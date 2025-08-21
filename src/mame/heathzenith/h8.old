@@ -1,0 +1,198 @@
+// license:BSD-3-Clause
+// copyright-holders:Mark Garlanger
+/***************************************************************************
+
+    Heathkit H8
+
+    This system uses Octal and Split-Octal rather than the usual hexadecimal.
+
+    STATUS:
+        It runs, keyboard works, you can enter data.
+        Serial console works. You can make it visible by setting Video
+        Options in settings.
+
+    Meaning of LEDs:
+        PWR = Power is turned on (+5V is present at on front panel)
+        MON = The front panel is being serviced by the cpu (controls should work)
+        RUN = CPU is running (not halted)
+        ION = Interrupts are enabled
+
+    Pasting:
+        H8    | mame key
+    -----------------------
+        0-F   | as is
+        +     |   ^
+        -     |   V
+        MEM   |   -
+        ALTER |   =
+
+        Addresses must have all 6 digits entered. Data must have all 3 digits entered.
+        System has a short beep for each key, and a slightly longer beep for each
+        group of 3 digits. The largest number allowed is octal 377 (=256/0xFF).
+
+    Test Paste:
+        -041000=123 245 333 144 255 366 077=-041000
+        Now press up-arrow to confirm the data has been entered.
+
+    Official test program from pages 4 to 8 of the operator's manual:
+        -040100=076 002 062 010 040 006 004 041 170 040 021 013 040 016 011 176
+                022 043 023 015 302 117 040 016 003 076 377 315 053 000 015 302
+                131 040 005 302 112 040 076 062 315 140 002 076 062 315 053 000
+                076 062 315 140 002 303 105 040 377 262 270 272 275 377 222 200
+                377 237 244 377 272 230 377 220 326 302 377 275 272 271 271 373
+                271 240 377 236 376 362 236 376 362 236 376 362 R6=040100=4
+
+****************************************************************************/
+
+#include "emu.h"
+
+<<<<<<< HEAD
+#include "bus/heathzenith/intr_cntrl/intr_cntrl.h"
+#include "bus/rs232/rs232.h"
+#include "cpu/i8085/i8085.h"
+#include "imagedev/cassette.h"
+#include "machine/clock.h"
+#include "machine/i8251.h"
+#include "machine/timer.h"
+#include "sound/beep.h"
+
+#include "speaker.h"
+#include "softlist_dev.h"
+
+#include "formats/h8_cas.h"
+
+#include "h8.lh"
+=======
+#include "bus/heathzenith/h8/cards.h"
+#include "bus/heathzenith/h8/h8bus.h"
+>>>>>>> upstream/master
+
+namespace {
+
+class h8_state : public driver_device
+{
+public:
+	h8_state(const machine_config &mconfig, device_type type, const char *tag)
+		: driver_device(mconfig, type, tag)
+		, m_h8bus(*this, "h8bus")
+		, m_p1(*this, "p1")
+		, m_p2(*this, "p2")
+		{}
+
+	void h8(machine_config &config);
+
+protected:
+	virtual void machine_start() override ATTR_COLD;
+	virtual void device_config_complete() override  ATTR_COLD;
+
+private:
+	required_device<h8bus_device> m_h8bus;
+	required_device<h8bus_slot_device> m_p1;
+	required_device<h8bus_slot_device> m_p2;
+};
+
+// Input ports
+static INPUT_PORTS_START( h8 )
+INPUT_PORTS_END
+
+void h8_state::machine_start()
+{
+}
+
+void h8_state::device_config_complete()
+{
+	// Connect up the p201 cable between p1 and p2 boards. This is separate from the h8bus.
+	auto p1_lookup = m_p1.lookup()->get_card_device();
+	auto p2_lookup = m_p2.lookup()->get_card_device();
+
+	// avoid crash when there isn't a card installed in either slot.
+	if (p1_lookup && p2_lookup)
+	{
+		device_p201_p1_card_interface *p1 = dynamic_cast<device_p201_p1_card_interface *>(p1_lookup);
+		device_p201_p2_card_interface *p2 = dynamic_cast<device_p201_p2_card_interface *>(p2_lookup);
+
+		p1->p201_reset_cb().set(*p2, FUNC(device_p201_p2_card_interface::p201_reset_w));
+		p1->p201_int1_cb().set(*p2, FUNC(device_p201_p2_card_interface::p201_int1_w));
+		p1->p201_int2_cb().set(*p2, FUNC(device_p201_p2_card_interface::p201_int2_w));
+
+		p2->p201_inte_cb().set(*p1, FUNC(device_p201_p1_card_interface::p201_inte_w));
+	}
+}
+
+void h8_state::h8(machine_config &config)
+{
+	H8BUS(config, m_h8bus, 0);
+
+<<<<<<< HEAD
+	/* video hardware */
+	config.set_default_layout(layout_h8);
+
+	HEATH_INTR_SOCKET(config, m_intr_socket, intr_ctrl_options, nullptr);
+	m_intr_socket->irq_line_cb().set_inputline(m_maincpu, INPUT_LINE_IRQ0);
+	m_intr_socket->set_default_option("original");
+	m_intr_socket->set_fixed(true);
+
+	/* sound hardware */
+	SPEAKER(config, "mono").front_center();
+	BEEP(config, m_beep, H8_BEEP_FRQ).add_route(ALL_OUTPUTS, "mono", 1.00);
+
+	/* Devices */
+	I8251(config, m_uart, 0);
+	m_uart->txd_handler().set([this] (bool state) { m_cassbit = state; });
+
+	I8251(config, m_console, 0);
+	m_console->txd_handler().set("rs232", FUNC(rs232_port_device::write_txd));
+	m_console->rts_handler().set("rs232", FUNC(rs232_port_device::write_rts));
+	m_console->dtr_handler().set("rs232", FUNC(rs232_port_device::write_dtr));
+	// The RxRdy pin on the 8251 USART is normally jumpered to generate a level 3 i/o interrupt.
+	m_console->rxrdy_handler().set(FUNC(h8_state::h8_level3_irq_callback));
+
+	rs232_port_device &rs232(RS232_PORT(config, "rs232", default_rs232_devices, "terminal"));
+	rs232.rxd_handler().set(m_console, FUNC(i8251_device::write_rxd));
+	rs232.cts_handler().set(m_console, FUNC(i8251_device::write_cts));
+	rs232.dsr_handler().set(m_console, FUNC(i8251_device::write_dsr));
+	rs232.set_option_device_input_defaults("terminal", DEVICE_INPUT_DEFAULTS_NAME(terminal));
+
+	clock_device &cassette_clock(CLOCK(config, "cassette_clock", 4800));
+	cassette_clock.signal_handler().set(m_uart, FUNC(i8251_device::write_txc));
+	cassette_clock.signal_handler().append(m_uart, FUNC(i8251_device::write_rxc));
+
+	// Console UART clock is 16X the baud rate.
+	clock_device &console_clock(CLOCK(config, "console_clock", 600*16));
+	console_clock.signal_handler().set(m_console, FUNC(i8251_device::write_txc));
+	console_clock.signal_handler().append(m_console, FUNC(i8251_device::write_rxc));
+
+	CASSETTE(config, m_cass);
+	m_cass->set_formats(h8_cassette_formats);
+	m_cass->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_ENABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
+	m_cass->set_interface("h8_cass");
+	SOFTWARE_LIST(config, "h8_cass").set_original("h8");
+
+	TIMER(config, "kansas_w").configure_periodic(FUNC(h8_state::kansas_w), attotime::from_hz(4800));
+	TIMER(config, "kansas_r").configure_periodic(FUNC(h8_state::kansas_r), attotime::from_hz(40000));
+	TIMER(config, "h8_timer").configure_periodic(FUNC(h8_state::h8_irq_pulse), attotime::from_hz(H8_IRQ_PULSE));
+=======
+	H8BUS_SLOT(config,  m_p1, "h8bus", h8_p1_cards,  "fp");
+	H8BUS_SLOT(config,  m_p2, "h8bus", h8_p2_cards,  "cpu8080");
+	H8BUS_SLOT(config,  "p3", "h8bus", h8_cards,     "wh_8_64");
+	H8BUS_SLOT(config,  "p4", "h8bus", h8_cards,     nullptr);
+	H8BUS_SLOT(config,  "p5", "h8bus", h8_cards,     nullptr);
+	H8BUS_SLOT(config,  "p6", "h8bus", h8_cards,     nullptr);
+	H8BUS_SLOT(config,  "p7", "h8bus", h8_cards,     nullptr);
+	H8BUS_SLOT(config,  "p8", "h8bus", h8_cards,     nullptr);
+	H8BUS_SLOT(config,  "p9", "h8bus", h8_cards,     "h_8_5");
+	H8BUS_SLOT(config, "p10", "h8bus", h8_p10_cards, nullptr);
+>>>>>>> upstream/master
+}
+
+// ROM definition
+ROM_START( h8 )
+ROM_END
+
+} // anonymous namespace
+
+// Driver
+
+//    YEAR  NAME  PARENT  COMPAT  MACHINE  INPUT  CLASS,    INIT        COMPANY          FULLNAME                        FLAGS
+COMP( 1977, h8,   0,      0,      h8,      h8,    h8_state, empty_init, "Heath Company", "Heathkit H8 Digital Computer", MACHINE_SUPPORTS_SAVE )

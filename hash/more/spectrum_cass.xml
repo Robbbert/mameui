@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3969 -->
+<!-- Number of items in this list = 3996 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -11162,6 +11162,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs27fcf842b7c92">
+		<description>Motorbike Madness (1988)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Motorbike Madness (1988)(Mastertronic Ltd).tap" size="49343" crc="3855e11f" sha1="27fcf842b7c9262656bf5ba5388cd1fced1c76df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs233400862554f">
+		<description>Motorbike Madness (1988)(Mastertronic Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68303">
+				<rom name="Motorbike Madness (1988)(Mastertronic Ltd)[a2].tap" size="68303" crc="8346f6c5" sha1="233400862554f2886e85effea5132ae7d898f5e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsadee1ad2d77ed">
+		<description>Motorbike Madness (1988)(Mastertronic Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39559">
+				<rom name="Motorbike Madness (1988)(Mastertronic Ltd)[a].tap" size="39559" crc="3d9536cc" sha1="adee1ad2d77ed00eb8d438db90b8536f05e9521d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbd1b4c1b2c512">
 		<description>Motorbike Madness</description>
 		<year>????</year>
@@ -11169,6 +11199,146 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="68553">
 				<rom name="Motorbike Madness.tzx" size="68553" crc="e20e2fd9" sha1="bd1b4c1b2c512eb2606c039423023db365c24a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96e69c3d13a2c">
+		<description>Motorcycle Crazy (1984)(Kerian UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32668">
+				<rom name="Motorcycle Crazy (1984)(Kerian UK).tap" size="32668" crc="81ab790b" sha1="96e69c3d13a2c2689d2940010f76e9c9b1c9a48f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc957fe609ed18">
+		<description>Motos (1987)(Mastertronic)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40115">
+				<rom name="Motos (1987)(Mastertronic)(128k).tap" size="40115" crc="beee0f0a" sha1="c957fe609ed18cfe25c292bea11078b91266eb80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96c542024e3bd">
+		<description>Mountain Bike Racer (1990)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29089">
+				<rom name="Mountain Bike Racer (1990)(Zeppelin Games).tap" size="29089" crc="3cc8fdeb" sha1="96c542024e3bd2316d058f3bba593f06163b890a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d8ad299a624a">
+		<description>Mountain Bike Simulator (19xx)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53006">
+				<rom name="Mountain Bike Simulator (19xx)(Codemasters).tap" size="53006" crc="d2738989" sha1="7d8ad299a624a14ee7f0f9b01686632fb14a5f4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81ae1edcb81c3">
+		<description>Mountains Of Ket 1 (1983)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49358">
+				<rom name="Mountains Of Ket 1 (1983)(Incentive).tap" size="49358" crc="4c7955e1" sha1="81ae1edcb81c36e82529fd70a07bc48ee94dddd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs889aa7e1654a6">
+		<description>Mountie Mick's Death Ride (1987)(Ariolasoft UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Mountie Mick's Death Ride (1987)(Ariolasoft UK).tap" size="49343" crc="3834dfbb" sha1="889aa7e1654a64e5eac3637c6ce6eadd165e9421"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe098a933628d">
+		<description>Mountie Mick's Death Ride (1987)(Ariolasoft UK)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24596">
+				<rom name="Mountie Mick's Death Ride (1987)(Ariolasoft UK)[a].tap" size="24596" crc="916a57c3" sha1="fe098a933628da5f426f4c442f57dd100abdbccb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d0120947dacf">
+		<description>Mousetrap 48K (2020)(Chris Maling)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10185">
+				<rom name="Mousetrap 48K (2020)(Chris Maling).tap" size="10185" crc="170bd6b3" sha1="1d0120947dacf5ff42218528de688a615639463a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs683079005ba18">
+		<description>Move It! (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3178">
+				<rom name="Move It! (19xx)(-).tap" size="3178" crc="2b98c517" sha1="683079005ba18a958591477dc9b3e5d6b5bd0019"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1212948c5f05a">
+		<description>Movie (1986)(Imagine Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48568">
+				<rom name="Movie (1986)(Imagine Software)[a].tap" size="48568" crc="f7687b5c" sha1="1212948c5f05aafa473c9967c6fef32cc1faa6e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs738fdf477db04">
+		<description>Mow The Lawn (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7576">
+				<rom name="Mow The Lawn (19xx)(-).tap" size="7576" crc="aff09815" sha1="738fdf477db049111066cb070a5874096d654575"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs884455dba5b7b">
+		<description>Mowy Adventures - Beer Quest 128K (2021)(Mowy Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60776">
+				<rom name="Mowy Adventures - Beer Quest 128K (2021)(Mowy Entertainment).tap" size="60776" crc="9db853c6" sha1="884455dba5b7ba6e292e4a61bc5f1d748242c3a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse70d87e1b784d">
+		<description>Mowy Adventures - Beer Quest 48K (2021)(Mowy Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40708">
+				<rom name="Mowy Adventures - Beer Quest 48K (2021)(Mowy Entertainment).tap" size="40708" crc="48654617" sha1="e70d87e1b784d2a44bf6466ec66d269ff6a7641f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs519e8b108ff96">
+		<description>MQM5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="651896">
+				<rom name="MQM5.TAP" size="651896" crc="81c24280" sha1="519e8b108ff96876612cf58999e8b14c8d448644"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13949,6 +14119,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56583">
 				<rom name="Operation Hanoi (1990)(Players Premier Software).tap" size="56583" crc="79550666" sha1="ac2cfe1acfbd1a0b2280b46cee7c740da552dec8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4588a42dc1c35">
+		<description>Operation Hanoi 48K-128K (1990)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="74134">
+				<rom name="Operation Hanoi 48K-128K (1990)(Players Premier).tap" size="74134" crc="8f259898" sha1="4588a42dc1c35ce2f2709ced7a521617905b56a0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17213,12 +17393,12 @@
 		</part>
 	</software>
 	<software name="zxs9669e0c20ff57">
-		<description>Prison Riot 128K (1990)(Players Premier)</description>
+		<description>Prison Riot 48K-128K (1990)(Players Premier)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="64518">
-				<rom name="Prison Riot 128K (1990)(Players Premier).tap" size="64518" crc="b760f8bd" sha1="9669e0c20ff5736227f43d22a11679ed21cf9687"/>
+				<rom name="Prison Riot 48K-128K (1990)(Players Premier).tap" size="64518" crc="b760f8bd" sha1="9669e0c20ff5736227f43d22a11679ed21cf9687"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20722,6 +20902,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8e202d112efdd">
+		<description>Runaway Nose EN v1.4 48K (2025)(Chentzilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39193">
+				<rom name="Runaway Nose EN v1.4 48K (2025)(Chentzilla).tap" size="39193" crc="9612d679" sha1="8e202d112efdd535cd437d57fd6a22f5929384bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3467ba98a859f">
+		<description>Runaway Nose RU v1.4 48K (2025)(Chentzilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39201">
+				<rom name="Runaway Nose RU v1.4 48K (2025)(Chentzilla).tap" size="39201" crc="56201040" sha1="3467ba98a859f2c3732be4fc96a601adddb68a80"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7d66acdf3315c">
 		<description>Runes Of Zendos, The (1984)(Dorcas Software)</description>
 		<year>????</year>
@@ -22552,16 +22752,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs16a35f3d5bd3d">
-		<description>Shark (1989)(Players Premier Software)(128K)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="101962">
-				<rom name="Shark (1989)(Players Premier Software)(128K).tap" size="101962" crc="014ce429" sha1="16a35f3d5bd3d0dc1de90d67cb1fae640be3d742"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs13fbd03ceca59">
 		<description>Shark (1989)(Players Premier Software)</description>
 		<year>????</year>
@@ -22569,6 +22759,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46543">
 				<rom name="Shark (1989)(Players Premier Software).tap" size="46543" crc="af830314" sha1="13fbd03ceca59021c343151a2a3232c18a11a073"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs16a35f3d5bd3d">
+		<description>Shark 48K-128K (1989)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="101962">
+				<rom name="Shark 48K-128K (1989)(Players Premier).tap" size="101962" crc="014ce429" sha1="16a35f3d5bd3d0dc1de90d67cb1fae640be3d742"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26243,12 +26443,12 @@
 		</part>
 	</software>
 	<software name="zxs17c11c0ce0060">
-		<description>Steel Eagle (1990)(Players Premier Software)</description>
+		<description>Steel Eagle 48K-128K (1990)(Players Premier)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52632">
-				<rom name="Steel Eagle (1990)(Players Premier Software).tap" size="52632" crc="0d55bee6" sha1="17c11c0ce00607cb3d22db983540855dc57c069a"/>
+				<rom name="Steel Eagle 48K-128K (1990)(Players Premier).tap" size="52632" crc="0d55bee6" sha1="17c11c0ce00607cb3d22db983540855dc57c069a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27153,12 +27353,12 @@
 		</part>
 	</software>
 	<software name="zxs9595af04ac4b2">
-		<description>Subway Vigilante (1989)(Players Premier)</description>
+		<description>Subway Vigilante 48K-128K (1989)(Players Premier)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="45847">
-				<rom name="Subway Vigilante (1989)(Players Premier).tap" size="45847" crc="f2e39b79" sha1="9595af04ac4b29a89c4be07416c064e58f77679e"/>
+				<rom name="Subway Vigilante 48K-128K (1989)(Players Premier).tap" size="45847" crc="f2e39b79" sha1="9595af04ac4b29a89c4be07416c064e58f77679e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29573,12 +29773,12 @@
 		</part>
 	</software>
 	<software name="zxs99ff24ac6c046">
-		<description>Time Scanner (1989)(Activision Inc)</description>
+		<description>Time Scanner 48K-128K (1989)(Activision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="113308">
-				<rom name="Time Scanner (1989)(Activision Inc).tap" size="113308" crc="3698495a" sha1="99ff24ac6c0462ea2d8766dbfcf8c7b4d24991a0"/>
+				<rom name="Time Scanner 48K-128K (1989)(Activision).tap" size="113308" crc="3698495a" sha1="99ff24ac6c0462ea2d8766dbfcf8c7b4d24991a0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35739,6 +35939,76 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46831">
 				<rom name="_Match Point.tzx" size="46831" crc="a865be98" sha1="12dd8e630f7b5b839f02b2ecbac33233ba7c3850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs188b5e7cc3dda">
+		<description>_Motorcycle 500 (1990)(Cult Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50148">
+				<rom name="_Motorcycle 500 (1990)(Cult Games).tap" size="50148" crc="f0a5ee2f" sha1="188b5e7cc3dda014af30a7ca09c6169df1d017d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs88b3ffaac70c2">
+		<description>_Movie (1986)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48594">
+				<rom name="_Movie (1986)(Imagine Software).tap" size="48594" crc="4f413f00" sha1="88b3ffaac70c299b180e6c2038ac9332db21e879"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9868a8ae3e054">
+		<description>_Mr. Dracula - Frank N Stein (1984)(Special Programs)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41095">
+				<rom name="_Mr. Dracula - Frank N Stein (1984)(Special Programs)(Sp).tap" size="41095" crc="3f5777d8" sha1="9868a8ae3e054eecfd949e4e5a8fdf3b3d488985"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef9d78a401940">
+		<description>_Mr. Freeze (1984)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32036">
+				<rom name="_Mr. Freeze (1984)(Firebird).tap" size="32036" crc="02dfa3ed" sha1="ef9d78a4019406307bfbcbb2fa5a24a6e4a86fb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1dd839f7c0fc">
+		<description>_Mr. Weems &amp; The She Vampires (1987)(Piranha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49864">
+				<rom name="_Mr. Weems &amp; The She Vampires (1987)(Piranha).tap" size="49864" crc="ab79ee75" sha1="a1dd839f7c0fca7701543b1090bd54084d8fad14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e7b6b95d45e8">
+		<description>_Mr. Weems and the She Vampires 48K (1987)(Piranha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54672">
+				<rom name="_Mr. Weems and the She Vampires 48K (1987)(Piranha).tap" size="54672" crc="4b04200a" sha1="8e7b6b95d45e83ab2b6dc0edf4dc14f05a1bc3e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48f62d685b42e">
+		<description>_Mrs. Mopp (1984)(Computasolve)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29749">
+				<rom name="_Mrs. Mopp (1984)(Computasolve).tap" size="29749" crc="088165e5" sha1="48f62d685b42e329e4f8afbe9f64c4f766472baa"/>
 			</dataarea>
 		</part>
 	</software>

@@ -217,7 +217,7 @@ void mame_options::populate_hashpath_from_args_and_inis(emu_options &options, co
 
 // MESSUI
 //------------------------------------------------------------------------------------------
-//  parse_parent_ini - parse the game INI file - we don't want to inherit slots and software
+//  parse_parent_ini - parse the game INI file - only want swpath
 //------------------------------------------------------------------------------------------
 
 void mame_options::parse_parent_ini(emu_options &options, const char *basename, int priority, std::ostream *error_stream)
