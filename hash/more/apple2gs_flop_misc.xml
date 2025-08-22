@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 41 -->
+<!-- Number of items in this list = 62 -->
 <softwarelist name="apple2gs_flop_misc" description="apple2gs_flop_misc loose roms">
 	<software name="appf8652ef569be4">
 		<description>4th &amp; Inches (1987)(Accolade)(Disk 1 of 2)</description>
@@ -292,6 +292,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app8879f5e6d9409">
+		<description>California demo (1988)(-)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="California demo (1988)(-)[b2].2mg" size="819264" crc="2a59a4d3" sha1="8879f5e6d9409d6c550a2e28948892622e8c291c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appdb8987a8ee777">
+		<description>California demo (1988)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819279">
+				<rom name="California demo (1988)(-)[b].2mg" size="819279" crc="046a72e3" sha1="db8987a8ee7774aa372c4077f05c2659de3423ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appd41a06c57ddd6">
+		<description>Captain Blood (1989)(Mindscape)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Captain Blood (1989)(Mindscape)[cr].2mg" size="819264" crc="6dfef714" sha1="d41a06c57ddd66a215cd69ce78794486b0c73403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app155b88575aaea">
+		<description>Cavern Cobra (1987)(PBI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Cavern Cobra (1987)(PBI).2mg" size="819264" crc="8c0301f1" sha1="155b88575aaeabc0071f58b44a1a36d4cf914459"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app78040578ac49b">
 		<description>cavit</description>
 		<year>????</year>
@@ -302,6 +342,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app8440e274af3ec">
+		<description>CB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819272">
+				<rom name="CB.2mg" size="819272" crc="7baef6f8" sha1="8440e274af3ece6bcd662cf720f7308d3923339b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app90f47b6d49846">
+		<description>CBPA1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="CBPA1.2mg" size="819264" crc="5111d171" sha1="90f47b6d49846c506df512a9bca230e8d3a397bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appaaf8cea265d05">
+		<description>CBPA2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="CBPA2.2mg" size="819264" crc="bbbf7209" sha1="aaf8cea265d053caeb904f6d731ba3e5f1eaf1e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appac33f0e25faa1">
+		<description>CBPA3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="CBPA3.2mg" size="819264" crc="63e4a876" sha1="ac33f0e25faa194428e1302a0442a8469e693678"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf1adc34141f22">
+		<description>Chessmaster, The (1988)(The Software Toolbooks)(Disk 1 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Chessmaster, The (1988)(The Software Toolbooks)(Disk 1 of 2)[cr].2mg" size="819264" crc="aab80067" sha1="f1adc34141f22399b186dde4560193f085de688e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0c9ca687c4212">
+		<description>Chessmaster, The (1988)(The Software Toolbooks)(Disk 2 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Chessmaster, The (1988)(The Software Toolbooks)(Disk 2 of 2)[cr].2mg" size="819264" crc="8201d956" sha1="0c9ca687c4212c3e80f9d78327f29f7ee6693464"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app72ed6b06b5f48">
+		<description>Copy II Plus v9.1 (1990)(Central Point Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Copy II Plus v9.1 (1990)(Central Point Software)[a].2mg" size="819264" crc="82d59861" sha1="72ed6b06b5f484da9c8970edecdb5a6b122470d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appad812dd946136">
+		<description>Cosmocade - The Arcade of Tomorrow (1990)(Pangea)(Disk 1 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Cosmocade - The Arcade of Tomorrow (1990)(Pangea)(Disk 1 of 2)[a].2mg" size="819264" crc="7beade33" sha1="ad812dd94613693d6edc5c1c21cccff6b5293ed9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="appd12c55ca5fef1">
 		<description>cracky</description>
 		<year>????</year>
@@ -309,6 +429,96 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="143360">
 				<rom name="cracky.dsk" size="143360" crc="051e6e4a" sha1="d12c55ca5fef14de575c9c8158aff3fc347cd548"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app84aa7a4c492e0">
+		<description>Crystal Quest (1989)(Casady And Greene)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819277">
+				<rom name="Crystal Quest (1989)(Casady And Greene)[a].2mg" size="819277" crc="ee71588c" sha1="84aa7a4c492e08cade39052a39dc6ce326eddaac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app1836c247a8e43">
+		<description>Delta demo (19xx)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Delta demo (19xx)(-)[b].2mg" size="819264" crc="f2d0fa78" sha1="1836c247a8e43bad08245c740d09d43d0f4bf471"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appccdc0fe05df1e">
+		<description>Deluxe Paint II (1987)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Deluxe Paint II (1987)(Electronic Arts).2mg" size="819264" crc="ae813e52" sha1="ccdc0fe05df1e0856c89fdc4ff72811608957b58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5ea65b34f63c6">
+		<description>Demo IIGS Cliche, Le (1992)(Zavstra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Demo IIGS Cliche, Le (1992)(Zavstra).2mg" size="819264" crc="a0c4903b" sha1="5ea65b34f63c65a05ebb1f5efb7ce478aafad746"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app4603248e31ef8">
+		<description>Disc Commander</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819278">
+				<rom name="Disc Commander.2mg" size="819278" crc="fa6b7efe" sha1="4603248e31ef80beb5b13110759e646b1639df71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app422baf4f23494">
+		<description>Diversi-tune</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Diversi-tune.2mg" size="819264" crc="d7f1c1fc" sha1="422baf4f234949bb45351d76af2a550a1b750309"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5a247a3eab27e">
+		<description>Dream Zone (19xx)(-)(Disk 1 of 2)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Dream Zone (19xx)(-)(Disk 1 of 2)[b2].2mg" size="819264" crc="6bbbeed2" sha1="5a247a3eab27e4d29d32ddf76eb868b770388030"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app15354a8659fcd">
+		<description>Dream Zone (19xx)(-)(Disk 1 of 2)[b3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Dream Zone (19xx)(-)(Disk 1 of 2)[b3].2mg" size="819264" crc="7e310ffc" sha1="15354a8659fcdcabfb2194b4e1e79f2ca59d67cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe16b4b756668b">
+		<description>Dream Zone (19xx)(-)(Disk 2 of 2)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Dream Zone (19xx)(-)(Disk 2 of 2)[b2].2mg" size="819264" crc="37970581" sha1="e16b4b756668b078025661e001eb0d2d6f1704b5"/>
 			</dataarea>
 		</part>
 	</software>
