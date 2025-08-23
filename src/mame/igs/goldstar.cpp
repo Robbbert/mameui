@@ -544,7 +544,8 @@ public:
 		m_fl7w4_id(*this, "fl7w4_id"),
 		m_mcu(*this, "mcu"),
 		m_tmcu(*this, "tmcu"),
-		m_nvram(*this, "nvram")
+		m_nvram(*this, "nvram"),
+		m_ticket_dispenser(*this, "hopper")
 	{ }
 
 	void animalw(machine_config &config) ATTR_COLD;
@@ -635,6 +636,7 @@ private:
 	optional_device<m68705p_device> m_mcu;
 	optional_device<i80c51_device> m_tmcu;
 	optional_shared_ptr<uint8_t> m_nvram;
+	optional_device<ticket_dispenser_device> m_ticket_dispenser;
 
 	uint8_t m_nmi_enable = 0U;
 	uint8_t m_vidreg = 0U;
@@ -5550,9 +5552,9 @@ static INPUT_PORTS_START( lucky8t )
 	PORT_MODIFY("IN1")  // b801 - No P2 Controls...
 	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
-	// expects the b802 bit2 and b811 bit1 ACTIVE_HIGH or it won't boot
+	// code expects the b802h bit2 and b811h bit0 ACTIVE HIGH, and b811h bit3 ACTIVE LOW to boot the game.
 	PORT_MODIFY("IN2")  // b802
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_UNKNOWN )
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_UNKNOWN )  // code checks if high to boot
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_J) PORT_CODE(KEYCODE_3_PAD) PORT_NAME("Stop3 / Right")
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_K) PORT_CODE(KEYCODE_2_PAD) PORT_NAME("Stop2 / Bonus Game")
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_L) PORT_CODE(KEYCODE_1_PAD) PORT_NAME("Stop1 / Left")
@@ -5561,20 +5563,22 @@ static INPUT_PORTS_START( lucky8t )
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_M) PORT_CODE(KEYCODE_0_PAD) PORT_NAME("Stop All");
 
 	PORT_MODIFY("IN4")  // b811
-	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_UNKNOWN )
+	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_UNKNOWN )  // code checks if high to boot
+	PORT_BIT( 0x04, IP_ACTIVE_LOW,  IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("hopper", FUNC(ticket_dispenser_device::line_r))
+	PORT_BIT( 0x08, IP_ACTIVE_LOW,  IPT_UNKNOWN )  // code checks if low to boot
 
 	PORT_MODIFY("DSW1")
-	PORT_DIPNAME( 0x01, 0x01, "Min/Max Bet" )               PORT_DIPLOCATION("DSW1:1")
-	PORT_DIPSETTING(    0x01, "16/64" )
-	PORT_DIPSETTING(    0x00, "32/120" )
+	PORT_DIPNAME( 0x01, 0x01, "Max Bet" )               PORT_DIPLOCATION("DSW1:1")
+	PORT_DIPSETTING(    0x01, "64" )
+	PORT_DIPSETTING(    0x00, "120" )
 	PORT_DIPUNKNOWN_DIPLOC(0x02, 0x02, "DSW1:2")
 	PORT_DIPUNKNOWN_DIPLOC(0x04, 0x04, "DSW1:3")
-	PORT_DIPNAME( 0x18, 0x18, "Double-Up Game Pay Rate" )   PORT_DIPLOCATION("DSW1:4,5")    // OK
+	PORT_DIPNAME( 0x18, 0x18, "Double-Up Game Pay Rate" )  PORT_DIPLOCATION("DSW1:4,5")    // OK
 	PORT_DIPSETTING(    0x18, "60%" )
 	PORT_DIPSETTING(    0x10, "70%" )
 	PORT_DIPSETTING(    0x08, "80%" )
 	PORT_DIPSETTING(    0x00, "90%" )
-	PORT_DIPNAME( 0x20, 0x20, "Reel Speed" )                PORT_DIPLOCATION("DSW1:6")
+	PORT_DIPNAME( 0x20, 0x20, "Reel Speed" )            PORT_DIPLOCATION("DSW1:6")
 	PORT_DIPSETTING(    0x20, "Normal" )
 	PORT_DIPSETTING(    0x00, "Fast" )
 	PORT_DIPUNKNOWN_DIPLOC(0x40, 0x40, "DSW1:7")
@@ -5603,7 +5607,11 @@ static INPUT_PORTS_START( lucky8t )
 	PORT_DIPUNKNOWN_DIPLOC(0x10, 0x10, "DSW3:5")
 	PORT_DIPUNKNOWN_DIPLOC(0x20, 0x20, "DSW3:6")
 	PORT_DIPUNKNOWN_DIPLOC(0x40, 0x40, "DSW3:7")
-	PORT_DIPUNKNOWN_DIPLOC(0x80, 0x80, "DSW3:8")
+	PORT_DIPNAME( 0x80, 0x80, "Minimum Bet" )         PORT_DIPLOCATION("DSW3:8")       // conditional to DSW1-1 max bet
+	PORT_DIPSETTING(    0x80, "16" )    PORT_CONDITION("DSW1", 0x01, NOTEQUALS, 0x00)  // for max 64
+	PORT_DIPSETTING(    0x00, "32" )    PORT_CONDITION("DSW1", 0x01, NOTEQUALS, 0x00)  // for max 64
+	PORT_DIPSETTING(    0x80, "32" )    PORT_CONDITION("DSW1", 0x01, EQUALS, 0x00)     // for max 120
+	PORT_DIPSETTING(    0x00, "40" )    PORT_CONDITION("DSW1", 0x01, EQUALS, 0x00)     // for max 120
 
 	PORT_MODIFY("DSW4")
 	PORT_DIPNAME( 0x03, 0x03, "Key In Rate" )       PORT_DIPLOCATION("DSW4:1,2")  // OK
@@ -10861,6 +10869,8 @@ void wingco_state::system_outputc_w(uint8_t data)
 
 	if (!m_nmi_enable)
 		m_maincpu->set_input_line(INPUT_LINE_NMI, CLEAR_LINE);
+	
+	m_ticket_dispenser->motor_w(!BIT(data, 7));
 }
 
 void wingco_state::ay8910_outputa_w(uint8_t data)
@@ -11485,6 +11495,9 @@ void wingco_state::lucky8(machine_config &config)
 	aysnd.port_a_write_callback().set(FUNC(wingco_state::ay8910_outputa_w));
 	aysnd.port_b_write_callback().set(FUNC(wingco_state::ay8910_outputb_w));
 	aysnd.add_route(ALL_OUTPUTS, "mono", 0.50);
+	
+	// payout hardware
+	TICKET_DISPENSER(config, m_ticket_dispenser, attotime::from_msec(200));
 }
 
 void wingco_state::nd8lines(machine_config &config)
@@ -24820,7 +24833,7 @@ GAMEL( 1988, lucky8p,    lucky8,   lucky8p,  lucky8,   wingco_state,   init_luck
 GAMEL( 1988, lucky8q,    lucky8,   lucky8,   lucky8,   wingco_state,   empty_init,     ROT0, "Wing Co., Ltd.",    "New Lucky 8 Lines (set 16, W-4)",                          0,                     layout_lucky8 )
 GAMEL( 1987, lucky8r,    lucky8,   lucky8,   lucky8,   wingco_state,   init_lucky8r,   ROT0, "TQ System",         "New Lucky 8 Lines (set 17, W-4, turbo, protected)",        0,                     layout_lucky8 )    // shift left registers protection
 GAMEL( 1988, lucky8s,    lucky8,   lucky8,   lucky8,   wingco_state,   init_lucky8s,   ROT0, "Wing Co., Ltd.",    "New Lucky 8 Lines (set 18, W-4, bingo/fever, protected)",  0,                     layout_lucky8 )    // shift left registers protection
-GAMEL( 1997, lucky8t,    lucky8,   lucky8,   lucky8t,  wingco_state,   empty_init,     ROT0, "bootleg (Bigico)",  "New Lucky 8 Lines (A900 2nd gen, Cross and Bell Bonus)",   0,                     layout_lucky8p1 )  // only 1 control set...
+GAME(  1997, lucky8t,    lucky8,   lucky8,   lucky8t,  wingco_state,   empty_init,     ROT0, "bootleg (Bigico)",  "New Lucky 8 Lines (A900 2nd gen, Cross and Bell Bonus)",   0 )                                       // only 1 control set, no lamps except 2 leftovers...
 GAMEL( 198?, ns8lines,   0,        lucky8,   lucky8b,  wingco_state,   empty_init,     ROT0, "<unknown>",         "New Lucky 8 Lines / New Super 8 Lines (W-4)",              0,                     layout_lucky8p1 )  // only 1 control set...
 GAMEL( 1985, ns8linesa,  ns8lines, lucky8,   lucky8b,  wingco_state,   empty_init,     ROT0, "Yamate (bootleg)",  "New Lucky 8 Lines / New Super 8 Lines (W-4, Lucky97 HW)",  0,                     layout_lucky8p1 )  // only 1 control set...
 GAMEL( 198?, ns8linew,   ns8lines, lucky8,   ns8linew, wingco_state,   empty_init,     ROT0, "<unknown>",         "New Lucky 8 Lines / New Super 8 Lines (F-5, Witch Bonus)", 0,                     layout_lucky8 )    // 2 control sets...

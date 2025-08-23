@@ -1,9 +1,9 @@
 // license:BSD-3-Clause
 // copyright-holders:smf
 /*
- *  Beatmania DJ Main Board (GX753)
+ *  Beatmania DJ Main Board (GQ753)
  *
- *  Product numbers:
+ *  Product numbers: (x: Q = full cabinet, C = conversion kit)
  *  GQ753 beatmania (first release in 1997.12)
  *  Gx853 beatmania 2nd MIX (1998.03)
  *  Gx825 beatmania 3rd MIX (1998.09)
@@ -18,16 +18,16 @@
  *  GxB07 beatmania 7th MIX (2002.01)
  *  GxC01 beatmania THE FINAL (2002.07))
  *
- *  Gx803 Pop'n Music 1 (1998.09)
+ *  Gx803 Pop'n Music (1998.09)
  *  Gx831 Pop'n Music 2 (1999.04)
  *  Gx980 Pop'n Music 3 (1999.09)
  *
- *  GQ970 Pop'n Stage (1999.11)
+ *  Gx970 Pop'n Stage (1999.11)
  *  Gx970 Pop'n Stage EX (2000.03)
  *
  *  Chips:
  *  15a:    MC68EC020FG25 @ 16 MHz
- *  25b:    001642 (sprites, misc)
+ *  25b:    001642 or KS10101 (sprites, misc)
  *  18d:    055555 (priority encoder)
  *   5f:    056766 (color DAC)
  *  18f:    056832 (tiles)
@@ -659,7 +659,7 @@ void djmain_state::maincpu_djmain(address_map &map)
 	map(0x480000, 0x48443f).ram().w(m_palette, FUNC(palette_device::write32)).share("palette");       // COLOR RAM
 	map(0x500000, 0x57ffff).rw(FUNC(djmain_state::sndram_r), FUNC(djmain_state::sndram_w));               // SOUND RAM
 	map(0x580000, 0x58003f).rw(m_k056832, FUNC(k056832_device::word_r), FUNC(k056832_device::word_w));      // VIDEO REG (tilemap)
-	map(0x590000, 0x590007).w(FUNC(djmain_state::unknown590000_w));                  // ??
+	map(0x590000, 0x590007).w(FUNC(djmain_state::unknown590000_w));                  // M66011FP?
 	map(0x5a0000, 0x5a005f).w(m_k055555, FUNC(k055555_device::K055555_long_w));                  // 055555: priority encoder
 	map(0x5b0000, 0x5b04ff).rw("k054539_1", FUNC(k054539_device::read), FUNC(k054539_device::write)).umask32(0xff00ff00);
 	map(0x5b0000, 0x5b04ff).rw("k054539_2", FUNC(k054539_device::read), FUNC(k054539_device::write)).umask32(0x00ff00ff);
@@ -2616,10 +2616,10 @@ GAME( 2001, bm6thmix,  0,        djmainj, bm6thmix,  djmain_state, init_bm6thmix
 GAME( 2001, bm7thmix,  0,        djmainj, bm6thmix,  djmain_state, init_bm7thmix,  ROT0, "Konami", "beatmania 7th MIX (ver JA-B)", 0 )
 GAME( 2002, bmfinal,   0,        djmainj, bm6thmix,  djmain_state, init_bmfinal,   ROT0, "Konami", "beatmania THE FINAL (ver JA-A)", 0 )
 
-GAME( 1998, popn1,     0,        djmaina, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 1 (ver TA-A, HDD 1.01)", 0 )
-GAME( 1998, popn1a,    popn1,    djmaina, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 1 (ver AA-A, HDD 1.00)", 0 )
-GAME( 1998, popn1k,    popn1,    djmaina, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 1 (ver KA-A, HDD 1.01)", 0 ) // KA-A based on filenames provided, no warning message
-GAME( 1998, popn1j,    popn1,    djmainj, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 1 (ver JA-A, HDD 1.00)", 0 )
+GAME( 1998, popn1,     0,        djmaina, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music (ver TA-A, HDD 1.01)", 0 )
+GAME( 1998, popn1a,    popn1,    djmaina, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music (ver AA-A, HDD 1.00)", 0 )
+GAME( 1998, popn1k,    popn1,    djmaina, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music (ver KA-A, HDD 1.01)", 0 ) // KA-A based on filenames provided, no warning message
+GAME( 1998, popn1j,    popn1,    djmainj, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music (ver JA-A, HDD 1.00)", 0 )
 GAME( 1999, popn2,     0,        djmainj, popn2,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 2 (ver JA-A)", 0 )
 GAME( 1999, popn3,     0,        djmainj, popn2,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 3 (ver JA-A)", 0 )
 
