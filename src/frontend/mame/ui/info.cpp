@@ -38,7 +38,8 @@ namespace {
 
 constexpr machine_flags::type MACHINE_ERRORS    = machine_flags::MECHANICAL;
 constexpr machine_flags::type MACHINE_WARNINGS  = machine_flags::NO_COCKTAIL | machine_flags::REQUIRES_ARTWORK;
-constexpr machine_flags::type MACHINE_BTANB     = machine_flags::NO_SOUND_HW | machine_flags::IS_INCOMPLETE;
+//constexpr machine_flags::type MACHINE_BTANB     = machine_flags::NO_SOUND_HW | machine_flags::IS_INCOMPLETE;
+constexpr machine_flags::type MACHINE_BTANB     = machine_flags::IS_INCOMPLETE;  // 2025-08-23
 constexpr device_t::flags_type DEVICE_ERRORS    = device_t::flags::NOT_WORKING;
 
 constexpr std::pair<device_t::feature_type, char const *> FEATURE_NAMES[] = {
