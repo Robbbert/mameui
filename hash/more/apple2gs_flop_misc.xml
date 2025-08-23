@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 62 -->
+<!-- Number of items in this list = 70 -->
 <softwarelist name="apple2gs_flop_misc" description="apple2gs_flop_misc loose roms">
 	<software name="appf8652ef569be4">
 		<description>4th &amp; Inches (1987)(Accolade)(Disk 1 of 2)</description>
@@ -519,6 +519,86 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819264">
 				<rom name="Dream Zone (19xx)(-)(Disk 2 of 2)[b2].2mg" size="819264" crc="37970581" sha1="e16b4b756668b078025661e001eb0d2d6f1704b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe630d2581ced0">
+		<description>Fast Break (1989)(Accolade)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Fast Break (1989)(Accolade)[cr].2mg" size="819264" crc="8d4331bf" sha1="e630d2581ced0460f357f61d42957f9b0dd6a855"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app966a82bde9b8f">
+		<description>Firepower (1989)(MicroIllusions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819273">
+				<rom name="Firepower (1989)(MicroIllusions).2mg" size="819273" crc="a651c8b3" sha1="966a82bde9b8fd6743f02c7952029c05ebb3787b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app49965d559dce6">
+		<description>GBA Championship Basketball - Two On Two (1987)(Activision)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819267">
+				<rom name="GBA Championship Basketball - Two On Two (1987)(Activision)[cr].2mg" size="819267" crc="6aa073dc" sha1="49965d559dce66def139350cbb70b0e4d0de0913"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appbe119902260a0">
+		<description>Gnarly Golf (1989)(Britannica)(Disk 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819270">
+				<rom name="Gnarly Golf (1989)(Britannica)(Disk 1 of 2).2mg" size="819270" crc="18eabb8a" sha1="be119902260a0c1c7307e034605df13a4263c395"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6d4287a0d2e21">
+		<description>Gnarly Golf (1989)(Britannica)(Disk 1 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Gnarly Golf (1989)(Britannica)(Disk 1 of 2)[cr].2mg" size="819264" crc="e6eec6cb" sha1="6d4287a0d2e2163af7a1e6b63993cb0a333ad44c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app4f8f36e6aec54">
+		<description>Gnarly Golf (1989)(Britannica)(Disk 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819270">
+				<rom name="Gnarly Golf (1989)(Britannica)(Disk 2 of 2).2mg" size="819270" crc="817db130" sha1="4f8f36e6aec54f1360a1018b66cd1613e5bc8ab5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0633926aa98a4">
+		<description>Gnarly Golf (1989)(Britannica)(Disk 2 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Gnarly Golf (1989)(Britannica)(Disk 2 of 2)[a].2mg" size="819264" crc="25b09ae6" sha1="0633926aa98a4404a18abcc86aa972d82fb42447"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app669847e1ea7ed">
+		<description>Grand Prix Circuit (1989)(Accolade)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819267">
+				<rom name="Grand Prix Circuit (1989)(Accolade).2mg" size="819267" crc="7ae29603" sha1="669847e1ea7edc86316763b05870166742fc1d5a"/>
 			</dataarea>
 		</part>
 	</software>

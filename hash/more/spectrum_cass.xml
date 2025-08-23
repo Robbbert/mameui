@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4024 -->
+<!-- Number of items in this list = 4062 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -99,6 +99,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="60927">
 				<rom name="-APB - All Points Bulletin (1989)(Domark)(128k)[a].tap" size="60927" crc="69cd660e" sha1="2a6066cc66e1fa559e9f18bc5fa7f5d658715be6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs495c0eae798dd">
+		<description>-Arc Of Yesod, The (1985)(Odin Computer Graphics)(128k)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52821">
+				<rom name="-Arc Of Yesod, The (1985)(Odin Computer Graphics)(128k)[t].tap" size="52821" crc="1f4caefa" sha1="495c0eae798dd7302d2c48b6ebb97f9a38dcd96e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5252,6 +5262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc8a4dae266ce8">
+		<description>Arcadia 16K (1982)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8522">
+				<rom name="Arcadia 16K (1982)(Imagine Software).tap" size="8522" crc="63ef88a9" sha1="c8a4dae266ce89b61476f59c0b8d15c1141c4808"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscda51b6139893">
 		<description>Arcadia</description>
 		<year>????</year>
@@ -5432,6 +5452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs830fb740739ea">
+		<description>Arkanoid - Revenge Of Doh (1988)(Imagine Software)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47899">
+				<rom name="Arkanoid - Revenge Of Doh (1988)(Imagine Software)(128k).tap" size="47899" crc="e7d83e56" sha1="830fb740739eaf16d22ff61b2c4529577d74c91b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfa11c2e7015b1">
 		<description>Arkanoid - Revenge Of Doh (1988)(Imagine Software)(128k)[a]</description>
 		<year>????</year>
@@ -5512,6 +5542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs819d349d23be6">
+		<description>Armageddon Man, The (1987)(Martech Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41367">
+				<rom name="Armageddon Man, The (1987)(Martech Games).tap" size="41367" crc="cf67d83d" sha1="819d349d23be6a9be567f191e1865100233bf342"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2647ba162d44c">
 		<description>Army Moves (1986)(Dinamic Software - Imagine Software)(Sp)[Part 1 of 2]</description>
 		<year>????</year>
@@ -5583,12 +5623,12 @@
 		</part>
 	</software>
 	<software name="zxs9c785521f9452">
-		<description>Arquimedes XXI ES 48K (1986)(Dinamic)</description>
+		<description>Arquimedes XXI ES 48K (1986)(Dinamic Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49872">
-				<rom name="Arquimedes XXI ES 48K (1986)(Dinamic).tzx" size="49872" crc="36e9f10a" sha1="9c785521f94523911515ba607c51f587adb05c74"/>
+				<rom name="Arquimedes XXI ES 48K (1986)(Dinamic Software).tzx" size="49872" crc="36e9f10a" sha1="9c785521f94523911515ba607c51f587adb05c74"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11189,6 +11229,256 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31255">
 				<rom name="Mister Gas.tzx" size="31255" crc="eba6a6ef" sha1="b4eb6cf66dbe63ed46c07db987f238b1c1492a36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4acec397e0a9a">
+		<description>Monty Python's Flying Circus (1990)(Virgin Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="136802">
+				<rom name="Monty Python's Flying Circus (1990)(Virgin Mastertronic).tap" size="136802" crc="3a99fb2d" sha1="4acec397e0a9a7cddb69f6b2fcab699df2d80c9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb545ee3cdada8">
+		<description>Monty's Honey Run 128K (2017)(Bubblesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44457">
+				<rom name="Monty's Honey Run 128K (2017)(Bubblesoft).tap" size="44457" crc="addb28f2" sha1="b545ee3cdada85694937bf1e70fc5ea689a0d3c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse9846f2918187">
+		<description>Moon Alert (1984)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46996">
+				<rom name="Moon Alert (1984)(Ocean Software Ltd).tap" size="46996" crc="008d471b" sha1="e9846f29181876acb799facbdefa330300638755"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs51fa7085c7d72">
+		<description>Moon Alert (1984)(Ocean Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47005">
+				<rom name="Moon Alert (1984)(Ocean Software Ltd)[a].tap" size="47005" crc="6f546ad5" sha1="51fa7085c7d72f8c6b7592c9c384df84969a6624"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf215a723c8669">
+		<description>Moon Alert! 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47090">
+				<rom name="Moon Alert! 48K (1984)(Ocean).tap" size="47090" crc="01a888bf" sha1="f215a723c8669b7d4cdf05e78d0592bedd7b5ef8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbbcda7071b4a7">
+		<description>Moon and the Pirates EN 48K (2019)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44496">
+				<rom name="Moon and the Pirates EN 48K (2019)(Furillo Productions).tap" size="44496" crc="ae6e18e3" sha1="bbcda7071b4a7f7b2fc9a07b142315bca8f7c09c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5a1a6b27529f">
+		<description>Moon Battle (19xx)(-)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21440">
+				<rom name="Moon Battle (19xx)(-)(Sp).tap" size="21440" crc="59d08fde" sha1="a5a1a6b27529f235b25827d79fe027056319bad2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs694c06cadc48f">
+		<description>Moon Cresta (1985)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28148">
+				<rom name="Moon Cresta (1985)(Incentive).tap" size="28148" crc="700a8849" sha1="694c06cadc48f8f15bdc81728c5b0890b1972440"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa3e8670dd3478">
+		<description>Moon Cresta (1985)(Incentive)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39686">
+				<rom name="Moon Cresta (1985)(Incentive)[a].tap" size="39686" crc="c6f8fda5" sha1="a3e8670dd34789174a262c250f0e7a49154bf511"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb86ee70e758f6">
+		<description>Moon Iron (1986)(Your Sinclair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28397">
+				<rom name="Moon Iron (1986)(Your Sinclair).tap" size="28397" crc="a866fc4c" sha1="b86ee70e758f6156c42a12f2eceb14175ce6681f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa040f516f4002">
+		<description>Moon Magic (1991)(Psychedelic Hedgehog)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35876">
+				<rom name="Moon Magic (1991)(Psychedelic Hedgehog).tap" size="35876" crc="7f81ef6c" sha1="a040f516f4002fac3f0df2452e29282646c858ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa6d12c36b819f">
+		<description>Moon Patrol (1984)(Atarisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40949">
+				<rom name="Moon Patrol (1984)(Atarisoft).tap" size="40949" crc="b02ce9ea" sha1="a6d12c36b819f247de1694be95ef750f93c8e913"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf52193bc17630">
+		<description>Moon Ranger 128K (2020)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29940">
+				<rom name="Moon Ranger 128K (2020)(Gabriele Amore).tap" size="29940" crc="d33c199a" sha1="f52193bc17630a7d7491faa05a21059f4f6041ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs834b03a00fbb7">
+		<description>Moon Ranger v2 128K (2021)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45527">
+				<rom name="Moon Ranger v2 128K (2021)(Gabriele Amore).tap" size="45527" crc="ebb5c2a1" sha1="834b03a00fbb7e5f230800eeab0d20b46b34726b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfc8f0de98a90d">
+		<description>Moon Rescue</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8042">
+				<rom name="Moon Rescue.TAP" size="8042" crc="1d4abbd1" sha1="fc8f0de98a90d048e939f8e0fcf0431bae2015ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1bb986fd53ee8">
+		<description>Moon Strike (1987)(Mirrorsoft)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56770">
+				<rom name="Moon Strike (1987)(Mirrorsoft)(128k).tap" size="56770" crc="196564a4" sha1="1bb986fd53ee86d8453cde530e19027bab63527d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs903e782754ec9">
+		<description>Moon Strike (1987)(Mirrorsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49633">
+				<rom name="Moon Strike (1987)(Mirrorsoft).tap" size="49633" crc="bd0e5cbd" sha1="903e782754ec91bfe90f31ddf53fb75e33bae41e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsce45a38457948">
+		<description>Moon Walker - The Computer Game (1989)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="170496">
+				<rom name="Moon Walker - The Computer Game (1989)(US Gold).tap" size="170496" crc="0c84679e" sha1="ce45a38457948f4282229b6c61fada8d3c061331"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4af5ea65d853">
+		<description>MoonAndThePirates_Furillo_2019_SP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44493">
+				<rom name="MoonAndThePirates_Furillo_2019_SP.tap" size="44493" crc="57323cf4" sha1="c4af5ea65d8536b97165c261a80b2ea859469182"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs06ebbdff6c0b5">
+		<description>Moonlight Madness (1986)(Bubblebus Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34850">
+				<rom name="Moonlight Madness (1986)(Bubblebus Software).tap" size="34850" crc="38324b42" sha1="06ebbdff6c0b5786558db3dad86a2b88bc637aac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94810669f2c18">
+		<description>Moonlight Madness (1986)(Bubblebus Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39795">
+				<rom name="Moonlight Madness (1986)(Bubblebus Software)[a].tap" size="39795" crc="ce1b0174" sha1="94810669f2c18a2e5b0bfcdef542b36c922928b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a264b7fbc8dc">
+		<description>MoonRN 48K-AY (2025)(Snauts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22900">
+				<rom name="MoonRN 48K-AY (2025)(Snauts).tap" size="22900" crc="eb41580e" sha1="0a264b7fbc8dcc77e33f81c4328f64be7f5bab8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f3fef8739d63">
+		<description>MoonRN 48K-AY (2025)(Snauts)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20266">
+				<rom name="MoonRN 48K-AY (2025)(Snauts)_1.tap" size="20266" crc="2e9a1874" sha1="8f3fef8739d63f2c9f21de1030cccc13a757d036"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs90fa9cfa1ce03">
+		<description>Moonsweeper (1983)(Softsync)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16302">
+				<rom name="Moonsweeper (1983)(Softsync).tap" size="16302" crc="6fdf8a6b" sha1="90fa9cfa1ce0335767072b8a29236a1db62c08e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc0eb70f207020">
+		<description>Moontorc (1991)(Atlantis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58279">
+				<rom name="Moontorc (1991)(Atlantis).tap" size="58279" crc="0fe238a1" sha1="c0eb70f2070202f15cead82640fe1c61665c665a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35822,6 +36112,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb885741499eb2">
+		<description>_Arbatax (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22035">
+				<rom name="_Arbatax (19xx)(-)(De).tap" size="22035" crc="f05076ae" sha1="b885741499eb286f055ec56eb7fa94de66585942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc7f3d8278ac0">
+		<description>_Arc Of Yesod, The (1985)(Odin Computer Graphics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43739">
+				<rom name="_Arc Of Yesod, The (1985)(Odin Computer Graphics)[a].Tap" size="43739" crc="b8733973" sha1="cc7f3d8278ac02bc7565f35affeb97371ed26c99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs38cd904bfea73">
+		<description>_Arcade Fruit Machine (1990)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55567">
+				<rom name="_Arcade Fruit Machine (1990)(Zeppelin Games).tap" size="55567" crc="c62e13c6" sha1="38cd904bfea737a46e1cc328f970f56b719041fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse839ce58bb977">
+		<description>_Arkanoid (1987)(Erbe Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46423">
+				<rom name="_Arkanoid (1987)(Erbe Software).tap" size="46423" crc="d1c65c3e" sha1="e839ce58bb977f30586a2d9bad35f5a67f18d0e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73e990af29c87">
+		<description>_Armageddon (1983)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13845">
+				<rom name="_Armageddon (1983)(Ocean Software).tap" size="13845" crc="398b3aa5" sha1="73e990af29c87e085dad716e471d8e8cc856d610"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse66789959eedf">
+		<description>_Armageddon (1983)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12873">
+				<rom name="_Armageddon (1983)(Silversoft).tap" size="12873" crc="68d6ca52" sha1="e66789959eedf2b4180823c12939dbf8edd6b11b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96b23035f57ab">
+		<description>_Armageddon (1993)(SVC Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46148">
+				<rom name="_Armageddon (1993)(SVC Software).tap" size="46148" crc="00af9f3e" sha1="96b23035f57ab53ea291a2517249a6b0cd28c58a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsafb7b65ba2e05">
 		<description>_Astro Blaster (1983)(Quicksilva Ltd)[a]</description>
 		<year>????</year>
@@ -36199,6 +36559,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46831">
 				<rom name="_Match Point.tzx" size="46831" crc="a865be98" sha1="12dd8e630f7b5b839f02b2ecbac33233ba7c3850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8effb77d0c36a">
+		<description>_Moon Buggy (1983)(Anirog Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22058">
+				<rom name="_Moon Buggy (1983)(Anirog Software).tap" size="22058" crc="3776cfff" sha1="8effb77d0c36ac5c7f2a8dffbb48f787c089ab30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4fdc513efc48">
+		<description>_Moonlander (1984)(Fun For Ever Soft)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37919">
+				<rom name="_Moonlander (1984)(Fun For Ever Soft)(De).tap" size="37919" crc="a330bacc" sha1="d4fdc513efc48debe4a255279b494e63b1571bc1"/>
 			</dataarea>
 		</part>
 	</software>
