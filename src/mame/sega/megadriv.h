@@ -5,8 +5,7 @@
 
 #pragma once
 
-#include "mdioport.h"
-
+#include "bus/megadrive/ctrl/mdioport.h"
 #include "cpu/m68000/m68000.h"
 #include "cpu/z80/z80.h"
 #include "sound/sn76496.h"
@@ -54,7 +53,7 @@ protected:
 	optional_ioport m_io_reset;
 
 private:
-//	IRQ_CALLBACK_MEMBER(genesis_int_callback);
+//  IRQ_CALLBACK_MEMBER(genesis_int_callback);
 	void cpu_space_map(address_map &map);
 
 	void vdp_vint_cb(int state);
