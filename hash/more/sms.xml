@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 535 -->
+<!-- Number of items in this list = 539 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1512,6 +1512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms62211d30d4528">
+		<description>Forest Escape - A Knight's Quest (2025)(IrataHack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Forest Escape - A Knight's Quest (2025)(IrataHack).sms" size="81920" crc="b56748ba" sha1="62211d30d45285770d49cb694717fd806d4c06fe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms28af0d81b2aea">
 		<description>Frontier Force (Alpha Demo V0.1.1)(2024)(badcomputer)</description>
 		<year>????</year>
@@ -1809,6 +1819,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="573440">
 				<rom name="Golden Axe - Tyris Flare Edition (2022)(Pyxosoft).sms" size="573440" crc="53aec4a5" sha1="799c7b8309ea61d43580757c5ab46725c1397475"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms675b5a8299935">
+		<description>Goodzilla v1.1 (2025)(Zhamul, Kronk, borbware, Keith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="98304">
+				<rom name="Goodzilla v1.1 (2025)(Zhamul, Kronk, borbware, Keith).sms" size="98304" crc="6c6c5ad8" sha1="675b5a82999353ca8c73a114094446ca4d193784"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3229,6 +3249,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Pac-Man Master Museum v2.10 (2025)(Lack of Track).sms" size="131072" crc="e4057636" sha1="b136c0d6302c102b2f65a858d9600458b1f191fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2e09d89dd8a9c">
+		<description>Pac-Man Master Museum v2.20 (2025)(Lack of Track)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pac-Man Master Museum v2.20 (2025)(Lack of Track).sms" size="131072" crc="9725b67f" sha1="2e09d89dd8a9cf37537a3ca8ad752c8a9bcf5daa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5099,6 +5129,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Wonder Boy in Monster World - Restoration (2017)(Ichigo Bankai).sms" size="524288" crc="754d1333" sha1="3dfe1bff73364e0dc85da1b1d370503dcdfd169e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms146cf5a9ff507">
+		<description>Wonder Kid (Open) (Korea) [Proto] [SMS-GG] [HACK+MAPPER]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Wonder Kid (Open) (Korea) [Proto] [SMS-GG] [HACK+MAPPER].sms" size="131072" crc="972ce310" sha1="146cf5a9ff5078656870f454d8dd526d4ad37d4a"/>
 			</dataarea>
 		</part>
 	</software>

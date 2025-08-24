@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 70 -->
+<!-- Number of items in this list = 79 -->
 <softwarelist name="apple2gs_flop_misc" description="apple2gs_flop_misc loose roms">
 	<software name="appf8652ef569be4">
 		<description>4th &amp; Inches (1987)(Accolade)(Disk 1 of 2)</description>
@@ -612,6 +612,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="appfba2712f85ce7">
+		<description>Hacker II (1987)(Activision)[cr][b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Hacker II (1987)(Activision)[cr][b].2mg" size="819264" crc="36a4fffd" sha1="fba2712f85ce704c00696edb939f8bc88ddd6d05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app12ac1b4b13b46">
+		<description>Hardball (1987)(Accolade)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819272">
+				<rom name="Hardball (1987)(Accolade)[a].2mg" size="819272" crc="4e0f8a73" sha1="12ac1b4b13b46d6e1d02b5e976f1970543edbb56"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="appc8e25df20e296">
 		<description>hopman</description>
 		<year>????</year>
@@ -622,6 +642,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app38313f7229adf">
+		<description>Hostage (1990)(Mindscape)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819270">
+				<rom name="Hostage (1990)(Mindscape)[cr].2mg" size="819270" crc="fe37fe37" sha1="38313f7229adf9b23bec8dc7e0830bd6de90c034"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf4436e95b355f">
+		<description>Hunt For Red October (1989)(Soft-Tech)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Hunt For Red October (1989)(Soft-Tech)[cr].2mg" size="819271" crc="e313bb84" sha1="f4436e95b355f6c02d38686a92fbe55d65adee5e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app7108627cc20b8">
 		<description>impetus</description>
 		<year>????</year>
@@ -629,6 +669,56 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="143360">
 				<rom name="impetus.dsk" size="143360" crc="4d73ff45" sha1="7108627cc20b823abf5445276506ec41445912a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appc998fa3e7ae67">
+		<description>Impossible Mission II (19xx)(Epyx)[cr][b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Impossible Mission II (19xx)(Epyx)[cr][b].2mg" size="819264" crc="bca64f2e" sha1="c998fa3e7ae67d87a9ce9b83df821f64b47348f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app1e92f47bb5422">
+		<description>Jack Nicklaus Greatest 18 Holes of Major Championship Golf (19xx)(Accolade)(Disk 1 of 4)(Game)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819268">
+				<rom name="Jack Nicklaus Greatest 18 Holes of Major Championship Golf (19xx)(Accolade)(Disk 1 of 4)(Game)[a].2mg" size="819268" crc="74f1c022" sha1="1e92f47bb542251a9905dfa845290eef9cc7d7c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app254da87a2736e">
+		<description>Jam Session (1989)(Broderbund)(Disk 1 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Jam Session (1989)(Broderbund)(Disk 1 of 2)[a].2mg" size="819264" crc="34913c81" sha1="254da87a2736e7bb1d9bc6152888ea6dc4eade72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0e0624eba1faf">
+		<description>Jam Session (1989)(Broderbund)(Disk 2 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Jam Session (1989)(Broderbund)(Disk 2 of 2)[a].2mg" size="819264" crc="55f76ca2" sha1="0e0624eba1faf71b781639a83ef26e3577a0feaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8a0a7002bd2cb">
+		<description>John Elway's Quarterback (1988)(Melbourne House)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819267">
+				<rom name="John Elway's Quarterback (1988)(Melbourne House)[b].2mg" size="819267" crc="52e4e253" sha1="8a0a7002bd2cb3b093fbd6ddb2dbe5dbf9d4fa49"/>
 			</dataarea>
 		</part>
 	</software>
