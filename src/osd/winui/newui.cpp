@@ -2856,10 +2856,10 @@ static void prepare_menus(HWND wnd)
 				win_append_menu_utf8(sub_menu, MF_SEPARATOR, 0, NULL);
 
 			// Since a software list exists, add the Mount Item menu
-			win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_ITEM, "Mount Item...");
+			win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_ITEM, "Mount SW-List Item...");
 		}
 
-		win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_OPEN, "Mount File...");
+		win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_OPEN, "Mount Loose File...");
 
 		if (img.is_creatable())
 			win_append_menu_utf8(sub_menu, MF_STRING, new_item + DEVOPTION_CREATE, "Create...");
