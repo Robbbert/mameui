@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 108 -->
+<!-- Number of items in this list = 120 -->
 <softwarelist name="apple2gs_flop_misc" description="apple2gs_flop_misc loose roms">
+	<software name="appd3bb3c875e1be">
+		<description>(demo)Modulae</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="(demo)Modulae.2mg" size="819264" crc="9f03ce1d" sha1="d3bb3c875e1beaf23457e1c6cdc8ee1ec0852e64"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="appf8652ef569be4">
 		<description>4th &amp; Inches (1987)(Accolade)(Disk 1 of 2)</description>
 		<year>????</year>
@@ -1022,6 +1032,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app7ad73b595441c">
+		<description>Mancala (1988)(California Dreams)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Mancala (1988)(California Dreams)[cr].2mg" size="819264" crc="003f2b88" sha1="7ad73b595441ccba9c3bcf8850ca3d7f250e8f83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0755c76b3f745">
+		<description>Manhunter New-york (1988)(Sierra)(Disk 1 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Manhunter New-york (1988)(Sierra)(Disk 1 of 4).2mg" size="819264" crc="ee07ab81" sha1="0755c76b3f745ce798870cf43a47f478d7fd8224"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app084cf0b8e0db0">
+		<description>Manhunter New-york (1988)(Sierra)(Disk 2 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Manhunter New-york (1988)(Sierra)(Disk 2 of 4).2mg" size="819264" crc="fdbbc81d" sha1="084cf0b8e0db0be8f7291701cba54d2c4bcc0571"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb720962b6eb7f">
+		<description>Manhunter New-york (1988)(Sierra)(Disk 2 of 4)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819268">
+				<rom name="Manhunter New-york (1988)(Sierra)(Disk 2 of 4)[a].2mg" size="819268" crc="7fbdee67" sha1="b720962b6eb7f5ecd5ce7a8f5705ba5f7e0dd5be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6d4f0972d6a32">
+		<description>Manhunter New-york (1988)(Sierra)(Disk 3 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Manhunter New-york (1988)(Sierra)(Disk 3 of 4).2mg" size="819264" crc="6f919f07" sha1="6d4f0972d6a321a56751148b253894eafc226eea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app7bd57d2b4f761">
+		<description>Manhunter New-york (1988)(Sierra)(Disk 3 of 4)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Manhunter New-york (1988)(Sierra)(Disk 3 of 4)[a].2mg" size="819271" crc="cea45864" sha1="7bd57d2b4f761c69df7981d40c508b37a8e359b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app4b53b0e425c3b">
+		<description>Manhunter New-york (1988)(Sierra)(Disk 4 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Manhunter New-york (1988)(Sierra)(Disk 4 of 4).2mg" size="819264" crc="d5961e81" sha1="4b53b0e425c3b89e935e43759eb15e5d2e23c823"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb8684ee391d18">
+		<description>Manhunter New-york (1988)(Sierra)(Disk 4 of 4)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Manhunter New-york (1988)(Sierra)(Disk 4 of 4)[a].2mg" size="819271" crc="42761bd2" sha1="b8684ee391d18637460a387759b6f87457433f2b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app5756eaf4067f5">
 		<description>mazy</description>
 		<year>????</year>
@@ -1039,6 +1129,36 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="143360">
 				<rom name="mieyen.dsk" size="143360" crc="53e0994f" sha1="debb0214fc6bf5c34d39298ee0497ff9914ccb98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app09d3b28f6676d">
+		<description>Mighty Marvel Vs The Forces of Evil (1988)(ISM)(Disk 1 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Mighty Marvel Vs The Forces of Evil (1988)(ISM)(Disk 1 of 2)[cr].2mg" size="819264" crc="3526088b" sha1="09d3b28f6676d89c7347ad6af2d5f53fbd4a836d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app37c43c72c9532">
+		<description>Mighty Marvel Vs The Forces of Evil (1988)(ISM)(Disk 2 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Mighty Marvel Vs The Forces of Evil (1988)(ISM)(Disk 2 of 2)[cr].2mg" size="819264" crc="10b82ffa" sha1="37c43c72c9532e5b5ef0af3eb9810a8526663e75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe9ba0bab7e2fb">
+		<description>Mouse Desk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Mouse Desk.2mg" size="819264" crc="55c85ad0" sha1="e9ba0bab7e2fb1a6187617145f1aefbb1e7eda5a"/>
 			</dataarea>
 		</part>
 	</software>
