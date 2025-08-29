@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4214 -->
+<!-- Number of items in this list = 4238 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -6613,12 +6613,32 @@
 		</part>
 	</software>
 	<software name="zxse8eb45de033ab">
-		<description>Baby-man Vs Man-baby (2023)(PuttyCAD, Tin Soldiers)</description>
+		<description>Baby-man VS Man-baby 48K (2023)(PuttyCAD, Tin Soldiers)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41891">
-				<rom name="Baby-man Vs Man-baby (2023)(PuttyCAD, Tin Soldiers).tap" size="41891" crc="7562acb5" sha1="e8eb45de033abda07cb2ec238c907a257867cb67"/>
+				<rom name="Baby-man VS Man-baby 48K (2023)(PuttyCAD, Tin Soldiers).tap" size="41891" crc="7562acb5" sha1="e8eb45de033abda07cb2ec238c907a257867cb67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc2ce5d8afe583">
+		<description>Baby-man VS Nappy Bird v1.01 48K (2023)(PuttyCAD, Tin Soldiers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23108">
+				<rom name="Baby-man VS Nappy Bird v1.01 48K (2023)(PuttyCAD, Tin Soldiers).tap" size="23108" crc="70cf01bf" sha1="c2ce5d8afe58386ffc93a8e4bd87de405fd28e42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8862d71f08fae">
+		<description>Baby-Man VS Terminatots PT1 v1.01 48K (2025)(PuttyCAD, Tin Soldiers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44968">
+				<rom name="Baby-Man VS Terminatots PT1 v1.01 48K (2025)(PuttyCAD, Tin Soldiers).tap" size="44968" crc="4520df8c" sha1="8862d71f08fae3dff2b058b890dd526a46a71152"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11342,6 +11362,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc2dd3bdad1add">
+		<description>Micro Chess (1983)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5185">
+				<rom name="Micro Chess (1983)(Artic Computing).tap" size="5185" crc="7acfb6ad" sha1="c2dd3bdad1add910f23bd86075cd6dcd85bc54c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1cc42f1c3529">
+		<description>Micro Chess (19xx)(Idescomp Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12065">
+				<rom name="Micro Chess (19xx)(Idescomp Software)(Sp).tap" size="12065" crc="8e3cd961" sha1="f1cc42f1c3529631a079f88eea1b060baf28838f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81211e6949269">
+		<description>Micro Mouse Goes De-bugging 128K (1989)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47636">
+				<rom name="Micro Mouse Goes De-bugging 128K (1989)(Mastertronic).tap" size="47636" crc="6a8a8635" sha1="81211e6949269393212d0cb0a009e500aa6c547b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5fddefc2f9173">
+		<description>Micro Olympics (1984)(Database Publications)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47659">
+				<rom name="Micro Olympics (1984)(Database Publications).tap" size="47659" crc="8ce33f1e" sha1="5fddefc2f9173bedcb6b6718c12505ba5956f811"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4eaf4cf43fdc">
+		<description>Micro Snake 16K (2024)(The Death Squad)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7592">
+				<rom name="Micro Snake 16K (2024)(The Death Squad).tap" size="7592" crc="ed3e3094" sha1="d4eaf4cf43fdcb0a9ca1bc8f371d6d80fe465cd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsda6a4af457026">
+		<description>Micro Trivia (1987)(Harold Gale Associates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="77557">
+				<rom name="Micro Trivia (1987)(Harold Gale Associates).tap" size="77557" crc="5a760d72" sha1="da6a4af457026ebc76e29224af7eefd7eb68513e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf357a609d5c37">
 		<description>Micro-Print (1984)(Myrmidon Soft)</description>
 		<year>????</year>
@@ -11349,6 +11429,136 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1654">
 				<rom name="Micro-Print (1984)(Myrmidon Soft).tap" size="1654" crc="065c6f6f" sha1="f357a609d5c378f34d8240f28e0dc3f4b111ef98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc6f5f67219c55">
+		<description>Microbowl (1992)(Gabi Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13813">
+				<rom name="Microbowl (1992)(Gabi Soft)(Sp).tap" size="13813" crc="14cb1eea" sha1="c6f5f67219c5525053bea578ba4232600ac1775b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs47b6039aeafcd">
+		<description>Microdrive Doctor (1985)(Seven Stars Publishing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5644">
+				<rom name="Microdrive Doctor (1985)(Seven Stars Publishing).tap" size="5644" crc="fdf12805" sha1="47b6039aeafcdac428dc38ab18cd3350f2643e78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2cd1efb199334">
+		<description>Microdrive Utility Program v1.1 (1984)(Easyuse Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8271">
+				<rom name="Microdrive Utility Program v1.1 (1984)(Easyuse Software).tap" size="8271" crc="733b3fbb" sha1="2cd1efb199334a991caf6b6ac1a0f959763a542c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs361e1ab760190">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 1 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60142">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 1 Side A).tap" size="60142" crc="1cb3afa5" sha1="361e1ab760190c563d8b83cb537f98868d8a06d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff17075cd66b4">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 1 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="62131">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 1 Side B).tap" size="62131" crc="7699931d" sha1="ff17075cd66b40ecc9f625b7396c4fd31b771146"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3cc084994275c">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 2 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58883">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 2 Side A).tap" size="58883" crc="3ca51878" sha1="3cc084994275c2a3cd3b14d8c8a38170e9eaa097"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5558950758b27">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 2 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50690">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 2 Side B).tap" size="50690" crc="01f9c298" sha1="5558950758b27d24e0958d2ff7c53818095eabcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa822aef5c3064">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 3 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68951">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 3 Side A).tap" size="68951" crc="bb20ca56" sha1="a822aef5c3064723f61dea52d3aa5d0cad244960"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs14cc84e8ffb4f">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 4 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58946">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 4 Side B).tap" size="58946" crc="c5be8a00" sha1="14cc84e8ffb4f2e3ffa29be58a611c97a5965e1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfbeebe6300246">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 8 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="105047">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 8 Side A).tap" size="105047" crc="3c05e9c7" sha1="fbeebe6300246f88202716dc9a71f446e0339679"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73c3a4ce0b207">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 8 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="123805">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 8 Side B).tap" size="123805" crc="f9b4f21f" sha1="73c3a4ce0b207887c3ea4ab2c2ea56a9626d9232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2cd9d854073ab">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 9 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86631">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 9 Side A).tap" size="86631" crc="71ea3bf3" sha1="2cd9d854073abf7ef626ff7b7326bc173e609a50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9bf575bd6dda1">
+		<description>Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 9 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72343">
+				<rom name="Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 9 Side B).tap" size="72343" crc="0775647c" sha1="9bf575bd6dda10d36ccc41d620eb09d1ef382a4d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16393,12 +16603,12 @@
 		</part>
 	</software>
 	<software name="zxs88491cab92d70">
-		<description>P-47 The Freedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh)</description>
+		<description>P-47 The Freedom Fighter 128K (Hack)(2022)(SGT - Slider, Goodboy, Tiboh)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="119134">
-				<rom name="P-47 The Freedom Fighter 128K (Hack)(1990-2022)(SGT - Slider, Goodboy, Tiboh).tap" size="119134" crc="9ec5769f" sha1="88491cab92d70e7f07656b6e581c5fd1b4dbcba4"/>
+				<rom name="P-47 The Freedom Fighter 128K (Hack)(2022)(SGT - Slider, Goodboy, Tiboh).tap" size="119134" crc="9ec5769f" sha1="88491cab92d70e7f07656b6e581c5fd1b4dbcba4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18099,6 +18309,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="38646">
 				<rom name="Pixy The Microdot 2 (1989)(Soft Corn)[cr TFF Team][a].tap" size="38646" crc="72f1dc84" sha1="66db0ec8cdc57cac789a74dcf6397dd8886ec817"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff4597414ab11">
+		<description>Pixy the Microdot 2 48K (1992)(Your Sinclair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41007">
+				<rom name="Pixy the Microdot 2 48K (1992)(Your Sinclair).tzx" size="41007" crc="d3a6e16f" sha1="ff4597414ab1105ecf06673dc43f5010143cf754"/>
 			</dataarea>
 		</part>
 	</software>
@@ -24793,12 +25013,12 @@
 		</part>
 	</software>
 	<software name="zxsffbbb800d95d9">
-		<description>Sidewinder 2 (1989)(Mastertronic Plus)</description>
+		<description>Sidewinder II 48K (1989)(Mastertronic Plus)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42370">
-				<rom name="Sidewinder 2 (1989)(Mastertronic Plus).tap" size="42370" crc="f3729589" sha1="ffbbb800d95d9cf430e5e457e8f72aa867066237"/>
+				<rom name="Sidewinder II 48K (1989)(Mastertronic Plus).tap" size="42370" crc="f3729589" sha1="ffbbb800d95d9cf430e5e457e8f72aa867066237"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26819,6 +27039,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="34582">
 				<rom name="Spaghetti Western (1990)(Zeppelin Games).tap" size="34582" crc="a148ae6a" sha1="b914652f420be0e9f40b82944c31c89f441a90f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4a091413a1bc7">
+		<description>SpAIders Game (2024)(Javier Fopiani)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="92321">
+				<rom name="SpAIders Game (2024)(Javier Fopiani).tap" size="92321" crc="cbb963cb" sha1="4a091413a1bc7b4181aac5c1fb0b6d72573f72be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30799,6 +31029,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49266">
 				<rom name="Thanatos (1986)(Durell Software Ltd)(128K).tap" size="49266" crc="4ce5e54e" sha1="d9edda00cc819da839b75fbda412c1ae8efc3e91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07897c79e9bed">
+		<description>Thanatos 128K (1986)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49288">
+				<rom name="Thanatos 128K (1986)(Durell).tzx" size="49288" crc="8730af6e" sha1="07897c79e9bedb1cfc5011de87e32fb7d6344d9d"/>
 			</dataarea>
 		</part>
 	</software>
