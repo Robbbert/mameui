@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4238 -->
+<!-- Number of items in this list = 4286 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -6702,6 +6702,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsaad49c16acabb">
+		<description>Back To The Future III (1990)(Image Works)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="222746">
+				<rom name="Back To The Future III (1990)(Image Works)(128K).tap" size="222746" crc="5de2c954" sha1="aad49c16acabb1347b6753e61e35804b0ab10d1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs85376f2b34763">
+		<description>Back To The Future III (1990)(Image Works)[a](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="222746">
+				<rom name="Back To The Future III (1990)(Image Works)[a](128K).tap" size="222746" crc="b085152e" sha1="85376f2b347633dbeaa4c83c1e8be56af33cd487"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd3e8dc7285a10">
 		<description>Back To The Future III (demo) (1990)(Image Works)</description>
 		<year>????</year>
@@ -6729,6 +6749,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="25555">
 				<rom name="Backgammon (1983)(Pi Software).tap" size="25555" crc="a0617878" sha1="fb68693aba409e48250700a00100fa877209352c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c7c22032efbd">
+		<description>Backgammon 16K (1983)(Hewson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8399">
+				<rom name="Backgammon 16K (1983)(Hewson).tap" size="8399" crc="b2f2cafe" sha1="0c7c22032efbd863d8e43d995fa81be76c698acd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1995b6881c452">
+		<description>Backpackers Guide To The Universe (1984)(Fantasy Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49218">
+				<rom name="Backpackers Guide To The Universe (1984)(Fantasy Software).tap" size="49218" crc="dba5c01b" sha1="1995b6881c45237d43507350da8608953a6329ca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11342,6 +11382,166 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs79e755329a68b">
+		<description>Mermaid Madness (1986)(Electric Dreams Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Mermaid Madness (1986)(Electric Dreams Software).tap" size="49343" crc="34f0b093" sha1="79e755329a68b9c604d01b4294988683849c787b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab1d3843677c3">
+		<description>Mermaid Madness (1986)(Electric Dreams Software)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47263">
+				<rom name="Mermaid Madness (1986)(Electric Dreams Software)[a2].tap" size="47263" crc="3b981595" sha1="ab1d3843677c3f89b7d2753659a32870dc22d812"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0fd844d56281">
+		<description>Message From Andromeda (1986)(Interceptor Micros Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47564">
+				<rom name="Message From Andromeda (1986)(Interceptor Micros Software).tap" size="47564" crc="c3334066" sha1="f0fd844d5628176c8b14aa80a8599036fee8f445"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa538b9b809e70">
+		<description>Mesta v Ceskoslovensku (1983)(Sinclair Programs - Otto Adametz)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10860">
+				<rom name="Mesta v Ceskoslovensku (1983)(Sinclair Programs - Otto Adametz)(Cz).tap" size="10860" crc="0a34899f" sha1="a538b9b809e70a9f90e0267350eeff0a0046619f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ea59de803196">
+		<description>MestoRobotu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29290">
+				<rom name="MestoRobotu.tap" size="29290" crc="946aab48" sha1="9ea59de803196444392a707a99e1999cbfc6efd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31448e45bd7ea">
+		<description>Metabolis (1985)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48004">
+				<rom name="Metabolis (1985)(Gremlin Graphics).tap" size="48004" crc="840ae929" sha1="31448e45bd7ea910308eaafc771651be3dbf2010"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b36dfff8f41d">
+		<description>Metal Army (1986)(Players Premier Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40251">
+				<rom name="Metal Army (1986)(Players Premier Software).tap" size="40251" crc="dbced42f" sha1="3b36dfff8f41d5f512bbd98e636e2c884bfa6d0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71f87a7f1b291">
+		<description>Metalyx (1987)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37668">
+				<rom name="Metalyx (1987)(Alternative Software).tap" size="37668" crc="4f0cfda1" sha1="71f87a7f1b291242855f1cf5fced1c45e0616022"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsffe8c74fc5ad6">
+		<description>Meteor Storm 16K (1982)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7303">
+				<rom name="Meteor Storm 16K (1982)(Quicksilva).tap" size="7303" crc="7ba250bc" sha1="ffe8c74fc5ad68d616304eaefc1110d6069e27bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd0a9a551dca8">
+		<description>meteorblast</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26098">
+				<rom name="meteorblast.tap" size="26098" crc="b8463979" sha1="cd0a9a551dca8a4ceae3cc36e7943f92241ec388"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd5f5b42bee7f2">
+		<description>Meteoroids (1982)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14678">
+				<rom name="Meteoroids (1982)(DK'Tronics).tap" size="14678" crc="f99fa90e" sha1="d5f5b42bee7f2adce7638d6776cfaddea24416ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab96deea9424f">
+		<description>Meteoroids (1982)(DK'Tronics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14848">
+				<rom name="Meteoroids (1982)(DK'Tronics)[a].tap" size="14848" crc="ed60ffcd" sha1="ab96deea9424f255bf566675f3ce5a4f208183c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs22904842511dc">
+		<description>Methyhel (1990)(The Guild)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56979">
+				<rom name="Methyhel (1990)(The Guild)(128K).tap" size="56979" crc="8caf06f6" sha1="22904842511dcfea73a25d51c0e4fa88066c21f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs37fc4fa5474b4">
+		<description>Methyhel - Part 1 (1990)(The Guild)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33728">
+				<rom name="Methyhel - Part 1 (1990)(The Guild).tap" size="33728" crc="1358a5ec" sha1="37fc4fa5474b43f98e60d732e4fa7ad5a0b9bc42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7f5a0fb445da">
+		<description>Methyhel - Part 2 (1990)(The Guild)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33056">
+				<rom name="Methyhel - Part 2 (1990)(The Guild).tap" size="33056" crc="8e2250cc" sha1="d7f5a0fb445da4ec8ff0898fdaf3cf8dae5330aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5ea4f58dbdaf">
+		<description>Metro-Cross (1987)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44446">
+				<rom name="Metro-Cross (1987)(U.S. Gold).tap" size="44446" crc="6e1d27d3" sha1="a5ea4f58dbdaf54aa2571400a23b14c72f3175b3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5aa3a9e84be9b">
 		<description>Metro-Cross</description>
 		<year>????</year>
@@ -11352,6 +11552,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc5f74defb4309">
+		<description>Metropol (19xx)(Zafiro Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28194">
+				<rom name="Metropol (19xx)(Zafiro Software)(Sp).tap" size="28194" crc="051c75ec" sha1="c5f74defb4309ea750494cf3cfdb6cd1c0654ed6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb3e4e611063f4">
+		<description>Metropolis (1988)(The Power House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48600">
+				<rom name="Metropolis (1988)(The Power House).tap" size="48600" crc="45a1b80a" sha1="b3e4e611063f47d0504c71514a3290907922afdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfacc13e46ec57">
+		<description>Miami Chase (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48671">
+				<rom name="Miami Chase (1991)(Codemasters).tap" size="48671" crc="24cb897c" sha1="facc13e46ec57697c95d9d0f33ff06be84431779"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs04dffe755a27e">
 		<description>Miami Cobra GT</description>
 		<year>????</year>
@@ -11359,6 +11589,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56343">
 				<rom name="Miami Cobra GT.tzx" size="56343" crc="9c87f864" sha1="04dffe755a27e251a0687593bd0d212e5db7152e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4e08d8a737e50">
+		<description>Miami Dice 48K (1986)(Bug-Byte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49463">
+				<rom name="Miami Dice 48K (1986)(Bug-Byte).tap" size="49463" crc="fee92bf2" sha1="4e08d8a737e50179331df9a86691d8e91dbb6377"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsea7081c6601e5">
+		<description>Miao (19xx)(Artic Computing)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40251">
+				<rom name="Miao (19xx)(Artic Computing)(Sp).tap" size="40251" crc="f47d99fa" sha1="ea7081c6601e53c34cddaa38c61f7b145f7da3a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27b034193f4f7">
+		<description>Michel Futbol Master (1989)(Dinamic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42768">
+				<rom name="Michel Futbol Master (1989)(Dinamic)(Sp).tap" size="42768" crc="38824765" sha1="27b034193f4f7de9b03bf812bc6d04eaceabe826"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs132d528b393d8">
+		<description>Michel Super Skills (1991)(Dinamic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43013">
+				<rom name="Michel Super Skills (1991)(Dinamic)(Sp).tap" size="43013" crc="035d9ad3" sha1="132d528b393d81a9ee4027292b80366c958bea93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse13eaf13e9a67">
+		<description>Mickey and Donald G&amp;W 48K (2023)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37646">
+				<rom name="Mickey and Donald G&amp;W 48K (2023)(Menyiques).tap" size="37646" crc="93b6eb9d" sha1="e13eaf13e9a67a42e338d59b4cc5d14f57349686"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5e6581f4ffa15">
+		<description>Mickey Mouse - The Computer Game (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="81397">
+				<rom name="Mickey Mouse - The Computer Game (1988)(Gremlin Graphics).tap" size="81397" crc="af007636" sha1="5e6581f4ffa155179a176976e3dd7638726f0f60"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37792,6 +38082,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs675594470b419">
+		<description>_Back to Skool 48K (1985)(Microsphere)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48013">
+				<rom name="_Back to Skool 48K (1985)(Microsphere).tap" size="48013" crc="c8136fa9" sha1="675594470b419d3d8fd069da5424bb5dac72460c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab6369c4df61c">
+		<description>_Backgammon (1983)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16152">
+				<rom name="_Backgammon (1983)(Psion).tap" size="16152" crc="970c9d77" sha1="ab6369c4df61c1d532a82eff204d441cf74193cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs672762329a36f">
+		<description>_Backgammon (1983)(Psion)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16103">
+				<rom name="_Backgammon (1983)(Psion)[a].tap" size="16103" crc="acb48a38" sha1="672762329a36fcae31f6601dd7e33faf859ad83a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfae6b34610306">
 		<description>_BATTLEFI</description>
 		<year>????</year>
@@ -38159,6 +38479,166 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46831">
 				<rom name="_Match Point.tzx" size="46831" crc="a865be98" sha1="12dd8e630f7b5b839f02b2ecbac33233ba7c3850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae1574f5e482c">
+		<description>_Merry Xmas Santa (1984)(Icon Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47400">
+				<rom name="_Merry Xmas Santa (1984)(Icon Software).tap" size="47400" crc="de99adb3" sha1="ae1574f5e482c745599b9dbf6f9b086112d265c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44ed66166c265">
+		<description>_Metaplex (1988)(Addictive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41326">
+				<rom name="_Metaplex (1988)(Addictive).tap" size="41326" crc="1ce25480" sha1="44ed66166c26524b49af276115de4793ac06e518"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa031436919840">
+		<description>_Micro Drivin (1988)(Softel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52637">
+				<rom name="_Micro Drivin (1988)(Softel).tap" size="52637" crc="916d580f" sha1="a031436919840f64448c9b09ccc1dac63bc76c11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs06948403a89ee">
+		<description>_Microbot (1983)(Softek Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49152">
+				<rom name="_Microbot (1983)(Softek Software).tap" size="49152" crc="31ff53f1" sha1="06948403a89eef1b8b962efb5d331cc3f240f58f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c4362d33895a">
+		<description>_Microbot (1983)(Softek Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49137">
+				<rom name="_Microbot (1983)(Softek Software)[a].tap" size="49137" crc="e3cfacf8" sha1="2c4362d33895a06ff55d9f15e743ed512f0caee0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs29cbeaa1699df">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 3 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65191">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 3 Side B).tap" size="65191" crc="ad6fb17f" sha1="29cbeaa1699dfed7fc220e8fcc69e3f1537d23ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1990dee461a81">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 4 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33632">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 4 Side A).tap" size="33632" crc="fd1fe8df" sha1="1990dee461a817976409e930258ba2121da39224"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4a249bfd8db4">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 5 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60178">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 5 Side A).tap" size="60178" crc="5b694883" sha1="d4a249bfd8db47eabd81a3bf725c60a888edd68e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb25016485812d">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 5 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64271">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 5 Side B).tap" size="64271" crc="d8a9d252" sha1="b25016485812d05a300a6f083dc27dbc138eeb45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ac93e362a3ba">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 6 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64613">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 6 Side A).tap" size="64613" crc="d85fdeda" sha1="5ac93e362a3baa7b91df8c6c88ff2b7c1dde5b06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e2705cbf3d82">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 6 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53571">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 6 Side B).tap" size="53571" crc="f337606a" sha1="8e2705cbf3d82e53f7a10763404cf5d05e33e937"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdda5efee49436">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 7 Side A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80029">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 7 Side A).tap" size="80029" crc="14113d49" sha1="dda5efee49436ed66489e307886c2662be20bb3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99f05d0cd3c55">
+		<description>_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 7 Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="74702">
+				<rom name="_Microhobby Cassette (1985)(Hobby Press)(Sp)(Tape 7 Side B).tap" size="74702" crc="5baab365" sha1="99f05d0cd3c55d0983afc5e17e9ab3989925b8d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs30dec27fcf0ee">
+		<description>_Mighty Magus, The (1985)(Quicksilva Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49152">
+				<rom name="_Mighty Magus, The (1985)(Quicksilva Ltd).tap" size="49152" crc="fcb353f6" sha1="30dec27fcf0eeba1509f7ecf4c6a7bb1d39eb1a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19906aa6cbd95">
+		<description>_Mighty Magus, The (1985)(Quicksilva Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49516">
+				<rom name="_Mighty Magus, The (1985)(Quicksilva Ltd)[a2].tap" size="49516" crc="aad37761" sha1="19906aa6cbd955c9ce4d543e174e8120cab4e5ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf5b3c15c92375">
+		<description>_Mighty Magus, The (1985)(Quicksilva Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48661">
+				<rom name="_Mighty Magus, The (1985)(Quicksilva Ltd)[a].tap" size="48661" crc="7c1437d1" sha1="f5b3c15c923752b324e08e6d1ea891af8940b336"/>
 			</dataarea>
 		</part>
 	</software>
