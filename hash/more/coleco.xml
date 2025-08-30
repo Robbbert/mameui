@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 629 -->
+<!-- Number of items in this list = 592 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -79,16 +79,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="2010 The Action Game.rom" size="32768" crc="c575a831" sha1="b1621d39a2a6d1cda7eceb882a612a4baf3da70c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col9ef2974a04f59">
-		<description>Adam's Musicbox Demo (1987)(-)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="24576">
-				<rom name="Adam's Musicbox Demo (1987)(-).rom" size="24576" crc="164c8c26" sha1="9ef2974a04f5982bd034f39d1741666b6d117d24"/>
 			</dataarea>
 		</part>
 	</software>
@@ -352,16 +342,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col359516da9459f">
-		<description>Bagman (2015)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32767">
-				<rom name="Bagman (2015)(CollectorVision).rom" size="32767" crc="673bdb9d" sha1="359516da9459fb743a15f21febbb01c5230f0c6d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="colf3a8887709bb8">
 		<description>Bankruptcy Builder (2008-05-15)</description>
 		<year>????</year>
@@ -399,16 +379,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="18758">
 				<rom name="Bankruptcy Builder 2008-05-18.rom" size="18758" crc="2c1ac5a4" sha1="b749d24bad5afd41b864d57735039aea58c57e15"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cole6c80b2de7a5a">
-		<description>Battle of Hoth (2013)(Team Pixelboy)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Battle of Hoth (2013)(Team Pixelboy).rom" size="32768" crc="b2ef6386" sha1="e6c80b2de7a5a0a05c1a3289c6ad9498bc62e52c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -562,16 +532,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col63dedc9548517">
-		<description>Bomb Jack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32174">
-				<rom name="Bomb Jack.rom" size="32174" crc="a399d4cd" sha1="63dedc954851761c55eedbb05d51dc4b8bdb23c1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="colb8b5a7cbfa310">
 		<description>Bomb'n Blast (2011)(CollectorVision)</description>
 		<year>????</year>
@@ -599,16 +559,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="30684">
 				<rom name="Bomb'n Blast.rom" size="30684" crc="b8ccdeb2" sha1="cfcd40d41cac35a25d6d150220fb8166eb7bfe18"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colb7a78920fa371">
-		<description>Boot Hill (2018)(Leo Brophy)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Boot Hill (2018)(Leo Brophy).bin" size="32768" crc="59e22170" sha1="b7a78920fa37177dc5f9a1105961ded4bd58e832"/>
 			</dataarea>
 		</part>
 	</software>
@@ -932,16 +882,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col8448feff0a210">
-		<description>Chack'n Pop (2011)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Chack'n Pop (2011)(CollectorVision).bin" size="32768" crc="c1366313" sha1="8448feff0a21037eb22dd968ab57d3312b153de0"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col2572dd33110ed">
 		<description>Challenger</description>
 		<year>????</year>
@@ -1182,16 +1122,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cold9adaae3ff8dc">
-		<description>Cosmo Challenge (1997 Marcel de Kogel)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="21632">
-				<rom name="Cosmo Challenge (1997 Marcel de Kogel).rom" size="21632" crc="43933306" sha1="d9adaae3ff8dce384c00790999f2fd1f9b29213e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cole9f07b63332ea">
 		<description>Cosmo Fighter 2</description>
 		<year>????</year>
@@ -1362,16 +1292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col9f97a9594b39f">
-		<description>Death Race (2004 Dav) [Playable Demo]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="3936">
-				<rom name="Death Race (2004 Dav) [Playable Demo].rom" size="3936" crc="ff4964b1" sha1="9f97a9594b39fdc32e530c18ba14f75852efc61e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col5b35ee46585b2">
 		<description>Decathlon (1983)(Activision)</description>
 		<year>????</year>
@@ -1489,16 +1409,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="25088">
 				<rom name="Dig Dug (1983) (Atarisoft) (Unreleased) [o1].rom" size="25088" crc="1fe02bbc" sha1="c9a07f579c11400ddf988db809a487abe428dfa8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col01c9ba078dbbd">
-		<description>Digger (2014 Mystery Man)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="24576">
-				<rom name="Digger (2014 Mystery Man).rom" size="24576" crc="77088cab" sha1="01c9ba078dbbdb8958e9800d06740d063080f44a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1642,16 +1552,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col8f2ad6a7abe91">
-		<description>Dungeons and Trolls (2014)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="30187">
-				<rom name="Dungeons and Trolls (2014)(CollectorVision).col" size="30187" crc="a227fdaa" sha1="8f2ad6a7abe91ae98304c4cad1ea5295ad31d1ab"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col81f3f0d294585">
 		<description>dvik-joyrex_wip-teaser 2008-06-08</description>
 		<year>????</year>
@@ -1732,16 +1632,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col499a1731ea160">
-		<description>Elevator Action SGM (2021)(Opcode Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Elevator Action SGM (2021)(Opcode Games).bin" size="32768" crc="cf4bdc75" sha1="499a1731ea16092a4ef2651edc25f08a69d30fa5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cola05a0868fa2f8">
 		<description>Elite Planet Browser_Bit90</description>
 		<year>????</year>
@@ -1759,16 +1649,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Elite Planet Browser_coleco.rom" size="32768" crc="c05d7886" sha1="5a4cde240194de5919721064deb7dd49fb95bbe5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col9bd47f0b28861">
-		<description>Energy Quiz</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Energy Quiz.rom" size="32768" crc="afb90dcd" sha1="9bd47f0b288612e85224c9bda093b12f0b5bff36"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1872,16 +1752,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col40e85b474db95">
-		<description>Flora and the Ghost Mirror (2013) (NewColeco)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Flora and the Ghost Mirror (2013) (NewColeco).rom" size="32768" crc="fd69012b" sha1="40e85b474db95076186ceaf89f1e259dd929b5ce"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="colfc24aee603cd7">
 		<description>Food Fight</description>
 		<year>????</year>
@@ -1909,16 +1779,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Fraction Fever (U).col" size="16384" crc="e9df779a" sha1="1e96e4847295b461382ed2ddbf9270f11ba0adc7"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col8a81e9b854e7f">
-		<description>Frantic (2008)(Scott Huggins)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32640">
-				<rom name="Frantic (2008)(Scott Huggins).col" size="32640" crc="f43b0b28" sha1="8a81e9b854e7f7fd5d4419cc9716d03ac2cfe023"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2382,16 +2242,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col4deb349f4205b">
-		<description>Haunted Caves (2013 Nicolas Campion)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="10881">
-				<rom name="Haunted Caves (2013 Nicolas Campion).rom" size="10881" crc="359f0ae5" sha1="4deb349f4205b8efffd4e7325b76aa00b7c4d32d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col583c25a2e2d28">
 		<description>Heist, The (U)</description>
 		<year>????</year>
@@ -2399,16 +2249,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Heist, The (U).col" size="24576" crc="c9c27f92" sha1="583c25a2e2d283fc4125273be6d318b731286845"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col11f56bac3f01d">
-		<description>Heli Fire</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="15385">
-				<rom name="Heli Fire.rom" size="15385" crc="9b891703" sha1="11f56bac3f01d4e1238639549a7035ccdda28f89"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2682,16 +2522,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="colaabca82c56bfb">
-		<description>Jump Or Die (2006 Daniel Bienvenu)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="2688">
-				<rom name="Jump Or Die (2006 Daniel Bienvenu).rom" size="2688" crc="f403fe04" sha1="aabca82c56bfb2c0587022ea87402fde75a42da9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="colb9c4b8a6d5921">
 		<description>Jumpman Junior (1984)(Epyx)[a]</description>
 		<year>????</year>
@@ -2792,26 +2622,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col50a1be08f8cd5">
-		<description>Kill Barney In Tokyo (1997 Daniel Bienvenu) [Playable Demo]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="9494">
-				<rom name="Kill Barney In Tokyo (1997 Daniel Bienvenu) [Playable Demo].rom" size="9494" crc="d905c94b" sha1="50a1be08f8cd5445ee32c1702a3d3607948867b6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col40324590797f3">
-		<description>Killer Instinct (1997 Daniel Bienvenu) [Playable Demo]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="9494">
-				<rom name="Killer Instinct (1997 Daniel Bienvenu) [Playable Demo].rom" size="9494" crc="58f10c63" sha1="40324590797f32915021cfd0d6eb4112020939bf"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cold25e70e883f5d">
 		<description>Klondike_104</description>
 		<year>????</year>
@@ -2862,16 +2672,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="colff22b90913f58">
-		<description>L'Abbaye des Morts (2019)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="L'Abbaye des Morts (2019)(CollectorVision).rom" size="131072" crc="b11a6d23" sha1="ff22b90913f58885709c93981a3d0622b01172a1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="colafa8e2f119d63">
 		<description>Lady Bug</description>
 		<year>????</year>
@@ -2902,16 +2702,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col5b1d0f3e36a2e">
-		<description>Light Grid Racing (2015)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Light Grid Racing (2015)(CollectorVision).bin" size="32768" crc="1e37ec6a" sha1="5b1d0f3e36a2eec303808acccb24ba2969326467"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="cola8b38970af1fc">
 		<description>Linking Logic (U)</description>
 		<year>????</year>
@@ -2919,16 +2709,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Linking Logic (U).col" size="16384" crc="b46635a5" sha1="a8b38970af1fc519220b2555fbfe3e3cb1e257d1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col216413aa11753">
-		<description>Lock'n Chase (2011)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="31873">
-				<rom name="Lock'n Chase (2011)(CollectorVision).rom" size="31873" crc="6bc9a350" sha1="216413aa1175392155e6424904d780d2b077f4ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2949,16 +2729,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Loco-Motion SGM (2017)(CollectorVision).rom" size="32768" crc="5b69d078" sha1="a23032064cb9a75ce769957253ebb1a48e4fcfd9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colac27b0756f729">
-		<description>Lode Runner (2002)(Steve Begin)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Lode Runner (2002)(Steve Begin).rom" size="32768" crc="a2128f74" sha1="ac27b0756f72931dc17f6b44cf7b4cfff6565634"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3159,16 +2929,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32767">
 				<rom name="Mazezam Challenge.rom" size="32767" crc="6f556b44" sha1="ede4e925757b89f7a40ed77de2ae6fd85f0d62ab"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col91ba9d9b13298">
-		<description>mecha_8</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="mecha_8.rom" size="131072" crc="53da40bc" sha1="91ba9d9b13298e8c65f0592e512020e84d99f2bc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3642,16 +3402,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col2afd54cd0e5f4">
-		<description>Nibbli Son of Nibbler</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="22308">
-				<rom name="Nibbli Son of Nibbler.rom" size="22308" crc="be4b3385" sha1="2afd54cd0e5f4f7ad13fb0e163de1ad5dfbcdcbe"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col9ee8bee2b5f4c">
 		<description>NIM (2000 Daniel Bienvenu)</description>
 		<year>????</year>
@@ -3802,16 +3552,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col2dd4d54ef119f">
-		<description>Ozma Wars</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="21625">
-				<rom name="Ozma Wars.rom" size="21625" crc="4aafdc07" sha1="2dd4d54ef119f081ffb68a518c7e80923c7258ab"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col4d724d40c389c">
 		<description>Pac-Man (1983) (Atarisoft) (Prototype)</description>
 		<year>????</year>
@@ -3839,16 +3579,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="10017">
 				<rom name="Pacar (2010 Steve Begin) [Playable Demo].rom" size="10017" crc="36b4e466" sha1="6fd2921e36dea2b39f6e0ef7b54cdf5152e48dd3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col35d2c6718562f">
-		<description>Pang (2012)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32558">
-				<rom name="Pang (2012)(CollectorVision).rom" size="32558" crc="18aced43" sha1="35d2c6718562ff094e32b076e32ff97bfbb496b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3909,16 +3639,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Pink Panther.rom" size="131072" crc="a9d82b08" sha1="7c6cd4a4fb2e8f4d1970efee5e1b98e19ae16b1d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cola26399c4359e1">
-		<description>Pippols (2014)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Pippols (2014)(CollectorVision).bin" size="32768" crc="28d04775" sha1="a26399c4359e18abaa5b796368a3b18c2ec729c1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4072,16 +3792,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col088125ea4dcda">
-		<description>Puzzli</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32061">
-				<rom name="Puzzli.rom" size="32061" crc="58f53b6e" sha1="088125ea4dcda47374b93cacdcbc3d06f4524395"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col88b4a564ca9f2">
 		<description>PV2000 (2012 Nicolas Campion)</description>
 		<year>????</year>
@@ -4199,16 +3909,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16512">
 				<rom name="Reversi Demo (Daniel Bienvenu)(2001)(PD).rom" size="16512" crc="bbef9e8f" sha1="ca2dded3b5881bafe8bbc4ab3ee7fb57e04e4c0b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col07700ccb5b1f1">
-		<description>Rip Cord (CollectorVision)(2017)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Rip Cord (CollectorVision)(2017).rom" size="32768" crc="60312b4e" sha1="07700ccb5b1f18e978695a0290ee1053f863a84e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4509,16 +4209,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Search for the Stolen Crown Jewels 3 (2013)(Phillipp Klaus Krause).rom" size="32768" crc="1f3981fc" sha1="24232525985959f413972c491f92d7b0ab1fca5c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col7102fd7a776ec">
-		<description>Search for the stolen Crown Jewels 3.0 Demo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="31229">
-				<rom name="Search for the stolen Crown Jewels 3.0 Demo.rom" size="31229" crc="594b1235" sha1="7102fd7a776ec16c4dd93b6e4caf729e6db4156f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5002,16 +4692,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="colebb8fca04ec42">
-		<description>Spectar (AtariAge)(2002)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Spectar (AtariAge)(2002).rom" size="32768" crc="a3aaae47" sha1="ebb8fca04ec429413ba6185cd7344d0cf79dacdc"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col8c83391f512d2">
 		<description>Spectron (1983)(Spectravideo)</description>
 		<year>????</year>
@@ -5182,16 +4862,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col7f8c255f1996f">
-		<description>Starcom</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="28407">
-				<rom name="Starcom.rom" size="28407" crc="02810be5" sha1="7f8c255f1996f645530dd84b40b71fc8f1e16545"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="colbaf380459ac26">
 		<description>Starship Defence Force (CollectorVision)(2015)</description>
 		<year>????</year>
@@ -5289,16 +4959,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="10496">
 				<rom name="sudoku_no_sound_v1.rom" size="10496" crc="12144312" sha1="0124ba683340188c7a9a89122af7a54db07e1edb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col499c9746f0dac">
-		<description>sudoku_no_sound_v2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="10496">
-				<rom name="sudoku_no_sound_v2.rom" size="10496" crc="2aa3abb2" sha1="499c9746f0dacab59a3fb23f80169df34cfbb91a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5542,16 +5202,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col86963e9064a87">
-		<description>Tank Mission (CollectorVision)(2017)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Tank Mission (CollectorVision)(2017).rom" size="262144" crc="d0f37969" sha1="86963e9064a87691e410dda6e08ecb96f677c188"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col1ce1db7abe6bf">
 		<description>Tank Mission</description>
 		<year>????</year>
@@ -5689,16 +5339,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="3233">
 				<rom name="Tic Tac Toe (1996)(Norman Nithman)(PD).rom" size="3233" crc="9f22cd12" sha1="811f35cca75ff3fcd180f8fe3d06f764ab0e1fb6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col3fe5477166f18">
-		<description>Tic Tac Toe (1996)(Norman Nithman)(PD)[a]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="3220">
-				<rom name="Tic Tac Toe (1996)(Norman Nithman)(PD)[a].rom" size="3220" crc="969d77c8" sha1="3fe5477166f1809e50754bd3d153e10764c3ad4e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5869,16 +5509,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Vampire (1982)(Exidy)[h].rom" size="16384" crc="3da70b52" sha1="a3a1cfc9fcce2d963b81a4700f3b4449c328c971"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col1feea815f254b">
-		<description>Vanguard (2019)(CollectorVision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="131072">
-				<rom name="Vanguard (2019)(CollectorVision).rom" size="131072" crc="a7a8d25e" sha1="1feea815f254b9c165397d92de4dc4f0ecbbf9c7"/>
 			</dataarea>
 		</part>
 	</software>
