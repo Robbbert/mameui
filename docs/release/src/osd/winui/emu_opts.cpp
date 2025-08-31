@@ -488,7 +488,7 @@ void ui_save_ini()
 void SetDirectories(windows_options &o)
 {
 	emu_set_value(o, OPTION_PLUGINDATAPATH, GetEmuPath());
-	//emu_set_value(o, OPTION_MEDIAPATH, dir_get_value(2));
+	emu_set_value(o, OPTION_MEDIAPATH, dir_get_value(2));
 	emu_set_value(o, OPTION_HASHPATH, dir_get_value(3));
 	emu_set_value(o, OPTION_SAMPLEPATH, dir_get_value(4));
 	emu_set_value(o, OPTION_INIPATH, dir_get_value(7));

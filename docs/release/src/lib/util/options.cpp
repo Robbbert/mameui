@@ -1329,6 +1329,7 @@ void core_options::simple_entry::revert(int priority_hi, int priority_lo)
 }
 
 // MESSUI
+#if 0
 void core_options::parse_parent_file(util::core_file &inifile, int priority, bool ignore_unknown_options, bool always_override)
 {
 	std::ostringstream error_stream;
@@ -1386,6 +1387,62 @@ void core_options::parse_parent_file(util::core_file &inifile, int priority, boo
 		*temp = 0;
 
 		// find our entry
+		entry::shared_ptr curentry = get_entry(optionname);
+		if (!curentry)
+		{
+			if (!ignore_unknown_options)
+			{
+				condition = std::max(condition, condition_type::WARN);
+				util::stream_format(error_stream, "Warning: unknown option in INI: %s\n", optionname);
+			}
+			continue;
+		}
+
+		// set the new data
+		do_set_value(*curentry, trim_spaces_and_quotes(optiondata), priority, error_stream, condition, true);
+	}
+}
+#endif
+void core_options::parse_parent_file(util::core_file &inifile, int priority, bool ignore_unknown_options, bool always_override)
+{
+	std::ostringstream error_stream;
+	condition_type condition = condition_type::NONE;
+
+	// loop over lines in the file
+	char buffer[4096] {};
+	while (inifile.gets(buffer, std::size(buffer)))
+	{
+		// process name
+		std::string oname = buffer;
+		if (oname.empty())
+			continue;
+		size_t osize = oname.find_first_of(" =\t");
+
+		// validate name length
+		if ((osize < 2) || (osize > 30))
+			continue;
+
+		// keep option name only
+		oname.erase(osize);
+
+		// process data
+		std::string odata = buffer;
+		if (osize < odata.length())
+			odata.erase(0,osize);
+		else
+			odata = " ";
+
+		// name to lowercase
+		std::transform(oname.begin(),oname.end(),oname.begin(), [] (unsigned char f) { return std::tolower(f); });
+
+		// only want swpath, discard remainder of file
+		if (oname != "swpath")
+			continue;
+
+		// find our entry
+		const char *optionname = oname.c_str();
+		const char *optiondata = odata.c_str();
+		//printf("option: %s == %s\n",optionname,optiondata);
 		entry::shared_ptr curentry = get_entry(optionname);
 		if (!curentry)
 		{

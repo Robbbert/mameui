@@ -35,7 +35,7 @@ const DIRECTORYINFO g_directoryInfo[] =
 {
 	{ "ROMs",                  nullptr,            nullptr,            2,  true,  DIRDLG_ROMS },
 	{ "Samples",               nullptr,            nullptr,            4,  true,  DIRDLG_SAMPLES },
-	{ "Software File Base",    nullptr,            nullptr,            13, false, DIRDLG_SW }, // core cannot handle multiple path, even though we can.
+	{ "Loose Software Root",   nullptr,            nullptr,            13, false, DIRDLG_SW }, // core cannot handle multiple path, even though we can.
 	{ "Artwork",               nullptr,            nullptr,            5,  true, 0 },
 	{ "Artwork Previews",      nullptr,            nullptr,            32, true, 0 },
 	{ "Bosses",                nullptr,            nullptr,            33, true, 0 },

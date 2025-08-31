@@ -1785,9 +1785,9 @@ BOOL MessCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 static LPCSTR s_tabs[] =
 {
-	"picker\0SW Files",
+	"picker\0Loose SW",
 	"MVIEW\0Media View",
-	"softlist\0SW Items",
+	"softlist\0SW List",
 };
 
 
@@ -1957,10 +1957,10 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 	}
 
 	if (pMViewInfo->pCallbacks->pfnGetOpenFileName)
-		AppendMenu(hMenu, MF_STRING, 1, TEXT("Mount File..."));
+		AppendMenu(hMenu, MF_STRING, 1, TEXT("Mount Loose File..."));
 
 	if (passes_tests && pMViewInfo->pCallbacks->pfnGetOpenItemName)
-		AppendMenu(hMenu, MF_STRING, 4, TEXT("Mount Item..."));
+		AppendMenu(hMenu, MF_STRING, 4, TEXT("Mount SW-List Item..."));
 
 	if (pEnt->dev->is_creatable())
 	{
