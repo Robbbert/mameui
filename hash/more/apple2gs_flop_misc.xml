@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 139 -->
+<!-- Number of items in this list = 171 -->
 <softwarelist name="apple2gs_flop_misc" description="apple2gs_flop_misc loose roms">
 	<software name="appd3bb3c875e1be">
 		<description>(demo)Modulae</description>
@@ -9,6 +9,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819264">
 				<rom name="(demo)Modulae.2mg" size="819264" crc="9f03ce1d" sha1="d3bb3c875e1beaf23457e1c6cdc8ee1ec0852e64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app892943d7537b9">
+		<description>(demo)Summer 1990 (19xx)(Corrosive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="(demo)Summer 1990 (19xx)(Corrosive).2mg" size="819264" crc="39288241" sha1="892943d7537b95b1a3abc9f81e4ff5e9721b2038"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1379,6 +1389,316 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="143360">
 				<rom name="ruptus.dsk" size="143360" crc="d879a0e2" sha1="331eecc0cae0e22d090b09002fd24d7f924af428"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appc1abac020d1be">
+		<description>Sensei (19xx)(-)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Sensei (19xx)(-)[b2].2mg" size="819264" crc="3f445b93" sha1="c1abac020d1becac9a29f381a964126f2312c589"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appaa0cf07ce7477">
+		<description>Sensei (19xx)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Sensei (19xx)(-)[b].2mg" size="819264" crc="cff23b17" sha1="aa0cf07ce7477b39ebd522108cbf861b04c74b4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3d8c0ff2a623b">
+		<description>Serve And Volley (1988)(Accolade)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Serve And Volley (1988)(Accolade)[b2].2mg" size="819264" crc="b0caae54" sha1="3d8c0ff2a623bd1d684cf7defb7f2188853884a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app360730b623a66">
+		<description>Serve And Volley (1988)(Accolade)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Serve And Volley (1988)(Accolade)[b].2mg" size="819271" crc="d293ac1a" sha1="360730b623a66a4b34b96d5b7d07eedd846baf85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app01a3bc056831f">
+		<description>Shanghai (1987)(Activision)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Shanghai (1987)(Activision)[cr].2mg" size="819264" crc="de0de2a7" sha1="01a3bc056831f488269683e0fb3f72425324fdec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appad9c66b01bd3c">
+		<description>Silpheed (1989)(Sierra)(Disk 1 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Silpheed (1989)(Sierra)(Disk 1 of 2)[cr].2mg" size="819264" crc="2a2b46ba" sha1="ad9c66b01bd3c9b8220ec8015dc9979c165612fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app32305a682c137">
+		<description>Silpheed (1989)(Sierra)(Disk 2 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819273">
+				<rom name="Silpheed (1989)(Sierra)(Disk 2 of 2)[a].2mg" size="819273" crc="7f60ffbd" sha1="32305a682c1375c7983a3afaf8e079ef24c99850"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appdcc8d6fad6c95">
+		<description>Silpheed (1989)(Sierra)(Disk 2 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Silpheed (1989)(Sierra)(Disk 2 of 2)[cr].2mg" size="819264" crc="a1140834" sha1="dcc8d6fad6c95004bb50e4c872192bb9b1304798"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app32075358a3143">
+		<description>Sinbad And The Throne of The Falcon (1990)(Cinemaware)(Disk 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Sinbad And The Throne of The Falcon (1990)(Cinemaware)(Disk 1 of 2).2mg" size="819264" crc="865996d5" sha1="32075358a3143d42278252f96782582da5c7d5b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5fbf8638f418a">
+		<description>Sinbad And The Throne of The Falcon (1990)(Cinemaware)(Disk 1 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Sinbad And The Throne of The Falcon (1990)(Cinemaware)(Disk 1 of 2)[b].2mg" size="819264" crc="7efedb2b" sha1="5fbf8638f418a21c5fd43ec06ed639126aa8a63d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appbaba4ca6885dc">
+		<description>Sinbad And The Throne of The Falcon (1990)(Cinemaware)(Disk 2 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Sinbad And The Throne of The Falcon (1990)(Cinemaware)(Disk 2 of 2)[b].2mg" size="819264" crc="fbfe7bca" sha1="baba4ca6885dc54635917b666fe7ac2fef3bcd27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app776c78d962d46">
+		<description>skate or die v1.0 iigs (trex crack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="skate or die v1.0 iigs (trex crack).2mg" size="819264" crc="466b7067" sha1="776c78d962d46b6b20ca464bbbed2e2f746f4099"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app83c8d5990b348">
+		<description>Solitaire Royale (1990)(Spectrum Holobyte)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Solitaire Royale (1990)(Spectrum Holobyte)[a].2mg" size="819264" crc="5da65e05" sha1="83c8d5990b34806d8a6f2f6f60608c98600d4405"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb228498ec0931">
+		<description>Space Quest (1987)(Sierra)(Disk 1 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Space Quest (1987)(Sierra)(Disk 1 of 2)[b].2mg" size="819264" crc="75df6c94" sha1="b228498ec0931b693446406e6721a73ccb2e7c74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appd0e3968f6bcea">
+		<description>Space Quest (1987)(Sierra)(Disk 2 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Space Quest (1987)(Sierra)(Disk 2 of 2)[b].2mg" size="819264" crc="529e8615" sha1="d0e3968f6bcea1c9e9631a7877aeb4b60d408286"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3dc3ab0133392">
+		<description>Space Quest II (1988)(Sierra)(Disk 1 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Space Quest II (1988)(Sierra)(Disk 1 of 2)[b].2mg" size="819264" crc="f0c168e7" sha1="3dc3ab0133392313606851ddfecfc9927166ffb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appa163a1438fd8c">
+		<description>Space Quest II (1988)(Sierra)(Disk 2 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Space Quest II (1988)(Sierra)(Disk 2 of 2)[b].2mg" size="819264" crc="543ff873" sha1="a163a1438fd8ceaf2c334f8eb16d8d92bd767b96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app7417308fb761b">
+		<description>Space Shark (19xx)(-)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819288">
+				<rom name="Space Shark (19xx)(-)[b2].2mg" size="819288" crc="898a8f6f" sha1="7417308fb761be2a4ab316937ed59ca47ebd443d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app556c91d938452">
+		<description>Space Shark (19xx)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Space Shark (19xx)(-)[b].2mg" size="819264" crc="1dd9e9af" sha1="556c91d9384527c1000ed73de8aca2db0d7730c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app13aaf38216002">
+		<description>Strip Poker II (1987)(Artworx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Strip Poker II (1987)(Artworx).2mg" size="819264" crc="797a57de" sha1="13aaf38216002a27d6db70a0152ead1df6d9c396"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appca78ef889957b">
+		<description>Superstar Ice Hockey (1988)(Mindscape)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Superstar Ice Hockey (1988)(Mindscape)[cr].2mg" size="819264" crc="1236d5d9" sha1="ca78ef889957bf6b53d5ed4dbe25dd78d0b0849b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app24f981a6e9f06">
+		<description>Sword of Sodan (1989)(Visionware)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Sword of Sodan (1989)(Visionware).2mg" size="819264" crc="c0745ba9" sha1="24f981a6e9f068571f23b13c0b18d53b0de7bbdd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8e87e44a0483f">
+		<description>System 6.0.1 (1993)(Apple)(Disk 1 of 7)(Install)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 1 of 7)(Install).2mg" size="819264" crc="f718e50e" sha1="8e87e44a0483f053a99514e7643e5210daac48fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app7cb3091cafd59">
+		<description>System 6.0.1 (1993)(Apple)(Disk 1 of 7)(Install)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 1 of 7)(Install)[a].2mg" size="819264" crc="aff44a40" sha1="7cb3091cafd5937dab0a514265728a67cd5c1a3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app4febeb0866258">
+		<description>System 6.0.1 (1993)(Apple)(Disk 2 of 7)(System)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 2 of 7)(System).2mg" size="819264" crc="b22ca59e" sha1="4febeb0866258ac8974b83f4c813c0f304da89f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app9230c98f03db8">
+		<description>System 6.0.1 (1993)(Apple)(Disk 2 of 7)(System)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 2 of 7)(System)[a].2mg" size="819264" crc="80656b68" sha1="9230c98f03db8a478d9cd817f4d3cf610c31f639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5ff1ac49d46d5">
+		<description>System 6.0.1 (1993)(Apple)(Disk 3 of 7)(System Tools 1)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 3 of 7)(System Tools 1)[a].2mg" size="819264" crc="ade9da4f" sha1="5ff1ac49d46d5e7adf55f7d80655957e7bd85da4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6467a5eafc74e">
+		<description>System 6.0.1 (1993)(Apple)(Disk 4 of 7)(System Tools 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 4 of 7)(System Tools 2)[a].2mg" size="819264" crc="513d9991" sha1="6467a5eafc74ecad9ffd1e8e0fe58fde88a1a5a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appd4c6e404b7a84">
+		<description>System 6.0.1 (1993)(Apple)(Disk 5 of 7)(Fonts)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 5 of 7)(Fonts)[a].2mg" size="819264" crc="1f4febfa" sha1="d4c6e404b7a845fef75367eddd7d780054df72f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8a59b8332e738">
+		<description>System 6.0.1 (1993)(Apple)(Disk 6 of 7)(Synth Lab)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 6 of 7)(Synth Lab)[a].2mg" size="819264" crc="ddbd96d4" sha1="8a59b8332e73859f652a8d93ca6764655ccdd46c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appda343039791ec">
+		<description>System 6.0.1 (1993)(Apple)(Disk 7 of 7)(Apple II Setup)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="System 6.0.1 (1993)(Apple)(Disk 7 of 7)(Apple II Setup)[a].2mg" size="819264" crc="f6f4f53b" sha1="da343039791ecfc7bed5dd90e45cfc7e75a45998"/>
 			</dataarea>
 		</part>
 	</software>
