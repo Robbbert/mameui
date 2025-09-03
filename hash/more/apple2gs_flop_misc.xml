@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 171 -->
+<!-- Number of items in this list = 286 -->
 <softwarelist name="apple2gs_flop_misc" description="apple2gs_flop_misc loose roms">
 	<software name="appd3bb3c875e1be">
 		<description>(demo)Modulae</description>
@@ -49,6 +49,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819264">
 				<rom name="4th &amp; Inches (1987)(Accolade)(Disk 2 of 2).2mg" size="819264" crc="7cb5a5a4" sha1="77cd9331dd0e44cb41c8bfad3d7a7f93b902dfb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app213675a44ff01">
+		<description>A2DeskTop_800k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="A2DeskTop_800k.2mg" size="819264" crc="160a1a97" sha1="213675a44ff0119cdc55da1a2013842677d9c03b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -129,6 +139,846 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="143360">
 				<rom name="antiair.dsk" size="143360" crc="824a9729" sha1="3bfb54f5a8e67e8acacae6c5f79b865a393f967d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app73f1452ae1207">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="e48d1089" sha1="73f1452ae120705167e56d9b37cd43e413161305"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app9600d033ba149">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="884abf92" sha1="9600d033ba14910733c040640e12aa050d96abb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app12c440610750f">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="7a1d300f" sha1="12c440610750ff08caf5c92859f28effe49620b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0f4318b50cb54">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="9319ab12" sha1="0f4318b50cb54a7f45d764a1ecb2bde26d20e4bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appc4c391aaaf6d8">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="63ff8c1f" sha1="c4c391aaaf6d84dc081eed1b5a720c8aa12df795"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app695fb250291b8">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="8323d4c6" sha1="695fb250291b809bea9a0d501c86c1d4ad04e9a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app828340974586b">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="75251979" sha1="828340974586b70eedf95e132e158f6f6250c3ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app541263bf3cbdf">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="f91da027" sha1="541263bf3cbdfc91723893e85a4caac4d8f5c91e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2bcbff673da2a">
+		<description>Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha1 (2023-10-01)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="5bb5d80e" sha1="2bcbff673da2a7da66f83ca33ab23f71de6ab03b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app78a71b1d17d3c">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="31f8f428" sha1="78a71b1d17d3ca15551b9275950bb9891b88dc03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appfb200974a4358">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="1b8a2de5" sha1="fb200974a43587072884041f648d10b00385689c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3318893761536">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="9a78183f" sha1="33188937615362b661076a30439dab29eaa45d6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5dc97c0f943e6">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="bf2ed350" sha1="5dc97c0f943e66803feff38fdc8ed0797293212f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app85e4926920a48">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="c9c8a76d" sha1="85e4926920a48672e4a1f792d0ca7a924580c5b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appd85a65504e547">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="fd288bcb" sha1="d85a65504e5470d8559e984c7c9afee1cd95030a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app9e3fdc5f57a43">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="1abb3652" sha1="9e3fdc5f57a43631a8374b7eb17cbb4fa52fec7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb892f9764fee5">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="8d47e433" sha1="b892f9764fee555c176ccd37fd0deab46fbb4e8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appaa5778973efbc">
+		<description>Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha2 (2023-11-02)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="8d178958" sha1="aa5778973efbce9a7ccaa695f3c00454c3fb92ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6e48dede1eb01">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="409aad0f" sha1="6e48dede1eb019f5aae679dbaaea23a11747903e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app246f092e4d3a5">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="6c487528" sha1="246f092e4d3a5c36ca3bedf729af9a67dd0e0a1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appae50c4103a8e1">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="a7b07cf9" sha1="ae50c4103a8e17d9a9ba1e451d42306eb264d4eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app7bb276b8bba36">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="c32c2979" sha1="7bb276b8bba36a974353efbe67596753fbf8bd4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app4c65036294890">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="006a6667" sha1="4c65036294890a9675207b7ea388f4fd44b89f5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb67af0aa942c2">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="d927b775" sha1="b67af0aa942c2560214bd1b6b248bde03c927709"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appa6a81626ec50d">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="fe50d524" sha1="a6a81626ec50dbefabc4362eb2726108259b6447"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app050978df37ae9">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="895b6c0d" sha1="050978df37ae92eae7a6518b4df8f2e38fd2ab82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app1a34a21d8396f">
+		<description>Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha3 (2023-12-02)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="40ee7152" sha1="1a34a21d8396fe6945c430cb76aaf525d895834d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app694192cf98cca">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="2e481285" sha1="694192cf98cca7b98b59e165fced6e388428c6ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb1365e4cbee44">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="8d4c80b2" sha1="b1365e4cbee44eae03b2fb999e225ab6053c9d96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf623a3ab3c1e0">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="e9b7a117" sha1="f623a3ab3c1e065d64b3f77f4d09ded6d3f02bb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3295a94275b1b">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="23173884" sha1="3295a94275b1b854af788b94fe355389895cf05d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appbd6532f5db589">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="068730b9" sha1="bd6532f5db589c59b0d206fd94f2a1e7739e92fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2ad328e34d154">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="ded186b3" sha1="2ad328e34d154bd84d8ce508c3a9a7583ea5a19c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app08bf203901480">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="b944e067" sha1="08bf20390148030900829c42418038b3fcc41383"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app94e901bfc2fbe">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="72c10e32" sha1="94e901bfc2fbe01d5b4d81a434365962117dfa94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app39344567431a7">
+		<description>Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha4 (2024-01-01)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="7ed04865" sha1="39344567431a78420801bc5f78f83d3ed299b162"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appc641c35df78f2">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="fd4ba9de" sha1="c641c35df78f2068df815171bab5a85c970f3c87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app391e55e395b50">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="72129799" sha1="391e55e395b502fa2d2a09d466ed012b5964a156"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app43156966a4791">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="eebccb7c" sha1="43156966a47916f4e60cb8abc2a6e7eac8d7dde0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6c85e7914a5ad">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="04d10405" sha1="6c85e7914a5ada1a55be225e753ff1364f327e4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app9c94c94782b13">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="969d5617" sha1="9c94c94782b136a3b915c4fdd3a558f490d5df2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app78bf892e8da44">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="25a7ca7b" sha1="78bf892e8da44fbfcc40784cbca2ec483f4aa052"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app32649dffe0ade">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="046412e0" sha1="32649dffe0ade11a9f7a7a6acf233f0f1c0b7743"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app076659b6e01de">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="b95f185e" sha1="076659b6e01deae504d57b93c6f912007753af88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app86adcdb2bbe03">
+		<description>Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha6 (2024-02-04)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="0255c84c" sha1="86adcdb2bbe03d58abd80a3535c1954e7ce41a6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0344bdb31826f">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="6ed389cb" sha1="0344bdb31826fb8bf035fdfd1fd5c1b2b7f1b1cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appac87813242b81">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="55154718" sha1="ac87813242b81c1abe600539bdc47f341a9a365b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app144e2977a9f9e">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="143a6b2d" sha1="144e2977a9f9e1835bf0f01be4a6b79771d4de88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app07692cf21bd45">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="62619fc6" sha1="07692cf21bd45dd01bcaf614badc78243219d9ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf594d03e06574">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="1f0f45c1" sha1="f594d03e06574958baf35ec4ea2b19c3f8522027"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf357f1bc76c3f">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="022fc0f3" sha1="f357f1bc76c3f05fdbbcb8e5522995d7622bfe65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app181a847c9e124">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="8368a739" sha1="181a847c9e124faafcbdaa0402db91a3aea569eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app4fa5ed0afd8a5">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="8c2dfb1f" sha1="4fa5ed0afd8a5576c7b776b32e670e7329cd5142"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app47f70ed863884">
+		<description>Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha7 (2024-03-01)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="05c1b232" sha1="47f70ed8638846ca183c757df1823971fde20972"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app82fbdacf748dc">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="eb8fdc5c" sha1="82fbdacf748dc5e09ceb2932b84c22146392e496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app92e1b83d3b5dc">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="2a9650a8" sha1="92e1b83d3b5dc2da90a8ddc1f674bb0418cc179c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app513db76956ef5">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="ca064bd1" sha1="513db76956ef5347a66959fdd37eb9b84e76c6be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe28cb4dd80728">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="2cd2135f" sha1="e28cb4dd8072837edea81311aafd18bc9751fb35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app44e0a67bfac4b">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="dcfebe7f" sha1="44e0a67bfac4b3ce49f27a2ca59a5a861f742e24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app69abd422e2773">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="ff5fd629" sha1="69abd422e2773f67cf11d75fa66be5ecf4f5181e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app77b4535a8be70">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="cf4fb1cb" sha1="77b4535a8be7030b9953a677b4508d067e0bc827"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app517735a958c60">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="e5b1aa58" sha1="517735a958c60d3e7b21499221e85e9f1c678753"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb7c2a5262672e">
+		<description>Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha8 (2024-04-01)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="8e75ae16" sha1="b7c2a5262672ec71e935f9fd70b29dacd3cb2031"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5bda5cdb9cfc1">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(alpha).2mg" size="819264" crc="176b81d8" sha1="5bda5cdb9cfc1e0a68c744e4642a05c40dd049e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe92fafdb9e911">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(da)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(da)(alpha).2mg" size="819264" crc="85d9af53" sha1="e92fafdb9e911d9e35abbd9e668bc4657a7da330"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2b342965412ee">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(de)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(de)(alpha).2mg" size="819264" crc="62291b65" sha1="2b342965412ee80a7af4725234c0f17fb6ed1564"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app755a33fed1d40">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(es)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(es)(alpha).2mg" size="819264" crc="a860592d" sha1="755a33fed1d40527af9a7ee0cffaf80bbded6d0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app247d36f40518d">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(fr)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(fr)(alpha).2mg" size="819264" crc="2ed255e4" sha1="247d36f40518d15e3a6ce83070b103a1def90bcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appdceec7a3c9ad0">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(it)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(it)(alpha).2mg" size="819264" crc="03e82769" sha1="dceec7a3c9ad0e8a8f39fc4bae0bb27ebcd65e41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app24e4177fd603f">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(nl)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(nl)(alpha).2mg" size="819264" crc="375a6051" sha1="24e4177fd603f3311db2876a9ad5c95b73ae90da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf3bc98dc38a75">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(pt)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(pt)(alpha).2mg" size="819264" crc="d1e517c3" sha1="f3bc98dc38a75b5f57e1b33662dcbe822bd6ccfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5bfc10d253268">
+		<description>Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(sv)(alpha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-alpha9 (2024-05-05)(Apple II DeskTop Team)(IIE)(sv)(alpha).2mg" size="819264" crc="53cf44c5" sha1="5bfc10d253268c6dd8121aaf0415071563e01841"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6b1ded89abefa">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(beta).2mg" size="819264" crc="cf971b2d" sha1="6b1ded89abefa093c6e9193eed552fbd9f85574a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app21c1db6e032b0">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(da)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(da)(beta).2mg" size="819264" crc="3da27258" sha1="21c1db6e032b0644a2fcce1ef9ce598c2024fbb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2caabeca76136">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(de)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(de)(beta).2mg" size="819264" crc="0778fe63" sha1="2caabeca76136036218600b31181dd229a380512"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appd9caee7118297">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(es)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(es)(beta).2mg" size="819264" crc="17ab61cc" sha1="d9caee7118297fefaeb6a874b5cadc35e767a5cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app1c62499a89d33">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(fr)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(fr)(beta).2mg" size="819264" crc="95c90b75" sha1="1c62499a89d338693d4d0c462c8c4d9cd3cdb74f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app44d13ddda32a6">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(it)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(it)(beta).2mg" size="819264" crc="19df0e45" sha1="44d13ddda32a6e86e761a6d97eabda6dfb6a65cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8bed3c9887c0b">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(nl)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(nl)(beta).2mg" size="819264" crc="72c4d781" sha1="8bed3c9887c0b49a8ef2aef77dac877d8d1dead9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app729eb97a10258">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(pt)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(pt)(beta).2mg" size="819264" crc="df4f0ae8" sha1="729eb97a10258a8a3a6a015b78077289e1f73063"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2e8ff7fbdfb47">
+		<description>Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(sv)(beta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(sv)(beta).2mg" size="819264" crc="f0b8716b" sha1="2e8ff7fbdfb472bc9fb015ee6f5ffa4bc7befc44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appedb144ed79b06">
+		<description>AppleWorks v3.0 (1989)(CLARIS)(US)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="AppleWorks v3.0 (1989)(CLARIS)(US).2mg" size="819264" crc="2c0e82bb" sha1="edb144ed79b0695f0610d99a58908634ed047bdd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appd537fe607d41a">
+		<description>AppleWorks v5.0 (1993)(Quality Computers)(Disk 1 of 2)(Installer)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="AppleWorks v5.0 (1993)(Quality Computers)(Disk 1 of 2)(Installer)[128K].2mg" size="819264" crc="65e8954e" sha1="d537fe607d41ae1dde36cddb659408f3b132aea9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app75f6b77cb81bf">
+		<description>AppleWorks v5.0 (1993)(Quality Computers)(Disk 2 of 2)(Program)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="AppleWorks v5.0 (1993)(Quality Computers)(Disk 2 of 2)(Program)[128K].2mg" size="819264" crc="018fc0d3" sha1="75f6b77cb81bfd8446db36fd23d37338b2d98ce1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -459,6 +1309,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819277">
 				<rom name="Crystal Quest (1989)(Casady And Greene)[a].2mg" size="819277" crc="ee71588c" sha1="84aa7a4c492e08cade39052a39dc6ce326eddaac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app7a407e41bc2d4">
+		<description>Death Sword (1987)(Epyx)(IIE)(US)[128K][Maxx Out! series]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Death Sword (1987)(Epyx)(IIE)(US)[128K][Maxx Out! series].2mg" size="819264" crc="6c20e3b3" sha1="7a407e41bc2d45637d05934b613152bb27827990"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1702,6 +2562,256 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="appbeb3953f87f7e">
+		<description>Task Force (1990)(Visual Concepts)(Disk 1 of 2)[cr][t][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Task Force (1990)(Visual Concepts)(Disk 1 of 2)[cr][t][a].2mg" size="819264" crc="52c43381" sha1="beb3953f87f7ec6a418371fe4fbe0c7b8a4c13ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf8f346eb24b0f">
+		<description>Task Force (1990)(Visual Concepts)(Disk 2 of 2)[cr][t][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Task Force (1990)(Visual Concepts)(Disk 2 of 2)[cr][t][a].2mg" size="819264" crc="34a0a273" sha1="f8f346eb24b0ff84985a0a73c4e792e25c7e491a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app4de25e5222fdc">
+		<description>Tass Times In Tonetown (1986)(Interplay - Brainwave)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Tass Times In Tonetown (1986)(Interplay - Brainwave)[a].2mg" size="819264" crc="bbc8add4" sha1="4de25e5222fdc0ac88362c5bfea9a3bb6f3d605c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5e42b6f5ed46f">
+		<description>Test Drive II - The Duel (1989)(Accolade)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819273">
+				<rom name="Test Drive II - The Duel (1989)(Accolade).2mg" size="819273" crc="6a5d7430" sha1="5e42b6f5ed46f2fd45b9cbaff3fba7977bbfad62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5be96ee3322aa">
+		<description>Thexder (1987)(Sierra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Thexder (1987)(Sierra).2mg" size="819271" crc="8d763708" sha1="5be96ee3322aa90cda523a087cae2b158e7578d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appa8f1330b65fc9">
+		<description>Thexder (1987)(Sierra)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Thexder (1987)(Sierra)[a].2mg" size="819271" crc="6a1e97c1" sha1="a8f1330b65fc9f52126d03dd138271c7c0095942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appfd0711d16b80d">
+		<description>Three Stooges, The (1989)(Cinemaware)(Disk 1 of 2)[cr][b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Three Stooges, The (1989)(Cinemaware)(Disk 1 of 2)[cr][b2].2mg" size="819264" crc="6652300a" sha1="fd0711d16b80d56ed5b9888a7c3d6281d93698b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app84dbef35fc20b">
+		<description>Three Stooges, The (1989)(Cinemaware)(Disk 2 of 2)[cr][b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Three Stooges, The (1989)(Cinemaware)(Disk 2 of 2)[cr][b2].2mg" size="819264" crc="8e3c4561" sha1="84dbef35fc20b015274e10d7d715bf42f98cde35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app123394b021e29">
+		<description>Tomahawk (1987)(Datasoft)(Disk 1 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Tomahawk (1987)(Datasoft)(Disk 1 of 2)[b].2mg" size="819264" crc="0ea08ba7" sha1="123394b021e29a5f0405bd6207c6fe2558a29be7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appc0f87a42b2e3e">
+		<description>Tomahawk (1987)(Datasoft)(Disk 2 of 2)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Tomahawk (1987)(Datasoft)(Disk 2 of 2)[b].2mg" size="819264" crc="9b2bd3c1" sha1="c0f87a42b2e3eed09af3fbff27c48822507d7658"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app06eeea56418e4">
+		<description>Tour of The Apple IIGS (demo) (1989)(Apple)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Tour of The Apple IIGS (demo) (1989)(Apple).2mg" size="819264" crc="8011b0ad" sha1="06eeea56418e407424a7dab4a0932048dbb64812"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6642e1d4c7953">
+		<description>Tower of Myraglen, The (1987)(PBI)(Disk 1 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Tower of Myraglen, The (1987)(PBI)(Disk 1 of 2)[cr].2mg" size="819264" crc="a037a067" sha1="6642e1d4c79538e1b98a02d6a782a847bbb0bd36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app524fc6cde0d1f">
+		<description>Tower of Myraglen, The (1987)(PBI)(Disk 2 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Tower of Myraglen, The (1987)(PBI)(Disk 2 of 2)[a].2mg" size="819264" crc="5ecdb38f" sha1="524fc6cde0d1f0a7bb85717d29f782a8ffe9ab21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app17a8675f265dd">
+		<description>transylvania (19xx)(merit software - polarware)(disk 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819288">
+				<rom name="transylvania (19xx)(merit software - polarware)(disk 1 of 2).2mg" size="819288" crc="4195fa6e" sha1="17a8675f265ddbc9aab33f625d6c28d3a03d7491"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3f3aecf922aa6">
+		<description>transylvania (19xx)(merit software - polarware)(disk 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819288">
+				<rom name="transylvania (19xx)(merit software - polarware)(disk 2 of 2).2mg" size="819288" crc="ac5608cb" sha1="3f3aecf922aa6a8738b476e8749ac7983e9f4f7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app80b8d34b06fa4">
+		<description>Triango (1988)(California Dreams)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819266">
+				<rom name="Triango (1988)(California Dreams)[b].2mg" size="819266" crc="071bcc41" sha1="80b8d34b06fa41478c6705518f63ffaa1baf6efb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app617ca6510dd26">
+		<description>Tunnels of Armageddon (1989)(California Dreams)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Tunnels of Armageddon (1989)(California Dreams)[a].2mg" size="819271" crc="761c438c" sha1="617ca6510dd26eb1fc2caa10bf24991c46870e93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe94bbc5981e5c">
+		<description>Tunnels of Armageddon (1989)(California Dreams)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Tunnels of Armageddon (1989)(California Dreams)[b].2mg" size="819264" crc="064f3fdc" sha1="e94bbc5981e5c8531cd7691fcb5c1a65cb61d2c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app975a86b9dd071">
+		<description>Vegas Gambler (1988)(California Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Vegas Gambler (1988)(California Dreams).2mg" size="819271" crc="f379c752" sha1="975a86b9dd0714d5293d0e53451021d483ceaf0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appded96afb3a737">
+		<description>War In Middle Earth (1989)(Melbourne House)(Disk 1 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="War In Middle Earth (1989)(Melbourne House)(Disk 1 of 2)[cr].2mg" size="819264" crc="58d4b481" sha1="ded96afb3a737d3a99d78c1565ff9abc2f8463e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf849639474c5d">
+		<description>War In Middle Earth (1989)(Melbourne House)(Disk 2 of 2)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="War In Middle Earth (1989)(Melbourne House)(Disk 2 of 2)[cr].2mg" size="819264" crc="a03b3465" sha1="f849639474c5d583ac34473d457f5212b4465bd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appdc7d348c7bc68">
+		<description>Windwalker (1990)(Origin)(Disk 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Windwalker (1990)(Origin)(Disk 1 of 2).2mg" size="819264" crc="b64e67b9" sha1="dc7d348c7bc68517f82824ae58d8a970fdba6283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app66a10a1f5d5c2">
+		<description>Windwalker (1990)(Origin)(Disk 1 of 2)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Windwalker (1990)(Origin)(Disk 1 of 2)[a].2mg" size="819264" crc="5dc81a45" sha1="66a10a1f5d5c2246bdecae5ff614ed3ace8f3a79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app9be847a6b4367">
+		<description>Windwalker (1990)(Origin)(Disk 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819271">
+				<rom name="Windwalker (1990)(Origin)(Disk 2 of 2).2mg" size="819271" crc="e0c8fa41" sha1="9be847a6b4367ea8fad4a388f5af440d076a0bfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app9ae2b338218f7">
+		<description>Xenocide (1989)(Micro Revelations)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Xenocide (1989)(Micro Revelations)[a].2mg" size="819264" crc="92185444" sha1="9ae2b338218f72dd13d141e710d80ba801394daa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app4654a9b0b97d7">
 		<description>yewdow</description>
 		<year>????</year>
@@ -1709,6 +2819,46 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="143360">
 				<rom name="yewdow.dsk" size="143360" crc="8de3d6d5" sha1="4654a9b0b97d77cd79786fc592dd6f2005d4927f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appc3184f982fccd">
+		<description>Zany golf (1988)(Will Harvey)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819268">
+				<rom name="Zany golf (1988)(Will Harvey)[b].2mg" size="819268" crc="a882123e" sha1="c3184f982fccd89b163202fea0b58e2b7f55ff0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2fa0a2b8bb96c">
+		<description>Zany golf (1988)(Will Harvey)[cr][b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="Zany golf (1988)(Will Harvey)[cr][b].2mg" size="819264" crc="1bb9ce8d" sha1="2fa0a2b8bb96ced88723da414074717a8dfe42dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appad0a9bb94f1a1">
+		<description>ZZ Copy (19xx)(-)[b2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="ZZ Copy (19xx)(-)[b2].2mg" size="819264" crc="210d9523" sha1="ad0a9bb94f1a1a389fabcbc68498b85e88b1466e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app644f6f0206b86">
+		<description>ZZ Copy (19xx)(-)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819264">
+				<rom name="ZZ Copy (19xx)(-)[b].2mg" size="819264" crc="bea0f1ad" sha1="644f6f0206b86167588f0d49287272549c980210"/>
 			</dataarea>
 		</part>
 	</software>

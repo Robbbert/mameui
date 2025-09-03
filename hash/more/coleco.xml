@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 592 -->
+<!-- Number of items in this list = 605 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -442,6 +442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colcb68d5a70ca05">
+		<description>Berenstain Bears, The (Proto)(1984)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Berenstain Bears, The (Proto)(1984)(Coleco).rom" size="8192" crc="18864abc" sha1="cb68d5a70ca0567060eddfd0b7783cbeeffb399e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col4cb20f83e4b6d">
 		<description>Berzerk (2022)(CollectorVision)</description>
 		<year>????</year>
@@ -832,6 +842,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cold4f34382d4389">
+		<description>Carnival (USA, Euro)(1982)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Carnival (USA, Euro)(1982)(Coleco).rom" size="16384" crc="70f315c2" sha1="d4f34382d43897774101e3620384a402dd3d2ec1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col0406ad601be68">
+		<description>Castelo (Brazil)(Unl)(1985)(Splice Vision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Castelo (Brazil)(Unl)(1985)(Splice Vision).rom" size="8192" crc="07a3d3db" sha1="0406ad601be68014820c77eda4491bfb4ea5c402"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb8f481fa7f5e6">
 		<description>Castle Excellent SGM (2018)(CollectorVision)</description>
 		<year>????</year>
@@ -1083,22 +1113,22 @@
 		</part>
 	</software>
 	<software name="colf31ebcb742903">
-		<description>Cosmic Avenger (1982)(Universal)</description>
+		<description>Cosmic Avenger (USA, Alt)(1982)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Cosmic Avenger (1982)(Universal).rom" size="16384" crc="14d6ced6" sha1="f31ebcb7429030af0fcb651d172724f392cc6f87"/>
+				<rom name="Cosmic Avenger (USA, Alt)(1982)(Coleco).rom" size="16384" crc="14d6ced6" sha1="f31ebcb7429030af0fcb651d172724f392cc6f87"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="colc8c2a70d3eab8">
-		<description>Cosmic Avenger</description>
+		<description>Cosmic Avenger (USA, Euro)(1982)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Cosmic Avenger.rom" size="16384" crc="39d4215b" sha1="c8c2a70d3eab8a68ab1db04e766a6c70f02f02ca"/>
+				<rom name="Cosmic Avenger (USA, Euro)(1982)(Coleco).rom" size="16384" crc="39d4215b" sha1="c8c2a70d3eab8a68ab1db04e766a6c70f02f02ca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1712,6 +1742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col145d175834730">
+		<description>Fathom (USA)(1983)(Imagic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Fathom (USA)(1983)(Imagic).rom" size="16384" crc="b3b767ae" sha1="145d1758347306e36a8039671a1088841bccaad5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cold28f866a931fb">
 		<description>Final Test Cartridge (1982)(Coleco)</description>
 		<year>????</year>
@@ -1739,6 +1779,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Fireman (Coleco)(1984).rom" size="32768" crc="64ec761e" sha1="077182c21b67182b334d4a6b69aab44eb3eecda9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cole78e370fc7b31">
+		<description>Flipper Slipper (USA, Euro)(1983)(Spectravideo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Flipper Slipper (USA, Euro)(1983)(Spectravideo).rom" size="16384" crc="2a49f507" sha1="e78e370fc7b3138010606f2eb9db1ea40fc37c5c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1783,12 +1833,12 @@
 		</part>
 	</software>
 	<software name="col4f4ef29dbb730">
-		<description>Frantic Freddy</description>
+		<description>Frantic Freddy (USA)(1983)(Spectravideo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Frantic Freddy.rom" size="16384" crc="8615c6e8" sha1="4f4ef29dbb730583bdf6da75aa7fe7b4f144216a"/>
+				<rom name="Frantic Freddy (USA)(1983)(Spectravideo).rom" size="16384" crc="8615c6e8" sha1="4f4ef29dbb730583bdf6da75aa7fe7b4f144216a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1802,13 +1852,33 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col9fae20696149c">
+		<description>Frenzy (USA)(1983)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="20480">
+				<rom name="Frenzy (USA)(1983)(Coleco).rom" size="20480" crc="3cacddfb" sha1="9fae20696149c1dba5203e1600565917c8981d81"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col1ec4f4ebdc02c">
-		<description>Frenzy (1982-83)(Stern Electronics, Ltd.)</description>
+		<description>Frenzy (USA, Alt 1)(1983)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
-				<rom name="Frenzy (1982-83)(Stern Electronics, Ltd.).rom" size="24576" crc="960616af" sha1="1ec4f4ebdc02c4e03bc9dbc83e34ce49da33942a"/>
+				<rom name="Frenzy (USA, Alt 1)(1983)(Coleco).rom" size="24576" crc="960616af" sha1="1ec4f4ebdc02c4e03bc9dbc83e34ce49da33942a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col77da39d6fa64e">
+		<description>Frenzy (USA, Alt 2)(1983)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Frenzy (USA, Alt 2)(1983)(Coleco).rom" size="24576" crc="bf1ccf04" sha1="77da39d6fa64e1b3849f61967f148dfe846a32b2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1819,16 +1889,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Frenzy! (UE).col" size="24576" crc="0522ebdd" sha1="f8a7bbff1dfc19b85428206522c0ab73d0d628e2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col77da39d6fa64e">
-		<description>Frenzy</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="24576">
-				<rom name="Frenzy.rom" size="24576" crc="bf1ccf04" sha1="77da39d6fa64e1b3849f61967f148dfe846a32b2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1932,13 +1992,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="colca62f469511d3">
-		<description>Frontline (1983)(Taito)</description>
+	<software name="col62ca275776e41">
+		<description>Front Line (USA)(1983)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
-				<rom name="Frontline (1983)(Taito).rom" size="24576" crc="9c551386" sha1="ca62f469511d30d164adc74859d4c5c77963e218"/>
+				<rom name="Front Line (USA)(1983)(Coleco).rom" size="24576" crc="d0110137" sha1="62ca275776e4184032224e61b6d01d0636d7e846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colca62f469511d3">
+		<description>Front Line (USA, Alt)(1983)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Front Line (USA, Alt)(1983)(Coleco).rom" size="24576" crc="9c551386" sha1="ca62f469511d30d164adc74859d4c5c77963e218"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1983,22 +2053,22 @@
 		</part>
 	</software>
 	<software name="col82052a190b21c">
-		<description>Galaxian (U)</description>
+		<description>Galaxian (USA)(1983)(Atarisoft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Galaxian (U).col" size="32768" crc="fe1d0b6a" sha1="82052a190b21c73f06a676fad3d2e30a2cc9b952"/>
+				<rom name="Galaxian (USA)(1983)(Atarisoft).rom" size="32768" crc="fe1d0b6a" sha1="82052a190b21c73f06a676fad3d2e30a2cc9b952"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="colcb389e5719aba">
-		<description>Galaxian</description>
+		<description>Galaxian (USA, Alt)(1983)(Atarisoft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Galaxian.rom" size="32768" crc="987bc7ac" sha1="cb389e5719aba0186f93643e75d5ffb3bf339f9d"/>
+				<rom name="Galaxian (USA, Alt)(1983)(Atarisoft).rom" size="32768" crc="987bc7ac" sha1="cb389e5719aba0186f93643e75d5ffb3bf339f9d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2189,6 +2259,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Gust Buster (1983)(Sunrise Software Inc.).rom" size="16384" crc="f2cac67c" sha1="550901882d369064779956704b2925e4e9b8be1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col9d34b9a55f9b6">
+		<description>Gyruss (USA)(1984)(Parker Brothers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Gyruss (USA)(1984)(Parker Brothers).rom" size="16384" crc="27cbf26d" sha1="9d34b9a55f9b6c8443696114a8e69724e5106b5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col54279c45a9529">
+		<description>Gyruss (USA, Proto)(1984)(Parker Brothers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="8448">
+				<rom name="Gyruss (USA, Proto)(1984)(Parker Brothers).rom" size="8448" crc="b35d4dc9" sha1="54279c45a95294626b7586f5110015b5d1fb94e6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4843,12 +4933,22 @@
 		</part>
 	</software>
 	<software name="colda0567bee88bd">
-		<description>Star Wars - The Arcade Game (1984) (Parker Bros)</description>
+		<description>Star Wars - The Arcade Game (USA)(1984)(Parker Brothers)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Star Wars - The Arcade Game (1984) (Parker Bros).rom" size="16384" crc="0e75b3bf" sha1="da0567bee88bd1991481a755ac8292a115ed15ac"/>
+				<rom name="Star Wars - The Arcade Game (USA)(1984)(Parker Brothers).rom" size="16384" crc="0e75b3bf" sha1="da0567bee88bd1991481a755ac8292a115ed15ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colc7f7aeeb9497a">
+		<description>Star Wars - The Arcade Game (USA, Proto)(1984)(Parker Brothers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Star Wars - The Arcade Game (USA, Proto)(1984)(Parker Brothers).rom" size="16384" crc="d7febc67" sha1="c7f7aeeb9497a6e68e524944323677de5a7a66cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4992,16 +5092,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col4c16f4e233db5">
-		<description>Super Action Football (1984)(Coleco)(gridiron)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Super Action Football (1984)(Coleco)(gridiron).rom" size="32768" crc="62619dc0" sha1="4c16f4e233db50e3d9b3a191f4f408338640ac19"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col3edf3b79e2f2d">
 		<description>Super Action Football (1984)(Coleco)[a](soccer)</description>
 		<year>????</year>
@@ -5012,13 +5102,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col71ed4c35f49af">
-		<description>Super Action Soccer (1984)(Coleco)</description>
+	<software name="col5f43180c24303">
+		<description>Super Action Football (Euro)(1984)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Super Action Soccer (1984)(Coleco).rom" size="32768" crc="acac69dd" sha1="71ed4c35f49af9ee3469f604ceb101af69096c36"/>
+				<rom name="Super Action Football (Euro)(1984)(Coleco).rom" size="32768" crc="4d6c0458" sha1="5f43180c243039eecef024ab1f4e70a2e2502fc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col4c16f4e233db5">
+		<description>Super Action Football (USA)(1984)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Super Action Football (USA)(1984)(Coleco).rom" size="32768" crc="62619dc0" sha1="4c16f4e233db50e3d9b3a191f4f408338640ac19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5029,6 +5129,36 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Super Action Soccer (2012 Team Pixelboy).rom" size="32768" crc="ec76729e" sha1="01d064ac9bf27f8b5bf5dcc8914dbb38dc8e5646"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col71ed4c35f49af">
+		<description>Super Action Soccer (USA)(1984)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Super Action Soccer (USA)(1984)(Coleco).rom" size="32768" crc="acac69dd" sha1="71ed4c35f49af9ee3469f604ceb101af69096c36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colc0ff64668723f">
+		<description>Super Cobra (USA)(1983)(Parker Brothers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Super Cobra (USA)(1983)(Parker Brothers).rom" size="8192" crc="6cb5cb8f" sha1="c0ff64668723f5f353ce98d3ee6089ebe0201369"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col3bf730acbfb04">
+		<description>Super Cobra (USA, Alt)(1983)(Parker Brothers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Super Cobra (USA, Alt)(1983)(Parker Brothers).rom" size="8192" crc="f84622d2" sha1="3bf730acbfb0404d2e2411169c8fc6a81b907053"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5232,23 +5362,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="colbbb25e64aefa3">
-		<description>Tapper (1984)(Bally Midway MFG. Co.)</description>
+	<software name="col459393f07792e">
+		<description>Tapper (1984)(Bally Midway MFG Co)[a]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Tapper (1984)(Bally Midway MFG. Co.).rom" size="32768" crc="8afd7db2" sha1="bbb25e64aefa3adaff9f864713ecabe3b6f0316b"/>
+				<rom name="Tapper (1984)(Bally Midway MFG Co)[a].rom" size="32768" crc="6eab5d44" sha1="459393f07792ee1b2c878e1257a21c6c351d5c29"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="col459393f07792e">
-		<description>Tapper (1984)(Bally Midway MFG. Co.)[a]</description>
+	<software name="colbbb25e64aefa3">
+		<description>Tapper (USA)(1984)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Tapper (1984)(Bally Midway MFG. Co.)[a].rom" size="32768" crc="6eab5d44" sha1="459393f07792ee1b2c878e1257a21c6c351d5c29"/>
+				<rom name="Tapper (USA)(1984)(Coleco).rom" size="32768" crc="8afd7db2" sha1="bbb25e64aefa3adaff9f864713ecabe3b6f0316b"/>
 			</dataarea>
 		</part>
 	</software>

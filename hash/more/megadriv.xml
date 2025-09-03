@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2010 -->
+<!-- Number of items in this list = 2015 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3072,6 +3072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gencacde308f8e67">
+		<description>2048 v1.2 (2014)(oerg866)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="93362">
+				<rom name="2048 v1.2 (2014)(oerg866).bin" size="93362" crc="c1137ad4" sha1="cacde308f8e6714fdf9de0d5858d986dd2ac624e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7bd413437359b">
 		<description>240pSuite-1.17</description>
 		<year>????</year>
@@ -5352,6 +5362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gene6bdb941d582c">
+		<description>Cross Fire - Widescreen (2025)(bankbank)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Cross Fire - Widescreen (2025)(bankbank).bin" size="524288" crc="5d9698b4" sha1="e6bdb941d582c5d084427b954f946739182d882d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gendc5bad0a0ec8f">
 		<description>Crusader of Centy PT-BR v1.2 (2002)(Tradu-Roms)</description>
 		<year>????</year>
@@ -5663,12 +5683,12 @@
 		</part>
 	</software>
 	<software name="genf5de58b8d59a6">
-		<description>Di Guo Wang Chao - Ya Se Chuan Shuo (Chinese)</description>
+		<description>Di Guo Wang Chao - Ya Se Chuan Shuo (China)(Unl)(Audio Fix)(2023)(Ken_Tse)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Di Guo Wang Chao - Ya Se Chuan Shuo (Chinese).BIN" size="2097152" crc="87ac7f92" sha1="f5de58b8d59a6db0911ed856fa803b7e0014d518"/>
+				<rom name="Di Guo Wang Chao - Ya Se Chuan Shuo (China)(Unl)(Audio Fix)(2023)(Ken_Tse).bin" size="2097152" crc="87ac7f92" sha1="f5de58b8d59a6db0911ed856fa803b7e0014d518"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6333,22 +6353,12 @@
 		</part>
 	</software>
 	<software name="gen79c30ccc84d73">
-		<description>Feng Shen Ying Jie Zhuan (Chinese)</description>
+		<description>Feng Shen Ying Jie Chuan (China)(Unl)(Audio Fix)(2023)(Ken_Tse)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Feng Shen Ying Jie Zhuan (Chinese).bin" size="2097152" crc="88664e2f" sha1="79c30ccc84d7351fec2a31ec81069074def13de9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen2b55ffe74498d">
-		<description>FFMD_Patreon_088b</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3932160">
-				<rom name="FFMD_Patreon_088b.bin" size="3932160" crc="fa21d81e" sha1="2b55ffe74498d6edfccc6104a2e5eac7bc8731c4"/>
+				<rom name="Feng Shen Ying Jie Chuan (China)(Unl)(Audio Fix)(2023)(Ken_Tse).bin" size="2097152" crc="88664e2f" sha1="79c30ccc84d7351fec2a31ec81069074def13de9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6459,6 +6469,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3932160">
 				<rom name="Final Fight MD v0.87b (2025)(MXRetroDev - CFX).bin" size="3932160" crc="6f5be1bc" sha1="c20da144165a029a0c90637a9da609f4be5c3664"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2b55ffe74498d">
+		<description>Final Fight MD v0.88b (2025)(MXRetroDev - CFX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3932160">
+				<rom name="Final Fight MD v0.88b (2025)(MXRetroDev - CFX).bin" size="3932160" crc="fa21d81e" sha1="2b55ffe74498d6edfccc6104a2e5eac7bc8731c4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14163,12 +14183,12 @@
 		</part>
 	</software>
 	<software name="gen60408056d4376">
-		<description>Shui Hu Zhuan (Chinese)</description>
+		<description>Shui Hu Zhuan (China)(Unl)(Audio Fix)(2023)(Ken_Tse)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Shui Hu Zhuan (Chinese).bin" size="2097152" crc="84c2f352" sha1="60408056d437683200e5cc5b200600181566df5b"/>
+				<rom name="Shui Hu Zhuan (China)(Unl)(Audio Fix)(2023)(Ken_Tse).bin" size="2097152" crc="84c2f352" sha1="60408056d437683200e5cc5b200600181566df5b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17082,6 +17102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen24730cd8c2cb4">
+		<description>Splatterhouse 3 - Widerscreen (2025)(bankbank)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Splatterhouse 3 - Widerscreen (2025)(bankbank).bin" size="2097152" crc="1748c3f5" sha1="24730cd8c2cb4e41f4cb7dfd623356ea0ae9ad01"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genfabd9c73d4fa8">
 		<description>Splatterhouse 3 Bloody Edition v1.2 (U) (2021)(CRT_rex)</description>
 		<year>????</year>
@@ -17529,6 +17559,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Strider(J).bin" size="1048576" crc="f38c0ed3" sha1="593565c58d13bf68a6a9820214309e43508be2ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfd66081727b1b">
+		<description>Submarine Attack (2025)(Camden Town Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="917504">
+				<rom name="Submarine Attack (2025)(Camden Town Games).bin" size="917504" crc="41ef1c68" sha1="fd66081727b1b077d53635acbc1fae485f7028dc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19929,6 +19969,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Zero Wing(F).bin" size="1048576" crc="237759c4" sha1="923e33c533e263a75cd6f1e24ac81d2f05c60151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfe98ddb9abbad">
+		<description>Zombi Terror (World) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="600442">
+				<rom name="Zombi Terror (World) (Unl).md" size="600442" crc="f36bf51f" sha1="fe98ddb9abbad1f062442388bfb7dee2f7b86807"/>
 			</dataarea>
 		</part>
 	</software>
