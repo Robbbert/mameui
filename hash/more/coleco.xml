@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 605 -->
+<!-- Number of items in this list = 601 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -442,16 +442,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="colcb68d5a70ca05">
-		<description>Berenstain Bears, The (Proto)(1984)(Coleco)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Berenstain Bears, The (Proto)(1984)(Coleco).rom" size="8192" crc="18864abc" sha1="cb68d5a70ca0567060eddfd0b7783cbeeffb399e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col4cb20f83e4b6d">
 		<description>Berzerk (2022)(CollectorVision)</description>
 		<year>????</year>
@@ -849,16 +839,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Carnival (USA, Euro)(1982)(Coleco).rom" size="16384" crc="70f315c2" sha1="d4f34382d43897774101e3620384a402dd3d2ec1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col0406ad601be68">
-		<description>Castelo (Brazil)(Unl)(1985)(Splice Vision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Castelo (Brazil)(Unl)(1985)(Splice Vision).rom" size="8192" crc="07a3d3db" sha1="0406ad601be68014820c77eda4491bfb4ea5c402"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5139,26 +5119,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Super Action Soccer (USA)(1984)(Coleco).rom" size="32768" crc="acac69dd" sha1="71ed4c35f49af9ee3469f604ceb101af69096c36"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="colc0ff64668723f">
-		<description>Super Cobra (USA)(1983)(Parker Brothers)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Super Cobra (USA)(1983)(Parker Brothers).rom" size="8192" crc="6cb5cb8f" sha1="c0ff64668723f5f353ce98d3ee6089ebe0201369"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col3bf730acbfb04">
-		<description>Super Cobra (USA, Alt)(1983)(Parker Brothers)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Super Cobra (USA, Alt)(1983)(Parker Brothers).rom" size="8192" crc="f84622d2" sha1="3bf730acbfb0404d2e2411169c8fc6a81b907053"/>
 			</dataarea>
 		</part>
 	</software>

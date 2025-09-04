@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 447 -->
+<!-- Number of items in this list = 448 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -1509,16 +1509,6 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="57413">
 				<rom name="Forgotten Worlds 128K (1989)(U.S. Gold).z80" size="57413" crc="33ef767e" sha1="404a756f1f2a37f5aee4682e74096988deecd0cc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs38a8d8345b535">
-		<description>Foxx Fights Back</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="spectrum_snap">
-			<dataarea name="snap" size="47908">
-				<rom name="Foxx Fights Back.tzx" size="47908" crc="d1d8d4f3" sha1="38a8d8345b535f3b495a166de009aaa0469fd6d6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4469,6 +4459,26 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="34544">
 				<rom name="Zybex 48K (1989)(Zeppelin Games).z80" size="34544" crc="a79c6137" sha1="06464e62acd9441149a1afa6b9abfdd858d463bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa0a2198e59337">
+		<description>_Match Day 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="43017">
+				<rom name="_Match Day 48K (1984)(Ocean).z80" size="43017" crc="59d3bc21" sha1="a0a2198e5933726847a4742b247fdb0a2bc41d29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d2511675d5fc">
+		<description>_Match Day II 48K (1987)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37993">
+				<rom name="_Match Day II 48K (1987)(Ocean).z80" size="37993" crc="910131c2" sha1="1d2511675d5fcf183a53734e1c29aa159ba2a2ac"/>
 			</dataarea>
 		</part>
 	</software>
