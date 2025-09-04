@@ -1941,6 +1941,8 @@ if (BUSES["ISA"]~=null) then
 		MAME_DIR .. "src/devices/bus/isa/xsu_cards.h",
 		MAME_DIR .. "src/devices/bus/isa/xtide.cpp",
 		MAME_DIR .. "src/devices/bus/isa/xtide.h",
+		MAME_DIR .. "src/devices/bus/isa/zxbus_adapter.cpp",
+		MAME_DIR .. "src/devices/bus/isa/zxbus_adapter.h",
 	}
 end
 
@@ -5557,6 +5559,20 @@ if (BUSES["TMC600"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/bus/tmc600/euro.cpp",
 		MAME_DIR .. "src/devices/bus/tmc600/euro.h",
+	}
+end
+
+---------------------------------------------------
+--
+--@src/devices/bus/technics/kn5000/kn5000_extension.h,BUSES["KN5000"] = true
+---------------------------------------------------
+
+if (BUSES["KN5000"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/technics/kn5000/kn5000_extension.cpp",
+		MAME_DIR .. "src/devices/bus/technics/kn5000/kn5000_extension.h",
+		MAME_DIR .. "src/devices/bus/technics/kn5000/hdae5000.cpp",
+		MAME_DIR .. "src/devices/bus/technics/kn5000/hdae5000.h",
 	}
 end
 
