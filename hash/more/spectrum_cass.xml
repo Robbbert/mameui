@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4396 -->
+<!-- Number of items in this list = 4431 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -159,6 +159,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="57082">
 				<rom name="-Auf Wiedersehen Monty (1987)(Gremlin Graphics Software Ltd)[cr [Cr Wixet][Cr Wixet].tap" size="57082" crc="89360a8a" sha1="2c20ea4b2fcda4210f5d7a99b4f96dd14aa07b49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2cfb1ca581c16">
+		<description>-Barbarian 2 - The Dungeon of Drax (1988)(Palace Software)[cr [Cr Matasoft][t +3 Matasoft](128K)[Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="87923">
+				<rom name="-Barbarian 2 - The Dungeon of Drax (1988)(Palace Software)[cr [Cr Matasoft][t +3 Matasoft](128K)[Cr Matasoft].tap" size="87923" crc="95d09699" sha1="2cfb1ca581c16a878336c3f7eff3c0ec6cfc114a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6c66e10faa852">
+		<description>-Batman (1986)(Ocean Software)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38136">
+				<rom name="-Batman (1986)(Ocean Software)[cr [Cr][Cr].tap" size="38136" crc="3c0ac4ee" sha1="6c66e10faa852d6fe1a3d1a61fa021ad96b41333"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9313e7e10b3dd">
+		<description>-Batman - The Caped Crusader - A Bird In The Hand  (1988)(Ocean Software)[cr [Cr][t +1][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42888">
+				<rom name="-Batman - The Caped Crusader - A Bird In The Hand  (1988)(Ocean Software)[cr [Cr][t +1][Cr].tap" size="42888" crc="e9c67400" sha1="9313e7e10b3dda950e2cb9bd9641c3eada9f3b55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61415a3514e83">
+		<description>-Mask 3 - Venom Strikes Back (1988)(Gremlin Graphics Software Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41594">
+				<rom name="-Mask 3 - Venom Strikes Back (1988)(Gremlin Graphics Software Ltd)[cr [Cr][Cr].tap" size="41594" crc="c6d476de" sha1="61415a3514e83f81223379b4a61b8d60dd66d367"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7022,6 +7062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse6501be348a68">
+		<description>Barbarian (1988)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46467">
+				<rom name="Barbarian (1988)(Melbourne House).tap" size="46467" crc="51bf72c1" sha1="e6501be348a683fe83eef1ae710b3533902ca5d8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa0918c5c471cd">
 		<description>Barbarian - 1 Player (1987)(Palace Software)</description>
 		<year>????</year>
@@ -11382,6 +11432,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf59209b9ba802">
+		<description>Marsport (1985)(Gargoyle Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48513">
+				<rom name="Marsport (1985)(Gargoyle Games).tap" size="48513" crc="5566568a" sha1="f59209b9ba802f2bcfa35d324de2ec1e25fa7ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs74598a79f73c0">
+		<description>Martianoids (1987)(Ultimate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36197">
+				<rom name="Martianoids (1987)(Ultimate).tap" size="36197" crc="9457af6e" sha1="74598a79f73c0b24abf71a7b5b1efbc7099abd47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfdf69ec8265cc">
+		<description>Martianoids 48K (1987)(Ultimate Play The Game)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49438">
+				<rom name="Martianoids 48K (1987)(Ultimate Play The Game).tap" size="49438" crc="a1fe1d86" sha1="fdf69ec8265ccaf2b2757c8a497465b94340cedf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71757908fa195">
+		<description>Mask II (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="79774">
+				<rom name="Mask II (1987)(Gremlin Graphics).tap" size="79774" crc="05a11ad4" sha1="71757908fa19516abade09f987fd4ff1f9c5f49f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8bbb534e2b78">
+		<description>MASK II 128K (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="79774">
+				<rom name="MASK II 128K (1987)(Gremlin Graphics).tap" size="79774" crc="972b746c" sha1="b8bbb534e2b780852b405dc5fd55a1977ebb59e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs271081cd5abf5">
+		<description>Mask III - Venom Strikes Back (1988)(Gremlin Graphics)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49210">
+				<rom name="Mask III - Venom Strikes Back (1988)(Gremlin Graphics)(128k).tap" size="49210" crc="1594be61" sha1="271081cd5abf5dd19d691100771fb06dff227b3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7525a3075c91">
+		<description>Mask III - Venom Strikes Back (1988)(Gremlin Graphics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Mask III - Venom Strikes Back (1988)(Gremlin Graphics)[a].tap" size="49343" crc="3d2baf6c" sha1="a7525a3075c91009e00a86efa0bf7a66e7ea9273"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs013563abe0796">
+		<description>MASK III - VENOM Strikes Back 128K (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51714">
+				<rom name="MASK III - VENOM Strikes Back 128K (1988)(Gremlin Graphics).tap" size="51714" crc="afcf673d" sha1="013563abe07967ae71fadab64c07bee4fcd1a79a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc4a5cfef8f2ab">
 		<description>Mask III - Venom Strikes Back</description>
 		<year>????</year>
@@ -11389,6 +11519,186 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49244">
 				<rom name="Mask III - Venom Strikes Back.tzx" size="49244" crc="d1dbfd26" sha1="c4a5cfef8f2abb8574384bb525aa39fcb36cf668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d0664405f6fe">
+		<description>Master Blaster (1990)(Cybadyne)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49304">
+				<rom name="Master Blaster (1990)(Cybadyne).tap" size="49304" crc="83f104ce" sha1="7d0664405f6fe0cbe8ed03e7128af9f40c6e609e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4b49b33673b4d">
+		<description>Master Brain (1990)(Crash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21798">
+				<rom name="Master Brain (1990)(Crash).tap" size="21798" crc="3be04794" sha1="4b49b33673b4d19ac3307436d8dae8c3b5ba510f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsca5e262a25672">
+		<description>Master Chess (1983)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12912">
+				<rom name="Master Chess (1983)(Mikro-Gen).tap" size="12912" crc="2aa51224" sha1="ca5e262a25672eec416daeafba41c745a9799e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4f1af057ee4aa">
+		<description>Master Chess (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17732">
+				<rom name="Master Chess (1987)(Mastertronic).tap" size="17732" crc="ba2e6f27" sha1="4f1af057ee4aa27daa535215fe6c22687ff15bff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbb4d7866039d3">
+		<description>Master File v04 (1982)(Campbell Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10216">
+				<rom name="Master File v04 (1982)(Campbell Systems).tap" size="10216" crc="830550e6" sha1="bb4d7866039d35ab49b2ea9e574e383a585d3752"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs60e6f35857835">
+		<description>Master File v06 (1982)(Campbell Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10550">
+				<rom name="Master File v06 (1982)(Campbell Systems).tap" size="10550" crc="43b27027" sha1="60e6f358578354dcd11eda13a9e150821eb32696"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse956fe3295a35">
+		<description>Master File v09 (1982)(Campbell Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15257">
+				<rom name="Master File v09 (1982)(Campbell Systems).tap" size="15257" crc="dbe4911e" sha1="e956fe3295a3539981a66f8b3410ab2bb46ec51e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs982aeb9b75c11">
+		<description>Master File v1.04 (1987)(Campbell Systems - J. Olmer Praha)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12327">
+				<rom name="Master File v1.04 (1987)(Campbell Systems - J. Olmer Praha)(Cz).tap" size="12327" crc="3b27859b" sha1="982aeb9b75c1155552552ce2846e00311a72a38b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs37ffa030f1ab1">
+		<description>Master Mariner (1984)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="70696">
+				<rom name="Master Mariner (1984)(Atlantis Software).tap" size="70696" crc="d2bf82e8" sha1="37ffa030f1ab1bf6d684961db88fb90c5a1a79e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdd4ad975c323a">
+		<description>Master Mind (1983)(Werner Spahl)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1717">
+				<rom name="Master Mind (1983)(Werner Spahl)(De).tap" size="1717" crc="c8b795df" sha1="dd4ad975c323a9679c7dd2e90e64d80ed4c98934"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19542676de267">
+		<description>Master Of Magic, The (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46387">
+				<rom name="Master Of Magic, The (1986)(Mastertronic).tap" size="46387" crc="becb1dcf" sha1="19542676de2675e1accca6d685d217d8595d583c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs625ee419e0032">
+		<description>Master Piece EN 48K (2025)(Tartessos Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43584">
+				<rom name="Master Piece EN 48K (2025)(Tartessos Games).tap" size="43584" crc="199f2f68" sha1="625ee419e0032d8266f9edfb7d75021ba684a266"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd3146d021438c">
+		<description>Master Piece ES 48K (2025)(Tartessos Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43616">
+				<rom name="Master Piece ES 48K (2025)(Tartessos Games).tap" size="43616" crc="8c79ddf2" sha1="d3146d021438cd7e4921c649908a01a1724083b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b56bab300cc4">
+		<description>Master, The (1986)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49664">
+				<rom name="Master, The (1986)(Artic Computing).tap" size="49664" crc="e99b9d77" sha1="6b56bab300cc4777a538d6110259813107eab995"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdec70151fd5e6">
+		<description>Master, The (1986)(Artic Computing)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49363">
+				<rom name="Master, The (1986)(Artic Computing)[a].tap" size="49363" crc="3ef927fc" sha1="dec70151fd5e63534beedb69853c0fff6340b6f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61852b548c4b3">
+		<description>Mastercopy (19xx)(Vatroslav Sobot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3112">
+				<rom name="Mastercopy (19xx)(Vatroslav Sobot).tap" size="3112" crc="ee955074" sha1="61852b548c4b390f07c292254ca464c259b67a16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae607950700f4">
+		<description>Mastercopy128 (19xx)(Vatroslav Sobot)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6337">
+				<rom name="Mastercopy128 (19xx)(Vatroslav Sobot)(128k).tap" size="6337" crc="77679b11" sha1="ae607950700f4216b24b144a7eddc68c3438f824"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba97d3ea4cff3">
+		<description>Mastercopy128 (19xx)(Vatroslav Sobot)(128k)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6196">
+				<rom name="Mastercopy128 (19xx)(Vatroslav Sobot)(128k)[a].tap" size="6196" crc="d7d93a74" sha1="ba97d3ea4cff3f7a5c6dd7db43a4ca0fafe1f589"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39052,6 +39362,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs81ff9181b80f7">
+		<description>_Bandera (1985)(MicroHobby)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9857">
+				<rom name="_Bandera (1985)(MicroHobby)(Sp).tap" size="9857" crc="ee9518bc" sha1="81ff9181b80f75755c6c82f0b3326547323573ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c831a8e5706c">
+		<description>_Bargain Basement (1986)(Creative Sparks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29031">
+				<rom name="_Bargain Basement (1986)(Creative Sparks).tap" size="29031" crc="e3be426d" sha1="5c831a8e5706cf43a527df64310b8af2e9b3a06b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfae6b34610306">
 		<description>_BATTLEFI</description>
 		<year>????</year>
@@ -39409,6 +39739,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49415">
 				<rom name="_Mag Max - Robo Centurion.tzx" size="49415" crc="4e359cb9" sha1="3216dac68594d30a76442ea5f65fadea0c02ca8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs245d63fd2a3b9">
+		<description>_Mask III - Venom Strikes Back (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47730">
+				<rom name="_Mask III - Venom Strikes Back (1988)(Gremlin Graphics).tap" size="47730" crc="ced20ec5" sha1="245d63fd2a3b9b2470ba4279d5ecd764d7f99611"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse3d8e16bf2f59">
+		<description>_Master &amp; Servant (1985)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48161">
+				<rom name="_Master &amp; Servant (1985)(Atlantis Software).tap" size="48161" crc="e8d37ffb" sha1="e3d8e16bf2f59eae4bd777257522066585445614"/>
 			</dataarea>
 		</part>
 	</software>

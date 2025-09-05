@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 51 -->
+<!-- Number of items in this list = 53 -->
 <softwarelist name="x1_cass" description="x1_cass loose roms">
 	<software name="x1f8854ea363a35e">
 		<description>aerial</description>
@@ -212,6 +212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x1d69aa8072ef85a">
+		<description>Hands[load'BASIC']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="53610">
+				<rom name="Hands[load'BASIC'].tap" size="53610" crc="b3adf1ec" sha1="d69aa8072ef85a786590fa92b85df6ec8f08133b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x12c9edfaabb08f7">
 		<description>Hitsuji-Yaai (1983)(Hudson Soft)(Masaaki Kikuta)</description>
 		<year>????</year>
@@ -329,6 +339,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="2198168">
 				<rom name="osotos.wav" size="2198168" crc="380055f3" sha1="acc4c944f861f9af7964be99fa2051c1cd1fcb97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x13004aaf0294f0b">
+		<description>Pinball[load'PINBALL']</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="133534">
+				<rom name="Pinball[load'PINBALL'].tap" size="133534" crc="32005eef" sha1="3004aaf0294f0ba0d4335b73d50b3fbd3470bb15"/>
 			</dataarea>
 		</part>
 	</software>
