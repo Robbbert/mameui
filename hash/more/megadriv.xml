@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2015 -->
+<!-- Number of items in this list = 2016 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -13083,12 +13083,12 @@
 		</part>
 	</software>
 	<software name="genb158463c83832">
-		<description>Rick Dangerous DX (2025)(Z-Team)_1</description>
+		<description>Rick Dangerous DX v1.1 (2025)(Z-Team)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="Rick Dangerous DX (2025)(Z-Team)_1.bin" size="1572864" crc="12e804a4" sha1="b158463c83832950cf69b0c0c3ed83abd6ec641d"/>
+				<rom name="Rick Dangerous DX v1.1 (2025)(Z-Team).bin" size="1572864" crc="12e804a4" sha1="b158463c83832950cf69b0c0c3ed83abd6ec641d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13099,6 +13099,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Rick Dangerous DX v1.2 (2025)(Z-Team).bin" size="1572864" crc="98f62ee5" sha1="ec69c4bfbaf3325d9bbdaac0e5da7d470c31bdb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="geneae5e460cb144">
+		<description>Rick Dangerous DX v1.3 (2025)(Z-Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Rick Dangerous DX v1.3 (2025)(Z-Team).bin" size="1572864" crc="82fb7b96" sha1="eae5e460cb14427f53d1792b9f3a21dd6c35e360"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 15 -->
+<!-- Number of items in this list = 16 -->
 <softwarelist name="smc777_quik" description="smc777_quik loose roms">
 	<software name="smcdc46dcfc4b9e9">
 		<description>Deepspace</description>
@@ -99,6 +99,16 @@
 		<part name="quik" interface="smc777_quik">
 			<dataarea name="quik" size="13153">
 				<rom name="MastermindRK_CPM.com" size="13153" crc="268f64e8" sha1="e2579fc57050127a84c94b54c04fc7524b9066a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc10f6d31e557b0">
+		<description>MastermindRK_smc777_CPM(old)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="smc777_quik">
+			<dataarea name="quik" size="12728">
+				<rom name="MastermindRK_smc777_CPM(old).com" size="12728" crc="9ce4d89e" sha1="10f6d31e557b0a094205f3676ba13308dac2a875"/>
 			</dataarea>
 		</part>
 	</software>
