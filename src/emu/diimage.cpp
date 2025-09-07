@@ -727,7 +727,7 @@ static int verify_length_and_hash(emu_file *file, std::string_view name, u32 exp
 	else if (hashes.flag(util::hash_collection::FLAG_BAD_DUMP))
 	{
 		// If it matches, but it is actually a bad dump, write it
-		osd_printf_error("%s NEEDS REDUMP\n",name);
+		osd_printf_info("%s NEEDS REDUMP\n",name);
 	}
 	return retval;
 }
