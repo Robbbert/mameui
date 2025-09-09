@@ -37,10 +37,10 @@ NOTES (MD side):
 TODO:
 - RAM size always gets detected as 2560K even when it's not (from chipset?);
 - Quadtel EMM driver fails recognizing WD76C10 chipset with drv4;
-- 286 card comms errors out at DOS/V bootstrap, may require VDP vint pending status;
 - Cannot HDD format with floppy insthdd.bat, cannot boot from HDD (needs floppy first).
   Attached disk is a WDL-330PS with no geometry info available;
 - MD side cart slot, expansion bay and VDP rewrites (WIP);
+- TMSS unlock and respective x86<->MD bus grants are sketchy;
 - SEGA TERADRIVE テラドライブ ユーザーズマニュアル known to exist (not scanned yet)
 - "TIMER FAIL" when exiting from F1 setup menu (keyboard? reset from chipset?);
 
@@ -144,6 +144,13 @@ void isa16_ibm_79f2661::device_start()
 {
 	set_isa_device();
 	m_rom_window_bank->configure_entries(0, 0x100, m_romdisk->base(), 0x2000);
+
+	save_item(NAME(m_rom_bank));
+	save_item(NAME(m_rom_address));
+	save_item(NAME(m_reg_1163));
+	save_item(NAME(m_reg_1164));
+	save_item(NAME(m_68k_address));
+	save_item(NAME(m_68k_view));
 }
 
 void isa16_ibm_79f2661::device_reset()
@@ -301,7 +308,8 @@ void isa16_ibm_79f2661::io_map(address_map &map)
  */
 	map(0x05, 0x05).lr8(
 		NAME([this] (offs_t offset) {
-			return m_system_in_cb() & 5;
+			// HACK: MD TMSS never writes `SEGA` from $a14000
+			return (1 << 5) | (m_system_in_cb() & 5);
 		})
 	);
 	map(0x06, 0x07).lrw16(
@@ -476,7 +484,7 @@ void teradrive_state::x86_map(address_map &map)
 void teradrive_state::x86_io(address_map &map)
 {
 	map.unmap_value_high();
-	// TODO: what's the origin of this?
+	// TODO: belongs to chipset
 	map(0xfc72, 0xfc73).lr16(
 		NAME([this] () {
 			u16 res = m_heartbeat & 0x8000;
@@ -815,6 +823,16 @@ void teradrive_state::machine_start()
 	m_tmss_bank->configure_entries(0, 0x200, memregion("tmss")->base(), 0x1000);
 	// doubled in space
 	m_sound_program = std::make_unique<u8[]>(0x4000);
+
+	save_item(NAME(m_heartbeat));
+
+	save_item(NAME(m_isa_address_bank));
+	save_item(NAME(m_68k_hs));
+	save_pointer(NAME(m_sound_program), 0x4000);
+
+	save_item(NAME(m_z80_reset));
+	save_item(NAME(m_z80_busrq));
+	save_item(NAME(m_z80_main_address));
 }
 
 void teradrive_state::machine_reset()
@@ -948,6 +966,7 @@ void teradrive_state::teradrive(machine_config &config)
 	m_mdscreen->set_screen_update(FUNC(teradrive_state::md_screen_update));
 
 	YM7101(config, m_md_vdp, md_master_xtal / 4);
+	m_md_vdp->set_mclk(md_master_xtal);
 	m_md_vdp->set_screen(m_mdscreen);
 	// TODO: actual DTACK
 	// TODO: accessing 68k bus from x86, defers access?
