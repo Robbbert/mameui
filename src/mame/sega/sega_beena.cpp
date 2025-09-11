@@ -1827,7 +1827,7 @@ void sega_beena_state::sega_beena(machine_config &config)
 	m_cart->set_device_load(FUNC(sega_beena_state::cart_load));
 	m_cart->set_must_be_loaded(false);
 
-	SOFTWARE_LIST(config, "cart_list").set_original("sega_beena_cart");
+	//SOFTWARE_LIST(config, "cart_list").set_original("sega_beena_cart");
 
 	SEGA_9H0_0008_CARD(config, m_card, beena_iox_devices, nullptr, false);
 

@@ -210,7 +210,7 @@ static datamap *properties_datamap;
 
 static int  g_nGame            = 0;
 static int  g_nFolder          = 0;
-static int  g_nFolderGame      = 0;
+//static int  g_nFolderGame      = 0;
 static int m_currScreen = -1;
 static OPTIONS_TYPE g_nPropertyMode = OPTIONS_GAME;
 static BOOL  g_bAutoAspect[MAX_SCREENS+1] = {false, false, false, false, false}; // state of tick on keep-aspect checkbox on "Screen" pane, per screen
@@ -2971,6 +2971,7 @@ static void InitializeBIOSUI(HWND hwnd)
 			ComboBox_SetItemData( hCtrl, i++, "");
 			return;
 		}
+#if 0
 		//if (g_nGame == LOCAL_OPTIONS) //Folder Options: This is the only place that LOCAL_OPTIONS is used.
 		{
 			gamedrv = &driver_list::driver(g_nFolderGame);
@@ -3005,7 +3006,7 @@ static void InitializeBIOSUI(HWND hwnd)
 			}
 			return;
 		}
-
+#endif
 		if (DriverHasOptionalBIOS(g_nGame) == false)
 		{
 			ComboBox_InsertString(hCtrl, i, TEXT("None"));
