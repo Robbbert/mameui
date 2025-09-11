@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2016 -->
+<!-- Number of items in this list = 2019 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4892,6 +4892,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gend5a367c8f220f">
+		<description>Cavaleiro (Proto)(2025)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Cavaleiro (Proto)(2025)(Manganga Team).bin" size="524288" crc="b358d781" sha1="d5a367c8f220f7d6a416dca9c85194f8877b8e56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genbefa3ae86e2b3">
+		<description>Cavaleiro - Director's Cut (Proto)(2025)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Cavaleiro - Director's Cut (Proto)(2025)(Manganga Team).bin" size="786432" crc="796ee6a6" sha1="befa3ae86e2b33625d3f5b836a4dfcb01674fb85"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gendeea36805385b">
 		<description>Cave Story MD (PD) (v0.5.2)</description>
 		<year>????</year>
@@ -7109,6 +7129,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="GM T-76153.bin" size="2097152" crc="1bb86a33" sha1="56ab90be258290d17eab82971035b530e15cf7c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen2b7ee5d57d5ce">
+		<description>Go! Go! Pogogirl (2025)(Space Pants Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Go! Go! Pogogirl (2025)(Space Pants Games).bin" size="2097152" crc="25ada8df" sha1="2b7ee5d57d5cef9cb701b4870385641070c1af95"/>
 			</dataarea>
 		</part>
 	</software>

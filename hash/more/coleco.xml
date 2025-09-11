@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 602 -->
+<!-- Number of items in this list = 612 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -3902,6 +3902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col523fd9fce7047">
+		<description>Qbert's Qubes (USA)(1984)(Parker Brothers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="12288">
+				<rom name="Qbert's Qubes (USA)(1984)(Parker Brothers).rom" size="12288" crc="79d90d26" sha1="523fd9fce7047ae76dd4219cdb89a4f298fe14ab"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col68ea419de52a9">
 		<description>Quatre (2013 Nicolas Campion)</description>
 		<year>????</year>
@@ -3973,12 +3983,12 @@
 		</part>
 	</software>
 	<software name="col878193d602643">
-		<description>Reversi (Daniel Bienvenu)(2001)(crashes after a while)</description>
+		<description>Reversi (2001)(Daniel Bienvenu)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="23296">
-				<rom name="Reversi (Daniel Bienvenu)(2001)(crashes after a while).rom" size="23296" crc="7d102fe7" sha1="878193d602643183dc00df7da9f20eab416b6d9d"/>
+				<rom name="Reversi (2001)(Daniel Bienvenu).rom" size="23296" crc="7d102fe7" sha1="878193d602643183dc00df7da9f20eab416b6d9d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4013,12 +4023,12 @@
 		</part>
 	</software>
 	<software name="col00a5b9dc41e3a">
-		<description>River Raid (1984)(Activision)[b]</description>
+		<description>River Raid (USA)(1984)(Activision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="River Raid (1984)(Activision)[b].rom" size="16384" crc="fe897f9c" sha1="00a5b9dc41e3a684a874b65cf29121984f10f327"/>
+				<rom name="River Raid (USA)(1984)(Activision).rom" size="16384" crc="fe897f9c" sha1="00a5b9dc41e3a684a874b65cf29121984f10f327"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4033,22 +4043,22 @@
 		</part>
 	</software>
 	<software name="col25b69a19bed03">
-		<description>Robin Hood (1984) (Xonox) [a1]</description>
+		<description>Robin Hood (USA)(1984)(Xonox)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Robin Hood (1984) (Xonox) [a1].rom" size="16384" crc="0eb45d6e" sha1="25b69a19bed03c806188665a348f64be1f4b0e56"/>
+				<rom name="Robin Hood (USA)(1984)(Xonox).rom" size="16384" crc="0eb45d6e" sha1="25b69a19bed03c806188665a348f64be1f4b0e56"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="colf987591f915eb">
-		<description>Robin Hood (1984)(Xonox)[a]</description>
+		<description>Robin Hood (USA, Alt)(1984)(Xonox)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Robin Hood (1984)(Xonox)[a].rom" size="16384" crc="cdb8d3cf" sha1="f987591f915eb0d3547b85f3767fff2d4fd0540f"/>
+				<rom name="Robin Hood (USA, Alt)(1984)(Xonox).rom" size="16384" crc="cdb8d3cf" sha1="f987591f915eb0d3547b85f3767fff2d4fd0540f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4082,23 +4092,33 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col6598592f1f4de">
+		<description>Roc 'n Rope (USA, Euro)(1984)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Roc 'n Rope (USA, Euro)(1984)(Coleco).rom" size="24576" crc="af885d76" sha1="6598592f1f4debccce5bccfff406bf10970ffdac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colfda438a9d57bd">
-		<description>Rock N Bolt (1984)(Activision)</description>
+		<description>Rock n' Bolt (USA)(1984)(Telegames)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Rock N Bolt (1984)(Activision).rom" size="16384" crc="522b59b9" sha1="fda438a9d57bdb5aa178c6748db695627805ce15"/>
+				<rom name="Rock n' Bolt (USA)(1984)(Telegames).rom" size="16384" crc="522b59b9" sha1="fda438a9d57bdb5aa178c6748db695627805ce15"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="col2b2f337ba597a">
-		<description>Rock N Bolt (1984)(Activision)[a]</description>
+		<description>Rock n' Bolt (USA, Alt)(1984)(Telegames)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Rock N Bolt (1984)(Activision)[a].rom" size="16384" crc="af49a0c3" sha1="2b2f337ba597af5eee2b10e70a129638b4679c9e"/>
+				<rom name="Rock n' Bolt (USA, Alt)(1984)(Telegames).rom" size="16384" crc="af49a0c3" sha1="2b2f337ba597af5eee2b10e70a129638b4679c9e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4372,6 +4392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col15e6f8197caee">
+		<description>Sir Lancelot (USA)(1983)(Xonox)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Sir Lancelot (USA)(1983)(Xonox).rom" size="16384" crc="df84ffb5" sha1="15e6f8197caee5a500c6ce33952d51beca6a43cc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col881d636171e00">
 		<description>sir_ababol_v11</description>
 		<year>????</year>
@@ -4483,22 +4513,22 @@
 		</part>
 	</software>
 	<software name="colbfa12da8a4bfe">
-		<description>Smurf - Rescue in Gargamel's Castle (1982) [b1]</description>
+		<description>Smurf - Rescue in Gargamel's Castle (USA, Alt)(1982)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Smurf - Rescue in Gargamel's Castle (1982) [b1].rom" size="16384" crc="d1a1fe0b" sha1="bfa12da8a4bfeb7c985c9b5ffc45494efc7fce50"/>
+				<rom name="Smurf - Rescue in Gargamel's Castle (USA, Alt)(1982)(Coleco).rom" size="16384" crc="d1a1fe0b" sha1="bfa12da8a4bfeb7c985c9b5ffc45494efc7fce50"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="colf0740e1916d23">
-		<description>Smurf - Rescue in Gargamel's Castle (1982)</description>
+		<description>Smurf - Rescue in Gargamel's Castle (USA, Euro)(1982)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Smurf - Rescue in Gargamel's Castle (1982).rom" size="16384" crc="42850379" sha1="f0740e1916d2351537c6725b37ba3c1b321f15eb"/>
+				<rom name="Smurf - Rescue in Gargamel's Castle (USA, Euro)(1982)(Coleco).rom" size="16384" crc="42850379" sha1="f0740e1916d2351537c6725b37ba3c1b321f15eb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4679,6 +4709,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Panic (1983)(Universal).rom" size="16384" crc="5bdf2997" sha1="530870501f322f1d72e820a722790d300f43a6de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col2d8c6c5a4088e">
+		<description>Space Venture v3.1 (2019)(TIX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Space Venture v3.1 (2019)(TIX).rom" size="32768" crc="f7ed24e9" sha1="2d8c6c5a4088e41ec8dbc085edb0d057f89a7eef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4973,12 +5013,12 @@
 		</part>
 	</software>
 	<software name="cola3c9aba579c6f">
-		<description>Stone of Wisdom (2015) (Team Pixelboy)</description>
+		<description>Stone of Wisdom SGM (2015)(Team Pixelboy)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
-				<rom name="Stone of Wisdom (2015) (Team Pixelboy).rom" size="131072" crc="ba2e3fea" sha1="a3c9aba579c6f164fb1eb2dd48002c5d2a36ebcf"/>
+				<rom name="Stone of Wisdom SGM (2015)(Team Pixelboy).rom" size="131072" crc="ba2e3fea" sha1="a3c9aba579c6f164fb1eb2dd48002c5d2a36ebcf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5039,6 +5079,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Subroc (1983)(Sega)[a].rom" size="32768" crc="2ecc2c3b" sha1="5500b8251775d81485249de3c4c36e89411700e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cold3dca3dab60a3">
+		<description>Subroc (USA, Euro)(1983)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="20480">
+				<rom name="Subroc (USA, Euro)(1983)(Coleco).rom" size="20480" crc="a417f25f" sha1="d3dca3dab60a386156d823bf1905e5542ac1aa21"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5322,6 +5372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col0a32a17a3e5e6">
+		<description>Tank Wars (Euro)(1983)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="12288">
+				<rom name="Tank Wars (Euro)(1983)(Coleco).rom" size="12288" crc="af6bbc7e" sha1="0a32a17a3e5e6c220de91e4dcf036d7d02ad8e30"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col01062d5049231">
 		<description>Tank Wars (U)</description>
 		<year>????</year>
@@ -5349,6 +5409,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Tapper (USA)(1984)(Coleco).rom" size="32768" crc="8afd7db2" sha1="bbb25e64aefa3adaff9f864713ecabe3b6f0316b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col59cb8dec033c3">
+		<description>Tarzan from out of the Jungle (USA, Euro)(1982)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Tarzan from out of the Jungle (USA, Euro)(1982)(Coleco).rom" size="24576" crc="7cd7a702" sha1="59cb8dec033c3b1df476c7c93109aba9562ba3d4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5552,26 +5622,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col06f54a91ad57e">
-		<description>Tutankham (1983)(Parker Brothers)(o)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Tutankham (1983)(Parker Brothers)(o).rom" size="16384" crc="10cc33a3" sha1="06f54a91ad57e5487ff733c9f33372d5314a1d74"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="cola668ff92e6f83">
-		<description>Tutankham (1983)(Parker Brothers)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="12288">
-				<rom name="Tutankham (1983)(Parker Brothers).rom" size="12288" crc="0408f58c" sha1="a668ff92e6f83e37f44178260618bbc650ca61c9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col880d1a04788be">
 		<description>Tutankham (U)</description>
 		<year>????</year>
@@ -5582,13 +5632,33 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col96d83945d041f">
-		<description>Up 'N Down (1984)(Sega)</description>
+	<software name="cola668ff92e6f83">
+		<description>Tutankham (USA)(1983)(Parker Brothers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="12288">
+				<rom name="Tutankham (USA)(1983)(Parker Brothers).rom" size="12288" crc="0408f58c" sha1="a668ff92e6f83e37f44178260618bbc650ca61c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col06f54a91ad57e">
+		<description>Tutankham (USA, Alt)(1983)(Parker Brothers)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Up 'N Down (1984)(Sega).rom" size="16384" crc="fdd52ca0" sha1="96d83945d041f6f795a3107904a9986de86df8a6"/>
+				<rom name="Tutankham (USA, Alt)(1983)(Parker Brothers).rom" size="16384" crc="10cc33a3" sha1="06f54a91ad57e5487ff733c9f33372d5314a1d74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col96d83945d041f">
+		<description>Up'n Down (USA)(1984)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Up'n Down (USA)(1984)(Sega).rom" size="16384" crc="fdd52ca0" sha1="96d83945d041f6f795a3107904a9986de86df8a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5612,16 +5682,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col9cf7e7439d171">
-		<description>Venture (1982)(Exidy)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Venture (1982)(Exidy).rom" size="16384" crc="8e5a4aa3" sha1="9cf7e7439d1719152ed28c1123ae8ad68175412f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col88cdf7bb3bc6c">
 		<description>Venture (1982)(Exidy)[a]</description>
 		<year>????</year>
@@ -5629,6 +5689,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Venture (1982)(Exidy)[a].rom" size="16384" crc="1d7eb7d1" sha1="88cdf7bb3bc6c82c675d2d3915adaff718dcab2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col9cf7e7439d171">
+		<description>Venture (USA, Euro)(1982)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Venture (USA, Euro)(1982)(Coleco).rom" size="16384" crc="8e5a4aa3" sha1="9cf7e7439d1719152ed28c1123ae8ad68175412f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5663,12 +5733,12 @@
 		</part>
 	</software>
 	<software name="colc9c40cf30cc52">
-		<description>VexedCOL</description>
+		<description>Vexed v1.15 (2023)(Under4Mhz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="VexedCOL.col" size="32768" crc="865bae31" sha1="c9c40cf30cc5290bc5a3b792256c3886d1a26b96"/>
+				<rom name="Vexed v1.15 (2023)(Under4Mhz).rom" size="32768" crc="865bae31" sha1="c9c40cf30cc5290bc5a3b792256c3886d1a26b96"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5679,6 +5749,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Victory (1983)(Exidy).rom" size="24576" crc="5f20bf49" sha1="327727222226d0c95d7557389d79a0c974cebf2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7144c65cb57ee">
+		<description>Victory (USA)(1983)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="20480">
+				<rom name="Victory (USA)(1983)(Coleco).rom" size="20480" crc="70142655" sha1="7144c65cb57eeb846f4771aeb402469494f8f56f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5713,12 +5793,22 @@
 		</part>
 	</software>
 	<software name="col48828f603e651">
-		<description>War Games (1984)(United Artists)</description>
+		<description>War Games (USA, Euro)(1984)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
-				<rom name="War Games (1984)(United Artists).rom" size="24576" crc="6e0150c1" sha1="48828f603e65178c0feda275d6b3a11aff688eae"/>
+				<rom name="War Games (USA, Euro)(1984)(Coleco).rom" size="24576" crc="6e0150c1" sha1="48828f603e65178c0feda275d6b3a11aff688eae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col1e3b525f2d895">
+		<description>War Games (USA, Proto)(1984)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="War Games (USA, Proto)(1984)(Coleco).rom" size="24576" crc="fd25adb3" sha1="1e3b525f2d895105727fee76076dd5ecccbf1778"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5812,6 +5902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="coleb7764ef6f508">
+		<description>Wing War (USA)(1983)(Imagic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Wing War (USA)(1983)(Imagic).rom" size="16384" crc="29ec00c9" sha1="eb7764ef6f50885e2eaffaff42ab9fcf760a77e1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb04d4a1c18255">
 		<description>Wizard (2003 Daniel Bienvenu)</description>
 		<year>????</year>
@@ -5893,22 +5993,22 @@
 		</part>
 	</software>
 	<software name="col9b5bfb69d3704">
-		<description>Yolks on You, The (1983)(Games of the Century)(proto)</description>
+		<description>Yolk's on you, The (Euro, Proto)(1983)(Fox Video Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Yolks on You, The (1983)(Games of the Century)(proto).rom" size="16384" crc="997ad8de" sha1="9b5bfb69d37042d131a5c9576f927e09f44f9666"/>
+				<rom name="Yolk's on you, The (Euro, Proto)(1983)(Fox Video Games).rom" size="16384" crc="997ad8de" sha1="9b5bfb69d37042d131a5c9576f927e09f44f9666"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="col65f76e4577be6">
-		<description>Zanac (2015)(CollectorVision)</description>
+		<description>Zanac SGM (2015)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
-				<rom name="Zanac (2015)(CollectorVision).rom" size="131072" crc="e290a941" sha1="65f76e4577be6fd0b9c03ea574cba2f21fa667d3"/>
+				<rom name="Zanac SGM (2015)(CollectorVision).rom" size="131072" crc="e290a941" sha1="65f76e4577be6fd0b9c03ea574cba2f21fa667d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5922,16 +6022,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col1733b3407939f">
-		<description>Zaxxon (1982)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="24576">
-				<rom name="Zaxxon (1982)(Sega).rom" size="24576" crc="8cb0891a" sha1="1733b3407939f5c37e39d5494abfa4137f500707"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col383d79b34a11e">
 		<description>Zaxxon (1982)(Sega)[a]</description>
 		<year>????</year>
@@ -5942,13 +6032,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col1733b3407939f">
+		<description>Zaxxon (USA, Euro)(1982)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Zaxxon (USA, Euro)(1982)(Coleco).rom" size="24576" crc="8cb0891a" sha1="1733b3407939f5c37e39d5494abfa4137f500707"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col9119f3a485eb4">
-		<description>Zenji (1984)(Activision)</description>
+		<description>Zenji (USA)(1984)(Activision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Zenji (1984)(Activision).rom" size="16384" crc="6e523e50" sha1="9119f3a485eb4215e7d41c7cf0e412d903458647"/>
+				<rom name="Zenji (USA)(1984)(Activision).rom" size="16384" crc="6e523e50" sha1="9119f3a485eb4215e7d41c7cf0e412d903458647"/>
 			</dataarea>
 		</part>
 	</software>

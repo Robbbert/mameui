@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 194 -->
+<!-- Number of items in this list = 195 -->
 <softwarelist name="zx80_cass" description="zx80_cass loose roms">
 	<software name="zx0e8091d85eaeda">
 		<description>1KCHESSplusKa</description>
@@ -1059,6 +1059,16 @@
 		<part name="cass1" interface="zx80_cass">
 			<dataarea name="cass" size="780">
 				<rom name="Othello.O" size="780" crc="e2bd919b" sha1="d7999f3b33cf212d069fee34ae911d118250ca9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx0abb76345cfd0f">
+		<description>password</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx80_cass">
+			<dataarea name="cass" size="774">
+				<rom name="password.o" size="774" crc="690d289b" sha1="abb76345cfd0f9e0674e9e6a954bdbef8a0f7957"/>
 			</dataarea>
 		</part>
 	</software>

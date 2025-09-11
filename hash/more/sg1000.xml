@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 69 -->
+<!-- Number of items in this list = 72 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -39,6 +39,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Arno Dash 2 v1.03 (2020)(Under4Mhz).sg" size="32768" crc="e0478a53" sha1="205568a00dfbf57e8549b03beb274eda11a0ee93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1b2dd23a7c41bf">
+		<description>Arno Dash v1.03 (2021)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Arno Dash v1.03 (2021)(Under4Mhz).sg" size="32768" crc="6dad65d3" sha1="b2dd23a7c41bfc74a16894e99647c7e3cd9a1c41"/>
 			</dataarea>
 		</part>
 	</software>
@@ -322,6 +332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg17524486ce0fa3">
+		<description>Mahjong Solitaire v1.16 (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Mahjong Solitaire v1.16 (2023)(Under4Mhz).sg" size="32768" crc="d07afa95" sha1="7524486ce0fa3c7a21c5231cce35133ef2f20a57"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1d261c253a83e0">
 		<description>Mazy (2022)(Inufuto)</description>
 		<year>????</year>
@@ -379,6 +399,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Ninja Princess (T-Eng)(2010)(goldenband).bin" size="32768" crc="bdb6cf0e" sha1="0473f6ca89948f08f504c634e00cf2cf72f94fc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1d48df1fce14ea">
+		<description>Operation Hibernation Plus (2025)(Jess Creations - ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="40960">
+				<rom name="Operation Hibernation Plus (2025)(Jess Creations - ArugulaZ).sg" size="40960" crc="e530d8f5" sha1="d48df1fce14ea834b8d22fe293bd9e35e363f2e3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -512,6 +542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg19e73650bbd708">
+		<description>Svellas (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="16384">
+				<rom name="Svellas (2025)(Inufuto).sg" size="16384" crc="ea0cc388" sha1="9e73650bbd708bcd265e69812fd9114b83788977"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg16f861fa045129">
 		<description>Ultimate Dungeon Escape (2025)(tibone, Cyrus, Revo)</description>
 		<year>????</year>
@@ -629,16 +669,6 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="[sg1000m2]Klondike_104.sg" size="32768" crc="9f2720df" sha1="3655a171b045bb462ce59251684e8b43b37903df"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sg17524486ce0fa3">
-		<description>[sg1000m2]Mahjong_116</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sg1000_cart">
-			<dataarea name="cart" size="32768">
-				<rom name="[sg1000m2]Mahjong_116.sg" size="32768" crc="d07afa95" sha1="7524486ce0fa3c7a21c5231cce35133ef2f20a57"/>
 			</dataarea>
 		</part>
 	</software>
