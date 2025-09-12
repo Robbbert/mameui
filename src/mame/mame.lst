@@ -20713,6 +20713,7 @@ ns8linewa
 ns8linewb
 ns8linewc
 ns8linewd
+packsystem
 pkrmast
 pkrmasta
 pokonl97
@@ -25231,6 +25232,7 @@ metamrphe
 metamrphj
 metamrphu
 mmaulers
+mmaulersu
 mtlchamp
 mtlchamp1
 mtlchampa
@@ -33016,6 +33018,12 @@ spool99b
 spool99c
 vcarn
 
+@source:misc/spcforce.cpp
+meteor
+meteors
+spcforc2
+spcforce
+
 @source:misc/sprcros2.cpp
 sprcros2
 sprcros2a
@@ -33093,9 +33101,6 @@ pushover
 @source:misc/sumt8035.cpp
 sm_ngacc
 sm_ultng
-
-@source:misc/supertnk.cpp
-supertnk
 
 @source:misc/tapatune.cpp
 smartoss
@@ -33267,9 +33272,6 @@ vampire
 @source:misc/vcombat.cpp
 shadfgtr
 vcombat
-
-@source:misc/video21.cpp
-video21
 
 @source:misc/videoart.cpp
 videoart
@@ -41694,6 +41696,7 @@ unomedal
 westdrmg
 
 @source:sega/segattl.cpp
+bmark
 fonz
 
 @source:sega/segaufo.cpp
@@ -47923,23 +47926,24 @@ tankbust
 @source:vectorgraphic/vector4.cpp
 vector4
 
-@source:venture/looping.cpp
-looping
-loopingv
-loopingva
-skybump
-
-@source:venture/spcforce.cpp
-meteor
-meteors
-spcforc2
-spcforce
-
 @source:verifone/tranz330.cpp
 tranz330
 
 @source:vidbrain/vidbrain.cpp
 vidbrain
+
+@source:videogames/looping.cpp
+looping
+loopingu
+loopingua
+loopingub
+skybump
+
+@source:videogames/supertnk.cpp
+supertnk
+
+@source:videogames/video21.cpp
+video21
 
 @source:videoton/tvc.cpp
 tvc64
