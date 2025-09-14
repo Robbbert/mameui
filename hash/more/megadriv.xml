@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2019 -->
+<!-- Number of items in this list = 2020 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6043,12 +6043,12 @@
 		</part>
 	</software>
 	<software name="gen8b54d7bcf8454">
-		<description>Earthion Early Prototype</description>
+		<description>Earthion Early Prototype (v3.3.0)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="655360">
-				<rom name="Earthion Early Prototype.md" size="655360" crc="27423e6c" sha1="8b54d7bcf84540bf8ba933becb69cebc54ccb09f"/>
+				<rom name="Earthion Early Prototype (v3.3.0).md" size="655360" crc="27423e6c" sha1="8b54d7bcf84540bf8ba933becb69cebc54ccb09f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9839,6 +9839,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Kunio no Nekketsu School Fighters (beta v.05b) (Brazil) (Unl).bin" size="4194304" crc="1054a215" sha1="26e8e0e6c1d4190371c7f2a38ba00acbdd095c51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend6da2ad8b5886">
+		<description>Kunio no Nekketsu School Fighters_v1.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5767168">
+				<rom name="Kunio no Nekketsu School Fighters_v1.4.bin" size="5767168" crc="16edf7ea" sha1="d6da2ad8b5886b4844a08f49732962201bf250aa"/>
 			</dataarea>
 		</part>
 	</software>
