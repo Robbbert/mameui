@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4599 -->
+<!-- Number of items in this list = 4646 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8552,6 +8552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs07a348534d749">
+		<description>Big Match Soccer (1983)(Wintersoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8333">
+				<rom name="Big Match Soccer (1983)(Wintersoft).tap" size="8333" crc="08311ee4" sha1="07a348534d749e352e7db00bb4e8162bd7ce705d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c215040d2bdb">
 		<description>Big Nose's American Adventure (1992)(Codemasters)</description>
 		<year>????</year>
@@ -8559,6 +8569,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47470">
 				<rom name="Big Nose's American Adventure (1992)(Codemasters).tap" size="47470" crc="64006917" sha1="1c215040d2bdbdbb10de9b99eed8e6c9ed76f29d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1825f837cd23">
+		<description>Big Shit III (19xx)(Hacker Chris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22677">
+				<rom name="Big Shit III (19xx)(Hacker Chris).tap" size="22677" crc="d1e9e95e" sha1="f1825f837cd23b9d87b2de95a72172d13937f991"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8629,6 +8649,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48586">
 				<rom name="Biggles - Timewarp (1986)(Mirrorsoft).tap" size="48586" crc="a53ff55d" sha1="7990ff21b9d0d023413c669bbdd5612dc64ede35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc592c03ed3d0e">
+		<description>Bigotudo, El 128K (2024)(Red Triangle)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55771">
+				<rom name="Bigotudo, El 128K (2024)(Red Triangle).tap" size="55771" crc="17e546ce" sha1="c592c03ed3d0ee9d6121be969532c516e00d2bf7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfbe2e40e14c7f">
+		<description>Bigotudo, El v1.4 128K (2024)(ZXOnline)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56901">
+				<rom name="Bigotudo, El v1.4 128K (2024)(ZXOnline).tap" size="56901" crc="ebf1a265" sha1="fbe2e40e14c7f9c44e39bafcec7ed44a5b2036cc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11472,6 +11512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2d3f4f0612245">
+		<description>L'orso (1994)(Program Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33070">
+				<rom name="L'orso (1994)(Program Soft).tap" size="33070" crc="6f6c0876" sha1="2d3f4f0612245287e8f44b2bc359f5c098277b99"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0dbe31463fb5d">
 		<description>Lamode_1984_programa_computado</description>
 		<year>????</year>
@@ -11562,6 +11612,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxscc4c583938636">
+		<description>Lord Of The Rings, The (1986)(Melbourne House)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="70198">
+				<rom name="Lord Of The Rings, The (1986)(Melbourne House)[Part 1 of 2].tap" size="70198" crc="0ea2da2d" sha1="cc4c583938636531098985c816093327e61fa994"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5007a760d8176">
+		<description>Lord Of The Rings, The (1986)(Melbourne House)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="71568">
+				<rom name="Lord Of The Rings, The (1986)(Melbourne House)[Part 2 of 2].tap" size="71568" crc="4a2e2bb4" sha1="5007a760d8176409d2462fed36b00aa33ab0bd75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4ecabe78cf69c">
+		<description>Lord Of The Rings, The - Beginner (1986)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63831">
+				<rom name="Lord Of The Rings, The - Beginner (1986)(Melbourne House).tap" size="63831" crc="e69747c9" sha1="4ecabe78cf69ce7ba0c4c0376d0151d65cd49483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56d3f02e8c76d">
+		<description>Lords Of Chaos (1991)(Blade Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41657">
+				<rom name="Lords Of Chaos (1991)(Blade Software).tap" size="41657" crc="f8c5375b" sha1="56d3f02e8c76d989c93900020413cf2dd7c8ca98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfeb706f979d71">
+		<description>Lords Of Chaos (1991)(Blade Software)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="105580">
+				<rom name="Lords Of Chaos (1991)(Blade Software)[a2].tap" size="105580" crc="9911bd66" sha1="feb706f979d715a71801bd71d7db8d2ca65b7fc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse957b43445774">
+		<description>Lords Of Chaos (1991)(Blade Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84653">
+				<rom name="Lords Of Chaos (1991)(Blade Software)[a].tap" size="84653" crc="db3d9c3f" sha1="e957b43445774a9e512cf48841cfaf3318bb40a5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs818cda2120ead">
 		<description>Lords of Chaos + Expansion Kit 1 (1991)(Blade Software)</description>
 		<year>????</year>
@@ -11569,6 +11679,146 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="106004">
 				<rom name="Lords of Chaos + Expansion Kit 1 (1991)(Blade Software).tzx" size="106004" crc="3c5e0cf7" sha1="818cda2120ead73ce28d2d75d8de0e5725af24d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs559870c5822b7">
+		<description>Lords Of Midnight, The (1984)(Beyond)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55351">
+				<rom name="Lords Of Midnight, The (1984)(Beyond)[a2].tap" size="55351" crc="89f43e9f" sha1="559870c5822b730f3595147a18eb7217bed1359d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7deae86bf42e0">
+		<description>Lords of Midnight, The 48K (1984)(Beyond)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49232">
+				<rom name="Lords of Midnight, The 48K (1984)(Beyond).tap" size="49232" crc="7a8b567b" sha1="7deae86bf42e04007552a9602b404ec6f7d47529"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a9ad336ca74d">
+		<description>Lorigraph (1985)(Loriciels)(Fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18671">
+				<rom name="Lorigraph (1985)(Loriciels)(Fr).tap" size="18671" crc="cc1401f7" sha1="8a9ad336ca74d6b9ee9bad0ebabf455a72fb3573"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa2153c61c0434">
+		<description>Los Angeles Drugs Bust (1990)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44685">
+				<rom name="Los Angeles Drugs Bust (1990)(Players Premier).tap" size="44685" crc="9d831f5b" sha1="a2153c61c0434e20d028203623bc2f0715ff08fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscf090bd1f877d">
+		<description>Los Angeles SWAT (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32386">
+				<rom name="Los Angeles SWAT (1987)(Mastertronic).tap" size="32386" crc="e6cec5fd" sha1="cf090bd1f877d45e151ac4e474d64ef548127bb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd855bc37b19d7">
+		<description>Los Templos Sagrados (1991)(Aventuras AD)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="91911">
+				<rom name="Los Templos Sagrados (1991)(Aventuras AD)(Sp).tap" size="91911" crc="e3106026" sha1="d855bc37b19d73603df2de7da004fa32149e1f42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb68d5c0a3e2b9">
+		<description>Lost Cavern (2021)(Isaiasdiaz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46610">
+				<rom name="Lost Cavern (2021)(Isaiasdiaz).tap" size="46610" crc="987ec991" sha1="b68d5c0a3e2b9ec4b2c23dae944e6af7abc2737a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdaf59f2542c01">
+		<description>Lost Cavern - Easy (2021)(Isaiasdiaz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46585">
+				<rom name="Lost Cavern - Easy (2021)(Isaiasdiaz).tap" size="46585" crc="37e3379b" sha1="daf59f2542c01eaaf79ab472de3ff7dca9b9550d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfaa463e931e12">
+		<description>Lost Caves and the Tomb of Doom 48K-128K (1989)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42515">
+				<rom name="Lost Caves and the Tomb of Doom 48K-128K (1989)(Players Premier).tap" size="42515" crc="88113a26" sha1="faa463e931e126616c6b1707a550ee35a9afaf86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs40276eef5a619">
+		<description>Lost City, The (1989)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36904">
+				<rom name="Lost City, The (1989)(Sinclair User).tap" size="36904" crc="5b92935c" sha1="40276eef5a6193c2957c72086373be732a7039d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa2cccbfa1237e">
+		<description>Lost Tapes of Albion (2012)(Stonechat Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25472">
+				<rom name="Lost Tapes of Albion (2012)(Stonechat Productions).tap" size="25472" crc="0f3caf6e" sha1="a2cccbfa1237eb07757a5bb58635f5cc94412afe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1bbb261c7a6b">
+		<description>Lost Temple Of The Incas, The (1990)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46383">
+				<rom name="Lost Temple Of The Incas, The (1990)(Zenobi Software).tap" size="46383" crc="a793d001" sha1="a1bbb261c7a6b0e1b64e79d323233202aadb8a2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2980abc7b884d">
+		<description>Lost Treasures of Tulum, the (2020)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="75999">
+				<rom name="Lost Treasures of Tulum, the (2020)(RetroWorks).tap" size="75999" crc="c64c38ad" sha1="2980abc7b884df58363040abdf4a8849e1cda0d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee409b308318d">
+		<description>Lost Treasures of Tulum, The ES 128K (2020)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="75999">
+				<rom name="Lost Treasures of Tulum, The ES 128K (2020)(RetroWorks).tap" size="75999" crc="c4087b0e" sha1="ee409b308318d520b04ce17af2c24a38c4474e10"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11589,6 +11839,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="129364">
 				<rom name="Lotus Esprit Turbo Challenge.tap" size="129364" crc="6c4fed18" sha1="b392e83742acd042d74d9827ef920704df8f2dfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94aaf7b357b80">
+		<description>Loxley (Basic Contest Version)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="246117">
+				<rom name="Loxley (Basic Contest Version).tap" size="246117" crc="5e785d94" sha1="94aaf7b357b80a45a5d3dba4cb786114759d2789"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs552e11cf94e19">
+		<description>Loxley (Standard Load)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="144187">
+				<rom name="Loxley (Standard Load).tap" size="144187" crc="89ef517a" sha1="552e11cf94e190874c19560be308192646ed0941"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f2c1d7dbc1f5">
+		<description>Loxley (Standard Load)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="144257">
+				<rom name="Loxley (Standard Load).tzx" size="144257" crc="d6e9c1c8" sha1="0f2c1d7dbc1f5e69cb858609a9310b61365c7c80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscac97ef744b60">
+		<description>Loxley (Turbo Load)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="144455">
+				<rom name="Loxley (Turbo Load).tzx" size="144455" crc="017c7a7b" sha1="cac97ef744b601c0922ee5aca8b24d9df69ca872"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40912,6 +41202,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7eac415ec5309">
+		<description>_Big Print (1983)(Janusz Gajewicz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8528">
+				<rom name="_Big Print (1983)(Janusz Gajewicz).tap" size="8528" crc="9ba4998a" sha1="7eac415ec5309dbef8d02385af843cf3c4b834e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8db4fa5ccd44b">
+		<description>_Biggles - Timewarp (1986)(Mirrorsoft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48636">
+				<rom name="_Biggles - Timewarp (1986)(Mirrorsoft)[a].tap" size="48636" crc="7b8fb747" sha1="8db4fa5ccd44b67c4117b1ba399f1448c6c51c24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs035d947ab7eb7">
+		<description>_Bignose's USA Adventure (1991)(Codemasters)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46080">
+				<rom name="_Bignose's USA Adventure (1991)(Codemasters)[t].tap" size="46080" crc="68787621" sha1="035d947ab7eb75ec625943ab4be4ac1c453c5d3c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3f551c308167f">
 		<description>_Binary Land v1.7 16K (2020)(Joflof)</description>
 		<year>????</year>
@@ -41242,6 +41562,146 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs55bb11bb1d411">
+		<description>_Lords Of Midnight, The (1984)(Beyond)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48924">
+				<rom name="_Lords Of Midnight, The (1984)(Beyond).tap" size="48924" crc="96f8999c" sha1="55bb11bb1d41102760af2ebe37072f834eda6759"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7a8dffbbe372">
+		<description>_Lords Of Midnight, The (1984)(Beyond)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48897">
+				<rom name="_Lords Of Midnight, The (1984)(Beyond)[a].tap" size="48897" crc="78ff1fba" sha1="f7a8dffbbe3723900c8c7cd5b3412b9087cc3de6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4ddba75d24407">
+		<description>_Lords Of Time (1988)(Level 9 Computing)[Remake]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33551">
+				<rom name="_Lords Of Time (1988)(Level 9 Computing)[Remake].tap" size="33551" crc="6f62e6d1" sha1="4ddba75d24407e16eaf5337339536d2bfce6f9d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs828de495b596e">
+		<description>_Lorna (1990)(Topo Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118666">
+				<rom name="_Lorna (1990)(Topo Soft)(Sp).tap" size="118666" crc="a09afe9a" sha1="828de495b596ee52155eabb6c15c0b92e9411182"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfa095a274b06e">
+		<description>_Lorna (1990)(Topo Soft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118784">
+				<rom name="_Lorna (1990)(Topo Soft)(Sp)[a].tap" size="118784" crc="b95ab421" sha1="fa095a274b06e5d9ea387d811b529cfd509b40e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a716e5fd07fb">
+		<description>_Los Chinos (1985)(MicroHobby)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11083">
+				<rom name="_Los Chinos (1985)(MicroHobby)(Sp).tap" size="11083" crc="64489edd" sha1="9a716e5fd07fb7f5d7850df0de7e080e32f09a67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs457e1af3b77e8">
+		<description>_Lost Dragon, The (1991)(Tartan Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50963">
+				<rom name="_Lost Dragon, The (1991)(Tartan Software).tap" size="50963" crc="7d3c1c31" sha1="457e1af3b77e8aa4835469d17e933c67a9a40403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs548d2461ffaca">
+		<description>_Lost Over Bermuda (1983)(Elfin Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28155">
+				<rom name="_Lost Over Bermuda (1983)(Elfin Software).tap" size="28155" crc="b827d164" sha1="548d2461ffaca23d0161eb1cf68cd750972caa7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc64490a245dc3">
+		<description>_Lost Tomb Of Ananka, The (1993)(Compass)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44692">
+				<rom name="_Lost Tomb Of Ananka, The (1993)(Compass).tap" size="44692" crc="b7436594" sha1="c64490a245dc3076d463a831dacb6adda11de95f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd69780ebe8115">
+		<description>_Luna Crabs (1983)(Micromega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16464">
+				<rom name="_Luna Crabs (1983)(Micromega).tap" size="16464" crc="b4580a5a" sha1="d69780ebe8115be93da76399bef0091521d6c1a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscabccea7ebe74">
+		<description>_Luna Crabs 16K (1983)(Micromega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16574">
+				<rom name="_Luna Crabs 16K (1983)(Micromega).tap" size="16574" crc="ffd2fb0b" sha1="cabccea7ebe740b1e44e74902580f91a9b2939d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf1768ce8d3cb">
+		<description>_Luna-Rover (1985)(Data Design Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20635">
+				<rom name="_Luna-Rover (1985)(Data Design Systems).tap" size="20635" crc="6b33e806" sha1="af1768ce8d3cb46d990c7dac781d998725663820"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc3ddd8fd70350">
+		<description>_Lunar Jetman (1983)(Ultimate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39213">
+				<rom name="_Lunar Jetman (1983)(Ultimate).tap" size="39213" crc="a2f329ab" sha1="c3ddd8fd7035073aa381e97a47f65ac1847b671f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3652f1303e877">
+		<description>_Lunar Jetman (1983)(Ultimate)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38908">
+				<rom name="_Lunar Jetman (1983)(Ultimate)[a].tap" size="38908" crc="988e3136" sha1="3652f1303e877578c726ee7640a629f9abe2a0f4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9a649e145e1e6">
 		<description>_Lunar Jetman</description>
 		<year>????</year>
@@ -41249,6 +41709,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39259">
 				<rom name="_Lunar Jetman.tzx" size="39259" crc="c0c6d93b" sha1="9a649e145e1e69c516e2bdfbbda5de51e3afec35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3af961a711e96">
+		<description>_Lunar Rescue (1983)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8743">
+				<rom name="_Lunar Rescue (1983)(CRL Group).tap" size="8743" crc="ebf12f7d" sha1="3af961a711e96e464b5afdd33736e18755df5fdf"/>
 			</dataarea>
 		</part>
 	</software>
