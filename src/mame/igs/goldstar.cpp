@@ -389,7 +389,7 @@ protected:
 	void goldstar_fa00_w(uint8_t data);
 	void cm_palette(palette_device &palette) const ATTR_COLD;
 	void lucky8_palette(palette_device &palette) const ATTR_COLD;
-	template <bool Has_bg_tmap> uint32_t screen_update_goldstar(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
+	uint32_t screen_update_goldstar(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
 
 	void common_decrypted_opcodes_map(address_map &map) ATTR_COLD;
 	void goldstar_map(address_map &map) ATTR_COLD;
@@ -468,7 +468,9 @@ public:
 	void init_hamhouse() ATTR_COLD;
 	void init_hamhouse9() ATTR_COLD;
 	void init_jkrmast() ATTR_COLD;
+	void decrypt_ll3() ATTR_COLD;
 	void init_ll3() ATTR_COLD;
+	void init_ll3b() ATTR_COLD;
 	void init_match133() ATTR_COLD;
 	void init_nfb96_a() ATTR_COLD;
 	void init_nfb96_b() ATTR_COLD;
@@ -509,6 +511,7 @@ private:
 	void background_col_w(uint8_t data);
 	void coincount_w(uint8_t data);
 	void pkm_out0_w(uint8_t data);
+	void jkm_vid_reg_w(uint8_t data);
 
 	uint32_t screen_update_amcoe1a(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
 	uint32_t screen_update_cmast91(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
@@ -1042,7 +1045,6 @@ void goldstar_state::goldstar_fa00_w(uint8_t data)
 
 
 
-template <bool Has_bg_tmap>
 uint32_t goldstar_state::screen_update_goldstar(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(rgb_t::black(), cliprect);
@@ -1050,7 +1052,7 @@ uint32_t goldstar_state::screen_update_goldstar(screen_device &screen, bitmap_rg
 	if (!(m_enable_reg & 0x01))
 		return 0;
 
-	if (Has_bg_tmap)
+	if (m_enable_reg & 0x10)
 	{
 		for (int i = 0; i < 64; i++)
 			m_bg_tilemap->set_scrolly(i, m_bg_scroll[i]);
@@ -2554,6 +2556,12 @@ void cmaster_state::pkm_out0_w(uint8_t data)
 }
 
 
+void cmaster_state::jkm_vid_reg_w(uint8_t data)
+{
+	m_enable_reg = bitswap<8>(data, 7, 6, 5, 4, 2, 3, 1, 0);
+}
+
+
 void cb3_state::coincount_w(uint8_t data)
 {
 
@@ -2740,7 +2748,7 @@ void cmaster_state::jkrmast_portmap(address_map &map)
 	map(0x12, 0x12).portr("IN2");
 	map(0x13, 0x13).w(FUNC(cmaster_state::pkm_out0_w));
 	map(0x17, 0x17).lw8(NAME([this] (uint8_t data) { m_reel_bank = (data & 0x30) >> 4; m_bgcolor = data & 0x03; m_bg_tilemap->mark_all_dirty(); }));
-	// map(0x18, 0x18).w // enable reg?
+	map(0x18, 0x18).w(FUNC(cmaster_state::jkm_vid_reg_w)); // enable reg?
 }
 
 void cmaster_state::eldoraddoa_portmap(address_map &map)  // TODO: incomplete!
@@ -2784,7 +2792,8 @@ void cmaster_state::cmast91_portmap(address_map &map)
 	map.global_mask(0xff);
 	map(0x00, 0x00).portr("IN0").w(FUNC(cmaster_state::outport0_w));
 	map(0x01, 0x01).portr("IN1").w(FUNC(cmaster_state::background_col_w));
-	map(0x02, 0x02).portr("IN2");
+	map(0x02, 0x02).portr("IN2").w(FUNC(cmaster_state::p1_lamps_w));
+	map(0x03, 0x03).w(FUNC(cmaster_state::coincount_w));
 	map(0x10, 0x13).rw("ppi8255_0", FUNC(i8255_device::read), FUNC(i8255_device::write));  // DIP switches
 	map(0x21, 0x21).r("aysnd", FUNC(ay8910_device::data_r));
 	map(0x22, 0x23).w("aysnd", FUNC(ay8910_device::data_address_w));
@@ -11779,7 +11788,7 @@ void goldstar_state::goldstar(machine_config &config)
 	screen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_goldstar);
@@ -11812,7 +11821,7 @@ void goldstar_state::goldstbl(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_bl);
@@ -11893,7 +11902,7 @@ void goldstar_state::super9(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 32*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_super9);
@@ -11998,7 +12007,7 @@ void cb3_state::ncb3(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(cb3_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(cb3_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_ncb3);
@@ -12066,7 +12075,7 @@ void goldstar_state::wcherry(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_cb3e);
@@ -12110,7 +12119,7 @@ void cmaster_state::cm(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_cmbitmap);
@@ -12398,7 +12407,7 @@ void wingco_state::superdrg(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(wingco_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(wingco_state::screen_update_goldstar));
 	screen.screen_vblank().set(FUNC(wingco_state::masked_irq));
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_animalhs);
@@ -12668,7 +12677,7 @@ void goldstar_state::kkotnoli(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, INPUT_LINE_NMI);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_ncb3);
@@ -12701,7 +12710,7 @@ void goldstar_state::ladylinr(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, INPUT_LINE_NMI);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_ncb3);
@@ -12753,7 +12762,7 @@ void wingco_state::wcat3(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(wingco_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(wingco_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, INPUT_LINE_NMI);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_ncb3);
@@ -12800,7 +12809,7 @@ void cmaster_state::amcoe1(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_cm);
@@ -12854,7 +12863,7 @@ void cmaster_state::amcoe2(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_cm);
@@ -12961,7 +12970,7 @@ void cmaster_state::pkrmast(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(cmaster_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, 0, HOLD_LINE);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_pkrmast);
@@ -12988,7 +12997,7 @@ void cmaster_state::jkrmast(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &cmaster_state::jkrmast_map);
 	m_maincpu->set_addrmap(AS_IO, &cmaster_state::jkrmast_portmap);
 
-	subdevice<screen_device>("screen")->set_screen_update(FUNC(cmaster_state::screen_update_goldstar<true>));
+	subdevice<screen_device>("screen")->set_screen_update(FUNC(cmaster_state::screen_update_goldstar));
 	MCFG_VIDEO_START_OVERRIDE(cmaster_state, jkrmast)
 
 	subdevice<ay8910_device>("aysnd")->port_a_read_callback().set_ioport("DSW3");
@@ -13051,7 +13060,7 @@ void goldstar_state::megaline(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, INPUT_LINE_NMI);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_megaline);
@@ -13081,7 +13090,7 @@ void unkch_state::bonusch(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(unkch_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(unkch_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, INPUT_LINE_NMI);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_megaline);
@@ -13121,7 +13130,7 @@ void goldstar_state::feverch(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_size(64*8, 32*8);
 	screen.set_visarea(0*8, 64*8-1, 2*8, 30*8-1);
-	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar<false>));
+	screen.set_screen_update(FUNC(goldstar_state::screen_update_goldstar));
 	screen.screen_vblank().set_inputline(m_maincpu, INPUT_LINE_NMI);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_ncb3);
@@ -15956,6 +15965,7 @@ ROM_START( cb3micro )
 ROM_END
 
 
+
 ROM_START( ll3 )  // WANG QL-1  V3.03 string
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "min bet 8.u1", 0x00000, 0x10000, CRC(f19d0af3) SHA1(deefe5782213d60d8d0aae6826aa6a0109925289) )  // on sub PCB
@@ -15971,8 +15981,164 @@ ROM_START( ll3 )  // WANG QL-1  V3.03 string
 	ROM_LOAD( "lucky line iii rom 2.u14",  0x4000, 0x2000, CRC(14369397) SHA1(32dc356d333e9b439e490407cef9eb70c44e86a4) )
 	ROM_LOAD( "lucky line iii rom 1.u9",   0x6000, 0x2000, CRC(626947e5) SHA1(13b7dd7fad4659ddc6a82883f1da5a8dd09e46b5) )
 
-	ROM_REGION( 0x10000, "user1", 0 )
-	ROM_LOAD( "lucky line iii rom 8.u53",  0x0000, 0x10000, CRC(e92443d3) SHA1(4b6ca4521841610054165f085ae05510e77af191) )
+	ROM_REGION( 0x10000, "user1", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "prom1.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "prom2.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "prom3.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( ll3a )  // Macedonia Skin
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "ll3a_set2.bin", 0x00000, 0x10000, CRC(8aeabff8) SHA1(e1c662bdef0366f4279b23571805b0f978b616f6) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "rom7.u16", 0x00000, 0x8000, CRC(c7272bde) SHA1(4c890e61151b30a69929ea82694ebb851d94ad3f) )
+	ROM_LOAD( "rom6.u11", 0x08000, 0x8000, CRC(9804690f) SHA1(f18ba831471bb11dd49d58ff6c7c39376838bce6) )
+	ROM_LOAD( "rom5.u4",  0x10000, 0x8000, CRC(53b3c5ec) SHA1(1af978c8ccc664c1f8298a3d21a1023eb04852f0) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "rom4.u15",  0x0000, 0x2000, CRC(1c211766) SHA1(639d15b92f703dccf4740a218ce34a07861c0107) )
+	ROM_LOAD( "rom3.u10",  0x2000, 0x2000, CRC(50d7b91c) SHA1(ef9e35706ec41cbae16c8a00fdc8ce44791112c9) )
+	ROM_LOAD( "rom2.u14",  0x4000, 0x2000, CRC(28226d1b) SHA1(b80c005d32cfe9b08293a09a0f674ed7f6b0f2eb) )
+	ROM_LOAD( "rom1.u9",   0x6000, 0x2000, CRC(090ffade) SHA1(813b857f0412a651318f4f4c6f61a38eb2630730) )
+
+	ROM_REGION( 0x10000, "user1", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "prom1.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "prom2.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "prom3.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( ll3b )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "ll3b_set3.bin", 0x00000, 0x10000, CRC(661720ac) SHA1(69b06953b354e339b5405d0e473692779c09a434) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "lucky line iii rom 7.u16", 0x00000, 0x8000, CRC(304f9630) SHA1(78089e9d59e471e4cd70fbf254e46dc0c0729957) )
+	ROM_LOAD( "lucky line iii rom 6.u11", 0x08000, 0x8000, CRC(1afe38d9) SHA1(cf247634b80f72c8288e49b7c5628b5cc9e555d3) )
+	ROM_LOAD( "lucky line iii rom 5.u4",  0x10000, 0x8000, CRC(e7660d2c) SHA1(1df9553bfaaf94ca076cea772dc72b6b5cb2c557) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "lucky line iii rom 4.u15",  0x0000, 0x2000, CRC(f9d75b29) SHA1(b56572fcfc2a20f45f241ec433e1fa813cb3e260) )
+	ROM_LOAD( "lucky line iii rom 3.u10",  0x2000, 0x2000, CRC(104eda10) SHA1(71b77dbf0c34d2186ac25e906da406fc74c180fc) )
+	ROM_LOAD( "lucky line iii rom 2.u14",  0x4000, 0x2000, CRC(14369397) SHA1(32dc356d333e9b439e490407cef9eb70c44e86a4) )
+	ROM_LOAD( "lucky line iii rom 1.u9",   0x6000, 0x2000, CRC(626947e5) SHA1(13b7dd7fad4659ddc6a82883f1da5a8dd09e46b5) )
+
+	ROM_REGION( 0x10000, "user1", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "prom1.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "prom2.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "prom3.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( ll3c )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "ll3c_set4.bin", 0x00000, 0x10000, CRC(b3210786) SHA1(5aa8d4302170342e1ed1b1126f917a8ced0dea36) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "lucky line iii rom 7.u16", 0x00000, 0x8000, CRC(304f9630) SHA1(78089e9d59e471e4cd70fbf254e46dc0c0729957) )
+	ROM_LOAD( "lucky line iii rom 6.u11", 0x08000, 0x8000, CRC(1afe38d9) SHA1(cf247634b80f72c8288e49b7c5628b5cc9e555d3) )
+	ROM_LOAD( "lucky line iii rom 5.u4",  0x10000, 0x8000, CRC(e7660d2c) SHA1(1df9553bfaaf94ca076cea772dc72b6b5cb2c557) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "lucky line iii rom 4.u15",  0x0000, 0x2000, CRC(f9d75b29) SHA1(b56572fcfc2a20f45f241ec433e1fa813cb3e260) )
+	ROM_LOAD( "lucky line iii rom 3.u10",  0x2000, 0x2000, CRC(104eda10) SHA1(71b77dbf0c34d2186ac25e906da406fc74c180fc) )
+	ROM_LOAD( "lucky line iii rom 2.u14",  0x4000, 0x2000, CRC(14369397) SHA1(32dc356d333e9b439e490407cef9eb70c44e86a4) )
+	ROM_LOAD( "lucky line iii rom 1.u9",   0x6000, 0x2000, CRC(626947e5) SHA1(13b7dd7fad4659ddc6a82883f1da5a8dd09e46b5) )
+
+	ROM_REGION( 0x10000, "user1", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "prom1.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "prom2.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "prom3.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( ll3d )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "ll3d_set5.bin", 0x00000, 0x10000, CRC(bfea6dce) SHA1(19e1fbd787979d9d02a25b9b32cfbf1f014969d3) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "lucky line iii rom 7.u16", 0x00000, 0x8000, CRC(304f9630) SHA1(78089e9d59e471e4cd70fbf254e46dc0c0729957) )
+	ROM_LOAD( "lucky line iii rom 6.u11", 0x08000, 0x8000, CRC(1afe38d9) SHA1(cf247634b80f72c8288e49b7c5628b5cc9e555d3) )
+	ROM_LOAD( "lucky line iii rom 5.u4",  0x10000, 0x8000, CRC(e7660d2c) SHA1(1df9553bfaaf94ca076cea772dc72b6b5cb2c557) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "lucky line iii rom 4.u15",  0x0000, 0x2000, CRC(f9d75b29) SHA1(b56572fcfc2a20f45f241ec433e1fa813cb3e260) )
+	ROM_LOAD( "lucky line iii rom 3.u10",  0x2000, 0x2000, CRC(104eda10) SHA1(71b77dbf0c34d2186ac25e906da406fc74c180fc) )
+	ROM_LOAD( "lucky line iii rom 2.u14",  0x4000, 0x2000, CRC(14369397) SHA1(32dc356d333e9b439e490407cef9eb70c44e86a4) )
+	ROM_LOAD( "lucky line iii rom 1.u9",   0x6000, 0x2000, CRC(626947e5) SHA1(13b7dd7fad4659ddc6a82883f1da5a8dd09e46b5) )
+
+	ROM_REGION( 0x10000, "user1", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "prom1.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "prom2.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "prom3.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( ll3e )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "ll3e_set6.bin", 0x00000, 0x10000, CRC(a73718f0) SHA1(7ff35e322523e0ccc5a1aa377497481d33916a3f) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "lucky line iii rom 7.u16", 0x00000, 0x8000, CRC(304f9630) SHA1(78089e9d59e471e4cd70fbf254e46dc0c0729957) )
+	ROM_LOAD( "lucky line iii rom 6.u11", 0x08000, 0x8000, CRC(1afe38d9) SHA1(cf247634b80f72c8288e49b7c5628b5cc9e555d3) )
+	ROM_LOAD( "lucky line iii rom 5.u4",  0x10000, 0x8000, CRC(e7660d2c) SHA1(1df9553bfaaf94ca076cea772dc72b6b5cb2c557) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "lucky line iii rom 4.u15",  0x0000, 0x2000, CRC(f9d75b29) SHA1(b56572fcfc2a20f45f241ec433e1fa813cb3e260) )
+	ROM_LOAD( "lucky line iii rom 3.u10",  0x2000, 0x2000, CRC(104eda10) SHA1(71b77dbf0c34d2186ac25e906da406fc74c180fc) )
+	ROM_LOAD( "lucky line iii rom 2.u14",  0x4000, 0x2000, CRC(14369397) SHA1(32dc356d333e9b439e490407cef9eb70c44e86a4) )
+	ROM_LOAD( "lucky line iii rom 1.u9",   0x6000, 0x2000, CRC(626947e5) SHA1(13b7dd7fad4659ddc6a82883f1da5a8dd09e46b5) )
+
+	ROM_REGION( 0x10000, "user1", ROMREGION_ERASE00 )
+	// not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "prom1.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "prom2.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "prom3.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( ll3f )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "ll3f_set7.bin", 0x00000, 0x10000, CRC(07ad76eb) SHA1(91bb7ec41eb430f265cc1929a1b21847d9a9067a) )
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "lucky line iii rom 7.u16", 0x00000, 0x8000, CRC(304f9630) SHA1(78089e9d59e471e4cd70fbf254e46dc0c0729957) )
+	ROM_LOAD( "lucky line iii rom 6.u11", 0x08000, 0x8000, CRC(1afe38d9) SHA1(cf247634b80f72c8288e49b7c5628b5cc9e555d3) )
+	ROM_LOAD( "lucky line iii rom 5.u4",  0x10000, 0x8000, CRC(e7660d2c) SHA1(1df9553bfaaf94ca076cea772dc72b6b5cb2c557) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "lucky line iii rom 4.u15",  0x0000, 0x2000, CRC(f9d75b29) SHA1(b56572fcfc2a20f45f241ec433e1fa813cb3e260) )
+	ROM_LOAD( "lucky line iii rom 3.u10",  0x2000, 0x2000, CRC(104eda10) SHA1(71b77dbf0c34d2186ac25e906da406fc74c180fc) )
+	ROM_LOAD( "lucky line iii rom 2.u14",  0x4000, 0x2000, CRC(14369397) SHA1(32dc356d333e9b439e490407cef9eb70c44e86a4) )
+	ROM_LOAD( "lucky line iii rom 1.u9",   0x6000, 0x2000, CRC(626947e5) SHA1(13b7dd7fad4659ddc6a82883f1da5a8dd09e46b5) )
+
+	ROM_REGION( 0x10000, "user1", ROMREGION_ERASE00 )
+	// not populated
 
 	ROM_REGION( 0x200, "proms", 0 )
 	ROM_LOAD( "prom1.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
@@ -25250,7 +25416,8 @@ void cmaster_state::init_cmtetriskr()
 	m_palette->update();
 }
 
-void cmaster_state::init_ll3() // verified with ICE dump
+
+void cmaster_state::decrypt_ll3()
 {
 	uint8_t *rom = memregion("maincpu")->base();
 
@@ -25263,16 +25430,58 @@ void cmaster_state::init_ll3() // verified with ICE dump
 	std::swap_ranges(&rom[0x2800], &rom[0x3000], &rom[0xa800]);
 	std::swap_ranges(&rom[0x6800], &rom[0x7000], &rom[0x9800]);
 	
+}
+
+void cmaster_state::init_ll3() // verified with ICE dump
+{
+	uint8_t *rom = memregion("maincpu")->base();
+	
+	decrypt_ll3();
+	
 	rom[0x8a] = 0;
 	rom[0x8b] = 0;
 	rom[0x8c] = 0;
 
-	// NOP'ing the writes to port 10h (video register)
-	// all the writes have masked the bit1 ON, getting
-	// the video totally disabled. Surely for protection.
+/*
+  NOP'ing the writes to port 10h (video register)
+  all the writes have masked the bit1 ON, getting
+  the video totally disabled. Surely for protection.
+
+  The most probably thing is that bit1 are inverted.
+  Need to be checked...
+
+*/
 	rom[0x0b2c] = 0x00;
 	rom[0x0b2d] = 0x00;
 }
+
+void cmaster_state::init_ll3b() // verified with ICE dump
+{
+	uint8_t *rom = memregion("maincpu")->base();
+	
+	decrypt_ll3();
+
+	rom[0x7e] = 0xcd;
+	rom[0x7f] = 0x87;
+	rom[0x80] = 0x6a;
+	
+	rom[0x8a] = 0;
+	rom[0x8b] = 0;
+	rom[0x8c] = 0;
+
+/*
+  NOP'ing the writes to port 10h (video register)
+  all the writes have masked the bit1 ON, getting
+  the video totally disabled. Surely for protection.
+
+  The most probably thing is that bit1 are inverted.
+  Need to be checked...
+
+*/
+	rom[0x0b2c] = 0x00;
+	rom[0x0b2d] = 0x00;
+}
+
 
 void goldstar_state::init_palnibbles()
 {
@@ -26663,8 +26872,14 @@ GAMEL( 1991, skdelux2k,  cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4
 GAMEL( 1991, skdelux99,  cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "bootleg",           "Florida Skill Deluxe 99 (FBV2 ver.T)",        0,                 layout_cmasterb )
 GAMEL( 199?, super7,     cmaster,  super7,   super7,   cmaster_state,  init_super7,    ROT0, "bootleg",           "Super Seven (ver. 2.3)",                      MACHINE_NOT_WORKING, layout_cmasterb ) // inputs / outputs needs verifying
 GAME ( 199?, wcat3a,     wcat3,    chryangl, cmaster,  cmaster_state,  init_wcat3a,    ROT0, "E.A.I.",            "Wild Cat 3 (CMV4 hardware)",                  MACHINE_NOT_WORKING ) // does not boot. Wrong decryption, wrong machine or wrong what?
-GAME ( 199?, ll3,        cmaster,  ll3,      ll3,      cmaster_state,  init_ll3,       ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03)",  0 )  // needs layout
-GAMEL( 199?, cmfb55,     cmaster,  cmfb55,   cmaster,  cmaster_state,  init_palnibbles,ROT0, "bootleg",           "Cherry Master (bootleg, Game FB55 Ver.2)",    MACHINE_NOT_WORKING, layout_cmv4 ) // inputs not done
+GAME ( 1993, ll3,        0,        ll3,      ll3,      cmaster_state,  init_ll3,       ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 1)",            0 )  // needs layout
+GAME ( 1993, ll3a,       ll3,      ll3,      ll3,      cmaster_state,  init_ll3,       ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 2, Macedonia)", 0 )  // needs layout
+GAME ( 1993, ll3b,       ll3,      ll3,      ll3,      cmaster_state,  init_ll3b,      ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 3)",            0 )  // needs layout
+GAME ( 1993, ll3c,       ll3,      ll3,      ll3,      cmaster_state,  init_ll3b,      ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 4)",            0 )  // needs layout
+GAME ( 1993, ll3d,       ll3,      ll3,      ll3,      cmaster_state,  init_ll3b,      ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 5)",            0 )  // needs layout
+GAME ( 1993, ll3e,       ll3,      ll3,      ll3,      cmaster_state,  init_ll3b,      ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 6)",            0 )  // needs layout
+GAME ( 1993, ll3f,       ll3,      ll3,      ll3,      cmaster_state,  init_ll3,       ROT0, "bootleg (LLC)",     "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 7)",            0 )  // needs layout
+GAMEL( 199?, cmfb55,     cmaster,  cmfb55,   cmv4,     cmaster_state,  init_palnibbles,ROT0, "bootleg",           "Cherry Master (bootleg, Game FB55 Ver.2)",    0,                   layout_cmv4 )
 GAMEL( 199?, hamhouse,   cmaster,  cm,       cmaster,  cmaster_state,  init_hamhouse,  ROT0, "bootleg",           "Hamburger House",                             0,                   layout_cmaster )
 GAMEL( 199?, hamhouse9,  cmaster,  cm,       cmaster,  cmaster_state,  init_hamhouse9, ROT0, "bootleg",           "Hamburger House 9",                           0,                   layout_cmaster )
 GAMEL( 199?, alienatt,   cmaster,  cm,       cmv4,     cmaster_state,  init_alienatt,  ROT0, "bootleg",           "Allien Attack (Game FBV2, ver.T)",            0,                   layout_cmv4 )
@@ -26682,8 +26897,8 @@ GAMEL( 1992, cb3micro,   cmv4,     cm,       cm_nodsw, cmaster_state,  empty_ini
 // poker master type sets
 GAMEL( 1991, tonypok,    0,        cm,       tonypok,  cmaster_state,  init_tonypok,   ROT0, "Corsica",           "Poker Master (Tony-Poker V3.A, hack?)",       0 ,                  layout_tonypok )
 GAME(  1999, jkrmast,    0,        jkrmast,  jkrmast,  cmaster_state,  init_jkrmast,   ROT0, "Pick-A-Party USA",  "Joker Master 2000 Special Edition (V515)",    0 )
-GAME(  1999, jkrmasta,   jkrmast,  jkrmast,  jkrmast,  cmaster_state,  init_jkrmast,   ROT0, "Pick-A-Party USA",  "Joker Master 2000 Special Edition (V512/513)", MACHINE_IMPERFECT_COLORS ) // sometimes fg colors are wrong, bonus stages have reels bg always white --> tilemap garbage or white
-GAME(  1999, jkrmastb,   jkrmast,  jkrmast,  jkrmastb, cmaster_state,  init_jkrmast,   ROT0, "Pick-A-Party USA",  "Joker Master 2000 Special Edition (V512)",    MACHINE_IMPERFECT_GRAPHICS ) // needs to clean the bg tilemap properly
+GAME(  1999, jkrmasta,   jkrmast,  jkrmast,  jkrmast,  cmaster_state,  init_jkrmast,   ROT0, "Pick-A-Party USA",  "Joker Master 2000 Special Edition (V512/513)", 0 )
+GAME(  1999, jkrmastb,   jkrmast,  jkrmast,  jkrmastb, cmaster_state,  init_jkrmast,   ROT0, "Pick-A-Party USA",  "Joker Master 2000 Special Edition (V512)",    0 )
 GAME(  1993, pkrmast,    0,        pkrmast,  pkrmast,  cmaster_state,  init_pkrmast,   ROT0, "Fun USA",           "Poker Master (ED-1993, dual game, set 1)",    0 ) // puts FUN USA 95H N/G  V2.20 in NVRAM
 GAME(  1993, pkrmasta,   pkrmast,  pkrmast,  pkrmast,  cmaster_state,  init_pkrmast,   ROT0, "Fun USA",           "Poker Master (ED-1993, dual game, set 2)",    0 ) // needs dips fixed, puts PM93 JAN 29/1996 V1.52 in NVRAM
 GAME(  1993, missbingo,  pkrmast,  pkrmast,  pkrmast,  cmaster_state,  init_pkrmast,   ROT0, "Fun USA",           "Miss Bingo (Poker Master HW, dual game)",     0 ) // needs girl support
@@ -26693,7 +26908,7 @@ GAME(  1993, missbingoc, crazybonb,crazybonb, pkrmast, cmaster_state,  init_craz
 GAME(  199?, chthree,    cmaster,  cm,       cmaster,  cmaster_state,  init_chthree,   ROT0, "Promat",            "Channel Three",                               0 ) // hack of cmaster, still shows DYNA CM-1 V1.01 in book-keeping
 
 GAME(  1991, cmast91,    0,        cmast91,  cmast91,  cmaster_state,  init_cmast91,   ROT0, "Dyna",              "Cherry Master '91 (ver.1.30)",                0 )
-GAME(  1991, cll,        0,        cmast91,  cmast91,  cmaster_state,  init_cll,       ROT0, "Dyna / TAB Austria","Cuty Line Limited (ver.1.30)",                MACHINE_NOT_WORKING ) // needs verifying inputs / dips, missing girls GFX ROM dump
+GAMEL( 1991, cll,        0,        cmast91,  cmv4,     cmaster_state,  init_cll,       ROT0, "Dyna / TAB Austria","Cuty Line Limited (ver.1.30)",                0,    layout_cmv4 ) // needs verifying dips, missing girls
 GAME(  1992, cmast92,    0,        eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '92 (V1.2D)",                   MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play
 GAME(  1992, cmast92a,   cmast92,  eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '92 (V1.1D)",                   MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play
 GAME(  1991, eldoradd,   0,        eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V5.1DR)",                          MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play

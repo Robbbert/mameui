@@ -27,7 +27,8 @@ TODO
 - IRQs are wrong;
 - EEPROM write doesn't work;
 - outputs, hopper;
-- verify colors and possible third layer;
+- verify colors;
+- fix sprites (currently disabled);
 - d9flower needs correct EEPROM;
 - device-ify ES-9409 and share with excellent/dblcrown.cpp.
 */
@@ -38,6 +39,7 @@ TODO
 #include "machine/bankdev.h"
 #include "machine/eepromser.h"
 #include "machine/nvram.h"
+#include "machine/timer.h"
 #include "machine/watchdog.h"
 #include "sound/ay8910.h"
 #include "sound/ymz280b.h"
@@ -46,6 +48,16 @@ TODO
 #include "screen.h"
 #include "speaker.h"
 #include "tilemap.h"
+
+
+// configurable logging
+#define LOG_EEPROM     (1U << 1)
+
+//#define VERBOSE (LOG_GENERAL | LOG_EEPROM)
+
+#include "logmacro.h"
+
+#define LOGEEPROM(...)     LOGMASKED(LOG_EEPROM,     __VA_ARGS__)
 
 
 namespace {
@@ -63,6 +75,7 @@ public:
 		m_eeprom(*this, "eeprom"),
 		m_vram_bank(*this, "vram_bank%u", 0U),
 		m_vram(*this, "vram"),
+		m_spriteram(*this, "spriteram", 0x2000U, ENDIANNESS_BIG),
 		m_pal_ram(*this, "palram", 0x200U, ENDIANNESS_BIG)
 	{ }
 
@@ -82,16 +95,21 @@ private:
 	required_device_array<address_map_bank_device, 2> m_vram_bank;
 
 	required_shared_ptr<uint8_t> m_vram;
+	memory_share_creator<uint8_t> m_spriteram;
 	memory_share_creator<uint8_t> m_pal_ram;
 
 	uint8_t m_vram_bank_entry[2] {};
 	tilemap_t *m_bg_tilemap = nullptr;
+	tilemap_t *m_md_tilemap = nullptr;
 	tilemap_t *m_fg_tilemap = nullptr;
 
 	TILE_GET_INFO_MEMBER(get_bg_tile_info);
 	TILE_GET_INFO_MEMBER(get_fg_tile_info);
 	void vram_w(offs_t offset, uint8_t data);
+	uint8_t spriteram_r(offs_t offset) { return m_spriteram[offset]; }
+	void spriteram_w(offs_t offset, uint8_t data) { m_spriteram[offset] = data; }
 	void palette_w(offs_t offset, uint8_t data);
+	void draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
@@ -101,17 +119,25 @@ private:
 
 	void program_map(address_map &map) ATTR_COLD;
 	void vram_map(address_map &map) ATTR_COLD;
+
+	TIMER_DEVICE_CALLBACK_MEMBER(scanline_cb);
+	u8 m_irq_source, m_irq_mask;
 };
 
 
 void es9501_state::video_start()
 {
 	m_bg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(es9501_state::get_bg_tile_info)), TILEMAP_SCAN_ROWS, 16, 16, 32, 16);
-	m_bg_tilemap->set_user_data(&m_vram[0xa000]);
+	m_bg_tilemap->set_user_data(&m_vram[0xa400]);
+
+	m_md_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(es9501_state::get_bg_tile_info)), TILEMAP_SCAN_ROWS, 16, 16, 32, 16);
+	m_md_tilemap->set_user_data(&m_vram[0xa000]);
 
 	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(es9501_state::get_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
 	m_fg_tilemap->set_user_data(&m_vram[0xb000]);
 
+	m_bg_tilemap->set_transparent_pen(0);
+	m_md_tilemap->set_transparent_pen(0);
 	m_fg_tilemap->set_transparent_pen(0);
 }
 
@@ -137,8 +163,11 @@ void es9501_state::vram_w(offs_t offset, uint8_t data)
 {
 	m_vram[offset] = data;
 
-	if ((offset & 0xf000) == 0xa000)
-		m_bg_tilemap->mark_tile_dirty((offset & 0xfff) >> 1);
+	if ((offset & 0xfc00) == 0xa000)
+		m_md_tilemap->mark_tile_dirty((offset & 0x3ff) >> 1);
+
+	if ((offset & 0xfc00) == 0xa400)
+		m_bg_tilemap->mark_tile_dirty((offset & 0x3ff) >> 1);
 
 	if ((offset & 0xf000) == 0xb000)
 		m_fg_tilemap->mark_tile_dirty((offset & 0xfff) >> 1);
@@ -160,9 +189,33 @@ void es9501_state::palette_w(offs_t offset, uint8_t data)
 	m_palette->set_pen_color(offset, pal4bit(r), pal4bit(g), pal4bit(b));
 }
 
+void es9501_state::draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprect)
+{
+	for (int offs = m_spriteram.bytes() - 8; offs >= 0; offs -= 8)
+	{
+		if (!BIT(m_spriteram[offs + 2], 7))
+			continue;
+
+		int sprite = m_spriteram[offs + 1] | (m_spriteram[offs] << 8);
+		int const x = m_spriteram[offs + 5] | (m_spriteram[offs + 4] << 8);
+		int const y = m_spriteram[offs + 7] | (m_spriteram[offs + 6] << 8);
+		int const flipx = 0; // TODO
+		int const flipy = 0; // TODO
+		// TODO: wrong colors on title screen
+		int const color = (m_spriteram[offs + 3]) & 0xf;
+
+		// TODO: needs prio_transpen
+		// TODO: sketchy alignment
+		m_gfxdecode->gfx(0)->transpen(bitmap, cliprect, sprite, color, flipx, flipy, x - 38, y - 17, 0);
+	}
+}
+
 uint32_t es9501_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
+	bitmap.fill(0, cliprect);
 	m_bg_tilemap->draw(screen, bitmap, cliprect, 0, 0);
+	draw_sprites(bitmap, cliprect); // seem to be under the tilemaps according to reference pics
+	m_md_tilemap->draw(screen, bitmap, cliprect, 0, 0);
 	m_fg_tilemap->draw(screen, bitmap, cliprect, 0, 0);
 
 	return 0;
@@ -171,6 +224,8 @@ uint32_t es9501_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap
 
 void es9501_state::machine_start()
 {
+	m_irq_source = 0;
+	m_irq_mask = 0;
 	save_item(NAME(m_vram_bank_entry));
 }
 
@@ -187,7 +242,7 @@ void es9501_state::watchdog_eeprom_w(uint8_t data)
 		m_watchdog->watchdog_reset();
 
 	if (data & 0x2e)
-		logerror("eeprom_unk_w: %02x\n", data & 0x2e);
+		LOGEEPROM("eeprom_unk_w: %02x\n", data & 0x2e);
 
 	m_eeprom->di_write(BIT(data, 7));
 	m_eeprom->clk_write(BIT(data, 6));
@@ -202,14 +257,24 @@ void es9501_state::program_map(address_map &map)
 	map(0x3fc000, 0x3fffff).ram().share("nvram");
 	map(0x400000, 0x401fff).m(m_vram_bank[0], FUNC(address_map_bank_device::amap8)).umask16(0xff00);
 	map(0x402000, 0x403fff).m(m_vram_bank[1], FUNC(address_map_bank_device::amap8)).umask16(0xff00);
-	map(0x404000, 0x405fff).ram(); // third layer?
-	map(0x406000, 0x4063ff).ram().w(FUNC(es9501_state::palette_w)).umask16(0xff00);
+	map(0x404000, 0x405fff).r(FUNC(es9501_state::spriteram_r)).w(FUNC(es9501_state::spriteram_w)).umask16(0xff00);
+	map(0x406000, 0x4063ff).lr8(NAME([this] (offs_t offset) { return m_pal_ram[offset]; })).w(FUNC(es9501_state::palette_w)).umask16(0xff00);
 	map(0x406400, 0x406fff).ram();
 	map(0x407c00, 0x407cff).ram();
 	map(0x407e00, 0x407e00).lr8(NAME([this] () -> uint8_t { return m_vram_bank_entry[1]; })).w(FUNC(es9501_state::vram_bank_w<1>));
 	map(0x407e02, 0x407e02).lr8(NAME([this] () -> uint8_t { return m_vram_bank_entry[0]; })).w(FUNC(es9501_state::vram_bank_w<0>));
-	// map(0x407e08, 0x407e09).ram(); // ?
-	map(0x407e0a, 0x407e0b).lr8(NAME([this] () -> uint16_t { return machine().rand() & 0x00ff; })).nopw(); // TODO: IRQ related?
+	map(0x407e08, 0x407e08).lrw8(
+		NAME([this] () {
+			return m_irq_mask;
+		}),
+		NAME([this] (u8 data) {
+			m_irq_mask = data;
+		})
+	);
+	map(0x407e0a, 0x407e0a).lrw8(
+		NAME([this] () { return m_irq_source; }),
+		NAME([this] (u8 data) { m_irq_source &= data; })
+	);
 	map(0x600000, 0x600001).portr("IN0"); // w are outputs
 	map(0x600002, 0x600003).portr("IN1"); // w are outputs
 	map(0x600004, 0x600005).portr("IN2"); // w are outputs
@@ -297,12 +362,32 @@ static GFXDECODE_START( gfx_es9501 )
 	GFXDECODE_RAM( "vram", 0, gfx_8x8x4_packed_msb_r, 0, 0x10 )
 GFXDECODE_END
 
+// bit 0 unused in specd9, d9flower depends on it on memory clear screen
+// bit 1 looks vblank (would hang otherwise)
+// bit 2 unknown (sprite DMA complete? Unset by specd9)
+TIMER_DEVICE_CALLBACK_MEMBER(es9501_state::scanline_cb)
+{
+	int scanline = param;
+
+	if (scanline == 240 && BIT(m_irq_mask, 1))
+	{
+		m_maincpu->set_input_line(1, HOLD_LINE);
+		m_irq_source |= 2;
+	}
+
+	if (scanline == 0 && BIT(m_irq_mask, 0))
+	{
+		m_maincpu->set_input_line(1, HOLD_LINE);
+		m_irq_source |= 1;
+	}
+}
+
 
 void es9501_state::es9501(machine_config &config)
 {
 	M68000(config, m_maincpu, 28.636363_MHz_XTAL / 2); // divider not verified
 	m_maincpu->set_addrmap(AS_PROGRAM, &es9501_state::program_map);
-	m_maincpu->set_vblank_int("screen", FUNC(es9501_state::irq1_line_hold));
+	TIMER(config, "scantimer").configure_scanline(FUNC(es9501_state::scanline_cb), "screen", 0, 1);
 
 	EEPROM_93C56_16BIT(config, m_eeprom);
 
@@ -317,7 +402,7 @@ void es9501_state::es9501(machine_config &config)
 	m_screen->set_refresh_hz(60);
 	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(2500));
 	m_screen->set_screen_update(FUNC(es9501_state::screen_update));
-	m_screen->set_size(64*8, 64*8);
+	m_screen->set_size(64*8, 262);
 	m_screen->set_visarea(0*8, 40*8-1, 0*8, 30*8-1);
 	m_screen->set_palette(m_palette);
 
@@ -332,7 +417,8 @@ void es9501_state::es9501(machine_config &config)
 	ymz.add_route(1, "speaker", 1.0, 1);
 
 	ymz284_device & ymz284(YMZ284(config, "ymz284", 28.636363_MHz_XTAL / 8)); // divider not verified
-	ymz284.add_route(ALL_OUTPUTS, "speaker", 1.0);
+	ymz284.add_route(ALL_OUTPUTS, "speaker", 0.5, 0);
+	ymz284.add_route(ALL_OUTPUTS, "speaker", 0.5, 1);
 }
 
 
@@ -437,5 +523,5 @@ ROM_END
 GAME( 1998, d9flower,   0,        es9501, specd9, es9501_state, empty_init, ROT0, "Cadence Technology", "Dream 9 Flower (v1.00c, set 1)",   MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
 GAME( 1998, d9flowera,  d9flower, es9501, specd9, es9501_state, empty_init, ROT0, "Cadence Technology", "Dream 9 Flower (v1.00c, set 2)",   MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
 GAME( 1997, specd9,     0,        es9501, specd9, es9501_state, empty_init, ROT0, "Excellent System",   "Special Dream 9 (v1.0.7G)",        MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
-GAME( 1997, specd9105g, 0,        es9501, specd9, es9501_state, empty_init, ROT0, "Excellent System",   "Special Dream 9 (v1.0.5G)",        MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
+GAME( 1997, specd9105g, specd9,   es9501, specd9, es9501_state, empty_init, ROT0, "Excellent System",   "Special Dream 9 (v1.0.5G)",        MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
 GAME( 1997, starball,   0,        es9501, specd9, es9501_state, empty_init, ROT0, "Excellent System",   "Star Ball (v1.0.0S)",              MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
