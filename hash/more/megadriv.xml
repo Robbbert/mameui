@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2035 -->
+<!-- Number of items in this list = 2036 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6049,6 +6049,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="DRAGONBALLTRIFORCE final version.bin" size="3145728" crc="aab25415" sha1="415e8613b40954d9c941394e615ca752ee473489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen77237f953f80b">
+		<description>Driftin Rage - Alpha Version</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Driftin Rage - Alpha Version.bin" size="2621440" crc="7319f173" sha1="77237f953f80bf153261e8708080b5075d2267e5"/>
 			</dataarea>
 		</part>
 	</software>

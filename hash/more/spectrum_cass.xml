@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4646 -->
+<!-- Number of items in this list = 4689 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -229,6 +229,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="24718">
 				<rom name="-Benny Hill's Madcap Chase! (1985)(DK'Tronics Ltd)[cr [Cr][Cr].tap" size="24718" crc="1cde65b1" sha1="831f7ab36eb077d90297e316f9a2c367775977ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse8cbac01bc553">
+		<description>-Black Lamp (1988)(Firebird Software Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40545">
+				<rom name="-Black Lamp (1988)(Firebird Software Ltd)[cr [Cr][Cr].tap" size="40545" crc="fc28e2a0" sha1="e8cbac01bc55311df135f226e3b57c1f579b2a47"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9273,12 +9283,12 @@
 		</part>
 	</software>
 	<software name="zxs42f44948f4dc8">
-		<description>Blasteroids (1987)(Image Works)</description>
+		<description>Blasteroids 48K-128K (1989)(Image Works)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50430">
-				<rom name="Blasteroids (1987)(Image Works).tap" size="50430" crc="5cfaa878" sha1="42f44948f4dc8360b8df962d02d56f60a51cc4e2"/>
+				<rom name="Blasteroids 48K-128K (1989)(Image Works).tap" size="50430" crc="5cfaa878" sha1="42f44948f4dc8360b8df962d02d56f60a51cc4e2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9559,6 +9569,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49366">
 				<rom name="Blood &amp; Guts (1984)(Quicksilva).tap" size="49366" crc="84318cbb" sha1="f7540ed2caa616594d1bf0b91a7e4b101411456d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5711c6db62266">
+		<description>Blood Brothers (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="79244">
+				<rom name="Blood Brothers (1988)(Gremlin Graphics).tap" size="79244" crc="8b657e93" sha1="5711c6db62266521834142753cff005e268b1026"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11602,6 +11622,176 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs06fcf7f041817">
+		<description>Lode Ranger 48K (1992)(Fantadrom)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Ranger 48K (1992)(Fantadrom)(Hack).tap" size="48038" crc="4e990388" sha1="06fcf7f04181751217f7b24aa1723becdfc8b6c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs644d79efff47e">
+		<description>Lode Runner (1984)(Software Projects)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="67960">
+				<rom name="Lode Runner (1984)(Software Projects)(128k).tap" size="67960" crc="50756449" sha1="644d79efff47ec5c493265a3136e9bb8b97d1167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5545bc5d2501c">
+		<description>Lode Runner (1984)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48640">
+				<rom name="Lode Runner (1984)(Software Projects).tap" size="48640" crc="084fb9e3" sha1="5545bc5d2501c8ab583ef7d4b7043457fcc32734"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0546d1b0285d0">
+		<description>Lode Runner (1984)(Software Projects)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48394">
+				<rom name="Lode Runner (1984)(Software Projects)[a].tap" size="48394" crc="14aeb8ab" sha1="0546d1b0285d04c67c86f2c50070a6235ea7eaa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6477ea9c145de">
+		<description>Lode Runner - Side A 48K (1984)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48037">
+				<rom name="Lode Runner - Side A 48K (1984)(Software Projects).tap" size="48037" crc="7e7e4ec7" sha1="6477ea9c145dedf25a4d85252c3841eee2f3b7fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b7eebf26b717">
+		<description>Lode Runner - Side B 48K (1984)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48037">
+				<rom name="Lode Runner - Side B 48K (1984)(Software Projects).tap" size="48037" crc="1a98c993" sha1="7b7eebf26b717be3576b9c3593251eeca036ab8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd80a2f202953e">
+		<description>Lode Runner 128K (1986)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72752">
+				<rom name="Lode Runner 128K (1986)(Software Projects).tap" size="72752" crc="26929396" sha1="d80a2f202953e69fb8c604fa949966a26a5eae9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44b71b9a7c852">
+		<description>Lode Runner 3 - At Hell to Paradise 48K (2013)(Hungry Software)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Runner 3 - At Hell to Paradise 48K (2013)(Hungry Software)(Hack).tap" size="48038" crc="5f5af05d" sha1="44b71b9a7c85281cbbfc591ce517f2f802cd4b92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs53650fbcf5ca4">
+		<description>Lode Runner 3 48K (1996)(Image)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Runner 3 48K (1996)(Image)(Hack).tap" size="48038" crc="699aa740" sha1="53650fbcf5ca4e22367109917e54fc3eb111d81a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e853db6dd810">
+		<description>Lode Runner 3 48K (1999)(Master)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Runner 3 48K (1999)(Master)(Hack).tap" size="48038" crc="dbf95098" sha1="3e853db6dd810b68bdc72326595aff683822683b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01ecded811465">
+		<description>Lode Runner 3 48K (2015)(Rasoft)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Runner 3 48K (2015)(Rasoft)(Hack).tap" size="48038" crc="cc4c8f4b" sha1="01ecded81146527588b47d0b8a3bc47c8e91c06a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b75bfedf4fd6">
+		<description>Lode Runner 3 48K (RU)(1995)(Biotech Software Inc.)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Runner 3 48K (RU)(1995)(Biotech Software Inc.)(Hack).tap" size="48038" crc="18cb6710" sha1="7b75bfedf4fd67db8849a12c1766defc69fe47c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs59d9d901ef0a2">
+		<description>Lode Runner 3 48K (RU)(1995)(Fikus-Pikus)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Runner 3 48K (RU)(1995)(Fikus-Pikus)(Hack).tap" size="48038" crc="d5b5852e" sha1="59d9d901ef0a2376c00fa11d3041cf25306e0e9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsed356ada74b42">
+		<description>Lode Runner 4 128K (1998)(DPS Group)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64508">
+				<rom name="Lode Runner 4 128K (1998)(DPS Group)(Hack).tap" size="64508" crc="0ee8a641" sha1="ed356ada74b42199ed953d5e2eace95db495ec20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9763c756f7b81">
+		<description>Lode Runner 4 48K (1997)(Technospace Software)(Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="Lode Runner 4 48K (1997)(Technospace Software)(Hack).tap" size="48038" crc="31d1cafc" sha1="9763c756f7b8168c6adce27d11fa98b6b2d6f6b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31afdf7c6ded4">
+		<description>Logic (1990)(Ultrasoft)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30938">
+				<rom name="Logic (1990)(Ultrasoft)(Cz).tap" size="30938" crc="fc501efd" sha1="31afdf7c6ded4827d0da3347557b5906b3d52413"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7da06963e028">
+		<description>Logic Gates (1984)(Scisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12661">
+				<rom name="Logic Gates (1984)(Scisoft).tap" size="12661" crc="fb0cccee" sha1="f7da06963e02812b1cf71aacb98851edcfe79674"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs80b0d0d9a94e7">
 		<description>LOGIC3_1 (19xx)(-)</description>
 		<year>????</year>
@@ -11609,6 +11799,76 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="61805">
 				<rom name="LOGIC3_1 (19xx)(-).tzx" size="61805" crc="45c97e45" sha1="80b0d0d9a94e7e63fce586781bbc76166e3354f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs718eb76dcf7f7">
+		<description>Lollipop (1994)(Fudgepacker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24925">
+				<rom name="Lollipop (1994)(Fudgepacker).tap" size="24925" crc="56587e32" sha1="718eb76dcf7f7145633d87ed65afe50529d4755c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd58b4e6912ac9">
+		<description>Lollipop - The Second Spunker (1994)(Fudgepacker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31388">
+				<rom name="Lollipop - The Second Spunker (1994)(Fudgepacker).tap" size="31388" crc="c076f045" sha1="d58b4e6912ac941041a3a51da9316e077e4551bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbaa30368b8a87">
+		<description>Lombrix (1984)(ERE Informatique)(Fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47332">
+				<rom name="Lombrix (1984)(ERE Informatique)(Fr).tap" size="47332" crc="9d01ff5f" sha1="baa30368b8a87dfac7fb54c0dd76ee6c1c2e1213"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd871801c0be8">
+		<description>Lone Attacker (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2659">
+				<rom name="Lone Attacker (19xx)(-).tap" size="2659" crc="38671ca2" sha1="cd871801c0be8827d5c6b8dcf042cf87448d1653"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs00822940e7a54">
+		<description>Loony Lander (1984)(Software Super Savers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32827">
+				<rom name="Loony Lander (1984)(Software Super Savers).tap" size="32827" crc="22a9466d" sha1="00822940e7a54f94cecef455d609fa84558a90ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8822197951785">
+		<description>Loop Synthesizer (1987)(Claus Jahn)(UNK-LANG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12702">
+				<rom name="Loop Synthesizer (1987)(Claus Jahn)(UNK-LANG).tap" size="12702" crc="336f8a23" sha1="8822197951785b6b5c50215cee66e574db18a211"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs061c87895ec90">
+		<description>Loopz (1991)(Audiogenic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44809">
+				<rom name="Loopz (1991)(Audiogenic).tap" size="44809" crc="27fbfd1e" sha1="061c87895ec906503c484ce37e11d3c8481e4614"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41242,6 +41502,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs104f7cd09ac52">
+		<description>_Black Friday (1983)(EMM Software)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19096">
+				<rom name="_Black Friday (1983)(EMM Software)(De).tap" size="19096" crc="6e80328b" sha1="104f7cd09ac52be5715be89da72637784ddbc05a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs277db6d7b05a2">
+		<description>_Black Planet (1983)(Phipps Associates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="69880">
+				<rom name="_Black Planet (1983)(Phipps Associates).tap" size="69880" crc="943af447" sha1="277db6d7b05a26bf2def80f213d93dd06968727d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs58d811c795d97">
+		<description>_Black Tower, The (1984)(Dollarsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48428">
+				<rom name="_Black Tower, The (1984)(Dollarsoft).tap" size="48428" crc="34d721e6" sha1="58d811c795d9793832f656ce364f1f7b8ad08d9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa610bb2bde5c7">
+		<description>_Blacula 48K Prototype (199x)(unreleased)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43419">
+				<rom name="_Blacula 48K Prototype (199x)(unreleased).tap" size="43419" crc="817288d8" sha1="a610bb2bde5c7395dc0c8a65ada856d759735d9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56b67468b786c">
+		<description>_Blazing Thunder (1990)(Hi-Tec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40532">
+				<rom name="_Blazing Thunder (1990)(Hi-Tec).tap" size="40532" crc="c2c63c66" sha1="56b67468b786cc1a5e33d80f88e9aa90d82c3e80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe4ef74e77f61">
+		<description>_Blazing Thunder (1990)(Hi-Tec)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40960">
+				<rom name="_Blazing Thunder (1990)(Hi-Tec)[a].tap" size="40960" crc="b28d7de8" sha1="be4ef74e77f612af29bd7524c11cd20b9171393f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef40c3736cd9a">
+		<description>_Blinky's Scary School (1990)(Zeppelin Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40960">
+				<rom name="_Blinky's Scary School (1990)(Zeppelin Games)[a].tap" size="40960" crc="c4279629" sha1="ef40c3736cd9a093fe392afec5658ca365a3b96b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd86d104884834">
+		<description>_Block-Buster (1984)(Compusound)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59675">
+				<rom name="_Block-Buster (1984)(Compusound).tap" size="59675" crc="1b0f3aa2" sha1="d86d104884834a907e886ff2a19a3c885f428bb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5b6209a100e75">
+		<description>_Blockbusters (1984)(Macsen Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="73125">
+				<rom name="_Blockbusters (1984)(Macsen Software).tap" size="73125" crc="481a74b8" sha1="5b6209a100e75795d408811fbae55f58306013fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7c2d8664231d">
+		<description>_blonde</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36569">
+				<rom name="_blonde.tap" size="36569" crc="21663231" sha1="f7c2d8664231d48367a1af2947d4ac15701dfdb2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd3a09d94019ec">
 		<description>_BMX Racers (1984)(Mastertronic)</description>
 		<year>????</year>
@@ -41559,6 +41919,76 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="54573">
 				<rom name="_Kinetik.tzx" size="54573" crc="9d8e431e" sha1="6c2d6b17cf58c7f973532fb92e8a9909513f73cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3f36d39b7fabb">
+		<description>_LOG-HOP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6673">
+				<rom name="_LOG-HOP.TAP" size="6673" crc="b5d28fa6" sha1="3f36d39b7fabb4893b4273763c082716c98a22fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb2d0a0519b30">
+		<description>_Logo (1990)(Rainbow Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37317">
+				<rom name="_Logo (1990)(Rainbow Dreams).tap" size="37317" crc="98327874" sha1="fb2d0a0519b307be3ae5fe159ba21582379c68ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs250dac5bb493d">
+		<description>_Long Division (1982)(Rose Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15403">
+				<rom name="_Long Division (1982)(Rose Software).tap" size="15403" crc="2030fdb2" sha1="250dac5bb493d6835ac6cc2200867d173e9d5675"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7751af8921c5f">
+		<description>_Long Multiplication (1982)(Rose Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16441">
+				<rom name="_Long Multiplication (1982)(Rose Software).tap" size="16441" crc="ddaa77fa" sha1="7751af8921c5fe141eea9e6618b6bc0e96084b57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5196aabe9395a">
+		<description>_Long Way Home Chapter Two - The Ludoids (1984)(16-48 Tape Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="295968">
+				<rom name="_Long Way Home Chapter Two - The Ludoids (1984)(16-48 Tape Magazine).tap" size="295968" crc="759899a3" sha1="5196aabe9395a613a03f1421ad1801700896ed44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse3349fe832160">
+		<description>_Long Way Home, The (1983)(16 - 48k Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38611">
+				<rom name="_Long Way Home, The (1983)(16 - 48k Magazine).tap" size="38611" crc="78a4d57c" sha1="e3349fe832160d00b394920326af3c02b88eacb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs77ed580b6c376">
+		<description>_Loony Zoo (1983)(Phipps Associates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27989">
+				<rom name="_Loony Zoo (1983)(Phipps Associates).tap" size="27989" crc="d30fb2f8" sha1="77ed580b6c3769d95aa5720456e63404ba34ee54"/>
 			</dataarea>
 		</part>
 	</software>
