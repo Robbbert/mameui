@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 667 -->
+<!-- Number of items in this list = 676 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -2452,6 +2452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxb14af4001d631">
+		<description>Guzzler (2025)(Mastropiero)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Guzzler (2025)(Mastropiero).rom" size="16384" crc="cd7e17b9" sha1="b14af4001d6318b0838f44dec971d607d6f69ed7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxe20d2576c2ef0">
 		<description>Gyruss[KonamiSCC]</description>
 		<year>????</year>
@@ -4043,12 +4053,12 @@
 		</part>
 	</software>
 	<software name="msxf67490de0e287">
-		<description>Ninja Love (2013)(Oniric Factor)</description>
+		<description>Ninja Love ES (2013)(Oniric Factor)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Ninja Love (2013)(Oniric Factor).rom" size="16384" crc="baa604ef" sha1="f67490de0e2879ce08bcbb312fcc3f8b69d2c9ed"/>
+				<rom name="Ninja Love ES (2013)(Oniric Factor).rom" size="16384" crc="baa604ef" sha1="f67490de0e2879ce08bcbb312fcc3f8b69d2c9ed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4149,6 +4159,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Operation Crossbow - Karoshi Corporation (2011) [unfinished game] [original] [2629].rom" size="16384" crc="9a4e65f9" sha1="4ac0b569ddd4ea74d5eef4f4574e5ef9759f66c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx38307244452d5">
+		<description>Operation Hibernation (2025)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Operation Hibernation (2025)(Jess Creations).rom" size="32768" crc="40a05ba8" sha1="38307244452d515ac10d139da3217a2e8963d982"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4473,12 +4493,12 @@
 		</part>
 	</software>
 	<software name="msxe04141f0ed49c">
-		<description>Poppie (2025)(Meichnpp)</description>
+		<description>Poppie Land (2025)(Meichnpp)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="753664">
-				<rom name="Poppie (2025)(Meichnpp).rom" size="753664" crc="33c9e1b0" sha1="e04141f0ed49c0a7501a4a895be8ffa5c2ee71a8"/>
+				<rom name="Poppie Land (2025)(Meichnpp).rom" size="753664" crc="33c9e1b0" sha1="e04141f0ed49c0a7501a4a895be8ffa5c2ee71a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4892,6 +4912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxb954b7290a986">
+		<description>Shamus (2025)(Nanochess)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Shamus (2025)(Nanochess).rom" size="24576" crc="073653b1" sha1="b954b7290a98676e97d9a588e9b22d85c586f85b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx1a5f3db42427e">
 		<description>Shyre v1.1 (2023)(Platty Soft)</description>
 		<year>????</year>
@@ -5019,6 +5049,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Sofia (1987)(Ymcat)[o].rom" size="131072" crc="91eda031" sha1="3caeec19423a960d98e4719b301a3d276339e5ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5d2ef92b93a09">
+		<description>Solar Fox II (2025)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Solar Fox II (2025)(Jess Creations).rom" size="32768" crc="d4ae976d" sha1="5d2ef92b93a09913d831f9599d78bf1eb8463660"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5422,6 +5462,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxa440dc513062e">
+		<description>Telethugs EN (2025)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Telethugs EN (2025)(Amaweks).rom" size="49152" crc="cd33aba8" sha1="a440dc513062e8f63fbf843dad40a86616636f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe01f3dd727cd2">
+		<description>Telethugs PT (2025)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Telethugs PT (2025)(Amaweks).rom" size="49152" crc="f536067d" sha1="e01f3dd727cd2e82b3b9bbecd12eb35043493cfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx726db200d18a3">
+		<description>Telethugs_BR_50Hz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Telethugs_BR_50Hz.rom" size="49152" crc="ebe424e6" sha1="726db200d18a3d2dcd6b9a131b0f62af5a0ae148"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx94f3058278113">
+		<description>Telethugs_ENG_50Hz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Telethugs_ENG_50Hz.rom" size="49152" crc="b94cc1e6" sha1="94f30582781138c81a54e0926d522055cab440c1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxfd0cd543e4809">
 		<description>Tenebra 2 (2023)(Haplo)</description>
 		<year>????</year>
@@ -5803,12 +5883,12 @@
 		</part>
 	</software>
 	<software name="msx0b849484f80a5">
-		<description>VexedMSX</description>
+		<description>Vexed v1.15 (2023)(Under4Mhz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="VexedMSX.rom" size="32768" crc="12fe1b8a" sha1="0b849484f80a58957a42de52c295e6e5644e9efc"/>
+				<rom name="Vexed v1.15 (2023)(Under4Mhz).rom" size="32768" crc="12fe1b8a" sha1="0b849484f80a58957a42de52c295e6e5644e9efc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6249,6 +6329,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="[2]Ashguine.rom" size="262144" crc="25a3c30a" sha1="2e388978f765bc5fe1fa9a42e1f059de5053721d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxaadf7c34f3b9a">
+		<description>[2]Automania v2 (2023)(Fregarni)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="[2]Automania v2 (2023)(Fregarni).rom" size="131072" crc="8532117a" sha1="aadf7c34f3b9a3287d5139597b2aaa4e43381f5b"/>
 			</dataarea>
 		</part>
 	</software>

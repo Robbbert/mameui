@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 126 -->
+<!-- Number of items in this list = 130 -->
 <softwarelist name="msx_flop" description="msx_flop loose roms">
 	<software name="msx5d68acb2b56ed">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[tr en][Micom BASIC]</description>
@@ -1059,6 +1059,46 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="368640">
 				<rom name="T Maker IV (1985) (T Maker Company)[Disk 2 of 2].DSK" size="368640" crc="a9b96389" sha1="572d4b6ab6f0183c5c8882d2b07cd3a9c2a0868d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx93846518bd774">
+		<description>Telethugs_BR_50Hz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Telethugs_BR_50Hz.dsk" size="737280" crc="c6bcbaf7" sha1="93846518bd774ef151387d9645d0a06311e0674c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx69ce03b7e3591">
+		<description>Telethugs_BR_60Hz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Telethugs_BR_60Hz.dsk" size="737280" crc="f5700349" sha1="69ce03b7e35918003d3a63e5dd1037934622471b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5793e34fbb03c">
+		<description>Telethugs_ENG_50Hz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Telethugs_ENG_50Hz.dsk" size="737280" crc="2f11c2a2" sha1="5793e34fbb03c45a489c1797ac3b8a3514c26644"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx809d6fb77348b">
+		<description>Telethugs_ENG_60Hz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Telethugs_ENG_60Hz.dsk" size="737280" crc="7fd6d824" sha1="809d6fb77348b27a148125aa0ded2d4b6195dc05"/>
 			</dataarea>
 		</part>
 	</software>

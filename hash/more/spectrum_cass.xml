@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4689 -->
+<!-- Number of items in this list = 4712 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -239,6 +239,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40545">
 				<rom name="-Black Lamp (1988)(Firebird Software Ltd)[cr [Cr][Cr].tap" size="40545" crc="fc28e2a0" sha1="e8cbac01bc55311df135f226e3b57c1f579b2a47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6001e7aae95e">
+		<description>-Bobby Bearing (1986)(The Edge Software)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33798">
+				<rom name="-Bobby Bearing (1986)(The Edge Software)[cr [Cr][Cr].tap" size="33798" crc="46b8d930" sha1="d6001e7aae95e593ee1b06cc063e79432aa15ec9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbec9d5927ac75">
+		<description>-Boby (19xx)(Pilot Soft - Matysoft)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28128">
+				<rom name="-Boby (19xx)(Pilot Soft - Matysoft)(Cz).tap" size="28128" crc="61091407" sha1="bec9d5927ac755d1abd8a9c4573bd1cd4f0206ea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9382,6 +9402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb396d926a8a92">
+		<description>Blob the Cop 48K (1989)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42224">
+				<rom name="Blob the Cop 48K (1989)(Sinclair User).tzx" size="42224" crc="f0e74f87" sha1="b396d926a8a9227ab8e84a824f8011f43ddb93ca"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsee646aa0d8905">
 		<description>Block (1989)(Triton Software)(Sp)</description>
 		<year>????</year>
@@ -11612,6 +11642,146 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd8319370755d6">
+		<description>Livingstone I Presume (1987)(Opera Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45879">
+				<rom name="Livingstone I Presume (1987)(Opera Soft)(Sp).tap" size="45879" crc="1048b4f7" sha1="d8319370755d60877320478ca40daed32570917a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfebbbba9e3f1f">
+		<description>Livingstone I Presume (1987)(Opera Soft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43451">
+				<rom name="Livingstone I Presume (1987)(Opera Soft)(Sp)[a].tap" size="43451" crc="9aa2c055" sha1="febbbba9e3f1fbb13a03e744d997e403e8c35c64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1c03299a069b">
+		<description>Livingstone II (1990)(Opera Soft - Alligata Software)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49289">
+				<rom name="Livingstone II (1990)(Opera Soft - Alligata Software)[Part 2 of 2].tap" size="49289" crc="4bcd5d3a" sha1="a1c03299a069bad37ca585824ffdaec5bdae3ba0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98b830f49f82e">
+		<description>Livingstone II (1990)(Opera Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49664">
+				<rom name="Livingstone II (1990)(Opera Soft)(Sp).tap" size="49664" crc="f04773e7" sha1="98b830f49f82e992774e870d14b067112f317673"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs043899d8ee326">
+		<description>Livingstone, I Presume 128K (1987)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45998">
+				<rom name="Livingstone, I Presume 128K (1987)(Opera Soft).tap" size="45998" crc="359fbe3c" sha1="043899d8ee326ebcf148a6080d65337aabb10e5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs95eb74ccf026d">
+		<description>Lo Spione (19xx)(Original Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40231">
+				<rom name="Lo Spione (19xx)(Original Soft).tap" size="40231" crc="3c96a75b" sha1="95eb74ccf026d39523d6127d435e09128fa55630"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs34672e569c53c">
+		<description>Lo Zio Tom (19xx)(Lamano Lesta &amp; Duran Duran)(It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49152">
+				<rom name="Lo Zio Tom (19xx)(Lamano Lesta &amp; Duran Duran)(It).tap" size="49152" crc="76e18b41" sha1="34672e569c53c2358c9af89d2ac3e0e58c8f96eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs549fa6018ca31">
+		<description>Lo Zio Tom (19xx)(Lamano Lesta &amp; Duran Duran)(It)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48744">
+				<rom name="Lo Zio Tom (19xx)(Lamano Lesta &amp; Duran Duran)(It)[a].tap" size="48744" crc="1e44add8" sha1="549fa6018ca31b59c8058fcb94b275bce319f67a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa8ece97fd33a">
+		<description>Lockdown Town ZX v1.02 48K (2022)(PuttyCAD, Tin Soldiers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30174">
+				<rom name="Lockdown Town ZX v1.02 48K (2022)(PuttyCAD, Tin Soldiers).tap" size="30174" crc="2ee0a21e" sha1="aa8ece97fd33ac71f80f2fdcac20b7f730c1f1c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs366da09d2112d">
+		<description>Lockdown Town ZXMas (2022)(PuttyCAD, Tin Soldiers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30591">
+				<rom name="Lockdown Town ZXMas (2022)(PuttyCAD, Tin Soldiers).tap" size="30591" crc="607f00ef" sha1="366da09d2112d9dc31380eb8cf3caec67374dd97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc369bef2b3643">
+		<description>Lockdown Town ZXMas - Crash Exclusive v1.01 48k (2023)(PuttyCAD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32868">
+				<rom name="Lockdown Town ZXMas - Crash Exclusive v1.01 48k (2023)(PuttyCAD).tap" size="32868" crc="8cfbb3e5" sha1="c369bef2b364355b10c1b8d944df075a1abe43b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6242ec2b699f4">
+		<description>Lockdown Town ZXMas v1.03 48K (2022)(PuttyCAD, Tin Soldiers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30975">
+				<rom name="Lockdown Town ZXMas v1.03 48K (2022)(PuttyCAD, Tin Soldiers).tap" size="30975" crc="bc1f2f4a" sha1="6242ec2b699f4d5783945943dc58c550e4a86d09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e51a655d267e">
+		<description>Lockdown Town ZXWeen v1.02 48K (2022)(PuttyCAD, Tin Soldiers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30441">
+				<rom name="Lockdown Town ZXWeen v1.02 48K (2022)(PuttyCAD, Tin Soldiers).tap" size="30441" crc="4d6a99cf" sha1="8e51a655d267eace3768b6c7527c49c0f9bf0d12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb18d4259c06c4">
+		<description>Loco 48K (1986)(Alligata)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48147">
+				<rom name="Loco 48K (1986)(Alligata).tap" size="48147" crc="b9f37989" sha1="b18d4259c06c42693c164fe067ea025c490aadb2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc33dd68d7fa38">
 		<description>Loco 48K (1986)(Z Cobra)</description>
 		<year>????</year>
@@ -13089,6 +13259,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="33095">
 				<rom name="Manic Miner - Eugene - Lord of the Bathroom 48K (1999)(Manic Miner Technologies).tap" size="33095" crc="0ffcbea2" sha1="1200db90728dcfb203ba2c5ecfbc68f59bab644f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb442de30621f0">
+		<description>Manic Miner - Lost Levels v1.2 128K (2024)(The Red Bayron)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125497">
+				<rom name="Manic Miner - Lost Levels v1.2 128K (2024)(The Red Bayron).tzx" size="125497" crc="db958a2c" sha1="b442de30621f0813037ab01360c0345b625d9a70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbfd2a99591b31">
+		<description>Manic Miner - Lost Levels v2.0 128K (2025)(The Red Bayron)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125461">
+				<rom name="Manic Miner - Lost Levels v2.0 128K (2025)(The Red Bayron).tzx" size="125461" crc="035a5d7d" sha1="bfd2a99591b314bf2a09f9aa0333a324cd2267c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19019,6 +19209,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="33267">
 				<rom name="Oddi The Viking 48K (2010)(Digital Brains).tzx" size="33267" crc="a9b440bd" sha1="ab90cdbf43c5dab3e14691bacd4e9cd45fb514a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8b9cf6641386c">
+		<description>ODMEK-02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="748">
+				<rom name="ODMEK-02.TAP" size="748" crc="3eee2b67" sha1="8b9cf6641386c6d2f96dcc4f43ccafb57e02412d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40162,6 +40362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsdc1c24d393376">
+		<description>Zak McDrucken Saves The Chickens 48K (2025)(RetroSouls)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34676">
+				<rom name="Zak McDrucken Saves The Chickens 48K (2025)(RetroSouls).tap" size="34676" crc="265d3204" sha1="dc1c24d3933760b1cc3f39a311e20e43107dc757"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs19ab0587e9bfc">
 		<description>Zaxxan (1983)(Starzone Software)</description>
 		<year>????</year>
@@ -41919,6 +42129,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="54573">
 				<rom name="_Kinetik.tzx" size="54573" crc="9d8e431e" sha1="6c2d6b17cf58c7f973532fb92e8a9909513f73cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa46d66956cd71">
+		<description>_Lo Chef - Cookie (1985)(Xor Soft)(It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8673">
+				<rom name="_Lo Chef - Cookie (1985)(Xor Soft)(It).tap" size="8673" crc="90cf69c6" sha1="a46d66956cd71e10a5b918c63a6b241a0f2a659a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -46879,6 +47099,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="30945">
 				<rom name="_ZX Wordle 48K (2022)(Adam Ainsworth).tap" size="30945" crc="cab302a6" sha1="884973133d14f9f70fe484ac9c8492873094e57f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f049e5a7d5d0">
+		<description>_ZXnake II 48K (2025)(Moises)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55566">
+				<rom name="_ZXnake II 48K (2025)(Moises).tap" size="55566" crc="ba169ea9" sha1="6f049e5a7d5d0403fc0147edb908e6ed2307de84"/>
 			</dataarea>
 		</part>
 	</software>
