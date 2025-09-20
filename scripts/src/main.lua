@@ -53,7 +53,7 @@ end
 		configuration { "mingw*" }
 			postbuildcommands {
 				"$(SILENT) echo Dumping symbols.",
-				"$(SILENT) objdump --section=.text --line-numbers --syms --demangle $(TARGET) >$(subst .exe,.sym,$(TARGET))"
+				"$(SILENT) objdump --section=.text --syms --demangle $(TARGET) >$(subst .exe,.sym,$(TARGET))"
 			}
 	end
 
