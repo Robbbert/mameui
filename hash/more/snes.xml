@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3922 -->
+<!-- Number of items in this list = 3924 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7019,6 +7019,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Der Langrisser T-Eng v1.3.1 (2022)(Near, D).sfc" size="4194304" crc="a55f6086" sha1="844324d1a16b3a6022eac7d5ff697bb2a79338f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns52698821a3681">
+		<description>Der Wanderknecht (J) (v1.1) (Goldlocke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Der Wanderknecht (J) (v1.1) (Goldlocke).sfc" size="262144" crc="d5d30c22" sha1="52698821a3681da41cef494c252c740f2ae738cc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31299,6 +31309,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1573376">
 				<rom name="Super Bonk 2 T-Eng (1999)(Gaijin Productions).sfc" size="1573376" crc="2e2a1be9" sha1="c07230294519bf044735693098d695aa68c23091"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns02cc5403575c2">
+		<description>Super Bug Hunters (V1.1) (MaxwelOlinda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Bug Hunters (V1.1) (MaxwelOlinda).sfc" size="262144" crc="f9305a4f" sha1="02cc5403575c203954f3c6282aafd4182ee06b29"/>
 			</dataarea>
 		</part>
 	</software>

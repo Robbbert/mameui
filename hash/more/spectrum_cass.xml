@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4712 -->
+<!-- Number of items in this list = 4747 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -9942,6 +9942,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbe9390ac569ab">
+		<description>Bomb 48K (2025)(Radastan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15487">
+				<rom name="Bomb 48K (2025)(Radastan).tap" size="15487" crc="cce67e6e" sha1="be9390ac569ab9797b9cc4fc4c621488e9dcea7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3656eda0fe40d">
+		<description>Bomb Alley (1984)(Your Computer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7843">
+				<rom name="Bomb Alley (1984)(Your Computer).tap" size="7843" crc="d74b11e6" sha1="3656eda0fe40d4020d3153339f5bdf2208f6bc4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d3791b1cc278">
+		<description>Bomb Alley (1984)(Your Computer)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8512">
+				<rom name="Bomb Alley (1984)(Your Computer)[a].tap" size="8512" crc="cb7943c2" sha1="7d3791b1cc27896483886eea9514d25502396362"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc9c08f43ad59d">
+		<description>Bomb Bomb Buster 128K (2022)(Packobilly)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56278">
+				<rom name="Bomb Bomb Buster 128K (2022)(Packobilly).tap" size="56278" crc="041ddb4c" sha1="c9c08f43ad59d356c8ad2b3383d44796686d4853"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse2c4091453341">
+		<description>Bomb Ed (1992)(Hellenic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25959">
+				<rom name="Bomb Ed (1992)(Hellenic Software).tap" size="25959" crc="c1366f31" sha1="e2c4091453341f099a774dabbdf5cf0131e7f5e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs275493ed92911">
+		<description>Bomb Jack (1986)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44642">
+				<rom name="Bomb Jack (1986)(Elite Systems).tap" size="44642" crc="d05e455f" sha1="275493ed9291113222eb289a121fbd5615e0a1aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4842765b983a4">
+		<description>Bomb Jack II (1987)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37709">
+				<rom name="Bomb Jack II (1987)(Elite Systems).tap" size="37709" crc="278a8820" sha1="4842765b983a42112ba7bb16a566e159a8547bb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa571b5ce0a3d">
+		<description>Bomb Scare (1986)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43914">
+				<rom name="Bomb Scare (1986)(Firebird).tap" size="43914" crc="3e70f6fa" sha1="aa571b5ce0a3d1e1dbbfa38538f00ae72e0da002"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb419d32212fb8">
 		<description>bombarder</description>
 		<year>????</year>
@@ -11562,6 +11642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7f26ac95e9a8e">
+		<description>L'ile Maudite (1984)(Loriciels)(Fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50857">
+				<rom name="L'ile Maudite (1984)(Loriciels)(Fr).tap" size="50857" crc="20fe0678" sha1="7f26ac95e9a8e60228e9cd5a0db0a43d800c1c95"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2d3f4f0612245">
 		<description>L'orso (1994)(Program Soft)</description>
 		<year>????</year>
@@ -11603,12 +11693,12 @@
 		</part>
 	</software>
 	<software name="zxsd9810ec825261">
-		<description>Lift</description>
+		<description>Lift 48K-AY (2021)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8920">
-				<rom name="Lift.tzx" size="8920" crc="1c765d1c" sha1="d9810ec8252616b4d37d4c3b3bfb7b9f45192dec"/>
+				<rom name="Lift 48K-AY (2021)(Inufuto).tzx" size="8920" crc="1c765d1c" sha1="d9810ec8252616b4d37d4c3b3bfb7b9f45192dec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11632,6 +11722,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5e77316b0b385">
+		<description>Light Cycle 2 (1992)(Rumatisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49853">
+				<rom name="Light Cycle 2 (1992)(Rumatisoft).tap" size="49853" crc="ff0261e2" sha1="5e77316b0b3851b0e3e126ef41db8ae2f8105485"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4e52dcc322d6">
+		<description>Light Cycles (1983)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14878">
+				<rom name="Light Cycles (1983)(PSS).tap" size="14878" crc="9ef66b90" sha1="c4e52dcc322d6cd4fa53faec102eb7f9dc1c9e12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc1a7c5c9e4297">
+		<description>Light Magic Graphic Designer (1985)(New Generation Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33806">
+				<rom name="Light Magic Graphic Designer (1985)(New Generation Software).tap" size="33806" crc="c394a104" sha1="c1a7c5c9e42979c55979bce03bc4143023898fd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ac14bd2a539d">
+		<description>Light Pen (1985)(Apina)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12491">
+				<rom name="Light Pen (1985)(Apina).tap" size="12491" crc="0e4b0144" sha1="2ac14bd2a539dc3f8b824cdf42cb76967929fe4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4c069edd76eca">
+		<description>Light Pen Mk2-3 (19xx)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9158">
+				<rom name="Light Pen Mk2-3 (19xx)(DK'Tronics).tap" size="9158" crc="aa7964aa" sha1="4c069edd76eca6beb903cef23ae91e8bb49752c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf02fdffd056d0">
+		<description>Lil' Ninja 48K (2023)(Joesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40609">
+				<rom name="Lil' Ninja 48K (2023)(Joesoft).tap" size="40609" crc="de3a35f2" sha1="f02fdffd056d019b998fc20be4f4cd162f54f6ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f7d9efee4d06">
+		<description>Lila Diva (1984)(Hands On Software)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47903">
+				<rom name="Lila Diva (1984)(Hands On Software)(De).tap" size="47903" crc="54c1c745" sha1="0f7d9efee4d06891c08b7743c63bf9b2d12cf4b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd82e074657e67">
+		<description>Liminal 48K-AY (2025)(Red Triangle)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28435">
+				<rom name="Liminal 48K-AY (2025)(Red Triangle).tap" size="28435" crc="95e7c052" sha1="d82e074657e67e8a007896f5e980ec5891c6ffd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs491d451848e59">
+		<description>Limonaden Stand (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7033">
+				<rom name="Limonaden Stand (19xx)(-)(De).tap" size="7033" crc="bd4eb7f5" sha1="491d451848e59e420b2c110384e2f67310b1ec8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa50579f6a6956">
+		<description>Line Of Fire (1990)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="165694">
+				<rom name="Line Of Fire (1990)(US Gold).tap" size="165694" crc="4f1c0e0e" sha1="a50579f6a695627a6773750b2ed8a569f1cf1c24"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxseaddcc1a10702">
 		<description>Line Of Fire</description>
 		<year>????</year>
@@ -11639,6 +11829,116 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="165833">
 				<rom name="Line Of Fire.tzx" size="165833" crc="a766cf2a" sha1="eaddcc1a107028b8ad07764ff7925994565d68c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2f2dc78f7e999">
+		<description>Lines (1986)(Computer Works Company)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16790">
+				<rom name="Lines (1986)(Computer Works Company)(Ru).tap" size="16790" crc="fbdc3aea" sha1="2f2dc78f7e999723c65685eab7e6711d176ccea9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs38d6b4f043918">
+		<description>Linker For MCoder 2 (1988)(Zeljko Juric)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3539">
+				<rom name="Linker For MCoder 2 (1988)(Zeljko Juric).tap" size="3539" crc="5f5b6cf2" sha1="38d6b4f04391895c5e1434e69e683a6680055fa0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8ba7f90f5500e">
+		<description>Linkword German (1984)(Silversoft)[b]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="264162">
+				<rom name="Linkword German (1984)(Silversoft)[b].tap" size="264162" crc="9c7bc786" sha1="8ba7f90f5500ebeec7c7f7fe1444253207980650"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96a2c15b43f58">
+		<description>Liquid War (2020)(Fitosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33821">
+				<rom name="Liquid War (2020)(Fitosoft).tap" size="33821" crc="3892d96f" sha1="96a2c15b43f58a61c6dc32e4242f6d087dc6b5c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs43172089e7607">
+		<description>Little Computer People (1986)(Activision)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="117303">
+				<rom name="Little Computer People (1986)(Activision)(128k).tap" size="117303" crc="8a0360ea" sha1="43172089e760708a32eee2c08a917f022299b106"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs183265b614f8a">
+		<description>Little Computer People 128K (1987)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139017">
+				<rom name="Little Computer People 128K (1987)(Activision).tap" size="139017" crc="84245a44" sha1="183265b614f8a06dbcf71fe23cf52c7027deb60a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b07521734963">
+		<description>Little John Can't Jump 48K-128K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34785">
+				<rom name="Little John Can't Jump 48K-128K (2025)(KTB Productions).tap" size="34785" crc="b5eac673" sha1="1b0752173496358e9074be9f11cb0ea7d8d057e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfad5b417918aa">
+		<description>Little Pac (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10368">
+				<rom name="Little Pac (19xx)(-)(De).tap" size="10368" crc="2ea608e1" sha1="fad5b417918aa2dfe870dcc3579218ef01bdf4ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4ddde622e42a5">
+		<description>Little Puff in Dragonland 128K (1990)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42827">
+				<rom name="Little Puff in Dragonland 128K (1990)(Codemasters).tap" size="42827" crc="30a03963" sha1="4ddde622e42a5f0a1f104f0d68978eabbbd26333"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa4c942c8bcbe8">
+		<description>Living Daylights (1987)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38808">
+				<rom name="Living Daylights (1987)(Domark).tap" size="38808" crc="9945b8ca" sha1="a4c942c8bcbe801acb01cbedd8cb93908a309d91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf63a044a1034f">
+		<description>Living Daylights, The (1987)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38564">
+				<rom name="Living Daylights, The (1987)(Domark).tap" size="38564" crc="2418a3ae" sha1="f63a044a1034f7c6cc17db075a0eac7164a7ba63"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42129,6 +42429,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="54573">
 				<rom name="_Kinetik.tzx" size="54573" crc="9d8e431e" sha1="6c2d6b17cf58c7f973532fb92e8a9909513f73cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56eef823c2519">
+		<description>_Light Force (1986)(Faster Than Light)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35646">
+				<rom name="_Light Force (1986)(Faster Than Light).tap" size="35646" crc="f91ca147" sha1="56eef823c251928810f1ca3e8ac5b6b6dee43a5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc0352cc7a9ab2">
+		<description>_Light Show v2.0 (1984)(Ziga Turk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26686">
+				<rom name="_Light Show v2.0 (1984)(Ziga Turk).tap" size="26686" crc="fdaf4c34" sha1="c0352cc7a9ab253e0cd89f44634dbb3e0450a591"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs34139e3aa60e5">
+		<description>_Lil' Alien (1986)(Essential Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48153">
+				<rom name="_Lil' Alien (1986)(Essential Consultants).tap" size="48153" crc="fd1ebc08" sha1="34139e3aa60e58f70eef58a70d59a36d5a40e110"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55fb85adc7bf9">
+		<description>_LINAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60003">
+				<rom name="_LINAN.tap" size="60003" crc="8a813a3d" sha1="55fb85adc7bf9955db4c7b38dd89b32f5cc66f69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs769e9dac42062">
+		<description>_Little Game (1987)(Satansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16388">
+				<rom name="_Little Game (1987)(Satansoft).tap" size="16388" crc="98bb4c58" sha1="769e9dac4206299eaa3d2081f1c2513893e2fbc8"/>
 			</dataarea>
 		</part>
 	</software>

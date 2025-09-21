@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 541 -->
+<!-- Number of items in this list = 542 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -3749,6 +3749,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="PWND 2 MSX2SMS Hack.sms" size="32768" crc="cc87347e" sha1="706751d901537696f49bca45612f2d83003cb424"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc733ec8dc6395">
+		<description>Pyramid Escape (2025)(IrataHack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="114688">
+				<rom name="Pyramid Escape (2025)(IrataHack).sms" size="114688" crc="705c8342" sha1="c733ec8dc639503924977812a2a69bf54bd7703c"/>
 			</dataarea>
 		</part>
 	</software>

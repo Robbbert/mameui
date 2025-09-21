@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 448 -->
+<!-- Number of items in this list = 449 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -613,12 +613,22 @@
 		</part>
 	</software>
 	<software name="zxsc61cec2b87fcc">
-		<description>Bomb Jack (1986)(Elite Systems)</description>
+		<description>Bomb Jack 48K (1986)(Elite Systems)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="41738">
-				<rom name="Bomb Jack (1986)(Elite Systems).z80" size="41738" crc="00e95211" sha1="c61cec2b87fcc232b86edecd230d1a8fdd6bb160"/>
+				<rom name="Bomb Jack 48K (1986)(Elite Systems).z80" size="41738" crc="00e95211" sha1="c61cec2b87fcc232b86edecd230d1a8fdd6bb160"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2695763fbf899">
+		<description>Bomb Jack II 48K (1987)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="45490">
+				<rom name="Bomb Jack II 48K (1987)(Elite Systems).z80" size="45490" crc="6327f471" sha1="2695763fbf89906374138fdcfd9764bb00267a6e"/>
 			</dataarea>
 		</part>
 	</software>

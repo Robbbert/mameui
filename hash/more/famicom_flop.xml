@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 524 -->
+<!-- Number of items in this list = 525 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -553,12 +553,22 @@
 		</part>
 	</software>
 	<software name="fds3d75a8b66cc62">
-		<description>Apple Town Monogatari - Little Computer People (Japan)</description>
+		<description>Apple Town Monogatari - Little Computer People (Japan)(1987)(Squaresoft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131016">
-				<rom name="Apple Town Monogatari - Little Computer People (Japan).fds" size="131016" crc="bf89dd4a" sha1="3d75a8b66cc626222fdb9637a3c13a340665f327"/>
+				<rom name="Apple Town Monogatari - Little Computer People (Japan)(1987)(Squaresoft).fds" size="131016" crc="bf89dd4a" sha1="3d75a8b66cc626222fdb9637a3c13a340665f327"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdsa4caa92688662">
+		<description>Apple Town Story - Little Computer People T-Eng (2025)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Apple Town Story - Little Computer People T-Eng (2025)(BlackPaladin).fds" size="131000" crc="4a72fdd0" sha1="a4caa926886620d24bd77f972bf4c625207a1787"/>
 			</dataarea>
 		</part>
 	</software>

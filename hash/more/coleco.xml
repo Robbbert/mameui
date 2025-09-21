@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 642 -->
+<!-- Number of items in this list = 646 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -133,32 +133,32 @@
 		</part>
 	</software>
 	<software name="cold1aa4aff55e9f">
-		<description>Alphabet Zoo</description>
+		<description>Alphabet Zoo (USA)(1984)(Spinnaker Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Alphabet Zoo.rom" size="16384" crc="4ffb4e8c" sha1="d1aa4aff55e9febaa3e7577ffcc381fee0f8e241"/>
+				<rom name="Alphabet Zoo (USA)(1984)(Spinnaker Software).rom" size="16384" crc="4ffb4e8c" sha1="d1aa4aff55e9febaa3e7577ffcc381fee0f8e241"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="col2a76962b43d32">
-		<description>Alpharoid SGM (2018)(Opcode Games)</description>
+		<description>AlphaRoid SGM (2018)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
-				<rom name="Alpharoid SGM (2018)(Opcode Games).col" size="131072" crc="6068db13" sha1="2a76962b43d329d65da7534c25cd726705f55e9d"/>
+				<rom name="AlphaRoid SGM (2018)(Opcode Games).rom" size="131072" crc="6068db13" sha1="2a76962b43d329d65da7534c25cd726705f55e9d"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="col733f8395d102f">
-		<description>Amazing Bumpman</description>
+		<description>Amazing Bumpman (USA)(1986)(Telegames)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Amazing Bumpman.rom" size="16384" crc="78a738af" sha1="733f8395d102f6849f58627d06655119062b97f8"/>
+				<rom name="Amazing Bumpman (USA)(1986)(Telegames).rom" size="16384" crc="78a738af" sha1="733f8395d102f6849f58627d06655119062b97f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -183,22 +183,22 @@
 		</part>
 	</software>
 	<software name="col63c142fe44ad2">
-		<description>Amazing Snake Beta 5 (Serge-Eric Tremblay)(2001) (PD)</description>
+		<description>Amazing Snake v0.9 (2001)(Serge-Eric Tremblay)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="31744">
-				<rom name="Amazing Snake Beta 5 (Serge-Eric Tremblay)(2001) (PD).rom" size="31744" crc="5ba1a6c8" sha1="63c142fe44ad21453740a6fb524c3777704a466b"/>
+				<rom name="Amazing Snake v0.9 (2001)(Serge-Eric Tremblay).rom" size="31744" crc="5ba1a6c8" sha1="63c142fe44ad21453740a6fb524c3777704a466b"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="colbe8a7df4f3e1e">
-		<description>Antarctic Adventure (1984)(Konami)(proto)</description>
+		<description>Antarctic Adventure (USA, Proto)(1984)(Konami)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Antarctic Adventure (1984)(Konami)(proto).rom" size="16384" crc="a66e5ed1" sha1="be8a7df4f3e1e1001785eb2326c26b4c301b4dbe"/>
+				<rom name="Antarctic Adventure (USA, Proto)(1984)(Konami).rom" size="16384" crc="a66e5ed1" sha1="be8a7df4f3e1e1001785eb2326c26b4c301b4dbe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -222,23 +222,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="col4782f1d6225d9">
-		<description>Aquattack (1984)(Interphase)[a]</description>
+	<software name="col76627fe3a0bbe">
+		<description>Aquattack (USA)(1984)(Interphase)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Aquattack (1984)(Interphase)[a].rom" size="16384" crc="947437ec" sha1="4782f1d6225d9b6501a9ab1ab72f9e66f3ff66d8"/>
+				<rom name="Aquattack (USA)(1984)(Interphase).rom" size="16384" crc="275a7013" sha1="76627fe3a0bbeca4f4cafd3427182eb8700e7677"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="col76627fe3a0bbe">
-		<description>Aquattack</description>
+	<software name="col4782f1d6225d9">
+		<description>Aquattack (USA, Alt)(1984)(Interphase)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Aquattack.rom" size="16384" crc="275a7013" sha1="76627fe3a0bbeca4f4cafd3427182eb8700e7677"/>
+				<rom name="Aquattack (USA, Alt)(1984)(Interphase).rom" size="16384" crc="947437ec" sha1="4782f1d6225d9b6501a9ab1ab72f9e66f3ff66d8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -492,6 +492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col28fc9bf517bce">
+		<description>Blockade Runner (USA)(1984)(Interphase)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Blockade Runner (USA)(1984)(Interphase).rom" size="16384" crc="df65fc87" sha1="28fc9bf517bce3d901c61d6fd1e297d2af421c70"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col09fc6bd4cfba5">
 		<description>Blockade Runner</description>
 		<year>????</year>
@@ -503,12 +513,12 @@
 		</part>
 	</software>
 	<software name="col492a499a32fac">
-		<description>BloktrisCOL</description>
+		<description>Bloktris v1.03 (2023)(Under4Mhz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="BloktrisCOL.col" size="32768" crc="d1bc1d23" sha1="492a499a32fac7c0902faf514a4cbbd6f91aa9da"/>
+				<rom name="Bloktris v1.03 (2023)(Under4Mhz).rom" size="32768" crc="d1bc1d23" sha1="492a499a32fac7c0902faf514a4cbbd6f91aa9da"/>
 			</dataarea>
 		</part>
 	</software>
@@ -562,6 +572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="coldd6c9d1ac16ca">
+		<description>Bomber King SGM (1988-2020)(Team Pixelboy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bomber King SGM (1988-2020)(Team Pixelboy).rom" size="131072" crc="782cfb9f" sha1="dd6c9d1ac16ca2540132bf908a452e9807cb7e74"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cole818bfb31fa57">
 		<description>Bosconian SGM (2016)(Opcode Games)</description>
 		<year>????</year>
@@ -592,23 +612,33 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="colad266ca4d270e">
-		<description>Boulderdash</description>
+	<software name="colbad7a976f37df">
+		<description>Boulder Dash (USA)(1984)(Telegames)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Boulderdash.rom" size="16384" crc="1796de5e" sha1="ad266ca4d270ea35def306381eaf05d36c811218"/>
+				<rom name="Boulder Dash (USA)(1984)(Telegames).rom" size="16384" crc="9b547ba8" sha1="bad7a976f37df875f4fa9646e5426c45344ec102"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colad266ca4d270e">
+		<description>Boulder Dash (USA, Proto)(1984)(Micro Fun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Boulder Dash (USA, Proto)(1984)(Micro Fun).rom" size="16384" crc="1796de5e" sha1="ad266ca4d270ea35def306381eaf05d36c811218"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="colfe6235b998893">
-		<description>Brain Strainers</description>
+		<description>Brain Strainers (USA)(1984)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Brain Strainers.rom" size="16384" crc="829c967d" sha1="fe6235b99889388ff858c19eae7337dd0b75944a"/>
+				<rom name="Brain Strainers (USA)(1984)(Coleco).rom" size="16384" crc="829c967d" sha1="fe6235b99889388ff858c19eae7337dd0b75944a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -652,13 +682,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col8df20c9c151b0">
+		<description>Bump 'n' Jump (USA, Euro)(1984)(Coleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="20480">
+				<rom name="Bump 'n' Jump (USA, Euro)(1984)(Coleco).rom" size="20480" crc="9e1fab59" sha1="8df20c9c151b01b0d859c0ab4753d5cce3956224"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col158f666aac5cf">
-		<description>Bump 'n' Jump (1984)(Mattel)(proto)</description>
+		<description>Bump 'n' Jump (USA, Proto)(1983)(Mattel Electronics)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Bump 'n' Jump (1984)(Mattel)(proto).rom" size="16384" crc="eb498f97" sha1="158f666aac5cf48c77b62beb77310a45f6c7e2ea"/>
+				<rom name="Bump 'n' Jump (USA, Proto)(1983)(Mattel Electronics).rom" size="16384" crc="eb498f97" sha1="158f666aac5cf48c77b62beb77310a45f6c7e2ea"/>
 			</dataarea>
 		</part>
 	</software>
