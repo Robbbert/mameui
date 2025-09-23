@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 542 -->
+<!-- Number of items in this list = 544 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1892,6 +1892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms37866be5a95ac">
+		<description>Grail of the Gods v0.49b (2023-25)(Guydebaville)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Grail of the Gods v0.49b (2023-25)(Guydebaville).sms" size="65536" crc="e6afde12" sha1="37866be5a95ac98937acac3ad55c7ccc863a56bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsaa2b5edb500cd">
 		<description>Gravity Beam Master Gaiden (2013)(Neko-MrD)</description>
 		<year>????</year>
@@ -2649,6 +2659,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Mai Nurse (2024)(Lunoka).sms" size="131072" crc="6b974d30" sha1="770a8b571af0b8c16c1bde88311b14984aa7f38e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsf32c3d01c296d">
+		<description>Mai Nurse (2025)(lunoka)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Mai Nurse (2025)(lunoka).sms" size="131072" crc="cbcb62f8" sha1="f32c3d01c296d2355e67650529fb38141a72a917"/>
 			</dataarea>
 		</part>
 	</software>

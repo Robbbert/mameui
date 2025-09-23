@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2021 -->
+<!-- Number of items in this list = 2022 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5923,12 +5923,12 @@
 		</part>
 	</software>
 	<software name="gen77237f953f80b">
-		<description>Driftin Rage - Alpha Version</description>
+		<description>Driftin Rage - Alpha Version v0.01a (HB)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2621440">
-				<rom name="Driftin Rage - Alpha Version.bin" size="2621440" crc="7319f173" sha1="77237f953f80bf153261e8708080b5075d2267e5"/>
+				<rom name="Driftin Rage - Alpha Version v0.01a (HB).bin" size="2621440" crc="7319f173" sha1="77237f953f80bf153261e8708080b5075d2267e5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12279,6 +12279,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="PapiCommandoReload-TectoyDemo.bin" size="1572864" crc="d73e6ad5" sha1="851d760cf48eb847bd2c0bdf39d9733facb7944e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene37b93b7675a5">
+		<description>Paprium (unlocked)(World)(2025)(knightofthewind89)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Paprium (unlocked)(World)(2025)(knightofthewind89).bin" size="8388608" crc="868dd234" sha1="e37b93b7675a51fd724a3f8e72176ba535f132c6"/>
 			</dataarea>
 		</part>
 	</software>
