@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2022 -->
+<!-- Number of items in this list = 2024 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4549,6 +4549,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9A (2025)(Yoni Arousement).bin" size="5242880" crc="ccd8889f" sha1="579b0d6933ac2d8f5acb8bc0beec8b61482778f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf8c005ccd6018">
+		<description>Black Jewel Reborn v2.11 (2022)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3407872">
+				<rom name="Black Jewel Reborn v2.11 (2022)(PSCD Games).bin" size="3407872" crc="0adee51c" sha1="f8c005ccd60185a55b8ae2f6c7fab207a9e38d9d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18809,6 +18819,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Toxic Crusaders (USA).bin" size="524288" crc="c2541e0a" sha1="bf875dfae2eb4a4d42245dc9a720da8e0c3038a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen938e224be5793">
+		<description>Traysia T-Spa (2025)(Team Alacant)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Traysia T-Spa (2025)(Team Alacant).bin" size="2097152" crc="f9170727" sha1="938e224be5793891dceb73e873efad995263db71"/>
 			</dataarea>
 		</part>
 	</software>

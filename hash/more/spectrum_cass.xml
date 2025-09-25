@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4747 -->
+<!-- Number of items in this list = 4774 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -1359,6 +1359,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="38178">
 				<rom name="1999.tzx" size="38178" crc="1f0fdc6c" sha1="28563a987b381b2d50b66b94f519ff91a2573109"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs32dde2728846e">
+		<description>1st Division Manager 48K-128K (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53668">
+				<rom name="1st Division Manager 48K-128K (1991)(Codemasters).tzx" size="53668" crc="138bb0e1" sha1="32dde2728846e23280e2703d599ac58571407a86"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4712,6 +4722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsac3e2c6298da4">
+		<description>American Turbo King - Super Car Trans-Am 48K-128K (1989)(Virgin Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43376">
+				<rom name="American Turbo King - Super Car Trans-Am 48K-128K (1989)(Virgin Mastertronic).tzx" size="43376" crc="38544788" sha1="ac3e2c6298da4f0d986f13c448008cc5493fe759"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs946dbd0e13fcc">
 		<description>Amidar (2022)(Salvador Camacho)</description>
 		<year>????</year>
@@ -5369,6 +5389,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15872">
 				<rom name="Aquarius (1983)(Bug-Byte Software)[a].tap" size="15872" crc="62966acd" sha1="239bbb5548339657451b66a00f77903cb2a1de68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe2b8b0073905">
+		<description>Aquarius 48K (1983)(Bug-Byte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15643">
+				<rom name="Aquarius 48K (1983)(Bug-Byte).tzx" size="15643" crc="b9005d23" sha1="be2b8b0073905e5a27377bd6a0e3a94dc34993c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10022,6 +10052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsae86d8e890245">
+		<description>Bomb Sweeper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46421">
+				<rom name="Bomb Sweeper.tap" size="46421" crc="b51f4118" sha1="ae86d8e890245cec9b292ea2690f07e61807ee46"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb419d32212fb8">
 		<description>bombarder</description>
 		<year>????</year>
@@ -10029,6 +10069,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="2881">
 				<rom name="bombarder.tzx" size="2881" crc="80f5567d" sha1="b419d32212fb828875c6f25c9cfc4c3a431268d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4a042d71fb14">
+		<description>Bombed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26112">
+				<rom name="Bombed.tap" size="26112" crc="03a39327" sha1="c4a042d71fb1414c08a20eba1f5fa282335100ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c0c3a25ce84c">
+		<description>Bomber Bot 128K (2023)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56471">
+				<rom name="Bomber Bot 128K (2023)(Gabriele Amore).tap" size="56471" crc="37d131f3" sha1="3c0c3a25ce84cdb129d21973746fe083b17fc071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfada18e94016f">
+		<description>Bomber Pengo (2023)(Gabriel Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47773">
+				<rom name="Bomber Pengo (2023)(Gabriel Amore).tap" size="47773" crc="6755ffe2" sha1="fada18e94016f1817d8f2a9148f0f0b6299676af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd1cc6ee2ee928">
+		<description>Bomberun 48K (1984)(DH Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18026">
+				<rom name="Bomberun 48K (1984)(DH Software).tap" size="18026" crc="5a32b070" sha1="d1cc6ee2ee9280d7453c4147aa4d2cb450f56ec9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46bd5b0c2ed22">
+		<description>Bombfusion (1989)(Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13852">
+				<rom name="Bombfusion (1989)(Mastertronic Ltd).tap" size="13852" crc="999e6c1e" sha1="46bd5b0c2ed22e39b7c0c93c668ee1903a6df13e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs314d6525cd2e5">
+		<description>Bombfusion (1989)(Mastertronic Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48085">
+				<rom name="Bombfusion (1989)(Mastertronic Ltd)[a].tap" size="48085" crc="2a44fd70" sha1="314d6525cd2e5fb9039a50f108fb76ade74ad96f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse00d96995c547">
+		<description>Bombfusion 48K (1989)(Virgin Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49726">
+				<rom name="Bombfusion 48K (1989)(Virgin Mastertronic).tap" size="49726" crc="b7fcbc3b" sha1="e00d96995c54738e52479be6385f4e7eea0aaa70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs90dd161cb9cb1">
+		<description>Bombscare 48K (1984)(Dollarsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48034">
+				<rom name="Bombscare 48K (1984)(Dollarsoft).tap" size="48034" crc="2ac3cefe" sha1="90dd161cb9cb1207b7779dfd4ee279a9b2e29a9d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11689,6 +11809,156 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="110899">
 				<rom name="LED Storm.tzx" size="110899" crc="8e136a30" sha1="d91a2a75c87c11c3d7e493aed4eee0ec4bf39872"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0aef38cbd8c7">
+		<description>Lemmings (demo) (1991)(Psygnosis Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="73672">
+				<rom name="Lemmings (demo) (1991)(Psygnosis Ltd).tap" size="73672" crc="d85f8d46" sha1="f0aef38cbd8c75c8f0a9a712f03e4305a86ed5d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8fc00cbbbaefe">
+		<description>Lemmings 48K (1991)(Psygnosis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="544963">
+				<rom name="Lemmings 48K (1991)(Psygnosis).tap" size="544963" crc="3a5fa27a" sha1="8fc00cbbbaefe77e3e7780736a76a513dd23726e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81169d2c9a635">
+		<description>Lemonade Stand (1983)(Sci-Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7712">
+				<rom name="Lemonade Stand (1983)(Sci-Soft).tap" size="7712" crc="cfca418b" sha1="81169d2c9a635a314451741059ab9f60afb761b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs533b8e1f5d2fc">
+		<description>Leonard (1986)(Ganamides)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35840">
+				<rom name="Leonard (1986)(Ganamides)(Sp).tap" size="35840" crc="78736ae4" sha1="533b8e1f5d2fcffde61b5de0d0d4ac7e8b2a8ac7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6756b835837ff">
+		<description>Les Flics (1984)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23168">
+				<rom name="Les Flics (1984)(PSS).tap" size="23168" crc="88813bb3" sha1="6756b835837ff26da8739258399dd76771aa9013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs41fb2d4930196">
+		<description>Leviathan (1987)(English Software)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97034">
+				<rom name="Leviathan (1987)(English Software)(128k).tap" size="97034" crc="ea69e8ac" sha1="41fb2d493019672ea80c1c1e1bae91c8ff2a0875"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4310be1024198">
+		<description>Levitation (1985)(Michael Beresford)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35047">
+				<rom name="Levitation (1985)(Michael Beresford).tap" size="35047" crc="bcb44e87" sha1="4310be10241986b6d161ce222e158cc77298d0c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd671b00917997">
+		<description>Liberator (1983)(Lyversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15550">
+				<rom name="Liberator (1983)(Lyversoft).tap" size="15550" crc="fcfeaa09" sha1="d671b00917997b3cf8bd0211770bb71fcbad9906"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0acf259af8c23">
+		<description>Liberator (1988)(Remsoft Arcade Designs Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47044">
+				<rom name="Liberator (1988)(Remsoft Arcade Designs Ltd).tap" size="47044" crc="7f9e8bf8" sha1="0acf259af8c23055d731eac9420eca555f911428"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc0df0d24a0419">
+		<description>Licence to Kill (1989)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48133">
+				<rom name="Licence to Kill (1989)(Domark).tap" size="48133" crc="44505823" sha1="c0df0d24a04191b170bcbb5159a4526f6a6a804e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse967086a333a4">
+		<description>License To Kill (1989)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48131">
+				<rom name="License To Kill (1989)(Domark).tap" size="48131" crc="8b0de117" sha1="e967086a333a44ae962aca31f456186794bf2f1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs29e3a76f886a4">
+		<description>Life And Adventures Of Crusoe, The (1984)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48040">
+				<rom name="Life And Adventures Of Crusoe, The (1984)(Automata UK).tap" size="48040" crc="10e1d89a" sha1="29e3a76f886a4480cd1854f980df764981e1b3e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs227436a0305bd">
+		<description>Life Of The Lone Electron, The (19xx)(Delbert the Hamster Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43815">
+				<rom name="Life Of The Lone Electron, The (19xx)(Delbert the Hamster Software).tap" size="43815" crc="b0e38b33" sha1="227436a0305bdfbc94016b307032c5ac34079d9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs254471a3aa30f">
+		<description>Lifeterm (1987)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41575">
+				<rom name="Lifeterm (1987)(Alternative Software).tap" size="41575" crc="36d5ad3b" sha1="254471a3aa30fa7fb207f614aff0e68b864fbd14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9f9510516da13">
+		<description>Lifeterm (1987)(Alternative Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41633">
+				<rom name="Lifeterm (1987)(Alternative Software)[a].tap" size="41633" crc="323b2610" sha1="9f9510516da13e7f9bc86918a302c40bd7f2e21c"/>
 			</dataarea>
 		</part>
 	</software>

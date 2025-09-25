@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3932 -->
+<!-- Number of items in this list = 3938 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3509,6 +3509,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Backgrounds (SMW1 Hack).sfc" size="2097152" crc="c97e2729" sha1="84c0fbb7d1c53ab9f73cc308566b06a67aee410c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3dae89a4ffbed">
+		<description>Bad Apple Tech-Demo (2021)(Ladida)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Bad Apple Tech-Demo (2021)(Ladida).sfc" size="8388608" crc="b2e98625" sha1="3dae89a4ffbed0a91a739e6763799b1399a6189f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21482,6 +21492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc26c6ae19fb0e">
+		<description>Return of Double Dragon (Evercade)(2020)(Blaze Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Return of Double Dragon (Evercade)(2020)(Blaze Entertainment).sfc" size="1572864" crc="bb2684c3" sha1="c26c6ae19fb0e9efd2c30b89c88e671180243c63"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0c90942ef6ab2">
 		<description>Return of Double Dragon - Crime Syndicate (J)(h8v4fullfix-11120953)</description>
 		<year>????</year>
@@ -21769,6 +21789,46 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Rock N' Roll Racing (E) (BR).sfc" size="1048576" crc="989abb5f" sha1="4b1bf6be051a68c11b08b3700f9e2cbeec410322"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns61430be47083d">
+		<description>Rock N' Roll Racing (E)(1993)(Interplay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rock N' Roll Racing (E)(1993)(Interplay).sfc" size="1048576" crc="b02daf39" sha1="61430be47083d7e7f5879a69247dd17ddaff50d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf0673d5446e42">
+		<description>Rock N' Roll Racing (J)(1993)(Interplay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rock N' Roll Racing (J)(1993)(Interplay).sfc" size="1048576" crc="a206384c" sha1="f0673d5446e42c4dbf1c177f9ad02ee2f5ba36fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns37547f9637b67">
+		<description>Rock N' Roll Racing (U, Demo)(1993-2014)(Blizzard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rock N' Roll Racing (U, Demo)(1993-2014)(Blizzard).sfc" size="1048576" crc="2313d87e" sha1="37547f9637b678b2daf0872f64b2f7e5f11dcd9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf9bd711726081">
+		<description>Rock N' Roll Racing - Alternate Race Tracks v1.2 (2025)(DarthMarino)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rock N' Roll Racing - Alternate Race Tracks v1.2 (2025)(DarthMarino).sfc" size="1048576" crc="21cf199e" sha1="f9bd711726081d470141961a326eb235b5afe7d2"/>
 			</dataarea>
 		</part>
 	</software>
