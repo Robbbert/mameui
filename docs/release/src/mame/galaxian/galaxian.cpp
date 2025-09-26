@@ -8921,6 +8921,7 @@ void gmgalax_state::init_gmgalax()
 	common_init(nullptr, nullptr, nullptr, nullptr);
 	m_extend_tile_info_ptr = extend_tile_info_delegate(&gmgalax_state::bagmanmc_extend_tile_info, this);
 	m_extend_sprite_info_ptr = extend_sprite_info_delegate(&gmgalax_state::bagmanmc_extend_sprite_info, this);
+	m_leftspriteclip = 8;
 }
 
 
