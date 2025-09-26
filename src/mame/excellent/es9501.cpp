@@ -31,7 +31,7 @@ TODO
 - flip screen support;
 - only a small part of the videoregs are (perhaps) understood;
 - d9flower needs correct EEPROM;
-- d9flower doesn't update palette after boot and doesn't accept controls (IRQ problem?)
+- IRQ handling not 100% correct;
 - device-ify ES-9409 and share with excellent/dblcrown.cpp.
 */
 
@@ -427,7 +427,7 @@ GFXDECODE_END
 
 // bit 0 unused in specd9, d9flower depends on it on memory clear screen
 // bit 1 looks vblank (would hang otherwise)
-// bit 2 unknown (sprite DMA complete? Unset by specd9)
+// bit 2 unknown (sprite DMA complete? Unset by specd9. Used for inputs and palette updates by d9flower)
 TIMER_DEVICE_CALLBACK_MEMBER(es9501_state::scanline_cb)
 {
 	int const scanline = param;
@@ -436,6 +436,12 @@ TIMER_DEVICE_CALLBACK_MEMBER(es9501_state::scanline_cb)
 	{
 		m_maincpu->set_input_line(1, HOLD_LINE);
 		m_irq_source |= 2;
+	}
+
+	if ((scanline >= 0) && (scanline < 240) && BIT(m_irq_mask, 2))
+	{
+		m_maincpu->set_input_line(1, HOLD_LINE);
+		m_irq_source |= 4;
 	}
 
 	if (scanline == 0 && BIT(m_irq_mask, 0))
@@ -576,7 +582,7 @@ ROM_START( starball )
 	ROM_LOAD( "t59.u23", 0x000000, 0x200000, CRC(b11857b4) SHA1(c0a6478fd8a8ef1ed35cfbfa9fd2af44eb258725) )
 
 	ROM_REGION16_BE( 0x100, "eeprom", 0 )
-	ROM_LOAD16_WORD_SWAP( "93c56.u12", 0x000, 0x100, BAD_DUMP CRC(3d0a5809) SHA1(5d754d359c36db8a08337c61d6101050a97407e3) ) // handcrafted
+	ROM_LOAD16_WORD_SWAP( "93c56.u12", 0x000, 0x100, CRC(e91dc32e) SHA1(b2e44321882abef012afc363cd78409a06a58764) )
 
 	ROM_REGION( 0x117, "plds", 0 )
 	ROM_LOAD( "3.u37", 0x000, 0x117, CRC(bea4cb24) SHA1(09987e6b903cc3bd202a9d933474b36bdbb99d9a) ) // PALCE16V8H
