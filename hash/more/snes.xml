@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3938 -->
+<!-- Number of items in this list = 3941 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7272,6 +7272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns87ae0259a06a2">
+		<description>Donkey Kong Country - Seiryuki Remix 2025 (2025)(Sudesh Sookdeo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Donkey Kong Country - Seiryuki Remix 2025 (2025)(Sudesh Sookdeo).sfc" size="4194304" crc="043ee352" sha1="87ae0259a06a2fd0b697a7a4e545716223cc0e08"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf11e06ef63166">
 		<description>Donkey Kong Country 2 (Diddy's Kong Quest) (BR)</description>
 		<year>????</year>
@@ -7289,6 +7299,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Donkey Kong Country 2 - Brigand Barrage (hack).sfc" size="4194304" crc="02387738" sha1="2468883eceee24718c6a139282cf95064c8efdbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0d34658313778">
+		<description>Donkey Kong Country 2 - The Project 4 Kongs (2024)(The Kong's Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Donkey Kong Country 2 - The Project 4 Kongs (2024)(The Kong's Team).sfc" size="6291456" crc="19742050" sha1="0d346583137780c13a553709bb9550a18547dd70"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21792,26 +21812,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns61430be47083d">
-		<description>Rock N' Roll Racing (E)(1993)(Interplay)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Rock N' Roll Racing (E)(1993)(Interplay).sfc" size="1048576" crc="b02daf39" sha1="61430be47083d7e7f5879a69247dd17ddaff50d1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsf0673d5446e42">
-		<description>Rock N' Roll Racing (J)(1993)(Interplay)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Rock N' Roll Racing (J)(1993)(Interplay).sfc" size="1048576" crc="a206384c" sha1="f0673d5446e42c4dbf1c177f9ad02ee2f5ba36fc"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns37547f9637b67">
 		<description>Rock N' Roll Racing (U, Demo)(1993-2014)(Blizzard)</description>
 		<year>????</year>
@@ -22122,6 +22122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns904f5dcf5aeda">
+		<description>Run Saber (E)(1993)(Atlus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Run Saber (E)(1993)(Atlus).sfc" size="1048576" crc="2820f702" sha1="904f5dcf5aedad12d77f335690bfd740bc28801a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5fba73777acdd">
 		<description>Run Saber (U)(1993)(Atlus)</description>
 		<year>????</year>
@@ -22129,6 +22139,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Run Saber (U)(1993)(Atlus).sfc" size="1048576" crc="8708e5bb" sha1="5fba73777acdd5b8bdb6ef429effcf6034c88072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsde78df0756da4">
+		<description>Run Saber T-Por (2021)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Run Saber T-Por (2021).sfc" size="1048576" crc="8296fc8e" sha1="de78df0756da4307c9427e9763234b45706eb4bc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36129,6 +36149,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Super Skyler World (SMW1 Hack).sfc" size="1048576" crc="0b299830" sha1="dc045d509fa404d43048f80f4ac4b189b8e08564"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns295a5292adb28">
+		<description>Super Sokonyan v2 (2025)(Acedio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Super Sokonyan v2 (2025)(Acedio).sfc" size="131072" crc="9550c61f" sha1="295a5292adb2812558d2c0044c8e2ca974d6bcf5"/>
 			</dataarea>
 		</part>
 	</software>
