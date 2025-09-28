@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 416 -->
+<!-- Number of items in this list = 449 -->
 <softwarelist name="apple2_flop_misc" description="apple2_flop_misc loose roms">
 	<software name="appf5929e36a9665">
 		<description>16 Sector Fast Disk Backup Rev. C (19xx)(-)</description>
@@ -179,6 +179,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="aliens (1986)(activision)(disk 1 of 2)(clean crack).dsk" size="143360" crc="bf0f7f72" sha1="d77b4d92ce266c75c4d7f08b85e507529e0afc68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3413841131552">
+		<description>Alphabet Zoo v1.0 rev 2 (1983)(Spinnaker Software)(II+)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234840">
+				<rom name="Alphabet Zoo v1.0 rev 2 (1983)(Spinnaker Software)(II+)[48K].woz" size="234840" crc="09b99cff" sha1="3413841131552609588c9de67abbb1507a3fdbbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0af2d34003d6a">
+		<description>Alphabet Zoo v1.0 rev 3 (1983)(Spinnaker Software)(II+)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234826">
+				<rom name="Alphabet Zoo v1.0 rev 3 (1983)(Spinnaker Software)(II+)[48K].woz" size="234826" crc="b3a2cd18" sha1="0af2d34003d6ac75a9163b600f958ebd2889bc32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2319,6 +2339,316 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Apple II DeskTop v1.4-beta1 (2024-06-14)(Apple II DeskTop Team)(IIE)(sv)(beta)(Disk 5 of 5).dsk" size="143360" crc="a2536026" sha1="cb679cb5af1bdca9939d986c68236bb0ce7d7afd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6cdd335fd7758">
+		<description>Apple II Double Hi Res Tile Editor (2023-12-05)(Wasson, Paul)(MIT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple II Double Hi Res Tile Editor (2023-12-05)(Wasson, Paul)(MIT).dsk" size="143360" crc="eaed1db0" sha1="6cdd335fd7758bce8a5e641a34d251d274b5697b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app690e714ad3bda">
+		<description>Apple II File Developer - FID Version M (1980)(Apple) &amp; Pirate's Friend (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple II File Developer - FID Version M (1980)(Apple) &amp; Pirate's Friend (19xx)(-).dsk" size="143360" crc="34dd6ec7" sha1="690e714ad3bda81d48fa0bd5b91decf26f914e34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf55314bc5706c">
+		<description>Apple II Pascal v1.1 (1980)(Apple)(Side A)(Boot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple II Pascal v1.1 (1980)(Apple)(Side A)(Boot).dsk" size="143360" crc="ce86bcee" sha1="f55314bc5706caf67ebcf5326f158109944f9e0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3b365c722f172">
+		<description>Apple II Pascal v1.1 (1980)(Apple)(Side B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple II Pascal v1.1 (1980)(Apple)(Side B).dsk" size="143360" crc="4735cd74" sha1="3b365c722f172822ed5d994b7dd1334d03b424e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8585b8cb53a9f">
+		<description>Apple II Pascal v1.1 (198x)(Apple)(Disk 1 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple II Pascal v1.1 (198x)(Apple)(Disk 1 of 4).dsk" size="143360" crc="af8c9e91" sha1="8585b8cb53a9f5ee2c3c9599d37429e65951b0c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app467649d70ae62">
+		<description>Apple II Pascal v1.1 (198x)(Apple)(Disk 2 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple II Pascal v1.1 (198x)(Apple)(Disk 2 of 4).dsk" size="143360" crc="8343d9b7" sha1="467649d70ae620ae264956a799406a245f1c361d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb523a78c264f8">
+		<description>Apple II Pascal v1.1 (198x)(Apple)(Disk 3 of 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple II Pascal v1.1 (198x)(Apple)(Disk 3 of 4).dsk" size="143360" crc="c51a5644" sha1="b523a78c264f80644c881d365bd76fd0814a73e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3b9084b17ac14">
+		<description>Apple Panic (1981-06-02)(Broderbund)(US)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="232960">
+				<rom name="Apple Panic (1981-06-02)(Broderbund)(US)[48K].nib" size="232960" crc="61dd30a5" sha1="3b9084b17ac14af90e197b8c7d651fb68d40889a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appea0a9981340e1">
+		<description>Apple Puck Man (1981-01-11)(Star Craft)(JP)[cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple Puck Man (1981-01-11)(Star Craft)(JP)[cr].dsk" size="143360" crc="80aa44be" sha1="ea0a9981340e1b4152e1884710bdc9cf299e4d97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5e1c8bbe62fb0">
+		<description>Apple Stellar Invaders (1980)(Apple)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple Stellar Invaders (1980)(Apple)[48K].dsk" size="143360" crc="f982f6ca" sha1="5e1c8bbe62fb0845cc1507297b8d61aee61c0aae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app31ee896ebbb5c">
+		<description>Apple Voice (1985-09)(Kazushige, Kida)(JP)(en)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apple Voice (1985-09)(Kazushige, Kida)(JP)(en)[Micom BASIC].dsk" size="143360" crc="45dc14ec" sha1="31ee896ebbb5c24196454d5f703af635ee39c4ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app57f1ce648d0af">
+		<description>Applesoft Optimizer (1980)(Programma Software) &amp; Super Invader (1979)(Tsukumo-Electronics) &amp; Sandwich au Homard, Le (1980)(Copic - Mars)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Applesoft Optimizer (1980)(Programma Software) &amp; Super Invader (1979)(Tsukumo-Electronics) &amp; Sandwich au Homard, Le (1980)(Copic - Mars).dsk" size="143360" crc="2c19526f" sha1="57f1ce648d0afe113ae09b0d5637bcc3be04e982"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe50ba9fdd94f1">
+		<description>applz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="applz.dsk" size="143360" crc="f787abe9" sha1="e50ba9fdd94f1fa6fe67cb1e81748920d61d171a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8ed20f6c10c18">
+		<description>Apricorn Graphics Sampler (19xx)(Apricorn)[Apricorn Graphics Printer Interface Supplement]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Apricorn Graphics Sampler (19xx)(Apricorn)[Apricorn Graphics Printer Interface Supplement].dsk" size="143360" crc="acadee70" sha1="8ed20f6c10c187555b6f9f5c83675d0ddb285f24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appa4797253c83bc">
+		<description>Aquatron (1983)(Sierra On-Line)(US)[cr The Freeze][48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Aquatron (1983)(Sierra On-Line)(US)[cr The Freeze][48K].dsk" size="143360" crc="cb19e0e5" sha1="a4797253c83bcdd80d2baa68374cfce58787bf97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appf21c3de5e2c1e">
+		<description>Arcade Bonanza (19xx)(Keypunch Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arcade Bonanza (19xx)(Keypunch Software).dsk" size="143360" crc="082b3150" sha1="f21c3de5e2c1ef9303ea5357da95a53f059c2646"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8a08de9f5bbe9">
+		<description>Arcade Boot Camp (1984)(Penguin Software)(II+)(US)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="232960">
+				<rom name="Arcade Boot Camp (1984)(Penguin Software)(II+)(US).nib" size="232960" crc="8f001182" sha1="8a08de9f5bbe9ebe6e194d78b2075fe22587baca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8daa98683cb20">
+		<description>Arcade Boot Camp (1984)(Penguin Software)(II+)(US)[cr Black Bag][a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arcade Boot Camp (1984)(Penguin Software)(II+)(US)[cr Black Bag][a3].dsk" size="143360" crc="ea97227e" sha1="8daa98683cb20bb84b0851f0df1f98a208fe4f29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app72c62164e43f5">
+		<description>Arcade Boot Camp (1984)(Penguin Software)(II+)(US)[cr][a][clean crack]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arcade Boot Camp (1984)(Penguin Software)(II+)(US)[cr][a][clean crack].dsk" size="143360" crc="3764b591" sha1="72c62164e43f5a0e41a2790161b1643216c3dd7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app04eb38d81c48e">
+		<description>Arcade Boot Camp (1984)(Penguin Software)(II+)(US)[cr][clean crack]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arcade Boot Camp (1984)(Penguin Software)(II+)(US)[cr][clean crack].dsk" size="143360" crc="a5e14cf1" sha1="04eb38d81c48e412d7debf8ed96128ee4a4297fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appc8dca5550da39">
+		<description>Arcade Sound Editor (1987)(Microsparc)(US)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arcade Sound Editor (1987)(Microsparc)(US).dsk" size="143360" crc="81ee0c64" sha1="c8dca5550da39bc6c9485ea9247d652aa5ea33a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app9fd8c77ae347c">
+		<description>Archive II (1986)(D.C. Heath &amp; Company)(US)[cr The Scanner]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Archive II (1986)(D.C. Heath &amp; Company)(US)[cr The Scanner].dsk" size="143360" crc="a7be97ce" sha1="9fd8c77ae347ccc536be87d9a8961fa7c078fe67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe1ef903ff57ea">
+		<description>Archon - The Light and the Dark (1984)(Electronic Arts)(II+)[cr Pusman - Wizard][64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Archon - The Light and the Dark (1984)(Electronic Arts)(II+)[cr Pusman - Wizard][64K].dsk" size="143360" crc="643a8afd" sha1="e1ef903ff57ea42ecc7ef5605e4a9a9ff1fc02f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app660fcc2224d2a">
+		<description>Arcticfox (1986)(Electronic Arts)(II+)[cr First Class][64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arcticfox (1986)(Electronic Arts)(II+)[cr First Class][64K].dsk" size="143360" crc="f8d64ab0" sha1="660fcc2224d2a488c5c86bce5658f7488f5db9b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0271260ca48d8">
+		<description>Arcticfox (1986)(Electronic Arts)(II+)[cr][64K][clean crack]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arcticfox (1986)(Electronic Arts)(II+)[cr][64K][clean crack].dsk" size="143360" crc="afa27e01" sha1="0271260ca48d82be4535d038c571d9a22a74d1d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app97790dfa3444e">
+		<description>Ardy the Aardvark (1983)(Datamost)(II+)(US)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="232960">
+				<rom name="Ardy the Aardvark (1983)(Datamost)(II+)(US)[48K].nib" size="232960" crc="2b65a0dd" sha1="97790dfa3444ece75224813b91ef505a8ec2ec88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appbe326e5247594">
+		<description>Ardy the Aardvark (1983)(Datamost)(II+)(US)[cr][48K][clean crack]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Ardy the Aardvark (1983)(Datamost)(II+)(US)[cr][48K][clean crack].dsk" size="143360" crc="edd107fa" sha1="be326e5247594ebd2f7354d89e1979f8647aac82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app5b530ed83ef17">
+		<description>Argos (1983)(Datamost)(II+)(US)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Argos (1983)(Datamost)(II+)(US).dsk" size="143360" crc="670cfbd7" sha1="5b530ed83ef17f6210b16ef72f89e265661bbb7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0b3dd50a7232b">
+		<description>Arkanoid (1988)(Taito America)(II+)(US)[a][64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arkanoid (1988)(Taito America)(II+)(US)[a][64K].dsk" size="143360" crc="526ebbaa" sha1="0b3dd50a7232bb2bc72b7c0a1e5aa7f6026a84ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app40ca4cec31157">
+		<description>Arkanoid (1988)(Taito America)(II+)(US)[cr][64K][clean crack]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Arkanoid (1988)(Taito America)(II+)(US)[cr][64K][clean crack].dsk" size="143360" crc="b7bdf709" sha1="40ca4cec31157e18c98c380b639309f8ebfd1e0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app884f4ecdd1f59">
+		<description>Art - Volume 1 v1.0 (1981)(MECC)(US)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="143360">
+				<rom name="Art - Volume 1 v1.0 (1981)(MECC)(US).dsk" size="143360" crc="08a8e23c" sha1="884f4ecdd1f593cc272ebc9f4aac41bc3c3cfe6b"/>
 			</dataarea>
 		</part>
 	</software>
