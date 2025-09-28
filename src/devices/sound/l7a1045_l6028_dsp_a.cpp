@@ -28,12 +28,13 @@
         a = sample end address, bits 23-4 if looping, ignored for one-shot
         r = sample rate in 4.12 fixed point relative to 44100 Hz (0x1000 = 44100 Hz)
 
-    2  ----------------   ????????????????   ????????????????
-        All bits unknown.  Data is usually 0000 4000 C000 for one-shot and
-        something more complex for looping samples.
-
-        Happy suggests the second word is bits 20-4 of the loop start
-        address, but that does not line up with reality.  Needs more research.
+    2  ----------------   mmmmmmmmmmmmmmmm   bbbbbbbbbbbbbbbb
+		b = loop length.  Loop start = sample end - loop length.
+		m = 2's complement negative of the loop length multiplier, in the same
+			4.12 fixed point format as the sample rate.
+			A multiplier of 0x1000 means b is exactly the loop length, whereas
+			a multiplier of 0x0800 means b is double the loop length so you must
+			divide it by 2 to get the actual loop length.
 
     3  ----------------   vvvvvvvvvvvvvvvv   ----------------
         v = volume envelope starting value (16 bit, maaaaybe signed?)
@@ -68,11 +69,6 @@
         Unknown, written once on bootup for HNG64 games.
 
     TODO:
-    - sams64 and sams64_2 sometimes have samples get stuck on.  Other games do not
-      seem to have this problem.  Why?
-    - Sample format seems wrong.
-    - Filter parameters are guesswork.  Cutoff frequency seems right, but
-      resonance is guesswork.  Getting the MPC3000 usable will help a lot.
     - How does the delay effect work?
     - How does DMA work?
 
@@ -106,7 +102,6 @@ void l7a1045_sound_device::device_start()
 	save_item(STRUCT_MEMBER(m_voice, start));
 	save_item(STRUCT_MEMBER(m_voice, end));
 	save_item(STRUCT_MEMBER(m_voice, step));
-	save_item(STRUCT_MEMBER(m_voice, mode));
 	save_item(STRUCT_MEMBER(m_voice, pos));
 	save_item(STRUCT_MEMBER(m_voice, frac));
 	save_item(STRUCT_MEMBER(m_voice, l_volume));
@@ -158,7 +153,7 @@ void l7a1045_sound_device::sound_stream_update(sound_stream &stream)
 
 				if ((start + pos) >= end)
 				{
-					pos = vptr->pos = 0;
+					pos = (vptr->end - vptr->start) - vptr->loop_start;
 				}
 				const uint32_t address = (start + pos) & (m_rom.length() - 1);
 				data = m_rom[address];
@@ -215,9 +210,8 @@ void l7a1045_sound_device::sound_stream_update(sound_stream &stream)
 				vptr->l += (vptr->flt_freq * vptr->b) >> 15;
 
 				const int32_t fout = vptr->l;
-				const int64_t left = (fout * (uint64_t(vptr->l_volume) * uint64_t(vptr->env_volume))) >> 20;
-				const int64_t right = (fout * (uint64_t(vptr->r_volume) * uint64_t(vptr->env_volume))) >> 20;
-
+				const int64_t left = (fout * (uint64_t(vptr->l_volume) * uint64_t(vptr->env_volume))) >> 24;
+				const int64_t right = (fout * (uint64_t(vptr->r_volume) * uint64_t(vptr->env_volume))) >> 24;
 				stream.add_int(0, j, left, 32768);
 				stream.add_int(1, j, right, 32768);
 			}
@@ -306,29 +300,28 @@ void l7a1045_sound_device::sound_data_w(offs_t offset, uint16_t data)
 			vptr->pos = 0;
 			vptr->frac = 0;
 			// clear the filter state too
-			vptr->b = vptr->l = 0;
+			vptr->flt_pos = 0;
+			vptr->l = vptr->b = 0;
 			break;
 
 		// loop end address and pitch step
 		case 0x01:
-			if ((m_audiodat[2][m_audiochannel].dat[0] == 0xc000) && (m_audiodat[2][m_audiochannel].dat[1] == 0x4000))
-			{
-				vptr->end = m_rom.length() - 1;
-				vptr->mode = false;
-			}
-			else
-			{
-				vptr->end = (m_audiodat[m_audioregister][m_audiochannel].dat[2] & 0x000f) << (16 + 4);
-				vptr->end |= (m_audiodat[m_audioregister][m_audiochannel].dat[1] & 0xffff) << (4);
-				vptr->mode = true;
-				vptr->end &= m_rom.length() - 1;
-			}
+			vptr->end = (m_audiodat[m_audioregister][m_audiochannel].dat[2] & 0x000f) << (16 + 4);
+			vptr->end |= (m_audiodat[m_audioregister][m_audiochannel].dat[1] & 0xffff) << (4);
+			vptr->end &= m_rom.length() - 1;
 
 			vptr->step = m_audiodat[m_audioregister][m_audiochannel].dat[0] & 0xffff;
 			break;
 
-		// unknown exactly what this does
+		// loop start, encoded weirdly
 		case 0x02:
+			{
+				const uint16_t multiplier = (m_audiodat[m_audioregister][m_audiochannel].dat[1] ^ 0xffff) + 1;
+				const uint16_t base = m_audiodat[m_audioregister][m_audiochannel].dat[0];
+
+				double loop_start = (double)base * ((double)multiplier / 4096.0);
+				vptr->loop_start = (uint32_t)loop_start;
+			}
 			break;
 
 		// starting envelope volume
@@ -345,9 +338,10 @@ void l7a1045_sound_device::sound_data_w(offs_t offset, uint16_t data)
 
 		// reg 5 = starting lowpass cutoff frequency
 		case 0x05:
-			vptr->flt_freq = m_audiodat[m_audioregister][m_audiochannel].dat[1];
-			vptr->flt_pos = 0;
-			vptr->l = vptr->b = 0;
+			if (vptr->flt_pos == 0)
+			{
+				vptr->flt_freq = m_audiodat[m_audioregister][m_audiochannel].dat[1];
+			}
 			break;
 
 		// reg 6 = lowpass cutoff target, resonance, and step rate
