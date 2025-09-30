@@ -295,6 +295,14 @@
 #include "skillch.lh"
 #include "tonypok.lh"
 #include "unkch.lh"
+#include "wcat3a.lh"
+
+
+constexpr XTAL MASTER_CLOCK = 12_MHz_XTAL;
+constexpr XTAL CPU_CLOCK    = MASTER_CLOCK / 4;
+constexpr XTAL PSG_CLOCK    = MASTER_CLOCK / 4;
+constexpr XTAL AY_CLOCK     = MASTER_CLOCK / 8;
+#define OKI_CLOCK       1056000      // unverified resonator
 
 
 namespace {
@@ -333,6 +341,7 @@ public:
 	void wcherry(machine_config &config) ATTR_COLD;
 
 	void init_chryangl() ATTR_COLD;
+	void init_chryanglb() ATTR_COLD;
 	void init_goldstar() ATTR_COLD;
 	void init_ladylinrb() ATTR_COLD;
 	void init_ladylinrc() ATTR_COLD;
@@ -430,8 +439,8 @@ public:
 	void amcoe1a(machine_config &config) ATTR_COLD;
 	void amcoe2(machine_config &config) ATTR_COLD;
 	void animalhs(machine_config &config) ATTR_COLD;
-	void cd3poker(machine_config &config) ATTR_COLD;
 	void chryangl(machine_config &config) ATTR_COLD;
+	void chryanglb(machine_config &config) ATTR_COLD;
 	void cm(machine_config &config) ATTR_COLD;
 	void cmast91(machine_config &config) ATTR_COLD;
 	void cmast92(machine_config &config) ATTR_COLD;
@@ -451,8 +460,8 @@ public:
 	void pkrmast(machine_config &config) ATTR_COLD;
 	void reelmg(machine_config &config) ATTR_COLD;
 	void super7(machine_config &config) ATTR_COLD;
+	void wcat3a(machine_config &config) ATTR_COLD;
 
-	void init_3cdp() ATTR_COLD;
 	void init_alienatt() ATTR_COLD;
 	void init_animalhs() ATTR_COLD;
 	void init_chthree() ATTR_COLD;
@@ -511,6 +520,8 @@ protected:
 
 private:
 	void outport0_w(uint8_t data);
+	void chyangb_outport0_w(uint8_t data);
+	void wcat3a_outport0_w(uint8_t data);
 	void girl_scroll_w(uint8_t data);
 	void background_col_w(uint8_t data);
 	void coincount_w(uint8_t data);
@@ -534,6 +545,7 @@ private:
 	void animalhs_map(address_map &map) ATTR_COLD;
 	void animalhs_portmap(address_map &map) ATTR_COLD;
 	void chryangl_decrypted_opcodes_map(address_map &map) ATTR_COLD;
+	void chyangb_portmap(address_map &map) ATTR_COLD;
 	void clb_map(address_map &map) ATTR_COLD;
 	void cm_map(address_map &map) ATTR_COLD;
 	void cm_portmap(address_map &map) ATTR_COLD;
@@ -557,6 +569,8 @@ private:
 	void super7_map(address_map &map) ATTR_COLD;
 	void super7_portmap(address_map &map) ATTR_COLD;
 	void ramdac_map(address_map &map) ATTR_COLD;
+	void wcat3a_map(address_map &map) ATTR_COLD;
+	void wcat3a_portmap(address_map &map) ATTR_COLD;
 
 	// installed by various driver init handlers to get stuff to work
 	template <uint8_t V> uint8_t fixedval_r() { return V; }
@@ -632,7 +646,7 @@ public:
 	void init_lucky8s() ATTR_COLD;
 	void init_magoddsc() ATTR_COLD;
 	void init_mbs2() ATTR_COLD;
-	void init_mgln() ATTR_COLD;	
+	void init_mgln() ATTR_COLD;
 	void init_luckylad() ATTR_COLD;
 	void init_nd8lines() ATTR_COLD;
 	void init_skch() ATTR_COLD;
@@ -738,6 +752,7 @@ public:
 	void init_cherrys() ATTR_COLD;
 	void init_chry10() ATTR_COLD;
 	void init_chrygld() ATTR_COLD;
+	void init_chryangla() ATTR_COLD;
 
 	void cb3c(machine_config &config) ATTR_COLD;
 	void cb3e(machine_config &config) ATTR_COLD;
@@ -846,6 +861,28 @@ private:
 	template <uint8_t Which> TILE_GET_INFO_MEMBER(get_reel_tile_info);
 };
 
+class cd3poker_state : public cmaster_state
+{
+public:
+	cd3poker_state(const machine_config &mconfig, device_type type, const char *tag) :
+		cmaster_state(mconfig, type, tag)
+	{ }
+
+	void cd3poker(machine_config &config) ATTR_COLD;
+
+	void init_3cdp() ATTR_COLD;
+
+protected:
+	virtual void machine_start() override ATTR_COLD;
+
+private:
+	void cd3poker_map(address_map &map) ATTR_COLD;
+
+	uint8_t armaly_prot_r();
+
+	uint8_t m_prot_index = 0;
+};
+
 
 void wingco_state::machine_start()
 {
@@ -864,6 +901,12 @@ void unkch_state::machine_start()
 	save_item(NAME(m_vidreg));
 }
 
+void cd3poker_state::machine_start()
+{
+	cmaster_state::machine_start();
+
+	save_item(NAME(m_prot_index));
+}
 
 /***************************************************************************
 
@@ -897,6 +940,11 @@ void goldstar_state::bg_atrram_w(offs_t offset, uint8_t data)
 }
 
 
+/****************************************************
+                    Tile Get Info
+
+****************************************************/
+
 TILE_GET_INFO_MEMBER(goldstar_state::get_goldstar_fg_tile_info)
 {
 	int const code = m_fg_vidram[tile_index];
@@ -907,7 +955,6 @@ TILE_GET_INFO_MEMBER(goldstar_state::get_goldstar_fg_tile_info)
 			attr & 0x0f,
 			0);
 }
-
 
 // colour / high tile bits are swapped around
 TILE_GET_INFO_MEMBER(cmaster_state::get_cherrym_fg_tile_info)
@@ -984,6 +1031,97 @@ TILE_GET_INFO_MEMBER(goldstar_state::get_reel_tile_info)
 			0);
 }
 
+
+TILE_GET_INFO_MEMBER(cmast97_state::get_cmast97_bg_tile_info)
+{
+	int const code = m_bg_vidram[tile_index];
+	int const attr = m_bg_atrram[tile_index];
+
+	tileinfo.set(2,
+			code | (attr & 0x0f) << 8,
+			(attr & 0xf0) >> 4,
+			0);
+}
+
+template <uint8_t Which>
+void sanghopm_state::reel_attrram_w(offs_t offset, uint8_t data)
+{
+	m_reel_attrram[Which][offset] = data;
+	m_reel_tilemap[Which]->mark_tile_dirty(offset);
+}
+
+
+TILE_GET_INFO_MEMBER(sanghopm_state::get_fg_tile_info)
+{
+	int const code = m_fg_vidram[tile_index];
+	int const attr = m_fg_atrram[tile_index];
+
+	tileinfo.set(0,
+			code | (attr & 0x0f) << 8,
+			(attr & 0x70) >> 4,
+			0);
+}
+
+TILE_GET_INFO_MEMBER(sanghopm_state::get_bg_tile_info)
+{
+	int const code = m_bg_vidram[tile_index];
+	int const attr = m_bg_atrram[tile_index];
+
+	tileinfo.set(1,
+			code | (attr & 0x0f) << 8,
+			(attr & 0x70) >> 4,
+			0);
+}
+
+template <uint8_t Which>
+TILE_GET_INFO_MEMBER(sanghopm_state::get_reel_tile_info)
+{
+	int const code = m_reel_ram[Which][tile_index];
+	int const attr = m_reel_attrram[Which][tile_index];
+
+	tileinfo.set(1,
+			code | (attr & 0x0f) << 8,
+			(attr & 0x70) >> 4,
+			0);
+}
+
+
+TILE_GET_INFO_MEMBER(wingco_state::get_magical_fg_tile_info)
+{
+	int const code = m_fg_vidram[tile_index];
+	int const attr = m_fg_atrram[tile_index];
+
+	tileinfo.set(0,
+			(code | (attr & 0xf0)<<4) + (m_tile_bank * 0x1000),
+			attr & 0x0f,
+			0);
+}
+
+template <uint8_t Which>
+void unkch_state::reel_attrram_w(offs_t offset, uint8_t data)
+{
+	m_reel_attrram[Which][offset] = data;
+	m_reel_tilemap[Which]->mark_tile_dirty(offset);
+}
+
+template <uint8_t Which>
+TILE_GET_INFO_MEMBER(unkch_state::get_reel_tile_info)
+{
+	int const code = m_reel_ram[Which][tile_index];
+	int const attr = m_reel_attrram[Which][tile_index];
+
+	tileinfo.set(1,
+			code | (attr & 0x0f) << 8,
+			(attr & 0xf0) >> 4,
+			0);
+}
+
+
+/****************************************************
+                     Video Start
+
+****************************************************/
+
 void goldstar_state::video_start()
 {
 	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(goldstar_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
@@ -1020,6 +1158,66 @@ void cmaster_state::video_start()
 	m_enable_reg = 0x0b;
 }
 
+void cmast97_state::video_start()
+{
+	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+
+	m_reel_tilemap[0]->set_scroll_cols(64);
+	m_reel_tilemap[1]->set_scroll_cols(64);
+	m_reel_tilemap[2]->set_scroll_cols(64);
+
+	m_reel_tilemap[0]->set_transparent_pen(0);
+	m_reel_tilemap[1]->set_transparent_pen(0);
+	m_reel_tilemap[2]->set_transparent_pen(0);
+
+	m_cmaster_girl_num = 0;
+	m_cmaster_girl_pal = 0;
+
+	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_cherrym_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+	m_fg_tilemap->set_transparent_pen(0);
+	m_fg_tilemap->set_scrolly(0, -16);
+
+	m_bg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_cmast97_bg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+}
+
+void sanghopm_state::video_start()
+{
+	m_bg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_bg_tile_info)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+
+	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+
+	m_reel_tilemap[0]->set_scroll_cols(64);
+	m_reel_tilemap[1]->set_scroll_cols(64);
+	m_reel_tilemap[2]->set_scroll_cols(64);
+
+	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+	m_fg_tilemap->set_transparent_pen(0);
+}
+
+void unkch_state::video_start()
+{
+	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+
+	m_reel_tilemap[0]->set_scroll_cols(32);
+	m_reel_tilemap[1]->set_scroll_cols(32);
+	m_reel_tilemap[2]->set_scroll_cols(32);
+
+	m_cmaster_girl_num = 0;
+	m_cmaster_girl_pal = 0;
+	m_vidreg = 0x00;
+
+	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_cherrym_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+	m_fg_tilemap->set_transparent_pen(0);
+
+	m_enable_reg = 0x0b;
+}
+
 VIDEO_START_MEMBER(cmaster_state, pkrmast)
 {
 	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmaster_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
@@ -1043,7 +1241,6 @@ VIDEO_START_MEMBER(cmaster_state, pkrmast)
 	m_bg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmaster_state::get_pkrmast_bg_tile_info)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
 
 //  m_enable_reg = 0x1b;
-
 //  save_item(NAME(m_reel_bank));
 }
 
@@ -1075,18 +1272,41 @@ VIDEO_START_MEMBER(cmaster_state, jkrmast)
 //  save_item(NAME(m_reel_bank));
 }
 
-void goldstar_state::goldstar_fa00_w(uint8_t data)
+VIDEO_START_MEMBER(wingco_state, bingowng)
 {
-	// bit 1 toggles continuously - might be irq enable or watchdog reset
-	// bit 2 selects background gfx color (I think)
-	m_bgcolor = (data & 0x04) >> 2;
-	m_reel_tilemap[0]->mark_all_dirty();
-	m_reel_tilemap[1]->mark_all_dirty();
-	m_reel_tilemap[2]->mark_all_dirty();
+	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
 
-	m_ticket_dispenser->motor_w(BIT(data, 7));
+	m_reel_tilemap[0]->set_scroll_cols(64);
+
+	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_goldstar_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+	m_fg_tilemap->set_transparent_pen(0);
+
+	// is there an enable reg for this game?
+	m_enable_reg = 0x0b;
 }
 
+VIDEO_START_MEMBER(wingco_state, magical)
+{
+	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+
+	m_reel_tilemap[0]->set_scroll_cols(32);
+	m_reel_tilemap[1]->set_scroll_cols(32);
+	m_reel_tilemap[2]->set_scroll_cols(32);
+
+	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_magical_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+	m_fg_tilemap->set_transparent_pen(0);
+
+	// is there an enable reg for this game?
+	m_enable_reg = 0x0b;
+}
+
+
+/****************************************************
+                    Screen Update
+
+****************************************************/
 
 uint32_t goldstar_state::screen_update_goldstar(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
@@ -1141,7 +1361,6 @@ uint32_t goldstar_state::screen_update_goldstar(screen_device &screen, bitmap_rg
 	return 0;
 }
 
-
 uint32_t cmaster_state::screen_update_cmast91(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(rgb_t::black(), cliprect);
@@ -1185,68 +1404,6 @@ uint32_t cmaster_state::screen_update_cmast91(screen_device &screen, bitmap_rgb3
 	return 0;
 }
 
-
-
-void cmaster_state::outport0_w(uint8_t data)
-{
-/*
-  ---- ---x  (global enable or irq enable?)
-  ---- --x-  (fg enable)
-  ---- -x--  (girl enable?)
-  ---- x---  (reels enable)
-  xxxx ----  unused?
-
-*/
-	// popmessage("outport %02x",data);
-	m_enable_reg = data;
-}
-
-void cmaster_state::girl_scroll_w(uint8_t data)
-{
-/*
-  xxxx ----  yscroll
-  ---- xxxx  xscroll
-
-  this isn't very fine scrolling, but i see no other registers.
-  1000 1000 is the center of the screen.
-
-*/
-	m_cm_girl_scroll = data;
-}
-
-void cmaster_state::background_col_w(uint8_t data)
-{
-	//printf("cm_background_col_w %02x\n",data);
-
-	// cherry master writes
-	// so it's probably
-	// 0ggg cc00
-	// where g is which girl to display and c is the colour palette
-	// (note, this doesn't apply to the amcoe games which have no girls,
-	//  I'm unsure how the priority/positioning works)
-
-	m_cmaster_girl_num = (data >> 4) & 0x7;
-	m_cmaster_girl_pal = (data >> 2) & 0x3;
-
-	//bgcolor = (data & 0x03) >> 0;
-
-	// apparently some boards have this colour scheme?
-	// i'm not convinced it isn't just a different prom on them
-	#if 0
-	m_bgcolor = 0;
-	m_bgcolor |= (data & 0x01) << 1;
-	m_bgcolor |= (data & 0x02) >> 1;
-	#else
-	m_bgcolor = (data & 0x03) >> 0;
-	#endif
-
-	m_reel_tilemap[0]->mark_all_dirty();
-	m_reel_tilemap[1]->mark_all_dirty();
-	m_reel_tilemap[2]->mark_all_dirty();
-
-}
-
-
 uint32_t cmaster_state::screen_update_amcoe1a(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(rgb_t::black(), cliprect);
@@ -1283,53 +1440,6 @@ uint32_t cmaster_state::screen_update_amcoe1a(screen_device &screen, bitmap_rgb3
 	return 0;
 }
 
-
-TILE_GET_INFO_MEMBER(cmast97_state::get_cmast97_bg_tile_info)
-{
-	int const code = m_bg_vidram[tile_index];
-	int const attr = m_bg_atrram[tile_index];
-
-	tileinfo.set(2,
-			code | (attr & 0x0f) << 8,
-			(attr & 0xf0) >> 4,
-			0);
-}
-
-void cmast97_state::video_start()
-{
-	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-
-	m_reel_tilemap[0]->set_scroll_cols(64);
-	m_reel_tilemap[1]->set_scroll_cols(64);
-	m_reel_tilemap[2]->set_scroll_cols(64);
-
-	m_reel_tilemap[0]->set_transparent_pen(0);
-	m_reel_tilemap[1]->set_transparent_pen(0);
-	m_reel_tilemap[2]->set_transparent_pen(0);
-
-	m_cmaster_girl_num = 0;
-	m_cmaster_girl_pal = 0;
-
-	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_cherrym_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_fg_tilemap->set_transparent_pen(0);
-	m_fg_tilemap->set_scrolly(0, -16);
-
-	m_bg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(cmast97_state::get_cmast97_bg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-}
-
-void cmast97_state::cmast97_palette_init(palette_device &palette) const
-{
-	// TODO: probably wrong
-	uint8_t const *const colours = memregion("proms")->base();
-	for (int i = 0; i < 0x200; i++)
-	{
-		uint8_t const data = colours[i];
-		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
-	}
-}
-
 uint32_t cmast97_state::screen_update_cmast97(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(rgb_t::black(), cliprect);
@@ -1359,50 +1469,6 @@ uint32_t cmast97_state::screen_update_cmast97(screen_device &screen, bitmap_rgb3
 
 	return 0;
 }
-
-
-TILE_GET_INFO_MEMBER(wingco_state::get_magical_fg_tile_info)
-{
-	int const code = m_fg_vidram[tile_index];
-	int const attr = m_fg_atrram[tile_index];
-
-	tileinfo.set(0,
-			(code | (attr & 0xf0)<<4) + (m_tile_bank * 0x1000),
-			attr & 0x0f,
-			0);
-}
-
-
-VIDEO_START_MEMBER(wingco_state, bingowng)
-{
-	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-
-	m_reel_tilemap[0]->set_scroll_cols(64);
-
-	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_goldstar_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_fg_tilemap->set_transparent_pen(0);
-
-	// is there an enable reg for this game?
-	m_enable_reg = 0x0b;
-}
-
-VIDEO_START_MEMBER(wingco_state, magical)
-{
-	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-
-	m_reel_tilemap[0]->set_scroll_cols(32);
-	m_reel_tilemap[1]->set_scroll_cols(32);
-	m_reel_tilemap[2]->set_scroll_cols(32);
-
-	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_magical_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_fg_tilemap->set_transparent_pen(0);
-
-	// is there an enable reg for this game?
-	m_enable_reg = 0x0b;
-}
-
 
 uint32_t wingco_state::screen_update_lucky8(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
@@ -1449,7 +1515,6 @@ uint32_t wingco_state::screen_update_lucky8(screen_device &screen, bitmap_rgb32 
 
 	return 0;
 }
-
 
 uint32_t wingco_state::screen_update_bingowng(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
@@ -1587,7 +1652,6 @@ uint32_t wingco_state::screen_update_magical(screen_device &screen, bitmap_rgb32
 	return 0;
 }
 
-
 uint32_t wingco_state::screen_update_mbstar(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(rgb_t::black(), cliprect);
@@ -1620,67 +1684,6 @@ uint32_t wingco_state::screen_update_mbstar(screen_device &screen, bitmap_rgb32 
 	return 0;
 }
 
-
-template <uint8_t Which>
-void sanghopm_state::reel_attrram_w(offs_t offset, uint8_t data)
-{
-	m_reel_attrram[Which][offset] = data;
-	m_reel_tilemap[Which]->mark_tile_dirty(offset);
-}
-
-
-TILE_GET_INFO_MEMBER(sanghopm_state::get_fg_tile_info)
-{
-	int const code = m_fg_vidram[tile_index];
-	int const attr = m_fg_atrram[tile_index];
-
-	tileinfo.set(0,
-			code | (attr & 0x0f) << 8,
-			(attr & 0x70) >> 4,
-			0);
-}
-
-TILE_GET_INFO_MEMBER(sanghopm_state::get_bg_tile_info)
-{
-	int const code = m_bg_vidram[tile_index];
-	int const attr = m_bg_atrram[tile_index];
-
-	tileinfo.set(1,
-			code | (attr & 0x0f) << 8,
-			(attr & 0x70) >> 4,
-			0);
-}
-
-template <uint8_t Which>
-TILE_GET_INFO_MEMBER(sanghopm_state::get_reel_tile_info)
-{
-	int const code = m_reel_ram[Which][tile_index];
-	int const attr = m_reel_attrram[Which][tile_index];
-
-	tileinfo.set(1,
-			code | (attr & 0x0f) << 8,
-			(attr & 0x70) >> 4,
-			0);
-}
-
-
-void sanghopm_state::video_start()
-{
-	m_bg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_bg_tile_info)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-
-	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-
-	m_reel_tilemap[0]->set_scroll_cols(64);
-	m_reel_tilemap[1]->set_scroll_cols(64);
-	m_reel_tilemap[2]->set_scroll_cols(64);
-
-	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(sanghopm_state::get_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_fg_tilemap->set_transparent_pen(0);
-}
-
-
 uint32_t sanghopm_state::screen_update_sangho(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(rgb_t::black(), cliprect);
@@ -1711,47 +1714,6 @@ uint32_t sanghopm_state::screen_update_sangho(screen_device &screen, bitmap_rgb3
 	m_fg_tilemap->draw(screen, bitmap, cliprect, 0, 0);
 
 	return 0;
-}
-
-
-template <uint8_t Which>
-void unkch_state::reel_attrram_w(offs_t offset, uint8_t data)
-{
-	m_reel_attrram[Which][offset] = data;
-	m_reel_tilemap[Which]->mark_tile_dirty(offset);
-}
-
-template <uint8_t Which>
-TILE_GET_INFO_MEMBER(unkch_state::get_reel_tile_info)
-{
-	int const code = m_reel_ram[Which][tile_index];
-	int const attr = m_reel_attrram[Which][tile_index];
-
-	tileinfo.set(1,
-			code | (attr & 0x0f) << 8,
-			(attr & 0xf0) >> 4,
-			0);
-}
-
-
-void unkch_state::video_start()
-{
-	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-
-	m_reel_tilemap[0]->set_scroll_cols(32);
-	m_reel_tilemap[1]->set_scroll_cols(32);
-	m_reel_tilemap[2]->set_scroll_cols(32);
-
-	m_cmaster_girl_num = 0;
-	m_cmaster_girl_pal = 0;
-	m_vidreg = 0x00;
-
-	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_cherrym_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_fg_tilemap->set_transparent_pen(0);
-
-	m_enable_reg = 0x0b;
 }
 
 uint32_t unkch_state::screen_update_unkch(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
@@ -1802,6 +1764,185 @@ uint32_t unkch_state::screen_update_unkch(screen_device &screen, bitmap_rgb32 &b
 
 	return 0;
 }
+
+
+/****************************************************
+               Palette Decode Routines
+
+****************************************************/
+
+void cmast97_state::cmast97_palette_init(palette_device &palette) const
+{
+	// TODO: probably wrong
+	uint8_t const *const colours = memregion("proms")->base();
+	for (int i = 0; i < 0x200; i++)
+	{
+		uint8_t const data = colours[i];
+		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
+	}
+}
+
+void goldstar_state::cm_palette(palette_device &palette) const
+{
+	// BBGGGRRR
+	uint8_t const *const proms = memregion("proms")->base();
+	for (int i = 0; i < 0x100; i++)
+	{
+		uint8_t const data = proms[0x000 + i] | (proms[0x100 + i] << 4);
+		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
+	}
+}
+
+void cmaster_state::cmast91_palette(palette_device &palette) const
+{
+	uint8_t const *const proms = memregion("proms")->base();
+	for (int i = 0; i < 0x100; i++)
+	{
+		int const b = pal4bit(proms[0x000 + i]);
+		int const g = pal4bit(proms[0x100 + i]);
+		int const r = pal4bit(proms[0x200 + i]);
+
+		palette.set_pen_color(i, rgb_t(r, g, b));
+	}
+}
+
+void goldstar_state::lucky8_palette(palette_device &palette) const
+{
+	// BBGGGRRR
+	uint8_t const *proms;
+
+	proms = memregion("proms")->base();
+	for (int i = 0; i < 0x100; i++)
+	{
+		uint8_t const data = proms[0x000 + i] | (proms[0x100 + i] << 4);
+		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
+	}
+
+	proms = memregion("proms2")->base();
+	for (int i = 0; i < 0x20; i++)
+	{
+		uint8_t const data = proms[i];
+		palette.set_pen_color(i + 0x80, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
+	}
+}
+
+void cmaster_state::nfm_palette(palette_device &palette) const
+{
+	// BBGGGRRR
+	uint8_t const *const colours = memregion("colours")->base();
+	for (int i = 0; i < 0x100; i++)
+	{
+		uint8_t const data = bitswap<8>(colours[0x000 + i], 3, 2, 1, 0, 7, 6, 5, 4);
+		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
+	}
+
+	// TODO: what's 0x100-0x1ff for? For the currently undecoded user1 ROM?
+}
+
+
+void wingco_state::magodds_palette(palette_device &palette) const
+{
+	uint8_t const *const proms = memregion("proms")->base();
+	for (int i = 0; i < 0x100; i++)
+	{
+		uint8_t const b = pal4bit(proms[0x000 + i]);
+		uint8_t const g = pal4bit(proms[0x100 + i]);
+		uint8_t const r = pal4bit(proms[0x200 + i]);
+
+		palette.set_pen_color(i, rgb_t(r, g, b));
+	}
+}
+
+
+/****************************************************
+                Read & Write Handlers
+
+****************************************************/
+
+void goldstar_state::goldstar_fa00_w(uint8_t data)
+{
+	// bit 1 toggles continuously - might be irq enable or watchdog reset
+	// bit 2 selects background gfx color (I think)
+	m_bgcolor = (data & 0x04) >> 2;
+	m_reel_tilemap[0]->mark_all_dirty();
+	m_reel_tilemap[1]->mark_all_dirty();
+	m_reel_tilemap[2]->mark_all_dirty();
+
+	m_ticket_dispenser->motor_w(BIT(data, 7));
+}
+
+
+void cmaster_state::outport0_w(uint8_t data)
+{
+/*
+  ---- ---x  (global enable or irq enable?)
+  ---- --x-  (fg enable)
+  ---- -x--  (girl enable?)
+  ---- x---  (reels enable)
+  xxxx ----  unused?
+
+*/
+//	popmessage("outport %02x",data);
+	m_enable_reg = data;
+}
+
+void cmaster_state::chyangb_outport0_w(uint8_t data)
+{
+//	popmessage("outport %02x",data);
+	m_enable_reg = data & 0xef;  // mask bg register flag
+}
+
+void cmaster_state::wcat3a_outport0_w(uint8_t data)
+{
+//	popmessage("outport %02x",data);
+	m_enable_reg = data & 0x0b;  // mask bg register flag
+}
+
+void cmaster_state::girl_scroll_w(uint8_t data)
+{
+/*
+  xxxx ----  yscroll
+  ---- xxxx  xscroll
+
+  this isn't very fine scrolling, but i see no other registers.
+  1000 1000 is the center of the screen.
+
+*/
+	m_cm_girl_scroll = data;
+}
+
+void cmaster_state::background_col_w(uint8_t data)
+{
+	//printf("cm_background_col_w %02x\n",data);
+
+	// cherry master writes
+	// so it's probably
+	// 0ggg cc00
+	// where g is which girl to display and c is the colour palette
+	// (note, this doesn't apply to the amcoe games which have no girls,
+	//  I'm unsure how the priority/positioning works)
+
+	m_cmaster_girl_num = (data >> 4) & 0x7;
+	m_cmaster_girl_pal = (data >> 2) & 0x3;
+
+	//bgcolor = (data & 0x03) >> 0;
+
+	// apparently some boards have this colour scheme?
+	// i'm not convinced it isn't just a different prom on them
+	#if 0
+	m_bgcolor = 0;
+	m_bgcolor |= (data & 0x01) << 1;
+	m_bgcolor |= (data & 0x02) >> 1;
+	#else
+	m_bgcolor = (data & 0x03) >> 0;
+	#endif
+
+	m_reel_tilemap[0]->mark_all_dirty();
+	m_reel_tilemap[1]->mark_all_dirty();
+	m_reel_tilemap[2]->mark_all_dirty();
+
+}
+
 
 void goldstar_state::protection_w(uint8_t data)
 {
@@ -1873,6 +2014,13 @@ void goldstar_state::p2_lamps_w(uint8_t data)
 //  popmessage("p2 lamps: %02X", data);
 }
 
+
+void wingco_state::masked_irq(int state)
+{
+	if (state && m_nmi_enable)
+		m_maincpu->set_input_line(INPUT_LINE_NMI, ASSERT_LINE);
+}
+
 // lucky bar mcu
 uint8_t wingco_state::mcu_portb_r()
 {
@@ -1920,6 +2068,475 @@ uint8_t wingco_state::nvram_r(offs_t offset)
 }
 
 
+void sanghopm_state::coincount_w(uint8_t data)
+{
+/*
+  7654 3210
+  ---- ---x  Coin Out counter.
+  ---- x---  Coin A counter..
+  ---x ----  Coin B counter.
+  --x- ----  Key In counter.
+  -x-- ----  Coin C counter.
+  x--- -xx-  Unknown.
+
+*/
+	machine().bookkeeping().coin_counter_w(0, data & 0x08);  // counter1 coin a
+	machine().bookkeeping().coin_counter_w(1, data & 0x10);  // counter2 coin b
+	machine().bookkeeping().coin_counter_w(2, data & 0x20);  // counter3 key in
+	machine().bookkeeping().coin_counter_w(3, data & 0x40);  // counter4 coin c
+	machine().bookkeeping().coin_counter_w(4, data & 0x01);  // counter5 payout
+}
+
+void sanghopm_state::enable_w(uint8_t data)
+{
+	m_enable_reg = data;
+}
+
+void cmaster_state::coincount_w(uint8_t data)
+{
+/*  bits
+  7654 3210
+  ---- ---x  Coin Out counter
+  ---- x---  Coin D counter
+  ---x ----  Coin C counter
+  --x- ----  Key In counter
+  -x-- ----  Coin A counter
+  x--- -xx-  unknown
+
+  interestingly there is no counter for coin B in the cm/cmaster games
+
+*/
+
+	machine().bookkeeping().coin_counter_w(0, data & 0x40);  // Counter 1 Coin A
+	machine().bookkeeping().coin_counter_w(1, data & 0x20);  // Counter 2 Key In
+	machine().bookkeeping().coin_counter_w(2, data & 0x10);  // Counter 3 Coin C
+	machine().bookkeeping().coin_counter_w(3, data & 0x08);  // Counter 4 Coin D
+	machine().bookkeeping().coin_counter_w(4, data & 0x01);  // Counter 5 Payout
+
+//  if (data & 0x86) // triggered by fb2010
+//      popmessage("counters: %02X", data);
+
+	m_ticket_dispenser->motor_w(BIT(data,7));
+//  popmessage("counters: %02X", data);
+
+}
+
+void cmaster_state::pkm_out0_w(uint8_t data)
+{
+/*  bits
+  7654 3210
+  ---- x---  Coin D counter
+  ---x ----  Coin C counter
+  --x- ----  Key In counter
+  -x-- ----  Coin A counter
+*/
+
+	machine().bookkeeping().coin_counter_w(0, data & 0x40);  // Counter 1 Coin A
+	machine().bookkeeping().coin_counter_w(1, data & 0x20);  // Counter 2 Key In
+	machine().bookkeeping().coin_counter_w(2, data & 0x10);  // Counter 3 Coin C
+	machine().bookkeeping().coin_counter_w(3, data & 0x08);  // Counter 4 Coin D
+
+	m_ticket_dispenser->motor_w(BIT(data,0)); //pkrmast:port 0x00 - jkrmast:port 0x13
+//  popmessage("pkm_out0_w: %02X", data);
+
+}
+
+
+void cmaster_state::jkm_vid_reg_w(uint8_t data)
+{
+	m_enable_reg = bitswap<8>(data, 7, 6, 5, 4, 2, 3, 1, 0);
+
+//  popmessage("jkm data, enable reg:%02x :: reg:%02x", data, m_enable_reg);
+
+}
+
+void cmaster_state::pkm_vid_reg_w(uint8_t data)
+{
+	m_enable_reg = bitswap<8>(data, 7, 6, 5, 4, 2, 3, 1, 0);
+
+	if(m_enable_reg == 0x1b)
+		m_enable_reg = 0x13;  // if bg activates, reels should be disabled
+
+//  popmessage("pkm enable reg:%02x", m_enable_reg );
+//  popmessage("pkm reel bank:%02x", m_reel_bank );
+
+}
+
+void cmaster_state::pkm_reel_reg_w(uint8_t data)
+{
+/*
+    Poker Master hardware is accessing the extended gfx
+    through the following pairs table:
+
+          girl0 girl1 girl2 girl3 girl4 girl5
+         .-----.-----.-----.-----.-----.-----.
+    46BE: 10 00 11 80 22 80 33 00 20 00 33 80 FF FF FF FF
+          -- --
+          || ||
+    Where || ''---> internal offset inside the 0x100 tiles bank
+          |'------> color code (up to 4 colors)
+          '-------> 0x100 tiles bank number
+*/
+	m_reel_bank = (data & 0x30) >> 4;
+	m_bgcolor = (data & 0x01);
+	m_bg_tilemap->mark_all_dirty();
+
+//  popmessage("pkm reel data:%02x", data );
+
+}
+
+void cmaster_state::ll3_vid_reg_w(uint8_t data)
+{
+/*
+  ---- ---x  global enable
+  ---- --x-  fg enable
+  ---- -x--  girl enable
+  ---- x---  reels enable
+  ---x ---   bg enable
+  xxx- ----  unused
+
+  All the writes have masked the register, getting
+  the video totally disabled. Surely for protection.
+
+*/
+	if(data > 0)
+		data = data + 0x01;
+	m_enable_reg = data;
+
+//  popmessage("ll3 vidreg:%02x", m_enable_reg );
+}
+
+void cmaster_state::czb_vid_reg_w(uint8_t data)
+{
+/*
+  ---- ---x  global enable
+  xxxx xxx-  unused
+
+  Harcoded foreground and reels on. just enable/disable
+  background, switching with reels off when enable.
+
+*/
+	m_enable_reg = 0x0b;  // harcoded
+
+	if(data == 1)
+		m_enable_reg = 0x13;  // if bg activates, reels should be disabled
+
+//  popmessage("enable data:%02x", data );
+}
+
+
+void cb3_state::coincount_w(uint8_t data)
+{
+
+	machine().bookkeeping().coin_counter_w(0, data & 0x40);  // Counter 1 Coin A
+	machine().bookkeeping().coin_counter_w(1, data & 0x20);  // Counter 2 Key In
+	machine().bookkeeping().coin_counter_w(2, data & 0x10);  // Counter 3 Coin C
+	machine().bookkeeping().coin_counter_w(3, data & 0x08);  // Counter 4 Coin D
+	machine().bookkeeping().coin_counter_w(4, data & 0x01);  // Counter 5 Payout
+
+}
+
+void cb3_state::misc_out_w(uint8_t data)
+{
+
+	m_bgcolor = (data & 0x04) >> 2;
+	m_reel_tilemap[0]->mark_all_dirty();
+	m_reel_tilemap[1]->mark_all_dirty();
+	m_reel_tilemap[2]->mark_all_dirty();
+
+	m_ticket_dispenser->motor_w(!BIT(data,7));
+
+}
+
+void wingco_state::magodds_outb850_w(uint8_t data)
+{
+	// guess, could be wrong, this might just be lights
+
+	if (data&0x20)
+		m_tile_bank = 1;
+	else
+		m_tile_bank = 0;
+
+//	popmessage("magodds_outb850_w %02x\n", data);
+
+	m_fg_tilemap->mark_all_dirty();
+
+}
+
+void wingco_state::magodds_outb860_w(uint8_t data)
+{
+//  popmessage("magodds_outb860_w %02x\n", data);
+}
+
+void wingco_state::fl7w4_outc802_w(uint8_t data)
+{
+	m_fl7w4_id->write((data >> 6) & 0x01);
+}
+
+
+void cb3_state::ncb3_port81_w(uint8_t data)
+{
+//  if (data!=0x00)
+//      popmessage("ncb3_port81_w %02x\n",data);
+}
+
+
+void unkch_state::coincount_w(uint8_t data)
+{
+/*
+  7654 3210
+  ---- --x-  Payout counter (rate set with DIP switches)
+  ---- -x--  Credit counter (1 pulse/10 credits)
+  ---- x---  Key In counter
+  --xx ----  used for something during ticket dispensing
+  x--- ----  Ticket Dispenser Motor
+  -x-- ---x  unused/unknown
+
+*/
+
+	m_ticket_dispenser->motor_w(BIT(data, 7));
+
+	machine().bookkeeping().coin_counter_w(0, data & 0x04);  // Credit counter
+	machine().bookkeeping().coin_counter_w(1, data & 0x08);  // Key In counter
+	machine().bookkeeping().coin_counter_w(2, data & 0x02);  // payout counter
+
+//	popmessage("coin counters: %02x", data);
+}
+
+void unkch_state::unkcm_0x02_w(uint8_t data)
+{
+/*  bits
+  7654 3210
+  ---- ---x     button lamp: Bet-A / Stop 2
+  ---- --x-     button lamp: Start / Stop All
+  ---- -x--     button lamp: Info / Small / Stop 3
+  ---- x---     button lamp: Big
+  ---x ----     button lamp: Bet-B / D-Up
+  --x- ----     button lamp: Take / Stop 1
+  -x-- ----     unknown/unused
+  x--- ----     vblank IRQ enable
+
+  these sets use crude PWM to dim lamp 2 which requires
+  filament physics simulation to work properly
+
+*/
+
+//	popmessage("unkcm_0x02_w %02x", data);
+
+	m_vblank_irq_enable = data & 0x80;
+	if (!m_vblank_irq_enable)
+		m_maincpu->set_input_line(INPUT_LINE_NMI, CLEAR_LINE);
+
+	m_lamps[0] = BIT(data, 0);  // Bet-A / Stop 2
+	m_lamps[1] = BIT(data, 1);  // Start / Stop All
+	m_lamps[2] = BIT(data, 2);  // Info / Small / Stop 3
+	m_lamps[3] = BIT(data, 3);  // Big
+	m_lamps[4] = BIT(data, 4);  // Bet-B / D-Up
+	m_lamps[5] = BIT(data, 5);  // Take / Stop 1
+}
+
+void unkch_state::unkcm_0x03_w(uint8_t data)
+{
+	// -x-- ----   seems to toggle when a 'normal' tilemap
+	//             should be displayed instead of the reels?
+
+	m_vidreg = data;
+
+//	popmessage("unkcm_0x03_w %02x", data);
+}
+
+#if 0
+void goldstar_state::ladylinr_outport_w(uint8_t data)
+{
+/* LAMPS (b840)...
+
+   .... ...x
+   .... ..x.
+   .... .x..
+   .... x...  BET
+   ...x ....  SMALL/INFO
+   ..x. ....  START
+   .x.. ....
+   x... ....
+*/
+//	popmessage("Output: %02X", data);
+}
+#endif
+
+void wingco_state::system_outputa_w(uint8_t data)
+{
+//  popmessage("system_outputa_w %02x",data);
+}
+
+void wingco_state::system_outputb_w(uint8_t data)
+{
+//  popmessage("system_outputb_w %02x",data);
+}
+
+void wingco_state::system_outputc_w(uint8_t data)
+{
+	m_nmi_enable = data & 8;
+	m_vidreg = data & 2;
+//  popmessage("system_outputc_w %02x",data);
+
+	if (!m_nmi_enable)
+		m_maincpu->set_input_line(INPUT_LINE_NMI, CLEAR_LINE);
+
+	m_ticket_dispenser->motor_w(!BIT(data, 7));
+//  popmessage("system_outputc_w %02x",data);
+}
+
+void wingco_state::megaline_outputa_w(uint8_t data)
+{
+	m_enable_reg = data & 0x7f;
+	m_ticket_dispenser->motor_w(BIT(data, 7));
+
+//  popmessage("megaline_outputa_w %02x",data);
+}
+
+void wingco_state::megaline_outputb_w(uint8_t data)
+{
+	machine().bookkeeping().coin_counter_w(0, data & 0x01);  //  counter A coin a
+	machine().bookkeeping().coin_counter_w(1, data & 0x02);  //  counter H Key In
+	machine().bookkeeping().coin_counter_w(2, data & 0x04);  //  counter B coin c
+	machine().bookkeeping().coin_counter_w(3, data & 0x08);  //  counter C coin d
+	machine().bookkeeping().coin_counter_w(4, data & 0x10);  //  counter D Hopper Out
+	machine().bookkeeping().coin_counter_w(5, data & 0x40);  //  counter F Key Out
+
+//  popmessage("megaline_outputb_w %02x",data);
+}
+
+void wingco_state::megaline_outputc_w(uint8_t data)
+{
+	m_lamps[0] = BIT(data, 0);
+	m_lamps[1] = BIT(data, 1);
+	m_lamps[2] = BIT(data, 2);
+	m_lamps[3] = BIT(data, 3);
+	m_lamps[4] = BIT(data, 4);
+	m_lamps[5] = BIT(data, 5);
+	m_lamps[6] = BIT(data, 6);
+	m_lamps[7] = BIT(data, 7);
+
+//  popmessage("megaline_outputc_w %02x",data);
+}
+
+void wingco_state::megaline_outputd_w(uint8_t data)
+{
+	m_lamps[8+0] = BIT(data, 0);
+	m_lamps[8+1] = BIT(data, 1);
+	m_lamps[8+2] = BIT(data, 2);
+	m_lamps[8+3] = BIT(data, 3);
+	m_lamps[8+4] = BIT(data, 4);
+	m_lamps[8+5] = BIT(data, 5);
+	m_lamps[8+6] = BIT(data, 6);
+	m_lamps[8+7] = BIT(data, 7);
+
+//  popmessage("megaline_outputd_w %02x",data);
+}
+
+void wingco_state::ay8910_outputa_w(uint8_t data)
+{
+//  popmessage("ay8910_outputa_w %02x", data);
+}
+
+void wingco_state::ay8910_outputb_w(uint8_t data)
+{
+//  popmessage("ay8910_outputb_w %02x", data);
+}
+
+
+uint8_t wingco_state::tetin3_r()
+{
+	uint8_t ret = ioport("IN3")->read();
+
+	if (ret == 0xfe)  // r > lucky to tetris
+	{
+		if (m_tcount++ == 2)
+		{
+			m_z80_p02 = true;
+			m_tcount = 0;
+		}
+		ret = 0xfe;
+	}
+
+	if (ret == 0xfd)  // t > tetris to lucky
+	{
+		if (m_tcount++ == 2)
+		{
+			m_z80_p02 = false;
+			m_tcount = 0;
+		}
+		ret = 0xfd;
+	}
+	return ret;
+}
+
+uint8_t wingco_state::z80_io_r(offs_t offset)
+{
+	if (offset == 0x01)
+		return  0x00;  // returning a different value inhibits the game swap (comprobed). Asign an input toggle to give functionality.
+
+	if (offset == 0x02)
+		return  m_z80_p02;
+
+	if (offset == 0x32)
+		return  00;
+
+	if (offset == 0xc0)
+	{
+		logerror("z80_io_r: offset:%02x\n", offset);
+		return  m_z80_io_c0;
+	}
+
+//  logerror("z80_io_r: offset:%02x\n", offset);  // investigate functionality ports 0x31, 0x32, 0xc0.
+	return machine().rand() & 0x0f;
+}
+
+void wingco_state::z80_io_w(offs_t offset, uint8_t data)
+{
+	if (offset == 0xc0)
+		m_z80_io_c0 = data;
+	logerror("Z80_io_w(): offset:%02x - data: %02x\n", offset, data);  // investigate functionality port 0xc0
+}
+
+void wingco_state::tmcu_io_w(offs_t offset, uint8_t data)
+{
+	if ((offset != 0x122) & (offset != 0x123))
+	logerror("tmcu_io Write: Offs:%04x - Data:%02x\n", offset, data);
+}
+
+uint8_t wingco_state::tmcu_io_r(offs_t offset)
+{
+	return 0x00;
+}
+
+void wingco_state::tmcu_p1_out(uint8_t data)
+{
+	m_mcu_p1 = data;
+//  logerror("MCU Port1:%02x\n", tmcu_p1_out);
+
+}
+
+uint8_t cd3poker_state::armaly_prot_r()
+{
+	int index = m_prot_index;
+	if (!machine().side_effects_disabled())
+	{
+		if (++m_prot_index > 0x10)
+			m_prot_index = 0;
+	}
+
+	if (index < 0x0f)
+		return "ANISA_ARMALY<=>"[index];
+	else
+		return index == 0x0f ? 0xa5 : 0x5a;
+}
+
+/****************************************************
+               Memory Map Information
+
+****************************************************/
+
 void goldstar_state::goldstar_map(address_map &map)
 {
 	map(0x0000, 0xb7ff).rom();
@@ -1937,8 +2554,6 @@ void goldstar_state::goldstar_map(address_map &map)
 	map(0xf800, 0xf800).portr("IN0");
 	map(0xf801, 0xf801).portr("IN1");    // Test Mode
 	map(0xf802, 0xf802).portr("DSW1");
-//  map(0xf803, 0xf803)
-//  map(0xf804, 0xf804)
 	map(0xf805, 0xf805).portr("DSW4");   // DSW 4 (also appears in 8910 port)
 	map(0xf806, 0xf806).portr("DSW7");
 	map(0xf810, 0xf810).portr("UNK1");
@@ -2002,7 +2617,6 @@ void goldstar_state::super9_portmap(address_map &map)
 	map(0x10, 0x10).portr("DSW5");   // DSW5 ok
 }
 
-
 void sanghopm_state::star100_map(address_map &map)
 {
 	map(0x0000, 0xbfff).rom();
@@ -2032,31 +2646,6 @@ void sanghopm_state::star100_map(address_map &map)
 	map(0xf000, 0xf7ff).ram().share("nvram");
 	map(0xf800, 0xffff).ram();
 
-}
-
-
-void sanghopm_state::coincount_w(uint8_t data)
-{
-/*
-  7654 3210
-  ---- ---x  Coin Out counter.
-  ---- x---  Coin A counter..
-  ---x ----  Coin B counter.
-  --x- ----  Key In counter.
-  -x-- ----  Coin C counter.
-  x--- -xx-  Unknown.
-
-*/
-	machine().bookkeeping().coin_counter_w(0, data & 0x08);  // counter1 coin a
-	machine().bookkeeping().coin_counter_w(1, data & 0x10);  // counter2 coin b
-	machine().bookkeeping().coin_counter_w(2, data & 0x20);  // counter3 key in
-	machine().bookkeeping().coin_counter_w(3, data & 0x40);  // counter4 coin c
-	machine().bookkeeping().coin_counter_w(4, data & 0x01);  // counter5 payout
-}
-
-void sanghopm_state::enable_w(uint8_t data)
-{
-	m_enable_reg = data;
 }
 
 void sanghopm_state::star100_readport(address_map &map)
@@ -2120,124 +2709,6 @@ void sanghopm_state::star100_readport(address_map &map)
 
 */
 
-void sanghopm_state::ramdac_map(address_map &map)
-{
-	map(0x000, 0x3ff).rw("ramdac", FUNC(ramdac_device::ramdac_pal_r), FUNC(ramdac_device::ramdac_rgb666_w));
-}
-
-/*
-  RAMDAC written commands:
-
-  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
-  -------------       -------------       -------------       -------------
-  00   00 00 00       10   00 00 00       20   00 00 00       30   00 00 00
-  01   E8 18 06       11   E8 18 06       21   E8 18 06       31   E8 18 06
-  02   FC EA 00       12   FC EA 00       22   FC EA 00       32   FC EA 00
-  03   FF FF 00       13   FF FF 00       23   FF FF 00       33   FF FF 00
-  04   FF 00 00       14   FF 00 00       24   FF 00 00       34   FF 00 00
-  05   00 00 FF       15   00 00 FF       25   00 00 FF       35   00 00 FF
-  06   00 E6 00       16   00 E6 00       26   00 E6 00       36   00 E6 00
-  07   01 F0 02       17   01 F0 02       27   01 F0 02       37   01 F0 02
-  08   EF FF E8       18   EF FF E8       28   EF FF E8       38   EF FF E8
-  09   12 08 F2       19   12 08 F2       29   12 08 F2       39   12 08 F2
-  0A   1A 12 FF       1A   1A 12 FF       2A   1A 12 FF       3A   1A 12 FF
-  0B   1F 1F F9       1B   1F 1F F9       2B   1F 1F F9       3B   1F 1F F9
-  0C   F9 F9 F9       1C   F9 F9 F9       2C   F9 F9 F9       3C   F9 F9 F9
-  0D   EF 18 00       1D   EF 18 00       2D   EF 18 00       3D   EF 18 00
-  0E   F0 F0 F0       1E   F0 F0 F0       2E   F0 F0 F0       3E   F0 F0 F0
-  0F   FF FF FF       1F   FF 00 00       2F   00 FF FF       3F   00 FF 00
-
-
-  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
-  -------------       -------------       -------------       -------------
-  40   00 00 00       50   00 00 00       60   00 00 00       70   00 00 00
-  41   E8 18 06       51   E8 18 06       61   E8 18 06       71   E8 18 06
-  42   FC EA 00       52   FC EA 00       62   FC EA 00       72   FC EA 00
-  43   FF FF 00       53   FF FF 00       63   FF FF 00       73   FF FF 00
-  44   FF 00 00       54   FF 00 00       64   FF 00 00       74   FF 00 00
-  45   00 00 FF       55   00 00 FF       65   00 00 FF       75   00 00 FF
-  46   00 E6 00       56   00 E6 00       66   00 E6 00       76   00 E6 00
-  47   01 F0 02       57   01 F0 02       67   01 F0 02       77   01 F0 02
-  48   EF FF E8       58   EF FF E8       68   EF FF E8       78   EF FF E8
-  49   12 08 F2       59   12 08 F2       69   12 08 F2       79   12 08 F2
-  4A   1A 12 FF       5A   1A 12 FF       6A   1A 12 FF       7A   1A 12 FF
-  4B   1F 1F F9       5B   1F 1F F9       6B   1F 1F F9       7B   1F 1F F9
-  4C   F9 F9 F9       5C   F9 F9 F9       6C   F9 F9 F9       7C   F9 F9 F9
-  4D   EF 18 00       5D   EF 18 00       6D   EF 18 00       7D   EF 18 00
-  4E   F0 F0 F0       5E   01 EC FF       6E   00 00 00       7E   00 00 00
-  4F   FF FF 00       5F   00 00 00       6F   01 EC FF       7F   00 00 00
-
-
-  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
-  -------------       -------------       -------------       -------------
-  80   28 28 28       90   28 28 28       A0   28 28 28       B0   28 28 28
-  81   FF ED E3       91   0B 00 00       A1   18 11 00       B1   02 16 00
-  82   FF F7 1E       92   13 00 00       A2   00 E1 00       B2   02 E1 00
-  83   FF F8 18       93   1C 00 00       A3   00 E8 00       B3   01 ED 02
-  84   14 0B 0B       94   E5 00 00       A4   13 F0 00       B4   02 FA 09
-  85   1F 10 0A       95   ED 00 00       A5   FF F7 1E       B5   F1 1A 00
-  86   E3 13 08       96   F6 00 00       A6   FF F0 EE       B6   F1 EA 00
-  87   E8 18 06       97   FF 05 0D       A7   EF 18 00       B7   1F 00 00
-  88   EC 1E 03       98   FF 0C 13       A8   F4 1B 00       B8   F2 00 00
-  89   F0 E3 02       99   FF 13 19       A9   FD 1F 00       B9   FF 00 00
-  8A   F5 E9 01       9A   FF 1A 1F       AA   FF E3 00       BA   FF 0C 02
-  8B   FA EF 01       9B   FF E2 E6       AB   FF EA 00       BB   FF 18 06
-  8C   FF F6 00       9C   FF E9 EC       AC   FF F1 00       BC   FF E3 0A
-  8D   FF FF 00       9D   FF F0 F2       AD   FF F8 00       BD   FF EC 19
-  8E   FF FF 1F       9E   FF F7 F8       AE   FF FF 00       BE   FF F4 1F
-  8F   FF FF FF       9F   FF FF FF       AF   FF FF 1F       BF   FF FF FF
-
-
-  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
-  -------------       -------------       -------------       -------------
-  C0   28 28 28       D0   28 28 28       E0   28 28 28       F0   12 12 E0
-  C1   F1 E6 00       D1   00 00 E4       E1   00 05 00       F1   1B 00 00
-  C2   F8 F1 00       D2   00 00 FF       E2   00 0A 00       F2   E0 10 04
-  C3   FF FF 00       D3   00 13 FF       E3   00 10 00       F3   E9 14 05
-  C4   14 07 E7       D4   00 1A FF       E4   00 15 00       F4   EF 1E 12
-  C5   15 0C EF       D5   00 E8 FF       E5   00 1B 00       F5   EC E3 1A
-  C6   1A 12 FA       D6   16 0B 00       E6   00 E0 00       F6   EE 05 04
-  C7   1B 16 FA       D7   19 0F 00       E7   00 E6 00       F7   F4 05 04
-  C8   1D 1A FB       D8   1D 14 00       E8   04 EC 05       F8   FE 04 04
-  C9   1F 1E FC       D9   E5 1A 00       E9   0C F2 0E       F9   F6 E4 15
-  CA   E2 E2 FC       DA   EE E0 00       EA   15 F8 18       FA   F8 EC E0
-  CB   E6 E7 FD       DB   F6 E6 00       EB   E0 FF E3       FB   FD F0 E4
-  CC   EA EC FE       DC   FF ED 00       EC   FD 0C 02       FC   FF F6 E7
-  CD   EF F1 FF       DD   FF F6 00       ED   FD 12 0D       FD   FF FA EA
-  CE   F6 F8 FF       DE   FF FF 00       EE   FE 1A 18       FE   FF FF F2
-  CF   FF FF FF       DF   FF FF FF       EF   FF E4 E4       FF   FF FF FF
-
-
-  And set again....
-
-  1C   1D 1D 1D       1C   1D 1D 1D
-  -------------       -------------
-  70   00 00 00       F0   12 12 E0
-  71   18 0C F6       F1   1B 00 00
-  72   1B 13 0B       F2   E0 10 04
-  73   E1 15 1E       F3   E9 14 05
-  74   F3 E9 E4       F4   EF 1E 12
-  75   F3 E7 00       F5   EC E3 1A
-  76   FE 17 E3       F6   EE 05 04
-  77   FE 0C F1       F7   F4 05 04
-  78   FD E3 13       F8   FE 04 04
-  79   FE ED 05       F9   F6 E4 15
-  7A   FF F5 03       FA   F8 EC E0
-  7B   FF FB 14       FB   FD F0 E4
-  7C   FC FB FA       FC   FF F6 E7
-  7D   FF FC E0       FD   FF FA EA
-  7E   FE FE FC       FE   FF FF F2
-  7F   FF 00 FF       FF   FF FF FF
-
-*/
-
-
-void cb3_state::ncb3_port81_w(uint8_t data)
-{
-//  if (data!=0x00)
-//      popmessage("ncb3_port81_w %02x\n",data);
-}
-
 
 void cb3_state::ncb3_map(address_map &map)
 {
@@ -2270,6 +2741,7 @@ void cb3_state::chryangla_map(address_map &map) // most to be verified when the 
 	map(0xc000, 0xc7ff).ram().share("nvram");
 	map(0xc800, 0xcfff).ram().w(FUNC(cb3_state::fg_vidram_w)).share(m_fg_vidram);
 	map(0xd000, 0xd7ff).ram().w(FUNC(cb3_state::fg_atrram_w)).share(m_fg_atrram);
+
 	map(0xd800, 0xd9ff).ram().w(FUNC(cb3_state::reel_ram_w<0>)).share(m_reel_ram[0]);
 	map(0xe000, 0xe1ff).ram().w(FUNC(cb3_state::reel_ram_w<1>)).share(m_reel_ram[1]);
 	map(0xe800, 0xe9ff).ram().w(FUNC(cb3_state::reel_ram_w<2>)).share(m_reel_ram[2]);
@@ -2421,6 +2893,30 @@ void cmaster_state::cm_map(address_map &map)
 	map(0xf880, 0xf9ff).ram();
 	map(0xfa00, 0xfa7f).ram().share(m_reel_scroll[1]);
 	map(0xfa80, 0xfbff).ram();
+	map(0xfc00, 0xfc7f).ram().share(m_reel_scroll[2]);
+	map(0xfc80, 0xffff).ram();
+}
+
+void cmaster_state::wcat3a_map(address_map &map)
+{
+	map(0x0000, 0xcfff).rom().nopw();
+
+	map(0xd000, 0xd7ff).ram().share("nvram");
+	map(0xd800, 0xdfff).ram();
+
+	map(0xe000, 0xe7ff).ram().w(FUNC(cmaster_state::fg_vidram_w)).share(m_fg_vidram);
+	map(0xe800, 0xefff).ram().w(FUNC(cmaster_state::fg_atrram_w)).share(m_fg_atrram);
+
+	map(0xf000, 0xf1ff).ram().w(FUNC(cmaster_state::reel_ram_w<0>)).share(m_reel_ram[0]);
+	map(0xf200, 0xf3ff).ram().w(FUNC(cmaster_state::reel_ram_w<1>)).share(m_reel_ram[1]);
+	map(0xf400, 0xf5ff).ram().w(FUNC(cmaster_state::reel_ram_w<2>)).share(m_reel_ram[2]);
+	map(0xf600, 0xf7ff).ram();
+
+	map(0xf800, 0xf83f).ram();
+	map(0xf840, 0xf8bf).ram().share(m_reel_scroll[0]);
+	map(0xf8c0, 0xfa7f).ram();
+	map(0xfa80, 0xfaff).ram().share(m_reel_scroll[1]);
+	map(0xfb00, 0xfbff).ram();
 	map(0xfc00, 0xfc7f).ram().share(m_reel_scroll[2]);
 	map(0xfc80, 0xffff).ram();
 }
@@ -2619,168 +3115,6 @@ void cmaster_state::animalhs_map(address_map &map)
 	map(0xf800, 0xffff).ram();
 }
 
-void cmaster_state::ramdac_map(address_map &map)
-{
-	map(0x000, 0x3ff).rw("ramdac", FUNC(ramdac_device::ramdac_pal_r), FUNC(ramdac_device::ramdac_rgb666_w));
-}
-
-
-void cmaster_state::coincount_w(uint8_t data)
-{
-/*  bits
-  7654 3210
-  ---- ---x  Coin Out counter
-  ---- x---  Coin D counter
-  ---x ----  Coin C counter
-  --x- ----  Key In counter
-  -x-- ----  Coin A counter
-  x--- -xx-  unknown
-
-  interestingly there is no counter for coin B in the cm/cmaster games
-
-*/
-
-	machine().bookkeeping().coin_counter_w(0, data & 0x40);  // Counter 1 Coin A
-	machine().bookkeeping().coin_counter_w(1, data & 0x20);  // Counter 2 Key In
-	machine().bookkeeping().coin_counter_w(2, data & 0x10);  // Counter 3 Coin C
-	machine().bookkeeping().coin_counter_w(3, data & 0x08);  // Counter 4 Coin D
-	machine().bookkeeping().coin_counter_w(4, data & 0x01);  // Counter 5 Payout
-
-//  if (data & 0x86) // triggered by fb2010
-//      popmessage("counters: %02X", data);
-
-	m_ticket_dispenser->motor_w(BIT(data,7));
-//  popmessage("counters: %02X", data);
-
-}
-
-void cmaster_state::pkm_out0_w(uint8_t data)
-{
-/*  bits
-  7654 3210
-  ---- x---  Coin D counter
-  ---x ----  Coin C counter
-  --x- ----  Key In counter
-  -x-- ----  Coin A counter
-*/
-
-	machine().bookkeeping().coin_counter_w(0, data & 0x40);  // Counter 1 Coin A
-	machine().bookkeeping().coin_counter_w(1, data & 0x20);  // Counter 2 Key In
-	machine().bookkeeping().coin_counter_w(2, data & 0x10);  // Counter 3 Coin C
-	machine().bookkeeping().coin_counter_w(3, data & 0x08);  // Counter 4 Coin D
-
-	m_ticket_dispenser->motor_w(BIT(data,0)); //pkrmast:port 0x00 - jkrmast:port 0x13
-//  popmessage("pkm_out0_w: %02X", data);
-
-}
-
-
-void cmaster_state::jkm_vid_reg_w(uint8_t data)
-{
-	m_enable_reg = bitswap<8>(data, 7, 6, 5, 4, 2, 3, 1, 0);
-
-//  popmessage("jkm data, enable reg:%02x :: reg:%02x", data, m_enable_reg);
-
-}
-
-void cmaster_state::pkm_vid_reg_w(uint8_t data)
-{
-	m_enable_reg = bitswap<8>(data, 7, 6, 5, 4, 2, 3, 1, 0);
-
-	if(m_enable_reg == 0x1b)
-		m_enable_reg = 0x13;  // if bg activates, reels should be disabled
-
-//  popmessage("pkm enable reg:%02x", m_enable_reg );
-//  popmessage("pkm reel bank:%02x", m_reel_bank );
-
-}
-
-void cmaster_state::pkm_reel_reg_w(uint8_t data)
-{
-/*
-    Poker Master hardware is accessing the extended gfx
-    through the following pairs table:
-
-          girl0 girl1 girl2 girl3 girl4 girl5
-         .-----.-----.-----.-----.-----.-----.
-    46BE: 10 00 11 80 22 80 33 00 20 00 33 80 FF FF FF FF
-          -- --
-          || ||
-    Where || ''---> internal offset inside the 0x100 tiles bank
-          |'------> color code (up to 4 colors)
-          '-------> 0x100 tiles bank number
-*/
-	m_reel_bank = (data & 0x30) >> 4;
-	m_bgcolor = (data & 0x01);
-	m_bg_tilemap->mark_all_dirty();
-
-//  popmessage("pkm reel data:%02x", data );
-
-}
-
-void cmaster_state::ll3_vid_reg_w(uint8_t data)
-{
-/*
-  ---- ---x  global enable
-  ---- --x-  fg enable
-  ---- -x--  girl enable
-  ---- x---  reels enable
-  ---x ---   bg enable
-  xxx- ----  unused
-
-  All the writes have masked the register, getting
-  the video totally disabled. Surely for protection.
-
-*/
-	if(data > 0)
-		data = data + 0x01;
-	m_enable_reg = data;
-
-//  popmessage("ll3 vidreg:%02x", m_enable_reg );
-}
-
-void cmaster_state::czb_vid_reg_w(uint8_t data)
-{
-/*
-  ---- ---x  global enable
-  xxxx xxx-  unused
-
-  Harcoded foreground and reels on. just enable/disable
-  background, switching with reels off when enable.
-
-*/
-	m_enable_reg = 0x0b;  // harcoded
-
-	if(data == 1)
-		m_enable_reg = 0x13;  // if bg activates, reels should be disabled
-
-//  popmessage("enable data:%02x", data );
-}
-
-
-void cb3_state::coincount_w(uint8_t data)
-{
-
-	machine().bookkeeping().coin_counter_w(0, data & 0x40);  // Counter 1 Coin A
-	machine().bookkeeping().coin_counter_w(1, data & 0x20);  // Counter 2 Key In
-	machine().bookkeeping().coin_counter_w(2, data & 0x10);  // Counter 3 Coin C
-	machine().bookkeeping().coin_counter_w(3, data & 0x08);  // Counter 4 Coin D
-	machine().bookkeeping().coin_counter_w(4, data & 0x01);  // Counter 5 Payout
-
-}
-
-void cb3_state::misc_out_w(uint8_t data)
-{
-
-	m_bgcolor = (data & 0x04) >> 2;
-	m_reel_tilemap[0]->mark_all_dirty();
-	m_reel_tilemap[1]->mark_all_dirty();
-	m_reel_tilemap[2]->mark_all_dirty();
-
-	m_ticket_dispenser->motor_w(!BIT(data,7));
-
-}
-
 
 void cmaster_state::cm_portmap(address_map &map)
 {
@@ -2883,6 +3217,21 @@ void cmaster_state::chryangl_decrypted_opcodes_map(address_map &map)
 {
 	map(0x0000, 0xffff).rom().share(m_decrypted_opcodes);
 	map(0xf800, 0xffff).ram();
+}
+
+void cmaster_state::chyangb_portmap(address_map &map)
+{
+	cm_portmap(map);
+
+	map(0x10, 0x10).w(FUNC(cmaster_state::chyangb_outport0_w));
+}
+
+void cmaster_state::wcat3a_portmap(address_map &map)
+{
+	cm_portmap(map);
+
+	map(0x10, 0x10).w(FUNC(cmaster_state::wcat3a_outport0_w));
+	map(0x80, 0x80).w("snsnd", FUNC(sn76489_device::write));  // initialized, but not used
 }
 
 void cmaster_state::crazybon_portmap(address_map &map)
@@ -3289,31 +3638,6 @@ void wingco_state::mbstar_map(address_map &map)
 }
 
 
-void wingco_state::magodds_outb850_w(uint8_t data)
-{
-	// guess, could be wrong, this might just be lights
-
-	if (data&0x20)
-		m_tile_bank = 1;
-	else
-		m_tile_bank = 0;
-
-	//popmessage("magodds_outb850_w %02x\n", data);
-
-	m_fg_tilemap->mark_all_dirty();
-
-}
-
-void wingco_state::magodds_outb860_w(uint8_t data)
-{
-//  popmessage("magodds_outb860_w %02x\n", data);
-}
-
-void wingco_state::fl7w4_outc802_w(uint8_t data)
-{
-	m_fl7w4_id->write((data >> 6) & 0x01);
-}
-
 void wingco_state::magodds_map(address_map &map)
 {
 	map(0x0000, 0x7fff).rom();
@@ -3363,24 +3687,6 @@ void goldstar_state::kkotnoli_map(address_map &map)
 	map(0xf800, 0xffff).ram();
 }
 
-
-#if 0
-void goldstar_state::ladylinr_outport_w(uint8_t data)
-{
-/* LAMPS (b840)...
-
-   .... ...x
-   .... ..x.
-   .... .x..
-   .... x...  BET
-   ...x ....  SMALL/INFO
-   ..x. ....  START
-   .x.. ....
-   x... ....
-*/
-	//popmessage("Output: %02X", data);
-}
-#endif
 
 void goldstar_state::ladylinr_map(address_map &map)
 {
@@ -3455,71 +3761,6 @@ void unkch_state::unkch_map(address_map &map)
 	map(0xfa00, 0xfbff).ram().w(FUNC(unkch_state::reel_attrram_w<1>)).share(m_reel_attrram[1]);
 	map(0xfc00, 0xfdff).ram().w(FUNC(unkch_state::reel_attrram_w<2>)).share(m_reel_attrram[2]);
 	map(0xfe00, 0xffff).ram();
-}
-
-
-void unkch_state::coincount_w(uint8_t data)
-{
-/*
-  7654 3210
-  ---- --x-  Payout counter (rate set with DIP switches)
-  ---- -x--  Credit counter (1 pulse/10 credits)
-  ---- x---  Key In counter
-  --xx ----  used for something during ticket dispensing
-  x--- ----  Ticket Dispenser Motor
-  -x-- ---x  unused/unknown
-
-*/
-
-	m_ticket_dispenser->motor_w(BIT(data, 7));
-
-	machine().bookkeeping().coin_counter_w(0, data & 0x04);  // Credit counter
-	machine().bookkeeping().coin_counter_w(1, data & 0x08);  // Key In counter
-	machine().bookkeeping().coin_counter_w(2, data & 0x02);  // payout counter
-
-	//popmessage("coin counters: %02x", data);
-}
-
-void unkch_state::unkcm_0x02_w(uint8_t data)
-{
-/*  bits
-  7654 3210
-  ---- ---x     button lamp: Bet-A / Stop 2
-  ---- --x-     button lamp: Start / Stop All
-  ---- -x--     button lamp: Info / Small / Stop 3
-  ---- x---     button lamp: Big
-  ---x ----     button lamp: Bet-B / D-Up
-  --x- ----     button lamp: Take / Stop 1
-  -x-- ----     unknown/unused
-  x--- ----     vblank IRQ enable
-
-  these sets use crude PWM to dim lamp 2 which requires
-  filament physics simulation to work properly
-
-*/
-
-	//popmessage("unkcm_0x02_w %02x", data);
-
-	m_vblank_irq_enable = data & 0x80;
-	if (!m_vblank_irq_enable)
-		m_maincpu->set_input_line(INPUT_LINE_NMI, CLEAR_LINE);
-
-	m_lamps[0] = BIT(data, 0);  // Bet-A / Stop 2
-	m_lamps[1] = BIT(data, 1);  // Start / Stop All
-	m_lamps[2] = BIT(data, 2);  // Info / Small / Stop 3
-	m_lamps[3] = BIT(data, 3);  // Big
-	m_lamps[4] = BIT(data, 4);  // Bet-B / D-Up
-	m_lamps[5] = BIT(data, 5);  // Take / Stop 1
-}
-
-void unkch_state::unkcm_0x03_w(uint8_t data)
-{
-	// -x-- ----   seems to toggle when a 'normal' tilemap
-	//             should be displayed instead of the reels?
-
-	m_vidreg = data;
-
-	//popmessage("unkcm_0x03_w %02x", data);
 }
 
 
@@ -3677,6 +3918,7 @@ void goldstar_state::feverch_map(address_map &map)
 	map(0xf000, 0xffff).ram();
 }
 
+
 void goldstar_state::feverch_portmap(address_map &map)
 {
 	map.global_mask(0xff);
@@ -3688,6 +3930,156 @@ void goldstar_state::feverch_portmap(address_map &map)
 	map(0x30, 0x30).w("sn3", FUNC(sn76489_device::write));
 	//map(0x38, 0x3b)
 }
+
+
+void cd3poker_state::cd3poker_map(address_map &map)
+{
+	map(0x0000, 0x9fff).rom();
+
+	map(0xa000, 0xa000).r(FUNC(cd3poker_state::armaly_prot_r));
+
+	map(0xd000, 0xd7ff).ram().share("nvram");
+	map(0xd800, 0xdfff).ram();
+
+	map(0xe000, 0xe7ff).ram().w(FUNC(cd3poker_state::fg_vidram_w)).share(m_fg_vidram);
+	map(0xe800, 0xefff).ram().w(FUNC(cd3poker_state::fg_atrram_w)).share(m_fg_atrram);
+
+	map(0xf000, 0xf1ff).ram().w(FUNC(cd3poker_state::reel_ram_w<0>)).share(m_reel_ram[0]);
+	map(0xf200, 0xf3ff).ram().w(FUNC(cd3poker_state::reel_ram_w<1>)).share(m_reel_ram[1]);
+	map(0xf400, 0xf5ff).ram().w(FUNC(cd3poker_state::reel_ram_w<2>)).share(m_reel_ram[2]);
+	map(0xf600, 0xf7ff).ram();
+
+	map(0xf800, 0xf87f).ram().share(m_reel_scroll[0]);
+	map(0xf880, 0xf9ff).ram();
+	map(0xfa00, 0xfa7f).ram().share(m_reel_scroll[1]);
+	map(0xfa80, 0xfbff).ram();
+	map(0xfc00, 0xfc7f).ram().share(m_reel_scroll[2]);
+	map(0xfc80, 0xffff).ram();
+}
+
+
+void cmaster_state::ramdac_map(address_map &map)
+{
+	map(0x000, 0x3ff).rw("ramdac", FUNC(ramdac_device::ramdac_pal_r), FUNC(ramdac_device::ramdac_rgb666_w));
+}
+
+
+void sanghopm_state::ramdac_map(address_map &map)
+{
+	map(0x000, 0x3ff).rw("ramdac", FUNC(ramdac_device::ramdac_pal_r), FUNC(ramdac_device::ramdac_rgb666_w));
+}
+
+/*
+  RAMDAC written commands:
+
+  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
+  -------------       -------------       -------------       -------------
+  00   00 00 00       10   00 00 00       20   00 00 00       30   00 00 00
+  01   E8 18 06       11   E8 18 06       21   E8 18 06       31   E8 18 06
+  02   FC EA 00       12   FC EA 00       22   FC EA 00       32   FC EA 00
+  03   FF FF 00       13   FF FF 00       23   FF FF 00       33   FF FF 00
+  04   FF 00 00       14   FF 00 00       24   FF 00 00       34   FF 00 00
+  05   00 00 FF       15   00 00 FF       25   00 00 FF       35   00 00 FF
+  06   00 E6 00       16   00 E6 00       26   00 E6 00       36   00 E6 00
+  07   01 F0 02       17   01 F0 02       27   01 F0 02       37   01 F0 02
+  08   EF FF E8       18   EF FF E8       28   EF FF E8       38   EF FF E8
+  09   12 08 F2       19   12 08 F2       29   12 08 F2       39   12 08 F2
+  0A   1A 12 FF       1A   1A 12 FF       2A   1A 12 FF       3A   1A 12 FF
+  0B   1F 1F F9       1B   1F 1F F9       2B   1F 1F F9       3B   1F 1F F9
+  0C   F9 F9 F9       1C   F9 F9 F9       2C   F9 F9 F9       3C   F9 F9 F9
+  0D   EF 18 00       1D   EF 18 00       2D   EF 18 00       3D   EF 18 00
+  0E   F0 F0 F0       1E   F0 F0 F0       2E   F0 F0 F0       3E   F0 F0 F0
+  0F   FF FF FF       1F   FF 00 00       2F   00 FF FF       3F   00 FF 00
+
+
+  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
+  -------------       -------------       -------------       -------------
+  40   00 00 00       50   00 00 00       60   00 00 00       70   00 00 00
+  41   E8 18 06       51   E8 18 06       61   E8 18 06       71   E8 18 06
+  42   FC EA 00       52   FC EA 00       62   FC EA 00       72   FC EA 00
+  43   FF FF 00       53   FF FF 00       63   FF FF 00       73   FF FF 00
+  44   FF 00 00       54   FF 00 00       64   FF 00 00       74   FF 00 00
+  45   00 00 FF       55   00 00 FF       65   00 00 FF       75   00 00 FF
+  46   00 E6 00       56   00 E6 00       66   00 E6 00       76   00 E6 00
+  47   01 F0 02       57   01 F0 02       67   01 F0 02       77   01 F0 02
+  48   EF FF E8       58   EF FF E8       68   EF FF E8       78   EF FF E8
+  49   12 08 F2       59   12 08 F2       69   12 08 F2       79   12 08 F2
+  4A   1A 12 FF       5A   1A 12 FF       6A   1A 12 FF       7A   1A 12 FF
+  4B   1F 1F F9       5B   1F 1F F9       6B   1F 1F F9       7B   1F 1F F9
+  4C   F9 F9 F9       5C   F9 F9 F9       6C   F9 F9 F9       7C   F9 F9 F9
+  4D   EF 18 00       5D   EF 18 00       6D   EF 18 00       7D   EF 18 00
+  4E   F0 F0 F0       5E   01 EC FF       6E   00 00 00       7E   00 00 00
+  4F   FF FF 00       5F   00 00 00       6F   01 EC FF       7F   00 00 00
+
+
+  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
+  -------------       -------------       -------------       -------------
+  80   28 28 28       90   28 28 28       A0   28 28 28       B0   28 28 28
+  81   FF ED E3       91   0B 00 00       A1   18 11 00       B1   02 16 00
+  82   FF F7 1E       92   13 00 00       A2   00 E1 00       B2   02 E1 00
+  83   FF F8 18       93   1C 00 00       A3   00 E8 00       B3   01 ED 02
+  84   14 0B 0B       94   E5 00 00       A4   13 F0 00       B4   02 FA 09
+  85   1F 10 0A       95   ED 00 00       A5   FF F7 1E       B5   F1 1A 00
+  86   E3 13 08       96   F6 00 00       A6   FF F0 EE       B6   F1 EA 00
+  87   E8 18 06       97   FF 05 0D       A7   EF 18 00       B7   1F 00 00
+  88   EC 1E 03       98   FF 0C 13       A8   F4 1B 00       B8   F2 00 00
+  89   F0 E3 02       99   FF 13 19       A9   FD 1F 00       B9   FF 00 00
+  8A   F5 E9 01       9A   FF 1A 1F       AA   FF E3 00       BA   FF 0C 02
+  8B   FA EF 01       9B   FF E2 E6       AB   FF EA 00       BB   FF 18 06
+  8C   FF F6 00       9C   FF E9 EC       AC   FF F1 00       BC   FF E3 0A
+  8D   FF FF 00       9D   FF F0 F2       AD   FF F8 00       BD   FF EC 19
+  8E   FF FF 1F       9E   FF F7 F8       AE   FF FF 00       BE   FF F4 1F
+  8F   FF FF FF       9F   FF FF FF       AF   FF FF 1F       BF   FF FF FF
+
+
+  1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D       1C   1D 1D 1D
+  -------------       -------------       -------------       -------------
+  C0   28 28 28       D0   28 28 28       E0   28 28 28       F0   12 12 E0
+  C1   F1 E6 00       D1   00 00 E4       E1   00 05 00       F1   1B 00 00
+  C2   F8 F1 00       D2   00 00 FF       E2   00 0A 00       F2   E0 10 04
+  C3   FF FF 00       D3   00 13 FF       E3   00 10 00       F3   E9 14 05
+  C4   14 07 E7       D4   00 1A FF       E4   00 15 00       F4   EF 1E 12
+  C5   15 0C EF       D5   00 E8 FF       E5   00 1B 00       F5   EC E3 1A
+  C6   1A 12 FA       D6   16 0B 00       E6   00 E0 00       F6   EE 05 04
+  C7   1B 16 FA       D7   19 0F 00       E7   00 E6 00       F7   F4 05 04
+  C8   1D 1A FB       D8   1D 14 00       E8   04 EC 05       F8   FE 04 04
+  C9   1F 1E FC       D9   E5 1A 00       E9   0C F2 0E       F9   F6 E4 15
+  CA   E2 E2 FC       DA   EE E0 00       EA   15 F8 18       FA   F8 EC E0
+  CB   E6 E7 FD       DB   F6 E6 00       EB   E0 FF E3       FB   FD F0 E4
+  CC   EA EC FE       DC   FF ED 00       EC   FD 0C 02       FC   FF F6 E7
+  CD   EF F1 FF       DD   FF F6 00       ED   FD 12 0D       FD   FF FA EA
+  CE   F6 F8 FF       DE   FF FF 00       EE   FE 1A 18       FE   FF FF F2
+  CF   FF FF FF       DF   FF FF FF       EF   FF E4 E4       FF   FF FF FF
+
+
+  And set again....
+
+  1C   1D 1D 1D       1C   1D 1D 1D
+  -------------       -------------
+  70   00 00 00       F0   12 12 E0
+  71   18 0C F6       F1   1B 00 00
+  72   1B 13 0B       F2   E0 10 04
+  73   E1 15 1E       F3   E9 14 05
+  74   F3 E9 E4       F4   EF 1E 12
+  75   F3 E7 00       F5   EC E3 1A
+  76   FE 17 E3       F6   EE 05 04
+  77   FE 0C F1       F7   F4 05 04
+  78   FD E3 13       F8   FE 04 04
+  79   FE ED 05       F9   F6 E4 15
+  7A   FF F5 03       FA   F8 EC E0
+  7B   FF FB 14       FB   FD F0 E4
+  7C   FC FB FA       FC   FF F6 E7
+  7D   FF FC E0       FD   FF FA EA
+  7E   FE FE FC       FE   FF FF F2
+  7F   FF 00 FF       FF   FF FF FF
+
+*/
+
+
+/****************************************************
+                     Input Ports
+
+****************************************************/
 
 static INPUT_PORTS_START( cmv4_player )
 	PORT_START("IN0")
@@ -4642,6 +5034,22 @@ static INPUT_PORTS_START( cmasterh )
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
 INPUT_PORTS_END
 
+
+static INPUT_PORTS_START( wcat3a )
+	PORT_INCLUDE( cmaster )
+
+	PORT_MODIFY("IN0")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_GAMBLE_HIGH ) PORT_CODE(KEYCODE_C) PORT_NAME("Big / Stop 2")
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_GAMBLE_D_UP ) PORT_CODE(KEYCODE_V) PORT_NAME("D-UP / Stop 3")
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_GAMBLE_TAKE ) PORT_CODE(KEYCODE_X) PORT_NAME("Take / Stop 1")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_GAMBLE_BET )  PORT_CODE(KEYCODE_Z) PORT_NAME("Bet")
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_GAMBLE_LOW )  PORT_CODE(KEYCODE_B) PORT_NAME("Small / Info")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_START1 )      PORT_CODE(KEYCODE_N) PORT_NAME("Start / Stop All")
+INPUT_PORTS_END
+
+
 // only 2 banks of 8 switches
 static INPUT_PORTS_START( super7 ) // TODO: verify everything
 	PORT_START("IN0")
@@ -5475,7 +5883,6 @@ static INPUT_PORTS_START( super9 )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
-
 // dip switches from manual, values & inputs are a guess from cmasterb
 static INPUT_PORTS_START( chryangl )
 	PORT_START("IN0")
@@ -5621,6 +6028,26 @@ static INPUT_PORTS_START( chryangl )
 	PORT_DIPSETTING(    0x40, DEF_STR( 1C_2C ) )
 	PORT_DIPSETTING(    0x80, DEF_STR( 1C_5C ) )
 	PORT_DIPSETTING(    0xc0, DEF_STR( 1C_10C ) )
+INPUT_PORTS_END
+
+static INPUT_PORTS_START( chryanglb )
+
+	PORT_INCLUDE( chryangl )
+
+	PORT_MODIFY("IN0")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_BUTTON3 )      PORT_CODE(KEYCODE_C) PORT_NAME("C") // ???
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_BUTTON4 )      PORT_CODE(KEYCODE_V) PORT_NAME("V") // ???
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON1 )      PORT_CODE(KEYCODE_Z) PORT_NAME("Z") // ???
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_OTHER )        PORT_CODE(KEYCODE_2) PORT_NAME("Bet 2")
+	//PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_GAMBLE_TAKE )  // no modify
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_GAMBLE_BET )   PORT_NAME("Bet 1")
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON2 )      PORT_CODE(KEYCODE_X) PORT_NAME("X") // ???
+	//PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_START1 )       PORT_NAME("Start")  // no modify
+
+	PORT_MODIFY("IN1")
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_GAMBLE_D_UP ) PORT_NAME("Guess")
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_GAMBLE_HIGH ) PORT_NAME("Big / Stop All")
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_GAMBLE_LOW )  PORT_NAME("Small / Info")
 INPUT_PORTS_END
 
 // no manual - best guesses
@@ -10092,7 +10519,7 @@ INPUT_PORTS_END
 
 static INPUT_PORTS_START( skillcha )
 
-	PORT_INCLUDE( megaline )  // different DSW 
+	PORT_INCLUDE( megaline )  // different DSW
 
 	PORT_MODIFY("DSW2")
 	PORT_DIPNAME( 0x0f, 0x0f, "Main Game Percentage" )   PORT_DIPLOCATION("DSW2:1,2,3,4")
@@ -11451,7 +11878,8 @@ INPUT_PORTS_END
 
 
 /*****************************************************
-*            Graphics Layouts & Decode               *
+             Graphics Layouts & Decode
+
 *****************************************************/
 
 static const gfx_layout charlayout =
@@ -11813,6 +12241,113 @@ static const gfx_layout flam7_tw_tilelayout =  // FIXME
 	128*8  // every char takes 128 consecutive bytes
 };
 
+static const gfx_layout tiles8x32_4bpp_layout =
+{
+	8,32,
+	RGN_FRAC(1,4),
+	4,
+	{ RGN_FRAC(0,4), RGN_FRAC(1,4), RGN_FRAC(2,4), RGN_FRAC(3,4) },
+	{ 0, 1, 2, 3, 4, 5, 6, 7},
+	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8, 8*8, 9*8, 10*8, 11*8, 12*8,
+		13*8, 14*8, 15*8, 16*8, 17*8, 18*8, 19*8, 20*8, 21*8, 22*8, 23*8,
+		24*8, 25*8, 26*8, 27*8, 28*8, 29*8, 30*8, 31*8 },
+	32*8
+};
+
+static const gfx_layout tiles8x8_3bpp_layout =
+{
+	8,8,
+	RGN_FRAC(1,3),
+	3,
+	{ RGN_FRAC(0,3), RGN_FRAC(1,3), RGN_FRAC(2,3) },
+	{ 0, 1, 2, 3, 4, 5, 6, 7},
+	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
+	8*8
+};
+
+static const gfx_layout tiles8x8x3_miss1bpp_layout =
+{
+	8,8,
+	RGN_FRAC(1,1),
+	3,
+	{ 1, 2, 3 },
+	{ 8, 12, 0, 4, 24, 28, 16, 20 },
+	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32 },
+	8*32
+};
+
+
+static const gfx_layout tiles8x32x4alt2_layout =
+{
+	8,32,
+	RGN_FRAC(1,1),
+	4,
+	{ 0, 1, 2, 3 },
+	{ 4, 0, 12, 8, 20, 16, 28, 24 },
+	{ STEP32(0,32) },
+	32*32
+};
+
+static const gfx_layout tilescherrys_layout =
+{
+	8,32,
+	RGN_FRAC(1,1),
+	4,
+	{ 3, 2, 1, 0 },
+	{  8, 12, 0, 4, 24, 28, 16, 20 },
+	{ STEP32(0,32) },
+	32*32
+};
+
+static const gfx_layout tiles8x32x4pkr_layout =
+{
+	8,32,           // 8*32 characters
+	RGN_FRAC(1,1),  // 1024 characters
+	4,              // 4 bits per pixel
+	{ 0, 2, 4, 6 }, // the bitplanes are packed in one byte
+	{ 0*8+0, 0*8+1, 1*8+0, 1*8+1, 2*8+0, 2*8+1, 3*8+0, 3*8+1 },
+	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32,
+		8*32, 9*32, 10*32, 11*32, 12*32, 13*32, 14*32, 15*32,
+		16*32, 17*32, 18*32, 19*32, 20*32, 21*32, 22*32, 23*32,
+		24*32, 25*32, 26*32, 27*32, 28*32, 29*32, 30*32, 31*32 },
+	8*32*4          // every char takes 128 consecutive bytes
+};
+
+static const gfx_layout cmast97_layout =
+{
+	8,8,
+	RGN_FRAC(1,1),
+	4,
+	{ 0, 1, 2, 3 },
+	{ 8, 12, 0, 4, 24, 28, 16, 20 },
+	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32 },
+	8*32
+};
+
+static const gfx_layout cmast97_layout32 =
+{
+	8,32,
+	RGN_FRAC(1,1),
+	4,
+	{ 0,1,2,3 },
+	{ 8,12,0,4,24,28, 16,20 },
+	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32, 8*32, 9*32, 10*32, 11*32,
+		12*32, 13*32, 14*32, 15*32, 16*32, 17*32, 18*32, 19*32, 20*32, 21*32,
+		22*32, 23*32, 24*32, 25*32, 26*32, 27*32, 28*32, 29*32, 30*32, 31*32 },
+	32*32
+};
+
+static const gfx_layout animalhs_tiles8x32_layout =
+{
+	8,32,
+	RGN_FRAC(1,1),
+	4,
+	{ STEP4(0,1) },
+	{ STEP8(0,4) },
+	{ STEP32(0,32) },
+	32*32
+};
+
 
 static GFXDECODE_START( gfx_goldstar )
 	GFXDECODE_ENTRY( "gfx1", 0, charlayout,   0, 16 )
@@ -11927,97 +12462,21 @@ static GFXDECODE_START( gfx_flam7_tw )  // gfx 2 still wrong...
 	GFXDECODE_ENTRY( "gfx2", 0, flam7_tw_tilelayout, 104,  8 )
 GFXDECODE_END
 
-
-static const gfx_layout tiles8x32_4bpp_layout =
-{
-	8,32,
-	RGN_FRAC(1,4),
-	4,
-	{ RGN_FRAC(0,4), RGN_FRAC(1,4), RGN_FRAC(2,4), RGN_FRAC(3,4) },
-	{ 0, 1, 2, 3, 4, 5, 6, 7},
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8, 8*8, 9*8, 10*8, 11*8, 12*8,
-		13*8, 14*8, 15*8, 16*8, 17*8, 18*8, 19*8, 20*8, 21*8, 22*8, 23*8,
-		24*8, 25*8, 26*8, 27*8, 28*8, 29*8, 30*8, 31*8 },
-	32*8
-};
-
-static const gfx_layout tiles8x8_3bpp_layout =
-{
-	8,8,
-	RGN_FRAC(1,3),
-	3,
-	{ RGN_FRAC(0,3), RGN_FRAC(1,3), RGN_FRAC(2,3) },
-	{ 0, 1, 2, 3, 4, 5, 6, 7},
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
-	8*8
-};
-
 static GFXDECODE_START( gfx_nfm )
 	GFXDECODE_ENTRY( "tilegfx", 0, tiles8x8_3bpp_layout,       0, 16 )
 	GFXDECODE_ENTRY( "reelgfx", 0, tiles8x32_4bpp_layout, 128+64,  4 )
 	GFXDECODE_ENTRY( "user1",   0, gfx_8x8x8_raw,              0, 16 )
 GFXDECODE_END
 
-
-static const gfx_layout tiles8x8x3_miss1bpp_layout =
-{
-	8,8,
-	RGN_FRAC(1,1),
-	3,
-	{ 1, 2, 3 },
-	{ 8, 12, 0, 4, 24, 28, 16, 20 },
-	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32 },
-	8*32
-};
-
-
-static const gfx_layout tiles8x32x4alt2_layout =
-{
-	8,32,
-	RGN_FRAC(1,1),
-	4,
-	{ 0, 1, 2, 3 },
-	{ 4, 0, 12, 8, 20, 16, 28, 24 },
-	{ STEP32(0,32) },
-	32*32
-};
-
-
 static GFXDECODE_START( gfx_unkch )
 	GFXDECODE_ENTRY( "gfx1", 0, gfx_8x8x4_packed_lsb,   0, 16 )
 	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4alt2_layout, 0, 16 )
 GFXDECODE_END
 
-static const gfx_layout tilescherrys_layout =
-{
-	8,32,
-	RGN_FRAC(1,1),
-	4,
-	{ 3, 2, 1, 0 },
-	{  8, 12, 0, 4, 24, 28, 16, 20 },
-	{ STEP32(0,32) },
-	32*32
-};
-
 static GFXDECODE_START( gfx_cherrys )
 	GFXDECODE_ENTRY( "gfx1", 0, tiles8x8x3_miss1bpp_layout,   0, 16 )
 	GFXDECODE_ENTRY( "gfx2", 0, tilescherrys_layout,        128,  8 )
 GFXDECODE_END
-
-
-static const gfx_layout tiles8x32x4pkr_layout =
-{
-	8,32,           // 8*32 characters
-	RGN_FRAC(1,1),  // 1024 characters
-	4,              // 4 bits per pixel
-	{ 0, 2, 4, 6 }, // the bitplanes are packed in one byte
-	{ 0*8+0, 0*8+1, 1*8+0, 1*8+1, 2*8+0, 2*8+1, 3*8+0, 3*8+1 },
-	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32,
-		8*32, 9*32, 10*32, 11*32, 12*32, 13*32, 14*32, 15*32,
-		16*32, 17*32, 18*32, 19*32, 20*32, 21*32, 22*32, 23*32,
-		24*32, 25*32, 26*32, 27*32, 28*32, 29*32, 30*32, 31*32 },
-	8*32*4          // every char takes 128 consecutive bytes
-};
 
 static GFXDECODE_START( gfx_pkrmast )
 	GFXDECODE_ENTRY( "gfx1", 0, charlayout,                                0, 16 )
@@ -12031,46 +12490,11 @@ static GFXDECODE_START( gfx_cmfb55 )
 	GFXDECODE_ENTRY( "user1", 0, tiles128x128x4_layout,     128,  4 )
 GFXDECODE_END
 
-static const gfx_layout cmast97_layout =
-{
-	8,8,
-	RGN_FRAC(1,1),
-	4,
-	{ 0, 1, 2, 3 },
-	{ 8, 12, 0, 4, 24, 28, 16, 20 },
-	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32 },
-	8*32
-};
-
-static const gfx_layout cmast97_layout32 =
-{
-	8,32,
-	RGN_FRAC(1,1),
-	4,
-	{ 0,1,2,3 },
-	{ 8,12,0,4,24,28, 16,20 },
-	{ 0*32, 1*32, 2*32, 3*32, 4*32, 5*32, 6*32, 7*32, 8*32, 9*32, 10*32, 11*32,
-		12*32, 13*32, 14*32, 15*32, 16*32, 17*32, 18*32, 19*32, 20*32, 21*32,
-		22*32, 23*32, 24*32, 25*32, 26*32, 27*32, 28*32, 29*32, 30*32, 31*32 },
-	32*32
-};
-
 static GFXDECODE_START( gfx_cmast97 )
 	GFXDECODE_ENTRY( "gfx", 0,       cmast97_layout,   0x0, 16 )
 	GFXDECODE_ENTRY( "gfx", 0x20000, cmast97_layout32, 0x0, 16 )
 	GFXDECODE_ENTRY( "gfx", 0x40000, cmast97_layout,   0x0, 16 )
 GFXDECODE_END
-
-static const gfx_layout animalhs_tiles8x32_layout =
-{
-	8,32,
-	RGN_FRAC(1,1),
-	4,
-	{ STEP4(0,1) },
-	{ STEP8(0,4) },
-	{ STEP32(0,32) },
-	32*32
-};
 
 static GFXDECODE_START( gfx_animalhs )
 	GFXDECODE_ENTRY( "gfx1", 0, gfx_8x8x4_packed_msb,           0, 16 )
@@ -12083,166 +12507,10 @@ static GFXDECODE_START( gfx_rolling )
 GFXDECODE_END
 
 
-void wingco_state::system_outputa_w(uint8_t data)
-{
-//  popmessage("system_outputa_w %02x",data);
-}
+/****************************************************
+                   Machine Config
 
-void wingco_state::system_outputb_w(uint8_t data)
-{
-//  popmessage("system_outputb_w %02x",data);
-}
-
-void wingco_state::system_outputc_w(uint8_t data)
-{
-	m_nmi_enable = data & 8;
-	m_vidreg = data & 2;
-//  popmessage("system_outputc_w %02x",data);
-
-	if (!m_nmi_enable)
-		m_maincpu->set_input_line(INPUT_LINE_NMI, CLEAR_LINE);
-
-	m_ticket_dispenser->motor_w(!BIT(data, 7));
-//  popmessage("system_outputc_w %02x",data);
-}
-
-void wingco_state::megaline_outputa_w(uint8_t data)
-{
-	m_enable_reg = data & 0x7f;
-	m_ticket_dispenser->motor_w(BIT(data, 7));
-
-//  popmessage("megaline_outputa_w %02x",data);
-}
-
-void wingco_state::megaline_outputb_w(uint8_t data)
-{
-	machine().bookkeeping().coin_counter_w(0, data & 0x01);  //  counter A coin a
-	machine().bookkeeping().coin_counter_w(1, data & 0x02);  //  counter H Key In
-	machine().bookkeeping().coin_counter_w(2, data & 0x04);  //  counter B coin c
-	machine().bookkeeping().coin_counter_w(3, data & 0x08);  //  counter C coin d
-	machine().bookkeeping().coin_counter_w(4, data & 0x10);  //  counter D Hopper Out
-	machine().bookkeeping().coin_counter_w(5, data & 0x40);  //  counter F Key Out
-
-//  popmessage("megaline_outputb_w %02x",data);
-}
-
-void wingco_state::megaline_outputc_w(uint8_t data)
-{
-	m_lamps[0] = BIT(data, 0);
-	m_lamps[1] = BIT(data, 1);
-	m_lamps[2] = BIT(data, 2);
-	m_lamps[3] = BIT(data, 3);
-	m_lamps[4] = BIT(data, 4);
-	m_lamps[5] = BIT(data, 5);
-	m_lamps[6] = BIT(data, 6);
-	m_lamps[7] = BIT(data, 7);
-
-//  popmessage("megaline_outputc_w %02x",data);
-}
-
-void wingco_state::megaline_outputd_w(uint8_t data)
-{
-	m_lamps[8+0] = BIT(data, 0);
-	m_lamps[8+1] = BIT(data, 1);
-	m_lamps[8+2] = BIT(data, 2);
-	m_lamps[8+3] = BIT(data, 3);
-	m_lamps[8+4] = BIT(data, 4);
-	m_lamps[8+5] = BIT(data, 5);
-	m_lamps[8+6] = BIT(data, 6);
-	m_lamps[8+7] = BIT(data, 7);
-
-//  popmessage("megaline_outputd_w %02x",data);
-}
-
-void wingco_state::ay8910_outputa_w(uint8_t data)
-{
-//  popmessage("ay8910_outputa_w %02x", data);
-}
-
-void wingco_state::ay8910_outputb_w(uint8_t data)
-{
-//  popmessage("ay8910_outputb_w %02x", data);
-}
-
-
-uint8_t wingco_state::tetin3_r()
-{
-	uint8_t ret = ioport("IN3")->read();
-
-	if (ret == 0xfe)  // r > lucky to tetris
-	{
-		if (m_tcount++ == 2)
-		{
-			m_z80_p02 = true;
-			m_tcount = 0;
-		}
-		ret = 0xfe;
-	}
-
-	if (ret == 0xfd)  // t > tetris to lucky
-	{
-		if (m_tcount++ == 2)
-		{
-			m_z80_p02 = false;
-			m_tcount = 0;
-		}
-		ret = 0xfd;
-	}
-	return ret;
-}
-
-uint8_t wingco_state::z80_io_r(offs_t offset)
-{
-	if (offset == 0x01)
-		return  0x00;  // returning a different value inhibits the game swap (comprobed). Asign an input toggle to give functionality.
-
-	if (offset == 0x02)
-		return  m_z80_p02;
-
-	if (offset == 0x32)
-		return  00;
-
-	if (offset == 0xc0)
-	{
-		logerror("z80_io_r: offset:%02x\n", offset);
-		return  m_z80_io_c0;
-	}
-
-//  logerror("z80_io_r: offset:%02x\n", offset);  // investigate functionality ports 0x31, 0x32, 0xc0.
-	return machine().rand() & 0x0f;
-}
-
-void wingco_state::z80_io_w(offs_t offset, uint8_t data)
-{
-	if (offset == 0xc0)
-		m_z80_io_c0 = data;
-	logerror("Z80_io_w(): offset:%02x - data: %02x\n", offset, data);  // investigate functionality port 0xc0
-}
-
-void wingco_state::tmcu_io_w(offs_t offset, uint8_t data)
-{
-	if ((offset != 0x122) & (offset != 0x123))
-	logerror("tmcu_io Write: Offs:%04x - Data:%02x\n", offset, data);
-}
-
-uint8_t wingco_state::tmcu_io_r(offs_t offset)
-{
-	return 0x00;
-}
-
-void wingco_state::tmcu_p1_out(uint8_t data)
-{
-	m_mcu_p1 = data;
-//  logerror("MCU Port1:%02x\n", tmcu_p1_out);
-
-}
-
-
-constexpr XTAL MASTER_CLOCK = 12_MHz_XTAL;
-constexpr XTAL CPU_CLOCK    = MASTER_CLOCK / 4;
-constexpr XTAL PSG_CLOCK    = MASTER_CLOCK / 4;
-constexpr XTAL AY_CLOCK     = MASTER_CLOCK / 8;
-#define OKI_CLOCK       1056000      // unverified resonator
+****************************************************/
 
 void goldstar_state::goldstar(machine_config &config)
 {
@@ -12389,64 +12657,6 @@ void goldstar_state::super9(machine_config &config)
 
 	// payout hardware
 	TICKET_DISPENSER(config, m_ticket_dispenser, attotime::from_msec(50));
-}
-
-
-void goldstar_state::cm_palette(palette_device &palette) const
-{
-	// BBGGGRRR
-	uint8_t const *const proms = memregion("proms")->base();
-	for (int i = 0; i < 0x100; i++)
-	{
-		uint8_t const data = proms[0x000 + i] | (proms[0x100 + i] << 4);
-		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
-	}
-}
-
-void cmaster_state::cmast91_palette(palette_device &palette) const
-{
-	uint8_t const *const proms = memregion("proms")->base();
-	for (int i = 0; i < 0x100; i++)
-	{
-		int const b = pal4bit(proms[0x000 + i]);
-		int const g = pal4bit(proms[0x100 + i]);
-		int const r = pal4bit(proms[0x200 + i]);
-
-		palette.set_pen_color(i, rgb_t(r, g, b));
-	}
-}
-
-void goldstar_state::lucky8_palette(palette_device &palette) const
-{
-	// BBGGGRRR
-	uint8_t const *proms;
-
-	proms = memregion("proms")->base();
-	for (int i = 0; i < 0x100; i++)
-	{
-		uint8_t const data = proms[0x000 + i] | (proms[0x100 + i] << 4);
-		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
-	}
-
-	proms = memregion("proms2")->base();
-	for (int i = 0; i < 0x20; i++)
-	{
-		uint8_t const data = proms[i];
-		palette.set_pen_color(i + 0x80, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
-	}
-}
-
-void cmaster_state::nfm_palette(palette_device &palette) const
-{
-	// BBGGGRRR
-	uint8_t const *const colours = memregion("colours")->base();
-	for (int i = 0; i < 0x100; i++)
-	{
-		uint8_t const data = bitswap<8>(colours[0x000 + i], 3, 2, 1, 0, 7, 6, 5, 4);
-		palette.set_pen_color(i, pal3bit(data >> 0), pal3bit(data >> 3), pal2bit(data >> 6));
-	}
-
-	// TODO: what's 0x100-0x1ff for? For the currently undecoded user1 ROM?
 }
 
 
@@ -12656,6 +12866,26 @@ void cmaster_state::chryangl(machine_config &config)
 	m_maincpu->set_addrmap(AS_OPCODES, &cmaster_state::chryangl_decrypted_opcodes_map);
 }
 
+void cmaster_state::chryanglb(machine_config &config)
+{
+	cm(config);
+
+	m_maincpu->set_addrmap(AS_OPCODES, &cmaster_state::chryangl_decrypted_opcodes_map);
+	m_maincpu->set_addrmap(AS_IO, &cmaster_state::chyangb_portmap);
+}
+
+void cmaster_state::wcat3a(machine_config &config)
+{
+	cm(config);
+
+	m_maincpu->set_addrmap(AS_PROGRAM, &cmaster_state::wcat3a_map);
+	m_maincpu->set_addrmap(AS_IO, &cmaster_state::wcat3a_portmap);
+	m_maincpu->set_addrmap(AS_OPCODES, &cmaster_state::chryangl_decrypted_opcodes_map);
+
+	// sound hardware
+	SN76489(config, "snsnd", CPU_CLOCK).add_route(ALL_OUTPUTS, "mono", 0.80);  // clock not verified
+}
+
 void cmaster_state::cmtetriskr(machine_config &config)
 {
 	chryangl(config);
@@ -12688,9 +12918,11 @@ void cmaster_state::super7(machine_config &config)
 	subdevice<ay8910_device>("aysnd")->port_b_read_callback().set_ioport("DSW2");
 }
 
-void cmaster_state::cd3poker(machine_config &config)
+void cd3poker_state::cd3poker(machine_config &config)
 {
 	cm(config);
+
+	m_maincpu->set_addrmap(AS_PROGRAM, &cd3poker_state::cd3poker_map);
 
 	NVRAM(config.replace(), "nvram", nvram_device::DEFAULT_ALL_0);
 }
@@ -12759,12 +12991,6 @@ void cmaster_state::cutylineb(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &cmaster_state::clb_map);
 }
 
-
-void wingco_state::masked_irq(int state)
-{
-	if (state && m_nmi_enable)
-		m_maincpu->set_input_line(INPUT_LINE_NMI, ASSERT_LINE);
-}
 
 void wingco_state::lucky8(machine_config &config)
 {
@@ -13037,20 +13263,6 @@ void wingco_state::mbstar(machine_config &config)
 }
 
 
-
-void wingco_state::magodds_palette(palette_device &palette) const
-{
-	uint8_t const *const proms = memregion("proms")->base();
-	for (int i = 0; i < 0x100; i++)
-	{
-		uint8_t const b = pal4bit(proms[0x000 + i]);
-		uint8_t const g = pal4bit(proms[0x100 + i]);
-		uint8_t const r = pal4bit(proms[0x200 + i]);
-
-		palette.set_pen_color(i, rgb_t(r, g, b));
-	}
-}
-
 void wingco_state::magodds(machine_config &config)
 {
 	// basic machine hardware
@@ -13104,7 +13316,6 @@ void wingco_state::magodds(machine_config &config)
 
 }
 
-
 void goldstar_state::kkotnoli(machine_config &config)
 {
 	// basic machine hardware
@@ -13138,9 +13349,7 @@ void goldstar_state::kkotnoli(machine_config &config)
 	SPEAKER(config, "mono").front_center();
 
 	SN76489(config, "snsnd", PSG_CLOCK).add_route(ALL_OUTPUTS, "mono", 0.80);
-
 }
-
 
 void goldstar_state::ladylinr(machine_config &config)
 {
@@ -13175,7 +13384,6 @@ void goldstar_state::ladylinr(machine_config &config)
 
 	AY8930(config, "aysnd", AY_CLOCK).add_route(ALL_OUTPUTS, "mono", 0.50);  // unused?
 }
-
 
 void goldstar_state::ladylinrb(machine_config &config)
 {
@@ -13619,11 +13827,10 @@ void wingco_state::lucky8tet(machine_config &config)
 }
 
 
-/***************************************************************************
+/****************************************************
+                  ROM Load Routines
 
-  Game driver(s)
-
-***************************************************************************/
+****************************************************/
 
 /*
   Golden Star (bootleg of Cherry 1 Gold)
@@ -19770,34 +19977,19 @@ ROM_END
 
 
 /*
-
   Magical Tonic
 
   unknown, 40 pin cpu (plastic box, with "Tonic" sticker on it)
   8255 x3
   YM2203
   12 MHz
-
   4x DSW
 
   is this the original Magical Odds?
 
+  also found with correctly sized program ROMs on a 03/25/93 DREAM97-1 PCB
+
 */
-void wingco_state::init_magoddsc()
-{
-	uint8_t *ROM = memregion("maincpu")->base();
-	for (int A = 0; A < 0x8000; A++)
-	{
-		if ((A & 4) == 4)
-			ROM[A] ^= 0x01;
-
-		ROM[A] = bitswap<8>(ROM[A], 3,6,5,4,7,2,1,0);
-	}
-}
-
-
-// is this a bootleg board?
-// also found with correctly sized program ROMs on a 03/25/93 DREAM97-1 PCB
 ROM_START( magodds )
 	ROM_REGION( 0x20000, "maincpu", 0 )
 	ROM_LOAD( "8_p6_d12.512", 0x00000, 0x08000, CRC(6978c662) SHA1(cfdbcdcd4085c264e1d0ad4f18160b40d2d4e406) )
@@ -20345,15 +20537,15 @@ ROM_START( wcat3a )
 	ROM_LOAD( "main program sub 27c512.bin",  0x0000, 0x10000, CRC(50b61d88) SHA1(7cea2a03d9b48a1f324171f69ae9df62cf65dc6f) )
 
 	ROM_REGION( 0x18000, "gfx1", 0 )
-	ROM_LOAD( "rom7.bin",   0x10000, 0x8000, CRC(3e2ade27) SHA1(9a463219c5028ed32086c378a17079f69d1c0439) )
+	ROM_LOAD( "rom7.bin",   0x00000, 0x8000, CRC(3e2ade27) SHA1(9a463219c5028ed32086c378a17079f69d1c0439) )
 	ROM_LOAD( "rom6.bin",   0x08000, 0x8000, CRC(71ae4c3c) SHA1(7b3b0a7453e5844194f3d3ed449549e4c091b127) )
-	ROM_LOAD( "rom5.bin",   0x00000, 0x8000, CRC(8fac3f23) SHA1(e2c67620aa2ea01c2d469d963b5a34ca710742ec) )
+	ROM_LOAD( "rom5.bin",   0x10000, 0x8000, CRC(8fac3f23) SHA1(e2c67620aa2ea01c2d469d963b5a34ca710742ec) )
 
 	ROM_REGION( 0x8000, "gfx2", 0 )
-	ROM_LOAD( "rom4.bin",   0x6000, 0x2000, CRC(0509d556) SHA1(c2f46d279f45b544c67b0c966659cc6d5d53c22f) )
-	ROM_LOAD( "rom3.bin",   0x4000, 0x2000, CRC(d50f3d62) SHA1(8500c7f3a2f51ea0ed7e142ecdc4e669ba3e7065) )
-	ROM_LOAD( "rom2.bin",   0x2000, 0x2000, CRC(373d9949) SHA1(ff483505fb9e86411acad7059bf5434dde290946) )
-	ROM_LOAD( "rom1.bin",   0x0000, 0x2000, CRC(50febe3b) SHA1(0479bcee53b174aa0413951e283e446b09a6f156) )
+	ROM_LOAD( "rom4.bin",   0x0000, 0x2000, CRC(0509d556) SHA1(c2f46d279f45b544c67b0c966659cc6d5d53c22f) )
+	ROM_LOAD( "rom3.bin",   0x2000, 0x2000, CRC(d50f3d62) SHA1(8500c7f3a2f51ea0ed7e142ecdc4e669ba3e7065) )
+	ROM_LOAD( "rom2.bin",   0x4000, 0x2000, CRC(373d9949) SHA1(ff483505fb9e86411acad7059bf5434dde290946) )
+	ROM_LOAD( "rom1.bin",   0x6000, 0x2000, CRC(50febe3b) SHA1(0479bcee53b174aa0413951e283e446b09a6f156) )
 
 	ROM_REGION( 0x10000, "user1", ROMREGION_ERASEFF ) // no girls bitmap
 
@@ -22099,64 +22291,6 @@ ROM_START( fb2010a )
 ROM_END
 
 
-void cmaster_state::init_fb2010()
-{
-	uint8_t *ROM = memregion("maincpu")->base();
-	for (int i = 0; i < 0x10000; i++)
-	{
-		uint8_t x = ROM[i];
-
-		switch (i & 0x22)
-		{
-			case 0x00: x = bitswap<8>(x^0x4c^0xff, 0,4,7,6,5,1,3,2); break;
-			case 0x02: x = bitswap<8>(x^0xc0^0xff, 7,6,0,5,3,2,1,4); break;
-			case 0x20: x = bitswap<8>(x^0x6b^0xff, 4,3,2,7,5,6,0,1); break;
-			case 0x22: x = bitswap<8>(x^0x23^0xff, 0,6,1,3,4,5,2,7); break;
-		}
-
-		ROM[i] = x;
-	}
-
-	m_maincpu->space(AS_IO).install_read_handler(0x1e, 0x1e, read8smo_delegate(*this, FUNC(cmaster_state::fixedval_r<0x7d>)));
-}
-
-
-/* descrambled by looking at CALLs
-
-  0000 -> 0000
-
-  46e7 -> 16e7
-  4027 -> 1027
-
-  35f3 -> 25f3
-  3327 -> 2327
-
-  7f6a -> 3f6a
-
-  1095 -> 4095
-  1d2f -> 4d2f
-  1e8b -> 4e8b
-
-  6246 -> 5246
-  628f -> 528f
-
-  2bed -> 6bed
-  2db7 -> 6db7
-
-  5838 -> 7838
-  58a2 -> 78a2
-
-  810f -> 810f
-
-  9762 -> 9762
-
-  a??? -> a???
-
-  b84a -> b84a
-
-  c??? -> c???
-
-*/
 ROM_START( nfb96se )
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "dogdptb.prg",0x00000, 0x1000, CRC(0690f915) SHA1(ed2477ba260a421013603017cfd1e1ba5ecd7f4e) )  // alt program?
@@ -25018,7 +25152,11 @@ ROM_START( fl7_tw )  // Serial 00000050E9B7.
 ROM_END
 
 
-/*********************************************************************************************************************/
+/****************************************************
+                Driver Init Routines
+
+****************************************************/
+
 
 void goldstar_state::init_goldstar()
 {
@@ -25196,17 +25334,13 @@ void cmaster_state::init_crazybonb()
 
 }
 
-void cmaster_state::init_3cdp()  // v1.6 & v1.0
+void cd3poker_state::init_3cdp()  // v1.6 & v1.0
 {
 	uint8_t *rom = memregion("maincpu")->base();
 
 	rom[0x0209] = 0x9b; // ppi0 init
 	rom[0x020d] = 0x9b; // ppi1 init
-
-	rom[0x8193] = 0xc9; // skip protection
-	rom[0x81c3] = 0xc9; // skip protection
 }
-
 
 void goldstar_state::init_ladylinrb()
 {
@@ -25708,6 +25842,11 @@ void goldstar_state::init_chryangl()
 		m_decrypted_opcodes[i] = x;
 	}
 
+	m_decrypted_opcodes[0xabd3] = 0xc9; // skip protection
+	m_decrypted_opcodes[0xac2b] = 0xc9; // skip protection
+	m_decrypted_opcodes[0xac41] = 0xc9; // skip stack handling protection
+	m_decrypted_opcodes[0xacb5] = 0x00; // skip protection
+
 	for (int i = 0; i < 0x10000; i++)
 	{
 		uint8_t x = rom[i];
@@ -25725,6 +25864,112 @@ void goldstar_state::init_chryangl()
 
 		rom[i] = x;
 	}
+
+	rom[0x1784] = 0x25; // read start button
+	rom[0x1785] = 0x18; //
+	rom[0x1793] = 0x66; // autostart on max bet p1
+
+}
+
+void cb3_state::init_chryangla()
+{
+	uint8_t *rom = memregion("maincpu")->base();
+
+	for (int i = 0; i < 0x10000; i++)
+	{
+		uint8_t x = rom[i];
+
+		switch (i & 0x83)
+		{
+			case 0x00: x = bitswap<8>(x ^ 0x80, 1, 6, 7, 4, 5, 2, 3, 0); break;
+			case 0x01: x = bitswap<8>(x ^ 0xa0, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x02: x = bitswap<8>(x ^ 0x02, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x03: x = bitswap<8>(x ^ 0xa0, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x80: x = bitswap<8>(x ^ 0x82, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x81: x = bitswap<8>(x ^ 0x02, 1, 6, 7, 4, 5, 2, 3, 0); break;
+			case 0x82: x = bitswap<8>(x ^ 0x08, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x83: x = bitswap<8>(x ^ 0x80, 5, 6, 3, 4, 1, 2, 7, 0); break;
+		}
+
+		m_decrypted_opcodes[i] = x;
+	}
+
+	m_decrypted_opcodes[0xac43] = 0xc9; // skip protection
+	m_decrypted_opcodes[0x9056] = 0xc9; // skip protection
+	m_decrypted_opcodes[0x9082] = 0xc9; // skip protection
+
+	for (int i = 0; i < 0x10000; i++)
+	{
+		uint8_t x = rom[i];
+		switch (i & 0x83)
+		{
+			case 0x00: x = bitswap<8>(x ^ 0x22, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x01: x = bitswap<8>(x ^ 0x2a, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x02: x = bitswap<8>(x ^ 0x82, 1, 6, 7, 4, 5, 2, 3, 0); break;
+			case 0x03: x = bitswap<8>(x ^ 0x2a, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x80: x = bitswap<8>(x ^ 0xa8, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x81: x = bitswap<8>(x ^ 0x88, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x82: x = bitswap<8>(x ^ 0x22, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x83: x = bitswap<8>(x ^ 0x88, 1, 6, 7, 4, 5, 2, 3, 0); break;
+		}
+
+		rom[i] = x;
+	}
+
+	rom[0x0039] = 0x66; // redirect irq to nmi
+	rom[0x003a] = 0x00; //
+}
+
+void goldstar_state::init_chryanglb()
+{
+	uint8_t *rom = memregion("maincpu")->base();
+
+	for (int i = 0; i < 0x10000; i++)
+	{
+		uint8_t x = rom[i];
+
+		switch (i & 0x83)
+		{
+			case 0x00: x = bitswap<8>(x ^ 0x80, 1, 6, 7, 4, 5, 2, 3, 0); break;
+			case 0x01: x = bitswap<8>(x ^ 0xa0, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x02: x = bitswap<8>(x ^ 0x02, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x03: x = bitswap<8>(x ^ 0xa0, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x80: x = bitswap<8>(x ^ 0x82, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x81: x = bitswap<8>(x ^ 0x02, 1, 6, 7, 4, 5, 2, 3, 0); break;
+			case 0x82: x = bitswap<8>(x ^ 0x08, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x83: x = bitswap<8>(x ^ 0x80, 5, 6, 3, 4, 1, 2, 7, 0); break;
+		}
+
+		m_decrypted_opcodes[i] = x;
+	}
+
+	m_decrypted_opcodes[0x9052] = 0xc9; // skip protection
+	m_decrypted_opcodes[0x9056] = 0xc9; // skip protection
+	m_decrypted_opcodes[0x90dd] = 0xc9; // skip protection
+	m_decrypted_opcodes[0xa9a3] = 0xc9; // skip protection
+	m_decrypted_opcodes[0xb651] = 0x00; // skip protection
+
+	for (int i = 0; i < 0x10000; i++)
+	{
+		uint8_t x = rom[i];
+		switch (i & 0x83)
+		{
+			case 0x00: x = bitswap<8>(x ^ 0x22, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x01: x = bitswap<8>(x ^ 0x2a, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x02: x = bitswap<8>(x ^ 0x82, 1, 6, 7, 4, 5, 2, 3, 0); break;
+			case 0x03: x = bitswap<8>(x ^ 0x2a, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x80: x = bitswap<8>(x ^ 0xa8, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x81: x = bitswap<8>(x ^ 0x88, 3, 6, 1, 4, 7, 2, 5, 0); break;
+			case 0x82: x = bitswap<8>(x ^ 0x22, 5, 6, 3, 4, 1, 2, 7, 0); break;
+			case 0x83: x = bitswap<8>(x ^ 0x88, 1, 6, 7, 4, 5, 2, 3, 0); break;
+		}
+
+		rom[i] = x;
+	}
+
+	//rom[0x1784] = 0x25; // ENABLE START BUTTON (BUT FAILS)
+	//rom[0x1785] = 0x18; //
+
 }
 
 void cmaster_state::init_wcat3a()  // seems ok, but needs checking
@@ -25750,6 +25995,21 @@ void cmaster_state::init_wcat3a()  // seems ok, but needs checking
 		m_decrypted_opcodes[i] = x;
 	}
 
+	m_decrypted_opcodes[0x01ae] = 0xfb;
+	m_decrypted_opcodes[0x9313] = 0xc9;
+	m_decrypted_opcodes[0x9319] = 0xc9;
+	m_decrypted_opcodes[0x932a] = 0xc9;
+	m_decrypted_opcodes[0x934b] = 0xc9;
+	m_decrypted_opcodes[0x93be] = 0xc9;
+	m_decrypted_opcodes[0x93f7] = 0xc9;
+	m_decrypted_opcodes[0x9a7b] = 0xc9;
+
+	//m_decrypted_opcodes[0x9353] = 0xc9;  // to check
+	//m_decrypted_opcodes[0x936c] = 0xc9;  // to check
+	//m_decrypted_opcodes[0x9379] = 0xc9;  // to check
+	//m_decrypted_opcodes[0x9388] = 0xc9;  // to check
+
+
 	for (int i = 0; i < 0x10000; i++)
 	{
 		uint8_t x = rom[i];
@@ -25766,6 +26026,10 @@ void cmaster_state::init_wcat3a()  // seems ok, but needs checking
 		}
 		rom[i] = x;
 	}
+
+	rom[0x00e3] = 0x38; // Enable PSG Sound ChA-ChB-ChC
+	rom[0x0785] = 0xdc; // 
+	rom[0x0786] = 0x20; //
 }
 
 void cb3_state::init_chrygld()
@@ -26328,7 +26592,7 @@ void wingco_state::init_lucky8r()
 	rom[0x43a6] = 0x80;
 	rom[0x454e] = 0x00;
 	rom[0x4567] = 0x00;
-	rom[0x431f] = 0x28;  // skip checksum;
+	rom[0x431f] = 0x28;  // skip checksum;
 }
 
 void wingco_state::init_lucky8s()
@@ -26380,6 +26644,18 @@ void wingco_state::init_mbs2()
 	uint8_t *rom = memregion("maincpu")->base();
 
 	rom[0xd6b1] = 0x97;
+}
+
+void wingco_state::init_magoddsc()
+{
+	uint8_t *ROM = memregion("maincpu")->base();
+	for (int A = 0; A < 0x8000; A++)
+	{
+		if ((A & 4) == 4)
+			ROM[A] ^= 0x01;
+
+		ROM[A] = bitswap<8>(ROM[A], 3,6,5,4,7,2,1,0);
+	}
 }
 
 
@@ -26468,6 +26744,64 @@ void cmaster_state::init_skill98()
 	m_maincpu->space(AS_IO).install_read_handler(0x1e, 0x1e, read8smo_delegate(*this, FUNC(cmaster_state::fixedval_r<0xea>)));
 	// Oki 6295 at 0x20
 }
+
+void cmaster_state::init_fb2010()
+{
+	uint8_t *ROM = memregion("maincpu")->base();
+	for (int i = 0; i < 0x10000; i++)
+	{
+		uint8_t x = ROM[i];
+
+		switch (i & 0x22)
+		{
+			case 0x00: x = bitswap<8>(x^0x4c^0xff, 0,4,7,6,5,1,3,2); break;
+			case 0x02: x = bitswap<8>(x^0xc0^0xff, 7,6,0,5,3,2,1,4); break;
+			case 0x20: x = bitswap<8>(x^0x6b^0xff, 4,3,2,7,5,6,0,1); break;
+			case 0x22: x = bitswap<8>(x^0x23^0xff, 0,6,1,3,4,5,2,7); break;
+		}
+
+		ROM[i] = x;
+	}
+
+	m_maincpu->space(AS_IO).install_read_handler(0x1e, 0x1e, read8smo_delegate(*this, FUNC(cmaster_state::fixedval_r<0x7d>)));
+}
+
+/* descrambled by looking at CALLs
+
+  0000 -> 0000
+
+  46e7 -> 16e7
+  4027 -> 1027
+
+  35f3 -> 25f3
+  3327 -> 2327
+
+  7f6a -> 3f6a
+
+  1095 -> 4095
+  1d2f -> 4d2f
+  1e8b -> 4e8b
+
+  6246 -> 5246
+  628f -> 528f
+
+  2bed -> 6bed
+  2db7 -> 6db7
+
+  5838 -> 7838
+  58a2 -> 78a2
+
+  810f -> 810f
+
+  9762 -> 9762
+
+  a??? -> a???
+
+  b84a -> b84a
+
+  c??? -> c???
+
+*/
 
 void cmaster_state::init_nfb96_a()
 {
@@ -27312,7 +27646,7 @@ void wingco_state::init_skch()
 
 	rom[0x3415] = 0xc9;
 	rom[0x45e4] = 0xc9;
-	
+
 	rom[0x6296] = 0x00;
 	rom[0x6297] = 0x00;
 }
@@ -27323,7 +27657,7 @@ void wingco_state::init_skcha()
 
 	rom[0x3434] = 0xc9;
 	rom[0x4608] = 0xc9;
-	
+
 	rom[0x6298] = 0x00;
 	rom[0x6299] = 0x00;
 }
@@ -27339,9 +27673,12 @@ void wingco_state::init_mgln()
 } // anonymous namespace
 
 
-/*********************************************
-*                Game Drivers                *
-*********************************************/
+/*********************************************************************************************************************/
+
+/****************************************************
+                    Game Drivers
+
+****************************************************/
 
 //     YEAR  NAME        PARENT    MACHINE   INPUT     STATE           INIT            ROT   COMPANY              FULLNAME                                       FLAGS              LAYOUT
 GAMEL( 199?, goldstar,   0,        goldstar, goldstar, goldstar_state, init_goldstar,  ROT0, "IGS",               "Golden Star",                                 0,                 layout_goldstar )
@@ -27372,15 +27709,15 @@ GAMEL( 199?, cb3g,       ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3g
 GAMEL( 199?, cb3h,       ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3,       ROT0, "Dyna",              "Cherry Bonus III (ver.1.40, set 7)",          0,                 layout_cherryb3 )
 GAMEL( 199?, cb3s51,     ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3g,      ROT0, "Dyna",              "Cherry Bonus III (ver.5.1)",                  0,                 layout_cherryb3 )
 GAMEL( 199?, chryglda,   ncb3,     cb3e,     chrygld,  cb3_state,      init_cb3e,      ROT0, "bootleg",           "Cherry Gold I (set 2, encrypted bootleg)",    0,                 layout_chrygld )  // Runs in CB3e hardware.
-GAME(  1994, chryangla,  ncb3,     chryangla,ncb3,     cb3_state,      init_chryangl,  ROT0, "bootleg (G.C.I.)",  "Cherry Angel (encrypted, W-4 hardware)",      MACHINE_NOT_WORKING ) // DYNA CB3  V1.40 string, decrypted but only test screens work
+GAME(  1994, chryangla,  ncb3,     chryangla,ncb3,     cb3_state,      init_chryangla, ROT0, "bootleg (G.C.I.)",  "Cherry Angel (encrypted, W-4 hardware)",      MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // DYNA CB3  V1.40 string, playable, but still has protections
 
 GAME(  1991, eldoraddoa, eldoradd, eldoraddoa,animalhs,cmaster_state,  init_eldoraddoa,ROT0, "Dyna",              "El Dorado (V1.4D)",                           MACHINE_NOT_WORKING | MACHINE_WRONG_COLORS ) // improve GFX drawing, correct palette decode, I/O, etc
 GAMEL( 1991, animalhs,   0,        animalhs, animalhs, cmaster_state,  init_animalhs,  ROT0, "Suns Co Ltd.",      "Animal House (V1.0, set 1)",                  0,                 layout_animalhs ) // improve GFX drawing, correct palette decode
 GAME(  1991, animalhsa,  animalhs, animalhs, animalhs, cmaster_state,  init_animalhs,  ROT0, "Suns Co Ltd.",      "Animal House (V1.0, set 2)",                  MACHINE_NOT_WORKING ) // improve GFX drawing, correct palette decode, I/O, etc
 
 // looks like a hack of Cherry Bonus 3
-GAME(  1994, chryangl,   ncb3,     chryangl, chryangl,  cmaster_state, init_chryangl,  ROT0, "bootleg (G.C.I.)",  "Cherry Angel (set 1)",                        MACHINE_NOT_WORKING ) // SKY SUPERCB 1.0 string, decrypted but hangs when betting
-GAME(  1994, chryanglb,  ncb3,     chryangl, chryangl,  cmaster_state, init_chryangl,  ROT0, "bootleg",           "Cherry Angel (set 2)",                        MACHINE_NOT_WORKING ) // ANGEL TL+YF 1.00 string, decrypted but hangs when betting
+GAME(  1994, chryangl,   ncb3,     chryangl, chryangl,  cmaster_state, init_chryangl,  ROT0, "bootleg (G.C.I.)",  "Cherry Angel (set 1)",                        MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // SKY SUPERCB 1.0 string, playable, but still has protections
+GAME(  1994, chryanglb,  ncb3,     chryanglb, chryanglb, cmaster_state, init_chryanglb, ROT0, "bootleg",          "Cherry Angel (set 2)",                        MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // ANGEL TL+YF 1.00 string, playable, but still has protections
 
 
 // cherry master hardware has a rather different mem map, but is basically the same
@@ -27394,8 +27731,8 @@ GAMEL( 1992, cmv4,       0,        cm,       cmv4,     cmaster_state,  init_cmv4
 GAMEL( 1992, cmv4a,      cmv4,     cm,       cmv4,     cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master (ver.4, set 2)",                0,                 layout_cmv4 ) // with tetris tiles leftover
 GAMEL( 199?, cmwm,       cmv4,     cm,       cmv4,     cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master (Watermelon bootleg / hack)",   0,                 layout_cmv4 ) // CM Fruit Bonus ver.2 T bootleg/hack
 GAMEL( 1995, cmfun,      cmv4,     cm,       cmv4,     cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master (Fun USA v2.5 bootleg / hack)", 0,                 layout_cmv4 )
-GAMEL( 1996, 3cdpoker,   0,        cd3poker, cmv4,     cmaster_state,  init_3cdp,      ROT0, "Armaly Labs",       "3 Cards Poker 96 (V1.6)",                     0,                 layout_cmv4 )
-GAMEL( 1996, 3cdpokera,  3cdpoker, cd3poker, cmv4,     cmaster_state,  init_3cdp,      ROT0, "Armaly Labs",       "3 Cards Poker 96 (V1.0)",                     0,                 layout_cmv4 )
+GAMEL( 1996, 3cdpoker,   0,        cd3poker, cmv4,     cd3poker_state, init_3cdp,      ROT0, "Armaly Labs",       "3 Cards Poker 96 (V1.6)",                     0,                 layout_cmv4 )
+GAMEL( 1996, 3cdpokera,  3cdpoker, cd3poker, cmv4,     cd3poker_state, init_3cdp,      ROT0, "Armaly Labs",       "3 Cards Poker 96 (V1.0)",                     0,                 layout_cmv4 )
 GAMEL( 1991, cmaster,    0,        cm,       cmaster,  cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master I (ver.1.01, set 1)",           0,                 layout_cmaster )
 GAMEL( 1991, cmasterb,   cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "Dyna",              "Cherry Master I (ver.1.01, set 2)",           0,                 layout_cmasterb )
 GAMEL( 1991, cm1codar,   cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "CODERE Argentina",  "Cherry Master I (ver.1.01, Spanish, CODERE, set 1)",  0,         layout_cmasterb )
@@ -27428,7 +27765,7 @@ GAMEL( 1991, lonestara,  cmaster,  cm,       cmasterh, cmaster_state,  init_cmv4
 GAMEL( 1991, skdelux2k,  cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "bootleg",           "Florida Skill Deluxe 2K (FBV2 ver.T)",        0,                 layout_cmasterb )
 GAMEL( 1991, skdelux99,  cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,      ROT0, "bootleg",           "Florida Skill Deluxe 99 (FBV2 ver.T)",        0,                 layout_cmasterb )
 GAMEL( 199?, super7,     cmaster,  super7,   super7,   cmaster_state,  init_super7,    ROT0, "bootleg",           "Super Seven (ver. 2.3)",                      MACHINE_NOT_WORKING, layout_cmasterb ) // inputs / outputs needs verifying
-GAME ( 199?, wcat3a,     wcat3,    chryangl, cmaster,  cmaster_state,  init_wcat3a,    ROT0, "E.A.I.",            "Wild Cat 3 (CMV4 hardware)",                  MACHINE_NOT_WORKING ) // does not boot. Wrong decryption, wrong machine or wrong what?
+GAMEL( 1993, wcat3a,     wcat3,    wcat3a,   wcat3a,   cmaster_state,  init_wcat3a,    ROT0, "E.A.I.",            "Wild Cat S (CMV4 hardware)",                  0,                 layout_wcat3a ) // CAT2 101893
 GAMEL( 1993, ll3,        0,        ll3,      ll3,      cmaster_state,  init_ll3,       ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 1)",            0,  layout_ll3 )
 GAMEL( 1993, ll3a,       ll3,      ll3,      ll3a,     cmaster_state,  init_ll3,       ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 2, Macedonia)", 0,  layout_ll3 )
 GAMEL( 1993, ll3b,       ll3,      ll3,      ll3b,     cmaster_state,  init_ll3b,      ROT0, "bootleg",           "Lucky Line III (ver 2.00, Wang QL-1 v3.03, set 3)",            0,  layout_ll3 )
@@ -27528,7 +27865,7 @@ GAME(  198?, ladylinrb,  ladylinr, ladylinrb,ladylinr, goldstar_state, init_lady
 GAME(  198?, ladylinrc,  ladylinr, ladylinrb,ladylinr, goldstar_state, init_ladylinrc, ROT0, "TAB Austria",       "Lady Liner (encrypted, set 2)",                            0 )
 GAME(  198?, ladylinrd,  ladylinr, ladylinrb,ladylinr, goldstar_state, init_ladylinrd, ROT0, "TAB Austria",       "Lady Liner (encrypted, set 3)",                            0 )
 GAME(  198?, ladylinre,  ladylinr, ladylinrb,ladylinr, goldstar_state, init_ladylinre, ROT0, "TAB Austria",       "Lady Liner (encrypted, set 4)",                            0 )
-GAME ( 1992?,wcat,       0,        wcat3,    lucky8b,  wingco_state,   init_wcat,      ROT0, "Excel",             "Wild Cat",                                                 MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING ) // needs correct GFX ROMs, I/O, etc
+GAME( 1992?, wcat,       0,        wcat3,    lucky8b,  wingco_state,   init_wcat,      ROT0, "Excel",             "Wild Cat",                                                 MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING ) // needs correct GFX ROMs, I/O, etc
 GAME(  1995, wcat3,      0,        wcat3,    lucky8,   wingco_state,   init_wcat3,     ROT0, "E.A.I.",            "Wild Cat 3",                                               MACHINE_NOT_WORKING | MACHINE_WRONG_COLORS ) // decryption partially wrong, needs soft resets before running. Bad PROM decode
 GAMEL( 199?, animalw,    0,        animalw,  lucky8t,  wingco_state,   empty_init,     ROT0, "GPS",               "Animal Wonders (ver A900 66)",                             0,                     layout_lucky8p1 )    // DIPs need to be checked
 GAMEL( 199?, animalwbl,  animalw,  lucky8t,  lucky8t,  wingco_state,   empty_init,     ROT0, "bootleg",           "Animal Wonders (ver A900, bootleg)",                       0,                     layout_lucky8p1 )    // DIPs need to be checked
