@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2023 -->
+<!-- Number of items in this list = 2028 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7032,6 +7032,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen9babe627b1f3b">
+		<description>Genesis Megatetris (2023-25)(Danisc23)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Genesis Megatetris (2023-25)(Danisc23).bin" size="393216" crc="caf8c2dd" sha1="9babe627b1f3bc95b2b932efa2056bae58e64de5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen92fea6292e15f">
 		<description>genpoker</description>
 		<year>????</year>
@@ -9682,6 +9692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf2eddd9869808">
+		<description>Jurl (2025)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Jurl (2025)(Tonsomo Entertainment).bin" size="393216" crc="a7a56b9b" sha1="f2eddd9869808a77699ac123ff75d61e4b591fae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf429ba499773e">
 		<description>justice league task force (Hack, Spanish)</description>
 		<year>????</year>
@@ -9719,6 +9739,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="kid chameleon (Hack, Spanish).bin" size="1048576" crc="4871962f" sha1="29197c61164dfba664e22699d9790f02a34aed61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen20a2f5faa212f">
+		<description>King &amp; Balloon (2025)(abadede919302)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="King &amp; Balloon (2025)(abadede919302).bin" size="393216" crc="4e6b7134" sha1="20a2f5faa212fd0f472055cbee31796a320f8355"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10859,6 +10889,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2088832">
 				<rom name="Mega Cheril Perils (2016)(The Mojon Twins).bin" size="2088832" crc="77afa0b1" sha1="c15b3f547e03253106c9606694bdd9fb1a33a2b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9851f9c761409">
+		<description>Mega Flappy Sis (2016-18)(Beetroot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="478706">
+				<rom name="Mega Flappy Sis (2016-18)(Beetroot).bin" size="478706" crc="d2ca75b7" sha1="9851f9c76140987b33a984acc7b9e0c96c8169be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13849,6 +13889,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="saturday night slammasters (usa).bin" size="4194304" crc="2fb4eaba" sha1="7252006bf41e41b92c6261c6722766a1352a6dca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genaec3ae1d0934b">
+		<description>Satyr In Hell (2022)(kakoeimon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="655360">
+				<rom name="Satyr In Hell (2022)(kakoeimon).bin" size="655360" crc="f4148d5c" sha1="aec3ae1d0934b77dc8fe5b98519eacf467c33cd6"/>
 			</dataarea>
 		</part>
 	</software>

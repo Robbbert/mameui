@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4818 -->
+<!-- Number of items in this list = 4855 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -19,6 +19,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="84661">
 				<rom name="(demo)70908 128K (2019)(Scopex).tap" size="84661" crc="e2268f42" sha1="4c55e94884563ba91cfe0375c03c8d85dff63668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdcb7328fa7d67">
+		<description>(demo)Bor-Fies - Bug-Eyes (1985)(Soft Well)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27197">
+				<rom name="(demo)Bor-Fies - Bug-Eyes (1985)(Soft Well)(Sp).tap" size="27197" crc="01a2eb5d" sha1="dcb7328fa7d673f2eeed3dfdb08fadfcf1e29c5b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10222,6 +10232,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3f130d276e289">
+		<description>BOOOM!!! v1.1 48K (2025)(Briefer666)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20684">
+				<rom name="BOOOM!!! v1.1 48K (2025)(Briefer666).tap" size="20684" crc="111ac828" sha1="3f130d276e2899cd7822a4bd434ea955e5bee084"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs23eb4ffd3586e">
+		<description>Bootee (2013)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39147">
+				<rom name="Bootee (2013)(The Mojon Twins).tap" size="39147" crc="b4e06a95" sha1="23eb4ffd3586e031df94173ed683dde88d65407a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1080cd42486c8">
 		<description>bootskell</description>
 		<year>????</year>
@@ -10242,13 +10272,113 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs2b3b03398b6ec">
-		<description>Bored of the Rings + Sceptical (1985)(Silversoft)[AICGLMS]</description>
+	<software name="zxs10d5db1e685b3">
+		<description>Booty (1984)(Firebird)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="615597">
-				<rom name="Bored of the Rings + Sceptical (1985)(Silversoft)[AICGLMS].tzx" size="615597" crc="6852c3fc" sha1="2b3b03398b6ece572744abccbd7886f3488cfbff"/>
+			<dataarea name="cass" size="45734">
+				<rom name="Booty (1984)(Firebird).tap" size="45734" crc="cbde2eb4" sha1="10d5db1e685b396c604bffff3bc02f4379950425"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa80fef974e6e3">
+		<description>Booty 48K (1984)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45734">
+				<rom name="Booty 48K (1984)(Firebird).tap" size="45734" crc="a387b4bf" sha1="a80fef974e6e3c01c46d8faf9351c6e620c79fac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf41b97d607f58">
+		<description>Borec (19xx)(Vladimar Makys)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2900">
+				<rom name="Borec (19xx)(Vladimar Makys).tap" size="2900" crc="5c31745f" sha1="f41b97d607f58198a590ccab3b7880c05bf5266a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscf6a37eb8935c">
+		<description>Bored of the Rings v2 - side A (1985)(Delta 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="91867">
+				<rom name="Bored of the Rings v2 - side A (1985)(Delta 4).tap" size="91867" crc="9361bca3" sha1="cf6a37eb8935c93455756a3296e9267a2c512449"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse2c3c5a24846e">
+		<description>Bored of the Rings v2 - side B (1985)(Delta 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="69048">
+				<rom name="Bored of the Rings v2 - side B (1985)(Delta 4).tap" size="69048" crc="2f287c8a" sha1="e2c3c5a24846e5e87a012a4ef7def688d87fbad5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs00a2a7cf49b94">
+		<description>Borer Deep (19xx)(Hipocrates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13823">
+				<rom name="Borer Deep (19xx)(Hipocrates).tap" size="13823" crc="b18fba39" sha1="00a2a7cf49b94a7d3026b4caf7e3988e08ecfd49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdc2ea2c94f28d">
+		<description>Boriel Runner 48K (2023)(briefer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30251">
+				<rom name="Boriel Runner 48K (2023)(briefer).tap" size="30251" crc="c58a6829" sha1="dc2ea2c94f28dd650d4b535e0419d75435d4301c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs15c1f00e75986">
+		<description>Boriel Runner v1.1 48K (2023)(briefer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30250">
+				<rom name="Boriel Runner v1.1 48K (2023)(briefer).tap" size="30250" crc="bbab58ff" sha1="15c1f00e7598620b28e06cdd70058c95552c538d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8acb21f8e197">
+		<description>Boriel Runner v1.2 48K (2023)(briefer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30406">
+				<rom name="Boriel Runner v1.2 48K (2023)(briefer).tap" size="30406" crc="ddede219" sha1="b8acb21f8e197cd69e0d7f4fabe4dbf94c9bb8db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54cac04ae0492">
+		<description>Borzak (1984)(Channel 8 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40132">
+				<rom name="Borzak (1984)(Channel 8 Software).tap" size="40132" crc="9b44111d" sha1="54cac04ae0492906f3a5cc6e8a0693c82a56582c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs726140d025955">
+		<description>Bosconian 87 (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46840">
+				<rom name="Bosconian 87 (1987)(Mastertronic).tap" size="46840" crc="3cc3e412" sha1="726140d0259556d07b1d2cd2b554d8a086cb4963"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11862,6 +11992,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7a3a0bb2b56e5">
+		<description>Last Battle Editor (1997)(Pro Hackers Dynasty)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31480">
+				<rom name="Last Battle Editor (1997)(Pro Hackers Dynasty).tap" size="31480" crc="fc1e164d" sha1="7a3a0bb2b56e5211f4a844b11e8c1d905bc759e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4d19e3004405f">
+		<description>Last Believer, The (1991)(The Guild)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36456">
+				<rom name="Last Believer, The (1991)(The Guild).tap" size="36456" crc="ed217bfc" sha1="4d19e3004405f7d115cbb5689ececc1788c27a03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3025cf577b1f9">
+		<description>Last Bullet 48K (2025)(Mananuk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44723">
+				<rom name="Last Bullet 48K (2025)(Mananuk).tap" size="44723" crc="d5b5d582" sha1="3025cf577b1f91fd90d8da3099ceff203afbf41e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd22f988dce2f8">
+		<description>Last Commando - The (1988)(Zeus Software - Dinamic Software)(128k)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44460">
+				<rom name="Last Commando - The (1988)(Zeus Software - Dinamic Software)(128k)(Sp).tap" size="44460" crc="4f42b44a" sha1="d22f988dce2f878f9d11340f505c200ff2b1fa9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7c38bd88e6f6d">
+		<description>Last Drive (1988)(Accolade)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35968">
+				<rom name="Last Drive (1988)(Accolade).tap" size="35968" crc="f91b02c9" sha1="7c38bd88e6f6d3e13bc6835f39885f5092e63dfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs146a04a9605d2">
+		<description>Last Duel (1989)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="171660">
+				<rom name="Last Duel (1989)(US Gold).tap" size="171660" crc="ca2ae42a" sha1="146a04a9605d2e349436e7a38c74d51b61d7282d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb96ba1fbea84e">
+		<description>Last Mission, The (1987)(Opera Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45998">
+				<rom name="Last Mission, The (1987)(Opera Soft)(Sp).tap" size="45998" crc="0016b908" sha1="b96ba1fbea84eda2eb366c01a1af62e1d1607445"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsefe7a31b67fac">
+		<description>Last Mission, The 128K ES (1987)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45998">
+				<rom name="Last Mission, The 128K ES (1987)(Opera Soft).tap" size="45998" crc="2e93fbe9" sha1="efe7a31b67facfc56662ce3e3223269cd4d6b9b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1678336b22a45">
+		<description>Last Ninja 2, The (1988)(System 3 Software)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="233900">
+				<rom name="Last Ninja 2, The (1988)(System 3 Software)(128k).tap" size="233900" crc="a6be2baa" sha1="1678336b22a451e3a88011bc731770ecd9dba6a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs10db75ae8801a">
+		<description>Last Ninja Remix, The (1990)(System 3 Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="233884">
+				<rom name="Last Ninja Remix, The (1990)(System 3 Software).tap" size="233884" crc="0d16555f" sha1="10db75ae8801a451f201e6e414f5107e8322645f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs35c33924e58ad">
 		<description>Last Ninja Remix</description>
 		<year>????</year>
@@ -11869,6 +12099,146 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="233942">
 				<rom name="Last Ninja Remix.tzx" size="233942" crc="c5750bf5" sha1="35c33924e58ad06bb688d0a8fa48d59671720be9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb240c1e380aed">
+		<description>Last Sunset For Lattica (1983)(Arcade Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23959">
+				<rom name="Last Sunset For Lattica (1983)(Arcade Software).tap" size="23959" crc="5e1f6b41" sha1="b240c1e380aedf78fbec4047558183e0c1bd2c75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf5bf699105738">
+		<description>Last Train to Tranz-Central Part1 128k (2020)(Quantum Sheep)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44216">
+				<rom name="Last Train to Tranz-Central Part1 128k (2020)(Quantum Sheep).tap" size="44216" crc="5782d9b4" sha1="f5bf6991057384b6777e02c3bc71019f24a4d01b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0270b716576d1">
+		<description>Last Train to Tranz-Central Part2 128k (2020)(Quantum Sheep)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45932">
+				<rom name="Last Train to Tranz-Central Part2 128k (2020)(Quantum Sheep).tap" size="45932" crc="8a07ee28" sha1="0270b716576d1df8f64de4878c6096410ad90062"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ae7b34e8795e">
+		<description>Last Vampire, The (1990)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50418">
+				<rom name="Last Vampire, The (1990)(Atlantis Software Ltd).tap" size="50418" crc="9c48dd1a" sha1="2ae7b34e8795ecfad8cdccb053a0b392928aef1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4f4231f59208f">
+		<description>Last Word, The v1.1 (1985)(Myrmidon Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16727">
+				<rom name="Last Word, The v1.1 (1985)(Myrmidon Software).tap" size="16727" crc="bf7109a8" sha1="4f4231f59208f2bb7b8d11381432bbd496f1e37f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3623862d764c1">
+		<description>Lava 16K (2021)(Zosya Ent.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8366">
+				<rom name="Lava 16K (2021)(Zosya Ent.).tap" size="8366" crc="a307f634" sha1="3623862d764c184bc2e61bb9265cebbaf0294d1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcd91fa757148">
+		<description>Lava Birds, The 128K (2022)(Quantum Sheep)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37340">
+				<rom name="Lava Birds, The 128K (2022)(Quantum Sheep).tap" size="37340" crc="4ff095cf" sha1="bcd91fa7571484a7284173821585749a2bdb1ee6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs170d59fa28bd4">
+		<description>Lawn Adventure (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24943">
+				<rom name="Lawn Adventure (19xx)(-).tap" size="24943" crc="edc643b6" sha1="170d59fa28bd456db522f33654e8a753b81912bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2f6d03cea2673">
+		<description>Lawn Tennis (1988)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28578">
+				<rom name="Lawn Tennis (1988)(Mastertronic).tap" size="28578" crc="91181e5e" sha1="2f6d03cea26731fb5fa3a9a714ebf3f3479ae874"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a80b636440cd">
+		<description>Lazer Tag (1987)(Go)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Lazer Tag (1987)(Go).tap" size="49343" crc="2468be88" sha1="9a80b636440cd971ac7b17eee333619fa37f19f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf954abbbe5592">
+		<description>Lazer Tag (1987)(Go)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29696">
+				<rom name="Lazer Tag (1987)(Go)[a2].tap" size="29696" crc="a88a379d" sha1="f954abbbe55926506172e3f4b520425a264d144c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs42ffb08be559a">
+		<description>Lazer Tag (1987)(Go)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29618">
+				<rom name="Lazer Tag (1987)(Go)[a].tap" size="29618" crc="384e4ba6" sha1="42ffb08be559ac886b658e21016eaef75fb8e450"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs244928ef1b288">
+		<description>Lazer Zone (1983)(Salamander Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16501">
+				<rom name="Lazer Zone (1983)(Salamander Software)[a].tap" size="16501" crc="a8c085da" sha1="244928ef1b2887083eb126ab1cff5c8eda1a1048"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf87eebeb500b3">
+		<description>Lazy Jones (1984)(Terminal Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35102">
+				<rom name="Lazy Jones (1984)(Terminal Software).tap" size="35102" crc="9f2230ed" sha1="f87eebeb500b3e619de5ed504a5c2ddc074488a0"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8124 -->
+<!-- Number of items in this list = 8125 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -57219,6 +57219,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="pacman09.bas.a26" size="4096" crc="eff597ef" sha1="abdbce8b0801f3820ec7f794b7b43e396a966e72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659c78aa860fb1">
+		<description>pacman2600_8k_v5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="pacman2600_8k_v5.bin" size="8192" crc="ee085471" sha1="59c78aa860fb1c17edf95d6b10de08cdac9977f7"/>
 			</dataarea>
 		</part>
 	</software>

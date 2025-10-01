@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3941 -->
+<!-- Number of items in this list = 3963 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1812,6 +1812,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns6defc4aa66a3d">
+		<description>(E)Plok! (E)(1993)(Tradewest)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(E)Plok! (E)(1993)(Tradewest).sfc" size="1048576" crc="026f2c19" sha1="6defc4aa66a3d7534adb32b21b48576a45ac2c03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9fc200f34eece">
+		<description>(E)Plok! (E, France)(1993)(Tradewest)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(E)Plok! (E, France)(1993)(Tradewest).sfc" size="1048576" crc="e5e84e18" sha1="9fc200f34eece7e477cae7be0217b66015e613ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns88e30c9575d7a">
+		<description>(E)Plok! (E, Germany)(1993)(Tradewest)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(E)Plok! (E, Germany)(1993)(Tradewest).sfc" size="1048576" crc="edc2befd" sha1="88e30c9575d7a96db29d3dcc5725612c359ff047"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns49aafbcb58460">
 		<description>(E)Super Conflict (E) [T+Fre_Generation IX] (2)</description>
 		<year>????</year>
@@ -1879,6 +1909,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="(E)Tintin in Tibet (E)(1995)(Infogrames).sfc" size="1572864" crc="f1dce2b7" sha1="f93338abc37fcf77e68c4c8c1cbab9efca32b5b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb378006fcf270">
+		<description>(E)Zombies (E)(1993)(Konami - LucasArts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(E)Zombies (E)(1993)(Konami - LucasArts).sfc" size="1048576" crc="fabff8bd" sha1="b378006fcf270ac8dd3b960a5d432024248cdb21"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3972,6 +4012,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc72d3368b5664">
+		<description>Black Jewel Reborn Demo (2024)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Black Jewel Reborn Demo (2024)(PSCD Games).sfc" size="1048576" crc="5cf1f05c" sha1="c72d3368b5664754587752c0045550b19c624d12"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3b2a6fa0eb091">
 		<description>Black Yoshi's ExGFx Hack of Super Mario World-3</description>
 		<year>????</year>
@@ -4749,6 +4799,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Brutal Mario English.sfc" size="4194304" crc="d8642ea3" sha1="d91bc627dc9d4f80285abcc98034589fc652d3e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf649ef183ff47">
+		<description>Brutal Zombies Ate My Neighbors v3.0 (2017)(Skylar Brock)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1081799">
+				<rom name="Brutal Zombies Ate My Neighbors v3.0 (2017)(Skylar Brock).sfc" size="1081799" crc="710ed3ce" sha1="f649ef183ff47f9e0c3a6cdf64d35ed53e59e851"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12412,6 +12472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf19e9aabf3b5a">
+		<description>Hyper Street Kart - the Road Warriors v1.1 (2016)(The Real Phoenix &amp; Ten Shu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Hyper Street Kart - the Road Warriors v1.1 (2016)(The Real Phoenix &amp; Ten Shu).sfc" size="1048576" crc="c18caa11" sha1="f19e9aabf3b5ad130b54aed6248a22b2a9101043"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd88360946e093">
 		<description>Hyper V-Ball (U) [T+Por_Nova CBT]</description>
 		<year>????</year>
@@ -13189,6 +13259,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Jurassic Park II - The Chaos Continues Redux (2025)(BillyTime! Games).sfc" size="2097152" crc="620de6a3" sha1="f75fe5c74054614903264099fa3af63bedab565c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7d75ce2c2766f">
+		<description>Jurl v0.5A (2025)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Jurl v0.5A (2025)(Tonsomo Entertainment).sfc" size="262144" crc="eccff965" sha1="7d75ce2c2766fff87f7ad8aa10c5179ec1335087"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18232,6 +18312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0d3b7aa9a5914">
+		<description>Metal Slader Glory - Director's Cut T-Eng v1.1 (2025)(FCandChill)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Metal Slader Glory - Director's Cut T-Eng v1.1 (2025)(FCandChill).sfc" size="3145728" crc="00419052" sha1="0d3b7aa9a5914729b8b62f346645bd7ff0438ac7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3fa2281430a17">
 		<description>metalgearhunter - Variatic Madness (SMW1 Hack)</description>
 		<year>????</year>
@@ -20232,6 +20322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsee40af66f9088">
+		<description>Oscar (E)(1996)(Titus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Oscar (E)(1996)(Titus).sfc" size="524288" crc="b458fdbc" sha1="ee40af66f9088ac1b695c8a197d38f85afecddc5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns9a99d4ccc6af8">
 		<description>Ossu!! Karate-bu (J)(1994)(Culture Brain)</description>
 		<year>????</year>
@@ -21432,6 +21532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns63f376bd55add">
+		<description>Realm (E)(1996)(Titus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Realm (E)(1996)(Titus).sfc" size="1048576" crc="9be46820" sha1="63f376bd55add49e0893d01d9321207b9f68d6c8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns476733dc9ce1f">
 		<description>Rebuilding of the Star Palace by Dotsarecool (demo1) (SMW1 Hack)</description>
 		<year>????</year>
@@ -21549,6 +21659,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Return of Double Dragon - Guarding law (J)(h9v8-30031023).sfc" size="1048576" crc="3157c8d9" sha1="8f1a5ab24e7a3f8523c00c87c19692fda3b66e11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9f58ab38ff5d3">
+		<description>Return of Double Dragon - Kencho hacks (2017)(Jesús Alonso Abad)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Return of Double Dragon - Kencho hacks (2017)(Jesús Alonso Abad).sfc" size="1048576" crc="a83cc8b3" sha1="9f58ab38ff5d3a7c2c256b7614cdc940c5d8e680"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36172,6 +36292,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns834b5c6b82b1e">
+		<description>Super Star Wars (U, Rev 1)(1992)(JVC - LucasArts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Star Wars (U, Rev 1)(1992)(JVC - LucasArts).sfc" size="1048576" crc="be47f6c6" sha1="834b5c6b82b1ee22cc583075334800b51269624b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb8dca1cd8b2ac">
+		<description>Super Star Wars - Return of the Jedi (U, Rev 1)(1994)(JVC - LucasArts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Star Wars - Return of the Jedi (U, Rev 1)(1994)(JVC - LucasArts).sfc" size="2097152" crc="4a5f30d8" sha1="b8dca1cd8b2ac99e46078fc91fd42ee336e761e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb61e09a62aa9a">
+		<description>Super Star Wars - Return of the Jedi Redux (2025)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Star Wars - Return of the Jedi Redux (2025)(BillyTime! Games).sfc" size="2097152" crc="04698461" sha1="b61e09a62aa9aea5c08ccd9ea3ca840d6fa1f028"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5f0ddc911e9c1">
 		<description>Super Star Wars - The Empire Strikes Back (E, Rev 1)(1993)(JVC - LucasArts)</description>
 		<year>????</year>
@@ -36189,6 +36339,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Super Star Wars - The Empire Strikes Back (U)(1993)(JVC - LucasArts)_1.sfc" size="1572864" crc="f45b15be" sha1="94293158b1b2dc72318e408946d69ab59b57de84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns82bf21e0ba427">
+		<description>Super Star Wars - The Empire Strikes Back (U, Rev 1)(1993)(JVC - LucasArts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Super Star Wars - The Empire Strikes Back (U, Rev 1)(1993)(JVC - LucasArts).sfc" size="1572864" crc="1e7ea62c" sha1="82bf21e0ba427bcc9c6390bf028dfd76de3c94d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns173b0860cccb4">
+		<description>Super Star Wars - The Empire Strikes Back Redux (2015)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Super Star Wars - The Empire Strikes Back Redux (2015)(BillyTime! Games).sfc" size="1572864" crc="1fdef9ed" sha1="173b0860cccb44d494b126c1d704441a9ab287cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5e56df3788569">
+		<description>Super Star Wars Redux (2025)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Super Star Wars Redux (2025)(BillyTime! Games).sfc" size="1572864" crc="b331a037" sha1="5e56df37885699393b8953ca209a5dff606ab7d6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37519,6 +37699,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="TMNT Tournament Fighters - Grandmasters Edition v1.2 (2025)(Allo).sfc" size="4194304" crc="ce1d413f" sha1="8d233097b67cb39c46fe66bba453ae459673e659"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc4dae0e27e17d">
+		<description>TMNT Tournament Fighters - Grandmasters Edition v2.1 (2025)(Allo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="TMNT Tournament Fighters - Grandmasters Edition v2.1 (2025)(Allo).sfc" size="4194304" crc="276a5820" sha1="c4dae0e27e17d16632f18eff5f83214db33e45b0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39402,6 +39592,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns701cb7610b465">
+		<description>Zombies Ate My Neighbors (2021)(Limited Run Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zombies Ate My Neighbors (2021)(Limited Run Games).sfc" size="1048576" crc="b57c9228" sha1="701cb7610b465eafa59b6c814b5cc5b0d315841c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsde7446e2410fe">
+		<description>Zombies Ate My Neighbors. The Sequel v1.1 (2017-18)(Droter)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1081344">
+				<rom name="Zombies Ate My Neighbors. The Sequel v1.1 (2017-18)(Droter).sfc" size="1081344" crc="633b9cfb" sha1="de7446e2410fe6a1af8c08a8ab54a3ee2654cb79"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns042a21fc384cd">
 		<description>Zomg! Floating Muncher! - Chikane (SMW1 Hack)</description>
 		<year>????</year>
@@ -39409,6 +39619,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Zomg! Floating Muncher! - Chikane (SMW1 Hack).sfc" size="2097152" crc="2d73ea81" sha1="042a21fc384cd0e41df7d0740cacab9eb9699f38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns40e648d159bb9">
+		<description>Zool - Ninja of the Nth Dimension (E)(1993)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zool - Ninja of the Nth Dimension (E)(1993)(Gremlin Graphics).sfc" size="1048576" crc="1188c64e" sha1="40e648d159bb94387f580a3b86b7a7bc3dfe3274"/>
 			</dataarea>
 		</part>
 	</software>
