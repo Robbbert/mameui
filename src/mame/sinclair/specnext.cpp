@@ -1038,6 +1038,7 @@ u8 specnext_state::port_ff_r()
 
 void specnext_state::port_ff_w(u8 data)
 {
+	m_screen->update_now();
 	m_port_ff_data = data; // ==port_ff_dat_tmx
 	m_ula_scr->port_ff_reg_w(m_port_ff_data);
 	nr_6a_lores_radastan_xor_w(m_nr_6a_lores_radastan_xor);
@@ -1972,7 +1973,7 @@ void specnext_state::reg_w(offs_t nr_wr_reg, u8 nr_wr_dat)
 		m_nr_22_line_interrupt_en = BIT(nr_wr_dat, 1);
 		m_nr_23_line_interrupt = (m_nr_23_line_interrupt & ~0x0100) | (BIT(nr_wr_dat, 0) << 8);
 		line_irq_adjust();
-		m_port_ff_data = (m_port_ff_data & 0xbf) | (BIT(nr_wr_dat, 1) << 6);
+		port_ff_w((m_port_ff_data & 0xbf) | (BIT(nr_wr_dat, 1) << 6));
 		break;
 	case 0x23:
 		m_nr_23_line_interrupt = (m_nr_23_line_interrupt & ~0x00ff) | nr_wr_dat;
@@ -2029,10 +2030,12 @@ void specnext_state::reg_w(offs_t nr_wr_reg, u8 nr_wr_dat)
 		nr_33_lores_scrolly_w(nr_wr_dat);
 		break;
 	case 0x34:
+		m_screen->update_now();
 		m_sprites->mirror_data_w(nr_wr_dat);
 		break;
 	case 0x35: case 0x36:  case 0x37: case 0x38: case 0x39:
 	case 0x75: case 0x76:  case 0x77: case 0x78: case 0x79:
+		m_screen->update_now();
 		m_sprites->mirror_inc_w(BIT(nr_wr_reg, 6));
 		m_sprites->mirror_index_w((nr_wr_reg & 0x3f) - 0x35);
 		m_sprites->mirror_data_w(nr_wr_dat);
@@ -2078,9 +2081,11 @@ void specnext_state::reg_w(offs_t nr_wr_reg, u8 nr_wr_dat)
 		}
 		break;
 	case 0x4b:
+		m_screen->update_now();
 		nr_4b_sprite_transparent_index_w(nr_wr_dat);
 		break;
 	case 0x4c:
+		m_screen->update_now();
 		nr_4c_tm_transparent_index_w(BIT(nr_wr_dat, 0, 4));
 		break;
 	case 0x50: case 0x51: case 0x52: case 0x53:
@@ -2128,7 +2133,7 @@ void specnext_state::reg_w(offs_t nr_wr_reg, u8 nr_wr_dat)
 		m_nr_68_ula_stencil_mode = BIT(nr_wr_dat, 0);
 		break;
 	case 0x69:
-		m_port_ff_data = (m_port_ff_data & 0xc0) | (nr_wr_dat & 0x3f);
+		port_ff_w((m_port_ff_data & 0xc0) | (nr_wr_dat & 0x3f));
 		port_7ffd_reg_w((m_port_7ffd_data & ~0x08) | (BIT(nr_wr_dat, 6) << 3));
 		port_123b_layer2_en_w(BIT(nr_wr_dat, 7));
 		break;
@@ -2291,7 +2296,7 @@ void specnext_state::reg_w(offs_t nr_wr_reg, u8 nr_wr_dat)
 		m_nr_c4_int_en_0_expbus = BIT(nr_wr_dat, 7);
 		m_nr_22_line_interrupt_en = BIT(nr_wr_dat, 1);
 		line_irq_adjust();
-		m_port_ff_data = (m_port_ff_data & 0xbf) | (BIT(~nr_wr_dat, 0) << 6);
+		port_ff_w((m_port_ff_data & 0xbf) | (BIT(~nr_wr_dat, 0) << 6));
 		break;
 	case 0xc5:
 		{
