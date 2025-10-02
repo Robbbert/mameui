@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 449 -->
+<!-- Number of items in this list = 453 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -659,6 +659,36 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="30873">
 				<rom name="Bosconian '87 48K (1987)(Mastertronic).z80" size="30873" crc="deb7845a" sha1="762daa133e9a08d576f41b9727a4356d31926594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f55026605da1">
+		<description>Boulder Dash II - Rockford's Riot 48K (1985)(Prism Leisure)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="22436">
+				<rom name="Boulder Dash II - Rockford's Riot 48K (1985)(Prism Leisure).z80" size="22436" crc="bcab1101" sha1="1f55026605da146bd76846367ec5cf7545f37654"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67d0c11996e09">
+		<description>Boulder Dash V 48K (1992)(Too Trek Moscow S.N.G.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34593">
+				<rom name="Boulder Dash V 48K (1992)(Too Trek Moscow S.N.G.).z80" size="34593" crc="6e9b68bf" sha1="67d0c11996e092d661398c9654eb7082f87af5ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc2ffa45bf6cd5">
+		<description>Boulder Dash VI 48K (1992)(Too Trek Moscow S.N.G.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="34706">
+				<rom name="Boulder Dash VI 48K (1992)(Too Trek Moscow S.N.G.).z80" size="34706" crc="6abfc981" sha1="c2ffa45bf6cd50380d81e7835a19550ceb76fce5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4399,6 +4429,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="77548">
 				<rom name="Xecutor - Remix (1987)(ACE Software).z80" size="77548" crc="97ef7538" sha1="5de6a033ea28f802891ed1ef91a5a1f7b6b83ccc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd0302cc6dc838">
+		<description>Xeno 48K (1986)(A'n'F Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37264">
+				<rom name="Xeno 48K (1986)(A'n'F Software).z80" size="37264" crc="4d10e27a" sha1="d0302cc6dc838b9f2dd9062fca8875e0f6b69c7f"/>
 			</dataarea>
 		</part>
 	</software>
