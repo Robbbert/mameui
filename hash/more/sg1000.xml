@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 72 -->
+<!-- Number of items in this list = 73 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -409,6 +409,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="40960">
 				<rom name="Operation Hibernation Plus (2025)(Jess Creations - ArugulaZ).sg" size="40960" crc="e530d8f5" sha1="d48df1fce14ea834b8d22fe293bd9e35e363f2e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1f98bf6e3ef5f6">
+		<description>Operation Hibernation Plus Rev.2 (2025)(Jess Creations - ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="49152">
+				<rom name="Operation Hibernation Plus Rev.2 (2025)(Jess Creations - ArugulaZ).sg" size="49152" crc="d4b2189a" sha1="f98bf6e3ef5f69214d1a6eeec39a3a68b05f6dee"/>
 			</dataarea>
 		</part>
 	</software>

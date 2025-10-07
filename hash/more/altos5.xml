@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 11 -->
+<softwarelist name="altos5" description="altos5 loose roms">
+	<software name="alt993549de68405">
+		<description>A5-5CPM2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="76781">
+				<rom name="A5-5CPM2.IMD" size="76781" crc="64cfda63" sha1="993549de6840572e3fd1880ec798217e24084fe1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alt6b04d3197a60f">
+		<description>a5-5cpm2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="47010">
+				<rom name="a5-5cpm2.td0" size="47010" crc="40e7925a" sha1="6b04d3197a60f502025df12fb6e4bf25a31b20b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alta44d63c190a92">
+		<description>A5-5MPM2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="497876">
+				<rom name="A5-5MPM2.IMD" size="497876" crc="092ac65b" sha1="a44d63c190a92776e193ed763cabe9f027a71f7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="altecb78d73cf6db">
+		<description>a5-5mpm2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="254502">
+				<rom name="a5-5mpm2.td0" size="254502" crc="bcd0f16c" sha1="ecb78d73cf6db2940996e83087e1f5af5dcd8579"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alt0abca14a492b0">
+		<description>CPM22050</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="230539">
+				<rom name="CPM22050.IMD" size="230539" crc="42eb5ae2" sha1="0abca14a492b09a989da6274a92091f652ea6fa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alt38261a2b358cc">
+		<description>DIAG30</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="146234">
+				<rom name="DIAG30.IMD" size="146234" crc="89e1c829" sha1="38261a2b358ccd97cb44e89e0d6c16eea2b3f250"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="altd73e713035da4">
+		<description>DIAG31S0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="67032">
+				<rom name="DIAG31S0.IMD" size="67032" crc="47a3369c" sha1="d73e713035da45f1c3404929ed0a1a2b037ab149"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alt348846af10e45">
+		<description>MPMII</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="555056">
+				<rom name="MPMII.IMD" size="555056" crc="3570859a" sha1="348846af10e450f11c176de4bdd07ad36961746b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alt6493c125b47d2">
+		<description>OASIS56</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="591543">
+				<rom name="OASIS56.IMD" size="591543" crc="f256e763" sha1="6493c125b47d212a99f62795b2ad177ff18f3d26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alt9fe0240a2ae9c">
+		<description>oasis56</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="556654">
+				<rom name="oasis56.td0" size="556654" crc="0bbf174d" sha1="9fe0240a2ae9c57624c2c987b71f7f132e06c895"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alt533684c948ccb">
+		<description>oasis_sys_5.6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="561613">
+				<rom name="oasis_sys_5.6.imd" size="561613" crc="803920c0" sha1="533684c948ccb13f9f1ef562f718f6e42c7420d9"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
