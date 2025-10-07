@@ -274,6 +274,7 @@
 
 #include "animalhs.lh"
 #include "bingowng.lh"
+#include "bonusch.lh"
 #include "cherryb3.lh"
 #include "chrygld.lh"
 #include "cmaster.lh"
@@ -848,6 +849,7 @@ private:
 
 	uint8_t m_vblank_irq_enable = 0U;
 	uint8_t m_vidreg = 0U;
+	uint8_t m_reelbank = 0U;
 
 	void coincount_w(uint8_t data);
 	void unkcm_0x02_w(uint8_t data);
@@ -871,6 +873,7 @@ private:
 
 	TILE_GET_INFO_MEMBER(get_bonusch_bg_tile_info);
 	template <uint8_t Which> TILE_GET_INFO_MEMBER(get_reel_tile_info);
+	template <uint8_t Which> TILE_GET_INFO_MEMBER(get_bch_reel_tile_info);
 };
 
 class cd3poker_state : public cmaster_state
@@ -970,10 +973,12 @@ TILE_GET_INFO_MEMBER(goldstar_state::get_goldstar_fg_tile_info)
 
 TILE_GET_INFO_MEMBER(unkch_state::get_bonusch_bg_tile_info)
 {
+//  extra tilemap to show credits and bet
+
 	int const code = m_bg_vidram[tile_index];
 	int const attr = m_bg_atrram[tile_index];
 
-	tileinfo.set(2,
+	tileinfo.set(3,
 			code + 0x100,
 			(attr & 0xf0) >> 4,
 			0);
@@ -1139,6 +1144,23 @@ TILE_GET_INFO_MEMBER(unkch_state::get_reel_tile_info)
 			0);
 }
 
+template <uint8_t Which>
+TILE_GET_INFO_MEMBER(unkch_state::get_bch_reel_tile_info)
+{
+	int const code = m_reel_ram[Which][tile_index];
+	int const attr = m_reel_attrram[Which][tile_index];
+
+	if ((code | (attr & 0x0f) << 8) < 0x100)
+		m_reelbank = 1;
+	else
+		m_reelbank = 2;
+
+	tileinfo.set(m_reelbank,
+			code | (attr & 0x0f) << 8,
+			(attr & 0xf0) >> 4,
+			0);
+}
+
 
 /****************************************************
                      Video Start
@@ -1235,7 +1257,7 @@ void unkch_state::video_start()
 	m_cmaster_girl_pal = 0;
 	m_vidreg = 0x00;
 
-	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_goldstar_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+	m_fg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_cherrym_fg_tile_info)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
 	m_fg_tilemap->set_transparent_pen(0);
 
 	m_enable_reg = 0x0b;
@@ -1246,9 +1268,9 @@ VIDEO_START_MEMBER(unkch_state, bonusch)
 	m_bg_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_bonusch_bg_tile_info)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
 	m_bg_tilemap->set_scroll_cols(32);
 
-	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
-	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_bch_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_bch_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(unkch_state::get_bch_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
 
 	m_reel_tilemap[0]->set_scroll_cols(64);
 	m_reel_tilemap[1]->set_scroll_cols(64);
@@ -1260,6 +1282,10 @@ VIDEO_START_MEMBER(unkch_state, bonusch)
 
 	// is there an enable reg for this game?
 	m_enable_reg = 0x1b;
+
+	// 1 for regular reels; 2 for d-up reel numbers.
+//	m_reelbank = 2;
+
 }
 
 VIDEO_START_MEMBER(cmaster_state, pkrmast)
@@ -2713,12 +2739,13 @@ void unkch_state::bonch_0x10_w(uint8_t data)  // prot. system
 
 void unkch_state::bonch_0x20_w(uint8_t data) // meters
 {
-	machine().bookkeeping().coin_counter_w(0, data & 0x01);  //  Coin a
+	machine().bookkeeping().coin_counter_w(0, data & 0x01);  //  Coin A
 	machine().bookkeeping().coin_counter_w(1, data & 0x02);  //  Key In
-	machine().bookkeeping().coin_counter_w(2, data & 0x04);  //  Coin b
-	machine().bookkeeping().coin_counter_w(3, data & 0x08);  //  Coin c
-	machine().bookkeeping().coin_counter_w(4, data & 0x10);  //  Coin d
+	machine().bookkeeping().coin_counter_w(2, data & 0x04);  //  Coin B
+	machine().bookkeeping().coin_counter_w(3, data & 0x08);  //  Coin C
+	machine().bookkeeping().coin_counter_w(4, data & 0x10);  //  Coin D
 	machine().bookkeeping().coin_counter_w(5, data & 0x40);  //  Key Out
+
 //	popmessage("bonch_0x20_w %02x", data);
 //	logerror("bonch_0x20_w %02x\n", data);
 }
@@ -2726,13 +2753,14 @@ void unkch_state::bonch_0x20_w(uint8_t data) // meters
 void unkch_state::bonch_0x30_w(uint8_t data)  // lamps
 {
 	m_lamps[0] = BIT(data, 0);  // Start
-	m_lamps[1] = BIT(data, 1);
+	m_lamps[1] = BIT(data, 1);  // Stop 2
 	m_lamps[2] = BIT(data, 2);  // High/Low
-	m_lamps[3] = BIT(data, 3);
+	m_lamps[3] = BIT(data, 3);  // Stop 3
 	m_lamps[4] = BIT(data, 4);  // Bet
-	m_lamps[5] = BIT(data, 5);
-	m_lamps[6] = BIT(data, 6);  // D.Up/Take
-	m_lamps[7] = BIT(data, 7);
+	m_lamps[5] = BIT(data, 5);  // Stop 1
+	m_lamps[6] = BIT(data, 6);  // D-Up/Take
+	m_lamps[7] = BIT(data, 7);  // Stop All
+
 //	popmessage("bonch_0x30_w %02x", data);
 //	logerror("bonch_0x30_w %02x\n", data);
 }
@@ -12996,9 +13024,10 @@ static GFXDECODE_START( gfx_megaline )
 GFXDECODE_END
 
 static GFXDECODE_START( gfx_bonusch )
-	GFXDECODE_ENTRY( "gfx1", 0, tiles8x8x4_layout,        0, 16 )  // for fg
-	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4_layout,     256,  8 )  // for reels
-	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4_layout, 256+128,  8 )  // for reels extended gfx 
+	GFXDECODE_ENTRY( "gfx1", 0, tiles8x8x4_layout,           0, 16 )  // for fg
+	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4_layout,        256,  8 )  // for reels
+	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4_layout, 256+128+16,  8 )  // for reels extended gfx (d-up reel numbers)
+	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4_layout,    256+128,  8 )  // for reels extended gfx (credit + bet tilemap)
 GFXDECODE_END
 
 static GFXDECODE_START( gfx_sangho )
@@ -28615,8 +28644,8 @@ GAMEL( 1986, skillch,    0,        megaline, megaline, wingco_state,   init_skch
 GAMEL( 1986, skillcha,   skillch,  megaline, skillcha, wingco_state,   init_skcha,     ROT0, "Wing Co., Ltd.",    "Skill Chance (W-7, set 2, 53-98 main)",                    0,          layout_skillch )
 
 // --- Wing W-8 hardware ---
-GAME(  1990, bonusch,    0,        bonusch,  bonusch,  unkch_state,    init_bonch,     ROT0, "Wing Co., Ltd.",    "Bonus Chance (W-8, set 1)",                                MACHINE_IMPERFECT_COLORS )  // M80C51F MCU, need proper colors in d-up2 reel numbers
-GAME(  1990, bonuscha,   bonusch,  bonusch,  bonusch,  unkch_state,    init_boncha,    ROT0, "Wing Co., Ltd.",    "Bonus Chance (W-8, set 2)",                                MACHINE_IMPERFECT_COLORS )  // M80C51F MCU, need proper colors in d-up2 reel numbers
+GAMEL( 1990, bonusch,    0,        bonusch,  bonusch,  unkch_state,    init_bonch,     ROT0, "Wing Co., Ltd.",    "Bonus Chance (W-8, set 1)",                                0,          layout_bonusch ) // M80C51F MCU
+GAMEL( 1990, bonuscha,   bonusch,  bonusch,  bonusch,  unkch_state,    init_boncha,    ROT0, "Wing Co., Ltd.",    "Bonus Chance (W-8, set 2)",                                0,          layout_bonusch )  // M80C51F MCU
 
 
 // --- Magical Odds hardware ---
