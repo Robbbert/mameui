@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3952 -->
+<!-- Number of items in this list = 3957 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1809,6 +1809,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(E)Lucky Luke (prototype).sfc" size="2097152" crc="6b7797c9" sha1="8d0f598378a96ef8dadd55fbb40310f5d1846688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8b61129cc7b09">
+		<description>(E)NBA Hang Time (E)(1996)(Midway)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="(E)NBA Hang Time (E)(1996)(Midway).sfc" size="3145728" crc="7bbfe8c0" sha1="8b61129cc7b093a1d9cc6e7aa291eade5660196d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17852,6 +17862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns8a32570fad3bf">
+		<description>Mega Man X (E)(1993)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Mega Man X (E)(1993)(Capcom).sfc" size="1572864" crc="41965122" sha1="8a32570fad3bfc92c0508c88022fb20412dd7bed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa3b30c4aa6da7">
 		<description>Mega Man X (U) (V1.0) [tr Pt beta IPS Point]</description>
 		<year>????</year>
@@ -19442,6 +19462,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snse22186ce64ae3">
+		<description>NBA Jam - Tournament Edition (E)(1994)(Acclaim Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="NBA Jam - Tournament Edition (E)(1994)(Acclaim Entertainment).sfc" size="3145728" crc="d48c8041" sha1="e22186ce64ae3c20152744157fdfc8b65a483e70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns04210f5b2b1ab">
+		<description>NBA Live 95 (E)(1994)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="NBA Live 95 (E)(1994)(Electronic Arts).sfc" size="1572864" crc="56fdbb8c" sha1="04210f5b2b1ab4cc1ec00eacd60252132d9d42e1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0420a84f44f58">
 		<description>NBA Live 96 (U)(1995)(Electronic Arts)</description>
 		<year>????</year>
@@ -19672,13 +19712,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns1fbcc5acbf072">
-		<description>NHL '97 (Europe) (Rev A)</description>
+	<software name="snsca45c193bc908">
+		<description>NHL '96 (E)(1995)(Electronic Arts)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="NHL '97 (Europe) (Rev A).smc" size="1572864" crc="1a53b7a8" sha1="1fbcc5acbf07206bf4c7ee67b8bd1caad0416501"/>
+				<rom name="NHL '96 (E)(1995)(Electronic Arts).sfc" size="1572864" crc="148b2734" sha1="ca45c193bc908740fffcd1d3fd39f2840342cd50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1fbcc5acbf072">
+		<description>NHL '97 (E, Rev 1)(1996)(Electronic Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="NHL '97 (E, Rev 1)(1996)(Electronic Arts).sfc" size="1572864" crc="1a53b7a8" sha1="1fbcc5acbf07206bf4c7ee67b8bd1caad0416501"/>
 			</dataarea>
 		</part>
 	</software>
