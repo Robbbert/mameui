@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 646 -->
+<!-- Number of items in this list = 647 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -682,6 +682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col0553f8a6a8424">
+		<description>Bull and Mighty's Critical Moment SGM (2024)(Opcode Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bull and Mighty's Critical Moment SGM (2024)(Opcode Games).rom" size="131072" crc="257a2565" sha1="0553f8a6a8424b65022d48585574195657ba2486"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col8df20c9c151b0">
 		<description>Bump 'n' Jump (USA, Euro)(1984)(Coleco)</description>
 		<year>????</year>
@@ -943,12 +953,12 @@
 		</part>
 	</software>
 	<software name="col2572dd33110ed">
-		<description>Challenger</description>
+		<description>Challenger (2019)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="29232">
-				<rom name="Challenger.rom" size="29232" crc="37265d37" sha1="2572dd33110edf0e74f4beeaecf0823082cd6260"/>
+				<rom name="Challenger (2019)(CollectorVision).rom" size="29232" crc="37265d37" sha1="2572dd33110edf0e74f4beeaecf0823082cd6260"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1773,12 +1783,12 @@
 		</part>
 	</software>
 	<software name="colfb3260cffd4bf">
-		<description>Elevator Action (2012)(CollectorVision)</description>
+		<description>Elevator Action (1985-2012)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Elevator Action (2012)(CollectorVision).bin" size="32768" crc="4bb8dc2a" sha1="fb3260cffd4bf1405cd90d112feb94bb4ff41b52"/>
+				<rom name="Elevator Action (1985-2012)(CollectorVision).rom" size="32768" crc="4bb8dc2a" sha1="fb3260cffd4bf1405cd90d112feb94bb4ff41b52"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5573,12 +5583,12 @@
 		</part>
 	</software>
 	<software name="colaec38f4d253da">
-		<description>Super Minefield</description>
+		<description>Super MineField (1983-2013)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="13794">
-				<rom name="Super Minefield.ROM" size="13794" crc="f26ea356" sha1="aec38f4d253da88764c8af6f38a50c7a3092bf87"/>
+				<rom name="Super MineField (1983-2013)(CollectorVision).rom" size="13794" crc="f26ea356" sha1="aec38f4d253da88764c8af6f38a50c7a3092bf87"/>
 			</dataarea>
 		</part>
 	</software>
