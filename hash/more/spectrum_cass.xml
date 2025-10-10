@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5028 -->
+<!-- Number of items in this list = 5035 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -12209,6 +12209,76 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="64212">
 				<rom name="Kewin_II.tzx" size="64212" crc="5e225498" sha1="9b70d2ef0873600e678d61b2a8d9bc50b9c902ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2b20eb3653921">
+		<description>Klax</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="127666">
+				<rom name="Klax.tap" size="127666" crc="72cacd1b" sha1="2b20eb3653921071d074bc508829f6f3f44c96ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseec45afcdc5bd">
+		<description>Kleuren Kubus (19xx)(Book)(Nl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1138">
+				<rom name="Kleuren Kubus (19xx)(Book)(Nl).tap" size="1138" crc="8f392103" sha1="eec45afcdc5bdc8105c9390b98d6332f2e431b55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs51033780fa914">
+		<description>Klimax (1989)(Rack It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49290">
+				<rom name="Klimax (1989)(Rack It).tap" size="49290" crc="5531ce0d" sha1="51033780fa914c16bc7013cc8ae62092e6bdeacc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc10ded8a491c">
+		<description>Klimax (1989)(Rack It)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35392">
+				<rom name="Klimax (1989)(Rack It)[t].tap" size="35392" crc="9973e439" sha1="cc10ded8a491c05f6626f9fa44a0dcba59bd4955"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76a0278a5ae5e">
+		<description>Klondike Solitaire (2021)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20200">
+				<rom name="Klondike Solitaire (2021)(Under4Mhz).tap" size="20200" crc="5f351c11" sha1="76a0278a5ae5e203518503e8a50c1dca33775e61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseaabad7be319b">
+		<description>Klondike Solitaire v1.04 128K (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27682">
+				<rom name="Klondike Solitaire v1.04 128K (2023)(Under4Mhz).tap" size="27682" crc="d446444e" sha1="eaabad7be319b7565f4b5cfc1b492d271dc847fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94238428928e0">
+		<description>Klondike Solitaire v1.04 48K (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27278">
+				<rom name="Klondike Solitaire v1.04 48K (2023)(Under4Mhz).tap" size="27278" crc="848b4208" sha1="94238428928e07117789e9e1399f2d1bea814b5f"/>
 			</dataarea>
 		</part>
 	</software>
