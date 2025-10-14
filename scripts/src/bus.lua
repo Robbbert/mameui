@@ -902,6 +902,31 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/bus/bk/parallel.h,BUSES["BK_PARALLEL"] = true
+---------------------------------------------------
+
+if (BUSES["BK_PARALLEL"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/bk/parallel.cpp",
+		MAME_DIR .. "src/devices/bus/bk/parallel.h",
+		MAME_DIR .. "src/devices/bus/bk/carts.cpp",
+		MAME_DIR .. "src/devices/bus/bk/carts.h",
+		MAME_DIR .. "src/devices/bus/bk/ay.cpp",
+		MAME_DIR .. "src/devices/bus/bk/ay.h",
+		MAME_DIR .. "src/devices/bus/bk/covox.cpp",
+		MAME_DIR .. "src/devices/bus/bk/covox.h",
+		MAME_DIR .. "src/devices/bus/bk/joystick.cpp",
+		MAME_DIR .. "src/devices/bus/bk/joystick.h",
+		MAME_DIR .. "src/devices/bus/bk/loopback.cpp",
+		MAME_DIR .. "src/devices/bus/bk/loopback.h",
+		MAME_DIR .. "src/devices/bus/bk/printer.cpp",
+		MAME_DIR .. "src/devices/bus/bk/printer.h",
+	}
+end
+
+
+---------------------------------------------------
+--
 --@src/devices/bus/bw2/exp.h,BUSES["BW2"] = true
 ---------------------------------------------------
 
@@ -4917,6 +4942,8 @@ end
 
 if (BUSES["QBUS"]~=null) then
 	files {
+		MAME_DIR .. "src/devices/bus/qbus/bk_irps.cpp",
+		MAME_DIR .. "src/devices/bus/qbus/bk_irps.h",
 		MAME_DIR .. "src/devices/bus/qbus/bk_kmd.cpp",
 		MAME_DIR .. "src/devices/bus/qbus/bk_kmd.h",
 		MAME_DIR .. "src/devices/bus/qbus/dsd4432.cpp",
@@ -4925,6 +4952,8 @@ if (BUSES["QBUS"]~=null) then
 		MAME_DIR .. "src/devices/bus/qbus/dvk_kgd.h",
 		MAME_DIR .. "src/devices/bus/qbus/dvk_kmd.cpp",
 		MAME_DIR .. "src/devices/bus/qbus/dvk_kmd.h",
+		MAME_DIR .. "src/devices/bus/qbus/dvk_ktlk.cpp",
+		MAME_DIR .. "src/devices/bus/qbus/dvk_ktlk.h",
 		MAME_DIR .. "src/devices/bus/qbus/dvk_mx.cpp",
 		MAME_DIR .. "src/devices/bus/qbus/dvk_mx.h",
 		MAME_DIR .. "src/devices/bus/qbus/pc11.cpp",
@@ -5895,6 +5924,8 @@ if (BUSES["PCI"]~=null) then
 		MAME_DIR .. "src/devices/bus/pci/opti82c861.h",
 		MAME_DIR .. "src/devices/bus/pci/pdc20262.cpp",
 		MAME_DIR .. "src/devices/bus/pci/pdc20262.h",
+		MAME_DIR .. "src/devices/bus/pci/permedia2.cpp",
+		MAME_DIR .. "src/devices/bus/pci/permedia2.h",
 		MAME_DIR .. "src/devices/bus/pci/promotion.cpp",
 		MAME_DIR .. "src/devices/bus/pci/promotion.h",
 		MAME_DIR .. "src/devices/bus/pci/riva128.cpp",
