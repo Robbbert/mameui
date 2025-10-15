@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 453 -->
+<!-- Number of items in this list = 455 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -9,6 +9,26 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="43905">
 				<rom name="100 - Stolnik (1995)(Power Of Sound).z80" size="43905" crc="8de30bdc" sha1="963e92cfefc020c9030cad917939006d553461e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27c6048728970">
+		<description>180 (1986)(Mastertronic Added Dimension)[128K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="54582">
+				<rom name="180 (1986)(Mastertronic Added Dimension)[128K].z80" size="54582" crc="c4937cba" sha1="27c60487289700219dae771e878ede75f5943627"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs571da5a526461">
+		<description>180 (1986)(Mastertronic Added Dimension)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36246">
+				<rom name="180 (1986)(Mastertronic Added Dimension)[48K].z80" size="36246" crc="8cba8fcd" sha1="571da5a526461b6fbc76751fcfcdaaaa601ea255"/>
 			</dataarea>
 		</part>
 	</software>
