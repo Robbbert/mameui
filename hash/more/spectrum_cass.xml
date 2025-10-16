@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5163 -->
+<!-- Number of items in this list = 5212 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -4202,6 +4202,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsed286351aa1e7">
+		<description>Alien Attack EN 48K (2025)(Mansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45980">
+				<rom name="Alien Attack EN 48K (2025)(Mansoft).tap" size="45980" crc="1b1c1f6c" sha1="ed286351aa1e78690e3b337c5d319520c3ffcf27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse01e5732983b4">
+		<description>Alien Attack ES 48K (2025)(Mansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46033">
+				<rom name="Alien Attack ES 48K (2025)(Mansoft).tap" size="46033" crc="f863debe" sha1="e01e5732983b474363198f8cb5ce0ef6032914a0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa1d0b17da7462">
 		<description>Alien City, The (1984)(Pirate Software)</description>
 		<year>????</year>
@@ -4902,13 +4922,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs8acb77223b96c">
-		<description>Ancient Fighters T-Eng 48K (2021)(Pavero)</description>
+	<software name="zxseeb777ce4d37d">
+		<description>Ancient Fighters SK 48K-128K (1994)(Extra Vision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="90253">
-				<rom name="Ancient Fighters T-Eng 48K (2021)(Pavero).tap" size="90253" crc="ae641ead" sha1="8acb77223b96c5efab24b297a781a69a51e64db9"/>
+				<rom name="Ancient Fighters SK 48K-128K (1994)(Extra Vision).tap" size="90253" crc="1977a769" sha1="eeb777ce4d37dadea63627af9060773079490747"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8acb77223b96c">
+		<description>Ancient Fighters T-Eng 48K-128K (2021)(Pavero Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="90253">
+				<rom name="Ancient Fighters T-Eng 48K-128K (2021)(Pavero Software).tap" size="90253" crc="ae641ead" sha1="8acb77223b96c5efab24b297a781a69a51e64db9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4983,12 +5013,12 @@
 		</part>
 	</software>
 	<software name="zxs7573117c24a6b">
-		<description>Andy Capp (1988)(Mirrorsoft)</description>
+		<description>Andy Capp 48K-128K (1988)(Mirrorsoft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="54909">
-				<rom name="Andy Capp (1988)(Mirrorsoft).tap" size="54909" crc="7c81909f" sha1="7573117c24a6bdf5bba4ce1e11bd07ab7a912a62"/>
+				<rom name="Andy Capp 48K-128K (1988)(Mirrorsoft).tap" size="54909" crc="7c81909f" sha1="7573117c24a6bdf5bba4ce1e11bd07ab7a912a62"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12122,6 +12152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsda73e1688147b">
+		<description>Indiana Jones</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28955">
+				<rom name="Indiana Jones.tap" size="28955" crc="676f5c4c" sha1="da73e1688147b5b3a0044c36a6e71c6a0958f4a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc490f0768f9ec">
 		<description>Ines + Denis + Ute + Sorti (1985)(Primoz Jakopin)</description>
 		<year>????</year>
@@ -12209,6 +12249,416 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44431">
 				<rom name="Jeff &amp; The Blue Notes 128K (2023)(Deanysoft).tzx" size="44431" crc="326e9e36" sha1="7c1c6e873a3e7612d22921e08c38cfd3418b97dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4d4936533866f">
+		<description>Jock And The Time Rings (1985)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47920">
+				<rom name="Jock And The Time Rings (1985)(Atlantis Software).tap" size="47920" crc="cf8da3c5" sha1="4d4936533866fd04d54a498d38825b9b519b8a65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs454df5e4f36f1">
+		<description>Jocky Wilson's Compendium Of Darts (1991)(Zepplin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43316">
+				<rom name="Jocky Wilson's Compendium Of Darts (1991)(Zepplin Games).tap" size="43316" crc="3b4c6176" sha1="454df5e4f36f1f17afca04b0cb22fcff8e596b32"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs12de1c3209225">
+		<description>Jocky Wilson's Darts Challenge (1989)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33937">
+				<rom name="Jocky Wilson's Darts Challenge (1989)(Zeppelin Games).tap" size="33937" crc="0e3e62a6" sha1="12de1c3209225467c678a5b3dab78814950b3a53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7fb809a9d163b">
+		<description>Joe Blade (1987)(Players)(48K-128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50660">
+				<rom name="Joe Blade (1987)(Players)(48K-128K).tap" size="50660" crc="27e8fa83" sha1="7fb809a9d163b0191703e189ae2749876a7cf082"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs69f3ab9a90208">
+		<description>Joe Blade 2 (demo) (1987)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35038">
+				<rom name="Joe Blade 2 (demo) (1987)(Players Premier).tap" size="35038" crc="cfd366d4" sha1="69f3ab9a9020869f96b72b7bc3f750d0ffa8fb7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1997baa2f0c09">
+		<description>Joe Blade 2 128K (1988)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47891">
+				<rom name="Joe Blade 2 128K (1988)(Players Premier).z80" size="47891" crc="20a19599" sha1="1997baa2f0c09b96b49f96f90bb258a3bc568743"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs171f479fae7e1">
+		<description>Joe Blade 2 48K (1988)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39752">
+				<rom name="Joe Blade 2 48K (1988)(Players Premier).z80" size="39752" crc="ff057d8e" sha1="171f479fae7e1af210887886d62925deadfbd229"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6680a67b02db5">
+		<description>Joe Blade 3 (1989)(Players Premier)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48752">
+				<rom name="Joe Blade 3 (1989)(Players Premier)(128k).tap" size="48752" crc="f1ae68cd" sha1="6680a67b02db521c9599c7fd9e1729ba4949bd0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0776374d42861">
+		<description>Joe Blade 3 48K-128K (1989)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58973">
+				<rom name="Joe Blade 3 48K-128K (1989)(Players Premier).tap" size="58973" crc="9487aaa4" sha1="0776374d42861b8e726e2f56246f45f6477fbcc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee347adc20952">
+		<description>Joe Blade 4 (1991)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45056">
+				<rom name="Joe Blade 4 (1991)(Players Premier).tap" size="45056" crc="e683cddc" sha1="ee347adc20952de3ae380d92dae8d87a776ac052"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb0cee2e48c92d">
+		<description>Joe Blade 4 (1991)(Players Premier)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44934">
+				<rom name="Joe Blade 4 (1991)(Players Premier)[a].tap" size="44934" crc="9bdeb522" sha1="b0cee2e48c92d2e40743b049ddb04823c4e70e9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7de41c03e8515">
+		<description>Joe Blade</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50470">
+				<rom name="Joe Blade.tap" size="50470" crc="aa3f076b" sha1="7de41c03e851500ccc952a53a79cdf3b32f2a068"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs557d04f5ccce5">
+		<description>Joe Blob v2 (2019)(Stonechat Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46630">
+				<rom name="Joe Blob v2 (2019)(Stonechat Productions).tap" size="46630" crc="05f21de8" sha1="557d04f5ccce5b4e1720edf39102a2a9188b8ffa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs926bcbb966a45">
+		<description>Jogger (1984)(Severn Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8247">
+				<rom name="Jogger (1984)(Severn Software).tap" size="8247" crc="e968e308" sha1="926bcbb966a45d18955a535fe95ab966a3f0e24a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9d13adb39670a">
+		<description>Jogos 80 em - Cade os Artigos v1.5.3 - Side A EN 48K-128K (2025)(Teknamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39936">
+				<rom name="Jogos 80 em - Cade os Artigos v1.5.3 - Side A EN 48K-128K (2025)(Teknamic Software).tap" size="39936" crc="12caf5eb" sha1="9d13adb39670abda8bb8bdf75e1cc9e6b5132847"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5b00238df6c85">
+		<description>Jogos 80 em - Cade os Artigos v1.5.3 - Side A ES 48K-128K (2025)(Teknamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39942">
+				<rom name="Jogos 80 em - Cade os Artigos v1.5.3 - Side A ES 48K-128K (2025)(Teknamic Software).tap" size="39942" crc="43ad5678" sha1="5b00238df6c852c5a51d388419c399c7de6c3b02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs85aadd628d764">
+		<description>Jogos 80 em - Cade os Artigos v1.5.3 - Side A PT 48K-128K (2025)(Teknamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39963">
+				<rom name="Jogos 80 em - Cade os Artigos v1.5.3 - Side A PT 48K-128K (2025)(Teknamic Software).tap" size="39963" crc="8597b280" sha1="85aadd628d7644448ae43228ad59a4044b88f688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse64d851f37d92">
+		<description>Jogos 80 em - Cade os Artigos v1.5.3 - Side B EN 48K-128K (2025)(Teknamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43792">
+				<rom name="Jogos 80 em - Cade os Artigos v1.5.3 - Side B EN 48K-128K (2025)(Teknamic Software).tap" size="43792" crc="665757bd" sha1="e64d851f37d9264fba63c46c69872d668accf22f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8d222bfa4812">
+		<description>Jogos 80 em - Cade os Artigos v1.5.3 - Side B ES 48K-128K (2025)(Teknamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43797">
+				<rom name="Jogos 80 em - Cade os Artigos v1.5.3 - Side B ES 48K-128K (2025)(Teknamic Software).tap" size="43797" crc="f62961a5" sha1="b8d222bfa48122273b5ccb181ac0328f52f2e967"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfcaad68a450cb">
+		<description>Jogos 80 em - Cade os Artigos v1.5.3 - Side B PT 48K-128K (2025)(Teknamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43827">
+				<rom name="Jogos 80 em - Cade os Artigos v1.5.3 - Side B PT 48K-128K (2025)(Teknamic Software).tap" size="43827" crc="ca94b94b" sha1="fcaad68a450cb3cc6009588aeb300f469d51e590"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1761097b43c94">
+		<description>John Caig Sailboat Racing  (1984)(JCS ZX Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49317">
+				<rom name="John Caig Sailboat Racing  (1984)(JCS ZX Software).tap" size="49317" crc="2e242e29" sha1="1761097b43c94d41ab6ab92cc7d77e66ac5452e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs734652922a2f1">
+		<description>Johnnie Verso (1991)(Wazertown Works)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="101509">
+				<rom name="Johnnie Verso (1991)(Wazertown Works)(Sp).tap" size="101509" crc="c48b2f7b" sha1="734652922a2f1f7740ac7d1197453f024c67936f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6dea79a419706">
+		<description>Johnny Danger EN 48K (2024)(TxarlyBoy Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44025">
+				<rom name="Johnny Danger EN 48K (2024)(TxarlyBoy Games).tap" size="44025" crc="e0d33bb6" sha1="6dea79a41970647311ce1e3d010a4ca67e03c268"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsad1a442d20e39">
+		<description>Johnny Danger y el Talisman de Fuego 48K (2024)(TXARLY BOY Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44227">
+				<rom name="Johnny Danger y el Talisman de Fuego 48K (2024)(TXARLY BOY Games).tap" size="44227" crc="82789ee6" sha1="ad1a442d20e39992507d3b9292515cdb9b7aeb18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7ec30cba3eaa7">
+		<description>Johnny Reb (1983)(M.C. Lothlorien)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27043">
+				<rom name="Johnny Reb (1983)(M.C. Lothlorien).tap" size="27043" crc="aa038d91" sha1="7ec30cba3eaa79332f99765b5d840a4c16bbbdda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfa34aa1c525f5">
+		<description>Johnny Reb 2 (1986)(MC Lothlorien Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37477">
+				<rom name="Johnny Reb 2 (1986)(MC Lothlorien Ltd).tap" size="37477" crc="4c1a762b" sha1="fa34aa1c525f5236ff1a661037f1db9089ef3dbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsafe5a20d38dcf">
+		<description>Johnny the Ghost 128K (2023)(Harald &amp; Marcus Gitzel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39448">
+				<rom name="Johnny the Ghost 128K (2023)(Harald &amp; Marcus Gitzel).tap" size="39448" crc="22359f59" sha1="afe5a20d38dcf25d80d951710ceed3bf38a8e8a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f5380c1abd68">
+		<description>Joker (1982)(Flowchart)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21833">
+				<rom name="Joker (1982)(Flowchart).tap" size="21833" crc="5603e37e" sha1="0f5380c1abd68706257b53d8a2099147f7daeeec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd482e00e524f9">
+		<description>Jolly Roger (1984)(Video Vault)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45934">
+				<rom name="Jolly Roger (1984)(Video Vault).tap" size="45934" crc="da073627" sha1="d482e00e524f9d54d9aad44c70994dfd93de8ef9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs62059b2123685">
+		<description>Jon The Jani (1985)(Your Computer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9005">
+				<rom name="Jon The Jani (1985)(Your Computer).tap" size="9005" crc="132946c6" sha1="62059b2123685da18e2e0cff836b998ab764628b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f27f1e452836">
+		<description>Jonah Barrington's Squash (1985)(New Generation Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55854">
+				<rom name="Jonah Barrington's Squash (1985)(New Generation Software).tap" size="55854" crc="510e4084" sha1="8f27f1e452836908427ec0b7c2d90dc89133c801"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs378bda82624e5">
+		<description>Jonah Barrington's Squash (1985)(New Generation Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46281">
+				<rom name="Jonah Barrington's Squash (1985)(New Generation Software)[a].tap" size="46281" crc="5c2a43ed" sha1="378bda82624e59c4db90350df9e086bb0d24e77e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2f756cc8987c0">
+		<description>Jonathan - Trick or Treat 48K (2022)(ZXAMAZE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37147">
+				<rom name="Jonathan - Trick or Treat 48K (2022)(ZXAMAZE).tap" size="37147" crc="4b1299bf" sha1="2f756cc8987c00acf05b40d8ca6e96a260cc8254"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs00c85dd6b5e3a">
+		<description>Jonny Quest In Doctor Zin's Underworld (1991)(Hi-Tec Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54349">
+				<rom name="Jonny Quest In Doctor Zin's Underworld (1991)(Hi-Tec Software).tap" size="54349" crc="d23f2c38" sha1="00c85dd6b5e3a890747bacf0d5c5f96be7941d87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs636545914fc4c">
+		<description>Journey's End (1985)(Games Workshop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="150253">
+				<rom name="Journey's End (1985)(Games Workshop).tap" size="150253" crc="d078c7a2" sha1="636545914fc4c0040c276088ce3425cb877106a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde3155e16a54e">
+		<description>Joust (1983)(Softek Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15841">
+				<rom name="Joust (1983)(Softek Software).tap" size="15841" crc="c5d78dcd" sha1="de3155e16a54e9f20bd343f85574f64d0c920b3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb31f0b21f4c1">
+		<description>Joy Graph (1985)(Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23347">
+				<rom name="Joy Graph (1985)(Ltd).tap" size="23347" crc="c5e12844" sha1="fb31f0b21f4c1e40e43c24fa98881228b2189c8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7a8d665d57b8">
+		<description>Joystick Conversion Tape 3 (1983)(Kempsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3977">
+				<rom name="Joystick Conversion Tape 3 (1983)(Kempsoft).tap" size="3977" crc="6f68b48c" sha1="a7a8d665d57b8c1ad7a29425822e2d27c94b33d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs228cb244516be">
+		<description>Joystick Issue 1 (1987)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84762">
+				<rom name="Joystick Issue 1 (1987)(-).tap" size="84762" crc="5d6fc8da" sha1="228cb244516bea669fe3c274cba154aa7f25446f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs491265804f9ef">
+		<description>Joystick Issue 2 (1987)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="98582">
+				<rom name="Joystick Issue 2 (1987)(-).tap" size="98582" crc="75506457" sha1="491265804f9ef23d65e6bd0953f42dcb99dc7095"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99a3af4417432">
+		<description>Joystick Issue 4 (1987)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="152178">
+				<rom name="Joystick Issue 4 (1987)(-).tap" size="152178" crc="e78afa83" sha1="99a3af441743279df4a4164bf9359f3b3ac651a0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16232,6 +16682,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2be34fbea884e">
+		<description>Magic Adventures EN 48K (2025)(Mansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46075">
+				<rom name="Magic Adventures EN 48K (2025)(Mansoft).tap" size="46075" crc="7e2fa2d5" sha1="2be34fbea884e88ce46fe4103ac03a8083b45fd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4204cf4555d26">
+		<description>Magic Adventures ES 48K (2025)(Mansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46115">
+				<rom name="Magic Adventures ES 48K (2025)(Mansoft).tap" size="46115" crc="6458d27c" sha1="4204cf4555d26c36ffff5d5bb3c7c11a30da3fea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs454cc76fd3daf">
 		<description>Magic Carpet (1985)(Mastertronic)</description>
 		<year>????</year>
@@ -17169,6 +17639,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1717">
 				<rom name="Master Mind (1983)(Werner Spahl)(De).tap" size="1717" crc="c8b795df" sha1="dd4ad975c323a9679c7dd2e90e64d80ed4c98934"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0801028a8bfb2">
+		<description>Master of Magic 48K (1986)(Mastertronic Added Dimension)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46451">
+				<rom name="Master of Magic 48K (1986)(Mastertronic Added Dimension).tzx" size="46451" crc="d8481420" sha1="0801028a8bfb289059201fdeb78afb19186421f1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -45819,6 +46299,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15694">
 				<rom name="_Jetpac.tzx" size="15694" crc="db33de35" sha1="4ec1bac1c1af18ded30d7db864928bc337f69bed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa8cd150f1caae">
+		<description>_Jokers Wild (1984)(Phoenix Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14265">
+				<rom name="_Jokers Wild (1984)(Phoenix Software).tap" size="14265" crc="9b8eb2d9" sha1="a8cd150f1caae8d2742768c40b852d05c8c0d33a"/>
 			</dataarea>
 		</part>
 	</software>

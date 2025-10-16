@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="apple2_cass" description="apple2_cass loose roms">
+	<software name="app5fac810ec106c">
+		<description>Jed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="apple2_cass">
+			<dataarea name="cass" size="12081164">
+				<rom name="Jed.wav" size="12081164" crc="948e5255" sha1="5fac810ec106c9ea98f0816ca413b7075ed1428b"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
