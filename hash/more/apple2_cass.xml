@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 2 -->
 <softwarelist name="apple2_cass" description="apple2_cass loose roms">
 	<software name="app5fac810ec106c">
 		<description>Jed</description>
@@ -9,6 +9,16 @@
 		<part name="cass" interface="apple2_cass">
 			<dataarea name="cass" size="12081164">
 				<rom name="Jed.wav" size="12081164" crc="948e5255" sha1="5fac810ec106c9ea98f0816ca413b7075ed1428b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0172bebdc58c4">
+		<description>Kinjirareta Asobi (1984-10)(RINGO)(JP)(en)[AKA Forbidden Games][Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="apple2_cass">
+			<dataarea name="cass" size="4049894">
+				<rom name="Kinjirareta Asobi (1984-10)(RINGO)(JP)(en)[AKA Forbidden Games][Micom BASIC].wav" size="4049894" crc="a162f56a" sha1="0172bebdc58c42d260b09080bd718bf96178246d"/>
 			</dataarea>
 		</part>
 	</software>

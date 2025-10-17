@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 676 -->
+<!-- Number of items in this list = 685 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -762,6 +762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx7d34a785b073c">
+		<description>Bobby is still going home v1.2 (2025)(Amaury Carvalho)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Bobby is still going home v1.2 (2025)(Amaury Carvalho).rom" size="131072" crc="24d79db9" sha1="7d34a785b073ce1e0e3c0110cc4b30abfe0a81f3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx19013289388b3">
 		<description>Boing-b</description>
 		<year>????</year>
@@ -919,6 +929,26 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Boynight. Haunted House. Yokew (1986)(Casio)[b].rom" size="32768" crc="8863415a" sha1="7c87b7ded0c7813217e5b305036e57849d0b93e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa091970376ffd">
+		<description>Brain Teaser (2025)(Y. R. Sova)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Brain Teaser (2025)(Y. R. Sova).rom" size="32768" crc="ef885a32" sha1="a091970376ffd35498a407f806f4f49e8b7eb069"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx536a6986df573">
+		<description>Break Out! - The Great Computer Adventure (Japan)(1985)(Toshiba-EMI)[needs 64k in slot 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Break Out! - The Great Computer Adventure (Japan)(1985)(Toshiba-EMI)[needs 64k in slot 2].rom" size="131072" crc="784d5f7f" sha1="536a6986df57398cb282fd86aa244ed5b932dd87"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1199,6 +1229,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Chess Master.rom" size="32768" crc="ab0ba6a6" sha1="4075ef9f51b4e010bd2481a648e05b2c29b3329d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1d2ed0dbd3ac0">
+		<description>Chick Fighter - Hiyoko Fighter (Japan)(1983)(Honeybee Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Chick Fighter - Hiyoko Fighter (Japan)(1983)(Honeybee Soft).rom" size="65536" crc="d8e1aadb" sha1="1d2ed0dbd3ac08d3e0916a23ba4a6e3012ed83ee"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1859,6 +1899,26 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Exerion 1 (1984)(Jaleco)[tr Br Uriano].rom" size="16384" crc="6227b8fb" sha1="5be82c297566b3e08fa1fe2534be06ca2f95d565"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxeb1646a5ad21d">
+		<description>EXO-TICAL EN (2025)(Roolandoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="EXO-TICAL EN (2025)(Roolandoo).rom" size="49152" crc="754cb687" sha1="eb1646a5ad21d77af4cf8ebb639a4eda16e7238c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx95fbe04b84b3e">
+		<description>EXO-TICAL ES (2025)(Roolandoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="EXO-TICAL ES (2025)(Roolandoo).rom" size="49152" crc="498b8f87" sha1="95fbe04b84b3e3cdf270ca7f9fe4082a16fe0fc9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4172,6 +4232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx775436040c97f">
+		<description>Operation Hibernation v1.1 (2025)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Operation Hibernation v1.1 (2025)(Jess Creations).rom" size="32768" crc="8b1610e6" sha1="775436040c97f4f605a0971e7bdd826ff75f932d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx29e5679bbcb42">
 		<description>Osotos</description>
 		<year>????</year>
@@ -5059,6 +5129,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Solar Fox II (2025)(Jess Creations).rom" size="32768" crc="d4ae976d" sha1="5d2ef92b93a09913d831f9599d78bf1eb8463660"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx98c1cb2506910">
+		<description>Solar Fox II - Space Evaders (2025)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Solar Fox II - Space Evaders (2025)(Jess Creations).rom" size="32768" crc="7ed32582" sha1="98c1cb25069103f101ef090f4325c81aa270750e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6289,6 +6369,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Zorrico IT (2020)(Physical Dreams).rom" size="49152" crc="9671f6d8" sha1="97b0c65a7bc3ca3ff66b7e21cac99cc7bd1ecd9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4a814ec9de7f0">
+		<description>Zxetris (2025)(Fausto Pracek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Zxetris (2025)(Fausto Pracek).rom" size="16384" crc="538a9a85" sha1="4a814ec9de7f098be7e66a5ee63320a3af6765aa"/>
 			</dataarea>
 		</part>
 	</software>

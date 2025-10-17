@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5212 -->
+<!-- Number of items in this list = 5246 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -49,6 +49,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1361">
 				<rom name="(demo)Fire4ever.tzx" size="1361" crc="2f412606" sha1="cbe2b12b071de18dda85deb7b76dec57b41b5272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8b14cc778e26c">
+		<description>(demo)Jerusale (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16919">
+				<rom name="(demo)Jerusale (19xx)(-).tap" size="16919" crc="daa29ef7" sha1="8b14cc778e26ccdc2079f4bbbb8b6adab45c6488"/>
 			</dataarea>
 		</part>
 	</software>
@@ -279,6 +289,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="28128">
 				<rom name="-Boby (19xx)(Pilot Soft - Matysoft)(Cz).tap" size="28128" crc="61091407" sha1="bec9d5927ac755d1abd8a9c4573bd1cd4f0206ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7a55a400b9ab1">
+		<description>-Jet Set Willy (1984)(Software Projects Ltd)[cr [Cr][t][Cr](protected)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22983">
+				<rom name="-Jet Set Willy (1984)(Software Projects Ltd)[cr [Cr][t][Cr](protected).tap" size="22983" crc="20cef1a8" sha1="7a55a400b9ab133366b64a1d7d2218b2f3f95bd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4c1fc890682bd">
+		<description>-Jet Set Willy 2 - The Final Frontier (1985)(Software Projects Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40419">
+				<rom name="-Jet Set Willy 2 - The Final Frontier (1985)(Software Projects Ltd)[cr [Cr][Cr].tap" size="40419" crc="c620bbad" sha1="4c1fc890682bd37a5af062e46ec8fb0a61bdfd5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7a08dc0d5eeb7">
+		<description>-Jet Set Willy 3 (1985)(MB - APG Software)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24698">
+				<rom name="-Jet Set Willy 3 (1985)(MB - APG Software)[cr [Cr][Cr].tap" size="24698" crc="190e406d" sha1="7a08dc0d5eeb7a3a647e79b6b50e4176a7c0c9c0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7712,6 +7752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbd10c100da388">
+		<description>Battle Field 48K (1988)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21551">
+				<rom name="Battle Field 48K (1988)(Atlantis Software).tzx" size="21551" crc="86b8b95a" sha1="bd10c100da3889d454d636dd8e67e4b142f52fe0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc00ee348f88ba">
 		<description>Battle Grid 48K (2022)(El Dr. Gusman)</description>
 		<year>????</year>
@@ -9752,6 +9802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8e358f322ca20">
+		<description>Blood Valley M3 48K-128K (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="102729">
+				<rom name="Blood Valley M3 48K-128K (1987)(Gremlin Graphics).tap" size="102729" crc="03e60931" sha1="8e358f322ca2019d4ea1dec469e250cfcb071df1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscd4a59b531536">
 		<description>Bloodwych (1990)(Image Works)</description>
 		<year>????</year>
@@ -10799,6 +10859,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8870">
 				<rom name="Breakout (1982)(C-Tech).tap" size="8870" crc="4b9e6a31" sha1="cfe37b5d7d129ff3fa92df8bc19106e9602eba2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73562fe9af3ad">
+		<description>Brewery (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37199">
+				<rom name="Brewery (1983)(CCS).tap" size="37199" crc="8b9f0874" sha1="73562fe9af3ad14227bd1e166534dd9146db7e0e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12242,6 +12312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc4bce77d6799e">
+		<description>Jeff &amp; The Blue Notes 128K (2023)(Deanysoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44152">
+				<rom name="Jeff &amp; The Blue Notes 128K (2023)(Deanysoft).tap" size="44152" crc="2484175f" sha1="c4bce77d6799e9f6f4db7b8e7ca4f447f2a30e78"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7c1c6e873a3e7">
 		<description>Jeff &amp; The Blue Notes 128K (2023)(Deanysoft)</description>
 		<year>????</year>
@@ -12249,6 +12329,276 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44431">
 				<rom name="Jeff &amp; The Blue Notes 128K (2023)(Deanysoft).tzx" size="44431" crc="326e9e36" sha1="7c1c6e873a3e7612d22921e08c38cfd3418b97dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs23ddffa8656b3">
+		<description>Jerico Road (1984)(Shards Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41638">
+				<rom name="Jerico Road (1984)(Shards Software).tap" size="41638" crc="9f066444" sha1="23ddffa8656b341f2dd9b0b2d4ca5cf1887442bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs02fa67e8d2751">
+		<description>Jerrybuilder (1984)(Ron Ridge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35769">
+				<rom name="Jerrybuilder (1984)(Ron Ridge).tap" size="35769" crc="8983c0c1" sha1="02fa67e8d27519ae72d334498ef2398ffc53dd8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ac901c0be89f">
+		<description>Jester Quest 128K (1988)(Zenobi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="126145">
+				<rom name="Jester Quest 128K (1988)(Zenobi).tap" size="126145" crc="67e918d2" sha1="9ac901c0be89f4bda414efcade05e5e9dc58df99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs072253487ce23">
+		<description>Jet Pack Bob 48K (2017)(Douglas Bagnall)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28945">
+				<rom name="Jet Pack Bob 48K (2017)(Douglas Bagnall).tap" size="28945" crc="b2444927" sha1="072253487ce2393f3e8a1597b04a781767063d26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs096a24f105deb">
+		<description>Jet Paco (2013)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39655">
+				<rom name="Jet Paco (2013)(The Mojon Twins).tap" size="39655" crc="566a9c20" sha1="096a24f105deba6bf74bd0e5d349a0771e5cea6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse6795c7312665">
+		<description>Jet Set Luis - rumbo a la Costa Blanca ES 48K (2015)(Softwarecete)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39975">
+				<rom name="Jet Set Luis - rumbo a la Costa Blanca ES 48K (2015)(Softwarecete).tap" size="39975" crc="0da926da" sha1="e6795c73126650520760bc9e8f8d931d554025fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd97b71f0c9e7a">
+		<description>Jet Set Steamboat Willie 128K (2024)(Sloanysoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47655">
+				<rom name="Jet Set Steamboat Willie 128K (2024)(Sloanysoft).tap" size="47655" crc="0e27d045" sha1="d97b71f0c9e7a63048129e1a1cd80fa3d2d171ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f262ef399d21">
+		<description>Jet Set Willy (1984)(Software Projects)(protected)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33154">
+				<rom name="Jet Set Willy (1984)(Software Projects)(protected).tap" size="33154" crc="c56a2307" sha1="8f262ef399d2135c5440a1a9ea1286971f8b86a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsadcb884a9144d">
+		<description>Jet Set Willy - In Space (1997)(Halsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41885">
+				<rom name="Jet Set Willy - In Space (1997)(Halsoft).tap" size="41885" crc="250e78cd" sha1="adcb884a9144d93a869738a2f6cbdf4cf052a49e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs803fe791f4361">
+		<description>Jet Set Willy - Ivy (1998)(Filsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41175">
+				<rom name="Jet Set Willy - Ivy (1998)(Filsoft).tap" size="41175" crc="9065b651" sha1="803fe791f43612f73ede2a227f3370eb1e9f5380"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs832cc73948a0f">
+		<description>Jet Set Willy - Join The Jet Set (1985)(Halsoft)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42739">
+				<rom name="Jet Set Willy - Join The Jet Set (1985)(Halsoft)[t].tap" size="42739" crc="e97ff85c" sha1="832cc73948a0f75adff5f445d277ae86a4a2a057"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd501bcf633fb9">
+		<description>Jet Set Willy - Role Reversal 48K (2023)(Arcane Design)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37243">
+				<rom name="Jet Set Willy - Role Reversal 48K (2023)(Arcane Design).tap" size="37243" crc="a15673a3" sha1="d501bcf633fb9d580ba03d6336d3e6c141a21983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a12d65f3f1b2">
+		<description>Jet Set Willy - The Continuing Adventures SE (1998)(Adam Britton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39863">
+				<rom name="Jet Set Willy - The Continuing Adventures SE (1998)(Adam Britton).tap" size="39863" crc="f8a4d30b" sha1="8a12d65f3f1b2033000ccd7d1df9d94141b007de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8339dc31313c1">
+		<description>Jet Set Willy 128 (1996)(John Elliot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58020">
+				<rom name="Jet Set Willy 128 (1996)(John Elliot).tap" size="58020" crc="947b3730" sha1="8339dc31313c18a10d3827d2642e33c73dda426f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01d1e13ae596b">
+		<description>Jet Set Willy 128K (1996)(John Elliott)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118898">
+				<rom name="Jet Set Willy 128K (1996)(John Elliott).tap" size="118898" crc="1ec78ad5" sha1="01d1e13ae596b514c59b13f374ce1d21c4aa850b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse08a1fe7589fe">
+		<description>Jet Set Willy 48K (1984)(Software Projects)(protected)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33280">
+				<rom name="Jet Set Willy 48K (1984)(Software Projects)(protected).tap" size="33280" crc="17ec8978" sha1="e08a1fe7589fe1a1c16f4c1b61d190835cdad9fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c7b4ae47da52">
+		<description>Jet Set Willy Editor (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41650">
+				<rom name="Jet Set Willy Editor (19xx)(-)(De).tap" size="41650" crc="dda6d4c7" sha1="5c7b4ae47da52231e16471ae60476315382119cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs144425544d956">
+		<description>Jet Set Willy II - The Final Frontier 48K (1985)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49881">
+				<rom name="Jet Set Willy II - The Final Frontier 48K (1985)(Software Projects).tap" size="49881" crc="85a4ac92" sha1="144425544d95637122788771713f0e89395df4cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs09f1d3c7d37b3">
+		<description>Jet-Story (1988)(Cybexlab Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50078">
+				<rom name="Jet-Story (1988)(Cybexlab Software).tap" size="50078" crc="1ea04566" sha1="09f1d3c7d37b3f19f050e1753c0734879bbe3a72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6efc71d7bb11">
+		<description>JetPac Miner v1.2b 48K-AY (2025)(Briefer666)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47199">
+				<rom name="JetPac Miner v1.2b 48K-AY (2025)(Briefer666).tap" size="47199" crc="8ca17901" sha1="d6efc71d7bb113d02e887d1d9031f41242df4f9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55b5bdf2d7095">
+		<description>Jetpack Jock 48K-128K (2020)(Gaz Marshall)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24820">
+				<rom name="Jetpack Jock 48K-128K (2020)(Gaz Marshall).tap" size="24820" crc="028217db" sha1="55b5bdf2d7095c8fba9ca9e18672e8689d99ccfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1fca30072031">
+		<description>JetpacRX (highriser)(2020)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22814">
+				<rom name="JetpacRX (highriser)(2020).tap" size="22814" crc="2f0a86ff" sha1="f1fca3007203128872a72625e549080e7c4b1cf0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35441d22804ff">
+		<description>JetSBOT 128K (2023)(Xavisan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49853">
+				<rom name="JetSBOT 128K (2023)(Xavisan).tap" size="49853" crc="c217d7a3" sha1="35441d22804fff642e6deb582c79a954869b57a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7821b20a443cf">
+		<description>JetSetWillyX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41122">
+				<rom name="JetSetWillyX.tap" size="41122" crc="6892e3a2" sha1="7821b20a443cf68bc3021a71a9b394fa93ef9316"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs62537a6d8104d">
+		<description>Jetsons - The Computer Game 48K-128K (1992)(Hi-Tec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="117628">
+				<rom name="Jetsons - The Computer Game 48K-128K (1992)(Hi-Tec).tap" size="117628" crc="df6fe05a" sha1="62537a6d8104d96e51ee4ef28262d53abaeb745b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfd9266f897c54">
+		<description>Jilly's Farm Volume 1 - SokoBAArn v1.01 48K (2018)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47687">
+				<rom name="Jilly's Farm Volume 1 - SokoBAArn v1.01 48K (2018)(Bob Smith).tap" size="47687" crc="52c86488" sha1="fd9266f897c54bdfa8fa460bd3ad30ca19da5675"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs30f2a7f731c57">
+		<description>Jinj 2 - Belmonte's Revenge (2012)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47956">
+				<rom name="Jinj 2 - Belmonte's Revenge (2012)(RetroWorks).tap" size="47956" crc="068ec259" sha1="30f2a7f731c575476245e6836c06380580a5cf2f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17639,16 +17989,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1717">
 				<rom name="Master Mind (1983)(Werner Spahl)(De).tap" size="1717" crc="c8b795df" sha1="dd4ad975c323a9679c7dd2e90e64d80ed4c98934"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs0801028a8bfb2">
-		<description>Master of Magic 48K (1986)(Mastertronic Added Dimension)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="46451">
-				<rom name="Master of Magic 48K (1986)(Mastertronic Added Dimension).tzx" size="46451" crc="d8481420" sha1="0801028a8bfb289059201fdeb78afb19186421f1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43922,6 +44262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8a401bb516572">
+		<description>Xecutor (1987)(ACE Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Xecutor (1987)(ACE Software).tap" size="49343" crc="a27b595c" sha1="8a401bb5165724dfbc879448195a4ab187919f3d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd2e6acb327b63">
 		<description>Xecutor (1987)(ACE Software)[a2]</description>
 		<year>????</year>
@@ -43933,42 +44283,32 @@
 		</part>
 	</software>
 	<software name="zxs827538d34066f">
-		<description>Xecutor (1987)(ACE Software)[a]</description>
+		<description>Xecutor - Alt 48K (1987)(ACE Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42063">
-				<rom name="Xecutor (1987)(ACE Software)[a].tap" size="42063" crc="a7a4f886" sha1="827538d34066f79ae3f96821de7af465affaa7c7"/>
+				<rom name="Xecutor - Alt 48K (1987)(ACE Software).tap" size="42063" crc="a7a4f886" sha1="827538d34066f79ae3f96821de7af465affaa7c7"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxsb0ddfb2e40fbb">
-		<description>Xecutor (1987)(ACE Software)_1</description>
+		<description>Xecutor 48K (1987)(ACE Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42063">
-				<rom name="Xecutor (1987)(ACE Software)_1.tap" size="42063" crc="d1047062" sha1="b0ddfb2e40fbb5144dbf1dedad3763828832f565"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs8a401bb516572">
-		<description>Xecutor (1987)(ACE Softwware)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49343">
-				<rom name="Xecutor (1987)(ACE Softwware).tap" size="49343" crc="a27b595c" sha1="8a401bb5165724dfbc879448195a4ab187919f3d"/>
+				<rom name="Xecutor 48K (1987)(ACE Software).tap" size="42063" crc="d1047062" sha1="b0ddfb2e40fbb5144dbf1dedad3763828832f565"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxsb4765870580f9">
-		<description>Xecutor</description>
+		<description>Xecutor 48K (1987)(ACE Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="53387">
-				<rom name="Xecutor.tzx" size="53387" crc="002ec2a9" sha1="b4765870580f97f09815da3b3d7d273a21a2f40c"/>
+				<rom name="Xecutor 48K (1987)(ACE Software).tzx" size="53387" crc="002ec2a9" sha1="b4765870580f97f09815da3b3d7d273a21a2f40c"/>
 			</dataarea>
 		</part>
 	</software>
