@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5306 -->
+<!-- Number of items in this list = 5332 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -49,6 +49,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1361">
 				<rom name="(demo)Fire4ever.tzx" size="1361" crc="2f412606" sha1="cbe2b12b071de18dda85deb7b76dec57b41b5272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaaba04ff3cbd6">
+		<description>(demo)Iron-I (1994)(The Unbelievable)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46209">
+				<rom name="(demo)Iron-I (1994)(The Unbelievable).tap" size="46209" crc="76633c51" sha1="aaba04ff3cbd6efb8804483331154f29c7c5935d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -289,6 +299,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="28128">
 				<rom name="-Boby (19xx)(Pilot Soft - Matysoft)(Cz).tap" size="28128" crc="61091407" sha1="bec9d5927ac755d1abd8a9c4573bd1cd4f0206ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs23c87f4bd431f">
+		<description>-Bronx Street Cop (1989)(Virgin Mastertronic Ltd)[cr [Cr][t Prosoft](128K)[Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37493">
+				<rom name="-Bronx Street Cop (1989)(Virgin Mastertronic Ltd)[cr [Cr][t Prosoft](128K)[Cr].tap" size="37493" crc="8ddd4226" sha1="23c87f4bd431fc96ba9648c0241c6d365942823d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11042,6 +11062,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0648e99a96172">
+		<description>Bronx (1990)(Animagic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85571">
+				<rom name="Bronx (1990)(Animagic)(Sp).tap" size="85571" crc="ecce73e0" sha1="0648e99a96172e98b74ea72fc9f849f1f1e32433"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ef2a9fbb2986">
+		<description>Bronx ES 48K-128K (1990)(Animagic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="95258">
+				<rom name="Bronx ES 48K-128K (1990)(Animagic).tap" size="95258" crc="283cbcba" sha1="9ef2a9fbb2986bb434bd711e9ae719d98eb28072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4411209203fff">
+		<description>Bronx Street Cop - Joystick (1989)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45318">
+				<rom name="Bronx Street Cop - Joystick (1989)(Mastertronic).tap" size="45318" crc="9884b2f8" sha1="4411209203fffe6f1925d4210242f6c6dbbc68c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs22f30f41c65ea">
+		<description>Bronx Street Cop 48K-128K (1989)(Virgin Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45346">
+				<rom name="Bronx Street Cop 48K-128K (1989)(Virgin Mastertronic).tzx" size="45346" crc="60c90ac4" sha1="22f30f41c65ea0f9322b4eb4576d922a4ae5a367"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs351574b7f5dbc">
 		<description>Bubble Bobble</description>
 		<year>????</year>
@@ -12442,6 +12502,136 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs58a57286028d9">
+		<description>IQ Test (1987)(Alfa Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37782">
+				<rom name="IQ Test (1987)(Alfa Soft).tap" size="37782" crc="77fca8bb" sha1="58a57286028d932d6aef93719bc11bdfc251a393"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs915904254498e">
+		<description>Iron Lord (1989)(Ubi Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138998">
+				<rom name="Iron Lord (1989)(Ubi Soft).tap" size="138998" crc="264103fa" sha1="915904254498e1c730fb2a73ec339112f232de0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e716cb235d18">
+		<description>Iron Lord 128K (1989)(Ubi Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="195062">
+				<rom name="Iron Lord 128K (1989)(Ubi Soft).tap" size="195062" crc="aaefd67c" sha1="9e716cb235d18c19fe62598af88acd689bf63d07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs41f0cebe30b54">
+		<description>Iron Soldier (1989)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29931">
+				<rom name="Iron Soldier (1989)(Players Premier).tap" size="29931" crc="710e6f17" sha1="41f0cebe30b54c3fa8561b914cf6e8080a4b9334"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01838b534a533">
+		<description>Iron Sphere 48K (2006)(Cronosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41960">
+				<rom name="Iron Sphere 48K (2006)(Cronosoft).tap" size="41960" crc="271afa7c" sha1="01838b534a533eddcc7a5ac67df6fc877ca44ce1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse629d6b692615">
+		<description>Ironman - Super Off Road (1990)(Virgin Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40051">
+				<rom name="Ironman - Super Off Road (1990)(Virgin Mastertronic)[a].tap" size="40051" crc="68cf1ab9" sha1="e629d6b692615f97f131ae8af123f6ca4e89d619"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs732baad86beca">
+		<description>Isa Brave 128K (2023)(Tom Martin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50274">
+				<rom name="Isa Brave 128K (2023)(Tom Martin).tap" size="50274" crc="32f917e4" sha1="732baad86beca0af16935e628f52a6a2f5138a81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs24bbb23f7ca1d">
+		<description>Ishido - The Way of Stones (2015)(mZX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15859">
+				<rom name="Ishido - The Way of Stones (2015)(mZX).tap" size="15859" crc="edd612c3" sha1="24bbb23f7ca1dc17e9c6bdec6f859e9fd86cce12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19df12449aaf7">
+		<description>Island Of Doctor Destructo, The (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48027">
+				<rom name="Island Of Doctor Destructo, The (1987)(Mastertronic).tap" size="48027" crc="d11d215d" sha1="19df12449aaf78f5c495009ac496f2ca15e3bdd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd70956f18ba0d">
+		<description>Island Of Doctor Destructo, The (1987)(Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48128">
+				<rom name="Island Of Doctor Destructo, The (1987)(Mastertronic)[a].tap" size="48128" crc="e150480f" sha1="d70956f18ba0d4a32d61d14711f49bacf5ed01dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d52cd07436ad">
+		<description>Island, The (1984)(Crystal Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25599">
+				<rom name="Island, The (1984)(Crystal Computing).tap" size="25599" crc="11e7dcc7" sha1="1d52cd07436add46bdd2d9ef827d3c97e9ab558f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a59c44631a53">
+		<description>Iso Copy v1.4.1 (1984)(Individual Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3736">
+				<rom name="Iso Copy v1.4.1 (1984)(Individual Software).tap" size="3736" crc="bd14230a" sha1="8a59c44631a53350a93abbe63721622a8f28798b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd876ec9e380c1">
+		<description>Iso Copy v1.5.5 (1984)(Individual Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2660">
+				<rom name="Iso Copy v1.5.5 (1984)(Individual Software).tap" size="2660" crc="58cd7d62" sha1="d876ec9e380c193477275b8e6977f2babfeb0f3f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd52fc3367c4b8">
 		<description>ISS - Incredible Shrinking Sphere</description>
 		<year>????</year>
@@ -12449,6 +12639,76 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48471">
 				<rom name="ISS - Incredible Shrinking Sphere.tzx" size="48471" crc="43bea798" sha1="d52fc3367c4b886b55f95520e4ff1637eb194b78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0ec8875dda29d">
+		<description>It's A Knockout (1986)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47949">
+				<rom name="It's A Knockout (1986)(Ocean Software Ltd).tap" size="47949" crc="fce16ad8" sha1="0ec8875dda29d76923fa88a1e5e22c24c1e19aeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscbb1aa2edeb88">
+		<description>It's a Knockout 48K (1986)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49882">
+				<rom name="It's a Knockout 48K (1986)(Ocean).tap" size="49882" crc="ae7df9ee" sha1="cbb1aa2edeb884892f583bccf176ee65e64dc43b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f78d950f7a04">
+		<description>It's Only Rock 'n' Roll (1983)(K-Tel Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53413">
+				<rom name="It's Only Rock 'n' Roll (1983)(K-Tel Productions).tap" size="53413" crc="cc458eef" sha1="1f78d950f7a04cfaaafe903315478b6b3b4b8484"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab436dd5afa29">
+		<description>Italian Supercar (1990)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48649">
+				<rom name="Italian Supercar (1990)(Codemasters).tap" size="48649" crc="0e28c70e" sha1="ab436dd5afa2903b2d94676e02d56201ec6aba54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ccb43cec6d85">
+		<description>Italian Supercar 48K-128K (1990)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48710">
+				<rom name="Italian Supercar 48K-128K (1990)(Codemasters).tzx" size="48710" crc="39f71ba8" sha1="2ccb43cec6d858fbf8fecb4f40665b98cd1248ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd93ae06c2cde">
+		<description>Iwo Jima (1986)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36047">
+				<rom name="Iwo Jima (1986)(PSS).tap" size="36047" crc="e8323b0d" sha1="cd93ae06c2cde066613c05e750ea68984f6e569a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2964ee0d2d3be">
+		<description>Izzy Wizzy 48K (2007)(Cronosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45323">
+				<rom name="Izzy Wizzy 48K (2007)(Cronosoft).tap" size="45323" crc="6b081dca" sha1="2964ee0d2d3be4c365172aa1d922768620e1e235"/>
 			</dataarea>
 		</part>
 	</software>
