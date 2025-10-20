@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 455 -->
+<!-- Number of items in this list = 456 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -729,6 +729,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="54942">
 				<rom name="Break Space 128K (2024)(IAMAI Creation).z80" size="54942" crc="07fa287e" sha1="91c1acb856d4b861b26727891090e79743a9818d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5235fac1fe744">
+		<description>Bruce Lee 48K (1984)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="36075">
+				<rom name="Bruce Lee 48K (1984)(U.S. Gold).z80" size="36075" crc="8298df22" sha1="5235fac1fe744172dde7fcb36c21be9bf8d2cd39"/>
 			</dataarea>
 		</part>
 	</software>

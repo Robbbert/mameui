@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5332 -->
+<!-- Number of items in this list = 5367 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -309,6 +309,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37493">
 				<rom name="-Bronx Street Cop (1989)(Virgin Mastertronic Ltd)[cr [Cr][t Prosoft](128K)[Cr].tap" size="37493" crc="8ddd4226" sha1="23c87f4bd431fc96ba9648c0241c6d365942823d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff84bf7c84ff9">
+		<description>-Bruce Lee (1984)(US Gold Ltd)[cr [Cr][t][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30548">
+				<rom name="-Bruce Lee (1984)(US Gold Ltd)[cr [Cr][t][Cr].tap" size="30548" crc="f0ed60ff" sha1="ff84bf7c84ff9344c3e4c917a9332dc88c476334"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11102,6 +11112,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsaaadd135e18fb">
+		<description>Bruce Lee (1984)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27412">
+				<rom name="Bruce Lee (1984)(US Gold).tap" size="27412" crc="fec1bc27" sha1="aaadd135e18fb4af422adc638b72e1e8af74b04b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs111fc6fe5377b">
+		<description>Bruce Lee (1984)(US Gold)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40897">
+				<rom name="Bruce Lee (1984)(US Gold)[a].tap" size="40897" crc="646c4f72" sha1="111fc6fe5377b5c1ebf8ee5649959e57d356f75a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4f7eab300953">
+		<description>Bruxolico - Side B 128K (2023)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41955">
+				<rom name="Bruxolico - Side B 128K (2023)(Amaweks).tap" size="41955" crc="29332105" sha1="d4f7eab30095312d7e3648b458a66181e6e24ef6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2fa085fd08f8f">
+		<description>Bruxolico - Side C 128K (2023)(Amaweks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44079">
+				<rom name="Bruxolico - Side C 128K (2023)(Amaweks).tap" size="44079" crc="82c08c58" sha1="2fa085fd08f8fce0c6ded3252addafb0c8ed8289"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs351574b7f5dbc">
 		<description>Bubble Bobble</description>
 		<year>????</year>
@@ -12492,6 +12542,206 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs729d295d15588">
+		<description>International Ninja Rabbits (1991)(Micro Value)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="87287">
+				<rom name="International Ninja Rabbits (1991)(Micro Value).tap" size="87287" crc="f55bc727" sha1="729d295d155884028d7a48304ed42668f84c7cad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef105a384de7d">
+		<description>International Rugby (1985)(Artic Computing)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39836">
+				<rom name="International Rugby (1985)(Artic Computing)[a].tap" size="39836" crc="a1726d13" sha1="ef105a384de7d77dd99633a175797abbe83d1bc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsffa11087897f6">
+		<description>International Rugby (1987)(Blue Ribbon)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39836">
+				<rom name="International Rugby (1987)(Blue Ribbon)[a].tap" size="39836" crc="d1571799" sha1="ffa11087897f67ffbdb492559b846e2ef6bf7a1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76e81aa315978">
+		<description>International Volleyball (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18412">
+				<rom name="International Volleyball (1986)(Mastertronic).tap" size="18412" crc="7c309af5" sha1="76e81aa315978458d7b5d69888c080262035a169"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80f7273b8ede4">
+		<description>International Volleyball (1986)(Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24907">
+				<rom name="International Volleyball (1986)(Mastertronic)[a].tap" size="24907" crc="2cb2815c" sha1="80f7273b8ede4601a1ab62b323f5a89f988fb46c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56d72ae49f457">
+		<description>Into the Eagle's Nest (1987)(Pandora)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40894">
+				<rom name="Into the Eagle's Nest (1987)(Pandora)_1.tap" size="40894" crc="289b4c8e" sha1="56d72ae49f4572f6027ee1e2dca9e938e879708a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd384cc5e697d">
+		<description>Into The Empire 2 - Oldren (1983)(Penguin Books)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10092">
+				<rom name="Into The Empire 2 - Oldren (1983)(Penguin Books).tap" size="10092" crc="ac69cfa9" sha1="cd384cc5e697d41039e1492054034169afe7391e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a75eca6d3878">
+		<description>Into The Empire 3 - Empire (1983)(Penguin Books)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9683">
+				<rom name="Into The Empire 3 - Empire (1983)(Penguin Books).tap" size="9683" crc="e11fc702" sha1="0a75eca6d387841b8d2ee6220a20e735e5b201d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8bf559c52d145">
+		<description>Into The Mystic (1991)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42873">
+				<rom name="Into The Mystic (1991)(Zenobi Software).tap" size="42873" crc="24791bea" sha1="8bf559c52d1454d60f91c54a36a11d6709190869"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbdd918751ff0f">
+		<description>Intruder Alert (1989)(Compass)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44191">
+				<rom name="Intruder Alert (1989)(Compass).tap" size="44191" crc="c918c3e6" sha1="bdd918751ff0fae3a6651d5d54284e2c9d5bbea5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8661f16b33eed">
+		<description>Invaders (1982)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15057">
+				<rom name="Invaders (1982)(Artic Computing).tap" size="15057" crc="efa61a38" sha1="8661f16b33eedbb68aab39abd62186458ef62209"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs09c178275ea36">
+		<description>Invaders (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5834">
+				<rom name="Invaders (19xx)(-).tap" size="5834" crc="dce24736" sha1="09c178275ea36feaec6cad6853dd446cceaa26bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse7b1f7070380a">
+		<description>Invaders (19xx)(-)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1597">
+				<rom name="Invaders (19xx)(-)[a].tap" size="1597" crc="5840a237" sha1="e7b1f7070380a5e95e3b907124db64dbc4fa3b0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs42452726f66b4">
+		<description>Invaders 16K (1983)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6795">
+				<rom name="Invaders 16K (1983)(DK'Tronics).tap" size="6795" crc="a6263eb9" sha1="42452726f66b43906e0a1a92fdbe328ea9b8e0de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf6cabead23df0">
+		<description>InvAGDers 48K (2017)(Allan Turvey)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38279">
+				<rom name="InvAGDers 48K (2017)(Allan Turvey).tap" size="38279" crc="d887b747" sha1="f6cabead23df08231f00eae7717e46fdbacfffb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f61e34529abd">
+		<description>Invasion (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41044">
+				<rom name="Invasion (1987)(Mastertronic).tap" size="41044" crc="ca9b8313" sha1="8f61e34529abd8c2329fca0f74a96882da09a9fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsafbdf39a4ffd1">
+		<description>Invasion (19xx)(P. Rawling)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28535">
+				<rom name="Invasion (19xx)(P. Rawling).tap" size="28535" crc="142770c5" sha1="afbdf39a4ffd1a05526cd8a62578f26438f5e6a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs989677a7eed3d">
+		<description>Invasion Force (1982)(Artic Computing)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9201">
+				<rom name="Invasion Force (1982)(Artic Computing)[a].tap" size="9201" crc="5870dd5b" sha1="989677a7eed3d64c2e6b4cfa9e4f2a80d004d492"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80a741d4102ba">
+		<description>Invasion Force (1990)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56221">
+				<rom name="Invasion Force (1990)(CCS).tap" size="56221" crc="89534cb3" sha1="80a741d4102ba5dc8276d03adf1f59a8154cec4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc62f09c405884">
+		<description>Invasion Force 16K (1982)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9216">
+				<rom name="Invasion Force 16K (1982)(Artic Computing).tap" size="9216" crc="14bf4579" sha1="c62f09c40588460b8bfe94d41f58c408825351f1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1614e62a969e8">
 		<description>Invasion of the Zombie Monsters (2010)(Relevo)</description>
 		<year>????</year>
@@ -12499,6 +12749,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="38977">
 				<rom name="Invasion of the Zombie Monsters (2010)(Relevo).tzx" size="38977" crc="32a661ae" sha1="1614e62a969e844917158320c730a2d9b910ce38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs245790496ad8d">
+		<description>Invincible Island (1983)(Richard Shepard Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48081">
+				<rom name="Invincible Island (1983)(Richard Shepard Software).tap" size="48081" crc="166552f4" sha1="245790496ad8db02ff19e3e3ecb2a0e595b047bd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47362,6 +47622,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs96b84b935b4d8">
+		<description>_International Rugby (1985)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46522">
+				<rom name="_International Rugby (1985)(Artic Computing).tap" size="46522" crc="c9fec9e8" sha1="96b84b935b4d84467c7432cec3da2fe76fa86aab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6fb3a1588a432">
+		<description>_International Rugby (1987)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40161">
+				<rom name="_International Rugby (1987)(Codemasters).tap" size="40161" crc="baf57b6c" sha1="6fb3a1588a43239e33a3ee13565281785e28507e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse48f773bc66bd">
+		<description>_Interpolacja Newtona (1985)(O. Przesmycki)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9156">
+				<rom name="_Interpolacja Newtona (1985)(O. Przesmycki).tap" size="9156" crc="3dd743c3" sha1="e48f773bc66bd8facaf3451e722ce1bcb94e44a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs927dffd67c553">
+		<description>_Into The Eagle's Nest (1987)(Pandora)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39933">
+				<rom name="_Into The Eagle's Nest (1987)(Pandora).tap" size="39933" crc="56379223" sha1="927dffd67c553cd54f05f4916988d33f6a3fbd67"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs41b5ac4f2b929">
 		<description>_Into The Eagle's Nest</description>
 		<year>????</year>
@@ -47369,6 +47669,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39961">
 				<rom name="_Into The Eagle's Nest.tzx" size="39961" crc="cfe865f3" sha1="41b5ac4f2b929cfdc769faca787726604f0bba98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70bdc4c15bc39">
+		<description>_Into The Empire 1 - Fog (1983)(Penguin Books)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8622">
+				<rom name="_Into The Empire 1 - Fog (1983)(Penguin Books).tap" size="8622" crc="326bc733" sha1="70bdc4c15bc39467af507ca2f41caeab9d12a757"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6cb35c526bc2c">
+		<description>_Invaders From Planet X (1991)(Compass)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47635">
+				<rom name="_Invaders From Planet X (1991)(Compass).tap" size="47635" crc="871471dd" sha1="6cb35c526bc2c7f07a4c564bdd71fdbfe4dd0701"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68297db103a10">
+		<description>_Invasion 48K (2025)(Animated AL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10969">
+				<rom name="_Invasion 48K (2025)(Animated AL).tap" size="10969" crc="7488b4e1" sha1="68297db103a109d02592f165a329e818a5ef44d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d308eca888ad">
+		<description>_It's A Knockout (1986)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54746">
+				<rom name="_It's A Knockout (1986)(Ocean Software).tap" size="54746" crc="73b61f5d" sha1="1d308eca888ad5e3c67d2824f97c4a4c233a77f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs74cb2d38de227">
+		<description>_Italy 1990 (1990)(US Gold)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="87172">
+				<rom name="_Italy 1990 (1990)(US Gold)(128k).tap" size="87172" crc="2eb9a5b7" sha1="74cb2d38de227012b40f341f57d5994bbba21c01"/>
 			</dataarea>
 		</part>
 	</software>
