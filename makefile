@@ -55,6 +55,7 @@ LONG_VERS := $(BARE_VERS).x
 # OPTIMIZE = 3
 # SYMBOLS = 1
 # SYMLEVEL = 2
+# PDB_SYMBOLS = 1
 # MAP = 1
 # PROFILE = 1
 # ARCHOPTS =
@@ -626,6 +627,10 @@ endif
 
 ifdef SYMLEVEL
 PARAMS += --SYMLEVEL='$(SYMLEVEL)'
+endif
+
+ifdef PDB_SYMBOLS
+PARAMS += --PDB_SYMBOLS='$(PDB_SYMBOLS)'
 endif
 
 ifdef PROFILER
