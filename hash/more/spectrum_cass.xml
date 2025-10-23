@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5367 -->
+<!-- Number of items in this list = 5401 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -49,6 +49,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1361">
 				<rom name="(demo)Fire4ever.tzx" size="1361" crc="2f412606" sha1="cbe2b12b071de18dda85deb7b76dec57b41b5272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs312d3fd7fc0bc">
+		<description>(demo)Interlace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29330">
+				<rom name="(demo)Interlace.TAP" size="29330" crc="51514531" sha1="312d3fd7fc0bccfb8ec5654e558ad1efa9025772"/>
 			</dataarea>
 		</part>
 	</software>
@@ -319,6 +329,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="30548">
 				<rom name="-Bruce Lee (1984)(US Gold Ltd)[cr [Cr][t][Cr].tap" size="30548" crc="f0ed60ff" sha1="ff84bf7c84ff9344c3e4c917a9332dc88c476334"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6e55c7953212d">
+		<description>-Bubble Bobble 2 -  Rainbow Islands  (1990)(Ocean Software Ltd)[cr [Cr Pentacle + Matasoft](128K)[Cr Pentacle + Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80070">
+				<rom name="-Bubble Bobble 2 -  Rainbow Islands  (1990)(Ocean Software Ltd)[cr [Cr Pentacle + Matasoft](128K)[Cr Pentacle + Matasoft].tap" size="80070" crc="35c50bcb" sha1="6e55c7953212d67f3cf1d20b1e6f73337885d128"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11152,6 +11172,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs055d40ca11d75">
+		<description>BS-BIO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6434">
+				<rom name="BS-BIO.TAP" size="6434" crc="eb90704e" sha1="055d40ca11d75fe1d230324e9486ec2d09a1c775"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66242e454ad6a">
+		<description>BS-COPY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="75837">
+				<rom name="BS-COPY.TAP" size="75837" crc="0122b30b" sha1="66242e454ad6aeb834bc3e387bc6a839c25b96a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdd586ca5a7743">
+		<description>BS-MIX</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27160">
+				<rom name="BS-MIX.TAP" size="27160" crc="854b01ed" sha1="dd586ca5a77433e8661be50aa07d37fdaea15054"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1dfab12b32a51">
+		<description>BS-SPEED</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4842">
+				<rom name="BS-SPEED.TAP" size="4842" crc="820c3411" sha1="1dfab12b32a51d6dee8ade9fa61331798b841ed2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs351574b7f5dbc">
 		<description>Bubble Bobble</description>
 		<year>????</year>
@@ -12532,6 +12592,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsdfd9de7ec8408">
+		<description>Inheritance, The (1987)(Infogrames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Inheritance, The (1987)(Infogrames).tap" size="49343" crc="039c11ee" sha1="dfd9de7ec84088a60424b7348baa27858697e758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5cf49efb83403">
+		<description>Inheritance, The (1987)(Infogrames)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="155193">
+				<rom name="Inheritance, The (1987)(Infogrames)[a].tap" size="155193" crc="e86337cd" sha1="5cf49efb83403831841755e77b41c9f5bcb21a83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs354ac8c12c921">
+		<description>Innsmouth EN v1.1 48K (2024)(Bitfans)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84868">
+				<rom name="Innsmouth EN v1.1 48K (2024)(Bitfans).tap" size="84868" crc="c775e949" sha1="354ac8c12c921cd82c549db543737abcbd4e9cfd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7e83c74c3fe5">
+		<description>Inside Outing (1988)(The Edge)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42453">
+				<rom name="Inside Outing (1988)(The Edge)[a].tap" size="42453" crc="e733db32" sha1="d7e83c74c3fe5f59e23ded511ea817e90710cba6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsef89ef78ab75e">
 		<description>Inside Outing</description>
 		<year>????</year>
@@ -12539,6 +12639,176 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="51623">
 				<rom name="Inside Outing.tzx" size="51623" crc="2fed739d" sha1="ef89ef78ab75e9792b05e72b5ca6c996feedbe62"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs21be20dda56c0">
+		<description>Inspector Gadget and the Circus of Fear 48K (1987)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44729">
+				<rom name="Inspector Gadget and the Circus of Fear 48K (1987)(Melbourne House).tap" size="44729" crc="c9dfdd10" sha1="21be20dda56c0f51eab913abb2ad19c7a4c55cf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d8e80975f86d">
+		<description>Instant User Designed Graphics (19xx)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7636">
+				<rom name="Instant User Designed Graphics (19xx)(Automata UK).tap" size="7636" crc="01f859c5" sha1="8d8e80975f86d6516c968cd2d19f498052d74948"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6694e36da85d4">
+		<description>Instrukcja Beta Basic v1.8 (1987)(WPK Zielonka)(Pl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="278713">
+				<rom name="Instrukcja Beta Basic v1.8 (1987)(WPK Zielonka)(Pl).tap" size="278713" crc="5c8f191c" sha1="6694e36da85d40ef33e39de77916b52c861d56ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs161c1e57e56cf">
+		<description>Instrukcja HiSoft Pascal (1987)(WPK Zielonka)(Pl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46514">
+				<rom name="Instrukcja HiSoft Pascal (1987)(WPK Zielonka)(Pl).tap" size="46514" crc="422c83fb" sha1="161c1e57e56cf65ec76b44ab54db4430ad3ead83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb6bc08edf4fe0">
+		<description>Integration (19xx)(University Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6810">
+				<rom name="Integration (19xx)(University Soft).tap" size="6810" crc="d132135e" sha1="b6bc08edf4fe0e4c3b8c90790ae46f1a4aaf0711"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c341cb46d547">
+		<description>Intensity (1988)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45643">
+				<rom name="Intensity (1988)(Firebird).tap" size="45643" crc="77a12914" sha1="5c341cb46d5478e49570ffce84253c5fe17eeb2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscbd6fda669498">
+		<description>Inter-Change (1991)(Hi-Tec Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32564">
+				<rom name="Inter-Change (1991)(Hi-Tec Software).tap" size="32564" crc="55f4cc69" sha1="cbd6fda66949858d596512d533bf9d4881aba2e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3977b232d95cc">
+		<description>Intergalactic Cage Match (1988)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43086">
+				<rom name="Intergalactic Cage Match (1988)(Mastertronic).tap" size="43086" crc="0931ffa6" sha1="3977b232d95cc5ca0d0f1c9577f731f8a3e78815"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs907e8c11e7efe">
+		<description>Intermediate Maths (1983)(Rose Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="198108">
+				<rom name="Intermediate Maths (1983)(Rose Software).tap" size="198108" crc="b83e885a" sha1="907e8c11e7efe1a1cc739ff22746071d6712c1a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfa45ce63544db">
+		<description>International 3D Tennis (1990)(Palace)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85714">
+				<rom name="International 3D Tennis (1990)(Palace)(128k).tap" size="85714" crc="6d60e471" sha1="fa45ce63544db59e23fc197614af2310ff2954ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81d0e943d444d">
+		<description>International 3D Tennis (1991)(Palace)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55367">
+				<rom name="International 3D Tennis (1991)(Palace).tap" size="55367" crc="b56afd6b" sha1="81d0e943d444d7309ca4a125fc074f5dcb851054"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9920047539ad1">
+		<description>International Cricket (1988)(Grandslam Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44917">
+				<rom name="International Cricket (1988)(Grandslam Entertainment).tap" size="44917" crc="b11da1d7" sha1="9920047539ad1c8bdc9acfd6379b3031f70dd4b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99f6f203337ea">
+		<description>International Football (1989)(Cult Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42018">
+				<rom name="International Football (1989)(Cult Games).tap" size="42018" crc="899f7498" sha1="99f6f203337ea15a65564e6a24b5832af8aa7d0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae73507cb39e4">
+		<description>International Karate - Stage 1 48K (1985)(System 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41266">
+				<rom name="International Karate - Stage 1 48K (1985)(System 3).tap" size="41266" crc="efa7860d" sha1="ae73507cb39e43d7b74e0e8bec85d986ae165a80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1015e32e54aed">
+		<description>International Karate+ 128K (1987)(System 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53619">
+				<rom name="International Karate+ 128K (1987)(System 3).tap" size="53619" crc="097593e6" sha1="1015e32e54aed3c9590416128af14d722a08f452"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbb230f2d5c64a">
+		<description>International Kickboxing 128K (1993)(Your Sinclair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38591">
+				<rom name="International Kickboxing 128K (1993)(Your Sinclair).tap" size="38591" crc="eefd494d" sha1="bb230f2d5c64a199d7dc8101db5a07df7658a147"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa709b96039026">
+		<description>International Match Day (1987)(Ocean Software)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="113677">
+				<rom name="International Match Day (1987)(Ocean Software)(128k).tap" size="113677" crc="536862b8" sha1="a709b96039026b46a3f98120045bbfd755b1387d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47382,6 +47652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4d43512acc455">
+		<description>_BS-TIME</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7306">
+				<rom name="_BS-TIME.TAP" size="7306" crc="09b9d39b" sha1="4d43512acc455aa66661cef40bbd5e90fe7a7237"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5c9de2e39de0">
 		<description>_Cauldron</description>
 		<year>????</year>
@@ -47619,6 +47899,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="57620">
 				<rom name="_Impossible Mission.tzx" size="57620" crc="949bc8f4" sha1="5426d6f0a0d04dc785bd3b1c9dce5af89369616b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0bc2a3240670">
+		<description>_Innsmouth ES v1.1 48K (2024)(Bitfans)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85751">
+				<rom name="_Innsmouth ES v1.1 48K (2024)(Bitfans).tap" size="85751" crc="8c77ef4e" sha1="f0bc2a324067039ee361d7121e0073b9e750dd83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef417879dcd58">
+		<description>_Inside Outing (1988)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="_Inside Outing (1988)(The Edge).tap" size="49343" crc="ed5c68af" sha1="ef417879dcd582c19ac8adfc73b2cc41505d2d6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs20a1244fda483">
+		<description>_Inspector Flukeit (1986)(Top Ten Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48331">
+				<rom name="_Inspector Flukeit (1986)(Top Ten Software).tap" size="48331" crc="93d59d7c" sha1="20a1244fda483edff9e1c52f8091e9ab4704e345"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs40adb05e427b0">
+		<description>_Interlogo v1.6 (1984)(Tadeusz Wilczek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31058">
+				<rom name="_Interlogo v1.6 (1984)(Tadeusz Wilczek).tap" size="31058" crc="4f56f293" sha1="40adb05e427b00fae4c73c4a66dbbd29d0d286ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa30f5c8d5362c">
+		<description>_Intermediate English (1982)(Rose Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="176068">
+				<rom name="_Intermediate English (1982)(Rose Software).tap" size="176068" crc="dcb7c0ec" sha1="a30f5c8d5362c277245d2b2c8cbbba5f583c88ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs40aaf63045d5e">
+		<description>_International Karate - Stage 2 48K (1985)(System 3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47713">
+				<rom name="_International Karate - Stage 2 48K (1985)(System 3).tap" size="47713" crc="89bfad75" sha1="40aaf63045d5e0cbeeb1edbf2f8c5a079cd9f938"/>
 			</dataarea>
 		</part>
 	</software>

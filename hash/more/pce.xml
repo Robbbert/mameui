@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 185 -->
+<!-- Number of items in this list = 186 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1229,6 +1229,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Jamanoid.pce" size="131072" crc="9bb8d362" sha1="a2277803c38765a37246a0a0ebf87ea9ffd33aae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce4679d587d51dd">
+		<description>jurl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="jurl.pce" size="262144" crc="c28d92a1" sha1="4679d587d51dd5a7cc6fd8f23f2bed35880a74fc"/>
 			</dataarea>
 		</part>
 	</software>

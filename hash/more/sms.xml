@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 544 -->
+<!-- Number of items in this list = 546 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -419,6 +419,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="14122">
 				<rom name="Ascend (2022)(Inufuto).sms" size="14122" crc="ffa79dc0" sha1="ace9eae888ef57f740e45be2d535dd61aea27fdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa5188cdeee508">
+		<description>Astro Climber v1.2.1 (2025)(Badcomputer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Astro Climber v1.2.1 (2025)(Badcomputer).sms" size="65536" crc="7f66528c" sha1="a5188cdeee508d408773b180a75e53b4476101a2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1899,6 +1909,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Grail of the Gods v0.49b (2023-25)(Guydebaville).sms" size="65536" crc="e6afde12" sha1="37866be5a95ac98937acac3ad55c7ccc863a56bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms8258b01b8eb0e">
+		<description>Grail of the Gods v0.50b (2023-25)(Guydebaville)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Grail of the Gods v0.50b (2023-25)(Guydebaville).sms" size="65536" crc="2bfe75d4" sha1="8258b01b8eb0e912b11ed9a9c1d0781131be8a93"/>
 			</dataarea>
 		</part>
 	</software>
