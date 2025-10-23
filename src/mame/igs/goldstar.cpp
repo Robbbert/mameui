@@ -478,6 +478,7 @@ public:
 	void init_cmtetrisd() ATTR_COLD;
 	void init_cmtetriskr() ATTR_COLD;
 	void init_cmv4() ATTR_COLD;
+	void init_cmv823() ATTR_COLD;
 	void init_crazybonb() ATTR_COLD;
 	void init_cutya() ATTR_COLD;
 	void init_eldoraddoa() ATTR_COLD;
@@ -727,7 +728,6 @@ private:
 	uint8_t m_z80_io_c0;
 	uint8_t tetin3_r();
 
-
 	TILE_GET_INFO_MEMBER(get_magical_fg_tile_info);
 	//virtual void machine_start() override { goldstar_state::machine_start(); m_tile_bank = 0; }
 
@@ -743,6 +743,7 @@ private:
 	uint8_t m_tcount = 0;
 	bool m_z80_p02 = false;
 	uint8_t m_mcu_p1;
+	uint8_t m_bgreels = 0;
 
 	void animalw_map(address_map &map) ATTR_COLD;
 	void bingowng_map(address_map &map) ATTR_COLD;
@@ -1157,8 +1158,8 @@ TILE_GET_INFO_MEMBER(wingco_state::get_magical_fg_tile_info)
 	int const code = m_fg_vidram[tile_index];
 	int const attr = m_fg_atrram[tile_index];
 
-	tileinfo.set(0,
-			(code | (attr & 0xf0)<<4) + (m_tile_bank * 0x1000),
+	tileinfo.set(m_tile_bank,
+			(code | (attr & 0xf0) << 4) + ((m_tile_bank >> 1) * 0x1000),
 			attr & 0x0f,
 			0);
 }
@@ -1398,6 +1399,10 @@ VIDEO_START_MEMBER(wingco_state, magical)
 	m_reel_tilemap[0] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<0>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
 	m_reel_tilemap[1] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<1>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
 	m_reel_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(wingco_state::get_reel_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 32, 64, 8);
+
+	m_reel_tilemap[0]->set_transparent_pen(0x0f);
+	m_reel_tilemap[1]->set_transparent_pen(0x0f);
+	m_reel_tilemap[2]->set_transparent_pen(0x0f);
 
 	m_reel_tilemap[0]->set_scroll_cols(32);
 	m_reel_tilemap[1]->set_scroll_cols(32);
@@ -1786,14 +1791,15 @@ uint32_t unkch_state::screen_update_bonusch(screen_device &screen, bitmap_rgb32 
 
 uint32_t wingco_state::screen_update_magical(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
+	rgb_t m_bg_color;
+ 	
 	bitmap.fill(rgb_t::black(), cliprect);
-
+	
 	if (!(m_enable_reg & 0x01))
 		return 0;
 
 	if (m_enable_reg & 0x08)
 	{
-		// guess, could be wrong, but different screens clearly need different reel layouts
 		if (m_vidreg & 2)
 		{
 			for (int i = 0; i < 32; i++)
@@ -1802,9 +1808,9 @@ uint32_t wingco_state::screen_update_magical(screen_device &screen, bitmap_rgb32
 				m_reel_tilemap[1]->set_scrolly(i, m_reel_scroll[1][i*2]);
 			//  m_reel_tilemap[2]->set_scrolly(i, m_reel_scroll[2][i*2]);
 			}
-
+			
 			rectangle const visible1alt(0*8, (16+48)*8-1,  4*8,  16*8-1);
-			rectangle const visible2alt(0*8, (16+48)*8-1, 16*8,  28*8-1);
+			rectangle const visible2alt(0*8, (16+48)*8-1, 16*8,  30*8-1);
 
 			m_reel_tilemap[0]->draw(screen, bitmap, visible1alt, 0, 0);
 			m_reel_tilemap[1]->draw(screen, bitmap, visible2alt, 0, 0);
@@ -1823,6 +1829,10 @@ uint32_t wingco_state::screen_update_magical(screen_device &screen, bitmap_rgb32
 			rectangle const visible2(0*8, (14+48)*8-1, 12*8, (12+8)*8-1);
 			rectangle const visible3(0*8, (14+48)*8-1, 20*8, (20+8)*8-1);
 
+			rectangle const visiblerec(0*8, (16+46)*8-1, 4*8,  28*8-1);
+			m_bg_color = m_palette->pen(m_bgreels + 0x120);
+
+			bitmap.fill(m_bg_color, visiblerec);
 			m_reel_tilemap[0]->draw(screen, bitmap, visible1, 0, 0);
 			m_reel_tilemap[1]->draw(screen, bitmap, visible2, 0, 0);
 			m_reel_tilemap[2]->draw(screen, bitmap, visible3, 0, 0);
@@ -1834,6 +1844,7 @@ uint32_t wingco_state::screen_update_magical(screen_device &screen, bitmap_rgb32
 
 	return 0;
 }
+
 
 uint32_t wingco_state::screen_update_mbstar(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
@@ -2025,14 +2036,29 @@ void cmaster_state::nfm_palette(palette_device &palette) const
 
 void wingco_state::magodds_palette(palette_device &palette) const
 {
+	// foreground palette
 	uint8_t const *const proms = memregion("proms")->base();
 	for (int i = 0; i < 0x100; i++)
 	{
-		uint8_t const b = pal4bit(proms[0x000 + i]);
-		uint8_t const g = pal4bit(proms[0x100 + i]);
-		uint8_t const r = pal4bit(proms[0x200 + i]);
+		uint8_t const b = pal4bit(bitswap(proms[0x000 + i], 7,6,5,4,0,1,2,3));
+		uint8_t const g = pal4bit(bitswap(proms[0x100 + i], 7,6,5,4,0,1,2,3));
+		uint8_t const r = pal4bit(bitswap(proms[0x200 + i], 7,6,5,4,0,1,2,3));
 
 		palette.set_pen_color(i, rgb_t(r, g, b));
+	}
+
+	// reels palette
+	uint8_t const *const proms2 = memregion("proms2")->base();
+	for (int i = 0; i < 0x20; i++)
+	{
+		palette.set_pen_color(i+0x100, pal3bit(proms2[i] >> 0), pal3bit(proms2[i] >> 3), pal2bit(proms2[i] >> 6));
+	}
+
+	// reels background
+	uint8_t const *const proms3 = memregion("proms3")->base();
+	for (int i = 0; i < 0x20; i++)
+	{
+		palette.set_pen_color(i+0x120, pal3bit(proms3[i] >> 0), pal3bit(proms3[i] >> 3), pal2bit(proms3[i] >> 6));
 	}
 }
 
@@ -2537,17 +2563,17 @@ void cb3_state::misc_out_w(uint8_t data)
 
 void wingco_state::magodds_outb850_w(uint8_t data)
 {
-	// guess, could be wrong, this might just be lights
-
+	uint8_t pal_index[8] = { 0, 1, 6, 3, 4, 5, 2, 7 }; // fix reels BG color
+	m_bgreels = pal_index[data & 0x07];	               // set BG reels color index
+	
 	if (data&0x20)
-		m_tile_bank = 1;
+		m_tile_bank = 2;
 	else
 		m_tile_bank = 0;
 
-//	popmessage("magodds_outb850_w %02x\n", data);
+//	popmessage("magodds_outb850_w %02x", data);
 
 	m_fg_tilemap->mark_all_dirty();
-
 }
 
 void wingco_state::magodds_outb860_w(uint8_t data)
@@ -8405,6 +8431,7 @@ static INPUT_PORTS_START( cbonus )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
+// no manual - best guesses
 static INPUT_PORTS_START( cbaai )
 	PORT_INCLUDE( lucky8b )
 
@@ -8415,8 +8442,8 @@ static INPUT_PORTS_START( cbaai )
 	PORT_DIPSETTING(    0x01, "5" )
 	PORT_DIPSETTING(    0x00, "8" )
 	PORT_DIPNAME( 0x04, 0x04, "D-UP Mode" )           PORT_DIPLOCATION("DSW1:3")
-	PORT_DIPSETTING(    0x04, "Hi-Lo Classic" )
-	PORT_DIPSETTING(    0x00, "Hi-Lo + Bonus" )
+	PORT_DIPSETTING(    0x04, "Classic Cards" )
+	PORT_DIPSETTING(    0x00, "Classic Cards + Bonus" )
 	PORT_DIPNAME( 0x18, 0x00, "Max Bet" )             PORT_DIPLOCATION("DSW1:4,5")
 	PORT_DIPSETTING(    0x18, "8" )
 	PORT_DIPSETTING(    0x10, "16" )
@@ -8433,32 +8460,30 @@ static INPUT_PORTS_START( cbaai )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 
 	PORT_MODIFY("DSW2")
-	PORT_DIPNAME( 0x01, 0x01, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:1")
-	PORT_DIPSETTING(    0x01, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x02, 0x02, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:2")
-	PORT_DIPSETTING(    0x02, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x04, 0x04, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:3")
-	PORT_DIPSETTING(    0x04, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x08, 0x08, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:4")
-	PORT_DIPSETTING(    0x08, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x10, 0x10, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:5")
-	PORT_DIPSETTING(    0x10, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x20, 0x20, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:6")
-	PORT_DIPSETTING(    0x20, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x40, 0x40, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:7")
-	PORT_DIPSETTING(    0x40, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW2:8")
-	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x07, 0x07, "Payout %" )                   PORT_DIPLOCATION("DSW2:1,2,3")
+	PORT_DIPSETTING(    0x00, "55%" )
+	PORT_DIPSETTING(    0x01, "60%" )
+	PORT_DIPSETTING(    0x02, "65%" )
+	PORT_DIPSETTING(    0x03, "70%" )
+	PORT_DIPSETTING(    0x04, "75%" )
+	PORT_DIPSETTING(    0x05, "80%" )
+	PORT_DIPSETTING(    0x06, "85%" )
+	PORT_DIPSETTING(    0x07, "90%" )
+	PORT_DIPNAME( 0x08, 0x08, "Double Up %" )                PORT_DIPLOCATION("DSW2:4")
+	PORT_DIPSETTING(    0x08, "80%" )
+	PORT_DIPSETTING(    0x00, "90%" )
+	PORT_DIPNAME( 0x30, 0x30, "Coin Rate & Hopper Out" )     PORT_DIPLOCATION("DSW2:5,6")
+	PORT_DIPSETTING(    0x10, "1" )
+	PORT_DIPSETTING(    0x20, "5" )
+	PORT_DIPSETTING(    0x00, "10" )
+	PORT_DIPSETTING(    0x30, "50" )
+	PORT_DIPNAME( 0xc0, 0xc0, "Key In" )                     PORT_DIPLOCATION("DSW2:7,8")
+	PORT_DIPSETTING(    0x80, "20" )
+	PORT_DIPSETTING(    0xc0, "100" )
+	PORT_DIPSETTING(    0x40, "120" )
+	PORT_DIPSETTING(    0x00, "500" )
 
-	PORT_MODIFY("DSW3")
+	PORT_MODIFY("DSW4")
 	PORT_DIPNAME( 0x01, 0x01, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW3:1")
 	PORT_DIPSETTING(    0x01, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
@@ -8471,44 +8496,43 @@ static INPUT_PORTS_START( cbaai )
 	PORT_DIPNAME( 0x08, 0x08, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW3:4")
 	PORT_DIPSETTING(    0x08, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x10, 0x10, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW3:5")
-	PORT_DIPSETTING(    0x10, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x20, 0x20, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW3:6")
-	PORT_DIPSETTING(    0x20, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x40, 0x40, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW3:7")
-	PORT_DIPSETTING(    0x40, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x70, 0x70, "Bell Pool" )           PORT_DIPLOCATION("DSW3:5,6,7")
+	PORT_DIPSETTING(    0x70, "100" )
+	PORT_DIPSETTING(    0x60, "200" )
+	PORT_DIPSETTING(    0x50, "300" )
+	PORT_DIPSETTING(    0x40, "400" )
+	PORT_DIPSETTING(    0x30, "500" )
+	PORT_DIPSETTING(    0x20, "600" )
+	PORT_DIPSETTING(    0x10, "700" )
+	PORT_DIPSETTING(    0x00, "800" )
 	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW3:8")
 	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 
-	PORT_MODIFY("DSW4")
-	PORT_DIPNAME( 0x01, 0x01, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:1")
-	PORT_DIPSETTING(    0x01, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x02, 0x02, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:2")
-	PORT_DIPSETTING(    0x02, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x04, 0x04, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:3")
-	PORT_DIPSETTING(    0x04, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x08, 0x08, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:4")
+	PORT_MODIFY("DSW3")
+	PORT_DIPNAME( 0x07, 0x05, "Credits Limit" )           PORT_DIPLOCATION("DSW4:1,2,3")
+	PORT_DIPSETTING(    0x07, "5000" )
+	PORT_DIPSETTING(    0x06, "10000" )
+	PORT_DIPSETTING(    0x05, "20000" )
+	PORT_DIPSETTING(    0x04, "30000" )
+	PORT_DIPSETTING(    0x03, "40000" )
+	PORT_DIPSETTING(    0x02, "50000" )
+	PORT_DIPSETTING(    0x01, "100000" )
+	PORT_DIPSETTING(    0x00, "999999" )
+	PORT_DIPNAME( 0x08, 0x00, "Show Limit on Screen" )    PORT_DIPLOCATION("DSW4:4")
 	PORT_DIPSETTING(    0x08, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x10, 0x10, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:5")
-	PORT_DIPSETTING(    0x10, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x20, 0x20, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:6")
-	PORT_DIPSETTING(    0x20, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x40, 0x40, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:7")
-	PORT_DIPSETTING(    0x40, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
-	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )    PORT_DIPLOCATION("DSW4:8")
-	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+	PORT_DIPNAME( 0x10, 0x00, "Cherry Bonus Chance" )     PORT_DIPLOCATION("DSW4:5")
+	PORT_DIPSETTING(    0x00, "12" )
+	PORT_DIPSETTING(    0x10, "15" )
+	PORT_DIPNAME( 0x20, 0x00, "Reel Speed" )              PORT_DIPLOCATION("DSW4:6")
+	PORT_DIPSETTING(    0x20, "Slow" )
+	PORT_DIPSETTING(    0x00, "Fast" )
+	PORT_DIPNAME( 0xc0, 0x80, "Min Bet for Bonus" )       PORT_DIPLOCATION("DSW4:7,8")
+	PORT_DIPSETTING(    0xc0, "4" )
+	PORT_DIPSETTING(    0x80, "8" )
+	PORT_DIPSETTING(    0x40, "16" )
+	PORT_DIPSETTING(    0x00, "32" )
 INPUT_PORTS_END
 
 
@@ -9708,22 +9732,22 @@ static INPUT_PORTS_START( magodds )
 	PORT_START("IN0")  // b800
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON6 ) PORT_CODE(KEYCODE_X) PORT_NAME("P1 - Big / Switch Controls")
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON4 ) PORT_CODE(KEYCODE_B) PORT_NAME("P1 - Double-Up")
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_BUTTON5 ) PORT_CODE(KEYCODE_Z) PORT_NAME("P1 - Take Score")
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_CODE(KEYCODE_V) PORT_NAME("P1 - Bet")
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_CODE(KEYCODE_C) PORT_NAME("P1 - Small / Info")
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_CODE(KEYCODE_N) PORT_NAME("P1 - Start")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_GAMBLE_HIGH ) PORT_CODE(KEYCODE_B) PORT_NAME("Big")
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_GAMBLE_D_UP ) PORT_CODE(KEYCODE_C) PORT_NAME("Double Up")
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_GAMBLE_TAKE ) PORT_CODE(KEYCODE_X) PORT_NAME("Take Score")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_GAMBLE_BET )  PORT_CODE(KEYCODE_Z) PORT_NAME("Bet")
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_GAMBLE_LOW )  PORT_CODE(KEYCODE_V) PORT_NAME("Small / Stop All")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_START1 )      PORT_CODE(KEYCODE_N) PORT_NAME("Start")
 
 	PORT_START("IN1")  // b801
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON12 ) PORT_CODE(KEYCODE_S) PORT_NAME("P2 - Big / Switch Controls")
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON10 ) PORT_CODE(KEYCODE_G) PORT_NAME("P2 - Double-Up")
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_BUTTON11 ) PORT_CODE(KEYCODE_A) PORT_NAME("P2 - Take Score")
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON13 ) PORT_CODE(KEYCODE_F) PORT_NAME("P2 - Bet")
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON15 ) PORT_CODE(KEYCODE_D) PORT_NAME("P2 - Small / Info")
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_BUTTON14 ) PORT_CODE(KEYCODE_H) PORT_NAME("P2 - Start")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
 	PORT_START("IN2")  // b802
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
@@ -13843,8 +13867,9 @@ static GFXDECODE_START( gfx_bingownga )
 GFXDECODE_END
 
 static GFXDECODE_START( gfx_magodds )
-	GFXDECODE_ENTRY( "gfx1", 0, tiles8x8x3_layout,  0, 32 )
-	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4_layout, 0, 16 )
+	GFXDECODE_ENTRY( "gfx1", 0, tiles8x8x3_layout,    0, 32 )  // fg
+	GFXDECODE_ENTRY( "gfx2", 0, tiles8x32x4_layout, 256, 16 )  // reels
+	GFXDECODE_ENTRY( "gfx1", 0, tiles8x8x3_layout,  128, 32 )  // title
 GFXDECODE_END
 
 static GFXDECODE_START( gfx_cm )
@@ -14757,7 +14782,7 @@ void wingco_state::magodds(machine_config &config)
 	screen.screen_vblank().set(FUNC(wingco_state::masked_irq));
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_magodds);
-	PALETTE(config, m_palette, FUNC(wingco_state::magodds_palette), 256);
+	PALETTE(config, m_palette, FUNC(wingco_state::magodds_palette), 512);
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
 	MCFG_VIDEO_START_OVERRIDE(wingco_state, magical)
@@ -16179,8 +16204,10 @@ ROM_END
 //  ED-96 V8.23 (encrypted)
 ROM_START( cmv823 )
 	ROM_REGION( 0x10000, "maincpu", 0 )
-	ROM_LOAD( "sub-pcb.bin",   0x0000, 0x10000, CRC(0dae1586) SHA1(0e217fdd54b5855ef8a8543d1af861f577f8e0d3) )
-
+	ROM_LOAD( "sub-pcb.bin", 0x4000, 0x4000, CRC(0dae1586) SHA1(0e217fdd54b5855ef8a8543d1af861f577f8e0d3) )
+	ROM_CONTINUE(            0x0000, 0x4000 )
+	ROM_CONTINUE(            0x8000, 0x8000 )
+ 
 	ROM_REGION( 0x18000, "gfx1", 0 )
 	ROM_LOAD( "m5.256",   0x00000, 0x8000, CRC(19cc1d67) SHA1(47487f9362bfb36a32100ed772960628844462bf) )
 	ROM_LOAD( "m6.256",   0x08000, 0x8000, CRC(63b3df4e) SHA1(9bacd23da598805ec18ec5ad15cab95d71eb9262) )
@@ -21555,15 +21582,10 @@ ROM_END
 
 
 /*
-  Magical Tonic
+  Magical Odds.
+  1991, PAL System.
 
-  unknown, 40 pin cpu (plastic box, with "Tonic" sticker on it)
-  8255 x3
-  YM2203
-  12 MHz
-  4x DSW
-
-  is this the original Magical Odds?
+  Is this the original Magical Odds?
 
   also found with correctly sized program ROMs on a 03/25/93 DREAM97-1 PCB
 
@@ -21582,22 +21604,24 @@ ROM_START( magodds )
 
 	ROM_REGION( 0x8000, "gfx2", 0 )
 	ROM_LOAD( "1_m1_h2.764", 0x06000, 0x2000, CRC(d7d657e4) SHA1(53e2717edb4cdeac83cd519b08225784600afa61) )
-	ROM_LOAD( "2_m2_h3.764", 0x02000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
-	ROM_LOAD( "3_m3_h5.764", 0x04000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
+	ROM_LOAD( "2_m2_h3.764", 0x04000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
+	ROM_LOAD( "3_m3_h5.764", 0x02000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
 	ROM_LOAD( "4_m4_h6.764", 0x00000, 0x2000, CRC(cccfaa5d) SHA1(69d9b8a26c769fd69093610e92918c9a086a2077) )
 
 	ROM_REGION( 0x300, "proms", 0 )
 	ROM_LOAD( "82s129a.3c", 0x000, 0x100, CRC(8c4c0dc8) SHA1(1b3ddbd253555efd1f48d469b42b272b9d96bacf) )
-	ROM_LOAD( "82s129a.1c", 0x100, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
-	ROM_LOAD( "82s129a.2c", 0x200, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "82s129a.2c", 0x100, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "82s129a.1c", 0x200, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
 
-	ROM_REGION( 0x100, "proms2", 0 )
-	ROM_LOAD( "82s129a.6j", 0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
+	ROM_REGION( 0x020, "proms2", 0 )
+	ROM_LOAD( "dm74s288.1b", 0x00, 0x20,  CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
 
-	ROM_REGION( 0x100, "proms3", 0 )
-	ROM_LOAD( "dm74s288.1a", 0x00, 0x20, CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
-	ROM_LOAD( "dm74s288.1b", 0x20, 0x20, CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
-	ROM_LOAD( "dm74s288.12k",0x40, 0x20, CRC(03231e84) SHA1(92abdf6f8ef705b260378e90e6d591da056c2cee) )
+	ROM_REGION( 0x020, "proms3", 0 )
+	ROM_LOAD( "dm74s288.1a", 0x00, 0x20,  CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
+
+	ROM_REGION( 0x120, "proms4", 0 )
+	ROM_LOAD( "82s129a.6j",   0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
+	ROM_LOAD( "dm74s288.12k", 0x100, 0x020, CRC(03231e84) SHA1(92abdf6f8ef705b260378e90e6d591da056c2cee) )
 ROM_END
 
 
@@ -21617,22 +21641,24 @@ ROM_START( magoddsa )
 
 	ROM_REGION( 0x8000, "gfx2", 0 )
 	ROM_LOAD( "1_m1_h2.764", 0x06000, 0x2000, CRC(d7d657e4) SHA1(53e2717edb4cdeac83cd519b08225784600afa61) )
-	ROM_LOAD( "2_m2_h3.764", 0x02000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
-	ROM_LOAD( "3_m3_h5.764", 0x04000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
+	ROM_LOAD( "2_m2_h3.764", 0x04000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
+	ROM_LOAD( "3_m3_h5.764", 0x02000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
 	ROM_LOAD( "4_m4_h6.764", 0x00000, 0x2000, CRC(cccfaa5d) SHA1(69d9b8a26c769fd69093610e92918c9a086a2077) )
 
 	ROM_REGION( 0x300, "proms", 0 )
 	ROM_LOAD( "82s129a.3c", 0x000, 0x100, CRC(8c4c0dc8) SHA1(1b3ddbd253555efd1f48d469b42b272b9d96bacf) )
-	ROM_LOAD( "82s129a.1c", 0x100, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
-	ROM_LOAD( "82s129a.2c", 0x200, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "82s129a.2c", 0x100, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "82s129a.1c", 0x200, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
 
-	ROM_REGION( 0x100, "proms2", 0 )
-	ROM_LOAD( "82s129a.6j", 0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
+	ROM_REGION( 0x020, "proms2", 0 )
+	ROM_LOAD( "dm74s288.1b", 0x00, 0x20,  CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
 
-	ROM_REGION( 0x100, "proms3", 0 )
-	ROM_LOAD( "dm74s288.1a", 0x00, 0x20, CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
-	ROM_LOAD( "dm74s288.1b", 0x20, 0x20, CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
-	ROM_LOAD( "dm74s288.12k",0x40, 0x20, CRC(03231e84) SHA1(92abdf6f8ef705b260378e90e6d591da056c2cee) )
+	ROM_REGION( 0x020, "proms3", 0 )
+	ROM_LOAD( "dm74s288.1a", 0x00, 0x20,  CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
+
+	ROM_REGION( 0x120, "proms4", 0 )
+	ROM_LOAD( "82s129a.6j",   0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
+	ROM_LOAD( "dm74s288.12k", 0x100, 0x020, CRC(03231e84) SHA1(92abdf6f8ef705b260378e90e6d591da056c2cee) )
 ROM_END
 
 
@@ -21649,22 +21675,24 @@ ROM_START( magoddsb )
 
 	ROM_REGION( 0x8000, "gfx2", 0 )
 	ROM_LOAD( "mo-137-1.m1", 0x06000, 0x2000, CRC(d7d657e4) SHA1(53e2717edb4cdeac83cd519b08225784600afa61) )
-	ROM_LOAD( "mo-137-2.m2", 0x02000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
-	ROM_LOAD( "mo-137-3.m3", 0x04000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
+	ROM_LOAD( "mo-137-2.m2", 0x04000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
+	ROM_LOAD( "mo-137-3.m3", 0x02000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
 	ROM_LOAD( "mo-137-4.m4", 0x00000, 0x2000, CRC(cccfaa5d) SHA1(69d9b8a26c769fd69093610e92918c9a086a2077) )
 
 	ROM_REGION( 0x300, "proms", 0 )
 	ROM_LOAD( "n5.bin", 0x000, 0x100, CRC(8c4c0dc8) SHA1(1b3ddbd253555efd1f48d469b42b272b9d96bacf) )
-	ROM_LOAD( "n7.bin", 0x100, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
-	ROM_LOAD( "n6.bin", 0x200, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "n6.bin", 0x100, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "n7.bin", 0x200, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
 
-	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_REGION( 0x020, "proms2", 0 )
+	ROM_LOAD( "n8.bin", 0x00, 0x20,   CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
+
+	ROM_REGION( 0x020, "proms3", 0 )
+	ROM_LOAD( "n9.bin", 0x00, 0x20,   CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
+
+	ROM_REGION( 0x120, "proms4", 0 )
 	ROM_LOAD( "n4.bin", 0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
-
-	ROM_REGION( 0x100, "proms3", 0 )
-	ROM_LOAD( "n9.bin", 0x00, 0x20, CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
-	ROM_LOAD( "n8.bin", 0x20, 0x20, CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
-	ROM_LOAD( "p1.bin", 0x40, 0x20, CRC(1aa176f3) SHA1(fe777cba829046f850ab612b927bde4fe0d37811) ) // different! to magoddsa
+	ROM_LOAD( "p1.bin", 0x40, 0x20,   CRC(1aa176f3) SHA1(fe777cba829046f850ab612b927bde4fe0d37811) ) // different! to magoddsa
 ROM_END
 
 
@@ -21695,8 +21723,8 @@ ROM_START( magoddsc )
 	ROM_LOAD( "82s129a.6j", 0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
 
 	ROM_REGION( 0x100, "proms3", 0 )
-	ROM_LOAD( "dm74s288.1a", 0x00, 0x20, CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
-	ROM_LOAD( "dm74s288.1b", 0x20, 0x20, CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
+	ROM_LOAD( "dm74s288.1b", 0x00, 0x20, CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
+	ROM_LOAD( "dm74s288.1a", 0x20, 0x20, CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
 	ROM_LOAD( "dm74s288.12k",0x40, 0x20, CRC(03231e84) SHA1(92abdf6f8ef705b260378e90e6d591da056c2cee) )
 ROM_END
 
@@ -21714,26 +21742,37 @@ ROM_START( magoddsd )
 
 	ROM_REGION( 0x8000, "gfx2", 0 )
 	ROM_LOAD( "1.m1", 0x06000, 0x2000, CRC(d7d657e4) SHA1(53e2717edb4cdeac83cd519b08225784600afa61) )
-	ROM_LOAD( "2.m2", 0x02000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
-	ROM_LOAD( "3.m3", 0x04000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
+	ROM_LOAD( "2.m2", 0x04000, 0x2000, CRC(fb7541d5) SHA1(62a36c186b32bd98dff5c3f0fa5f2ad13992835c) )
+	ROM_LOAD( "3.m3", 0x02000, 0x2000, CRC(49572d8b) SHA1(ceaaf911f58cceec82f429ca9114bffa1a67ec12) )
 	ROM_LOAD( "4.m4", 0x00000, 0x2000, CRC(cccfaa5d) SHA1(69d9b8a26c769fd69093610e92918c9a086a2077) )
 
 	// proms not verified on this set, taken from magoddsa
 	ROM_REGION( 0x300, "proms", 0 )
 	ROM_LOAD( "82s129a.3c", 0x000, 0x100, CRC(8c4c0dc8) SHA1(1b3ddbd253555efd1f48d469b42b272b9d96bacf) )
-	ROM_LOAD( "82s129a.1c", 0x100, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
-	ROM_LOAD( "82s129a.2c", 0x200, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "82s129a.2c", 0x100, 0x100, CRC(4d46f40a) SHA1(c141e94ae5705773605b7a094e65625b4a21db73) )
+	ROM_LOAD( "82s129a.1c", 0x200, 0x100, CRC(55e3c65f) SHA1(f51d08e0b2e4d97d2eacb1f6d52777065bbe1ae5) )
 
-	ROM_REGION( 0x100, "proms2", 0 )
-	ROM_LOAD( "82s129a.6j", 0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
+	ROM_REGION( 0x020, "proms2", 0 )
+	ROM_LOAD( "dm74s288.1b", 0x00, 0x20,  CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
 
-	ROM_REGION( 0x100, "proms3", 0 )
-	ROM_LOAD( "dm74s288.1a", 0x00, 0x20, CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
-	ROM_LOAD( "dm74s288.1b", 0x20, 0x20, CRC(e04abac8) SHA1(4f2adf9f1482470b6de6d0e547623f62e95eaf24) )
-	ROM_LOAD( "dm74s288.12k",0x40, 0x20, CRC(03231e84) SHA1(92abdf6f8ef705b260378e90e6d591da056c2cee) )
+	ROM_REGION( 0x020, "proms3", 0 )
+	ROM_LOAD( "dm74s288.1a", 0x00, 0x20,  CRC(6a13320b) SHA1(6d7c663477f3fbc22fb716e15bfdd9c452eb686a) )
+
+	ROM_REGION( 0x120, "proms4", 0 )
+	ROM_LOAD( "82s129a.6j",   0x000, 0x100, CRC(1200815e) SHA1(8c9a856274246644af25961a2e731dbcb73f12b9) )
+	ROM_LOAD( "dm74s288.12k", 0x100, 0x020, CRC(03231e84) SHA1(92abdf6f8ef705b260378e90e6d591da056c2cee) )
 ROM_END
 
-// custom CPU block
+/*
+  Magical Tonic
+
+  unknown, 40 pin cpu (plastic box, with "Tonic" sticker on it)
+  8255 x3
+  YM2203
+  12 MHz
+  4x DSW
+
+*/
 ROM_START( mtonic2 )
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "8_tonic.7e", 0x0000, 0x8000, CRC(71df6972) SHA1(281c93184b611a0227a409a0bfe2d8c72d5da878) )
@@ -27799,6 +27838,40 @@ void cmaster_state::init_cmv4()
 	rom[0x020d] = 0x9b;
 }
 
+
+void cmaster_state::init_cmv823()
+{
+	uint8_t *rom = memregion("maincpu")->base();
+
+	for (int i = 0; i < 0x10000; i += 0x100)
+	{
+		if ((i & 0xc000) != 0x8000)
+		{
+			std::swap_ranges(&rom[i + 0x30], &rom[i + 0x40], &rom[i + 0x10]);
+			std::swap_ranges(&rom[i + 0x20], &rom[i + 0x30], &rom[i + 0x30]);
+			std::swap_ranges(&rom[i + 0x20], &rom[i + 0x30], &rom[i + 0x00]);
+			std::swap_ranges(&rom[i + 0x60], &rom[i + 0x70], &rom[i + 0x50]);
+			std::swap_ranges(&rom[i + 0x80], &rom[i + 0x90], &rom[i + 0xb0]);
+			std::swap_ranges(&rom[i + 0xd0], &rom[i + 0xe0], &rom[i + 0xf0]);
+			std::swap_ranges(&rom[i + 0xc0], &rom[i + 0xd0], &rom[i + 0xd0]);
+			std::swap_ranges(&rom[i + 0xc0], &rom[i + 0xd0], &rom[i + 0xe0]);
+		}
+	}
+
+	for (int i = 0; i < 0x10000; i++)
+	{
+		if ((i & 0xc000) != 0x8000)
+		{
+			switch (i & 0x10)
+			{
+				case 0x00: BIT(rom[i], 3) ? rom[i] = bitswap<8>(rom[i] ^ 0x33, 5, 1, 2, 0, 3, 6, 7, 4) : rom[i] = bitswap<8>(rom[i] ^ 0xa6, 6, 4, 7, 2, 3, 5, 0, 1); break;
+				case 0x10: BIT(rom[i], 7) ? rom[i] = bitswap<8>(rom[i] ^ 0x2b, 7, 3, 6, 1, 2, 0, 4, 5) : rom[i] = bitswap<8>(rom[i] ^ 0x51, 7, 5, 0, 3, 4, 1, 6, 2); break;
+			}
+		}
+	}
+}
+
+
 void cmaster_state::init_hamhouse()
 {
 	init_cmv4();
@@ -29583,7 +29656,7 @@ GAME(  1994, chryanglb,  ncb3,     chryanglb, chryanglb, cmaster_state, init_chr
 
 // cherry master hardware has a rather different mem map, but is basically the same
 GAMEL( 198?, cmv801,     0,        cm,       cmv801,   cmaster_state,  init_cm,        ROT0, "Corsica",           "Cherry Master (Corsica, ver.8.01)",           0,                 layout_cmv4 )  // says ED-96 where the manufacturer is on some games...
-GAMEL( 198?, cmv823,     0,        cm,       cmv801,   cmaster_state,  empty_init,     ROT0, "Corsica",           "Cherry Master (ED-96 V8.23)",                 MACHINE_NOT_WORKING, layout_cmasterb )  // encrypted
+GAMEL( 198?, cmv823,     0,        cm,       cmv801,   cmaster_state,  init_cmv823,    ROT0, "Corsica",           "Cherry Master (ED-96 V8.23)",                 MACHINE_NOT_WORKING, layout_cmasterb )  // encrypted
 
 
 // most of these are almost certainly bootlegs, with added features, hacked payouts etc. identifying which are
@@ -29773,9 +29846,9 @@ GAMEL( 1990, bonuscha,   bonusch,  bonusch,  bonusch,  unkch_state,    init_bonc
 
 
 // --- Magical Odds hardware ---
-GAME(  1992, magodds,    0,        magodds,  magodds,  wingco_state,   empty_init,     ROT0, "Pal Company / Micro Manufacturing Inc.", "Magical Odds (set 1)",                             MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_GRAPHICS )
-GAME(  1992, magoddsa,   magodds,  magodds,  magodds,  wingco_state,   empty_init,     ROT0, "Pal Company / Micro Manufacturing Inc.", "Magical Odds (set 2)",                             MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_GRAPHICS )
-GAME(  1992, magoddsb,   magodds,  magodds,  magodds,  wingco_state,   empty_init,     ROT0, "Pal Company / Micro Manufacturing Inc.", "Magical Odds (set 3)",                             MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_GRAPHICS )
+GAME(  1992, magodds,    0,        magodds,  magodds,  wingco_state,   empty_init,     ROT0, "Pal Company / Micro Manufacturing Inc.", "Magical Odds (set 1)",                             0 )
+GAME(  1992, magoddsa,   magodds,  magodds,  magodds,  wingco_state,   empty_init,     ROT0, "Pal Company / Micro Manufacturing Inc.", "Magical Odds (set 2)",                             0 )
+GAME(  1992, magoddsb,   magodds,  magodds,  magodds,  wingco_state,   empty_init,     ROT0, "Pal Company / Micro Manufacturing Inc.", "Magical Odds (set 3)",                             0 )
 GAME(  1991, magoddsc,   magodds,  magodds,  magoddsc, wingco_state,   init_magoddsc,  ROT0, "Pal Company",                            "Magical Odds (set 4, custom encrypted CPU block)", MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING | MACHINE_NO_SOUND )
 GAME(  1991, magoddsd,   magodds,  magodds,  magoddsc, wingco_state,   init_magoddsc,  ROT0, "Pal Company",                            "Magical Odds (set 5, custom encrypted CPU block)", MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING | MACHINE_NO_SOUND )
 GAME(  199?, mtonic2,    0,        magodds,  magoddsc, wingco_state,   init_magoddsc,  ROT0, "Pal Company",                            "Magical Tonic Part 2",                             MACHINE_WRONG_COLORS | MACHINE_NOT_WORKING | MACHINE_NO_SOUND )

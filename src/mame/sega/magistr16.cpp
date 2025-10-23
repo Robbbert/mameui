@@ -8,9 +8,19 @@ a.k.a. Super Kombat KO16
 
 MegaDrive SECAM clone with ISA bus glued together thru expansion bus
 
+Notes:
+- error #100A: generic Magistr16 HW error, missing "BIOS" header at $400000
+  (what would return when run on stock MD)
+- error #1004: flash type error PC=fc07da
+- error #1008: GPIO1 Super I/O device at $100 AT90S1200
+- error #1009: <seen in the same path as #1008>
+- error #100C: checksum error (on main cart);
+
 TODO:
 - accomodate YM7101 to use PAL semantics and V30 modes
-- Fix error #1004 (at PC=FC07DA), should be wrong type for flash device;
+- Fix current #1008 error (bp fc1b84,1,{D0=0;g})
+- Alias for flash type device ID 0x46 (at PC=fc0794/PC=fc07b2)
+- Eventually return "ILLEGAL COPY !!!" at PC=FC3900
 
 **************************************************************************************************/
 
@@ -81,7 +91,7 @@ private:
 	required_device_array<sms_control_port_device, 3> m_md_ctrl_ports;
 	required_device_array<megadrive_io_port_device, 3> m_md_ioports;
 	required_device<isa16_device> m_isabus;
-	required_device<fujitsu_29f016a_device> m_flash;
+	required_device<winbond_w29c020c_device> m_flash;
 
 	std::unique_ptr<u8[]> m_sound_program;
 
@@ -92,6 +102,9 @@ private:
 	void flush_z80_state();
 
 	static void winbond_superio_config(device_t *device);
+
+	u8 gpio1_r();
+	void gpio1_w(u8 data);
 };
 
 
@@ -100,7 +113,7 @@ void magistr16_state::md_68k_map(address_map &map)
 	map.unmap_value_high();
 	// assume it can't access expansion bus area
 	map(0x000000, 0x3fffff).rw(m_md_cart, FUNC(megadrive_cart_slot_device::base_r), FUNC(megadrive_cart_slot_device::base_w));
-	map(0x400000, 0x5fffff).rw(m_flash, FUNC(fujitsu_29f016a_device::read), FUNC(fujitsu_29f016a_device::write));
+	map(0x400000, 0x43ffff).rw(m_flash, FUNC(winbond_w29c020c_device::read), FUNC(winbond_w29c020c_device::write));
 
 	map(0x7e0000, 0x7e07ff).rw(m_isabus, FUNC(isa16_device::io_r), FUNC(isa16_device::io_w)).umask16(0x00ff);
 
@@ -166,7 +179,7 @@ void magistr16_state::md_68k_map(address_map &map)
 //  map(0xa14000, 0xa14003) TMSS lock
 //  map(0xa15100, 0xa153ff) 32X registers if present, <unmapped> otherwise
 //  map(0xc00000, 0xdfffff) VDP and PSG (with mirrors and holes)
-//	$d00000 alias required by earthdef
+//  $d00000 alias required by earthdef
 	map(0xc00000, 0xc0001f).mirror(0x100000).m(m_md_vdp, FUNC(ym7101_device::if16_map));
 	map(0xe00000, 0xe3ffff).mirror(0x1c0000).ram(); // more work RAM compared to stock MD
 }
@@ -308,20 +321,51 @@ void magistr16_state::machine_reset()
 	flush_z80_state();
 }
 
+/*
+ *
+ * Super I/O semantics
+ *
+ */
+
+// AT90S1200 comms, also from $300000 in cart space for "music"
+/*
+ * ---- --x- Atmel PB6/MISO
+ */
+u8 magistr16_state::gpio1_r()
+{
+	return 0;
+}
+
+/*
+ * x--- ---- Atmel PB5/MOSI
+ * -x-- ---- Atmel PB7/SCK
+ * --xx ---- <used on $300000 checks> PB0~1/AIN0~1?
+ */
+void magistr16_state::gpio1_w(u8 data)
+{
+	if (data & 0x3f)
+		logerror("gpio1_w: unknown bit set %02x\n",data);
+}
+
 static void isa_internal_devices(device_slot_interface &device)
 {
+	// TODO: Winbond w83977f
 	device.option_add("w83977tf", W83977TF);
 }
 
 void magistr16_state::winbond_superio_config(device_t *device)
 {
-	// TODO: Winbond w83977f
-//	w83977tf_device &fdc = *downcast<w83977tf_device *>(device);
+	auto *state = device->subdevice<magistr16_state>(":");
+
+	w83977tf_device &fdc = *downcast<w83977tf_device *>(device);
+	fdc.gpio1_read().set(*state, FUNC(magistr16_state::gpio1_r));
+	fdc.gpio1_write().set(*state, FUNC(magistr16_state::gpio1_w));
+
 //  fdc.set_sysopt_pin(1);
-//	fdc.gp20_reset().set_inputline(":maincpu", INPUT_LINE_RESET);
-//	fdc.gp25_gatea20().set_inputline(":maincpu", INPUT_LINE_A20);
-//	fdc.irq1().set(":pci:07.0", FUNC(i82371eb_isa_device::pc_irq1_w));
-//	fdc.irq8().set(":pci:07.0", FUNC(i82371eb_isa_device::pc_irq8n_w));
+//  fdc.gp20_reset().set_inputline(":maincpu", INPUT_LINE_RESET);
+//  fdc.gp25_gatea20().set_inputline(":maincpu", INPUT_LINE_A20);
+//  fdc.irq1().set(":pci:07.0", FUNC(i82371eb_isa_device::pc_irq1_w));
+//  fdc.irq8().set(":pci:07.0", FUNC(i82371eb_isa_device::pc_irq8n_w));
 //  fdc.txd1().set(":serport0", FUNC(rs232_port_device::write_txd));
 //  fdc.ndtr1().set(":serport0", FUNC(rs232_port_device::write_dtr));
 //  fdc.nrts1().set(":serport0", FUNC(rs232_port_device::write_rts));
@@ -401,11 +445,11 @@ void magistr16_state::magistr16(machine_config &config)
 	m_opn->add_route(0, "md_speaker", 0.50, 0);
 	m_opn->add_route(1, "md_speaker", 0.50, 1);
 
+	// TODO: either split specific magistr16 carts or make it a filter option
 	SOFTWARE_LIST(config, "cart_list").set_original("megadriv").set_filter("PAL");
 
 	// expansion bus overlays
-	// TODO: Winbond W29C020C really
-	FUJITSU_29F016A(config, "flash");
+	WINBOND_W29C020C(config, "flash");
 
 	// FIXME: determine ISA bus clock
 	ISA16(config, m_isabus, 0);
@@ -415,16 +459,15 @@ void magistr16_state::magistr16(machine_config &config)
 
 
 ROM_START( magistr16 )
-	ROM_REGION( 0x200000, "flash", ROMREGION_ERASEFF )
+	ROM_REGION16_BE( 0x40000, "flash", ROMREGION_ERASE00 )
 	// both looks incomplete, to be checked if any vital data is missing here.
 	ROM_SYSTEM_BIOS(0, "212a", "2.12a")
-	ROMX_LOAD( "bios-dump_2.12a-core.bin", 0x00000, 0x4800, BAD_DUMP CRC(ed7b2d61) SHA1(89aa09023262e5daae7f62c2c46b0a6b2228113f), ROM_BIOS(0))
+	ROMX_LOAD( "bios-dump_2.12a-core.bin", 0x00000, 0x4800, BAD_DUMP CRC(ed7b2d61) SHA1(89aa09023262e5daae7f62c2c46b0a6b2228113f), ROM_BIOS(0) | ROM_GROUPWORD)
 	ROM_SYSTEM_BIOS(1, "209i", "2.09i")
-	ROMX_LOAD( "bios-dump_2.09i-core.bin", 0x00000, 0x4c00, BAD_DUMP CRC(c63d54b4) SHA1(8dad327fd5464341c55a9c12225b46c440c46507), ROM_BIOS(1))
-
+	ROMX_LOAD( "bios-dump_2.09i-core.bin", 0x00000, 0x4c00, BAD_DUMP CRC(c63d54b4) SHA1(8dad327fd5464341c55a9c12225b46c440c46507), ROM_BIOS(1) | ROM_GROUPWORD)
 ROM_END
 
 } // anonymous namespace
 
-CONS( 2001, magistr16, 0, 0, magistr16, magistr16, magistr16_state, empty_init, "New Game", "Magistr16 (Russia)", MACHINE_NOT_WORKING )
+CONS( 2001, magistr16, 0, 0, magistr16, magistr16, magistr16_state, empty_init, "New Game", "Magistr16 (Russia)", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION )
 
