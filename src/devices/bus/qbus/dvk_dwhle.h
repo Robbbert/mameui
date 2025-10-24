@@ -2,18 +2,18 @@
 // copyright-holders:Sergey Svishchev
 /***************************************************************************
 
-    Loopback cart for ROM test routines
+    DVK KZD MFM hard disk controller HLE
 
 ***************************************************************************/
 
-#ifndef MAME_BUS_BK_LOOPBACK_H
-#define MAME_BUS_BK_LOOPBACK_H
+#ifndef MAME_BUS_QBUS_DVK_DWHLE_H
+#define MAME_BUS_QBUS_DVK_DWHLE_H
 
 #pragma once
 
-#include "parallel.h"
+#include "qbus.h"
 
 
-DECLARE_DEVICE_TYPE(BK_LOOPBACK, device_qbus_card_interface)
+DECLARE_DEVICE_TYPE(DVK_DWHLE, device_qbus_card_interface)
 
 #endif

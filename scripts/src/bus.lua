@@ -2607,8 +2607,8 @@ if (BUSES["RC2014"]~=null) then
 		MAME_DIR .. "src/devices/bus/rc2014/rtc.h",
 		MAME_DIR .. "src/devices/bus/rc2014/serial.cpp",
 		MAME_DIR .. "src/devices/bus/rc2014/serial.h",
-		MAME_DIR .. "src/devices/bus/rc2014/sound.cpp",
-		MAME_DIR .. "src/devices/bus/rc2014/sound.h",
+		MAME_DIR .. "src/devices/bus/rc2014/sound_ym_ay.cpp",
+		MAME_DIR .. "src/devices/bus/rc2014/sound_ym_ay.h",
 		MAME_DIR .. "src/devices/bus/rc2014/z180cpu.cpp",
 		MAME_DIR .. "src/devices/bus/rc2014/z180cpu.h",
 		MAME_DIR .. "src/devices/bus/rc2014/z80cpu.cpp",
@@ -5004,6 +5004,8 @@ if (BUSES["QBUS"]~=null) then
 		MAME_DIR .. "src/devices/bus/qbus/bk_kmd.h",
 		MAME_DIR .. "src/devices/bus/qbus/dsd4432.cpp",
 		MAME_DIR .. "src/devices/bus/qbus/dsd4432.h",
+		MAME_DIR .. "src/devices/bus/qbus/dvk_dwhle.cpp",
+		MAME_DIR .. "src/devices/bus/qbus/dvk_dwhle.h",
 		MAME_DIR .. "src/devices/bus/qbus/dvk_kgd.cpp",
 		MAME_DIR .. "src/devices/bus/qbus/dvk_kgd.h",
 		MAME_DIR .. "src/devices/bus/qbus/dvk_kmd.cpp",
@@ -5533,6 +5535,19 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/bus/nec_fdd/pc80s31k.h,BUSES["NEC_FDD"] = true
+---------------------------------------------------
+
+if (BUSES["NEC_FDD"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/bus/nec_fdd/pc80s31k.cpp",
+		MAME_DIR .. "src/devices/bus/nec_fdd/pc80s31k.h",
+	}
+end
+
+
+---------------------------------------------------
+--
 --@src/devices/bus/pc98_cbus/slot.h,BUSES["PC98_CBUS"] = true
 ---------------------------------------------------
 
@@ -5540,6 +5555,8 @@ if (BUSES["PC98_CBUS"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/bus/pc98_cbus/amd98.cpp",
 		MAME_DIR .. "src/devices/bus/pc98_cbus/amd98.h",
+		MAME_DIR .. "src/devices/bus/pc98_cbus/fdd_2d.cpp",
+		MAME_DIR .. "src/devices/bus/pc98_cbus/fdd_2d.h",
 		MAME_DIR .. "src/devices/bus/pc98_cbus/mif201.cpp",
 		MAME_DIR .. "src/devices/bus/pc98_cbus/mif201.h",
 		MAME_DIR .. "src/devices/bus/pc98_cbus/mpu_pc98.cpp",
