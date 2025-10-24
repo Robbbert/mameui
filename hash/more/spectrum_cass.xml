@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5401 -->
+<!-- Number of items in this list = 5426 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -339,6 +339,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="80070">
 				<rom name="-Bubble Bobble 2 -  Rainbow Islands  (1990)(Ocean Software Ltd)[cr [Cr Pentacle + Matasoft](128K)[Cr Pentacle + Matasoft].tap" size="80070" crc="35c50bcb" sha1="6e55c7953212d67f3cf1d20b1e6f73337885d128"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs390cbeead87ee">
+		<description>-Impossamole (1990)(Gremlin Graphics Software Ltd)[cr [Cr California][t California](128K)[Cr California]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84026">
+				<rom name="-Impossamole (1990)(Gremlin Graphics Software Ltd)[cr [Cr California][t California](128K)[Cr California].tap" size="84026" crc="e73e5e49" sha1="390cbeead87ee875f97c9e04e94dfb42978bf11c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11212,6 +11222,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc271406ca248c">
+		<description>BT-BCS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4797">
+				<rom name="BT-BCS.TAP" size="4797" crc="13a48cde" sha1="c271406ca248c0824ccca89716d8c3ef0d7eda2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4c932e064254">
+		<description>BT-TC30</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6016">
+				<rom name="BT-TC30.TAP" size="6016" crc="06b60dc4" sha1="d4c932e0642542e2a8dd6fd81358f57205287a81"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs351574b7f5dbc">
 		<description>Bubble Bobble</description>
 		<year>????</year>
@@ -12532,6 +12562,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs50914230e5264">
+		<description>In Search Of Angels (1985)(8th Day Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34109">
+				<rom name="In Search Of Angels (1985)(8th Day Software).tap" size="34109" crc="5434f2d9" sha1="50914230e5264532b0e8b77d0c6181b1ec2b65e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs678a21c931398">
+		<description>In the Walls of Eryx (2016)(Monster's Legs Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39585">
+				<rom name="In the Walls of Eryx (2016)(Monster's Legs Productions).tap" size="39585" crc="e201c77c" sha1="678a21c931398f26b491c66db3fdeae52170804c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b1cf7eab916f">
+		<description>Incredible Shrinking Fireman, The (1986)(Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49550">
+				<rom name="Incredible Shrinking Fireman, The (1986)(Mastertronic)[a].tap" size="49550" crc="3c55d7eb" sha1="6b1cf7eab916f125e2ada33a4be42513452c40b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb95c26d72d84f">
+		<description>Incredible Shrinking Fireman, The 48K (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46523">
+				<rom name="Incredible Shrinking Fireman, The 48K (1986)(Mastertronic).tap" size="46523" crc="1940b148" sha1="b95c26d72d84f414678f75ef96c07bf147548ff0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaef38cfc3f3f2">
+		<description>Incredible Shrinking Professor, The 128K (2017)(Rucksack Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44116">
+				<rom name="Incredible Shrinking Professor, The 128K (2017)(Rucksack Games).tap" size="44116" crc="03e3de19" sha1="aef38cfc3f3f2a64833d19edff10a60ed200f122"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54a63fa66b78e">
+		<description>Incredible Shrinking Sphere (1989)(Electric Dreams Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42625">
+				<rom name="Incredible Shrinking Sphere (1989)(Electric Dreams Software).tap" size="42625" crc="f89b035d" sha1="54a63fa66b78ebb95df5e6a3466104b52e0b6efb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb61ca39db86fa">
+		<description>Incursion Arena (19xx)(Hipocrates Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13781">
+				<rom name="Incursion Arena (19xx)(Hipocrates Soft).tap" size="13781" crc="94c80bd1" sha1="b61ca39db86fae76ed2d92c4a0b594f02435a01a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5a920df8719b2">
+		<description>Indiana Jones - A Chram Zkazy (1985)(Fuxoft)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48408">
+				<rom name="Indiana Jones - A Chram Zkazy (1985)(Fuxoft)(Cz).tap" size="48408" crc="2e44f155" sha1="5a920df8719b21b0232e6a0bd42ababe4a3caaf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdee00513fc794">
+		<description>Indiana Jones - A Zlata Soska Keltu (1989)(Fuxoft)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39458">
+				<rom name="Indiana Jones - A Zlata Soska Keltu (1989)(Fuxoft)(Cz).tap" size="39458" crc="783d9c8f" sha1="dee00513fc7940f17ef34cede390aaf17927f1a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2bd2251cc872e">
+		<description>Indiana Jones 2 (1987)(Fuxoft)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48408">
+				<rom name="Indiana Jones 2 (1987)(Fuxoft)(Cz).tap" size="48408" crc="d893f2c6" sha1="2bd2251cc872e9d95679a6129fc77888c9afce72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa397420d84491">
+		<description>Indiana Jones 2 (1987)(Fuxoft)(Cz)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28218">
+				<rom name="Indiana Jones 2 (1987)(Fuxoft)(Cz)[a].tap" size="28218" crc="cd2f1cd8" sha1="a397420d84491b8969210957540a71cd613c5857"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse910c3438a772">
+		<description>Indiana Jones 3 (1990)(Fuxoft)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48408">
+				<rom name="Indiana Jones 3 (1990)(Fuxoft)(Cz).tap" size="48408" crc="70534e50" sha1="e910c3438a77203b412f4fd2990aa75d54135eea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc0059de8f4a9a">
 		<description>Indiana Jones 3</description>
 		<year>????</year>
@@ -12542,6 +12692,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6208db3314321">
+		<description>Indiana Jones and the Fate of Atlantis - Text Adventure 48K (2025)(Kamil Blazek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46567">
+				<rom name="Indiana Jones and the Fate of Atlantis - Text Adventure 48K (2025)(Kamil Blazek).tap" size="46567" crc="456d8d5b" sha1="6208db3314321a8dc542b8fecb08d3ada72a072f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs25241cc02b926">
+		<description>Indiana Jones And The Last Crusade (1989)(US Gold)[t +4](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="146474">
+				<rom name="Indiana Jones And The Last Crusade (1989)(US Gold)[t +4](128K).tap" size="146474" crc="33a7990c" sha1="25241cc02b926b2b8b06e2d7b0d52af5b34be89d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92e59aa086944">
+		<description>Indiana Jones and the Last Crusade 128K (1989)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="145470">
+				<rom name="Indiana Jones and the Last Crusade 128K (1989)(U.S. Gold).tap" size="145470" crc="e43fcead" sha1="92e59aa086944c835db46311651e2b8586e8f36e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9c79c5538745e">
 		<description>Indiana Jones And the Last Crusade</description>
 		<year>????</year>
@@ -12549,6 +12729,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="146595">
 				<rom name="Indiana Jones And the Last Crusade.tzx" size="146595" crc="d868f47d" sha1="9c79c5538745eb1f4fa14be9f14012e5f2653ba7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs26f596074265b">
+		<description>Indiana Jones And The Temple Of Doom (1987)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="76529">
+				<rom name="Indiana Jones And The Temple Of Doom (1987)(US Gold).tap" size="76529" crc="2c9fa63e" sha1="26f596074265b9ddaed908ab03f055c9affd5f13"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12572,6 +12762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs24c57206cfd65">
+		<description>Indoor Sports (1987)(Advance Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42765">
+				<rom name="Indoor Sports (1987)(Advance Software).tap" size="42765" crc="711cce01" sha1="24c57206cfd658a24681e3cc73e434e81d9ddac1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc490f0768f9ec">
 		<description>Ines + Denis + Ute + Sorti (1985)(Primoz Jakopin)</description>
 		<year>????</year>
@@ -12582,6 +12782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4d93f8d9a7629">
+		<description>Ines 64 v1.1 (1985)(Ultrasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19484">
+				<rom name="Ines 64 v1.1 (1985)(Ultrasoft).tap" size="19484" crc="f87ed487" sha1="4d93f8d9a76299f4b8b3921cc35ad3a713fc6ee5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbcce8213e176e">
 		<description>Inferno</description>
 		<year>????</year>
@@ -12589,6 +12799,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8517">
 				<rom name="Inferno.tzx" size="8517" crc="ad53b6c9" sha1="bcce8213e176ea41352106bcb73d251cb93f5124"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs733103f8fa0d8">
+		<description>Infiltrator (1986)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="152377">
+				<rom name="Infiltrator (1986)(US Gold).tap" size="152377" crc="0ccee7c6" sha1="733103f8fa0d8fc56e643b3f3e43b027cf46da2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ffb5f0ea36ec">
+		<description>Infiltrator (1986)(US Gold)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49370">
+				<rom name="Infiltrator (1986)(US Gold)[a].tap" size="49370" crc="3d9a3e8e" sha1="2ffb5f0ea36ec874924d7df8e9efe44adb2931e4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47899,6 +48129,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="57620">
 				<rom name="_Impossible Mission.tzx" size="57620" crc="949bc8f4" sha1="5426d6f0a0d04dc785bd3b1c9dce5af89369616b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd11b0bdb55969">
+		<description>_Incredible Shrinking Fireman, The (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46345">
+				<rom name="_Incredible Shrinking Fireman, The (1986)(Mastertronic).tap" size="46345" crc="355c7259" sha1="d11b0bdb55969422ee063edf436d346deca2775c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c718649e3ad6">
+		<description>_Indiana Jones And The Last Crusade (1989)(US Gold)(128k)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="145920">
+				<rom name="_Indiana Jones And The Last Crusade (1989)(US Gold)(128k)[a].tap" size="145920" crc="a59a83af" sha1="0c718649e3ad6d8d69433819193cd401b2a4e956"/>
 			</dataarea>
 		</part>
 	</software>
