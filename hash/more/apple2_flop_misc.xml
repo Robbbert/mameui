@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 982 -->
+<!-- Number of items in this list = 994 -->
 <softwarelist name="apple2_flop_misc" description="apple2_flop_misc loose roms">
 	<software name="app77bb781cf3d30">
 		<description>(demo) Desire Wires (2024-02)(Desire)</description>
@@ -8832,6 +8832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app18a23399e8c92">
+		<description>Painter Power (1981)(Micro Lab)(II+)(US)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234757">
+				<rom name="Painter Power (1981)(Micro Lab)(II+)(US)[48K].woz" size="234757" crc="0cd769bf" sha1="18a23399e8c926c65825722c2fcb6350f0311a01"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app6a316363f966b">
 		<description>Pandora's Box (1982)(Datamost)(II+)(US)[cr Hot Rod - The Sorcerer][f title screen][48K]</description>
 		<year>????</year>
@@ -8839,6 +8849,36 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Pandora's Box (1982)(Datamost)(II+)(US)[cr Hot Rod - The Sorcerer][f title screen][48K].dsk" size="143360" crc="30b4bd71" sha1="6a316363f966b7e963c60a6c39cff9cc92ba89a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appba9bd041762b6">
+		<description>Peanuts Math Matcher (1985)(Random House)(II+)(US)(Side A)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="733696">
+				<rom name="Peanuts Math Matcher (1985)(Random House)(II+)(US)(Side A)[48K].woz" size="733696" crc="8da1e28b" sha1="ba9bd041762b67eff85b6dae0e41602504050cf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appb24ffdfb4a3c9">
+		<description>Peanuts Math Matcher (1985)(Random House)(II+)(US)(Side B)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="780288">
+				<rom name="Peanuts Math Matcher (1985)(Random House)(II+)(US)(Side B)[48K].woz" size="780288" crc="4264cbd6" sha1="b24ffdfb4a3c93faf5352c9b00e8c1500ac53039"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2b0ab04bb461e">
+		<description>Perception v3.1 (1981)(Edu-Ware)(II+)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234812">
+				<rom name="Perception v3.1 (1981)(Edu-Ware)(II+)[48K].woz" size="234812" crc="d3c10b65" sha1="2b0ab04bb461ec1beae38e45a4fa59f9f8f82e72"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8859,6 +8899,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Plasma Mask (2024-02)(Desire).dsk" size="143360" crc="2b7468a5" sha1="1a54e35ec86223913d3c9f18a60b6347684addc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appa9222543987c6">
+		<description>Polls and Politics v1.0 (1983)(MECC)(II+)(US)[a][48K][A-820]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234809">
+				<rom name="Polls and Politics v1.0 (1983)(MECC)(II+)(US)[a][48K][A-820].woz" size="234809" crc="1c90694f" sha1="a9222543987c603a6d1d12fc8f872ddf5ee8ce4d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8919,6 +8969,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Porteparole v1.1 (1984)(Ediciel)(FR)(Side B)(Mise au Point Graphique).dsk" size="143360" crc="19139d74" sha1="e7719524ed71d99268711062a9d29f4e0ecda628"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2e3c077d8fd88">
+		<description>Problem-Solving Strategies v1.0 (1984-09-25)(MECC)(II+)(US)[48K][H-103]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234838">
+				<rom name="Problem-Solving Strategies v1.0 (1984-09-25)(MECC)(II+)(US)[48K][H-103].woz" size="234838" crc="05fe2fd2" sha1="2e3c077d8fd8848f82ec21cb0ced25bfe0d8d7ea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9039,6 +9099,66 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Pulsewave 5th Birthday Flyer (20xx)(Melvin, Bud).dsk" size="143360" crc="5ec6b537" sha1="f63b967d97978718cd0c706724fd85c99b74cb66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appcf3f30baa97e7">
+		<description>Punctuation - Building Better Language Skills (1989)(Micrograms)(II+)[64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234792">
+				<rom name="Punctuation - Building Better Language Skills (1989)(Micrograms)(II+)[64K].woz" size="234792" crc="1d8cb9df" sha1="cf3f30baa97e7495a97f7055c8b766d9ae87a2fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appfb1de9b30323c">
+		<description>Punctuation Skills - End Marks, Semicolon, and Colon (1983)(Milton Bradley)(II+)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="241481">
+				<rom name="Punctuation Skills - End Marks, Semicolon, and Colon (1983)(Milton Bradley)(II+)[48K].woz" size="241481" crc="d76e3396" sha1="fb1de9b30323c5a54e80ea05bb2e0af8e6d4c25c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appaf79559d8a919">
+		<description>Questprobe featuring Spider-Man vB-258 (1985)(Adventure International)(II+)(US)(Side A)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234797">
+				<rom name="Questprobe featuring Spider-Man vB-258 (1985)(Adventure International)(II+)(US)(Side A)[48K].woz" size="234797" crc="96f4ff35" sha1="af79559d8a9193f9cc87765d6f89df24917b42d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appcd38313dfc3d9">
+		<description>Questprobe featuring Spider-Man vB-258 (1985)(Adventure International)(II+)(US)(Side B)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234797">
+				<rom name="Questprobe featuring Spider-Man vB-258 (1985)(Adventure International)(II+)(US)(Side B)[48K].woz" size="234797" crc="2e55a307" sha1="cd38313dfc3d97d3325ec366ae15db8d2a34cc0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8ae44ba9f64f2">
+		<description>Questprobe featuring Spider-Man vF-261 (1985)(Adventure International)(II+)(US)(Side A)[a][48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234766">
+				<rom name="Questprobe featuring Spider-Man vF-261 (1985)(Adventure International)(II+)(US)(Side A)[a][48K].woz" size="234766" crc="bcce8646" sha1="8ae44ba9f64f253aac7dc592e1a7dea16c0d7573"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0373a0fc159d6">
+		<description>Questprobe featuring Spider-Man vF-261 (1985)(Adventure International)(II+)(US)(Side B)[a][48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234766">
+				<rom name="Questprobe featuring Spider-Man vF-261 (1985)(Adventure International)(II+)(US)(Side B)[a][48K].woz" size="234766" crc="af4779c9" sha1="0373a0fc159d6f55052d5925f962b816980cda49"/>
 			</dataarea>
 		</part>
 	</software>

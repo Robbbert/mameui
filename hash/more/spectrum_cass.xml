@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5426 -->
+<!-- Number of items in this list = 5491 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -339,6 +339,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="80070">
 				<rom name="-Bubble Bobble 2 -  Rainbow Islands  (1990)(Ocean Software Ltd)[cr [Cr Pentacle + Matasoft](128K)[Cr Pentacle + Matasoft].tap" size="80070" crc="35c50bcb" sha1="6e55c7953212d67f3cf1d20b1e6f73337885d128"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56af9908b7dcf">
+		<description>-Hydrofool (1987)(Faster Than Light)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39609">
+				<rom name="-Hydrofool (1987)(Faster Than Light)[cr [Cr][Cr].tap" size="39609" crc="ec7caf25" sha1="56af9908b7dcf4cd7f596d9786a04e6deb99b984"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb6cefd41daa96">
+		<description>-Hypsys - Part 1 (1989)(Techno Arts)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39153">
+				<rom name="-Hypsys - Part 1 (1989)(Techno Arts)[cr [Cr][Cr].tap" size="39153" crc="215291c9" sha1="b6cefd41daa96d12c546f46262f37a8c58a76b76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs22884d48229dc">
+		<description>-Hypsys - Part 2 (1989)(Techno Arts)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39156">
+				<rom name="-Hypsys - Part 2 (1989)(Techno Arts)[cr [Cr][Cr].tap" size="39156" crc="48059696" sha1="22884d48229dc8d4fac018b72e38748fdf3a4bec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54f4675b6bda4">
+		<description>-Ikari Warriors (1988)(Elite Systems Ltd)[cr [Cr][t][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34472">
+				<rom name="-Ikari Warriors (1988)(Elite Systems Ltd)[cr [Cr][t][Cr].tap" size="34472" crc="40238f4d" sha1="54f4675b6bda44b724d42f336c675566063a2efd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11242,6 +11282,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4fb8e7f610bc1">
+		<description>Bubble Bobble (1987)(Firebird)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44544">
+				<rom name="Bubble Bobble (1987)(Firebird)(128K).tap" size="44544" crc="416da40b" sha1="4fb8e7f610bc19a84842c54f53b69c2c08ab7e9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb1387e67d21d6">
+		<description>Bubble Bobble (1987)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36925">
+				<rom name="Bubble Bobble (1987)(Firebird).tap" size="36925" crc="df413744" sha1="b1387e67d21d64225d412ecce37a38245b32b61a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3653265d4a3f6">
+		<description>Bubble Bobble (1987)(Firebird)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53224">
+				<rom name="Bubble Bobble (1987)(Firebird)_1.tap" size="53224" crc="dce45529" sha1="3653265d4a3f668d6734fc65e299dd0a0ba6f8c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4da4a905f04f8">
+		<description>Bubble Bobble - The Adventure 128K (1993)(AP's Adventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="73681">
+				<rom name="Bubble Bobble - The Adventure 128K (1993)(AP's Adventures).tap" size="73681" crc="856eb771" sha1="4da4a905f04f8d84cb0e072238cd3236215be1f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50c74656898ed">
+		<description>Bubble Bobble 2 (1990)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42813">
+				<rom name="Bubble Bobble 2 (1990)(Ocean Software).tap" size="42813" crc="9517719d" sha1="50c74656898ed3313a2aa43304be9df823b69569"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a8bde9e28e9d">
+		<description>Bubble Bobble 2 (1990)(Ocean Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43008">
+				<rom name="Bubble Bobble 2 (1990)(Ocean Software)[a].tap" size="43008" crc="3104d495" sha1="9a8bde9e28e9d0e173c7b6588cbcec5e5d38b1ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs351574b7f5dbc">
 		<description>Bubble Bobble</description>
 		<year>????</year>
@@ -11249,6 +11349,166 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="55592">
 				<rom name="Bubble Bobble.tzx" size="55592" crc="21507440" sha1="351574b7f5dbcd9404f6ebb235215253f1ad6bed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b9026d77bb65">
+		<description>Bubble Buster (1983)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7796">
+				<rom name="Bubble Buster (1983)(Hudson Soft).tap" size="7796" crc="2452ed7c" sha1="7b9026d77bb651980094cb14bbe0a829bb343c70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs32fc1ebe3d508">
+		<description>Bubble Buster (1983)(Hudson Soft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8192">
+				<rom name="Bubble Buster (1983)(Hudson Soft)[a].tap" size="8192" crc="6d37e388" sha1="32fc1ebe3d508c360e903c49db7bef9b7462f475"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcd77440a28f3">
+		<description>Bubble Cop v1.0 128K (2025)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56008">
+				<rom name="Bubble Cop v1.0 128K (2025)(Gabriele Amore).tap" size="56008" crc="8c66a090" sha1="bcd77440a28f3b9f7f36485a56b05c2f522d3833"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf35e88382016">
+		<description>Bubble Cop v1.1 128K (2025)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56008">
+				<rom name="Bubble Cop v1.1 128K (2025)(Gabriele Amore).tap" size="56008" crc="04c35f20" sha1="af35e88382016d5daecad3be36f42bd04642224a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa0140842bc69">
+		<description>Bubble Dizzy (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50433">
+				<rom name="Bubble Dizzy (1991)(Codemasters).tap" size="50433" crc="8e6625af" sha1="aa0140842bc69277085904291fd6612b255661ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse0101bf44bd11">
+		<description>Bubble in Trouble v1.1 128K (2025)(bitmagine Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50682">
+				<rom name="Bubble in Trouble v1.1 128K (2025)(bitmagine Studio).tap" size="50682" crc="c6b8bd06" sha1="e0101bf44bd1125de0aa3374d15843f1950cdd2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs37f1a6d8d4f58">
+		<description>Bubble Monkey Bros - bug fixed (2015)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32418">
+				<rom name="Bubble Monkey Bros - bug fixed (2015)(Gabriele Amore).tap" size="32418" crc="bd320030" sha1="37f1a6d8d4f58be646e1879203f1109e3607adda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2eb2f9bca9467">
+		<description>Bubble Monkey Bros 128K (2015)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36566">
+				<rom name="Bubble Monkey Bros 128K (2015)(Gabriele Amore).tap" size="36566" crc="729dd4be" sha1="2eb2f9bca9467836e1bb51b0884268df75b01374"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd071da4c6ae07">
+		<description>Bubble Run (1986)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17083">
+				<rom name="Bubble Run (1986)(Tynesoft).tap" size="17083" crc="a245cad7" sha1="d071da4c6ae07661b8997a053db18305a1a26fe0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs10f89e863dd1d">
+		<description>Bubble Trouble (1982)(Arcade Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29542">
+				<rom name="Bubble Trouble (1982)(Arcade Software).tap" size="29542" crc="f4e483b5" sha1="10f89e863dd1dd18318ec61158cc44f69aed2408"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a70d175308f5">
+		<description>Bubble Trouble (1986)(Your Sinclair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7390">
+				<rom name="Bubble Trouble (1986)(Your Sinclair).tap" size="7390" crc="cdf7b3a7" sha1="9a70d175308f54b5344868b357e841d01b3b4882"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70eea41571926">
+		<description>BubbleBack - The Story of Forward to the Past 2 48K-128K (2025)(Sloanysoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50134">
+				<rom name="BubbleBack - The Story of Forward to the Past 2 48K-128K (2025)(Sloanysoft).tap" size="50134" crc="8e5011a7" sha1="70eea41571926448bef778d1c6524b277709e33e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98bb6aa7166be">
+		<description>Bubbler (1987)(Ultimate Play The Game)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41660">
+				<rom name="Bubbler (1987)(Ultimate Play The Game).tap" size="41660" crc="8e3e4b5a" sha1="98bb6aa7166befe73375382df53118783177ddbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1ff60d3015196">
+		<description>Bubbler (1987)(Ultimate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41660">
+				<rom name="Bubbler (1987)(Ultimate).tap" size="41660" crc="df47a7ad" sha1="1ff60d3015196c765ec26b261a18b71607926cf9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee5cdfb7f9bd5">
+		<description>Bubbler (1987)(Ultimate)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41656">
+				<rom name="Bubbler (1987)(Ultimate)[a].tap" size="41656" crc="5d0699fa" sha1="ee5cdfb7f9bd597e384eed16728813dc682d54f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb9d87384d5e9a">
+		<description>Bubu's Anteater (2021)(Bubu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21399">
+				<rom name="Bubu's Anteater (2021)(Bubu).tap" size="21399" crc="81c38b76" sha1="b9d87384d5e9a0e028de87be8a5e1429f16c256a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12502,6 +12762,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs02e11e5c6578a">
+		<description>I Ain't Got Nobody (19xx)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48267">
+				<rom name="I Ain't Got Nobody (19xx)(Tynesoft).tap" size="48267" crc="bc315f0c" sha1="02e11e5c6578aa8f2ff22bff9286725e83ea6644"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb1f97ca3d3b32">
+		<description>I Alien (1988)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43614">
+				<rom name="I Alien (1988)(CRL Group).tap" size="43614" crc="03e4a9ac" sha1="b1f97ca3d3b32e9a1bcd227f0a81f896858509ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7666303ea7a46">
+		<description>I Ball II - The Quest For The Past (1987)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40691">
+				<rom name="I Ball II - The Quest For The Past (1987)(Firebird).tap" size="40691" crc="8ddcdfc8" sha1="7666303ea7a463a34bcd6c534a46bbafbc47fcd2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscd6fedfd427cd">
 		<description>I Ball</description>
 		<year>????</year>
@@ -12512,6 +12802,156 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5909b8167a572">
+		<description>I Dare You (19xx)(Pegasus Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44730">
+				<rom name="I Dare You (19xx)(Pegasus Software).tap" size="44730" crc="3cf82e64" sha1="5909b8167a572f2aadd974f37dd7c791a0f3b1f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e6102645f582">
+		<description>I Of The Mask (1985)(Electric Dreams Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43920">
+				<rom name="I Of The Mask (1985)(Electric Dreams Software).tap" size="43920" crc="8742ebf7" sha1="8e6102645f58234e9cd1db564882f1b9de8b9396"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0d1d1888146b9">
+		<description>I'm In Shock (1984)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5872">
+				<rom name="I'm In Shock (1984)(Artic Computing).tap" size="5872" crc="fb8df5ed" sha1="0d1d1888146b92a5150320e1770c4168a2d4c618"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf78ed97ebd577">
+		<description>I.C.U.P.S. (1985)(Thor Computer Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37263">
+				<rom name="I.C.U.P.S. (1985)(Thor Computer Software).tap" size="37263" crc="c29dc468" sha1="f78ed97ebd577a28985352cf97cbfa34c9497405"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc58ed8f905d70">
+		<description>I.C.U.P.S. (1985)(Thor Computer Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="I.C.U.P.S. (1985)(Thor Computer Software)[a].tap" size="42714" crc="eab29fbb" sha1="c58ed8f905d70d1a242d6192e10b04e35abd4521"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1aca8efd56f3e">
+		<description>Ian Botham's Test Match (1985)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35757">
+				<rom name="Ian Botham's Test Match (1985)(Tynesoft).tap" size="35757" crc="2905bb4d" sha1="1aca8efd56f3ea28420f600913abb897d7c75cb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs916235ef4b4b6">
+		<description>Ice Attack (1986)(K'Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5668">
+				<rom name="Ice Attack (1986)(K'Soft).tap" size="5668" crc="fee83467" sha1="916235ef4b4b60eaf87900fb154eb35d0830ce73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1adcb8c26953a">
+		<description>Ice Slider Z 48K (2015)(EgoTrip)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25840">
+				<rom name="Ice Slider Z 48K (2015)(EgoTrip).tap" size="25840" crc="810f2cae" sha1="1adcb8c26953aa57175233552e986149886526a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseb26df8f111d6">
+		<description>Ice Station Zero (1985)(8th Day Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41353">
+				<rom name="Ice Station Zero (1985)(8th Day Software).tap" size="41353" crc="efcc0b05" sha1="eb26df8f111d685add22cebb9b3703320e2b51ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7bf0c94053101">
+		<description>Ice-Breaker (1990)(Topo Soft - Realtime Games)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="164972">
+				<rom name="Ice-Breaker (1990)(Topo Soft - Realtime Games)(Sp).tap" size="164972" crc="b51d9d3f" sha1="7bf0c94053101503e6fcb61b0134bcbf16043dff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse3c70cd9d5d34">
+		<description>Icicle Works (1985)(Statesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48541">
+				<rom name="Icicle Works (1985)(Statesoft).tap" size="48541" crc="6a617fd6" sha1="e3c70cd9d5d34d52fc8127897a00c1b92866ba54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs694370058e06a">
+		<description>ID (1986)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21225">
+				<rom name="ID (1986)(CRL Group).tap" size="21225" crc="66e7de34" sha1="694370058e06a1f348c265a2b4831b2ea58b5523"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdea330d91bf63">
+		<description>ID (1986)(CRL Group)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49370">
+				<rom name="ID (1986)(CRL Group)[a].tap" size="49370" crc="6b196971" sha1="dea330d91bf63ad3959f2735d3c36f9f9be99783"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e38ce0676441">
+		<description>Identikit (19xx)(Stell Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37238">
+				<rom name="Identikit (19xx)(Stell Software).tap" size="37238" crc="faab39af" sha1="7e38ce067644139088e6241aaef5b01e1ef7f4e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaed386322699e">
+		<description>Ikari Warriors 48K-128K (1987)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47889">
+				<rom name="Ikari Warriors 48K-128K (1987)(Elite Systems).tap" size="47889" crc="f3fac369" sha1="aed386322699ef947bddb1c3fed11a9f37a8e9dd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs47b9b0905101c">
 		<description>Ikari Warriors</description>
 		<year>????</year>
@@ -12519,6 +12959,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49236">
 				<rom name="Ikari Warriors.tzx" size="49236" crc="132eda1b" sha1="47b9b0905101c1162ebea938f33f55e8d881a74a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfae8f0d4d6352">
+		<description>Il Cavalliere Di Re Artu Buon Divertimento (1986)(Palace)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42742">
+				<rom name="Il Cavalliere Di Re Artu Buon Divertimento (1986)(Palace)(Sp).tap" size="42742" crc="30f97307" sha1="fae8f0d4d6352b9b5a0b4b989a8a4b870290c67d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs921593461efc2">
+		<description>Il Meccanico - Automania (1984)(Load 'n' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39548">
+				<rom name="Il Meccanico - Automania (1984)(Load 'n' Run)(Sp).tap" size="39548" crc="7ed53690" sha1="921593461efc24ea8e357e0d7d18eac56e8a4047"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12542,6 +13002,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs06145f8ade3db">
+		<description>Impact (1988)(Audiogenic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46072">
+				<rom name="Impact (1988)(Audiogenic Software).tap" size="46072" crc="bd060a8c" sha1="06145f8ade3db117a987f84d29900d7bda86577b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs716c885254167">
+		<description>Imperator (1992)(Zagruvaetsq)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26858">
+				<rom name="Imperator (1992)(Zagruvaetsq)(Ru).tap" size="26858" crc="ddf009cd" sha1="716c8852541678e8e5d36ce246945bd3e7d33777"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscf27e678b6519">
+		<description>Impetus (2021)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16231">
+				<rom name="Impetus (2021)(Inufuto).tap" size="16231" crc="059b3699" sha1="cf27e678b6519a5346963fbe394bed0527566643"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3323252cdcbcc">
 		<description>Impetus</description>
 		<year>????</year>
@@ -12552,6 +13042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsdf3d870c89c95">
+		<description>Impossaball (1987)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45993">
+				<rom name="Impossaball (1987)(Hewson Consultants).tap" size="45993" crc="158525a4" sha1="df3d870c89c953433d65b884964af113fb25bf09"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs6709d78bdf3e8">
 		<description>Impossaball</description>
 		<year>????</year>
@@ -12559,6 +13059,76 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44657">
 				<rom name="Impossaball.tzx" size="44657" crc="5304b5d4" sha1="6709d78bdf3e8cf2b009ef3a6c761bf70ab65500"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b8c7493312aa">
+		<description>Impossamal 128K (2023)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48978">
+				<rom name="Impossamal 128K (2023)(The Mojon Twins).tap" size="48978" crc="b30c4dce" sha1="7b8c7493312aa6a976037e443f7bcc54c7c67fc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs405bc8315e58c">
+		<description>Impossamal 48K (2023)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41958">
+				<rom name="Impossamal 48K (2023)(The Mojon Twins).tap" size="41958" crc="da1579b8" sha1="405bc8315e58c5ed53432a39fda0ac515fdf0104"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50dd2bad6caef">
+		<description>Impossamole (1990)(Gremlin Graphics)[t +3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="153496">
+				<rom name="Impossamole (1990)(Gremlin Graphics)[t +3].tap" size="153496" crc="383bc115" sha1="50dd2bad6caef53d49697200a11ff28f5cc1fc40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f6c331819863">
+		<description>Impossamole 128K (1990)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="152632">
+				<rom name="Impossamole 128K (1990)(Gremlin Graphics).tap" size="152632" crc="f1c505c7" sha1="0f6c331819863e57eaa76b47fde22330936582af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7619332ee7988">
+		<description>Impossible Mission (1985)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54480">
+				<rom name="Impossible Mission (1985)(U.S. Gold).tap" size="54480" crc="f3cddbf9" sha1="7619332ee7988baece4ce1ce1f10f5501afe54d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs741e9114431a5">
+		<description>Impossible Mission II (1988)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39758">
+				<rom name="Impossible Mission II (1988)(US Gold).tap" size="39758" crc="7557ec6d" sha1="741e9114431a5e841e375cd048e502b99b4bf844"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf4a0a1025b56">
+		<description>Impossible Mission II 48K (1988)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54122">
+				<rom name="Impossible Mission II 48K (1988)(U.S. Gold).tap" size="54122" crc="b5d3ec84" sha1="bf4a0a1025b563282da82ebd8144283a6071a6d8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -48122,6 +48692,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2acc1de080f2a">
+		<description>_Ice Temple, The (1986)(Bubble Bus Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45056">
+				<rom name="_Ice Temple, The (1986)(Bubble Bus Software).tap" size="45056" crc="fd129937" sha1="2acc1de080f2a59dbdde6e02e44756c731b8cf98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c35ed55adff1">
+		<description>_Ice Temple, The (1986)(Bubble Bus Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45017">
+				<rom name="_Ice Temple, The (1986)(Bubble Bus Software)[a].tap" size="45017" crc="5da8d930" sha1="2c35ed55adff1367930990cdcc799c27f02fa5f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8b7809c3a2c63">
+		<description>_Ice Temple, The 48K (1986)(Bubble Bus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45017">
+				<rom name="_Ice Temple, The 48K (1986)(Bubble Bus).tap" size="45017" crc="269dc9de" sha1="8b7809c3a2c63e04aa42ca36678a980042b727a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs872d5d5dae2c6">
+		<description>_Idioms (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="89670">
+				<rom name="_Idioms (19xx)(-).tap" size="89670" crc="3e6fc645" sha1="872d5d5dae2c68ff2b33f52b22c478d05f36feaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs902e62cb93f3d">
+		<description>_Il Noma Della Rosa T-Eng 48K (2025)(Miloslav Bahna)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="145914">
+				<rom name="_Il Noma Della Rosa T-Eng 48K (2025)(Miloslav Bahna).tap" size="145914" crc="515c98a0" sha1="902e62cb93f3d8c4950a7c6e7856d076268de62c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd06727106bb3e">
+		<description>_Illustrator, The VA00 (1984)(Gilsoft International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15470">
+				<rom name="_Illustrator, The VA00 (1984)(Gilsoft International).tap" size="15470" crc="9aa0010e" sha1="d06727106bb3e079e5a061bb16475506c628293a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73760c2875407">
+		<description>_Imagination (1987)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48607">
+				<rom name="_Imagination (1987)(Firebird Software Ltd).tap" size="48607" crc="a6b69007" sha1="73760c287540790ee615c20cc82230c168bac232"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaac3f4ea21987">
+		<description>_Impossamole (1990)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="145408">
+				<rom name="_Impossamole (1990)(Gremlin Graphics).tap" size="145408" crc="2085598d" sha1="aac3f4ea2198725bbc59e0352adf2e2b7af1c24e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs49c2cc6db66ab">
+		<description>_Impossamole (1990)(Gremlin Graphics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="145269">
+				<rom name="_Impossamole (1990)(Gremlin Graphics)[a].tap" size="145269" crc="082a0aa0" sha1="49c2cc6db66abd0be423c46a4c8f8701e4085263"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5426d6f0a0d04">
 		<description>_Impossible Mission</description>
 		<year>????</year>
@@ -50449,16 +51109,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="112766">
 				<rom name="_Ninja Warriors, The.tzx" size="112766" crc="af303a6d" sha1="6f532f012a60501669448edea5e59773b857ff86"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs902e62cb93f3d">
-		<description>_Noma della Rosa, Il EN 48K (1993)(Perpetum)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="145914">
-				<rom name="_Noma della Rosa, Il EN 48K (1993)(Perpetum).tap" size="145914" crc="515c98a0" sha1="902e62cb93f3d8c4950a7c6e7856d076268de62c"/>
 			</dataarea>
 		</part>
 	</software>
