@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5491 -->
+<!-- Number of items in this list = 5523 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -339,6 +339,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="80070">
 				<rom name="-Bubble Bobble 2 -  Rainbow Islands  (1990)(Ocean Software Ltd)[cr [Cr Pentacle + Matasoft](128K)[Cr Pentacle + Matasoft].tap" size="80070" crc="35c50bcb" sha1="6e55c7953212d67f3cf1d20b1e6f73337885d128"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1490c5d0d1bf3">
+		<description>-Hunt For Red October, The - Based On The Movie (1991)(Grandslam Entertainments Ltd)[t](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="96069">
+				<rom name="-Hunt For Red October, The - Based On The Movie (1991)(Grandslam Entertainments Ltd)[t](128K).tap" size="96069" crc="29066613" sha1="1490c5d0d1bf365c180ac8fe97fd2d93e6777348"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5253,12 +5263,12 @@
 		</part>
 	</software>
 	<software name="zxs77340a14402ee">
-		<description>Angler (1983)(Virgin Games)</description>
+		<description>Angler 48K (1983)(Virgin Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="12733">
-				<rom name="Angler (1983)(Virgin Games).tap" size="12733" crc="a361e2c4" sha1="77340a14402ee7bcf8bce2e7903ff3de855737f8"/>
+				<rom name="Angler 48K (1983)(Virgin Games).tap" size="12733" crc="a361e2c4" sha1="77340a14402ee7bcf8bce2e7903ff3de855737f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6369,6 +6379,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47815">
 				<rom name="Astroclone (1985)(Hewson Consultants).tap" size="47815" crc="105bdd98" sha1="e44b021cfc15cfec438e38a23b760a29d63d36fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f917e2b583f9">
+		<description>Astrodrone v1.46 128K (2025)(Steve Tyson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43482">
+				<rom name="Astrodrone v1.46 128K (2025)(Steve Tyson).tap" size="43482" crc="818abe70" sha1="1f917e2b583f9047b66632da7de809fe4a842101"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs457f5a10a06cb">
+		<description>Astrodrone v1.48 128K (2025)(Steve Tyson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43482">
+				<rom name="Astrodrone v1.48 128K (2025)(Steve Tyson).tap" size="43482" crc="cb1fb46f" sha1="457f5a10a06cbf5ec2bb820030d80d69a6191b2a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11512,6 +11542,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs309b3b1febc1f">
+		<description>Buffalo Bill's Wild West Show (1989)(Tynesoft)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="131092">
+				<rom name="Buffalo Bill's Wild West Show (1989)(Tynesoft)(128k).tap" size="131092" crc="fc253b18" sha1="309b3b1febc1f913a77e479183b0bed4573e4e29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44b735844dad2">
+		<description>Bufonada</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48242">
+				<rom name="Bufonada.tap" size="48242" crc="03516fbe" sha1="44b735844dad2f65b930c6d46d034e32c43757ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs413d6835b5b46">
+		<description>Bufonada_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48242">
+				<rom name="Bufonada_1.tap" size="48242" crc="2b5c7742" sha1="413d6835b5b4650e6ce6ae6eded57357075f72f7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0ae2547d2dd25">
 		<description>Buggy Boy</description>
 		<year>????</year>
@@ -12732,13 +12792,53 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs1e1020667b17d">
+		<description>Hydrofool (1987)(Faster Than Light)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45889">
+				<rom name="Hydrofool (1987)(Faster Than Light).tap" size="45889" crc="82e3db69" sha1="1e1020667b17d96988652283ff44d8e2417479c1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8caef2c5d8823">
-		<description>Hydrofool</description>
+		<description>Hydrofool 48K-128K (1987)(Faster Than Light)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47177">
-				<rom name="Hydrofool.tzx" size="47177" crc="5c912b02" sha1="8caef2c5d8823023c8041682ebcb8f3f28648195"/>
+				<rom name="Hydrofool 48K-128K (1987)(Faster Than Light).tzx" size="47177" crc="5c912b02" sha1="8caef2c5d8823023c8041682ebcb8f3f28648195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa0ad79803a369">
+		<description>Hypa Raid (1986)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48201">
+				<rom name="Hypa Raid (1986)(Atlantis Software Ltd).tap" size="48201" crc="a43ff2f9" sha1="a0ad79803a369e519421db0d4f9e07caffbd6f2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4bea736ecb49b">
+		<description>Hypaball (1986)(Odin Computer Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45311">
+				<rom name="Hypaball (1986)(Odin Computer Graphics).tap" size="45311" crc="635862b2" sha1="4bea736ecb49b9f5c5727dafaad71e8630b8f8bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd820f657c69cd">
+		<description>Hyper Active 48K (1988)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25305">
+				<rom name="Hyper Active 48K (1988)(Sinclair User).tap" size="25305" crc="b7aa30e8" sha1="d820f657c69cdcdabc68f8aa2a895521b18e6cf5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12749,6 +12849,146 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="28244">
 				<rom name="Hyper Bowl.tzx" size="28244" crc="6b41baa0" sha1="b43e6c667a01ee10cfa1191bd4db1732848475b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e40cc1892cab">
+		<description>Hyper Sports (1985)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49508">
+				<rom name="Hyper Sports (1985)(Imagine Software).tap" size="49508" crc="be6194b1" sha1="0e40cc1892cab9be066d3ba3cb933d94d21c19f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5cabdd4f9f797">
+		<description>Hyper Sports (1985)(Imagine Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46963">
+				<rom name="Hyper Sports (1985)(Imagine Software)[a].tap" size="46963" crc="a55f6c24" sha1="5cabdd4f9f797739fc283ed100b223343797ce65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs58f6520db0abc">
+		<description>Hyper Sports (1985)(Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48751">
+				<rom name="Hyper Sports (1985)(Imagine).tap" size="48751" crc="e3a072a5" sha1="58f6520db0abcdf6951f53d11f8cbc72137532d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c5023a22a0cd">
+		<description>Hyperbowl (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Hyperbowl (1986)(Mastertronic).tap" size="49343" crc="971de417" sha1="5c5023a22a0cd3184454fbb3a93e00260c14968d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc3e8364b6516e">
+		<description>Hyperbowl (1986)(Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28215">
+				<rom name="Hyperbowl (1986)(Mastertronic)[a].tap" size="28215" crc="fa215b34" sha1="c3e8364b6516e88edc462373c1c6e9dedf7ca786"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7097e3894d4de">
+		<description>Hyperlane+ (1990)(Enigma Tape Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28376">
+				<rom name="Hyperlane+ (1990)(Enigma Tape Magazine).tap" size="28376" crc="39bba5da" sha1="7097e3894d4de6350784376d3be82e6b0938fa73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa8c1d861fa575">
+		<description>Hypsys - Part 1 (1989)(Dro Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49162">
+				<rom name="Hypsys - Part 1 (1989)(Dro Soft).tap" size="49162" crc="0d76e3f1" sha1="a8c1d861fa575a5098cc54de62162404362f100a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs25458aa0a822c">
+		<description>Hypsys - Part 1 (1989)(Techno Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49162">
+				<rom name="Hypsys - Part 1 (1989)(Techno Arts).tap" size="49162" crc="da20c588" sha1="25458aa0a822cac6c3001e2111f4759cc2044d51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5ba57df58d9d">
+		<description>Hypsys - Part 2 (1989)(Dro Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49809">
+				<rom name="Hypsys - Part 2 (1989)(Dro Soft).tap" size="49809" crc="97b3d2d9" sha1="c5ba57df58d9dec8c75b1d23b92377744de87790"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa917a68346c05">
+		<description>Hypsys - Part 2 (1989)(Techno Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49767">
+				<rom name="Hypsys - Part 2 (1989)(Techno Arts).tap" size="49767" crc="b1316b85" sha1="a917a68346c05e130c7ec09d30e2850e2bc4653b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs734aee4e8eb81">
+		<description>Hysteria (1987)(Software Projects Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Hysteria (1987)(Software Projects Ltd).tap" size="49343" crc="d4c80446" sha1="734aee4e8eb81044dd32d1c9f538e549d1cfb739"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsacb0f0ecc404d">
+		<description>Hysteria (1987)(Software Projects Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47289">
+				<rom name="Hysteria (1987)(Software Projects Ltd)[a].tap" size="47289" crc="6266cb1a" sha1="acb0f0ecc404d63da41de858a57fe98f5630ab72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc73628ab912e4">
+		<description>Hysteria - A Year After Mix (1987)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47394">
+				<rom name="Hysteria - A Year After Mix (1987)(Software Projects).tap" size="47394" crc="3eebe901" sha1="c73628ab912e47b2d7b21703f27783e36389c032"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35e5f81110def">
+		<description>Hysteria - Thalbert Dock Mix (1987)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48071">
+				<rom name="Hysteria - Thalbert Dock Mix (1987)(Software Projects).tap" size="48071" crc="1fabd3aa" sha1="35e5f81110def0b7bb4acc01aa070e5ede42fc1a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -25289,6 +25529,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46473">
 				<rom name="O Purgatorio de Virgilio 2.0 - Capitulo 2 PT (2023)(Amaweks).tap" size="46473" crc="5d26605e" sha1="d252f9f636464b94b2c560091b7ccf271a5aa96d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc63ac94ae64eb">
+		<description>O-Cman 48K (2011)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35975">
+				<rom name="O-Cman 48K (2011)(Oblo).tap" size="35975" crc="34b40f4c" sha1="c63ac94ae64eb3c8891b5f8327ab80bd0ed1c8e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd2e1c64f674ba">
+		<description>O-Cman+ 48K (2025)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46060">
+				<rom name="O-Cman+ 48K (2025)(Oblo).tap" size="46060" crc="75abbf45" sha1="d2e1c64f674ba5a6ae4534513e97522b94c20d7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc486411778ae6">
+		<description>O-Cman+ 48K (2025)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46115">
+				<rom name="O-Cman+ 48K (2025)(Oblo).tzx" size="46115" crc="5bb2a259" sha1="c486411778ae6208e6bb01af83b8b2417131f7b5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41723,12 +41993,22 @@
 		</part>
 	</software>
 	<software name="zxs0e0e9f52bc126">
-		<description>Tiddly Drinks (19xx)(Gremlin Graphics Ltd)</description>
+		<description>Tiddly Drinks 48K (1987)(Gremlin Graphics)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49508">
-				<rom name="Tiddly Drinks (19xx)(Gremlin Graphics Ltd).tap" size="49508" crc="53f45ddb" sha1="0e0e9f52bc126614d2cd7ff6a3c87a0124387928"/>
+				<rom name="Tiddly Drinks 48K (1987)(Gremlin Graphics).tap" size="49508" crc="53f45ddb" sha1="0e0e9f52bc126614d2cd7ff6a3c87a0124387928"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs12d6dd8263025">
+		<description>Tiddly Drinks 48K (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49530">
+				<rom name="Tiddly Drinks 48K (1987)(Gremlin Graphics).tzx" size="49530" crc="ea00fe0a" sha1="12d6dd8263025bd52e2ecb81f11f5df12675b4af"/>
 			</dataarea>
 		</part>
 	</software>
@@ -48462,6 +48742,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd3bf08c487dd8">
+		<description>_Buccaneer (1985)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49414">
+				<rom name="_Buccaneer (1985)(Firebird).tap" size="49414" crc="9fdacef2" sha1="d3bf08c487dd816800e1deeb5007ef886dfa07f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8bf12555b09c3">
+		<description>_Buck Rogers - Planet Of Zoom (1985)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39718">
+				<rom name="_Buck Rogers - Planet Of Zoom (1985)(US Gold).tap" size="39718" crc="c5e25b6c" sha1="8bf12555b09c33b6dd9d061e7e494461ec664779"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5c9de2e39de0">
 		<description>_Cauldron</description>
 		<year>????</year>
@@ -48682,6 +48982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf771eed6a9365">
+		<description>_Hydro</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3299">
+				<rom name="_Hydro.tap" size="3299" crc="597b73ba" sha1="f771eed6a9365fcb7fd7f94365793ad8a2868974"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse89f2cb8891b8">
 		<description>_hyper sports demo</description>
 		<year>????</year>
@@ -48689,6 +48999,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37597">
 				<rom name="_hyper sports demo.tzx" size="37597" crc="f5281d15" sha1="e89f2cb8891b831e4e2cbb19f32f9a76673b6eb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5920082fa64f">
+		<description>_Hyperaction (1984)(Silversoft Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31468">
+				<rom name="_Hyperaction (1984)(Silversoft Ltd).tap" size="31468" crc="d0ac22c7" sha1="c5920082fa64f6046bd6976dba73ec2f6b9d01d4"/>
 			</dataarea>
 		</part>
 	</software>

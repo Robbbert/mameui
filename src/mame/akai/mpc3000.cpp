@@ -76,13 +76,12 @@ MPCs on other hardware:
 ***************************************************************************/
 
 #include "emu.h"
+
+#include "bus/midi/midi.h"
+#include "bus/nscsi/devices.h"
 #include "cpu/nec/v5x.h"
 #include "cpu/upd7810/upd7810.h"
 #include "imagedev/floppy.h"
-#include "sound/l7a1045_l6028_dsp_a.h"
-#include "video/hd61830.h"
-#include "bus/midi/midi.h"
-#include "bus/nscsi/devices.h"
 #include "formats/dfi_dsk.h"
 #include "formats/hxchfe_dsk.h"
 #include "formats/hxcmfm_dsk.h"
@@ -92,9 +91,6 @@ MPCs on other hardware:
 #include "formats/dsk_dsk.h"
 #include "formats/pc_dsk.h"
 #include "formats/ipf_dsk.h"
-#include "speaker.h"
-#include "screen.h"
-#include "emupal.h"
 #include "machine/74259.h"
 #include "machine/i8255.h"
 #include "machine/input_merger.h"
@@ -104,6 +100,13 @@ MPCs on other hardware:
 #include "machine/te7774.h"
 #include "machine/timer.h"
 #include "machine/upd765.h"
+#include "sound/l7a1045_l6028_dsp_a.h"
+#include "video/hd61830.h"
+
+#include "emupal.h"
+#include "screen.h"
+#include "softlist_dev.h"
+#include "speaker.h"
 
 #include "mpc3000.lh"
 
@@ -161,6 +164,7 @@ private:
 	void mpc3000_map(address_map &map) ATTR_COLD;
 	void mpc3000_io_map(address_map &map) ATTR_COLD;
 	void mpc3000_sub_map(address_map &map) ATTR_COLD;
+	void dsp_map(address_map &map) ATTR_COLD;
 
 	uint8_t dma_memr_cb(offs_t offset);
 	void dma_memw_cb(offs_t offset, uint8_t data);
@@ -191,6 +195,10 @@ void mpc3000_state::machine_start()
 {
 	save_item(NAME(m_key_scan_row));
 	save_item(NAME(m_drum_scan_row));
+	save_item(NAME(m_variation_slider));
+	save_item(NAME(m_last_dial));
+	save_item(NAME(m_count_dial));
+	save_item(NAME(m_quadrature_phase));
 }
 
 void mpc3000_state::machine_reset()
@@ -201,7 +209,7 @@ void mpc3000_state::mpc3000_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).mirror(0x80000).rom().region("maincpu", 0);
 	map(0x300000, 0x3fffff).ram();  // 2x HM658512 (512Kx8)
-	map(0x500000, 0x500fff).share("nvram");
+	map(0x500000, 0x500fff).ram().share("nvram");
 }
 
 void mpc3000_state::mpc3000_io_map(address_map &map)
@@ -221,6 +229,11 @@ void mpc3000_state::mpc3000_io_map(address_map &map)
 	map(0x00e8, 0x00eb).r(FUNC(mpc3000_state::fdc_hc365_r)).umask16(0xff00);
 	map(0x00f0, 0x00f7).rw("synctmr", FUNC(pit8254_device::read), FUNC(pit8254_device::write)).umask16(0x00ff);
 	map(0x00f8, 0x00ff).rw("adcexp", FUNC(i8255_device::read), FUNC(i8255_device::write)).umask16(0x00ff);
+}
+
+void mpc3000_state::dsp_map(address_map &map)
+{
+	map(0x0000'0000, 0x01ff'ffff).ram();
 }
 
 // bit 0 = ED   1 if disk was not ejected prior to last check,
@@ -546,6 +559,7 @@ void mpc3000_state::mpc3000(machine_config &config)
 	SPEAKER(config, "outputs", 8).unknown();
 
 	L7A1045(config, m_dsp, 33.8688_MHz_XTAL); // clock verified by schematic
+	m_dsp->set_addrmap(AS_DATA, &mpc3000_state::dsp_map);
 	m_dsp->drq_handler_cb().set(m_maincpu, FUNC(v53a_device::dreq_w<3>));
 	m_dsp->add_route(l7a1045_sound_device::L6028_LEFT, "speaker", 1.0, 0);
 	m_dsp->add_route(l7a1045_sound_device::L6028_RIGHT, "speaker", 1.0, 1);
@@ -560,6 +574,8 @@ void mpc3000_state::mpc3000(machine_config &config)
 	m_dsp->add_route(l7a1045_sound_device::L6028_OUT7, "outputs", 1.0, 7);
 
 	TIMER(config, "dialtimer").configure_periodic(FUNC(mpc3000_state::dial_timer_tick), attotime::from_hz(60.0));
+
+	SOFTWARE_LIST(config, "flop_mpc3000").set_original("mpc3000_flop");
 
 	config.set_default_layout(layout_mpc3000);
 }
@@ -694,8 +710,6 @@ ROM_START( mpc3000 )
 
 	ROM_REGION(0x8000, "subcpu", 0)    // uPD78C10 panel controller code
 	ROM_LOAD( "mp3000__op_v1.0.am27c256__id0110.ic602.bin", 0x000000, 0x008000, CRC(b0b783d3) SHA1(a60016184fc07ba00dcc19ba4da60e78aceff63c) )
-
-	ROM_REGION( 0x2000000, "dsp", ROMREGION_ERASE00 )   // sample RAM
 ROM_END
 
 void mpc3000_state::init_mpc3000()

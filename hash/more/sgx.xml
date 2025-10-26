@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 22 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="sgx" description="sgx loose roms">
 	<software name="sgx986238ccd6a50">
 		<description>(sgx)1941 - Counter Attack (Japan) [a]</description>
@@ -79,16 +79,6 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="(sgx)Daimakaimura (J) (SGX) (J-Debug).pce" size="1048576" crc="d6722c04" sha1="4f0fbea3b87a2a10ec9a3d1e06d43da4cba067ed"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sgxcab9e4a1a8b6d">
-		<description>(sgx)Daimakaimura (Japan)(1990)(NEC Avenue)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pce_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="(sgx)Daimakaimura (Japan)(1990)(NEC Avenue).pce" size="1048576" crc="b486a8ed" sha1="cab9e4a1a8b6da07cc2c5cc35949928199a417ee"/>
 			</dataarea>
 		</part>
 	</software>
