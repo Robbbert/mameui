@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1001 -->
+<!-- Number of items in this list = 1016 -->
 <softwarelist name="apple2_flop_misc" description="apple2_flop_misc loose roms">
 	<software name="app77bb781cf3d30">
 		<description>(demo) Desire Wires (2024-02)(Desire)</description>
@@ -9352,6 +9352,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="appf38659ec7d972">
+		<description>SAGA #1 - Adventureland v2.2-416 (1982)(Adventure International)(II+)(US)(Side A)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234863">
+				<rom name="SAGA #1 - Adventureland v2.2-416 (1982)(Adventure International)(II+)(US)(Side A)[48K].woz" size="234863" crc="c1d57b70" sha1="f38659ec7d9723ec8cf082c6496ab916548a718e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app35ee6aa6272aa">
+		<description>SAGA #1 - Adventureland v2.2-416 (1982)(Adventure International)(II+)(US)(Side B)(Boot)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234863">
+				<rom name="SAGA #1 - Adventureland v2.2-416 (1982)(Adventure International)(II+)(US)(Side B)(Boot)[48K].woz" size="234863" crc="e8c92a08" sha1="35ee6aa6272aa2b466cc226eddfcf503cdb79cf8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="appa5ef0946e8902">
 		<description>SAGA #3 - Mission Impossible v2.1-306 (1982)(Adventure International)(II+)(US)(Side A)[48K]</description>
 		<year>????</year>
@@ -9409,6 +9429,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Science Vol. 4 v1.0 (1983)(MECC)(US).dsk" size="143360" crc="b1c7ad93" sha1="944ddd2f24de5c2ebf692f7724eb1be359e972ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appacd402db4a418">
+		<description>Scramble (1987)(Micrograms)(II+)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234789">
+				<rom name="Scramble (1987)(Micrograms)(II+)[48K].woz" size="234789" crc="47e840be" sha1="acd402db4a418046fd51f794182b594a53c3ff0c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9502,6 +9532,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app4b5d86118ecfc">
+		<description>Social Studies - Africa (1983)(Educational Activities)(II+)(Disk 1 of 2)(Introduction to Africa)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="642560">
+				<rom name="Social Studies - Africa (1983)(Educational Activities)(II+)(Disk 1 of 2)(Introduction to Africa)[48K].woz" size="642560" crc="0c3b9061" sha1="4b5d86118ecfcd9fd4c86e200ce669d295c3ed5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0c00c1ba48ea0">
+		<description>Social Studies - Africa (1983)(Educational Activities)(II+)(Disk 2 of 2)(Mapwork on Africa)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="568832">
+				<rom name="Social Studies - Africa (1983)(Educational Activities)(II+)(Disk 2 of 2)(Mapwork on Africa)[48K].woz" size="568832" crc="130d8345" sha1="0c00c1ba48ea031ec8bcf0ae5f7a843b995ab65b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app31e957d7bd35b">
 		<description>Softcard CP-M 60K v2.23 (1982)(Microsoft)[a]</description>
 		<year>????</year>
@@ -9562,6 +9612,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app40713aa5b786b">
+		<description>Spy's Adventures in Europe, The (1986-09-30)(Polarware)(II+)(Side A)[64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="241500">
+				<rom name="Spy's Adventures in Europe, The (1986-09-30)(Polarware)(II+)(Side A)[64K].woz" size="241500" crc="aa326250" sha1="40713aa5b786bad32bbf69b3709ce46ea5e6e737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app15bbfbd0e9082">
+		<description>Spy's Adventures in Europe, The (1986-09-30)(Polarware)(II+)(Side B)(Boot)[64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="241500">
+				<rom name="Spy's Adventures in Europe, The (1986-09-30)(Polarware)(II+)(Side B)(Boot)[64K].woz" size="241500" crc="a8d9f028" sha1="15bbfbd0e9082f8c4ec7b2c4fbdef273b45611a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app8e2c44734c899">
+		<description>Spy's Adventures in North America, The (1986-10-01)(Polarware)(II+)(Side A)[64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="241507">
+				<rom name="Spy's Adventures in North America, The (1986-10-01)(Polarware)(II+)(Side A)[64K].woz" size="241507" crc="dfd316e6" sha1="8e2c44734c8996ca6473c24b01730da00a16e7e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appa8d855fe223b6">
+		<description>Spy's Adventures in North America, The (1986-10-01)(Polarware)(II+)(Side B)(Boot)[64K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="241538">
+				<rom name="Spy's Adventures in North America, The (1986-10-01)(Polarware)(II+)(Side B)(Boot)[64K].woz" size="241538" crc="a37572ce" sha1="a8d855fe223b67e7eeb0b12dbee3674463478663"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app67231ccc91f69">
 		<description>Star Blazer &amp; Choplifter &amp; Robot Battle &amp; Night Crawler (19xx)(-)[a]</description>
 		<year>????</year>
@@ -9569,6 +9659,46 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Star Blazer &amp; Choplifter &amp; Robot Battle &amp; Night Crawler (19xx)(-)[a].dsk" size="143360" crc="592de702" sha1="67231ccc91f690cc977e85702d1eb86890ccf037"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app2f94c3d0b9c85">
+		<description>Stickybear Printer v1 (1985)(Optimum Resource)(II+)(US)[a][48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234848">
+				<rom name="Stickybear Printer v1 (1985)(Optimum Resource)(II+)(US)[a][48K].woz" size="234848" crc="2822a943" sha1="2f94c3d0b9c851e9a16b146b2e55d838dfedb0b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appe9c16795ec598">
+		<description>Stickybear Reading rev 2 (1986)(Optimum Resource)(II+)(US)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234817">
+				<rom name="Stickybear Reading rev 2 (1986)(Optimum Resource)(II+)(US)[48K].woz" size="234817" crc="0185e057" sha1="e9c16795ec59834d607e8e808e2d2d6392212765"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3035fb37b8490">
+		<description>Stickybear Town Builder rev 2 (1984)(Optimum Resource)(II+)(US)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="241536">
+				<rom name="Stickybear Town Builder rev 2 (1984)(Optimum Resource)(II+)(US)[48K].woz" size="241536" crc="6a8eb370" sha1="3035fb37b84907b0d9441b4c59361f7259b24ba6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app3771df9851673">
+		<description>Stickybear Word Problems rev 2 (1986)(Optimum Resource)(II+)(US)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234854">
+				<rom name="Stickybear Word Problems rev 2 (1986)(Optimum Resource)(II+)(US)[48K].woz" size="234854" crc="f41d87ce" sha1="3771df985167307abb690be2c3b97707591ffacd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9609,6 +9739,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="143360">
 				<rom name="Submarine Sabotage (2023-06-06)(Francis, Garry).dsk" size="143360" crc="65aa8cad" sha1="c31a5710a85dce23c85696e3eb26f1d14fc20c2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appcba58e5bc8d1d">
+		<description>Success with Algebra - Advanced Linear Equations (1984)(Mindscape)(II+)(US)[48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="241472">
+				<rom name="Success with Algebra - Advanced Linear Equations (1984)(Mindscape)(II+)(US)[48K].woz" size="241472" crc="06f45187" sha1="cba58e5bc8d1d1cb312640bee88072daba71fbf8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app1b1955ae0554b">
+		<description>Success with Math - Multiplication and Division (1983)(CBS Software)(II+)(US)[a][48K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="234818">
+				<rom name="Success with Math - Multiplication and Division (1983)(CBS Software)(II+)(US)[a][48K].woz" size="234818" crc="cd5713e9" sha1="1b1955ae0554b7abe9bd969b1d4dc6c3f9f97d65"/>
 			</dataarea>
 		</part>
 	</software>

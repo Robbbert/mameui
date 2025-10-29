@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2028 -->
+<!-- Number of items in this list = 2030 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3532,6 +3532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genceb521f9ec558">
+		<description>Altered Beast II - The Seven Depths of Hell - Alpha-4 (2024)(Fabianodigital)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2490368">
+				<rom name="Altered Beast II - The Seven Depths of Hell - Alpha-4 (2024)(Fabianodigital).bin" size="2490368" crc="d6a8b0ab" sha1="ceb521f9ec5584b838e22a45571f6f8e1f55cb52"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen21d9a51ad55ac">
 		<description>Amshay (2022)(BankBank)</description>
 		<year>????</year>
@@ -3819,6 +3829,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1015888">
 				<rom name="Atomic Sonic in sonic 2 (hack).bin" size="1015888" crc="64f3f0df" sha1="fba2a2b9e3a01f3222bef1e1533591c88eb20a61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen51c5b1582cef8">
+		<description>Aureole - Wings of Hope (2025)(JanduSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1179648">
+				<rom name="Aureole - Wings of Hope (2025)(JanduSoft).bin" size="1179648" crc="51aef53d" sha1="51c5b1582cef867f92489a11712f98a12d9d74de"/>
 			</dataarea>
 		</part>
 	</software>
