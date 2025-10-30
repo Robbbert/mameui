@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3957 -->
+<!-- Number of items in this list = 3965 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -2729,6 +2729,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="555214">
 				<rom name="Adventure of the red plumber by guitar god527 (2 level demo) (SMW1 Hack).smc" size="555214" crc="e05a8926" sha1="c9308b27ce6635a0092a9a4be9cac20643e2ab06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd6dbc293670e0">
+		<description>Adventures of Batman &amp; Robin, The PT-BR v1-BETA (2025)(Kyle Romhacker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Adventures of Batman &amp; Robin, The PT-BR v1-BETA (2025)(Kyle Romhacker).sfc" size="4194304" crc="30829019" sha1="d6dbc293670e08a7da97da93e2f9e67561cd72c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7332,6 +7342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns23adf04abfa86">
+		<description>Donkey Kong Country 2 - Squitter's Spider Quest v1.1 (2022)(Saetta06)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Donkey Kong Country 2 - Squitter's Spider Quest v1.1 (2022)(Saetta06).sfc" size="4194304" crc="214b511e" sha1="23adf04abfa860f422901ee5e6292c46bd22651c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0d34658313778">
 		<description>Donkey Kong Country 2 - The Project 4 Kongs (2024)(The Kong's Team)</description>
 		<year>????</year>
@@ -9689,6 +9709,36 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Final Fight 2.sfc" size="1310720" crc="53d143d7" sha1="8c374ca1e6fab41dca6ec153767030b4e9e99534"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6966cd0e21d86">
+		<description>Final Fight 3 - Boss (20xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fight 3 - Boss (20xx).sfc" size="4194304" crc="b82cbdff" sha1="6966cd0e21d867dc49f3b40baded1b0fd093780c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns95b3336294577">
+		<description>Final Fight 3 - Hard Edition (2019)(Programer Peru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Final Fight 3 - Hard Edition (2019)(Programer Peru).sfc" size="3145728" crc="cd812d3a" sha1="95b33362945771cd9b0ea210c5cfce0d9d699814"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd07decaf72e8d">
+		<description>Final Fight 3 - Tough Edition (2023)(Samir Rolemberg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Final Fight 3 - Tough Edition (2023)(Samir Rolemberg).sfc" size="3145728" crc="bc1c4134" sha1="d07decaf72e8d8283af3d8a144fe4276449c206c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17839,6 +17889,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mega Man &amp; Bass T-Eng v1.1 (2002-2023)(Aeon Genesis, Blade133bo).sfc" size="4194304" crc="bb319f69" sha1="7ade242db58989b56a16706c30ef778249657259"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa70bbdce836f5">
+		<description>Mega Man 7 Jet Suit (2025)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mega Man 7 Jet Suit (2025)(BillyTime! Games).sfc" size="2097152" crc="06442631" sha1="a70bbdce836f5ab8055380b221b793af0b3c4de7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7ecbd1354203e">
+		<description>Mega Man 7 PSX Sprite (20xx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mega Man 7 PSX Sprite (20xx).sfc" size="2097152" crc="34b84d00" sha1="7ecbd1354203e925716c90868180cd2f7e5bd69d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37959,6 +38029,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Ultimate Fighter (U)(1994)(Culture Brain).sfc" size="1572864" crc="9dfc8897" sha1="384b54d4eccb2ba8375c7c0058b8516ec6d487de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns31562c4d7fe4a">
+		<description>Ultimate Mortal Kombat 3 BZero Edition v1.1 (2025)(B-Zero TV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Ultimate Mortal Kombat 3 BZero Edition v1.1 (2025)(B-Zero TV).sfc" size="8388608" crc="4ae4d7ad" sha1="31562c4d7fe4a3bafc8d60ccbff26f576b19a781"/>
 			</dataarea>
 		</part>
 	</software>

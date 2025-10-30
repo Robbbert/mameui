@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 87 -->
+<!-- Number of items in this list = 89 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -242,6 +242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp0301fa0b93752">
+		<description>Don't Die, Mr. Robot! (2025)(Infinite State Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Don't Die, Mr. Robot! (2025)(Infinite State Games).ngp" size="2097152" crc="d3f986b2" sha1="0301fa0b9375205a4c495d905f441f55901aa612"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp081b8d2aa7daa">
 		<description>Hardware Test (PD)</description>
 		<year>????</year>
@@ -289,6 +299,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Kikou Seiki Unitron - Sono Tsuide. Hikari Umareru Chi Yori. (Japan) [T-En by WyndCrosser v0.38] [i].ngc" size="2097152" crc="364de6b4" sha1="9fc12489baef0e4b4e68267b139276001f252336"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp967b0d1a7074e">
+		<description>King of Fighters Battle Paradise</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="King of Fighters Battle Paradise.ngc" size="2097152" crc="e08dc918" sha1="967b0d1a7074ecbfbd4bf476fcaed3be30e2a7b3"/>
 			</dataarea>
 		</part>
 	</software>
