@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3965 -->
+<!-- Number of items in this list = 3966 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -2739,6 +2739,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Adventures of Batman &amp; Robin, The PT-BR v1-BETA (2025)(Kyle Romhacker).sfc" size="4194304" crc="30829019" sha1="d6dbc293670e08a7da97da93e2f9e67561cd72c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsae244370341d2">
+		<description>Adventures of Batman &amp; Robin, The PT-BR v1-BETA (2026)(Kyle Romhacker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Adventures of Batman &amp; Robin, The PT-BR v1-BETA (2026)(Kyle Romhacker).sfc" size="4194304" crc="fe9cdcda" sha1="ae244370341d29ca8e8e3c9e8f91685ab6ae96bc"/>
 			</dataarea>
 		</part>
 	</software>
