@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2030 -->
+<!-- Number of items in this list = 2033 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -11602,6 +11602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2f1c1a288dd2b">
+		<description>Mortal Kombat (World) (REV01) (Mortal Kombat Legacy Kollection)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mortal Kombat (World) (REV01) (Mortal Kombat Legacy Kollection).bin" size="2097152" crc="9872fa39" sha1="2f1c1a288dd2bdfff31dc19d81811a03bd6a00a1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen32d2a7b33e754">
 		<description>Mortal Kombat (World) [Hack by Hiro1112 v20060806] (Blood+Translation Fix)</description>
 		<year>????</year>
@@ -11659,6 +11669,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mortal Kombat 3 (R).bin" size="4194304" crc="582dedbc" sha1="12a9491e8d129163a0990c2b458437e7e2d30fce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1fe635fb1cbba">
+		<description>Mortal Kombat 3 (World) (Mortal Kombat Legacy Kollection)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat 3 (World) (Mortal Kombat Legacy Kollection).bin" size="4194304" crc="d1fd0bdd" sha1="1fe635fb1cbbae8fc59500b5a09ac83d825f849a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11729,6 +11749,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mortal Kombat Graff kore (hack).bin" size="2097152" crc="ac6db792" sha1="d3e6d967892f54ee46b811463d9ab0a52483c6b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genaf6d2db16f2b7">
+		<description>Mortal Kombat II (World) (Mortal Kombat Legacy Kollection)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Mortal Kombat II (World) (Mortal Kombat Legacy Kollection).bin" size="3145728" crc="a9e013d8" sha1="af6d2db16f2b76940ff5a9738f1e00c4e7ea485e"/>
 			</dataarea>
 		</part>
 	</software>

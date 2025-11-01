@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5646 -->
+<!-- Number of items in this list = 5695 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -349,6 +349,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56469">
 				<rom name="-Buggy Boy (1988)(Elite Systems Ltd)[cr [Cr][Cr].tap" size="56469" crc="971589f4" sha1="24445be7313fd58bff6aa9d0447e20ca2466b878"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsce2d7c84f7001">
+		<description>-Hobbit (1982)(Melbourne House)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40039">
+				<rom name="-Hobbit (1982)(Melbourne House)[cr [Cr][Cr].tap" size="40039" crc="0a896ac7" sha1="ce2d7c84f7001be598e91ad44c6e6af5b87fbfca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9962,6 +9972,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs946955a9bfa19">
+		<description>Blood of Dracula EN 48K (2025)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44589">
+				<rom name="Blood of Dracula EN 48K (2025)(Furillo Productions).tap" size="44589" crc="ebea38d3" sha1="946955a9bfa19f67af322dc5a6d559aa67fa357b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0d498eabfd5c2">
+		<description>Blood of Dracula ES 48K (2025)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44574">
+				<rom name="Blood of Dracula ES 48K (2025)(Furillo Productions).tap" size="44574" crc="5d6ca527" sha1="0d498eabfd5c27930e0d229c7bc4559d2ea96f18"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1a1bad7622bbd">
 		<description>Blood Valley (1991)(Gremlin Graphics)</description>
 		<year>????</year>
@@ -11972,6 +12002,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsfb3c75bd6b663">
+		<description>C is for Crabby (2013)(Gabriel Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41821">
+				<rom name="C is for Crabby (2013)(Gabriel Amore).tap" size="41821" crc="490a07d9" sha1="fb3c75bd6b6633897dc22a90e3f549e03cb336d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdbd47944069f3">
+		<description>C.E.S (19xx)(Scisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6320">
+				<rom name="C.E.S (19xx)(Scisoft).tap" size="6320" crc="354fcf95" sha1="dbd47944069f3905f02d381eb0d019e1dcdb6d20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs78561de47a42c">
+		<description>C.O.R.E. (1986)(A'n'F Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48919">
+				<rom name="C.O.R.E. (1986)(A'n'F Software).tap" size="48919" crc="716221c7" sha1="78561de47a42cec70ecacccc4bfd5ad1781bb3f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa4175af9afd6b">
+		<description>C.P.U. Destroyer (19xx)(-)(It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48035">
+				<rom name="C.P.U. Destroyer (19xx)(-)(It).tap" size="48035" crc="6418fcad" sha1="a4175af9afd6bfd3134d44205ea17d1a919143f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb869b754ff592">
+		<description>C.P.U. Destroyer (19xx)(-)(It)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48128">
+				<rom name="C.P.U. Destroyer (19xx)(-)(It)[a].tap" size="48128" crc="ffa850f7" sha1="b869b754ff592bb34625f14a316f6fa7c6db12dc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs537499953ae2a">
 		<description>cacorm</description>
 		<year>????</year>
@@ -12339,6 +12419,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48312">
 				<rom name="Cyclone.tzx" size="48312" crc="7b3d2971" sha1="277ae255c311759731b2a96af2bdd1e1b45644df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaec0b1c9fc484">
+		<description>C_Compiler</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11689">
+				<rom name="C_Compiler.tap" size="11689" crc="84b3befd" sha1="aec0b1c9fc484b41bcc7b9f0e8bdaa161e5782b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13052,6 +13142,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd3f1b2938e18f">
+		<description>Hoarder, The EN 48K (2020)(iadvd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41367">
+				<rom name="Hoarder, The EN 48K (2020)(iadvd).tap" size="41367" crc="30a0539a" sha1="d3f1b2938e18fc33086f958f0f19e470c4ea809a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs11648fc50bcd8">
+		<description>Hoarder, The ES 48K (2020)(iadvd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41374">
+				<rom name="Hoarder, The ES 48K (2020)(iadvd).tap" size="41374" crc="1c7cee3d" sha1="11648fc50bcd8774426f02099299291981be7340"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd45643d32bfc5">
+		<description>Hobbit (Vah-ka's Cut), El ES 48K (2012)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34226">
+				<rom name="Hobbit (Vah-ka's Cut), El ES 48K (2012)(The Mojon Twins).tap" size="34226" crc="e77cc2e9" sha1="d45643d32bfc5284573485af6eedf1731bd9e0a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67ea4041c3972">
+		<description>Hobbit (Vah-ka's Cut), The EN 48K (2012)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34049">
+				<rom name="Hobbit (Vah-ka's Cut), The EN 48K (2012)(The Mojon Twins).tap" size="34049" crc="df530833" sha1="67ea4041c3972fd548285f00a21ae4979b505e01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsacd9b0b50638a">
+		<description>Hobbit (Vah-ka's Cut)R, El ES v1.1 48K (2012-25)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29199">
+				<rom name="Hobbit (Vah-ka's Cut)R, El ES v1.1 48K (2012-25)(The Mojon Twins).tap" size="29199" crc="944980fd" sha1="acd9b0b50638ad522c80475d856ddeb7f8e15354"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c69899641a0d">
+		<description>Hobbit (Vah-ka's Cut)R, The EN v1.2 48K (2012-25)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29125">
+				<rom name="Hobbit (Vah-ka's Cut)R, The EN v1.2 48K (2012-25)(The Mojon Twins).tap" size="29125" crc="a32a5fe7" sha1="2c69899641a0d6db931cfb3f0b30780ee4299433"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdbea41813a613">
+		<description>Hobbit v1.0, The (1982)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45066">
+				<rom name="Hobbit v1.0, The (1982)(Melbourne House).tap" size="45066" crc="dbe6cc88" sha1="dbea41813a61355cc89605ffe93bdbfa5d69e034"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs254bad8b0d6b3">
+		<description>Hobbit v1.2, The (1982)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47178">
+				<rom name="Hobbit v1.2, The (1982)(Melbourne House).tap" size="47178" crc="33bf3574" sha1="254bad8b0d6b39be1d99e80abf9e6089cb75a729"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8d30d93959a3">
+		<description>Hobbit, The 128K Edition (2015)(World of Spectrum)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128019">
+				<rom name="Hobbit, The 128K Edition (2015)(World of Spectrum).tap" size="128019" crc="95cc8713" sha1="b8d30d93959a371e0e36e14a0ee49925fd855a44"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsed5c7d9064cf4">
 		<description>Hobbit, The</description>
 		<year>????</year>
@@ -13059,6 +13239,136 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47206">
 				<rom name="Hobbit, The.tzx" size="47206" crc="69d34042" sha1="ed5c7d9064cf4cf6bb4387f87060993b348876e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdfc7435f896ce">
+		<description>Hobbit128_BETA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="71004">
+				<rom name="Hobbit128_BETA.tap" size="71004" crc="6f43bfab" sha1="dfc7435f896ce947c4e773f423b5cb4738ad72b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ff9dbc8dac7e">
+		<description>Hobble Hunter, The (1989)(Compass)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43324">
+				<rom name="Hobble Hunter, The (1989)(Compass).tap" size="43324" crc="b296bf87" sha1="5ff9dbc8dac7e407c7ad5093b5ea6faf4107baa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1cb7e3dc0b83d">
+		<description>Hobgoblin (1991)(Atlantis Software)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20291">
+				<rom name="Hobgoblin (1991)(Atlantis Software)[t].tap" size="20291" crc="96a35831" sha1="1cb7e3dc0b83d4878f4888f2cf32a789adecc52f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsea372fe605eaf">
+		<description>Hobgoblin 48K (1991)(Atlantis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31817">
+				<rom name="Hobgoblin 48K (1991)(Atlantis).tap" size="31817" crc="244df5e4" sha1="ea372fe605eaf27580fb27de22217b9176091219"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd5d1be02938b">
+		<description>HODINY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2230">
+				<rom name="HODINY.TAP" size="2230" crc="ac323cda" sha1="cd5d1be02938b4286764e223c31d1ca5bded0227"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3041a6f97d7e8">
+		<description>Hoellensturz (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7383">
+				<rom name="Hoellensturz (19xx)(-)(De).tap" size="7383" crc="b19196ed" sha1="3041a6f97d7e8378ead4c0c1b57d697cd5cad3b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs515501fd697fd">
+		<description>Holiday In Sumaria (1987)(Pirate Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49118">
+				<rom name="Holiday In Sumaria (1987)(Pirate Software Ltd).tap" size="49118" crc="046d6de3" sha1="515501fd697fd5ac68a9967d9ef652ca2f00e314"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7fcd3e07d0a34">
+		<description>Holiday To Remember (1987)(Visual Dimensions)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32247">
+				<rom name="Holiday To Remember (1987)(Visual Dimensions)[Part 1 of 2].tap" size="32247" crc="2566ba2f" sha1="7fcd3e07d0a34a21b6d1898f560b8100de69e418"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0eeb836f4dd52">
+		<description>Holiday To Remember (1987)(Visual Dimensions)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35497">
+				<rom name="Holiday To Remember (1987)(Visual Dimensions)[Part 2 of 2].tap" size="35497" crc="19e4db6b" sha1="0eeb836f4dd52a7d8f1a23ab36db53b40180227e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs23f1391e20de2">
+		<description>Hollow, The 48K (1985)(Gilsoft International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47876">
+				<rom name="Hollow, The 48K (1985)(Gilsoft International).tap" size="47876" crc="d2d36c3a" sha1="23f1391e20de2d1bb2181cb1a4ac84a26da11c68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4fc5d0428d1da">
+		<description>Hollywood Poker (1988)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47200">
+				<rom name="Hollywood Poker (1988)(Players Premier).tap" size="47200" crc="f17d7402" sha1="4fc5d0428d1da43ecb25c402b11c154ab8e0cc5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd8bbd52b350ab">
+		<description>Home Hungaroring (19xx)(Centrum)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43203">
+				<rom name="Home Hungaroring (19xx)(Centrum).tap" size="43203" crc="5ffcc5bc" sha1="d8bbd52b350aba8823a11861a239b4d60d06b529"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs00788ceef4093">
+		<description>Homebrew 48K (2009)(Jonathan Cauldwell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39137">
+				<rom name="Homebrew 48K (2009)(Jonathan Cauldwell).tap" size="39137" crc="6e962533" sha1="00788ceef40931d293cd3d2430e3e87125324d98"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13072,6 +13382,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsab161eb5753a9">
+		<description>Hop'n'Frog 128K (2015)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23739">
+				<rom name="Hop'n'Frog 128K (2015)(Gabriele Amore).tap" size="23739" crc="7d55a6f4" sha1="ab161eb5753a970068fb9fe86f856a686f2e7133"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse961aba18904b">
+		<description>Hopman (2023)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9385">
+				<rom name="Hopman (2023)(Inufuto).tap" size="9385" crc="b5984e40" sha1="e961aba18904b4eb24211dda7677f4f420743d96"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs44c54536dceb2">
 		<description>Hopman</description>
 		<year>????</year>
@@ -13079,6 +13409,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="3041401">
 				<rom name="Hopman.wav" size="3041401" crc="3849b75e" sha1="44c54536dceb23fbabfad28fdc293235fb36e42a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc0579193ccdd">
+		<description>Hopper (1983)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15535">
+				<rom name="Hopper (1983)(PSS).tap" size="15535" crc="67761fd1" sha1="cc0579193ccdde7dd4ba62bb8c5ebb9dd4e2c6f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6bdea9ca543af">
+		<description>Hoppin' Mad (1988)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40347">
+				<rom name="Hoppin' Mad (1988)(Elite Systems).tap" size="40347" crc="620ba84c" sha1="6bdea9ca543af754d61725949b4f5f10a9e4a4de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc184316b16de0">
+		<description>Hoppin' Mad 48K-128K (1988)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40592">
+				<rom name="Hoppin' Mad 48K-128K (1988)(Elite Systems).tzx" size="40592" crc="b030d562" sha1="c184316b16de0034c7192178c281624c38528995"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13092,6 +13452,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7de72791b50c3">
+		<description>Horace &amp; The Spiders (1983)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16327">
+				<rom name="Horace &amp; The Spiders (1983)(Psion).tap" size="16327" crc="b3095abe" sha1="7de72791b50c374b0969dc875e7ccc76e5b661a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs985359078433d">
+		<description>Horace and the Robots (Steve Snake)(2017)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25517">
+				<rom name="Horace and the Robots (Steve Snake)(2017).tap" size="25517" crc="05fd13e2" sha1="985359078433ddcdc81b3a1e10bacc377aa4a540"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse497bbd0a6fa2">
+		<description>Horace Goes Skiing (1982)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15979">
+				<rom name="Horace Goes Skiing (1982)(Psion).tap" size="15979" crc="ed277619" sha1="e497bbd0a6fa25fdc59a70655b16d8588f927398"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs10b6d9f741366">
+		<description>Horace Goes Skiing (1982)(Psion)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15988">
+				<rom name="Horace Goes Skiing (1982)(Psion)[a].tap" size="15988" crc="0d417f06" sha1="10b6d9f74136613e628fee486e1be25541b6a517"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfeee7bf2baf81">
 		<description>Horace Goes Skiing</description>
 		<year>????</year>
@@ -13099,6 +13499,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16019">
 				<rom name="Horace Goes Skiing.tzx" size="16019" crc="85bb5278" sha1="feee7bf2baf8149bd0e22f3ea7efdb5a46513270"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4c23479b0a3d7">
+		<description>Horace in the Mystic Woods - blue character 48K (2010)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48023">
+				<rom name="Horace in the Mystic Woods - blue character 48K (2010)(Bob Smith).tap" size="48023" crc="37472c26" sha1="4c23479b0a3d764e31d7a97ed848b195f1aea85a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9090fe3692a87">
+		<description>Horace in the Mystic Woods - cyan character 48K (2010)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48023">
+				<rom name="Horace in the Mystic Woods - cyan character 48K (2010)(Bob Smith).tap" size="48023" crc="6ead6fc7" sha1="9090fe3692a87350360691d55e6b9d9c9931f720"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs49323cf8a5781">
+		<description>Horace in the Mystic Woods - green character 48K (2010)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48023">
+				<rom name="Horace in the Mystic Woods - green character 48K (2010)(Bob Smith).tap" size="48023" crc="0e0bbeaf" sha1="49323cf8a5781a5f90c8dc9fdbbe218a7368cf80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs20d4f2608b3da">
+		<description>Horace in the Mystic Woods - white character 48K (2010)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48023">
+				<rom name="Horace in the Mystic Woods - white character 48K (2010)(Bob Smith).tap" size="48023" crc="afe0cd17" sha1="20d4f2608b3da0b9346158fd2e5a5f4ef959883c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff688f47b655a">
+		<description>Horoskop (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16911">
+				<rom name="Horoskop (19xx)(-)(De).tap" size="16911" crc="635d06cf" sha1="ff688f47b655a25d882e92c3b5c84c9eb25c8a8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse09bc1758a55c">
+		<description>Horse Race</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5472">
+				<rom name="Horse Race.TAP" size="5472" crc="eb5ca333" sha1="e09bc1758a55ce12028109a88fda9b08d4eaa3a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30979,6 +31439,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="26686">
 				<rom name="Punk Star (1988)(Genesis Software)(Sp)[a].tap" size="26686" crc="769678b2" sha1="217b4857a0cb6cdd772268648ee38442ffeafa53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9516448500102">
+		<description>Puppies Rescue - Halloween Edition 128K (2025)(Daniel Isoba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60276">
+				<rom name="Puppies Rescue - Halloween Edition 128K (2025)(Daniel Isoba).tap" size="60276" crc="43c1d3dd" sha1="9516448500102a02d9d80a61b92d94536bc95d8f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -50129,6 +50599,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43048">
 				<rom name="_Gunfright.tzx" size="43048" crc="c9179545" sha1="c7f62b485cd1a5b23a68c3b60a0f9f001eb07428"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs340b9d4591a99">
+		<description>_Hooper (19xx)(Microhobby)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41969">
+				<rom name="_Hooper (19xx)(Microhobby).tap" size="41969" crc="4d928110" sha1="340b9d4591a99bb8c4bc0a5aa62db50ff8e3bb2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0d8b67aeccfb4">
+		<description>_Horace Goes Fishing 48K (2024)(Moises Garin Escriva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43015">
+				<rom name="_Horace Goes Fishing 48K (2024)(Moises Garin Escriva).tap" size="43015" crc="966bc5b3" sha1="0d8b67aeccfb4649adc9bf06ce70b2128d744041"/>
 			</dataarea>
 		</part>
 	</software>

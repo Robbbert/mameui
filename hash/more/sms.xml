@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 546 -->
+<!-- Number of items in this list = 548 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2482,6 +2482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms94d1a5fc7cda6">
+		<description>Laranja Mecanico (2023)(Jaguarete Retro Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Laranja Mecanico (2023)(Jaguarete Retro Games).sms" size="524288" crc="8126ac1a" sha1="94d1a5fc7cda6e56a1a1fa6daca579c9b38c8a8e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms41e69a6b9244a">
 		<description>Leonard MSX2SMS Hack</description>
 		<year>????</year>
@@ -3189,6 +3199,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="No MSX2SMS Hack.sms" size="49152" crc="0904264e" sha1="afa4dc60282360ff49076d07f86ca398318b7e86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa559402b19a51">
+		<description>Noturno (2025)(LMS Retro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Noturno (2025)(LMS Retro).sms" size="524288" crc="47be6422" sha1="a559402b19a51710b8968db611427d80d8e53802"/>
 			</dataarea>
 		</part>
 	</software>
