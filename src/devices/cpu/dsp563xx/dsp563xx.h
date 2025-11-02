@@ -9,9 +9,13 @@
 #pragma once
 
 #include "hi08.h"
+#include "shi.h"
 
 enum {
-	DSP563XX_PC, DSP563XX_A, DSP563XX_B, DSP563XX_X0, DSP563XX_X1, DSP563XX_Y0, DSP563XX_Y1,
+	DSP563XX_PC, DSP563XX_LA, DSP563XX_LC,
+	DSP563XX_SR, DSP563XX_EMR, DSP563XX_MR, DSP563XX_CCR, DSP563XX_OMR,
+	DSP563XX_SSH, DSP563XX_SSL,
+	DSP563XX_A, DSP563XX_B, DSP563XX_X0, DSP563XX_X1, DSP563XX_Y0, DSP563XX_Y1,
 	DSP563XX_R0, DSP563XX_R1, DSP563XX_R2, DSP563XX_R3, DSP563XX_R4, DSP563XX_R5, DSP563XX_R6, DSP563XX_R7,
 	DSP563XX_N0, DSP563XX_N1, DSP563XX_N2, DSP563XX_N3, DSP563XX_N4, DSP563XX_N5, DSP563XX_N6, DSP563XX_N7,
 	DSP563XX_M0, DSP563XX_M1, DSP563XX_M2, DSP563XX_M3, DSP563XX_M4, DSP563XX_M5, DSP563XX_M6, DSP563XX_M7,
@@ -56,8 +60,8 @@ protected:
 	static const u16 t_move[0x10000];
 	static const u16 t_npar[0x100000];
 
-	static const u64 t_move_ex[39];
-	static const u64 t_npar_ex[71];
+	static const u64 t_move_ex[40];
+	static const u64 t_npar_ex[72];
 		
 	dsp563xx_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock,
 					address_map_constructor map_p, address_map_constructor map_x, address_map_constructor map_y);
@@ -73,7 +77,6 @@ protected:
 	virtual void state_export(const device_state_entry &entry) override;
 	virtual void state_string_export(const device_state_entry &entry, std::string &str) const override;
 	virtual std::unique_ptr<util::disasm_interface> create_disassembler() override;
-	virtual void device_add_mconfig(machine_config &config) override ATTR_COLD;
 
 	virtual u32 get_reset_vector() const = 0;
 
@@ -84,7 +87,8 @@ protected:
 
 	void unhandled(const char *inst);
 
-	required_device<hi08_device> m_hi08;
+	optional_device<hi08_device> m_hi08;
+	optional_device<dsp5636x_shi_device> m_shi;
 
 	address_space_config m_p_config, m_x_config, m_y_config;
 
@@ -109,7 +113,7 @@ protected:
 	inline void set_a2(u8 v) { m_a = (m_a & 0x00ffffffffffff) | (u64(v) << 48); }
 	inline void set_a1(u32 v) { m_a = (m_a & 0xff000000ffffff) | (u64(v & 0xffffff) << 24); }
 	inline void set_a0(u32 v) { m_a = (m_a & 0xffffffff000000) | u64(v & 0xffffff); }
-	inline void set_b(u64 v) { m_a = v & 0xffffffffffffff; }
+	inline void set_b(u64 v) { m_b = v & 0xffffffffffffff; }
 	inline void set_b2(u8 v) { m_b = (m_b & 0x00ffffffffffff) | (u64(v) << 48); }
 	inline void set_b1(u32 v) { m_b = (m_b & 0xff000000ffffff) | (u64(v & 0xffffff) << 24); }
 	inline void set_b0(u32 v) { m_b = (m_b & 0xffffffff000000) | u64(v & 0xffffff); }
@@ -126,7 +130,7 @@ protected:
 	inline void set_omr(u32 v) { m_omr = v; }
 	inline void set_sc(u32 v) { m_sc = v; }
 	inline void set_sp(u32 v) { m_sp = v; }
-	inline void set_sr(u32 v) { m_emr = v >> 16; m_mr = v >> 8; m_mr = v; }
+	inline void set_sr(u32 v) { m_emr = v >> 16; m_mr = v >> 8; m_ccr = v; }
 	inline void set_ssh(u32 v) { m_stackh[m_sp] = v; }
 	inline void set_ssl(u32 v) { m_stackl[m_sp] = v; }
 	inline void set_sz(u32 v) { m_sz = v; }
