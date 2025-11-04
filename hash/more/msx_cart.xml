@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 685 -->
+<!-- Number of items in this list = 686 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1989,6 +1989,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Firebird (1987)(Konami)[RC-747].rom" size="131072" crc="6aa2737b" sha1="7b0b379c6f46552a6f5a0408b8182e8e79540f7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9ecf31bdc2bde">
+		<description>Flappy Patastrato (2025)(PlattySoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Flappy Patastrato (2025)(PlattySoft).rom" size="49152" crc="b6343889" sha1="9ecf31bdc2bde725d558d919fe99d8b19d2f012d"/>
 			</dataarea>
 		</part>
 	</software>

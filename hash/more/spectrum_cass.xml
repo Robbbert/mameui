@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5735 -->
+<!-- Number of items in this list = 5764 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -12142,6 +12142,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsea7a4a7c7b131">
+		<description>Camelot (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25694">
+				<rom name="Camelot (1983)(CCS).tap" size="25694" crc="3b13e80d" sha1="ea7a4a7c7b13109c104f4fc801cbf154360518c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d3282949c7dc">
+		<description>Camelot Warriors (1985)(Dinamic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41654">
+				<rom name="Camelot Warriors (1985)(Dinamic)(Sp).tap" size="41654" crc="5992a515" sha1="8d3282949c7dc804770191b900272b3bbfad2f1f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8ec7e19c8a509">
 		<description>Canyon Warrior</description>
 		<year>????</year>
@@ -13192,6 +13212,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs23845163d0c2f">
+		<description>Herbert's Dummy Run (1985)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36179">
+				<rom name="Herbert's Dummy Run (1985)(Mikro-Gen).tap" size="36179" crc="68a54471" sha1="23845163d0c2f2291d12129c405aa6679cd19cfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b3f50a40a127">
+		<description>Herbert's Dummy Run 48K (1985)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49402">
+				<rom name="Herbert's Dummy Run 48K (1985)(Mikro-Gen).tap" size="49402" crc="a9b3b9c5" sha1="7b3f50a40a127ac875b2021447e6e446df3d4023"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5968c90440004">
 		<description>Herbert's Dummy Run</description>
 		<year>????</year>
@@ -13202,6 +13242,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs005bcb98f65b4">
+		<description>Herbie wants to be a Millionaire 128K (2025)(bitmagine Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61125">
+				<rom name="Herbie wants to be a Millionaire 128K (2025)(bitmagine Studio).tap" size="61125" crc="b6085fd2" sha1="005bcb98f65b4b338cf5ea8bff8b4a81e898693d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs91f48f87a0072">
+		<description>Herbie wants to be a Millionaire v1.1 128K (2025)(bitmagine Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61844">
+				<rom name="Herbie wants to be a Millionaire v1.1 128K (2025)(bitmagine Studio).tap" size="61844" crc="7a2cbf39" sha1="91f48f87a0072695ba304999a0e73d936ec62cb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27217135e0421">
+		<description>Hercules (1986)(Alpha Omega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28621">
+				<rom name="Hercules (1986)(Alpha Omega).tap" size="28621" crc="3b89d565" sha1="27217135e04216a47d3baadef405f33829c487fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb292d30d550f6">
+		<description>Hercules - Slayer of the Damned 48K-128K (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52958">
+				<rom name="Hercules - Slayer of the Damned 48K-128K (1988)(Gremlin Graphics).tap" size="52958" crc="c6ca45e6" sha1="b292d30d550f68393b2b49ba1e70c13ff79a1db5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs65b878c863fa2">
 		<description>Hercules - Slayer Of The Damned</description>
 		<year>????</year>
@@ -13209,6 +13289,146 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="108909">
 				<rom name="Hercules - Slayer Of The Damned.tzx" size="108909" crc="404bcdf6" sha1="65b878c863fa2c6f01932e5ac85a0679d22cde95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2230da701e413">
+		<description>Here Be Tygers (1985)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48605">
+				<rom name="Here Be Tygers (1985)(Automata UK).tap" size="48605" crc="1675da55" sha1="2230da701e413e11c433f6bddb2b47772f56746e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs91881a559ffcf">
+		<description>Here Comes The Sun (1983)(Alligata Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54775">
+				<rom name="Here Comes The Sun (1983)(Alligata Software).tap" size="54775" crc="3e99a9a7" sha1="91881a559ffcf8ccfa402e926556890bf1f19d64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8264b126e842a">
+		<description>Hero (1984)(Activision)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37534">
+				<rom name="Hero (1984)(Activision)[a].tap" size="37534" crc="4c40b009" sha1="8264b126e842a6fff904c8d4fad99e14ac155b46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c4933f3edc29">
+		<description>Hero Quest (1991)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="137094">
+				<rom name="Hero Quest (1991)(Gremlin Graphics).tap" size="137094" crc="54842253" sha1="1c4933f3edc292e0b7168212d554d5542e1f76e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19d370af8c908">
+		<description>Hero Quest (1991)(Gremlin Graphics)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="111870">
+				<rom name="Hero Quest (1991)(Gremlin Graphics)_1.tap" size="111870" crc="76faec29" sha1="19d370af8c9084055e9c6f13ea3fc6bc54c87c57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c78d9f1478c2">
+		<description>Hero Quest (1994)(Karry Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45917">
+				<rom name="Hero Quest (1994)(Karry Soft).tap" size="45917" crc="034abf1e" sha1="5c78d9f1478c24e6e700236e59d3e5f32d58cdda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9b45a1aa1e64b">
+		<description>Hero Quest (demo) (1991)(Gremlin Graphics Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47591">
+				<rom name="Hero Quest (demo) (1991)(Gremlin Graphics Software Ltd).tap" size="47591" crc="bbaf26d0" sha1="9b45a1aa1e64b8a3e93c41101798dfabd6027254"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44461644b99c2">
+		<description>Hero Quest - Return Of The Witch Lord (1991)(Gremlin Graphics Software Ltd)[a](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68158">
+				<rom name="Hero Quest - Return Of The Witch Lord (1991)(Gremlin Graphics Software Ltd)[a](128K).tap" size="68158" crc="31b4fdc2" sha1="44461644b99c2d9fe3c671196723420bb39ef9f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf6bc567612efc">
+		<description>Hero Quest - Return of the Witch Lord (1991)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="131173">
+				<rom name="Hero Quest - Return of the Witch Lord (1991)(Gremlin Graphics).tap" size="131173" crc="65141180" sha1="f6bc567612efc3e87f7bf529c230dcafd54adbdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56b65bb4ffd27">
+		<description>Heroes Of The Lance (1988)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="153985">
+				<rom name="Heroes Of The Lance (1988)(US Gold).tap" size="153985" crc="c4df7f3b" sha1="56b65bb4ffd27a4c5836720e08b062b6c66501e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2682a3f11ee2a">
+		<description>Heroes Rescue (2016)(Defecto Digital Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35792">
+				<rom name="Heroes Rescue (2016)(Defecto Digital Studios).tap" size="35792" crc="70ccdcda" sha1="2682a3f11ee2a6bf9979149b80d6faa70798fe42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8328b1bcc7115">
+		<description>heroes_TAPE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43787">
+				<rom name="heroes_TAPE.tap" size="43787" crc="fc76a038" sha1="8328b1bcc7115b31c6f227f2f3cf7e6194661070"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a603d4f91443">
+		<description>Hex Loader (1983)(FV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3021">
+				<rom name="Hex Loader (1983)(FV).tap" size="3021" crc="4270fb9b" sha1="9a603d4f91443abe62b824a8edff131af59702b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08ffdda916b9c">
+		<description>Hexxagon (1994)(Rok Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28076">
+				<rom name="Hexxagon (1994)(Rok Software).tap" size="28076" crc="6d3643ec" sha1="08ffdda916b9c7d951a14ad4b50448f79a8acba1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -50672,6 +50892,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0b3342d8f5a96">
+		<description>_Camelot Warriors 48K (1986)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41677">
+				<rom name="_Camelot Warriors 48K (1986)(Dinamic Software).tap" size="41677" crc="27fdde63" sha1="0b3342d8f5a96fd767763690b2b2c683c690a4e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscae705140764b">
+		<description>_Campo De Minas (1983)(Investronica)(Sp)[Compilation]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24603">
+				<rom name="_Campo De Minas (1983)(Investronica)(Sp)[Compilation].tap" size="24603" crc="1ab98545" sha1="cae705140764b39f27dc0c4b5d1af6c31a5a5df6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs554b47196fbc3">
+		<description>_Campo Explosivo (19xx)(Hippocrates Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30165">
+				<rom name="_Campo Explosivo (19xx)(Hippocrates Soft)(Sp).tap" size="30165" crc="1981d612" sha1="554b47196fbc3ac3bc2f2d2e6ac9c6aa78475237"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5c9de2e39de0">
 		<description>_Cauldron</description>
 		<year>????</year>
@@ -50889,6 +51139,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43048">
 				<rom name="_Gunfright.tzx" size="43048" crc="c9179545" sha1="c7f62b485cd1a5b23a68c3b60a0f9f001eb07428"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs97b8bc2153204">
+		<description>_Hero (1984)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38104">
+				<rom name="_Hero (1984)(Activision).tap" size="38104" crc="9494e54a" sha1="97b8bc215320469845295e7ada615176d8776cc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde746dfd0a86b">
+		<description>_Heroes Of Karn (1984)(Interceptor Micros Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48128">
+				<rom name="_Heroes Of Karn (1984)(Interceptor Micros Software).tap" size="48128" crc="9c495ed3" sha1="de746dfd0a86b959f08034ce790bba660445acfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98d0b811c0fcf">
+		<description>_Heroes Of Karn (1984)(Interceptor Micros Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48007">
+				<rom name="_Heroes Of Karn (1984)(Interceptor Micros Software)[a].tap" size="48007" crc="2f441836" sha1="98d0b811c0fcffde6578d70d8db9f5c6a90bef48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7609af605f2d1">
+		<description>_Hexagonal Museum (19xx)(16 - 48k Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28094">
+				<rom name="_Hexagonal Museum (19xx)(16 - 48k Magazine).tap" size="28094" crc="9e46c4cc" sha1="7609af605f2d1ffc9ebc8581f6448736558b4f7f"/>
 			</dataarea>
 		</part>
 	</software>

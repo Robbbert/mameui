@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 89 -->
+<!-- Number of items in this list = 90 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -249,6 +249,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Don't Die, Mr. Robot! (2025)(Infinite State Games).ngp" size="2097152" crc="d3f986b2" sha1="0301fa0b9375205a4c495d905f441f55901aa612"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp0784e58ddf280">
+		<description>Fruity Pals' Revenge v1.2 (2025)(Infinite State Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Fruity Pals' Revenge v1.2 (2025)(Infinite State Games).ngp" size="2097152" crc="f92db309" sha1="0784e58ddf280c82d5b39f763e35b5ea3cfb5b71"/>
 			</dataarea>
 		</part>
 	</software>
