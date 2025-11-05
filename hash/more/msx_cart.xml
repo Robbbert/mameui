@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 686 -->
+<!-- Number of items in this list = 689 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -479,6 +479,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Aquapolis SOS (1983)(Compile)[h Sammy].rom" size="16384" crc="d82e3eae" sha1="0400bf9fcebf76ead52a702a00b51eef991f730a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd5fefdce2c3ab">
+		<description>Arcade Fever (2025)(SMX Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="1998848">
+				<rom name="Arcade Fever (2025)(SMX Team).rom" size="1998848" crc="5cc305c3" sha1="d5fefdce2c3ab28e8a0e335f8421e39b0f62ce97"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1112,6 +1122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx9f26f6a8bf6ee">
+		<description>Casio Collection (2025)(SMX Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="827392">
+				<rom name="Casio Collection (2025)(SMX Team).rom" size="827392" crc="cb857ad7" sha1="9f26f6a8bf6eeb0918c1d3c6bf3047710f563ece"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxe32d7334ace26">
 		<description>Casio Gamecase (2002)(JAM)</description>
 		<year>????</year>
@@ -1599,6 +1619,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="139264">
 				<rom name="Digital Devil Monogatari Megami Tensei T-Eng (2024)(Kaisaan).rom" size="139264" crc="91987fb2" sha1="6b038d9a3eed85000b326a4b6223763a98c40d8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4f39acb290ea4">
+		<description>Dinamic Treasures ES (2025)(SMX Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="1908736">
+				<rom name="Dinamic Treasures ES (2025)(SMX Team).rom" size="1908736" crc="1bbbc643" sha1="4f39acb290ea4490e849dfbd64d997c7929bd0f4"/>
 			</dataarea>
 		</part>
 	</software>

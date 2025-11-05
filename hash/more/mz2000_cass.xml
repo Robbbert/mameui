@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 41 -->
+<!-- Number of items in this list = 37 -->
 <softwarelist name="mz2000_cass" description="mz2000_cass loose roms">
 	<software name="m2030f3f8c7b34f9">
 		<description>Aerial_BW</description>
@@ -172,16 +172,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="m200441e79bf3a1a">
-		<description>Gang Man (1983)(Hudson Soft)(Fumihiko Itagaki) [CT]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="3474088">
-				<rom name="Gang Man (1983)(Hudson Soft)(Fumihiko Itagaki) [CT].wav" size="3474088" crc="41ac815e" sha1="0441e79bf3a1a31eb931b76db20d6a41c6e23ecd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m206b51f55b0a0d2">
 		<description>Guntus_BW</description>
 		<year>????</year>
@@ -239,16 +229,6 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1899548">
 				<rom name="Impetus_mz2000.wav" size="1899548" crc="c028a95e" sha1="ebf2b3bd0b99f0710ff0ec43725fb2bd379ff728"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m2079f5cd35a0929">
-		<description>Itasandrias (1983)(Hudson Soft)(Fumihiko Itagaki) [CT]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="3912958">
-				<rom name="Itasandrias (1983)(Hudson Soft)(Fumihiko Itagaki) [CT].wav" size="3912958" crc="da6bd73d" sha1="79f5cd35a0929932d32f0661ec69bdb99181c3c2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -372,16 +352,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="m204de8ad5e0543c">
-		<description>Super Doors (1983)(Hudson Soft)(TNT) [CT]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="2992512">
-				<rom name="Super Doors (1983)(Hudson Soft)(TNT) [CT].wav" size="2992512" crc="638e1cb9" sha1="4de8ad5e0543cd487b820e242684f8fff101a2e0"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m20a70420a5e6cdd">
 		<description>Yewdow_BW</description>
 		<year>????</year>
@@ -399,16 +369,6 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1391523">
 				<rom name="Yewdow_mz2000.wav" size="1391523" crc="40354f84" sha1="45ea9fa73e29d2605287d25741ee3db71a43517b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m2035bbc817baa5d">
-		<description>Zero Fighter (1983)(Hudson Soft) [CT]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="2755948">
-				<rom name="Zero Fighter (1983)(Hudson Soft) [CT].wav" size="2755948" crc="c64af8ba" sha1="35bbc817baa5ddacc806fcc1f7eac20b807264d2"/>
 			</dataarea>
 		</part>
 	</software>

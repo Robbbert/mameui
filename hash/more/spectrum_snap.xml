@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 456 -->
+<!-- Number of items in this list = 457 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -4539,6 +4539,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="34544">
 				<rom name="Zybex 48K (1989)(Zeppelin Games).z80" size="34544" crc="a79c6137" sha1="06464e62acd9441149a1afa6b9abfdd858d463bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7c503e5d47c63">
+		<description>_HeliChopper 48K (1985)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="33920">
+				<rom name="_HeliChopper 48K (1985)(Firebird).z80" size="33920" crc="28c9aa3f" sha1="7c503e5d47c636af984a504c9c2e440479c635b2"/>
 			</dataarea>
 		</part>
 	</software>

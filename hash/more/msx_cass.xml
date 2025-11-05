@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 115 -->
+<!-- Number of items in this list = 113 -->
 <softwarelist name="msx_cass" description="msx_cass loose roms">
 	<software name="msxeadb9d14766b7">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[Micom BASIC][cload]</description>
@@ -679,26 +679,6 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="9774">
 				<rom name="H-tron_msx[BLOAD'CAS-',R].cas" size="9774" crc="cb17bd1f" sha1="4755e2cfbba2940d8bd69df46c10704581944f35"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msxe41c96ef08572">
-		<description>Hammer Boy - Side A (Euro)(1991)(Dinamic Software)[RUN'CAS-']</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="msx_cass">
-			<dataarea name="cass" size="55954">
-				<rom name="Hammer Boy - Side A (Euro)(1991)(Dinamic Software)[RUN'CAS-'].cas" size="55954" crc="907a6931" sha1="e41c96ef08572959225620966b61ec6b89c09113"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx45edf1319864c">
-		<description>Hammer Boy - Side B (Euro)(1991)(Dinamic Software)[RUN'CAS-']</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="msx_cass">
-			<dataarea name="cass" size="55954">
-				<rom name="Hammer Boy - Side B (Euro)(1991)(Dinamic Software)[RUN'CAS-'].cas" size="55954" crc="2e7eba8e" sha1="45edf1319864c958437c2b22e8ba03ed2fb194dd"/>
 			</dataarea>
 		</part>
 	</software>

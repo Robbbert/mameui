@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5764 -->
+<!-- Number of items in this list = 5791 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10322,6 +10322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc59cb1e7e3d79">
+		<description>Bolalela 5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34623">
+				<rom name="Bolalela 5.tap" size="34623" crc="b0fa7e49" sha1="c59cb1e7e3d79be884de6d0cd264983fd4c5e223"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbe9390ac569ab">
 		<description>Bomb 48K (2025)(Radastan)</description>
 		<year>????</year>
@@ -12162,6 +12172,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5c51f891767e7">
+		<description>Cannibal Island (1986)(Live Wire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47998">
+				<rom name="Cannibal Island (1986)(Live Wire Software).tap" size="47998" crc="e70c5cac" sha1="5c51f891767e7f9056aec880c3842be7ab5ecc2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs89c52a84e84cf">
+		<description>Cannibal Island 2 48K (2023)(Pavero Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40421">
+				<rom name="Cannibal Island 2 48K (2023)(Pavero Software).tap" size="40421" crc="4bc3ae8a" sha1="89c52a84e84cfd21f39b093f6b50605fe1b98ab0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse2fae0e73065d">
+		<description>Cannibal Island 48K (1986)(LiveWire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48016">
+				<rom name="Cannibal Island 48K (1986)(LiveWire Software).tap" size="48016" crc="0a6738c4" sha1="e2fae0e73065da36981029e4153efe9f6c0481e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfa91492a1fd43">
+		<description>Cannibals (1987)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33220">
+				<rom name="Cannibals (1987)(Alternative Software).tap" size="33220" crc="2a418708" sha1="fa91492a1fd434abc30fc3953b8c599cf45a703f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdde76fb884412">
+		<description>Cannibals (1987)(Alternative Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33280">
+				<rom name="Cannibals (1987)(Alternative Software)[a].tap" size="33280" crc="f22335aa" sha1="dde76fb884412bd84fbbb2becf7e4b74daee3553"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9db5e9793c7f0">
+		<description>Cannon Ball (1983)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7602">
+				<rom name="Cannon Ball (1983)(Hudson Soft).tap" size="7602" crc="203cc5a5" sha1="9db5e9793c7f0485892cc4dee21b5b694a572634"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc797e5aa10e14">
+		<description>Canyon Warrior (1989)(Mastertronic Plus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52451">
+				<rom name="Canyon Warrior (1989)(Mastertronic Plus).tap" size="52451" crc="5574dd40" sha1="c797e5aa10e14eccaef347ad107fdf5ad34c369f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8ec7e19c8a509">
 		<description>Canyon Warrior</description>
 		<year>????</year>
@@ -13202,6 +13282,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs148b313f0abd1">
+		<description>Heli-Land (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3137">
+				<rom name="Heli-Land (19xx)(-).tap" size="3137" crc="a3c31a4e" sha1="148b313f0abd140107dcdd42b4dd370203830520"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc2184a615e080">
+		<description>Helikopter (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7695">
+				<rom name="Helikopter (19xx)(-)(De).tap" size="7695" crc="cf034f4c" sha1="c2184a615e080c65f4c1ff3b0c2c1a8158c5f056"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs213738af0120a">
+		<description>Helikopter (19xx)(Jansoft)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16048">
+				<rom name="Helikopter (19xx)(Jansoft)(De).tap" size="16048" crc="34399d4e" sha1="213738af0120ae0e5a5324bea00194c8b10ace9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs023e46cc27b5d">
+		<description>Hell Tank 128K - Easy (2024)(fransouls)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56854">
+				<rom name="Hell Tank 128K - Easy (2024)(fransouls).tap" size="56854" crc="33dc72ea" sha1="023e46cc27b5d7f3ae01cbd6012322ffe7dfc154"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdb490c1d05e9a">
+		<description>Hell Tank 128K - Hard (2024)(fransouls)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56919">
+				<rom name="Hell Tank 128K - Hard (2024)(fransouls).tap" size="56919" crc="31514705" sha1="db490c1d05e9a587684069e66a23c80bde1eb4cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs36fbac3e4992d">
+		<description>HELL YEAH! (2020)(Andy Precious)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47898">
+				<rom name="HELL YEAH! (2020)(Andy Precious).tap" size="47898" crc="6f2404b4" sha1="36fbac3e4992d108bebc73b5e6af1b8f423cd45b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7804ebfa63a15">
+		<description>HELL YEAH! (2020)(Andy Precious)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47848">
+				<rom name="HELL YEAH! (2020)(Andy Precious)_1.tap" size="47848" crc="064685ab" sha1="7804ebfa63a15d6005d7bbf2132cb237e10e9731"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbace3468f536b">
+		<description>Hellfire (1985)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48138">
+				<rom name="Hellfire (1985)(Melbourne House).tap" size="48138" crc="060aae2e" sha1="bace3468f536b33ab163fe3e8e6ad9245eaa3a17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse449ffc3f02a6">
+		<description>Hellfire (1985)(Melbourne House)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48030">
+				<rom name="Hellfire (1985)(Melbourne House)[a].tap" size="48030" crc="11742566" sha1="e449ffc3f02a696ea317483467af518a679fe309"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1f715eb3d8702">
 		<description>Hellfire Attack</description>
 		<year>????</year>
@@ -13209,6 +13379,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="157949">
 				<rom name="Hellfire Attack.tzx" size="157949" crc="8b628dfc" sha1="1f715eb3d8702e6ce0c3e8e593758d7afcc3d9c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs829ad58cb1cab">
+		<description>Helter Skelter (1990)(Audiogenic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="70452">
+				<rom name="Helter Skelter (1990)(Audiogenic Software).tap" size="70452" crc="eb7fdaa4" sha1="829ad58cb1cab9fe162220f8390eddce742ae388"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c5e14329aa19">
+		<description>Helvera - Mistress Of The Park (19xx)(FSF Adventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36902">
+				<rom name="Helvera - Mistress Of The Park (19xx)(FSF Adventures).tap" size="36902" crc="293f5c11" sha1="3c5e14329aa19438e50e96b95e9e40ecdb298d58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c955b723a2d4">
+		<description>Henry IV Part One (19xx)(Penguin Study Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52307">
+				<rom name="Henry IV Part One (19xx)(Penguin Study Software).tap" size="52307" crc="d04afbd8" sha1="0c955b723a2d4a21714165da5c96b3fe9f875ea3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa893cfd7eed01">
+		<description>Henry's Hoard (1985)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37491">
+				<rom name="Henry's Hoard (1985)(Alternative Software).tap" size="37491" crc="2a12510e" sha1="a893cfd7eed0111090d415e88f695c16b3303dd4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13639,26 +13849,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41374">
 				<rom name="Hoarder, The ES 48K (2020)(iadvd).tap" size="41374" crc="1c7cee3d" sha1="11648fc50bcd8774426f02099299291981be7340"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsd45643d32bfc5">
-		<description>Hobbit (Vah-ka's Cut), El ES 48K (2012)(The Mojon Twins)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="34226">
-				<rom name="Hobbit (Vah-ka's Cut), El ES 48K (2012)(The Mojon Twins).tap" size="34226" crc="e77cc2e9" sha1="d45643d32bfc5284573485af6eedf1731bd9e0a6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs67ea4041c3972">
-		<description>Hobbit (Vah-ka's Cut), The EN 48K (2012)(The Mojon Twins)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="34049">
-				<rom name="Hobbit (Vah-ka's Cut), The EN 48K (2012)(The Mojon Twins).tap" size="34049" crc="df530833" sha1="67ea4041c3972fd548285f00a21ae4979b505e01"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18292,16 +18482,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs1a8d0880b45e5">
-		<description>Knightmare ZX 128K (2012)(Climacus)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="69251">
-				<rom name="Knightmare ZX 128K (2012)(Climacus).tzx" size="69251" crc="0ea2f87d" sha1="1a8d0880b45e543957e27db854367b9b1fe328a3"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs4a016bd2ee05f">
 		<description>KnightsDemonsDX_alt</description>
 		<year>????</year>
@@ -18629,16 +18809,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="28477">
 				<rom name="Krpat (2020)(Bizard).tap" size="28477" crc="d4b9f078" sha1="b0fb1a78ed913613728a5c8edab0d069583a9453"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs71c49edbb919d">
-		<description>Krypton Raider ES 48K (1985)(Future Stars)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="26520">
-				<rom name="Krypton Raider ES 48K (1985)(Future Stars).tzx" size="26520" crc="9c59b305" sha1="71c49edbb919d4bfe2c5791b9ae71079d40d80ff"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27032,6 +27202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa1c6e391cd220">
+		<description>Ninja Secret Agent Chapter 1 128K (2025)(Itho Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58403">
+				<rom name="Ninja Secret Agent Chapter 1 128K (2025)(Itho Games).tap" size="58403" crc="5c22d5e6" sha1="a1c6e391cd22058c969c681d93cff2bd026a5da5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbde22eba11ff8">
 		<description>Ninja Spirit (19xx)(Activision)</description>
 		<year>????</year>
@@ -27752,16 +27932,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsd51ff66f14039">
-		<description>Ole, toro ES 48K (1985)(Dinamic Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="38335">
-				<rom name="Ole, toro ES 48K (1985)(Dinamic Software).tzx" size="38335" crc="1f40df1f" sha1="d51ff66f14039bc9a9fd3bb9806fbb565475af76"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs83773207f9980">
 		<description>Oligopoli (1983)(CCS)</description>
 		<year>????</year>
@@ -28109,6 +28279,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46767">
 				<rom name="Operation Hormuz (1989)(Again Again).tap" size="46767" crc="a1114200" sha1="88943c159af68c8aa4dd9da895aeac0af7c757f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs579561fd0a8c3">
+		<description>Operation Hormuz 48K-128K (1989)(Again Again)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49106">
+				<rom name="Operation Hormuz 48K-128K (1989)(Again Again).tzx" size="49106" crc="1c657b1e" sha1="579561fd0a8c365476c229bc0bd7f6f562140059"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32452,6 +32632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs207215d38cb1c">
+		<description>Quivira</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="153908">
+				<rom name="Quivira.tap" size="153908" crc="e4817a3d" sha1="207215d38cb1caf114aa3d4af8404a352a056ec3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs24d605ed5e6d2">
 		<description>Quondam (19xx)(Ocean Software)</description>
 		<year>????</year>
@@ -32769,26 +32959,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49233">
 				<rom name="Ramiro el vampiro IV ES 128K (2023)(The Mojon Twins).tap" size="49233" crc="54c870f3" sha1="313f3ac4904f7879754c8050a0436c581f1c10a8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsa0f9d97af7a26">
-		<description>Ramiro el Vampiro Parte 1 ES 48K (2013)(The Mojon Twins)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="40517">
-				<rom name="Ramiro el Vampiro Parte 1 ES 48K (2013)(The Mojon Twins).tap" size="40517" crc="cd8156bf" sha1="a0f9d97af7a26143f4739f44ffdefd8a721db1a2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs540692a998ff5">
-		<description>Ramiro el Vampiro Parte 2 ES 48K (2013)(The Mojon Twins)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="41250">
-				<rom name="Ramiro el Vampiro Parte 2 ES 48K (2013)(The Mojon Twins).tap" size="41250" crc="1b41cef8" sha1="540692a998ff5bf1398e2b4b17656c62ee120e9b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34779,6 +34949,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="25245">
 				<rom name="Room Ten (1986)(CRL Group PLC).tap" size="25245" crc="ef186d19" sha1="eeb24c2a1e0cbf8dcce0b89a4a257db14d3761e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs483c64f4f50b9">
+		<description>RoshiMilkCourse_A(eng)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58213">
+				<rom name="RoshiMilkCourse_A(eng).tap" size="58213" crc="18e216a7" sha1="483c64f4f50b9faa7b48c33e6fd01c65fc59b173"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7d6179bdd033">
+		<description>RoshiMilkCourse_A(esp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58312">
+				<rom name="RoshiMilkCourse_A(esp).tap" size="58312" crc="f3518526" sha1="a7d6179bdd0335a07c7fd8b9162d6742d8daf279"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs89d4791ddfe4f">
+		<description>RoshiMilkCourse_A(por)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58314">
+				<rom name="RoshiMilkCourse_A(por).tap" size="58314" crc="f365e8a5" sha1="89d4791ddfe4fcefae79e1694e00f18c0a8209f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67e72903dbebe">
+		<description>RoshiMilkCourse_B(eng)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59237">
+				<rom name="RoshiMilkCourse_B(eng).tap" size="59237" crc="253c75fb" sha1="67e72903dbebe95c8a45e8a443a015e11a3b1765"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd47c15ddc2c5f">
+		<description>RoshiMilkCourse_B(esp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59340">
+				<rom name="RoshiMilkCourse_B(esp).tap" size="59340" crc="5e3ef4ba" sha1="d47c15ddc2c5f67eb92e8da934d9bc513af9a9d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8878057519593">
+		<description>RoshiMilkCourse_B(por)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59352">
+				<rom name="RoshiMilkCourse_B(por).tap" size="59352" crc="757dcdb7" sha1="88780575195934030024b7e04931fc54ff4af2c5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37389,6 +37619,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="3731">
 				<rom name="Siege (1983)(Postern).tap" size="3731" crc="47bec272" sha1="95d2d35812c2046bd68cbb033c71ff639573acfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1faec368134cd">
+		<description>Sigma 7 128K (1987)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44613">
+				<rom name="Sigma 7 128K (1987)(Durell).tzx" size="44613" crc="64794396" sha1="1faec368134cd55ec4c6bbdb10363cbf22db99fc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -51142,6 +51382,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs05936b3e036d9">
+		<description>_HELANGEL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6311">
+				<rom name="_HELANGEL.TAP" size="6311" crc="b821e5f8" sha1="05936b3e036d9eedfb3280c3ae7ab21cc1f24463"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9086e0dda1c32">
+		<description>_HeliChopper 48K (1985)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48038">
+				<rom name="_HeliChopper 48K (1985)(Firebird).tap" size="48038" crc="5160aec4" sha1="9086e0dda1c32b903a5ff7e7a4a74b780ea15f95"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs97b8bc2153204">
 		<description>_Hero (1984)(Activision)</description>
 		<year>????</year>
@@ -55439,6 +55699,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48238">
 				<rom name="_Sigma 7 (1987)(Durell Software Ltd).tap" size="48238" crc="2d38ab8c" sha1="d0d1bb5c1f4e0a97bf3a3b5d19deaf12858a6a7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbc54c6347ac2a">
+		<description>_Sigma 7 48K (1987)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49372">
+				<rom name="_Sigma 7 48K (1987)(Durell).tzx" size="49372" crc="7c6ae893" sha1="bc54c6347ac2ae7c3b80b1e324348279a407c622"/>
 			</dataarea>
 		</part>
 	</software>

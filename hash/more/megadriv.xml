@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2033 -->
+<!-- Number of items in this list = 2032 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -11749,16 +11749,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mortal Kombat Graff kore (hack).bin" size="2097152" crc="ac6db792" sha1="d3e6d967892f54ee46b811463d9ab0a52483c6b6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genaf6d2db16f2b7">
-		<description>Mortal Kombat II (World) (Mortal Kombat Legacy Kollection)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="Mortal Kombat II (World) (Mortal Kombat Legacy Kollection).bin" size="3145728" crc="a9e013d8" sha1="af6d2db16f2b76940ff5a9738f1e00c4e7ea485e"/>
 			</dataarea>
 		</part>
 	</software>
