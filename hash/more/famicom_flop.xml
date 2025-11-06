@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 525 -->
+<!-- Number of items in this list = 527 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -4669,6 +4669,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="65516">
 				<rom name="tile editor (older) (sunsoft).fds" size="65516" crc="b68a9875" sha1="f08a94aca1d71985c9704abb824be005c7a388cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds716786692cf9c">
+		<description>Titanic Mystery - Ao no Senritsu (Japan)(1987)(Gakken - Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Titanic Mystery - Ao no Senritsu (Japan)(1987)(Gakken - Activision).fds" size="131000" crc="fb36075c" sha1="716786692cf9cba9c5b02745025d648237571c43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds1206d6a853d43">
+		<description>Titanic Mystery - Rumblings from the Blue T-Eng (2025)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="131000">
+				<rom name="Titanic Mystery - Rumblings from the Blue T-Eng (2025)(BlackPaladin).fds" size="131000" crc="dab26a4e" sha1="1206d6a853d4399c22cb1a9ab6e48c600871e0e1"/>
 			</dataarea>
 		</part>
 	</software>

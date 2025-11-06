@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 689 -->
+<!-- Number of items in this list = 691 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -4052,6 +4052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx1d5339204c100">
+		<description>MultiCart 31in1 (2019)(RetroHard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="MultiCart 31in1 (2019)(RetroHard).rom" size="1048576" crc="0613d8db" sha1="1d5339204c100d2ba5125b87f11a927305fe9ad9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx13742f7f9d11a">
 		<description>Multiverse (2019)(Hikaru Games)</description>
 		<year>????</year>
@@ -4889,6 +4899,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="12268">
 				<rom name="Ruptus.rom" size="12268" crc="9d04917f" sha1="a2418ad9bf80d585d09dfff33d69e686c9a75855"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxcd97a1139d65d">
+		<description>S H M U P S (2019)(RetroHard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="S H M U P S (2019)(RetroHard).rom" size="1048576" crc="0241b504" sha1="cd97a1139d65d4ada536c25944b24b5c3ceac839"/>
 			</dataarea>
 		</part>
 	</software>

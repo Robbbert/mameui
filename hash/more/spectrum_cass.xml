@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5791 -->
+<!-- Number of items in this list = 5826 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -349,6 +349,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56469">
 				<rom name="-Buggy Boy (1988)(Elite Systems Ltd)[cr [Cr][Cr].tap" size="56469" crc="971589f4" sha1="24445be7313fd58bff6aa9d0447e20ca2466b878"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87752c2712b55">
+		<description>-Captain Blood (1988)(ERE Informatique)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31963">
+				<rom name="-Captain Blood (1988)(ERE Informatique)[cr [Cr][Cr].tap" size="31963" crc="cb35ae81" sha1="87752c2712b55e4e98a1502dd04b77f80459e6ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e99414a65c28">
+		<description>-Hard Drivin' (1989)(Domark Ltd)[cr [Cr Matasoft][t](128K)[Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41262">
+				<rom name="-Hard Drivin' (1989)(Domark Ltd)[cr [Cr Matasoft][t](128K)[Cr Matasoft].tap" size="41262" crc="60164374" sha1="1e99414a65c28e9cdd3e9d8e9a641c269ae1d83e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12252,6 +12272,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa36bec8b815f7">
+		<description>Capitan Sevilla (1988)(Dinamic)(Sp)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37888">
+				<rom name="Capitan Sevilla (1988)(Dinamic)(Sp)[Part 2 of 2].tap" size="37888" crc="686c2d28" sha1="a36bec8b815f72e39e5605fbeb5d210dd95dee57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs52b4b6110901d">
+		<description>Capitan Trueno (1989)(Dinamic)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37966">
+				<rom name="Capitan Trueno (1989)(Dinamic)[Part 1 of 2].tap" size="37966" crc="66c4f79e" sha1="52b4b6110901dceb738af44c9c0159cab986c776"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse3fd6b23e4b73">
+		<description>Capitan Trueno (1989)(Dinamic)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35473">
+				<rom name="Capitan Trueno (1989)(Dinamic)[Part 2 of 2].tap" size="35473" crc="f8de5b55" sha1="e3fd6b23e4b73e373acfaeabca51bd565951e574"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5fb0647d75243">
+		<description>Capman (1983)(Your Computer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5915">
+				<rom name="Capman (1983)(Your Computer).tap" size="5915" crc="cb29db5b" sha1="5fb0647d75243efed10eac15a71b8ba9285b899f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc69a3a3071141">
 		<description>Captain Dynamo</description>
 		<year>????</year>
@@ -13279,6 +13339,206 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42443">
 				<rom name="H.A.T.E. - Hostile All Terrain Encounter.tzx" size="42443" crc="1cb9147e" sha1="da8d96c86afb5f0bb49c79644d0eca0b0c154115"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1930a1b08c76c">
+		<description>Havoc (1990)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35840">
+				<rom name="Havoc (1990)(Players Premier).tap" size="35840" crc="2fd326cc" sha1="1930a1b08c76cff8b719309cd71c691743fb151f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf82bd54513054">
+		<description>Head Over Heels (1987)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47517">
+				<rom name="Head Over Heels (1987)(Ocean Software).tap" size="47517" crc="846a8db2" sha1="f82bd54513054bb83cc85089af9fb002afad3845"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsadf8975f6ddf2">
+		<description>Head over Heels 48K-128K (1987)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49966">
+				<rom name="Head over Heels 48K-128K (1987)(Ocean).tap" size="49966" crc="94b0569b" sha1="adf8975f6ddf2868bd543a1dfb187a4c0d577fd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsddd81104da382">
+		<description>Head Start (1987)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49743">
+				<rom name="Head Start (1987)(Bug-Byte Software).tap" size="49743" crc="82af1b09" sha1="ddd81104da3826f59b847e07a97571ad9062bd2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d5725b7dbc32">
+		<description>Headbangers Heaven (1983)(Llamasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19695">
+				<rom name="Headbangers Heaven (1983)(Llamasoft).tap" size="19695" crc="2c8d9c10" sha1="1d5725b7dbc32d6546b49a536155d67406b3e0fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46bb497263266">
+		<description>Headbangers Heaven v2 48K (1983)(Llamasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19701">
+				<rom name="Headbangers Heaven v2 48K (1983)(Llamasoft).tap" size="19701" crc="c8697518" sha1="46bb4972632663a3f774c821fe07d8578d72d749"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76bb9762ca50a">
+		<description>Header Editor (1985)(Zbysek Bahensky)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7548">
+				<rom name="Header Editor (1985)(Zbysek Bahensky).tap" size="7548" crc="30a8af23" sha1="76bb9762ca50a714a2a76811093f9483cde3b566"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf84408b06a12e">
+		<description>Heartland (1986)(Odin Computer Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40550">
+				<rom name="Heartland (1986)(Odin Computer Graphics).tap" size="40550" crc="d4e8eaf7" sha1="f84408b06a12ed07425451fdd188832d2fef1045"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs51cf6b676ae36">
+		<description>Heartland (1986)(Odin Computer Graphics)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42923">
+				<rom name="Heartland (1986)(Odin Computer Graphics)_1.tap" size="42923" crc="d756125c" sha1="51cf6b676ae368afd470137eeb6f466e998f4a2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45405c2ce0878">
+		<description>Heartlight 48K-128K (2024)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37417">
+				<rom name="Heartlight 48K-128K (2024)(Rafal Miazga).tap" size="37417" crc="f6930dcd" sha1="45405c2ce08785beb43b6ee585d34782df779e4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb3bb5e380e39c">
+		<description>Heathrow International Air Traffic Control (1985)(Hewson Consultants Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46076">
+				<rom name="Heathrow International Air Traffic Control (1985)(Hewson Consultants Ltd).tap" size="46076" crc="3e31c92f" sha1="b3bb5e380e39cd42f03e371631f1b41087bdc2dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff28da119a379">
+		<description>Heathrow Radar (1985)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9115">
+				<rom name="Heathrow Radar (1985)(Hewson Consultants).tap" size="9115" crc="f07a9155" sha1="ff28da119a379b544a793abdae081da605897583"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76643f028adfe">
+		<description>Heavy Metal 128K (1990)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86702">
+				<rom name="Heavy Metal 128K (1990)(U.S. Gold).tap" size="86702" crc="67e11acf" sha1="76643f028adfe841512bc3825b731c180996dcd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs90587ba277338">
+		<description>Heavy On The Magick (1986)(Gargoyle Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43025">
+				<rom name="Heavy On The Magick (1986)(Gargoyle Games).tap" size="43025" crc="2a890b28" sha1="90587ba277338d38062f9c7a08d7f6ee86f83b2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96f5d85df5864">
+		<description>Heavy On The Magick (1986)(Gargoyle Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48413">
+				<rom name="Heavy On The Magick (1986)(Gargoyle Games)[a].tap" size="48413" crc="82d5db40" sha1="96f5d85df586416b2ccbf0cb040962679dade3cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb511443a389a0">
+		<description>Heavy on the Magick 48K (1986)(Gargoyle Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42787">
+				<rom name="Heavy on the Magick 48K (1986)(Gargoyle Games).tap" size="42787" crc="77ccf39c" sha1="b511443a389a052c5652012369cbd44b2b844385"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7afc10a0769de">
+		<description>Heavy Weight (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7619">
+				<rom name="Heavy Weight (19xx)(-).tap" size="7619" crc="3ca895c2" sha1="7afc10a0769de64a2edc8f22f771ca2fd1bf9604"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdb056207ff6a9">
+		<description>Hebrew Word Processor (1984)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7727">
+				<rom name="Hebrew Word Processor (1984)(-).tap" size="7727" crc="fc4be1f4" sha1="db056207ff6a90489d6c91a93dcb850ac335451d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs233887a1e4dd6">
+		<description>Hedgehogs 2 RU 48K-128K (2024)(kas29)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44178">
+				<rom name="Hedgehogs 2 RU 48K-128K (2024)(kas29).tap" size="44178" crc="3d8f0559" sha1="233887a1e4dd62e977b0ef0d67ec74c596fb90f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa8b1d6c4398d3">
+		<description>Hedgehogs 48K-AY (2013)(kas29)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19811">
+				<rom name="Hedgehogs 48K-AY (2013)(kas29).tap" size="19811" crc="99852192" sha1="a8b1d6c4398d37b6d99556e76da34033d9299b58"/>
 			</dataarea>
 		</part>
 	</software>
@@ -51162,6 +51422,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf5abaa72f3543">
+		<description>_Capitan Sevilla (1988)(Dinamic)(Sp)[a][Part 1-2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97116">
+				<rom name="_Capitan Sevilla (1988)(Dinamic)(Sp)[a][Part 1-2 of 2].tap" size="97116" crc="c7e55e36" sha1="f5abaa72f3543e8936b5199d1ae19b2c7fa539ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaac94d7246d91">
+		<description>_Capitan Sevilla - Part 1 ES 48K (1988)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48619">
+				<rom name="_Capitan Sevilla - Part 1 ES 48K (1988)(Dinamic Software).tap" size="48619" crc="1f0ef121" sha1="aac94d7246d913d13c7f37c4f4047ce85d61173f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1769b3b36c2db">
+		<description>_Capitan Sevilla - Part 2 ES 48K (1988)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48619">
+				<rom name="_Capitan Sevilla - Part 2 ES 48K (1988)(Dinamic Software).tap" size="48619" crc="7109d33d" sha1="1769b3b36c2dbf148719675e52a92752ef3e54aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76db5bcffbd76">
+		<description>_Capitan Sevilla 48K ES (1988)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97238">
+				<rom name="_Capitan Sevilla 48K ES (1988)(Dinamic).tap" size="97238" crc="8f8c61e7" sha1="76db5bcffbd76b30d09234ba1164bbc7fa22613d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5c9de2e39de0">
 		<description>_Cauldron</description>
 		<year>????</year>
@@ -51379,6 +51679,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43048">
 				<rom name="_Gunfright.tzx" size="43048" crc="c9179545" sha1="c7f62b485cd1a5b23a68c3b60a0f9f001eb07428"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb47b9e1f6a129">
+		<description>_Hawk Storm (1990)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39092">
+				<rom name="_Hawk Storm (1990)(Players Premier).tap" size="39092" crc="7b20364e" sha1="b47b9e1f6a1297f9e9e614e4d02e5adb9ae04c75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66befed194a37">
+		<description>_Hawks (1984)(Lotus-Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15705">
+				<rom name="_Hawks (1984)(Lotus-Soft).tap" size="15705" crc="7de077bf" sha1="66befed194a37efc8c9444a9c288a3dbaa7b8305"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse80f6b0c374c5">
+		<description>_Header Designer (1984)(Reinhart Wittkopf)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3723">
+				<rom name="_Header Designer (1984)(Reinhart Wittkopf).tap" size="3723" crc="36620823" sha1="e80f6b0c374c55a9df8f176b5309284a0b299dd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7c72fe6199c6a">
+		<description>_Headerlist (1984)(Z. Kosina)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7896">
+				<rom name="_Headerlist (1984)(Z. Kosina).tap" size="7896" crc="dc6f1f72" sha1="7c72fe6199c6a08522b144f7f6e5931917724429"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs91a075a068ca0">
+		<description>_Heartbroken (1989)(Atlantis Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54856">
+				<rom name="_Heartbroken (1989)(Atlantis Software Ltd).tap" size="54856" crc="34ed13a7" sha1="91a075a068ca098674386378610074080be50c93"/>
 			</dataarea>
 		</part>
 	</software>
