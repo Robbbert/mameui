@@ -70,6 +70,7 @@
 #include "cpu/mcs51/sab80c535.h"
 #include "machine/intelfsh.h"
 #include "video/hd44780.h"
+#include "video/pwm.h"
 
 #include "emupal.h"
 #include "speaker.h"
@@ -86,13 +87,17 @@ public:
 	acvirus_state(const machine_config &mconfig, device_type type, const char *tag) :
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
+		m_banked_ram(*this, "banked_ram", 4 * 0x8000, ENDIANNESS_LITTLE),
 		m_lcdc(*this, "lcdc"),
 		m_dsp(*this, "dsp"),
 		m_rombank(*this, "rombank"),
+		m_rambank(*this, "rambank"),
 		m_row(*this, "ROW%u", 0U),
 		m_knob(*this, "knob_%u", 0U),
+		m_leds(*this, "leds"),
 		m_scan(0),
-		m_an_select(0)
+		m_an_select(0),
+		m_led_pattern(0)
 	{ }
 
 	void virusa(machine_config &config) ATTR_COLD;
@@ -107,9 +112,11 @@ protected:
 
 private:
 	required_device<sab80c535_device> m_maincpu;
+	memory_share_creator<u8> m_banked_ram;
 	required_device<hd44780_device> m_lcdc;
 	required_device<dsp563xx_device> m_dsp;
 	required_memory_bank m_rombank;
+	required_memory_bank m_rambank;
 	required_ioport_array<4> m_row;
 
 	void prog_map(address_map &map) ATTR_COLD;
@@ -122,6 +129,7 @@ private:
 	u8 p4_r();
 	void p1_w(u8 data);
 	void p3_w(u8 data);
+	void p4_w(u8 data);
 	void p5_w(u8 data);
 
 	u8 p402_r();
@@ -129,9 +137,11 @@ private:
 	void palette_init(palette_device &palette) ATTR_COLD;
 
 	required_ioport_array<32> m_knob;
+	optional_device<pwm_display_device> m_leds;
 
 	u8 m_scan;
 	u8 m_an_select;
+	u8 m_led_pattern;
 };
 
 
@@ -140,8 +150,12 @@ void acvirus_state::machine_start()
 	m_rombank->configure_entries(0, 16, memregion("maincpu")->base(), 0x8000);
 	m_rombank->set_entry(3);
 
+	m_rambank->configure_entries(0, 4, m_banked_ram, 0x8000);
+	m_rambank->set_entry(0);
+
 	save_item(NAME(m_scan));
 	save_item(NAME(m_an_select));
+	save_item(NAME(m_led_pattern));
 }
 
 void acvirus_state::machine_reset()
@@ -171,10 +185,23 @@ u8 acvirus_state::p4_r()
 	return m_row[m_scan & 3]->read();
 }
 
+void acvirus_state::p4_w(u8 data)
+{
+	m_leds->write_mx(data);
+
+	if (BIT(m_scan, 3))
+		m_led_pattern = data;
+}
+
 void acvirus_state::p5_w(u8 data)
 {
-	m_scan = data & 7;
 	m_rombank->set_entry((data >> 4) & 15);
+
+	if (BIT(data, 3))
+		m_rambank->set_entry((data >> 4) & 3);
+
+	m_scan = data & 15;
+	m_leds->matrix(1 << m_scan, m_led_pattern);
 }
 
 void acvirus_state::prog_map(address_map &map)
@@ -185,8 +212,9 @@ void acvirus_state::prog_map(address_map &map)
 
 void acvirus_state::data_map(address_map &map)
 {
+	map(0x0000, 0x7fff).ram();
 	map(0x0400, 0x0407).rw(m_dsp, FUNC(dsp563xx_device::hi08_r), FUNC(dsp563xx_device::hi08_w));
-	map(0x2000, 0x7fff).ram(); // TODO: RAM banks
+	map(0x8000, 0xffff).bankrw(m_rambank);
 }
 
 void acvirus_state::dsp_p_map(address_map &map)
@@ -260,6 +288,7 @@ void acvirus_state::virusb(machine_config &config)
 	m_maincpu->port_out_cb<1>().set(FUNC(acvirus_state::p1_w));
 	m_maincpu->port_out_cb<3>().set(FUNC(acvirus_state::p3_w));
 	m_maincpu->port_in_cb<4>().set(FUNC(acvirus_state::p4_r));
+	m_maincpu->port_out_cb<4>().set(FUNC(acvirus_state::p4_w));
 	m_maincpu->port_out_cb<5>().set(FUNC(acvirus_state::p5_w));
 	m_maincpu->an0_func().set([this] { return m_knob[4*0 + m_an_select]->read(); });
 	m_maincpu->an1_func().set([this] { return m_knob[4*1 + m_an_select]->read(); });
@@ -282,6 +311,8 @@ void acvirus_state::virusb(machine_config &config)
 	/* Actual device is LM16255 */
 	HD44780(config, m_lcdc, 270000); // TODO: clock not measured, datasheet typical clock used
 	m_lcdc->set_lcd_size(2, 16);
+
+	PWM_DISPLAY(config, m_leds).set_size(8, 8);
 
 	DSP56311(config, m_dsp, 108_MHz_XTAL);
 	m_dsp->set_addrmap(dsp563xx_device::AS_P, &acvirus_state::dsp_p_map);
@@ -356,10 +387,10 @@ INPUT_PORTS_START( virusa_knobs )
 	PORT_ADJUSTER(64, "Osc 2: Wave/PW") PORT_MINMAX(0, 127)
 
 	PORT_START("knob_9")
-	PORT_ADJUSTER(64, "Osc 2 Semitone") PORT_MINMAX(0, 127)
+	PORT_ADJUSTER(64, "Osc 2 Detune") PORT_MINMAX(0, 127)
 
 	PORT_START("knob_10")
-	PORT_ADJUSTER(64, "Osc 2 Detune") PORT_MINMAX(0, 127)
+	PORT_ADJUSTER(64, "Osc 2 Semitone") PORT_MINMAX(0, 127)
 
 	PORT_START("knob_11")
 	PORT_ADJUSTER(64, "Osc 2 FM Amount") PORT_MINMAX(0, 127)
