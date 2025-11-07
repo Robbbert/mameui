@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5826 -->
+<!-- Number of items in this list = 5864 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -369,6 +369,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41262">
 				<rom name="-Hard Drivin' (1989)(Domark Ltd)[cr [Cr Matasoft][t](128K)[Cr Matasoft].tap" size="41262" crc="60164374" sha1="1e99414a65c28e9cdd3e9d8e9a641c269ae1d83e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3676cb25bb170">
+		<description>-Harrier Attack (1983)(Durell Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10073">
+				<rom name="-Harrier Attack (1983)(Durell Software Ltd).tap" size="10073" crc="b5337c17" sha1="3676cb25bb170bbe9a36619088e1efd76efb4ffd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12312,6 +12322,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5161de1ac6abe">
+		<description>Captain Blood (1988)(ERE Informatique)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56330">
+				<rom name="Captain Blood (1988)(ERE Informatique).tap" size="56330" crc="dbd71814" sha1="5161de1ac6abeb73a6858998c120087c97087385"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa97b33a89d01">
+		<description>Captain Blood (demo) (1988)(ERE Informatique)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54187">
+				<rom name="Captain Blood (demo) (1988)(ERE Informatique).tap" size="54187" crc="c3814b2f" sha1="aa97b33a89d01f13fdb37e565829336479a00275"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa8075b210f3bf">
+		<description>Captain Dynamo (1993)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68500">
+				<rom name="Captain Dynamo (1993)(Codemasters).tap" size="68500" crc="62855d75" sha1="a8075b210f3bf44e2bb8d6248cbd74ab92e2754d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc69a3a3071141">
 		<description>Captain Dynamo</description>
 		<year>????</year>
@@ -12319,6 +12359,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="68533">
 				<rom name="Captain Dynamo.tzx" size="68533" crc="280883d6" sha1="c69a3a3071141251aa26e9e3602ec44bab68f497"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaccd8e8e9bf62">
+		<description>Captain Fizz Meets The Blastertrons (1989)(Psyclapse)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="81616">
+				<rom name="Captain Fizz Meets The Blastertrons (1989)(Psyclapse).tap" size="81616" crc="88588ac8" sha1="accd8e8e9bf62021b01108d32ffe343db2a09eaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc7abaa59d87fa">
+		<description>Captain Gofer (2020)(Dwa83)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28711">
+				<rom name="Captain Gofer (2020)(Dwa83).tap" size="28711" crc="ae298c30" sha1="c7abaa59d87fa5a4b5a5bdc102b63c06043caee2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87e65f29065fd">
+		<description>Captain Kelly (1986)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48724">
+				<rom name="Captain Kelly (1986)(Quicksilva).tap" size="48724" crc="44637b92" sha1="87e65f29065fd7cb5113f29c43ebd9dadff7f811"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa0e927fd9b2c4">
+		<description>Captain Kelly 48K (1986)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48724">
+				<rom name="Captain Kelly 48K (1986)(Quicksilva).tap" size="48724" crc="1aa9f1b9" sha1="a0e927fd9b2c416d468f4fd35e7cb223cae76b25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c00fd369a401">
+		<description>Captain Planet (1991)(Mindscape International Inc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47137">
+				<rom name="Captain Planet (1991)(Mindscape International Inc).tap" size="47137" crc="79549f0b" sha1="0c00fd369a40150eb992bf5ded14a5aa1814b79b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs145620234ee5c">
+		<description>Captain Planet (1991)(Mindscape)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29564">
+				<rom name="Captain Planet (1991)(Mindscape).tap" size="29564" crc="87bd941f" sha1="145620234ee5ca5e8bec1c323ecdaeb402b736bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0588bd3ca46a2">
+		<description>Captain Planet and the Planeteers (1991)(Mindscape International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61255">
+				<rom name="Captain Planet and the Planeteers (1991)(Mindscape International).tap" size="61255" crc="0e629f1d" sha1="0588bd3ca46a2aee1ff1143fbaedf4e8c0774b43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c4951736c049">
+		<description>Captain Pytron (demo) (1990)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41570">
+				<rom name="Captain Pytron (demo) (1990)(Sinclair User).tap" size="41570" crc="53aac6dc" sha1="2c4951736c04984c8deae5e30cff25a098850ad8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13339,6 +13459,236 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42443">
 				<rom name="H.A.T.E. - Hostile All Terrain Encounter.tzx" size="42443" crc="1cb9147e" sha1="da8d96c86afb5f0bb49c79644d0eca0b0c154115"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse1aabe7c9e2d0">
+		<description>Handy Andy (1984)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13346">
+				<rom name="Handy Andy (1984)(CRL Group).tap" size="13346" crc="93f72964" sha1="e1aabe7c9e2d0a8aaf2dd2379442dd06667268ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9dc68f6841e9c">
+		<description>Hanoi King (1983)(Contrast Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15802">
+				<rom name="Hanoi King (1983)(Contrast Software).tap" size="15802" crc="d8ba4f31" sha1="9dc68f6841e9c1d9dcb0251a5f353e73d988895d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a65b29520c69">
+		<description>Haoken EN 128K (2023)(Hicks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50063">
+				<rom name="Haoken EN 128K (2023)(Hicks).tap" size="50063" crc="ee57e531" sha1="0a65b29520c69750ae20f5a0d5afcfddc316bbff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs983e26777c979">
+		<description>Haoken ES 128K (2023)(Hicks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50024">
+				<rom name="Haoken ES 128K (2023)(Hicks).tap" size="50024" crc="d30c2af6" sha1="983e26777c979c4b15a0ced0fe72e77ee35ea09a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs789b8d9428574">
+		<description>Happelaar (19xx)(-)(Nl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6038">
+				<rom name="Happelaar (19xx)(-)(Nl).tap" size="6038" crc="3ee52f71" sha1="789b8d9428574bb458970f9b23a23cba09499631"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs69615fc3a1425">
+		<description>Happiest Days Of Your Life, The (1986)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48465">
+				<rom name="Happiest Days Of Your Life, The (1986)(Firebird).tap" size="48465" crc="8e9d2261" sha1="69615fc3a1425d8623f0f07be0785d3856832360"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55ae19b2ee6cb">
+		<description>Harbinger 2 The Void, Intro 128K (2018)(APSIS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42380">
+				<rom name="Harbinger 2 The Void, Intro 128K (2018)(APSIS).tap" size="42380" crc="07570650" sha1="55ae19b2ee6cb265833b32cb0e57275e60811659"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf979a0481f259">
+		<description>Harbinger 2 The Void, Part-1 128K (2018)(APSIS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65335">
+				<rom name="Harbinger 2 The Void, Part-1 128K (2018)(APSIS).tap" size="65335" crc="ae30b46e" sha1="f979a0481f2597ac361dd118750ee3d56ea7bc4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs754e07017d646">
+		<description>Harbinger 2 The Void, Part-2 128K (2018)(APSIS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="66496">
+				<rom name="Harbinger 2 The Void, Part-2 128K (2018)(APSIS).tap" size="66496" crc="ffc5c242" sha1="754e07017d646e48b395beb439d320dd1884758d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse1c9e56edc44b">
+		<description>Harbinger 2 The Void, Part-3 128K (2018)(APSIS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65665">
+				<rom name="Harbinger 2 The Void, Part-3 128K (2018)(APSIS).tap" size="65665" crc="4e9caca3" sha1="e1c9e56edc44b8bbd56734eff6c2f5403b808b14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3198ec4c875ba">
+		<description>Harbinger Convergence Part-1 128K (2016)(APSIS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52742">
+				<rom name="Harbinger Convergence Part-1 128K (2016)(APSIS).tap" size="52742" crc="3f7e8009" sha1="3198ec4c875ba273b6d2f16b02e73b3ed7208d79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsea8bd65998d81">
+		<description>Harbinger Convergence Part-2 128K (2016)(APSIS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55208">
+				<rom name="Harbinger Convergence Part-2 128K (2016)(APSIS).tap" size="55208" crc="c0920a99" sha1="ea8bd65998d81f104476306e54a557c289f50bcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsed08ae827b4cb">
+		<description>Hard Cheese (1983)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14704">
+				<rom name="Hard Cheese (1983)(DK'Tronics).tap" size="14704" crc="eee475b0" sha1="ed08ae827b4cb59856ae2ec1c533cc2f378ec899"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab69e031d9ddf">
+		<description>Hard Copy v1.1 (1987)(Jozef Vavrinec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2544">
+				<rom name="Hard Copy v1.1 (1987)(Jozef Vavrinec).tap" size="2544" crc="8b07e89f" sha1="ab69e031d9ddfdd24528a81ebadcb3ef7f6d4b55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4116dfdfca639">
+		<description>Hard Drivin' (1989)(Domark)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47211">
+				<rom name="Hard Drivin' (1989)(Domark)(128k).tap" size="47211" crc="f55dc984" sha1="4116dfdfca6391349726203429ddee3e3696bf3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3d151e0a4a3fa">
+		<description>Hardball (1986)(Advance Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="Hardball (1986)(Advance Software).tap" size="42714" crc="19c4406e" sha1="3d151e0a4a3fa03337c226bf7f3b31f9a95b4cc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ca133a666b8e">
+		<description>Harlequin (1984)(Mr Micro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27525">
+				<rom name="Harlequin (1984)(Mr Micro).tap" size="27525" crc="c1bfb9ce" sha1="9ca133a666b8ec253295ff1e540e48185fb45b70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa2d223e69658f">
+		<description>Harrier Attack (1983)(Durell Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13527">
+				<rom name="Harrier Attack (1983)(Durell Software Ltd)[a].tap" size="13527" crc="fca1e7e7" sha1="a2d223e69658fa62528399fce41406f53ff5462f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf70d1f4b20e25">
+		<description>Harvesting Moon (1985)(8th Day Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48290">
+				<rom name="Harvesting Moon (1985)(8th Day Software).tap" size="48290" crc="7452adec" sha1="f70d1f4b20e2521c57b5f0f1260c82ef4007e8d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs474204d15aa64">
+		<description>Haunted House (1992)(Your Sinclair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8162">
+				<rom name="Haunted House (1992)(Your Sinclair).tap" size="8162" crc="8150e829" sha1="474204d15aa6462a11e9e03cbc385b1418c25fc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsca329d7658be8">
+		<description>Haunted House 48K (1992)(Jonathan Cauldwell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48113">
+				<rom name="Haunted House 48K (1992)(Jonathan Cauldwell).tap" size="48113" crc="8b2e6593" sha1="ca329d7658be8842e1c57215bf01a36a02806e71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8634069069082">
+		<description>Haunted House 48K (2023)(bwganblack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48529">
+				<rom name="Haunted House 48K (2023)(bwganblack).tap" size="48529" crc="1c6689c9" sha1="8634069069082b8334f137138f5cb35dfe8066dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsed273ddcd9946">
+		<description>Haunting of Waterbelle End, The 48K (2021)(Stonechat Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32906">
+				<rom name="Haunting of Waterbelle End, The 48K (2021)(Stonechat Productions).tap" size="32906" crc="74fe322f" sha1="ed273ddcd99464c6d8d7b8823c014786cf789d1a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -51462,6 +51812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsdb22a0fb80823">
+		<description>_Captain Blood (1988)(ERE Informatique)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122445">
+				<rom name="_Captain Blood (1988)(ERE Informatique)(128k).tap" size="122445" crc="ba65302a" sha1="db22a0fb80823074c03ae98090bd740fd69c1f7d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5c9de2e39de0">
 		<description>_Cauldron</description>
 		<year>????</year>
@@ -51679,6 +52039,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43048">
 				<rom name="_Gunfright.tzx" size="43048" crc="c9179545" sha1="c7f62b485cd1a5b23a68c3b60a0f9f001eb07428"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs339a74e9f9622">
+		<description>_Hare Raiser - Finale (1984)(Haresoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14330">
+				<rom name="_Hare Raiser - Finale (1984)(Haresoft).tap" size="14330" crc="38bac531" sha1="339a74e9f96221aac51b56e22578c44646623ddd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs97d8586047817">
+		<description>_Haunted Hedges (1983)(Micromega)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9555">
+				<rom name="_Haunted Hedges (1983)(Micromega)[a].tap" size="9555" crc="c760b5bd" sha1="97d8586047817e3555fed14b3aa88da3d0ec4d51"/>
 			</dataarea>
 		</part>
 	</software>
