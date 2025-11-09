@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 548 -->
+<!-- Number of items in this list = 550 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2532,6 +2532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms5c54070022246">
+		<description>Little Samson Tribute v1.1 (GlobalHack)(2025)(LMS Retro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Little Samson Tribute v1.1 (GlobalHack)(2025)(LMS Retro).sms" size="524288" crc="17a73ba7" sha1="5c54070022246534dc25ede046530059b8df4a6e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsf179b0d9efcbd">
 		<description>Lode Runner 1 MSX2SMS Hack</description>
 		<year>????</year>
@@ -3209,6 +3219,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Noturno (2025)(LMS Retro).sms" size="524288" crc="47be6422" sha1="a559402b19a51710b8968db611427d80d8e53802"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms66d79546faca2">
+		<description>Noturno Mini Game (Edicao de Halloween) (2025)(LMS Retro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Noturno Mini Game (Edicao de Halloween) (2025)(LMS Retro).sms" size="524288" crc="038489c0" sha1="66d79546faca2d4588bf48d7dfa140998f63f6f0"/>
 			</dataarea>
 		</part>
 	</software>
