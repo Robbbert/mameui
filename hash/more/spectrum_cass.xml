@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5954 -->
+<!-- Number of items in this list = 6011 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -359,6 +359,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31963">
 				<rom name="-Captain Blood (1988)(ERE Informatique)[cr [Cr][Cr].tap" size="31963" crc="cb35ae81" sha1="87752c2712b55e4e98a1502dd04b77f80459e6ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf9e456fd2a3dd">
+		<description>-Grand National (1985)(Elite Systems Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26715">
+				<rom name="-Grand National (1985)(Elite Systems Ltd)[cr [Cr][Cr].tap" size="26715" crc="2e63edcb" sha1="f9e456fd2a3dd0108fe3c7829dbe07a0f0faa690"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5886a264e734b">
+		<description>-Grand Prix Circuit (1990)(Accolade Inc)[cr [Cr Matasoft][Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55131">
+				<rom name="-Grand Prix Circuit (1990)(Accolade Inc)[cr [Cr Matasoft][Cr Matasoft].tap" size="55131" crc="cf8c9f07" sha1="5886a264e734bd3a54da96feb2126b640668b808"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12612,6 +12632,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs34e3700eb0163">
+		<description>Casanova (1988)(Iber Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45005">
+				<rom name="Casanova (1988)(Iber Soft)(Sp).tap" size="45005" crc="1c66d96d" sha1="34e3700eb01632c8ade7679b3e06d70ede35ea8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa36ea20208e3d">
+		<description>Casanova (1988)(Iber Soft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45056">
+				<rom name="Casanova (1988)(Iber Soft)(Sp)[a].tap" size="45056" crc="78cff680" sha1="a36ea20208e3d4ba09cd7edce6a8649c1bdb7096"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbf53d681a757c">
 		<description>Casanova</description>
 		<year>????</year>
@@ -12622,6 +12662,146 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs021cc299c8c8d">
+		<description>Cascade (1994)(Paul Howard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6358">
+				<rom name="Cascade (1994)(Paul Howard).tap" size="6358" crc="6ced7a06" sha1="021cc299c8c8d2555f6293b8d6518e0fe434b87e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs03b6ecba4eb5e">
+		<description>Case Of The Obscene Mural, The (1986)(Encief Routines)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36950">
+				<rom name="Case Of The Obscene Mural, The (1986)(Encief Routines).tap" size="36950" crc="8821c28c" sha1="03b6ecba4eb5ec73570611584560742c9d2e251d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9790ea203c04e">
+		<description>Case Of The Obscene Mural, The (1986)(Encief Routines)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47729">
+				<rom name="Case Of The Obscene Mural, The (1986)(Encief Routines)[a].tap" size="47729" crc="efcfd59e" sha1="9790ea203c04ebc11a678b4a3dc76f6496fb86b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs89bf1ac04733f">
+		<description>Casey Jones (1984)(Blaby Computer Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36363">
+				<rom name="Casey Jones (1984)(Blaby Computer Games).tap" size="36363" crc="995bae98" sha1="89bf1ac04733f3026b1fb5bbcb066251f853afc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdc5bf89d801a2">
+		<description>Casey Jones (1984)(Blaby Computer Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36864">
+				<rom name="Casey Jones (1984)(Blaby Computer Games)[a].tap" size="36864" crc="f225d41b" sha1="dc5bf89d801a23a9a29a109e13c2b9aca5b7a85b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs598044c7bf017">
+		<description>Cash Cade (1990)(Fastback)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44855">
+				<rom name="Cash Cade (1990)(Fastback).tap" size="44855" crc="527fd0dd" sha1="598044c7bf0170df306f99a4f86a582b20ac1a78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4b0b144010c45">
+		<description>Cashdash (19xx)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47712">
+				<rom name="Cashdash (19xx)(Tynesoft).tap" size="47712" crc="a278579f" sha1="4b0b144010c45394b864e23edfa5f1b6931d2cfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse375c4e08ce2f">
+		<description>Castelian - Nebulus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44437">
+				<rom name="Castelian - Nebulus.tap" size="44437" crc="46353552" sha1="e375c4e08ce2f25bfa4a1c2eadd98db1780a4aae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8b4b88e92c37c">
+		<description>Castle Blackstar (1984)(CDS Microsystems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42711">
+				<rom name="Castle Blackstar (1984)(CDS Microsystems).tap" size="42711" crc="40c3f99e" sha1="8b4b88e92c37c57932c235a513a9c498c507008d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs253fa05c38917">
+		<description>Castle Capers 2 128K (2025)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54221">
+				<rom name="Castle Capers 2 128K (2025)(Gabriele Amore).tap" size="54221" crc="37ce32b0" sha1="253fa05c389171a9f40876f3bc76bb63b2e92de2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c4eef7f86b80">
+		<description>Castle Colditz (1983)(K-Tel Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32220">
+				<rom name="Castle Colditz (1983)(K-Tel Productions).tap" size="32220" crc="0766c697" sha1="1c4eef7f86b80dd1818e85b919207083a6d587f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs38e05fa11f534">
+		<description>Castle Master (1990)(Incentive)(Sp)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50513">
+				<rom name="Castle Master (1990)(Incentive)(Sp)[t].tap" size="50513" crc="1541c4f1" sha1="38e05fa11f53412c61521845801a1132797a47a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c47f47a7cc08">
+		<description>Castle Master II - The Crypt (1990)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38497">
+				<rom name="Castle Master II - The Crypt (1990)(Incentive).tap" size="38497" crc="6ca31513" sha1="2c47f47a7cc083c3cbf19fd671f296b1f4c9e4cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf22956eeb402e">
+		<description>Castle Master II - The Crypt 48K (1990)(Incentive Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56766">
+				<rom name="Castle Master II - The Crypt 48K (1990)(Incentive Software).tap" size="56766" crc="5a1c6535" sha1="f22956eeb402e1568a0af1a5b00a106eeb7555e0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9fa8e20d52773">
 		<description>Castle Master</description>
 		<year>????</year>
@@ -12629,6 +12809,76 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50550">
 				<rom name="Castle Master.tzx" size="50550" crc="fa3fc239" sha1="9fa8e20d527731413d41f328a39327b9d662c94c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48cece44fe1a1">
+		<description>Castle Of Dr Game (2020)(Paul Jenkinson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38366">
+				<rom name="Castle Of Dr Game (2020)(Paul Jenkinson).tap" size="38366" crc="5063f4b5" sha1="48cece44fe1a1c2e18a1f6f6baafcdccae50a5f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs15f218fb68bab">
+		<description>Castle Of Dreams (1984)(Widgit Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46408">
+				<rom name="Castle Of Dreams (1984)(Widgit Software Ltd).tap" size="46408" crc="45d9b9b0" sha1="15f218fb68bab8f0d18d270334cca8e6796ca526"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdbbe634661fae">
+		<description>Castle Quest (1984)(Scorpio Gamesworld)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45293">
+				<rom name="Castle Quest (1984)(Scorpio Gamesworld).tap" size="45293" crc="522eaac2" sha1="dbbe634661fae592bea511a98fc815ead117e45d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4f4c8219f8f54">
+		<description>Castle, The (1983)(Bug-Byte Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43640">
+				<rom name="Castle, The (1983)(Bug-Byte Software Ltd).tap" size="43640" crc="4a30210c" sha1="4f4c8219f8f5452ee6c979d984d85247df262110"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a12ce87b738d">
+		<description>Castle, The (1983)(Bug-Byte Software Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44192">
+				<rom name="Castle, The (1983)(Bug-Byte Software Ltd)[a2].tap" size="44192" crc="d96105c8" sha1="9a12ce87b738d7871f5b9d245eaa889f8b934c8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6425ef49538a3">
+		<description>Castle, The (1983)(Bug-Byte Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43088">
+				<rom name="Castle, The (1983)(Bug-Byte Software Ltd)[a].tap" size="43088" crc="9edf84eb" sha1="6425ef49538a361165425dfcc76d513c01855416"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse58fc50ab66b6">
+		<description>Castlemaze Adventure (1984)(Peter Gerrard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27539">
+				<rom name="Castlemaze Adventure (1984)(Peter Gerrard).tap" size="27539" crc="fb8ea41f" sha1="e58fc50ab66b6113e3dd72f72e9cdab708eb5f15"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13562,6 +13812,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0e5bbea20deda">
+		<description>Green+Beret</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53900">
+				<rom name="Green+Beret.tap" size="53900" crc="3c914565" sha1="0e5bbea20dedaaf25c56ba3af9a55912a4b842ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7cb4a72fb6806">
+		<description>Green+Beret_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49365">
+				<rom name="Green+Beret_3.tap" size="49365" crc="43dbc15e" sha1="7cb4a72fb6806e545b829a64653b56819e49cb0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6735d232f1cfc">
+		<description>Gregory Loses His Clock (1989)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40206">
+				<rom name="Gregory Loses His Clock (1989)(Mastertronic).tap" size="40206" crc="e065a001" sha1="6735d232f1cfc8412125dd948ff153e5d01646f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87c8428f8851f">
+		<description>Gregory Loses His Clock 48K (1989)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40109">
+				<rom name="Gregory Loses His Clock 48K (1989)(Mastertronic).tap" size="40109" crc="02af488a" sha1="87c8428f8851fa9eae8ce79c0e67e6216022f515"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs024d01f72a640">
+		<description>Grell and Falla in the Enchanted Garden 48K-128K (1992)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65157">
+				<rom name="Grell and Falla in the Enchanted Garden 48K-128K (1992)(Codemasters).tzx" size="65157" crc="6569e0af" sha1="024d01f72a640085a8f9c7691524e3ae9eca1499"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7a257fa9fd99">
+		<description>Gremlins (1984)(Thor Computer Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23887">
+				<rom name="Gremlins (1984)(Thor Computer Software).tap" size="23887" crc="1e11da79" sha1="a7a257fa9fd991f3258cd38478fb0d0492a59f0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaff60688acfac">
+		<description>Gremlins - The Adventure (1985)(Adventure International)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47796">
+				<rom name="Gremlins - The Adventure (1985)(Adventure International)(Sp).tap" size="47796" crc="f88c94b1" sha1="aff60688acfac8019931c031820dde575cdc9763"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e4861ab062f1">
+		<description>Gremlins - The Adventure (1985)(Adventure International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47820">
+				<rom name="Gremlins - The Adventure (1985)(Adventure International).tap" size="47820" crc="9bae5693" sha1="2e4861ab062f1195d3f333f2f5bb2a48e867ecec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5239393a06f00">
 		<description>Gremlins - The Adventure</description>
 		<year>????</year>
@@ -13572,6 +13902,116 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6a1faef64a5da">
+		<description>Gremlins 2 - The New Batch (1990)(Elite Systems Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="160108">
+				<rom name="Gremlins 2 - The New Batch (1990)(Elite Systems Ltd).tap" size="160108" crc="143f7128" sha1="6a1faef64a5dad5afd48e57133ccc47528d9b046"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs95194e1d5db68">
+		<description>Gremlins 2 - The New Batch (1990)(Topo Soft - Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="160108">
+				<rom name="Gremlins 2 - The New Batch (1990)(Topo Soft - Elite Systems).tap" size="160108" crc="b1402dfe" sha1="95194e1d5db682254b5c87a9b31d89c3e300951b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsed8e84592bb22">
+		<description>Gremlins 2 - The New Batch (1990)(Topo Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="101592">
+				<rom name="Gremlins 2 - The New Batch (1990)(Topo Soft)(Sp).tap" size="101592" crc="3c4b26ab" sha1="ed8e84592bb227e60af15788a5745ab144e5cdd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae301727cf6ba">
+		<description>Greyfell (1987)(Starlight Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49094">
+				<rom name="Greyfell (1987)(Starlight Software).tap" size="49094" crc="cc632f07" sha1="ae301727cf6bad10be9b7654fb8725300ee477b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94c8632b41de6">
+		<description>Grid Iron II (1989)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43852">
+				<rom name="Grid Iron II (1989)(Alternative Software).tap" size="43852" crc="73748d7e" sha1="94c8632b41de6591e62392c4051c2c4e8eb144fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93c4378ca74ad">
+		<description>Grid Run (1983)(Arcade Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23822">
+				<rom name="Grid Run (1983)(Arcade Software).tap" size="23822" crc="9486f2d7" sha1="93c4378ca74ad164b628dcbb660cc26d9f06341a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdaf9ba3466c9f">
+		<description>Grid Trap (1986)(Live Wire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37263">
+				<rom name="Grid Trap (1986)(Live Wire Software).tap" size="37263" crc="af283cf3" sha1="daf9ba3466c9f0082c4199b106cbbc25f73ba90f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef07c37d256c3">
+		<description>Ground Attack (1982)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6236">
+				<rom name="Ground Attack (1982)(Silversoft).tap" size="6236" crc="4ef94a07" sha1="ef07c37d256c3599186f4a07be97a9864735b3bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e1dd0c480ed5">
+		<description>Ground Force Zero (1983)(Titan Programs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7839">
+				<rom name="Ground Force Zero (1983)(Titan Programs).tap" size="7839" crc="0c14e72f" sha1="0e1dd0c480ed51b51e9ce17844a51b3a7b30ca07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs747f66952bbd3">
+		<description>Grumphers (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2471">
+				<rom name="Grumphers (19xx)(-).tap" size="2471" crc="cec6d9f3" sha1="747f66952bbd359d490e4d26d02891e3fb270b15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50fd6b146f7c9">
+		<description>Grumpy Gumphrey Super Sleuth (1985)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37388">
+				<rom name="Grumpy Gumphrey Super Sleuth (1985)(Gremlin Graphics).tap" size="37388" crc="c5329937" sha1="50fd6b146f7c90b69a0df7581c36026d2681ff82"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs156d8f0e28391">
 		<description>Grumpy Gumphrey Supersleuth</description>
 		<year>????</year>
@@ -13579,6 +14019,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49604">
 				<rom name="Grumpy Gumphrey Supersleuth.tzx" size="49604" crc="b8e47211" sha1="156d8f0e28391bf5f39a5a73de33d960c44224be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf5d90e3f58d81">
+		<description>Gryzor (1986)(Ocean Software Ltd)[a](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85089">
+				<rom name="Gryzor (1986)(Ocean Software Ltd)[a](128K).tap" size="85089" crc="30ce537b" sha1="f5d90e3f58d819c18ecf8001aa6c3e7cc104b01b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1cff6c8a05600">
+		<description>Gryzor (1987)(Ocean Software Ltd)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="115219">
+				<rom name="Gryzor (1987)(Ocean Software Ltd)(128k).tap" size="115219" crc="941d84c9" sha1="1cff6c8a0560093aa2b1b1f2704522cd3bf3a465"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs529fbb289606a">
+		<description>Gryzor 48K (1987)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49774">
+				<rom name="Gryzor 48K (1987)(Ocean).tap" size="49774" crc="1b11c206" sha1="529fbb289606a29dff75db76f53975b8085a8aec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52612,6 +53082,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbc6648bfef2dc">
+		<description>_Castle Adventure (1983)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34985">
+				<rom name="_Castle Adventure (1983)(Bug-Byte Software).tap" size="34985" crc="ea49501c" sha1="bc6648bfef2dc2e6b7099e27e96937cb3606c471"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd1cce587c75dd">
+		<description>_Castle Master (1990)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50816">
+				<rom name="_Castle Master (1990)(Domark).tap" size="50816" crc="63e17cd0" sha1="d1cce587c75dda034eeed6970c1951f259cd9cd2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5c9de2e39de0">
 		<description>_Cauldron</description>
 		<year>????</year>
@@ -52819,6 +53309,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48870">
 				<rom name="_Grand National.tzx" size="48870" crc="0acd41c0" sha1="61c5d4d70a65556bdde42e2fd7993cb31ab92abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs77b275b993a49">
+		<description>_Green+Beret_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42825">
+				<rom name="_Green+Beret_1.tap" size="42825" crc="09eec4fc" sha1="77b275b993a49b0fca0a73f8c29a3c06d18ee1fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17c931bcf7e8b">
+		<description>_Green+Beret_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49449">
+				<rom name="_Green+Beret_2.tap" size="49449" crc="b0e352bb" sha1="17c931bcf7e8bdfa8257bf15fb275f62383c947c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0efb2d13db17a">
+		<description>_Gremlins 2 - The New Batch (1990)(Topo Soft - Elite Systems)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36776">
+				<rom name="_Gremlins 2 - The New Batch (1990)(Topo Soft - Elite Systems)[a].tap" size="36776" crc="1622cd97" sha1="0efb2d13db17aa784b0c3bb71bbae545448e70c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa390f81e5557a">
+		<description>_Grey Island (1989)(CV Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48118">
+				<rom name="_Grey Island (1989)(CV Software).tap" size="48118" crc="f1f3dc9e" sha1="a390f81e5557a1d9e5a1a95a66237b85bf047382"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73aa3446d42e2">
+		<description>_Gricko (1982)(R &amp; R Software)(Yu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8782">
+				<rom name="_Gricko (1982)(R &amp; R Software)(Yu).tap" size="8782" crc="249bb00d" sha1="73aa3446d42e23daa67fdc11ed405e3b5168b939"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf9fde06fc72d7">
+		<description>_Grid Patrol (1984)(M.C. Lothlorien)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9869">
+				<rom name="_Grid Patrol (1984)(M.C. Lothlorien).tap" size="9869" crc="8b2e961c" sha1="f9fde06fc72d7f5d2fd27b79279f0b50480b943d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa335ab669dc52">
+		<description>_Gridrunner (1983)(Salamander Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16231">
+				<rom name="_Gridrunner (1983)(Salamander Software).tap" size="16231" crc="eb08f86a" sha1="a335ab669dc52841228becbd8f1d783d6d2b0062"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsda788f22a3ba2">
+		<description>_Gridrunner 2 - Matrix (1984)(Salamander Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21336">
+				<rom name="_Gridrunner 2 - Matrix (1984)(Salamander Software).tap" size="21336" crc="6dbf4382" sha1="da788f22a3ba2bb935b53f50a9ececb7948fcf51"/>
 			</dataarea>
 		</part>
 	</software>

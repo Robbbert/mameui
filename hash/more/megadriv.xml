@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2032 -->
+<!-- Number of items in this list = 2033 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6479,6 +6479,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fight_for_Vengeance_PD_2022.bin" size="4194304" crc="7db61291" sha1="d241dd7a13d2c69d9a8a0fca11113cc81eb4affd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene6311f7c0e38f">
+		<description>Final Fight MD (World) (v0.91b) (Proto) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Final Fight MD (World) (v0.91b) (Proto) (Aftermarket) (Unl).md" size="4063232" crc="a125cc7d" sha1="e6311f7c0e38f4cb4995e494c995dd30b19d03fd"/>
 			</dataarea>
 		</part>
 	</software>
