@@ -854,7 +854,7 @@ void mbee_state::mbee128p(machine_config &config)
 	FLOPPY_CONNECTOR(config, m_floppy0, mbee_floppies, "35dd", floppy_image_device::default_mfm_floppy_formats).enable_sound(true);
 	FLOPPY_CONNECTOR(config, m_floppy1, mbee_floppies, "35dd", floppy_image_device::default_mfm_floppy_formats).enable_sound(true);
 
-	SN76489A(config, "sn1", 13.5_MHz_XTAL / 4).add_route(ALL_OUTPUTS, "mono", 0.50);
+	SN76489A(config, "sn1", 13.5_MHz_XTAL / 4).add_route(ALL_OUTPUTS, "mono", 0.00);  // a new bug makes a tone all the time, so silenced 2025-11-13
 
 	SOFTWARE_LIST(config, "flop_list").set_original("mbee_flop").set_filter("3");
 	remove_carts(config);

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6011 -->
+<!-- Number of items in this list = 6055 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -379,6 +379,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="55131">
 				<rom name="-Grand Prix Circuit (1990)(Accolade Inc)[cr [Cr Matasoft][Cr Matasoft].tap" size="55131" crc="cf8c9f07" sha1="5886a264e734bd3a54da96feb2126b640668b808"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3510da73f6058">
+		<description>-Great Escape (1986)(Ocean Software Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39402">
+				<rom name="-Great Escape (1986)(Ocean Software Ltd)[cr [Cr][Cr].tap" size="39402" crc="d9d3c9ec" sha1="3510da73f60580206bc444da4cc32196a6a42b79"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12882,6 +12892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8aaff6b82f1c7">
+		<description>Catch 23 (1987)(Martech Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54581">
+				<rom name="Catch 23 (1987)(Martech Games).tap" size="54581" crc="bef82e6f" sha1="8aaff6b82f1c71d196e1b5c969b314ecd838d5f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb0522fecbc865">
 		<description>Catch 23</description>
 		<year>????</year>
@@ -12889,6 +12909,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="54772">
 				<rom name="Catch 23.tzx" size="54772" crc="5f1a2d67" sha1="b0522fecbc865f9187d2f14625373ff3397ff3b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ca304fa0bee5">
+		<description>Catshell ES 48K (2025)(thorlinvhoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42371">
+				<rom name="Catshell ES 48K (2025)(thorlinvhoo).tap" size="42371" crc="88035990" sha1="5ca304fa0bee59e9844b79db34776510384abc50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs515505dddff3c">
+		<description>Cattivik (2013)(Gabriele Amore, Alessandro Grussu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65828">
+				<rom name="Cattivik (2013)(Gabriele Amore, Alessandro Grussu).tap" size="65828" crc="92e705bb" sha1="515505dddff3c2ea9a426d8332b50d5a88457cc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsce434fed1a06c">
+		<description>Cattivik 2024 128K (2024)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52220">
+				<rom name="Cattivik 2024 128K (2024)(Gabriele Amore).tap" size="52220" crc="dba277f8" sha1="ce434fed1a06c0655413452ff2100819087fd617"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31d8e2c9b48ea">
+		<description>Cattivik Never Dies 128K (2017)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43306">
+				<rom name="Cattivik Never Dies 128K (2017)(Gabriele Amore).tap" size="43306" crc="aa780aaf" sha1="31d8e2c9b48ea998c416bf80bfb487092d9ab920"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse6e6127a0e6eb">
+		<description>Catwalk (1984)(Power Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48029">
+				<rom name="Catwalk (1984)(Power Software).tap" size="48029" crc="8c86a5b9" sha1="e6e6127a0e6eb231be3a83b2ca161e1055f86bff"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13792,6 +13862,246 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc83d3748edd7d">
+		<description>Grabbed By The Ghoulies! (19xx)(FSF Adventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36867">
+				<rom name="Grabbed By The Ghoulies! (19xx)(FSF Adventures).tap" size="36867" crc="1333525a" sha1="c83d3748edd7dfc2f4b95f5d704eeeb2b4a23ae5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e2eba041ff33">
+		<description>Graeme Souness Soccer Manager (1992)(Zepplin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47634">
+				<rom name="Graeme Souness Soccer Manager (1992)(Zepplin Games).tap" size="47634" crc="19a46109" sha1="2e2eba041ff334e64aacc5482fa4a8c869f697f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4f77e688a704a">
+		<description>Graf 2 (19xx)(-)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18617">
+				<rom name="Graf 2 (19xx)(-)(Ru).tap" size="18617" crc="e3926cd4" sha1="4f77e688a704a80329afb2f18a7cb4a424fc8c07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27d0294362586">
+		<description>Graf 3 (19xx)(-)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15793">
+				<rom name="Graf 3 (19xx)(-)(Ru).tap" size="15793" crc="a728373f" sha1="27d029436258637d4c0c01ffc456daabca789994"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1355bc199d6c9">
+		<description>Graham Gooch's Test Cricket (1986)(Audiogenic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48626">
+				<rom name="Graham Gooch's Test Cricket (1986)(Audiogenic Software).tap" size="48626" crc="4a732588" sha1="1355bc199d6c981ca159c468567ecef2ee38cf2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3d6abfec414ec">
+		<description>Graham Grass Snake (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2654">
+				<rom name="Graham Grass Snake (19xx)(-).tap" size="2654" crc="c046de00" sha1="3d6abfec414ec014d49116683cfbbaf3174db5b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e2f02a48c8e0">
+		<description>Grammar Tree, The (1983)(Sulis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64768">
+				<rom name="Grammar Tree, The (1983)(Sulis Software).tap" size="64768" crc="b1aecb23" sha1="7e2f02a48c8e0118ee0ce5f99c513b6b4781c3f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c69b60357b47">
+		<description>Grand Prix (1988)(D &amp; H Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47489">
+				<rom name="Grand Prix (1988)(D &amp; H Games).tap" size="47489" crc="5b92e76b" sha1="1c69b60357b4755f0a598c18bb9f68aa649ab7b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3aee52cc7ffa7">
+		<description>Grand Prix Challenge (1991)(Challenge Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39688">
+				<rom name="Grand Prix Challenge (1991)(Challenge Software).tap" size="39688" crc="162ae100" sha1="3aee52cc7ffa7e7e0813c96616d8c378116ab816"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b7ef8fffe4a6">
+		<description>Grand Prix Drivers (1992)(Grafix Wizard)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41046">
+				<rom name="Grand Prix Drivers (1992)(Grafix Wizard).tap" size="41046" crc="24d008a3" sha1="1b7ef8fffe4a69535c497de1d0aba5bdbb607ccf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs29e91e72fe628">
+		<description>Grand Prix Master (19xx)(Dinamic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48275">
+				<rom name="Grand Prix Master (19xx)(Dinamic Software)(Sp).tap" size="48275" crc="4185f87a" sha1="29e91e72fe628399bdfb9beea289ab9accd5c26f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71fedd778a2fc">
+		<description>Grand Prix Simulator (1988)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55033">
+				<rom name="Grand Prix Simulator (1988)(Codemasters).tap" size="55033" crc="379b30e6" sha1="71fedd778a2fca2ed375d82b1e46b85538d0aa91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs221038654fa5a">
+		<description>Grand Prix Simulator 2 (1989)(Codemasters)(48K-128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53178">
+				<rom name="Grand Prix Simulator 2 (1989)(Codemasters)(48K-128K).tap" size="53178" crc="2e2014ef" sha1="221038654fa5a3fb1546e0aa3eef0b9e2745e70d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse673d6e48b09e">
+		<description>Grange Hill (1987)(Argus Press Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="Grange Hill (1987)(Argus Press Software Ltd).tap" size="42714" crc="97e588d3" sha1="e673d6e48b09e8a9065d13372fdfc98d27cfdd9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9d50dacfb8638">
+		<description>Grange Hill (1987)(Argus Press Software Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55498">
+				<rom name="Grange Hill (1987)(Argus Press Software Ltd)[a2].tap" size="55498" crc="15402185" sha1="9d50dacfb8638ca15f8e792ee562ec1917360baa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaec4c22e67072">
+		<description>Grange Hill (1987)(Argus Press Software Ltd)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="77819">
+				<rom name="Grange Hill (1987)(Argus Press Software Ltd)[a3].tap" size="77819" crc="6d84c0eb" sha1="aec4c22e670728a259a5a404a7ee1dd540a55753"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs863652dd5280f">
+		<description>Grange Hill (1987)(Argus Press Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="71361">
+				<rom name="Grange Hill (1987)(Argus Press Software Ltd)[a].tap" size="71361" crc="bc5a2e58" sha1="863652dd5280fce6fc767337544206373acede9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7a4d3fe8fb44a">
+		<description>Graphic Adventure Creator, The (1986)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38436">
+				<rom name="Graphic Adventure Creator, The (1986)(Incentive).tap" size="38436" crc="53c9cf40" sha1="7a4d3fe8fb44abfe40d12b2e7aea4f27e17a423b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0428197d1a4d7">
+		<description>Grazers (2024-06-24)(Snauts)(LV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16900">
+				<rom name="Grazers (2024-06-24)(Snauts)(LV).tap" size="16900" crc="a8b28091" sha1="0428197d1a4d7eb117843e6538e78d533d594c16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1eab112c8bd1d">
+		<description>Great Britain Limited (1982)(Hessel Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24878">
+				<rom name="Great Britain Limited (1982)(Hessel Software).tap" size="24878" crc="8c6f727d" sha1="1eab112c8bd1d5a0ce3c41c9d20c97f67f4847af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf13feba4d6659">
+		<description>Great Britain Limited (1986)(Jov &amp; Zon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23495">
+				<rom name="Great Britain Limited (1986)(Jov &amp; Zon).tap" size="23495" crc="f1443f3c" sha1="f13feba4d665937cf1f3974dce10333f296152ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0bc433c471d2b">
+		<description>Great Escape, The (1986)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48547">
+				<rom name="Great Escape, The (1986)(Ocean Software).tap" size="48547" crc="dae8d04b" sha1="0bc433c471d2b3afe469a61a32e74bef759d1410"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb068eb57a7e52">
+		<description>Great Escape, The (1986)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50366">
+				<rom name="Great Escape, The (1986)(Ocean).tap" size="50366" crc="0d3be279" sha1="b068eb57a7e52ef72c21dbea819c76b4731db341"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd11e833846b34">
+		<description>Great Fire Of London, The (19xx)(-)[Corrupt]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42127">
+				<rom name="Great Fire Of London, The (19xx)(-)[Corrupt].tap" size="42127" crc="00fb358b" sha1="d11e833846b34008ce7da7ed6c9965ce23fcd960"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsee5a63561e2af">
 		<description>Great Gurianos</description>
 		<year>????</year>
@@ -13802,6 +14112,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6dab75082bd3b">
+		<description>Greedy Gulch (1983)(Phipps Associates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34478">
+				<rom name="Greedy Gulch (1983)(Phipps Associates).tap" size="34478" crc="29aebbbb" sha1="6dab75082bd3b132e0b37c461b9f2b9d9b3a3584"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9544037b68ce7">
+		<description>Green Beret (1986)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42247">
+				<rom name="Green Beret (1986)(Imagine Software).tap" size="42247" crc="93fc559c" sha1="9544037b68ce7b463e92865fcb92e232814bdac9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs36945d209ff86">
 		<description>Green Beret 48K (1986)(Imagine)</description>
 		<year>????</year>
@@ -13809,6 +14139,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="53521">
 				<rom name="Green Beret 48K (1986)(Imagine).tzx" size="53521" crc="63a0d332" sha1="36945d209ff86e5daab04b4ab9361c03db91ec59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6ad4b37bacb04">
+		<description>Green Beret</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49640">
+				<rom name="Green Beret.tap" size="49640" crc="7e6fb584" sha1="6ad4b37bacb045e75f70109e0843c344ca788193"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs564ecce3fefbd">
+		<description>Green Death, The (1988)(Casventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44246">
+				<rom name="Green Death, The (1988)(Casventures).tap" size="44246" crc="1515c9c6" sha1="564ecce3fefbd3e4066f8d5c44df51c80599edeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc9f51f8f425a7">
+		<description>Green Door, The (1988)(Tartan Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41897">
+				<rom name="Green Door, The (1988)(Tartan Software).tap" size="41897" crc="c3683040" sha1="c9f51f8f425a7a5d837fab201b871fb1eca84151"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53102,6 +53462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3b82c890cbf38">
+		<description>_Cats</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41447">
+				<rom name="_Cats.tap" size="41447" crc="5222a712" sha1="3b82c890cbf38a74ed42e1ce13b060f6af22983d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc5c9de2e39de0">
 		<description>_Cauldron</description>
 		<year>????</year>
@@ -53302,6 +53672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd132880e4e5b7">
+		<description>_Grand National (1985)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48830">
+				<rom name="_Grand National (1985)(Elite Systems).tap" size="48830" crc="924e4e6b" sha1="d132880e4e5b79b5221b2fa7dce631958a464551"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs61c5d4d70a655">
 		<description>_Grand National</description>
 		<year>????</year>
@@ -53309,6 +53689,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48870">
 				<rom name="_Grand National.tzx" size="48870" crc="0acd41c0" sha1="61c5d4d70a65556bdde42e2fd7993cb31ab92abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc59db2d47eba1">
+		<description>_Grand Prix Driver (1983)(Britannia Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40897">
+				<rom name="_Grand Prix Driver (1983)(Britannia Software Ltd).tap" size="40897" crc="bc86b1a5" sha1="c59db2d47eba16ac640fc0df77868d3466f66c9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2a281ef0f7161">
+		<description>_Grand Prix Manager (1984)(Silicon Joy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41383">
+				<rom name="_Grand Prix Manager (1984)(Silicon Joy).tap" size="41383" crc="f869be8d" sha1="2a281ef0f7161eb8ea1f3be740f64075d6575f4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd78d71b236029">
+		<description>_Granja (1985)(MicroHobby Cassette)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10602">
+				<rom name="_Granja (1985)(MicroHobby Cassette)(Sp).tap" size="10602" crc="c30b70d5" sha1="d78d71b236029d635b5fc607f99daff12fcaf897"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c0cf6ee1aef0">
+		<description>_Great Detective, The (19xx)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40706">
+				<rom name="_Great Detective, The (19xx)(CRL Group).tap" size="40706" crc="d0748eb0" sha1="3c0cf6ee1aef0c68caec3879ac3d3d463306601a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsceaf52179aaf8">
+		<description>_Great Space Race, The (1984)(Legend)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46522">
+				<rom name="_Great Space Race, The (1984)(Legend).tap" size="46522" crc="cf977588" sha1="ceaf52179aaf8adf7f7a9ea124f370d4981bae7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae712e0ce81b6">
+		<description>_Greedy Gulch (1983)(Phipps Associates)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39180">
+				<rom name="_Greedy Gulch (1983)(Phipps Associates)[a].tap" size="39180" crc="3d253679" sha1="ae712e0ce81b6f3386084080b69fe59fd0bbd301"/>
 			</dataarea>
 		</part>
 	</software>

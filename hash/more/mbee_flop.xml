@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 15 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="mbee_flop" description="mbee_flop loose roms">
 	<software name="beec0f1aee814c30">
 		<description>[128kp]Arcade Games Vol1 (19xx)(HoneySoft)(corrupted)</description>
@@ -99,6 +99,66 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="215296">
 				<rom name="[56k]honeysoft_colour_sampler_vol_1_t03.dsk" size="215296" crc="c0c4a0d1" sha1="621180d6cd0f9e07841a949b0a9aa3fb125f5a23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeeca17caeaf12e">
+		<description>[56k]starnet_autoboot_demonstration_ds40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="430336">
+				<rom name="[56k]starnet_autoboot_demonstration_ds40.dsk" size="430336" crc="351661e2" sha1="eca17caeaf12eff0595707f380ded580c8d2b538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee73fa102c34ac1">
+		<description>[56k]starnet_autoboot_test_disk_ds40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="430336">
+				<rom name="[56k]starnet_autoboot_test_disk_ds40.dsk" size="430336" crc="33b590ec" sha1="73fa102c34ac1b3f0c9fa6fd46b3444ac5599209"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7b7a12a3419f8">
+		<description>[56k]starnet_master_84_03_ds40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="430336">
+				<rom name="[56k]starnet_master_84_03_ds40.dsk" size="430336" crc="90919ab5" sha1="7b7a12a3419f8b4f4697b82abdbb5e48582589f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeb064248235842">
+		<description>[56k]starnet_master_85_10_ds40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="430336">
+				<rom name="[56k]starnet_master_85_10_ds40.dsk" size="430336" crc="db1c8fa3" sha1="b064248235842acc37318a8892dc9bed6c71baae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee83b03ec6dfd7">
+		<description>[56k]starnet_premium_upgrade_ds40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="430336">
+				<rom name="[56k]starnet_premium_upgrade_ds40.dsk" size="430336" crc="c9b7efcb" sha1="e83b03ec6dfd756bb529962fab3f826690a485f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7d8f46271bc3e">
+		<description>[56k]wordstar_broken</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="430336">
+				<rom name="[56k]wordstar_broken.dsk" size="430336" crc="8ecab164" sha1="7d8f46271bc3e2073a2fdbe996401dbbfccc91ef"/>
 			</dataarea>
 		</part>
 	</software>
