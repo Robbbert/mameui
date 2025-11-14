@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 65 -->
+<!-- Number of items in this list = 58 -->
 <softwarelist name="mz80k_cass" description="mz80k_cass loose roms">
 	<software name="mz82e6696b7f0143">
 		<description>(bas)clock</description>
@@ -102,16 +102,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="mz83bf2b25f1d758">
-		<description>BUGFIRE-NEW(MC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="2757278">
-				<rom name="BUGFIRE-NEW(MC).wav" size="2757278" crc="48b8a8e0" sha1="3bf2b25f1d758fb4123fe59769bb0e35b9d6268f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="mz82624fbd76596f">
 		<description>CMTtoFD</description>
 		<year>????</year>
@@ -142,36 +132,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="mz8a06feb738f419">
-		<description>COSMIC CRUISER2(MC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="3612246">
-				<rom name="COSMIC CRUISER2(MC).wav" size="3612246" crc="6ef8e383" sha1="a06feb738f4190855c81153abe8111ae1db3c61a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="mz8343ab1f14c1a6">
-		<description>CRAZY-CLIMBER (1of2)(MC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="6790628">
-				<rom name="CRAZY-CLIMBER (1of2)(MC).wav" size="6790628" crc="2a16d3f9" sha1="343ab1f14c1a6703cf54060352121c1716f3db12"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="mz813ce8239a3a79">
-		<description>CRAZY-CLIMBER (2of2)(MC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="1816122">
-				<rom name="CRAZY-CLIMBER (2of2)(MC).wav" size="1816122" crc="ac62692f" sha1="13ce8239a3a79a6ed06aadf0955f6c290e0f3ea5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="mz8a13d5e28a6559">
 		<description>Cross Snake_mz</description>
 		<year>????</year>
@@ -189,16 +149,6 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="9069377">
 				<rom name="Cross Snake_mz.wav" size="9069377" crc="19e3bf1b" sha1="c07303b2afa64b56ac295c41c387a31a12b41fab"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="mz807d63f06f4423">
-		<description>CRYSTALL(MC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="4787">
-				<rom name="CRYSTALL(MC).m12" size="4787" crc="eca8d449" sha1="07d63f06f442383b25cabce86c1e530cfdd419c0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -502,16 +452,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="mz878d93f2936b44">
-		<description>SPACE RUINER(MC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="4515874">
-				<rom name="SPACE RUINER(MC).wav" size="4515874" crc="b64fb4f1" sha1="78d93f2936b44b0b02ab5ef9c62281231d9704f4"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="mz84afdcf2ee2243">
 		<description>STAR WARS(MC)</description>
 		<year>????</year>
@@ -629,16 +569,6 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1394514">
 				<rom name="WILHELM TELL(MC).wav" size="1394514" crc="0f5858e9" sha1="e544bd10187dcdb49a6f739b6888f732a2215ab2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="mz8200c4f40d4234">
-		<description>ZARDOS(MC)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="9152754">
-				<rom name="ZARDOS(MC).wav" size="9152754" crc="3794837f" sha1="200c4f40d42342bb1996c43ed517be0b64cd2069"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 457 -->
+<!-- Number of items in this list = 459 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -829,6 +829,26 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="41541">
 				<rom name="Carlos Sainz (1990)(Zigurat Software)(128k).z80" size="41541" crc="608dabf2" sha1="904b3881af7ec861cb33dcd9d137551091128db5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98fb5fee1110f">
+		<description>Cauldron 48K (1985)(Palace)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40827">
+				<rom name="Cauldron 48K (1985)(Palace).z80" size="40827" crc="adea0ad1" sha1="98fb5fee1110f063f494a75583d1d5a44a0a204e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4971f6119032c">
+		<description>Cauldron II - The Pumpkin Strikes Back 48K (1986)(Palace)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="37705">
+				<rom name="Cauldron II - The Pumpkin Strikes Back 48K (1986)(Palace).z80" size="37705" crc="c73307f0" sha1="4971f6119032c84f7ec25320be8f02eff07ba4fb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2212,16 +2232,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs1997baa2f0c09">
-		<description>Joe Blade 2 (1988)(Players Premier)(128k)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="snap" interface="spectrum_snap">
-			<dataarea name="snap" size="47891">
-				<rom name="Joe Blade 2 (1988)(Players Premier)(128k).z80" size="47891" crc="20a19599" sha1="1997baa2f0c09b96b49f96f90bb258a3bc568743"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs9ed3c2b4d7666">
 		<description>Joe Blade 2 (1988)(Players Premier)</description>
 		<year>????</year>
@@ -2229,6 +2239,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="39777">
 				<rom name="Joe Blade 2 (1988)(Players Premier).z80" size="39777" crc="382b3651" sha1="9ed3c2b4d76661c8f477186ad0c9ba9c6f4d7a9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1997baa2f0c09">
+		<description>Joe Blade 2 128K (1988)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="47891">
+				<rom name="Joe Blade 2 128K (1988)(Players Premier).z80" size="47891" crc="20a19599" sha1="1997baa2f0c09b96b49f96f90bb258a3bc568743"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3703,22 +3723,22 @@
 		</part>
 	</software>
 	<software name="zxs0f39a6cb6e0c3">
-		<description>Sol Negro - Special Edition - Part 1 (1989)(Opera Soft)</description>
+		<description>Sol Negro - Special Edition - Part 1 ES 48K-AY (1989)(Opera Soft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="42525">
-				<rom name="Sol Negro - Special Edition - Part 1 (1989)(Opera Soft).z80" size="42525" crc="27b7e34f" sha1="0f39a6cb6e0c3c80835a4bc4498cdb60655b3b0c"/>
+				<rom name="Sol Negro - Special Edition - Part 1 ES 48K-AY (1989)(Opera Soft).z80" size="42525" crc="27b7e34f" sha1="0f39a6cb6e0c3c80835a4bc4498cdb60655b3b0c"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxs5170d3f5a2921">
-		<description>Sol Negro - Special Edition - Part 2 (1989)(Opera Soft)</description>
+		<description>Sol Negro - Special Edition - Part 2 ES 48K-AY (1989)(Opera Soft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="37075">
-				<rom name="Sol Negro - Special Edition - Part 2 (1989)(Opera Soft).z80" size="37075" crc="af912284" sha1="5170d3f5a292185ddd62e25b5f68bfbcee6521e2"/>
+				<rom name="Sol Negro - Special Edition - Part 2 ES 48K-AY (1989)(Opera Soft).z80" size="37075" crc="af912284" sha1="5170d3f5a292185ddd62e25b5f68bfbcee6521e2"/>
 			</dataarea>
 		</part>
 	</software>
