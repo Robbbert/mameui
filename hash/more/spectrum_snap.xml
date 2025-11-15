@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 459 -->
+<!-- Number of items in this list = 460 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -1739,6 +1739,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="108754">
 				<rom name="Ghouls 'n' Ghosts 128K (1989)(U.S. Gold).z80" size="108754" crc="1b626fe8" sha1="511c495dfd48bce7dccb0f9abc7b0bf8710e8c3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61322e3a47523">
+		<description>Gold Mine 16K (1983)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="11870">
+				<rom name="Gold Mine 16K (1983)(DK'Tronics).z80" size="11870" crc="aa7b6d96" sha1="61322e3a47523b337ba00290a2a94aa8b2b850d5"/>
 			</dataarea>
 		</part>
 	</software>

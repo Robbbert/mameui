@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6100 -->
+<!-- Number of items in this list = 6159 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -49,6 +49,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1361">
 				<rom name="(demo)Fire4ever.tzx" size="1361" crc="2f412606" sha1="cbe2b12b071de18dda85deb7b76dec57b41b5272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e70081ea989c">
+		<description>(demo)Goa 4k Intro (1998)(Extreme)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4314">
+				<rom name="(demo)Goa 4k Intro (1998)(Extreme).tap" size="4314" crc="c18d3140" sha1="9e70081ea989c4531a9b95211789b68f12e55d97"/>
 			</dataarea>
 		</part>
 	</software>
@@ -372,6 +382,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs78eade88c7355">
+		<description>-G-Loc (1992)(US Gold Ltd)[cr [Cr Torasoft][t Torasoft](128K)[Cr Torasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63153">
+				<rom name="-G-Loc (1992)(US Gold Ltd)[cr [Cr Torasoft][t Torasoft](128K)[Cr Torasoft].tap" size="63153" crc="58d6a047" sha1="78eade88c735575a3509eb723d28193e7b07e597"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfdc591e43fac3">
+		<description>-G.I.Hero (1988)(Firebird Software Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36254">
+				<rom name="-G.I.Hero (1988)(Firebird Software Ltd)[cr [Cr][Cr].tap" size="36254" crc="4651a6fa" sha1="fdc591e43fac3ea6750c97e043b7b5851d5a6e6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs549125cfaaadb">
+		<description>-Garfield - Big,Fat,Hairy Deal (1988)(The Edge Software)[cr [Cr][t][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34765">
+				<rom name="-Garfield - Big,Fat,Hairy Deal (1988)(The Edge Software)[cr [Cr][t][Cr].tap" size="34765" crc="06330d67" sha1="549125cfaaadbaa2794f7cb69b4a49aa3c8ededc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9585e553bfe09">
+		<description>-Ghostbusters 2 (1989)(Activision Inc)[cr [Cr][t Saposoftware](128K)[Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="104462">
+				<rom name="-Ghostbusters 2 (1989)(Activision Inc)[cr [Cr][t Saposoftware](128K)[Cr].tap" size="104462" crc="b316daf6" sha1="9585e553bfe092514b3a8d29badf166d9a6f48e2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf768d34de75dd">
 		<description>-Golden Axe (1990)(Virgin Games Ltd)[cr [Cr Matasoft][Cr Matasoft]</description>
 		<year>????</year>
@@ -379,6 +429,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="112019">
 				<rom name="-Golden Axe (1990)(Virgin Games Ltd)[cr [Cr Matasoft][Cr Matasoft].tap" size="112019" crc="e321ff89" sha1="f768d34de75dd5cd0d68e15e463e684c3998e5bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b23417120a4d">
+		<description>-Golden Basket (1990)(Opera Soft)(Sp)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41245">
+				<rom name="-Golden Basket (1990)(Opera Soft)(Sp)[cr [Cr][Cr].tap" size="41245" crc="84b5e919" sha1="7b23417120a4dbfcf6351f09fd92f7e8630f5cc7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7852,6 +7912,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb95757a5d5214">
+		<description>Basic Tower v6.4 EN 48K (2025)(ignacobo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85611">
+				<rom name="Basic Tower v6.4 EN 48K (2025)(ignacobo).tap" size="85611" crc="ea4d8c42" sha1="b95757a5d5214de876df47c076f98427d07c59ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d77d28370e82">
+		<description>Basic Tower v6.4 ES 48K (2025)(ignacobo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85622">
+				<rom name="Basic Tower v6.4 ES 48K (2025)(ignacobo).tap" size="85622" crc="e38001fb" sha1="7d77d28370e8243d04301b9ed5533523455e7490"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9cef7e84ce914">
+		<description>Basic Tower v6.4 PT 48K (2025)(ignacobo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85622">
+				<rom name="Basic Tower v6.4 PT 48K (2025)(ignacobo).tap" size="85622" crc="a234c14d" sha1="9cef7e84ce9145b789a82b48a79486e0bd9faf1e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0973c062354eb">
 		<description>Basic Tutor</description>
 		<year>????</year>
@@ -8799,6 +8889,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40989">
 				<rom name="BELEGOST.TAP" size="40989" crc="35a70cb7" sha1="8a9602d27e8e27d377b75d4515d0cbe5e5c127f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee9962e931541">
+		<description>Beltalowda - Parte 1 ES 128K (2025)(Molisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="124920">
+				<rom name="Beltalowda - Parte 1 ES 128K (2025)(Molisoft).tap" size="124920" crc="09d71ec8" sha1="ee9962e9315414cfbfbce910d0bfc94a11637b26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3417522c24ffb">
+		<description>Beltalowda - Parte 2 ES 128K (2025)(Molisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="127418">
+				<rom name="Beltalowda - Parte 2 ES 128K (2025)(Molisoft).tap" size="127418" crc="10ca636f" sha1="3417522c24ffb8f0488407e9aa935ee114369381"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13142,6 +13252,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3d446de46c61f">
+		<description>Cave Fighter (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5584">
+				<rom name="Cave Fighter (19xx)(-)(De).tap" size="5584" crc="e4993eab" sha1="3d446de46c61f2e692dae2bf1bbec82d0c69d8e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs962ffdb65a460">
+		<description>Cave Raider - The Cursed Treasure (2018)(Bumfun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35128">
+				<rom name="Cave Raider - The Cursed Treasure (2018)(Bumfun).tap" size="35128" crc="57718ae2" sha1="962ffdb65a460cea557315823da48f56d4cfd538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d35ea1e79bec">
+		<description>Cavelon (1984)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34335">
+				<rom name="Cavelon (1984)(Ocean Software).tap" size="34335" crc="e0159820" sha1="1d35ea1e79becf8d3d747e077bd37db73c33cfc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs533d823a428e4">
+		<description>Cavelon 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33603">
+				<rom name="Cavelon 48K (1984)(Ocean).tap" size="33603" crc="df2fa332" sha1="533d823a428e4880329aa02740fa6e14862499a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc24beeb231adc">
+		<description>Cavelon 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34393">
+				<rom name="Cavelon 48K (1984)(Ocean).tzx" size="34393" crc="430ca1b5" sha1="c24beeb231adc9607632523e812aa29c37d972ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5dc945857784">
+		<description>Cavelon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34505">
+				<rom name="Cavelon.tap" size="34505" crc="ba7e5568" sha1="c5dc945857784ee76b0c095239f8aa89f44a34dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc8d00f142ac65">
+		<description>Cavemania (1990)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48245">
+				<rom name="Cavemania (1990)(Atlantis Software).tap" size="48245" crc="156c837d" sha1="c8d00f142ac6545b45c353e6ce5009229534f221"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3fe8a79883f6e">
+		<description>Caves Of Doom, The (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47519">
+				<rom name="Caves Of Doom, The (1985)(Mastertronic).tap" size="47519" crc="7b403c56" sha1="3fe8a79883f6e9744ac3fc7a0fbb5f391866c740"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs233a2797a86d0">
+		<description>Caves Of The Spiders (19xx)(Neil Pellinacci)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15306">
+				<rom name="Caves Of The Spiders (19xx)(Neil Pellinacci).tap" size="15306" crc="16c5800f" sha1="233a2797a86d09762f56de06cc6facc81d519335"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f3b9a410d43d">
+		<description>Cavit (2021)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11732">
+				<rom name="Cavit (2021)(Inufuto).tap" size="11732" crc="1e7f06b4" sha1="0f3b9a410d43dc7f725921c05b2ee386cc5957ae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7a1f248898724">
 		<description>cavit</description>
 		<year>????</year>
@@ -13152,6 +13362,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa98050a1de02b">
+		<description>Cavrl Janje (1984)(S. Radivojsa)(UNK-LANG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25949">
+				<rom name="Cavrl Janje (1984)(S. Radivojsa)(UNK-LANG).tap" size="25949" crc="ab8b8d3c" sha1="a98050a1de02b78da76fea22e5e4289e84e8b4b6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b8833c214388">
+		<description>CCT (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21560">
+				<rom name="CCT (19xx)(-).tap" size="21560" crc="b3d12d33" sha1="6b8833c214388ac58f5f7f81a6cf5d64102eefa5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs232d2f188aa77">
 		<description>CD Games Pack - Loader (1989)(Codemasters)</description>
 		<year>????</year>
@@ -13159,6 +13389,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="2954">
 				<rom name="CD Games Pack - Loader (1989)(Codemasters).tzx" size="2954" crc="bd27a1ba" sha1="232d2f188aa77af70b103ea97cd17b0559d9a69d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs12dc71d6bd965">
+		<description>CD Games Pack - Loader (19xx)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2932">
+				<rom name="CD Games Pack - Loader (19xx)(Codemasters).tap" size="2932" crc="7b8edd71" sha1="12dc71d6bd96538113299cfdd80376de798442e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14032,6 +14272,166 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf223af0962a82">
+		<description>Gnasher (1984)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17027">
+				<rom name="Gnasher (1984)(Mastertronic).tap" size="17027" crc="7c38b4ea" sha1="f223af0962a82b7a2f3b786b1af3ead6eb9c92ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs34a6fdd898ca9">
+		<description>Gnome Lazies, The (19xx)(Mouse)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7343">
+				<rom name="Gnome Lazies, The (19xx)(Mouse).tap" size="7343" crc="43df53b1" sha1="34a6fdd898ca9245f18d9dd6946db91d71c4e5fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs759cbd4d19349">
+		<description>Gnoni (1987)(Biei Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17473">
+				<rom name="Gnoni (1987)(Biei Software)(Sp).tap" size="17473" crc="14adb16f" sha1="759cbd4d193490e16227d52ad3aae71f149e6ff9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0fe6d00bc1b57">
+		<description>Gobble A Ghost (1982)(CDS Microsystems)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15137">
+				<rom name="Gobble A Ghost (1982)(CDS Microsystems)[a].tap" size="15137" crc="7b9c8929" sha1="0fe6d00bc1b576de7ff77407439605e4fd1eee84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa05084aa8cfb9">
+		<description>Gobbleman (1982)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8259">
+				<rom name="Gobbleman (1982)(Artic Computing).tap" size="8259" crc="f16d3912" sha1="a05084aa8cfb9cfdb78e0df1032486b203c91e8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf3a5ed46acad9">
+		<description>Goblin EN 128K (2022)(Hicks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46960">
+				<rom name="Goblin EN 128K (2022)(Hicks).tap" size="46960" crc="aaddbdc4" sha1="f3a5ed46acad9225ca8bd75f1b89ed58a4bc130d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf7a195317f99">
+		<description>Goblin ES 128K (2022)(Hicks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46999">
+				<rom name="Goblin ES 128K (2022)(Hicks).tap" size="46999" crc="80e04163" sha1="af7a195317f9958f343dcf6c32532e0f06b8122b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f696e83c10c6">
+		<description>Goblinarama 128K (2025)(Zero Budget)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72351">
+				<rom name="Goblinarama 128K (2025)(Zero Budget).tap" size="72351" crc="b1d5184c" sha1="6f696e83c10c6a173ae810535fdc8e390f1c1cce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7fdc9f60d870c">
+		<description>Goblinarama v2 128K (2025)(Zero Budget)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72354">
+				<rom name="Goblinarama v2 128K (2025)(Zero Budget).tap" size="72354" crc="b21d9b4c" sha1="7fdc9f60d870c918534abcd86c9ea168a177e819"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs516b87d9ae29f">
+		<description>Gods Of War, The (1990)(Zenobi Software)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125251">
+				<rom name="Gods Of War, The (1990)(Zenobi Software)(128K).tap" size="125251" crc="df20c956" sha1="516b87d9ae29fb7d2d36c615b576f561a4bef507"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd14bc4ea9eeec">
+		<description>Godzilla - The Atomar Nightmare (1995)(Tiger's Claw - LCD Design)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28361">
+				<rom name="Godzilla - The Atomar Nightmare (1995)(Tiger's Claw - LCD Design).tap" size="28361" crc="48913c0c" sha1="d14bc4ea9eeec8a357741935823ea2e1882d3ca9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9bbf06170b87e">
+		<description>Gold Digger (1983)(Blaby Computer Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13052">
+				<rom name="Gold Digger (1983)(Blaby Computer Games).tap" size="13052" crc="b401f223" sha1="9bbf06170b87eddc6b801b5d9d5755794f2ca8d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1fced936acad8">
+		<description>Gold Mine 48K Remix 48K (1991)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24222">
+				<rom name="Gold Mine 48K Remix 48K (1991)(Sinclair User).tzx" size="24222" crc="ea76c585" sha1="1fced936acad8423d28e4b42687f06e2d10c255c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67369269ddb7a">
+		<description>Gold Rush (1983)(Thorn EMI Video)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11981">
+				<rom name="Gold Rush (1983)(Thorn EMI Video).tap" size="11981" crc="5a04b79b" sha1="67369269ddb7a59233c864674ee24966aadb9406"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsec05b821d83a0">
+		<description>Gold Truck (1984)(Neil Pellinacci)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6410">
+				<rom name="Gold Truck (1984)(Neil Pellinacci).tap" size="6410" crc="31c5a513" sha1="ec05b821d83a0e59d96ad27f43154b3edfa5479c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs99c9778d02ddd">
+		<description>Golden Axe (1990)(Virgin Games)(128k)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="193317">
+				<rom name="Golden Axe (1990)(Virgin Games)(128k)[t].tap" size="193317" crc="dc0477be" sha1="99c9778d02ddd569a665a54095dcfce25ff77875"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf0071768a0e64">
 		<description>Golden Axe</description>
 		<year>????</year>
@@ -14039,6 +14439,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="189312">
 				<rom name="Golden Axe.tzx" size="189312" crc="56d287d7" sha1="f0071768a0e6438ab6458ce1a85ed62e5a2fa907"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7012264527276">
+		<description>Golden Pyramid, The (1991)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43300">
+				<rom name="Golden Pyramid, The (1991)(Zenobi Software).tap" size="43300" crc="295f2c12" sha1="7012264527276db9cece8a97d88d49e23bd58b0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4b7b3bd6af7bd">
+		<description>Goldstadt (1984)(Aqua Soft)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28477">
+				<rom name="Goldstadt (1984)(Aqua Soft)(De).tap" size="28477" crc="fc368e7e" sha1="4b7b3bd6af7bd1f11586b00a344f8c6f2d503d85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs967f34c39b3f8">
+		<description>Golf (1983)(Clive Roberts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27964">
+				<rom name="Golf (1983)(Clive Roberts).tap" size="27964" crc="f05b395c" sha1="967f34c39b3f802ba03817722728713375421948"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6cbabc8c225e4">
+		<description>Golf (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39000">
+				<rom name="Golf (19xx)(-).tap" size="39000" crc="d5d158a8" sha1="6cbabc8c225e4d8e5f5f80e81f0d8ecec16fe119"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs398c277729949">
+		<description>Golf Dash 48K (2024)(Bob Fossil &amp; Equinox)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11708">
+				<rom name="Golf Dash 48K (2024)(Bob Fossil &amp; Equinox).tap" size="11708" crc="68c2048a" sha1="398c27772994995692d3f8c753b92179410e05be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53902,6 +54352,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb8e0134db8059">
+		<description>_Cave Flyer (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26663">
+				<rom name="_Cave Flyer (19xx)(-)(De).tap" size="26663" crc="1989b2e4" sha1="b8e0134db80590843fe41270795ce8701f15da5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs86ed0a8ad7302">
+		<description>_Caveman (1983)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7661">
+				<rom name="_Caveman (1983)(CRL Group).tap" size="7661" crc="84d08993" sha1="86ed0a8ad7302fd7b2233c09c4473277fb7f9243"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc3b7e3cc041d">
+		<description>_Cavern Chaos (1985)(5D Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="62384">
+				<rom name="_Cavern Chaos (1985)(5D Software).tap" size="62384" crc="04def9cb" sha1="cc3b7e3cc041daa119180609154c7b5e9a795ccd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse4a95a142ea22">
+		<description>_Cavern Fighter (1983)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8553">
+				<rom name="_Cavern Fighter (1983)(Bug-Byte Software).tap" size="8553" crc="6b46a685" sha1="e4a95a142ea220527cd051cbcde813492bf451e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31259377a12a1">
+		<description>_Caveted Against the Darkness 48K (2022)(Stonechat Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47774">
+				<rom name="_Caveted Against the Darkness 48K (2022)(Stonechat Productions).tap" size="47774" crc="1fde01af" sha1="31259377a12a166138668b306d1dd6b9d23f5f33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1a7b4d104b84a">
+		<description>_Cazafantasmas - Ghostbusters (19xx)(Stars)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40318">
+				<rom name="_Cazafantasmas - Ghostbusters (19xx)(Stars)(Sp).tap" size="40318" crc="7cf8c51a" sha1="1a7b4d104b84a3c729fe0593b223f2470ddc5b97"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9b35850e252f5">
 		<description>_Cerius II - Interalia</description>
 		<year>????</year>
@@ -54089,6 +54599,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49408">
 				<rom name="_Gift From The Gods.tzx" size="49408" crc="f127a2e6" sha1="d599ffe9e771623e584aaa38c9162b2e3ac313a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs89b730a7b1170">
+		<description>_Gnasher (1983)(R &amp; R Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16731">
+				<rom name="_Gnasher (1983)(R &amp; R Software).tap" size="16731" crc="5e5d6957" sha1="89b730a7b1170da24b876f5ef7d0f87bdff19757"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8ca3f85b4500f">
+		<description>_Gnasher (1983)(R &amp; R Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8524">
+				<rom name="_Gnasher (1983)(R &amp; R Software)[a].tap" size="8524" crc="214b654c" sha1="8ca3f85b4500f17ef486f5d66529424426431d52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs725f31e8afb3b">
+		<description>_Go To Hell (1985)(Triple Six)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47265">
+				<rom name="_Go To Hell (1985)(Triple Six).tap" size="47265" crc="ae9a8be9" sha1="725f31e8afb3ba206826fbd99a6affe396e611f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5b941d8b60287">
+		<description>_Gobble A Ghost (1982)(CDS Microsystems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15360">
+				<rom name="_Gobble A Ghost (1982)(CDS Microsystems).tap" size="15360" crc="f2c6f035" sha1="5b941d8b602872daa1d1eb93722eb5e266880dbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf86ed9f6fd3ca">
+		<description>_Golden Hawk (1984)(Micro Mart Publications)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49228">
+				<rom name="_Golden Hawk (1984)(Micro Mart Publications).tap" size="49228" crc="2fc1cf7f" sha1="f86ed9f6fd3ca304be274adb5bb5cd1a3a768ed4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3af1e6b79eddc">
+		<description>_Goldstadt (1984)(Sun Soft)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36026">
+				<rom name="_Goldstadt (1984)(Sun Soft)(De).tap" size="36026" crc="edc777fe" sha1="3af1e6b79eddc57113d739bde4285d3e5ad7c141"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35dac522865de">
+		<description>_Golf (1983)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7746">
+				<rom name="_Golf (1983)(DK'Tronics).tap" size="7746" crc="47d01a8e" sha1="35dac522865dede54527349c717ca5b01bee9b75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf80fb56b1daf">
+		<description>_Golf (1983)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27778">
+				<rom name="_Golf (1983)(Virgin Games).tap" size="27778" crc="c814d031" sha1="bf80fb56b1daff0cdf18e17d721b7f3b82bb7f86"/>
 			</dataarea>
 		</part>
 	</software>
