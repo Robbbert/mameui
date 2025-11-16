@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6159 -->
+<!-- Number of items in this list = 6201 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -13402,6 +13402,116 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsac989ae86f539">
+		<description>Ceasefire (1991)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45568">
+				<rom name="Ceasefire (1991)(Sinclair User).tap" size="45568" crc="eaf2134d" sha1="ac989ae86f53955594188217d46d893a0cfa318b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe40c1efc3e1e">
+		<description>Ceasefire (1991)(Sinclair User)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45168">
+				<rom name="Ceasefire (1991)(Sinclair User)[a].tap" size="45168" crc="103e3698" sha1="fe40c1efc3e1e8658611bb577753d46e24be5b49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa00de4f387595">
+		<description>Centipede (1982)(DK'Tronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13183">
+				<rom name="Centipede (1982)(DK'Tronics).tap" size="13183" crc="fdd1fe00" sha1="a00de4f3875958ebb8c870a3585de77e33d492db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs42f4fc44794f3">
+		<description>Centipede (1982)(DK'Tronics)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6303">
+				<rom name="Centipede (1982)(DK'Tronics)[a2].tap" size="6303" crc="8e6edb2f" sha1="42f4fc44794f347fb0d53b1e0f0b5772f5d4d90f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd335edfb384bf">
+		<description>Centipede (1982)(DK'Tronics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6656">
+				<rom name="Centipede (1982)(DK'Tronics)[a].tap" size="6656" crc="ef818685" sha1="d335edfb384bffd4b2b0651258eb62bc080c29cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc2e0e670cee52">
+		<description>Centropods (1983)(Rabbit Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10862">
+				<rom name="Centropods (1983)(Rabbit Software Ltd).tap" size="10862" crc="7741ca7a" sha1="c2e0e670cee52996eff73a3d595be4b47be2e311"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsba24e0dffc541">
+		<description>Centurions (1987)(Reactor)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39738">
+				<rom name="Centurions (1987)(Reactor)(128k).tap" size="39738" crc="75759d36" sha1="ba24e0dffc541135d55eb528b4585d0732261e49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5940270ff6e1">
+		<description>Cerius (1988)(Atlantis Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Cerius (1988)(Atlantis Software)[a].tap" size="56277" crc="b5a41733" sha1="b5940270ff6e151c83c1549a4c08107c59dbacd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsce5f2443a6507">
+		<description>Cerius II - Interalia (1988)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43614">
+				<rom name="Cerius II - Interalia (1988)(Atlantis Software).tap" size="43614" crc="81fcc941" sha1="ce5f2443a6507a027c36ad731d784acbdae5b467"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a3111016bef1">
+		<description>Cesare The Somnambule 128K (2024)(Team Moritz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="123918">
+				<rom name="Cesare The Somnambule 128K (2024)(Team Moritz).tap" size="123918" crc="b4c3289e" sha1="9a3111016bef19101676107c8ee294fdadb5e0e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7051a25aa9d84">
+		<description>Cesta Bojovnika (1989)(Ultrasoft)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55609">
+				<rom name="Cesta Bojovnika (1989)(Ultrasoft)(Ru).tap" size="55609" crc="3faf6902" sha1="7051a25aa9d8453ca8c002b4bc0d9f053a90a09c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs24be58cf1672f">
 		<description>Chicago's 30</description>
 		<year>????</year>
@@ -14262,6 +14372,196 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs1dfcea686ce3d">
+		<description>Giant's Revenge (1984)(Thor Computer Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48856">
+				<rom name="Giant's Revenge (1984)(Thor Computer Software).tap" size="48856" crc="8974bdcb" sha1="1dfcea686ce3d10465f466d83a5e48683d695784"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs462f1ee862304">
+		<description>Gift From The Gods (1984)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49465">
+				<rom name="Gift From The Gods (1984)(Ocean Software Ltd).tap" size="49465" crc="4f0b3c32" sha1="462f1ee8623045d64d8728d0a9156a6b7015ea4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsce97f16b441dd">
+		<description>Gift From The Gods (1984)(Ocean Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48044">
+				<rom name="Gift From The Gods (1984)(Ocean Software Ltd)[a].tap" size="48044" crc="0ee0c2aa" sha1="ce97f16b441dd5d12b9e86b748d915c98f355efb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff571015a8321">
+		<description>Gift from the Gods (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48083">
+				<rom name="Gift from the Gods (1984)(Ocean).tap" size="48083" crc="b6b38137" sha1="ff571015a8321ae6af216db73c5c7caf9cd77da4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs217f916b1abf2">
+		<description>Gilbert Escape From Drill (1989)(Again Again)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52455">
+				<rom name="Gilbert Escape From Drill (1989)(Again Again).tap" size="52455" crc="5b528a33" sha1="217f916b1abf2cccc2a2c3319214bac4e1a168a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b41d7f6e1a33">
+		<description>Gilbert Escape From Drill (1989)(Again Again)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="69020">
+				<rom name="Gilbert Escape From Drill (1989)(Again Again)[a].tap" size="69020" crc="a7022003" sha1="3b41d7f6e1a338387d97bf7080e9e2677df58654"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc434b3b1f5f94">
+		<description>Giliszta (1993)(Egmont Koblinger - Albert Koblinger)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10493">
+				<rom name="Giliszta (1993)(Egmont Koblinger - Albert Koblinger)(Cz).tap" size="10493" crc="aef17fff" sha1="c434b3b1f5f94a5a59d849d8c586801f3b8e12c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs043ac63064ad9">
+		<description>Gilligan's Gold (1984)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43449">
+				<rom name="Gilligan's Gold (1984)(Ocean Software Ltd).tap" size="43449" crc="621e2626" sha1="043ac63064ad90582d230624e53f411570ec85b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5e83f2059a113">
+		<description>Gilligan's Gold (1984)(Ocean Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45750">
+				<rom name="Gilligan's Gold (1984)(Ocean Software Ltd)[a].tap" size="45750" crc="8623c1a1" sha1="5e83f2059a113520c1153dc8033c778c071192de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscf7f70a3f0b03">
+		<description>Gilligans Mine - beta v1.04.1 128K (2024)(Clebin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63187">
+				<rom name="Gilligans Mine - beta v1.04.1 128K (2024)(Clebin Games).tap" size="63187" crc="ddf095c9" sha1="cf7f70a3f0b039466e3143a607097799c75d5502"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa71bcf0424f72">
+		<description>Gilligans Mine v1.0.1 128K (2025)(Clebin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="75843">
+				<rom name="Gilligans Mine v1.0.1 128K (2025)(Clebin Games).tap" size="75843" crc="3438ff18" sha1="a71bcf0424f72c4968777d631cfd000ef9ca0fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf00356e914e3d">
+		<description>Give My Regards To Broad Street (1985)(Argus Press Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Give My Regards To Broad Street (1985)(Argus Press Software Ltd).tap" size="49343" crc="2e9abc95" sha1="f00356e914e3dbfd0e12505638b75a4db32a2fe2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e79e3ec1f72e">
+		<description>Give My Regards To Broad Street (1985)(Argus Press Software Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49786">
+				<rom name="Give My Regards To Broad Street (1985)(Argus Press Software Ltd)[a2].tap" size="49786" crc="dca811b9" sha1="3e79e3ec1f72e30877e96b25094a6e385565b648"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs067a9948139a2">
+		<description>Give My Regards To Broad Street (1985)(Argus Press Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48052">
+				<rom name="Give My Regards To Broad Street (1985)(Argus Press Software Ltd)[a].tap" size="48052" crc="e7091c3b" sha1="067a9948139a2999c729d0a00b864692c92cfb06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f1f488005004">
+		<description>Gladiator (1986)(Domark Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48364">
+				<rom name="Gladiator (1986)(Domark Ltd)[a].tap" size="48364" crc="e7937919" sha1="1f1f48800500446517be18cb966da9eba36eef99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf3a72cffbb627">
+		<description>Gladiator (1986)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45249">
+				<rom name="Gladiator (1986)(Domark).tap" size="45249" crc="902ff9d8" sha1="f3a72cffbb6272419fc4ba470e9f41a7ff5025fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b44108b21bcd">
+		<description>Gladiator 128K (1986)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="70662">
+				<rom name="Gladiator 128K (1986)(Domark).tap" size="70662" crc="ca8e9327" sha1="6b44108b21bcdd8769cec6b4ebfcfc3d778affcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs167dc9673f23b">
+		<description>Glass 48K (1985)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44801">
+				<rom name="Glass 48K (1985)(Quicksilva).tap" size="44801" crc="c6e19b1c" sha1="167dc9673f23b42c418fdcb6b28fe2fd33660233"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9aaa5759f225b">
+		<description>Glass Design (1983)(Scisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7601">
+				<rom name="Glass Design (1983)(Scisoft).tap" size="7601" crc="87f9e4e1" sha1="9aaa5759f225b87a377c29b2c5697891bff709fb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8f2487f7f50bf">
 		<description>Glass</description>
 		<year>????</year>
@@ -14269,6 +14569,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="45354">
 				<rom name="Glass.tzx" size="45354" crc="a76fa543" sha1="8f2487f7f50bfa2ee82407ff6b8f207f0d45a9d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb3672403a033d">
+		<description>Glider Rider (1987)(Quicksilva Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53326">
+				<rom name="Glider Rider (1987)(Quicksilva Ltd)[cr [Cr][Cr].tap" size="53326" crc="3f817103" sha1="b3672403a033d80d2c190e8aebee3b6ed46d523e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd44c0e75dd32a">
+		<description>Glider Rider (1987)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65105">
+				<rom name="Glider Rider (1987)(Quicksilva).tap" size="65105" crc="2789b5bb" sha1="d44c0e75dd32a887b0b40ea69f7ab01a09ab112f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb9f6b2a7a24bf">
+		<description>Globe, The (19xx)(John Wilson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Globe, The (19xx)(John Wilson).tap" size="49343" crc="30c83ad0" sha1="b9f6b2a7a24bf958c0185d0ecef4672b99bca559"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs59395f6f7933a">
+		<description>Globeplotter (1986)(VNU Buisness Publications)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="78489">
+				<rom name="Globeplotter (1986)(VNU Buisness Publications).tap" size="78489" crc="b582342b" sha1="59395f6f7933a3ef82596855942c426fa83295fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66201400ce407">
+		<description>Globus 48K (2017)(Sanchis, Paco Lafuente)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48419">
+				<rom name="Globus 48K (2017)(Sanchis, Paco Lafuente).tap" size="48419" crc="b9eed88e" sha1="66201400ce407cb19e814a4b317b8710d68809cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54412,6 +54762,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsea8559c25103b">
+		<description>_Centipedes (1983)(EMM Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13319">
+				<rom name="_Centipedes (1983)(EMM Software).tap" size="13319" crc="65abd311" sha1="ea8559c25103bc78149e07d4a130b0259f4364f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c775bc2220ca">
+		<description>_Cerius (1988)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48466">
+				<rom name="_Cerius (1988)(Atlantis Software).tap" size="48466" crc="a2e5da6c" sha1="3c775bc2220cade6423288e70e3568f5f9191a44"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9b35850e252f5">
 		<description>_Cerius II - Interalia</description>
 		<year>????</year>
@@ -54599,6 +54969,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49408">
 				<rom name="_Gift From The Gods.tzx" size="49408" crc="f127a2e6" sha1="d599ffe9e771623e584aaa38c9162b2e3ac313a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf60d44ef96b2">
+		<description>_Gilligan's Gold 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48534">
+				<rom name="_Gilligan's Gold 48K (1984)(Ocean).tzx" size="48534" crc="84e1bd75" sha1="af60d44ef96b28479fa9ec5d16249a83bebad99c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs068e1e86f83b0">
+		<description>_Gitternetz-Diagramm (1986)(Claus Jahn)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1362">
+				<rom name="_Gitternetz-Diagramm (1986)(Claus Jahn)(De).tap" size="1362" crc="d348ce4f" sha1="068e1e86f83b0397620c45c091764b415903e3c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf3c4440bad741">
+		<description>_Glass (1985)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43185">
+				<rom name="_Glass (1985)(Quicksilva).tap" size="43185" crc="b5fc4b81" sha1="f3c4440bad74129b4f0a07c8a7186950f3375828"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb88791f75a5ef">
+		<description>_Glug Glug (1984)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11652">
+				<rom name="_Glug Glug (1984)(CRL Group).tap" size="11652" crc="65d0b134" sha1="b88791f75a5efe346627ad70c67222f934566d4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf3c62e544e6ff">
+		<description>_Glug Glug (1984)(CRL Group)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18843">
+				<rom name="_Glug Glug (1984)(CRL Group)[a].tap" size="18843" crc="0a096413" sha1="f3c62e544e6ff64aa83c2afe2dd638ef763c9123"/>
 			</dataarea>
 		</part>
 	</software>

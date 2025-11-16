@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 550 -->
+<!-- Number of items in this list = 553 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -349,6 +349,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="ALF (F) [translation kr151].sms" size="131072" crc="8faa486c" sha1="25a9c50d842c519a9fc563e31e8ae6cb99ae4e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3b97e63fd8054">
+		<description>Alien Cat 2 (2025)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="327680">
+				<rom name="Alien Cat 2 (2025)(PSCD Games).sms" size="327680" crc="188ec6fa" sha1="3b97e63fd80549ce094443a9b7301cfacc937914"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms4e7625fd0f050">
+		<description>Alien Cat 2 (2025)(PSCD Games)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="344064">
+				<rom name="Alien Cat 2 (2025)(PSCD Games)_1.sms" size="344064" crc="7acff9b3" sha1="4e7625fd0f050bae2ebdb7e21db18c14f213324f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3339,6 +3359,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Pac-Man Master Museum v2.20 (2025)(Lack of Track).sms" size="131072" crc="9725b67f" sha1="2e09d89dd8a9cf37537a3ca8ad752c8a9bcf5daa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms709d713a83b22">
+		<description>Pac-Man Master Museum v3.10 (2025)(Lack of Track)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Pac-Man Master Museum v3.10 (2025)(Lack of Track).sms" size="262144" crc="75419b59" sha1="709d713a83b229d0ef9ef25ccdcff487fd4ec057"/>
 			</dataarea>
 		</part>
 	</software>
