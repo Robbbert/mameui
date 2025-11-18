@@ -2222,6 +2222,7 @@ orbit
 
 @source:atari/pofo.cpp
 pofo
+pofo2
 
 @source:atari/pong.cpp
 breakout
@@ -20704,6 +20705,8 @@ fl7_500
 fl7_2000
 fl7_2k16
 fl7_tw
+fl7_twa
+fl7_twb
 goldfrui
 goldstar
 goldstbl
@@ -20843,6 +20846,9 @@ skillcha
 skillchb
 skillmst
 skillmsta
+special7
+special7a
+special7b
 srmagic
 star100
 super7
@@ -40560,6 +40566,9 @@ waidrive
 xtrmhnt2
 xtrmhunt
 
+@source:sega/dcchk.cpp
+dcacchk
+
 @source:sega/dccons.cpp
 dc
 dcdev
@@ -47966,7 +47975,7 @@ raiders5ta
 @source:upl/xxmissio.cpp
 xxmissio
 
-@source:usp/patinho_feio.cpp
+@source:usp/patinhofeio.cpp
 patinho
 
 @source:ussr/apogee.cpp

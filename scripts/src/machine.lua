@@ -3387,17 +3387,6 @@ if (MACHINES["SEGA_MD_IOPORT"]~=null) then
 	}
 end
 
----------------------------------------------------
---
---@src/devices/machine/sega_scu.h,MACHINES["SEGA_SCU"] = true
----------------------------------------------------
-
-if (MACHINES["SEGA_SCU"]~=null) then
-	files {
-		MAME_DIR .. "src/devices/machine/sega_scu.cpp",
-		MAME_DIR .. "src/devices/machine/sega_scu.h",
-	}
-end
 
 ---------------------------------------------------
 --
@@ -3423,17 +3412,6 @@ if (MACHINES["SMC91C9X"]~=null) then
 	}
 end
 
----------------------------------------------------
---
---@src/devices/machine/smpc.h,MACHINES["SMPC"] = true
----------------------------------------------------
-
-if (MACHINES["SMPC"]~=null) then
-	files {
-		MAME_DIR .. "src/devices/machine/smpc.cpp",
-		MAME_DIR .. "src/devices/machine/smpc.h",
-	}
-end
 
 ---------------------------------------------------
 --
