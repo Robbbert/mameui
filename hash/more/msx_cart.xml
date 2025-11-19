@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 691 -->
+<!-- Number of items in this list = 692 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -4919,6 +4919,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Safari-X (1985)(Policy).rom" size="16384" crc="0d940900" sha1="68b5fdca0ba6a80c0a1beb091c6689e29ce8a5c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx6cc679b6fd2f0">
+		<description>Salamander - Konami (1987) [Nemesis2 in slot 2 partch] [RC-758] [5412]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="278528">
+				<rom name="Salamander - Konami (1987) [Nemesis2 in slot 2 partch] [RC-758] [5412].rom" size="278528" crc="787a4408" sha1="6cc679b6fd2f091e05b1f23d72baf0ad2a9155c8"/>
 			</dataarea>
 		</part>
 	</software>

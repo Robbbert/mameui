@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6201 -->
+<!-- Number of items in this list = 6227 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -379,6 +379,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="51281">
 				<rom name="-Cauldron II (1986)(Erbe Software)(Sp).tap" size="51281" crc="b7c2739a" sha1="bab99552d9bfeab94a596bbd024c289b8133ac07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4503493d0d784">
+		<description>-Chain Reaction (1987)(Durell Software Ltd)[t +4](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30977">
+				<rom name="-Chain Reaction (1987)(Durell Software Ltd)[t +4](128K).tap" size="30977" crc="5b9b95f3" sha1="4503493d0d784e0a0736fb529974ab0c3287c90a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13512,6 +13522,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd5e420dd07539">
+		<description>Chain Reaction (1987)(Durell Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51941">
+				<rom name="Chain Reaction (1987)(Durell Software Ltd).tap" size="51941" crc="e49c6d57" sha1="d5e420dd07539554dc9ebee2c54d7f9a1748fd05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1016be786784b">
+		<description>Chain Reaction (1987)(Durell)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51862">
+				<rom name="Chain Reaction (1987)(Durell)(128k).tap" size="51862" crc="42c4cd17" sha1="1016be786784be45cfaf923f25cb71038073d7b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e3259cf2dd89">
+		<description>Chain Reaction 48K (1987)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52005">
+				<rom name="Chain Reaction 48K (1987)(Durell).tzx" size="52005" crc="bcbdd521" sha1="9e3259cf2dd89780ad99c0119d433681e2138c6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa4c3872d5dd1d">
+		<description>Challenge Of The Gobots (1987)(Ariolasoft UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25861">
+				<rom name="Challenge Of The Gobots (1987)(Ariolasoft UK).tap" size="25861" crc="ebe97d30" sha1="a4c3872d5dd1d70b91b3f65d62576f2dff8ec856"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1164529143d1d">
+		<description>Chambers Of Horrors (1984)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45027">
+				<rom name="Chambers Of Horrors (1984)(CRL Group).tap" size="45027" crc="46dd0e3b" sha1="1164529143d1dbb77a5608cb33a9619012f3df16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96de793bbf34e">
+		<description>Champ, The (1991)(Linel Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="69453">
+				<rom name="Champ, The (1991)(Linel Software).tap" size="69453" crc="70ca6cc8" sha1="96de793bbf34e57493100fea948f8c2dba5c6658"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs24be58cf1672f">
 		<description>Chicago's 30</description>
 		<year>????</year>
@@ -14332,6 +14402,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2ad38f23366e1">
+		<description>GFL Championship Football (1987)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48030">
+				<rom name="GFL Championship Football (1987)(Activision).tap" size="48030" crc="5248af3b" sha1="2ad38f23366e1e67530456b61f58bd8b61200bce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs964bd93cc2d83">
+		<description>GGunners_TBKtape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40763">
+				<rom name="GGunners_TBKtape.tap" size="40763" crc="18748d4f" sha1="964bd93cc2d838f1c6c5b9847d2c3578a543c073"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd614e5efdc6c4">
+		<description>Gherbert Groundhog in Save the Date (2022)(PuttyCAD &amp; Psychic Parrot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45411">
+				<rom name="Gherbert Groundhog in Save the Date (2022)(PuttyCAD &amp; Psychic Parrot).tap" size="45411" crc="13f11e02" sha1="d614e5efdc6c4c254022b84d584f7be07fa03deb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse90aef610177f">
+		<description>Ghost Castle 2 - Special Edition 48K (2011)(Cronosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37978">
+				<rom name="Ghost Castle 2 - Special Edition 48K (2011)(Cronosoft).tap" size="37978" crc="6437856c" sha1="e90aef610177f50ae247c6624a8dbeb74272a178"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs63e7089507262">
+		<description>Ghost Hunt (1983)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5475">
+				<rom name="Ghost Hunt (1983)(PSS).tap" size="5475" crc="feec4713" sha1="63e70895072628796f6d693830943e04ced43ded"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsdfd874ed00103">
 		<description>Ghost Hunters</description>
 		<year>????</year>
@@ -14342,6 +14462,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs738b377620c7d">
+		<description>Ghost Town (1983)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43984">
+				<rom name="Ghost Town (1983)(Virgin Games).tap" size="43984" crc="4166d386" sha1="738b377620c7da0e8a6b4a4357297186d57e3f81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1763a623beb5d">
+		<description>Ghost's Revenge (1983)(Micromania)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15558">
+				<rom name="Ghost's Revenge (1983)(Micromania).tap" size="15558" crc="4eb8d249" sha1="1763a623beb5d43bbbe4977a8d05600bac0af59d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e014da6c2095">
+		<description>Ghostbusters 128K (1984)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="69552">
+				<rom name="Ghostbusters 128K (1984)(Activision).tap" size="69552" crc="c4c790a1" sha1="0e014da6c2095c4fda0a638ec1601d33cadc591e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs34f905e46a5f3">
+		<description>Ghostbusters 48K (1984)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39790">
+				<rom name="Ghostbusters 48K (1984)(Activision).tap" size="39790" crc="25deb7c0" sha1="34f905e46a5f3ec7ff84586fd4df1532c033bf27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde0fc5a3dc9bc">
+		<description>Ghostbusters II (1989)(Activision)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="174896">
+				<rom name="Ghostbusters II (1989)(Activision)[t].tap" size="174896" crc="1594430c" sha1="de0fc5a3dc9bc60f80de41b73f6622a2771ddd23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9b39094d8d272">
+		<description>GhoSte's Grunge 128K (2022)(Buck)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38696">
+				<rom name="GhoSte's Grunge 128K (2022)(Buck).tap" size="38696" crc="95860a70" sha1="9b39094d8d272daf0409ca2f15d36bae8ecb38cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17ca270578080">
+		<description>GhoSte's Grunge 48K (2022)(Buck)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26725">
+				<rom name="GhoSte's Grunge 48K (2022)(Buck).tzx" size="26725" crc="9442c96e" sha1="17ca27057808023177e1f864b0f08828272ea261"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff03ccb967839">
+		<description>Ghostly Capers 128K (2023)(Chopz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47437">
+				<rom name="Ghostly Capers 128K (2023)(Chopz).tap" size="47437" crc="60003b1e" sha1="ff03ccb967839dfca0b73789ddc18ff6d3130cdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs939afd7b589cd">
+		<description>Ghostly Grange (1988)(Creative Sparks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="Ghostly Grange (1988)(Creative Sparks).tap" size="42714" crc="f9d75186" sha1="939afd7b589cdf41d129372a7eef5d40a3443920"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c33e4537baef">
+		<description>Ghostly Grange (1988)(Creative Sparks)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40097">
+				<rom name="Ghostly Grange (1988)(Creative Sparks)[a].tap" size="40097" crc="31449893" sha1="3c33e4537baef408f4a0f0e702c98396cfe7cc00"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa29e621621bca">
 		<description>Ghosts 'n' Goblins</description>
 		<year>????</year>
@@ -14349,6 +14569,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49599">
 				<rom name="Ghosts 'n' Goblins.tzx" size="49599" crc="603fb50b" sha1="a29e621621bca85b64ee5de5ba794704e5c1f87d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3f604cfb2ef83">
+		<description>Ghouls 'n' Ghosts (1989)(Gremlin Graphics)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="103808">
+				<rom name="Ghouls 'n' Ghosts (1989)(Gremlin Graphics)(128k).tap" size="103808" crc="ea5b7709" sha1="3f604cfb2ef83ce808985ab3445176be5fd455d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsad96a6b9c812f">
+		<description>Ghouls 'n' Ghosts (1989)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122048">
+				<rom name="Ghouls 'n' Ghosts (1989)(Gremlin Graphics).tap" size="122048" crc="2c30f4e5" sha1="ad96a6b9c812f62f858026b8890e3725096274d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54959,6 +55199,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37279">
 				<rom name="_Fuxoft Soundtrack 4.tzx" size="37279" crc="15f78f5d" sha1="1437d91dd2859a5c89d2a8240719f3fabae7d352"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs039a771b212ed">
+		<description>_Ghost Hunters 48K (1987)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48896">
+				<rom name="_Ghost Hunters 48K (1987)(Codemasters).tap" size="48896" crc="dfa7ffcb" sha1="039a771b212edaa96e899984b1b487510cfd993c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs133cbfebe5f98">
+		<description>_Ghostbusters (1984)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39396">
+				<rom name="_Ghostbusters (1984)(Activision).tap" size="39396" crc="68404b1e" sha1="133cbfebe5f98e85e175143ccb024f3d41c8485c"/>
 			</dataarea>
 		</part>
 	</software>

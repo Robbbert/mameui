@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2033 -->
+<!-- Number of items in this list = 2036 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3602,6 +3602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbccefcfec3ab4">
+		<description>Annexed Territory (2025)(Tym01)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Annexed Territory (2025)(Tym01).bin" size="1048576" crc="890bde10" sha1="bccefcfec3ab45a0d01cc286e1382b63fdaa236b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genc8b399a3a4c4a">
 		<description>aoki ookami to shiroki meshika - genchou hishi (T-Chi)</description>
 		<year>????</year>
@@ -5939,6 +5949,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="DRAGONBALLTRIFORCE final version.bin" size="3145728" crc="aab25415" sha1="415e8613b40954d9c941394e615ca752ee473489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena5e7bdba24652">
+		<description>Dreamcast Arcade Stick Checker_1998_08</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Dreamcast Arcade Stick Checker_1998_08.bin" size="524288" crc="989d4ded" sha1="a5e7bdba2465241a21010d1fd8ab5deb4e10d8b2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11422,6 +11442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genc71dd63a71091">
+		<description>Miner Mole (2025)(Geri)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3801088">
+				<rom name="Miner Mole (2025)(Geri).bin" size="3801088" crc="d5db4972" sha1="c71dd63a7109158396f64a7ed083889dde015b6b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen7058b3f39e2ff">
 		<description>Miniplanets</description>
 		<year>????</year>
@@ -13913,12 +13943,12 @@
 		</part>
 	</software>
 	<software name="gen1c9e6cbe6a3b1">
-		<description>San Guo Yan Yi - Huo Shao Chi Bi</description>
+		<description>San Guo Yan Yi - Huo Shao Chi Bi (China)(Unl)(199x)(Li Cheng)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="San Guo Yan Yi - Huo Shao Chi Bi.md" size="2097152" crc="3a71e961" sha1="1c9e6cbe6a3b1a8eb9d558d441c94a88ec729617"/>
+				<rom name="San Guo Yan Yi - Huo Shao Chi Bi (China)(Unl)(199x)(Li Cheng).bin" size="2097152" crc="3a71e961" sha1="1c9e6cbe6a3b1a8eb9d558d441c94a88ec729617"/>
 			</dataarea>
 		</part>
 	</software>
