@@ -31,12 +31,15 @@ protected:
 
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_post_load() override ATTR_COLD;
-	virtual uint32_t palette_entries() const noexcept override { return 32; }
+	virtual uint32_t palette_entries() const noexcept override { return 16; }
+	virtual uint32_t palette_indirect_entries() const noexcept override { return 32; }
 	virtual space_config_vector memory_space_config() const override ATTR_COLD;
 
-	uint8_t palette_r(uint8_t index) const { return m_palette_reg[!BIT(m_vga_addr, 4) ? (index & m_palette_mask) : (m_vga_addr & 0x0f)]; }
+	pen_t palette_r(uint8_t index) const { return pen(!BIT(m_vga_addr, 4) ? (index & m_palette_mask) : (m_vga_addr & 0x0f)); }
 	uint8_t chr_gen_r(uint8_t chr, uint8_t ra) const { return m_chr_gen[(uint32_t(chr) << m_chr_stride) | (uint32_t(ra) << m_ra_stride)]; }
 	uint32_t row_base(uint8_t ra) const { return (m_display_base & m_base_mask) | ((uint32_t(ra) << m_ra_shift) & m_ra_mask); }
+
+	void set_palette_base(uint8_t base);
 
 	int status_r();
 	void lightpen_strobe_w(int data);
@@ -47,7 +50,6 @@ protected:
 	virtual MC6845_UPDATE_ROW( crtc_update_row );
 	MC6845_UPDATE_ROW( text_inten_update_row );
 	MC6845_UPDATE_ROW( gfx_4bpp_update_row );
-	MC6845_UPDATE_ROW( gfx_2bpp_update_row );
 	MC6845_UPDATE_ROW( gfx_2bpp_high_update_row );
 
 	void default_map(address_map &map) ATTR_COLD;
@@ -80,6 +82,8 @@ protected:
 	int m_update_row_type;
 	uint8_t m_display_enable;
 	uint8_t m_vsync;
+
+private:
 	uint8_t m_palette_base;
 };
 
@@ -88,8 +92,6 @@ class pcvideo_t1000_device : public pc_t1t_device, public device_gfx_interface
 {
 public:
 	pcvideo_t1000_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
-
-	using device_palette_interface::palette;
 
 	uint8_t read(address_space &space, offs_t offset);
 	virtual void write(offs_t offset, uint8_t data);
@@ -117,6 +119,16 @@ protected:
 	virtual void device_post_load() override ATTR_COLD;
 
 private:
+	pen_t palette_cga_2bpp_r(uint8_t index) const
+	{
+		if (!index)
+			return palette_r(BIT(m_color_sel, 0, 4));
+		else if (BIT(m_mode_sel, 2) && (2 == index))
+			return palette_r((BIT(m_color_sel, 4) << 3) | (index << 1));
+		else
+			return palette_r((BIT(m_color_sel, 4) << 3) | (index << 1) | BIT(m_color_sel, 5));
+	}
+
 	void mode_switch();
 	void vga_data_w(uint8_t data);
 	void mode_select_w(uint8_t data);
@@ -127,6 +139,7 @@ private:
 
 	virtual MC6845_UPDATE_ROW( crtc_update_row ) override;
 	MC6845_UPDATE_ROW( text_blink_update_row );
+	MC6845_UPDATE_ROW( gfx_2bpp_update_row );
 	MC6845_UPDATE_ROW( gfx_1bpp_update_row );
 
 	uint8_t m_mode_sel;
@@ -212,6 +225,7 @@ private:
 	virtual MC6845_UPDATE_ROW( crtc_update_row ) override;
 	MC6845_UPDATE_ROW( text_blink_update_row );
 	MC6845_UPDATE_ROW( pcjx_text_update_row );
+	MC6845_UPDATE_ROW( gfx_2bpp_update_row );
 	MC6845_UPDATE_ROW( gfx_1bpp_update_row );
 };
 
