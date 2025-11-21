@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 460 -->
+<!-- Number of items in this list = 462 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -1679,6 +1679,26 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="43670">
 				<rom name="Game Over II (1987)(Dinamic Software)(Part 2 of 2)(128k).z80" size="43670" crc="4c2a4520" sha1="d17875cf7b14c8b1842ad6fe59d9f1e7dfcf775b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2443693309072">
+		<description>Gary Lineker's Hot-Shot! 48K (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35338">
+				<rom name="Gary Lineker's Hot-Shot! 48K (1988)(Gremlin Graphics).z80" size="35338" crc="18e1d943" sha1="2443693309072257ce9a05c0ff316c68c451c9ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse7d6420abc3f8">
+		<description>Gary Lineker's Super Skills 128K (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="77423">
+				<rom name="Gary Lineker's Super Skills 128K (1988)(Gremlin Graphics).z80" size="77423" crc="fcb98fd1" sha1="e7d6420abc3f82ce0eabdecaf11f0242444e1312"/>
 			</dataarea>
 		</part>
 	</software>

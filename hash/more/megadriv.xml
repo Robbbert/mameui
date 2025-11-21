@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2036 -->
+<!-- Number of items in this list = 2040 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5272,6 +5272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gene588cc24eea50">
+		<description>Console Tetris (2020)(Retro Game Dev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1966080">
+				<rom name="Console Tetris (2020)(Retro Game Dev).bin" size="1966080" crc="f6da47a4" sha1="e588cc24eea50e914197d53d88a08dd6ff4ffd65"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb33e0e601f213">
 		<description>Contra - Hard Corps (USA, Korea)</description>
 		<year>????</year>
@@ -6459,6 +6469,36 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fight for Vengeance - Tournament Edition (2022)(Genesis Fight Engine).bin" size="4194304" crc="813a61a6" sha1="cbf3b650c541ad7ffea7e27d673071ef8fa4e920"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen32698f2a602f8">
+		<description>Fight Game 3 500 (2022)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Fight Game 3 500 (2022)(Manganga Team).bin" size="4063232" crc="ec16f8e3" sha1="32698f2a602f869b2c26d9a9716a0915a60bc042"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3742a7b686c61">
+		<description>Fight Game II 1000 (2022)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Fight Game II 1000 (2022)(Manganga Team).bin" size="4063232" crc="d754b607" sha1="3742a7b686c6152bcb62c22ea37ffc5efab61dbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen40971fe046365">
+		<description>Fight Game II 3000 (2022)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Fight Game II 3000 (2022)(Manganga Team).bin" size="4194304" crc="769de2f6" sha1="40971fe04636513499034669cbf97da4c78fdd21"/>
 			</dataarea>
 		</part>
 	</software>

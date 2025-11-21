@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6268 -->
+<!-- Number of items in this list = 6307 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -389,6 +389,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="30977">
 				<rom name="-Chain Reaction (1987)(Durell Software Ltd)[t +4](128K).tap" size="30977" crc="5b9b95f3" sha1="4503493d0d784e0a0736fb529974ab0c3287c90a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94ad51366b897">
+		<description>-Chase H.Q. 2 -  Special Criminal Investigation (1990)(Ocean Software Ltd)[cr [Cr Cid][t Cid][Cr Cid]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="93567">
+				<rom name="-Chase H.Q. 2 -  Special Criminal Investigation (1990)(Ocean Software Ltd)[cr [Cr Cid][t Cid][Cr Cid].tap" size="93567" crc="7beaade8" sha1="94ad51366b8973fc116fb9dc083af7f8b1c5e62b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13722,6 +13732,96 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs222d91090ffd9">
+		<description>Chao Trouble 48K (2023)(Bunk3r)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43216">
+				<rom name="Chao Trouble 48K (2023)(Bunk3r).tap" size="43216" crc="499492e9" sha1="222d91090ffd9f083cf51fee9ba5a57b096d14fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d51cd9e66d4a">
+		<description>Chaos - The Battle Of Wizards (1985)(Games Workshop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33728">
+				<rom name="Chaos - The Battle Of Wizards (1985)(Games Workshop).tap" size="33728" crc="335c8915" sha1="6d51cd9e66d4a1b0b6002acc0da16fb3824fc3fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd1075518c844b">
+		<description>Chaos - The Battle Of Wizards (1985)(Games Workshop)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41614">
+				<rom name="Chaos - The Battle Of Wizards (1985)(Games Workshop)_1.tap" size="41614" crc="f4251f08" sha1="d1075518c844bba339c7e089a383f48a78b579de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1516869a73be1">
+		<description>Chaos - The Battle of Wizards 48K (1985)(Games Workshop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41640">
+				<rom name="Chaos - The Battle of Wizards 48K (1985)(Games Workshop).tap" size="41640" crc="a696e01a" sha1="1516869a73be1ac56f134e65dd7b7ede9a08e4be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs547c88392e0b0">
+		<description>Charlie Far's Vimpto Quest! v1.4 48K (2025)(Steve Tyson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24372">
+				<rom name="Charlie Far's Vimpto Quest! v1.4 48K (2025)(Steve Tyson).tap" size="24372" crc="5d2fe12b" sha1="547c88392e0b0f57fcfe1b130c40e3f3d2659a6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5e75a40557606">
+		<description>Chase (19xx)(Stefan Benk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2782">
+				<rom name="Chase (19xx)(Stefan Benk).tap" size="2782" crc="3805a130" sha1="5e75a40557606c2523247dcb68e7ba7ac5552f7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs468079daca2b0">
+		<description>Chase H.Q. (1989)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118340">
+				<rom name="Chase H.Q. (1989)(Ocean).tap" size="118340" crc="236a9884" sha1="468079daca2b0df298805fcb6f5b8333c223c12e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7a75685d84ed4">
+		<description>Chase H.Q. 2 -  Special Criminal Investigation (1990)(Ocean Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122661">
+				<rom name="Chase H.Q. 2 -  Special Criminal Investigation (1990)(Ocean Software Ltd).tap" size="122661" crc="fd47cf79" sha1="7a75685d84ed4d7c4b3dc97b3b570140293ee8a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs22254a84964d0">
+		<description>Chase HQ (1989)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="114544">
+				<rom name="Chase HQ (1989)(Ocean Software).tap" size="114544" crc="d780556b" sha1="22254a84964d0d159a266813853ad40b7641aa2a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs24be58cf1672f">
 		<description>Chicago's 30</description>
 		<year>????</year>
@@ -14529,6 +14629,236 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56190">
 				<rom name="G.I. Hero.tzx" size="56190" crc="171c62f2" sha1="d14fce176f203d4b1b7f2c05731fe04a620c4995"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc0edf92718776">
+		<description>Garfield - Big, Fat, Hairy Deal 48K (1988)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43785">
+				<rom name="Garfield - Big, Fat, Hairy Deal 48K (1988)(The Edge).tap" size="43785" crc="45c3ceb8" sha1="c0edf9271877697e28c1bb239d0e832bf51682e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f563e1c61869">
+		<description>Garfield - Big, Fat, Hairy Deal 48K (1988)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52697">
+				<rom name="Garfield - Big, Fat, Hairy Deal 48K (1988)(The Edge).tzx" size="52697" crc="ec92d5f7" sha1="8f563e1c61869655f35ba0fb6b042c2e1efb5999"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73f782a64f887">
+		<description>Garfield - Winter's Tail (1990)(The Edge)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58470">
+				<rom name="Garfield - Winter's Tail (1990)(The Edge)[a].tap" size="58470" crc="74f9f23e" sha1="73f782a64f8874781482293c459c62573302d7cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdf30ce11d9e89">
+		<description>Garfield 2 (1990)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36313">
+				<rom name="Garfield 2 (1990)(The Edge).tap" size="36313" crc="de41d0a0" sha1="df30ce11d9e89cb8a07424007bb41a5227eea5f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2bcc9a8bd313e">
+		<description>Gargantua Copy v3.0 (1990)(Universum)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4061">
+				<rom name="Gargantua Copy v3.0 (1990)(Universum).tap" size="4061" crc="01d2b4f9" sha1="2bcc9a8bd313e33bc097e62e6a6cf04433094f54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs09b15b9525a23">
+		<description>Gary Lineker's Super Star Soccer 48K (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47904">
+				<rom name="Gary Lineker's Super Star Soccer 48K (1987)(Gremlin Graphics).tap" size="47904" crc="4eda2a1e" sha1="09b15b9525a23b060c107964b39e3d7dbdc0189a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b8379cf24804">
+		<description>Gary Linekers Super Skills (1988)(Gremlin Graphics Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="106634">
+				<rom name="Gary Linekers Super Skills (1988)(Gremlin Graphics Software Ltd).tap" size="106634" crc="a2cdda51" sha1="1b8379cf24804ddbe0ee35e817c2014032b58fd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5b90a2c13e893">
+		<description>Gasman Life v1.0 (19xx)(Matthew Westcott)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5742">
+				<rom name="Gasman Life v1.0 (19xx)(Matthew Westcott).tap" size="5742" crc="ef14cf6a" sha1="5b90a2c13e8936099833315f0d8f2618b7be1909"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4122dc1fc57fc">
+		<description>Gatecrasher (1984)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30466">
+				<rom name="Gatecrasher (1984)(Quicksilva).tap" size="30466" crc="980c9911" sha1="4122dc1fc57fc19ce509a08df39815213c4982c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs793391de8a1d6">
+		<description>Gatecrasher (1984)(Quicksilva)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="Gatecrasher (1984)(Quicksilva)[a].tap" size="42714" crc="67cd4c11" sha1="793391de8a1d667a4072990c98742e4cce9b141a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf93357edcb49b">
+		<description>Gateway To Hell (1987)(Summit Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38448">
+				<rom name="Gateway To Hell (1987)(Summit Software).tap" size="38448" crc="2bd799ee" sha1="f93357edcb49b86690e84ae4ae9d89e2c6e81bc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs37511477254be">
+		<description>Gauntlet (1987)(US Gold)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="150112">
+				<rom name="Gauntlet (1987)(US Gold)[a].tap" size="150112" crc="4618b99e" sha1="37511477254be0c8d6856911879047955e08f628"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse27ae569333a5">
+		<description>Gauntlet - The Deeper Dungeons 48K-128K (1987)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="264944">
+				<rom name="Gauntlet - The Deeper Dungeons 48K-128K (1987)(U.S. Gold).tap" size="264944" crc="d9da0b42" sha1="e27ae569333a5b327c5daff4a9c556fad07c57e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2f3c1b7fa54f4">
+		<description>Gauntlet 2 (1988)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="135163">
+				<rom name="Gauntlet 2 (1988)(US Gold).tap" size="135163" crc="400e869d" sha1="2f3c1b7fa54f464260f59f803573350244265f70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcefbb6d7ae15">
+		<description>Gauntlet 3 - The Final Quest (1991)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="344602">
+				<rom name="Gauntlet 3 - The Final Quest (1991)(US Gold).tap" size="344602" crc="8c5a72ce" sha1="bcefbb6d7ae1541b6997b2ec5d317639ef0710f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs32938faedbede">
+		<description>Gauntlet III - The Final Quest 128K (1991)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="352550">
+				<rom name="Gauntlet III - The Final Quest 128K (1991)(U.S. Gold).tap" size="352550" crc="9dd3f5fc" sha1="32938faedbedeca322e4501279f842ab497aaca3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c0e50e1c80c8">
+		<description>Gauntlet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="150888">
+				<rom name="Gauntlet.tap" size="150888" crc="173177cc" sha1="2c0e50e1c80c83b4f474fc49ff1968612460b4a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc564b972853a4">
+		<description>Gazetteer (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18716">
+				<rom name="Gazetteer (19xx)(-).tap" size="18716" crc="62eb8741" sha1="c564b972853a49c91bab9de844ad8c3b2935d0ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde10844652748">
+		<description>Gazza II (1990)(Empire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18983">
+				<rom name="Gazza II (1990)(Empire Software).tap" size="18983" crc="ceb4f9bf" sha1="de108446527483e2a58bcb93527e6b60449f9fe8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs725edbfb09d39">
+		<description>Gazza II (1990)(Empire Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11366">
+				<rom name="Gazza II (1990)(Empire Software)[a].tap" size="11366" crc="505d8297" sha1="725edbfb09d392e9d0e40c39e4fbcdf21cdfeac2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse34b3eaf60f5c">
+		<description>Gazza II (demo) (1990)(Empire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11466">
+				<rom name="Gazza II (demo) (1990)(Empire Software).tap" size="11466" crc="ad242896" sha1="e34b3eaf60f5c15c2c5723f3b209fc2e73077a90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08fdef5781a91">
+		<description>Gazza's Super Soccer (demo) (1989)(Empire Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40120">
+				<rom name="Gazza's Super Soccer (demo) (1989)(Empire Software).tap" size="40120" crc="03dc050e" sha1="08fdef5781a910966fa9baca88d8d514020bfba0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6570281b8270b">
+		<description>GBA Basketball - Two On Two (1987)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39128">
+				<rom name="GBA Basketball - Two On Two (1987)(Activision).tap" size="39128" crc="a5328d0b" sha1="6570281b8270b647038fc205224f5bdf43c42a71"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54082,6 +54412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2c62af2583d1d">
+		<description>_-Garfield - Winter's Tail (1990)(The Edge)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53499">
+				<rom name="_-Garfield - Winter's Tail (1990)(The Edge)[a2].tap" size="53499" crc="79b0eb65" sha1="2c62af2583d1d567c81564a5d5bb86537091c5d0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs18f3af104f8af">
 		<description>_-Manic Miner (1983)(Bug-Byte Software Ltd)[t]</description>
 		<year>????</year>
@@ -55432,6 +55772,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs211035a3830a7">
+		<description>_Chaos 2 - The Battle In Future (19xx)(Blindmouse)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49407">
+				<rom name="_Chaos 2 - The Battle In Future (19xx)(Blindmouse).tap" size="49407" crc="e3844370" sha1="211035a3830a7d7f1d6cf61877f7a3a028964258"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc8779f758bc3">
+		<description>_Charlie &amp; The Chocolate Factory (1985)(Hill MacGibbon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41070">
+				<rom name="_Charlie &amp; The Chocolate Factory (1985)(Hill MacGibbon).tap" size="41070" crc="cc07d6fd" sha1="cc8779f758bc39be097834a515dd872338a71906"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs627af3d5b723f">
+		<description>_Chart Topper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19165">
+				<rom name="_Chart Topper.TAP" size="19165" crc="f60bde57" sha1="627af3d5b723feec1a3b1b67543d8844d795a02c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscae5d511001a0">
 		<description>_Chickin Chase 48K (1985)(Firebird Software)</description>
 		<year>????</year>
@@ -55599,6 +55969,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37279">
 				<rom name="_Fuxoft Soundtrack 4.tzx" size="37279" crc="15f78f5d" sha1="1437d91dd2859a5c89d2a8240719f3fabae7d352"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6fb66ac89a47a">
+		<description>_Gargantua Copy v2.0 (1988)(Universum)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4231">
+				<rom name="_Gargantua Copy v2.0 (1988)(Universum).tap" size="4231" crc="3354b5c5" sha1="6fb66ac89a47aaf986bcb4842786a92bec32c574"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9b1eacbf0fed5">
+		<description>_Gatecrasher (1984)(Quicksilva)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30720">
+				<rom name="_Gatecrasher (1984)(Quicksilva)[a2].tap" size="30720" crc="08bebb4a" sha1="9b1eacbf0fed5e5d5579a1c39b083b7ab6cfde68"/>
 			</dataarea>
 		</part>
 	</software>
