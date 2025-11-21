@@ -530,12 +530,8 @@ MC6845_UPDATE_ROW( pc_t1t_device::gfx_4bpp_update_row )
 		uint16_t const data = space(0).read_word(rowbase | offset);
 
 		*p++ = palette_r(BIT(data,  4, 4));
-		*p++ = palette_r(BIT(data,  4, 4));
-		*p++ = palette_r(BIT(data,  0, 4));
 		*p++ = palette_r(BIT(data,  0, 4));
 		*p++ = palette_r(BIT(data, 12, 4));
-		*p++ = palette_r(BIT(data, 12, 4));
-		*p++ = palette_r(BIT(data,  8, 4));
 		*p++ = palette_r(BIT(data,  8, 4));
 	}
 }
@@ -543,9 +539,8 @@ MC6845_UPDATE_ROW( pc_t1t_device::gfx_4bpp_update_row )
 
 MC6845_UPDATE_ROW( pcvideo_t1000_device::gfx_2bpp_update_row )
 {
-	// Unlike the PCjr, the Tandy 1000 seems to ignore the VRAM addressing
-	// configuration in this mode - the BIOS sets ARDM0 and ADRM1 to zero for
-	// CGA-compatible modes, but one bit of RA must be used for VRAM addressing.
+	// Unlike the PCjr, the Tandy 1000 ignores the VRAM addressing configuration
+	// in this mode.
 	uint32_t *p = &bitmap.pix(y);
 	uint32_t const rowbase = m_display_base | ((uint32_t(ra) << 13) & 0x02000);
 
@@ -611,14 +606,16 @@ MC6845_UPDATE_ROW( pc_t1t_device::gfx_2bpp_high_update_row )
 
 MC6845_UPDATE_ROW( pcvideo_t1000_device::gfx_1bpp_update_row )
 {
+	// Unlike the PCjr, the Tandy 1000 ignores the VRAM addressing configuration
+	// in this mode.
 	uint32_t *p = &bitmap.pix(y);
-	uint32_t const rowbase = row_base(ra);
+	uint32_t const rowbase = m_display_base | ((uint32_t(ra) << 13) & 0x02000);
 	auto const fg = palette_r(BIT(m_color_sel, 0, 4));
 	auto const bg = palette_r(0);
 
 	for (int i = 0; i < x_count; i++)
 	{
-		uint16_t const offset = ((ma + i) << 1) & m_offset_mask;
+		uint16_t const offset = ((ma + i) << 1) & 0x01fff;
 		uint16_t const data = space(0).read_word(rowbase | offset);
 
 		*p++ = BIT(data,  7) ? fg : bg;
@@ -782,7 +779,7 @@ void pcvideo_t1000_device::mode_switch()
 		m_mc6845->set_clock(XTAL(14'318'181) / 8);
 	else
 		m_mc6845->set_clock(XTAL(14'318'181) / 16);
-	m_mc6845->set_hpixels_per_column((hresad && !hresck) ? 16 : 8);
+	m_mc6845->set_hpixels_per_column(!grph ? 8 : (!hresad && c16col) ? 4 : (hresad && !c4colhr) ? 16 : 8);
 }
 
 
@@ -842,6 +839,7 @@ void pcvideo_pcjr_device::pc_pcjr_mode_switch()
 		m_mc6845->set_clock(XTAL(14'318'181) / 8);
 	else
 		m_mc6845->set_clock(XTAL(14'318'181) / 16);
+	m_mc6845->set_hpixels_per_column(!graphics ? 8 : color16 ? 4 : color2 ? 16 : 8);
 
 	// color or b/w?
 	set_palette_base(mono ? 16 : 0);
@@ -1007,8 +1005,6 @@ void pcvideo_t1000x_device::page_w(uint8_t data)
 
 	// extra page bit for 256K VRAM
 	m_base_mask |= uint32_t(0x01) << 17;
-
-	m_page = data;
 }
 
 
