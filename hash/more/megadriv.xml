@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2040 -->
+<!-- Number of items in this list = 2039 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5959,16 +5959,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="DRAGONBALLTRIFORCE final version.bin" size="3145728" crc="aab25415" sha1="415e8613b40954d9c941394e615ca752ee473489"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gena5e7bdba24652">
-		<description>Dreamcast Arcade Stick Checker_1998_08_dcc_rom</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Dreamcast Arcade Stick Checker_1998_08_dcc_rom.bin" size="524288" crc="989d4ded" sha1="a5e7bdba2465241a21010d1fd8ab5deb4e10d8b2"/>
 			</dataarea>
 		</part>
 	</software>

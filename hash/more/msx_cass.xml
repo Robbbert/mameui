@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 113 -->
+<!-- Number of items in this list = 114 -->
 <softwarelist name="msx_cass" description="msx_cass loose roms">
 	<software name="msxeadb9d14766b7">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[Micom BASIC][cload]</description>
@@ -759,6 +759,16 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="11926">
 				<rom name="Hyper Blust (1985)(Soft Pro International)[CLOAD + RUN].cas" size="11926" crc="5ce7a576" sha1="2958ad169d53c7f9a68ded1230d5088dd08b337e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8fdfbbbd29812">
+		<description>Impetus+ (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="16870">
+				<rom name="Impetus+ (2025)(Inufuto).cas" size="16870" crc="f8941854" sha1="8fdfbbbd29812fe888a22d73a4b62854c87bcc50"/>
 			</dataarea>
 		</part>
 	</software>

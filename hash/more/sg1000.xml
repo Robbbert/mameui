@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 73 -->
+<!-- Number of items in this list = 75 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -293,12 +293,22 @@
 		</part>
 	</software>
 	<software name="sg111f995fb7e9e9">
-		<description>Impetus</description>
+		<description>Impetus (2022)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="16624">
-				<rom name="Impetus.sg" size="16624" crc="42179ce3" sha1="11f995fb7e9e93ffc53a5fdab083731b35eb9c16"/>
+				<rom name="Impetus (2022)(Inufuto).sg" size="16624" crc="42179ce3" sha1="11f995fb7e9e93ffc53a5fdab083731b35eb9c16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg110ec5b6d4e003">
+		<description>Impetus+ (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="24576">
+				<rom name="Impetus+ (2025)(Inufuto).sg" size="24576" crc="57f3ceec" sha1="10ec5b6d4e003b77e41f7b04785b8b8f46860921"/>
 			</dataarea>
 		</part>
 	</software>
@@ -479,6 +489,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Pooyan.sg" size="32768" crc="a71c959d" sha1="cd87e62f48f8670db7e0e928f0cf5376fa0c766a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg18a0e2539babce">
+		<description>RetroPIPE v0.2 (2025)(Visrealm)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="RetroPIPE v0.2 (2025)(Visrealm).sg" size="32768" crc="3885a1f3" sha1="8a0e2539babce65c1480868a5d157bf50c5187b1"/>
 			</dataarea>
 		</part>
 	</software>

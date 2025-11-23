@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 692 -->
+<!-- Number of items in this list = 694 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -2262,6 +2262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxc594191621e57">
+		<description>Go Brick (2025)(Gamecast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Go Brick (2025)(Gamecast).rom" size="753664" crc="4605a36b" sha1="c594191621e57dc7b0f8c51b514ad0747f031330"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx9018cdc72267c">
 		<description>Goblin, The (2023)(Hicks &amp; Mananuk)</description>
 		<year>????</year>
@@ -2699,6 +2709,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Hydlide II - Shine of Darkness (Japan) [T-En by Rieks Warendorp Torringa].rom" size="131072" crc="92943e5b" sha1="0fe07b5f62e179a1294253a505a296ffefca8c95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1eae08241c068">
+		<description>Hydlide II - Shine Of Darkness T-Eng (20xx)(Rieks W. Torringa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Hydlide II - Shine Of Darkness T-Eng (20xx)(Rieks W. Torringa).rom" size="131072" crc="a0fd57cf" sha1="1eae08241c0681d6b6d87c68ebdaaff1baa40069"/>
 			</dataarea>
 		</part>
 	</software>
