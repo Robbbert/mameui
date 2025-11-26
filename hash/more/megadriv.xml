@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2039 -->
+<!-- Number of items in this list = 2042 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4579,6 +4579,36 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9A (2025)(Yoni Arousement).bin" size="5242880" crc="ccd8889f" sha1="579b0d6933ac2d8f5acb8bc0beec8b61482778f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencb18d09a876c2">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v2.9B (2025)(Yoni Arousement)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9B (2025)(Yoni Arousement).bin" size="5242880" crc="0349ea04" sha1="cb18d09a876c2654ffa2f99116345d35f045402f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb57f76340db25">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v2.9B (2025)(Yoni Arousement)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9B (2025)(Yoni Arousement)_1.bin" size="5242880" crc="7deb6d8c" sha1="b57f76340db2535065f93564ad9ee3f283c9fda2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3a51e5bbb5fdd">
+		<description>Bishoujo Super Street Fighter II - Glamor Queen v2.9B Censored (2025)(Yoni Arousement)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="5242880">
+				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9B Censored (2025)(Yoni Arousement).bin" size="5242880" crc="c7d4e6fa" sha1="3a51e5bbb5fdd82ce599967ac2541b80c228c343"/>
 			</dataarea>
 		</part>
 	</software>
