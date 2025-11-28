@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 168 -->
+<!-- Number of items in this list = 169 -->
 <softwarelist name="n64" description="n64 loose roms">
 	<software name="n64bbc390954c605">
 		<description>(demo)2 Blokes &amp; An Armchair - Nintendo 64 Remix (199x)(Tesko)(PD)[h]</description>
@@ -1599,6 +1599,16 @@
 		<part name="cart" interface="n64_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Turok 2 - Seeds of Evil.bin.z64" size="33554432" crc="57f1fbf5" sha1="a86af6c2ac9f6d837181f07c0a27f7ee59e7df68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="n6456368bbc7485f">
+		<description>Viewpoint 2064 [NJKJ]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="n64_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Viewpoint 2064 [NJKJ].z64" size="33554432" crc="927562ce" sha1="56368bbc7485f140078f1891cede69bd1ee2662a"/>
 			</dataarea>
 		</part>
 	</software>

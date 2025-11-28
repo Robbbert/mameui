@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2042 -->
+<!-- Number of items in this list = 2043 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -14019,6 +14019,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Sangokushi III hack by yanliang (070328).bin" size="1572864" crc="24450d9b" sha1="b99fae3c869e9f877818ff91e6acf5e3c6d24b39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5d2157573cad2">
+		<description>Satan Claus (W) (REV02) [!]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3058530">
+				<rom name="Satan Claus (W) (REV02) [!].bin" size="3058530" crc="f6b9aea0" sha1="5d2157573cad2501ec6d4c6f9fa35e14aa3a4acc"/>
 			</dataarea>
 		</part>
 	</software>
