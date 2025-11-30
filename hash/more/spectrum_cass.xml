@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6549 -->
+<!-- Number of items in this list = 6597 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -39,6 +39,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="93902">
 				<rom name="(demo)Break Space 128K (2016)(thesuper).tap" size="93902" crc="b9212b04" sha1="695e821735ad9d548f154f982923c77831a6fd48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae3226bf0d9cd">
+		<description>(demo)Citadel - Demoversion (19xx)(Stalker)(Sv)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19038">
+				<rom name="(demo)Citadel - Demoversion (19xx)(Stalker)(Sv).tap" size="19038" crc="58763f53" sha1="ae3226bf0d9cdbe333f5077a100654ce52f5bdcd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14482,6 +14492,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs407fb9d0fb99b">
+		<description>Cindy Block v1.1 48K-128K (2025)(Grongy, Art-top, n1k-o)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42116">
+				<rom name="Cindy Block v1.1 48K-128K (2025)(Grongy, Art-top, n1k-o).tap" size="42116" crc="1d6b6135" sha1="407fb9d0fb99b867ae3d7e254b05d061f9943a2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc7ef6e34eb9d7">
+		<description>Circuitry v1.1 48K (2017)(Rucksack Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31538">
+				<rom name="Circuitry v1.1 48K (2017)(Rucksack Games).tap" size="31538" crc="c97061d1" sha1="c7ef6e34eb9d736d8a1ee99b852525f9bb0a8519"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs38a6ea6c1880b">
+		<description>Circus Circus (demo) (1989)(Martech Games Ltd)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55323">
+				<rom name="Circus Circus (demo) (1989)(Martech Games Ltd)[a2].tap" size="55323" crc="cf9fc832" sha1="38a6ea6c1880bfebbdee12bef9bf4cd705db3f2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs58b9a277bf115">
+		<description>Circus Circus (demo) (19xx)(Martech Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55327">
+				<rom name="Circus Circus (demo) (19xx)(Martech Ltd).tap" size="55327" crc="4f2d99b4" sha1="58b9a277bf1150a97cdd1c1ddb67d28289a71e16"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse0b3b7f2e14f5">
+		<description>Circus Circus (demo) (19xx)(Martech Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55293">
+				<rom name="Circus Circus (demo) (19xx)(Martech Ltd)[a].tap" size="55293" crc="1cf4f8b5" sha1="e0b3b7f2e14f5e41a0d6ef3db1a4209bec3de805"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs83fdcbd042fbb">
+		<description>Circus Games (1988)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="188807">
+				<rom name="Circus Games (1988)(Tynesoft).tap" size="188807" crc="397fcd73" sha1="83fdcbd042fbb5273d667958befb2a3ac9606eac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs019fbc35e7a27">
+		<description>Circus Games 48K (1988)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="151897">
+				<rom name="Circus Games 48K (1988)(Tynesoft).tap" size="151897" crc="4d953275" sha1="019fbc35e7a27fccfee6a5dd8a85690df021e8a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b1c1f0aec6bf">
+		<description>Cisco Heat (1991)(Image Works)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83428">
+				<rom name="Cisco Heat (1991)(Image Works).tap" size="83428" crc="96abde74" sha1="6b1c1f0aec6bf8bb10636de27bbb516a48fa06eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscdff460327716">
+		<description>City Bomber (19xx)(Stephen Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6388">
+				<rom name="City Bomber (19xx)(Stephen Smith).tap" size="6388" crc="7515a046" sha1="cdff460327716c73541cfde934f7625fdfe458e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c636759a8c46">
+		<description>City Bomber</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2543">
+				<rom name="City Bomber.tap" size="2543" crc="c92c3b2a" sha1="1c636759a8c464d86ea5fefd5067b6ebd3157d4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs86a7a0d383c4d">
+		<description>City Connection 128K (1988)(Manuel Lemos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="112933">
+				<rom name="City Connection 128K (1988)(Manuel Lemos).tap" size="112933" crc="ba5fd65a" sha1="86a7a0d383c4d5737205b3d978d3bd5edeaf1944"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs051b789a066bb">
+		<description>City Defender (19xx)(Vaba Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15882">
+				<rom name="City Defender (19xx)(Vaba Software)(Sp).tap" size="15882" crc="c60f30a1" sha1="051b789a066bb021eaef6d0a3e7a858a11fe830e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse45801d2c985d">
 		<description>CJ In The USA</description>
 		<year>????</year>
@@ -15162,6 +15292,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs972c0b351cb6e">
+		<description>Forbidden Planet (1986)(Design Design)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37260">
+				<rom name="Forbidden Planet (1986)(Design Design)[a].tap" size="37260" crc="7500d86e" sha1="972c0b351cb6e37ed62258192a5fd7a32999bd7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5112aff57b17">
+		<description>Force, The (1985)(Argus Press Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Force, The (1985)(Argus Press Software).tap" size="56277" crc="2e1435b7" sha1="c5112aff57b17dc6e7eb58b3fe022b0cfd74c376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4c2f74baf25b1">
+		<description>Forensic (1983)(John McMullan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25831">
+				<rom name="Forensic (1983)(John McMullan).tap" size="25831" crc="a28e77c5" sha1="4c2f74baf25b1bb585b4d51241b85a6b62c0f81b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs19640e8851d19">
+		<description>Forest Escape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37329">
+				<rom name="Forest Escape.tap" size="37329" crc="d183be0c" sha1="19640e8851d19ff33a19c35145547843965b702a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80c760472f7a0">
+		<description>Forest, The (1983)(Phipps Associates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16395">
+				<rom name="Forest, The (1983)(Phipps Associates).tap" size="16395" crc="ccbc5d16" sha1="80c760472f7a08c1a549f4913be0b4e861ce20b6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs06ff36dcffe0f">
 		<description>Forg Wants Love (2021)(Bee Bush Games)</description>
 		<year>????</year>
@@ -15172,6 +15352,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs047eb4536263f">
+		<description>Forgotten Worlds (1989)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="91898">
+				<rom name="Forgotten Worlds (1989)(US Gold).tap" size="91898" crc="40640d9e" sha1="047eb4536263f884aa58b920c8f723c5bab57f61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8772afd2ebad8">
+		<description>Forgotten Worlds 128K (1989)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="153209">
+				<rom name="Forgotten Worlds 128K (1989)(U.S. Gold).tap" size="153209" crc="4f4ee740" sha1="8772afd2ebad84333a73be4073dd02a56070b3aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs28ad2bb45ea8f">
+		<description>Forgotten Worlds 128K (2020)(Tiboh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="132958">
+				<rom name="Forgotten Worlds 128K (2020)(Tiboh).tap" size="132958" crc="e567e7f7" sha1="28ad2bb45ea8fd4fd3bc4e3bbbca0c73672d6201"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e96a6b7e812d">
+		<description>Format 42 (1982)(Stuart Lichols)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8626">
+				<rom name="Format 42 (1982)(Stuart Lichols).tap" size="8626" crc="753e932b" sha1="3e96a6b7e812d837a5690fc584b075c59cf10fc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsca39abfd270f7">
+		<description>Format 42C (1983)(Milan Pavicevic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8629">
+				<rom name="Format 42C (1983)(Milan Pavicevic).tap" size="8629" crc="1fbee081" sha1="ca39abfd270f794ca0783f15d9488c6d4c587b34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs463fbace12901">
+		<description>Formula 1 (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41192">
+				<rom name="Formula 1 (1986)(Mastertronic).tap" size="41192" crc="520e572c" sha1="463fbace1290196acc0e731ebe39ed635b796acb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2c51fae268fa4">
+		<description>Formula One</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59948">
+				<rom name="Formula One.tap" size="59948" crc="904b2f3d" sha1="2c51fae268fa4505d4f8a2dd089c4a79c5a0dbbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe6fb31483586">
+		<description>Forward to the Past (2021)(Sloanysoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31362">
+				<rom name="Forward to the Past (2021)(Sloanysoft).tap" size="31362" crc="e6b298c4" sha1="be6fb31483586d483ffe4cf08f50e3fac5426559"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs53313d6f3fbc3">
+		<description>Four Minutes To Midnight (1987)(8th Day Soft)[Graphical]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42965">
+				<rom name="Four Minutes To Midnight (1987)(8th Day Soft)[Graphical].tap" size="42965" crc="bdd13a95" sha1="53313d6f3fbc34905836c4b75e64bab3ffd85559"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsefd173f9d2c00">
+		<description>Four Minutes To Midnight (1987)(8th Day Soft)[Text]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36363">
+				<rom name="Four Minutes To Midnight (1987)(8th Day Soft)[Text].tap" size="36363" crc="56b6db64" sha1="efd173f9d2c004ecc919d96cc32517cbd8125132"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs50c70f555f48b">
 		<description>Four Soccer Simulators (1989)(Code Masters)</description>
 		<year>????</year>
@@ -15179,6 +15459,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="191817">
 				<rom name="Four Soccer Simulators (1989)(Code Masters).tzx" size="191817" crc="f5d8a381" sha1="50c70f555f48b62094cdeb757585dcddaba2cbe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f486e4226dfe">
+		<description>Four Soccer Simulators - Indoor Soccer (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46904">
+				<rom name="Four Soccer Simulators - Indoor Soccer (1989)(Codemasters).tap" size="46904" crc="41ccf44e" sha1="6f486e4226dfe85075a526f64ad3477a490beab7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b8dac1c4dfe7">
+		<description>Four Soccer Simulators - Soccer Skills (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48277">
+				<rom name="Four Soccer Simulators - Soccer Skills (1989)(Codemasters).tap" size="48277" crc="81ce7f49" sha1="7b8dac1c4dfe76aa17e1f1651bb779fce46e325a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3d3ea2f70e1b2">
+		<description>Four Symbols, The (19xx)(FSF Adventures)(128k)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59666">
+				<rom name="Four Symbols, The (19xx)(FSF Adventures)(128k)[Part 1 of 2].tap" size="59666" crc="5a11ceb2" sha1="3d3ea2f70e1b242c923abee04f8df5af75261ea6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d5e31ef12ce0">
+		<description>Four Symbols, The (19xx)(FSF Adventures)(128k)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50028">
+				<rom name="Four Symbols, The (19xx)(FSF Adventures)(128k)[Part 2 of 2].tap" size="50028" crc="b1ff6995" sha1="8d5e31ef12ce0a5685b7aba538380faf1b26f69b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3bbbfe378646a">
+		<description>Fourth Protocol, The (1985)(Hutchinson Computer Publishing)[Part 1 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50999">
+				<rom name="Fourth Protocol, The (1985)(Hutchinson Computer Publishing)[Part 1 of 3].tap" size="50999" crc="0a52cf48" sha1="3bbbfe378646afa2b3caff46107d3c6b734dd0d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c562169d2305">
+		<description>Fourth Protocol, The (1985)(Hutchinson Computer Publishing)[Part 2 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50939">
+				<rom name="Fourth Protocol, The (1985)(Hutchinson Computer Publishing)[Part 2 of 3].tap" size="50939" crc="74c34483" sha1="5c562169d2305ec24c8ccdebfdcc5436ee6f326b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5769895559a64">
+		<description>Fourth Protocol, The (1985)(Hutchinson Computer Publishing)[Part 3 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41500">
+				<rom name="Fourth Protocol, The (1985)(Hutchinson Computer Publishing)[Part 3 of 3].tap" size="41500" crc="e4150dcd" sha1="5769895559a6457cdcb345e01949ff102e10057c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8cb1534a44afb">
+		<description>Foxx Fights Back (1988)(Image Works)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47395">
+				<rom name="Foxx Fights Back (1988)(Image Works).tap" size="47395" crc="7c9ae4b5" sha1="8cb1534a44afb16106ea7ff4f6173246e37fda16"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22592,6 +22952,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse4a0a6602ee97">
+		<description>JAAM Rivals 128K (2025)(AmikoSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="62434">
+				<rom name="JAAM Rivals 128K (2025)(AmikoSoft).tap" size="62434" crc="84d147c1" sha1="e4a0a6602ee974ad0d9fcfe09c5c280ee7f1e1f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs177fd64c3bed1">
 		<description>Jabato en Africa ES 48K (1989)(Aventuras AD)</description>
 		<year>????</year>
@@ -28952,6 +29322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb4d0ca7c6d709">
+		<description>Max Stone Edicion MH 128K (2025)(Flopping, MicroHobby)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57588">
+				<rom name="Max Stone Edicion MH 128K (2025)(Flopping, MicroHobby).tap" size="57588" crc="1bbd5529" sha1="b4d0ca7c6d709df88d0b21cbd719b0be2c3133b8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs12322e746b7d6">
 		<description>Max Stone EN 128K (2024)(Flopping)</description>
 		<year>????</year>
@@ -28989,6 +29369,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="57094">
 				<rom name="Max Stone ES 48K (2024)(Flopping)_1.tap" size="57094" crc="9a150977" sha1="5e4d8041e0a85c7bd5fe62ef84b4ecd8ec0f7b4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf9ada8550fb2">
+		<description>Max Stone MH Edition 128K (2025)(Flopping, MicroHobby)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57573">
+				<rom name="Max Stone MH Edition 128K (2025)(Flopping, MicroHobby).tap" size="57573" crc="990fd200" sha1="af9ada8550fb2093b843ce1a8aa6b338d0ef246a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30893,12 +31283,12 @@
 		</part>
 	</software>
 	<software name="zxsab9c8ee6125f3">
-		<description>Monkey J - The Treasure Of The Gold Temple 128K (2017)(Gabriele Amore)</description>
+		<description>Monkey J - The Treasure of the Gold Temple 48K-128K (2017)(Gabriele Amore)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35456">
-				<rom name="Monkey J - The Treasure Of The Gold Temple 128K (2017)(Gabriele Amore).tap" size="35456" crc="c326ebce" sha1="ab9c8ee6125f366035f5a27b03db4b2a2f85d3c5"/>
+				<rom name="Monkey J - The Treasure of the Gold Temple 48K-128K (2017)(Gabriele Amore).tap" size="35456" crc="c326ebce" sha1="ab9c8ee6125f366035f5a27b03db4b2a2f85d3c5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -57832,6 +58222,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6c3cf4fb36de5">
+		<description>_Ciclista (1985)(Load 'n' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45625">
+				<rom name="_Ciclista (1985)(Load 'n' Run)(Sp).tap" size="45625" crc="01a1e143" sha1="6c3cf4fb36de537244acdfa6da47b853e26c1df3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs02dbe949c58e5">
+		<description>_Cipherbreaker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4494">
+				<rom name="_Cipherbreaker.TAP" size="4494" crc="356a7d32" sha1="02dbe949c58e57af15455241b6db1ac69471c466"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs303ef82dcea61">
+		<description>_City (1983)(Terminal Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23191">
+				<rom name="_City (1983)(Terminal Software).tap" size="23191" crc="da91e3fb" sha1="303ef82dcea6161682dbc73f413f9b91aa7e169e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c2088469a44c">
 		<description>_Crosswize</description>
 		<year>????</year>
@@ -57939,6 +58359,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="90896">
 				<rom name="_Expert For Bank.tzx" size="90896" crc="b86e2332" sha1="4d4e86c59e476d4dca18dc928a34c0010c5718ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c8fd81ce04a7">
+		<description>_Forbidden Planet (1986)(Design Design)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46592">
+				<rom name="_Forbidden Planet (1986)(Design Design).tap" size="46592" crc="7638ebf8" sha1="5c8fd81ce04a72b224ef525dbce5b2803ba73111"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdff6ad79a8a5b">
+		<description>_Forbidden Planet (1986)(Design Design)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46150">
+				<rom name="_Forbidden Planet (1986)(Design Design)[a2].tap" size="46150" crc="17ecfc92" sha1="dff6ad79a8a5b79b6315069d9ba036551573e371"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3f84120b8b630">
+		<description>_Forest At The Worlds End, The (1984)(Interceptor Micros Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47150">
+				<rom name="_Forest At The Worlds End, The (1984)(Interceptor Micros Software).tap" size="47150" crc="5202f675" sha1="3f84120b8b63031d2eced0e111976939465ccf99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44031ede23802">
+		<description>_Forest Of Doom (1984)(Puffin Books)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="152552">
+				<rom name="_Forest Of Doom (1984)(Puffin Books).tap" size="152552" crc="80c2c3eb" sha1="44031ede23802183c0f9e357f821ec046cab8db1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdf55271ad1e61">
+		<description>_Forest, The (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10157">
+				<rom name="_Forest, The (19xx)(-).tap" size="10157" crc="2342ba2f" sha1="df55271ad1e61106b3bfa27e430d24add17c3fbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8ecb8169a550e">
+		<description>_Format 64 In Line (1985)(Megasoft)(UNK-LANG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11263">
+				<rom name="_Format 64 In Line (1985)(Megasoft)(UNK-LANG).tap" size="11263" crc="d4304172" sha1="8ecb8169a550e774638c467861eb26d4d2427b01"/>
 			</dataarea>
 		</part>
 	</software>
