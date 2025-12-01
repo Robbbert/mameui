@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6597 -->
+<!-- Number of items in this list = 6632 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -419,6 +419,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52532">
 				<rom name="-Chicago 30 (1988)(Topo Soft)(Sp)[a].tap" size="52532" crc="31a6c54f" sha1="8630b17cfb19350e0521efb65587a4ea7b2b373b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb2531eb994206">
+		<description>-Fairlight 1 - A Prelude (1985)(The Edge Software)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55058">
+				<rom name="-Fairlight 1 - A Prelude (1985)(The Edge Software)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft].tap" size="55058" crc="9137c7c2" sha1="b2531eb99420683527ea8cb66c7277d33caeb333"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1fe162ddf4e61">
+		<description>-Falcon Patrol 2 (1985)(Virgin Games Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24130">
+				<rom name="-Falcon Patrol 2 (1985)(Virgin Games Ltd)[cr [Cr][Cr].tap" size="24130" crc="91e3537d" sha1="1fe162ddf4e6113549b3a646ebbe4ad3b79bb146"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9fb13f54c7227">
+		<description>-Fighter Bomber (1990)(Activision Inc)[cr [Cr Kamil + Renegade](128K)[Cr Kamil + Renegade]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="100959">
+				<rom name="-Fighter Bomber (1990)(Activision Inc)[cr [Cr Kamil + Renegade](128K)[Cr Kamil + Renegade].tap" size="100959" crc="bc626c81" sha1="9fb13f54c72271ee568a7af327f141f178783793"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsadc224260ee89">
+		<description>-Final Assault (1988)(US Gold Ltd)[cr [Cr Cidsoft](128K)[Cr Cidsoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64710">
+				<rom name="-Final Assault (1988)(US Gold Ltd)[cr [Cr Cidsoft](128K)[Cr Cidsoft].tap" size="64710" crc="f242cce1" sha1="adc224260ee8968863c714a03af788c74e0f1598"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd810673030857">
+		<description>-Firefly (1988)(Ocean Software Ltd)[cr [Cr][t][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40325">
+				<rom name="-Firefly (1988)(Ocean Software Ltd)[cr [Cr][t][Cr].tap" size="40325" crc="2b055705" sha1="d8106730308573370cd2f03d613c4e857b736acf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1033fce543d40">
+		<description>-Firelord (1986)(Hewson Consultants Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44375">
+				<rom name="-Firelord (1986)(Hewson Consultants Ltd)[cr [Cr][Cr].tap" size="44375" crc="22531fa7" sha1="1033fce543d40cfd04dc12fd24ce15dc9874843d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs20fe889f1e266">
+		<description>-Flintstones (1988)(Grandslam Entertainments Ltd)[cr [Cr Hollis](128K)[Cr Hollis]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58752">
+				<rom name="-Flintstones (1988)(Grandslam Entertainments Ltd)[cr [Cr Hollis](128K)[Cr Hollis].tap" size="58752" crc="e3c5774e" sha1="20fe889f1e26656e9e21f903ff2506548acd8b27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2101ea51a633a">
+		<description>-Flyer Fox (1984)(Bug-Byte Software Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34229">
+				<rom name="-Flyer Fox (1984)(Bug-Byte Software Ltd)[cr [Cr][Cr].tap" size="34229" crc="087ea6de" sha1="2101ea51a633ab8cacbd84ddbad8c988318eb460"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14612,6 +14692,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4f0e6835aa295">
+		<description>CJ In the USA (1991)(Codemasters)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64000">
+				<rom name="CJ In the USA (1991)(Codemasters)(128k).tap" size="64000" crc="455f660b" sha1="4f0e6835aa295dbb5460092020ab35413a95dfac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs002c430ab0d05">
+		<description>CJ In The USA (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63882">
+				<rom name="CJ In The USA (1991)(Codemasters).tap" size="63882" crc="70323aa3" sha1="002c430ab0d05032e179f962818b6ae47773d663"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse45801d2c985d">
 		<description>CJ In The USA</description>
 		<year>????</year>
@@ -14619,6 +14719,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43595">
 				<rom name="CJ In The USA.tzx" size="43595" crc="78e557a1" sha1="e45801d2c985d23d8e965d53fdba5cb7bc6c8354"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse82fe916da288">
+		<description>CJ's Elephant Antics (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="60962">
+				<rom name="CJ's Elephant Antics (1991)(Codemasters).tap" size="60962" crc="a44b3da6" sha1="e82fe916da288087beac0256968a7a2d924a8cd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c524a240576d">
+		<description>CJ's Elephant Antics (1991)(Codemasters)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57344">
+				<rom name="CJ's Elephant Antics (1991)(Codemasters)[t].tap" size="57344" crc="f80b3ec7" sha1="5c524a240576dfdfead3a3c02b1e79c9393465c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15289,6 +15409,186 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="38325">
 				<rom name="Flying Shark.tzx" size="38325" crc="8b5d0e1f" sha1="0d2531ee7afcdfd62198e8882cc150c69fa51807"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbde197c9bb313">
+		<description>Football Director (1986)(D &amp; H Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44023">
+				<rom name="Football Director (1986)(D &amp; H Games)[a].tap" size="44023" crc="5cbec966" sha1="bde197c9bb3136a90d7f79d10afa3d9dea88ab1c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd632217f83d2">
+		<description>Football Director - 2 Player Super League (1986)(D &amp; H Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39785">
+				<rom name="Football Director - 2 Player Super League (1986)(D &amp; H Games).tap" size="39785" crc="732d53c3" sha1="cd632217f83d2e3f7e0768b32a89cc8a17b3ee02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs457a41ac6d3fe">
+		<description>Football Director - 2 Player Super League (1986)(D &amp; H Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51838">
+				<rom name="Football Director - 2 Player Super League (1986)(D &amp; H Games)[a].tap" size="51838" crc="1f1f622f" sha1="457a41ac6d3fe95b9020ae9ffed8e964dba736e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd975cdac04f10">
+		<description>Football Director - 2 Player Super League (1989)(D &amp; H Games)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="76434">
+				<rom name="Football Director - 2 Player Super League (1989)(D &amp; H Games)(128k).tap" size="76434" crc="2793b106" sha1="d975cdac04f10174aaeee9f222f944c54ea3f78e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse7d7cd2c9f2f4">
+		<description>Football Frenzy (1987)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41573">
+				<rom name="Football Frenzy (1987)(Alternative Software).tap" size="41573" crc="27319dce" sha1="e7d7cd2c9f2f4b28f922dcfb31db5a61efc5a0d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5d546239fd2e">
+		<description>Football Manager (1982)(Addictive Games)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43913">
+				<rom name="Football Manager (1982)(Addictive Games)(Cz).tap" size="43913" crc="3b7c1ce8" sha1="c5d546239fd2ef236a5c9a59907cc5790a047722"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdb46610f5c83e">
+		<description>Football Manager (1982)(Addictive Games)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72772">
+				<rom name="Football Manager (1982)(Addictive Games)(Sp).tap" size="72772" crc="af09c7ef" sha1="db46610f5c83e6f67c03bab2287217259b405183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd46048e091d4e">
+		<description>Football Manager (1982)(Addictive Games)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36369">
+				<rom name="Football Manager (1982)(Addictive Games)(Sp)[a].tap" size="36369" crc="59fddfc1" sha1="d46048e091d4ed4cf860c6de2c3691cc616a0639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs60ba6d72bb22d">
+		<description>Football Manager (1982)(Addictive Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35582">
+				<rom name="Football Manager (1982)(Addictive Games).tap" size="35582" crc="9ff2f05d" sha1="60ba6d72bb22d1fc37fda295d8a72d31bd39a0f5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a0c198e2e76e">
+		<description>Football Manager - World Cup Edition (1990)(Addictive Games)[m tzxtools]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41462">
+				<rom name="Football Manager - World Cup Edition (1990)(Addictive Games)[m tzxtools].tap" size="41462" crc="52f22bdb" sha1="8a0c198e2e76e66024425daf6378d3a73497927b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1882326afdf63">
+		<description>Football Manager 2 (1988)(Addictive Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="117562">
+				<rom name="Football Manager 2 (1988)(Addictive Games).tap" size="117562" crc="30569041" sha1="1882326afdf63f2eaa7862c37697bb7ca82ea3ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ff1b56671c48">
+		<description>Football Manager 2 (1989)(Addictive Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50435">
+				<rom name="Football Manager 2 (1989)(Addictive Games).tap" size="50435" crc="060ddf75" sha1="5ff1b56671c48eba239326c44d941b4329fc6649"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf1f981a658d77">
+		<description>Football Manager 3 (1991)(Addictive Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46747">
+				<rom name="Football Manager 3 (1991)(Addictive Games).tap" size="46747" crc="5e1a8c16" sha1="f1f981a658d7748d7f0a77d8e869c65d56da6924"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs07d21c13cf9b1">
+		<description>Footballer (1989)(Cult)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38680">
+				<rom name="Footballer (1989)(Cult).tap" size="38680" crc="63ee5e81" sha1="07d21c13cf9b1fe6a278936e3912b78e5741e0c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde01bb65cb8a0">
+		<description>Footballer Of The Year (1986)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28044">
+				<rom name="Footballer Of The Year (1986)(Gremlin Graphics).tap" size="28044" crc="5a64089a" sha1="de01bb65cb8a03cde893828f8dc9658af9253815"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsefb8f4be1f64c">
+		<description>Footballer Of The Year 2 (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47799">
+				<rom name="Footballer Of The Year 2 (1987)(Gremlin Graphics).tap" size="47799" crc="3aa30010" sha1="efb8f4be1f64ceca48807c1bb8debd5584c9e4f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48fded5ecaf1d">
+		<description>Footballer of the Year 2 48K-128K (1989)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47843">
+				<rom name="Footballer of the Year 2 48K-128K (1989)(Gremlin Graphics).tap" size="47843" crc="7da8008f" sha1="48fded5ecaf1d55c56f011455fb33e7c1095b149"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8fba3d12a5b28">
+		<description>Footballer of the Year 48K (1986)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49353">
+				<rom name="Footballer of the Year 48K (1986)(Gremlin Graphics).tap" size="49353" crc="2e7da5c2" sha1="8fba3d12a5b2889e751d8c9c8324c13497a3634f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32743,12 +33043,12 @@
 		</part>
 	</software>
 	<software name="zxse57862c8f8c1c">
-		<description>Mutant Fortress 128K (1989)(Players Premier)</description>
+		<description>Mutant Fortress 48K-128K (1989)(Players Premier)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="77979">
-				<rom name="Mutant Fortress 128K (1989)(Players Premier).tap" size="77979" crc="f82b3bcc" sha1="e57862c8f8c1c8143485b874667e065544b83a8b"/>
+				<rom name="Mutant Fortress 48K-128K (1989)(Players Premier).tap" size="77979" crc="f82b3bcc" sha1="e57862c8f8c1c8143485b874667e065544b83a8b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32779,6 +33079,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="83776">
 				<rom name="Mutants (1987)(Ocean Software Ltd).tap" size="83776" crc="1611da8f" sha1="1361a11600ff325fa19203fca896e3ffbc7dc4ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d444e9854a08">
+		<description>Mutants 128K (1987)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86381">
+				<rom name="Mutants 128K (1987)(Ocean).tzx" size="86381" crc="e1903034" sha1="6d444e9854a088c52596412317913324516f15f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -58359,6 +58669,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="90896">
 				<rom name="_Expert For Bank.tzx" size="90896" crc="b86e2332" sha1="4d4e86c59e476d4dca18dc928a34c0010c5718ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e24583310f03">
+		<description>_Football Champions (1990)(Cult Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49765">
+				<rom name="_Football Champions (1990)(Cult Games).tap" size="49765" crc="46fe3e3b" sha1="1e24583310f035242e67f5c5e8ce281d53ccd61b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0937c75cadd80">
+		<description>_Football Champions (1990)(Cult Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49633">
+				<rom name="_Football Champions (1990)(Cult Games)[a].tap" size="49633" crc="9e0ec925" sha1="0937c75cadd80e066b180ee747d939826d4a6b93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde01c80802cd7">
+		<description>_Football Director 48K (1986)(D&amp;H Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47945">
+				<rom name="_Football Director 48K (1986)(D&amp;H Games).tap" size="47945" crc="71643b24" sha1="de01c80802cd7855bef6aa96b8f123519960678b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f0ddd8174fdb">
+		<description>_Football Manager - World Cup Edition (1990)(Addictive Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43133">
+				<rom name="_Football Manager - World Cup Edition (1990)(Addictive Games).tap" size="43133" crc="320fdcc6" sha1="0f0ddd8174fdba61061e8e7e0b04b2778644834a"/>
 			</dataarea>
 		</part>
 	</software>
