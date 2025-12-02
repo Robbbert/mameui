@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="apple1" description="apple1 loose roms">
+	<software name="app3e844ff713dd2">
+		<description>Apple-1 basic from real E000.EFFFR[E000.EFFFR,E000R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="apple1_cass">
+			<dataarea name="cass" size="3546412">
+				<rom name="Apple-1 basic from real E000.EFFFR[E000.EFFFR,E000R].wav" size="3546412" crc="d5a33768" sha1="3e844ff713dd20db769b41b45e7ae51ed369f090"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="appef94ee4c71bfc">
+		<description>Apple1Basi[E000.EFFFR,E000R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="apple1_cass">
+			<dataarea name="cass" size="6644780">
+				<rom name="Apple1Basi[E000.EFFFR,E000R].wav" size="6644780" crc="344fb7fe" sha1="ef94ee4c71bfc2e02c3d6fba5a4eab9b6049f0ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app67c00ebf944e7">
+		<description>BASIC[E000.EFFFR,E000R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="apple1_cass">
+			<dataarea name="cass" size="3366344">
+				<rom name="BASIC[E000.EFFFR,E000R].wav" size="3366344" crc="d512ef7a" sha1="67c00ebf944e701ab3e5d2ef584a2fafeaf04a3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app6ebe5645faa32">
+		<description>Enhanced Basic[5000.78B0R,7825R]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="apple1_cass">
+			<dataarea name="cass" size="12203596">
+				<rom name="Enhanced Basic[5000.78B0R,7825R].wav" size="12203596" crc="eefaa6ed" sha1="6ebe5645faa32e00fd3cfde62238838b651d844f"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
