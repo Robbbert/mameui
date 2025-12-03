@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6670 -->
+<!-- Number of items in this list = 6701 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -59,6 +59,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1361">
 				<rom name="(demo)Fire4ever.tzx" size="1361" crc="2f412606" sha1="cbe2b12b071de18dda85deb7b76dec57b41b5272"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7103b6014155">
+		<description>(demo)First Association Preview (1997)(Omega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41559">
+				<rom name="(demo)First Association Preview (1997)(Omega).tap" size="41559" crc="c0427c22" sha1="f7103b601415539a597139a2285ee134ba622403"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14832,6 +14842,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs152d658c6afdc">
+		<description>Coal Collector (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9846">
+				<rom name="Coal Collector (19xx)(-).tap" size="9846" crc="3c6c57b7" sha1="152d658c6afdcd1d5ef12e5941a886a84916dd70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs46395061137d1">
+		<description>Cobra (1986)(Ocean Software)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47835">
+				<rom name="Cobra (1986)(Ocean Software)[t].tap" size="47835" crc="2309aad1" sha1="46395061137d1e476d2d8d5a8f5462358bfcfc65"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4c4e27a6cb645">
 		<description>Cobra - Stallone</description>
 		<year>????</year>
@@ -14849,6 +14879,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="54643">
 				<rom name="Cobra Force.tzx" size="54643" crc="0c00cb15" sha1="dac6ad512eba4daa4481043094b26c42807e02df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b5e48992bd82">
+		<description>Cobra's Arc (1986)(Dinamic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48732">
+				<rom name="Cobra's Arc (1986)(Dinamic)(Sp).tap" size="48732" crc="5e9febe6" sha1="6b5e48992bd825681569e75347908ca07dc573fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs511e4a7381ce3">
+		<description>Cobra's Arc ES (1986)(Dinamic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49106">
+				<rom name="Cobra's Arc ES (1986)(Dinamic).tap" size="49106" crc="ed2e3bb4" sha1="511e4a7381ce3d6ff39156f99dd6eed10585bfcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa448ce7ceebc3">
+		<description>Cobra's Arc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49106">
+				<rom name="Cobra's Arc.tap" size="49106" crc="76f3c817" sha1="a448ce7ceebc36d2f511a78746e16b2c3ea8f2c2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15462,6 +15522,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsdddf513fd652d">
+		<description>Fire &amp; Forget (1988)(Titus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46724">
+				<rom name="Fire &amp; Forget (1988)(Titus).tap" size="46724" crc="7685ab3a" sha1="dddf513fd652df0257a13902733a17dc34041ff7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs538644d58d425">
+		<description>Fire &amp; Ice (1984)(Electric Dreams Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25497">
+				<rom name="Fire &amp; Ice (1984)(Electric Dreams Software).tap" size="25497" crc="ca620a5d" sha1="538644d58d425116d975050089624e2950533135"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9892558a1ca79">
+		<description>Fire 'N Ice 128K (1987-2003)(n-Discovery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="569884">
+				<rom name="Fire 'N Ice 128K (1987-2003)(n-Discovery).tap" size="569884" crc="05b70672" sha1="9892558a1ca79a8c283a816696c230c1c6581623"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81a00a5862a7d">
+		<description>Fire 'N Ice 128K (1987-2003)(n-Discovery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="575234">
+				<rom name="Fire 'N Ice 128K (1987-2003)(n-Discovery).tzx" size="575234" crc="e99a90fb" sha1="81a00a5862a7d0fe63f7e94d593fb12b9ab31df1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5022cec08bc21">
+		<description>Fire Copy v1.0 (1985)(Juric Zeljko)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3478">
+				<rom name="Fire Copy v1.0 (1985)(Juric Zeljko).tap" size="3478" crc="9668a99a" sha1="5022cec08bc219550dbe0f574843b0fe542c24c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee271842653ed">
+		<description>Fire Fight (1986)(H.S. Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44543">
+				<rom name="Fire Fight (1986)(H.S. Software).tap" size="44543" crc="29a64822" sha1="ee271842653ed503f5f16b105e5301334068ca5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf5db18d08eb46">
+		<description>Fire Hawks (1984)(Postern)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6336">
+				<rom name="Fire Hawks (1984)(Postern).tap" size="6336" crc="3fed2791" sha1="f5db18d08eb46d8f4deb05b4ad2d77c4df56f8b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs23c32e23cbaaf">
+		<description>Fire Trap (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3506">
+				<rom name="Fire Trap (19xx)(-).tap" size="3506" crc="b28a5ed1" sha1="23c32e23cbaafe1124eecb15d38ca475caed34f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs15e745afab5a7">
 		<description>fire</description>
 		<year>????</year>
@@ -15472,13 +15612,153 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsda6591ebf9144">
+		<description>Firebird (1983)(Softek Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15872">
+				<rom name="Firebird (1983)(Softek Software).tap" size="15872" crc="de004a31" sha1="da6591ebf9144a3a0f51b1c29780350c4d704c99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92546fc106d6d">
+		<description>Firebird (1983)(Softek Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16202">
+				<rom name="Firebird (1983)(Softek Software)[a].tap" size="16202" crc="282c3c91" sha1="92546fc106d6d628b2ea542c83d0d9ed2b15e6eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdbba93e4cf9c8">
+		<description>Fireflash (1983)(Abacus Programs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15203">
+				<rom name="Fireflash (1983)(Abacus Programs).tap" size="15203" crc="6f16e3c8" sha1="dbba93e4cf9c8114e78dbe28054355b6f1c72640"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf535a2b35ecf4">
+		<description>Firefly (1988)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45885">
+				<rom name="Firefly (1988)(Ocean Software).tap" size="45885" crc="4c890b6f" sha1="f535a2b35ecf4b312029029743b70c68c8d1ab64"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsad402c7c52681">
-		<description>Firefly</description>
+		<description>Firefly 48K (1988)(Ocean)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50950">
-				<rom name="Firefly.tzx" size="50950" crc="e47c520d" sha1="ad402c7c526810d23155d67ee19d8605ad4d25ab"/>
+				<rom name="Firefly 48K (1988)(Ocean).tzx" size="50950" crc="e47c520d" sha1="ad402c7c526810d23155d67ee19d8605ad4d25ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44802f8987578">
+		<description>Firelord 48K (1986)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48559">
+				<rom name="Firelord 48K (1986)(Hewson Consultants).tap" size="48559" crc="e586189f" sha1="44802f8987578006ae70b64f1e910c1bd33456e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse625857274349">
+		<description>Fireman (2008)(Miguel Angel Rodriguez Jodar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18452">
+				<rom name="Fireman (2008)(Miguel Angel Rodriguez Jodar).tap" size="18452" crc="f7853e31" sha1="e625857274349d120a8e05d74f9261bc52cfe43a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98ab086c3ea0f">
+		<description>Fireman Sam (1992)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="87991">
+				<rom name="Fireman Sam (1992)(Alternative Software).tap" size="87991" crc="b628c84b" sha1="98ab086c3ea0fb20e89f8148465c18d0b5894e1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscdfbdaa55c3c7">
+		<description>Fireman Sam - The Hero Next Door 48K (1991)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="87975">
+				<rom name="Fireman Sam - The Hero Next Door 48K (1991)(Alternative).tap" size="87975" crc="b813c820" sha1="cdfbdaa55c3c79ea4484ff1bf3c4c5e94267dea8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd8a74b66e7a0c">
+		<description>Firestorm (1987)(Nexus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43426">
+				<rom name="Firestorm (1987)(Nexus).tap" size="43426" crc="ac8f4f40" sha1="d8a74b66e7a0c75bebc5a030ca47769b2b149daa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs79ea945473104">
+		<description>First Past The Post (1988)(Cult Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41091">
+				<rom name="First Past The Post (1988)(Cult Games).tap" size="41091" crc="74aa9998" sha1="79ea945473104fba9de2be37307d24ce06087615"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs12a24a50e9839">
+		<description>First Past The Post (1988)(Cult Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47995">
+				<rom name="First Past The Post (1988)(Cult Games)[a].tap" size="47995" crc="efd2e4f4" sha1="12a24a50e98395717934945d7fd3f04f1c0f6d9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5c28169b54db">
+		<description>Fisherman's Friend v1.305 (1996)(Joseph Aron)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17587">
+				<rom name="Fisherman's Friend v1.305 (1996)(Joseph Aron).tap" size="17587" crc="5eb560d5" sha1="b5c28169b54db2e3014b1c2a99e03bc77abd3278"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4a86ffd5eebf7">
+		<description>Fist II - The Legend Continues 48K (1986)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47879">
+				<rom name="Fist II - The Legend Continues 48K (1986)(Melbourne House).tap" size="47879" crc="41d1677f" sha1="4a86ffd5eebf7ad365cb878b51d7f51afe4247f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4dd4067c04b84">
+		<description>Fitris 128K (2023)(FitoSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39006">
+				<rom name="Fitris 128K (2023)(FitoSoft).tap" size="39006" crc="6e656131" sha1="4dd4067c04b84616087b4ef13fa32b567f52f82d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -24463,12 +24743,12 @@
 		</part>
 	</software>
 	<software name="zxs2f756cc8987c0">
-		<description>Jonathan - Trick or Treat 48K (2022)(ZXAMAZE)</description>
+		<description>Jonathan Trick or Treat 48K (2022)(ZXAMAZE)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37147">
-				<rom name="Jonathan - Trick or Treat 48K (2022)(ZXAMAZE).tap" size="37147" crc="4b1299bf" sha1="2f756cc8987c00acf05b40d8ca6e96a260cc8254"/>
+				<rom name="Jonathan Trick or Treat 48K (2022)(ZXAMAZE).tap" size="37147" crc="4b1299bf" sha1="2f756cc8987c00acf05b40d8ca6e96a260cc8254"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26133,12 +26413,12 @@
 		</part>
 	</software>
 	<software name="zxsf0d3c44b41657">
-		<description>L'Abbaye des Morts 128K (2014)(Darkhorace)</description>
+		<description>L'Abbaye des Morts 48K-128K (2014)(Darkhorace)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35533">
-				<rom name="L'Abbaye des Morts 128K (2014)(Darkhorace).tzx" size="35533" crc="2bdb3db6" sha1="f0d3c44b41657d46944f3ea1a86d8f35c231c98a"/>
+				<rom name="L'Abbaye des Morts 48K-128K (2014)(Darkhorace).tzx" size="35533" crc="2bdb3db6" sha1="f0d3c44b41657d46944f3ea1a86d8f35c231c98a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -58892,6 +59172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbbf6e1b89f02e">
+		<description>_Cobra Force (1989)(Players)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47615">
+				<rom name="_Cobra Force (1989)(Players).tap" size="47615" crc="a02bc0dc" sha1="bbf6e1b89f02ea94ecef3012043f91297d70a1fd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c2088469a44c">
 		<description>_Crosswize</description>
 		<year>????</year>
@@ -58999,6 +59289,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="90896">
 				<rom name="_Expert For Bank.tzx" size="90896" crc="b86e2332" sha1="4d4e86c59e476d4dca18dc928a34c0010c5718ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf61b2809875b8">
+		<description>_Fireman Fred (1984)(Tynesoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44954">
+				<rom name="_Fireman Fred (1984)(Tynesoft).tap" size="44954" crc="8c2146a0" sha1="f61b2809875b85ccfdf9fb8dda96b3604c3530dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs42b012f15203e">
+		<description>_Fischen (1983)(Kurt Windolf Westerland)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11875">
+				<rom name="_Fischen (1983)(Kurt Windolf Westerland)(De).tap" size="11875" crc="f9653830" sha1="42b012f15203eee2350b18cc5a88c6fe62e0dfb3"/>
 			</dataarea>
 		</part>
 	</software>
