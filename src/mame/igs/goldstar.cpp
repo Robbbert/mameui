@@ -5338,10 +5338,10 @@ static INPUT_PORTS_START( cmv4_service )
 	PORT_START("IN2")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("hopper", FUNC(ticket_dispenser_device::line_r)) //PORT_CODE(KEYCODE_7_PAD) PORT_NAME("Hopper Coin")
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("hopper", FUNC(ticket_dispenser_device::line_r))
 	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_CUSTOM )  // Hopper presence detection
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_GAMBLE_KEYOUT ) PORT_NAME("Key Out / Attendant")
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_SERVICE ) PORT_CODE(KEYCODE_8_PAD) PORT_NAME("Hopper Payout")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_GAMBLE_PAYOUT ) PORT_NAME("Hopper Payout")
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_GAMBLE_SERVICE ) PORT_NAME("Settings")
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_GAMBLE_BOOK ) PORT_NAME("Stats")  // on some sets a DSW must be on/off to access this menu
 INPUT_PORTS_END
@@ -5864,7 +5864,7 @@ static INPUT_PORTS_START( eldoradoa )
 	PORT_INCLUDE( animalhs )
 
 	PORT_MODIFY("IN1")
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_CUSTOM ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_6) PORT_NAME("Service In")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_OTHER ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_6) PORT_NAME("Service In")
 
 	PORT_MODIFY("DSW1")
 	PORT_DIPNAME( 0x01, 0x01, "Show Stats" )                PORT_DIPLOCATION("DSW1:1")
@@ -7208,6 +7208,7 @@ INPUT_PORTS_END
 
 
 static INPUT_PORTS_START( cmast99 )
+/*
 	PORT_START("IN0")  // called "PLAYER" in input test
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_A) PORT_NAME("Player: 1")
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_S) PORT_NAME("Player: 2")
@@ -7223,10 +7224,10 @@ static INPUT_PORTS_START( cmast99 )
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_2) PORT_NAME("Coin: 2")
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_3) PORT_NAME("Coin: 3")
 	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_4) PORT_NAME("Coin: 4")
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_5) PORT_NAME("Coin: 5")
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_6) PORT_NAME("Coin: 6")
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_7) PORT_NAME("Coin: 7")
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_8) PORT_NAME("Coin: 8")
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_COIN1 ) PORT_IMPULSE(2) PORT_NAME("Coin A")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_COIN2 ) PORT_IMPULSE(2) PORT_NAME("Coin B")
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_GAMBLE_KEYIN )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_COIN3 ) PORT_IMPULSE(2) PORT_NAME("Coin C")
 
 	PORT_START("IN2")  // called "TEST" in input test
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_1_PAD) PORT_NAME("Test: 1-Pad")
@@ -7237,7 +7238,12 @@ static INPUT_PORTS_START( cmast99 )
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_OTHER ) PORT_CODE(KEYCODE_6_PAD) PORT_NAME("Test: 6-Pad")
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_GAMBLE_SERVICE ) PORT_NAME("Settings / Port Test")
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_GAMBLE_BOOK )    PORT_NAME("Stats / Palette Test")
+*/
+	PORT_INCLUDE( cmv4_player )
 
+	PORT_INCLUDE( cmv4_coins )
+
+	PORT_INCLUDE( cmv4_service )
 
 	PORT_START("DSW1")
 	PORT_DIPNAME( 0x03, 0x03, "Minimum Bet" )               PORT_DIPLOCATION("DSW1:1,2")
@@ -7599,16 +7605,16 @@ static INPUT_PORTS_START( cb3c )
 	PORT_START("IN0")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_CODE(KEYCODE_X) PORT_CODE(KEYCODE_2_PAD) PORT_NAME("Big / Stop 2")
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON5 ) PORT_CODE(KEYCODE_B)                          PORT_NAME("Blue Bet / D-UP")
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_CODE(KEYCODE_Z) PORT_CODE(KEYCODE_1_PAD) PORT_NAME("Take / Stop 1")
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON4 ) PORT_CODE(KEYCODE_V)                          PORT_NAME("Red Bet")
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_CODE(KEYCODE_C) PORT_CODE(KEYCODE_3_PAD) PORT_NAME("Small / Info / Stop 3")
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_BUTTON6 ) PORT_CODE(KEYCODE_N) PORT_CODE(KEYCODE_0_PAD) PORT_NAME("Start / All Stop")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_SLOT_STOP2 )                   PORT_NAME("Stop Reel 2 / Big")
+	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_BUTTON5 ) PORT_CODE(KEYCODE_N) PORT_NAME("Blue Bet / Double Up")
+	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_SLOT_STOP1 )                   PORT_NAME("Stop Reel 1 / Take Score")
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON4 ) PORT_CODE(KEYCODE_B) PORT_NAME("Red Bet")
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SLOT_STOP3 )                   PORT_NAME("Stop Reel 3 / Small / Info")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_START1 )                       PORT_NAME("Start / Stop All Reels")
 
 	PORT_INCLUDE( cmv4_coins )
 	PORT_MODIFY("IN1")
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_CUSTOM ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_6) PORT_NAME("Service In")
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_OTHER ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_6) PORT_NAME("Service In")
 
 	PORT_INCLUDE( cmv4_service )
 
@@ -7675,7 +7681,7 @@ static INPUT_PORTS_START( cb3c )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 
 	PORT_START("DSW3")
-	PORT_DIPNAME( 0x07, 0x02, "Payout %" )             PORT_DIPLOCATION("DSW3:1,2,3")
+	PORT_DIPNAME( 0x07, 0x02, "Payout Rate" )          PORT_DIPLOCATION("DSW3:1,2,3")
 	PORT_DIPSETTING(    0x00, "55%" )
 	PORT_DIPSETTING(    0x04, "60%" )
 	PORT_DIPSETTING(    0x02, "65%" )
@@ -7684,13 +7690,13 @@ static INPUT_PORTS_START( cb3c )
 	PORT_DIPSETTING(    0x05, "80%" )
 	PORT_DIPSETTING(    0x03, "85%" )
 	PORT_DIPSETTING(    0x07, "100%" )
-	PORT_DIPNAME( 0x08, 0x00, "Double Up Feature" )     PORT_DIPLOCATION("DSW3:4")
+	PORT_DIPNAME( 0x08, 0x00, "Double Up Game" )        PORT_DIPLOCATION("DSW3:4")
 	PORT_DIPSETTING(    0x08, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 	PORT_DIPNAME( 0x10, 0x00, "Minimum Bet for Bonus" ) PORT_DIPLOCATION("DSW3:5")
 	PORT_DIPSETTING(    0x00, "8" )
 	PORT_DIPSETTING(    0x10, "16" )
-	PORT_DIPNAME( 0x60, 0x00, "Key In" )                PORT_DIPLOCATION("DSW3:6,7")
+	PORT_DIPNAME( 0x60, 0x00, "Key-In Rate" )           PORT_DIPLOCATION("DSW3:6,7")
 	PORT_DIPSETTING(    0x60, "10" )
 	PORT_DIPSETTING(    0x40, "20" )
 	PORT_DIPSETTING(    0x20, "50" )
@@ -7702,13 +7708,13 @@ static INPUT_PORTS_START( cb3c )
 	PORT_START("DSW4")
 	PORT_DIPNAME( 0x03, 0x02, "Game Limit" )         PORT_DIPLOCATION("DSW4:1,2")
 	PORT_DIPSETTING(    0x00, "40,000" )
-    PORT_DIPSETTING(    0x01, "50,000" )
+	PORT_DIPSETTING(    0x01, "50,000" )
 	PORT_DIPSETTING(    0x02, "100,000" )
-	PORT_DIPSETTING(    0x03, "No Limit" )
+	PORT_DIPSETTING(    0x03, "Unlimited" )
 	PORT_DIPNAME( 0x04, 0x00, "Show Limit" )         PORT_DIPLOCATION("DSW4:3")
 	PORT_DIPSETTING(    0x04, DEF_STR( No ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) ) // Show if Jackpot is Off
-	PORT_DIPNAME( 0x18, 0x18, "Max Bet" )            PORT_DIPLOCATION("DSW4:4,5")
+	PORT_DIPNAME( 0x18, 0x18, "Maximum Bet" )        PORT_DIPLOCATION("DSW4:4,5")
 	PORT_DIPSETTING(    0x10, "32" )
 	PORT_DIPSETTING(    0x08, "64" )
 	PORT_DIPSETTING(    0x00, "72" )
@@ -7717,8 +7723,8 @@ static INPUT_PORTS_START( cb3c )
 	PORT_DIPSETTING(    0x20, DEF_STR( No ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
 	PORT_DIPNAME( 0x40, 0x00, "Reels Speed" )        PORT_DIPLOCATION("DSW4:7")
-	PORT_DIPSETTING(    0x40, "Slow" )
-	PORT_DIPSETTING(    0x00, "Fast" )
+	PORT_DIPSETTING(    0x40, DEF_STR(Low) )
+	PORT_DIPSETTING(    0x00, DEF_STR(High) )
 	PORT_DIPNAME( 0x80, 0x00, "Speed Take Score" )   PORT_DIPLOCATION("DSW4:8")
 	PORT_DIPSETTING(    0x80, "Normal" )
 	PORT_DIPSETTING(    0x00, "Fast" )
@@ -8182,8 +8188,8 @@ static INPUT_PORTS_START( tonypok )
 
 	PORT_INCLUDE( cmv4_coins )
 	PORT_MODIFY("IN1")
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_CUSTOM ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_5) PORT_NAME("Service In")   // inserting 1 credit per pulse
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_CUSTOM ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_6) PORT_NAME("Exchange Out") // rates by coin DSW3:3,4
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_OTHER ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_5) PORT_NAME("Service In")   // inserting 1 credit per pulse
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_OTHER ) PORT_IMPULSE(2) PORT_CODE(KEYCODE_6) PORT_NAME("Exchange Out") // rates by coin DSW3:3,4
 
 	PORT_INCLUDE( cmv4_service )
 
@@ -15974,7 +15980,7 @@ void cmaster_state::cm99(machine_config &config)
 {
 	cm(config);
 	m_maincpu->set_addrmap(AS_PROGRAM, &cmaster_state::cm99_map);
-	
+
 	MCFG_MACHINE_START_OVERRIDE(cmaster_state, cm99)
 }
 
@@ -20258,7 +20264,7 @@ ROM_START( cmast99 )
 	ROM_LOAD( "cm99-041-4.u15", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
 	ROM_LOAD( "cm99-041-3.u10", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
 	ROM_LOAD( "cm99-041-2.u14", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
-	ROM_LOAD( "cm99-041-1.u9",  0x6000, 0x2000, CRC(44046c31) SHA1(c9703ce2371cf86bc597e5fdb9c0d4dd6d91f7dc) )
+	ROM_LOAD( "cm99-041-1.u9",  0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
 
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
@@ -20299,7 +20305,305 @@ ROM_START( cmast99b )
 	ROM_LOAD( "cm99-041-4.u15", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
 	ROM_LOAD( "cm99-041-3.u10", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
 	ROM_LOAD( "cm99-041-2.u14", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
-	ROM_LOAD( "cm99-041-1.u9",  0x6000, 0x2000, CRC(44046c31) SHA1(c9703ce2371cf86bc597e5fdb9c0d4dd6d91f7dc) )
+	ROM_LOAD( "cm99-041-1.u9",  0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( cmast99c )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "cmaster_99_m27c512_cleco.bin", 0x0000, 0x1000, CRC(23a44d71) SHA1(c3692c62b960c4f44eba1ea9576a9cdcfb62bd39) )
+	ROM_CONTINUE(0x4000,0x1000)
+	ROM_CONTINUE(0x3000,0x1000)
+	ROM_CONTINUE(0x7000,0x1000)
+	ROM_CONTINUE(0x1000,0x1000)
+	ROM_CONTINUE(0x6000,0x1000)
+	ROM_CONTINUE(0x2000,0x1000)
+	ROM_CONTINUE(0x5000,0x1000)
+	ROM_CONTINUE(0x8000,0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "cm99-041-7.u16", 0x00000, 0x8000, CRC(69e2aef2) SHA1(195faec239734650dcd777d55a8da84e3a0ed50c) )
+	ROM_LOAD( "cm99-041-6.u11", 0x08000, 0x8000, CRC(900f36f5) SHA1(0fd41f8c8cb2f7940b653a1fad93df2e3f28a34b) )
+	ROM_LOAD( "cm99-041-5.u4",  0x10000, 0x8000, CRC(3e465e38) SHA1(847dc27e45d495cb924b3fd5ce8e68a1cb83ffc8) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "cm99-041-4.u15", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "cm99-041-3.u10", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "cm99-041-2.u14", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "cm99-041-1.u9",  0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( cmast99d )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "cmast_99_m27c512_usa_board_long.bin", 0x0000, 0x1000, CRC(5f209e97) SHA1(a9b90db26c172d7c24cbb338d5a76cb0397fb3cd) )
+	ROM_CONTINUE(0x4000,0x1000)
+	ROM_CONTINUE(0x3000,0x1000)
+	ROM_CONTINUE(0x7000,0x1000)
+	ROM_CONTINUE(0x1000,0x1000)
+	ROM_CONTINUE(0x6000,0x1000)
+	ROM_CONTINUE(0x2000,0x1000)
+	ROM_CONTINUE(0x5000,0x1000)
+	ROM_CONTINUE(0x8000,0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "cm99-041-7.u16", 0x00000, 0x8000, CRC(69e2aef2) SHA1(195faec239734650dcd777d55a8da84e3a0ed50c) )
+	ROM_LOAD( "cm99-041-6.u11", 0x08000, 0x8000, CRC(900f36f5) SHA1(0fd41f8c8cb2f7940b653a1fad93df2e3f28a34b) )
+	ROM_LOAD( "cm99-041-5.u4",  0x10000, 0x8000, CRC(3e465e38) SHA1(847dc27e45d495cb924b3fd5ce8e68a1cb83ffc8) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "cm99-041-4.u15", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "cm99-041-3.u10", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "cm99-041-2.u14", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "cm99-041-1.u9",  0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+/*
+  Cherry Master '99 (Cleco, Hand Count?)
+  Taiwanese bootleg.
+
+  Different bankswitching?
+
+  bp 29f
+  
+  ld b, $fc
+  call $0bf6 --> disable the screen
+  call $91d0 --> banked to $51d0?
+
+*/
+ROM_START( cmast99hc )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "cmast_99_hc.bin", 0x0000, 0x1000, CRC(021df5aa) SHA1(62863fbd95ecca3fa37bcc169184c15e6372ac55) )
+	ROM_CONTINUE(0x4000,0x1000)
+	ROM_CONTINUE(0x3000,0x1000)
+	ROM_CONTINUE(0x7000,0x1000)
+	ROM_CONTINUE(0x1000,0x1000)
+	ROM_CONTINUE(0x6000,0x1000)
+	ROM_CONTINUE(0x2000,0x1000)
+	ROM_CONTINUE(0x5000,0x1000)
+	ROM_CONTINUE(0x8000,0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "cm99-041-7.u16", 0x00000, 0x8000, CRC(69e2aef2) SHA1(195faec239734650dcd777d55a8da84e3a0ed50c) )
+	ROM_LOAD( "cm99-041-6.u11", 0x08000, 0x8000, CRC(900f36f5) SHA1(0fd41f8c8cb2f7940b653a1fad93df2e3f28a34b) )
+	ROM_LOAD( "cm99-041-5.u4",  0x10000, 0x8000, CRC(3e465e38) SHA1(847dc27e45d495cb924b3fd5ce8e68a1cb83ffc8) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "cm99-041-4.u15", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "cm99-041-3.u10", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "cm99-041-2.u14", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "cm99-041-1.u9",  0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( texas99 )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "cm99-041-8.u81", 0x0000, 0x1000, CRC(5fb0800e) SHA1(14d316b7b89340c5b5c9fdd0b43d5810513b74d6) )
+	ROM_CONTINUE(0x4000, 0x1000)
+	ROM_CONTINUE(0x3000, 0x1000)
+	ROM_CONTINUE(0x7000, 0x1000)
+	ROM_CONTINUE(0x1000, 0x1000)
+	ROM_CONTINUE(0x6000, 0x1000)
+	ROM_CONTINUE(0x2000, 0x1000)
+	ROM_CONTINUE(0x5000, 0x1000)
+	ROM_CONTINUE(0x8000, 0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "rom7.bin", 0x00000, 0x8000, CRC(d77d1f8b) SHA1(69761cb9cbb903b8c94ca1b3727f6c686bda1be2) )
+	ROM_LOAD( "rom6.bin", 0x08000, 0x8000, CRC(4b26ed0a) SHA1(24f56835e098f47dd92bca1c3bc13a4afeb8d58c) )
+	ROM_LOAD( "rom5.bin", 0x10000, 0x8000, CRC(b2ee065f) SHA1(a41aaa6515adfac4f6f705b8e1ff4a25cdc91e4e) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "rom4.bin", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "rom3.bin", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "rom2.bin", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "rom1.bin", 0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( texas99b )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "cm99b-041-8.u81", 0x0000, 0x1000, CRC(e0872d9f) SHA1(6d8f5e09e5c9daf834d5c74434eae86e5dd7e194) )
+	ROM_CONTINUE(0x4000, 0x1000)
+	ROM_CONTINUE(0x3000, 0x1000)
+	ROM_CONTINUE(0x7000, 0x1000)
+	ROM_CONTINUE(0x1000, 0x1000)
+	ROM_CONTINUE(0x6000, 0x1000)
+	ROM_CONTINUE(0x2000, 0x1000)
+	ROM_CONTINUE(0x5000, 0x1000)
+	ROM_CONTINUE(0x8000, 0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "rom7.bin", 0x00000, 0x8000, CRC(d77d1f8b) SHA1(69761cb9cbb903b8c94ca1b3727f6c686bda1be2) )
+	ROM_LOAD( "rom6.bin", 0x08000, 0x8000, CRC(4b26ed0a) SHA1(24f56835e098f47dd92bca1c3bc13a4afeb8d58c) )
+	ROM_LOAD( "rom5.bin", 0x10000, 0x8000, CRC(b2ee065f) SHA1(a41aaa6515adfac4f6f705b8e1ff4a25cdc91e4e) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "rom4.bin", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "rom3.bin", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "rom2.bin", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "rom1.bin", 0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( texas99c )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "texas_99_m27c512_cleco.bin", 0x0000, 0x1000, CRC(23a44d71) SHA1(c3692c62b960c4f44eba1ea9576a9cdcfb62bd39) )
+	ROM_CONTINUE(0x4000, 0x1000)
+	ROM_CONTINUE(0x3000, 0x1000)
+	ROM_CONTINUE(0x7000, 0x1000)
+	ROM_CONTINUE(0x1000, 0x1000)
+	ROM_CONTINUE(0x6000, 0x1000)
+	ROM_CONTINUE(0x2000, 0x1000)
+	ROM_CONTINUE(0x5000, 0x1000)
+	ROM_CONTINUE(0x8000, 0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "rom7.bin", 0x00000, 0x8000, CRC(d77d1f8b) SHA1(69761cb9cbb903b8c94ca1b3727f6c686bda1be2) )
+	ROM_LOAD( "rom6.bin", 0x08000, 0x8000, CRC(4b26ed0a) SHA1(24f56835e098f47dd92bca1c3bc13a4afeb8d58c) )
+	ROM_LOAD( "rom5.bin", 0x10000, 0x8000, CRC(b2ee065f) SHA1(a41aaa6515adfac4f6f705b8e1ff4a25cdc91e4e) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "rom4.bin", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "rom3.bin", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "rom2.bin", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "rom1.bin", 0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+ROM_START( texas99d )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "texas_99_m27c512_usa_board_long.bin", 0x0000, 0x1000, CRC(5f209e97) SHA1(a9b90db26c172d7c24cbb338d5a76cb0397fb3cd) )
+	ROM_CONTINUE(0x4000, 0x1000)
+	ROM_CONTINUE(0x3000, 0x1000)
+	ROM_CONTINUE(0x7000, 0x1000)
+	ROM_CONTINUE(0x1000, 0x1000)
+	ROM_CONTINUE(0x6000, 0x1000)
+	ROM_CONTINUE(0x2000, 0x1000)
+	ROM_CONTINUE(0x5000, 0x1000)
+	ROM_CONTINUE(0x8000, 0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "rom7.bin", 0x00000, 0x8000, CRC(d77d1f8b) SHA1(69761cb9cbb903b8c94ca1b3727f6c686bda1be2) )
+	ROM_LOAD( "rom6.bin", 0x08000, 0x8000, CRC(4b26ed0a) SHA1(24f56835e098f47dd92bca1c3bc13a4afeb8d58c) )
+	ROM_LOAD( "rom5.bin", 0x10000, 0x8000, CRC(b2ee065f) SHA1(a41aaa6515adfac4f6f705b8e1ff4a25cdc91e4e) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "rom4.bin", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "rom3.bin", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "rom2.bin", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "rom1.bin", 0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+/*
+  Texas '99 (Cleco, Hand Count?)
+  Taiwanese bootleg. Same as cmast99hc.
+
+  Different bankswitching?
+
+  bp 29f
+  
+  ld b, $fc
+  call $0bf6 --> disable the screen
+  call $91d0 --> banked to $51d0?
+
+*/
+ROM_START( texas99hc )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "texas_99_hc.bin", 0x0000, 0x1000, CRC(021df5aa) SHA1(62863fbd95ecca3fa37bcc169184c15e6372ac55) )
+	ROM_CONTINUE(0x4000, 0x1000)
+	ROM_CONTINUE(0x3000, 0x1000)
+	ROM_CONTINUE(0x7000, 0x1000)
+	ROM_CONTINUE(0x1000, 0x1000)
+	ROM_CONTINUE(0x6000, 0x1000)
+	ROM_CONTINUE(0x2000, 0x1000)
+	ROM_CONTINUE(0x5000, 0x1000)
+	ROM_CONTINUE(0x8000, 0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "rom7.bin", 0x00000, 0x8000, CRC(d77d1f8b) SHA1(69761cb9cbb903b8c94ca1b3727f6c686bda1be2) )
+	ROM_LOAD( "rom6.bin", 0x08000, 0x8000, CRC(4b26ed0a) SHA1(24f56835e098f47dd92bca1c3bc13a4afeb8d58c) )
+	ROM_LOAD( "rom5.bin", 0x10000, 0x8000, CRC(b2ee065f) SHA1(a41aaa6515adfac4f6f705b8e1ff4a25cdc91e4e) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "rom4.bin", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "rom3.bin", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "rom2.bin", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "rom1.bin", 0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
 
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
@@ -26468,6 +26772,37 @@ ROM_START( jpknight )  // D9503 DYNA
 	ROM_LOAD( "82s135.c11", 0x100, 0x100, CRC(17c615a5) SHA1(d7bf23402e9da25bc6d9c27f5ceb27f3143caae4) )
 ROM_END
 
+
+//  The Aladdin. Dyna, 1991
+//  V1.2U - PCB D9106
+ROM_START( aladdin ) 
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "ald2_v1.2u_27c512.d15", 0x00000, 0x10000, CRC(66c638ca) SHA1(ac0e9af5cd7535e8a86573723851b987c4a80c63) )
+
+	ROM_REGION( 0x100000, "gfx", 0 )
+	ROM_LOAD( "538000_as_27c080.h2", 0x000000, 0x100000, CRC(800c6c8d) SHA1(bf8d8f05b21e6cd4f0efed1ae7b66c2d9d8f43ee) )
+
+	ROM_REGION( 0x300, "proms", 0 )
+	ROM_LOAD( "mb7114h.h14", 0x000, 0x100, CRC(a69819b8) SHA1(5818046aae387f5b137c379cc4d78a15739c71cc) )
+	ROM_LOAD( "mb7114h.h15", 0x100, 0x100, CRC(36c08918) SHA1(fa87dea8fd27c1ac7e007e2cdef77ef5eabf1a7b) )
+	ROM_LOAD( "mb7114h.h16", 0x200, 0x100, CRC(71e66913) SHA1(800b05ea8eb1bb89e933a6f44632c7ebfea52e03) )
+ROM_END
+
+//  The Aladdin. Dyna, 1991
+//  V1.1A - PCB D9106
+ROM_START( aladdina ) 
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "ald2_v1.1a_27c512.d15", 0x00000, 0x10000, CRC(b13baf47) SHA1(2c45edca22add535a5cf367810ac26d84f7abd82) )
+
+	ROM_REGION( 0x100000, "gfx", 0 )
+	ROM_LOAD( "538000_as_27c080.h2", 0x000000, 0x100000, CRC(800c6c8d) SHA1(bf8d8f05b21e6cd4f0efed1ae7b66c2d9d8f43ee) )
+
+	ROM_REGION( 0x300, "proms", 0 )
+	ROM_LOAD( "mb7114h.h14", 0x000, 0x100, CRC(a69819b8) SHA1(5818046aae387f5b137c379cc4d78a15739c71cc) )
+	ROM_LOAD( "mb7114h.h15", 0x100, 0x100, CRC(36c08918) SHA1(fa87dea8fd27c1ac7e007e2cdef77ef5eabf1a7b) )
+	ROM_LOAD( "mb7114h.h16", 0x200, 0x100, CRC(71e66913) SHA1(800b05ea8eb1bb89e933a6f44632c7ebfea52e03) )
+ROM_END
+
 /*
   DYNA D9106C PCB:
   -Zilog Z0840006.
@@ -26522,6 +26857,23 @@ ROM_START( eldoraddo )  // String "DYNA ELD3 V1.1TA" on program ROM
 	ROM_LOAD( "pal16l8.e11", 0x200, 0x104, NO_DUMP )
 ROM_END
 
+ROM_START( eldoraddob )  // String "DYNA ELD3 V2.0D" in program ROM, DYNA D9105B PCB
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "elb.50d.d15", 0x00000, 0x10000, CRC(34d55507) SHA1(8cc293bb5e493a837320e14d0316a0658084dde3) )
+
+	ROM_REGION( 0x100000, "gfx", 0 )
+	ROM_LOAD( "tc538000p-dyna dm9106.h2", 0x000000, 0x100000, CRC(fa84c372) SHA1(a71e57e76321b7ebb16933d9bc983b9160995b4a) )
+
+	ROM_REGION( 0x300, "proms", 0 )
+	ROM_LOAD( "e14", 0x000, 0x100, CRC(fa274678) SHA1(6712cb1f7ead1a7aa703ec799e7199c33ace857c) )
+	ROM_LOAD( "e15", 0x100, 0x100, CRC(e58877ea) SHA1(30fa873fc05d91610ef68eef54b78f2c7301a62a) )
+	ROM_LOAD( "e16", 0x200, 0x100, CRC(781b2842) SHA1(566667d4f81e93b29bb01dbc51bf144c02dff75d) )
+
+	ROM_REGION( 0x400, "plds", 0 ) // available as brute-forced dumps, need to be verified and converted
+	ROM_LOAD( "pal16l8.d13", 0x000, 0x104, NO_DUMP )
+	ROM_LOAD( "pal16l8.e11", 0x200, 0x104, NO_DUMP )
+ROM_END
+
 /*
   DYNA D9105 PCB with Sharp LH0080B (Z80B) CPU and 2 customs
   (DYNA DC4000 and DYNA 22A078803), 5x 8-dips, XTAL 24 MHz.
@@ -26545,6 +26897,24 @@ ROM_START( eldoraddoc )  // String "DYNA ELD3 V1.1J" in program ROM
 	ROM_LOAD( "pal16l8.d13", 0x000, 0x104, NO_DUMP )
 	ROM_LOAD( "pal16l8.e11", 0x200, 0x104, NO_DUMP )
 ROM_END
+
+ROM_START( eldoraddod )  // String "DYNA ELD3 V1.1U" in program ROM
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD16_WORD( "27c512_v1.1u.c14", 0x00000, 0x10000, CRC(3274d388) SHA1(180c9389fe7ccdee716b28a87effdc3970e057bf) )
+
+	ROM_REGION( 0x100000, "gfx", 0 )
+	ROM_LOAD( "tc538009.g15", 0x000000, 0x100000, CRC(fa84c372) SHA1(a71e57e76321b7ebb16933d9bc983b9160995b4a) )
+
+	ROM_REGION( 0x300, "proms", 0 )
+	ROM_LOAD( "bprom.d8",  0x000, 0x100, CRC(fa274678) SHA1(6712cb1f7ead1a7aa703ec799e7199c33ace857c) )
+	ROM_LOAD( "bprom.d10", 0x100, 0x100, CRC(e58877ea) SHA1(30fa873fc05d91610ef68eef54b78f2c7301a62a) )
+	ROM_LOAD( "bprom.d12", 0x200, 0x100, CRC(781b2842) SHA1(566667d4f81e93b29bb01dbc51bf144c02dff75d) )
+
+	ROM_REGION( 0x400, "plds", 0 )  // available as brute-forced dumps, need to be verified and converted
+	ROM_LOAD( "pal16l8.d13", 0x000, 0x104, NO_DUMP )
+	ROM_LOAD( "pal16l8.e11", 0x200, 0x104, NO_DUMP )
+ROM_END
+
 
 /*
   DYNA D9101 PCB with Z0840006VSC CPU and 2 customs
@@ -26571,21 +26941,23 @@ ROM_START( eldoraddoa )  // String "DYNA ELD2  V1.4D" in program ROM. The two du
 	ROM_LOAD( "82s129.h5", 0x000, 0x100, CRC(209ccf78) SHA1(9f92875855702c7cc4d429ba5f463b698e0e91d3) )
 ROM_END
 
-ROM_START( eldoraddob )  // String "DYNA ELD3 V2.0D" in program ROM, DYNA D9105B PCB
+ROM_START( eldoraddoab )  // Dyna ELD2 V1.5U (Dyna Grayhound version)
 	ROM_REGION( 0x10000, "maincpu", 0 )
-	ROM_LOAD16_WORD( "elb.50d.d15", 0x00000, 0x10000, CRC(34d55507) SHA1(8cc293bb5e493a837320e14d0316a0658084dde3) )
+	ROM_LOAD( "dyna_eld2_v1.5u.h13", 0x00000, 0x10000, CRC(e72ce59f) SHA1(683e5169f536e4cea124307b0d5a0321660a9c74) )
 
-	ROM_REGION( 0x100000, "gfx", 0 )
-	ROM_LOAD( "tc538000p-dyna dm9106.h2", 0x000000, 0x100000, CRC(fa84c372) SHA1(a71e57e76321b7ebb16933d9bc983b9160995b4a) )
+	ROM_REGION( 0x20000, "gfx1", 0 )
+	ROM_LOAD( "9.d9", 0x00000, 0x20000, CRC(ee7b1537) SHA1(e10b2f3c9291d836782148c4ae388c94ee47a964) )
+
+	ROM_REGION( 0x20000, "gfx2", 0 )
+	ROM_LOAD( "8.d8", 0x00000, 0x20000, CRC(d39c3cf2) SHA1(56a56ae7c931aa3f94643e1fbf33bfc6ac1c1b2b) )
 
 	ROM_REGION( 0x300, "proms", 0 )
-	ROM_LOAD( "e14", 0x000, 0x100, CRC(fa274678) SHA1(6712cb1f7ead1a7aa703ec799e7199c33ace857c) )
-	ROM_LOAD( "e15", 0x100, 0x100, CRC(e58877ea) SHA1(30fa873fc05d91610ef68eef54b78f2c7301a62a) )
-	ROM_LOAD( "e16", 0x200, 0x100, CRC(781b2842) SHA1(566667d4f81e93b29bb01dbc51bf144c02dff75d) )
+	ROM_LOAD( "82s129.e12", 0x000, 0x100, CRC(1564bb12) SHA1(641a681866ac5d53d88752a076ad958c94e68a3a) )
+	ROM_LOAD( "82s129.e10", 0x100, 0x100, CRC(db31f7ac) SHA1(9f23d65dc0c43b1700093461d2c5277cc1d42f49) )
+	ROM_LOAD( "82s129.e11", 0x200, 0x100, CRC(49c4df77) SHA1(860fa207c74eab00ea6c7f3fa16aafba84195336) )
 
-	ROM_REGION( 0x400, "plds", 0 ) // available as brute-forced dumps, need to be verified and converted
-	ROM_LOAD( "pal16l8.d13", 0x000, 0x104, NO_DUMP )
-	ROM_LOAD( "pal16l8.e11", 0x200, 0x104, NO_DUMP )
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.h5", 0x000, 0x100, CRC(209ccf78) SHA1(9f92875855702c7cc4d429ba5f463b698e0e91d3) )
 ROM_END
 
 ROM_START( animalhs ) // Animal House. Strings "SUNS PECKER V1.0" and "SUNS CO LTD." on program ROM. Clearly derived from the eldoraddoa set above
@@ -31769,6 +32141,7 @@ void cmaster_state::init_cm99()
 	init_cmv4();
 
 	// intended, for specific game init.
+
 }
 
 
@@ -31812,10 +32185,6 @@ GAMEL( 199?, cb3h,       ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3,
 GAMEL( 199?, cb3s51,     ncb3,     ncb3,     ncb3,     cb3_state,      init_cb3g,      ROT0, "Dyna",              "Cherry Bonus III (ver.5.1)",                  0,                 layout_cherryb3 )
 GAMEL( 199?, chryglda,   ncb3,     cb3e,     chrygld,  cb3_state,      init_cb3e,      ROT0, "bootleg",           "Cherry Gold I (set 2, encrypted bootleg)",    0,                 layout_chrygld )  // Runs in CB3e hardware.
 GAME(  1994, chryangla,  ncb3,     chryangla,ncb3,     cb3_state,      init_chryangla, ROT0, "bootleg (G.C.I.)",  "Cherry Angel (encrypted, W-4 hardware)",      MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // DYNA CB3  V1.40 string, playable, but still has protections
-
-GAMEL( 1991, eldoraddoa, eldoradd, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",             "El Dorado (V1.4D)",                           0,                 layout_animalhs )
-GAMEL( 1991, animalhs,   0,        animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 1)",                  0,                 layout_animalhs )
-GAMEL( 1991, animalhsa,  animalhs, animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 2)",                  0,                 layout_animalhs )
 
 // looks like a hack of Cherry Bonus 3
 GAME(  1994, chryangl,   ncb3,     chryangl,  chryangl,  cmaster_state, init_chryangl,  ROT0, "bootleg (G.C.I.)", "Cherry Angel (set 1)",                        MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // SKY SUPERCB 1.0 string, playable, but still has protections
@@ -31908,23 +32277,45 @@ GAME(  1993, missbingoc, crazybonb, crazybonb, crazybonb, cmaster_state, init_cr
 
 GAME(  199?, chthree,    cmaster,  cm,       cmaster,  cmaster_state,  init_chthree,   ROT0, "Promat",            "Channel Three",                               0 ) // hack of cmaster, still shows DYNA CM-1 V1.01 in book-keeping
 
+// Dyna D9101 PCB
+GAMEL( 1991, eldoraddoa,  eldoradd, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",             "El Dorado (V1.4D)",                          0,                 layout_animalhs )
+GAMEL( 1991, eldoraddoab, eldoradd, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna / Grayhound", "El Dorado (V1.5U, Dyna/Grayhound)",          0,                 layout_animalhs )
+GAMEL( 1991, animalhs,    0,        animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 1)",                 0,                 layout_animalhs )
+GAMEL( 1991, animalhsa,   animalhs, animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 2)",                 0,                 layout_animalhs )
+
+// Dyna D9106/D9106C PCB
+GAME(  1991, eldoradd,   0,        eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V5.1DR)",                          MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play
+GAME(  1991, aladdin,    0,        eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "The Aladdin (V1.2U)",                         MACHINE_NOT_WORKING ) // different GFX hw?
+GAME(  1991, aladdina,   aladdin,  eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "The Aladdin (V1.1A)",                         MACHINE_NOT_WORKING ) // different GFX hw?
+
+// Dyna D9105 PCB
+GAME(  1991, eldoraddo,  eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V1.1TA)",                          MACHINE_NOT_WORKING ) // different GFX hw?
+GAME(  1991, eldoraddob, eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V2.0D)",                           MACHINE_NOT_WORKING ) // different GFX hw?
+GAME(  1991, eldoraddoc, eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V1.1J)",                           MACHINE_NOT_WORKING ) // different GFX hw?
+GAME(  1991, eldoraddod, eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V1.1U)",                           MACHINE_NOT_WORKING ) // different GFX hw?
+
 GAME(  1991, cmast91,    0,        cmast91,  cmast91,  cmaster_state,  init_cmast91,   ROT0, "Dyna",              "Cherry Master '91 (ver.1.30)",                0 )
 GAMEL( 1991, cll,        0,        cmast91,  cmast91,  cmaster_state,  init_cll,       ROT0, "Dyna / TAB Austria","Cuty Line Limited (ver.1.30)",                0,    layout_cmv4 ) // needs verifying dips, missing girls
 GAME(  1992, cmast92,    0,        eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '92 (V1.2D)",                   MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play
 GAME(  1992, cmast92a,   cmast92,  eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '92 (V1.1D)",                   MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play
-GAME(  1991, eldoradd,   0,        eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V5.1DR)",                          MACHINE_NOT_WORKING ) // different GFX hw? Game is running and sounds play
-GAME(  1991, eldoraddo,  eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V1.1TA)",                          MACHINE_NOT_WORKING ) // different GFX hw?
-GAME(  1991, eldoraddob, eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V2.0D)",                           MACHINE_NOT_WORKING ) // different GFX hw?
-GAME(  1991, eldoraddoc, eldoradd, eldoradd, cmast91,  cmaster_state,  empty_init,     ROT0, "Dyna",              "El Dorado (V1.1J)",                           MACHINE_NOT_WORKING ) // different GFX hw?
 GAMEL( 1996, cmast97,    0,        cmast97,  cmast97,  cmast97_state,  init_cm97,      ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 1)",             0,    layout_cmast97 )
 GAMEL( 1997, cmast97a,   cmast97,  cmast97,  cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 2, no girls)",   0,    layout_cmast97 )
 GAMEL( 1996, cmast97b,   cmast97,  cmast97,  cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 3, no girls)",   0,    layout_cmast97 )
 GAMEL( 1996, cmast97i,   cmast97,  cmast97,  cmast97i, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cheri Mondo '97 (V1.4I)",                     0,    layout_cmast97 )
 GAMEL( 1997, jpknight,   0,        jpknight, cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna / R-Stone",    "Jackpot Knight (V1.1)",                       0,    layout_cmast97 ) // check inputs
 
-GAME(  1999, cmast99,    0,        cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "Dyna",              "Cherry Master '99 (V9B.00)",                  MACHINE_NOT_WORKING )
-GAME(  1999, cmast99b,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Cherry Master '99 (V9B.00 bootleg / hack)",   MACHINE_NOT_WORKING )
-GAME(  1993, aplan,      0,        cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "WeaShing H.K.",     "A-Plan",                                      MACHINE_NOT_WORKING )
+// Dyna CM99 hardware (dynamic banking)
+GAMEL( 1999, cmast99,    0,        cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "Dyna",              "Cherry Master '99 (QL-1 V9B.00)",             MACHINE_NOT_WORKING,     layout_cmv4 )
+GAMEL( 1999, cmast99b,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Cherry Master '99 (QQ-1 V9B.00, bootleg)",    MACHINE_NOT_WORKING,     layout_cmv4 )
+GAMEL( 1999, cmast99c,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Cherry Master '99 (QQ-1 V9B.00, Cleco)",      MACHINE_NOT_WORKING,     layout_cmv4 )
+GAMEL( 1999, cmast99d,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Cherry Master '99 (QL-1 V9B.00, USA long PCB)", MACHINE_NOT_WORKING,   layout_cmv4 )
+GAMEL( 1999, cmast99hc,  cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Cherry Master '99 (QL-1 V9B.00, Cleco, Hand Count?)", MACHINE_NOT_WORKING, layout_cmv4 ) // different bankswitching? see the ROM load notes
+GAMEL( 1998, texas99,    cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QL-1 V9B.00)",                     MACHINE_NOT_WORKING,     layout_cmv4 ) // similar to cmast99 
+GAMEL( 1998, texas99b,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QQ-1 V9B.00, bootleg)",            MACHINE_NOT_WORKING,     layout_cmv4 ) // similar to cmast99b 
+GAMEL( 1998, texas99c,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QQ-1 V9B.00, Cleco)",              MACHINE_NOT_WORKING,     layout_cmv4 )
+GAMEL( 1998, texas99d,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QL-1 V9B.00, USA long PCB)",       MACHINE_NOT_WORKING,     layout_cmv4 ) 
+GAMEL( 1998, texas99hc,  cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QL-1 V9B.00, Cleco, Hand Count?)", MACHINE_NOT_WORKING,     layout_cmv4 ) // different bankswitching? see the ROM load notes
+GAME(  1993, aplan,      0,        cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "WeaShing H.K.",     "A-Plan",                                      MACHINE_NOT_WORKING ) // doesn't boot, not investigated yet
 GAME(  1999, top7,       0,        cm,       cmast99,  cmaster_state,  empty_init,     ROT0, "bootleg (UTech)",   "Top-7 (V8.8, set 1)",                         MACHINE_NOT_WORKING ) // doesn't boot, not investigated yet
 GAME(  1999, top7a,      top7,     cm,       cmast99,  cmaster_state,  empty_init,     ROT0, "bootleg (UTech)",   "Top-7 (V8.8, set 2)",                         MACHINE_NOT_WORKING ) // doesn't boot, not investigated yet
 GAME(  1996, war3cb,     0,        cm,       cmast99,  cmaster_state,  empty_init,     ROT0, "S.B.E.",            "War III Cherry Best",                         MACHINE_NOT_WORKING ) // different portmap?

@@ -15,8 +15,6 @@
 
     TODO (per-game issues)
     - doa, doaa: corrupted sound, eventually becomes silent;
-    - hpyagu98: stops with 'Error #1' message during boot.
-      Also writes to the 0x600000-0x62ffff range in main CPU program map;
     - lastbrnx: uses external DMA port 0 for uploading SHARC program, hook-up might not be 100% right;
     - lastbrnx: has wrong graphics, uses several SHARC opcodes that needs to be double checked
                 (compute_fmul_avg, shift operation 0x11, ALU operation 0x89 (compute_favg));
@@ -24,6 +22,8 @@
               bypass it by entering then exiting service mode;
     - sgt24h: has input analog issues, steering doesn't center when neutral,
       gas and brake pedals pulses instead of being fixed;
+	- vcop2: stage select has tilemap priority issue, tilemap B (city model) has priority bit set,
+	         yet it should appear underneath tilemap A ("shoot to select") which does not
 
     Notes:
     - some analog games can be calibrated in service mode via volume control item ...
@@ -143,6 +143,8 @@ void model2_state::machine_start()
 	// initialize custom debugger pool, @see machine/model2.cpp
 	debug_init();
 
+	m_lamps.resolve();
+	
 	save_item(NAME(m_intreq));
 	save_item(NAME(m_intena));
 	save_item(NAME(m_coproctl));
@@ -1173,45 +1175,93 @@ u8 model2_state::lightgun_offscreen_r(offs_t offset)
 //  OUTPUTS
 //**************************************************************************
 
-void model2o_state::daytona_output_w(u8 data)
-{
-	// 7-------  leader led
-	// -6------  vr4 led
-	// --5-----  vr3 led
-	// ---4----  vr2 led
-	// ----3---  vr1 led
-	// -----2--  start led
-	// ------1-  coin counter 2
-	// -------0  coin counter 1
+/*
+	Daytona
+	7-------  leader lamp
+	-6------  vr4 lamp
+	--5-----  vr3 lamp
+	---4----  vr2 lamp
+	----3---  vr1 lamp
+	-----2--  start lamp
+	------1-  coin counter 2
+	-------0  coin counter 1
 
-	machine().bookkeeping().coin_counter_w(1, BIT(data, 1));
+	Desert
+	7-------  cannon motor
+	-6------  machine gun motor
+	--5-----  vr1 lamp
+	---4----  vr2 lamp
+	----3---  vr3 lamp
+	-----2--  start lamp
+	------1-  coin counter 2
+	-------0  coin counter 1
+
+	Vcop
+	7654----  unknown (not used?)
+	----32--  start lamps (always set together)
+	------1-  coin counter 2
+	-------0  coin counter 1
+
+	Srallyc
+	7-------  leader lamp   
+	-6------  unknown
+	--5-----  vr lamp
+	---4----  unknown
+	----3---  unknown
+	-----2--  start lamp
+	------1-  coin counter 2
+	-------0  coin counter 1
+
+	STCC
+	7-------  unknown
+	-6------  unknown
+	--5-----  view 2 (zoom out) lamp  
+	---4----  view 1 (zoom in) lamp 
+	----3---  rev max lamp 
+	-----2--  start lamp 
+	------1-  coin counter 2
+	-------0  coin counter 1
+
+	Indy500
+	7-------  race leader lamp 
+	-6------  unknown
+	--5-----  view 2 (zoom out) lamp
+	---4----  view 1 (zoom in) lamp 
+	----3---  unknown
+	-----2--  start lamp 
+	------1-  coin counter 2
+	-------0  coin counter 1
+
+	Overrev
+	7-------  unknown
+	-6------  unknown
+	--5-----  view 2 lamp
+	---4----  view 1 lamp
+	----3---  unknown
+	-----2--  start lamp
+	------1-  coin counter 2
+	-------0  coin counter 1
+
+	Sgt24h
+	7-------  unknown
+	-6------  unknown
+	--5-----  view 2 lamp
+	---4----  view 1 lamp
+	----3---  unknown
+	-----2--  start lamp
+	------1-  coin counter 2
+	-------0  coin counter 1
+*/
+
+void model2_state::lamp_output_w(u8 data)
+{
+	// Coin counters
 	machine().bookkeeping().coin_counter_w(0, BIT(data, 0));
-}
-
-void model2o_state::desert_output_w(u8 data)
-{
-	// 7-------  cannon motor
-	// -6------  machine gun motor
-	// --5-----  vr1
-	// ---4----  vr2
-	// ----3---  vr3
-	// -----2--  start
-	// ------1-  coin counter 2
-	// -------0  coin counter 1
-
 	machine().bookkeeping().coin_counter_w(1, BIT(data, 1));
-	machine().bookkeeping().coin_counter_w(0, BIT(data, 0));
-}
 
-void model2o_state::vcop_output_w(u8 data)
-{
-	// 7654----  unknown (not used?)
-	// ----32--  start leds (always set together)
-	// ------1-  coin counter 2
-	// -------0  coin counter 1
-
-	machine().bookkeeping().coin_counter_w(1, BIT(~data, 1));
-	machine().bookkeeping().coin_counter_w(0, BIT(~data, 0));
+	// Lamps (bits 2–7)
+	for (int i = 0; i < 6; i++)
+		m_lamps[i] = BIT(data, i + 2);
 }
 
 
@@ -1528,7 +1578,8 @@ void model2_state::rchase2_drive_board_w(u8 data)
 void model2_state::drive_board_w(u8 data)
 {
 	m_driveio_comm_data = data;
-	m_drivecpu->set_input_line(0, HOLD_LINE);
+	if (m_drivecpu)
+		m_drivecpu->set_input_line(0, HOLD_LINE);
 }
 
 
@@ -1569,12 +1620,11 @@ u8 model2_state::in0_r()
 ioport_value model2_state::daytona_gearbox_r()
 {
 	u8 res = m_gears.read_safe(0);
-	int i;
 	const u8 gearvalue[5] = { 0, 2, 1, 6, 5 };
 
-	for(i=0;i<5;i++)
+	for (int i = 0; i < 5; i++)
 	{
-		if(res & 1<<i)
+		if (BIT(res, i))
 		{
 			m_gearsel = i;
 			return gearvalue[i];
@@ -2623,7 +2673,7 @@ void model2o_state::daytona(machine_config &config)
 	ioboard.an_callback<0>().set_ioport("STEER");
 	ioboard.an_callback<1>().set_ioport("ACCEL");
 	ioboard.an_callback<2>().set_ioport("BRAKE");
-	ioboard.output_callback().set(FUNC(model2o_state::daytona_output_w));
+	ioboard.output_callback().set(FUNC(model2_state::lamp_output_w));
 }
 
 void model2o_maxx_state::daytona_maxx(machine_config &config)
@@ -2648,7 +2698,7 @@ void model2o_state::desert(machine_config &config)
 	ioboard.an_callback<0>().set_ioport("STEER");
 	ioboard.an_callback<1>().set_ioport("ACCEL");
 	ioboard.an_callback<2>().set_ioport("BRAKE");
-	ioboard.output_callback().set(FUNC(model2o_state::desert_output_w));
+	ioboard.output_callback().set(FUNC(model2_state::lamp_output_w));
 }
 
 void model2o_state::vcop(machine_config &config)
@@ -2662,7 +2712,7 @@ void model2o_state::vcop(machine_config &config)
 	ioboard.in_callback<0>().set_ioport("IN0");
 	ioboard.in_callback<1>().set_ioport("IN1");
 	ioboard.in_callback<2>().set_ioport("IN2");
-	ioboard.output_callback().set(FUNC(model2o_state::vcop_output_w));
+	ioboard.output_callback().set(FUNC(model2_state::lamp_output_w));
 	ioboard.set_lightgun_p1x_tag("P1_X");
 	ioboard.set_lightgun_p1y_tag("P1_Y");
 	ioboard.set_lightgun_p2x_tag("P2_X");
@@ -2696,6 +2746,7 @@ void model2a_state::model2a(machine_config &config)
 	io.in_pd_callback().set_ioport("IN2");
 	io.in_pg_callback().set_ioport("SW");
 	io.out_pe_callback().set([this] (u8 data) { m_billboard->write(data); });
+	io.out_pf_callback().set(FUNC(model2_state::lamp_output_w));
 
 	model2_timers(config);
 	model2_screen(config);
@@ -2748,6 +2799,7 @@ void model2a_state::srallyc(machine_config &config)
 
 	sega_315_5649_device &io(*subdevice<sega_315_5649_device>("io"));
 	io.out_pe_callback().set(FUNC(model2a_state::drive_board_w));
+	io.out_pf_callback().set(FUNC(model2_state::lamp_output_w));
 	io.an_port_callback<0>().set_ioport("STEER");
 	io.an_port_callback<1>().set_ioport("ACCEL");
 	io.an_port_callback<2>().set_ioport("BRAKE");
@@ -2773,8 +2825,8 @@ void model2a_state::skytargt(machine_config &config)
 
 u16 model2_state::crypt_read_callback(u32 addr)
 {
-	u16 dat= m_maincpu->space().read_word((0x1d80000+2*addr));
-	return ((dat&0xff00)>>8)|((dat&0x00ff)<<8);
+	u16 dat= m_maincpu->space().read_word((0x1d80000 + 2*addr));
+	return ((dat & 0xff00) >> 8) | ((dat & 0x00ff) << 8);
 }
 
 void model2a_state::model2a_5881(machine_config &config)
@@ -2831,6 +2883,7 @@ void model2b_state::model2b(machine_config &config)
 	io.in_pd_callback().set_ioport("IN2");
 	io.in_pg_callback().set_ioport("SW");
 	io.out_pe_callback().set([this] (u8 data) { m_billboard->write(data); });
+	io.out_pf_callback().set(FUNC(model2_state::lamp_output_w));
 
 	model2_timers(config);
 	model2_screen(config);
@@ -2868,16 +2921,7 @@ void model2b_state::indy500(machine_config &config)
 	model2b(config);
 
 	sega_315_5649_device &io(*subdevice<sega_315_5649_device>("io"));
-	io.an_port_callback<0>().set_ioport("STEER");
-	io.an_port_callback<1>().set_ioport("ACCEL");
-	io.an_port_callback<2>().set_ioport("BRAKE");
-}
-
-void model2b_state::overrev2b(machine_config &config)
-{
-	model2b(config);
-
-	sega_315_5649_device &io(*subdevice<sega_315_5649_device>("io"));
+	io.out_pe_callback().set(FUNC(model2b_state::drive_board_w));
 	io.an_port_callback<0>().set_ioport("STEER");
 	io.an_port_callback<1>().set_ioport("ACCEL");
 	io.an_port_callback<2>().set_ioport("BRAKE");
@@ -2979,6 +3023,7 @@ void model2c_state::model2c(machine_config &config)
 	io.in_pc_callback().set_ioport("IN1");
 	io.in_pd_callback().set_ioport("IN2");
 	io.in_pg_callback().set_ioport("SW");
+	io.out_pf_callback().set(FUNC(model2_state::lamp_output_w));
 
 	model2_timers(config);
 	model2_screen(config);
@@ -3001,6 +3046,7 @@ void model2c_state::stcc(machine_config &config)
 	model2c(config);
 
 	sega_315_5649_device &io(*subdevice<sega_315_5649_device>("io"));
+	io.out_pf_callback().set(FUNC(model2_state::lamp_output_w));
 	io.an_port_callback<0>().set_ioport("STEER");
 	io.an_port_callback<1>().set_ioport("ACCEL");
 	io.an_port_callback<2>().set_ioport("BRAKE");
@@ -3058,6 +3104,7 @@ void model2c_state::overrev2c(machine_config &config)
 	model2c(config);
 
 	sega_315_5649_device &io(*subdevice<sega_315_5649_device>("io"));
+	io.out_pf_callback().set(FUNC(model2_state::lamp_output_w));
 	io.an_port_callback<0>().set_ioport("STEER");
 	io.an_port_callback<1>().set_ioport("ACCEL");
 	io.an_port_callback<2>().set_ioport("BRAKE");
@@ -7422,8 +7469,8 @@ ROM_START( hpyagu98 ) /* Hanguk Pro Yagu 98, Model 2A, ROM board# 834-11342 REV.
 	ROM_LOAD32_WORD( "bb-tp-3.21", 0x800002, 0x400000, CRC(dbadc020) SHA1(101cab02cf6e14b7438faa0dadc565e0837aba34) )
 
 	ROM_REGION( 0x1000000, "textures", ROMREGION_ERASEFF ) // Textures
-	ROM_LOAD32_WORD( "bb-tx-0.25", 0x000000, 0x400000, CRC(d241a138) SHA1(bd2dff3d76b25705f474acd428b301fa984ff321) )
-	ROM_LOAD32_WORD( "bb-tx-1.24", 0x000002, 0x400000, CRC(ac04ce3c) SHA1(aa35e34957d5215d7f784cadc59fe1c74d4b6d01) )
+	ROM_LOAD32_WORD( "bb-tx-1.25", 0x000000, 0x400000, CRC(ac04ce3c) SHA1(aa35e34957d5215d7f784cadc59fe1c74d4b6d01) )
+	ROM_LOAD32_WORD( "bb-tx-0.24", 0x000002, 0x400000, CRC(d241a138) SHA1(bd2dff3d76b25705f474acd428b301fa984ff321) )
 
 	ROM_REGION( 0x080000, "audiocpu", 0 ) // Sound program
 	ROM_LOAD16_WORD_SWAP( "am27c1024.30", 0x000000, 0x020000, CRC(023c64f1) SHA1(43b9bb1c7a3da8650a6da60f58466d4ac759b228) ) // without label
@@ -7433,6 +7480,12 @@ ROM_START( hpyagu98 ) /* Hanguk Pro Yagu 98, Model 2A, ROM board# 834-11342 REV.
 	ROM_LOAD16_WORD_SWAP( "bb-sn-2.32", 0x200000, 0x200000, CRC(dcf9ffd9) SHA1(5679c26d85cf0384dd402e1ac28867d26287ecc4) )
 	ROM_LOAD16_WORD_SWAP( "bb-sn-3.36", 0x400000, 0x200000, CRC(e4c938b2) SHA1(3a96433f58a52dea026ab47bf93dc6a9c620e1dd) )
 	ROM_LOAD16_WORD_SWAP( "bb-sn-4.37", 0x600000, 0x200000, CRC(8692fbf3) SHA1(d8e854bba7b54fba85e182d761a9fd02fd13646f) )
+
+	ROM_REGION16_LE(0x80, "eeprom", 0) // EEPROM (required to prevent error #0 on boot)
+	ROM_LOAD("hpyagu98_nvram", 0x00, 0x80, CRC(3634c60f) SHA1(1ab7b74fd05b2d21496af9b2a477c0d197847c55)) // partly handcrafted, same settings as dynabb97 default
+
+	ROM_REGION(0x4000, "backup1", 0) // Backup RAM (required to prevent error #0 on boot)
+	ROM_LOAD("hpyagu98_backup", 0x0000, 0x4000, CRC(979751d5) SHA1(2f6c6d12b77d7fbd3e44b05f4c21ca479fae782c)) // partly handcrafted
 
 	MODEL2_CPU_BOARD
 	MODEL2A_VID_BOARD
@@ -7580,14 +7633,14 @@ GAME( 1996, lastbrnxu,  lastbrnx, model2b,      vf2,       model2b_state, empty_
 GAME( 1996, lastbrnxj,  lastbrnx, model2b,      vf2,       model2b_state, empty_init,    ROT0, "Sega",   "Last Bronx: Tokyo Bangaichi (Japan, Revision A)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1996, doa,        0,        model2b_0229, doa,       model2b_state, init_doa,      ROT0, "Tecmo",  "Dead or Alive (Model 2B, Revision C)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS ) // Jan 10 1997
 GAME( 1996, doab,       doa,      model2b_0229, doa,       model2b_state, init_doa,      ROT0, "Tecmo",  "Dead or Alive (Model 2B, Revision B)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS ) // Dec 4 1996
-GAME( 1996, sgt24h,     0,        overrev2b,    sgt24h,    model2b_state, init_sgt24h,   ROT0, "Jaleco", "Super GT 24h", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
+GAME( 1996, sgt24h,     0,        indy500,      sgt24h,    model2b_state, init_sgt24h,   ROT0, "Jaleco", "Super GT 24h", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1996, powsled,    0,        powsled,      powsled,   model2b_state, empty_init,    ROT0, "Sega",   "Power Sled (Slave, Revision A)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1996, powsledr,   powsled,  powsled,      powsled,   model2b_state, empty_init,    ROT0, "Sega",   "Power Sled (Relay, Revision A)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1996, powsledm,   powsled,  powsled,      powsled,   model2b_state, init_powsledm, ROT0, "Sega",   "Power Sled (Main, hack of Relay)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1996, dynabb,     0,        dynabb,       dynabb,    model2b_state, empty_init,    ROT0, "Sega",   "Dynamite Baseball", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1997, dynabb97,   0,        dynabb,       dynabb,    model2b_state, empty_init,    ROT0, "Sega",   "Dynamite Baseball 97 (Revision A)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
-GAME( 1997, overrevb,   overrev,  overrev2b,    overrev,   model2b_state, empty_init,    ROT0, "Jaleco", "Over Rev (Model 2B, Revision B)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
-GAME( 1997, overrevba,  overrev,  overrev2b,    overrev,   model2b_state, empty_init,    ROT0, "Jaleco", "Over Rev (Model 2B, Revision A)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
+GAME( 1997, overrevb,   overrev,  indy500,      overrev,   model2b_state, empty_init,    ROT0, "Jaleco", "Over Rev (Model 2B, Revision B)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
+GAME( 1997, overrevba,  overrev,  indy500,      overrev,   model2b_state, empty_init,    ROT0, "Jaleco", "Over Rev (Model 2B, Revision A)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1997, zerogun,    0,        zerogun,      zerogun,   model2b_state, init_zerogun,  ROT0, "Psikyo", "Zero Gunner (Export, Model 2B)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1997, zerogunj,   zerogun,  zerogun,      zerogun,   model2b_state, init_zerogun,  ROT0, "Psikyo", "Zero Gunner (Japan, Model 2B)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1998, dynamcopb,  dynamcop, model2b_5881, dynamcop,  model2b_state, empty_init,    ROT0, "Sega",   "Dynamite Cop (Export, Model 2B)", MACHINE_NOT_WORKING|MACHINE_IMPERFECT_GRAPHICS )
