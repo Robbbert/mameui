@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6742 -->
+<!-- Number of items in this list = 6760 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -6819,16 +6819,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="4605">
 				<rom name="ASTRZONE.TAP" size="4605" crc="fedb86b3" sha1="a517d2cf626eb316a880d4173adde224ed992242"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs700af1fe288f3">
-		<description>Asymmetry 48K-128K v1.1 (2025)(Manu &amp; Kit)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="68794">
-				<rom name="Asymmetry 48K-128K v1.1 (2025)(Manu &amp; Kit).tap" size="68794" crc="6a6c0c99" sha1="700af1fe288f3873e2dc24e3afc071024341df86"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14582,16 +14572,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs407fb9d0fb99b">
-		<description>Cindy Block v1.1 48K-128K (2025)(Grongy, Art-top, n1k-o)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="42116">
-				<rom name="Cindy Block v1.1 48K-128K (2025)(Grongy, Art-top, n1k-o).tap" size="42116" crc="1d6b6135" sha1="407fb9d0fb99b867ae3d7e254b05d061f9943a2e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsc7ef6e34eb9d7">
 		<description>Circuitry v1.1 48K (2017)(Rucksack Games)</description>
 		<year>????</year>
@@ -15049,6 +15029,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1955">
 				<rom name="Coconut Climber (19xx)(Nigel Hurst).tap" size="1955" crc="0ed9d760" sha1="aa5e9d453c8602f0e10f629ee6ea025d609fb8fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94bb669bca29e">
+		<description>Code Book Caper, The (1984)(Scorpio Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29152">
+				<rom name="Code Book Caper, The (1984)(Scorpio Software).tap" size="29152" crc="a9078ebb" sha1="94bb669bca29e8c16f6299587dc3a8ae70eeeaa2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs28aa0e851dd86">
+		<description>Coingame (19xx)(Ceran Software)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3689">
+				<rom name="Coingame (19xx)(Ceran Software)(De).tap" size="3689" crc="c3f447b7" sha1="28aa0e851dd8645ea03d0eedea43d288bd4c1efc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87a8bc9680564">
+		<description>COINZ are mine 128K (2023)(Drunk Fly)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31418">
+				<rom name="COINZ are mine 128K (2023)(Drunk Fly).tap" size="31418" crc="1c0f1177" sha1="87a8bc9680564368e04ec5035a9f92978bb6eeda"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15632,6 +15642,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4376fd407c95c">
+		<description>Fast And The Furious, The (19xx)(Ernie Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48749">
+				<rom name="Fast And The Furious, The (19xx)(Ernie Software).tap" size="48749" crc="c254fb97" sha1="4376fd407c95cff69286bba269dae3edefc8333f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d66dc74ff72c">
+		<description>Fast Food Dizzy (1989)(Codemasters)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53170">
+				<rom name="Fast Food Dizzy (1989)(Codemasters)(128k).tap" size="53170" crc="025c92cb" sha1="6d66dc74ff72c9db68713335c1ddc50eec97a3d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1d0ba9df44d68">
+		<description>Fast Food Dizzy 48K (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42067">
+				<rom name="Fast Food Dizzy 48K (1989)(Codemasters).tap" size="42067" crc="9c820493" sha1="1d0ba9df44d68c1cf2ce4760b7c7d5ddee47af3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ed53534d31aa">
+		<description>Fat Worm Blows A Sparky (1985)(Durell Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47616">
+				<rom name="Fat Worm Blows A Sparky (1985)(Durell Software Ltd).tap" size="47616" crc="d4358aee" sha1="3ed53534d31aabe9302ed9ecabe717ce7977357d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8789cbe56bc22">
+		<description>Fat Worm Blows a Sparky 48K (1986)(Durell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49617">
+				<rom name="Fat Worm Blows a Sparky 48K (1986)(Durell).tap" size="49617" crc="e2012e24" sha1="8789cbe56bc2209156b99a444b3993c9edaf5b46"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs55a8711eedc29">
 		<description>Fat Worm Blows A Sparky</description>
 		<year>????</year>
@@ -15639,6 +15699,126 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49493">
 				<rom name="Fat Worm Blows A Sparky.tzx" size="49493" crc="e290de0d" sha1="55a8711eedc299880bae8110fb1684d6f8c17d4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc468cb166f765">
+		<description>Fate of the Pirate, The EN 48K-128K (2025)(Poe Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47643">
+				<rom name="Fate of the Pirate, The EN 48K-128K (2025)(Poe Games).tap" size="47643" crc="1f5d2383" sha1="c468cb166f765eda623565c26e5a07f0a19a5dba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa22d55c691f02">
+		<description>Fate of the Pirate, The ES 48K-128K (2025)(Poe Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47643">
+				<rom name="Fate of the Pirate, The ES 48K-128K (2025)(Poe Games).tap" size="47643" crc="5221b682" sha1="a22d55c691f02ce133950bedcae6fa9175c3e35f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44c8035950031">
+		<description>Faulty Towers (1984)(Harbour Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28016">
+				<rom name="Faulty Towers (1984)(Harbour Soft).tap" size="28016" crc="90365fbb" sha1="44c803595003150f96781cd6d54a4acdaf566455"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs39f5e2053f9d2">
+		<description>Fearless Frank (1984)(Visions Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40614">
+				<rom name="Fearless Frank (1984)(Visions Software).tap" size="40614" crc="573889ab" sha1="39f5e2053f9d261469a40711e5343ee6e20bd54f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs08354df6373e7">
+		<description>Federation Underwater EN 128K (2022)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="117594">
+				<rom name="Federation Underwater EN 128K (2022)(Furillo Productions).tap" size="117594" crc="1b111c3f" sha1="08354df6373e710d61b66abd598c8f648910db5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs86373fa63e6ac">
+		<description>Federation Underwater ES 128K (2022)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="117591">
+				<rom name="Federation Underwater ES 128K (2022)(Furillo Productions).tap" size="117591" crc="21048ce6" sha1="86373fa63e6ace6ee985d127933bfe065f132c1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf59cdd47c2146">
+		<description>Fernando Martin Basket Master (1987)(Dinamic)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Fernando Martin Basket Master (1987)(Dinamic)(Sp)[a].tap" size="49343" crc="c4b6e1ab" sha1="f59cdd47c214681d5433d9ce4a16d19e5a19ad7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7337c4e766d14">
+		<description>Fernando Martin Basket Master ES 48K (1987)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47196">
+				<rom name="Fernando Martin Basket Master ES 48K (1987)(Dinamic Software).tap" size="47196" crc="f802ceb0" sha1="7337c4e766d14278c64bdfa38bee3987bc718f2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc8f6e899783dd">
+		<description>Festung (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5668">
+				<rom name="Festung (19xx)(-)(De).tap" size="5668" crc="74d08d4f" sha1="c8f6e899783ddcdcaede69e0ab097d5193a3a09c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc015758687865">
+		<description>Feud (1987)(Bulldog Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47901">
+				<rom name="Feud (1987)(Bulldog Software).tap" size="47901" crc="80bbcb8c" sha1="c0157586878651d0248f48bd00308f0a87beaa3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs42b0ede0692c2">
+		<description>Feud (1987)(Mastertronic)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44036">
+				<rom name="Feud (1987)(Mastertronic)(128k).tap" size="44036" crc="cfda34e2" sha1="42b0ede0692c2d557e8414fe622beaf9db976015"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc7b30a2c11bdd">
+		<description>Feud 48K (1987)(Bulldog)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47901">
+				<rom name="Feud 48K (1987)(Bulldog).tap" size="47901" crc="f69e87b4" sha1="c7b30a2c11bdd402c14185b3c92468d9b35ffcc4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17359,26 +17539,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49465">
 				<rom name="Frost Byte 48K (1986)(Mikro-Gen).tap" size="49465" crc="895fc6d8" sha1="9f7c1a684d9e38ddf04b8c2c6665b7a9357de51e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsd1efaa9a8489f">
-		<description>Frost Land EN v1.01 48K (2025)(Roman Skorik)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="44395">
-				<rom name="Frost Land EN v1.01 48K (2025)(Roman Skorik).tap" size="44395" crc="22968217" sha1="d1efaa9a8489fdf11832be989010865a26668175"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs53be9d71af42b">
-		<description>Frost Land RU v1.01 48K (2025)(Roman Skorik)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="44478">
-				<rom name="Frost Land RU v1.01 48K (2025)(Roman Skorik).tap" size="44478" crc="773d596e" sha1="53be9d71af42bc27169f318607bd6fb8244a0c26"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26652,26 +26812,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs1f35b52d772aa">
-		<description>Kubanoid EN 48K-AY v1.1 (2025)(Stardust)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="23019">
-				<rom name="Kubanoid EN 48K-AY v1.1 (2025)(Stardust).tap" size="23019" crc="1606464f" sha1="1f35b52d772aa979f46900b75b1523ff76af5633"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs1e2a10a61f948">
-		<description>Kubanoid RU 48K-AY v1.1 (2025)(Stardust)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="23078">
-				<rom name="Kubanoid RU 48K-AY v1.1 (2025)(Stardust).tap" size="23078" crc="29ffa0da" sha1="1e2a10a61f948577becab12ed9473fae553a4334"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsf88b897aa36c7">
 		<description>Kung Fu (1984)(Bug-Byte Software Ltd)[a2]</description>
 		<year>????</year>
@@ -27039,46 +27179,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="2405">
 				<rom name="Lady Copy v1.04 (1985)(Ladinek)(UNK-LANG).tap" size="2405" crc="f9a24c47" sha1="4561409f328a159c4a6beeb9b2ce48bcb509d4d7"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs3231624768386">
-		<description>Laetitia - Part 1 48K-128K (2019)(Jaime Grilo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48451">
-				<rom name="Laetitia - Part 1 48K-128K (2019)(Jaime Grilo).tap" size="48451" crc="3a7f3003" sha1="32316247683869dc7485d1ff7b416e2b315ec911"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsc0847f16bfb55">
-		<description>Laetitia - Part 2 48K-128K (2019)(Jaime Grilo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47973">
-				<rom name="Laetitia - Part 2 48K-128K (2019)(Jaime Grilo).tap" size="47973" crc="8b919d99" sha1="c0847f16bfb55d993727f811aeaf891257447d61"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsb3d20d1dceff5">
-		<description>Laetitia - Part 3 48K-128K (2019)(Jaime Grilo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47954">
-				<rom name="Laetitia - Part 3 48K-128K (2019)(Jaime Grilo).tap" size="47954" crc="222b918d" sha1="b3d20d1dceff5ed226180fa63a5d293a48e1b403"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs74ef894a407b1">
-		<description>Laetitia - Part 4 48K-128K (2019)(Jaime Grilo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48657">
-				<rom name="Laetitia - Part 4 48K-128K (2019)(Jaime Grilo).tap" size="48657" crc="46c87322" sha1="74ef894a407b1d4b9c6a13cf0eda74f947b37f73"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30029,6 +30129,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41968">
 				<rom name="Maria's Christmas Box (1988)(Anco Software).tap" size="41968" crc="d9f675d1" sha1="8857d902f7fe0f4d5151695534b0769d8d4b5526"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbd5da16370c4f">
+		<description>Maria's Christmas Cards 48K-128K (2025)(DF Design)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="208458">
+				<rom name="Maria's Christmas Cards 48K-128K (2025)(DF Design).tap" size="208458" crc="fd32e1ed" sha1="bd5da16370c4f45a853aae3523a8c56ff4b339a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43219,16 +43329,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="72853">
 				<rom name="Run! 128K (2020)(Roman Gikryt).tap" size="72853" crc="4691c976" sha1="375cbfeef6b86f40ea902b1cc75d5177643e2341"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs6457622253f4d">
-		<description>Runaway Nose EN v1.6 48K (2025)(Chentzilla)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="46081">
-				<rom name="Runaway Nose EN v1.6 48K (2025)(Chentzilla).tap" size="46081" crc="0bf5bcfe" sha1="6457622253f4d2c92a439e30745500607ffaaa74"/>
 			</dataarea>
 		</part>
 	</software>
@@ -59582,6 +59682,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb5789795d79b3">
+		<description>_Code Woord (1984)(Wolters Software)(Nl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29065">
+				<rom name="_Code Woord (1984)(Wolters Software)(Nl).tap" size="29065" crc="aeedf57e" sha1="b5789795d79b3c271826459cde16bbc24323ecee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b5e0d2c30413">
+		<description>_Codename Mat 1 (1984)(Micromega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49208">
+				<rom name="_Codename Mat 1 (1984)(Micromega).tap" size="49208" crc="abdc35be" sha1="0b5e0d2c304133352ef72b625f7d3c38de7fc115"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2692435b553ee">
+		<description>_Codename Mat II (1984)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47771">
+				<rom name="_Codename Mat II (1984)(Domark).tap" size="47771" crc="b57b2cd2" sha1="2692435b553ee64fddfb9b53ed02e1051fe4f7d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdf735984cf549">
+		<description>_Codename MAT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49617">
+				<rom name="_Codename MAT.tap" size="49617" crc="16095634" sha1="df735984cf549ff7d61f98c3c515b658dfd9c465"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c2088469a44c">
 		<description>_Crosswize</description>
 		<year>????</year>
@@ -59689,6 +59829,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="90896">
 				<rom name="_Expert For Bank.tzx" size="90896" crc="b86e2332" sha1="4d4e86c59e476d4dca18dc928a34c0010c5718ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2b231f820d2b3">
+		<description>_Faust's Folly (1983)(Abbex Electronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12395">
+				<rom name="_Faust's Folly (1983)(Abbex Electronics).tap" size="12395" crc="c8ade3d8" sha1="2b231f820d2b3f89809913a5133280d3fcd82688"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb36abd1684eac">
+		<description>_Federation Z EN 48K (2020)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44748">
+				<rom name="_Federation Z EN 48K (2020)(Furillo Productions).tap" size="44748" crc="fd72043c" sha1="b36abd1684eacaf9864f06d23bdd8d135371f4bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb9c275022595c">
+		<description>_Federation Z ES 48K (2020)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44747">
+				<rom name="_Federation Z ES 48K (2020)(Furillo Productions).tap" size="44747" crc="10e79d9d" sha1="b9c275022595cab6da5b3196d558c7394c494dd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5286d407753b">
+		<description>_Fernandez Must Die (1988)(Image Works)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36827">
+				<rom name="_Fernandez Must Die (1988)(Image Works).tap" size="36827" crc="0f8632d0" sha1="b5286d407753b35c14aa24a86f755ad92b3faafc"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 2 -->
+<softwarelist name="ibmpcjr_cass" description="ibmpcjr_cass loose roms">
+	<software name="ibmc75c5031e68d3">
+		<description>LDPCMAN[load,width80,run]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="ibmpcjr_cass">
+			<dataarea name="cass" size="16472976">
+				<rom name="LDPCMAN[load,width80,run].wav" size="16472976" crc="cb3ae938" sha1="c75c5031e68d35b5c927583d3def16bfba598f56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm5e3343ed4846f">
+		<description>OTHELLO[load,width80,run]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="ibmpcjr_cass">
+			<dataarea name="cass" size="5006682">
+				<rom name="OTHELLO[load,width80,run].WAV" size="5006682" crc="9b641233" sha1="5e3343ed4846fe4cd7fd98b2d064d6642eda8829"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
