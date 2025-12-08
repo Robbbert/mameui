@@ -20570,6 +20570,79 @@ ROM_START( texas99d )
 ROM_END
 
 /*
+  New Texas '99 (Kolom V1)
+  http://www.kolom.com.tw
+
+  Seems to have extra I/O ports.
+
+  7b1d: ld  a, $a1
+  7b1f: out ($78),a
+  7b21: in a, ($7a)  --> waiting for bit5 stats
+  7b23: bit5, a
+  7b25: jr  z, $7b21
+
+  *EDIT*
+  
+  The game is not a bootleg. Runs in cmast99 hardware
+  with a heavily protected daughterboard.
+
+  Daughterboard specs:
+
+  Silkscreened "KOLOM-LK1"
+
+  1x Zilog Z84C0006PEC (Z80 CPU)
+  1x NEC D71055C Parallel Interfase Unit (i8255 PPI compatible)
+  1x ATMEL AT89C51 (MCU with 4KB of internal flash ROM)
+  1x HM6116 SRAM.
+  1x PEEL18CV8P-25
+  1x 8 DIP switches bank.
+  1x 5 DIP switches bank.
+  1x DB9 not soldered port (possible RS232 comm)
+  1x 3-pin connector (P1).
+  2x Red LEDs (maybe for system status).
+  1x 12.000 MHz Xtal.
+
+  Due to the complexity, this daughterboard seems to be meant
+  for different extra functions, as printers, SAS, jackpot
+  servers, or whatever linking system.
+  Needs further investigtion.
+
+*/
+ROM_START( texas99e )
+	ROM_REGION( 0x10000, "maincpu", 0 )
+	ROM_LOAD( "new_texas_99.bin", 0x0000, 0x1000, CRC(74025b83) SHA1(eb33a4d2f92f321794e47e562e2cc703c4e481b9) )
+	ROM_CONTINUE(0x4000, 0x1000)
+	ROM_CONTINUE(0x3000, 0x1000)
+	ROM_CONTINUE(0x7000, 0x1000)
+	ROM_CONTINUE(0x1000, 0x1000)
+	ROM_CONTINUE(0x6000, 0x1000)
+	ROM_CONTINUE(0x2000, 0x1000)
+	ROM_CONTINUE(0x5000, 0x1000)
+	ROM_CONTINUE(0x8000, 0x8000)
+
+	ROM_REGION( 0x18000, "gfx1", 0 )
+	ROM_LOAD( "rom7.bin", 0x00000, 0x8000, CRC(d77d1f8b) SHA1(69761cb9cbb903b8c94ca1b3727f6c686bda1be2) )
+	ROM_LOAD( "rom6.bin", 0x08000, 0x8000, CRC(4b26ed0a) SHA1(24f56835e098f47dd92bca1c3bc13a4afeb8d58c) )
+	ROM_LOAD( "rom5.bin", 0x10000, 0x8000, CRC(b2ee065f) SHA1(a41aaa6515adfac4f6f705b8e1ff4a25cdc91e4e) )
+
+	ROM_REGION( 0x8000, "gfx2", 0 )
+	ROM_LOAD( "rom4.bin", 0x0000, 0x2000, CRC(6b870b29) SHA1(d65f24817d9d45c148cb857439b46e9e75dabfe7) )
+	ROM_LOAD( "rom3.bin", 0x2000, 0x2000, CRC(8a0b205f) SHA1(3afea0464b793526bf23610cac6736a31edc7ec2) )
+	ROM_LOAD( "rom2.bin", 0x4000, 0x2000, CRC(c84dba45) SHA1(ab4ac891a23d6b9a216df046d516e868c77e8a36) )
+	ROM_LOAD( "rom1.bin", 0x6000, 0x2000, CRC(9e337e9c) SHA1(58aacc09d59f04d7686dfec1eb7621969719857f) )
+
+	ROM_REGION( 0x10000, "user1", 0 )
+	ROM_FILL( 0x0000, 0x10000, 0xff )  // U53 (girl bitmaps) not populated
+
+	ROM_REGION( 0x200, "proms", 0 )
+	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+
+	ROM_REGION( 0x100, "proms2", 0 )
+	ROM_LOAD( "82s129.u46", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
+ROM_END
+
+/*
   Texas '99 (Cleco, Hand Count?)
   Taiwanese bootleg. Same as cmast99hc.
 
@@ -32314,6 +32387,7 @@ GAMEL( 1998, texas99,    cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99
 GAMEL( 1998, texas99b,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QQ-1 V9B.00, bootleg)",            MACHINE_NOT_WORKING,     layout_cmv4 ) // similar to cmast99b 
 GAMEL( 1998, texas99c,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QQ-1 V9B.00, Cleco)",              MACHINE_NOT_WORKING,     layout_cmv4 )
 GAMEL( 1998, texas99d,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QL-1 V9B.00, USA long PCB)",       MACHINE_NOT_WORKING,     layout_cmv4 ) 
+GAMEL( 1998, texas99e,   cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "Kolom",             "New Texas '99 (QL-1 V9B.00, Kolom V1)",       MACHINE_NOT_WORKING,     layout_cmv4 ) // DB with MCU... see the ROM load notes 
 GAMEL( 1998, texas99hc,  cmast99,  cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "bootleg",           "Texas '99 (QL-1 V9B.00, Cleco, Hand Count?)", MACHINE_NOT_WORKING,     layout_cmv4 ) // different bankswitching? see the ROM load notes
 GAME(  1993, aplan,      0,        cm,       cmast99,  cmaster_state,  init_cmv4,      ROT0, "WeaShing H.K.",     "A-Plan",                                      MACHINE_NOT_WORKING ) // doesn't boot, not investigated yet
 GAME(  1999, top7,       0,        cm,       cmast99,  cmaster_state,  empty_init,     ROT0, "bootleg (UTech)",   "Top-7 (V8.8, set 1)",                         MACHINE_NOT_WORKING ) // doesn't boot, not investigated yet
