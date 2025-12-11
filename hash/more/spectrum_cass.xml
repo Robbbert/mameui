@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6760 -->
+<!-- Number of items in this list = 6795 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -432,6 +432,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs542decc3602b8">
+		<description>-Coliseum ES 48K (1988)(Topo Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52375">
+				<rom name="-Coliseum ES 48K (1988)(Topo Soft).tap" size="52375" crc="50c20efc" sha1="542decc3602b8a310a302dc98aed05cd06e47b81"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb2531eb994206">
 		<description>-Fairlight 1 - A Prelude (1985)(The Edge Software)[cr [Cr Matasoft][t Matasoft](128K)[Cr Matasoft]</description>
 		<year>????</year>
@@ -449,6 +459,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="24130">
 				<rom name="-Falcon Patrol 2 (1985)(Virgin Games Ltd)[cr [Cr][Cr].tap" size="24130" crc="91e3537d" sha1="1fe162ddf4e6113549b3a646ebbe4ad3b79bb146"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscabaf5bc60f93">
+		<description>-Fargo Wells (1988)(Topo Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44060">
+				<rom name="-Fargo Wells (1988)(Topo Soft)(Sp).tap" size="44060" crc="ca936c85" sha1="cabaf5bc60f93a9f7ec02805e4a55da182f4ece1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15062,6 +15082,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxscb42b35cb8d05">
+		<description>Colditz Story, The (1987)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48064">
+				<rom name="Colditz Story, The (1987)(Atlantis Software).tap" size="48064" crc="08c44aff" sha1="cb42b35cb8d05a1584581b9f0ef310fd8d405382"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f389bb42e477">
+		<description>Colin The Cleaner (1987)(IJK Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31870">
+				<rom name="Colin The Cleaner (1987)(IJK Software).tap" size="31870" crc="43224ecc" sha1="8f389bb42e47716dc8af8afc858b949d142e4b10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs13ec86673dc4e">
+		<description>Collywobbles (1987)(Pirate Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43268">
+				<rom name="Collywobbles (1987)(Pirate Software).tap" size="43268" crc="7c14a1fb" sha1="13ec86673dc4e48055b12ee002057fb410076b8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs932b6a2ff2301">
+		<description>Coloco (2020)(Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46855">
+				<rom name="Coloco (2020)(Mojon Twins).tap" size="46855" crc="dd07fa17" sha1="932b6a2ff23017e2a753a440fd48bf12b1d05434"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs40bb5811c6534">
 		<description>Colosseum</description>
 		<year>????</year>
@@ -15632,6 +15692,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs258d8e9a55e52">
+		<description>Falcon - The Renegade Lord (1987)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Falcon - The Renegade Lord (1987)(Virgin Games).tap" size="56277" crc="076cc956" sha1="258d8e9a55e529724f7d2ee538978e5e38d57706"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b719a938bb4b">
+		<description>Falcon Patrol 2 48K (1985)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32540">
+				<rom name="Falcon Patrol 2 48K (1985)(Virgin Games).tzx" size="32540" crc="8db8c950" sha1="3b719a938bb4baabd0e908168e6148fde454da07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc9be3a5d34410">
+		<description>Falcon Patrol II (1985)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49816">
+				<rom name="Falcon Patrol II (1985)(Virgin Games).tap" size="49816" crc="77b43b2c" sha1="c9be3a5d344108e9a92c3e751014c83d1d0920c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs675fefc05c151">
+		<description>Falklands 82 (1986)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39499">
+				<rom name="Falklands 82 (1986)(PSS).tap" size="39499" crc="71958714" sha1="675fefc05c1515ce265496ccc283cf550f9d65fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse1a97961c60f0">
+		<description>Fall Guy, The (1986)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48255">
+				<rom name="Fall Guy, The (1986)(Elite Systems).tap" size="48255" crc="b733feff" sha1="e1a97961c60f0eca85a5035bcf510736ffc79029"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9808f22ffaf8e">
+		<description>Fall Of Rome, The (1984)(Argus Press Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40507">
+				<rom name="Fall Of Rome, The (1984)(Argus Press Software).tap" size="40507" crc="71e24c38" sha1="9808f22ffaf8e617b90c817b37d7b4c0c96e2e69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5caaa1a28a9fe">
+		<description>Fallen Angel (1989)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="82545">
+				<rom name="Fallen Angel (1989)(Alternative Software).tap" size="82545" crc="0067c07c" sha1="5caaa1a28a9fec0ab6d9879e9d6620a3c6a5ccd4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs603e23d7d185d">
 		<description>Fallen Angel</description>
 		<year>????</year>
@@ -15639,6 +15769,196 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="82615">
 				<rom name="Fallen Angel.tzx" size="82615" crc="6abd01ac" sha1="603e23d7d185dc66801ae199fe0e94d6797ccc71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71e0e3eb71396">
+		<description>Falls Of Shalor, The (1983)(C.P. Woodward)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35063">
+				<rom name="Falls Of Shalor, The (1983)(C.P. Woodward).tap" size="35063" crc="ef01e3ec" sha1="71e0e3eb7139639a272e42f5e4ff96e5dcbfb7ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse3f6101948ca5">
+		<description>Famous 5, The (1990)(Enigma Variations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="81370">
+				<rom name="Famous 5, The (1990)(Enigma Variations).tap" size="81370" crc="a21689a7" sha1="e3f6101948ca515aa0e1d123efc38f8b66c40120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc6767a52298cf">
+		<description>Fanky Punky (1987)(Genesis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29540">
+				<rom name="Fanky Punky (1987)(Genesis Software).tap" size="29540" crc="3e0c3e6b" sha1="c6767a52298cf5d9300001f04853e5daee09fd80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1afdb52ee4e5d">
+		<description>Fantasia (1983)(Rabbit Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18352">
+				<rom name="Fantasia (1983)(Rabbit Software).tap" size="18352" crc="47170ddd" sha1="1afdb52ee4e5d08e854de5c6aa9622ab97cb6985"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs62f369f82914d">
+		<description>Fantasia Diamond (1984)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40840">
+				<rom name="Fantasia Diamond (1984)(Hewson Consultants).tap" size="40840" crc="69f580db" sha1="62f369f82914de08e9d86bb689a77e9414d206b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8ede5fb2a852">
+		<description>Fantastic Voyage (1984)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41843">
+				<rom name="Fantastic Voyage (1984)(Quicksilva).tap" size="41843" crc="a2fa1490" sha1="b8ede5fb2a8525828f19ba2f4a39251dbae05356"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a87ec2e43866">
+		<description>Fantastic Voyage (1984)(Quicksilva)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42032">
+				<rom name="Fantastic Voyage (1984)(Quicksilva)[a].tap" size="42032" crc="8c6d5727" sha1="8a87ec2e43866bc1b7726bc1deb7f57fc0c6deb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe1df6f7d3572">
+		<description>Fantasy Zone - Escape from the Pyramid 128K (2016)(GreenWebSevilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46356">
+				<rom name="Fantasy Zone - Escape from the Pyramid 128K (2016)(GreenWebSevilla).tap" size="46356" crc="313f31f1" sha1="be1df6f7d3572b812946c29b88b55078925eea7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse67d2e980fe29">
+		<description>Fantasy Zone - Escape from the Pyramid Alt 128K (2016)(GreenWebSevilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43024">
+				<rom name="Fantasy Zone - Escape from the Pyramid Alt 128K (2016)(GreenWebSevilla).tap" size="43024" crc="b9e83039" sha1="e67d2e980fe299c12daef6b62e305f361037393b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs29e190a1c2e20">
+		<description>Fantasy Zone, The (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23707">
+				<rom name="Fantasy Zone, The (19xx)(-).tap" size="23707" crc="00c1eb15" sha1="29e190a1c2e207061448cea12f91aab024fb5d01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5564930c2635a">
+		<description>Far West Tale's Guns 128K (2025)(Antrilles)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65327">
+				<rom name="Far West Tale's Guns 128K (2025)(Antrilles).tap" size="65327" crc="22a3eca4" sha1="5564930c2635a6018e667db488227214e93abdd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs487d9c7cf7c93">
+		<description>Fargo Wells (1988)(Topo Soft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39808">
+				<rom name="Fargo Wells (1988)(Topo Soft)(Sp)[a].tap" size="39808" crc="cb3c2a4c" sha1="487d9c7cf7c93f0dc22ca5bc1a52ff6138187138"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdcd8aa7a06073">
+		<description>Farmer Horace (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13824">
+				<rom name="Farmer Horace (1983)(CCS).tap" size="13824" crc="6c808922" sha1="dcd8aa7a060733a7ea7968d4a090e0ae1ed4e993"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0f93226436bd9">
+		<description>Farmer Horace (1983)(CCS)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13500">
+				<rom name="Farmer Horace (1983)(CCS)[a].tap" size="13500" crc="c122196e" sha1="0f93226436bd9b77b046d9f1a98864612ee29c4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs617a0b94c1bc9">
+		<description>Farmer Jack - Treasure Trove 128K (2008)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48403">
+				<rom name="Farmer Jack - Treasure Trove 128K (2008)(Bob Smith).tap" size="48403" crc="01f1d44f" sha1="617a0b94c1bc907e3ab186b4aaf710f42507538b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf95364f0edc31">
+		<description>Farmer Jack and the Hedge Monkeys (2008)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48405">
+				<rom name="Farmer Jack and the Hedge Monkeys (2008)(Bob Smith).tap" size="48405" crc="de828b58" sha1="f95364f0edc3159283937c4f6efd45fc070bd5ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs64295c0cdd60f">
+		<description>Farmer Jack in Harvest Havoc (2006)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39223">
+				<rom name="Farmer Jack in Harvest Havoc (2006)(Bob Smith).tap" size="39223" crc="936f2345" sha1="64295c0cdd60f9c4a968f106621cdc4b53205bb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3cedf8a71865c">
+		<description>Farmer, The EN v1.1 48K (2025)(Nextric)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40199">
+				<rom name="Farmer, The EN v1.1 48K (2025)(Nextric).tap" size="40199" crc="38128dff" sha1="3cedf8a71865c8b85f29dc8c87645923f0503302"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd9e2124686ff2">
+		<description>Farmer, The ES v1.1 48K (2025)(Nextric)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40300">
+				<rom name="Farmer, The ES v1.1 48K (2025)(Nextric).tap" size="40300" crc="90358c24" sha1="d9e2124686ff204a024b873dc8ba4103809c341a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -59722,6 +60042,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse84d4f4520cbc">
+		<description>_Colditz Castle (1983)(Phipps Associates)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51462">
+				<rom name="_Colditz Castle (1983)(Phipps Associates).tap" size="51462" crc="57bbb979" sha1="e84d4f4520cbcc1aa5e5521a438ebaaf0021ef9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs16a0453df9b64">
+		<description>_Colditz Castle (1983)(Phipps Associates)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50274">
+				<rom name="_Colditz Castle (1983)(Phipps Associates)[a].tap" size="50274" crc="51061b7d" sha1="16a0453df9b6490d0660d40402144e8ab5c3c791"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c2088469a44c">
 		<description>_Crosswize</description>
 		<year>????</year>
@@ -59829,6 +60169,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="90896">
 				<rom name="_Expert For Bank.tzx" size="90896" crc="b86e2332" sha1="4d4e86c59e476d4dca18dc928a34c0010c5718ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a32e98550286">
+		<description>_Fantomas (1984)(G.B. Max)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16570">
+				<rom name="_Fantomas (1984)(G.B. Max)(Sp).tap" size="16570" crc="a77fd958" sha1="9a32e985502861d16b2933d2016926f27b406b36"/>
 			</dataarea>
 		</part>
 	</software>
