@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6795 -->
+<!-- Number of items in this list = 6834 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -52,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5419b3eef9ef5">
+		<description>(demo)F.B.I. (1996)(The Unbelievables)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11151">
+				<rom name="(demo)F.B.I. (1996)(The Unbelievables).tap" size="11151" crc="b0e37849" sha1="5419b3eef9ef57fb06b0fa79cf19f9fa17501d75"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscbe2b12b071de">
 		<description>(demo)Fire4ever</description>
 		<year>????</year>
@@ -69,6 +79,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41559">
 				<rom name="(demo)First Association Preview (1997)(Omega).tap" size="41559" crc="c0427c22" sha1="f7103b601415539a597139a2285ee134ba622403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse7ad33a6871a0">
+		<description>(demo)First Association</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1630176">
+				<rom name="(demo)First Association.tap" size="1630176" crc="d08304b1" sha1="e7ad33a6871a02d51e7bf3d0d96034ced31b7d36"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2803,12 +2823,12 @@
 		</part>
 	</software>
 	<software name="zxsb7bdd5b682639">
-		<description>911 TS (1985)(Elite Systems)_1</description>
+		<description>911 TS - 911 Tiger Shark 48K (1985)(Elite Systems)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47921">
-				<rom name="911 TS (1985)(Elite Systems)_1.tap" size="47921" crc="303db330" sha1="b7bdd5b6826393d90a358b538e8597c82ab78ad0"/>
+				<rom name="911 TS - 911 Tiger Shark 48K (1985)(Elite Systems).tap" size="47921" crc="303db330" sha1="b7bdd5b6826393d90a358b538e8597c82ab78ad0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9913,12 +9933,12 @@
 		</part>
 	</software>
 	<software name="zxs8e9f2c42d0605">
-		<description>Black Sea - Treasure Hunters 128K (2021)(Mananuk)</description>
+		<description>Black Sea - Treasure Hunters 48K-128K (2021)(Mananuk)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="45089">
-				<rom name="Black Sea - Treasure Hunters 128K (2021)(Mananuk).tap" size="45089" crc="00ad4735" sha1="8e9f2c42d06058959f8bac4cbb7bcaeb2ef04731"/>
+				<rom name="Black Sea - Treasure Hunters 48K-128K (2021)(Mananuk).tap" size="45089" crc="00ad4735" sha1="8e9f2c42d06058959f8bac4cbb7bcaeb2ef04731"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13992,6 +14012,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs573f9fc30a028">
+		<description>Chequered Flag 48K (1983)(Sinclair Research)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48707">
+				<rom name="Chequered Flag 48K (1983)(Sinclair Research).tzx" size="48707" crc="c9368910" sha1="573f9fc30a0285a11bd2adcfe6427cb898f8e0bf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0dd7c6c1bf90b">
 		<description>ChernobylAI 128K (2025)(Juntelart)</description>
 		<year>????</year>
@@ -15122,6 +15152,116 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs96e3b236bea59">
+		<description>Colonos III Part1 EN 128K (2022)(Jose Manuel Gris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40239">
+				<rom name="Colonos III Part1 EN 128K (2022)(Jose Manuel Gris).tap" size="40239" crc="d479a589" sha1="96e3b236bea59cd59cde57c249bc1cabb2776652"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f74b66f56f20">
+		<description>Colonos III Part2 EN 128K (2022)(Jose Manuel Gris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37801">
+				<rom name="Colonos III Part2 EN 128K (2022)(Jose Manuel Gris).tap" size="37801" crc="9d287b2d" sha1="6f74b66f56f20875c61a004b0753abff594bcdb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse0c8b2284b738">
+		<description>Colonos III Part3 EN 128K (2022)(Jose Manuel Gris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37320">
+				<rom name="Colonos III Part3 EN 128K (2022)(Jose Manuel Gris).tap" size="37320" crc="5fec4b64" sha1="e0c8b2284b7387b0541b957e7e3d33bf12a15ad9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs06bf1705e5ae4">
+		<description>Colonos III Parte1 ES (2022)(Jose Manuel Gris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40344">
+				<rom name="Colonos III Parte1 ES (2022)(Jose Manuel Gris).tap" size="40344" crc="9faec737" sha1="06bf1705e5ae44f87e8388af4abcbcb43db5b02b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf457b76092d7">
+		<description>Colonos III Parte2 ES (2022)(Jose Manuel Gris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37808">
+				<rom name="Colonos III Parte2 ES (2022)(Jose Manuel Gris).tap" size="37808" crc="3f4195f8" sha1="bf457b76092d7ad44c7ae6cc89a2c52ea27350ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0eaa9ad9a58c4">
+		<description>Colonos III Parte3 ES 128K (2022)(Jose Manuel Gris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37325">
+				<rom name="Colonos III Parte3 ES 128K (2022)(Jose Manuel Gris).tap" size="37325" crc="9f90edc5" sha1="0eaa9ad9a58c4ed9727ef43dec7910c18fe0045b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92d78e86865ce">
+		<description>Colonos ZX 48K (2020)(Jose Manuel Gris)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35144">
+				<rom name="Colonos ZX 48K (2020)(Jose Manuel Gris).tap" size="35144" crc="b5bac9fa" sha1="92d78e86865ce39a7d1740ae00323ae7f90ac48b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f9da7a01c55f">
+		<description>Colony (1982)(Softek Software International)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5149">
+				<rom name="Colony (1982)(Softek Software International).tap" size="5149" crc="81525684" sha1="1f9da7a01c55f9e28ba220996ece6b9ced78d80a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2cfd678c11672">
+		<description>Color Worm (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7743">
+				<rom name="Color Worm (19xx)(-)(De).tap" size="7743" crc="f877340e" sha1="2cfd678c11672a0089170a96f66805067c0fa90b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd83bceee0f88a">
+		<description>Coloris (1990)(WoMo-Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23511">
+				<rom name="Coloris (1990)(WoMo-Team).tap" size="23511" crc="349ff927" sha1="d83bceee0f88ac4ceb70b64ca5a307f16617776f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3398634813365">
+		<description>Colossal Cave Adventure (1985)(Anubis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48270">
+				<rom name="Colossal Cave Adventure (1985)(Anubis Software).tap" size="48270" crc="e3c91c39" sha1="33986348133654baa31be979b6a21035e244c8c0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs40bb5811c6534">
 		<description>Colosseum</description>
 		<year>????</year>
@@ -15129,6 +15269,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52447">
 				<rom name="Colosseum.tzx" size="52447" crc="b68223c9" sha1="40bb5811c653423316d3a491daaaaff3ffe68f1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7c050bfbbc4d">
+		<description>Colossus 4 Chess 48K (1986)(CDS Microsystems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43369">
+				<rom name="Colossus 4 Chess 48K (1986)(CDS Microsystems).tap" size="43369" crc="e0f45f59" sha1="a7c050bfbbc4db3bab72862b7974c5275005582f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscbb47674302a7">
+		<description>Colossus Bridge (1986)(CDS Microsystems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42256">
+				<rom name="Colossus Bridge (1986)(CDS Microsystems).tap" size="42256" crc="a9e5d4d7" sha1="cbb47674302a7dd95b07d2f51a140044d85bb381"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7f0feb3272bc">
+		<description>Colour Of Magic, The (1986)(Delta 4)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138647">
+				<rom name="Colour Of Magic, The (1986)(Delta 4).tap" size="138647" crc="43a002ab" sha1="a7f0feb3272bce14079e7116d10b235e57ee82f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15672,6 +15842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsba91c71ad76ed">
+		<description>Escape from Colony 8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33045">
+				<rom name="Escape from Colony 8.tap" size="33045" crc="b55aad43" sha1="ba91c71ad76eddc5ca14074701734398bf86cd40"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs45eb7f0b23fda">
 		<description>Exolon</description>
 		<year>????</year>
@@ -15689,6 +15869,156 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48317">
 				<rom name="Extreme.tzx" size="48317" crc="8828090b" sha1="e8505d369781bfa06c6c3f5b88d881e731c1f400"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ceebf1ae0787">
+		<description>F-16 Combat Pilot (1991)(Digital Integration)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="119913">
+				<rom name="F-16 Combat Pilot (1991)(Digital Integration).tap" size="119913" crc="c39bb048" sha1="9ceebf1ae0787284607fb656b8b97845bb246c71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd09ec8cef46cd">
+		<description>F-16 Combat Pilot (1991)(Digital Integration)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="102967">
+				<rom name="F-16 Combat Pilot (1991)(Digital Integration)[cr [Cr][Cr].tap" size="102967" crc="e6ac9aee" sha1="d09ec8cef46cdd2c4a371e48215c32aa0a23c1cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3651b5c1a9e1c">
+		<description>F-16 Fighting Falcon (1990)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39117">
+				<rom name="F-16 Fighting Falcon (1990)(Mastertronic).tap" size="39117" crc="2071bb7c" sha1="3651b5c1a9e1c50facea4e4833cd1479e88af721"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd1d6100f93e70">
+		<description>F-19 (19xx)(Load 'N' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37708">
+				<rom name="F-19 (19xx)(Load 'N' Run)(Sp).tap" size="37708" crc="fdb280a9" sha1="d1d6100f93e7049fba7f539e999bb342e443d490"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs263baadc7a208">
+		<description>F-19 Stealth Fighter (1990)(Microprose Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="179248">
+				<rom name="F-19 Stealth Fighter (1990)(Microprose Software).tap" size="179248" crc="86144b85" sha1="263baadc7a2085023b77701ddb6c5302920f131c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17817f5fb1693">
+		<description>F.I.F.O. (1989)(Klub Fifo)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49500">
+				<rom name="F.I.F.O. (1989)(Klub Fifo)(Cz).tap" size="49500" crc="2b374159" sha1="17817f5fb169355e46f65ac65381936ee76670c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81f8c513fb9e2">
+		<description>F1 Tornado Simulator (1991)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47364">
+				<rom name="F1 Tornado Simulator (1991)(Zeppelin Games).tap" size="47364" crc="9fdcd1b4" sha1="81f8c513fb9e22103a9c452b6e4b102d8c2aeead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd34812a9ef5c">
+		<description>FA Cup Football (1987)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47828">
+				<rom name="FA Cup Football (1987)(Virgin Games).tap" size="47828" crc="57ffc870" sha1="cd34812a9ef5c847e4beb71dfeb6d904a8141bae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa6a368284a2ee">
+		<description>Factory Daze 128K (2009)(Bob Smith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59071">
+				<rom name="Factory Daze 128K (2009)(Bob Smith).tap" size="59071" crc="73225faf" sha1="a6a368284a2eeda68fc64fa581f6ff23b0b3ac2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfcbb02b495177">
+		<description>Faerie (1985)(8th Day Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34159">
+				<rom name="Faerie (1985)(8th Day Software).tap" size="34159" crc="1dfa28ff" sha1="fcbb02b495177a7f1cb270f67222ecede9e92f5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5bdaf77a39aed">
+		<description>Fairlight - A Prelude 48K (1985)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50258">
+				<rom name="Fairlight - A Prelude 48K (1985)(The Edge).tap" size="50258" crc="12342db8" sha1="5bdaf77a39aeda602833f53b96b8dfe7e3b3bc01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6eaa68fe0de6c">
+		<description>Fairlight 2 - A Trail Of Darkness (1986)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Fairlight 2 - A Trail Of Darkness (1986)(The Edge).tap" size="56277" crc="80fc07fe" sha1="6eaa68fe0de6cf1884d346b5cd0c2e6ef0f0620b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73424c5d407f8">
+		<description>Fairlight II 128K (1986)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97674">
+				<rom name="Fairlight II 128K (1986)(The Edge).tap" size="97674" crc="5fac6ab2" sha1="73424c5d407f8e7cd84f1184a0681e85f0ba4e73"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8fc415604dfcf">
+		<description>Fairly Difficult Mission (1988)(Zodiac Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="154838">
+				<rom name="Fairly Difficult Mission (1988)(Zodiac Software).tap" size="154838" crc="76822524" sha1="8fc415604dfcf12274a65b5bf5f3fd13586a3787"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0a949028d939">
+		<description>Fakultet (1987)(Ribic Samir)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22488">
+				<rom name="Fakultet (1987)(Ribic Samir)(Unk-Lang).tap" size="22488" crc="a0d78518" sha1="f0a949028d93933c0eb1eb001e6b338af7156649"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17039,6 +17369,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49353">
 				<rom name="Footballer of the Year 48K (1986)(Gremlin Graphics).tap" size="49353" crc="2e7da5c2" sha1="8fba3d12a5b2889e751d8c9c8324c13497a3634f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7f80e05a89ece">
+		<description>Footble Smellble 48K-128K (2025)(DjPoke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34773">
+				<rom name="Footble Smellble 48K-128K (2025)(DjPoke).tap" size="34773" crc="9275ea28" sha1="7f80e05a89ece95d7d04598f5f92b0483ae7f74d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -60062,6 +60402,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsddc8554c1686c">
+		<description>_Colossal Adventure (1985)(Level 9 Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29332">
+				<rom name="_Colossal Adventure (1985)(Level 9 Computing).tap" size="29332" crc="18bfef9a" sha1="ddc8554c1686cdb9ace55c99ac163e410fe48740"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc48d5633494da">
+		<description>_Colosseum (1988)(Topo Soft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42135">
+				<rom name="_Colosseum (1988)(Topo Soft)(Sp)[a].tap" size="42135" crc="19dee2d1" sha1="c48d5633494dadfb6cdc7c66ed0e0a9a5b0825bc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c2088469a44c">
 		<description>_Crosswize</description>
 		<year>????</year>
@@ -60169,6 +60529,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="90896">
 				<rom name="_Expert For Bank.tzx" size="90896" crc="b86e2332" sha1="4d4e86c59e476d4dca18dc928a34c0010c5718ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcd048d19d90d">
+		<description>_Factory Breakout (1984)(Poppy Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45836">
+				<rom name="_Factory Breakout (1984)(Poppy Soft).tap" size="45836" crc="2cbce88c" sha1="bcd048d19d90d8dface8ee027e9281b007e1a4c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa85323101229e">
+		<description>_Fairlight - A Prelude (1986)(The Edge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49286">
+				<rom name="_Fairlight - A Prelude (1986)(The Edge).tap" size="49286" crc="e7ed9e30" sha1="a85323101229eb7ffd1662ae5acbbe5ebe7c2ac6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs956118e4c9702">
+		<description>_Fairshare (1984)(Griffin Software)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25570">
+				<rom name="_Fairshare (1984)(Griffin Software)[Part 2 of 2].tap" size="25570" crc="8f3644a1" sha1="956118e4c97024cb7e9942b8eb188ab21607d179"/>
 			</dataarea>
 		</part>
 	</software>

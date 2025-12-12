@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 694 -->
+<!-- Number of items in this list = 706 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -752,6 +752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx6f014b3ae1960">
+		<description>Blagger Enhanced (2013)(Jose Luis Tur)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Blagger Enhanced (2013)(Jose Luis Tur).rom" size="16384" crc="bdbdf44a" sha1="6f014b3ae1960468bf71b18c8e396d0eadf5b6ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxa6e415f977e36">
 		<description>Bloktris (2023)(Under4Mhz)</description>
 		<year>????</year>
@@ -1192,6 +1202,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx57ad582c7deb3">
+		<description>Cats Pots!!! v1.2 (2021)(Amaury Carvalho)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Cats Pots!!! v1.2 (2021)(Amaury Carvalho).rom" size="32768" crc="8d5a8ea0" sha1="57ad582c7deb330533ccb2999a44f6f931903bd0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc5568fc07bfb1">
+		<description>Caverns of Titan (2005)(Jose Luis Tur)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Caverns of Titan (2005)(Jose Luis Tur).rom" size="16384" crc="9e02db6c" sha1="c5568fc07bfb193b43ad7c840787f274d9c1e42f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx52b13d087e4ea">
 		<description>Cavit</description>
 		<year>????</year>
@@ -1312,6 +1342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx8cde922a3c189">
+		<description>Cold Blood (2010)(Paxanga Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Cold Blood (2010)(Paxanga Software).rom" size="32768" crc="0d622a32" sha1="8cde922a3c189889096970fb6e8a1670fcc4e8ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxb305f803bc1d7">
 		<description>Colony (1987)(Mastertronic)</description>
 		<year>????</year>
@@ -1399,6 +1439,26 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Cornelius in the Forbidden Zone IT (2023)(Physical Dreams).rom" size="49152" crc="d8571230" sha1="2e98cbabcf1763c797186c2136ad50bf3b544802"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9d87ba5ac3b9a">
+		<description>Cow Abductors (2009)(Paxanga Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Cow Abductors (2009)(Paxanga Software).rom" size="16384" crc="790623de" sha1="9d87ba5ac3b9a865f2dd93d239e9cdaf6e48dff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx08a85b7feca94">
+		<description>Cow Abductors TOO! (2025)(Paxanga Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Cow Abductors TOO! (2025)(Paxanga Software).rom" size="32768" crc="48b823af" sha1="08a85b7feca947e30d5a440d6353467d1a2fa446"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1832,6 +1892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx30c6f72928b81">
+		<description>Eat Blue! 2004 v2 (2004)(Paxanga Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Eat Blue! 2004 v2 (2004)(Paxanga Software).rom" size="8192" crc="1ac005a0" sha1="30c6f72928b81c7d37d192cf6d6d6d3d1232469b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxcbe6c0db6201f">
 		<description>EGGER2</description>
 		<year>????</year>
@@ -2159,6 +2229,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="gall force - defense of chaos (japan) (alt 2).rom" size="131072" crc="ec036e37" sha1="abe52920e895c148851649ecb9c029fdc41a275f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx89073c052b0fe">
+		<description>Gambler Jiko Chuushinha (Japan)(1988)(Game Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Gambler Jiko Chuushinha (Japan)(1988)(Game Arts).rom" size="262144" crc="91955bcd" sha1="89073c052b0fe29b6de077c8bdf5373474081edf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4372,6 +4452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxf0b65b71c505c">
+		<description>Parachuteless Joe (2005)(Paxanga Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Parachuteless Joe (2005)(Paxanga Software).rom" size="32768" crc="bff072fe" sha1="f0b65b71c505c68019e2285d3b8afcf068a74b9f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxcda2df54006d9">
 		<description>Parachuteless Joe</description>
 		<year>????</year>
@@ -4529,6 +4619,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Pepper 2 - Exidy's (2008) [Muffie Version] [1778].rom" size="32768" crc="7106e8cc" sha1="bf041bc8ce3b5dab7b1f85f623b371b263639aab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7ec25356abf37">
+		<description>Perfect Fit (2008)(Paxanga Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Perfect Fit (2008)(Paxanga Software).rom" size="32768" crc="91f8b81f" sha1="7ec25356abf3720806b2b97cbabdc1f19ed698f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5082,6 +5182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx2e22ee1a9ece1">
+		<description>Shoganai (2013)(Paxanga Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Shoganai (2013)(Paxanga Software).rom" size="16384" crc="d27ea890" sha1="2e22ee1a9ece11d008f7dd1e0893d1d859b4cc7f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx1a5f3db42427e">
 		<description>Shyre v1.1 (2023)(Platty Soft)</description>
 		<year>????</year>
@@ -5399,6 +5509,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Steden Zoeken in Nederland.rom" size="16384" crc="4c0a3d59" sha1="dff0bd03cae606096c2fc76e0d1bf45372fe4867"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa5a479b4743a0">
+		<description>Stellar Burrow (2025)(Meichnpp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Stellar Burrow (2025)(Meichnpp).rom" size="753664" crc="bf564955" sha1="a5a479b4743a0bca868de5289103e0c83ed5a2f8"/>
 			</dataarea>
 		</part>
 	</software>
