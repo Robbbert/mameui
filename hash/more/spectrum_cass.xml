@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6834 -->
+<!-- Number of items in this list = 6869 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -129,6 +129,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16919">
 				<rom name="(demo)Jerusale (19xx)(-).tap" size="16919" crc="daa29ef7" sha1="8b14cc778e26ccdc2079f4bbbb8b6adab45c6488"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4dca0aadfa7fe">
+		<description>(demo)Kremash 128K (2023)(MB Maniax &amp; CI5)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68634">
+				<rom name="(demo)Kremash 128K (2023)(MB Maniax &amp; CI5).tap" size="68634" crc="64e4608e" sha1="4dca0aadfa7fe099d75b763fb014fee968e97f41"/>
 			</dataarea>
 		</part>
 	</software>
@@ -459,6 +469,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52375">
 				<rom name="-Coliseum ES 48K (1988)(Topo Soft).tap" size="52375" crc="50c20efc" sha1="542decc3602b8a310a302dc98aed05cd06e47b81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96f00f3f694b5">
+		<description>-Extreme (1991)(Digital Integration)[cr [Cr Mata][t +2 Mata + Miki][Cr Mata]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37560">
+				<rom name="-Extreme (1991)(Digital Integration)[cr [Cr Mata][t +2 Mata + Miki][Cr Mata].tap" size="37560" crc="ca2d1865" sha1="96f00f3f694b529ea949b20c3b23cfba51e83e62"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14012,16 +14032,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs573f9fc30a028">
-		<description>Chequered Flag 48K (1983)(Sinclair Research)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48707">
-				<rom name="Chequered Flag 48K (1983)(Sinclair Research).tzx" size="48707" crc="c9368910" sha1="573f9fc30a0285a11bd2adcfe6427cb898f8e0bf"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs0dd7c6c1bf90b">
 		<description>ChernobylAI 128K (2025)(Juntelart)</description>
 		<year>????</year>
@@ -15302,6 +15312,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7d60ed447ff5e">
+		<description>Comando Quatro (1989)(Zigurat Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49485">
+				<rom name="Comando Quatro (1989)(Zigurat Software)(Sp).tap" size="49485" crc="11a8ebc0" sha1="7d60ed447ff5e0db1acbd67060f51224dde3448e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs453d2adffc4ff">
+		<description>Comando Tracer (1988)(Dinamic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45714">
+				<rom name="Comando Tracer (1988)(Dinamic)(Sp).tap" size="45714" crc="1e81b94d" sha1="453d2adffc4fffce877dc5d1bc6a922fd2f72d7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs42dd677467af1">
+		<description>Comando Tracer (1988)(Dinamic)(Sp)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45489">
+				<rom name="Comando Tracer (1988)(Dinamic)(Sp)[a2].tap" size="45489" crc="475c7eb1" sha1="42dd677467af17eeba7162aa94cc12962a2eaae8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7efa2b12fd40">
+		<description>Comando Tracer (1988)(Dinamic)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44544">
+				<rom name="Comando Tracer (1988)(Dinamic)(Sp)[a].tap" size="44544" crc="1339a926" sha1="d7efa2b12fd4004d6df1ae8f98fa550467becb47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs17d1cd185c565">
+		<description>Comando Tracer 48K-128K (1989)(Dinamic Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41721">
+				<rom name="Comando Tracer 48K-128K (1989)(Dinamic Software).tap" size="41721" crc="d394ef8c" sha1="17d1cd185c565ad21d757d33f08c0b0937ec8a5c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc78a6babb9087">
 		<description>Contact Sam Cruise</description>
 		<year>????</year>
@@ -15852,6 +15912,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb45fb5e552f15">
+		<description>EXO-TICAL EN 128K (2023)(Roolandoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50368">
+				<rom name="EXO-TICAL EN 128K (2023)(Roolandoo).tap" size="50368" crc="4a942675" sha1="b45fb5e552f15b731f753b8b3bc70813c7764965"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e3689f7947b4">
+		<description>EXO-TICAL ES 128K (2023)(Roolandoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50624">
+				<rom name="EXO-TICAL ES 128K (2023)(Roolandoo).tap" size="50624" crc="b5a3b89f" sha1="8e3689f7947b4379d70ae23a6546a9a056fcd206"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5600700559937">
+		<description>Exodron 48K (2024)(PixelSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43090">
+				<rom name="Exodron 48K (2024)(PixelSoft).tap" size="43090" crc="6859f910" sha1="5600700559937333308910da9777109b18b63100"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2678271cccc4b">
+		<description>Exolon (1987)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34140">
+				<rom name="Exolon (1987)(Hewson Consultants).tap" size="34140" crc="8e738759" sha1="2678271cccc4b2485a8fe5ea05c3ac781e1f421b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7627ba26522fa">
+		<description>Exolon (1987)(Hewson Consultants)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42581">
+				<rom name="Exolon (1987)(Hewson Consultants)[a].tap" size="42581" crc="ac6f446e" sha1="7627ba26522faa8f80794464bc3a6fac817d2679"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse0e49294ad4c4">
+		<description>Exolon (1987)(Hewson Consultants)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35551">
+				<rom name="Exolon (1987)(Hewson Consultants)[t].tap" size="35551" crc="bb6cb2cc" sha1="e0e49294ad4c471c86b881dd9a157272be74675f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35abadc49b8fd">
+		<description>Exolon 128K (1987)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42957">
+				<rom name="Exolon 128K (1987)(Hewson Consultants).tap" size="42957" crc="7094b901" sha1="35abadc49b8fd1aed54036445ae2563a3356280f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs45eb7f0b23fda">
 		<description>Exolon</description>
 		<year>????</year>
@@ -15862,6 +15992,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8049109ca2486">
+		<description>EXOTER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49297">
+				<rom name="EXOTER.TAP" size="49297" crc="1a9d4128" sha1="8049109ca2486856c45ed908c3e6d8222a4b3fa1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa9aad413d15aa">
+		<description>Exotron (1985)(Carrium Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18325">
+				<rom name="Exotron (1985)(Carrium Software).tap" size="18325" crc="e4207ce9" sha1="a9aad413d15aa7b42230115928cd446a251e1b63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c8e2d840a84a">
+		<description>Expert (1988)(OKF)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34796">
+				<rom name="Expert (1988)(OKF).tap" size="34796" crc="942a554e" sha1="5c8e2d840a84ae02f2b9a109272190adbd031342"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d4b46141d386">
+		<description>Explode v3.1 (1989)(Homesoft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27035">
+				<rom name="Explode v3.1 (1989)(Homesoft)(Sp).tap" size="27035" crc="a5fb2da6" sha1="7d4b46141d386862674401ac95df93b0b3c50ba1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa23207a66f785">
+		<description>Explode v3.1 (1989)(Homesoft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27136">
+				<rom name="Explode v3.1 (1989)(Homesoft)(Sp)[a].tap" size="27136" crc="6442de94" sha1="a23207a66f785edc3f9aed94f6b3f5910d9be145"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d9ef0ad00347">
+		<description>Exploding Wall (1989)(Byte Back)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37387">
+				<rom name="Exploding Wall (1989)(Byte Back).tap" size="37387" crc="6bb8ab64" sha1="7d9ef0ad003474f66e5eb8d8e50100a1dd10ed0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs362bebc55c206">
+		<description>Exploding Wall 48K (1989)(Byte Back)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37401">
+				<rom name="Exploding Wall 48K (1989)(Byte Back).tap" size="37401" crc="fe708ad6" sha1="362bebc55c206e17de7a950f0ca49394412eea1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4ffa2d99b4390">
+		<description>Explorer 2 48K (2018)(Luca Bordoni)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47170">
+				<rom name="Explorer 2 48K (2018)(Luca Bordoni).tap" size="47170" crc="59c05e82" sha1="4ffa2d99b43900fd85d8c7907a194dbaa6bc49b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa7085631088cb">
+		<description>Explorer 48K (2015)(Luca Bordoni)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31320">
+				<rom name="Explorer 48K (2015)(Luca Bordoni).tap" size="31320" crc="1b3a7a81" sha1="a7085631088cbfd43a9ac9d89c7ef84bee196af0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c0ca10affe6d">
+		<description>Exterminator 128K (1992)(Audiogenic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="129464">
+				<rom name="Exterminator 128K (1992)(Audiogenic).tap" size="129464" crc="dfeed3ed" sha1="3c0ca10affe6db123493de997b49ec1ab686bf10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdfa202132e07f">
+		<description>Exterminator 16K (1983)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11858">
+				<rom name="Exterminator 16K (1983)(Silversoft).tap" size="11858" crc="6e8e8f5d" sha1="dfa202132e07f86b52348860cf408db2e16f6dbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6feeed1c6b58b">
+		<description>Extreme (1991)(Digital Integration)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48283">
+				<rom name="Extreme (1991)(Digital Integration).tap" size="48283" crc="1445a511" sha1="6feeed1c6b58b55f95c463404e238321181a8678"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse8505d369781b">
 		<description>Extreme</description>
 		<year>????</year>
@@ -15869,6 +16119,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48317">
 				<rom name="Extreme.tzx" size="48317" crc="8828090b" sha1="e8505d369781bfa06c6c3f5b88d881e731c1f400"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb6bf5021d21dc">
+		<description>Extricator, The (1986)(Precision Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30455">
+				<rom name="Extricator, The (1986)(Precision Games).tap" size="30455" crc="fd61b3ce" sha1="b6bf5021d21dc28c3c6e1cfe03d2e371a10e80bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7e58ca5525913">
+		<description>Extricator, The (1986)(Precision Games)[Corrupt]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42346">
+				<rom name="Extricator, The (1986)(Precision Games)[Corrupt].tap" size="42346" crc="dee453aa" sha1="7e58ca552591384cb7c2ada6131b64341acc1524"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1fa64014486cc">
+		<description>Extruder 48K (2018)(Rui Martins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28574">
+				<rom name="Extruder 48K (2018)(Rui Martins).tap" size="28574" crc="289733c7" sha1="1fa64014486cca0b5885041b08f12bf91286560d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31ea1a646f011">
+		<description>Eye (1987)(Endurance Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33388">
+				<rom name="Eye (1987)(Endurance Games).tap" size="33388" crc="6948270b" sha1="31ea1a646f011a09e5677a1b1a550683d77adafc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbbf953bf12477">
+		<description>Eye Of The Star Warrior, The (1983)(Carnell Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40609">
+				<rom name="Eye Of The Star Warrior, The (1983)(Carnell Software).tap" size="40609" crc="d2381a40" sha1="bbf953bf12477a45606d0538940003fab23d473d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa9e46820010a3">
+		<description>Eye Of Vartan (1985)(Pocket Money Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48322">
+				<rom name="Eye Of Vartan (1985)(Pocket Money Software).tap" size="48322" crc="dd673e5f" sha1="a9e46820010a332602894d9fe1a95781025a9938"/>
 			</dataarea>
 		</part>
 	</software>
@@ -60519,6 +60829,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8327">
 				<rom name="_Eliza (1983)(M. de Vries).tap" size="8327" crc="323a5cb0" sha1="29c447fe5b36566850cfdbbab45189ad0e0eb1c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66193730b887d">
+		<description>_Excalibur - Sword Of Kings (1987)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48388">
+				<rom name="_Excalibur - Sword Of Kings (1987)(Alternative Software).tap" size="48388" crc="bd3be119" sha1="66193730b887dd3dafdde7698f977a2f0fc74311"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsffdbdce891b44">
+		<description>_Exodus (1984)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43306">
+				<rom name="_Exodus (1984)(Firebird).tap" size="43306" crc="6a7b90de" sha1="ffdbdce891b44ad0229e00f6322847ff51af2dcc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c7c93f96f5dd">
+		<description>_Exolon 48K (1987)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44921">
+				<rom name="_Exolon 48K (1987)(Hewson Consultants).tap" size="44921" crc="edd68b67" sha1="3c7c93f96f5dd67ab9bacea804541623d036b61d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf2f09b97f2bab">
+		<description>_Expert For Bank</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="90859">
+				<rom name="_Expert For Bank.tap" size="90859" crc="dbe12a5c" sha1="f2f09b97f2bab618d4b32097797809a8f7117925"/>
 			</dataarea>
 		</part>
 	</software>

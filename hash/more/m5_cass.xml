@@ -1,17 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 24 -->
+<!-- Number of items in this list = 17 -->
 <softwarelist name="m5_cass" description="m5_cass loose roms">
-	<software name="m5583848b8e6bbe8">
-		<description>3D Squash (198x)(Sord)(JP) [BASIC-I CHAIN]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="m5_cass">
-			<dataarea name="cass" size="6471">
-				<rom name="3D Squash (198x)(Sord)(JP) [BASIC-I CHAIN].cas" size="6471" crc="4b866a06" sha1="583848b8e6bbe8f445a3e0bb5032d030a7336f08"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m5135f0adb05fd27">
 		<description>3dsquash [BASIC-I CHAIN]</description>
 		<year>????</year>
@@ -92,16 +82,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="m545ece22730c8de">
-		<description>Rainbow Block (198x)(Sord)(JP) [BASIC-I CHAIN] [_]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="m5_cass">
-			<dataarea name="cass" size="3784">
-				<rom name="Rainbow Block (198x)(Sord)(JP) [BASIC-I CHAIN] [_].cas" size="3784" crc="9a2b7ab6" sha1="45ece22730c8ded1a1c1c9c54aaa2b1bca654fed"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m5913c568c0bfd04">
 		<description>Rainbow Block [BASIC-I CHAIN] [_]</description>
 		<year>????</year>
@@ -112,16 +92,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="m5dc397a763f449a">
-		<description>Reflection (198x)(Sord)(JP) [BASIC-I CHAIN] [_]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="m5_cass">
-			<dataarea name="cass" size="3576">
-				<rom name="Reflection (198x)(Sord)(JP) [BASIC-I CHAIN] [_].cas" size="3576" crc="c089a48b" sha1="dc397a763f449afc94cf92dd0b1524470a58b167"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m59effb969f51dc0">
 		<description>Reflection [BASIC-I CHAIN] [_]</description>
 		<year>????</year>
@@ -129,16 +99,6 @@
 		<part name="cass1" interface="m5_cass">
 			<dataarea name="cass" size="1870628">
 				<rom name="Reflection [BASIC-I CHAIN] [_].wav" size="1870628" crc="3b36a9e8" sha1="9effb969f51dc08335356cd11eea947bf2cf768f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m5d1ee98e9a829a5">
-		<description>Sansuu Keisan (198x)(Takara)(JP) [BASIC-I CHAIN]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="m5_cass">
-			<dataarea name="cass" size="2899">
-				<rom name="Sansuu Keisan (198x)(Takara)(JP) [BASIC-I CHAIN].cas" size="2899" crc="5fcf5e03" sha1="d1ee98e9a829a57e961fa70a9ad9c2f4b0f8b7a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -172,16 +132,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="m59c593a18bbe68e">
-		<description>Synthesizer (198x)(Takara)(JP) [BASIC-I CHAIN]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="m5_cass">
-			<dataarea name="cass" size="2381">
-				<rom name="Synthesizer (198x)(Takara)(JP) [BASIC-I CHAIN].cas" size="2381" crc="bec3352a" sha1="9c593a18bbe68ebdff0e37bf2361d890c9cc486f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m51443ffb38ebb73">
 		<description>synthesizer_orig [BASIC-I CHAIN]</description>
 		<year>????</year>
@@ -189,16 +139,6 @@
 		<part name="cass1" interface="m5_cass">
 			<dataarea name="cass" size="696444">
 				<rom name="synthesizer_orig [BASIC-I CHAIN].wav" size="696444" crc="58e9954e" sha1="1443ffb38ebb73fa34fc6979b46c395c6de22994"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m519a29142257270">
-		<description>Touchdown (198x)(Sord)(JP) [BASIC-I CHAIN]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="m5_cass">
-			<dataarea name="cass" size="4167">
-				<rom name="Touchdown (198x)(Sord)(JP) [BASIC-I CHAIN].cas" size="4167" crc="dd6e65ad" sha1="19a291422572709a94fbbd949955f19007896b8d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -219,16 +159,6 @@
 		<part name="cass1" interface="m5_cass">
 			<dataarea name="cass" size="2557238">
 				<rom name="touchdown_orig [BASIC-I CHAIN].wav" size="2557238" crc="7e363e39" sha1="1e7aeb8507758483733fddde2cba8782329abb6e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m5822ca2814f6f08">
-		<description>UFO Game (198x)(Takara)(JP) [BASIC-I CHAIN]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="m5_cass">
-			<dataarea name="cass" size="2381">
-				<rom name="UFO Game (198x)(Takara)(JP) [BASIC-I CHAIN].cas" size="2381" crc="d38eb3b7" sha1="822ca2814f6f089b6d99582b8f99637135cb4cb7"/>
 			</dataarea>
 		</part>
 	</software>

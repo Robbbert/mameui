@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 48 -->
+<!-- Number of items in this list = 44 -->
 <softwarelist name="m5_cart" description="m5_cart loose roms">
 	<software name="m51017b98d9a193f">
 		<description>Aerial</description>
@@ -212,16 +212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="m5e5d328fa276553">
-		<description>guttanggottong</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="m5_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="guttanggottong.bin" size="8192" crc="04f842ea" sha1="e5d328fa2765530849422eb3ae33628d2adf4ca9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m5ad77e589ee17eb">
 		<description>H-Tron</description>
 		<year>????</year>
@@ -412,16 +402,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="m5c724e0777aa89e">
-		<description>tankbattalion</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="m5_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="tankbattalion.bin" size="8192" crc="e05b2c70" sha1="c724e0777aa89ee58937bd9ca60e4d82baeabb66"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="m51c4d1b687bddfe">
 		<description>tankbattalion_1</description>
 		<year>????</year>
@@ -429,16 +409,6 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="tankbattalion_1.bin" size="8192" crc="a25efb96" sha1="1c4d1b687bddfec40eccf2f3a3b7305ff454e791"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m5139ab0c63c8253">
-		<description>upupballoon</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="m5_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="upupballoon.bin" size="8192" crc="1fce24c8" sha1="139ab0c63c82538bc032d2cb9d9eaf858d7c969d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -459,16 +429,6 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Wonder Hole (1982)(Irem)(JP)[Req 36k RAM].bin" size="8192" crc="5274f575" sha1="667f09f256bd8b2fb7f77681d10426970961490f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m5dd0e732f121b90">
-		<description>wonderhole</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="m5_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="wonderhole.bin" size="8192" crc="4a7613e6" sha1="dd0e732f121b904bc12a6a5a30e3f9fd40d03afd"/>
 			</dataarea>
 		</part>
 	</software>
