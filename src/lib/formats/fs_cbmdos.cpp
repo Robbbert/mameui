@@ -88,6 +88,7 @@ public:
 	virtual std::pair<std::error_condition, meta_data> metadata(const std::vector<std::string> &path) override;
 	virtual std::pair<std::error_condition, std::vector<dir_entry>> directory_contents(const std::vector<std::string> &path) override;
 	virtual std::pair<std::error_condition, std::vector<u8>> file_read(const std::vector<std::string> &path) override;
+	virtual std::tuple<std::error_condition, std::vector<u32>, std::vector<u32>> enum_blocks(const std::vector<std::string> &path) override;
 	virtual std::error_condition file_create(const std::vector<std::string> &path, const meta_data &meta) override;
 	virtual std::error_condition file_write(const std::vector<std::string> &path, const std::vector<u8> &data) override;
 
@@ -222,6 +223,8 @@ std::vector<meta_description> fs::cbmdos_image::volume_meta_description() const
 {
 	std::vector<meta_description> results;
 	results.emplace_back(meta_name::name, "UNTITLED", false, [](const meta_value &m) { return m.as_string().size() <= 16; }, "Volume name, up to 16 characters");
+	results.emplace_back(meta_name::disk_id, "ZX", false, [](const meta_value &m) { return m.as_string().size() <= 2; }, "Disk ID, 2 characters");
+	results.emplace_back(meta_name::os_version, "2A", true, [](const meta_value &m) { return m.as_string().size() <= 2; }, "OS version and format type");
 	return results;
 }
 
@@ -306,9 +309,13 @@ meta_data impl::volume_metadata()
 {
 	auto bam_block = read_sector(DIRECTORY_TRACK, BAM_SECTOR);
 	std::string disk_name = bam_block->rstr(0x90, 16);
+	std::string disk_id = bam_block->rstr(0xa2, 2);
+	std::string os_version = bam_block->rstr(0xa5, 2);
 
 	meta_data results;
 	results.set(meta_name::name, strtrimright_cbm(disk_name));
+	results.set(meta_name::disk_id, strtrimright_cbm(disk_id));
+	results.set(meta_name::os_version, strtrimright_cbm(os_version));
 	return results;
 }
 
@@ -355,13 +362,39 @@ std::pair<std::error_condition, std::vector<u8>> impl::file_read(const std::vect
 	if (!dirent)
 		return std::make_pair(error::not_found, std::vector<u8>());
 
-	// and get the data
+	// and get the data (TODO: perform two-level scan for REL files)
 	std::vector<u8> result;
 	block_iterator iter(*this, dirent->m_file_first_track, dirent->m_file_first_sector);
 	while (iter.next())
 		iter.append_data(result);
 
 	return std::make_pair(iter.track() != CHAIN_END ? error::circular_reference : std::error_condition(), std::move(result));
+}
+
+
+//-------------------------------------------------
+//  impl::enum_blocks
+//-------------------------------------------------
+
+std::tuple<std::error_condition, std::vector<u32>, std::vector<u32>> impl::enum_blocks(const std::vector<std::string> &path)
+{
+	std::optional<cbmdos_dirent> dirent;
+	if (!path.empty())
+	{
+		dirent = dirent_from_path(path);
+		if (!dirent)
+			return std::make_tuple(error::not_found, std::vector<u32>(), std::vector<u32>());
+	}
+
+	// TODO: list allocation blocks for REL files
+	std::vector<u32> blocks;
+	block_iterator iter(*this, path.empty() ? DIRECTORY_TRACK : dirent->m_file_first_track, path.empty() ? FIRST_DIRECTORY_SECTOR : dirent->m_file_first_sector);
+	while (iter.next())
+	{
+		// typical file allocation patterns are more random than s_track_sector_map, so just encode track and sector in decimal
+		blocks.push_back(iter.track() * 100 + iter.sector());
+	}
+	return std::make_tuple(iter.track() != CHAIN_END ? error::circular_reference : std::error_condition(), std::vector<u32>(), std::move(blocks));
 }
 
 
