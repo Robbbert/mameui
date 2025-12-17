@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2043 -->
+<!-- Number of items in this list = 2045 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6942,6 +6942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen67498cc2a19b1">
+		<description>Garfield - The Lost Levels (Sega Channel)(1995-96)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Garfield - The Lost Levels (Sega Channel)(1995-96)(Sega).bin" size="2097152" crc="a9e35705" sha1="67498cc2a19b13b951b27b23547437b3ca4e6d4a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen54bb7bb4d9970">
 		<description>Gargoyles (USA) (Beta) (1995-09-25)</description>
 		<year>????</year>
@@ -9889,6 +9899,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Kishi Densetsu (Japan).bin" size="1572864" crc="e91c6b2d" sha1="89c7bec518299c47d86020c130e312f587f10c87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf57f99d0d5e4a">
+		<description>Klirk, The (2025)(Furmal Munky)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Klirk, The (2025)(Furmal Munky).bin" size="1310720" crc="4dde4910" sha1="f57f99d0d5e4a67a795ecd7f03ae933aaf935176"/>
 			</dataarea>
 		</part>
 	</software>

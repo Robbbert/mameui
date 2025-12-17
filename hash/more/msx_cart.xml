@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 698 -->
+<!-- Number of items in this list = 699 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -6919,6 +6919,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="[2]Space Manbow (MSX2).rom" size="262144" crc="f326e255" sha1="9447e50d1266b7cb96a414eaf9ee16c0f99e55f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx655c9b2e1c845">
+		<description>[2]Three Weeks in Paradise (2025)(Fregarni)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="[2]Three Weeks in Paradise (2025)(Fregarni).rom" size="131072" crc="e4230d8a" sha1="655c9b2e1c84557d1facfb7501e94ed72ac16480"/>
 			</dataarea>
 		</part>
 	</software>
