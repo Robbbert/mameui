@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6938 -->
+<!-- Number of items in this list = 6973 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -49,6 +49,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="19038">
 				<rom name="(demo)Citadel - Demoversion (19xx)(Stalker)(Sv).tap" size="19038" crc="58763f53" sha1="ae3226bf0d9cdbe333f5077a100654ce52f5bdcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs877cf8945fd51">
+		<description>(demo)Entropy Demo 128k (1998)(ZX Maniacs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="104208">
+				<rom name="(demo)Entropy Demo 128k (1998)(ZX Maniacs).tap" size="104208" crc="1209f799" sha1="877cf8945fd512f88806b1416eab75524b44bfb6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15462,6 +15472,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc29d2369c7e32">
+		<description>Commando (1984)(Double Play Adventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25705">
+				<rom name="Commando (1984)(Double Play Adventures).tap" size="25705" crc="f3531c51" sha1="c29d2369c7e32497b7655570858f5fd1fe410b4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse83c379eecba4">
+		<description>Commando (1985)(Elite Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50176">
+				<rom name="Commando (1985)(Elite Software).tap" size="50176" crc="eb055a21" sha1="e83c379eecba45de58cc0c8c97f646eeed8e729b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscdc338420b9ea">
+		<description>Commando (1985)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48833">
+				<rom name="Commando (1985)(Elite Systems).tap" size="48833" crc="90a44ff9" sha1="cdc338420b9ea72703f579c4abaf8ce0d4023e99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4b7a411b93ef1">
+		<description>Commando (19xx)(Sprites Logiciels)(Fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47849">
+				<rom name="Commando (19xx)(Sprites Logiciels)(Fr).tap" size="47849" crc="c5e224b2" sha1="4b7a411b93ef1cf33f60d0ae551c8ae5d36003d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7003000fa9966">
+		<description>Commando 48K (1985)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49227">
+				<rom name="Commando 48K (1985)(Elite Systems).tzx" size="49227" crc="6f0ce3d1" sha1="7003000fa9966a7c53c9f5195daeda6970c20985"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc78a6babb9087">
 		<description>Contact Sam Cruise</description>
 		<year>????</year>
@@ -15992,6 +16052,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa5c978375105e">
+		<description>End Zone (1989)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47858">
+				<rom name="End Zone (1989)(Alternative Software).tap" size="47858" crc="d0dc3a47" sha1="a5c978375105e11b5abd61726bb0db0914a8f7e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs653ead22672cf">
+		<description>Endurance (1985)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46769">
+				<rom name="Endurance (1985)(CRL Group).tap" size="46769" crc="0b491102" sha1="653ead22672cf52a704a76918d2b9d2c7e8e7f49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse133996644a5f">
+		<description>Enduro (1984)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14848">
+				<rom name="Enduro (1984)(Activision).tap" size="14848" crc="a166e8b1" sha1="e133996644a5f57bf87e5a0e15328084c042bd23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc6818b0ef053b">
+		<description>Enduro (1984)(Activision)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28709">
+				<rom name="Enduro (1984)(Activision)[a].tap" size="28709" crc="55cf5bd9" sha1="c6818b0ef053bca8b6a553b109668ce3f7bb72ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscca93d0be011d">
+		<description>Enduro Racer (1987)(Activision)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47599">
+				<rom name="Enduro Racer (1987)(Activision)(128k).tap" size="47599" crc="6433ec1b" sha1="cca93d0be011d4e969d58427e62be45b58a14c15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3bea549d823f3">
+		<description>Enduro Racer (1987)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49670">
+				<rom name="Enduro Racer (1987)(Activision).tap" size="49670" crc="0e34f8bf" sha1="3bea549d823f36ed70c6c8c8994f23d41bd2136b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae4af70b6d487">
+		<description>Enduro Racer (1987)(Activision)[t +1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47983">
+				<rom name="Enduro Racer (1987)(Activision)[t +1].tap" size="47983" crc="3a487059" sha1="ae4af70b6d487d3c0e3cd2979676d33fbcfc26e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs112592d2019bd">
+		<description>Enduro Racer 48K-128K (1987)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52935">
+				<rom name="Enduro Racer 48K-128K (1987)(Activision).tzx" size="52935" crc="f7f8328f" sha1="112592d2019bdf84a78cbdbea9bee940027fad4a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2af0f9f7a3eb8">
 		<description>Enduro Racer</description>
 		<year>????</year>
@@ -15999,6 +16139,166 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="51505">
 				<rom name="Enduro Racer.tzx" size="51505" crc="f026c45f" sha1="2af0f9f7a3eb83fd6e04aaf2f6bb255db7520caf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48b60c05ff098">
+		<description>Energy Warrior (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35997">
+				<rom name="Energy Warrior (1987)(Mastertronic).tap" size="35997" crc="a67e139d" sha1="48b60c05ff09861490babb42ba0bf67a29f08386"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c8aca7204f5d">
+		<description>Engineer Humpty (1984)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44834">
+				<rom name="Engineer Humpty (1984)(Artic Computing).tap" size="44834" crc="742a4943" sha1="5c8aca7204f5d8e264db27d238477ef679c72106"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8def7fc7190ff">
+		<description>Engleski Jezik 2 (19xx)(Zavod Za Udzbenike &amp; Nastavna Sreds)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="103290">
+				<rom name="Engleski Jezik 2 (19xx)(Zavod Za Udzbenike &amp; Nastavna Sreds).tap" size="103290" crc="0b950416" sha1="8def7fc7190ffdd21190c8e8751e4bd238986f15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c4d50aef1610">
+		<description>English Verbs (1994)(Softhouse)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16164">
+				<rom name="English Verbs (1994)(Softhouse)(Cz).tap" size="16164" crc="d45fb9f7" sha1="1c4d50aef16105d7af5baaf46381d4a98265d585"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs477485acb3586">
+		<description>Enigma (demo) (1995)(Gasman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26199">
+				<rom name="Enigma (demo) (1995)(Gasman).tap" size="26199" crc="de7d2d23" sha1="477485acb3586af38e55d19256478701fd8d2786"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs405de8a122a40">
+		<description>Enigma Force (1985)(Beyond)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48362">
+				<rom name="Enigma Force (1985)(Beyond).tap" size="48362" crc="edf3d51b" sha1="405de8a122a40be7b44025af68f846e82a92809b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf3d3efecf16ab">
+		<description>Enigma Force (1985)(Beyond)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48291">
+				<rom name="Enigma Force (1985)(Beyond)[a].tap" size="48291" crc="004e371b" sha1="f3d3efecf16ab148ee36f1481c439d9deca6f4f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0430c75a9ea9a">
+		<description>Enigmatik 48K (2020)(iadvd, Molomazo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45841">
+				<rom name="Enigmatik 48K (2020)(iadvd, Molomazo).tap" size="45841" crc="c02dcd01" sha1="0430c75a9ea9a7f887c5d929dbe9564699c312f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs02037bdb4af06">
+		<description>Envelope, The (1984)(Yodasoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20606">
+				<rom name="Envelope, The (1984)(Yodasoft).tap" size="20606" crc="69065e7e" sha1="02037bdb4af0666efe93afc62a1d42332ba750bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs52de2fa087839">
+		<description>Eric And The Floaters (1983)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8492">
+				<rom name="Eric And The Floaters (1983)(Hudson Soft).tap" size="8492" crc="0f7826de" sha1="52de2fa087839956412203e9083fc85ec39810fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27384c05fe4d8">
+		<description>Eric And The Floaters (1983)(Hudson Soft)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8704">
+				<rom name="Eric And The Floaters (1983)(Hudson Soft)[a].tap" size="8704" crc="0504e750" sha1="27384c05fe4d8cac94f38fb0133e85af514b40de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6377f20bc448">
+		<description>Erik - The Phantom Of The Opera (1987)(Crysys)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Erik - The Phantom Of The Opera (1987)(Crysys).tap" size="49343" crc="42596dd6" sha1="d6377f20bc4483b58f95019532cf50e383a64fda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs528e9ac6f1b19">
+		<description>Erik - The Phantom Of The Opera (1987)(Crysys)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37987">
+				<rom name="Erik - The Phantom Of The Opera (1987)(Crysys)[a].tap" size="37987" crc="497146b7" sha1="528e9ac6f1b19cf506901e9823888eb267fc8f53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf80c26869ba29">
+		<description>Escalera, La EN 48K (2024)(Fitosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39788">
+				<rom name="Escalera, La EN 48K (2024)(Fitosoft).tap" size="39788" crc="2e6a5f01" sha1="f80c26869ba2972ac49995091c8632f153fdbc58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbcdddf6befc42">
+		<description>Escalera, La ES 48K (2024)(Fitosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39839">
+				<rom name="Escalera, La ES 48K (2024)(Fitosoft).tap" size="39839" crc="af366258" sha1="bcdddf6befc42718df20c85e8061146da8348e91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2229aee71b3a7">
+		<description>Escalera, La PT 48K (2024)(Fitosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39833">
+				<rom name="Escalera, La PT 48K (2024)(Fitosoft).tap" size="39833" crc="d93a0fc4" sha1="2229aee71b3a7d4f4a1e114b585c6262fd405d1c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -61459,6 +61759,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8327">
 				<rom name="_Eliza (1983)(M. de Vries).tap" size="8327" crc="323a5cb0" sha1="29c447fe5b36566850cfdbbab45189ad0e0eb1c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9ccb43219670e">
+		<description>_Enterprise (1987)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52536">
+				<rom name="_Enterprise (1987)(Melbourne House).tap" size="52536" crc="f1d7c64d" sha1="9ccb43219670e72c9310da1d9a4391a8290e7a96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs41b70970783c5">
+		<description>_Enterprise (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21463">
+				<rom name="_Enterprise (19xx)(-)(De).tap" size="21463" crc="114cec74" sha1="41b70970783c528ecf396f42294b2fb23001321f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67e7787096d92">
+		<description>_Equinox (1986)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44422">
+				<rom name="_Equinox (1986)(Mikro-Gen).tap" size="44422" crc="798a8e9c" sha1="67e7787096d92d499483af0ac9f1e942391b5653"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfbb0026ca8565">
+		<description>_Eric Bristow's Pro-Darts (1984)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="98319">
+				<rom name="_Eric Bristow's Pro-Darts (1984)(Quicksilva).tap" size="98319" crc="8e650648" sha1="fbb0026ca85650aa05decf482bba30306209c0b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs51a1fda300459">
+		<description>_Escalador Loco (1983)(Ventamatic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19216">
+				<rom name="_Escalador Loco (1983)(Ventamatic Software)(Sp).tap" size="19216" crc="d8247b44" sha1="51a1fda300459dea91baab6d168d2f1018d2f5cb"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 699 -->
+<!-- Number of items in this list = 696 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -702,16 +702,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msxef476e25fb6b7">
-		<description>Binary Land (1984)(Kuma)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Binary Land (1984)(Kuma).rom" size="16384" crc="fbacbc7a" sha1="ef476e25fb6b7221ca778a379117885450dd36f0"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="msx42975e598eeaf">
 		<description>Black Onyx, The (Japan) [T-En by Polaris v1.0]</description>
 		<year>????</year>
@@ -919,16 +909,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Bouncing Block (1988)(Idealogic).rom" size="16384" crc="cf270c3b" sha1="f1f571c1d9360839450c26d73c6aef89e1e052eb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msxf2d1a057940b4">
-		<description>Bousou Tokkyuu SOS (1985)(Hudson Soft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Bousou Tokkyuu SOS (1985)(Hudson Soft).rom" size="32768" crc="334efc07" sha1="f2d1a057940b44c04ba08f4ff2767eef8b515833"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1769,16 +1749,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Dragon Slayer Jr. - Romancia T-Eng (2010)(MSX Translations).rom" size="131072" crc="885773f9" sha1="f913ba02cd07e7d6a18d79d0fc2f4628841fc5c6"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msxd22817c519f53">
-		<description>Driller Tanks (1983)(Hudson Soft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Driller Tanks (1983)(Hudson Soft).rom" size="16384" crc="d78da5fc" sha1="d22817c519f5316f61c963580a620b0493a6232d"/>
 			</dataarea>
 		</part>
 	</software>

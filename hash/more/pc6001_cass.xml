@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 176 -->
+<!-- Number of items in this list = 168 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p606261e6a462162">
 		<description>1-Screen Programs (01 On-naji) {m1p1}</description>
@@ -152,16 +152,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p60dc49c616fb782">
-		<description>amida</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="2755">
-				<rom name="amida.p6" size="2755" crc="fbb5ec19" sha1="dc49c616fb7822f21ca895bbb5f3b16924d306d8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p60518887069cd65">
 		<description>Arm Wrestling {m5p4}</description>
 		<year>????</year>
@@ -269,16 +259,6 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="4167">
 				<rom name="AX-1 (Barricade) {m1p2}.cas" size="4167" crc="a991614f" sha1="a87cac3e53fcdbf1c78ff90097b54e19b06b0512"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p6001b2da04a6d8c">
-		<description>AX-1 (Break Out) {m1p2}</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="4837">
-				<rom name="AX-1 (Break Out) {m1p2}.cas" size="4837" crc="b0bad3d9" sha1="01b2da04a6d8c5766dcd765994d142bd18dcce73"/>
 			</dataarea>
 		</part>
 	</software>
@@ -392,16 +372,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p60e64442f2c32f0">
-		<description>AX-6 (Head-On) {m1p1}</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="5711">
-				<rom name="AX-6 (Head-On) {m1p1}.cas" size="5711" crc="91f7d594" sha1="e64442f2c32f0a7b6c62e1adcc4555fcc8149b66"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p60ab0cfe272400c">
 		<description>AX-6 (Mastermind) {m1p1}</description>
 		<year>????</year>
@@ -409,16 +379,6 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="6841">
 				<rom name="AX-6 (Mastermind) {m1p1}.cas" size="6841" crc="074faa75" sha1="ab0cfe272400c493d8fc563ce7d9f0f62d34ba99"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p604d922cef648f9">
-		<description>AX-6 (Space Enemy) {m1p1}</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="5579">
-				<rom name="AX-6 (Space Enemy) {m1p1}.cas" size="5579" crc="6601f428" sha1="4d922cef648f9efe001f25920bf1874ca5cbde52"/>
 			</dataarea>
 		</part>
 	</software>
@@ -512,16 +472,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p608e9d3d90a0c50">
-		<description>Break Through {m2p2}</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="24029">
-				<rom name="Break Through {m2p2}.cas" size="24029" crc="929dd694" sha1="8e9d3d90a0c506cfcde12139258050cd8608bc5d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p60f4e2e3d73fac6">
 		<description>canmaker</description>
 		<year>????</year>
@@ -569,16 +519,6 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="3493">
 				<rom name="Dirty Room {m1p1}.cas" size="3493" crc="6830f4c0" sha1="d11e239900d1158af24c0d69b0da541aa891332c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p60f89c8ab94cf00">
-		<description>Door Door MkII (1984)(Enix)(Koichi Nakamura)(Mode 2, Page 2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="32221">
-				<rom name="Door Door MkII (1984)(Enix)(Koichi Nakamura)(Mode 2, Page 2).p6" size="32221" crc="3bc496a3" sha1="f89c8ab94cf0004303714f605739efc0abf2a608"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1432,16 +1372,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p6090e2b187f3b04">
-		<description>Tiny Xevious {m2p2}</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="17741">
-				<rom name="Tiny Xevious {m2p2}.cas" size="17741" crc="5e9e2dbf" sha1="90e2b187f3b042ef1883105a34e83fe69a58e38f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p6012b3db378c669">
 		<description>Toiyaar (full) {m2p4}</description>
 		<year>????</year>
@@ -1519,16 +1449,6 @@
 		<part name="cart2" interface="pc6001_cass">
 			<dataarea name="cass" size="711">
 				<rom name="Toriaezu Tinyan da yo! {m1p1}.cas" size="711" crc="f3bb97e1" sha1="98c689d2b5a02efe382790f61757d6151dea176a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p6039798e7f7cb28">
-		<description>Trick Boy {m2p2}</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart2" interface="pc6001_cass">
-			<dataarea name="cass" size="25800">
-				<rom name="Trick Boy {m2p2}.cas" size="25800" crc="dfad3c61" sha1="39798e7f7cb2802d977f5124dd053a0d85d4c018"/>
 			</dataarea>
 		</part>
 	</software>
