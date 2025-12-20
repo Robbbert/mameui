@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 6973 -->
+<!-- Number of items in this list = 7004 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -479,6 +479,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52375">
 				<rom name="-Coliseum ES 48K (1988)(Topo Soft).tap" size="52375" crc="50c20efc" sha1="542decc3602b8a310a302dc98aed05cd06e47b81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs28b7420062230">
+		<description>-Continental Circus (1987)(Virgin Mastertronic Ltd)[cr [Cr Mata + Kamilsoft][t +4](128K)[Cr Mata + Kamilsoft]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="62824">
+				<rom name="-Continental Circus (1987)(Virgin Mastertronic Ltd)[cr [Cr Mata + Kamilsoft][t +4](128K)[Cr Mata + Kamilsoft].tap" size="62824" crc="e579b320" sha1="28b7420062230798ee327fc9d80669b016b651e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93185eb7a1e82">
+		<description>-Earthlight (1988)(Firebird Software Ltd)[cr [Cr Wixet][t Wixet][Cr Wixet]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41621">
+				<rom name="-Earthlight (1988)(Firebird Software Ltd)[cr [Cr Wixet][t Wixet][Cr Wixet].tap" size="41621" crc="321b0742" sha1="93185eb7a1e82a254b15da4cf748a0961ded726f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e9e0b79853b1">
+		<description>-Elite (1985)(Firebird Software Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38149">
+				<rom name="-Elite (1985)(Firebird Software Ltd)[cr [Cr][Cr].tap" size="38149" crc="085d36bb" sha1="9e9e0b79853b1e43b62e19b2bfadf60e22886eb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5527f05586754">
+		<description>-Emilio Sanchez Vicario Grandslam (1989)(Zigurat Software)(Sp)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29317">
+				<rom name="-Emilio Sanchez Vicario Grandslam (1989)(Zigurat Software)(Sp)[cr [Cr][Cr].tap" size="29317" crc="8c8a6a34" sha1="5527f0558675430466651088e41b2d1fffcc4e9e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15522,6 +15562,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsdf19311687f29">
+		<description>Compact Office (1986)(Robtek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63472">
+				<rom name="Compact Office (1986)(Robtek).tap" size="63472" crc="c08305de" sha1="df19311687f2997f4c36093f1f4e7a5bc3f51106"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs16e720e36d69f">
+		<description>Compress Copy (1988)(Dinosoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1620">
+				<rom name="Compress Copy (1988)(Dinosoft).tap" size="1620" crc="50ca5200" sha1="16e720e36d69f9fc6413fd3a379d15503eb305d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55a6d8f6da849">
+		<description>Computer Aided Graphic Design (1986)(Omikron Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63072">
+				<rom name="Computer Aided Graphic Design (1986)(Omikron Soft).tap" size="63072" crc="c5707a05" sha1="55a6d8f6da8494b920bf2c90b83a510395bde756"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs878dd7539769c">
+		<description>Computer Bridge (1983)(P.White)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8415">
+				<rom name="Computer Bridge (1983)(P.White).tap" size="8415" crc="dfe6c932" sha1="878dd7539769cc5e57897717e821099f878f0d9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs78b06e2ef7bc9">
+		<description>Concentration (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3170">
+				<rom name="Concentration (19xx)(-).tap" size="3170" crc="6c951ca5" sha1="78b06e2ef7bc9c649aafa02ea811168858d6f173"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc78a6babb9087">
 		<description>Contact Sam Cruise</description>
 		<year>????</year>
@@ -16032,6 +16122,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4561baa8b9c28">
+		<description>Elite Planet Browser_ZXSpectrum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14307">
+				<rom name="Elite Planet Browser_ZXSpectrum.tap" size="14307" crc="09f82f8e" sha1="4561baa8b9c2894501c0f7c6e2292bdbe0d79902"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45ebb24dea2d8">
+		<description>Elixir Vitae 128K (2013)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19567">
+				<rom name="Elixir Vitae 128K (2013)(Rafal Miazga).tap" size="19567" crc="68c69860" sha1="45ebb24dea2d80ca378054f7e65f0505500a7bfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsafc88f6a51921">
+		<description>Eliza (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8226">
+				<rom name="Eliza (19xx)(-).tap" size="8226" crc="411ba6df" sha1="afc88f6a51921717b5c404e27e3604396b8f5a23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs95ad7c2cbbe2a">
+		<description>Elon M. with Jetpack 128K (2019)(Matra)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46403">
+				<rom name="Elon M. with Jetpack 128K (2019)(Matra).tap" size="46403" crc="bc78e913" sha1="95ad7c2cbbe2ac3bc9ca6670591ff2554517b01c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs85a6dc6af0e71">
+		<description>Elven Warrior (1989)(Players Premier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33280">
+				<rom name="Elven Warrior (1989)(Players Premier).tap" size="33280" crc="1bb4588b" sha1="85a6dc6af0e7112a7085342d587374374379b470"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs984a9445184a8">
+		<description>Elven Warrior (1989)(Players Premier)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33049">
+				<rom name="Elven Warrior (1989)(Players Premier)[a].tap" size="33049" crc="48efad84" sha1="984a9445184a8066723d436275a32e5613e81c52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse82e77895282e">
+		<description>Elven Warrior</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51605">
+				<rom name="Elven Warrior.tap" size="51605" crc="10bcb8c8" sha1="e82e77895282eef096f11f2c5db9dce40472709c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ec75dcb582d5">
+		<description>Emilio Butraguemo (1988)(Ocean Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35014">
+				<rom name="Emilio Butraguemo (1988)(Ocean Software)(Sp).tap" size="35014" crc="99569c38" sha1="5ec75dcb582d515a13c88df0ee7cd3e88843c1e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsca5e488776380">
 		<description>Emilio Butragueno Futbol</description>
 		<year>????</year>
@@ -16042,6 +16212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs89f0db15df1e2">
+		<description>Emilio Sanchez Vicario Grand Slam ES (1990)(Zigurat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46879">
+				<rom name="Emilio Sanchez Vicario Grand Slam ES (1990)(Zigurat).tap" size="46879" crc="22f0f155" sha1="89f0db15df1e227f446ec761c6ea43459f1769b4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfd68d28f47f1c">
 		<description>Emilio Sanchez Vicario Grand Slam</description>
 		<year>????</year>
@@ -16049,6 +16229,106 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46898">
 				<rom name="Emilio Sanchez Vicario Grand Slam.tzx" size="46898" crc="ca4e3210" sha1="fd68d28f47f1c292c3a5f51a067c40e087bc3de3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs252435c0d5174">
+		<description>Emily's Tantrums (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4295">
+				<rom name="Emily's Tantrums (19xx)(-).tap" size="4295" crc="0625042d" sha1="252435c0d5174334023c46ebdfb1ae25ebb03847"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd265ce1e420ea">
+		<description>Emlyn Hughes International Soccer 48K (1989)(Audiogenic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48566">
+				<rom name="Emlyn Hughes International Soccer 48K (1989)(Audiogenic).tap" size="48566" crc="cedea177" sha1="d265ce1e420ea89547fa11e9a2c7b05a9c393ca4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs26517edb572b6">
+		<description>Empire Fights Back, The (1985)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38534">
+				<rom name="Empire Fights Back, The (1985)(Mastertronic).tap" size="38534" crc="471ce6d7" sha1="26517edb572b6546810b5cd15bbd199570ab0ce3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs85eeb44a68c16">
+		<description>Empire Strikes Back, The 48K (1988)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56308">
+				<rom name="Empire Strikes Back, The 48K (1988)(Domark).tzx" size="56308" crc="68d108fa" sha1="85eeb44a68c16b030f2ed4b0dbd349cb96dd34ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7fd55ca4bc296">
+		<description>Enchanted (1989)(KFR Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51070">
+				<rom name="Enchanted (1989)(KFR Soft)(Sp).tap" size="51070" crc="e0867890" sha1="7fd55ca4bc29640dd9c1bdbb7e322d70185cea07"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa489aacaebc4f">
+		<description>Enchanted ES 48K (1989)(Positive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48705">
+				<rom name="Enchanted ES 48K (1989)(Positive).tap" size="48705" crc="841628d9" sha1="a489aacaebc4f90274f5692ccdfe95512c0e5677"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs584c91475843d">
+		<description>Encyclopedia Of War - Ancient Battles (1988)(CCS)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="82164">
+				<rom name="Encyclopedia Of War - Ancient Battles (1988)(CCS)(128k).tap" size="82164" crc="a7f4e3d8" sha1="584c91475843d983c691a66b312218edb58672a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs11b91cb1bc8fc">
+		<description>Encyclopedia Of War - Ancient Battles (1988)(CCS)(128k)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="132298">
+				<rom name="Encyclopedia Of War - Ancient Battles (1988)(CCS)(128k)[a].tap" size="132298" crc="d31a5074" sha1="11b91cb1bc8fc5c66633c856ec8b9bb37f22a347"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93ffcca7ac324">
+		<description>Encyclopedia Of War - Ancient Battles (1988)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83551">
+				<rom name="Encyclopedia Of War - Ancient Battles (1988)(CCS).tap" size="83551" crc="70307056" sha1="93ffcca7ac324c50a509148141e68c755e950e7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b5c37faaf1cd">
+		<description>Encyclopedia Of War - Ancient Battles (1988)(CCS)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="145266">
+				<rom name="Encyclopedia Of War - Ancient Battles (1988)(CCS)[a].tap" size="145266" crc="651ea7aa" sha1="0b5c37faaf1cd1573f068fd193ec9ddfa492c0b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -61662,6 +61942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs917f3bc228154">
+		<description>_Composer (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14327">
+				<rom name="_Composer (19xx)(-).tap" size="14327" crc="fa1fadad" sha1="917f3bc228154be6622fcd93149bec93e4649037"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c2088469a44c">
 		<description>_Crosswize</description>
 		<year>????</year>
@@ -61759,6 +62049,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8327">
 				<rom name="_Eliza (1983)(M. de Vries).tap" size="8327" crc="323a5cb0" sha1="29c447fe5b36566850cfdbbab45189ad0e0eb1c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ad2a37ca92fe">
+		<description>_Embassy Assault (1982)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16082">
+				<rom name="_Embassy Assault (1982)(Psion).tap" size="16082" crc="aa146f79" sha1="3ad2a37ca92fe797ff121be621f69e25dd8a1f06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs585c4b6b166ec">
+		<description>_Emerald Isle (1985)(Level 9 Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41427">
+				<rom name="_Emerald Isle (1985)(Level 9 Computing).tap" size="41427" crc="a8de4d9c" sha1="585c4b6b166ec7079475e5b6416b4cfcb556f00c"/>
 			</dataarea>
 		</part>
 	</software>
