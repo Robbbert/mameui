@@ -219,6 +219,7 @@ void mb87030_device::scsi_disconnect()
 	update_state(State::Idle);
 }
 
+
 void mb87030_device::scsi_set_ctrl(uint32_t value, uint32_t mask)
 {
 	if (m_sctl & SCTL_DIAG_MODE) {
@@ -508,7 +509,8 @@ void mb87030_device::device_start()
 
 void mb87030_device::scsi_ctrl_changed()
 {
-	LOG("%s: %02x\n", __FUNCTION__, scsi_bus->ctrl_r());
+	const auto value = scsi_bus->ctrl_r();
+	LOG("%s: %02x\n", __FUNCTION__, value);
 	if (m_delay_timer->remaining() == attotime::never)
 		step(false);
 }
