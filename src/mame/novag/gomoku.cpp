@@ -11,6 +11,10 @@ doesn't count as a win).
 
 For faster interface control in MAME, map the piece spawn inputs to your keyboard.
 
+NOTE: If internal artwork Japanese text is not visible (either fontprovider or OS
+doesn't support character substitution), manually set the -artfont option to a CJK
+font.
+
 Hardware notes:
 - PCB label: 100015
 - Zilog Z8400B PS @ ~2.25MHz
