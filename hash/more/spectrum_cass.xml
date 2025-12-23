@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7004 -->
+<!-- Number of items in this list = 7042 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -15602,6 +15602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd91bac550acb3">
+		<description>Con-Quest (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48762">
+				<rom name="Con-Quest (1986)(Mastertronic).tap" size="48762" crc="77e76fe8" sha1="d91bac550acb31f3af5cb190b38f5417b00be5dc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs78b06e2ef7bc9">
 		<description>Concentration (19xx)(-)</description>
 		<year>????</year>
@@ -15612,6 +15622,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs404e41e0d91cb">
+		<description>Conflict (1982)(Martech Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16993">
+				<rom name="Conflict (1982)(Martech Games).tap" size="16993" crc="841be43c" sha1="404e41e0d91cb78632425527198412a4d94f00a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd514333420043">
+		<description>Confrontation (1983)(M.C. Lothlorien)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45711">
+				<rom name="Confrontation (1983)(M.C. Lothlorien).tap" size="45711" crc="6e9f400a" sha1="d5143334200432eb25733e0e6da7fb99099253fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6d88a7f9a232c">
+		<description>Confusion (1983)(Blaby Computer Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19704">
+				<rom name="Confusion (1983)(Blaby Computer Games).tap" size="19704" crc="fa10aeb5" sha1="6d88a7f9a232cce1752643bfed54631b62b46600"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7562f010562c0">
+		<description>Confuzion (1985)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Confuzion (1985)(Incentive).tap" size="49343" crc="9d0f6c6c" sha1="7562f010562c0aa10d8bff39ee58eb6771180600"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0001e6022e06b">
+		<description>Confuzion (1985)(Incentive)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35641">
+				<rom name="Confuzion (1985)(Incentive)[a].tap" size="35641" crc="ad5dec9e" sha1="0001e6022e06b16339406698df141ffad9512fce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9fbfaed396eeb">
+		<description>Connect 4 (1984)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11999">
+				<rom name="Connect 4 (1984)(Atlantis Software).tap" size="11999" crc="742520b9" sha1="9fbfaed396eeb55cafe9c7a04456a5cef571739f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0d8bb96020856">
+		<description>Connect 4 (1994)(John Westhead)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24232">
+				<rom name="Connect 4 (1994)(John Westhead).tap" size="24232" crc="10f0bcee" sha1="0d8bb9602085645d3f10775adb0911b00f8c5acf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs170e5d0bfb38e">
+		<description>Connect 4 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9767">
+				<rom name="Connect 4 (19xx)(-).tap" size="9767" crc="8be91846" sha1="170e5d0bfb38e745fe5855e232bf489aa94941b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2b990ccf2eef5">
+		<description>Conquest (1984)(Cheetahsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57017">
+				<rom name="Conquest (1984)(Cheetahsoft).tap" size="57017" crc="3ba814e1" sha1="2b990ccf2eef5e290a7bea5f04af9d0e87d289b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4fd079abf2411">
+		<description>Contact Sam Cruise (1986)(Microsphere)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49227">
+				<rom name="Contact Sam Cruise (1986)(Microsphere).tap" size="49227" crc="7951188f" sha1="4fd079abf2411ad15a5e836970bbf5117783d135"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc78a6babb9087">
 		<description>Contact Sam Cruise</description>
 		<year>????</year>
@@ -15619,6 +15729,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50105">
 				<rom name="Contact Sam Cruise.tzx" size="50105" crc="d0585fdf" sha1="c78a6babb90873a2b8495ea5d95e7a27c02169ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4bbc23715c133">
+		<description>Continental Circus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="127564">
+				<rom name="Continental Circus.tap" size="127564" crc="be5c0729" sha1="4bbc23715c133552ff0576eb57e5c90ad3310735"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6941c5df983af">
+		<description>Conversion</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8498">
+				<rom name="Conversion.TAP" size="8498" crc="9a98689e" sha1="6941c5df983af451c746e310a4dcacca9ddcf45a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6cc6a1980b0f3">
+		<description>Convert (1982)(Microl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2628">
+				<rom name="Convert (1982)(Microl).tap" size="2628" crc="d88d1161" sha1="6cc6a1980b0f321c31239671855b611148c28bca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdbe10af206682">
+		<description>Convoy (1985)(Budgie Budget Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54441">
+				<rom name="Convoy (1985)(Budgie Budget Software).tap" size="54441" crc="f9b06c92" sha1="dbe10af206682cf21c99b4b96f073b01bdd307b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16092,6 +16242,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs233d383cbc5a1">
+		<description>Elfin Wars, The (19xx)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17919">
+				<rom name="Elfin Wars, The (19xx)(Zenobi Software).tap" size="17919" crc="a13fe5b5" sha1="233d383cbc5a1c0836ede7954906c6cd0bdc5cbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf849ce8c069fa">
+		<description>Elfindor (1990)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25794">
+				<rom name="Elfindor (1990)(Zenobi Software).tap" size="25794" crc="95055a21" sha1="f849ce8c069fa47d2e5b3b4bf4e64f98190908ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4530f0ef2196c">
+		<description>Eliminator (1988)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30512">
+				<rom name="Eliminator (1988)(Alternative Software).tap" size="30512" crc="c19dc2b3" sha1="4530f0ef2196cf565fd6bb8546c4349930df13c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd09ec2c562f3a">
+		<description>Eliminator (1988)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31198">
+				<rom name="Eliminator (1988)(Hewson Consultants).tap" size="31198" crc="ecef5bf1" sha1="d09ec2c562f3a5fa14e30d20eff0fbb2e530fd15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs840d16a9bcb7f">
+		<description>Eliminator (1988)(Hewson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44964">
+				<rom name="Eliminator (1988)(Hewson).tap" size="44964" crc="4e5643c0" sha1="840d16a9bcb7f4ad64e7460a59a1a63588603cd9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs52d811a98d939">
 		<description>Eliminator</description>
 		<year>????</year>
@@ -16102,6 +16302,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse6a4f1b123e64">
+		<description>Elite - Commander Editor (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6036">
+				<rom name="Elite - Commander Editor (19xx)(-).tap" size="6036" crc="594daf7a" sha1="e6a4f1b123e648c2c110d10f92910fbc6c3efc34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab30d2695c6ac">
+		<description>Elite - Trainer 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38515">
+				<rom name="Elite - Trainer 128K (1985)(Firebird Software).tap" size="38515" crc="9b875d7d" sha1="ab30d2695c6acd19e81c4570262e7880bf992d3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse450a25c94303">
+		<description>Elite - Trainer2 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41016">
+				<rom name="Elite - Trainer2 128K (1985)(Firebird Software).tap" size="41016" crc="9e5dd44e" sha1="e450a25c94303e8f87f21e49d981e8c413802277"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc09b9d28d8a2a">
+		<description>Elite 48K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49289">
+				<rom name="Elite 48K (1985)(Firebird Software).tap" size="49289" crc="73958402" sha1="c09b9d28d8a2ab20d4c3d783771d3354b744a13b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsffc1213903f37">
+		<description>Elite Alt1 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49522">
+				<rom name="Elite Alt1 128K (1985)(Firebird Software).tap" size="49522" crc="75e46259" sha1="ffc1213903f379bd928a8c9e5452826b160fb3fe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9accfbfd7a8f3">
 		<description>Elite Alt1 128K (1985)(Firebird Software)</description>
 		<year>????</year>
@@ -16109,6 +16359,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31439">
 				<rom name="Elite Alt1 128K (1985)(Firebird Software).tzx" size="31439" crc="9d1bac9d" sha1="9accfbfd7a8f3915c93235c15985d69c2ae7fd93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1ce991c1d84d9">
+		<description>Elite Alt11 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44571">
+				<rom name="Elite Alt11 128K (1985)(Firebird Software).tap" size="44571" crc="981c52ab" sha1="1ce991c1d84d9da7326ea0e23187bc67f1ace716"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93d833a88db6b">
+		<description>Elite Alt2 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47911">
+				<rom name="Elite Alt2 128K (1985)(Firebird Software).tap" size="47911" crc="e3ee9e8e" sha1="93d833a88db6b6729633f13a98a795085258eb83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse916b1f03462a">
+		<description>Elite Alt3 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46476">
+				<rom name="Elite Alt3 128K (1985)(Firebird Software).tap" size="46476" crc="c88da41f" sha1="e916b1f03462a9a1eabb0ac47db2017052062084"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae072c90ce6ce">
+		<description>Elite Alt4 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49525">
+				<rom name="Elite Alt4 128K (1985)(Firebird Software).tap" size="49525" crc="6c7f39b5" sha1="ae072c90ce6ce4d703b89c03d5f3d4df8aba2a95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61bf05e51a831">
+		<description>Elite Alt5 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46476">
+				<rom name="Elite Alt5 128K (1985)(Firebird Software).tap" size="46476" crc="97a5b95c" sha1="61bf05e51a831b954c45b91cd999cf64e8647d2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse015d70bc4c3b">
+		<description>Elite Alt6 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46714">
+				<rom name="Elite Alt6 128K (1985)(Firebird Software).tap" size="46714" crc="a3051823" sha1="e015d70bc4c3b6afd57eb16d738fe1d71309e2c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc884de2683cd6">
+		<description>Elite Alt7 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44839">
+				<rom name="Elite Alt7 128K (1985)(Firebird Software).tap" size="44839" crc="60e52471" sha1="c884de2683cd60900748200d304a7a35855264c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs32962747dac16">
+		<description>Elite Alt9 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44555">
+				<rom name="Elite Alt9 128K (1985)(Firebird Software).tap" size="44555" crc="0b25cec4" sha1="32962747dac168c7ee55a971ee4ffe5146013f37"/>
 			</dataarea>
 		</part>
 	</software>
@@ -61952,6 +62282,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb2cbae1381ad9">
+		<description>_Conveyor Belt Capers (19xx)(Ian Brandon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11765">
+				<rom name="_Conveyor Belt Capers (19xx)(Ian Brandon).tap" size="11765" crc="6283a51c" sha1="b2cbae1381ad9e5dedb1e607e7bc2b865c5f82df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9f2c7f3e82179">
+		<description>_Conveyor Belt Capers (19xx)(Ian Brandon)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11776">
+				<rom name="_Conveyor Belt Capers (19xx)(Ian Brandon)[a].tap" size="11776" crc="4d0cbd39" sha1="9f2c7f3e821799a8c46ace980f6b0ffdbb98d63e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa40f61c2af57f">
+		<description>_Convoy Raider (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39345">
+				<rom name="_Convoy Raider (1987)(Gremlin Graphics).tap" size="39345" crc="f2295353" sha1="a40f61c2af57f53ffcad0f2481ee145ddf7981bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c2088469a44c">
 		<description>_Crosswize</description>
 		<year>????</year>
@@ -62039,6 +62399,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15784">
 				<rom name="_Eight Patience Cards.TAP" size="15784" crc="19fb637f" sha1="adb82bd4b8635970a3df85db8496a8dc2a37be8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ed7bc691fa6a">
+		<description>_Elite 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44196">
+				<rom name="_Elite 128K (1985)(Firebird Software).tap" size="44196" crc="9e0d1886" sha1="2ed7bc691fa6abf6439b4c063101340e260831fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd806e62e02012">
+		<description>_Elite Alt8 128K (1985)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44777">
+				<rom name="_Elite Alt8 128K (1985)(Firebird Software).tap" size="44777" crc="e7bce2ca" sha1="d806e62e0201291b5d195405a5d3b8718febb44d"/>
 			</dataarea>
 		</part>
 	</software>

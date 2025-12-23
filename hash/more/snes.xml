@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3966 -->
+<!-- Number of items in this list = 3967 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -20469,6 +20469,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Otogirisou T-Eng v1.1 (2025)(ButThouMust).sfc" size="1572864" crc="33c8391d" sha1="7eb316f373ba1521e31be4b32583363591070846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns62d3d3e1eea36">
+		<description>Otogirisou T-Eng v1.2 (2025)(ButThouMust)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Otogirisou T-Eng v1.2 (2025)(ButThouMust).sfc" size="1572864" crc="454d3b37" sha1="62d3d3e1eea369bef4e33ec2e1b6b599a765bc66"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 696 -->
+<!-- Number of items in this list = 700 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1009,6 +1009,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Buru to Marty Kikiippatsu - Inspecteur Z (1986)(Hal)[tr En].rom" size="32768" crc="57a1bfb3" sha1="01b506cfecb366f7e00bcabb717e86e8974c02a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx17cdba8c632d1">
+		<description>Busy Rainy Day (Japan)(1983)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Busy Rainy Day (Japan)(1983)(Hudson Soft).rom" size="16384" crc="66f2be7b" sha1="17cdba8c632d137c7c1aa3a1b04c11846d6b913d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5133,12 +5143,12 @@
 		</part>
 	</software>
 	<software name="msxe8df1bb8df6e9">
-		<description>SkyFox - Paina (Pasi Kettunen) (1989)</description>
+		<description>SkyFox Paina (Euro)(1989)(Pasi Kettunen)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="8192">
-				<rom name="SkyFox - Paina (Pasi Kettunen) (1989).rom" size="8192" crc="efb971a4" sha1="e8df1bb8df6e9e0df47aa654a7f28ab324cd48e1"/>
+				<rom name="SkyFox Paina (Euro)(1989)(Pasi Kettunen).rom" size="8192" crc="efb971a4" sha1="e8df1bb8df6e9e0df47aa654a7f28ab324cd48e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5452,6 +5462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxba3620220a4f1">
+		<description>Submarine Shooter (Japan)(1983)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Submarine Shooter (Japan)(1983)(Hudson Soft).rom" size="16384" crc="07f221e8" sha1="ba3620220a4f124a6bab11342a04fd219cf077c5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxcd466c04209a8">
 		<description>super boy ii (1989)(zemina)</description>
 		<year>????</year>
@@ -5509,6 +5529,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Super Cobra (1983)(Konami)[o][RC-705].rom" size="16384" crc="6c601fa5" sha1="31472edf134c8ba532e6a1eded0dcc1aa088e8ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb692e7f96a121">
+		<description>Super Doors (Japan)(1983)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Super Doors (Japan)(1983)(Hudson Soft).rom" size="16384" crc="1fa291eb" sha1="b692e7f96a121abffb40889b2a60cde3bc8f71c2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6049,6 +6079,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Universe Unknown (final).rom" size="49152" crc="134dbf0e" sha1="83dee5f1fd4bdad33b095ed15870c52c96becc63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf60496a527daa">
+		<description>Vegetable Crash (Japan)(1984)(HoneyBee Soft, Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Vegetable Crash (Japan)(1984)(HoneyBee Soft, Hudson Soft).rom" size="8192" crc="14283d5b" sha1="f60496a527daa34aba57333a552e10cba95309b0"/>
 			</dataarea>
 		</part>
 	</software>
