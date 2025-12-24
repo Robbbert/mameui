@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 553 -->
+<!-- Number of items in this list = 555 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1192,6 +1192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms5a353f907ca38">
+		<description>Dangerous Demolition (2022)(Dr.Ludos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Dangerous Demolition (2022)(Dr.Ludos).sms" size="49152" crc="3f7c5b40" sha1="5a353f907ca38cb987ad57e38c6fc7deb5686c80"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms73d6f05c66037">
 		<description>datastorm</description>
 		<year>????</year>
@@ -1939,6 +1949,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Grail of the Gods v0.50b (2023-25)(Guydebaville).sms" size="65536" crc="2bfe75d4" sha1="8258b01b8eb0e912b11ed9a9c1d0781131be8a93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms9436e48f9eff5">
+		<description>Grail of the Gods v0.99 (2023-25)(Guydebaville)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Grail of the Gods v0.99 (2023-25)(Guydebaville).sms" size="131072" crc="fb3a8ab3" sha1="9436e48f9eff52d0165eaf138ea0d0fc7c1c7ff3"/>
 			</dataarea>
 		</part>
 	</software>

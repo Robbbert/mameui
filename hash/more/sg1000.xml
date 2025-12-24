@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 75 -->
+<!-- Number of items in this list = 76 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -59,6 +59,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="9451">
 				<rom name="Ascend.sg" size="9451" crc="69e60ce5" sha1="14e8396f2663ff50f61d177255c207ff7dca1262"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg18f11706ed0595">
+		<description>Astrododge</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Astrododge.sg" size="32768" crc="b895942d" sha1="8f11706ed0595a36fc6b5a0426e82ba45ef53c00"/>
 			</dataarea>
 		</part>
 	</software>

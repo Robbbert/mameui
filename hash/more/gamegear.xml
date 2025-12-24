@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 92 -->
+<!-- Number of items in this list = 96 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -79,6 +79,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Batman Returns (With trainer).gg" size="262144" crc="66f9ac51" sha1="de309b9fd4fea038c5fd75a853f977cfec61bafa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggc2058ea0f05719">
+		<description>Battle Marine (2024)(Suzuki Plan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Battle Marine (2024)(Suzuki Plan).gg" size="524288" crc="f49a00ba" sha1="c2058ea0f05719ead896c0567f23b1e7679d21e9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -233,12 +243,22 @@
 		</part>
 	</software>
 	<software name="gg1fc86e87279846">
-		<description>Dangerous Demolition</description>
+		<description>Dangerous Demolition v1.0 (2020)(Dr.Ludos)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Dangerous Demolition.gg" size="32768" crc="638c4252" sha1="1fc86e872798466a4e5191e01f3af2d76d3bfedd"/>
+				<rom name="Dangerous Demolition v1.0 (2020)(Dr.Ludos).gg" size="32768" crc="638c4252" sha1="1fc86e872798466a4e5191e01f3af2d76d3bfedd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggd416ae6e912aee">
+		<description>Dangerous Demolition v2.0 (2022)(Dr.Ludos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Dangerous Demolition v2.0 (2022)(Dr.Ludos).gg" size="49152" crc="bff5cf71" sha1="d416ae6e912aee8be517de356d7ab4306fa883b0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -399,6 +419,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Impetus Mini (2023)(Inufuto).gg" size="32768" crc="07e1fa70" sha1="8243fa156de56601ffb8ea547f2c16b1c47c2702"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg7e613c688e8488">
+		<description>Impetus+ Micro (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Impetus+ Micro (2025)(Inufuto).gg" size="24576" crc="8e6e9131" sha1="7e613c688e84889d1239b0dbed85ccac850d14ff"/>
 			</dataarea>
 		</part>
 	</software>
@@ -839,6 +869,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Svellas Micro (2025)(Inufuto).gg" size="16384" crc="d0a447dd" sha1="3e5595f99105cdb68c0131fe19473abd8895cf3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg5710f324167238">
+		<description>Sword of Stone, The v2.4 (2024-25)(2Minds - Cireza)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Sword of Stone, The v2.4 (2024-25)(2Minds - Cireza).gg" size="524288" crc="3a92a9ed" sha1="5710f324167238dd400882448af3477e3a45df8e"/>
 			</dataarea>
 		</part>
 	</software>

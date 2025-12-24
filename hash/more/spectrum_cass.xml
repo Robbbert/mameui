@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7042 -->
+<!-- Number of items in this list = 7111 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -489,6 +489,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="62824">
 				<rom name="-Continental Circus (1987)(Virgin Mastertronic Ltd)[cr [Cr Mata + Kamilsoft][t +4](128K)[Cr Mata + Kamilsoft].tap" size="62824" crc="e579b320" sha1="28b7420062230798ee327fc9d80669b016b651e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5977679b64c3c">
+		<description>-Earthlight (1988)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37368">
+				<rom name="-Earthlight (1988)(Firebird Software Ltd).tap" size="37368" crc="ed518f0c" sha1="5977679b64c3c256d91663783f2f1f8ef7a22a0e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8492,6 +8502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs13058f2f3873e">
+		<description>Battle of the Planets 48K (1986)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49558">
+				<rom name="Battle of the Planets 48K (1986)(Mikro-Gen).tzx" size="49558" crc="0b2f08c9" sha1="13058f2f3873ead799316880dc744662f5a735b2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs50877a4f83811">
 		<description>Battle Of The Planets, The (1986)(Mikro-Gen)</description>
 		<year>????</year>
@@ -16229,6 +16249,606 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49833">
 				<rom name="Dynamite Dan.tzx" size="49833" crc="fd66031c" sha1="f1b1f7b1889a0f72e49861d9cd742f7fbc02cff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d4f1838471c1">
+		<description>E-Motion (1990)(US Gold)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54402">
+				<rom name="E-Motion (1990)(US Gold)(128k).tap" size="54402" crc="8c751e68" sha1="5d4f1838471c1504b44ea8ef6e080e23544825a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf79538ea7908">
+		<description>E-Motion (1990)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46007">
+				<rom name="E-Motion (1990)(US Gold).tap" size="46007" crc="052a2ac4" sha1="bf79538ea7908e0c213cc89110b5344b1ca1480b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01fde41648975">
+		<description>E-Motion (1990)(US Gold)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46335">
+				<rom name="E-Motion (1990)(US Gold)[a2].tap" size="46335" crc="6c96c13c" sha1="01fde41648975451cb345023ee56731b5de2c306"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4dd8736ffd1cf">
+		<description>E-Motion (1990)(US Gold)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39782">
+				<rom name="E-Motion (1990)(US Gold)[a3].tap" size="39782" crc="f6ae6e2f" sha1="4dd8736ffd1cff9b08ef55d9ea2e2957097f2e8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb3a56b791e242">
+		<description>E-Motion (1990)(US Gold)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39936">
+				<rom name="E-Motion (1990)(US Gold)[a].tap" size="39936" crc="5641b65c" sha1="b3a56b791e242f0ab8207766981aca5aeffc5a03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70127e5ba2065">
+		<description>E-SWAT (1990)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="213337">
+				<rom name="E-SWAT (1990)(US Gold).tap" size="213337" crc="721ab30f" sha1="70127e5ba2065228f37c8bb9dc11d141f27b8564"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb938a40b3c17a">
+		<description>E.T (1983)(Macronics Systems Ltd)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17952">
+				<rom name="E.T (1983)(Macronics Systems Ltd)(Sp).tap" size="17952" crc="c8bb6c29" sha1="b938a40b3c17a64b11d49cc1ea5ecf74703e7c11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2230408e77a46">
+		<description>Eagle (19xx)(Juliet Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45844">
+				<rom name="Eagle (19xx)(Juliet Software)(Sp).tap" size="45844" crc="c6ada8d0" sha1="2230408e77a468983f2d2dabdb58ea168c3ae598"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs79f7235ee0fd1">
+		<description>Earth Attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13482">
+				<rom name="Earth Attack.TAP" size="13482" crc="8c9f8f18" sha1="79f7235ee0fd16bcdf1ce9e46eaa95329e060ecf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb71803aee3e7e">
+		<description>Earth Defence (1984)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14579">
+				<rom name="Earth Defence (1984)(Artic Computing).tap" size="14579" crc="4b4f3c35" sha1="b71803aee3e7e03fc71f673ab8bf4e9b6e1e15df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7104aaf2c757d">
+		<description>Earth Shaker (1990)(Michael Batty)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37729">
+				<rom name="Earth Shaker (1990)(Michael Batty).tap" size="37729" crc="0c8c1e65" sha1="7104aaf2c757d5decd0172e6bd3642e32b03b186"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseea1cd51cfe5f">
+		<description>Earth Shaker (1990)(Michael Batty)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37723">
+				<rom name="Earth Shaker (1990)(Michael Batty)[a].tap" size="37723" crc="ec7f52cc" sha1="eea1cd51cfe5f0f87a79e213d21f45844d55d9d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9707cee1b9951">
+		<description>Earthlight (1988)(Firebird Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55730">
+				<rom name="Earthlight (1988)(Firebird Software Ltd)[a].tap" size="55730" crc="933c9791" sha1="9707cee1b995143f168acf0bb8cd1d7bf960b0f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb86ff1b06df4b">
+		<description>Earthlight (1988)(Telecomsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48613">
+				<rom name="Earthlight (1988)(Telecomsoft).tap" size="48613" crc="88010e67" sha1="b86ff1b06df4b4dd1eb77b8c72dea6f4162fed00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc28d326c25f16">
+		<description>Earthlight 128K (1988)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61597">
+				<rom name="Earthlight 128K (1988)(Firebird).tap" size="61597" crc="063d61f4" sha1="c28d326c25f1670cc39ad69e106949f36f4adab4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5feeec58771b">
+		<description>Easiledger (1984)(Gemini Marketing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9740">
+				<rom name="Easiledger (1984)(Gemini Marketing).tap" size="9740" crc="9230c4d7" sha1="c5feeec58771b9c778726bf69bf0d76fcc5cd6ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef573d66e7779">
+		<description>East Enders (1986)(Macsen Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44962">
+				<rom name="East Enders (1986)(Macsen Software).tap" size="44962" crc="4e42a21e" sha1="ef573d66e7779e5616518dc0078947355e75f54a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e0ffe7a2542a">
+		<description>easyfrog</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="1043">
+				<rom name="easyfrog.tap" size="1043" crc="db2b2186" sha1="2e0ffe7a2542a7e14b01aa24f7d90d922c399a3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb172ec2d5f03d">
+		<description>Ecclesia 128K (2025)(AmikoSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="69126">
+				<rom name="Ecclesia 128K (2025)(AmikoSoft).tap" size="69126" crc="dd39c357" sha1="b172ec2d5f03da9f6ef7b0d225b97303b7aabcc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfc3c54f6f6740">
+		<description>Echelon (1988)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="77365">
+				<rom name="Echelon (1988)(US Gold).tap" size="77365" crc="36159d70" sha1="fc3c54f6f674058ca7af62db052ef485c21a16e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ea15cfea05a0">
+		<description>ECHOLOGY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="121648">
+				<rom name="ECHOLOGY.TAP" size="121648" crc="20efb8d2" sha1="5ea15cfea05a026766042e2892ba5fc74e3aa703"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5563731654cab">
+		<description>Eclipse (1991)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45663">
+				<rom name="Eclipse (1991)(Zenobi Software).tap" size="45663" crc="07f3b9ce" sha1="5563731654cab292b5aec4100e98cbde3f302b42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4f93eba30401e">
+		<description>Eclipsia part 1 - Beginning 48K (2023)(ICreateworlds)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48336">
+				<rom name="Eclipsia part 1 - Beginning 48K (2023)(ICreateworlds).tap" size="48336" crc="fe2d5769" sha1="4f93eba30401e09fbfd92aa94e7f3cca93b626d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8ea68e063f8ec">
+		<description>Eclipsia part 2 - Awaken 48K (2023)(ICreateworlds)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48557">
+				<rom name="Eclipsia part 2 - Awaken 48K (2023)(ICreateworlds).tap" size="48557" crc="ea18f33b" sha1="8ea68e063f8ecf9566125688fb6b131b5e993276"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2fb1b9688e8ee">
+		<description>Eclipsia part 3 - Starlost 48K (2023)(ICreateworlds)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48560">
+				<rom name="Eclipsia part 3 - Starlost 48K (2023)(ICreateworlds).tap" size="48560" crc="bb923bfc" sha1="2fb1b9688e8ee83ecd4e2bb251d68ef5078a1f13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscf68c4c0eaf60">
+		<description>Eddie Kidd Jump Challenge (1984)(Martech Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19841">
+				<rom name="Eddie Kidd Jump Challenge (1984)(Martech Games).tap" size="19841" crc="621f498c" sha1="cf68c4c0eaf60ea7486c0e379627a923d43038e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc9aee98aa8784">
+		<description>Eddie Kidd Jump Challenge (1984)(Martech Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46742">
+				<rom name="Eddie Kidd Jump Challenge (1984)(Martech Games)[a].tap" size="46742" crc="abe28684" sha1="c9aee98aa8784b2c3d8434aab6ef350a5e3c4270"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc825eb2d71d87">
+		<description>Edit Sampler v1.2 (1989)(MS-CID)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11464">
+				<rom name="Edit Sampler v1.2 (1989)(MS-CID).tap" size="11464" crc="e54d6fb4" sha1="c825eb2d71d87653d71116b9bdf531a5ded1f44b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4e2720d085ccd">
+		<description>Editor Caratteri (19xx)(M. Bianchi &amp; G. Restano)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38153">
+				<rom name="Editor Caratteri (19xx)(M. Bianchi &amp; G. Restano).tap" size="38153" crc="b84fcef6" sha1="4e2720d085ccd8020fdd547d84b08b6a6bed05d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfe9cee7c3d2ed">
+		<description>Egal (19xx)(The Mad Guys)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32123">
+				<rom name="Egal (19xx)(The Mad Guys).tap" size="32123" crc="02d63bc3" sha1="fe9cee7c3d2edd0f97ce70d3b5d972dfe1663431"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6aa175f58b33a">
+		<description>Egg Cather (1984)(M.R.Walker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2741">
+				<rom name="Egg Cather (1984)(M.R.Walker).tap" size="2741" crc="3eb246a7" sha1="6aa175f58b33aa453cc9b6e0838a272825e03e25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs205d510296f07">
+		<description>Egg Head 2 - To The Rescue (1989)(Jonathan Cauldwell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46618">
+				<rom name="Egg Head 2 - To The Rescue (1989)(Jonathan Cauldwell).tap" size="46618" crc="e7412b6b" sha1="205d510296f07113f4455f43fcbbef32e6a1c8eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4f44dfe563c2b">
+		<description>Egg, The (1985)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48961">
+				<rom name="Egg, The (1985)(Automata UK).tap" size="48961" crc="255d1c21" sha1="4f44dfe563c2bf5829833d00e794d7cb66a97b0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfd31784d67d7b">
+		<description>Egghead 48K-AY (1989)(Crash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48076">
+				<rom name="Egghead 48K-AY (1989)(Crash).tap" size="48076" crc="794d5953" sha1="fd31784d67d7bfde232aa721c75ab91d7903ad88"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs67293312c06b1">
+		<description>Egghead</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48193">
+				<rom name="Egghead.tap" size="48193" crc="b3a33370" sha1="67293312c06b12317c08cbe4897388a6cee60709"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1a3eeeb4a8ed">
+		<description>Eh Dollah (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21492">
+				<rom name="Eh Dollah (19xx)(-).tap" size="21492" crc="80037977" sha1="a1a3eeeb4a8edabd69a5588db1e0e7b26e9e6fc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd54aeaa804b02">
+		<description>Eidolon, The (1986)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49343">
+				<rom name="Eidolon, The (1986)(Activision).tap" size="49343" crc="ac736a14" sha1="d54aeaa804b02a525ea57fb1d5187c1e482a5837"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs20a8c46232723">
+		<description>Eight Cards Patience (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14560">
+				<rom name="Eight Cards Patience (19xx)(-).tap" size="14560" crc="7795fe0c" sha1="20a8c46232723e2b663d1ee4ad186e8ca4adb515"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseeb923458fae4">
+		<description>Ekranski Editor (1986)(Racunari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19435">
+				<rom name="Ekranski Editor (1986)(Racunari).tap" size="19435" crc="165c9938" sha1="eeb923458fae4d35b045e5308d08d9bc5b4ca2f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscca3b0c7bd33b">
+		<description>El Chispa (19xx)(Load'N'Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39566">
+				<rom name="El Chispa (19xx)(Load'N'Run)(Sp).tap" size="39566" crc="73245dd6" sha1="cca3b0c7bd33b4396e4dd70b85d6535449b1dd04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ffe21c0b4f7b">
+		<description>El Cid (1988)(Mastertronic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46941">
+				<rom name="El Cid (1988)(Mastertronic)(Sp).tap" size="46941" crc="958eac60" sha1="3ffe21c0b4f7bd6d7c88a1cacb74aaa4184c5eb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseb72282fa9470">
+		<description>El Cid (1988)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47709">
+				<rom name="El Cid (1988)(Mastertronic).tap" size="47709" crc="60db8d3d" sha1="eb72282fa94708c7f805cae0bc3e45c750ad6a34"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs30d8557ce8bc5">
+		<description>El Detective - The Detective (1983)(Ventamatic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23881">
+				<rom name="El Detective - The Detective (1983)(Ventamatic Software)(Sp).tap" size="23881" crc="bcef7279" sha1="30d8557ce8bc52d32140183a018ffd7b2d8ca781"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs432a6d02d3c3a">
+		<description>El hombre que susurraba a las balas 48K (2013)(Radastan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43394">
+				<rom name="El hombre que susurraba a las balas 48K (2013)(Radastan).tap" size="43394" crc="d41acad0" sha1="432a6d02d3c3a74b6f906a1a0464e445c0b252cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs559d0a133ece7">
+		<description>El Jugador De Ajedrez (1983)(Quicksilva)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30294">
+				<rom name="El Jugador De Ajedrez (1983)(Quicksilva)(Sp).tap" size="30294" crc="5558105f" sha1="559d0a133ece723a03fbab23cab97cec18280bb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs11ead9ef1a8b6">
+		<description>El Misterio Del Nilo (1987)(Zigurat)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50395">
+				<rom name="El Misterio Del Nilo (1987)(Zigurat)(Sp).tap" size="50395" crc="9bdca35d" sha1="11ead9ef1a8b6d07303cc596631732d40239f299"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4aaf168df47a9">
+		<description>El Poder (19xx)(Zigurat)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49853">
+				<rom name="El Poder (19xx)(Zigurat)(Sp).tap" size="49853" crc="bc720866" sha1="4aaf168df47a9c139053b614254fecfdd68ac858"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4288d5f20602c">
+		<description>Elecciones Generales (1986)(Hobbypress)(Sp)[Part 1-2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="98472">
+				<rom name="Elecciones Generales (1986)(Hobbypress)(Sp)[Part 1-2 of 2].tap" size="98472" crc="209b2822" sha1="4288d5f20602c29b1154a403a16bde46245713cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb99276b4d1c8">
+		<description>Election (1984)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43085">
+				<rom name="Election (1984)(Mastertronic).tap" size="43085" crc="4b26a696" sha1="fb99276b4d1c88d82b7138599cffffeff1d199ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs56803ce495539">
+		<description>Electoral Suite Documentation (19xx)(Radical Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14318">
+				<rom name="Electoral Suite Documentation (19xx)(Radical Alternative Software).tap" size="14318" crc="b294b590" sha1="56803ce495539cffcc7235972eed8e8bed6835c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01f50720a1f51">
+		<description>Electra 9000 - Lunar Attack Vehicle (1987)(Alternative Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6810">
+				<rom name="Electra 9000 - Lunar Attack Vehicle (1987)(Alternative Software).tap" size="6810" crc="a6ff0ada" sha1="01f50720a1f51e039cba0c06e458759a0ba9594a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9df9f8a957957">
+		<description>Electro 2 (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34690">
+				<rom name="Electro 2 (19xx)(-).tap" size="34690" crc="46ffa76e" sha1="9df9f8a95795789d1ca8e13278e21430fd4b8334"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8a90b3889ef42">
+		<description>Electro Bingo (1989)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31811">
+				<rom name="Electro Bingo (1989)(Sinclair User).tap" size="31811" crc="b542f002" sha1="8a90b3889ef42e3b465c7371b835fdde4f28fea5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs34d58b29f1ace">
+		<description>Electro Bingo II (1989)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34690">
+				<rom name="Electro Bingo II (1989)(Sinclair User).tap" size="34690" crc="95609114" sha1="34d58b29f1acecd048ff3e727422c131ae3b9b85"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd20d53be5969e">
+		<description>Electro Bingo III (1989)(Sinclair User)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34762">
+				<rom name="Electro Bingo III (1989)(Sinclair User).tap" size="34762" crc="8028c705" sha1="d20d53be5969e7ae44425a70d96be9a70d8ecdbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45e74316dee8e">
+		<description>Electronics (1982)(FV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21527">
+				<rom name="Electronics (1982)(FV).tap" size="21527" crc="56c0b8a3" sha1="45e74316dee8e3f420cb0408bb24cff4902e3403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc4020eb1514d7">
+		<description>Elektro Storm (1983)(PSS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13208">
+				<rom name="Elektro Storm (1983)(PSS).tap" size="13208" crc="6ac43605" sha1="c4020eb1514d7e5a244322b18eba7e4ab05bbabe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs350aa39b7ccd4">
+		<description>Elevator Action (1987)(Quicksilva)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41180">
+				<rom name="Elevator Action (1987)(Quicksilva)(128k).tap" size="41180" crc="58235cac" sha1="350aa39b7ccd44fb3aa37cca6848df5c1fad55b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs340ccc3bd4f7d">
+		<description>Elevator Action (1987)(Quicksilva)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49364">
+				<rom name="Elevator Action (1987)(Quicksilva)[a].tap" size="49364" crc="36bf2fb7" sha1="340ccc3bd4f7d325a5d09d709505a0fe6cf21f81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf0070d96d4303">
+		<description>Elevator Action 128K (1987)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48481">
+				<rom name="Elevator Action 128K (1987)(Quicksilva).tap" size="48481" crc="3000fcd9" sha1="f0070d96d43036fbef7523a2798ac3080fdbe10b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -60592,6 +61212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd43cf7c48d83a">
+		<description>_(demo)EarShaver 48K (2023)(Shiru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34305">
+				<rom name="_(demo)EarShaver 48K (2023)(Shiru).tap" size="34305" crc="57d93455" sha1="d43cf7c48d83a26b5e42c85de1c641075ae8d021"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs79bb84455f991">
 		<description>_(demo)fxs2</description>
 		<year>????</year>
@@ -62392,6 +63022,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5da439d8a23f1">
+		<description>_Egghead II - Egghead to the Rescue 48K-AY (1990)(Crash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46328">
+				<rom name="_Egghead II - Egghead to the Rescue 48K-AY (1990)(Crash).tap" size="46328" crc="b854984a" sha1="5da439d8a23f1f07d95e9c16b26aeb9ac3711abd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs950a85a78c884">
+		<description>_Eidolon, The (1986)(Activision)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="127455">
+				<rom name="_Eidolon, The (1986)(Activision)[a3].tap" size="127455" crc="934c6a96" sha1="950a85a78c88476d64cee109196faba7c7ab345e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsadb82bd4b8635">
 		<description>_Eight Patience Cards</description>
 		<year>????</year>
@@ -62399,6 +63049,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15784">
 				<rom name="_Eight Patience Cards.TAP" size="15784" crc="19fb637f" sha1="adb82bd4b8635970a3df85db8496a8dc2a37be8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf6a9967372a5">
+		<description>_El Amo Del Mundo (1991)(Positive Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42605">
+				<rom name="_El Amo Del Mundo (1991)(Positive Software)(Sp).tap" size="42605" crc="e2f536f2" sha1="af6a9967372a5b80150643f53c8a10a974986528"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2318be733de81">
+		<description>_El Gato (1985)(Load 'n' Run)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43688">
+				<rom name="_El Gato (1985)(Load 'n' Run)(Sp).tap" size="43688" crc="835ec537" sha1="2318be733de815ec38407b65362ddc1de5ac3e8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf4c4438ecb7fc">
+		<description>_El Pintor (19xx)(-)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19916">
+				<rom name="_El Pintor (19xx)(-)(Sp).tap" size="19916" crc="911e04d1" sha1="f4c4438ecb7fcb8483cbb8f62a7ac033a140eb05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs88f6ca2876b58">
+		<description>_Elevator Action (1987)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30815">
+				<rom name="_Elevator Action (1987)(Quicksilva).tap" size="30815" crc="3b8cfce7" sha1="88f6ca2876b589bf2ea6dc7b5512673ed9ab1051"/>
 			</dataarea>
 		</part>
 	</software>
