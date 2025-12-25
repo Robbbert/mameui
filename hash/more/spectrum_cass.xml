@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7111 -->
+<!-- Number of items in this list = 7136 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -489,6 +489,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="62824">
 				<rom name="-Continental Circus (1987)(Virgin Mastertronic Ltd)[cr [Cr Mata + Kamilsoft][t +4](128K)[Cr Mata + Kamilsoft].tap" size="62824" crc="e579b320" sha1="28b7420062230798ee327fc9d80669b016b651e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs94fdc5ccf837d">
+		<description>-Dun Darach (1985)(Gargoyle Games)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38877">
+				<rom name="-Dun Darach (1985)(Gargoyle Games)[cr [Cr][Cr].tap" size="38877" crc="f0645851" sha1="94fdc5ccf837d1b41599b67774962d9b61ba65c8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15922,6 +15932,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa3dd1a384cec4">
+		<description>D'Veel'Ng (2013)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40424">
+				<rom name="D'Veel'Ng (2013)(The Mojon Twins).tap" size="40424" crc="eeb6c372" sha1="a3dd1a384cec45c69f05210af1400903679c6137"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9f86388d3f028">
+		<description>D-Writer (19xx)(DaJe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40920">
+				<rom name="D-Writer (19xx)(DaJe).tap" size="40920" crc="97f4aed6" sha1="9f86388d3f028d7a76f75fa96c43b64b47a4e2a9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs238aaf8866ae2">
 		<description>Dan Dare II - Mekon's Revenge</description>
 		<year>????</year>
@@ -16232,6 +16262,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs806308fa3b056">
+		<description>Dustin - The Game (1986)(Dinamic)[Free With Your Sinclair]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47485">
+				<rom name="Dustin - The Game (1986)(Dinamic)[Free With Your Sinclair].tap" size="47485" crc="f9a89413" sha1="806308fa3b05607a1e8e02fd10c25fcbdc4354f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse88a2bb56fcc3">
+		<description>Dustin - The Game (1988)(Dinamic)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46453">
+				<rom name="Dustin - The Game (1988)(Dinamic)(Sp).tap" size="46453" crc="646d3237" sha1="e88a2bb56fcc32600e777b38cddd890f113aa403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd67f763ce3a02">
+		<description>Dustin - The Game (1988)(Dinamic)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46393">
+				<rom name="Dustin - The Game (1988)(Dinamic)(Sp)[a].tap" size="46393" crc="af45a7e3" sha1="d67f763ce3a0278a121ce3158e4479967b8d6a5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3470d56d0a0ab">
+		<description>Dwarfs Domain (1984)(King Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42080">
+				<rom name="Dwarfs Domain (1984)(King Soft).tap" size="42080" crc="705d47f3" sha1="3470d56d0a0ab6444f720f405c088c98666aa2d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs40b3a2a174db2">
+		<description>Dyna Star (1988)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42714">
+				<rom name="Dyna Star (1988)(Codemasters).tap" size="42714" crc="6e96e34c" sha1="40b3a2a174db276a8d5507d715def5b1767045c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs827e439bf7542">
+		<description>Dynamic Duo (1989)(Firebird)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47270">
+				<rom name="Dynamic Duo (1989)(Firebird).tap" size="47270" crc="553c2b8e" sha1="827e439bf75425e0972572cd468eb27b39594edb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5a3a008627b95">
+		<description>Dynamite Dan (1985)(Mirrorsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43699">
+				<rom name="Dynamite Dan (1985)(Mirrorsoft).tap" size="43699" crc="ed7f8fb0" sha1="5a3a008627b956d6c168dbc941d7fab1376fe280"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9f414a04c77f1">
+		<description>Dynamite Dan II - Dr Blitzen And The Islands Of Arcanum (1985)(Mirrorsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46457">
+				<rom name="Dynamite Dan II - Dr Blitzen And The Islands Of Arcanum (1985)(Mirrorsoft).tap" size="46457" crc="4d2172b1" sha1="9f414a04c77f1e3b57eeba10993d035d55b5c9e4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2c63eee4266d3">
 		<description>Dynamite Dan II - Dr Blitzen And The Islands Of Arcanum</description>
 		<year>????</year>
@@ -16249,6 +16359,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49833">
 				<rom name="Dynamite Dan.tzx" size="49833" crc="fd66031c" sha1="f1b1f7b1889a0f72e49861d9cd742f7fbc02cff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs014352a757fac">
+		<description>Dynamite Dux (1989)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="150855">
+				<rom name="Dynamite Dux (1989)(Activision).tap" size="150855" crc="c13fc9c0" sha1="014352a757fac2b86ff558cc3127c0d90590b376"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf23383b1d8790">
+		<description>Dynamix (1989)(Virgin Mastertronic Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49162">
+				<rom name="Dynamix (1989)(Virgin Mastertronic Ltd).tap" size="49162" crc="acc6f4e8" sha1="f23383b1d87908a293d45b791127d102f72a2c37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe84d204edf9e">
+		<description>Dynamix 48K (1989)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49655">
+				<rom name="Dynamix 48K (1989)(Mastertronic).tap" size="49655" crc="e8cca35d" sha1="be84d204edf9e83df32ba7afc251df4ddaf412c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c332499a8183">
+		<description>Dynasty Wars (1990)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="106814">
+				<rom name="Dynasty Wars (1990)(US Gold).tap" size="106814" crc="bda5db6a" sha1="9c332499a8183809b9d288d121cba5126cd1ddfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs78fb7c8437b5c">
+		<description>Dynasty Wars (1990)(US Gold)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="100253">
+				<rom name="Dynasty Wars (1990)(US Gold)[a].tap" size="100253" crc="ae3317af" sha1="78fb7c8437b5caa2df8513e5b4544eb513b51a68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf014692667aff">
+		<description>Dynatron Mission (1987)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47642">
+				<rom name="Dynatron Mission (1987)(Mastertronic).tap" size="47642" crc="b83a4f4c" sha1="f014692667aff6e6a5f5500fb7fe3a519318bb1e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa25dbcfda044d">
+		<description>Dynatron Mission (1987)(Mastertronic)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48128">
+				<rom name="Dynatron Mission (1987)(Mastertronic)[a].tap" size="48128" crc="a54ffa29" sha1="a25dbcfda044d5ceff0568c40488a591215bcfdc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b6825d4413af">
+		<description>Dyslexia Beater (1984)(Dunitz Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49462">
+				<rom name="Dyslexia Beater (1984)(Dunitz Software).tap" size="49462" crc="2693dc50" sha1="1b6825d4413afd808b5d74e47b3dc26959c9feeb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47102,6 +47292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs537358e9e3816">
+		<description>Santa's Lost &amp; Found 48K (2025)(Indigobeetle)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35877">
+				<rom name="Santa's Lost &amp; Found 48K (2025)(Indigobeetle).tap" size="35877" crc="593217e9" sha1="537358e9e38163543e8a109b82a9de56e73ae694"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9e1814bc29d57">
 		<description>Santa's Search (19xx)(-)</description>
 		<year>????</year>
@@ -50289,6 +50489,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42699">
 				<rom name="Sophistry (1988)(CRL Group PLC).tap" size="42699" crc="b913d76a" sha1="4c77b303a91a56243a583f9cd865eab9c3fee3fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45444642df635">
+		<description>Sorcerer Kid Adventure 48K-128K (2024)(Vidaextraretro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40789">
+				<rom name="Sorcerer Kid Adventure 48K-128K (2024)(Vidaextraretro).tap" size="40789" crc="35c93a20" sha1="45444642df635d7fc9e534e8ac0d98c4fe80dad1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -63009,6 +63219,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39268">
 				<rom name="_Doomsday Castle.tzx" size="39268" crc="8d43c33a" sha1="2faea2c725348119ebd65ecd157da49c88db8070"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsec4bed4ca974b">
+		<description>_Dunshalt Donut, The (1984)(Anubis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42661">
+				<rom name="_Dunshalt Donut, The (1984)(Anubis Software).tap" size="42661" crc="45f2bf26" sha1="ec4bed4ca974bc5541b8ea9b73822ce29754e534"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs813c9dfb75827">
+		<description>_Dustman (1984)(Timescape Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48125">
+				<rom name="_Dustman (1984)(Timescape Software).tap" size="48125" crc="443e1b66" sha1="813c9dfb758277e487ed27e534efa2e8940335ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs665c5e0828abc">
+		<description>_Dustman (1984)(Timescape Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48128">
+				<rom name="_Dustman (1984)(Timescape Software)[a].tap" size="48128" crc="db4cb8f5" sha1="665c5e0828abcf272a0bf62b3bf8919a96b329e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs48a7dc6dd5e67">
+		<description>_Dynamite Dan (1985)(Mirrorsoft)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51559">
+				<rom name="_Dynamite Dan (1985)(Mirrorsoft)[t].tap" size="51559" crc="0ab28567" sha1="48a7dc6dd5e67ab46282e7f1a3cb0a965218d979"/>
 			</dataarea>
 		</part>
 	</software>
