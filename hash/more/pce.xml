@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 186 -->
+<!-- Number of items in this list = 200 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -502,6 +502,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce3ac86354155ca">
+		<description>1943 Kai (Japan)(1991)(Naxat Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="1943 Kai (Japan)(1991)(Naxat Soft).pce" size="524288" crc="fde08d6d" sha1="3ac86354155ca01859c53e2f2287a715cd3fca13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcede80a0d266916">
+		<description>21 Emon - Mezase Hotel Ou!! (japan)(1994)(NEC Home Electronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="21 Emon - Mezase Hotel Ou!! (japan)(1994)(NEC Home Electronics).pce" size="524288" crc="73614660" sha1="de80a0d266916799ee5666815d9fd11602bdbdec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pce3bae42a52eba7">
 		<description>256-Colour Slideshow by Chris Covell (PD)</description>
 		<year>????</year>
@@ -522,6 +542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce01ad5bbd73167">
+		<description>Adventure Island (Japan)(1991)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Adventure Island (Japan)(1991)(Hudson Soft).pce" size="262144" crc="8e71d4f3" sha1="01ad5bbd7316740409e01917c19494cb26173ff5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcee508569966cc5">
 		<description>Aerial</description>
 		<year>????</year>
@@ -529,6 +559,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Aerial.pce" size="24576" crc="99092cc8" sha1="e508569966cc5999b662ca978a2fc85b99ce6c6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce748ec92246140">
+		<description>Aero Blasters (Japan)(1990)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Aero Blasters (Japan)(1990)(Hudson Soft).pce" size="524288" crc="25be2b81" sha1="748ec92246140565d95f6fb727de6167227b85d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -559,6 +599,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="After Burner II (1991)(NEC Avenue)(Jp)[b4].bin" size="524288" crc="667ace1a" sha1="e0be991d0a17985c205af91d781be29d5d698edc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce50b9d22fe5179">
+		<description>After Burner II (Japan)(1990)(NEC Avenue)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="After Burner II (Japan)(1990)(NEC Avenue).pce" size="524288" crc="ca72a828" sha1="50b9d22fe5179aee5cb95022472714ef8483841f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -932,6 +982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pcef59c538fa632f">
+		<description>Darius Alpha (Japan)(1990)(NEC Avenue)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Darius Alpha (Japan)(1990)(NEC Avenue).pce" size="393216" crc="b0ba689f" sha1="f59c538fa632f687c356af70659fb07b37933f78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcea362c06e4466b">
+		<description>Darius Plus (Japan)(1990)(NEC Avenue)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Darius Plus (Japan)(1990)(NEC Avenue).pce" size="786432" crc="bebfe042" sha1="a362c06e4466b2b3dc7a682f892988189117ef62"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcebca32f878a41f">
 		<description>darius</description>
 		<year>????</year>
@@ -949,6 +1019,26 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Dead Moon - Tsuki Sekai no Akumu (J) [T-BR] (T-Lhotian G-Romhack BR)(2001).pce" size="524288" crc="38d643ae" sha1="9d19fa4dae320510b2ece763c86b2b17a6c339f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcee1d07a2f71c69">
+		<description>Detana!! TwinBee (Japan)(1992)(Konami)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Detana!! TwinBee (Japan)(1992)(Konami).pce" size="524288" crc="5cf59d80" sha1="e1d07a2f71c695b53755bade6fe81e46e4c4828c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pceae01c948903cc">
+		<description>Die Hard T-Eng (2011)(Spinner 8 &amp; friends)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Die Hard T-Eng (2011)(Spinner 8 &amp; friends).pce" size="524288" crc="91be0dec" sha1="ae01c948903cca1c849d77f68bffb3e533efcf50"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1039,6 +1129,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="66048">
 				<rom name="Flipit.pce" size="66048" crc="3c12fa23" sha1="49f5ea33975dd2fd60819f2b0741b4c648e11b13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce6e61a991050cd">
+		<description>Fortress of Necros T-Eng v1.1 (2025)(washbear)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Fortress of Necros T-Eng v1.1 (2025)(washbear).pce" size="524288" crc="e9138d89" sha1="6e61a991050cd3f7671d51ab04af88e1a6c129a4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1412,6 +1512,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pceb782344fad0ef">
+		<description>Monster Pro Wrestling (Japan)(1991)(ASK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Monster Pro Wrestling (Japan)(1991)(ASK).pce" size="524288" crc="f2e46d25" sha1="b782344fad0efd1bcf6d3863e5f3ac9de45eee39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce77490668bd4be">
+		<description>Morita Shougi PC (Japan)(1991)(NEC Avenue)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Morita Shougi PC (Japan)(1991)(NEC Avenue).pce" size="524288" crc="2546efe0" sha1="77490668bd4beea8e46e1f2676095d8d6ef1c3cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce9737bd5a9d4f2">
+		<description>Moto Roader (Japan)(1989)(NCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Moto Roader (Japan)(1989)(NCS).pce" size="262144" crc="428f36cd" sha1="9737bd5a9d4f28544ad1cb25592e428bea98aa27"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcee1288b2ba9875">
 		<description>Moto Roader II (1991-03-29)(Masiya)(JP)(en)[a][NCS91002]</description>
 		<year>????</year>
@@ -1429,6 +1559,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Nantettatte Engine (Unl) Aetherbyte.pce" size="262144" crc="3974fb41" sha1="4b9cd0d86b6406142a306adcafe6ae9efbcd9b6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce5c897decf660a">
+		<description>Narazumono Sentou Butai - Bloody Wolf (Japan)(1989)(Data East)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Narazumono Sentou Butai - Bloody Wolf (Japan)(1989)(Data East).pce" size="524288" crc="b01f70c2" sha1="5c897decf660a41e4136f364a085e634d1fdc9a0"/>
 			</dataarea>
 		</part>
 	</software>
