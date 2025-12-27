@@ -669,6 +669,27 @@ uint32_t mrgame_state::screen_update_mrgame(screen_device &screen, bitmap_ind16 
 {
 	m_tilemap->draw(screen, bitmap, cliprect);
 
+	// sprites
+	for (u8 ptr = 0x40; ptr < 0x60; ptr += 4)
+	{
+		u8 x = m_p_objectram[ptr + 3] + 1;
+		u8 y = 255 - m_p_objectram[ptr];
+
+		if ((y > 16) && (x > 24))
+		{
+			bool flipx = BIT(m_p_objectram[ptr + 1], 6);
+			bool flipy = BIT(m_p_objectram[ptr + 1], 7);
+			u16 chr = (m_p_objectram[ptr + 1] & 0x3f) | (m_gfx_bank << 6);
+			u8 col = m_p_objectram[ptr + 2];
+
+			m_gfxdecode->gfx(1)->transpen(bitmap,cliprect,
+				chr,
+				col,
+				flipx,flipy,
+				x,y-16,0);
+		}
+	}
+
 	return 0;
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 555 -->
+<!-- Number of items in this list = 564 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -3612,6 +3612,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsfd8dad6acb6fa">
+		<description>Phantasy Star (Brazil)(1987)(Tec Toy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (Brazil)(1987)(Tec Toy).sms" size="524288" crc="75971bef" sha1="fd8dad6acb6fa75dc8e9bbaea2a7e9fd486fc2dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms257ca76ebcd54">
+		<description>Phantasy Star (Euro, USA, v1.2)(1987)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (Euro, USA, v1.2)(1987)(Sega).sms" size="524288" crc="e4a65e79" sha1="257ca76ebcd54c75a414ca7ce968fa59ea42f150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms07fcf297be4f4">
+		<description>Phantasy Star (Euro, USA, v3)(1987)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (Euro, USA, v3)(1987)(Sega).sms" size="524288" crc="00bef1d7" sha1="07fcf297be4f4c9d92cd3f119a7ac48467e06838"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms82067c389b26f">
 		<description>Phantasy Star (J) [T+Eng1.02_sms power] (2)</description>
 		<year>????</year>
@@ -3632,6 +3662,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsc9a40ddd217c5">
+		<description>Phantasy Star (Japan)(1987)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (Japan)(1987)(Sega).sms" size="524288" crc="6605d36a" sha1="c9a40ddd217c58dddcd6b5c0fe66c3a50d3e68e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb3ae447dc7392">
+		<description>Phantasy Star (Japan, MD)(1994)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (Japan, MD)(1994)(Sega).sms" size="524288" crc="07301f83" sha1="b3ae447dc739256616b44cbd77cb903c9f19e980"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms71bcce9670f2a">
 		<description>Phantasy Star (JP) [tr En090_Z80 Gaiden]</description>
 		<year>????</year>
@@ -3649,6 +3699,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Phantasy Star (JP) [tr En091_Z80 Gaiden].sms" size="524288" crc="0861bb46" sha1="f93333661a5b5b915e971c95f0877a08bfba3c17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms52b2aa52a1c96">
+		<description>Phantasy Star (Korea)(1987)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star (Korea)(1987)(Sega).sms" size="524288" crc="747e83b5" sha1="52b2aa52a1c96e15869498a8e42b074705070007"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3712,6 +3772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms84ba5b94cb66e">
+		<description>Phantasy Star T-Eng v2.6.1 (Japan)(2025)(SMS Power!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star T-Eng v2.6.1 (Japan)(2025)(SMS Power!).sms" size="524288" crc="2cd659d4" sha1="84ba5b94cb66ec48e1f1b3418d592bf2605604a0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsf6702ce073692">
 		<description>Phantasy Star T-Por v2.5 (Japan)(2025)(SMS Power!)</description>
 		<year>????</year>
@@ -3722,6 +3792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms16823f6f4db35">
+		<description>Phantasy Star T-Por v2.6.1 (Japan)(2025)(SMS Power!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star T-Por v2.6.1 (Japan)(2025)(SMS Power!).sms" size="524288" crc="fe0d37e2" sha1="16823f6f4db3553893ee440d49f37c93c86f79a3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms2b70ff6c329fb">
 		<description>Phantasy Star T-Spa v2.5 (Japan)(2025)(SMS Power!)</description>
 		<year>????</year>
@@ -3729,6 +3809,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Phantasy Star T-Spa v2.5 (Japan)(2025)(SMS Power!).sms" size="524288" crc="14cdc932" sha1="2b70ff6c329fba4236308a09515a1bebaa2281a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsbcba1a7660c17">
+		<description>Phantasy Star T-Spa v2.6.1 (Japan)(2025)(SMS Power!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Phantasy Star T-Spa v2.6.1 (Japan)(2025)(SMS Power!).sms" size="524288" crc="04d4e21b" sha1="bcba1a7660c17a2887a588ac28c8bdffbe3ed351"/>
 			</dataarea>
 		</part>
 	</software>
