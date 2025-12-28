@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 114 -->
+<!-- Number of items in this list = 116 -->
 <softwarelist name="msx_cass" description="msx_cass loose roms">
 	<software name="msxeadb9d14766b7">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[Micom BASIC][cload]</description>
@@ -902,6 +902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxa9e28f0c9537a">
+		<description>Neuras (2021)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8803">
+				<rom name="Neuras (2021)(Inufuto).cas" size="8803" crc="68760271" sha1="a9e28f0c9537a623d1bef7fcbf54701223882190"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxd062be70d6a41">
 		<description>North sea helicopter (1987)(aackosoft)(nl)[run'cas-']</description>
 		<year>????</year>
@@ -1109,6 +1119,16 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="1556348">
 				<rom name="WHITE &amp; BLACK (1985-03)(Ouyam, Takahiro)(JP)[Micom BASIC][cload].wav" size="1556348" crc="02a8dc69" sha1="8bcc033fb922f40935c6cdaf7aba24f0bb2b2d57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxea752bc828fb5">
+		<description>Yewdow (2023)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="8919">
+				<rom name="Yewdow (2023)(Inufuto).cas" size="8919" crc="370b2706" sha1="ea752bc828fb58d661edbc3c70a7b7173e0d0428"/>
 			</dataarea>
 		</part>
 	</software>

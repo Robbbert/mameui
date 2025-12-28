@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7200 -->
+<!-- Number of items in this list = 7224 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -16212,6 +16212,106 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs08b5ae6ef7943">
+		<description>Dr. Acula 48K (2024)(Colin Stewart)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46666">
+				<rom name="Dr. Acula 48K (2024)(Colin Stewart).tap" size="46666" crc="c14a4558" sha1="08b5ae6ef79435ac741ae1bc75f86a2650195d5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e064df3724e4">
+		<description>Dr. Goo And The Samaroons (1988)(Global Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57953">
+				<rom name="Dr. Goo And The Samaroons (1988)(Global Software).tap" size="57953" crc="3f569994" sha1="3e064df3724e4eba0b084f5a2049e386c3c92d60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs938485b4dff75">
+		<description>Dr. Jackle And Mr Wide (1986)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47282">
+				<rom name="Dr. Jackle And Mr Wide (1986)(Mastertronic).tap" size="47282" crc="a46e2c84" sha1="938485b4dff7566dc22a3b95ebe09b14567ebe00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbd2af382dd343">
+		<description>Dr. Jekyl und die Geheimformel (1985)(Potz Blitz)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38002">
+				<rom name="Dr. Jekyl und die Geheimformel (1985)(Potz Blitz)(De).tap" size="38002" crc="9b6ce585" sha1="bd2af382dd3439d7a09238b33bd2bf84b810c7d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3344fe9d00446">
+		<description>Dr. MG (1986)(Stanislav Kmec &amp; Peter Ziman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27880">
+				<rom name="Dr. MG (1986)(Stanislav Kmec &amp; Peter Ziman).tap" size="27880" crc="f6c73363" sha1="3344fe9d00446e0a4297204330f1e73958dd03aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb4b9f3f460121">
+		<description>Dr. Scroll (1989)(Digital Image)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8550">
+				<rom name="Dr. Scroll (1989)(Digital Image).tap" size="8550" crc="b7d99774" sha1="b4b9f3f460121c5d00f1fecde8de8194723c6580"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsda4284dd70ee9">
+		<description>Draconus (1988)(Zepplin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39793">
+				<rom name="Draconus (1988)(Zepplin Games).tap" size="39793" crc="6aeb0e66" sha1="da4284dd70ee90282ef28921f5c2f68848c8b34f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd96fea6387122">
+		<description>Draconus (1988)(Zepplin Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47550">
+				<rom name="Draconus (1988)(Zepplin Games)[a].tap" size="47550" crc="071ee01b" sha1="d96fea638712268d930811addb3b99286095f175"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa082f9724d5a3">
+		<description>Dragon Breed (1989)(Activision Inc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="126452">
+				<rom name="Dragon Breed (1989)(Activision Inc).tap" size="126452" crc="c7158fdf" sha1="a082f9724d5a3970ce97989fec4b4e69e7cee325"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8832ad9e37a48">
+		<description>Dragon Breed (1989)(Activision)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138613">
+				<rom name="Dragon Breed (1989)(Activision)[t].tap" size="138613" crc="d8515e49" sha1="8832ad9e37a485a018763fabef1d18357edb44e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2a30ad9165fc5">
 		<description>Dragon Breed</description>
 		<year>????</year>
@@ -16222,6 +16322,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf43afe956a3a4">
+		<description>Dragon Ninja (1988)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39769">
+				<rom name="Dragon Ninja (1988)(Imagine Software).tap" size="39769" crc="f9cccace" sha1="f43afe956a3a4703a5a72e0504280500163d9c4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c1a7ae26ced7">
+		<description>Dragon Ninja (1988)(Imagine Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="95634">
+				<rom name="Dragon Ninja (1988)(Imagine Software)[a].tap" size="95634" crc="5ba91604" sha1="9c1a7ae26ced76480a4eaaf334ff27b32b40859e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf196eaeb0e28a">
+		<description>Dragon Ninja 128K (1988)(Imagine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118559">
+				<rom name="Dragon Ninja 128K (1988)(Imagine).tap" size="118559" crc="636223a9" sha1="f196eaeb0e28ad484f66e05bb8ea26d709a9253e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs556fbe9063af2">
 		<description>Dragon Ninja</description>
 		<year>????</year>
@@ -16229,6 +16359,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="123074">
 				<rom name="Dragon Ninja.tzx" size="123074" crc="205f87b3" sha1="556fbe9063af28074073742c5030adc2c10c6c45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbd24e1c6ed3bc">
+		<description>Dragon Slayer (1984)(Double Play Adventure)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39490">
+				<rom name="Dragon Slayer (1984)(Double Play Adventure).tap" size="39490" crc="524059f7" sha1="bd24e1c6ed3bc9ff00164664678dc822aad5fda8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef478c6a504bf">
+		<description>Dragon Spirit (1989)(Domark)[t]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="117291">
+				<rom name="Dragon Spirit (1989)(Domark)[t].tap" size="117291" crc="90b81e43" sha1="ef478c6a504bff8a547cca4c712ae434353d6e91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse09558e762cd1">
+		<description>Dragon Spirit (1990)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="164427">
+				<rom name="Dragon Spirit (1990)(Domark).tap" size="164427" crc="adc4c7cf" sha1="e09558e762cd1ca7a4fab4f6c6d9d8893af7bd07"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16519,6 +16679,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="26083">
 				<rom name="Drunk Policeman (1985)(Automata UK).tap" size="26083" crc="272aed04" sha1="467553401c5490f5ef06746628d9f844e1042a0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbf863a302c3b6">
+		<description>dr_plzak (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4652">
+				<rom name="dr_plzak (19xx)(-).tap" size="4652" crc="a17a57b3" sha1="bf863a302c3b65a923ccd5234d9b9f088c4e2667"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55922,6 +56092,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs118eba0b87033">
+		<description>Throbbin' Christmas Headaches 128K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36258">
+				<rom name="Throbbin' Christmas Headaches 128K (2025)(KTB Productions).tap" size="36258" crc="f91fb57e" sha1="118eba0b87033fb4815d98db8a4eb7771d6dc31d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0eb8f8fce1528">
+		<description>Throbbin' Christmas Headaches 48K (2025)(KTB Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31986">
+				<rom name="Throbbin' Christmas Headaches 48K (2025)(KTB Productions).tap" size="31986" crc="c2e3c54a" sha1="0eb8f8fce15284b9cca2b847e13321360d4de29f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa317021e61b35">
 		<description>Throbbing Headache 48K (2025)(KTB Productions)</description>
 		<year>????</year>
@@ -63769,6 +63959,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39268">
 				<rom name="_Doomsday Castle.tzx" size="39268" crc="8d43c33a" sha1="2faea2c725348119ebd65ecd157da49c88db8070"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscec5fb5b6f834">
+		<description>_Dr. Franky And The Monster (1984)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48586">
+				<rom name="_Dr. Franky And The Monster (1984)(Virgin Games).tap" size="48586" crc="430d907d" sha1="cec5fb5b6f83486a3a0cad3b7e1133ac4d203bc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc020900a0b752">
+		<description>_Dr. Genius (19xx)(-)(Fr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41286">
+				<rom name="_Dr. Genius (19xx)(-)(Fr).tap" size="41286" crc="f26300c6" sha1="c020900a0b75276d0d720454ed3e613f866826c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31dbc5f27a77f">
+		<description>_Dr. Jekyll And Mr Hyde - A Gothic Nightmare (1988)(Essential Myth)[Part 1-2-3 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="133689">
+				<rom name="_Dr. Jekyll And Mr Hyde - A Gothic Nightmare (1988)(Essential Myth)[Part 1-2-3 of 3].tap" size="133689" crc="3ce8141d" sha1="31dbc5f27a77f3650dba01ee9b8502aa8bc25dd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc150473a8be61">
+		<description>_Dr. Jekyll And Mr Hyde - A Gothic Nightmare - Dichotomies (1988)(Essential Myth)[Part 1 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46969">
+				<rom name="_Dr. Jekyll And Mr Hyde - A Gothic Nightmare - Dichotomies (1988)(Essential Myth)[Part 1 of 3].tap" size="46969" crc="b921a8d4" sha1="c150473a8be61b3e5395bfa8080e2cd58f6646fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfff92891bc06e">
+		<description>_Dr. Maddo (1986)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45074">
+				<rom name="_Dr. Maddo (1986)(US Gold).tap" size="45074" crc="2662711e" sha1="fff92891bc06ef29b029c59565b362c2852c1ecb"/>
 			</dataarea>
 		</part>
 	</software>

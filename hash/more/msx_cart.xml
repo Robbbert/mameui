@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 700 -->
+<!-- Number of items in this list = 702 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -2532,6 +2532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx7205be7f6b3c8">
+		<description>GS Soccer v1.2 (2025)(Fausto Pracek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GS Soccer v1.2 (2025)(Fausto Pracek).rom" size="16384" crc="24f677ee" sha1="7205be7f6b3c8f3769d5933ef331851ce8d0867a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx5e28fa0cd90bc">
 		<description>Guardic (1986)(Compile)</description>
 		<year>????</year>
@@ -4879,6 +4889,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="RLV933_Relevo's_Snowboarding.rom" size="49152" crc="8efaf6b4" sha1="957ad5f91f9bb7e59bffa7da1a8c31907e5a215f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf8d8c3310eebe">
+		<description>Robotik (2025)(GameCast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="753664">
+				<rom name="Robotik (2025)(GameCast).rom" size="753664" crc="633ddad5" sha1="f8d8c3310eebe37e1918c638ad71d42ab190d7c7"/>
 			</dataarea>
 		</part>
 	</software>
