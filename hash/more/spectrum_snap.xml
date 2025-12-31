@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 462 -->
+<!-- Number of items in this list = 463 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -1309,6 +1309,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="15293">
 				<rom name="Don't Panic! 16K (1985)(Firebird).z80" size="15293" crc="75879d60" sha1="43263bd27f744c3cbf84194672e516f6fd12dbee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs09d7ec6fa95c5">
+		<description>Doom (Demo) 128K (1996)(Digital Reality)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="73114">
+				<rom name="Doom (Demo) 128K (1996)(Digital Reality).z80" size="73114" crc="b310b6f1" sha1="09d7ec6fa95c5afde213a01b21f1762ca6a313ac"/>
 			</dataarea>
 		</part>
 	</software>
