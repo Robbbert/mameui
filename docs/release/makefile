@@ -6,7 +6,7 @@
 #
 ###########################################################################
 
-BARE_VERS := 0.283
+BARE_VERS := 0.284
 LONG_VERS := $(BARE_VERS).0
 
 ###########################################################################
@@ -395,6 +395,10 @@ endif
 endif
 
 ifeq ($(findstring aarch64,$(UNAME)),aarch64)
+ARCHITECTURE :=
+endif
+
+ifeq ($(findstring riscv64,$(UNAME)),riscv64)
 ARCHITECTURE :=
 endif
 
