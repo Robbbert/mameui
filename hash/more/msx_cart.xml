@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 702 -->
+<!-- Number of items in this list = 703 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -2539,6 +2539,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="GS Soccer v1.2 (2025)(Fausto Pracek).rom" size="16384" crc="24f677ee" sha1="7205be7f6b3c8f3769d5933ef331851ce8d0867a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1bfe9225a36fc">
+		<description>GS Soccer v1.3 (2025)(Fausto Pracek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="GS Soccer v1.3 (2025)(Fausto Pracek).rom" size="16384" crc="80706f87" sha1="1bfe9225a36fc869cb5c98840bc2810d20847deb"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3967 -->
+<!-- Number of items in this list = 3968 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -37749,6 +37749,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="TMNT Tournament Fighters - Grandmasters Edition v2.1 (2025)(Allo).sfc" size="4194304" crc="276a5820" sha1="c4dae0e27e17d16632f18eff5f83214db33e45b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7729cd22c8809">
+		<description>TMNT Tournament Fighters - Grandmasters Edition v3.3 (2025)(Allo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="TMNT Tournament Fighters - Grandmasters Edition v3.3 (2025)(Allo).sfc" size="4194304" crc="60fe423e" sha1="7729cd22c88099a216b88b535bfbe601b7f856c2"/>
 			</dataarea>
 		</part>
 	</software>

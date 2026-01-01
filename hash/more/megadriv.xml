@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2045 -->
+<!-- Number of items in this list = 2047 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6442,6 +6442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbd06beda0abd2">
+		<description>Felix the Cat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Felix the Cat.bin" size="1048576" crc="bf9ba3bc" sha1="bd06beda0abd2d4ed34fee21e4cc6f347681db43"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen79c30ccc84d73">
 		<description>Feng Shen Ying Jie Chuan (China)(Unl)(Audio Fix)(2023)(Ken_Tse)</description>
 		<year>????</year>
@@ -6562,16 +6572,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gene6311f7c0e38f">
-		<description>Final Fight MD (World) (v0.91b) (Proto) (Aftermarket) (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4063232">
-				<rom name="Final Fight MD (World) (v0.91b) (Proto) (Aftermarket) (Unl).md" size="4063232" crc="a125cc7d" sha1="e6311f7c0e38f4cb4995e494c995dd30b19d03fd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="genb202769ca9cbb">
 		<description>Final Fight MD v0.82b (2025)(MXRetroDev - CFX)</description>
 		<year>????</year>
@@ -6632,13 +6632,33 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gene6311f7c0e38f">
+		<description>Final Fight MD v0.91b (2025)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Final Fight MD v0.91b (2025).md" size="4063232" crc="a125cc7d" sha1="e6311f7c0e38f4cb4995e494c995dd30b19d03fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena1531b7e231b1">
+		<description>Final Fight MD v0.92b (2025)(MXRetroDev - CFX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fight MD v0.92b (2025)(MXRetroDev - CFX).bin" size="4194304" crc="ae245026" sha1="a1531b7e231b1c76c7688b1a9835b194ee07d10c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2d621b8ff41c5">
-		<description>Final Fight MD v24.01.20b (2024)(MXRetroDev)</description>
+		<description>Final Fight MD wip-demo (2024-01-20)(MXRetroDev)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3670016">
-				<rom name="Final Fight MD v24.01.20b (2024)(MXRetroDev).bin" size="3670016" crc="2d5321a3" sha1="2d621b8ff41c53579fa3d5059e14682d423885a2"/>
+				<rom name="Final Fight MD wip-demo (2024-01-20)(MXRetroDev).bin" size="3670016" crc="2d5321a3" sha1="2d621b8ff41c53579fa3d5059e14682d423885a2"/>
 			</dataarea>
 		</part>
 	</software>

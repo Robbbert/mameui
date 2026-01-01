@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 147 -->
+<!-- Number of items in this list = 163 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -89,6 +89,26 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Atomic (2006).j64" size="1048576" crc="f7e67198" sha1="347bc410deedb3a53018c1eb9a6085418622d8db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag992aabf198b92">
+		<description>Atomic Reloaded (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Atomic Reloaded (World) (Aftermarket) (Unl).j64" size="2097152" crc="ff38c49e" sha1="992aabf198b924a7746e3ba6ba8dd368452299a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag01dc37e7a9d03">
+		<description>Attack of the Mutant Penguins (World)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Attack of the Mutant Penguins (World).j64" size="2097152" crc="cd5bf827" sha1="01dc37e7a9d03246a93bcb8c6a3116cb6391ed31"/>
 			</dataarea>
 		</part>
 	</software>
@@ -352,6 +372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag321749f6b93ea">
+		<description>Degz (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Degz (World) (Aftermarket) (Unl).j64" size="2097152" crc="f8415194" sha1="321749f6b93ea6528aa06af0a985e6b1d7f89091"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag8dacaa5f6cd88">
 		<description>DEGZ</description>
 		<year>????</year>
@@ -393,12 +423,12 @@
 		</part>
 	</software>
 	<software name="jag8939ba84cf27e">
-		<description>Downfall</description>
+		<description>Downfall (World) (Aftermarket) (Unl)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Downfall.j64" size="2097152" crc="acfceabd" sha1="8939ba84cf27e7c4bc659f6d61c07c5b03ccdc9d"/>
+				<rom name="Downfall (World) (Aftermarket) (Unl).j64" size="2097152" crc="acfceabd" sha1="8939ba84cf27e7c4bc659f6d61c07c5b03ccdc9d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -409,6 +439,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="DRAGON - header.j64" size="2097152" crc="83c6acc0" sha1="8f556976f42c393858127d99112264e6a5a9ae19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag974290948d613">
+		<description>Expressway (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Expressway (World) (Aftermarket) (Unl).j64" size="2097152" crc="58ddf24a" sha1="974290948d61340ce04bce92c1489e4b6c623483"/>
 			</dataarea>
 		</part>
 	</software>
@@ -582,6 +622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag2e2b930368ad1">
+		<description>Full Circle - Rocketeer (World) (Demo) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Full Circle - Rocketeer (World) (Demo) (Aftermarket) (Unl).j64" size="2097152" crc="bddd9ff3" sha1="2e2b930368ad1764d18c102bda01d7c2f7740fc9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag10f35c2499bc0">
 		<description>Gauntlet_2</description>
 		<year>????</year>
@@ -612,6 +662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jage99ff0add256b">
+		<description>High Voltage C Maze (USA) (Demo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="High Voltage C Maze (USA) (Demo).j64" size="2097152" crc="25f79b1f" sha1="e99ff0add256bd45394c9ed8728e38b458cfe5e6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jagdc40160b23889">
 		<description>hires</description>
 		<year>????</year>
@@ -619,6 +679,36 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="hires.j64" size="2097152" crc="34de6b8f" sha1="dc40160b23889e538e384a2bb77f3a6d90fba29e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag5655c0bd0e14c">
+		<description>HMS RaptoR (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="HMS RaptoR (World) (Aftermarket) (Unl).j64" size="2097152" crc="e7e8fbbb" sha1="5655c0bd0e14c17346aed42e36a410ce920f69db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag4f25c0508ff12">
+		<description>HMS RaptoR (World) (Demo) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="HMS RaptoR (World) (Demo) (Aftermarket) (Unl).j64" size="1048576" crc="b6c5c660" sha1="4f25c0508ff1221cf9dcfcf48bedd0226700ab05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag519d67592b287">
+		<description>HMS RaptoR (World) (v1.1) (U-235) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="HMS RaptoR (World) (v1.1) (U-235) (Aftermarket) (Unl).j64" size="2097152" crc="f2a3c58a" sha1="519d67592b2871f4567503e448950466c7c5c4ce"/>
 			</dataarea>
 		</part>
 	</software>
@@ -832,6 +922,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag054e42c872449">
+		<description>Kobayashi Maru (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kobayashi Maru (World) (Aftermarket) (Unl).j64" size="2097152" crc="cb675cb3" sha1="054e42c872449b18ccf597e34a01c31ee17d605c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jageab82974662da">
+		<description>Kobayashi Maru Final (World) (Digital) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kobayashi Maru Final (World) (Digital) (Aftermarket) (Unl).j64" size="2097152" crc="af180db0" sha1="eab82974662da3c4e52089bc175d3a2b9ebf8eb6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag5778a4c4baa5d">
 		<description>Llamatron</description>
 		<year>????</year>
@@ -1032,6 +1142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jagd7dcb3b07dcf5">
+		<description>Painter (World) (1995-12-29) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Painter (World) (1995-12-29) (Unl).j64" size="1048576" crc="5f9ef174" sha1="d7dcb3b07dcf586cdae87443322fa1e672185c89"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag5fae5950d3692">
 		<description>PAULA Preview DEMO (2009)</description>
 		<year>????</year>
@@ -1083,12 +1203,12 @@
 		</part>
 	</software>
 	<software name="jageaca103055d0b">
-		<description>Project One DEMO (2009)</description>
+		<description>Project One (World) (Demo) (Aftermarket) (Unl)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Project One DEMO (2009).j64" size="2097152" crc="a00c6406" sha1="eaca103055d0b643955f162b3b22d962ed719ac1"/>
+				<rom name="Project One (World) (Demo) (Aftermarket) (Unl).j64" size="2097152" crc="a00c6406" sha1="eaca103055d0b643955f162b3b22d962ed719ac1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1232,6 +1352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag2b0dec06ade5b">
+		<description>Rocks Off! (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rocks Off! (World) (Aftermarket) (Unl).j64" size="1048576" crc="1f86f163" sha1="2b0dec06ade5b056478ccafe8d86e17d7389fc88"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jagcdadf1f855ec1">
 		<description>rocksoff</description>
 		<year>????</year>
@@ -1309,6 +1439,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="SkyCopter_II_(1996).j64" size="2097152" crc="4f464fa5" sha1="ba634a9869df76fbdb16c4e1f90f1344b7987491"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag792d54b0591a9">
+		<description>Slam Racer (World) (Proto 1) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Slam Racer (World) (Proto 1) (Aftermarket) (Unl).j64" size="2097152" crc="91c3ff61" sha1="792d54b0591a964a73bdb52511e0bded291f4092"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1462,6 +1602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag2ab78090e8afd">
+		<description>Virtual VCS (USA) (Proto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Virtual VCS (USA) (Proto).j64" size="1048576" crc="59a8863f" sha1="2ab78090e8afd985ca4fe54da8daef7e125550fa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag6cc18917b3b05">
 		<description>Yakbig DEMO (1993)</description>
 		<year>????</year>
@@ -1469,6 +1619,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Yakbig DEMO (1993).j64" size="1048576" crc="96400cf6" sha1="6cc18917b3b0564e0d6215f60dca1a0a95352361"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagcc020aa6e9d59">
+		<description>Zzyorxx II (USA) (Demo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Zzyorxx II (USA) (Demo).j64" size="1048576" crc="c8c7e4c7" sha1="cc020aa6e9d596b60cea691d7b0a3c8536873079"/>
 			</dataarea>
 		</part>
 	</software>
