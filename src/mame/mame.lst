@@ -948,7 +948,7 @@ apple2gsr3p
 apple3
 
 @source:apple/imacg3.cpp
-//imac
+//imac                        //crash after start sound
 
 @source:apple/iphone2g.cpp
 iphone2g
@@ -2151,7 +2151,7 @@ freezeat5
 freezeat6
 freezeatjp
 jaguar
-//jaguarcd          // freezes at start
+//jaguarcd          // freeze at start
 maxf_102
 maxf_ng
 maxforce
@@ -20566,7 +20566,7 @@ tpad760xd
 tpad770z
 
 @source:ibm/thinkpad8xx.cpp
-//tpad850
+//tpad850                   //freeze at start
 
 @source:ice/chexx.cpp
 chexx83
@@ -34836,7 +34836,7 @@ ncd19c
 ncdmcx
 
 @source:ncd/ncdmips.cpp
-//hmxpro
+//hmxpro                    //freeze after a while
 
 @source:ncd/ncdppc.cpp
 explorapro
@@ -37419,7 +37419,7 @@ ibm5160
 
 @source:pc/ibmpcjr.cpp
 ibmpcjr
-//ibmpcjx
+//ibmpcjx                       //very likely to crash at start
 
 @source:pc/igspc.cpp
 eztouch
@@ -43866,7 +43866,7 @@ fs3216
 ft68m
 
 @source:skeleton/gamebox.cpp
-gamebox
+//gamebox                        // freeze at start
 
 @source:skeleton/ganbaremo.cpp
 ganbaremo
@@ -44431,7 +44431,7 @@ mjxy2
 vp415
 
 @source:skeleton/webtouchone.cpp
-//wto2840sp
+//wto2840sp                        // freeze at start
 
 @source:skeleton/xbase09.cpp
 xbase09
@@ -45023,8 +45023,8 @@ sun3_80
 sun3_460
 
 @source:sun/sun4.cpp
-//sun_s10
-//sun_s20
+//sun_s10                     //crash at start
+//sun_s20                     //crash at start
 sun4_20
 sun4_25
 sun4_110
