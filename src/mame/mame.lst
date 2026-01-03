@@ -2151,7 +2151,7 @@ freezeat5
 freezeat6
 freezeatjp
 jaguar
-//jaguarcd          // freeze at start
+jaguarcd
 maxf_102
 maxf_ng
 maxforce
@@ -20566,7 +20566,7 @@ tpad760xd
 tpad770z
 
 @source:ibm/thinkpad8xx.cpp
-//tpad850                   //freeze at start
+tpad850                   //no screen, giant error log
 
 @source:ice/chexx.cpp
 chexx83
@@ -43866,7 +43866,7 @@ fs3216
 ft68m
 
 @source:skeleton/gamebox.cpp
-//gamebox                        // freeze at start
+gamebox                        // freeze while loading huge rom, then black screen
 
 @source:skeleton/ganbaremo.cpp
 ganbaremo
@@ -44431,7 +44431,7 @@ mjxy2
 vp415
 
 @source:skeleton/webtouchone.cpp
-//wto2840sp                        // freeze at start
+wto2840sp                        //black screen, giant error log
 
 @source:skeleton/xbase09.cpp
 xbase09
