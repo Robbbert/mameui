@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 163 -->
+<!-- Number of items in this list = 162 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -99,16 +99,6 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Atomic Reloaded (World) (Aftermarket) (Unl).j64" size="2097152" crc="ff38c49e" sha1="992aabf198b924a7746e3ba6ba8dd368452299a7"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="jag01dc37e7a9d03">
-		<description>Attack of the Mutant Penguins (World)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Attack of the Mutant Penguins (World).j64" size="2097152" crc="cd5bf827" sha1="01dc37e7a9d03246a93bcb8c6a3116cb6391ed31"/>
 			</dataarea>
 		</part>
 	</software>
