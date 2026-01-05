@@ -3597,9 +3597,9 @@ GAME( 1982, digsid,    digdug,   digdug,  digdug,   digdug_state,  empty_init,  
 
 /* Bootlegs with replacement I/O chips */
 
-GAME( 1982, gallag,    galaga,   galagab, galaga,   galaga_state,  init_galaga,  ROT90,  "bootleg", "Gallag", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND )
+GAME( 1982, gallag,    galaga,   galaga, galaga,   galaga_state,  init_galaga,  ROT90,  "bootleg", "Gallag", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND )
 GAME( 1984, gatsbee,   galaga,   gatsbee, gatsbee,  galaga_state,  init_galaga,  ROT90,  "hack (Uchida)", "Gatsbee", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND )
-GAME( 1981, nebulbee,  galaga,   galagab, galaga,   galaga_state,  init_galaga,  ROT90,  "bootleg", "Nebulous Bee", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND )
+GAME( 1981, nebulbee,  galaga,   galaga, galaga,   galaga_state,  init_galaga,  ROT90,  "bootleg", "Nebulous Bee", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND )
 
 GAME( 1982, xevios,    xevious,  xevious, xevious,  xevious_state, init_xevios,  ROT90,  "bootleg", "Xevios", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1982, battles,   xevious,  battles, xevious,  battles_state, init_xevious, ROT90,  "bootleg", "Battles (set 1)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
