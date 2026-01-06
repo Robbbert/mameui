@@ -377,7 +377,6 @@
 #define IDC_RESET_PLAYSTATS             1194
 #define IDC_INHERITED                   1196
 #define IDC_KEY_GUI                     1197
-#define IDC_RELOAD                      1198
 #define IDC_DUAL_LIGHTGUN               1199
 #define IDC_NOOFFSET_CLONES             1200
 #define IDC_BIOS                        1201

@@ -1885,7 +1885,6 @@ static void SetPropEnabledControls(HWND hWnd)
 			Button_Enable(GetDlgItem(hWnd,IDC_LIGHTGUN),false);
 			use_lightgun = Button_GetCheck(GetDlgItem(hWnd,IDC_USE_MOUSE));
 			Button_Enable(GetDlgItem(hWnd,IDC_DUAL_LIGHTGUN),false);
-			Button_Enable(GetDlgItem(hWnd,IDC_RELOAD),use_lightgun);
 //		}
 //		else
 //		{
@@ -1894,14 +1893,12 @@ static void SetPropEnabledControls(HWND hWnd)
 //			Button_Enable(GetDlgItem(hWnd,IDC_LIGHTGUN),true);
 //			use_lightgun = Button_GetCheck(GetDlgItem(hWnd,IDC_LIGHTGUN));
 //			Button_Enable(GetDlgItem(hWnd,IDC_DUAL_LIGHTGUN),use_lightgun);
-//			Button_Enable(GetDlgItem(hWnd,IDC_RELOAD),use_lightgun);
 //		}
 	}
 	else
 	{
 		Button_Enable(GetDlgItem(hWnd,IDC_LIGHTGUN),false);
 		Button_Enable(GetDlgItem(hWnd,IDC_DUAL_LIGHTGUN),false);
-		Button_Enable(GetDlgItem(hWnd,IDC_RELOAD),false);
 	}
 
 
@@ -2429,7 +2426,6 @@ static void BuildDataMap(void)
 	datamap_add(properties_datamap, IDC_STEADYKEY,				DM_BOOL,	OPTION_STEADYKEY);
 	datamap_add(properties_datamap, IDC_MULTIKEYBOARD,			DM_BOOL,	OPTION_MULTIKEYBOARD);
 	datamap_add(properties_datamap, IDC_MULTIMOUSE,				DM_BOOL,	OPTION_MULTIMOUSE);
-	datamap_add(properties_datamap, IDC_RELOAD,					DM_BOOL,	OPTION_OFFSCREEN_RELOAD);
 
 	datamap_add(properties_datamap, IDC_JDZ,					DM_FLOAT,	OPTION_JOYSTICK_DEADZONE);
 	datamap_add(properties_datamap, IDC_JDZDISP,				DM_FLOAT,	OPTION_JOYSTICK_DEADZONE);

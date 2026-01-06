@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3968 -->
+<!-- Number of items in this list = 3972 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -4672,6 +4672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns57ca753389a7b">
+		<description>Breath of Fire II PT-BR v1.01 (2025)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Breath of Fire II PT-BR v1.01 (2025)(Dindo).sfc" size="4194304" crc="464a870e" sha1="57ca753389a7b776e27de3b647a7323b5bf83c30"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns9e7e13a0bdf61">
 		<description>Breath of Fire II T-Spa v1.2 (2002)(Vegetal Translations)</description>
 		<year>????</year>
@@ -5589,6 +5599,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Chaos Chronicles demo ver1-1 (SMW1 Hack).sfc" size="4194304" crc="2abb46cf" sha1="835a0272753a19b9f2ead82af2dcb33d0616fd1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc545b238bc8f8">
+		<description>Chaos Seed - Cronicas do Feng Shui PT-BR (2025)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Chaos Seed - Cronicas do Feng Shui PT-BR (2025)(Dindo).sfc" size="3145728" crc="357e7441" sha1="c545b238bc8f873ea72fe4d6764bd3b6605016dd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17772,6 +17792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns26002b532c5be">
+		<description>Marvelous - Outra Ilha do Tesouro PT-BR (2025)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Marvelous - Outra Ilha do Tesouro PT-BR (2025)(Dindo).sfc" size="4194304" crc="d2417812" sha1="26002b532c5be798c59d57ba146b6f86dace1391"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns63f577c388d1d">
 		<description>Marvelous return to Super Mario World by Gummymikaman (14 level demo) (SMW1 Hack)</description>
 		<year>????</year>
@@ -22859,6 +22889,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Seiken Densetsu 3 (Japan) [En v1.01 by LNF+Neill Corlett+SoM2Freak] [Title Hack v1.0 by Dragonsbrethren] (~Secret of Mana 2).sfc" size="4194304" crc="5f14f4ca" sha1="fd4b7fbefc6c7cd0ea0e3dee01277111d24c6283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbb5b70b47d9ad">
+		<description>Seiken Densetsu 3 - Trials of Mana PT-BR v1.03 (2024)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Seiken Densetsu 3 - Trials of Mana PT-BR v1.03 (2024)(Dindo).sfc" size="4194304" crc="0c61a7bf" sha1="bb5b70b47d9ad33cbef85f1d3af39d795482ce25"/>
 			</dataarea>
 		</part>
 	</software>

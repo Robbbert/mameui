@@ -70,7 +70,6 @@ extern const DWORD dwHelpIDs[] =
 //	IDC_PROP_RESET                ,HIDC_PROP_RESET,
 	IDC_REFRESH                   ,HIDC_REFRESH,
 	IDC_REFRESHSPEED              ,HIDC_REFRESHSPEED,
-	IDC_RELOAD                    ,HIDC_RELOAD,
 	IDC_RESET_DEFAULT             ,HIDC_RESET_DEFAULT,
 	IDC_RESET_EFFECT              ,HIDC_RESET_EFFECT,
 	IDC_RESET_FILTERS             ,HIDC_RESET_FILTERS,

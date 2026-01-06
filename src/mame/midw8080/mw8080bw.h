@@ -23,7 +23,7 @@
 #define MW8080BW_MASTER_CLOCK             (19968000.0)
 #define MW8080BW_CPU_CLOCK                (MW8080BW_MASTER_CLOCK / 10)
 #define MW8080BW_PIXEL_CLOCK              (MW8080BW_MASTER_CLOCK / 4)
-#define MW8080BW_HTOTAL                   (0x140)
+#define MW8080BW_HTOTAL                   (0x168)     // 280zzzapa
 #define MW8080BW_HBEND                    (0x000)
 #define MW8080BW_HBSTART                  (0x100)
 #define MW8080BW_VTOTAL                   (0x106)
