@@ -609,6 +609,14 @@ VIDEO_START_MEMBER(galaxold_state,drivfrcg)
 	m_color_mask = 0xff;
 }
 
+VIDEO_START_MEMBER(galaxold_state, dkingjrv)
+{
+	VIDEO_START_CALL_MEMBER(galaxold);
+
+	m_modify_charcode   = &galaxold_state::pisces_modify_charcode;
+	m_modify_spritecode = &galaxold_state::dkingjrv_modify_spritecode;
+}
+
 VIDEO_START_MEMBER(galaxold_state,ad2083)
 {
 	video_start_common();
@@ -972,6 +980,11 @@ void galaxold_state::ad2083_modify_spritecode(uint8_t *spriteram, int *code, int
 void galaxold_state::dambustr_modify_spritecode(uint8_t *spriteram, int *code, int *flipx, int *flipy, int offs)
 {
 	*code += 0x40;
+}
+
+void galaxold_state::dkingjrv_modify_spritecode(uint8_t *spriteram, int *code, int *flipx, int *flipy, int offs)
+{
+	*code |= (m_gfxbank[1] << 6);
 }
 
 

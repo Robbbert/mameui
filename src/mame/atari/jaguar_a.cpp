@@ -248,6 +248,7 @@ uint16_t jaguar_state::jerry_regs_r(offs_t offset)
 			return m_dsp_irq_state;
 		case ASICTRL:
 			// HACK: assume fifo empty
+			// Why this is a thing to begin with? Is there UART debugging for CoJag games?
 			return (m_dsp_regs[offset] & 0xfeff) | 0x100;
 		case 0x36/2:
 		case 0x38/2:
@@ -276,7 +277,11 @@ void jaguar_state::update_jpit_timer(unsigned which)
 		m_jpit_timer[which]->adjust(sample_period);
 	}
 	else
+	{
 		m_jpit_timer[which]->adjust(attotime::never);
+		m_dsp->set_input_line(2 + which, CLEAR_LINE);
+
+	}
 
 }
 
@@ -405,6 +410,8 @@ void jaguar_state::update_serial_timer()
 	{
 		case 0x00:
 			m_serial_timer->adjust(attotime::never);
+			// pdrive seems incredibly fuzzy on having this disabled when SMODE is off
+			m_dsp->set_input_line(1, CLEAR_LINE);
 			break;
 		// TODO: atarikrt uses SMODE 0x05 but still expects an irq?
 		case 0x05:
