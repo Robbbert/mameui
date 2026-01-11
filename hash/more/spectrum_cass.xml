@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7436 -->
+<!-- Number of items in this list = 7469 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -49,6 +49,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="19038">
 				<rom name="(demo)Citadel - Demoversion (19xx)(Stalker)(Sv).tap" size="19038" crc="58763f53" sha1="ae3226bf0d9cdbe333f5077a100654ce52f5bdcd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7896154be387b">
+		<description>(demo)Demagogia (1992)(Omega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14257">
+				<rom name="(demo)Demagogia (1992)(Omega).tap" size="14257" crc="361767aa" sha1="7896154be387b6b97eb97f134268cf7b776fdc8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd7235682251a3">
+		<description>(demo)Demomaker demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9359">
+				<rom name="(demo)Demomaker demo.tap" size="9359" crc="573287c1" sha1="d7235682251a3c79c600ba2f8ec2b307f300ca0c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -499,6 +519,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="62824">
 				<rom name="-Continental Circus (1987)(Virgin Mastertronic Ltd)[cr [Cr Mata + Kamilsoft][t +4](128K)[Cr Mata + Kamilsoft].tap" size="62824" crc="e579b320" sha1="28b7420062230798ee327fc9d80669b016b651e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5786fed1849b4">
+		<description>-Deactivators (1986)(Ariolasoft UK Ltd)[cr [Cr Matasofware](128K)[Cr Matasofware]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37489">
+				<rom name="-Deactivators (1986)(Ariolasoft UK Ltd)[cr [Cr Matasofware](128K)[Cr Matasofware].tap" size="37489" crc="64b04d8a" sha1="5786fed1849b43d3c00c287946eef73a83b83f98"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16072,23 +16102,263 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs014ff8ebaac14">
+		<description>DEF-LET</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6216">
+				<rom name="DEF-LET.TAP" size="6216" crc="979ed1ef" sha1="014ff8ebaac145fe1db2e33e05c11fcebc9e6c15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e947a85b8539">
+		<description>Defcom 1 (1989)(Iber Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="135889">
+				<rom name="Defcom 1 (1989)(Iber Soft).tap" size="135889" crc="1cc5681e" sha1="8e947a85b8539acaf0cd2c93ac9b0a149406d635"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs14f43866c385b">
+		<description>Defcom 128K (1986)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="55692">
+				<rom name="Defcom 128K (1986)(Quicksilva).tap" size="55692" crc="0f2a7a1b" sha1="14f43866c385b061b0dd729148fc0732e364116f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d37bd40a74c0">
+		<description>Defenda (1984)(Interstella Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12850">
+				<rom name="Defenda (1984)(Interstella Software).tap" size="12850" crc="62e88d65" sha1="8d37bd40a74c03aced0c9d8c02eab33b0b9edeec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5c34c78f7a2a5">
+		<description>Defenda (1984)(Interstella Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16663">
+				<rom name="Defenda (1984)(Interstella Software)[a].tap" size="16663" crc="93515670" sha1="5c34c78f7a2a5fdb03ea6c9a47a247067b46457e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f01516621758">
+		<description>Defender (1982)(Michael J. Levers)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16384">
+				<rom name="Defender (1982)(Michael J. Levers)[a].tap" size="16384" crc="a011b6bd" sha1="8f01516621758344755efa3b9300334136372d46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80175063fc7a7">
+		<description>Defender (1983)(Dragan Coledin)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15628">
+				<rom name="Defender (1983)(Dragan Coledin)(Unk-Lang).tap" size="15628" crc="e9ba1655" sha1="80175063fc7a7725265bb47e00203941c2a0f90d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs983015908275e">
+		<description>Defender (1983)(Michael J. Levers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16142">
+				<rom name="Defender (1983)(Michael J. Levers).tap" size="16142" crc="cd46e319" sha1="983015908275ef19bd8b0b8af4e1c11232f4784a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3edd115e9bba8">
+		<description>Defender 48K (2024)(rth)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19363">
+				<rom name="Defender 48K (2024)(rth).tap" size="19363" crc="c310b86e" sha1="3edd115e9bba8d78164a2c76ab2cdae93f820707"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs78c24f0a2c58a">
+		<description>Defender Of The Crown (1989)(The Cat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46832">
+				<rom name="Defender Of The Crown (1989)(The Cat).tap" size="46832" crc="3bbc7dd1" sha1="78c24f0a2c58ab7edc97cdba803623961d93989f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb6f06d4f9c0fd">
+		<description>Defenders Of The Earth (1990)(Enigma Variations)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="64451">
+				<rom name="Defenders Of The Earth (1990)(Enigma Variations)(128K).tap" size="64451" crc="16168c2e" sha1="b6f06d4f9c0fd61e3c7f2e6c322d7b14b8b11e7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd801e05f49d3c">
+		<description>Defendin_DB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5232">
+				<rom name="Defendin_DB.tap" size="5232" crc="8c5edcba" sha1="d801e05f49d3ceb8c9589e4ddec363f853908997"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c0aacab247bb">
+		<description>DEFENDIN_LN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5385">
+				<rom name="DEFENDIN_LN.TAP" size="5385" crc="02350db6" sha1="0c0aacab247bbbb4f4cda51517eef2a51ffea107"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs23156a514d41e">
+		<description>Deflator (19xx)(Garry Rowland)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="12410">
+				<rom name="Deflator (19xx)(Garry Rowland).tap" size="12410" crc="c1415f41" sha1="23156a514d41ee881abfa8032c3772bd7c448fe9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsebdc56af72d73">
+		<description>Deflektor (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28048">
+				<rom name="Deflektor (1987)(Gremlin Graphics).tap" size="28048" crc="04bf9aff" sha1="ebdc56af72d7302f36648c4efd8dc3c92fe299d5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs177aaa768d7d1">
-		<description>Deflektor</description>
+		<description>Deflektor 48K (1987)(Gremlin Graphics)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="58746">
-				<rom name="Deflektor.tzx" size="58746" crc="ab891d55" sha1="177aaa768d7d1772bd1c5c80f84ad24c2871db2e"/>
+				<rom name="Deflektor 48K (1987)(Gremlin Graphics).tzx" size="58746" crc="ab891d55" sha1="177aaa768d7d1772bd1c5c80f84ad24c2871db2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs424a2365fea83">
+		<description>Deja Vu (1989)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41221">
+				<rom name="Deja Vu (1989)(Zenobi Software).tap" size="41221" crc="af897141" sha1="424a2365fea83be8f140967732537dd7478b1abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsecffa0e7c6b53">
+		<description>Deja Vu - The Remix (1990)(Zenobi Software - Crash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48266">
+				<rom name="Deja Vu - The Remix (1990)(Zenobi Software - Crash).tap" size="48266" crc="99700cd1" sha1="ecffa0e7c6b53ef7ce3d29498fa1f0758609b9ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf9d39d50e9eb">
+		<description>Deja Vu - The Remix (1990)(Zenobi Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48244">
+				<rom name="Deja Vu - The Remix (1990)(Zenobi Software).tap" size="48244" crc="5447fd97" sha1="af9d39d50e9ebbb7bd4a0bfce69e80163968479c"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxse6ad3e7eb3846">
-		<description>Delfox</description>
+		<description>Delfox ES 48K (1987-88)(Dinamic Software)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="18444">
-				<rom name="Delfox.tzx" size="18444" crc="c9649c96" sha1="e6ad3e7eb3846babf89b2d9a29d8e8747c058f9b"/>
+				<rom name="Delfox ES 48K (1987-88)(Dinamic Software).tzx" size="18444" crc="c9649c96" sha1="e6ad3e7eb3846babf89b2d9a29d8e8747c058f9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54d031a99e0b8">
+		<description>Delta Charge! (1990)(Thalamus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56562">
+				<rom name="Delta Charge! (1990)(Thalamus).tap" size="56562" crc="3f0b7368" sha1="54d031a99e0b867ce68c5a85186568c28d16f8c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0d7d57bc388e9">
+		<description>Delta Wing (1984)(Creative Sparks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48130">
+				<rom name="Delta Wing (1984)(Creative Sparks).tap" size="48130" crc="c8094b29" sha1="0d7d57bc388e98d451b34dcf78259c2c58e2c0f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2a2516bd5dcbf">
+		<description>Delta Wing (1984)(Creative Sparks)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48150">
+				<rom name="Delta Wing (1984)(Creative Sparks)[a].tap" size="48150" crc="d8f8d095" sha1="2a2516bd5dcbfcd2374cc78177b0400e3858c2de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs869ff8061528e">
+		<description>Demolition (1984)(Dorling Kindersley)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13377">
+				<rom name="Demolition (1984)(Dorling Kindersley)(De).tap" size="13377" crc="9cd3f144" sha1="869ff8061528e3c8d432602e3ef1bba2e13a00f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1bf24404c7023">
+		<description>Demolition (1994)(Jonathan Cauldwell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23490">
+				<rom name="Demolition (1994)(Jonathan Cauldwell).tap" size="23490" crc="ac5914f0" sha1="1bf24404c7023a268f7589af06e6ae5c65fbba49"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs47a94e709faa2">
+		<description>Demolition (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3802">
+				<rom name="Demolition (19xx)(-).tap" size="3802" crc="8aa5e7db" sha1="47a94e709faa2778a5be828240e5f79ad901293a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -63862,6 +64132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs48ab175e9f0b1">
+		<description>_(demo)Demo Atelier 128 III</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28076">
+				<rom name="_(demo)Demo Atelier 128 III.tap" size="28076" crc="517f5e1c" sha1="48ab175e9f0b14ce3907193d1482fc32a1d6b600"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs363fb27f9f70c">
 		<description>_(demo)Dizzy 4k Intro (1998)(Serzhsoft)</description>
 		<year>????</year>
@@ -65649,6 +65929,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="220503">
 				<rom name="_Darius+.tzx" size="220503" crc="efbcb9c7" sha1="0ef5161cc0a40c0d1621213ec6e971d6ca13dd6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc68ee02891982">
+		<description>_Defcom (1986)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33536">
+				<rom name="_Defcom (1986)(Quicksilva).tap" size="33536" crc="f5d3574e" sha1="c68ee028919826be4448bcb4aa7cede411741d92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse143888c7781d">
+		<description>_Dekorating Blues (1986)(Alpha-Omega Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52998">
+				<rom name="_Dekorating Blues (1986)(Alpha-Omega Software).tap" size="52998" crc="0284610e" sha1="e143888c7781d9e43e3a6e53ff47afc5ad7e624c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5f7ee82fd091e">
+		<description>_Delta Wing (19xx)(Mastertronic Added Dimension)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50971">
+				<rom name="_Delta Wing (19xx)(Mastertronic Added Dimension).tap" size="50971" crc="b33af276" sha1="5f7ee82fd091e0b8676ed4ce7a9389a20b3ffe52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd9a3c231855b9">
+		<description>_Demobit 96 - Invitation Intro v1.00 (1996)(7 Gods)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45081">
+				<rom name="_Demobit 96 - Invitation Intro v1.00 (1996)(7 Gods).tap" size="45081" crc="d9bca704" sha1="d9a3c231855b9e7de5b0eed29eec425e7d147d5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa27315f7f43a8">
+		<description>_Demolition</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2731">
+				<rom name="_Demolition.TAP" size="2731" crc="73410256" sha1="a27315f7f43a834ca49ec8adde28d9a4689a024f"/>
 			</dataarea>
 		</part>
 	</software>

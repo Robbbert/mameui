@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3972 -->
+<!-- Number of items in this list = 3975 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -31682,6 +31682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns1b1416def9dd3">
+		<description>Super Bug Hunters v1.2 (2025)(Maxwel Olinda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Bug Hunters v1.2 (2025)(Maxwel Olinda).sfc" size="262144" crc="23386931" sha1="1b1416def9dd35b21565a1e4267c80399fd78c95"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns17a241b0d63b0">
 		<description>Super Campeonato Brasileiro 95 (unl)</description>
 		<year>????</year>
@@ -32089,6 +32099,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Ghouls 'n Ghosts Restoration Hack (2023)(SCD).sfc" size="2097152" crc="acaed88a" sha1="a22aabecf7b1b0c052521f5a23344ea329b8e1c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsac81a92a91fb2">
+		<description>Super Ghouls'n Ghosts (U, Proto)(1991)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Ghouls'n Ghosts (U, Proto)(1991)(Capcom).sfc" size="2097152" crc="f1073bb3" sha1="ac81a92a91fb2908d3532f7b2ef3c6bc92015842"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbf2efd4eaeb1b">
+		<description>Super Ghouls'n Ghosts Restoration Hack (2023-25)(SCD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Ghouls'n Ghosts Restoration Hack (2023-25)(SCD).sfc" size="2097152" crc="d983a882" sha1="bf2efd4eaeb1b863d498fcb37e59bc0bdcb95582"/>
 			</dataarea>
 		</part>
 	</software>

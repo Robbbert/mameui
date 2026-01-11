@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 558 -->
+<!-- Number of items in this list = 560 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -4189,6 +4189,26 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="17461">
 				<rom name="Ruptus (2021)(Inufuto).sms" size="17461" crc="f4e44d46" sha1="16ae8129f7daf0eedaac16dd8cf64d6455d97833"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsb16e0a66e83ab">
+		<description>Rygar - Arcade Title (2017)(Psyklax)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="147456">
+				<rom name="Rygar - Arcade Title (2017)(Psyklax).sms" size="147456" crc="3bd1bd68" sha1="b16e0a66e83ab02327b6c7f9679886b8dae7c5d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms33cfd2c4ee703">
+		<description>Rygar - Custom Title (2013)(Kevinmos3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Rygar - Custom Title (2013)(Kevinmos3).sms" size="131072" crc="6f197c21" sha1="33cfd2c4ee703eda7eed817a9c8b71aededfc860"/>
 			</dataarea>
 		</part>
 	</software>
