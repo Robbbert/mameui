@@ -194,6 +194,7 @@ public:
 
 	void m10(machine_config &config) ATTR_COLD;
 	void m11(machine_config &config) ATTR_COLD;
+	void ipminvad2(machine_config &config) ATTR_COLD;
 
 	DECLARE_INPUT_CHANGED_MEMBER(set_vr1) { m_ic8j2->set_resistor_value(RES_K(10 + newval / 5.0)); }
 
@@ -210,9 +211,11 @@ private:
 	uint8_t m_back_color[4]{};
 	uint8_t m_back_xpos[4]{};
 	uint8_t m_bottomline = 0;
+	uint8_t m_step = 0;
 
 	void m10_ctrl_w(uint8_t data);
 	void m11_ctrl_w(uint8_t data);
+	void ipminvad2_ctrl_w(uint8_t data);
 	void m10_a500_w(uint8_t data);
 	void m11_a100_w(uint8_t data);
 	uint8_t clear_74123_r();
@@ -221,6 +224,7 @@ private:
 
 	void m10_main(address_map &map) ATTR_COLD;
 	void m11_main(address_map &map) ATTR_COLD;
+	void ipminvad2_main(address_map &map) ATTR_COLD;
 };
 
 class m15_state : public m1x_state
@@ -543,16 +547,27 @@ void m10_state::m10_ctrl_w(uint8_t data)
 
 void m10_state::m11_ctrl_w(uint8_t data)
 {
-	if (data & 0x4c)
-		LOGCTRL("M11 ctrl: %02x",data);
-
 	m_bottomline = ~data & 0x20;
 
 	if (m_cab->read() & 0x01)
 		m_flip = ~data & 0x10;
 
-	if (!(m_cab->read() & 0x02))
-		machine().sound().system_mute(data & 0x80);
+	if (m_cab->read() & 0x02)
+		data |= 0x80;
+
+	machine().sound().system_mute(~data & 0x80);
+}
+
+void m10_state::ipminvad2_ctrl_w(uint8_t data)
+{
+	m11_ctrl_w(data);
+
+	// saucer sound
+	if (data == 0xDF)
+		m_samples->start(5, 9, true);
+	else
+	if (data == 0x9F)
+		m_samples->stop(5);
 }
 
 /*
@@ -614,24 +629,41 @@ void m10_state::m11_a100_w(uint8_t data)
 
 	m_last = data;
 
-	// audio control!
-	// MISSILE sound
+	// shoot sound
 	if (raising_bits & 0x01)
 		m_samples->start(0, 0);
 
-	// EXPLOSION sound
+	// ship explosion
 	if (raising_bits & 0x02)
-		m_samples->start(1, 1);
+	{
+		m_samples->start(2, 1);
+		m_samples->stop(5);
+	}
 
-	// Rapidly falling parachute
+	// Saucer explodes
+	if (raising_bits & 0x20)
+		m_samples->start(1, 7);
+
+	// Invader hit
 	if (raising_bits & 0x04)
-		m_samples->start(3, 8);
+		m_samples->start(3, 2);
 
-	// Background sound ?
-	if (data & 0x10)
-		m_samples->start(4, 9, true);
-	else
-		m_samples->stop(4);
+	// Extra base
+	if (raising_bits & 0x08)
+		m_samples->start(2, 8);
+
+	// steps
+	if (raising_bits & 0x10)
+	{
+		m_step = (m_step + 1) & 3;
+		m_samples->start(4, 3+m_step);
+	}
+
+	if (raising_bits & 0x40)
+	{
+		m_step = 3;
+		m_samples->start(4, 6);
+	}
 }
 
 void m15_state::a100_w(uint8_t data)
@@ -753,6 +785,12 @@ void m10_state::m11_main(address_map &map)
 	map(0xa400, 0xa400).w(FUNC(m10_state::m11_ctrl_w));   // line at bottom of screen?, sound, flip screen
 	map(0xa700, 0xa700).r(FUNC(m10_state::clear_74123_r));
 	map(0xfc00, 0xffff).rom(); // for the reset / interrupt vectors
+}
+
+void m10_state::ipminvad2_main(address_map &map)
+{
+	m11_main(map);
+	map(0xa400, 0xa400).w(FUNC(m10_state::ipminvad2_ctrl_w));
 }
 
 void m15_state::main(address_map &map)
@@ -1088,6 +1126,14 @@ void m10_state::m11(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &m10_state::m11_main);
 }
 
+void m10_state::ipminvad2(machine_config &config)
+{
+	m11(config);
+
+	// basic machine hardware
+	m_maincpu->set_addrmap(AS_PROGRAM, &m10_state::ipminvad2_main);
+}
+
 void m15_state::m15(machine_config &config)
 {
 	// basic machine hardware
@@ -1240,7 +1286,7 @@ ROM_END
 //    YEAR  NAME       PARENT    MACHINE INPUT     CLASS      INIT           ROT     COMPANY FULLNAME                         FLAGS
 GAME( 1979, ipminvad,  0,        m10,    ipminvad, m10_state, init_ipminvad, ROT270, "IPM",  "IPM Invader (M10, set 1)",      MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, ipminvad1, ipminvad, m10,    ipminvad, m10_state, init_ipminvad, ROT270, "IPM",  "IPM Invader (M10, set 2)",      MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, ipminvad2, ipminvad, m11,    ipminvad, m10_state, init_ipminvad, ROT270, "IPM",  "IPM Invader (M11)",             MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, ipminvad2, ipminvad, ipminvad2, ipminvad, m10_state, init_ipminvad, ROT270, "IPM",  "IPM Invader (M11)",             MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
 
 GAME( 1980, andromed,  0,        m11,    andromed, m10_state, init_andromed, ROT270, "Irem", "Andromeda SS (Japan?)",         MACHINE_NO_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE ) // export version known as simply "Andromeda"
 GAME( 1980, skychut,   0,        m11,    skychut,  m10_state, init_andromed, ROT270, "Irem", "Sky Chuter",                    MACHINE_NO_SOUND | MACHINE_IMPERFECT_COLORS | MACHINE_SUPPORTS_SAVE )
