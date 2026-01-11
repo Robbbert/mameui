@@ -208,6 +208,7 @@ jaguar_cpu_device::jaguar_cpu_device(const machine_config &mconfig, device_type 
 	, m_io_config("io", ENDIANNESS_BIG, 32, 8, 0, io_map)
 	, m_version(version) // 1 : Jaguar prototype, 2 : Jaguar first release, 3 : Midsummer prototype, Other : unknown/reserved
 	, m_isdsp(isdsp)
+	, m_branch_hack(false)
 	, m_cpu_interrupt(*this)
 	, m_tables_referenced(false)
 	, table_refcount(0)
@@ -352,6 +353,7 @@ void jaguar_cpu_device::execute_set_input(int irqline, int state)
 	// Ignore irq if masked
 	// - barkley, breakout, clubdriv, ironsol2, skyhamm, ultravor all wants to not read a pending
 	//   DSP serial irq *before* JPIT
+	// TODO: should really ack cycle when flipping imask in flags_w
 	if (state != CLEAR_LINE && BIT(m_int_mask, irqline))
 	{
 		m_int_latch |= mask;
@@ -581,7 +583,7 @@ void jaguargpu_cpu_device::execute_run()
 		(this->*gpu_op_table[op >> 10])(op);
 		m_icount--;
 
-	} while (m_icount > 0 || m_icount == m_bankswitch_icount);
+	} while (m_icount > 0 || (m_icount == m_bankswitch_icount && m_branch_hack));
 }
 
 void jaguardsp_cpu_device::execute_run()
@@ -617,7 +619,7 @@ void jaguardsp_cpu_device::execute_run()
 		(this->*dsp_op_table[op >> 10])(op);
 		m_icount--;
 
-	} while (m_icount > 0 || m_icount == m_bankswitch_icount);
+	} while (m_icount > 0 || (m_icount == m_bankswitch_icount && m_branch_hack));
 }
 
 
@@ -829,8 +831,9 @@ void jaguar_cpu_device::jump_cc_rn(u16 op)
 		const u8 reg = (op >> 5) & 31;
 
 		// HACK: kludge for risky code in the cojag DSP interrupt handlers
+		// Pinpoint what cojag game(s) needs this (if it's still a thing ...)
 		// also note: using m_r[reg] only fix wolfn3d and gorf2k current regression (with no sound tho)
-		const u32 newpc = (m_icount == m_bankswitch_icount) ? m_a[reg] : m_r[reg];
+		const u32 newpc = (m_icount == m_bankswitch_icount && m_branch_hack) ? m_a[reg] : m_r[reg];
 		debugger_instruction_hook(m_pc);
 		op = ROPCODE(m_pc);
 		m_pc = newpc;
