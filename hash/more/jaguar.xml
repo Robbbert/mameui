@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 162 -->
+<!-- Number of items in this list = 154 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag1516859334668">
 		<description>8biteer</description>
@@ -179,16 +179,6 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Barbarian.j64" size="1048576" crc="501351f1" sha1="c16738d10d5b7b7bcf235bb5d7ab34d4d65885e8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="jag2419909334bcb">
-		<description>BEEBRIS</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="BEEBRIS.j64" size="1048576" crc="a84955ba" sha1="2419909334bcbd2e4f48ccd241d6c96f8462c0e6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -372,16 +362,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="jag8dacaa5f6cd88">
-		<description>DEGZ</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="DEGZ.j64" size="2097152" crc="343c3010" sha1="8dacaa5f6cd88871ccc78a396d1760038ecce3d9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="jag50a7fc831cfaf">
 		<description>DiamJag (2008)</description>
 		<year>????</year>
@@ -412,16 +392,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="jag8939ba84cf27e">
-		<description>Downfall (World) (Aftermarket) (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Downfall (World) (Aftermarket) (Unl).j64" size="2097152" crc="acfceabd" sha1="8939ba84cf27e7c4bc659f6d61c07c5b03ccdc9d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="jag8f556976f42c3">
 		<description>DRAGON - header</description>
 		<year>????</year>
@@ -439,26 +409,6 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Expressway (World) (Aftermarket) (Unl).j64" size="2097152" crc="58ddf24a" sha1="974290948d61340ce04bce92c1489e4b6c623483"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="jag21b1f1cea2132">
-		<description>expressway</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="expressway.j64" size="2097152" crc="499429b2" sha1="21b1f1cea213291e841c0b4cf6c88d8cf9a5488a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="jag2eac6f173ff99">
-		<description>fcr-rls_jiffi</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="fcr-rls_jiffi.j64" size="2097152" crc="d5be4e16" sha1="2eac6f173ff9968992922efb2ef6433d179eb443"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1192,16 +1142,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="jageaca103055d0b">
-		<description>Project One (World) (Demo) (Aftermarket) (Unl)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Project One (World) (Demo) (Aftermarket) (Unl).j64" size="2097152" crc="a00c6406" sha1="eaca103055d0b643955f162b3b22d962ed719ac1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="jag4e99d3df1e9aa">
 		<description>ProjectW (2008)</description>
 		<year>????</year>
@@ -1349,16 +1289,6 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Rocks Off! (World) (Aftermarket) (Unl).j64" size="1048576" crc="1f86f163" sha1="2b0dec06ade5b056478ccafe8d86e17d7389fc88"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="jagcdadf1f855ec1">
-		<description>rocksoff</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="rocksoff.j64" size="1048576" crc="d1bc114e" sha1="cdadf1f855ec127d47a04e322f7ecd6b26f8b18b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1569,16 +1499,6 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="TNG DEMO (2008)(runs with gfx probs).j64" size="131072" crc="bb6457e7" sha1="9bd65fec49545e83e368d62d5c9509d1ab464385"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="jage886eb07d402d">
-		<description>tripper</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="jaguar_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="tripper.j64" size="4194304" crc="f7756a03" sha1="e886eb07d402d05463ef8356a462c15c1b839c42"/>
 			</dataarea>
 		</part>
 	</software>
