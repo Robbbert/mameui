@@ -45,10 +45,10 @@ void madam_device::device_start()
 	m_revision = 0x01020200;
 	m_msysbits = 0x51;
 
-	save_pointer(NAME(m_pip), 16);
-	save_pointer(NAME(m_fence), 4);
-	save_pointer(NAME(m_mmu), 64);
-	save_pointer(NAME(m_mult), 40);
+	save_item(NAME(m_pip));
+	save_item(NAME(m_fence));
+	save_item(NAME(m_mmu));
+	save_item(NAME(m_mult));
 }
 
 void madam_device::device_reset()
@@ -76,7 +76,8 @@ void madam_device::map(address_map &map)
 	map(0x0008, 0x000b).lrw32(
 		NAME([this] () { return m_mctl; }),
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
-			LOG("mctl: %08x & %08x\n", data, mem_mask);
+			if (data != 0x0001e000)
+				LOG("mctl: %08x & %08x\n", data, mem_mask);
 			COMBINE_DATA(&m_mctl);
 		})
 	);
