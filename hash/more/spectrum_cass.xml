@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7540 -->
+<!-- Number of items in this list = 7564 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -539,6 +539,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="81587">
 				<rom name="-Daley Thompson's Super Test (1985)(Ocean Software Ltd)[cr [Cr](128K)[Cr].tap" size="81587" crc="a01349bc" sha1="7e9e3d41cfd357e1c49202749c65763d91caf401"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs872be80807af7">
+		<description>-Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39468">
+				<rom name="-Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a3].tap" size="39468" crc="8aa1cc27" sha1="872be80807af7f2ca0a91b75978ee35b17944e4c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16042,6 +16052,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3fd3c8f153c7b">
+		<description>Dan Dare - Pilot Of The Future (1986)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47114">
+				<rom name="Dan Dare - Pilot Of The Future (1986)(Virgin Games).tap" size="47114" crc="7e854da5" sha1="3fd3c8f153c7b7a425f78dfa780ecbe65199d830"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs91d679810c1bf">
+		<description>Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a4].tap" size="56277" crc="b8d32331" sha1="91d679810c1bf43210cd793bc7d2d72af0cc7940"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb50806a305ecf">
+		<description>Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44861">
+				<rom name="Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a].tap" size="44861" crc="4e33fd65" sha1="b50806a305ecffeded0265af7fbb2ab97f470978"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa3be449dad77">
+		<description>Dan Dare II - Mekon's Revenge (1988)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39441">
+				<rom name="Dan Dare II - Mekon's Revenge (1988)(Virgin Games).tap" size="39441" crc="3fe22f27" sha1="aa3be449dad7755cadd743787a3cca80a190b21e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs238aaf8866ae2">
 		<description>Dan Dare II - Mekon's Revenge</description>
 		<year>????</year>
@@ -16049,6 +16099,126 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="34547">
 				<rom name="Dan Dare II - Mekon's Revenge.tzx" size="34547" crc="f4de84ff" sha1="238aaf8866ae2db67d8af015bdcab0680e3c5517"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs51f51f0d4bbc7">
+		<description>Dan Dare III - The Escape (1990)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38444">
+				<rom name="Dan Dare III - The Escape (1990)(Virgin Games).tap" size="38444" crc="e9c80386" sha1="51f51f0d4bbc7a07269f4d66ee1ffd417471aec2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf096bfbc6e18">
+		<description>Danger Mouse In Double Trouble (1984)(Creative Sparks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48575">
+				<rom name="Danger Mouse In Double Trouble (1984)(Creative Sparks).tap" size="48575" crc="ee9cb01d" sha1="af096bfbc6e185b111e6070846c76e4a0f2c0b8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs64e44933ee43b">
+		<description>Danger Mouse In Double Trouble (1984)(Creative Sparks)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48562">
+				<rom name="Danger Mouse In Double Trouble (1984)(Creative Sparks)[a].tap" size="48562" crc="2bd228bf" sha1="64e44933ee43b05387aefb5fb47dc25de774f92c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf32c60f6d1ae6">
+		<description>Danger Mouse In Makin' Whoopee (1985)(Creative Sparks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37009">
+				<rom name="Danger Mouse In Makin' Whoopee (1985)(Creative Sparks).tap" size="37009" crc="93fcac1c" sha1="f32c60f6d1ae6734abff28f8384465a248057b11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f008561116e1">
+		<description>Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[a][Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34447">
+				<rom name="Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[a][Part 1 of 2].tap" size="34447" crc="3d84bd25" sha1="1f008561116e1c13b0845d7eb0c44524e355513a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb44da4e04338f">
+		<description>Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[a][Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36827">
+				<rom name="Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[a][Part 2 of 2].tap" size="36827" crc="ed0506ae" sha1="b44da4e04338fc85efd460ad56d1f7679c0a115c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscd769d719e9da">
+		<description>Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30673">
+				<rom name="Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[Part 1 of 2].tap" size="30673" crc="bc5d28b0" sha1="cd769d719e9da75c4fa5904965bb0a3e83f40ece"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs737acedead2d8">
+		<description>Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33109">
+				<rom name="Danger Mouse In The Black Forest Chateau (1984)(Creative Sparks)[Part 2 of 2].tap" size="33109" crc="db754c62" sha1="737acedead2d8dbdf891b406b6e9b884e1dd1a65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs26dc4c251a79f">
+		<description>Dangerous Gardens (1984)(Your Computer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6037">
+				<rom name="Dangerous Gardens (1984)(Your Computer).tap" size="6037" crc="4628b24d" sha1="26dc4c251a79f0cf469259184c52b79cfcb37d0d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98a28725274bb">
+		<description>Danterrifik 2 (2020)(Toku Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49982">
+				<rom name="Danterrifik 2 (2020)(Toku Soft).tap" size="49982" crc="478c7adf" sha1="98a28725274bb78dd19a6e55370be42f1a95ea35"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa64db79addb8d">
+		<description>Danterrifik 3 (2021)(TokuSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46898">
+				<rom name="Danterrifik 3 (2021)(TokuSoft).tap" size="46898" crc="9041c4da" sha1="a64db79addb8d6bfc8f8cf608023b3942a08255b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1a08bbbf97dbc">
+		<description>Danterrifik IV A New Beginning 128K (2023)(Tokusoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36977">
+				<rom name="Danterrifik IV A New Beginning 128K (2023)(Tokusoft).tap" size="36977" crc="33a71a90" sha1="1a08bbbf97dbc4b6e1d5457631b549a4f7c6b3f9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -66552,6 +66722,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbfbe690f99930">
+		<description>_Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49698">
+				<rom name="_Dan Dare - Pilot Of The Future (1986)(Virgin Games)[a2].tap" size="49698" crc="cf07eb73" sha1="bfbe690f99930dd2c234c277b7ef003c2aa20ebc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa3d6ac5e65cfe">
+		<description>_Dandy (1986)(Electric Dreams Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86173">
+				<rom name="_Dandy (1986)(Electric Dreams Software).tap" size="86173" crc="66ebdafe" sha1="a3d6ac5e65cfe7a702c04918d5c9a2174d436c31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9e28b08a6b7b8">
+		<description>_Dangerous Garden (1988)(CV Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38226">
+				<rom name="_Dangerous Garden (1988)(CV Software).tap" size="38226" crc="5aebc30e" sha1="9e28b08a6b7b80b48c1840954edf6fed85513480"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4950e36c20082">
+		<description>_Dardos (1985)(MicroHobby)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22538">
+				<rom name="_Dardos (1985)(MicroHobby)(Sp).tap" size="22538" crc="212e9ac7" sha1="4950e36c20082451163d65926dec18f538b8ec3b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0ef5161cc0a40">
 		<description>_Darius+</description>
 		<year>????</year>
@@ -66559,6 +66769,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="220503">
 				<rom name="_Darius+.tzx" size="220503" crc="efbcb9c7" sha1="0ef5161cc0a40c0d1621213ec6e971d6ca13dd6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5eb0211a0a709">
+		<description>_Dark Sceptre (1987)(Firebird Software Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44817">
+				<rom name="_Dark Sceptre (1987)(Firebird Software Ltd).tap" size="44817" crc="86d7efc0" sha1="5eb0211a0a709c36727618d5928f5e15ac5d91a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs87423d8e78d0d">
+		<description>_Dark Side (1988)(Incentive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38877">
+				<rom name="_Dark Side (1988)(Incentive).tap" size="38877" crc="3bdf2ddf" sha1="87423d8e78d0d59cd50b194122e61e28f9ddda04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa5de8b3c34a2c">
+		<description>_Dark Side (1988)(Incentive)[c Bill Gillbert]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38912">
+				<rom name="_Dark Side (1988)(Incentive)[c Bill Gillbert].tap" size="38912" crc="ea63b690" sha1="a5de8b3c34a2cdcd3bd99b9235caf7631414d73d"/>
 			</dataarea>
 		</part>
 	</software>
