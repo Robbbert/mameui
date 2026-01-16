@@ -2,9 +2,14 @@
 // copyright-holders:Angelo Salese, Wilbert Pol
 /***************************************************************************
 
-  3do.cpp
+3do.cpp
 
-  Driver file to handle emulation of the 3DO systems
+Driver file to handle emulation of the 3DO systems
+
+References:
+- https://3dodev.com/documentation/hardware
+- https://wiki.console5.com/wiki/Panasonic_3DO_FZ-1
+- https://github.com/trapexit/portfolio_os
 
 Hardware descriptions:
 
@@ -14,7 +19,7 @@ Processors:
 - Super Fast BUS Speed (50 Megabytes per second)
 - Math Co-Processor custom designed by NTG for accelerating fixed-point
   matrix operations (_not_ the ARM FPA)
-- Multitaking 32-bit operating system
+- Multitasking 32-bit operating system
 
 Resolution:
 - 640x480 pixel resolution
@@ -101,6 +106,8 @@ Part list of Goldstar 3DO Interactive Multiplayer
 #include "imagedev/cdromimg.h"
 
 
+#define DIAG_ENABLE     0
+
 #define X2_CLOCK_PAL    59000000
 #define X2_CLOCK_NTSC   49090000
 #define X601_CLOCK      XTAL(16'934'400)
@@ -108,15 +115,23 @@ Part list of Goldstar 3DO Interactive Multiplayer
 
 void _3do_state::main_mem(address_map &map)
 {
-	map(0x00000000, 0x001FFFFF).bankrw(m_bank1);                                       /* DRAM */
-	map(0x00200000, 0x003FFFFF).ram().share(m_vram);                                   /* VRAM */
-	map(0x03000000, 0x030FFFFF).rom().region("bios", 0);                               /* BIOS */
-	map(0x03100000, 0x0313FFFF).ram();                                                 /* Brooktree? */
-	map(0x03140000, 0x0315FFFF).rw(FUNC(_3do_state::nvarea_r), FUNC(_3do_state::nvarea_w)).umask32(0x000000ff);                /* NVRAM */
-	map(0x03180000, 0x031BFFFF).rw(FUNC(_3do_state::slow2_r), FUNC(_3do_state::slow2_w));               /* Slow bus - additional expansion */
-	map(0x03200000, 0x0320FFFF).rw(FUNC(_3do_state::svf_r), FUNC(_3do_state::svf_w));                   /* special vram access1 */
-	map(0x03300000, 0x033FFFFF).rw(FUNC(_3do_state::madam_r), FUNC(_3do_state::madam_w));               /* address decoder */
-	map(0x03400000, 0x034FFFFF).rw(FUNC(_3do_state::clio_r), FUNC(_3do_state::clio_w));                 /* io controller */
+	map(0x0000'0000, 0x001F'FFFF).bankrw(m_bank1);                                       /* DRAM */
+	map(0x0020'0000, 0x003F'FFFF).ram().share(m_vram);                                   /* VRAM */
+	map(0x0300'0000, 0x030F'FFFF).rom().region("bios", 0);                               /* BIOS */
+	// slow bus
+	map(0x0310'0000, 0x0313'FFFF).ram();                                                 /* Brooktree? */
+	map(0x0314'0000, 0x0315'FFFF).mirror(0x20000).rw(FUNC(_3do_state::nvarea_r), FUNC(_3do_state::nvarea_w)).umask32(0x000000ff);                /* NVRAM */
+	map(0x0318'0000, 0x031B'FFFF).rw(FUNC(_3do_state::slow2_r), FUNC(_3do_state::slow2_w));               /* Slow bus - additional expansion */
+	// Sport
+	map(0x0320'0000, 0x0320'FFFF).rw(FUNC(_3do_state::svf_r), FUNC(_3do_state::svf_w));                   /* special vram access1 */
+	map(0x0330'0000, 0x0330'07FF).m(m_madam, FUNC(madam_device::map));              /* address decoder */
+	map(0x0340'0000, 0x0340'3FFF).m(m_clio, FUNC(clio_device::map));                /* io controller */
+	map(0x0340'C000, 0x0340'FFFF).m(*this, FUNC(_3do_state::uncle_map));
+//  map(0x0360'0000, 0X037F'FFFF) trace
+//      map(0x0370'0000, 0X037E'FFFF) SRAM
+//      map(0X037F'FF00, 0X037F'FF0B) link data/address/FIFO
+//      map(0X037F'FF0C, 0X037F'FF0F) joysticks
+//  map(0x0380'0000, 0x03??'????) trace big RAM
 }
 
 
@@ -142,27 +157,42 @@ void _3do_state::machine_start()
 	m_bank1->configure_entry(1, memregion("overlay")->base());
 
 	m_slow2_init();
-	m_madam_init();
-	m_clio_init();
+	m_uncle.rev = 0x03800000;
 }
 
 void _3do_state::machine_reset()
 {
 	/* start with overlay enabled */
 	m_bank1->set_entry(1);
-
-	m_clio.cstatbits = 0x01; /* bit 0 = reset of clio caused by power on */
 }
 
 void _3do_state::_3do(machine_config &config)
 {
 	/* Basic machine hardware */
-	ARM7_BE(config, m_maincpu, XTAL(50'000'000)/4);
+	ARM7_BE(config, m_maincpu, XTAL(50'000'000)/4); // DA86C06020XV
 	m_maincpu->set_addrmap(AS_PROGRAM, &_3do_state::main_mem);
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
-	TIMER(config, "timer_x16").configure_periodic(FUNC(_3do_state::timer_x16_cb), attotime::from_hz(12000)); // TODO: timing
+	MADAM(config, m_madam, XTAL(50'000'000)/4);
+	m_madam->diag_cb().set([] (u8 data) {
+		// TODO: how this really connects?
+		// is it expecting a Mac terminal on the other end, where the baud is set there?
+		if (DIAG_ENABLE)
+		{
+			if(data == 0x0a)
+				printf("\n");
+			else
+				printf("%c", data & 0xff);
+		}
+	});
+
+	CLIO(config, m_clio, XTAL(50'000'000)/4);
+	m_clio->firq_cb().set([this] (int state) {
+		if (state)
+			m_maincpu->pulse_input_line(arm7_cpu_device::ARM7_FIRQ_LINE, m_maincpu->minimum_quantum_time());
+	});
+	m_clio->set_screen_tag("screen");
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_raw(X2_CLOCK_NTSC / 2, 1592, 254, 1534, 263, 22, 262);
@@ -180,7 +210,23 @@ void _3do_state::_3do_pal(machine_config &config)
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
-	TIMER(config, "timer_x16").configure_periodic(FUNC(_3do_state::timer_x16_cb), attotime::from_hz(12000)); // TODO: timing
+	MADAM(config, m_madam, XTAL(50'000'000)/4);
+	m_madam->diag_cb().set([] (u8 data) {
+		if (DIAG_ENABLE)
+		{
+			if(data == 0x0a)
+				printf("\n");
+			else
+				printf("%c",data & 0xff);
+		}
+	});
+
+	CLIO(config, m_clio, XTAL(50'000'000)/4);
+	m_clio->firq_cb().set([this] (int state) {
+		if (state)
+			m_maincpu->pulse_input_line(arm7_cpu_device::ARM7_FIRQ_LINE, m_maincpu->minimum_quantum_time());
+	});
+	m_clio->set_screen_tag("screen");
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_raw(X2_CLOCK_PAL / 2, 1592, 254, 1534, 263, 22, 262); // TODO: proper params
@@ -189,6 +235,8 @@ void _3do_state::_3do_pal(machine_config &config)
 	CDROM(config, "cdrom");
 }
 
+// TODO: split into separate CONS drivers
+// later models merges Clio + Madam into one fat chip named Anvil
 #if 0
 #define NTSC_BIOS \
 	ROM_REGION32_BE( 0x200000, "bios", 0 ) \

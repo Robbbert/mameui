@@ -29,6 +29,7 @@
 #include <clocale>
 #include <cstdarg>
 #include <cstdio>
+#include <locale>
 #include <optional>
 #include <sstream>
 #include <thread>
@@ -165,6 +166,9 @@ int main_(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	std::setlocale(LC_ALL, "");
+#if defined(_LIBCPP_VERSION) && defined(_UCRT)
+	std::locale::global(std::locale(""));
+#endif
 	std::vector<std::string> args = osd_get_command_line(argc, argv);
 
 	// use small output buffers on non-TTYs (i.e. pipes)
