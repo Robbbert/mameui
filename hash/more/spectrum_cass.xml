@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7564 -->
+<!-- Number of items in this list = 7589 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -539,6 +539,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="81587">
 				<rom name="-Daley Thompson's Super Test (1985)(Ocean Software Ltd)[cr [Cr](128K)[Cr].tap" size="81587" crc="a01349bc" sha1="7e9e3d41cfd357e1c49202749c65763d91caf401"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb7ba4d3a5056">
+		<description>-Dam Busters (1985)(US Gold Ltd)[cr [Cr][Cr]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37454">
+				<rom name="-Dam Busters (1985)(US Gold Ltd)[cr [Cr][Cr].tap" size="37454" crc="023d440b" sha1="fb7ba4d3a505654ecf7b426417fbf4f96cc9b62f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16049,6 +16059,206 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40920">
 				<rom name="D-Writer (19xx)(DaJe).tap" size="40920" crc="97f4aed6" sha1="9f86388d3f028d7a76f75fa96c43b64b47a4e2a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfacfbac1011f6">
+		<description>D.N.A. Warrior 128K (1989)(Cascade Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52639">
+				<rom name="D.N.A. Warrior 128K (1989)(Cascade Games).tap" size="52639" crc="86a9a591" sha1="facfbac1011f666b893465d33aa4feac5550989b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs18949602f4c2c">
+		<description>Da Vinci's Legacy - First Part 128K (2024)(Sequentia Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="67132">
+				<rom name="Da Vinci's Legacy - First Part 128K (2024)(Sequentia Soft).tap" size="67132" crc="77e84957" sha1="18949602f4c2cfbe1fda154189924b5530b8bdd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs630134754cfe1">
+		<description>Daga Oscura, La - Parte 1 ES v10 128K (2024-25)(Ejvg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="109618">
+				<rom name="Daga Oscura, La - Parte 1 ES v10 128K (2024-25)(Ejvg).tap" size="109618" crc="43f79037" sha1="630134754cfe16ba6f55dc94410a7ea7cda2326b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1762ad46e348">
+		<description>Daga Oscura, La - Parte 1 v9 ES 128K (2024)(Ejvg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="109637">
+				<rom name="Daga Oscura, La - Parte 1 v9 ES 128K (2024)(Ejvg).tap" size="109637" crc="dbbef1d9" sha1="a1762ad46e34897c58c57e0042950f0d966928d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d72b7fac5656">
+		<description>Daga Oscura, La - Parte 2 ES v10 128K (2024-25)(Ejvg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="111222">
+				<rom name="Daga Oscura, La - Parte 2 ES v10 128K (2024-25)(Ejvg).tap" size="111222" crc="28e4997f" sha1="5d72b7fac5656160f04e047f85b4188141b0ebce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs944dd6f6741d9">
+		<description>Daga Oscura, La - Parte 2 v9 ES 128K (2024)(Ejvg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="109952">
+				<rom name="Daga Oscura, La - Parte 2 v9 ES 128K (2024)(Ejvg).tap" size="109952" crc="3748fba1" sha1="944dd6f6741d9f40306cb946047dc40ddef6c2b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab2adadcd6678">
+		<description>Dalek Attack (128K) (1992)(Admiral)(Trainer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="119370">
+				<rom name="Dalek Attack (128K) (1992)(Admiral)(Trainer).tap" size="119370" crc="5b3cd868" sha1="ab2adadcd66783f02e17e1da2ffe3ae641eaacbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs655c1db0ab2c3">
+		<description>Daley Thompson's Decathlon (1984)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97700">
+				<rom name="Daley Thompson's Decathlon (1984)(Ocean Software).tap" size="97700" crc="b4dc2e69" sha1="655c1db0ab2c31ade461cf080b175b89b4e64085"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93ac7310828e6">
+		<description>Daley Thompson's Olympic Challenge 128K (1988)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="230865">
+				<rom name="Daley Thompson's Olympic Challenge 128K (1988)(Ocean).tap" size="230865" crc="4e9ebd7d" sha1="93ac7310828e676a6e96cbbebe5dc66e4568c0a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs61b38c4c0681f">
+		<description>Daley Thompson's Super-Test - Day 1 48K (1985)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48773">
+				<rom name="Daley Thompson's Super-Test - Day 1 48K (1985)(Ocean).tzx" size="48773" crc="d0c4cb08" sha1="61b38c4c0681f4547d95bb685bb2cdf9f43a7281"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc0b9fa7819d5c">
+		<description>Daley Thompson's Super-Test - Day 2 48K (1985)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48986">
+				<rom name="Daley Thompson's Super-Test - Day 2 48K (1985)(Ocean).tzx" size="48986" crc="6e80d6e6" sha1="c0b9fa7819d5c8dfde641c5c5f2348d4ab947b7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs62804e60498b3">
+		<description>Daley Thompson's Super-Test 128K (1986)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128286">
+				<rom name="Daley Thompson's Super-Test 128K (1986)(Ocean).tzx" size="128286" crc="7b9abadf" sha1="62804e60498b351cc10a72c0f3ae5e0d6f38ad48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs37ef11cf6f6ad">
+		<description>Daley Thompson's Supertest (1985)(Ocean Software)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128381">
+				<rom name="Daley Thompson's Supertest (1985)(Ocean Software)(128k).tap" size="128381" crc="e8ab5d26" sha1="37ef11cf6f6adf7296d0c9f0576caefbe5761894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1e33affa9a5ff">
+		<description>Daley Thompson's Supertest (1985)(Ocean Software)[a](128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128228">
+				<rom name="Daley Thompson's Supertest (1985)(Ocean Software)[a](128K).tap" size="128228" crc="0c1c5ad6" sha1="1e33affa9a5ffb80ccc77018301eab7d5b67d77a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc178e16cc195a">
+		<description>Dam Busters, The 48K (1985)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48993">
+				<rom name="Dam Busters, The 48K (1985)(U.S. Gold).tap" size="48993" crc="c43163e6" sha1="c178e16cc195a7729e68c940f1188f9841708237"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75ee4a6f11cb9">
+		<description>Dama (19xx)(-)(Ru)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8520">
+				<rom name="Dama (19xx)(-)(Ru).tap" size="8520" crc="54fc15d0" sha1="75ee4a6f11cb90e7d023950ab4df3755aeec397e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd3e96c3f3bbea">
+		<description>Damatta (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30777">
+				<rom name="Damatta (19xx)(-).tap" size="30777" crc="e6f5c3ea" sha1="d3e96c3f3bbea83b29e9381c7886dd40cc0c64da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs396b5ee4ec3ca">
+		<description>Dame (19xx)(-)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7412">
+				<rom name="Dame (19xx)(-)(De).tap" size="7412" crc="051f7188" sha1="396b5ee4ec3ca042446dbff1c908a31bb6b91c72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf49ebc0504ed4">
+		<description>Dame (19xx)(-)(De)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5211">
+				<rom name="Dame (19xx)(-)(De)[a].tap" size="5211" crc="355b83f1" sha1="f49ebc0504ed4703e4375ef7f0b3340076813bfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0c7f4f1667557">
+		<description>Dammen (1984)(Book)(Nl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7561">
+				<rom name="Dammen (1984)(Book)(Nl).tap" size="7561" crc="f5da9bfc" sha1="0c7f4f16675571016319f08291e1cb5cf5557519"/>
 			</dataarea>
 		</part>
 	</software>
@@ -66702,6 +66912,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbcfe134153c30">
+		<description>_D-Day (1984)(Games Workshop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="129464">
+				<rom name="_D-Day (1984)(Games Workshop).tap" size="129464" crc="89860625" sha1="bcfe134153c309e6d0b8b86bf958310e0836b155"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsda2eed3c334ce">
+		<description>_D-Day (1984)(Games Workshop)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97205">
+				<rom name="_D-Day (1984)(Games Workshop)[a].tap" size="97205" crc="4887faf8" sha1="da2eed3c334ce7f831c714af6db06e3b0b872d1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs001ad3389526b">
+		<description>_Daley Thompson's Decathlon - Day 1 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50434">
+				<rom name="_Daley Thompson's Decathlon - Day 1 48K (1984)(Ocean).tzx" size="50434" crc="d1b8e51b" sha1="001ad3389526b10adcc7ffca297c739de7fdef3d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5c428bf8b9657">
 		<description>_Daley Thompson's Decathlon - Day 1</description>
 		<year>????</year>
@@ -66709,6 +66949,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50550">
 				<rom name="_Daley Thompson's Decathlon - Day 1.tzx" size="50550" crc="cdab722b" sha1="5c428bf8b9657e60e9c2744dc7abed39bac3c651"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5ab1e1336eea0">
+		<description>_Daley Thompson's Decathlon - Day 2 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="50434">
+				<rom name="_Daley Thompson's Decathlon - Day 2 48K (1984)(Ocean).tzx" size="50434" crc="da238cb2" sha1="5ab1e1336eea0a1d9693344fced0885bfe72a39c"/>
 			</dataarea>
 		</part>
 	</software>
