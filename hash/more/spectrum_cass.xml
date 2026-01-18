@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7589 -->
+<!-- Number of items in this list = 7614 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -519,6 +519,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="62824">
 				<rom name="-Continental Circus (1987)(Virgin Mastertronic Ltd)[cr [Cr Mata + Kamilsoft][t +4](128K)[Cr Mata + Kamilsoft].tap" size="62824" crc="e579b320" sha1="28b7420062230798ee327fc9d80669b016b651e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9c5ea5163e51f">
+		<description>-Cyrus 2 Chess (1986)(Alligata Software Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30197">
+				<rom name="-Cyrus 2 Chess (1986)(Alligata Software Ltd)(128K).tap" size="30197" crc="0fe0f3c9" sha1="9c5ea5163e51fc44f469a765ca73505d31b2bff3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16012,13 +16022,163 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs1babdd8453084">
+		<description>Custerd's Quest (1986)(Alpha Omega Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40959">
+				<rom name="Custerd's Quest (1986)(Alpha Omega Software).tap" size="40959" crc="d3baf0f3" sha1="1babdd84530843ec5a7428f92384575f7a7b5555"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs922bcaf19c709">
+		<description>Cyber Rats (1982)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="7975">
+				<rom name="Cyber Rats (1982)(Silversoft).tap" size="7975" crc="9d0c1ad1" sha1="922bcaf19c709f89604146c49cf30d0bc9390b57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs372fd65444c7b">
+		<description>Cyber Zone (1984)(Crystal Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18745">
+				<rom name="Cyber Zone (1984)(Crystal Computing).tap" size="18745" crc="e1d371e3" sha1="372fd65444c7b259315eabbfd206abe3bd7b0d19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7452b3a14a600">
+		<description>Cyberball - Football in the 21st Century 128K (1990)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128918">
+				<rom name="Cyberball - Football in the 21st Century 128K (1990)(Domark).tap" size="128918" crc="c9c15d0a" sha1="7452b3a14a6003fbfa53ce9d7bb1cefa50a7d57c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8ede7effad40b">
+		<description>Cyberbig 48K-128K (1989)(Animagic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59428">
+				<rom name="Cyberbig 48K-128K (1989)(Animagic).tap" size="59428" crc="87d72301" sha1="8ede7effad40bd21602a52fafbc273a4357ddbc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsede7eaadf8682">
+		<description>Cybermania 48K (2016)(Payndz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29277">
+				<rom name="Cybermania 48K (2016)(Payndz).tap" size="29277" crc="cae44982" sha1="ede7eaadf8682ebda402788ee3050d2feb5f6426"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35ad29e6bd112">
+		<description>Cybernoid (1987)(Hewson Consultants Ltd)(128K)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46731">
+				<rom name="Cybernoid (1987)(Hewson Consultants Ltd)(128K).tap" size="46731" crc="965806fc" sha1="35ad29e6bd11262c43c8b691b58cf9f265d81990"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs639c283c6bbd0">
+		<description>Cybernoid - The Fighting Machine 48K-128K (1988)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45064">
+				<rom name="Cybernoid - The Fighting Machine 48K-128K (1988)(Hewson Consultants).tzx" size="45064" crc="379d4fc3" sha1="639c283c6bbd0811c00061ddda2f01d7be238fad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaed4265e8253f">
+		<description>Cybernoid II (1988)(Hewson Consultants)(128k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48033">
+				<rom name="Cybernoid II (1988)(Hewson Consultants)(128k).tap" size="48033" crc="5d933be6" sha1="aed4265e8253fa01fab9f151637528084a596162"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs31316e8b5a451">
+		<description>Cybernoid II (1988)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48032">
+				<rom name="Cybernoid II (1988)(Hewson Consultants).tap" size="48032" crc="a66dd375" sha1="31316e8b5a451ee146be5924a667f2ee1e2c13f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd280517e576f0">
+		<description>Cybernoid II (demo) (1988)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40320">
+				<rom name="Cybernoid II (demo) (1988)(Hewson Consultants).tap" size="40320" crc="a084c042" sha1="d280517e576f0073f6244bc0bb34be88c4d3797a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsffcf20a23b1ca">
-		<description>Cybernoid 2</description>
+		<description>Cybernoid II - The Revenge 128K (1988)(Hewson Consultants)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48061">
-				<rom name="Cybernoid 2.tzx" size="48061" crc="d1269907" sha1="ffcf20a23b1ca136ac2edc6693de386e4f88f8db"/>
+				<rom name="Cybernoid II - The Revenge 128K (1988)(Hewson Consultants).tzx" size="48061" crc="d1269907" sha1="ffcf20a23b1ca136ac2edc6693de386e4f88f8db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscae109ff260bd">
+		<description>Cybernoid II - The Revenge 48K (1988)(Hewson Consultants)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48060">
+				<rom name="Cybernoid II - The Revenge 48K (1988)(Hewson Consultants).tzx" size="48060" crc="aab780b1" sha1="cae109ff260bdee3d8be2fa4a838f0facd4f62e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4612f90373327">
+		<description>Cybo Run (1984)(Walltone Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26334">
+				<rom name="Cybo Run (1984)(Walltone Software).tap" size="26334" crc="261cfafb" sha1="4612f90373327e5552f828a33277440e8007e1fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc888769a44eee">
+		<description>Cyclone (1985)(Vortex Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48230">
+				<rom name="Cyclone (1985)(Vortex Software).tap" size="48230" crc="4726857f" sha1="c888769a44eee81117df26cd0853244e3b28403f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4d6d80131cfb5">
+		<description>Cyclone (1985)(Vortex Software)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48533">
+				<rom name="Cyclone (1985)(Vortex Software)[a].tap" size="48533" crc="980d9d6e" sha1="4d6d80131cfb514c526d937fa664b9dcd1143682"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16029,6 +16189,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48312">
 				<rom name="Cyclone.tzx" size="48312" crc="7b3d2971" sha1="277ae255c311759731b2a96af2bdd1e1b45644df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc16ccab6ce5d">
+		<description>Cyclus Part 1 (2021)(Miguetelo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44736">
+				<rom name="Cyclus Part 1 (2021)(Miguetelo).tap" size="44736" crc="36b8fe17" sha1="cc16ccab6ce5df5cf161cbd0c895d92e39ab4337"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs00fb90979ed4c">
+		<description>Cyclus Part 2 (2021)(Miguetelo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44007">
+				<rom name="Cyclus Part 2 (2021)(Miguetelo).tap" size="44007" crc="534ecbe7" sha1="00fb90979ed4cac3a5961c5c2d358f16f56206cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs76fcbd9a88d19">
+		<description>Cygnus - Alpha 128K (2020)(Steve A.J. Broad)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="52324">
+				<rom name="Cygnus - Alpha 128K (2020)(Steve A.J. Broad).tap" size="52324" crc="830a0b99" sha1="76fcbd9a88d19035ff1324cee3dcf3703c36fd75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsccca50afb703d">
+		<description>Cyrus IS Chess (1983)(Psion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16785">
+				<rom name="Cyrus IS Chess (1983)(Psion).tap" size="16785" crc="5a65f3f7" sha1="ccca50afb703d406a5a642d2b279230faae5c0d7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -66899,6 +67099,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="61937">
 				<rom name="_Crosswize.tzx" size="61937" crc="436b87bf" sha1="1c2088469a44ccafafd21ab5d823dd0e0b498a55"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs464251af229c2">
+		<description>_Custard Pie (19xx)(-)(Unk-Lang)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5951">
+				<rom name="_Custard Pie (19xx)(-)(Unk-Lang).tap" size="5951" crc="8c96f0d2" sha1="464251af229c20d5236ef1b5018070ea3e4c6f14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs93b5a40d9f8e5">
+		<description>_Cyberun 48K (1986)(Ultimate Play The Game)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47506">
+				<rom name="_Cyberun 48K (1986)(Ultimate Play The Game).tap" size="47506" crc="8ffbbf90" sha1="93b5a40d9f8e5aa47e232250f4f0ca51de1d3106"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs98b0d5561b747">
+		<description>_Cyberun, The (1985)(Ultimate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47506">
+				<rom name="_Cyberun, The (1985)(Ultimate).tap" size="47506" crc="12ad2fb1" sha1="98b0d5561b747d034af704505dfc6848f17912d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc9c0ea2399d76">
+		<description>_Cyberun, The (1985)(Ultimate)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47616">
+				<rom name="_Cyberun, The (1985)(Ultimate)[a].tap" size="47616" crc="739a5385" sha1="c9c0ea2399d76e4e1c4f934d7fadc46bc54b5604"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d798093fa160">
+		<description>_Cyrox (1986)(The Power House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42754">
+				<rom name="_Cyrox (1986)(The Power House).tap" size="42754" crc="fcbd0f97" sha1="8d798093fa16078070690f1472d889ff97a42b2d"/>
 			</dataarea>
 		</part>
 	</software>

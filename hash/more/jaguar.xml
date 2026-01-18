@@ -1,7 +1,47 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 46 -->
+<!-- Number of items in this list = 66 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
+	<software name="jagcabd3fdaf1a7c">
+		<description>(demo)Mel O Dee's (2023-12)(Resistance)(PAL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(demo)Mel O Dee's (2023-12)(Resistance)(PAL).j64" size="2097152" crc="4499642b" sha1="cabd3fdaf1a7cc342b46a39961e19807d5d17b6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag7789d69bf491f">
+		<description>(demo)Movin' Saw Tooth (2023-12)(42Bastian)[Model K]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="(demo)Movin' Saw Tooth (2023-12)(42Bastian)[Model K].j64" size="32768" crc="1b840cf0" sha1="7789d69bf491f28665a98f73d9adc82a3bd72454"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagc5716f4bc6a38">
+		<description>(demo)Movin'Traps (2023-12)(42Bastian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="(demo)Movin'Traps (2023-12)(42Bastian).j64" size="32768" crc="05a839ae" sha1="c5716f4bc6a386d9a13d54454eb0ea2f4adfa124"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagab6eb848d04e0">
+		<description>(demo)Outrun</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="(demo)Outrun.j64" size="1048576" crc="27779597" sha1="ab6eb848d04e019379dad52caac72004c4f81800"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jagc9b60083d7aea">
 		<description>(demo)Plasmosis (2024-03)(42Bastian)</description>
 		<year>????</year>
@@ -122,6 +162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jagd9d50c4883d7d">
+		<description>(sound-only)Music DEMO (2002)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(sound-only)Music DEMO (2002).j64" size="2097152" crc="76ee9bb7" sha1="d9d50c4883d7d42417054232cb75b8f2e0145047"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag5fae5950d3692">
 		<description>(sound-only)PAULA Preview DEMO (2009)</description>
 		<year>????</year>
@@ -159,6 +209,156 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(sound-only)Treasure_Island_Dizzy.j64" size="2097152" crc="7a08f9e1" sha1="7d5ad8c7c1b0ae0b89b06b01a9a397cbf5689fe8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag0293f1963429c">
+		<description>Klax</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Klax.j64" size="1048576" crc="85510528" sha1="0293f1963429c5452ca2c6a2f9d3ef373cd66378"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag054e42c872449">
+		<description>Kobayashi Maru (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kobayashi Maru (World) (Aftermarket) (Unl).j64" size="2097152" crc="cb675cb3" sha1="054e42c872449b18ccf597e34a01c31ee17d605c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jageab82974662da">
+		<description>Kobayashi Maru Final (World) (Digital) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kobayashi Maru Final (World) (Digital) (Aftermarket) (Unl).j64" size="2097152" crc="af180db0" sha1="eab82974662da3c4e52089bc175d3a2b9ebf8eb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag5778a4c4baa5d">
+		<description>Llamatron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Llamatron.j64" size="524288" crc="60ee9273" sha1="5778a4c4baa5d8528cb1f4f42aae2a57bb35a1d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag104476a48d870">
+		<description>Mad_Bodies_(2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mad_Bodies_(2008).j64" size="2097152" crc="a7e01fef" sha1="104476a48d8705f78b95eb73cce967aca8239599"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jage3beb1a9568d3">
+		<description>Mandelbrot Demo (2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mandelbrot Demo (2008).j64" size="32768" crc="bb109167" sha1="e3beb1a9568d3d0cc4bff23b63be80489898b093"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag7e26d3cff0bd1">
+		<description>Martian Attack (2007)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Martian Attack (2007).j64" size="1048576" crc="bc3b32bf" sha1="7e26d3cff0bd1465331e5cc4ee7307da39f60f2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag5b227f989e81f">
+		<description>MemDump v1.1 (2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MemDump v1.1 (2008).j64" size="32768" crc="ee76ea09" sha1="5b227f989e81f7bb9465e184b7daa229e29b06fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagbd86b43068dec">
+		<description>Mercenary_(No_Enter)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mercenary_(No_Enter).j64" size="524288" crc="4a929453" sha1="bd86b43068dec416f46ebc3987e8f6f071402eaa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag22d505ddbf7be">
+		<description>Metro_Cross</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Metro_Cross.j64" size="2097152" crc="4f008630" sha1="22d505ddbf7bee58ff356a1389fbd1cbafb01e86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag2d5a6b9e32ad3">
+		<description>MK1_DEMO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="MK1_DEMO.j64" size="2097152" crc="98195dcf" sha1="2d5a6b9e32ad345840d65a1951f353161d2101d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag4cee32f21204f">
+		<description>Moon_Patrol_(Atari_ST)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Moon_Patrol_(Atari_ST).j64" size="1048576" crc="cf7b2e99" sha1="4cee32f21204f36b0f0e69f94de392ab3955e39f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag8b51f89da8052">
+		<description>Ninja_Mission_(Atari_ST)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Ninja_Mission_(Atari_ST).j64" size="2097152" crc="e531b833" sha1="8b51f89da80525b8cf4e2762b405e2826f628456"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag7502d4db5bca1">
+		<description>nyanjag_stereo_jiffi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="nyanjag_stereo_jiffi.j64" size="2097152" crc="8175e75d" sha1="7502d4db5bca126b0f077ab908e83e0a5497ef8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagd9626311fe481">
+		<description>OSMOZYS (2007)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="OSMOZYS (2007).j64" size="2097152" crc="3463527f" sha1="d9626311fe481b1bdb22de9b750e122061412a20"/>
 			</dataarea>
 		</part>
 	</software>
