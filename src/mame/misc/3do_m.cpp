@@ -1,4 +1,4 @@
-// license:LGPL-2.1+
+// license:BSD-3-Clause
 // copyright-holders:Angelo Salese, Wilbert Pol
 /*
 
@@ -78,8 +78,15 @@ uint8_t _3do_state::nvarea_r(offs_t offset) { return m_nvmem[offset]; }
 void _3do_state::nvarea_w(offs_t offset, uint8_t data) { m_nvmem[offset] = data; }
 
 
+void _3do_state::m_slow2_init( void )
+{
+	m_slow2.cg_input = 0;
+	// NOTE: remove the -1 to enter into diag mode
+	m_slow2.cg_output = 0x00000005 - 1;
+}
 
-// TODO: this connects to Z85C30, with Mac LF-to-CR newline conversion
+
+// TODO: (update for below) this connects to Z85C30, with Mac LF-to-CR newline conversion
 /*
     I have no idea what piece of hardware this is. Possibly some kind of communication hardware using shift registers.
 
@@ -142,12 +149,13 @@ void _3do_state::slow2_w(offs_t offset, uint32_t data, uint32_t mem_mask)
 
 
 
+// NOTE: TC528267 emulation
 uint32_t _3do_state::svf_r(offs_t offset)
 {
 	uint32_t addr = ( offset & ( 0x07fc / 4 ) ) << 9;
 	uint32_t *p = m_vram + addr;
 
-	logerror( "%08X: SVF read offset = %08X\n", m_maincpu->pc(), offset*4 );
+	logerror( "%08X: SVF read offset = %08X\n", m_maincpu->pc(), offset * 4 );
 
 	switch( offset & ( 0xE000 / 4 ) )
 	{
@@ -162,6 +170,7 @@ uint32_t _3do_state::svf_r(offs_t offset)
 	case 0x4000/4:      /* Flash write */
 		break;
 	case 0x6000/4:      /* CAS before RAS refresh/reset (CBR). Used to initialize VRAM mode during boot. */
+		// TODO: reads here at boot
 		break;
 	}
 	return 0;
@@ -193,6 +202,8 @@ void _3do_state::svf_w(offs_t offset, uint32_t data, uint32_t mem_mask)
 		{
 			uint32_t keep_bits = data ^ 0xffffffff;
 			uint32_t new_bits = m_svf.color & data;
+
+			logerror("VRAM flash write %08x color %08x\n", addr, new_bits);
 
 			for ( int i = 0; i < 512; i++ )
 			{
@@ -230,68 +241,4 @@ void _3do_state::video_start()
 //  }
 }
 
-
-// TODO: move to madam
-uint32_t _3do_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
-{
-	uint32_t *source_p = m_vram + 0x1c0000 / 4;
-
-	for ( int y = 0; y < 120; y++ )
-	{
-		uint32_t  *dest_p0 = &bitmap.pix(22 + y * 2, 254 );
-		uint32_t  *dest_p1 = &bitmap.pix(22 + y * 2 + 1, 254 );
-
-		for ( int x = 0; x < 320; x++ )
-		{
-			/* Every dword contains two pixels, upper word is top pixel, lower is bottom. */
-			uint32_t lower = *source_p & 0xffff;
-			uint32_t upper = ( *source_p >> 16 ) & 0xffff;
-			int r, g, b;
-
-			/* Format is RGB555 */
-			r = (upper & 0x7c00) >> 10;
-			g = (upper & 0x03e0) >> 5;
-			b = (upper & 0x001f) >> 0;
-			r = (r << 3) | (r & 7);
-			g = (g << 3) | (g & 7);
-			b = (b << 3) | (b & 7);
-
-			dest_p0[0] = r << 16 | g << 8 | b;
-			dest_p0[1] = r << 16 | g << 8 | b;
-			dest_p0[2] = r << 16 | g << 8 | b;
-			dest_p0[3] = r << 16 | g << 8 | b;
-
-			r = (lower & 0x7c00) >> 10;
-			g = (lower & 0x03e0) >> 5;
-			b = (lower & 0x001f) >> 0;
-			r = (r << 3) | (r & 7);
-			g = (g << 3) | (g & 7);
-			b = (b << 3) | (b & 7);
-
-			dest_p1[0] = r << 16 | g << 8 | b;
-			dest_p1[1] = r << 16 | g << 8 | b;
-			dest_p1[2] = r << 16 | g << 8 | b;
-			dest_p1[3] = r << 16 | g << 8 | b;
-
-			source_p++;
-			dest_p0 += 4;
-			dest_p1 += 4;
-		}
-	}
-
-	return 0;
-}
-
-/*
- *
- * Machine Inits
- *
- */
-
-
-void _3do_state::m_slow2_init( void )
-{
-	m_slow2.cg_input = 0;
-	m_slow2.cg_output = 0x00000005 - 1;
-}
 

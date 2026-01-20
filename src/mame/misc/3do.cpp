@@ -1,4 +1,4 @@
-// license:LGPL-2.1+
+// license:BSD-3-Clause
 // copyright-holders:Angelo Salese, Wilbert Pol
 /**************************************************************************************************
 
@@ -145,6 +145,7 @@ void _3do_state::main_mem(address_map &map)
 //      map(0x0370'0000, 0X037E'FFFF) SRAM
 //      map(0X037F'FF00, 0X037F'FF0B) link data/address/FIFO
 //      map(0X037F'FF0C, 0X037F'FF0F) joysticks
+//      map(0x037F'0000, 0x0373'FFFF) debug ROM
 //  map(0x0380'0000, 0x03??'????) trace big RAM
 }
 
@@ -206,6 +207,7 @@ void _3do_state::green_config(machine_config &config)
 		space.write_dword(offset, data, 0xffff'ffff);
 	});
 	m_madam->irq_dply_cb().set(m_clio, FUNC(clio_device::dply_w));
+	m_madam->set_amy_tag("amy");
 
 	CLIO(config, m_clio, XTAL(50'000'000)/4);
 	m_clio->firq_cb().set([this] (int state) {
@@ -232,16 +234,21 @@ void _3do_state::green_config(machine_config &config)
 		m_cdrom->enable_w(1);
 		m_cdrom->cmd_w(1);
 	});
+	m_clio->vsync_cb().set(m_madam, FUNC(madam_device::vdlp_start_w));
+	m_clio->hsync_cb().set(m_madam, FUNC(madam_device::vdlp_continue_w));
+
+	AMY(config, m_amy, XTAL(50'000'000)/4);
+	m_amy->set_screen("screen");
 
 	CR560B(config, m_cdrom, 0);
 	m_cdrom->add_route(0, "speaker", 1.0, 0);
 	m_cdrom->add_route(1, "speaker", 1.0, 1);
 	m_cdrom->set_interface("cdrom");
-//	m_cdrom->scor_cb().set(m_clio, FUNC(clio_device::xbus...)).invert();
-//	m_cdrom->stch_cb().set(m_clio, FUNC(clio_device::xbus...)).invert();
-//	m_cdrom->sten_cb().set(m_clio, FUNC(clio_device::xbus...));
+//  m_cdrom->scor_cb().set(m_clio, FUNC(clio_device::xbus...)).invert();
+//  m_cdrom->stch_cb().set(m_clio, FUNC(clio_device::xbus...)).invert();
+//  m_cdrom->sten_cb().set(m_clio, FUNC(clio_device::xbus...));
 	m_cdrom->sten_cb().set(m_clio, FUNC(clio_device::xbus_int_w)).invert();
-//	m_cdrom->drq_cb().set(m_clio, FUNC(clio_device::xbus...));
+//  m_cdrom->drq_cb().set(m_clio, FUNC(clio_device::xbus...));
 
 	DAC_16BIT_R2R_TWOS_COMPLEMENT(config, m_dac[0], 0).add_route(ALL_OUTPUTS, "speaker", 1.0, 0);
 	DAC_16BIT_R2R_TWOS_COMPLEMENT(config, m_dac[1], 0).add_route(ALL_OUTPUTS, "speaker", 1.0, 1);
@@ -255,6 +262,7 @@ void _3do_state::_3do(machine_config &config)
 	/* Basic machine hardware */
 	ARM7_BE(config, m_maincpu, XTAL(50'000'000)/4); // DA86C06020XV
 	m_maincpu->set_addrmap(AS_PROGRAM, &_3do_state::main_mem);
+	m_maincpu->set_dasm_override(std::function(&portfolio_dasm_override), "portfolio_dasm_override");
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
@@ -263,8 +271,7 @@ void _3do_state::_3do(machine_config &config)
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	// TODO: proper params (mostly running in interlace mode)
 	m_screen->set_raw(X2_CLOCK_NTSC / 2, 1592, 254, 1534, 263, 22, 262);
-	m_screen->set_screen_update(FUNC(_3do_state::screen_update));
-	m_screen->screen_vblank().set(m_clio, FUNC(clio_device::vint1_w));
+	m_screen->set_screen_update(m_amy, FUNC(amy_device::screen_update));
 
 	SPEAKER(config, "speaker", 2).front();
 }
@@ -274,6 +281,7 @@ void _3do_state::_3do_pal(machine_config &config)
 	/* Basic machine hardware */
 	ARM7_BE(config, m_maincpu, XTAL(50'000'000)/4);
 	m_maincpu->set_addrmap(AS_PROGRAM, &_3do_state::main_mem);
+	m_maincpu->set_dasm_override(std::function(&portfolio_dasm_override), "portfolio_dasm_override");
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
@@ -281,9 +289,8 @@ void _3do_state::_3do_pal(machine_config &config)
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	// TODO: proper params
-	m_screen->set_raw(X2_CLOCK_PAL / 2, 1592, 254, 1534, 263, 22, 262);
-	m_screen->set_screen_update(FUNC(_3do_state::screen_update));
-	m_screen->screen_vblank().set(m_clio, FUNC(clio_device::vint1_w));
+	m_screen->set_raw(X2_CLOCK_PAL / 2, 1592, 254, 1534, 313, 22, 312);
+	m_screen->set_screen_update(m_amy, FUNC(amy_device::screen_update));
 
 	SPEAKER(config, "speaker", 2).front();
 }

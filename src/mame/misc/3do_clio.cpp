@@ -1,4 +1,4 @@
-// license:LGPL-2.1+
+// license:BSD-3-Clause
 // copyright-holders:Angelo Salese, Wilbert Pol
 
 #include "emu.h"
@@ -27,6 +27,8 @@ clio_device::clio_device(const machine_config &mconfig, const char *tag, device_
 	, m_screen(*this, finder_base::DUMMY_TAG)
 	, m_dspp(*this, "dspp")
 	, m_firq_cb(*this)
+	, m_vsync_cb(*this)
+	, m_hsync_cb(*this)
 	, m_xbus_read_cb(*this, 0xff)
 	, m_xbus_write_cb(*this)
 	, m_dac_l(*this)
@@ -37,9 +39,9 @@ clio_device::clio_device(const machine_config &mconfig, const char *tag, device_
 void clio_device::device_add_mconfig(machine_config &config)
 {
 	DSPP(config, m_dspp, DERIVED_CLOCK(1, 1));
-//	m_dspp->int_handler().set([this] (int state) { printf("%d\n", state); });
-//	m_dspp->dma_read_handler().set(FUNC(m2_bda_device::read_bus8));
-//	m_dspp->dma_write_handler().set(FUNC(m2_bda_device::write_bus8));
+//  m_dspp->int_handler().set([this] (int state) { printf("%d\n", state); });
+//  m_dspp->dma_read_handler().set(FUNC(m2_bda_device::read_bus8));
+//  m_dspp->dma_write_handler().set(FUNC(m2_bda_device::write_bus8));
 }
 
 void clio_device::device_start()
@@ -52,6 +54,7 @@ void clio_device::device_start()
 //  m_revision = 0x04000000;
 	m_expctl = 0x80;    /* ARM has the expansion bus */
 
+	m_scan_timer = timer_alloc(FUNC(clio_device::scan_timer_cb), this);
 	m_system_timer = timer_alloc(FUNC(clio_device::system_timer_cb), this);
 	m_dac_timer = timer_alloc(FUNC(clio_device::dac_update_cb), this);
 	m_dac_timer->adjust(attotime::from_hz(16.9345));
@@ -70,16 +73,10 @@ void clio_device::device_reset()
 	m_irq0_enable = m_irq1_enable = 0;
 	m_irq0 = m_irq1 = 0;
 	m_timer_ctrl = 0;
-	m_system_timer->adjust(attotime::never);
-}
-
-void clio_device::vint1_w(int state)
-{
-	// currently used by the BIOS to set periodic stuff up (namely watchdog)
-	if (state && m_screen->frame_number() & 1)
-	{
-		request_fiq(1 << 1, 0);
-	}
+	m_vint0 = m_vint1 = 0xffff'ffff;
+	m_slack = 336;
+	m_system_timer->adjust(attotime::from_ticks(m_slack, this->clock()));
+	m_scan_timer->adjust(m_screen->time_until_pos(0), 0);
 }
 
 void clio_device::dply_w(int state)
@@ -97,10 +94,10 @@ void clio_device::xbus_int_w(int state)
 
 	//if ((m_sel & 0x0f) == 0)
 	//{
-	//	if (state)
-	//		m_poll |= 0x10;
-	//	else
-	//		m_poll &= ~0x10;
+	//  if (state)
+	//      m_poll |= 0x10;
+	//  else
+	//      m_poll &= ~0x10;
 	//}
 }
 
@@ -237,7 +234,7 @@ void clio_device::map(address_map &map)
 		})
 	);
 
-//	map(0x005c, 0x005f) unknown if used at all
+//  map(0x005c, 0x005f) unknown if used at all
 	map(0x0060, 0x0067).lrw32(
 		NAME([this] () { return m_irq1; }),
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
@@ -329,7 +326,7 @@ void clio_device::map(address_map &map)
 			else
 				m_timer_ctrl |= mask;
 			LOGTIMER("timer control %s: %08x & %08x (shift=%d)\n", offset & 1 ? "clear" : "set", data, mem_mask, shift);
-			m_system_timer->adjust(m_timer_ctrl ? attotime::from_ticks(64, this->clock()) : attotime::never);
+			//m_system_timer->adjust(m_timer_ctrl ? attotime::from_ticks(64, this->clock()) : attotime::never);
 		})
 	);
 	map(0x0220, 0x0223).lrw32(
@@ -337,12 +334,17 @@ void clio_device::map(address_map &map)
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
 			LOG("slack: %08x & %08x\n", data, mem_mask);
 			COMBINE_DATA(&m_slack);
+			m_slack &= 0x7ff;
+			// NOTE: Kernel forbids slack times less than 64 anyway
+			// TODO: is it really +64?
+			m_slack = std::max<unsigned>(m_slack, 64);
+			m_system_timer->adjust(attotime::from_ticks(m_slack, this->clock()));
 		})
 	);
 
-//	map(0x0300, 0x0303) FIFO init
-//	map(0x0304, 0x0307) DMA request enable
-//	map(0x0308, 0x030b) DMA request disable
+//  map(0x0300, 0x0303) FIFO init
+//  map(0x0304, 0x0307) DMA request enable
+//  map(0x0308, 0x030b) DMA request disable
 	// NOTE: not readable on Red revision apparently
 	map(0x0304, 0x030b).lrw32(
 		NAME([this] () { return m_dma_enable; }),
@@ -354,7 +356,7 @@ void clio_device::map(address_map &map)
 			LOG("DMA request %s: %08x & %08x\n", offset ? "clear" : "set", data, mem_mask);
 		})
 	);
-//	map(0x0380, 0x0383) FIFO status
+//  map(0x0380, 0x0383) FIFO status
 
 	// XBus
 	map(0x0400, 0x0407).lrw32(
@@ -433,12 +435,14 @@ void clio_device::map(address_map &map)
 		NAME([this] () { return m_xbus_read_cb(m_sel & 0x8f); }),
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) { m_xbus_write_cb(m_sel & 0x8f, data & 0xff); })
 	);
-//	map(0x05c0, 0x05ff) Data
+//  map(0x05c0, 0x05ff) Data
 
 	// TODO: should really map these directly in DSPP core
-//	map(0x17d0, 0x17d3) Semaphore
-//	map(0x17d4, 0x17d7) Semaphore ACK
-//	map(0x17e0, 0x17ff) DSPP DMA and state
+//  map(0x17d0, 0x17d3) Semaphore
+	// HACK: for 3do_gdo101
+	map(0x17d0, 0x17d3).lr32(NAME([] () { return 0x0004'0000; }));
+//  map(0x17d4, 0x17d7) Semaphore ACK
+//  map(0x17e0, 0x17ff) DSPP DMA and state
 	map(0x17e8, 0x17eb).lw32(
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
 			// reset?
@@ -466,7 +470,7 @@ void clio_device::map(address_map &map)
 			LOGDSPP("DSPP $17fc %08x & %08x\n", data, mem_mask);
 			m_dspp->write(0x6070 >> 2, data);
 			//if (data & 1)
-			//	machine().debug_break();
+			//  machine().debug_break();
 		})
 	);
 	// DSPP N paths (code)
@@ -571,6 +575,39 @@ void clio_device::request_fiq(uint32_t irq_req, uint8_t type)
 	}
 }
 
+// TODO: this actually generates from Amy not from Clio
+TIMER_CALLBACK_MEMBER(clio_device::scan_timer_cb)
+{
+	int scanline = param;
+
+	// TODO: does it triggers on odd fields only?
+	if (scanline == m_vint1 && m_screen->frame_number() & 1)
+	{
+		request_fiq(1 << 1, 0);
+	}
+
+	// 22, 262
+	if (scanline == 0)
+	{
+		m_vsync_cb(1);
+	}
+	else if (scanline == 22 - 6)
+	{
+		m_vsync_cb(0);
+	}
+	else if (scanline > 22 - 6)
+	{
+		m_hsync_cb(1);
+		m_hsync_cb(0);
+	}
+
+	scanline ++;
+	scanline %= m_screen->height();
+
+	m_scan_timer->adjust(m_screen->time_until_pos(scanline), scanline);
+}
+
+
 /*
  * x--- "flablode" flag (unknown, is it even implemented?)
  * -x-- cascade flag
@@ -619,8 +656,9 @@ TIMER_CALLBACK_MEMBER( clio_device::system_timer_cb )
 		}
 	}
 
-	// TODO: 64 or from spare register?
-	m_system_timer->adjust(m_timer_ctrl ? attotime::from_ticks(64, this->clock()) : attotime::never);
+	// Opera specification goes this lengthy explaination about "64" being the unit of time
+	// but 3do_fc2 and 3do_gdo101 won't boot with a timer tick this small ...
+	m_system_timer->adjust(attotime::from_ticks(m_slack, this->clock()));
 }
 
 TIMER_CALLBACK_MEMBER(clio_device::dac_update_cb)
