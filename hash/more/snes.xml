@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3976 -->
+<!-- Number of items in this list = 3978 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7499,6 +7499,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Dossun! Ganseki Battle T-Eng (2000)(Aeon Genesis).sfc" size="1048576" crc="223d17d0" sha1="95dd00232b92ede517e6ea671c5942acc4a63b82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsdce3807e41a00">
+		<description>Dossun! Ganseki Battle T-Eng v1.1 (2026)(Stoneboat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Dossun! Ganseki Battle T-Eng v1.1 (2026)(Stoneboat).sfc" size="2097152" crc="1111d176" sha1="dce3807e41a00e34600e6fca1155095b0d921fd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns93a59ec36f668">
+		<description>Dossun! Ganseki Battle T-Spa v1.1 (2018)(Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dossun! Ganseki Battle T-Spa v1.1 (2018)(Wave).sfc" size="1048576" crc="8161d72e" sha1="93a59ec36f6684d9ed2949a96ed19ad5c05abc67"/>
 			</dataarea>
 		</part>
 	</software>

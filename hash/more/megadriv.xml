@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2047 -->
+<!-- Number of items in this list = 2048 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -11879,6 +11879,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mortal Kombat Arcade Edition Enhanced v2.2 (2025)(Rael G.C.).bin" size="4194304" crc="e0b10bf3" sha1="09b4750cd2ab66943ff1fae2c4c8c06e80f392cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfb7d47faafc23">
+		<description>Mortal Kombat Arcade Edition v1.0d (2026)(Master Linkuei)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat Arcade Edition v1.0d (2026)(Master Linkuei).bin" size="4194304" crc="8688c9b2" sha1="fb7d47faafc23ea42264f7ef38d0cdcbf47b1f50"/>
 			</dataarea>
 		</part>
 	</software>
