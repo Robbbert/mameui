@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 99 -->
+<!-- Number of items in this list = 117 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag65f1d536885b0">
 		<description>(demo)Hallo World (2008)</description>
@@ -369,6 +369,176 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(sound-only)Treasure_Island_Dizzy.j64" size="2097152" crc="7a08f9e1" sha1="7d5ad8c7c1b0ae0b89b06b01a9a397cbf5689fe8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag974290948d613">
+		<description>Expressway (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Expressway (World) (Aftermarket) (Unl).j64" size="2097152" crc="58ddf24a" sha1="974290948d61340ce04bce92c1489e4b6c623483"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag973b56f4bfc77">
+		<description>Fernandez_Must_Die!</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Fernandez_Must_Die!.j64" size="1048576" crc="b0391dd5" sha1="973b56f4bfc77ccba912fe1740e6f02a80871567"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagbb6e3bb69b5cf">
+		<description>Fishes (2006)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Fishes (2006).j64" size="262144" crc="bdd21892" sha1="bb6e3bb69b5cf58351bbf86e96d281049997cdc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag61d4db841c090">
+		<description>Flip Out! (World)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Flip Out! (World).j64" size="4194304" crc="fae31dd0" sha1="61d4db841c090ae3104eb20b6087160ff80e7a12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag13d13f23706d2">
+		<description>Frog Feast DEMO (2006)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Frog Feast DEMO (2006).j64" size="524288" crc="0bb68730" sha1="13d13f23706d21747afa3792620b5a334d3847f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagbdfe384781d9d">
+		<description>Frogger_(Atari_ST)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Frogger_(Atari_ST).j64" size="4194304" crc="4a3daa9e" sha1="bdfe384781d9d823775ad4f2e59ed08a05521b23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag0309664e87ecb">
+		<description>FROGZ 64 BETA 3 21 2017</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="FROGZ 64 BETA 3 21 2017.j64" size="2097152" crc="e3b036e6" sha1="0309664e87ecb2b70d4cfba064ca19268ad1c785"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag8cd5751d38fd2">
+		<description>Frogz 64 BETA(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Frogz 64 BETA(1).j64" size="2097152" crc="6ac581c4" sha1="8cd5751d38fd2a1e57b1fcb941beaf3169930685"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag0c0efe897bf19">
+		<description>Frogz 64 BETA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Frogz 64 BETA.j64" size="2097152" crc="f37c355f" sha1="0c0efe897bf199deccb68d2f646a906352b1f046"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagcdc04feb55165">
+		<description>Frogz 64 DEMO(1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Frogz 64 DEMO(1).j64" size="2097152" crc="f4958a08" sha1="cdc04feb5516531774622f1d260b168c7fc4a487"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag736ef3058e3f5">
+		<description>Frogz 64 DEMO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Frogz 64 DEMO.j64" size="2097152" crc="a3f30cd4" sha1="736ef3058e3f58f7f898683db8c994be03967ef4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag29637237f9abe">
+		<description>FROGZ 64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="FROGZ 64.j64" size="2097152" crc="f38190be" sha1="29637237f9abedb7ab0bb6818b8f953b488e70c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag3dd91ac4248b8">
+		<description>Frogz_I THINK PLAYER 2 WORKS NOW</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Frogz_I THINK PLAYER 2 WORKS NOW.j64" size="2097152" crc="c5d4ef2a" sha1="3dd91ac4248b8560f0fe776f2ff84edccb2abdc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag36bd3b61568db">
+		<description>Frogz_snow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Frogz_snow.j64" size="2097152" crc="6220028a" sha1="36bd3b61568db0b09d718ddd949935bfbe99e0f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag4b909cabab296">
+		<description>Frog_Feast_(2006)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Frog_Feast_(2006).j64" size="524288" crc="a8a32a95" sha1="4b909cabab296a59ad153dbaef105c29c282df7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag2e2b930368ad1">
+		<description>Full Circle - Rocketeer (World) (Demo) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Full Circle - Rocketeer (World) (Demo) (Aftermarket) (Unl).j64" size="2097152" crc="bddd9ff3" sha1="2e2b930368ad1764d18c102bda01d7c2f7740fc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag10f35c2499bc0">
+		<description>Gauntlet_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gauntlet_2.j64" size="2097152" crc="e2ca43ab" sha1="10f35c2499bc0d97ce3cad76bdcd34d1c2070a36"/>
 			</dataarea>
 		</part>
 	</software>
@@ -749,6 +919,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="raytrace_m.j64" size="32768" crc="395549b6" sha1="64e80c5fbc110d0ac99bd5ec750090acda75cfb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag47aa8acc7e322">
+		<description>Return to Genesis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Return to Genesis.j64" size="4194304" crc="24a69d87" sha1="47aa8acc7e322073743c0570956e43fa30d85cce"/>
 			</dataarea>
 		</part>
 	</software>
