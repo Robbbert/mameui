@@ -117,6 +117,7 @@ Part list of Goldstar 3DO Interactive Multiplayer
 #include "cpu/arm7/arm7.h"
 #include "imagedev/cdromimg.h"
 
+#include "softlist_dev.h"
 #include "speaker.h"
 
 
@@ -183,6 +184,7 @@ void _3do_state::machine_reset()
 	m_bank1->set_entry(1);
 }
 
+
 // TODO: clocks (doubled vs. ARM?)
 void _3do_state::green_config(machine_config &config)
 {
@@ -197,12 +199,17 @@ void _3do_state::green_config(machine_config &config)
 				printf("%c", data & 0xff);
 		}
 	});
-	m_madam->dma_read_cb().set([this] (offs_t offset) {
+	m_madam->dma8_read_cb().set([this] (offs_t offset) {
+		address_space &space = m_maincpu->space();
+		u8 ret = space.read_byte(offset);
+		return ret;
+	});
+	m_madam->dma32_read_cb().set([this] (offs_t offset) {
 		address_space &space = m_maincpu->space();
 		u32 ret = space.read_dword(offset, 0xffff'ffff);
 		return ret;
 	});
-	m_madam->dma_write_cb().set([this] (offs_t offset, u32 data) {
+	m_madam->dma32_write_cb().set([this] (offs_t offset, u32 data) {
 		address_space &space = m_maincpu->space();
 		space.write_dword(offset, data, 0xffff'ffff);
 	});
@@ -274,6 +281,9 @@ void _3do_state::_3do(machine_config &config)
 	m_screen->set_screen_update(m_amy, FUNC(amy_device::screen_update));
 
 	SPEAKER(config, "speaker", 2).front();
+
+	SOFTWARE_LIST(config, "cdrom_list").set_original("3do");
+	SOFTWARE_LIST(config, "photocd_list").set_compatible("photo_cd");
 }
 
 void _3do_state::_3do_pal(machine_config &config)
@@ -293,6 +303,9 @@ void _3do_state::_3do_pal(machine_config &config)
 	m_screen->set_screen_update(m_amy, FUNC(amy_device::screen_update));
 
 	SPEAKER(config, "speaker", 2).front();
+
+	SOFTWARE_LIST(config, "cdrom_list").set_original("3do");
+	SOFTWARE_LIST(config, "photocd_list").set_compatible("photo_cd");
 }
 
 void _3do_state::arcade_ntsc(machine_config &config)

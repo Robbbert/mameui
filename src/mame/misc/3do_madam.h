@@ -16,10 +16,11 @@ public:
 
 	template <typename T> void set_amy_tag(T &&tag) { m_amy.set_tag(std::forward<T>(tag)); }
 
-	auto diag_cb()            { return m_diag_cb.bind(); }
-	auto dma_read_cb()        { return m_dma_read_cb.bind(); }
-	auto dma_write_cb()       { return m_dma_write_cb.bind(); }
-	auto irq_dply_cb()        { return m_irq_dply_cb.bind(); }
+	auto diag_cb()              { return m_diag_cb.bind(); }
+	auto dma8_read_cb()         { return m_dma8_read_cb.bind(); }
+	auto dma32_read_cb()        { return m_dma32_read_cb.bind(); }
+	auto dma32_write_cb()       { return m_dma32_write_cb.bind(); }
+	auto irq_dply_cb()          { return m_irq_dply_cb.bind(); }
 
 	void map(address_map &map);
 
@@ -34,8 +35,9 @@ protected:
 private:
 	required_device<amy_device> m_amy;
 	devcb_write8     m_diag_cb;
-	devcb_read32     m_dma_read_cb;
-	devcb_write32    m_dma_write_cb;
+	devcb_read8      m_dma8_read_cb;
+	devcb_read32     m_dma32_read_cb;
+	devcb_write32    m_dma32_write_cb;
 	devcb_write_line m_irq_dply_cb;
 
 	uint32_t  m_revision = 0;       /* 03300000 */
@@ -86,6 +88,7 @@ private:
 	enum cel_state_t : u8 {
 		IDLE,
 		FETCH_PARAMS,
+		DECOMPRESS,
 		DRAW
 	};
 
@@ -93,14 +96,15 @@ private:
 		cel_state_t state;
 		u32 address;
 		u32 current_ccb;
-		bool skip, last, ccbpre, packed;
+		bool skip, last, ccbpre, packed, bgnd;
 		u32 next_ptr;
 		u32 source_ptr;
 		u32 plut_ptr;
-		u32 xpos, ypos;
+		s32 xpos, ypos;
 		u32 hdx, hdy, vdx, vdy;
 		u32 hddx, hddy;
 		u32 pixc, pre0, pre1;
+		std::vector<u16> buffer;
 	} m_cel;
 
 	u32 mctl_r();
@@ -108,6 +112,14 @@ private:
 
 	void cel_start_w(offs_t offset, u32 data, u32 mem_mask);
 	void cel_stop_w(offs_t offset, u32 data, u32 mem_mask);
+	u32 cel_decompress();
+
+	typedef u16 (madam_device::*get_pixel_func)(int x, int y, u16 woffset);
+	static const get_pixel_func get_pixel_table[4];
+	u16 get_uncompressed_16bpp_lrform0(int x, int y, u16 woffset);
+	u16 get_uncompressed_16bpp_lrform1(int x, int y, u16 woffset);
+	u16 get_compressed_16bpp(int x, int y, u16 woffset);
+
 
 	TIMER_CALLBACK_MEMBER(dma_playerbus_cb);
 	TIMER_CALLBACK_MEMBER(cel_tick_cb);
