@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7690 -->
+<!-- Number of items in this list = 7716 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -519,6 +519,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="62824">
 				<rom name="-Continental Circus (1987)(Virgin Mastertronic Ltd)[cr [Cr Mata + Kamilsoft][t +4](128K)[Cr Mata + Kamilsoft].tap" size="62824" crc="e579b320" sha1="28b7420062230798ee327fc9d80669b016b651e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf40addbaa7fba">
+		<description>-Crazy Cars II (1988)(Titus)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34663">
+				<rom name="-Crazy Cars II (1988)(Titus)[a].tap" size="34663" crc="1b3b9113" sha1="f40addbaa7fba75f6cb11fcba550ee4bd1c56cc9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15962,6 +15972,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs78f324dc6c776">
+		<description>Crabby is back 128K (2025)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54124">
+				<rom name="Crabby is back 128K (2025)(Gabriele Amore).tap" size="54124" crc="36912cb7" sha1="78f324dc6c776a914d7d7b410ee6d5eca5092c97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd6d162cbe40db">
+		<description>Crack Down (1990)(US Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="189590">
+				<rom name="Crack Down (1990)(US Gold).tap" size="189590" crc="c82c010e" sha1="d6d162cbe40db6cd393948ce032ce4f850e50b11"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc05522fca2ed2">
 		<description>CRACKER</description>
 		<year>????</year>
@@ -15982,6 +16012,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs49657bb4c47ca">
+		<description>Craps (1982)(Micromega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="5107">
+				<rom name="Craps (1982)(Micromega).tap" size="5107" crc="089eec2c" sha1="49657bb4c47ca8eb6b19c8bb6eb5ee87283f5196"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs70e595ec39bf1">
+		<description>Crash (1983)(Mogul Communications)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23007">
+				<rom name="Crash (1983)(Mogul Communications).tap" size="23007" crc="05478e9a" sha1="70e595ec39bf1fe015049faaa57850f401bf438e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaab7e774ea5e5">
+		<description>Crash Cars (19xx)(-)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10011">
+				<rom name="Crash Cars (19xx)(-)(Sp).tap" size="10011" crc="abdfbdd5" sha1="aab7e774ea5e5c6b38490e0e0f39507f8434438c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse01315f6c5a45">
+		<description>Cray-5 (Retroworks)(2011)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53875">
+				<rom name="Cray-5 (Retroworks)(2011).tap" size="53875" crc="a1467bf5" sha1="e01315f6c5a45c387aeb2df875a2ffc37f65b18e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4fc8386e057a4">
+		<description>Crazy Blaster (2019)(TFW8b)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32951">
+				<rom name="Crazy Blaster (2019)(TFW8b).tap" size="32951" crc="6797d22c" sha1="4fc8386e057a41b0e64094a1a0b24e9734e582d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a42f4b02f81d">
+		<description>Crazy Burger 48K (2025)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48105">
+				<rom name="Crazy Burger 48K (2025)(Menyiques).tap" size="48105" crc="59bff160" sha1="0a42f4b02f81d21ebffcef74263edde234058cc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs03add9e3f4257">
+		<description>Crazy Cars (1985)(JB Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="24414">
+				<rom name="Crazy Cars (1985)(JB Software).tap" size="24414" crc="1829c691" sha1="03add9e3f42579c21bf2576feb0ccc3afa68f54a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf57648f23b8a4">
+		<description>Crazy Cars (1988)(Titus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44388">
+				<rom name="Crazy Cars (1988)(Titus).tap" size="44388" crc="e65d2bd3" sha1="f57648f23b8a404ff4aa56d41d9d48e2496be3fa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsdf9218533585c">
 		<description>Crazy Cars 2</description>
 		<year>????</year>
@@ -15989,6 +16099,146 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47360">
 				<rom name="Crazy Cars 2.tzx" size="47360" crc="262edcaa" sha1="df9218533585cd5697d2e75856960c3c5780adc6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68354e4dbe502">
+		<description>Crazy Cars II (1988)(Titus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32072">
+				<rom name="Crazy Cars II (1988)(Titus).tap" size="32072" crc="c4f75aca" sha1="68354e4dbe5020d9a7a23e4b931eec6462f56b56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs50302435c0e33">
+		<description>Crazy Cars II (1989)(Titus)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41208">
+				<rom name="Crazy Cars II (1989)(Titus).tap" size="41208" crc="0b4a0be1" sha1="50302435c0e335caff2f114f45002303b95793bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f390224278f2">
+		<description>Crazy Cars II+ v0.1 48K-128K (2025)(SjASMPlus, ZX0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="27768">
+				<rom name="Crazy Cars II+ v0.1 48K-128K (2025)(SjASMPlus, ZX0).tap" size="27768" crc="64b2601b" sha1="6f390224278f2cff54e3398cd9530003f7b2f933"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs27d53e4b0afa0">
+		<description>Crazy Castles (1985)(Automata UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41485">
+				<rom name="Crazy Castles (1985)(Automata UK).tap" size="41485" crc="04acf11d" sha1="27d53e4b0afa0c715d12b59f5bd2b5d00768c169"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0211ee96fb2cd">
+		<description>Crazy Christmas 48K-AY v1.0 (2023)(Fransouls)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46648">
+				<rom name="Crazy Christmas 48K-AY v1.0 (2023)(Fransouls).tap" size="46648" crc="647cff0e" sha1="0211ee96fb2cd03139a7e73b3f3c644619b44a1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf25f17e1388b7">
+		<description>Crazy Christmas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46648">
+				<rom name="Crazy Christmas.tap" size="46648" crc="0924923b" sha1="f25f17e1388b76928ace979251faf5f1b76aef09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d8aa0c4f842b">
+		<description>Crazy Crane (1984)(Voyager Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13920">
+				<rom name="Crazy Crane (1984)(Voyager Software).tap" size="13920" crc="e23e8f42" sha1="7d8aa0c4f842b3e7542d61a30ddd6b97f39b20a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs64443b9a9f99c">
+		<description>Crazy Forest 128K (2023)(Daniel Isoba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57178">
+				<rom name="Crazy Forest 128K (2023)(Daniel Isoba).tap" size="57178" crc="52a1514c" sha1="64443b9a9f99cc314d1383fb29b169cc9f795d04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs85e7e0566563e">
+		<description>Crazy Golf (1993)(Jonathan Cauldwell)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22394">
+				<rom name="Crazy Golf (1993)(Jonathan Cauldwell).tap" size="22394" crc="d1edb58d" sha1="85e7e0566563ed484b6c4ea4ee7fe9dfb7d938d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9d75f748abe0a">
+		<description>Crazy Kong (19xx)(Ocean Software)(De)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44984">
+				<rom name="Crazy Kong (19xx)(Ocean Software)(De).tap" size="44984" crc="ee95c332" sha1="9d75f748abe0a66568c460039058873d11473f3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7f0c392fa67e6">
+		<description>Crazy Kong City - Saving Kong - Music Dizziness (2017)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40684">
+				<rom name="Crazy Kong City - Saving Kong - Music Dizziness (2017)(Gabriele Amore).tap" size="40684" crc="84860fed" sha1="7f0c392fa67e685b4ab82172e3b564ae67deb73b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1910798a7558e">
+		<description>Crazy Kong City - Saving Kong - Music Massive Attack (2017)(Gabriele Amore)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39573">
+				<rom name="Crazy Kong City - Saving Kong - Music Massive Attack (2017)(Gabriele Amore).tap" size="39573" crc="3c553744" sha1="1910798a7558e61f60cbdde3108ffef7396a1744"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa9acdedb8189e">
+		<description>Crazy Motorcycle Rally (1984)(Kerian UK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32446">
+				<rom name="Crazy Motorcycle Rally (1984)(Kerian UK).tap" size="32446" crc="0c6d8bf1" sha1="a9acdedb8189ea45b0cd8707d32a670a3bc27d97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2d12b9ec58a64">
+		<description>Crazy Painter (1984)(Sinclair Programs)(Nl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3968">
+				<rom name="Crazy Painter (1984)(Sinclair Programs)(Nl).tap" size="3968" crc="10b4243c" sha1="2d12b9ec58a645d745ef55ab9be488cc9141129f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -67699,6 +67949,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39345">
 				<rom name="_Convoy Raider (1987)(Gremlin Graphics).tap" size="39345" crc="f2295353" sha1="a40f61c2af57f53ffcad0f2481ee145ddf7981bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa475c7267caae">
+		<description>_Crazy Caverns (1984)(Severn Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="4726">
+				<rom name="_Crazy Caverns (1984)(Severn Software).tap" size="4726" crc="cc6d2e0d" sha1="a475c7267caaedc02ceb943198ca03194fc3a47a"/>
 			</dataarea>
 		</part>
 	</software>

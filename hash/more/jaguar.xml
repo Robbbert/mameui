@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 140 -->
+<!-- Number of items in this list = 166 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
+	<software name="jag162de3abfc73d">
+		<description>(demo)96Kb Demo (19xx)(Mr Spock)(PD)[$8000]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="96544">
+				<rom name="(demo)96Kb Demo (19xx)(Mr Spock)(PD)[$8000].j64" size="96544" crc="be28c374" sha1="162de3abfc73dbffa357838fe9acc46627663d03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag66b6aff84f5a4">
+		<description>(demo)AVP_Commercial_(Cinepak)_(2017)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(demo)AVP_Commercial_(Cinepak)_(2017).j64" size="2097152" crc="ed5e7caf" sha1="66b6aff84f5a41b5f61f2f1ce902b04af64860cf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag5c9235e32d556">
 		<description>(demo)bootmona</description>
 		<year>????</year>
@@ -459,6 +479,246 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(sound-only)Treasure_Island_Dizzy.j64" size="2097152" crc="7a08f9e1" sha1="7d5ad8c7c1b0ae0b89b06b01a9a397cbf5689fe8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag1516859334668">
+		<description>8biteer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="8biteer.j64" size="2097152" crc="bb293ea7" sha1="15168593346687a2ceb685e0d2711eafa132ebde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jaga181725a0d1c3">
+		<description>Action_Fighter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Action_Fighter.j64" size="524288" crc="5f97a080" sha1="a181725a0d1c3ce6c2a41c5c06cbf269da9d36c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagfd6bc087448a2">
+		<description>Alice's Mom's Rescue (World) (En,Fr,De,Es,It) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Alice's Mom's Rescue (World) (En,Fr,De,Es,It) (Aftermarket) (Unl).j64" size="6291456" crc="419d26f0" sha1="fd6bc087448a258039aaa0ba556eafa9931b7983"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag343e04689d75a">
+		<description>Alien vs Predator alpha</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1635476">
+				<rom name="Alien vs Predator alpha.j64" size="1635476" crc="4242dfa7" sha1="343e04689d75abfe9e6d24b126b65fea80ef15a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagfe5d149ff01db">
+		<description>Arkanna DEMO (2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Arkanna DEMO (2008).j64" size="131072" crc="a5aa0071" sha1="fe5d149ff01db5c6c948d67738fedf35dbedf086"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagea6d469209181">
+		<description>Arkanoid_-_Revenge_of_DoH</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Arkanoid_-_Revenge_of_DoH.j64" size="524288" crc="59fafdee" sha1="ea6d4692091813e4c01d15af82246e1d31656ed7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagb9371b9a4e339">
+		<description>Assassin DEMO (2008)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Assassin DEMO (2008).j64" size="1048576" crc="0ad19ded" sha1="b9371b9a4e339426110cc423037b8674f2c840e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag9f9c3357fcd1e">
+		<description>Asteroid (2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Asteroid (2000).j64" size="524288" crc="d231043a" sha1="9f9c3357fcd1e2cab37290a0879546115fe1b2f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag347bc410deedb">
+		<description>Atomic (2006)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Atomic (2006).j64" size="1048576" crc="f7e67198" sha1="347bc410deedb3a53018c1eb9a6085418622d8db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag992aabf198b92">
+		<description>Atomic Reloaded (World) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Atomic Reloaded (World) (Aftermarket) (Unl).j64" size="2097152" crc="ff38c49e" sha1="992aabf198b924a7746e3ba6ba8dd368452299a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag4c9b53ba8f482">
+		<description>BADAPPLE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="BADAPPLE.j64" size="6291456" crc="72036f6e" sha1="4c9b53ba8f482bd5da4b5409f894b1f7d194bff1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jaga5e6605d6cd1c">
+		<description>BADAPPV2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="BADAPPV2.j64" size="6291456" crc="fd3e6fd7" sha1="a5e6605d6cd1c942a0dfccb76d1a31857a860dfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagc7c50b71166d6">
+		<description>BADAPPV3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="BADAPPV3.j64" size="6291456" crc="16f76445" sha1="c7c50b71166d66f17589060ac7d5b1ab226d4b75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagf1ac540a118df">
+		<description>BADAPPV4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="BADAPPV4.j64" size="4194304" crc="148194f8" sha1="f1ac540a118df8e9748fa0fa7490c7605acce195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag1c734a8b01bfc">
+		<description>BADAPPV5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="BADAPPV5.j64" size="6291456" crc="5fd0c347" sha1="1c734a8b01bfcd4c8931bd622c6e903a63d53f72"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagb234e1ce25905">
+		<description>BADAPPV6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="BADAPPV6.j64" size="6291456" crc="e00c1b38" sha1="b234e1ce2590595d8d37c5e09e1b30c3f4a32501"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jaga622fef20c11d">
+		<description>BADAPPV7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="BADAPPV7.j64" size="6291456" crc="4c668398" sha1="a622fef20c11dc8634623fb77f819a24e245c58e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag6a974464dbdf6">
+		<description>BadCode 4m (2001)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="BadCode 4m (2001).j64" size="524288" crc="618a958a" sha1="6a974464dbdf68381afcc8c3c09dad91b99da1e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag3b21031285d93">
+		<description>BadCode0 (1999)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="BadCode0 (1999).j64" size="262144" crc="0e68eb1f" sha1="3b21031285d938cdc69e6dfbe276819cae6324fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag7b4a951be7cc6">
+		<description>BadCode1 (2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="BadCode1 (2000).j64" size="262144" crc="f6f45d0e" sha1="7b4a951be7cc64bed29d0e7f1d7250227373c281"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagafcf67ac51c58">
+		<description>BadCode2 (2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="BadCode2 (2000).j64" size="524288" crc="6837b7c4" sha1="afcf67ac51c58faffe9348f64e5207758b8cfeb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jage42a67e6a5de7">
+		<description>BadCode3 (2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="BadCode3 (2000).j64" size="524288" crc="f9e24667" sha1="e42a67e6a5de72c8d22780c54a4b7db9ae5221bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag03c7cc623c0d6">
+		<description>BadCode4n (2003)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="BadCode4n (2003).j64" size="524288" crc="413cfdae" sha1="03c7cc623c0d6a20f7cd53bb8d94fba3f76d2663"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagc16738d10d5b7">
+		<description>Barbarian</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Barbarian.j64" size="1048576" crc="501351f1" sha1="c16738d10d5b7b7bcf235bb5d7ab34d4d65885e8"/>
 			</dataarea>
 		</part>
 	</software>
