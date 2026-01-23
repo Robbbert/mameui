@@ -20,6 +20,7 @@ public:
 	auto dma8_read_cb()         { return m_dma8_read_cb.bind(); }
 	auto dma32_read_cb()        { return m_dma32_read_cb.bind(); }
 	auto dma32_write_cb()       { return m_dma32_write_cb.bind(); }
+	auto playerbus_read_cb()    { return m_playerbus_read_cb.bind(); }
 	auto irq_dply_cb()          { return m_irq_dply_cb.bind(); }
 
 	void map(address_map &map);
@@ -38,6 +39,7 @@ private:
 	devcb_read8      m_dma8_read_cb;
 	devcb_read32     m_dma32_read_cb;
 	devcb_write32    m_dma32_write_cb;
+	devcb_read32     m_playerbus_read_cb;
 	devcb_write_line m_irq_dply_cb;
 
 	uint32_t  m_revision = 0;       /* 03300000 */
@@ -135,14 +137,19 @@ private:
 	std::tuple<u8, u32> fetch_byte(u32 ptr, u8 frac);
 
 	typedef std::tuple<u16, u32> (madam_device::*fetch_rle_func)(u32 ptr, u8 frac);
-	static const fetch_rle_func fetch_rle_table[2];
+	static const fetch_rle_func fetch_rle_table[16];
+
+	std::tuple<u16, u32> get_unemulated(u32 ptr, u8 frac);
+	std::tuple<u16, u32> get_coded_4bpp(u32 ptr, u8 frac);
 	std::tuple<u16, u32> get_coded_6bpp(u32 ptr, u8 frac);
+	std::tuple<u16, u32> get_coded_16bpp(u32 ptr, u8 frac);
 	std::tuple<u16, u32> get_uncoded_16bpp(u32 ptr, u8 frac);
 
-	TIMER_CALLBACK_MEMBER(dma_playerbus_cb);
 	TIMER_CALLBACK_MEMBER(cel_tick_cb);
-	emu_timer *m_dma_playerbus_timer;
 	emu_timer *m_cel_timer;
+
+	emu_timer *m_dma_playerbus_timer;
+	TIMER_CALLBACK_MEMBER(dma_playerbus_cb);
 };
 
 DECLARE_DEVICE_TYPE(MADAM, madam_device)
