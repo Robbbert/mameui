@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7716 -->
+<!-- Number of items in this list = 7747 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -15952,6 +15952,76 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6c171ff28f483">
+		<description>Cosmazoigs (1983)(Your Computer)(Cz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6099">
+				<rom name="Cosmazoigs (1983)(Your Computer)(Cz).tap" size="6099" crc="3daf9dd7" sha1="6c171ff28f483b692e7e7b3a0a6c416b63721513"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9515c83209cf1">
+		<description>Cosmazoigs (1984)(Your Computer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8013">
+				<rom name="Cosmazoigs (1984)(Your Computer).tap" size="8013" crc="c6b69721" sha1="9515c83209cf10234ab131a6fc77826c40c5bf6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs77efdcadb8149">
+		<description>Cosmic Cruiser (1984)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46103">
+				<rom name="Cosmic Cruiser (1984)(Imagine Software).tap" size="46103" crc="adec9baf" sha1="77efdcadb81499ff0a4a172455932bd1213368d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4aec7f0018b60">
+		<description>Cosmic Lander 48K (2023)(RetroTeam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31318">
+				<rom name="Cosmic Lander 48K (2023)(RetroTeam).tap" size="31318" crc="959db9b6" sha1="4aec7f0018b6096d7db0f3f4734d8529f0db041f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs000fe2ed78126">
+		<description>Cosmic Pirate (1983)(Blaby Computer Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25053">
+				<rom name="Cosmic Pirate (1983)(Blaby Computer Games).tap" size="25053" crc="2d685e0f" sha1="000fe2ed7812649865cb2b6f177e0e4f800e3106"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscb1b5b9724b7a">
+		<description>Cosmic Sheriff (1989)(Dinamic Software)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48558">
+				<rom name="Cosmic Sheriff (1989)(Dinamic Software)(Sp).tap" size="48558" crc="6788b645" sha1="cb1b5b9724b7a6dec1b15c79b9595b606a4632b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs05958ba95aa8d">
+		<description>Cosmic Shock Absorber (1986)(Martech Games Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33965">
+				<rom name="Cosmic Shock Absorber (1986)(Martech Games Ltd).tap" size="33965" crc="0bfb4399" sha1="05958ba95aa8de10af5e13922041e2035dfbf027"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs2afcf24e58786">
 		<description>Cosmic Space Attack 48K (2024)(ACMT Retro Games)</description>
 		<year>????</year>
@@ -15962,6 +16032,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs99fdc70f10e4d">
+		<description>Cosmic Space Attack crack 48K (2021)(Vintage Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26141">
+				<rom name="Cosmic Space Attack crack 48K (2021)(Vintage Software).tap" size="26141" crc="6b04deb9" sha1="99fdc70f10e4d3fe89ce3dfbe5e3d44ff32973a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb050d83b63b0c">
+		<description>Cosmic Space Attack demo 48K (2021)(Vintage Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26141">
+				<rom name="Cosmic Space Attack demo 48K (2021)(Vintage Software).tap" size="26141" crc="687fad04" sha1="b050d83b63b0cbb9d4f8387e0199c1c47fbd82a9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs28ef9208a9ef7">
 		<description>Cosmic Space Attack demo 48K (2021)(Vintage Software)</description>
 		<year>????</year>
@@ -15969,6 +16059,136 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="26166">
 				<rom name="Cosmic Space Attack demo 48K (2021)(Vintage Software).tzx" size="26166" crc="179c6977" sha1="28ef9208a9ef7c840d60186b90e1441ac6573f5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfba47d1aaaed9">
+		<description>Cosmic Space Attack full 48K (2021)(Vintage Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26111">
+				<rom name="Cosmic Space Attack full 48K (2021)(Vintage Software).tap" size="26111" crc="bf843068" sha1="fba47d1aaaed938554ee239ac410f7dc9663ded7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0830e1e171084">
+		<description>Cosmic Wartoad (1985)(Ocean Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49722">
+				<rom name="Cosmic Wartoad (1985)(Ocean Software).tap" size="49722" crc="367d733b" sha1="0830e1e171084d5529bf4cb8a3a1a7e5814454aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs129e287d311ff">
+		<description>Cosmic Wartoad (1985)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45221">
+				<rom name="Cosmic Wartoad (1985)(Ocean).tap" size="45221" crc="81e8ae65" sha1="129e287d311ffe9586c3f59bca98c089cbe9d317"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs21eaffcc97d8b">
+		<description>Count (1983)(Widgit Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6458">
+				<rom name="Count (1983)(Widgit Software).tap" size="6458" crc="acd3325c" sha1="21eaffcc97d8bbec7108bd03815884ef589c95dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs167ae50d636fe">
+		<description>Count 100 (1983)(Widgit Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3925">
+				<rom name="Count 100 (1983)(Widgit Software).tap" size="3925" crc="cd298c7a" sha1="167ae50d636fec0f03883b00557d1f136e52aa31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs214d61c1d79eb">
+		<description>Count Cats (1983)(Widgit Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6837">
+				<rom name="Count Cats (1983)(Widgit Software).tap" size="6837" crc="110a89a4" sha1="214d61c1d79eb275664ac1c32f1a6488e67c6220"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscf75d03dc384c">
+		<description>Count Duckula (1989)(Alternative Software Ltd)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48615">
+				<rom name="Count Duckula (1989)(Alternative Software Ltd)[a].tap" size="48615" crc="2185ec3a" sha1="cf75d03dc384c3ac821de56d118d9026a931ff9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b2bb8a8d82c6">
+		<description>Count Duckula 2 128K (1992)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="96837">
+				<rom name="Count Duckula 2 128K (1992)(Alternative).tap" size="96837" crc="e5c979e1" sha1="0b2bb8a8d82c6588073c921133bec44b0447b5d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45b247dd5c9ac">
+		<description>Count Duckula 2 48K (1992)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47605">
+				<rom name="Count Duckula 2 48K (1992)(Alternative).tap" size="47605" crc="7b53965d" sha1="45b247dd5c9ac128596fe21f72ba8b3d7d7985ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf067a00dc113c">
+		<description>Countdown (1985)(Macsen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42437">
+				<rom name="Countdown (1985)(Macsen).tap" size="42437" crc="d623383f" sha1="f067a00dc113ce010680e74a5ff518da716f593b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8967e403a2e1d">
+		<description>Countdown To The Death (1990)(MG Soft)[Crash Power Tape]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48590">
+				<rom name="Countdown To The Death (1990)(MG Soft)[Crash Power Tape].tap" size="48590" crc="30f6a44d" sha1="8967e403a2e1da91a9fc7e6d42f86f047aed11ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc380721b6e21a">
+		<description>Countries Of The World (1982)(Hewson Consultants Ltd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36324">
+				<rom name="Countries Of The World (1982)(Hewson Consultants Ltd).tap" size="36324" crc="31d51379" sha1="c380721b6e21a5cbf1fb27c247e6a12642df7f8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs59a34445e12df">
+		<description>Cowboy Kidz (1989)(Byte Back)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47774">
+				<rom name="Cowboy Kidz (1989)(Byte Back).tap" size="47774" crc="13a3ea16" sha1="59a34445e12df1c356e949f3e2885d8bd8b3f1d7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -67949,6 +68169,96 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39345">
 				<rom name="_Convoy Raider (1987)(Gremlin Graphics).tap" size="39345" crc="f2295353" sha1="a40f61c2af57f53ffcad0f2481ee145ddf7981bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b9bfd945395c">
+		<description>_Cosmic Debris (1983)(Artic Computing)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39792">
+				<rom name="_Cosmic Debris (1983)(Artic Computing).tap" size="39792" crc="e0597dd3" sha1="1b9bfd945395c4f1c034ef142d686a84bf844e1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc5010d734629">
+		<description>_Cosmic Guerilla (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16035">
+				<rom name="_Cosmic Guerilla (19xx)(-).tap" size="16035" crc="afabd5d5" sha1="cc5010d7346292d1712f706a36688be0a6b8eca9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0df72068bade0">
+		<description>_Cosmic Pirate (1989)(Byte Back)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43865">
+				<rom name="_Cosmic Pirate (1989)(Byte Back).tap" size="43865" crc="de87ebb3" sha1="0df72068bade062aa111ade9cc50cbb587f30eb2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf913bcc3df33">
+		<description>_Cosmic Raiders 16K (1983)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9367">
+				<rom name="_Cosmic Raiders 16K (1983)(Mikro-Gen).tzx" size="9367" crc="1e8ec357" sha1="af913bcc3df33cc427d4478a041ea980164c6cc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7761b3465bc83">
+		<description>_Cosmos (1982)(Abbex Electronics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14282">
+				<rom name="_Cosmos (1982)(Abbex Electronics).tap" size="14282" crc="c0a266f1" sha1="7761b3465bc83db72be63c6239a188970fd704f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9309062be6d1c">
+		<description>_Count, The (1985)(Mirrorsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36826">
+				<rom name="_Count, The (1985)(Mirrorsoft).tap" size="36826" crc="e12a5c85" sha1="9309062be6d1c4be9fbf07f0b5276f0ab5690dec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf04683b3495dc">
+		<description>_Cover</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="2221">
+				<rom name="_Cover.TAP" size="2221" crc="9acb5c96" sha1="f04683b3495dc429608e68b4a1a843cf0c5db9ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs96d5c2062feb4">
+		<description>_Coverprinter (19xx)(-)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6543">
+				<rom name="_Coverprinter (19xx)(-).tap" size="6543" crc="fb7f2d1a" sha1="96d5c2062feb4c1967ca1f8f4586c4bb5dd96495"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4c7a7e4c8b42">
+		<description>_Cowboy Shootout (19xx)(Program Power)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8879">
+				<rom name="_Cowboy Shootout (19xx)(Program Power).tap" size="8879" crc="274ecc03" sha1="d4c7a7e4c8b42048d2c7cb0d4291a01674cb0573"/>
 			</dataarea>
 		</part>
 	</software>
