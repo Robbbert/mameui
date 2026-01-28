@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8125 -->
+<!-- Number of items in this list = 8126 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -26839,6 +26839,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Dragon's Lair version with 5 fast dragons (Adventure hack).a26" size="8192" crc="22643d2a" sha1="40b0b3f5ebd6bdd06c544af6f8776dcfd43aee9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2638f61d7da009c">
+		<description>DragonChalice</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="DragonChalice.a26" size="32768" crc="c0c75625" sha1="38f61d7da009c2f0c42920797a67ab3932dbd044"/>
 			</dataarea>
 		</part>
 	</software>

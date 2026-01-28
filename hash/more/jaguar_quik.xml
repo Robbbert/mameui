@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 82 -->
+<!-- Number of items in this list = 99 -->
 <softwarelist name="jaguar_quik" description="jaguar_quik loose roms">
 	<software name="jag8891da48d64e1">
 		<description>(demo)FIRE (Symmetry of TNG 2003)</description>
@@ -249,6 +249,176 @@
 		<part name="quik" interface="jaguar_quik">
 			<dataarea name="quik" size="2088960">
 				<rom name="Barkley Shut Up And Jam (Prototype).rom" size="2088960" crc="c2898f6e" sha1="57b0340dd805b240abcc761e4186aac1d04c5f6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag1752d89e6c841">
+		<description>Dazed</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="429632">
+				<rom name="Dazed.bin" size="429632" crc="ca694a33" sha1="1752d89e6c841e39f8ff3a6ea0ed0fff19f788f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag2693943111b31">
+		<description>Defender 2000 (Prototype)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="4186112">
+				<rom name="Defender 2000 (Prototype).rom" size="4186112" crc="ed58f111" sha1="2693943111b317a0c56d14752f8b8e801edab167"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag22bd96a10ef35">
+		<description>Degz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="1191431">
+				<rom name="Degz.cof" size="1191431" crc="d594c43b" sha1="22bd96a10ef35b90a2eed61bc71ccfa22d0dba15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagdd708a824ebbf">
+		<description>Demo 1 (2000)(Jaguar Development Club)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="518848">
+				<rom name="Demo 1 (2000)(Jaguar Development Club)(PD).jag" size="518848" crc="effca60e" sha1="dd708a824ebbf2e28afbb2693b240783a0948d98"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag20abd1d8d55b9">
+		<description>DiamJag  by Orion_ 2006</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="534784">
+				<rom name="DiamJag  by Orion_ 2006.bin" size="534784" crc="89391046" sha1="20abd1d8d55b944ce729b9c93b3c8d40f29f1fd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag9589697d06e3c">
+		<description>downfall</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="1470240">
+				<rom name="downfall.bin" size="1470240" crc="b6bd78e8" sha1="9589697d06e3cd2278c0cf4e6ff479f99466068c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagfb7ed8d7766fb">
+		<description>DRAGON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="2088960">
+				<rom name="DRAGON.ROM" size="2088960" crc="7b743c7c" sha1="fb7ed8d7766fb097860951b3975d7e30e7ff4b0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagceda44b3dfda1">
+		<description>embrace_the_plasma</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="559118">
+				<rom name="embrace_the_plasma.abs" size="559118" crc="6fb4127c" sha1="ceda44b3dfda12f7c136769c7a0b8d292270d2e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag9e3765a824261">
+		<description>example demo1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="144928">
+				<rom name="example demo1.bin" size="144928" crc="0b4412b4" sha1="9e3765a824261c4a4685c4dd778bb1a8c6344a12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagefd549e929d93">
+		<description>example demo1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="146940">
+				<rom name="example demo1.cof" size="146940" crc="f3eb01c2" sha1="efd549e929d9348a33c30e9a58f121f7cad14180"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag1e769990fe72c">
+		<description>example demo2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="48992">
+				<rom name="example demo2.bin" size="48992" crc="4169016b" sha1="1e769990fe72cbbd092a92a2437337b9b8d5dae2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jaga193794650061">
+		<description>example demo2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="51039">
+				<rom name="example demo2.cof" size="51039" crc="8bf0a0ac" sha1="a1937946500615dfabb16d8eddd84c99b27f107e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag23fedff2038cf">
+		<description>example demo3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="184480">
+				<rom name="example demo3.bin" size="184480" crc="68c3754c" sha1="23fedff2038cf0adfbc3f05ea423e03df583d8e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagcdde82331c44f">
+		<description>example demo3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="186613">
+				<rom name="example demo3.cof" size="186613" crc="1ce69021" sha1="cdde82331c44f1a453cf568da2cc9a44311fa2c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagfecf17a290aba">
+		<description>example4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="423552">
+				<rom name="example4.bin" size="423552" crc="fdb76c8c" sha1="fecf17a290abaf935265ccb8a03c1a736aa951fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag0711b1038417b">
+		<description>example4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="425477">
+				<rom name="example4.cof" size="425477" crc="a3454d91" sha1="0711b1038417bb59c892fb691ae3367a55fe82fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag465d5ea4bbe10">
+		<description>example4a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="457272">
+				<rom name="example4a.cof" size="457272" crc="695c0b91" sha1="465d5ea4bbe10bde97e1cf550ab874b06f9ff545"/>
 			</dataarea>
 		</part>
 	</software>

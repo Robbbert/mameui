@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3978 -->
+<!-- Number of items in this list = 3977 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -31849,16 +31849,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Demo World demo 1 (SMW hack).sfc" size="2097152" crc="eef3d985" sha1="ebd567070bcb3ec4b7102ee72e1b37f95279723c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns250b8cb96692a">
-		<description>Super Double Dragon (E, Proto)(1992)(Tradewest - Technos)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Super Double Dragon (E, Proto)(1992)(Tradewest - Technos).sfc" size="1048576" crc="1064e0e0" sha1="250b8cb96692a4fdbb88dfe5773f1a0cea488126"/>
 			</dataarea>
 		</part>
 	</software>

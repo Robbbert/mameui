@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7747 -->
+<!-- Number of items in this list = 7780 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -5009,6 +5009,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="5008">
 				<rom name="Alien Attack (1983)(ACE Software).tap" size="5008" crc="c8272238" sha1="b3f901eacecd50b12757ccfd538cd507186af403"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7507fc5a4d964">
+		<description>Alien Attack 2 - Invaded Colony EN 48K (2025)(Mansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43437">
+				<rom name="Alien Attack 2 - Invaded Colony EN 48K (2025)(Mansoft).tap" size="43437" crc="a96a46b6" sha1="7507fc5a4d9649132577fe9f2efb1da0507338d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0590854356dc4">
+		<description>Alien Attack 2 - Invaded Colony ES 48K (2025)(Mansoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43529">
+				<rom name="Alien Attack 2 - Invaded Colony ES 48K (2025)(Mansoft).tap" size="43529" crc="77b4804b" sha1="0590854356dc4407a59c9ad8bdbf3424b31d302d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15932,6 +15952,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs676e5bad634e3">
+		<description>Cookie (1983)(Ultimate)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15913">
+				<rom name="Cookie (1983)(Ultimate).tap" size="15913" crc="3466ab22" sha1="676e5bad634e3fb71b7b0019dbbc7c51f6b3e051"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs81308c265b8a4">
 		<description>Cookie</description>
 		<year>????</year>
@@ -15939,6 +15969,136 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15959">
 				<rom name="Cookie.tzx" size="15959" crc="dd316aca" sha1="81308c265b8a4a7ce19c50a048fa1277b9787519"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs58c9390cef5a3">
+		<description>Cop Out (1986)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44079">
+				<rom name="Cop Out (1986)(Mikro-Gen).tap" size="44079" crc="ceb79209" sha1="58c9390cef5a340e2de6470511a2e80e018ca8bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs025e8ec2e44c7">
+		<description>Cop-Out 48K (1986)(Mikro-Gen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49468">
+				<rom name="Cop-Out 48K (1986)(Mikro-Gen).tap" size="49468" crc="27dd134e" sha1="025e8ec2e44c739c41815ab2b1296bf568000ad1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8c4d793bad9ad">
+		<description>Copa du Mundo (1985)(Multisoft Informatica)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49302">
+				<rom name="Copa du Mundo (1985)(Multisoft Informatica)(Sp).tap" size="49302" crc="27117acc" sha1="8c4d793bad9adee9bdc8a901996f5c80859d3a21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs01257ee9321d9">
+		<description>Copius - Spellbound (1984)(Beyond Software - Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33792">
+				<rom name="Copius - Spellbound (1984)(Beyond Software - Gremlin Graphics).tap" size="33792" crc="960ef090" sha1="01257ee9321d94cde8b511fefe2a1d5572765795"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e8f0968e73db">
+		<description>Copius - Spellbound (1984)(Beyond Software - Gremlin Graphics)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33289">
+				<rom name="Copius - Spellbound (1984)(Beyond Software - Gremlin Graphics)[a].tap" size="33289" crc="553d2c8a" sha1="8e8f0968e73db20f8a1be7263ae5c30c876f8237"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs63f959922d7ee">
+		<description>Copper (19xx)(Vectis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="6996">
+				<rom name="Copper (19xx)(Vectis).tap" size="6996" crc="5b48f241" sha1="63f959922d7ee3aef422ec4d88ac0636e5284de9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f8cca00e70d6">
+		<description>Copta (1984)(Omega Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32689">
+				<rom name="Copta (1984)(Omega Soft).tap" size="32689" crc="7eed62b2" sha1="6f8cca00e70d6cd2cca77059a6a202964911199c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf6d3e29f619e3">
+		<description>CORE - Cybernatic Organism Recovery Expedition (1986)(A &amp; F Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56277">
+				<rom name="CORE - Cybernatic Organism Recovery Expedition (1986)(A &amp; F Software).tap" size="56277" crc="d9fe9cd4" sha1="f6d3e29f619e3af4bf6b6645ed3eb3915f2bc7d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs429f29d311419">
+		<description>Corn Cropper (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34558">
+				<rom name="Corn Cropper (1983)(CCS).tap" size="34558" crc="b5e380cb" sha1="429f29d3114193fba0a8008c83bfcb6d235ed5d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4feb91d8aaab2">
+		<description>Corona Magica, La</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125139">
+				<rom name="Corona Magica, La.tap" size="125139" crc="07676421" sha1="4feb91d8aaab2eacf25fe12c5aba871d3925721e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8f27f29403f3">
+		<description>Corruption (1984)(CRL Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18872">
+				<rom name="Corruption (1984)(CRL Group).tap" size="18872" crc="d58f62d2" sha1="b8f27f29403f31cafea979cb834c66779ab68a15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9647557583548">
+		<description>Corya the Warrior Sage 1 - Dragon (1992)(The Guild)(Tape 1 of 1 Side 1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44020">
+				<rom name="Corya the Warrior Sage 1 - Dragon (1992)(The Guild)(Tape 1 of 1 Side 1).tap" size="44020" crc="a271bd68" sha1="96475575835483013e28cdd30aaaf90335ed7676"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9fc7e885c863e">
+		<description>Corya the Warrior Sage 1 - Dragon (1992)(The Guild)(Tape 1 of 1 Side 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42709">
+				<rom name="Corya the Warrior Sage 1 - Dragon (1992)(The Guild)(Tape 1 of 1 Side 2).tap" size="42709" crc="172aeba5" sha1="9fc7e885c863e1f937603f8e302ae46ed5bac2d8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37462,6 +37622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs42f824909660f">
+		<description>Magic (1985)(Macmillan Software Ltd)(psw=magic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="45857">
+				<rom name="Magic (1985)(Macmillan Software Ltd)(psw=magic).tap" size="45857" crc="6bb22fdd" sha1="42f824909660fd48b3e9613559622b5e07313964"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs6b618502b787b">
 		<description>Magic (19xx)(Elettronica CS)(It)</description>
 		<year>????</year>
@@ -46129,6 +46299,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49210">
 				<rom name="Phantis (1987)(Dinamic)(Sp)[cr Hacker Junior].tap" size="49210" crc="172a669b" sha1="84b01cf2607dcc13f23fdc6bdf6ce758d5653608"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs939a9196dc537">
+		<description>Phantis - Part II (1987)(Dinamic)(Sp)[cr Hacker Junior](code18757)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49311">
+				<rom name="Phantis - Part II (1987)(Dinamic)(Sp)[cr Hacker Junior](code18757).tap" size="49311" crc="53d67670" sha1="939a9196dc5374ce8d7fb01ba2f10e5fc7cb0cae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc005ef9fc5674">
+		<description>Phantis - Part II (1987)(Dinamic)(Sp)[cr Hacker Junior][a](code18757)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49664">
+				<rom name="Phantis - Part II (1987)(Dinamic)(Sp)[cr Hacker Junior][a](code18757).tap" size="49664" crc="c2eb8a13" sha1="c005ef9fc5674cde43d9b44bc0f985b610ada18f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -60942,6 +61132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs80e675cec0ef9">
+		<description>Titanic - part 2 ES (1988)(Topo Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46204">
+				<rom name="Titanic - part 2 ES (1988)(Topo Soft).tap" size="46204" crc="547d088f" sha1="80e675cec0ef946e67791c5d6f0b7649d08165ae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf520e58388d6e">
 		<description>Titanic Blinky 48K (1991)(Zeppelin Games)</description>
 		<year>????</year>
@@ -66392,6 +66592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs43ce8f788dff5">
+		<description>[2a]Angel Nieto Pole 500cc 128K ES (1990)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68099">
+				<rom name="[2a]Angel Nieto Pole 500cc 128K ES (1990)(Opera Soft).tap" size="68099" crc="010c9f97" sha1="43ce8f788dff50ea24ab2543358e57eeb3148073"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscb37f1fb64607">
 		<description>[2a]Corsarios - Part 1 48K (1989)(Opera Soft)</description>
 		<year>????</year>
@@ -66409,6 +66619,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49282">
 				<rom name="[2a]Corsarios - Part 2 48K (1989)(Opera Soft).tzx" size="49282" crc="87850a26" sha1="f75dc6984bc0a0f86b8caa1b3acbc79fb6f2f0e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs226f578a56844">
+		<description>[2a]Livingstone Supongo II - Part 1 128K+2A (1989)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49127">
+				<rom name="[2a]Livingstone Supongo II - Part 1 128K+2A (1989)(Opera Soft).tap" size="49127" crc="362be350" sha1="226f578a568445c37d36a98a33075ca0e254bebf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0779d612647cc">
+		<description>[2a]Livingstone Supongo II - Part 2 128K+2A (1989)(Opera Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49127">
+				<rom name="[2a]Livingstone Supongo II - Part 2 128K+2A (1989)(Opera Soft).tap" size="49127" crc="4ca7e9dd" sha1="0779d612647cc08f830e64a9f305c38dd93395b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs32daad548a95d">
+		<description>[2a]Mot (1989)(Opera Soft)(Sp)[Part 1 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49127">
+				<rom name="[2a]Mot (1989)(Opera Soft)(Sp)[Part 1 of 3].tap" size="49127" crc="0713edec" sha1="32daad548a95d41daa4018dd7dd711366ad2f19f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs82ce1427b25ad">
+		<description>[2a]Mot (1989)(Opera Soft)(Sp)[Part 3 of 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49127">
+				<rom name="[2a]Mot (1989)(Opera Soft)(Sp)[Part 3 of 3].tap" size="49127" crc="43ed24bc" sha1="82ce1427b25ad627ff4e1be8e3749d0859e94aeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb8a49d8a32d41">
+		<description>[2a]Mot (demo) (1989)(Opera Soft)(Sp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49127">
+				<rom name="[2a]Mot (demo) (1989)(Opera Soft)(Sp).tap" size="49127" crc="76c4cac9" sha1="b8a49d8a32d41f0c9d9735bf2f1be7b450841942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0fc1769f9e62d">
+		<description>[2a]MOT Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="196508">
+				<rom name="[2a]MOT Demo.tap" size="196508" crc="3364773e" sha1="0fc1769f9e62d5b950e10698e4f3cf90c376e413"/>
 			</dataarea>
 		</part>
 	</software>
@@ -68169,6 +68439,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39345">
 				<rom name="_Convoy Raider (1987)(Gremlin Graphics).tap" size="39345" crc="f2295353" sha1="a40f61c2af57f53ffcad0f2481ee145ddf7981bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0556ac2d40705">
+		<description>_Copier Tr (1986)(T.R.C. Soft)(UNK-LANG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10214">
+				<rom name="_Copier Tr (1986)(T.R.C. Soft)(UNK-LANG).tap" size="10214" crc="ccd3ca34" sha1="0556ac2d40705dab00063817920434a6e1901ff5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs25f78b0c20066">
+		<description>_Corridors Of Genon (1983)(New Generation Software - Aackosoft)(UNK-LANG)(useZandX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23220">
+				<rom name="_Corridors Of Genon (1983)(New Generation Software - Aackosoft)(UNK-LANG)(useZandX).tap" size="23220" crc="937542a2" sha1="25f78b0c200660572306761c20e364ee2ab319fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf060f700c03b3">
+		<description>_Corridors Of Genon (1983)(New Generation Software)(useZandX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20448">
+				<rom name="_Corridors Of Genon (1983)(New Generation Software)(useZandX).tap" size="20448" crc="24ec2a4b" sha1="f060f700c03b36392dd80efc5fbec43c6ec9fef0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -72469,6 +72769,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16388">
 				<rom name="_Little Game (1987)(Satansoft).tap" size="16388" crc="98bb4c58" sha1="769e9dac4206299eaa3d2081f1c2513893e2fbc8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsad85812fd7ad4">
+		<description>_Livingstone II (1990)(Opera Soft - Alligata Software)[Part 1 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49084">
+				<rom name="_Livingstone II (1990)(Opera Soft - Alligata Software)[Part 1 of 2].tap" size="49084" crc="eb0c8e93" sha1="ad85812fd7ad4cd146884689cd7ef3bed8b09ad8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa6129ddbc5256">
+		<description>_Livingstone II (1990)(Opera Soft - Alligata Software)[Part 2 of 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49084">
+				<rom name="_Livingstone II (1990)(Opera Soft - Alligata Software)[Part 2 of 2].tap" size="49084" crc="216f6c0e" sha1="a6129ddbc5256937b73d8fb284cfa371d6f033ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4986077c54359">
+		<description>_Livingstone II (1990)(Opera Soft)(Sp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="196422">
+				<rom name="_Livingstone II (1990)(Opera Soft)(Sp)[a].tap" size="196422" crc="b51878ce" sha1="4986077c54359d47bd9c4e4da7650c840baf3768"/>
 			</dataarea>
 		</part>
 	</software>
