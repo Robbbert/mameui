@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 99 -->
+<!-- Number of items in this list = 115 -->
 <softwarelist name="jaguar_quik" description="jaguar_quik loose roms">
 	<software name="jag8891da48d64e1">
 		<description>(demo)FIRE (Symmetry of TNG 2003)</description>
@@ -249,6 +249,166 @@
 		<part name="quik" interface="jaguar_quik">
 			<dataarea name="quik" size="2088960">
 				<rom name="Barkley Shut Up And Jam (Prototype).rom" size="2088960" crc="c2898f6e" sha1="57b0340dd805b240abcc761e4186aac1d04c5f6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag5fd30a5cc920a">
+		<description>blobs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="63680">
+				<rom name="blobs.bin" size="63680" crc="182631aa" sha1="5fd30a5cc920a075ba2a54f18e72646fd406d948"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag3ca8856e7025a">
+		<description>blobs</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="63911">
+				<rom name="blobs.cof" size="63911" crc="7326edd0" sha1="3ca8856e7025a35ba945379588b3128a174cad8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag1009e778a70f2">
+		<description>BrainGames (unreleased)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="1612332">
+				<rom name="BrainGames (unreleased).abs" size="1612332" crc="43c8bca8" sha1="1009e778a70f264dcb61267372fcff580cf965db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagdd0505579035f">
+		<description>Breakout2000 (Prototype) 3-27</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="2088960">
+				<rom name="Breakout2000 (Prototype) 3-27.rom" size="2088960" crc="d8696f23" sha1="dd0505579035fd4b402be64d975b41496fcfb4ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jage322b66651a3c">
+		<description>Checkpoint_DEMO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="1360334">
+				<rom name="Checkpoint_DEMO.abs" size="1360334" crc="b6e04dad" sha1="e322b66651a3c397846440feb6a1bb56a3a0b3e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag676dc7f010977">
+		<description>Chroma Luma Colors Picker (1996)(Matthias Domin)(PD)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="7236">
+				<rom name="Chroma Luma Colors Picker (1996)(Matthias Domin)(PD)[a2].jag" size="7236" crc="115254e1" sha1="676dc7f01097754f14782cc28d16cdb215a17ccb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jaga6decc7643075">
+		<description>Chroma-Luma Color Pick by Matthias Domin (jag) (1996) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="7282">
+				<rom name="Chroma-Luma Color Pick by Matthias Domin (jag) (1996) (PD).prg" size="7282" crc="2e967b0c" sha1="a6decc76430757c426bfbcdac8c081c324fb574f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagda366ede25da1">
+		<description>Chroma-Luma Color Pick by Matthias Domin (jag) (1996) (PD)[a1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="9426">
+				<rom name="Chroma-Luma Color Pick by Matthias Domin (jag) (1996) (PD)[a1].prg" size="9426" crc="24ecb02b" sha1="da366ede25da13e945ff4f78ec440fcd2becb73b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag5550ae55bb0da">
+		<description>Chroma-Luma Colors Picker for Mouse (1996) (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="9234">
+				<rom name="Chroma-Luma Colors Picker for Mouse (1996) (PD).prg" size="9234" crc="37df04ab" sha1="5550ae55bb0da81272addf869c842808363e36f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagec6e56d64979f">
+		<description>Clicks 3 (199x)(Matthias Domin)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="82226">
+				<rom name="Clicks 3 (199x)(Matthias Domin)(PD).jag" size="82226" crc="427c2be7" sha1="ec6e56d64979f2fd3bbae7a2378ead1e9aef9f59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jage4eb1a565eb5a">
+		<description>Clicks 4 (199x)(Matthias Domin)(PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="106212">
+				<rom name="Clicks 4 (199x)(Matthias Domin)(PD).jag" size="106212" crc="30bd7c4c" sha1="e4eb1a565eb5af8a29211323050a4849e6286f2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag5fadd1eb60803">
+		<description>Clicks 4 (199x)(Matthias Domin)(PD)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="106258">
+				<rom name="Clicks 4 (199x)(Matthias Domin)(PD)[a].jag" size="106258" crc="5f7198c9" sha1="5fadd1eb608034ef236fcae6bef6f1f267c2a61b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagd2ded01afb3d0">
+		<description>Connaone Demo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="315374">
+				<rom name="Connaone Demo.jag" size="315374" crc="5614472e" sha1="d2ded01afb3d0c9306a51fbf7ea388e533c39678"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag26230767abe53">
+		<description>Cyber Golf v0.02 (19xx)(Atari)[Demo]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="2088960">
+				<rom name="Cyber Golf v0.02 (19xx)(Atari)[Demo].rom" size="2088960" crc="8f8167bd" sha1="26230767abe53452a39f2403dea80c356316c140"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag9b47ab30f1670">
+		<description>Cyber Golf v0.03 (19xx)(Atari)[Prototype]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="1040384">
+				<rom name="Cyber Golf v0.03 (19xx)(Atari)[Prototype].rom" size="1040384" crc="8928c80b" sha1="9b47ab30f167093818b406bca140f034829ffee1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagd0123ccf06f2a">
+		<description>Cyber Golf v0.04 (19xx)(Atari)[Prototype]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="1040384">
+				<rom name="Cyber Golf v0.04 (19xx)(Atari)[Prototype].rom" size="1040384" crc="d5795815" sha1="d0123ccf06f2a5a3e6188b7339c0eafa7faf14db"/>
 			</dataarea>
 		</part>
 	</software>
