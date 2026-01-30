@@ -20,8 +20,10 @@ public:
 	template <typename T> void set_screen_tag(T &&tag) { m_screen.set_tag(std::forward<T>(tag)); }
 
 	auto firq_cb() { return m_firq_cb.bind(); }
+	auto xbus_sel_cb() { return m_xbus_sel_cb.bind(); }
 	auto xbus_read_cb() { return m_xbus_read_cb.bind(); }
 	auto xbus_write_cb() { return m_xbus_write_cb.bind(); }
+	auto exp_dma_enable_cb() { return m_exp_dma_enable_cb.bind(); }
 	auto dacl_cb() { return m_dac_l.bind(); }
 	auto dacr_cb() { return m_dac_r.bind(); }
 	auto hsync_cb() { return m_hsync_cb.bind(); }
@@ -29,9 +31,11 @@ public:
 	template <std::size_t Line> auto adb_out_cb() { return m_adb_out_cb[Line].bind(); }
 
 	void xbus_int_w(int state);
+	void xbus_wr_w(int state);
 
-//  void expansion_w(int state);
 	void dply_w(int state);
+	void arm_ctl_w(int state);
+	void dexp_w(int state);
 
 protected:
 	// device-level overrides
@@ -45,8 +49,10 @@ private:
 	devcb_write_line    m_firq_cb;
 	devcb_write_line    m_vsync_cb;
 	devcb_write_line    m_hsync_cb;
+	devcb_write8        m_xbus_sel_cb;
 	devcb_read8         m_xbus_read_cb;
 	devcb_write8        m_xbus_write_cb;
+	devcb_write_line    m_exp_dma_enable_cb;
 	devcb_write16       m_dac_l;
 	devcb_write16       m_dac_r;
 	devcb_write_line::array<4> m_adb_out_cb;
@@ -82,6 +88,7 @@ private:
 									/* Expansion bus */
 	uint32_t  m_expctl = 0;         /* 03400400/03400404 */
 	uint32_t  m_type0_4 = 0;        /* 03400408 */
+	uint32_t  m_xfrcnt = 0;         /* 0340040c */
 	uint32_t  m_dipir1 = 0;         /* 03400410 */
 	uint32_t  m_dipir2 = 0;         /* 03400414 */
 									/* Bus signals */
@@ -91,6 +98,7 @@ private:
 //  uint32_t  m_avdidata = 0;       /* 034005c0 - 034005ff */
 	uint32_t  m_sel;
 	uint32_t  m_poll;
+	u8        m_xbus_dev[0x10];
 									/* DSPP */
 //  uint32_t  m_semaphore = 0;      /* 034017d0 */
 //  uint32_t  m_semaack = 0;        /* 034017d4 */

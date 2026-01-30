@@ -7,7 +7,8 @@
 #define LOG_IRQ   (1U << 1) // enable bits (verbose)
 #define LOG_TIMER (1U << 2)
 #define LOG_XBUS  (1U << 3)
-#define LOG_DSPP  (1U << 4)
+#define LOG_XBUSV (1U << 4) // verbose XBus stuff
+#define LOG_DSPP  (1U << 5)
 
 #define VERBOSE (LOG_GENERAL | LOG_XBUS | LOG_DSPP)
 //#define LOG_OUTPUT_FUNC osd_printf_warning
@@ -17,6 +18,7 @@
 #define LOGIRQ(...)   LOGMASKED(LOG_IRQ,     __VA_ARGS__)
 #define LOGTIMER(...) LOGMASKED(LOG_TIMER,   __VA_ARGS__)
 #define LOGXBUS(...)  LOGMASKED(LOG_XBUS,    __VA_ARGS__)
+#define LOGXBUSV(...) LOGMASKED(LOG_XBUSV,   __VA_ARGS__)
 #define LOGDSPP(...)  LOGMASKED(LOG_DSPP,    __VA_ARGS__)
 
 
@@ -29,8 +31,10 @@ clio_device::clio_device(const machine_config &mconfig, const char *tag, device_
 	, m_firq_cb(*this)
 	, m_vsync_cb(*this)
 	, m_hsync_cb(*this)
+	, m_xbus_sel_cb(*this)
 	, m_xbus_read_cb(*this, 0xff)
 	, m_xbus_write_cb(*this)
+	, m_exp_dma_enable_cb(*this)
 	, m_dac_l(*this)
 	, m_dac_r(*this)
 //  , m_adb_in_cb(*this)
@@ -96,6 +100,8 @@ void clio_device::device_start()
 
 	save_item(NAME(m_sel));
 	save_item(NAME(m_poll));
+	save_item(NAME(m_xfrcnt));
+	save_item(NAME(m_xbus_dev));
 }
 
 void clio_device::device_reset()
@@ -108,6 +114,8 @@ void clio_device::device_reset()
 	m_vint0 = m_vint1 = 0xffff'ffff;
 	m_slack = 336;
 	m_adbio = 0x00;
+	std::fill(std::begin(m_xbus_dev), std::end(m_xbus_dev), 0x00);
+	m_xfrcnt = 0;
 	m_system_timer->adjust(attotime::from_ticks(m_slack, this->clock()));
 	m_scan_timer->adjust(m_screen->time_until_pos(0), 0);
 }
@@ -120,18 +128,54 @@ void clio_device::dply_w(int state)
 
 void clio_device::xbus_int_w(int state)
 {
-	if (state && m_poll & 7)
+	if (state)
 	{
-		request_fiq(1 << 2, 0);
+		m_xbus_dev[0] |= 0x10;
+		if (m_xbus_dev[0] & 1)
+			request_fiq(1 << 2, 0);
 	}
+	else
+		m_xbus_dev[0] &= ~0x10;
+}
 
-	//if ((m_sel & 0x0f) == 0)
-	//{
-	//  if (state)
-	//      m_poll |= 0x10;
-	//  else
-	//      m_poll &= ~0x10;
-	//}
+void clio_device::xbus_wr_w(int state)
+{
+//	printf("%d WR %02x\n", state, m_xbus_dev[0]);
+	if (state)
+	{
+		m_xbus_dev[0] |= 0x20;
+		if (m_xbus_dev[0] & 2)
+			request_fiq(1 << 2, 0);
+	}
+	else
+		m_xbus_dev[0] &= ~0x20;
+}
+
+void clio_device::dexp_w(int state)
+{
+	//printf("dexp_w %d\n", state);
+	if (state)
+	{
+		m_expctl &= ~(1 << 10);
+		request_fiq(1 << 29, 0);
+	}
+}
+
+void clio_device::arm_ctl_w(int state)
+{
+	if (state)
+	{
+		m_expctl |= 0x80;
+		// TODO: is this really a thing?
+		// avoids starting the DMA again (with count already underflowed),
+		// but BIOS clears this status on receiving dexp_w anyway ...
+		m_dma_enable &= ~(1 << 20);
+	}
+	else
+	{
+		m_expctl &= ~0x80;
+		m_expctl |= (1 << 10);
+	}
 }
 
 // $0340'0000 base
@@ -217,7 +261,8 @@ void clio_device::map(address_map &map)
 	);
 	// TODO: should likely follow seed number, and be truly RNG
 	map(0x003c, 0x003f).lr32(NAME([this] () {
-		LOG("random read (!)\n");
+		if (!machine().side_effects_disabled())
+			LOG("random read (!)\n");
 		return m_random;
 	}));
 
@@ -393,21 +438,25 @@ void clio_device::map(address_map &map)
 			else
 				m_dma_enable |= data;
 			LOG("DMA request %s: %08x & %08x\n", offset ? "clear" : "set", data, mem_mask);
+			m_exp_dma_enable_cb(BIT(m_dma_enable, 20) && BIT(m_expctl, 11));
 		})
 	);
 //  map(0x0380, 0x0383) FIFO status
 
 	// XBus
 	map(0x0400, 0x0407).lrw32(
-		NAME([this] () { return m_expctl; }),
+		NAME([this] () {
+			return m_expctl;
+		}),
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
-			if (ACCESSING_BITS_8_15)
+			if (ACCESSING_BITS_0_15)
 			{
 				if (offset)
-					m_expctl &= ~(data & 0xca00);
+					m_expctl &= ~(data & 0xca80);
 				else
-					m_expctl |= (data & 0xca00);
+					m_expctl |= (data & 0xca80);
 				LOGXBUS("xbus expctl %s: %08x & %08x\n", offset ? "clear" : "set", data, mem_mask);
+				m_exp_dma_enable_cb(BIT(m_dma_enable, 20) && BIT(m_expctl, 11));
 			}
 		})
 	);
@@ -415,6 +464,13 @@ void clio_device::map(address_map &map)
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
 			LOGXBUS("xbus type0_4: %08x & %08x\n", data, mem_mask);
 			COMBINE_DATA(&m_type0_4);
+		})
+	);
+	map(0x040c, 0x040f).lrw32(
+		NAME([this] () { return m_xfrcnt; }),
+		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
+			LOGXBUS("DMA xfercnt %08x & %08x\n", data, mem_mask);
+			COMBINE_DATA(&m_xfrcnt);
 		})
 	);
 	// TODO: these are identification bits
@@ -441,7 +497,8 @@ void clio_device::map(address_map &map)
 			m_sel &= 0xff;
 			/* Start WRSEL cycle */
 
-			LOGXBUS("xbus sel: %02x & %08x\n", data, mem_mask);
+			m_xbus_sel_cb(data);
+			LOGXBUSV("xbus sel: %02x & %08x\n", data, mem_mask);
 			/* Detection of too many devices on the bus */
 			switch ( data & 0xff )
 			{
@@ -454,18 +511,37 @@ void clio_device::map(address_map &map)
 			}
 		})
 	);
+	/*
+	 * x--- ---- media access (read clear)
+	 * -x-- ---- write valid (r/o)
+	 * --x- ---- read valid (r/o)
+	 * ---x ---- status valid (r/o)
+	 * ---- x--- reset
+	 * ---- -x-- write irq enable
+	 * ---- --x- read irq enable
+	 * ---- ---x status irq enable
+	 */
 	map(0x0540, 0x057f).lrw32(
-		NAME([this] () {
-			// HACK: until I understand semantics
+		NAME([this] () -> u8 {
+			u8 res = m_poll;
+			//m_poll &= ~0x80;
 			if (m_sel == 0)
-				return (m_poll & 0xef) | (machine().rand() & 0x10);
-			return m_poll;
+				return m_xbus_dev[0]; //(res & 0xcf) | (m_xbus_dev[0] & 0x30);
+			return (res);
 		}),
 		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
-			LOGXBUS("xbus poll: %02x & %08x\n", data, mem_mask);
-			COMBINE_DATA(&m_poll);
-			m_poll &= 0xf8;
-			m_poll |= data & 7;
+			LOGXBUS("xbus poll: %02x & %08x (sel=%d)\n", data, mem_mask, m_sel);
+			//COMBINE_DATA(&m_poll);
+			//m_poll &= 0xf8;
+			if (ACCESSING_BITS_0_7)
+			{
+				if (m_sel == 0)
+				{
+					m_xbus_dev[0] = (data & 0xf) | (m_xbus_dev[0] & 0xf0);
+				}
+				else
+					m_poll = data & 0xff;
+			}
 		})
 	);
 	// 1--- 1111 external device
@@ -478,7 +554,7 @@ void clio_device::map(address_map &map)
 
 	// TODO: should really map these directly in DSPP core
 //  map(0x17d0, 0x17d3) Semaphore
-	// HACK: for 3do_gdo101
+	// HACK: temporary to allow 3do_gdo101 boot
 	map(0x17d0, 0x17d3).lr32(NAME([] () { return 0x0004'0000; }));
 //  map(0x17d4, 0x17d7) Semaphore ACK
 //  map(0x17e0, 0x17ff) DSPP DMA and state
@@ -568,7 +644,7 @@ IRQ0
 0x0000f000 DMA DSPP->RAM *
 0x00000800 DSPP
 0x00000400 Timer  1
-0x00000200 Timer  3 <- needed to surpass current hang point
+0x00000200 Timer  3
 0x00000100 Timer  5
 0x00000080 Timer  7
 0x00000040 Timer  9
@@ -606,12 +682,7 @@ void clio_device::request_fiq(uint32_t irq_req, uint8_t type)
 	else
 		m_irq0 &= ~(1 << 31);
 
-	if((m_irq0 & m_irq0_enable) || (m_irq1 & m_irq1_enable))
-	{
-		//printf("Go irq %08x & %08x %08x & %08x\n",m_irq0, m_irq0_enable, m_irq1, m_irq1_enable);
-		m_firq_cb(1);
-		//m_maincpu->pulse_input_line(arm7_cpu_device::ARM7_FIRQ_LINE, m_maincpu->minimum_quantum_time());
-	}
+	m_firq_cb((m_irq0 & m_irq0_enable) || (m_irq1 & m_irq1_enable));
 }
 
 // TODO: this actually generates from Amy not from Clio
@@ -697,6 +768,10 @@ TIMER_CALLBACK_MEMBER( clio_device::system_timer_cb )
 
 	// Opera specification goes this lengthy explaination about "64" being the unit of time
 	// but 3do_fc2 and 3do_gdo101 won't boot with a timer tick this small ...
+	// TODO: causes "PAL system detected" in most BIOSes
+	// - slack may just be the start time
+	// - in an ideal world we would split this implementation in separate timers,
+	//   however that will give more scheduler roundtrips, in an already crowded scenario ...
 	m_system_timer->adjust(attotime::from_ticks(m_slack, this->clock()));
 }
 
