@@ -29,6 +29,7 @@
 #include <clocale>
 #include <cstdarg>
 #include <cstdio>
+#include <locale>
 #include <optional>
 #include <sstream>
 #include <thread>
@@ -53,14 +54,31 @@
 #define UNICODE_POSTFIX "A"
 #endif
 
+namespace {
+
 //**************************************************************************
 //  TYPE DEFINITIONS
 //**************************************************************************
+
+template <typename CharT>
+class [[maybe_unused]] suppress_grouping : public std::numpunct<CharT>
+{
+public:
+	suppress_grouping(std::locale const &base) : m_base(std::use_facet<std::numpunct<CharT> >(base)) { }
+protected:
+	virtual typename std::numpunct<CharT>::char_type do_decimal_point() const override { return m_base.decimal_point(); }
+	virtual typename std::numpunct<CharT>::char_type do_thousands_sep() const override { return m_base.thousands_sep(); }
+	virtual std::string do_grouping() const override { return std::string(); }
+	virtual typename std::numpunct<CharT>::string_type do_truename() const override { return m_base.truename(); }
+	virtual typename std::numpunct<CharT>::string_type do_falsename() const override { return m_base.falsename(); }
+	std::numpunct<CharT> const &m_base;
+};
 
 //============================================================
 //  winui_output_error
 //============================================================
 // MAMEUI Robbbert, 2022-11-18. The removed code was a total horrible hack and froze the system.
+
 class winui_output_error : public osd_output
 {
 public:
@@ -85,6 +103,9 @@ public:
 		}
 	}
 };
+
+} // anonymous namespace
+
 
 //**************************************************************************
 //  GLOBAL VARIABLES
@@ -165,6 +186,12 @@ int main_(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	std::setlocale(LC_ALL, "");
+#if defined(_LIBCPP_VERSION) && defined(_UCRT)
+	// suppress digit grouping for now - too many things don't take it into consideration
+	std::locale const syslocale("");
+	std::locale const customlocale(std::locale(syslocale, new suppress_grouping<char>(syslocale)), new suppress_grouping<wchar_t>(syslocale));
+	std::locale::global(customlocale);
+#endif
 	std::vector<std::string> args = osd_get_command_line(argc, argv);
 
 	// use small output buffers on non-TTYs (i.e. pipes)

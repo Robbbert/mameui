@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 647 -->
+<!-- Number of items in this list = 648 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -3709,6 +3709,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Nether Dungeon (2018)(CollectorVision).rom" size="131072" crc="4657bb8c" sha1="f78a9b9477f4b02556351e6574e0a297fd20a7d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col33fe4037d283d">
+		<description>New Cluck City - Egg On The Town</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="New Cluck City - Egg On The Town.col" size="32768" crc="e29d280e" sha1="33fe4037d283d825775d0249fd43d328473b8911"/>
 			</dataarea>
 		</part>
 	</software>

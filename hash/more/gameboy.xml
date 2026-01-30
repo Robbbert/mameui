@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1382 -->
+<!-- Number of items in this list = 1381 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -12199,16 +12199,6 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Soul Void Redux (2023-07-17)(Kadabura).gbc" size="1048576" crc="b6f5f372" sha1="3b10f6bae11dab5bb6106d0a6e4e80a3fbd0fa7a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbcad9240b30e381">
-		<description>South Park (USA) (Proto)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gameboy_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="South Park (USA) (Proto).gbc" size="524288" crc="e79d411a" sha1="ad9240b30e381cd7b260f5fc78aaaeed00c6b43d"/>
 			</dataarea>
 		</part>
 	</software>

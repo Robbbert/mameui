@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3977 -->
+<!-- Number of items in this list = 3988 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3642,6 +3642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5512a07611663">
+		<description>Bastard!! - Ankoku no Hakaishin (J)(1994)(Cobra Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Bastard!! - Ankoku no Hakaishin (J)(1994)(Cobra Team).sfc" size="1572864" crc="6742d51c" sha1="5512a076116639e36e1bfde38ca86b126ca0d867"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf43fb1980d9ad">
 		<description>Bastard!! - Dark God of Destruction T-Eng 'Easy Spells' (2017)(DeJap Translations, Docrow)</description>
 		<year>????</year>
@@ -7169,6 +7179,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Dezaemon T-Eng (2018)(Aeon Genesis)..sfc" size="524288" crc="32f9c958" sha1="3abca6dc1b7731f46ca27f07705294c7011a871b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb6af15c347d58">
+		<description>Diddy's Kong Quest - Rambis Revenge (2025)(KFin45)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Diddy's Kong Quest - Rambis Revenge (2025)(KFin45).sfc" size="4194304" crc="9f69d768" sha1="b6af15c347d58053f948f89b8e42a47f9e5138c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11562,6 +11582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snscd0570d80d3ae">
+		<description>Goof Troop Paradise EN v1.0.3 (2025)(MegaStriker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Goof Troop Paradise EN v1.0.3 (2025)(MegaStriker).sfc" size="1048576" crc="3ebc72ca" sha1="cd0570d80d3ae4743bc9aea74d3caacca3bc60d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns869754b2d6be1">
+		<description>Goof Troop Paradise PT v1.0.3 (2025)(MegaStriker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Goof Troop Paradise PT v1.0.3 (2025)(MegaStriker).sfc" size="1048576" crc="95e360f7" sha1="869754b2d6be1f6eba520d6f7411b6c5cbd34e92"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsed4e38976dd99">
 		<description>Goomba Break Out v1.3 (2024)(BriG78)</description>
 		<year>????</year>
@@ -13019,6 +13059,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="J League Super Soccer (J)(1994)(Hudson Soft).sfc" size="1572864" crc="1d20cac2" sha1="c6a42f7240ef8898bfedfe0f938f9d86cfdaaee5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns14f5a0f928436">
+		<description>James Pond 3 - Operation Starfish (E)(1995)(U.S. Gold - Millennium)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="James Pond 3 - Operation Starfish (E)(1995)(U.S. Gold - Millennium).sfc" size="2097152" crc="9d3e313f" sha1="14f5a0f9284365169a82a6902eb80b1886efcf0d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31092,6 +31142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns2fa68c2a01259">
+		<description>Soul Blazer T-Por (2025)(eki)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Soul Blazer T-Por (2025)(eki).sfc" size="1048576" crc="28d07e22" sha1="2fa68c2a01259941716944b5469606b076f5126c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsab3ecbc7a55d8">
 		<description>Space Invaders</description>
 		<year>????</year>
@@ -31179,6 +31239,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="spctest (2023)(HB).sfc" size="131072" crc="1a1efbd6" sha1="26202a15e022b83d827db4083bd096eaecb4a9ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns32c25976d026c">
+		<description>Special Tee Shot (Proto)(1996)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Special Tee Shot (Proto)(1996)(Nintendo).sfc" size="1048576" crc="0cfa3cec" sha1="32c25976d026cdb4edb56df6825e065fe0eae0e4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32829,6 +32899,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Mario Globe demo (SMW Hack).sfc" size="2097152" crc="a819a4c2" sha1="eb144a0a01364908e210c4a5d015374bcb3c06fe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6ac961c4fe1a6">
+		<description>Super Mario Horizons v1.0b (2023)(MegaCesarCG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Mario Horizons v1.0b (2023)(MegaCesarCG).sfc" size="4194304" crc="d0f5682b" sha1="6ac961c4fe1a6c591abef682bf8880ac33cf618f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38222,6 +38302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb849ae046d294">
+		<description>Uncharted World v1.1 (2026)(Will)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Uncharted World v1.1 (2026)(Will).sfc" size="4194304" crc="664bb5fa" sha1="b849ae046d294fc37abdc14a24779752f54a6157"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd98a8ec2688ee">
 		<description>Undake 30 - Same Game Daisakusen - Mario Version (Japan)</description>
 		<year>????</year>
@@ -38253,12 +38343,12 @@
 		</part>
 	</software>
 	<software name="sns509bd3d8f4c82">
-		<description>Unholy Night - The Darkness Hunter (2017)(Blazepro -Foxbat)</description>
+		<description>Unholy Night - The Darkness Hunter (2017)(Blazepro - Foxbat)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194816">
-				<rom name="Unholy Night - The Darkness Hunter (2017)(Blazepro -Foxbat).sfc" size="4194816" crc="219a466b" sha1="509bd3d8f4c82c187dcb1ce6e4efd5586b33386e"/>
+				<rom name="Unholy Night - The Darkness Hunter (2017)(Blazepro - Foxbat).sfc" size="4194816" crc="219a466b" sha1="509bd3d8f4c82c187dcb1ce6e4efd5586b33386e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38989,6 +39079,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Waluigi Start! (SMW1 Hack).smc" size="1048576" crc="59342013" sha1="577ee879013e9b2f880a0a58b2ccdbf3f8d0e936"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb63911cc410f5">
+		<description>Waluigi's Road to Glory - Horlogic will Go On v1.2 (2021)(Roberto Zampari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Waluigi's Road to Glory - Horlogic will Go On v1.2 (2021)(Roberto Zampari).sfc" size="4194304" crc="b82e8eaa" sha1="b63911cc410f599f19310ec33f88abd8c1859d12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd3eb15390f9a0">
+		<description>Waluigi's Road to Glory 2 - Azathomura vF02 (2025)(Roberto Zampari)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Waluigi's Road to Glory 2 - Azathomura vF02 (2025)(Roberto Zampari).sfc" size="4194304" crc="a825137a" sha1="d3eb15390f9a04006e87e84ccb008a24da3ac311"/>
 			</dataarea>
 		</part>
 	</software>

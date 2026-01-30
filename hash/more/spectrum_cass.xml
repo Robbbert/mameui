@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7780 -->
+<!-- Number of items in this list = 7790 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10029,6 +10029,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48579">
 				<rom name="Bismark (1987)(PSS).tap" size="48579" crc="d328eab3" sha1="0717074c9164027f23fe486c55e9a8534c76dd28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8bd909a69e408">
+		<description>BIT 101 saves Christmas EN 128K (2026)(Isaias Diaz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58261">
+				<rom name="BIT 101 saves Christmas EN 128K (2026)(Isaias Diaz).tap" size="58261" crc="e5189aff" sha1="8bd909a69e4082f46cc3a25b81c7bac47aab0427"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa4ba1f6e84d5">
+		<description>BIT 101 saves Christmas ES 128K (2026)(Isaias Diaz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58264">
+				<rom name="BIT 101 saves Christmas ES 128K (2026)(Isaias Diaz).tap" size="58264" crc="c8e18c62" sha1="aa4ba1f6e84d5daabd66f635cfb8d1c715bf7c9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfc867fe6ed218">
+		<description>BIT 101 saves Christmas PT 128K (2026)(Isaias Diaz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58347">
+				<rom name="BIT 101 saves Christmas PT 128K (2026)(Isaias Diaz).tap" size="58347" crc="179aadb9" sha1="fc867fe6ed2186684c0f95a44c8f313ea0b2b4eb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34792,6 +34822,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs9544add51c0f9">
+		<description>Koji al rescate de la Superaleacion Z ES 128K (2025)(Clanbyte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72751">
+				<rom name="Koji al rescate de la Superaleacion Z ES 128K (2025)(Clanbyte).tap" size="72751" crc="9dfed9f1" sha1="9544add51c0f9bc4d70f3c7200a2c858a323e582"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaebaa106ccd13">
+		<description>Koji to the rescue of Superalloy Z EN 128K (2025)(Clanbyte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72571">
+				<rom name="Koji to the rescue of Superalloy Z EN 128K (2025)(Clanbyte).tap" size="72571" crc="ee3f26ad" sha1="aebaa106ccd1379606ca3d470f98a677cd5d20e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs62d4494572cf4">
 		<description>Kokotoni Wilf (1984)(Elite Systems)</description>
 		<year>????</year>
@@ -51812,6 +51862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsfbe3430fb38ff">
+		<description>Ryo in soccorso della Superlega Z IT 128K (2025)(Clanbyte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72683">
+				<rom name="Ryo in soccorso della Superlega Z IT 128K (2025)(Clanbyte).tap" size="72683" crc="e6626e6c" sha1="fbe3430fb38ffaa5c3440498aecb07b41d1cfb03"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5b5c1ca597294">
 		<description>S.A.S. Combat Simulator (1988)(Codemasters)</description>
 		<year>????</year>
@@ -64539,6 +64599,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48070">
 				<rom name="William Wobbler (1986)(Wizard Software).tap" size="48070" crc="f75fb8d5" sha1="0d9f3d6af4fcc064eba5dea620b8566a618b6741"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa48a540a2395b">
+		<description>Willy in the Islands of Mystery - Part 1 - Exploration EN 128K (2007)(Herve Ast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118898">
+				<rom name="Willy in the Islands of Mystery - Part 1 - Exploration EN 128K (2007)(Herve Ast).tap" size="118898" crc="9c43df25" sha1="a48a540a2395bd584920114709b3247441be7cf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4f509a4113e47">
+		<description>Willy in the Islands of Mystery - Part 1 - Exploration FR 128K (2007)(Herve Ast)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118898">
+				<rom name="Willy in the Islands of Mystery - Part 1 - Exploration FR 128K (2007)(Herve Ast).tap" size="118898" crc="c5de41e9" sha1="4f509a4113e47c5494c95f04c486d03a08e074c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsec3bb0417efc1">
+		<description>Willy in the Islands of Mystery - Part 2 - The Temple EN 128K (2025)(Herve Ast, Daniel Gromann)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125825">
+				<rom name="Willy in the Islands of Mystery - Part 2 - The Temple EN 128K (2025)(Herve Ast, Daniel Gromann).tap" size="125825" crc="a9f3d888" sha1="ec3bb0417efc1e3697166c8fc1a26d6a8e5b9114"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse0821cfc31bc4">
+		<description>Willy in the Islands of Mystery - Part 2 - The Temple FR 128K (2025)(Herve Ast, Daniel Gromann)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125825">
+				<rom name="Willy in the Islands of Mystery - Part 2 - The Temple FR 128K (2025)(Herve Ast, Daniel Gromann).tap" size="125825" crc="3698218a" sha1="e0821cfc31bc498d749aed40ed8c72e47b7ea397"/>
 			</dataarea>
 		</part>
 	</software>
