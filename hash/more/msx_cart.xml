@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 712 -->
+<!-- Number of items in this list = 706 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -819,26 +819,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16417">
 				<rom name="Bomber Man (1986)(Korea Soft Bank)[o].rom" size="16417" crc="72188b8b" sha1="2c0e3d130a1655617f9f80836f4b8b606f0774f2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx64781236e70cf">
-		<description>Bomber Man (Korea)(1986)(Korea SoftBank)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Bomber Man (Korea)(1986)(Korea SoftBank).rom" size="16384" crc="3df1f56f" sha1="64781236e70cf5dd530a420305533ff55db0e4ad"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx8976f8b8ab2a8">
-		<description>Bomber Man (Korea, Alt)(1986)(Korea SoftBank)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Bomber Man (Korea, Alt)(1986)(Korea SoftBank).rom" size="8192" crc="c9a2c37e" sha1="8976f8b8ab2a82f626a73c781d0a21899ae68dae"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3302,16 +3282,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msx6895a062e10b7">
-		<description>Koedoli (Korea)(1988)(Mickey Soft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Koedoli (Korea)(1988)(Mickey Soft).rom" size="32768" crc="cb345bcc" sha1="6895a062e10b790e19a55952e634662f3135fa55"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="msx9bdfe44a7a0d5">
 		<description>konami's baseball (japan) (alt 1)</description>
 		<year>????</year>
@@ -5152,16 +5122,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="msxbab66b0aa4131">
-		<description>Shadow Switcher (2022)(Robosoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Shadow Switcher (2022)(Robosoft).rom" size="32768" crc="43075381" sha1="bab66b0aa413174695ab0ffcc1293a50db97a32c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="msxb954b7290a986">
 		<description>Shamus (2025)(Nanochess)</description>
 		<year>????</year>
@@ -6829,26 +6789,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="[2]Mahjong_116.rom" size="32768" crc="06158880" sha1="f7fa508e9983800f1d0060213f6001609d6be90e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msxe4d61ee748670">
-		<description>[2]Mashou no Yakata Gabalin (Japan)(1987)(Pony Canyon)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="65536">
-				<rom name="[2]Mashou no Yakata Gabalin (Japan)(1987)(Pony Canyon).rom" size="65536" crc="d34d74f7" sha1="e4d61ee74867066b04b0f6aba35d98d72665e6e0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx8f92ea214a7a1">
-		<description>[2]Mashou no Yakata Gabalin (Japan, Alt)(1987)(Pony Canyon)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="65536">
-				<rom name="[2]Mashou no Yakata Gabalin (Japan, Alt)(1987)(Pony Canyon).rom" size="65536" crc="6ef086eb" sha1="8f92ea214a7a11394c512080d3b65a7afa9a92ed"/>
 			</dataarea>
 		</part>
 	</software>

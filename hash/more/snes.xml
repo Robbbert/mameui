@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3988 -->
+<!-- Number of items in this list = 3987 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3639,16 +3639,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="BASS Masters Classic (U)(1994)(Malibu Games).sfc" size="1572864" crc="832a27c2" sha1="0539a9ad5b83e6fd752dff7d7eb9195339fdceef"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns5512a07611663">
-		<description>Bastard!! - Ankoku no Hakaishin (J)(1994)(Cobra Team)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="Bastard!! - Ankoku no Hakaishin (J)(1994)(Cobra Team).sfc" size="1572864" crc="6742d51c" sha1="5512a076116639e36e1bfde38ca86b126ca0d867"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7509,6 +7499,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Dorke &amp; Imp (USA) (Unl).sfc" size="4194304" crc="6e3a0485" sha1="cd8ea5ccda423927950d37f15a63f8054b9794d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns544201ff2f0ad">
+		<description>Dossun! Ganseki Battle (J)(1994)(I'Max)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dossun! Ganseki Battle (J)(1994)(I'Max).sfc" size="1048576" crc="1aa002d6" sha1="544201ff2f0ad09a14142d3d7c02a2e07cfc7c5a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13059,16 +13059,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="J League Super Soccer (J)(1994)(Hudson Soft).sfc" size="1572864" crc="1d20cac2" sha1="c6a42f7240ef8898bfedfe0f938f9d86cfdaaee5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns14f5a0f928436">
-		<description>James Pond 3 - Operation Starfish (E)(1995)(U.S. Gold - Millennium)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="James Pond 3 - Operation Starfish (E)(1995)(U.S. Gold - Millennium).sfc" size="2097152" crc="9d3e313f" sha1="14f5a0f9284365169a82a6902eb80b1886efcf0d"/>
 			</dataarea>
 		</part>
 	</software>

@@ -20,7 +20,6 @@ Where can I find out more?
 * [Official MAME Development Team Site](http://mamedev.org/)
 * [MAMEUI site] https://messui.1emulation.com/
 * [MAMEUI distribution] http://mameui.info/
-* [MAMEUI forum] https://www.mameworld.info/ubbthreads/postlist.php?Cat=&Board=mameui
 * [MAMEUI forum] https://www.1emulation.com/forums/forum/125-mameui/
 
 
@@ -34,3 +33,4 @@ Information about the MAME content can be found at https://github.com/mamedev/ma
 Information about the MAME license can be found at https://github.com/mamedev/mame/blob/master/COPYING
 
 Information about the WINUI portion can be found at https://github.com/Robbbert/mameui/blob/master/docs/winui_license.txt
+
