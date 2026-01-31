@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3987 -->
+<!-- Number of items in this list = 3990 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7169,6 +7169,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Dezaemon T-Eng (2018)(Aeon Genesis)..sfc" size="524288" crc="32f9c958" sha1="3abca6dc1b7731f46ca27f07705294c7011a871b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns189842879aa2e">
+		<description>Diddy Kong's Quest - Rattle Royale (2025)(kfin45)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Diddy Kong's Quest - Rattle Royale (2025)(kfin45).sfc" size="4194304" crc="e90719a7" sha1="189842879aa2e87cf7052237a2f84fdef96b5da1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22569,6 +22579,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Scooby-Doo (U) [T+Por_Romhack BR].sfc" size="2097152" crc="f4b892f2" sha1="e4f4bbb1e692af770d1d6c695c896b90e797bed3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2ffe575af2250">
+		<description>Scooby-Doo Mystery PT-BR (2001)(Majin Alucard, Kuwanger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Scooby-Doo Mystery PT-BR (2001)(Majin Alucard, Kuwanger).sfc" size="2097152" crc="d734be10" sha1="2ffe575af22509fc62563f189b824857d69d8635"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0b37ea6a13d8b">
+		<description>Scooby-Doo Mystery T-Spa (2021)(Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Scooby-Doo Mystery T-Spa (2021)(Wave).sfc" size="2097152" crc="4019a9fd" sha1="0b37ea6a13d8bbc49c15e5399713e9d4225c9ad3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39173,12 +39203,12 @@
 		</part>
 	</software>
 	<software name="sns1927ff794da83">
-		<description>Wedding Peach (Japan) [T-En by Krokodyl v1.0]</description>
+		<description>Wedding Peach T-Eng (2024)(Krokodyl)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
-				<rom name="Wedding Peach (Japan) [T-En by Krokodyl v1.0].sfc" size="1572864" crc="8be6142b" sha1="1927ff794da83aa243cb59ea0772622ca9062f2a"/>
+				<rom name="Wedding Peach T-Eng (2024)(Krokodyl).sfc" size="1572864" crc="8be6142b" sha1="1927ff794da83aa243cb59ea0772622ca9062f2a"/>
 			</dataarea>
 		</part>
 	</software>
