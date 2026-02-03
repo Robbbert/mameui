@@ -100,8 +100,8 @@ void shoken_md06_state::sound_io_map(address_map &map)
 	map.global_mask(0xff);
 	map.unmap_value_high();
 
-	map(0x40, 0x40).rw("oki", FUNC(okim9810_device::read), FUNC(okim9810_device::write)); // w?
-	map(0x41, 0x41).w("oki", FUNC(okim9810_device::write_tmp_register)); // ?
+	// map(0xXX, 0xXX).rw("oki", FUNC(okim9810_device::read), FUNC(okim9810_device::write)); // w?
+	// map(0xXX, 0xXX).w("oki", FUNC(okim9810_device::write_tmp_register)); // ?
 	// map(0x40, 0x40).nopw(); // rw?
 	// map(0x41, 0x41).nopw(); // w?
 	map(0x50, 0x5f).rw("rtc", FUNC(rtc62423_device::read), FUNC(rtc62423_device::write));
@@ -269,8 +269,8 @@ ROM_END
 
 // the following runs on the 'ML01MAIN-1' PCB. It's probably missing at least a video PCB, given reference video: https://www.youtube.com/watch?v=eTAPPweARss
 ROM_START( silvrush )
-	ROM_REGION( 0x10000, "maincpu", 0 )
-	ROM_LOAD( "silver_rush_jp_limit_ver23.08.25.ic6", 0x00000, 0x10000, CRC(ac9e0c52) SHA1(c240a25ddf31913ac82ad7c96cea017890db7b8c) ) // 1xxxxxxxxxxxxxxx = 0xFF
+	ROM_REGION( 0x20000, "maincpu", 0 )
+	ROM_LOAD( "silver_rush_jp_limit_ver23.08.25.ic6", 0x00000, 0x20000, CRC(ac9e0c52) SHA1(c240a25ddf31913ac82ad7c96cea017890db7b8c) ) // 1xxxxxxxxxxxxxxx = 0xFF
 
 	ROM_REGION( 0x200000, "oki", 0 )
 	ROM_LOAD( "type_sr_51f5_ver_1_0.ic55", 0x000000, 0x200000, CRC(d4f1ee94) SHA1(707e3337a18b043b742b64b6561a292f7fa81646) ) // 11xxxxxxxxxxxxxxxxxxx = 0x00

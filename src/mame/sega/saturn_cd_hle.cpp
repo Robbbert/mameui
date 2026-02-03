@@ -103,8 +103,6 @@ saturn_cd_hle_device::saturn_cd_hle_device(const machine_config &mconfig, const 
 	: device_t(mconfig, SATURN_CD_HLE, tag, owner, clock)
 	, device_mixer_interface(mconfig, *this)
 	, m_cdrom_image(*this, "cdrom")
-	, m_sector_timer(*this, "sector_timer")
-	, m_sh1_timer(*this, "sh1_cmd")
 	, m_cdda(*this, "cdda")
 {
 }
@@ -114,9 +112,6 @@ void saturn_cd_hle_device::device_add_mconfig(machine_config &config)
 {
 	CDROM(config, "cdrom").set_interface("cdrom");
 
-	TIMER(config, m_sector_timer).configure_generic(FUNC(saturn_cd_hle_device::stv_sector_cb));
-	TIMER(config, m_sh1_timer).configure_generic(FUNC(saturn_cd_hle_device::stv_sh1_sim));
-
 	CDDA(config, m_cdda);
 	m_cdda->add_route(0, *this, 1.0, 0);
 	m_cdda->add_route(1, *this, 1.0, 1);
@@ -125,6 +120,9 @@ void saturn_cd_hle_device::device_add_mconfig(machine_config &config)
 
 void saturn_cd_hle_device::device_start()
 {
+	m_sh1_timer = timer_alloc(FUNC(saturn_cd_hle_device::sh1_command_cb), this);
+	m_sector_timer = timer_alloc(FUNC(saturn_cd_hle_device::cd_sector_cb), this);
+
 	save_item(NAME(sectlenin));
 	save_item(NAME(sectlenout));
 	save_item(NAME(lastbuf));
@@ -149,11 +147,10 @@ void saturn_cd_hle_device::device_start()
 	save_item(NAME(hirqmask));
 	save_item(NAME(hirqreg));
 	save_item(NAME(cd_stat));
+	save_item(NAME(cd_next_stat));
 	save_item(NAME(cd_curfad));
 	save_item(NAME(cd_fad_seek));
 	save_item(NAME(fadstoplay));
-	save_item(NAME(in_buffer));
-	save_item(NAME(oddframe));
 	save_item(NAME(buffull));
 	save_item(NAME(sectorstore));
 	save_item(NAME(freeblocks));
@@ -179,17 +176,23 @@ void saturn_cd_hle_device::device_reset()
 	cr4 = ('C'<<8) | 'K';
 	cd_stat = CD_STAT_PAUSE;
 	cd_stat |= CD_STAT_PERI;
+	cd_next_stat = CD_STAT_PAUSE;
 	cur_track = 0xff;
+	calcsize = 0;
+	playtype = 0;
+	buffull_temp_pause = false;
 
 	curdir.clear();
 
 	xfertype = XFERTYPE_INVALID;
 	xfertype32 = XFERTYPE32_INVALID;
+	xfercount = 0;
+	xferoffs = 0;
 
 	// reset flag vars
 	buffull = sectorstore = 0;
 
-	freeblocks = 200;
+	freeblocks = MAX_BLOCKS;
 
 	sectlenin = sectlenout = 2048;
 
@@ -221,14 +224,13 @@ void saturn_cd_hle_device::device_reset()
 		LOG("Opened CD-ROM successfully, reading root directory\n");
 		read_new_dir(0xffffff);    // read root directory
 		cd_curfad = 150;
-		fadstoplay = 0;
+		fadstoplay = -1;
 	}
 	else
 	{
 		cd_stat = CD_STAT_NODISC;
 	}
 
-	in_buffer = 0;
 	buffull = 0;
 	cd_speed = 2;
 	cdda_repeat_count = 0;
@@ -248,10 +250,10 @@ void saturn_cd_hle_device::amap(address_map &map)
 	map(0x90000, 0x90003).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::datatrns_r), FUNC(saturn_cd_hle_device::datatrns_w));
 	map(0x90008, 0x9000b).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::hirq_r), FUNC(saturn_cd_hle_device::hirq_w)).umask32(0xffffffff);
 	map(0x9000c, 0x9000f).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::hirqmask_r), FUNC(saturn_cd_hle_device::hirqmask_w)).umask32(0xffffffff);
-	map(0x90018, 0x9001b).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::cr1_r), FUNC(saturn_cd_hle_device::cr1_w)).umask32(0xffffffff);
-	map(0x9001c, 0x9001f).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::cr2_r), FUNC(saturn_cd_hle_device::cr2_w)).umask32(0xffffffff);
-	map(0x90020, 0x90023).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::cr3_r), FUNC(saturn_cd_hle_device::cr3_w)).umask32(0xffffffff);
-	map(0x90024, 0x90027).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::cr4_r), FUNC(saturn_cd_hle_device::cr4_w)).umask32(0xffffffff);
+	map(0x90018, 0x9001b).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::dr1_r), FUNC(saturn_cd_hle_device::cr1_w)).umask32(0xffffffff);
+	map(0x9001c, 0x9001f).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::dr2_r), FUNC(saturn_cd_hle_device::cr2_w)).umask32(0xffffffff);
+	map(0x90020, 0x90023).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::dr3_r), FUNC(saturn_cd_hle_device::cr3_w)).umask32(0xffffffff);
+	map(0x90024, 0x90027).mirror(0x08000).rw(FUNC(saturn_cd_hle_device::dr4_r), FUNC(saturn_cd_hle_device::cr4_w)).umask32(0xffffffff);
 
 	// NetLink access
 	// dragndrm expects this value, most likely for status
@@ -276,7 +278,8 @@ u32 saturn_cd_hle_device::datatrns_r(offs_t offset, uint32_t mem_mask)
 	}
 	else
 	{
-		LOGWARN("CD: Unknown data buffer read with mask = %08x\n", mem_mask);
+		if (!machine().side_effects_disabled())
+			LOGWARN("CD: Unknown data buffer read with mask = %08x\n", mem_mask);
 		rv = 0;
 	}
 	return rv;
@@ -521,13 +524,16 @@ void saturn_cd_hle_device::hirqmask_w(offs_t offset, uint16_t data, uint16_t mem
 	COMBINE_DATA(&hirqmask);
 }
 
-uint16_t saturn_cd_hle_device::cr1_r() { return cr1; }
-uint16_t saturn_cd_hle_device::cr2_r() { return cr2; }
-uint16_t saturn_cd_hle_device::cr3_r() { return cr3; }
-uint16_t saturn_cd_hle_device::cr4_r()
+uint16_t saturn_cd_hle_device::dr1_r() { return cr1; }
+uint16_t saturn_cd_hle_device::dr2_r() { return cr2; }
+uint16_t saturn_cd_hle_device::dr3_r() { return cr3; }
+uint16_t saturn_cd_hle_device::dr4_r()
 {
-	cmd_pending = 0;
-	cd_stat |= CD_STAT_PERI;
+	if (!machine().side_effects_disabled())
+	{
+		cmd_pending = 0;
+		cd_stat |= CD_STAT_PERI;
+	}
 	return cr4;
 }
 
@@ -610,15 +616,15 @@ void saturn_cd_hle_device::cr_standard_return(uint16_t cur_status)
 		uint8_t seek_track = m_cdrom_image->get_track(cd_fad_seek-150);
 
 		cr1 = cur_status | (playtype << 7) | 0x00 | (cdda_repeat_count & 0xf);
-		cr2 =  (seek_track == 0xff) ? 0xffff : ((sega_cdrom_get_adr_control(seek_track)<<8) | seek_track);
-		cr3 = (get_track_index(cd_fad_seek)<<8) | (cd_fad_seek>>16); //index & 0xff00
+		cr2 =  (seek_track == 0xff) ? 0xffff : ((sega_cdrom_get_adr_control(seek_track)<< 8 ) | seek_track);
+		cr3 = (get_track_index(cd_fad_seek) << 8) | (cd_fad_seek >> 16); //index & 0xff00
 		cr4 = cd_fad_seek;
 	}
 	else
 	{
 		cr1 = cur_status | (playtype << 7) | 0x00 | (cdda_repeat_count & 0xf); //options << 4 | repeat & 0xf
-		cr2 = (cur_track == 0xff) ? 0xffff : ((sega_cdrom_get_adr_control(cur_track)<<8) | (m_cdrom_image->get_track(cd_curfad-150)+1));
-		cr3 = (get_track_index(cd_curfad)<<8) | (cd_curfad>>16); //index & 0xff00
+		cr2 = (cur_track == 0xff) ? 0xffff : ((sega_cdrom_get_adr_control(cur_track)<<8) | (m_cdrom_image->get_track(cd_curfad - 150) + 1));
+		cr3 = (get_track_index(cd_curfad) << 8) | (cd_curfad >> 16); //index & 0xff00
 		cr4 = cd_curfad;
 	}
 }
@@ -633,6 +639,8 @@ void saturn_cd_hle_device::mpeg_standard_return(uint16_t cur_status)
 
 void saturn_cd_hle_device::cd_change_status(u16 new_status)
 {
+	// it would make more sense with mask & 0xf0ff
+	// - houkago will chain 0x21 commands due of PERI hook (leading to a crash)
 	cd_stat = CD_STAT_BUSY;
 	cd_next_stat = new_status;
 }
@@ -743,8 +751,8 @@ void saturn_cd_hle_device::cmd_init_cdsystem()
 			//cur_track = 1;
 			fadstoplay = 0;
 		}
-		in_buffer = 0;
 		buffull = 0;
+		buffull_temp_pause = false;
 		hirqreg &= 0xffe5;
 		cd_speed = (cr1 & 0x10) ? 1 : 2;
 
@@ -831,7 +839,7 @@ void saturn_cd_hle_device::cmd_end_data_transfer()
 				transpart->size -= xferdnum;
 				transpart->numblks -= xfersectnum;
 
-				if (freeblocks == 200)
+				if (freeblocks == MAX_BLOCKS)
 				{
 					sectorstore = 0;
 				}
@@ -879,10 +887,10 @@ void saturn_cd_hle_device::cmd_play_disc()
 		else
 		{
 			// track mode
-			if(((start_pos)>>8) != 0)
+			if((start_pos >> 8) != 0)
 			{
-				cur_track = (start_pos)>>8;
-				cd_fad_seek = m_cdrom_image->get_track_start(cur_track-1);
+				cur_track = start_pos >> 8;
+				cd_fad_seek = m_cdrom_image->get_track_start(cur_track - 1);
 				cd_change_status(CD_STAT_SEEK);
 				m_cdda->pause_audio(0);
 			}
@@ -952,8 +960,6 @@ void saturn_cd_hle_device::cmd_play_disc()
 
 	cr_standard_return(cd_stat);
 	hirqreg |= (CMOK);
-	oddframe = 0;
-	in_buffer = 0;
 
 	playtype = 0;
 
@@ -1163,7 +1169,7 @@ void saturn_cd_hle_device::cmd_set_filter_range()
 	// Set Filter Range
 	// cr1 low + cr2 = FAD0, cr3 low + cr4 = FAD1
 	// cr3 hi = filter num.
-	uint8_t fnum = (cr3>>8)&0xff;
+	uint8_t fnum = (cr3 >> 8) & 0xff;
 
 	LOGCMD("%s: Set Filter Range\n",   machine().describe_context());
 
@@ -1186,16 +1192,16 @@ void saturn_cd_hle_device::cmd_get_filter_range()
 void saturn_cd_hle_device::cmd_set_filter_subheader_conditions()
 {
 	// Set Filter Subheader conditions
-	uint8_t fnum = (cr3>>8)&0xff;
+	uint8_t fnum = (cr3 >> 8) & 0xff;
 
-	LOGCMD("%s: Set Filter Subheader conditions %x => chan %x masks %x fid %x vals %x\n", machine().describe_context(), fnum, cr1&0xff, cr2, cr3&0xff, cr4);
+	LOGCMD("%s: Set Filter Subheader conditions %x => chan %x masks %x fid %x vals %x\n", machine().describe_context(), fnum, cr1 & 0xff, cr2, cr3 & 0xff, cr4);
 
 	filters[fnum].chan = cr1 & 0xff;
-	filters[fnum].smmask = (cr2>>8)&0xff;
-	filters[fnum].cimask = cr2&0xff;
-	filters[fnum].fid = cr3&0xff;
-	filters[fnum].smval = (cr4>>8)&0xff;
-	filters[fnum].cival = cr4&0xff;
+	filters[fnum].smmask = (cr2 >> 8) & 0xff;
+	filters[fnum].cimask = cr2 & 0xff;
+	filters[fnum].fid = cr3 & 0xff;
+	filters[fnum].smval = (cr4 >> 8) & 0xff;
+	filters[fnum].cival = cr4 & 0xff;
 
 	hirqreg |= (CMOK|ESEL);
 	cr_standard_return(cd_stat);
@@ -1206,9 +1212,9 @@ void saturn_cd_hle_device::cmd_set_filter_subheader_conditions()
 void saturn_cd_hle_device::cmd_get_filter_subheader_conditions()
 {
 	// Get Filter Subheader conditions
-	uint8_t fnum = (cr3>>8)&0xff;
+	uint8_t fnum = (cr3 >> 8) & 0xff;
 
-	LOGCMD("%s: Set Filter Subheader conditions %x => chan %x masks %x fid %x vals %x\n", machine().describe_context(), fnum, cr1&0xff, cr2, cr3&0xff, cr4);
+	LOGCMD("%s: Set Filter Subheader conditions %x => chan %x masks %x fid %x vals %x\n", machine().describe_context(), fnum, cr1 & 0xff, cr2, cr3 & 0xff, cr4);
 
 	cr1 = cd_stat | (filters[fnum].chan & 0xff);
 	cr2 = (filters[fnum].smmask << 8) | (filters[fnum].cimask & 0xff);
@@ -1222,7 +1228,7 @@ void saturn_cd_hle_device::cmd_get_filter_subheader_conditions()
 void saturn_cd_hle_device::cmd_set_filter_mode()
 {
 	// Set Filter Mode
-	uint8_t fnum = (cr3>>8)&0xff;
+	uint8_t fnum = (cr3 >> 8) & 0xff;
 	uint8_t mode = (cr1 & 0xff);
 
 	// initialize filter?
@@ -1244,7 +1250,7 @@ void saturn_cd_hle_device::cmd_set_filter_mode()
 void saturn_cd_hle_device::cmd_get_filter_mode()
 {
 	// Get Filter Mode
-	uint8_t fnum = (cr3>>8)&0xff;
+	uint8_t fnum = (cr3 >> 8) & 0xff;
 
 	cr1 = cd_stat | (filters[fnum].mode & 0xff);
 	cr2 = 0;
@@ -1260,15 +1266,15 @@ void saturn_cd_hle_device::cmd_set_filter_connection()
 	// Set Filter Connection
 	// FIXME: verify usage of cr3 LSB
 	// (false condition?)
-	uint8_t fnum = (cr3>>8)&0xff;
+	uint8_t fnum = (cr3 >> 8) & 0xff;
 
 	LOGCMD("%s: Set Filter Connection %x => mode %x parm %04x\n", machine().describe_context(), fnum, cr1 & 0xf, cr2);
 
 	if (cr1 & 1)    // set true condition
-		filters[fnum].condtrue = (cr2>>8)&0xff;
+		filters[fnum].condtrue = (cr2 >> 8) & 0xff;
 
 	if (cr1 & 2)    // set false condition
-		filters[fnum].condfalse = cr2&0xff;
+		filters[fnum].condfalse = cr2 & 0xff;
 
 	hirqreg |= (CMOK|ESEL);
 	cr_standard_return(cd_stat);
@@ -1280,11 +1286,12 @@ void saturn_cd_hle_device::cmd_reset_selector()
 	int i,j;
 	// Reset Selector
 
-	LOGCMD("%s: Reset Selector\n",   machine().describe_context());
+	LOGCMD("%s: Reset Selector %02x\n", machine().describe_context(), cr1);
 
 	if((cr1 & 0xff) == 0x00)
 	{
-		uint8_t bufnum = cr3>>8;
+		uint8_t bufnum = cr3 >> 8;
+		LOGCMD("\tbufnum %02x\n", bufnum);
 
 		if(bufnum < MAX_FILTERS)
 		{
@@ -1301,7 +1308,7 @@ void saturn_cd_hle_device::cmd_reset_selector()
 
 		// TODO: buffer full flag
 
-		if (freeblocks == 200) { sectorstore = 0; }
+		if (freeblocks == MAX_BLOCKS) { sectorstore = 0; }
 
 		hirqreg |= (CMOK|ESEL);
 		cr_standard_return(cd_stat);
@@ -1358,6 +1365,7 @@ void saturn_cd_hle_device::cmd_reset_selector()
 		}
 
 		buffull = sectorstore = 0;
+		buffull_temp_pause = false;
 	}
 
 	hirqreg |= (CMOK|ESEL);
@@ -1369,7 +1377,7 @@ void saturn_cd_hle_device::cmd_get_buffer_size()
 {
 	// get Buffer Size
 	cr1 = cd_stat;
-	cr2 = (freeblocks > 200) ? 200 : freeblocks;
+	cr2 = (freeblocks > MAX_BLOCKS) ? MAX_BLOCKS : freeblocks;
 	cr3 = 0x1800;
 	cr4 = 200;
 	LOG("Get Buffer Size = %d\n", cr2);
@@ -1381,7 +1389,7 @@ void saturn_cd_hle_device::cmd_get_buffer_partition_sector_number()
 {
 	// get # sectors used in a buffer
 
-	uint32_t bufnum = cr3>>8;
+	uint32_t bufnum = cr3 >> 8;
 
 	cr1 = cd_stat;
 	cr2 = 0;
@@ -1403,17 +1411,14 @@ void saturn_cd_hle_device::cmd_get_buffer_partition_sector_number()
 	LOGCMD("%s: Get Sector Number (bufno %d) = %d blocks\n",   machine().describe_context(), bufnum, cr4);
 
 	//LOGWARN("%04x\n",cr4);
-	if(cr4 == 0)
-		hirqreg |= (CMOK);
-	else
-		hirqreg |= (CMOK|DRDY);
+	hirqreg |= (CMOK);
 	status_type = 1;
 }
 
 void saturn_cd_hle_device::cmd_calculate_actual_data_size()
 {
 	// calculate actual size
-	uint32_t bufnum = cr3>>8;
+	uint32_t bufnum = cr3 >> 8;
 	uint32_t sectoffs = cr2;
 	uint32_t numsect = cr4;
 
@@ -1442,7 +1447,7 @@ void saturn_cd_hle_device::cmd_get_actual_data_size()
 {
 	// get actual block size
 	LOGCMD("%s: Get actual block size\n", machine().describe_context());
-	cr1 = cd_stat | ((calcsize>>16)&0xff);
+	cr1 = cd_stat | ((calcsize >> 16) & 0xff);
 	cr2 = (calcsize & 0xffff);
 	cr3 = 0;
 	cr4 = 0;
@@ -1454,7 +1459,7 @@ void saturn_cd_hle_device::cmd_get_sector_information()
 {
 	// get sector info
 	uint32_t sectoffs = cr2 & 0xff;
-	uint32_t bufnum = cr3>>8;
+	uint32_t bufnum = cr3 >> 8;
 
 	if (bufnum >= MAX_FILTERS || !partitions[bufnum].blocks[sectoffs])
 	{
@@ -1495,7 +1500,7 @@ void saturn_cd_hle_device::cmd_set_sector_length()
 			break;
 	}
 
-	switch ((cr2>>8) & 0xff)
+	switch ((cr2 >> 8) & 0xff)
 	{
 		case 0:
 			sectlenout = 2048;
@@ -1520,7 +1525,7 @@ void saturn_cd_hle_device::cmd_get_sector_data()
 	// get sector data
 	uint32_t sectnum = cr4;
 	uint32_t sectofs = cr2;
-	uint32_t bufnum = cr3>>8;
+	uint32_t bufnum = cr3 >> 8;
 
 	LOGCMD("%s: Get sector data (SN %d SO %d BN %d)\n",   machine().describe_context(), sectnum, sectofs, bufnum);
 
@@ -1563,7 +1568,7 @@ void saturn_cd_hle_device::cmd_delete_sector_data()
 	// delete sector data
 	uint32_t sectnum = cr4;
 	uint32_t sectofs = cr2;
-	uint32_t bufnum = cr3>>8;
+	uint32_t bufnum = cr3 >> 8;
 	int32_t i;
 
 	LOGCMD("%s: Delete sector data (SN %d SO %d BN %d)\n",   machine().describe_context(), sectnum, sectofs, bufnum);
@@ -1606,7 +1611,7 @@ void saturn_cd_hle_device::cmd_delete_sector_data()
 
 	partitions[bufnum].numblks -= sectnum;
 
-	if (freeblocks == 200)
+	if (freeblocks == MAX_BLOCKS)
 	{
 		sectorstore = 0;
 	}
@@ -1623,7 +1628,7 @@ void saturn_cd_hle_device::cmd_get_and_delete_sector_data()
 
 	uint32_t sectnum = cr4;
 	uint32_t sectofs = cr2;
-	uint32_t bufnum = cr3>>8;
+	uint32_t bufnum = cr3 >> 8;
 
 	LOGCMD("%s: Get and delete sector data (SN %d SO %d BN %d)\n",   machine().describe_context(), sectnum, sectofs, bufnum);
 
@@ -1665,10 +1670,11 @@ void saturn_cd_hle_device::cmd_get_and_delete_sector_data()
 void saturn_cd_hle_device::cmd_put_sector_data()
 {
 	// aburner2, outrun, fantzone and dmastnx needs this
+	// TODO: transfer shouldn't be here
 
 	uint32_t sectnum = cr4 & 0xff;
 	uint32_t sectofs = cr2;
-	uint32_t bufnum = cr3>>8;
+	uint32_t bufnum = cr3 >> 8;
 
 	LOGCMD("%s: Put sector data (SN %d SO %d BN %d)\n",   machine().describe_context(), sectnum, sectofs, bufnum);
 
@@ -1712,8 +1718,8 @@ void saturn_cd_hle_device::cmd_copy_sector_data()
 {
 	// swordsor and riglord2 uses this
 	// TODO: incomplete
-	uint32_t src_filter = (cr3>>8)&0xff;
-	uint32_t dst_filter = cr1&0xff;
+	uint32_t src_filter = (cr3 >> 8) & 0xff;
+	uint32_t dst_filter = cr1 & 0xff;
 	uint32_t sectnum = cr4 & 0xff;
 
 	//cd_stat |= CD_STAT_TRANS;
@@ -1764,7 +1770,7 @@ void saturn_cd_hle_device::cmd_change_directory()
 	LOGCMD("%s: Change Directory\n",   machine().describe_context());
 	hirqreg |= (CMOK|EFLS);
 
-	temp = (cr3&0xff)<<16;
+	temp = (cr3 & 0xff) << 16;
 	temp |= cr4;
 
 	read_new_dir(temp);
@@ -1889,9 +1895,6 @@ void saturn_cd_hle_device::cmd_read_file()
 	LOGWARN("Read file %08x (%08x %08x) %02x %d\n",curdir[file_id].firstfad,cd_curfad,fadstoplay,file_filter,sectlenin);
 
 	cr_standard_return(cd_stat);
-
-	oddframe = 0;
-	in_buffer = 0;
 
 	playtype = 1;
 
@@ -2112,13 +2115,13 @@ void saturn_cd_hle_device::cd_exec_command()
 	}
 }
 
-TIMER_DEVICE_CALLBACK_MEMBER( saturn_cd_hle_device::stv_sh1_sim )
+TIMER_CALLBACK_MEMBER( saturn_cd_hle_device::sh1_command_cb )
 {
 	if((cmd_pending == 0xf) && (!(hirqreg & CMOK)))
 		cd_exec_command();
 }
 
-TIMER_DEVICE_CALLBACK_MEMBER( saturn_cd_hle_device::stv_sector_cb )
+TIMER_CALLBACK_MEMBER( saturn_cd_hle_device::cd_sector_cb )
 {
 	if(!m_cdrom_image->exists())
 		return;
@@ -2136,9 +2139,12 @@ TIMER_DEVICE_CALLBACK_MEMBER( saturn_cd_hle_device::stv_sector_cb )
 
 	// TODO: Saturn refuses to boot with this if a disk isn't in and condition is applied!?
 	// TODO: Check out actual timing of SCDQ acquisition.
-	// (Daytona USA original version definitely wants it to be on).
+	// (daytonau definitely wants it to be on).
 	//if(((cd_stat & 0x0f00) != CD_STAT_NODISC) && ((cd_stat & 0x0f00) != CD_STAT_OPEN))
-	hirqreg |= SCDQ;
+	if (!buffull)
+		hirqreg |= SCDQ;
+	else
+		hirqreg &= ~SCDQ;
 
 	if(cd_stat & CD_STAT_PERI)
 	{
@@ -2151,7 +2157,7 @@ saturn_cd_hle_device::blockT *saturn_cd_hle_device::cd_alloc_block(uint8_t *blkn
 	int32_t i;
 
 	// search the 200 available blocks for a free one
-	for (i = 0; i < 200; i++)
+	for (i = 0; i < MAX_BLOCKS; i++)
 	{
 		if (blocks[i].size == -1)
 		{
@@ -2186,7 +2192,7 @@ void saturn_cd_hle_device::cd_free_block(blockT *blktofree)
 		return;
 	}
 
-	for (i = 0; i < 200; i++)
+	for (i = 0; i < MAX_BLOCKS; i++)
 	{
 		if (&blocks[i] == blktofree)
 		{
@@ -2219,9 +2225,9 @@ void saturn_cd_hle_device::cd_defragblocks(partitionT *part)
 	blockT *temp;
 	uint8_t temp2;
 
-	for (i = 0; i < (MAX_BLOCKS-1); i++)
+	for (i = 0; i < (MAX_BLOCKS - 1); i++)
 	{
-		for (j = i+1; j < MAX_BLOCKS; j++)
+		for (j = i + 1; j < MAX_BLOCKS; j++)
 		{
 			if ((part->blocks[i] == (blockT *)nullptr) && (part->blocks[j] != (blockT *)nullptr))
 			{
@@ -2475,7 +2481,7 @@ void saturn_cd_hle_device::cd_readTOC(void)
 		if (m_cdrom_image->exists())
 		{
 			//tocbuf[tocptr] = sega_cdrom_get_adr_control(cdrom, i);
-			//HACK: ddsom does not enter ingame with the line above!
+			// HACK: ddsom does not enter ingame with the line above
 			tocbuf[tocptr] = m_cdrom_image->get_adr_control(i)<<4 | 0x01;
 		}
 		else
@@ -2738,7 +2744,7 @@ saturn_cd_hle_device::partitionT *saturn_cd_hle_device::cd_read_filtered_sector(
 void saturn_cd_hle_device::cd_playdata()
 {
 	if (LIVE_CD_VIEW)
-		popmessage("%04x %d %d (%d)", cd_stat, cd_curfad, fadstoplay, buffull);
+		popmessage("%04x %d %d %04x (%d)", cd_stat, cd_curfad, fadstoplay, hirqreg, buffull);
 
 	switch(cd_stat & 0x0f00)
 	{
@@ -2776,6 +2782,15 @@ void saturn_cd_hle_device::cd_playdata()
 				cd_change_status(CD_STAT_PLAY);
 			}
 
+			break;
+		}
+		case CD_STAT_PAUSE:
+		{
+			if (buffull_temp_pause && !buffull && fadstoplay)
+			{
+				buffull_temp_pause = false;
+				cd_change_status(CD_STAT_PLAY);
+			}
 			break;
 		}
 		case CD_STAT_PLAY:
@@ -2832,6 +2847,13 @@ void saturn_cd_hle_device::cd_playdata()
 								fadstoplay = m_cdrom_image->get_track_start(cur_track) - cd_curfad;
 							}
 						}
+					}
+					else if (buffull)
+					{
+						// TODO: should be correct but somehow still doesn't work
+						buffull_temp_pause = true;
+						// sectorstore = 0;
+						cd_change_status(CD_STAT_PAUSE);
 					}
 				}
 			}
