@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:
+// copyright-holders: Angelo Salese
 /**************************************************************************************************
 
 Medalist Spectrum HW
@@ -7,8 +7,7 @@ Medalist Spectrum HW
 https://www.youtube.com/watch?v=-kxk8UtTeIM
 
 TODO:
-- error 007, bp f85f4,1,{ebp=1234;g} (???)
-- error 033, shadow RAM check between $ffffe and $10fffe
+- error 033 (?)
 - Emulate 65535 (S)VGA, same as IBM PC-110;
 - ROM disk, in ISA space;
 - Sound, from parallel ports?
@@ -156,19 +155,19 @@ private:
 
 void mdartstr_state::main_map(address_map &map)
 {
-//	map(0x000000, 0x09ffff).ram();
-//	map(0x0a0000, 0x0bffff).rw("vga", FUNC(vga_device::mem_r), FUNC(vga_device::mem_w));
-//	map(0x0c0000, 0x0c7fff).rom().region("bios", 0x48000); // VGA BIOS + virtual floppy ISA
-//	map(0x0c8000, 0x0cffff).rom().region("bios", 0x18000);
-//	map(0x0e0000, 0x0fffff).rom().region("bios", 0x20000);
-//	map(0x100000, 0x15ffff).ram();
+//  map(0x000000, 0x09ffff).ram();
+//  map(0x0a0000, 0x0bffff).rw("vga", FUNC(vga_device::mem_r), FUNC(vga_device::mem_w));
+//  map(0x0c0000, 0x0c7fff).rom().region("bios", 0x48000); // VGA BIOS + virtual floppy ISA
+//  map(0x0c8000, 0x0cffff).rom().region("bios", 0x18000);
+//  map(0x0e0000, 0x0fffff).rom().region("bios", 0x20000);
+//  map(0x100000, 0x15ffff).ram();
 	// TODO: fc0000-fdffff has an optional memory hole in chipset at $4e bit 4
 	map(0xfc0000, 0xffffff).rom().region("bios", 0x00000);
 }
 
 void mdartstr_state::main_io(address_map &map)
 {
-//	map(0x03b0, 0x03df).m("vga", FUNC(vga_device::io_map));
+//  map(0x03b0, 0x03df).m("vga", FUNC(vga_device::io_map));
 }
 
 static INPUT_PORTS_START( mdartstr )
@@ -216,7 +215,7 @@ void mdartstr_state::mdartstr(machine_config &config)
 	m_chipset->spkr().set([this] (int state) { m_speaker->level_w(state); });
 
 	// 640 + 384 KB
-	RAM(config, "ram").set_default_size("1M");
+	RAM(config, "ram").set_default_size("1024K");
 
 	ISA16(config, m_isabus, 0);
 	m_isabus->set_memspace("maincpu", AS_PROGRAM);
@@ -265,11 +264,11 @@ ROM_START( mdartstr )
 	ROM_LOAD( "system rev 1.0.bin", 0x000000, 0x080000, CRC(cdd36a31) SHA1(4ced7065e0923d9cb414b65d2a2d955da080c46b) )
 
 	ROM_REGION16_LE( 0x40000, "bios", ROMREGION_ERASEFF )
-	ROM_COPY( "rawbios", 0x48000, 0x08000, 0x08000 )
-	ROM_COPY( "rawbios", 0x60000, 0x20000, 0x20000 )
+	ROM_COPY( "rawbios", 0x40000, 0x00000, 0x40000 )
 
 	ROM_REGION16_LE( 0x800000, "romdisk", ROMREGION_ERASEFF )
-	// TODO: actual socket positions, verify actual loading
+	// TODO: actual socket position filename .ext
+	// TODO: verify actual loading
 	ROM_LOAD("mem_0 rev 3.25.bin",  0x000000, 0x100000,  CRC(8fa930f1) SHA1(a898b180678086c730dc059f14ddd34a334625c7) )
 	ROM_LOAD("mem_1 rev 3.25.bin",  0x100000, 0x100000, CRC(8145bd30) SHA1(70d6a1f7e2ca63431396fd923b6d7d2bdabd56e8) )
 	// empty socket mem 2
