@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3990 -->
+<!-- Number of items in this list = 3994 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6182,6 +6182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns611d27ab6f0b4">
+		<description>Cooly Skunk PT-BR v1.1 (2022)(Breno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Cooly Skunk PT-BR v1.1 (2022)(Breno).sfc" size="2097152" crc="4cc6bd82" sha1="611d27ab6f0b40561d13fc7bb5ba91875025db4d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns60aae82852f99">
 		<description>Cooly Skunk T-Eng v1.1 (2020)(Psyklax)</description>
 		<year>????</year>
@@ -7279,6 +7289,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Disney's Aladdin (U)(1993)(Capcom).sfc" size="1310720" crc="124d8e4d" sha1="bd5fea18ce7456cc0231a39473927d8ea9c6589b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd6a6df42caec1">
+		<description>Disney's Aladdin PT-BR (2021)(PO.B.R.E.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Disney's Aladdin PT-BR (2021)(PO.B.R.E.).sfc" size="1572864" crc="050904c6" sha1="d6a6df42caec14ab85e5abe906182605a93de8f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11589,6 +11609,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Goof Troop (U) [T+Por_Look].sfc" size="524288" crc="cfb184b5" sha1="6c6397ca5ea59f11426eba1d9609c71afddae189"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsae450fba0f0b9">
+		<description>Goof Troop - A Turma do Pateta PT-BR (2013)(Hylian, Denim)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Goof Troop - A Turma do Pateta PT-BR (2013)(Hylian, Denim).sfc" size="524288" crc="094ba15f" sha1="ae450fba0f0b9427519da6c787b1adb4434feab6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33469,6 +33499,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Super Mario SCORPION's Wrath V2.0 (Part 1).sfc" size="2097664" crc="d2a03a45" sha1="a119be0cd1a58de4d2c87f386664b73f60d73173"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9b1a47f770908">
+		<description>Super Mario So Estrelas PT-BR v1.11 (2022)(bMatSantos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Mario So Estrelas PT-BR v1.11 (2022)(bMatSantos).sfc" size="2097152" crc="c0df4bd8" sha1="9b1a47f7709084aa4b62a85ad2dee38c551ae93a"/>
 			</dataarea>
 		</part>
 	</software>
