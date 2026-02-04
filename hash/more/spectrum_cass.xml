@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7798 -->
+<!-- Number of items in this list = 7797 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -70879,16 +70879,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39396">
 				<rom name="_Ghostbusters (1984)(Activision).tap" size="39396" crc="68404b1e" sha1="133cbfebe5f98e85e175143ccb024f3d41c8485c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs5534f6ef8be0b">
-		<description>_Ghostbusters 48K (1984)(Activision)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="41601">
-				<rom name="_Ghostbusters 48K (1984)(Activision).tzx" size="41601" crc="277a58c3" sha1="5534f6ef8be0bf099ec913fa89adf89d90f52e68"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 97 -->
+<!-- Number of items in this list = 98 -->
 <softwarelist name="uzebox" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -419,6 +419,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="59310">
 				<rom name="joyrider.uze" size="59310" crc="18820af6" sha1="602c649b52dc784e1db0df2f023c4820f9dcf63d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze9c9cc924a4fd6">
+		<description>JumpnBump</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="59114">
+				<rom name="JumpnBump.uze" size="59114" crc="4f9d83c5" sha1="9c9cc924a4fd60374b48368a0cbc13d0ef0542e0"/>
 			</dataarea>
 		</part>
 	</software>

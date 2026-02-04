@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2048 -->
+<!-- Number of items in this list = 2063 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -1239,6 +1239,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(E)Hybrid Front, The T-Eng (2025)(Nebulous Group).bin" size="2097152" crc="5a69d1ea" sha1="a6db71969384230d9b3db8b7d111347671b1fbf2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencd0a8bf850bbb">
+		<description>(E)Hybrid Front, The T-Eng v1.1 (2025)(Nebulous Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(E)Hybrid Front, The T-Eng v1.1 (2025)(Nebulous Group).bin" size="2097152" crc="3e43639e" sha1="cd0a8bf850bbbeb3934730e81487b7354daf0ad2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3879,6 +3889,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Bahamut Senki (Japan) [T+Eng] Supper v1.0.bin" size="1048576" crc="89383a55" sha1="e2aa594256428eee348cb63ac654f11c4ba7ffbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf7a4aa5fb9a2c">
+		<description>Bailey the Brave (2026)(Digital Mints)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1966080">
+				<rom name="Bailey the Brave (2026)(Digital Mints).bin" size="1966080" crc="983b1eba" sha1="f7a4aa5fb9a2c790b42326f9f7f293e6d1c82e80"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6802,6 +6822,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen29a1d4013a479">
+		<description>Flintstones, The (Sega Channel)(Proto)(1995)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Flintstones, The (Sega Channel)(Proto)(1995)(Ocean).bin" size="2097152" crc="8ca71c6b" sha1="29a1d4013a479d1884a704926c85d87726c35643"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen9cc62b1be9af3">
 		<description>Flintstones, The (USA)</description>
 		<year>????</year>
@@ -6942,6 +6972,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen11780f6c16c43">
+		<description>galaga [pocket player pro] [128k]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="galaga [pocket player pro] [128k].bin" size="131072" crc="eeca829d" sha1="11780f6c16c43efcb8f427bfc14c74adf6af7049"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen71cdfbe77f472">
+		<description>galaxian [pocket player pro] [rev1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="galaxian [pocket player pro] [rev1].bin" size="65536" crc="1608a3a9" sha1="71cdfbe77f4727da74f64625339df49d62ac4f13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen77bb86f9375c2">
+		<description>Galaxian</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="441600">
+				<rom name="Galaxian.bin" size="441600" crc="6a9bd7c3" sha1="77bb86f9375c2e1e5e0a975dec1de579b1c7d6f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7429f1522128e">
+		<description>Galaxian2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="160768">
+				<rom name="Galaxian2.bin" size="160768" crc="46a85468" sha1="7429f1522128ede853e21766f21d0f089c0f604e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen5477d2f5e297d">
 		<description>galaxy force II (Hack, Spanish)</description>
 		<year>????</year>
@@ -6999,6 +7069,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="gauntlet (censor prototype).bin" size="1048576" crc="7d478079" sha1="347209b0d09270d0a492622e7961ba7febdef99b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena2435d71817f4">
+		<description>Gemesis v1.1 (2026)(NoutsteW)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="376832">
+				<rom name="Gemesis v1.1 (2026)(NoutsteW).bin" size="376832" crc="a091aabe" sha1="a2435d71817f4ea7ef4fcd1ff75a092229ce228d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11992,6 +12072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen7f04f32db55ec">
+		<description>MsPacMan</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="502784">
+				<rom name="MsPacMan.bin" size="502784" crc="5cc15637" sha1="7f04f32db55ecf12a2083b25ca229fb175e665e0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen94562ae81db3a">
 		<description>muls_1.4.2</description>
 		<year>????</year>
@@ -12389,6 +12479,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="pac-man 2 - the new adventures (t-chi, v1.1).bin" size="2621440" crc="9dde7643" sha1="db1f2fbb233ccbe0b4445d407b4bff6184184e76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen312ecec779701">
+		<description>Pacman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="221952">
+				<rom name="Pacman.bin" size="221952" crc="82f64a0e" sha1="312ecec77970196e94526e847b9e4371fff187c6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12932,6 +13032,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8c4e907a482d0">
+		<description>Pop'n Wizz v2 (2026)(format_c)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Pop'n Wizz v2 (2026)(format_c).bin" size="393216" crc="17654df8" sha1="8c4e907a482d084a18c3495ee7adc818bf032780"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen0e4c49c5d1337">
+		<description>Popeye in High Seas High-Jinks (Sega Channel)(Proto)(1995)(Technos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Popeye in High Seas High-Jinks (Sega Channel)(Proto)(1995)(Technos).bin" size="2097152" crc="6c92e44d" sha1="0e4c49c5d1337c90ea819cbe777405a2cc91187e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend1f8d789ae099">
 		<description>Predator 2 (USA, Europe)</description>
 		<year>????</year>
@@ -13009,6 +13129,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Prisonela MD (2025)(Two Black Cats).bin" size="1048576" crc="58fe6ea8" sha1="a560a473ad546e253e8a954e3d61ac0a3c053a7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genbace199c46259">
+		<description>Prisonela MD (2025)(Two Black Cats)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1179648">
+				<rom name="Prisonela MD (2025)(Two Black Cats)_1.bin" size="1179648" crc="d16ac11c" sha1="bace199c462593a982be3d046c9ae74a9268bf8a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17322,6 +17452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen42159043d2408">
+		<description>space invaders [pocket player pro] [128k]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="space invaders [pocket player pro] [128k].bin" size="131072" crc="39b16291" sha1="42159043d24086f9715853e5206d57f5a9204b96"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf2bfbec913838">
 		<description>Sparkster (USA)</description>
 		<year>????</year>
@@ -19089,6 +19229,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Trouble Shooter (USA).bin" size="524288" crc="6549645a" sha1="889670fa885c53a2ff247030a492c46c7b094729"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen68bb50f31372d">
+		<description>True Galactic Mission (2025)(Big Uncle Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="True Galactic Mission (2025)(Big Uncle Games).bin" size="4194304" crc="80713dba" sha1="68bb50f31372df87e61aa047eb6342ecea8bb22c"/>
 			</dataarea>
 		</part>
 	</software>
