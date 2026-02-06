@@ -13,6 +13,10 @@
 
 #include "emuopts.h"
 
+#include "endianness.h"
+
+#include <algorithm>
+
 //#define VERBOSE 1
 #include "logmacro.h"
 
@@ -59,32 +63,73 @@ enum
 };
 
 DEFINE_DEVICE_TYPE(ADSP21062, adsp21062_device, "adsp21062", "Analog Devices ADSP21062 \"SHARC\"")
+DEFINE_DEVICE_TYPE(ADSP21060, adsp21060_device, "adsp21060", "Analog Devices ADSP21060 \"SHARC\"")
 
-void adsp21062_device::internal_pgm(address_map &map)
+void adsp21062_device::pgm_2m(address_map &map)
 {
-	map(0x20000, 0x24fff).rw(FUNC(adsp21062_device::pm0_r), FUNC(adsp21062_device::pm0_w));
-	map(0x28000, 0x2cfff).rw(FUNC(adsp21062_device::pm1_r), FUNC(adsp21062_device::pm1_w));
-	map(0x30000, 0x34fff).rw(FUNC(adsp21062_device::pm1_r), FUNC(adsp21062_device::pm1_w));
-	map(0x38000, 0x3cfff).rw(FUNC(adsp21062_device::pm1_r), FUNC(adsp21062_device::pm1_w));
+	map(0x20000, 0x24fff).mirror(0x18000).rw(FUNC(adsp21062_device::pm_r<1>), FUNC(adsp21062_device::pm_w<1>));
+	map(0x20000, 0x24fff).rw(FUNC(adsp21062_device::pm_r<0>), FUNC(adsp21062_device::pm_w<0>));
 }
 
-void adsp21062_device::internal_data(address_map &map)
+void adsp21062_device::pgm_4m(address_map &map)
+{
+	map(0x20000, 0x29fff).rw(FUNC(adsp21062_device::pm_r<0>), FUNC(adsp21062_device::pm_w<0>));
+	map(0x30000, 0x39fff).rw(FUNC(adsp21062_device::pm_r<1>), FUNC(adsp21062_device::pm_w<1>));
+}
+
+void adsp21062_device::data_2m(address_map &map)
 {
 	map(0x00000, 0x000ff).rw(FUNC(adsp21062_device::iop_r), FUNC(adsp21062_device::iop_w));
-	map(0x20000, 0x27fff).ram().share("block0");
-	map(0x28000, 0x2ffff).ram().share("block1");
-	map(0x30000, 0x37fff).ram().share("block1");
-	map(0x38000, 0x3ffff).ram().share("block1");
-	map(0x40000, 0x4ffff).rw(FUNC(adsp21062_device::dmw0_r), FUNC(adsp21062_device::dmw0_w));
-	map(0x50000, 0x5ffff).rw(FUNC(adsp21062_device::dmw1_r), FUNC(adsp21062_device::dmw1_w));
-	map(0x60000, 0x6ffff).rw(FUNC(adsp21062_device::dmw1_r), FUNC(adsp21062_device::dmw1_w));
-	map(0x70000, 0x7ffff).rw(FUNC(adsp21062_device::dmw1_r), FUNC(adsp21062_device::dmw1_w));
+	map(0x20000, 0x27fff).mirror(0x18000).ram().share(m_blocks[1]);
+	map(0x20000, 0x27fff).ram().share(m_blocks[0]);
+	map(0x40000, 0x4ffff).mirror(0x30000).rw(FUNC(adsp21062_device::dmw_r<1>), FUNC(adsp21062_device::dmw_w<1>));
+	map(0x40000, 0x4ffff).rw(FUNC(adsp21062_device::dmw_r<0>), FUNC(adsp21062_device::dmw_w<0>));
+}
+
+void adsp21062_device::data_4m(address_map &map)
+{
+	map(0x00000, 0x000ff).rw(FUNC(adsp21062_device::iop_r), FUNC(adsp21062_device::iop_w));
+	map(0x20000, 0x2ffff).ram().share(m_blocks[0]);
+	map(0x30000, 0x3ffff).ram().share(m_blocks[1]);
+	map(0x40000, 0x5ffff).rw(FUNC(adsp21062_device::dmw_r<0>), FUNC(adsp21062_device::dmw_w<0>));
+	map(0x60000, 0x7ffff).rw(FUNC(adsp21062_device::dmw_r<1>), FUNC(adsp21062_device::dmw_w<1>));
 }
 
 adsp21062_device::adsp21062_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: cpu_device(mconfig, ADSP21062, tag, owner, clock)
-	, m_program_config("program", ENDIANNESS_LITTLE, 64, 24, -3, address_map_constructor(FUNC(adsp21062_device::internal_pgm), this))
-	, m_data_config("data", ENDIANNESS_LITTLE, 32, 32, -2, address_map_constructor(FUNC(adsp21062_device::internal_data), this))
+	: adsp21062_device(
+			mconfig,
+			ADSP21062,
+			tag,
+			owner,
+			clock,
+			address_map_constructor(FUNC(adsp21062_device::pgm_2m), this),
+			address_map_constructor(FUNC(adsp21062_device::data_2m), this))
+{
+}
+
+adsp21060_device::adsp21060_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: adsp21062_device(
+			mconfig,
+			ADSP21060,
+			tag,
+			owner,
+			clock,
+			address_map_constructor(FUNC(adsp21060_device::pgm_4m), this),
+			address_map_constructor(FUNC(adsp21060_device::data_4m), this))
+{
+}
+
+adsp21062_device::adsp21062_device(
+		const machine_config &mconfig,
+		device_type type,
+		const char *tag,
+		device_t *owner,
+		uint32_t clock,
+		address_map_constructor internal_pgm,
+		address_map_constructor internal_data)
+	: cpu_device(mconfig, type, tag, owner, clock)
+	, m_program_config("program", ENDIANNESS_LITTLE, 64, 24, -3, internal_pgm)
+	, m_data_config("data", ENDIANNESS_LITTLE, 32, 32, -2, internal_data)
 	, m_boot_mode(BOOT_MODE_HOST)
 	, m_cache(CACHE_SIZE + sizeof(sharc_internal_state))
 	, m_entry(nullptr)
@@ -108,8 +153,7 @@ adsp21062_device::adsp21062_device(const machine_config &mconfig, const char *ta
 	, m_swap_dag2_4_7(nullptr)
 	, m_swap_r0_7(nullptr)
 	, m_swap_r8_15(nullptr)
-	, m_block0(*this, "block0")
-	, m_block1(*this, "block1")
+	, m_blocks(*this, "block%u", 0U)
 	, m_enable_drc(false)
 {
 	std::fill(std::begin(m_exception), std::end(m_exception), nullptr);
@@ -119,12 +163,15 @@ adsp21062_device::~adsp21062_device()
 {
 }
 
+adsp21060_device::~adsp21060_device()
+{
+}
+
 device_memory_interface::space_config_vector adsp21062_device::memory_space_config() const
 {
-	return space_config_vector {
-		std::make_pair(AS_PROGRAM, &m_program_config),
-		std::make_pair(AS_DATA,    &m_data_config)
-	};
+	return space_config_vector{
+			std::make_pair(AS_PROGRAM, &m_program_config),
+			std::make_pair(AS_DATA,    &m_data_config) };
 }
 
 std::unique_ptr<util::disasm_interface> adsp21062_device::create_disassembler()
@@ -134,6 +181,8 @@ std::unique_ptr<util::disasm_interface> adsp21062_device::create_disassembler()
 
 void adsp21062_device::enable_recompiler()
 {
+	if (has_running_machine() && (machine().phase() > machine_phase::INIT))
+		throw emu_fatalerror("SHARC: enable_recompiler: changing mode after starting\n");
 	m_enable_drc = allow_drc();
 }
 
@@ -176,7 +225,8 @@ TIMER_CALLBACK_MEMBER(adsp21062_device::sharc_iop_delayed_write_callback)
 			break;
 		}
 
-		default:    fatalerror("SHARC: sharc_iop_delayed_write: unknown IOP register %02X\n", m_core->iop_delayed_reg);
+		default:
+			throw emu_fatalerror("SHARC: sharc_iop_delayed_write: unknown IOP register %02X\n", m_core->iop_delayed_reg);
 	}
 
 	m_core->delayed_iop_timer->adjust(attotime::never, 0);
@@ -196,86 +246,46 @@ void adsp21062_device::sharc_iop_delayed_w(uint32_t reg, uint32_t data, int cycl
 // 3 ab9 5h 5l 4l
 // 4 cde 6h 6l 7h
 
-uint64_t adsp21062_device::pm0_r(offs_t offset)
+template <unsigned N>
+uint64_t adsp21062_device::pm_r(offs_t offset)
 {
 	offs_t slot = offset >> 12;
 	offs_t base = (offset & 0xfff) + (slot >> 1) * (3<<12);
-	if(slot & 1)
-		return (uint64_t(m_block0[base + 0x2000]) << 16) | (m_block0[base + 0x1000] & 0xffff);
+	if (slot & 1)
+		return (uint64_t(m_blocks[N][base + 0x2000]) << 16) | (m_blocks[N][base + 0x1000] & 0xffff);
 	else
-		return (uint64_t(m_block0[base         ]) << 16) | (m_block0[base + 0x1000] >> 16);
+		return (uint64_t(m_blocks[N][base         ]) << 16) | (m_blocks[N][base + 0x1000] >> 16);
 }
 
-void adsp21062_device::pm0_w(offs_t offset, uint64_t data, uint64_t mem_mask)
+template <unsigned N>
+void adsp21062_device::pm_w(offs_t offset, uint64_t data, uint64_t mem_mask)
 {
 	offs_t slot = offset >> 12;
 	offs_t base = (offset & 0xfff) + (slot >> 1) * (3<<12);
-	if(slot & 1) {
-		if(ACCESSING_BITS_0_15)
-			m_block0[base + 0x1000] = (m_block0[base + 0x1000] & 0xffff0000) | (data & 0xffff);
-		m_block0[base + 0x2000] = (m_block0[base + 0x2000] & ~(mem_mask >> 16)) | ((data & mem_mask) >> 16);
-	} else {
-		m_block0[base + 0x0000] = (m_block0[base + 0x0000] & ~(mem_mask >> 16)) | ((data & mem_mask) >> 16);
-		if(ACCESSING_BITS_0_15)
-			m_block0[base + 0x1000] = (m_block0[base + 0x1000] & 0xffff) | ((data & 0xffff) << 16);
+	if (slot & 1)
+	{
+		if (ACCESSING_BITS_0_15)
+			m_blocks[N][base + 0x1000] = (m_blocks[N][base + 0x1000] & 0xffff0000) | (data & 0xffff);
+		m_blocks[N][base + 0x2000] = (m_blocks[N][base + 0x2000] & ~(mem_mask >> 16)) | ((data & mem_mask) >> 16);
+	}
+	else
+	{
+		m_blocks[N][base + 0x0000] = (m_blocks[N][base + 0x0000] & ~(mem_mask >> 16)) | ((data & mem_mask) >> 16);
+		if (ACCESSING_BITS_0_15)
+			m_blocks[N][base + 0x1000] = (m_blocks[N][base + 0x1000] & 0xffff) | ((data & 0xffff) << 16);
 	}
 }
 
-uint64_t adsp21062_device::pm1_r(offs_t offset)
+template <unsigned N>
+uint32_t adsp21062_device::dmw_r(offs_t offset)
 {
-	offs_t slot = offset >> 12;
-	offs_t base = (offset & 0xfff) + (slot >> 1) * (3<<12);
-	if(slot & 1)
-		return (uint64_t(m_block1[base + 0x2000]) << 16) | (m_block1[base + 0x1000] & 0xffff);
-	else
-		return (uint64_t(m_block1[base         ]) << 16) | (m_block1[base + 0x1000] >> 16);
+	return util::little_endian_cast<uint16_t const>(&m_blocks[N][0])[offset];
 }
 
-void adsp21062_device::pm1_w(offs_t offset, uint64_t data, uint64_t mem_mask)
+template <unsigned N>
+void adsp21062_device::dmw_w(offs_t offset, uint32_t data)
 {
-	offs_t slot = offset >> 12;
-	offs_t base = (offset & 0xfff) + (slot >> 1) * (3<<12);
-	if(slot & 1) {
-		if(ACCESSING_BITS_0_15)
-			m_block1[base + 0x1000] = (m_block1[base + 0x1000] & 0xffff0000) | (data & 0xffff);
-		m_block1[base + 0x2000] = (m_block1[base + 0x2000] & ~(mem_mask >> 16)) | ((data & mem_mask) >> 16);
-	} else {
-		m_block1[base + 0x0000] = (m_block1[base + 0x0000] & ~(mem_mask >> 16)) | ((data & mem_mask) >> 16);
-		if(ACCESSING_BITS_0_15)
-			m_block1[base + 0x1000] = (m_block1[base + 0x1000] & 0xffff) | ((data & 0xffff) << 16);
-	}
-}
-
-uint32_t adsp21062_device::dmw0_r(offs_t offset)
-{
-	if(offset & 1)
-		return m_block0[offset >> 1] >> 16;
-	else
-		return m_block0[offset >> 1] & 0xffff;
-}
-
-void adsp21062_device::dmw0_w(offs_t offset, uint32_t data)
-{
-	if(offset & 1)
-		m_block0[offset >> 1] = (m_block0[offset >> 1] & 0xffff) | (data << 16);
-	else
-		m_block0[offset >> 1] = (m_block0[offset >> 1] & 0xffff0000) | (data & 0xffff);
-}
-
-uint32_t adsp21062_device::dmw1_r(offs_t offset)
-{
-	if(offset & 1)
-		return m_block1[offset >> 1] >> 16;
-	else
-		return m_block1[offset >> 1] & 0xffff;
-}
-
-void adsp21062_device::dmw1_w(offs_t offset, uint32_t data)
-{
-	if(offset & 1)
-		m_block1[offset >> 1] = (m_block1[offset >> 1] & 0xffff) | (data << 16);
-	else
-		m_block1[offset >> 1] = (m_block1[offset >> 1] & 0xffff0000) | (data & 0xffff);
+	util::little_endian_cast<uint16_t>(&m_blocks[N][0])[offset] = uint16_t(data);
 }
 
 /* IOP registers */
@@ -290,8 +300,8 @@ uint32_t adsp21062_device::iop_r(offs_t offset)
 			return m_core->dma_status;
 		}
 		default:
-		if(!machine().side_effects_disabled())
-			fatalerror("sharc_iop_r: Unimplemented IOP reg %02X at %08X\n", offset, m_core->pc);
+		if (!machine().side_effects_disabled())
+			throw emu_fatalerror("sharc_iop_r: Unimplemented IOP reg %02X at %08X\n", offset, m_core->pc);
 
 		return 0;
 	}
@@ -383,7 +393,8 @@ void adsp21062_device::iop_w(offs_t offset, uint32_t data)
 		case 0x4e: m_core->dma[7].ext_modifier = data; return;
 		case 0x4f: m_core->dma[7].ext_count = data; return;
 
-		default:        fatalerror("sharc_iop_w: Unimplemented IOP reg %02X, %08X at %08X\n", offset, data, m_core->pc);
+		default:
+			throw emu_fatalerror("sharc_iop_w: Unimplemented IOP reg %02X, %08X at %08X\n", offset, data, m_core->pc);
 	}
 }
 
@@ -417,7 +428,7 @@ void adsp21062_device::build_opcode_table()
 			auto &opcode = s_sharc_opcode_table[j++];
 			if ((opcode.op_mask & op) == opcode.op_bits)
 			{
-				fatalerror("build_opcode_table: table already filled! (i=%04X, j=%d)\n", i, j);
+				throw emu_fatalerror("build_opcode_table: table already filled! (i=%04X, j=%d)\n", i, j);
 			}
 		}
 	}
@@ -454,7 +465,7 @@ void adsp21062_device::external_iop_write(uint32_t address, uint32_t data)
 	else
 	{
 		LOG("SHARC IOP write %08X, %08X\n", address, m_core->iop_data);
-		m_data->write_dword(address, m_core->iop_data);
+		m_data.write_dword(address, m_core->iop_data);
 	}
 }
 
@@ -472,7 +483,7 @@ void adsp21062_device::external_dma_write(uint32_t address, uint64_t data)
 			int shift = address % 3;
 			uint64_t r = pm_read48((m_core->dma[6].int_index & 0x1ffff) | 0x20000);
 
-			r &= ~((uint64_t)(0xffff) << (shift*16));
+			r &= ~(uint64_t(0xffff) << (shift*16));
 			r |= (data & 0xffff) << (shift*16);
 
 			pm_write48((m_core->dma[6].int_index & 0x1ffff) | 0x20000, r);
@@ -485,7 +496,7 @@ void adsp21062_device::external_dma_write(uint32_t address, uint64_t data)
 		}
 		default:
 		{
-			fatalerror("sharc_external_dma_write: unimplemented packing mode %d\n", (m_core->dma[6].control >> 6) & 0x3);
+			throw emu_fatalerror("sharc_external_dma_write: unimplemented packing mode %d\n", (m_core->dma[6].control >> 6) & 0x3);
 		}
 	}
 }
@@ -496,8 +507,8 @@ void adsp21062_device::device_start()
 	m_core = m_cache.alloc_near<sharc_internal_state>();
 	memset(m_core, 0, sizeof(sharc_internal_state));
 
-	m_program = &space(AS_PROGRAM);
-	m_data = &space(AS_DATA);
+	space(AS_PROGRAM).specific(m_program);
+	space(AS_DATA).specific(m_data);
 
 	if (!m_enable_drc)
 	{
@@ -905,8 +916,8 @@ void adsp21062_device::device_start()
 
 void adsp21062_device::device_reset()
 {
-	memset(m_block0, 0, 0x8000 * sizeof(uint32_t));
-	memset(m_block1, 0, 0x8000 * sizeof(uint32_t));
+	for (auto &block : m_blocks)
+		std::fill(std::begin(block), std::end(block), 0);
 
 	switch(m_boot_mode)
 	{
@@ -940,7 +951,7 @@ void adsp21062_device::device_reset()
 		}
 
 		default:
-			fatalerror("SHARC: Unimplemented boot mode %d\n", m_boot_mode);
+			throw emu_fatalerror("SHARC: Unimplemented boot mode %d\n", m_boot_mode);
 	}
 
 	m_core->pc = 0x20004;
@@ -962,6 +973,70 @@ void adsp21062_device::device_reset()
 
 	if (m_enable_drc)
 		m_drcfe->flush();
+}
+
+void adsp21062_device::device_pre_save()
+{
+	cpu_device::device_pre_save();
+
+	if (m_enable_drc)
+	{
+		auto const pack_astat =
+				[] (ASTAT_DRC const &in) -> uint32_t
+				{
+					return
+							((in.az << AZ_SHIFT) & AZ) |
+							((in.av << AV_SHIFT) & AV) |
+							((in.an << AN_SHIFT) & AN) |
+							((in.ac << AC_SHIFT) & AC) |
+							((in.as << AS_SHIFT) & AS) |
+							((in.ai << AI_SHIFT) & AI) |
+							((in.mn << MN_SHIFT) & MN) |
+							((in.mv << MV_SHIFT) & MV) |
+							((in.mu << MU_SHIFT) & MU) |
+							((in.mi << MI_SHIFT) & MI) |
+							((in.sv << SV_SHIFT) & SV) |
+							((in.sz << SZ_SHIFT) & SZ) |
+							((in.ss << SS_SHIFT) & SS) |
+							((in.btf << BTF_SHIFT) & BTF) |
+							((in.af << AF_SHIFT) & AF) |
+							((in.cacc << 24) & 0xff00'0000);
+				};
+
+		m_core->astat = pack_astat(m_core->astat_drc);
+		m_core->astat_old = pack_astat(m_core->astat_drc_copy);
+		m_core->astat_old_old = pack_astat(m_core->astat_delay_copy);
+	}
+}
+
+void adsp21062_device::device_post_load()
+{
+	auto const unpack_astat =
+			[] (ASTAT_DRC &out, uint32_t in)
+			{
+				out.az = BIT(in, AZ_SHIFT);
+				out.av = BIT(in, AV_SHIFT);
+				out.an = BIT(in, AN_SHIFT);
+				out.ac = BIT(in, AC_SHIFT);
+				out.as = BIT(in, AS_SHIFT);
+				out.ai = BIT(in, AI_SHIFT);
+				out.mn = BIT(in, MN_SHIFT);
+				out.mv = BIT(in, MV_SHIFT);
+				out.mu = BIT(in, MU_SHIFT);
+				out.mi = BIT(in, MI_SHIFT);
+				out.sv = BIT(in, SV_SHIFT);
+				out.sz = BIT(in, SZ_SHIFT);
+				out.ss = BIT(in, SS_SHIFT);
+				out.btf = BIT(in, BTF_SHIFT);
+				out.af = BIT(in, AF_SHIFT);
+				out.cacc = BIT(in, 24, 8);
+			};
+
+	cpu_device::device_post_load();
+
+	unpack_astat(m_core->astat_drc, m_core->astat);
+	unpack_astat(m_core->astat_drc_copy, m_core->astat_old);
+	unpack_astat(m_core->astat_delay_copy, m_core->astat_old_old);
 }
 
 
@@ -995,7 +1070,7 @@ void adsp21062_device::set_flag_input(int flag_num, int state)
 		}
 		else
 		{
-			fatalerror("sharc_set_flag_input: flag %d is set output!\n", flag_num);
+			throw emu_fatalerror("sharc_set_flag_input: flag %d is set output!\n", flag_num);
 		}
 	}
 }
@@ -1110,7 +1185,7 @@ void adsp21062_device::execute_run()
 
 			debugger_instruction_hook(m_core->pc);
 
-			m_core->opcode = m_program->read_qword(m_core->pc);
+			m_core->opcode = m_program.read_qword(m_core->pc);
 
 			// handle looping
 			if (m_core->pc == m_core->laddr.addr)
@@ -1144,12 +1219,12 @@ void adsp21062_device::execute_run()
 				}
 				case 1:     // counter-based, length 1
 				{
-					//fatalerror("SHARC: counter-based loop, length 1 at %08X\n", m_pc);
+					//throw emu_fatalerror("SHARC: counter-based loop, length 1 at %08X\n", m_pc);
 					//break;
 				}
 				case 2:     // counter-based, length 2
 				{
-					//fatalerror("SHARC: counter-based loop, length 2 at %08X\n", m_pc);
+					//throw emu_fatalerror("SHARC: counter-based loop, length 2 at %08X\n", m_pc);
 					//break;
 				}
 				case 3:     // counter-based, length >2
