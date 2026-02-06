@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 76 -->
+<!-- Number of items in this list = 78 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -69,6 +69,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Astrododge.sg" size="32768" crc="b895942d" sha1="8f11706ed0595a36fc6b5a0426e82ba45ef53c00"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg10366856f6efc8">
+		<description>Awass (2026)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="16384">
+				<rom name="Awass (2026)(Inufuto).sg" size="16384" crc="bbff7ebf" sha1="0366856f6efc8b84beef78c80630882d5f07638d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -249,6 +259,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="32768">
 				<rom name="Elite Planet Browser_sc3000.sg" size="32768" crc="69104020" sha1="f81a6740a71cd25acfdb8d75bcc07e3043c517f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1d177ab8262fa7">
+		<description>Eye Brawls v1.2 (2026)(Jess Creations, ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Eye Brawls v1.2 (2026)(Jess Creations, ArugulaZ).sg" size="32768" crc="e2ce44f0" sha1="d177ab8262fa7fb48024f5707d673f6c43b15d2a"/>
 			</dataarea>
 		</part>
 	</software>
