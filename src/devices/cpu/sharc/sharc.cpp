@@ -135,6 +135,7 @@ adsp21062_device::adsp21062_device(
 	, m_entry(nullptr)
 	, m_nocode(nullptr)
 	, m_out_of_cycles(nullptr)
+	, m_reset_cache(nullptr)
 	, m_pm_read48(nullptr)
 	, m_pm_write48(nullptr)
 	, m_pm_read32(nullptr)
@@ -503,6 +504,9 @@ void adsp21062_device::external_dma_write(uint32_t address, uint64_t data)
 
 void adsp21062_device::device_start()
 {
+	assert(m_blocks[0].length() == m_blocks[1].length());
+	assert(!(m_blocks[0].length() & (m_blocks[0].length() - 1)));
+
 	m_cache.allocate_cache(mconfig().options().drc_rwx());
 	m_core = m_cache.alloc_near<sharc_internal_state>();
 	memset(m_core, 0, sizeof(sharc_internal_state));
@@ -580,9 +584,7 @@ void adsp21062_device::device_start()
 		m_drcfe = std::make_unique<sharc_frontend>(this, COMPILE_BACKWARDS_BYTES, COMPILE_FORWARDS_BYTES, COMPILE_MAX_SEQUENCE);
 
 		for (int i = 0; i < 16; i++)
-		{
 			m_regmap[i] = uml::mem(&m_core->r[i]);
-		}
 
 		// I0-3 used by the DRC, rest can be assigned to fast registers
 		if (!DISABLE_FAST_REGISTERS)
@@ -693,8 +695,10 @@ void adsp21062_device::device_start()
 	m_core->astat_old_old = 0;
 	m_core->astat_old_old_old = 0;
 
-	m_core->fp0 = 0.0f;
-	m_core->fp1 = 1.0f;
+	m_core->fp_const.k0_0 = 0.0F;
+	m_core->fp_const.k0_5 = 0.5F;
+	m_core->fp_const.k1_0 = 1.0F;
+	m_core->fp_const.k2_0 = 2.0F;
 
 	save_pointer(NAME(&m_core->r[0].r), std::size(m_core->r));
 	save_pointer(NAME(&m_core->reg_alt[0].r), std::size(m_core->reg_alt));

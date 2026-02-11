@@ -4031,6 +4031,18 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/machine/vl82c420.h,MACHINES["VL82C420"] = true
+---------------------------------------------------
+
+if MACHINES["VL82C420"] then
+	files {
+		MAME_DIR .. "src/devices/machine/vl82c420.cpp",
+		MAME_DIR .. "src/devices/machine/vl82c420.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/machine/wd_fdc.h,MACHINES["WD_FDC"] = true
 ---------------------------------------------------
 
@@ -4520,6 +4532,18 @@ if MACHINES["FDC37C665GT"] then
 	files {
 		MAME_DIR .. "src/devices/machine/fdc37c665gt.cpp",
 		MAME_DIR .. "src/devices/machine/fdc37c665gt.h",
+	}
+end
+
+---------------------------------------------------
+--
+--@src/devices/machine/fdc37c665ir.h,MACHINES["FDC37C665IR"] = true
+---------------------------------------------------
+
+if MACHINES["FDC37C665IR"] then
+	files {
+		MAME_DIR .. "src/devices/machine/fdc37c665ir.cpp",
+		MAME_DIR .. "src/devices/machine/fdc37c665ir.h",
 	}
 end
 

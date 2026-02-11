@@ -1,26 +1,26 @@
 // license:BSD-3-Clause
 // copyright-holders: Angelo Salese
 
-#ifndef MAME_MACHINE_F82C836_H
-#define MAME_MACHINE_F82C836_H
+#ifndef MAME_MACHINE_VL82C420_H
+#define MAME_MACHINE_VL82C420_H
 
 #pragma once
 
 #include "bus/isa/isa.h"
 #include "machine/am9517a.h"
+#include "machine/at_keybc.h"
+#include "machine/ds128x.h"
 #include "machine/pic8259.h"
 #include "machine/pit8253.h"
-#include "machine/ds128x.h"
-#include "machine/at_keybc.h"
 #include "machine/ram.h"
 
-class f82c836a_device : public device_t,
-					    public device_memory_interface
+class vl82c420_device : public device_t,
+				       public device_memory_interface
 {
 public:
 	template <typename T, typename U, typename V, typename W, typename X>
-	f82c836a_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock, T &&cputag, U &&biostag, V &&keybctag, W &&ramtag, X &&isatag)
-		: f82c836a_device(mconfig, tag, owner, clock)
+	vl82c420_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock, T &&cputag, U &&biostag, V &&keybctag, W &&ramtag, X &&isatag)
+		: vl82c420_device(mconfig, tag, owner, clock)
 	{
 		set_cputag(std::forward<T>(cputag));
 		set_biostag(std::forward<U>(biostag));
@@ -29,7 +29,7 @@ public:
 		set_isatag(std::forward<X>(isatag));
 	}
 
-	f82c836a_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
+	vl82c420_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
 
 	auto ior() { return m_read_ior.bind(); }
 	auto iow() { return m_write_iow.bind(); }
@@ -98,11 +98,10 @@ public:
 	}
 	void gatea20_w(int state) { keyboard_gatea20(state); }
 	void kbrst_w(int state) {
-		// convert to active low signal (gets inverted in at_keybc.cpp)
+		// convert to active low signal (gets inverted in at_keybc.c)
 		state = (state == ASSERT_LINE ? 0 : 1);
 
-		// external kbreset is ignored when emulation enabled
-		//if (!BIT(m_registers[SOFT_RESET_AND_GATEA20], 4))
+		//if (?)
 		//{
 		//	// detect transition
 		if (m_kbrst == 1 && state == 0)
@@ -127,13 +126,12 @@ protected:
 
 	void io_map(address_map &map) ATTR_COLD;
 	void config_map(address_map &map) ATTR_COLD;
-
 private:
 	const address_space_config m_space_config;
 
 	required_device<device_memory_interface> m_cpu;
 	required_device<at_kbc_device_base> m_keybc;
-	required_region_ptr<u16> m_bios;
+	required_region_ptr<u32> m_bios;
 
 	address_space *m_space_mem;
 	address_space *m_space_io;
@@ -170,27 +168,37 @@ private:
 	int m_kbrst;
 	int m_ext_gatea20;
 	int m_fast_gatea20;
-//	int m_emu_gatea20;
-//	bool m_keybc_d1_written;
-//	bool m_keybc_data_blocked;
 
 	u8 portb_r();
 	void portb_w(u8 data);
 
 	u8 m_config_address;
+	bool m_config_unlock;
+	u8 m_ramtmg;
+	u8 m_ramcfg[2];
+	u8 m_ramset;
+	u8 m_ntbref;
+	u8 m_clkctl;
+	u8 m_miscset;
+	u8 m_dmactl;
+	u8 m_busctl;
+	u8 m_fbcr;
+	u8 m_romset;
+	u8 m_segment_access[6];
+	u8 m_segment_cache[6];
+	u8 m_cachctl;
+	u8 m_pmra[2];
+	u8 m_pmre[2];
+	u8 m_xctl;
 
-	u8 m_dma_ws_control;
-	u8 m_chan_env;
-	u8 m_rom_enable;
-	u8 m_ram_write_protect;
-	u8 m_shadow_reg[3];
-	u8 m_dram_config;
-	u8 m_ext_boundary;
-	u8 m_ems_control;
-	std::vector<u8> m_shadow_ram;
+	void config_address_w(offs_t offset, u8 data);
+	u8 config_data_r(offs_t offset);
+	void config_data_w(offs_t offset, u8 data);
 
-	void update_romram_settings();
-	void update_dma_clock();
+//	std::vector<u8> m_shadow_ram;
+
+	void update_segment_settings();
+//	void update_dma_clock();
 
 	offs_t page_offset();
 	void set_dma_channel(int channel, bool state);
@@ -237,7 +245,6 @@ private:
 //	void emulated_gatea20(int state);
 };
 
-DECLARE_DEVICE_TYPE(F82C836A, f82c836a_device)
-//DECLARE_DEVICE_TYPE(F82C836B, f82c836b_device)
+DECLARE_DEVICE_TYPE(VL82C420, vl82c420_device)
 
-#endif // MAME_MACHINE_F82C836_H
+#endif // MAME_MACHINE_VL82C420_H
