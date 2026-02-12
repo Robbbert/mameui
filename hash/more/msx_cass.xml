@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 116 -->
+<!-- Number of items in this list = 117 -->
 <softwarelist name="msx_cass" description="msx_cass loose roms">
 	<software name="msxeadb9d14766b7">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[Micom BASIC][cload]</description>
@@ -449,6 +449,16 @@
 		<part name="cass1" interface="msx_cass">
 			<dataarea name="cass" size="39675">
 				<rom name="aspar gp master (1989)(dinamic software)(es)(en)[english edition][run'cas-'].cas" size="39675" crc="bf265f66" sha1="21dedf778abbb12bc02edbb423d4c7d2614de6aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx3079fc058784f">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="msx_cass">
+			<dataarea name="cass" size="9356">
+				<rom name="awass.cas" size="9356" crc="01a17136" sha1="3079fc058784f428711b973ed8e59928ed8b8547"/>
 			</dataarea>
 		</part>
 	</software>

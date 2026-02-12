@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 706 -->
+<!-- Number of items in this list = 707 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1959,6 +1959,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="EXO-TICAL ES (2025)(Roolandoo).rom" size="49152" crc="498b8f87" sha1="95fbe04b84b3e3cdf270ca7f9fe4082a16fe0fc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa7b531049feac">
+		<description>eyebrawls</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="eyebrawls.rom" size="32768" crc="c1a37604" sha1="a7b531049feacb8a907754b4221a8784ba5647cb"/>
 			</dataarea>
 		</part>
 	</software>

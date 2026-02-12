@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7797 -->
+<!-- Number of items in this list = 7800 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -7579,6 +7579,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="7997">
 				<rom name="Awari (1984)(Understanding Ltd).tap" size="7997" crc="ad8f3f1b" sha1="ec13251536e969ff0bfbed9d16d99b5f83627660"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73d1a75e9f59a">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11355">
+				<rom name="awass.tzx" size="11355" crc="211c14bf" sha1="73d1a75e9f59a550d5463d2db359955fb41a1e48"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18899,6 +18909,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48389">
 				<rom name="Demon Lord - The Fortress Of Fear (1984)(Javlin Software)[Part 1 of 2].tap" size="48389" crc="3a668086" sha1="288661e234a4029e001ca94b0b41c0db6202520c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7dc0ffec5f4b1">
+		<description>Demon Pages</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="75671">
+				<rom name="Demon Pages.tap" size="75671" crc="adc661dd" sha1="7dc0ffec5f4b1e504559b29b295c89a442a446e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -66289,6 +66309,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56938">
 				<rom name="Ziona Quest II - Part 1 v1.1 128K (2025)(IAMAI Creation).tap" size="56938" crc="650a133a" sha1="7a040d9362c3f84e6fe85bd336449f3416bda094"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs627ca79bbbb33">
+		<description>Ziona Quest II - Part 2 128K (2026)(IAMAI Creation)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56617">
+				<rom name="Ziona Quest II - Part 2 128K (2026)(IAMAI Creation).tap" size="56617" crc="bedf5bee" sha1="627ca79bbbb33db3a221f87ece493c502cc23dbd"/>
 			</dataarea>
 		</part>
 	</software>
