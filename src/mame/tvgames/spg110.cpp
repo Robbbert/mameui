@@ -79,6 +79,7 @@ public:
 		spg110_game_state(mconfig, type, tag),
 		m_cart(*this, "cartslot"),
 		m_cartrom(*this, "cartrom")
+		, m_memview(*this, "memview")
 	{ }
 
 	void sstarkar(machine_config &config);
@@ -90,6 +91,7 @@ private:
 	required_device<generic_slot_device> m_cart;
 	DECLARE_DEVICE_IMAGE_LOAD_MEMBER(cart_load);
 	optional_memory_bank m_cartrom;
+	memory_view m_memview;
 
 	void mem_map_cart(address_map &map) ATTR_COLD;
 };
@@ -105,7 +107,9 @@ void spg110_game_state::mem_map(address_map &map)
 
 void spg110_sstarkar_game_state::mem_map_cart(address_map &map)
 {
-	map(0x004000, 0x0fffff).bankr("cartrom");
+	map(0x4000, 0xfffff).view(m_memview);
+	m_memview[0](0x4000, 0xfffff).nopr();
+	m_memview[1](0x4000, 0xfffff).bankr("cartrom");
 }
 
 void spg110_easports_game_state::mem_map(address_map &map)
@@ -556,11 +560,13 @@ void spg110_easports_game_state::easports_pal(machine_config &config)
 
 void spg110_sstarkar_game_state::machine_start()
 {
+	m_memview.select(0);
 	// if there's a cart, override the standard mapping
 	if (m_cart && m_cart->exists())
 	{
 		m_cartrom->configure_entries(0, 1, m_cart->get_rom_base()+0x8000, 0x200000-0x8000);
 		m_cartrom->set_entry(0);
+		m_memview.select(1);
 	}
 }
 
