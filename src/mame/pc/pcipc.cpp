@@ -695,7 +695,7 @@ void pcipc_state::pciagp(machine_config &config)
 
 	I82371EB_USB (config, "pci:07.2", 0);
 	I82371EB_ACPI(config, "pci:07.3", 0);
-	LPC_ACPI     (config, "pci:07.3:acpi", 0);
+	ACPI_PIIX4   (config, "pci:07.3:acpi", 0);
 	SMBUS        (config, "pci:07.3:smbus", 0);
 
 	ISA16_SLOT(config, "board4", 0, "pci:07.0:isabus", isa_internal_devices, "w83977tf", true).set_option_machine_config("w83977tf", winbond_superio_config);
@@ -757,7 +757,7 @@ void pcipc_state::se440bx2(machine_config &config)
 	I82371EB_ACPI(config, "pci:07.3", 0);
 //	i82371eb_acpi_device &acpi(I82371EB_ACPI(config, "pci:07.3", 0));
 //	acpi.apmc_en().set("pci:07.0", FUNC(i82371eb_isa_device::apmc_en_w));
-	LPC_ACPI     (config, "pci:07.3:acpi", 0);
+	ACPI_PIIX4   (config, "pci:07.3:acpi", 0);
 	SMBUS        (config, "pci:07.3:smbus", 0);
 
 	ISA16_SLOT(config, "board4", 0, "pci:07.0:isabus", isa_internal_devices, "fdc37m707", true).set_option_machine_config("fdc37m707", smc707_superio_config);
@@ -829,7 +829,7 @@ ROM_START(se440bx2)
 	ROM_REGION32_LE(0x80000, "pci:07.0", ROMREGION_ERASEFF) /* PC bios */
 	ROM_SYSTEM_BIOS(0, "p17", "P17-0024")
 	ROMX_LOAD( "440bx2.p17", 0x00000, 0x080000, CRC(0af597e3) SHA1(362c8385678e4f9f998877bde15409566ca134fb), ROM_BIOS(0) )
-	ROM_SYSTEM_BIOS(1,  "p16", "P15-0023")
+	ROM_SYSTEM_BIOS(1,  "p16", "P16-0023")
 	ROMX_LOAD( "440bx2.p16", 0x00000, 0x080000, CRC(1cf74bbb) SHA1(dfa026db04599db43f33294aeccfa3f26f9cbd40), ROM_BIOS(1) )
 	ROM_SYSTEM_BIOS(2,  "p15", "P15-0022")
 	ROMX_LOAD( "440bx2.p15", 0x00000, 0x080000, CRC(fe183bd9) SHA1(4270b874d6206d7f06954d2d775c00b2894a72f3), ROM_BIOS(2) )
