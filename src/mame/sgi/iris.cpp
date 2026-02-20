@@ -46,6 +46,7 @@
 #include "pm2.h"
 
 #include "gl1.h"
+#include "gl2.h"
 
 #include "iris1400.lh"
 
@@ -144,6 +145,7 @@ static void iris_g_cards(device_slot_interface &device)
 {
 	// graphics side cards
 	device.option_add("gl1", SGI_GL1);
+	device.option_add("gl2", SGI_GL2);
 }
 
 // 20-slot chassis, card positions assumed from 2xxx
@@ -196,6 +198,8 @@ void iris_state::iris3130(machine_config &config)
 	m_slot[1]->set_default_option("ip2");
 	m_slot[2]->set_default_option("nex");
 	m_slot[3]->set_default_option("dsd");
+
+	m_slot[19]->set_default_option("gl2");
 }
 
 ROM_START(iris1400)

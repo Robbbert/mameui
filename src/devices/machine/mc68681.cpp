@@ -1823,6 +1823,7 @@ void duart_channel::write_CR(uint8_t data)
 
 void duart_channel::write_TX(uint8_t data)
 {
+	printf("%c", data);
 	if (!(SR & STATUS_TRANSMITTER_READY))
 	{
 		logerror("write_tx transmitter not ready (data 0x%02x discarded)\n", data);

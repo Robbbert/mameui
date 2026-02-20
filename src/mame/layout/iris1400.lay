@@ -50,5 +50,9 @@ Silicon Graphics IRIS 1400.
 		<element name="LED7" ref="kbd_led"><bounds x="80" y="768" width="10" height="10" /></element>
 		<element name="LED8" ref="kbd_led"><bounds x="90" y="768" width="10" height="10" /></element> <!-- CAPS -->
 
+		<element name="DS1" ref="kbd_led"><bounds x="120" y="768" width="10" height="10" /></element>
+		<element name="DS2" ref="kbd_led"><bounds x="130" y="768" width="10" height="10" /></element>
+		<element name="DS3" ref="kbd_led"><bounds x="140" y="768" width="10" height="10" /></element>
+
 	</view>
 </mamelayout>

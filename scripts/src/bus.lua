@@ -4788,6 +4788,10 @@ if (BUSES["QIC02"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/bus/qic02/qic02.cpp",
 		MAME_DIR .. "src/devices/bus/qic02/qic02.h",
+		MAME_DIR .. "src/devices/bus/qic02/hle.cpp",
+		MAME_DIR .. "src/devices/bus/qic02/hle.cpp",
+		MAME_DIR .. "src/devices/bus/qic02/wangtek_5150eq.cpp",
+		MAME_DIR .. "src/devices/bus/qic02/wangtek_5150eq.cpp",
 	}
 end
 

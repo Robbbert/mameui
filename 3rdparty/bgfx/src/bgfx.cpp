@@ -2637,7 +2637,7 @@ namespace bgfx
 		{ noop::rendererCreate,   noop::rendererDestroy,   BGFX_RENDERER_NOOP_NAME,       false                             }, // Noop
 #endif // BX_PLATFORM_OSX || BX_PLATFORM_IOS
 		{ nvn::rendererCreate,    nvn::rendererDestroy,    BGFX_RENDERER_NVN_NAME,        !!BGFX_CONFIG_RENDERER_NVN        }, // NVN
-		{ gl::rendererCreate,     gl::rendererDestroy,     BGFX_RENDERER_OPENGL_NAME,     !!BGFX_CONFIG_RENDERER_OPENGLES   }, // OpenGLES
+		{ gl::rendererCreate,     gl::rendererDestroy,     BGFX_RENDERER_OPENGL_NAME,     !!(BGFX_CONFIG_RENDERER_OPENGLES > 0)   }, // OpenGLES
 		{ gl::rendererCreate,     gl::rendererDestroy,     BGFX_RENDERER_OPENGL_NAME,     !!BGFX_CONFIG_RENDERER_OPENGL     }, // OpenGL
 		{ vk::rendererCreate,     vk::rendererDestroy,     BGFX_RENDERER_VULKAN_NAME,     !!BGFX_CONFIG_RENDERER_VULKAN     }, // Vulkan
 		{ webgpu::rendererCreate, webgpu::rendererDestroy, BGFX_RENDERER_WEBGPU_NAME,     !!BGFX_CONFIG_RENDERER_WEBGPU     }, // WebGPU
