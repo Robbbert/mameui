@@ -3322,6 +3322,8 @@ if BUSES["MM2"] then
 		MAME_DIR .. "src/devices/bus/mm2/exp.h",
 		MAME_DIR .. "src/devices/bus/mm2/crtc186.cpp",
 		MAME_DIR .. "src/devices/bus/mm2/crtc186.h",
+		MAME_DIR .. "src/devices/bus/mm2/meme186.cpp",
+		MAME_DIR .. "src/devices/bus/mm2/meme186.h",
 		MAME_DIR .. "src/devices/bus/mm2/mm2kb.cpp",
 		MAME_DIR .. "src/devices/bus/mm2/mm2kb.h",
 		MAME_DIR .. "src/devices/bus/mm2/mmc186.cpp",

@@ -70,11 +70,16 @@ void nscsi_s1410_device::scsi_command()
 		break;
 
 	case SC_SEEK:
-		if (scsi_cmdbuf[1] >> 5) {
-			scsi_status_complete(SS_NOT_READY);
-			scsi_sense_buffer[0] = SK_DRIVE_NOT_READY;
-		} else {
-			scsi_status_complete(SS_GOOD);
+		{
+			const auto &info = image->get_info();
+			int max_lba = (info.cylinders * info.heads * info.sectors) - 1;
+			lba = get_u24be(&scsi_cmdbuf[1]) & 0x1fffff;
+			if (lba <= max_lba) {
+				scsi_status_complete(SS_GOOD);
+			} else {
+				scsi_status_complete(SS_SEEK_ERROR);
+				scsi_sense_buffer[0] = SK_DRIVE_NOT_READY;
+			}
 		}
 		break;
 
