@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3998 -->
+<!-- Number of items in this list = 3997 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3129,16 +3129,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="AmbianceOW (SMW1 Hack).sfc" size="1048576" crc="66ee407a" sha1="ebe0334a8774d3bdb0ebbf6661ec6db4f2974963"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns7d53b77c51c7c">
-		<description>America Oudan Ultra Quiz (J)(1992)(Tomy)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="America Oudan Ultra Quiz (J)(1992)(Tomy).sfc" size="1048576" crc="9624e6ed" sha1="7d53b77c51c7c7e964f40e12b641a405d2e68b2a"/>
 			</dataarea>
 		</part>
 	</software>
