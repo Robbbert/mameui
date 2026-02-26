@@ -14,6 +14,7 @@ SiS 6326
 
 #define VERBOSE (LOG_GENERAL | LOG_WARN | LOG_AGP)
 //#define LOG_OUTPUT_FUNC osd_printf_info
+
 #include "logmacro.h"
 
 #define LOGWARN(...)            LOGMASKED(LOG_WARN, __VA_ARGS__)
@@ -113,9 +114,108 @@ void sis6326_pci_device::vram_aperture_map(address_map &map)
 
 void sis6326_pci_device::mmio_map(address_map &map)
 {
+	map(0x8280, 0x8283).lw32(
+		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
+			COMBINE_DATA(&m_src_start_addr);
+			m_src_start_addr &= 0x3f'ffff;
+		})
+	);
+	// TODO: bit 31 is read only for Enhanced Color Expansion busy bit
+	map(0x8284, 0x8287).lw32(
+		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
+			COMBINE_DATA(&m_dst_start_addr);
+			m_dst_start_addr &= 0x3f'ffff;
+			if (ACCESSING_BITS_24_31)
+				m_draw_sel = data >> 24;
+		})
+	);
+	map(0x8288, 0x8289).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_src_pitch);
+			m_src_pitch &= 0xfff;
+		})
+	);
+	map(0x828a, 0x828b).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_dst_pitch);
+			m_dst_pitch &= 0xfff;
+		})
+	);
+	map(0x828c, 0x828d).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_rect_width);
+			m_rect_width &= 0xfff;
+			m_rect_width ++;
+		})
+	);
+	map(0x828e, 0x828f).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_rect_height);
+			m_rect_height &= 0xfff;
+			m_rect_height ++;
+		})
+	);
+	map(0x8290, 0x8293).lw32(
+		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
+			COMBINE_DATA(&m_fg_color);
+			m_fg_color &= 0xff'ffff;
+			if (ACCESSING_BITS_24_31)
+				m_fg_rop = data >> 24;
+		})
+	);
+	map(0x8294, 0x8297).lw32(
+		NAME([this] (offs_t offset, u32 data, u32 mem_mask) {
+			COMBINE_DATA(&m_bg_color);
+			m_bg_color &= 0xff'ffff;
+			if (ACCESSING_BITS_24_31)
+				m_bg_rop = data >> 24;
+		})
+	);
+	map(0x8298, 0x829f).lw8(NAME([this] (offs_t offset, u8 data) { m_mask[offset] = data; }));
+	map(0x82a0, 0x82a1).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_clip_left);
+			m_clip_left &= 0xfff;
+		})
+	);
+	map(0x82a2, 0x82a3).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_clip_top);
+			m_clip_top &= 0xfff;
+		})
+	);
+	map(0x82a4, 0x82a5).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_clip_right);
+			m_clip_right &= 0xfff;
+		})
+	);
+	map(0x82a6, 0x82a7).lw16(
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_clip_bottom);
+			m_clip_bottom &= 0xfff;
+		})
+	);
+
 	// HACK: fake Turbo Queue so to not lockup windows
-	map(0x82a8, 0x82ab).lr32(NAME([] () { return 0x8000'0100; }));
-	// Same deal, 3D Engine Status
+	map(0x82a8, 0x82a9).lr16(
+		NAME([] (offs_t offset) { return 0x0100; })
+	);
+	map(0x82aa, 0x82ab).lrw16(
+		NAME([] (offs_t offset) { return 0x8000; }),
+		NAME([this] (offs_t offset, u16 data, u16 mem_mask) {
+			COMBINE_DATA(&m_draw_command);
+			if (mem_mask == 0xffff)
+				trigger_2d_command();
+		})
+	);
+
+	map(0x82ac, 0x82eb).lw8(NAME([this] (offs_t offset, u8 data) {
+		m_pattern_data[offset] = data;
+	}));
+
+	map(0x8378, 0x837f).w(m_vga, FUNC(sis6326_vga_device::cursor_mmio_w));
+	// HACK: Same deal for 3D Engine Status
 	map(0x89fc, 0x89ff).lr32(NAME([] () { return (0x3ff << 16) | 3; }));
 }
 
@@ -158,6 +258,282 @@ void sis6326_pci_device::map_extra(uint64_t memory_window_start, uint64_t memory
 	{
 		io_space->install_device(0x03b0, 0x03df, *this, &sis6326_pci_device::legacy_io_map);
 	}
+}
+
+/*
+ * 2d drawing
+ */
+
+const sis6326_pci_device::get_src_func sis6326_pci_device::get_src_table[4] =
+{
+	&sis6326_pci_device::get_src_bgcol,
+	&sis6326_pci_device::get_src_fgcol,
+	&sis6326_pci_device::get_src_mem,
+	&sis6326_pci_device::get_src_cpu
+};
+
+
+u8 sis6326_pci_device::get_src_bgcol(u32 offset_base, u32 x)
+{
+	return m_bg_color;
+}
+
+u8 sis6326_pci_device::get_src_fgcol(u32 offset_base, u32 x)
+{
+	return m_fg_color;
+}
+
+u8 sis6326_pci_device::get_src_mem(u32 offset_base, u32 x)
+{
+	return m_vga->read_memory(offset_base + x);
+}
+
+// TODO: no idea about this yet
+u8 sis6326_pci_device::get_src_cpu(u32 offset_base, u32 x)
+{
+	return x & 1 ? 0x55 : 0xaa;
+}
+
+const sis6326_pci_device::get_pat_func sis6326_pci_device::get_pat_table[4] =
+{
+	&sis6326_pci_device::get_pat_bgcol,
+	&sis6326_pci_device::get_pat_fgcol,
+	&sis6326_pci_device::get_pat_regs,
+	&sis6326_pci_device::get_pat_ddraw
+};
+
+u8 sis6326_pci_device::get_pat_bgcol(u32 y, u32 x)
+{
+	return m_bg_color;
+}
+
+u8 sis6326_pci_device::get_pat_fgcol(u32 y, u32 x)
+{
+	return m_fg_color;
+}
+
+// TODO: not yet sure about how this works either
+// testable in win98se shutdown options
+u8 sis6326_pci_device::get_pat_regs(u32 y, u32 x)
+{
+	return m_pattern_data[x & 3];
+}
+
+// TODO: this is special, uses regs in a different way
+u8 sis6326_pci_device::get_pat_ddraw(u32 y, u32 x)
+{
+	return x & 1 ? 0x55 : 0xaa;
+}
+
+// TODO: copied from s3virge, really needs moving in a common interface
+// https://learn.microsoft.com/en-us/windows/win32/gdi/ternary-raster-operations
+uint32_t sis6326_pci_device::GetROP(uint8_t rop, uint32_t src, uint32_t dst, uint32_t pat)
+{
+	uint32_t ret = 0;
+
+	switch(rop)
+	{
+		case 0x00:  // 0
+			ret = 0;
+			break;
+		case 0x0a:  // DPna
+			ret = (dst & (~pat));
+			break;
+		case 0x22:  // DSna
+			ret = (dst & (~src));
+			break;
+		case 0x33:  // Sn
+			ret = ~src;
+			break;
+		case 0x55:  // Dn
+			ret = ~dst;
+			break;
+		case 0x5a:  // DPx
+			ret = dst ^ pat;
+			break;
+		case 0x66:  // DSx
+			ret = dst ^ src;
+			break;
+		case 0x88:  // DSa
+			ret = dst & src;
+			break;
+		case 0xaa:  // D
+			ret = dst;
+			break;
+		case 0xb8:  // PSDPxax
+			ret = ((dst ^ pat) & src) ^ pat;
+			break;
+		case 0xbb:  // DSno
+			ret = (dst | (~src));
+			break;
+		case 0xca:  // DPSDxax (moneynet install screen, no effective change?)
+			ret = ((src ^ dst) & pat) ^ dst;
+			break;
+		case 0xcc:
+			ret = src;
+			break;
+		case 0xe2:  // DSPDxax
+			ret = ((pat ^ dst) & src) ^ dst;
+			break;
+		case 0xee:  // DSo
+			ret = (dst | src);
+			break;
+		case 0xf0:
+			ret = pat;
+			break;
+		case 0xff:  // 1
+			ret = 0xffffffff;
+			break;
+		default:
+			popmessage("bus/pci/sis6326.cpp: Unimplemented ROP 0x%02x",rop);
+	}
+
+	return ret;
+}
+
+
+void sis6326_pci_device::trigger_2d_command()
+{
+	const u8 src_select = m_draw_command & 3;
+	const u8 pat_select = (m_draw_command >> 2) & 3;
+	const s8 x_dir = BIT(m_draw_command, 4) ? 1 : -1;
+	const s8 y_dir = BIT(m_draw_command, 5) ? 1 : -1;
+	const bool clip_enable = !!BIT(m_draw_command, 6);
+	const bool clip_external = !!BIT(m_draw_command, 7);
+	const u8 cmd_type = (m_draw_command >> 8) & 3;
+	const std::string src_types[] = { "bgcol", "fgcol", "memory", "CPU" };
+	// NOTE: pat type 3 may really select Direct Draw mode
+	const std::string pat_types[] = { "bgcol", "fgcol", "pattern", "<reserved>" };
+	LOG("Command: %04x: SRC %s, PAT %s, XY: %d|%d, clip: %d%d\n"
+		, m_draw_command, src_types[src_select], pat_types[pat_select]
+		, x_dir, y_dir, clip_enable, clip_external
+	);
+	if (clip_enable)
+	{
+		LOG("cliprange X %d %d ~ Y %d %d\n", m_clip_left, m_clip_right, m_clip_top, m_clip_bottom);
+		// (a very unlikely) sanity check
+		if (m_dst_pitch == 0)
+		{
+			LOG("\tWarning: dst pitch == 0, ignored!\n");
+			return;
+		}
+	}
+
+	// bits 15-14 are r/o
+	// TODO: currently using 256 colors only
+	// how this even acknowledge a change in color mode?
+	switch(cmd_type)
+	{
+		case 0:
+		{
+			LOG("\tBitBlt\n");
+			LOG("\tSRC Addr %06x DST Addr %06x Sel %02x\n", m_src_start_addr, m_dst_start_addr, m_draw_sel);
+			LOG("\tSRC Pitch %d DST Pitch %d Rect %dx%d\n", m_src_pitch, m_dst_pitch, m_rect_width, m_rect_height);
+			LOG("\tFG ROP %02x Color %06x | BG ROP %02x Color %06x\n", m_fg_rop, m_fg_color, m_bg_rop, m_bg_color);
+
+			for (s32 y = 0; y < m_rect_height; y++)
+			{
+				const s32 yi = y * y_dir;
+				if (clip_enable)
+				{
+					// clipping ranges are derived from the addresses (no explicit X/Y)
+					const s16 dst_y = yi + (m_dst_start_addr / m_dst_pitch);
+					if ((dst_y == std::clamp<u16>(dst_y, m_clip_top, m_clip_bottom)) ^ clip_external)
+						continue;
+				}
+
+				const u32 src_base = (yi * m_src_pitch) + m_src_start_addr;
+				const u32 dst_base = (yi * m_dst_pitch) + m_dst_start_addr;
+				for (s32 x = 0; x < m_rect_width; x++)
+				{
+					const s32 xi = x * x_dir;
+
+					if (clip_enable)
+					{
+						const u16 dst_x = xi + (m_dst_start_addr % m_dst_pitch);
+						if ((dst_x == std::clamp<u16>(dst_x, m_clip_left, m_clip_right)) ^ clip_external)
+							continue;
+					}
+
+					const u8 src = (this->*get_src_table[src_select])(src_base, xi);
+					const u8 dst = m_vga->read_memory(xi + dst_base);
+					const u8 pat = (this->*get_pat_table[pat_select])(y, x);
+					const u8 res = GetROP(m_fg_rop, src, dst, pat) & 0xff;
+					m_vga->write_memory(xi + dst_base, res);
+				}
+			}
+
+			break;
+		}
+		case 1:
+		{
+			LOG("\tBitBlt with mask\n");
+			// ...
+			break;
+		}
+		case 2:
+		{
+			const bool color_exp = !!BIT(m_draw_command, 12);
+			const bool font_exp = !!BIT(m_draw_command, 13);
+			LOG("\tColor/Font expansion: Color enhanced %d Font enhanced %d\n", color_exp, font_exp);
+			LOG("\tSRC Addr %06x DST Addr %06x Sel %02x\n", m_src_start_addr, m_dst_start_addr, m_draw_sel);
+			LOG("\tSRC Pitch %d DST Pitch %d Rect %dx%d\n", m_src_pitch, m_dst_pitch, m_rect_width, m_rect_height);
+			LOG("\tFG ROP %02x Color %06x | BG ROP %02x Color %06x\n", m_fg_rop, m_fg_color, m_bg_rop, m_bg_color);
+
+			if (m_rect_width > 8)
+			{
+				LOG("\tWarning: rect width > 8, ignored!\n");
+				return;
+			}
+
+			for (s32 y = 0; y < m_rect_height; y++)
+			{
+				const s32 yi = y * y_dir;
+
+				if (clip_enable)
+				{
+					const u16 dst_y = yi + (m_dst_start_addr / m_dst_pitch);
+					if ((dst_y == std::clamp<u16>(dst_y, m_clip_top, m_clip_bottom)) ^ clip_external)
+						continue;
+				}
+
+				const u8 pattern_base = y;
+				const u32 src_base = (y * m_src_pitch * y_dir) + m_src_start_addr;
+				const u32 dst_base = (y * m_dst_pitch * y_dir) + m_dst_start_addr;
+
+				for (s32 x = 0; x < m_rect_width; x++)
+				{
+					const s32 xi = x * x_dir;
+
+					if (clip_enable)
+					{
+						const u16 dst_x = xi + (m_dst_start_addr % m_dst_pitch);
+						if ((dst_x == std::clamp<u16>(dst_x, m_clip_left, m_clip_right)) ^ clip_external)
+							continue;
+					}
+
+					const u8 src = (this->*get_src_table[src_select])(src_base, xi);
+					const u8 dst = m_vga->read_memory(xi + dst_base);
+					const u8 dot = (m_pattern_data[pattern_base] >> (7 - x) & 1);
+					// ROP and pattern depends on pattern
+					// win98se start menu hovering depends on this
+					const u8 res = GetROP(dot ? m_fg_rop : m_bg_rop, src, dst, dot ? m_fg_color : m_bg_color) & 0xff;
+					m_vga->write_memory(xi + dst_base, res & 0xff);
+				}
+			}
+
+			break;
+		}
+		case 3:
+		{
+			const bool major_axis = !!BIT(m_draw_command, 10);
+			const bool last_pixel = !!BIT(m_draw_command, 11);
+			LOG("\tLine: major axis %s %d\n", major_axis ? "Y" : "X", !last_pixel);
+			// ...
+			break;
+		}
+	}
+
 }
 
 /*

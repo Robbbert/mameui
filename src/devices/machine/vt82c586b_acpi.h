@@ -16,6 +16,8 @@ class vt82c586b_acpi_device : public pci_device
 public:
 	vt82c586b_acpi_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
+	auto sci_pin_cb() { return m_sci_pin_cb.bind(); }
+
 protected:
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_reset() override ATTR_COLD;
@@ -28,6 +30,7 @@ protected:
 	void acpi_map(address_map &map) ATTR_COLD;
 private:
 	required_device<acpi_pipc_device> m_acpi;
+	devcb_write8 m_sci_pin_cb;
 
 	u8 m_pin_config;
 	u8 m_general_config;
@@ -94,6 +97,7 @@ private:
 	void gp_sci_enable_w(offs_t offset, u8 data);
 
 	void check_smi();
+//	void check_sci();
 };
 
 DECLARE_DEVICE_TYPE(VT82C586B_ACPI, vt82c586b_acpi_device)

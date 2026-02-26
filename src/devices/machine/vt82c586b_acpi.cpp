@@ -44,6 +44,7 @@ DEFINE_DEVICE_TYPE(ACPI_PIPC, acpi_pipc_device, "acpi_pipc", "ACPI PIPC")
 vt82c586b_acpi_device::vt82c586b_acpi_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
 	: pci_device(mconfig, VT82C586B_ACPI, tag, owner, clock)
 	, m_acpi(*this, "acpi")
+	, m_sci_pin_cb(*this)
 {
 	// xxxx ---- Silicon Version Code
 	// ---- xxxx Silicon Revision Code
@@ -110,7 +111,8 @@ void vt82c586b_acpi_device::config_map(address_map &map)
 		NAME([this] () { return m_sci_irq_config; }),
 		NAME([this] (offs_t offset, u8 data) {
 			m_sci_irq_config = data & 0xf;
-			LOG("42h: SCI Interrupt Configuration %02x\n", data);
+			LOG("42h: SCI Interrupt Configuration %02x (%d)\n", data, data);
+			m_sci_pin_cb(m_sci_irq_config);
 		})
 	);
 	map(0x44, 0x47).lrw16(
@@ -334,7 +336,8 @@ void acpi_pipc_device::io_map(address_map &map)
 				m_pmcntrl |= (data & 0x3c) << 8;
 				if (BIT(m_pmcntrl, 13))
 				{
-					LOGACPI("SLP_EN Sleep Enable issued %d\n", (m_pmcntrl >> 10) & 7);
+					const u8 slp_typ = (m_pmcntrl >> 10) & 7;
+					LOGACPI("SLP_EN Sleep Enable issued %d\n", slp_typ);
 					// TODO: SLP_EN cannot be '1'
 					// (generates a suspend mode if enabled, flips to '0')
 				}

@@ -499,29 +499,17 @@ private:
 	bool if_condition_always_true(int condition);
 	uint32_t do_condition_astat_bits(int condition);
 
-	void sharc_cfunc_unimplemented();
-	void sharc_cfunc_read_iop();
-	void sharc_cfunc_write_iop();
-	void sharc_cfunc_pcstack_overflow();
-	void sharc_cfunc_pcstack_underflow();
-	void sharc_cfunc_loopstack_overflow();
-	void sharc_cfunc_loopstack_underflow();
-	void sharc_cfunc_statusstack_overflow();
-	void sharc_cfunc_statusstack_underflow();
+	template <unsigned N> static void cfunc_update_flag_out(void *param);
 
-	void sharc_cfunc_unimplemented_compute();
-	void sharc_cfunc_unimplemented_shiftimm();
-	void sharc_cfunc_write_snoop();
-
-	static void cfunc_unimplemented(void *param);
-	static void cfunc_pcstack_overflow(void *param);
-	static void cfunc_pcstack_underflow(void *param);
-	static void cfunc_loopstack_overflow(void *param);
-	static void cfunc_loopstack_underflow(void *param);
-	static void cfunc_statusstack_overflow(void *param);
-	static void cfunc_statusstack_underflow(void *param);
-	static void cfunc_unimplemented_compute(void *param);
-	static void cfunc_unimplemented_shiftimm(void *param);
+	[[noreturn]] static void cfunc_unimplemented(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_unimplemented_compute(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_unimplemented_shiftimm(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_pcstack_overflow(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_pcstack_underflow(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_loopstack_overflow(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_loopstack_underflow(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_statusstack_overflow(void *param) ATTR_COLD;
+	[[noreturn]] static void cfunc_statusstack_underflow(void *param) ATTR_COLD;
 };
 
 

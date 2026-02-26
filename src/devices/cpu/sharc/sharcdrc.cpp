@@ -125,105 +125,68 @@ inline void adsp21062_device::alloc_handle(uml::code_handle *&handleptr, const c
 
 
 
+template <unsigned N>
+void adsp21062_device::cfunc_update_flag_out(void *param)
+{
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	sharc.m_flag_out_cb[N](BIT(sharc.m_core->astat, FLG0_SHIFT + N));
+}
+
 
 void adsp21062_device::cfunc_unimplemented(void *param)
 {
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_unimplemented();
-}
-
-void adsp21062_device::cfunc_pcstack_overflow(void *param)
-{
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_pcstack_overflow();
-}
-
-void adsp21062_device::cfunc_pcstack_underflow(void *param)
-{
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_pcstack_underflow();
-}
-
-void adsp21062_device::cfunc_loopstack_overflow(void *param)
-{
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_loopstack_overflow();
-}
-
-void adsp21062_device::cfunc_loopstack_underflow(void *param)
-{
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_loopstack_underflow();
-}
-
-void adsp21062_device::cfunc_statusstack_overflow(void *param)
-{
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_statusstack_overflow();
-}
-
-void adsp21062_device::cfunc_statusstack_underflow(void *param)
-{
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_statusstack_underflow();
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: Unimplemented op %012X", sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64);
 }
 
 void adsp21062_device::cfunc_unimplemented_compute(void *param)
 {
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_unimplemented_compute();
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: Unimplemented compute %012X", sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64);
 }
 
 void adsp21062_device::cfunc_unimplemented_shiftimm(void *param)
 {
-	adsp21062_device *sharc = (adsp21062_device *)param;
-	sharc->sharc_cfunc_unimplemented_shiftimm();
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: Unimplemented shiftimm %012X", sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64);
 }
 
-void adsp21062_device::sharc_cfunc_unimplemented()
+void adsp21062_device::cfunc_pcstack_overflow(void *param)
 {
-	fatalerror("PC=%08X: Unimplemented op %012X\n", m_core->pc, m_core->arg64);
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: PCStack overflow", sharc.tag(), sharc.m_core->pc);
 }
 
-void adsp21062_device::sharc_cfunc_unimplemented_compute()
+void adsp21062_device::cfunc_pcstack_underflow(void *param)
 {
-	fatalerror("PC=%08X: Unimplemented compute %012X\n", m_core->pc, m_core->arg64);
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: PCStack underflow", sharc.tag(), sharc.m_core->pc);
 }
 
-void adsp21062_device::sharc_cfunc_unimplemented_shiftimm()
+void adsp21062_device::cfunc_loopstack_overflow(void *param)
 {
-	fatalerror("PC=%08X: Unimplemented shiftimm %012X\n", m_core->pc, m_core->arg64);
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: Loop Stack overflow", sharc.tag(), sharc.m_core->pc);
 }
 
-void adsp21062_device::sharc_cfunc_pcstack_overflow()
+void adsp21062_device::cfunc_loopstack_underflow(void *param)
 {
-	fatalerror("SHARC: PCStack overflow");
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: Loop Stack underflow", sharc.tag(), sharc.m_core->pc);
 }
 
-void adsp21062_device::sharc_cfunc_pcstack_underflow()
+void adsp21062_device::cfunc_statusstack_overflow(void *param)
 {
-	fatalerror("SHARC: PCStack underflow");
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: Status Stack overflow", sharc.tag(), sharc.m_core->pc);
 }
 
-void adsp21062_device::sharc_cfunc_loopstack_overflow()
+void adsp21062_device::cfunc_statusstack_underflow(void *param)
 {
-	fatalerror("SHARC: Loop Stack overflow");
+	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
+	throw emu_fatalerror("%s: PC=%08X: Status Stack underflow", sharc.tag(), sharc.m_core->pc);
 }
 
-void adsp21062_device::sharc_cfunc_loopstack_underflow()
-{
-	fatalerror("SHARC: Loop Stack underflow");
-}
-
-void adsp21062_device::sharc_cfunc_statusstack_overflow()
-{
-	fatalerror("SHARC: Status Stack overflow");
-}
-
-void adsp21062_device::sharc_cfunc_statusstack_underflow()
-{
-	fatalerror("SHARC: Status Stack underflow");
-}
 
 
 bool adsp21062_device::if_condition_always_true(int condition)
@@ -2158,8 +2121,33 @@ void adsp21062_device::generate_write_ureg(drcuml_block &block, compiler_state &
 			UML_MOV(block, mem(&m_core->irptl), imm ? data : I0);
 			break;
 		case 0x7a:      // MODE2
-			UML_MOV(block, mem(&m_core->mode2), imm ? data : I0);
+		{
+			uml::code_label const skip0 = compiler.labelnum++;
+			uml::code_label const skip1 = compiler.labelnum++;
+			uml::code_label const skip2 = compiler.labelnum++;
+			uml::code_label const skip3 = compiler.labelnum++;
+
+			UML_XOR(block, I1, MODE2, 0xffffffff);
+			UML_MOV(block, MODE2, imm ? data : I0);
+			UML_AND(block, I1, I1, imm ? data : I0);
+			UML_TEST(block, I1, 1 << (15 + 0));
+			UML_JMPc(block, COND_Z, skip0);
+			UML_CALLC(block, cfunc_update_flag_out<0>, this);
+			UML_LABEL(block, skip0);
+			UML_TEST(block, I1, 1 << (15 + 1));
+			UML_JMPc(block, COND_Z, skip1);
+			UML_CALLC(block, cfunc_update_flag_out<1>, this);
+			UML_LABEL(block, skip1);
+			UML_TEST(block, I1, 1 << (15 + 2));
+			UML_JMPc(block, COND_Z, skip2);
+			UML_CALLC(block, cfunc_update_flag_out<2>, this);
+			UML_LABEL(block, skip2);
+			UML_TEST(block, I1, 1 << (15 + 3));
+			UML_JMPc(block, COND_Z, skip3);
+			UML_CALLC(block, cfunc_update_flag_out<3>, this);
+			UML_LABEL(block, skip3);
 			break;
+		}
 		case 0x7b:      // MODE1
 			// MODE1 needs to be written delayed
 			if (imm)
@@ -2176,24 +2164,74 @@ void adsp21062_device::generate_write_ureg(drcuml_block &block, compiler_state &
 			}
 			break;
 		case 0x7c:      // ASTAT
-			UML_AND(block, mem(&m_core->astat), I0, FLG0 | FLG1 | FLG2 | FLG3);
-			UML_BFXU(block, mem(&m_core->astat_drc.cacc), I0, 24, 8);
-			UML_BFXU(block, ASTAT_AF, I0, AF_SHIFT, 1);
-			UML_BFXU(block, ASTAT_BTF, I0, BTF_SHIFT, 1);
-			UML_BFXU(block, ASTAT_SS, I0, SS_SHIFT, 1);
-			UML_BFXU(block, ASTAT_SZ, I0, SZ_SHIFT, 1);
-			UML_BFXU(block, ASTAT_SV, I0, SV_SHIFT, 1);
-			UML_BFXU(block, ASTAT_MI, I0, MI_SHIFT, 1);
-			UML_BFXU(block, ASTAT_MU, I0, MU_SHIFT, 1);
-			UML_BFXU(block, ASTAT_MV, I0, MV_SHIFT, 1);
-			UML_BFXU(block, ASTAT_MN, I0, MN_SHIFT, 1);
-			UML_BFXU(block, ASTAT_AI, I0, AI_SHIFT, 1);
-			UML_BFXU(block, ASTAT_AS, I0, AS_SHIFT, 1);
-			UML_BFXU(block, ASTAT_AC, I0, AC_SHIFT, 1);
-			UML_BFXU(block, ASTAT_AN, I0, AN_SHIFT, 1);
-			UML_BFXU(block, ASTAT_AV, I0, AV_SHIFT, 1);
-			UML_BFXU(block, ASTAT_AZ, I0, AZ_SHIFT, 1);
+		{
+			uml::code_label const skip0 = compiler.labelnum++;
+			uml::code_label const skip1 = compiler.labelnum++;
+			uml::code_label const skip2 = compiler.labelnum++;
+			uml::code_label const skip3 = compiler.labelnum++;
+
+			if (imm)
+			{
+				UML_XOR(block, I1, mem(&m_core->astat), data);
+				UML_MOV(block, mem(&m_core->astat), data & (FLG0 | FLG1 | FLG2 | FLG3));
+				UML_MOV(block, mem(&m_core->astat_drc.cacc), BIT(data, 24, 8));
+				UML_MOV(block, ASTAT_AF, BIT(data, AF_SHIFT));
+				UML_MOV(block, ASTAT_BTF, BIT(data, BTF_SHIFT));
+				UML_MOV(block, ASTAT_SS, BIT(data, SS_SHIFT));
+				UML_MOV(block, ASTAT_SZ, BIT(data, SZ_SHIFT));
+				UML_MOV(block, ASTAT_SV, BIT(data, SV_SHIFT));
+				UML_MOV(block, ASTAT_MI, BIT(data, MI_SHIFT));
+				UML_MOV(block, ASTAT_MU, BIT(data, MU_SHIFT));
+				UML_MOV(block, ASTAT_MV, BIT(data, MV_SHIFT));
+				UML_MOV(block, ASTAT_MN, BIT(data, MN_SHIFT));
+				UML_MOV(block, ASTAT_AI, BIT(data, AI_SHIFT));
+				UML_MOV(block, ASTAT_AS, BIT(data, AS_SHIFT));
+				UML_MOV(block, ASTAT_AC, BIT(data, AC_SHIFT));
+				UML_MOV(block, ASTAT_AN, BIT(data, AN_SHIFT));
+				UML_MOV(block, ASTAT_AV, BIT(data, AV_SHIFT));
+				UML_MOV(block, ASTAT_AZ, BIT(data, AZ_SHIFT));
+			}
+			else
+			{
+				UML_XOR(block, I1, I0, mem(&m_core->astat));
+				UML_AND(block, mem(&m_core->astat), I0, FLG0 | FLG1 | FLG2 | FLG3);
+				UML_BFXU(block, mem(&m_core->astat_drc.cacc), I0, 24, 8);
+				UML_BFXU(block, ASTAT_AF, I0, AF_SHIFT, 1);
+				UML_BFXU(block, ASTAT_BTF, I0, BTF_SHIFT, 1);
+				UML_BFXU(block, ASTAT_SS, I0, SS_SHIFT, 1);
+				UML_BFXU(block, ASTAT_SZ, I0, SZ_SHIFT, 1);
+				UML_BFXU(block, ASTAT_SV, I0, SV_SHIFT, 1);
+				UML_BFXU(block, ASTAT_MI, I0, MI_SHIFT, 1);
+				UML_BFXU(block, ASTAT_MU, I0, MU_SHIFT, 1);
+				UML_BFXU(block, ASTAT_MV, I0, MV_SHIFT, 1);
+				UML_BFXU(block, ASTAT_MN, I0, MN_SHIFT, 1);
+				UML_BFXU(block, ASTAT_AI, I0, AI_SHIFT, 1);
+				UML_BFXU(block, ASTAT_AS, I0, AS_SHIFT, 1);
+				UML_BFXU(block, ASTAT_AC, I0, AC_SHIFT, 1);
+				UML_BFXU(block, ASTAT_AN, I0, AN_SHIFT, 1);
+				UML_BFXU(block, ASTAT_AV, I0, AV_SHIFT, 1);
+				UML_BFXU(block, ASTAT_AZ, I0, AZ_SHIFT, 1);
+			}
+			UML_SHL(block, I0, MODE2, FLG0_SHIFT - 15);
+			UML_AND(block, I0, I0, I1);
+			UML_TEST(block, I0, FLG0);
+			UML_JMPc(block, COND_Z, skip0);
+			UML_CALLC(block, cfunc_update_flag_out<0>, this);
+			UML_LABEL(block, skip0);
+			UML_TEST(block, I0, FLG1);
+			UML_JMPc(block, COND_Z, skip1);
+			UML_CALLC(block, cfunc_update_flag_out<1>, this);
+			UML_LABEL(block, skip1);
+			UML_TEST(block, I0, FLG2);
+			UML_JMPc(block, COND_Z, skip2);
+			UML_CALLC(block, cfunc_update_flag_out<2>, this);
+			UML_LABEL(block, skip2);
+			UML_TEST(block, I0, FLG3);
+			UML_JMPc(block, COND_Z, skip3);
+			UML_CALLC(block, cfunc_update_flag_out<3>, this);
+			UML_LABEL(block, skip3);
 			break;
+		}
 		case 0x7d:      // IMASK
 			UML_MOV(block, mem(&m_core->imask), imm ? data : I0);
 			break;
@@ -2775,7 +2813,47 @@ bool adsp21062_device::generate_opcode(drcuml_block &block, compiler_state &comp
 									UML_OR(block, IRPTL, IRPTL, data);
 									break;
 								case 0xa: // MODE2
-									UML_OR(block, MODE2, MODE2, data);
+									if (BIT(data, 15, 4))
+									{
+										UML_MOV(block, I0, MODE2);
+										UML_OR(block, MODE2, I0, data);
+										if (BIT(data, 15 + 0))
+										{
+											uml::code_label const skip = compiler.labelnum++;
+											UML_TEST(block, I0, 1 << (15 + 0));
+											UML_JMPc(block, COND_NZ, skip);
+											UML_CALLC(block, cfunc_update_flag_out<0>, this);
+											UML_LABEL(block, skip);
+										}
+										if (BIT(data, 15 + 1))
+										{
+											uml::code_label const skip = compiler.labelnum++;
+											UML_TEST(block, I0, 1 << (15 + 1));
+											UML_JMPc(block, COND_NZ, skip);
+											UML_CALLC(block, cfunc_update_flag_out<1>, this);
+											UML_LABEL(block, skip);
+										}
+										if (BIT(data, 15 + 2))
+										{
+											uml::code_label const skip = compiler.labelnum++;
+											UML_TEST(block, I0, 1 << (15 + 2));
+											UML_JMPc(block, COND_NZ, skip);
+											UML_CALLC(block, cfunc_update_flag_out<2>, this);
+											UML_LABEL(block, skip);
+										}
+										if (BIT(data, 15 + 3))
+										{
+											uml::code_label const skip = compiler.labelnum++;
+											UML_TEST(block, I0, 1 << (15 + 3));
+											UML_JMPc(block, COND_NZ, skip);
+											UML_CALLC(block, cfunc_update_flag_out<3>, this);
+											UML_LABEL(block, skip);
+										}
+									}
+									else
+									{
+										UML_OR(block, MODE2, MODE2, data);
+									}
 									break;
 								case 0xb: // MODE1
 									compiler.mode1_delay.counter = 2;
@@ -2814,14 +2892,46 @@ bool adsp21062_device::generate_opcode(drcuml_block &block, compiler_state &comp
 										UML_MOV(block, ASTAT_SS, 1);
 									if (data & ASTAT_FLAGS::BTF)
 										UML_MOV(block, ASTAT_BTF, 1);
+									if (data & (ASTAT_FLAGS::FLG0 | ASTAT_FLAGS::FLG1 | ASTAT_FLAGS::FLG2 | ASTAT_FLAGS::FLG3))
+									{
+										UML_MOV(block, I0, mem(&m_core->astat));
+										UML_ROLAND(block, I1, MODE2, FLG0_SHIFT - 15, data & (ASTAT_FLAGS::FLG0 | ASTAT_FLAGS::FLG1 | ASTAT_FLAGS::FLG2 | ASTAT_FLAGS::FLG3));
+										UML_OR(block, mem(&m_core->astat), I0, data & (ASTAT_FLAGS::FLG0 | ASTAT_FLAGS::FLG1 | ASTAT_FLAGS::FLG2 | ASTAT_FLAGS::FLG3));
+										UML_XOR(block, I0, I0, 0xffffffff);
+										UML_AND(block, I0, I0, I1);
+									}
 									if (data & ASTAT_FLAGS::FLG0)
-										UML_MOV(block, FLAG0, 1);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG0);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<0>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & ASTAT_FLAGS::FLG1)
-										UML_MOV(block, FLAG1, 1);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG1);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<1>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & ASTAT_FLAGS::FLG2)
-										UML_MOV(block, FLAG2, 1);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG2);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<2>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & ASTAT_FLAGS::FLG3)
-										UML_MOV(block, FLAG3, 1);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG3);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<3>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & 0xff000000)
 									{
 										UML_OR(block, mem(&m_core->astat_drc.cacc), mem(&m_core->astat_drc.cacc), data >> 24);
@@ -2895,14 +3005,45 @@ bool adsp21062_device::generate_opcode(drcuml_block &block, compiler_state &comp
 										UML_MOV(block, ASTAT_SS, 0);
 									if (data & ASTAT_FLAGS::BTF)
 										UML_MOV(block, ASTAT_BTF, 0);
+									if (data & (ASTAT_FLAGS::FLG0 | ASTAT_FLAGS::FLG1 | ASTAT_FLAGS::FLG2 | ASTAT_FLAGS::FLG3))
+									{
+										UML_MOV(block, I0, mem(&m_core->astat));
+										UML_ROLAND(block, I1, MODE2, FLG0_SHIFT - 15, data & (ASTAT_FLAGS::FLG0 | ASTAT_FLAGS::FLG1 | ASTAT_FLAGS::FLG2 | ASTAT_FLAGS::FLG3));
+										UML_AND(block, mem(&m_core->astat), I0, ~data & (ASTAT_FLAGS::FLG0 | ASTAT_FLAGS::FLG1 | ASTAT_FLAGS::FLG2 | ASTAT_FLAGS::FLG3));
+										UML_AND(block, I0, I0, I1);
+									}
 									if (data & ASTAT_FLAGS::FLG0)
-										UML_MOV(block, FLAG0, 0);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG0);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<0>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & ASTAT_FLAGS::FLG1)
-										UML_MOV(block, FLAG1, 0);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG1);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<1>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & ASTAT_FLAGS::FLG2)
-										UML_MOV(block, FLAG2, 0);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG2);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<2>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & ASTAT_FLAGS::FLG3)
-										UML_MOV(block, FLAG3, 0);
+									{
+										uml::code_label const skip = compiler.labelnum++;
+										UML_TEST(block, I0, ASTAT_FLAGS::FLG3);
+										UML_JMPc(block, COND_Z, skip);
+										UML_CALLC(block, cfunc_update_flag_out<3>, this);
+										UML_LABEL(block, skip);
+									}
 									if (data & 0xff000000)
 									{
 										UML_AND(block, mem(&m_core->astat_drc.cacc), mem(&m_core->astat_drc.cacc), ~(data >> 24));

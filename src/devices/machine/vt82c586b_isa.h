@@ -42,6 +42,13 @@ public:
 	auto cpureset() { return m_write_cpureset.bind(); }
 	auto pcirst() { return m_write_pcirst.bind(); }
 
+	// external, from ACPI
+	void acpi_pin_config_w(u8 data) { m_acpi_pin_config = data & 0xf; }
+	void pc_acpi_w(int state) { redirect_irq(m_acpi_pin_config, state); }
+
+	void pc_ide0_w(int state) { redirect_irq(m_ide_pin_config[0], state); }
+	void pc_ide1_w(int state) { redirect_irq(m_ide_pin_config[1], state); }
+
 	void pc_irq1_w(int state);
 	void pc_irq3_w(int state);
 	void pc_irq4_w(int state);
@@ -196,6 +203,11 @@ private:
 	u8 m_pirq_select;
 	u8 m_mirq[3];
 	u8 m_mirq_pin_config;
+
+	u8 ide_irq_routing_r(offs_t offset);
+	void ide_irq_routing_w(offs_t offset, u8 data);
+	u8 m_ide_pin_config[2];
+	u8 m_acpi_pin_config;
 };
 
 DECLARE_DEVICE_TYPE(VT82C586B_ISA, vt82c586b_isa_device)
