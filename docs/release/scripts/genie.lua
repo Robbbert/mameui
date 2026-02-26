@@ -562,9 +562,13 @@ if (_ACTION == nil) then return false end
 configuration { "Debug" }
 	defines {
 		"MAME_DEBUG",
-		"MAME_PROFILER",
 --      "BGFX_CONFIG_DEBUG=1",
 	}
+if _OPTIONS["PROFILER"]~="0" then
+	defines {
+		"MAME_PROFILER",
+	}
+end
 
 configuration { }
 
@@ -1014,7 +1018,6 @@ end
 			end
 			buildoptions {
 				"-fdiagnostics-show-note-include-stack",
-				"-Wno-error=tautological-compare",
 				"-Wno-cast-align",
 				"-Wno-constant-logical-operand",
 				"-Wno-extern-c-compat",
@@ -1348,7 +1351,6 @@ elseif _OPTIONS["vs"]=="clangcl" then
 			"-Wno-unused-private-field",
 			"-Wno-xor-used-as-pow",
 			"-Wno-error=deprecated-declarations",
-			"-Wno-error=tautological-compare",
 		}
 	if _OPTIONS["DEPRECATED"]=="0" then
 		buildoptions {

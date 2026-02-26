@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2057 -->
+<!-- Number of items in this list = 2058 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -969,6 +969,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="(E)Alien Soldier (Europe).bin" size="2097152" crc="22c6b3b9" sha1="3b213e4f66182344807255ba515183b074837f24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf5b1319e5f6ba">
+		<description>(E)Bare Knuckle 3 Project</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3882698">
+				<rom name="(E)Bare Knuckle 3 Project.bin" size="3882698" crc="3f8f40b1" sha1="f5b1319e5f6ba56fe63c4cd6da053490997e44f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3959,16 +3969,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Bare Knuckle (World) (Rev A).bin" size="524288" crc="3e8baf7e" sha1="8990e9e0220aee274121c57f06b546274b3d1b78"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genf5b1319e5f6ba">
-		<description>Bare Knuckle 3 Project (5)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3882698">
-				<rom name="Bare Knuckle 3 Project (5).bin" size="3882698" crc="3f8f40b1" sha1="f5b1319e5f6ba56fe63c4cd6da053490997e44f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13112,6 +13112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2ea7befb7e523">
+		<description>Psycho Pinball_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Psycho Pinball_1.bin" size="1572864" crc="11e9c3f2" sha1="2ea7befb7e52334111385667030ceb647157a397"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3b4d1254e13e2">
 		<description>Puggsy (USA)</description>
 		<year>????</year>
@@ -18982,16 +18992,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gend21793b66c0bc">
-		<description>TMNT_Shredders_ReRevenge (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="4063356">
-				<rom name="TMNT_Shredders_ReRevenge (2).md" size="4063356" crc="6720cc8a" sha1="d21793b66c0bcf74db972a173c4ec379cd86e02c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="genca322a629a34b">
 		<description>TMNT_Shredders_ReRevenge</description>
 		<year>????</year>
@@ -18999,6 +18999,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4063356">
 				<rom name="TMNT_Shredders_ReRevenge.md" size="4063356" crc="31a4c1db" sha1="ca322a629a34bdc769da04aa03ef692e1cc8dfb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend21793b66c0bc">
+		<description>TMNT_Shredders_ReRevenge_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063356">
+				<rom name="TMNT_Shredders_ReRevenge_1.md" size="4063356" crc="6720cc8a" sha1="d21793b66c0bcf74db972a173c4ec379cd86e02c"/>
 			</dataarea>
 		</part>
 	</software>
