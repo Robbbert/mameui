@@ -48,6 +48,8 @@ private:
 
 	void map_shadowram(address_space *memory_space, offs_t start_offs, offs_t end_offs, u8 setting);
 
+	void aperture_map(address_map &map);
+
 	u8 m_cache_control_1;
 	u8 m_cache_control_2;
 	u8 m_noncache_control;

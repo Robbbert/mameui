@@ -19,6 +19,14 @@ public:
 	virtual uint8_t mem_r(offs_t offset) override;
 	virtual void mem_w(offs_t offset, uint8_t data) override;
 
+	// Configuration pins
+	// AGP bus enable
+	auto md20_cb() { return m_md20_cb.bind(); }
+	// AGP 2X transfer mode
+	auto md21_cb() { return m_md21_cb.bind(); }
+	// Enable 64K ROM
+	auto md23_cb() { return m_md23_cb.bind(); }
+
 protected:
 	sis6326_vga_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);
 
@@ -27,15 +35,26 @@ protected:
 
 	virtual void io_3cx_map(address_map &map) override ATTR_COLD;
 
+	virtual void crtc_map(address_map &map) override ATTR_COLD;
 	virtual void sequencer_map(address_map &map) override ATTR_COLD;
+	virtual void tvout_map(address_map &map) ATTR_COLD;
 
 	virtual uint16_t offset() override;
 	virtual void recompute_params() override;
+	virtual space_config_vector memory_space_config() const override;
+
+	address_space_config m_tvout_space_config;
+
+	devcb_read_line m_md20_cb;
+	devcb_read_line m_md21_cb;
+
+	devcb_read_line m_md23_cb;
 
 	u8 m_ramdac_mode = 0;
 	u8 m_ext_sr07;
 	u8 m_ext_sr0b;
 	u8 m_ext_sr0c;
+	u8 m_ext_ddc;
 	u8 m_ext_sr23;
 	u8 m_ext_sr33;
 	u8 m_ext_sr34;
@@ -54,7 +73,17 @@ protected:
 	u8 m_ext_eclk[3]{};
 	u8 m_ext_clock_gen = 0;
 	u8 m_ext_clock_source_select = 0;
-	bool m_unlock_reg = false;
+	bool m_crtc_unlock_reg = false;
+	bool m_seq_unlock_reg = false;
+	u8 m_linear_address[2];
+
+	u8 m_tvout_index;
+	struct {
+		u8 control;
+
+		u16 pycin;
+		bool enyf, encf, tvsense;
+	} m_tv;
 
 	virtual uint32_t latch_start_addr() override;
 	virtual std::tuple<u8, u8> flush_true_color_mode();

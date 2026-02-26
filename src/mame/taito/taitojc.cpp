@@ -27,6 +27,8 @@ TODO:
 - landgear has huge 3d problems on gameplay (CPU comms?)
 - dangcurv DSP program crashes very soon, so no 3d is currently shown. Is it
   due to undumped rom? maybe not?
+- verify screen raw params, current params match vsync measurement, I suspect
+  hsync measurement (see PCB notes) was inaccurate
 - add idle skips if possible
 
 BTANB:
@@ -409,23 +411,7 @@ Notes:
 #include "dendego.lh"
 
 
-// hmm, what is the pixel clock? let's assume it's same as the 68040
-// 54MHz(/4) or 16MHz would make HTOTAL unrealistically short
-static constexpr XTAL PIXEL_CLOCK = XTAL(10'000'000)*2;
-
-// VSync - 55.6795Hz
-// HSync - 24.639kHz / 24.690kHz (may be inaccurate)
-// TODO: why different HSyncs? 24 kHz assumes medium res monitor, so it can't be interlacing.
-static constexpr unsigned HTOTAL  = 812;
-static constexpr unsigned HBEND   = 0;
-static constexpr unsigned HBSTART = 512;
-
-static constexpr unsigned VTOTAL  = 443;
-static constexpr unsigned VBEND   = 0;
-static constexpr unsigned VBSTART = 400;
-
-
-#define DSP_IDLESKIP        1 /* dsp idle skipping speedup hack */
+#define DSP_IDLESKIP 1 /* dsp idle skipping speedup hack */
 
 
 void taitojc_state::coin_control_w(uint8_t data)
@@ -1130,13 +1116,13 @@ void dendego_state::machine_start()
 
 void taitojc_state::taitojc(machine_config &config)
 {
-	/* basic machine hardware */
-	M68040(config, m_maincpu, XTAL(10'000'000)*2); // 20MHz, clock source = CY7C991
+	// basic machine hardware
+	M68040(config, m_maincpu, 10_MHz_XTAL*2); // 20MHz, clock source = CY7C991
 	m_maincpu->set_addrmap(AS_PROGRAM, &taitojc_state::taitojc_map);
 	m_maincpu->set_vblank_int("screen", FUNC(taitojc_state::vblank));
 	m_maincpu->set_addrmap(m68000_base_device::AS_CPU_SPACE, &taitojc_state::cpu_space_map);
 
-	mc68hc11_cpu_device &sub(MC68HC11M0(config, "sub", XTAL(16'000'000)/2));
+	mc68hc11_cpu_device &sub(MC68HC11M0(config, "sub", 16_MHz_XTAL/2));
 	sub.set_addrmap(AS_PROGRAM, &taitojc_state::hc11_pgm_map);
 	sub.in_pa_callback().set_constant(0); // ?
 	sub.in_pg_callback().set(FUNC(taitojc_state::hc11_comm_r));
@@ -1153,7 +1139,7 @@ void taitojc_state::taitojc(machine_config &config)
 	sub.in_an6_callback().set(FUNC(taitojc_state::hc11_analog_r<6>));
 	sub.in_an7_callback().set(FUNC(taitojc_state::hc11_analog_r<7>));
 
-	TMS320C51(config, m_dsp, XTAL(10'000'000)*4); // 40MHz, clock source = CY7C991
+	TMS320C51(config, m_dsp, 10_MHz_XTAL*4); // 40MHz, clock source = CY7C991
 	m_dsp->set_addrmap(AS_PROGRAM, &taitojc_state::tms_program_map);
 	m_dsp->set_addrmap(AS_DATA, &taitojc_state::tms_data_map);
 
@@ -1171,9 +1157,9 @@ void taitojc_state::taitojc(machine_config &config)
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfxdecode_device::empty);
 
-	/* video hardware */
+	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_raw(PIXEL_CLOCK, HTOTAL, HBEND, HBSTART, VTOTAL, VBEND, VBSTART);
+	m_screen->set_raw(54_MHz_XTAL/3, 720, 0, 512, 449, 0, 400);
 	m_screen->set_screen_update(FUNC(taitojc_state::screen_update));
 	m_screen->set_palette(m_palette);
 
@@ -1181,7 +1167,7 @@ void taitojc_state::taitojc(machine_config &config)
 
 	TC0780FPA(config, m_tc0780fpa, 0);
 
-	/* sound hardware */
+	// sound hardware
 	SPEAKER(config, "speaker", 2).front();
 
 	taito_en_device &taito_en(TAITO_EN(config, "taito_en", 0));
@@ -1193,13 +1179,14 @@ void dendego_state::dendego(machine_config &config)
 {
 	taitojc(config);
 
-	/* basic machine hardware */
+	// basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &dendego_state::dendego_map);
 
-	/* sound hardware */
+	// sound hardware
 	SPEAKER(config, "vibration").lfe();
 
-	OKIM6295(config, "oki", 1056000, okim6295_device::PIN7_HIGH).add_route(ALL_OUTPUTS, "vibration", 0.20); /* clock frequency & pin 7 not verified */
+	okim6295_device &oki(OKIM6295(config, "oki", 1056000, okim6295_device::PIN7_HIGH)); // clock frequency & pin 7 not verified
+	oki.add_route(ALL_OUTPUTS, "vibration", 0.20);
 }
 
 

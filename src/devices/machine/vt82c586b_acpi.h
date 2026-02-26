@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "lpc.h"
 #include "pci.h"
 
 class acpi_pipc_device;
@@ -36,10 +37,15 @@ private:
 	u16 m_irq_channel[2];
 };
 
-class acpi_pipc_device : public device_t
+class acpi_pipc_device : public lpc_device
+                       , public device_memory_interface
 {
 public:
 	acpi_pipc_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = XTAL(3'579'545).value());
+
+	virtual void map_device(uint64_t memory_window_start, uint64_t memory_window_end, uint64_t memory_offset, address_space *memory_space,
+						uint64_t io_window_start, uint64_t io_window_end, uint64_t io_offset, address_space *io_space) override;
+
 
 	void map(address_map &map);
 
@@ -51,15 +57,21 @@ protected:
 	virtual void device_reset() override;
 	virtual void device_validity_check(validity_checker &valid) const override;
 
+	virtual space_config_vector memory_space_config() const override;
+
 private:
 	devcb_write_line m_write_smi;
 	devcb_write_line m_write_sci;
+
+	address_space_config m_space_config;
+
+	void io_map(address_map &map);
 
 	u16 m_pmsts;
 	u16 m_pmen;
 	u16 m_pmcntrl;
 	u16 m_gpen;
-	u16 m_pcntrl;
+	u32 m_pcntrl;
 
 	u16 m_gpsts;
 	u16 m_gp_sci_enable;
@@ -75,6 +87,11 @@ private:
 	u8 m_gpio_dir;
 	u8 m_gpio_val;
 	u16 m_gpo_val;
+
+	u8 gpsts_r(offs_t offset);
+	void gpsts_w(offs_t offset, u8 data);
+	u8 gp_sci_enable_r(offs_t offset);
+	void gp_sci_enable_w(offs_t offset, u8 data);
 
 	void check_smi();
 };

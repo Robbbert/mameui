@@ -20,11 +20,12 @@ SiS 6326
 #define LOGAGP(...)             LOGMASKED(LOG_AGP, __VA_ARGS__)
 
 
+DEFINE_DEVICE_TYPE(SIS6326_PCI, sis6326_pci_device,   "sis6326_pci",   "SiS 6326 PCI card")
 DEFINE_DEVICE_TYPE(SIS6326_AGP, sis6326_agp_device,   "sis6326_agp",   "SiS 6326 AGP card")
 
 
 
-sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
+sis6326_pci_device::sis6326_pci_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
 	: pci_card_device(mconfig, type, tag, owner, clock)
 	, m_vga(*this, "vga")
 	, m_vga_rom(*this, "vga_rom")
@@ -32,8 +33,139 @@ sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, device_typ
 	set_ids(0x10396326, 0xa0, 0x030000, 0x10396326);
 }
 
+sis6326_pci_device::sis6326_pci_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: sis6326_pci_device(mconfig, SIS6326_PCI, tag, owner, clock)
+{
+}
+
+ROM_START( sis6326pci )
+	ROM_REGION32_LE( 0x10000, "vga_rom", ROMREGION_ERASEFF )
+	ROM_DEFAULT_BIOS("sis")
+
+	ROM_SYSTEM_BIOS( 0, "sis", "SiS6326 4MB 1.25" )
+	ROMX_LOAD( "sis6326_75mhz.vbi", 0x000000, 0x008000, CRC(1c74109d) SHA1(c9180a32e78481c9082ad5bc75082ef4b289ad76), ROM_BIOS(0) )
+ROM_END
+
+const tiny_rom_entry *sis6326_pci_device::device_rom_region() const
+{
+	return ROM_NAME(sis6326pci);
+}
+
+void sis6326_pci_device::device_add_mconfig(machine_config &config)
+{
+	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
+	screen.set_raw(XTAL(25'174'800), 900, 0, 640, 526, 0, 480);
+	screen.set_screen_update(m_vga, FUNC(sis6326_vga_device::screen_update));
+
+	SIS6326_VGA(config, m_vga, 0);
+	m_vga->set_screen("screen");
+	// 4MB, max 8MB
+	m_vga->set_vram_size(4*1024*1024);
+	m_vga->md20_cb().set_constant(0);
+	m_vga->md21_cb().set_constant(0);
+	m_vga->md23_cb().set_constant(1);
+}
+
+void sis6326_pci_device::device_start()
+{
+	pci_card_device::device_start();
+
+	add_map(4*1024*1024, M_MEM | M_PREF, FUNC(sis6326_pci_device::vram_aperture_map));
+	add_map(64*1024, M_MEM, FUNC(sis6326_pci_device::mmio_map));
+	// "32-bit for 16 I/O space"
+	add_map(128, M_IO, FUNC(sis6326_pci_device::vmi_map));
+
+	// TODO: should really read the actual BIOS size and set md23 accordingly
+	add_rom((u8 *)m_vga_rom->base(), 0x10000);
+	expansion_rom_base = 0xc0000;
+
+	// INTA#
+	// TODO: VGA D3/MD27 can strap this to no irq pin
+	// ls5amvp3 goes N/A, assume it's disabled by default
+	intr_pin = 0;
+}
+
+void sis6326_pci_device::device_reset()
+{
+	pci_card_device::device_reset();
+
+	// doc makes multiple ninja jumps in messing up these defaults
+	// bus master (hardwired)
+	command = 0x0004;
+	command_mask = 0x23;
+	// medium DEVSEL#
+	// assume capability list & 66 MHz disabled in this variant
+	status = 0x0200;
+
+	remap_cb();
+}
+
+void sis6326_pci_device::config_map(address_map &map)
+{
+	pci_card_device::config_map(map);
+}
+
+
+void sis6326_pci_device::vram_aperture_map(address_map &map)
+{
+	map(0x0000000, 0x3f'ffff).rw(m_vga, FUNC(sis6326_vga_device::mem_linear_r), FUNC(sis6326_vga_device::mem_linear_w));
+}
+
+void sis6326_pci_device::mmio_map(address_map &map)
+{
+	// HACK: fake Turbo Queue so to not lockup windows
+	map(0x82a8, 0x82ab).lr32(NAME([] () { return 0x8000'0100; }));
+	// Same deal, 3D Engine Status
+	map(0x89fc, 0x89ff).lr32(NAME([] () { return (0x3ff << 16) | 3; }));
+}
+
+void sis6326_pci_device::vmi_map(address_map &map)
+{
+	// same as later '630, win98se expects VGA to be mapped here for extended GFX setups
+	map(0x30, 0x5f).m(m_vga, FUNC(sis6326_vga_device::io_map));
+}
+
+// TODO: this should really be a subclass of VGA
+void sis6326_pci_device::legacy_memory_map(address_map &map)
+{
+	map(0xa0000, 0xbffff).rw(FUNC(sis6326_pci_device::vram_r), FUNC(sis6326_pci_device::vram_w));
+}
+
+void sis6326_pci_device::legacy_io_map(address_map &map)
+{
+	map(0, 0x02f).m(m_vga, FUNC(sis6326_vga_device::io_map));
+}
+
+uint8_t sis6326_pci_device::vram_r(offs_t offset)
+{
+	return downcast<sis6326_vga_device *>(m_vga.target())->mem_r(offset);
+}
+
+void sis6326_pci_device::vram_w(offs_t offset, uint8_t data)
+{
+	downcast<sis6326_vga_device *>(m_vga.target())->mem_w(offset, data);
+}
+
+void sis6326_pci_device::map_extra(uint64_t memory_window_start, uint64_t memory_window_end, uint64_t memory_offset, address_space *memory_space,
+							uint64_t io_window_start, uint64_t io_window_end, uint64_t io_offset, address_space *io_space)
+{
+	if (BIT(command, 1))
+	{
+		memory_space->install_readwrite_handler(0x000a'0000, 0x000b'ffff, read8sm_delegate(*this, FUNC(sis6326_pci_device::vram_r)), write8sm_delegate(*this, FUNC(sis6326_pci_device::vram_w)));
+	}
+
+	if (BIT(command, 0))
+	{
+		io_space->install_device(0x03b0, 0x03df, *this, &sis6326_pci_device::legacy_io_map);
+	}
+}
+
+/*
+ * AGP overrides
+ */
+
 sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: sis6326_agp_device(mconfig, SIS6326_AGP, tag, owner, clock)
+	: sis6326_pci_device(mconfig, SIS6326_AGP, tag, owner, clock)
 {
 }
 
@@ -63,30 +195,10 @@ const tiny_rom_entry *sis6326_agp_device::device_rom_region() const
 
 void sis6326_agp_device::device_add_mconfig(machine_config &config)
 {
-	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_raw(XTAL(25'174'800), 900, 0, 640, 526, 0, 480);
-	screen.set_screen_update(m_vga, FUNC(sis6326_vga_device::screen_update));
-
-	SIS6326_VGA(config, m_vga, 0);
-	m_vga->set_screen("screen");
-	// 4MB, max 8MB
-	m_vga->set_vram_size(4*1024*1024);
-}
-
-void sis6326_agp_device::device_start()
-{
-	pci_card_device::device_start();
-
-	add_map(4*1024*1024, M_MEM, FUNC(sis6326_agp_device::vram_aperture_map));
-	add_map(64*1024, M_MEM, FUNC(sis6326_agp_device::mmio_map));
-	add_map(16, M_IO, FUNC(sis6326_agp_device::vmi_map));
-
-	add_rom((u8 *)m_vga_rom->base(), 0x10000);
-	expansion_rom_base = 0xc0000;
-
-	// INTA#
-	// TODO: SRE D3 can strap this to no irq pin
-	intr_pin = 1;
+	sis6326_pci_device::device_add_mconfig(config);
+	m_vga->md20_cb().set_constant(1);
+	m_vga->md21_cb().set_constant(1);
+	m_vga->md23_cb().set_constant(1);
 }
 
 void sis6326_agp_device::device_reset()
@@ -102,6 +214,7 @@ void sis6326_agp_device::device_reset()
 
 	remap_cb();
 }
+
 
 u8 sis6326_agp_device::capptr_r()
 {
@@ -144,7 +257,7 @@ void sis6326_agp_device::agp_command_w(offs_t offset, uint32_t data, uint32_t me
 
 void sis6326_agp_device::config_map(address_map &map)
 {
-	pci_card_device::config_map(map);
+	sis6326_pci_device::config_map(map);
 	// AGP
 	map(0x50, 0x53).lr32(NAME([] () { return 0x00105c02; } ));
 	map(0x54, 0x57).lr32(NAME([] () { return 0x01000003; } ));
@@ -152,50 +265,3 @@ void sis6326_agp_device::config_map(address_map &map)
 	map(0x5c, 0x5f).lr32(NAME([] () { return 0x00000000; } )); // NULL terminator
 }
 
-void sis6326_agp_device::vram_aperture_map(address_map &map)
-{
-	map(0x0000000, 0x3ffffff).rw(m_vga, FUNC(sis6326_vga_device::mem_linear_r), FUNC(sis6326_vga_device::mem_linear_w));
-}
-
-void sis6326_agp_device::mmio_map(address_map &map)
-{
-}
-
-void sis6326_agp_device::vmi_map(address_map &map)
-{
-}
-
-// TODO: this should really be a subclass of VGA
-void sis6326_agp_device::legacy_memory_map(address_map &map)
-{
-	map(0xa0000, 0xbffff).rw(FUNC(sis6326_agp_device::vram_r), FUNC(sis6326_agp_device::vram_w));
-}
-
-void sis6326_agp_device::legacy_io_map(address_map &map)
-{
-	map(0, 0x02f).m(m_vga, FUNC(sis6326_vga_device::io_map));
-}
-
-uint8_t sis6326_agp_device::vram_r(offs_t offset)
-{
-	return downcast<sis6326_vga_device *>(m_vga.target())->mem_r(offset);
-}
-
-void sis6326_agp_device::vram_w(offs_t offset, uint8_t data)
-{
-	downcast<sis6326_vga_device *>(m_vga.target())->mem_w(offset, data);
-}
-
-void sis6326_agp_device::map_extra(uint64_t memory_window_start, uint64_t memory_window_end, uint64_t memory_offset, address_space *memory_space,
-							uint64_t io_window_start, uint64_t io_window_end, uint64_t io_offset, address_space *io_space)
-{
-	if (BIT(command, 1))
-	{
-		memory_space->install_readwrite_handler(0xa0000, 0xbffff, read8sm_delegate(*this, FUNC(sis6326_agp_device::vram_r)), write8sm_delegate(*this, FUNC(sis6326_agp_device::vram_w)));
-	}
-
-	if (BIT(command, 0))
-	{
-		io_space->install_device(0x03b0, 0x03df, *this, &sis6326_agp_device::legacy_io_map);
-	}
-}

@@ -1,17 +1,29 @@
 // license:BSD-3-Clause
 // copyright-holders:Angelo Salese
-/***************************************************************************
+/*
 
-    Super Cross II (c) 1987 GM Shoji
+Super Cross II (c) 1986 GM Shoji
 
-    driver by Angelo Salese, based off "wiped off due of not anymore licenseable" driver by insideoutboy.
+driver by Angelo Salese, based on "wiped off due to not anymore
+licenseable" driver by insideoutboy.
 
-    TODO:
-    - scanline renderer;
-    - understand irq 0 source;
-    - output bit 0 might be watchdog armed bit/sprite start DMA instead of irq enable;
-    - weird visible area resolution, 224 or 240 x 224? Maybe it's really just 256 x 224 and then it's supposed
-      to show garbage/nothing on the edges?
+TODO:
+- scanline renderer, or change to tilemaps;
+- understand irq 0 source;
+- output bit 0 might be watchdog armed bit/sprite start DMA instead of irq
+  enable;
+- weird visible area resolution, 224 or 240 x 224? Maybe it's really just
+  256 x 224 and then it's supposed to show garbage/nothing on the edges?
+- verify hsync/vsync, current screen raw params are guessed;
+- verify Z80 frequency, it has slowdowns at 2.5MHz, and Z80B is rated 6MHz
+
+The hardware has similarities with Sanritsu's Bank Panic, PCB label is similar
+as well: C2-00170-A for Bank Panic, C2-00171-D/C2-00172-D for Super Cross II.
+There's also an unused SEGA logo in the gfx0 region.
+
+GM Shoji is not a game developer. It's probably an old Sanritsu game that was
+canceled/rejected by Sega. Sanritsu's involvement is also mentioned in a
+preview in the Japanese magazine GAME FREAK Vol 21.
 
 ===================================
 
@@ -50,7 +62,7 @@ SCM-23.5B
 SC-60.4K
 SC-61.5A
 
-***************************************************************************/
+*/
 
 #include "emu.h"
 #include "cpu/z80/z80.h"
@@ -62,8 +74,6 @@ SC-61.5A
 
 
 namespace {
-
-#define MAIN_CLOCK XTAL(10'000'000)
 
 class sprcros2_state : public driver_device
 {
@@ -199,7 +209,6 @@ void sprcros2_state::legacy_fg_draw(bitmap_ind16 &bitmap,const rectangle &clipre
 		}
 	}
 }
-
 
 
 
@@ -450,7 +459,6 @@ TIMER_DEVICE_CALLBACK_MEMBER(sprcros2_state::master_scanline)
 {
 	int scanline = param;
 
-
 	if(scanline == 0 && m_master_irq_enable == true)
 		m_master_cpu->set_input_line(0, HOLD_LINE);
 }
@@ -458,24 +466,24 @@ TIMER_DEVICE_CALLBACK_MEMBER(sprcros2_state::master_scanline)
 void sprcros2_state::sprcros2(machine_config &config)
 {
 	/* basic machine hardware */
-	Z80(config, m_master_cpu, MAIN_CLOCK/4);
+	Z80(config, m_master_cpu, 10_MHz_XTAL/2);
 	m_master_cpu->set_addrmap(AS_PROGRAM, &sprcros2_state::master_map);
 	m_master_cpu->set_addrmap(AS_IO, &sprcros2_state::master_io);
 	m_master_cpu->set_vblank_int("screen", FUNC(sprcros2_state::master_vblank_irq));
 
 	TIMER(config, "scantimer").configure_scanline(FUNC(sprcros2_state::master_scanline), "screen", 0, 1);
 
-	Z80(config, m_slave_cpu, MAIN_CLOCK/4);
+	Z80(config, m_slave_cpu, 10_MHz_XTAL/2);
 	m_slave_cpu->set_addrmap(AS_PROGRAM, &sprcros2_state::slave_map);
 	m_slave_cpu->set_addrmap(AS_IO, &sprcros2_state::slave_io);
 	m_slave_cpu->set_vblank_int("screen", FUNC(sprcros2_state::slave_vblank_irq));
 
-	config.set_perfect_quantum(m_master_cpu);
+	config.set_maximum_quantum(attotime::from_hz(m_master_cpu->clock() / 4));
 
 	/* video hardware */
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_screen_update(FUNC(sprcros2_state::screen_update));
-	screen.set_raw(MAIN_CLOCK/2, 343, 8, 256-8, 262, 16, 240); // TODO: Wrong screen parameters
+	screen.set_raw(10_MHz_XTAL/2, 320, 8, 256-8, 262, 16, 240);
 	screen.set_palette("palette");
 
 	GFXDECODE(config, m_gfxdecode, "palette", gfx_sprcros2);
@@ -484,9 +492,9 @@ void sprcros2_state::sprcros2(machine_config &config)
 
 	/* sound hardware */
 	SPEAKER(config, "mono").front_center();
-	SN76489(config, "sn1", 10000000/4).add_route(ALL_OUTPUTS, "mono", 0.50);
-	SN76489(config, "sn2", 10000000/4).add_route(ALL_OUTPUTS, "mono", 0.50);
-	SN76489(config, "sn3", 10000000/4).add_route(ALL_OUTPUTS, "mono", 0.50);
+	SN76489(config, "sn1", 10_MHz_XTAL/4).add_route(ALL_OUTPUTS, "mono", 0.50);
+	SN76489(config, "sn2", 10_MHz_XTAL/4).add_route(ALL_OUTPUTS, "mono", 0.50);
+	SN76489(config, "sn3", 10_MHz_XTAL/4).add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 
@@ -495,8 +503,6 @@ void sprcros2_state::sprcros2(machine_config &config)
   Machine driver(s)
 
 ***************************************************************************/
-
-
 
 ROM_START( sprcros2 )
 	ROM_REGION( 0x0c000, "master", 0 )
@@ -577,5 +583,5 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1986, sprcros2,  0,        sprcros2, sprcros2, sprcros2_state, empty_init, ROT0, "GM Shoji", "Super Cross II (Japan, set 1)", MACHINE_SUPPORTS_SAVE )
-GAME( 1986, sprcros2a, sprcros2, sprcros2, sprcros2, sprcros2_state, empty_init, ROT0, "GM Shoji", "Super Cross II (Japan, set 2)", MACHINE_SUPPORTS_SAVE )
+GAME( 1986, sprcros2,  0,        sprcros2, sprcros2, sprcros2_state, empty_init, ROT0, "Sanritsu / GM Shoji", "Super Cross II (Japan, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 1986, sprcros2a, sprcros2, sprcros2, sprcros2, sprcros2_state, empty_init, ROT0, "Sanritsu / GM Shoji", "Super Cross II (Japan, set 2)", MACHINE_SUPPORTS_SAVE )

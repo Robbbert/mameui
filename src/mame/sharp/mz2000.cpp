@@ -1430,7 +1430,7 @@ void mz80b_state::mz80b(machine_config &config)
 void mz2000_state::mz2000(machine_config &config)
 {
 	mz80b(config);
-	// MZ-2000 also uses 1800 baud (same as MZ-80B), so mz80b_cassette_formats is correct
+
 	m_maincpu->set_addrmap(AS_PROGRAM, &mz2000_state::mz2000_map);
 	m_maincpu->set_addrmap(AS_IO, &mz2000_state::mz2000_io);
 

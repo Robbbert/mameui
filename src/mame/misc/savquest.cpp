@@ -505,7 +505,7 @@ void savquest_state::savquest(machine_config &config)
 	screen.set_visarea(0, 512 - 1, 0, 240 - 1);
 	screen.set_screen_update("pci:0d.0", FUNC(voodoo_2_pci_device::screen_update));
 
-	PCI_SLOT(config, "pci:01.0:1", agp_cards, 1, 0, 1, 2, 3, nullptr);
+	PCI_SLOT(config, "pci:01.0:0", agp_cards, 0, 0, 1, 2, 3, nullptr);
 
 	PCI_SLOT(config, "pci:1", pci_cards, 9, 0, 1, 2, 3, "trio64dx").set_fixed(true);
 	PCI_SLOT(config, "pci:2", pci_cards, 10, 1, 2, 3, 0, nullptr);

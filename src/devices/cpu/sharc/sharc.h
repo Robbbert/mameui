@@ -30,6 +30,8 @@ public:
 	virtual ~adsp21062_device() override;
 
 	// configuration helpers
+	template <unsigned N> auto flag_out() { return m_flag_out_cb[N].bind(); }
+
 	void set_boot_mode(const sharc_boot_mode boot_mode) { m_boot_mode = boot_mode; }
 	void enable_recompiler();
 
@@ -288,6 +290,8 @@ private:
 
 	memory_access<24, 3, -3, ENDIANNESS_LITTLE>::specific m_program;
 	memory_access<32, 2, -2, ENDIANNESS_LITTLE>::specific m_data;
+
+	devcb_write8::array<4> m_flag_out_cb;
 
 	required_shared_ptr_array<uint32_t, 2> m_blocks;
 

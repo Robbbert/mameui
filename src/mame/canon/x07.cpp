@@ -106,8 +106,8 @@ void x07_state::t6834_cmd (uint8_t cmd)
 			else if (address >= 0xe000 && address < 0xe200 && ((address & 0xf) != 0xf)) // VRAM and col 0-119 ?
 			{
 				data = 0;
-				const int y = (address & 0x1ff) >> 4;
-				const int x = (address & 0x000f) * 8;
+				const int y = (address >> 4) & 0x001f;
+				const int x = (address & 0x000f) << 3;
 				// Read video data from LCD
 				for (int p = 0; p < 8; ++p)
 					data |= (m_lcd_map[y][x+p] ? (1 << (7-p)) : 0);
@@ -129,8 +129,8 @@ void x07_state::t6834_cmd (uint8_t cmd)
 
 			if (address >= 0xe000 && address < 0xe200 && ((address & 0xf) != 0xf)) // VRAM and col 0-119 ?
 			{
-				const int y = (address & 0x1ff) >> 4;
-				const int x = (address & 0x000f) * 8;
+				const int y = (address >> 4) & 0x001f;
+				const int x = (address & 0x000f) << 3;
 				// Write video data to LCD
 				for (int p = 0; p < 8; ++p)
 				{

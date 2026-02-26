@@ -474,5 +474,5 @@ ROM_END
  *
  *************************************/
 
-GAME( 1982, koikoip2, 0, koikoi, koikoi, koikoi_state, empty_init, ROT270, "Kiwako",                       "Koi Koi Part 2", MACHINE_WRONG_COLORS | MACHINE_SUPPORTS_SAVE )
+GAME( 1982, koikoip2, 0, koikoi, koikoi, koikoi_state, empty_init, ROT270, "Sanritsu / Kiwako",            "Koi Koi Part 2", MACHINE_WRONG_COLORS | MACHINE_SUPPORTS_SAVE )
 GAME( 1982, koikoi,   0, koikoi, koikoi, koikoi_state, empty_init, ROT270, "Chubukiko / Best Data System", "Koi Koi",        MACHINE_NOT_WORKING | MACHINE_WRONG_COLORS | MACHINE_SUPPORTS_SAVE )

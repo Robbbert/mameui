@@ -191,7 +191,7 @@ void silverball_state::silverball_i440zx(machine_config &config)
 	ROM_SYSTEM_BIOS(16, "bios30", "BIOS30 (Soyo SY-7IZB+)") \
 	ROMX_LOAD("bios30.bin", 0x00000, 0x40000, CRC(c6e30fb1) SHA1(1d9a900a5383bf58b66a2e9f7fb34c61397dd327), ROM_BIOS(16)) /* Soyo Computer Inc. SY-7IZB+ */ \
 	/* Soyo SY-5EAS */ \
-	ROM_SYSTEM_BIOS(17, "bios29", "BIOS29 (Soyo 5EAS)") /* Dumped from the actual Silverball 8.06 machine */ \
+	ROM_SYSTEM_BIOS(17, "bios29", "BIOS29 (Soyo SY-5EAS)") /* Dumped from the actual Silverball 8.06 machine */ \
 	ROMX_LOAD("bios29.bin", 0x00000, 0x20000, CRC(ddbd94f4) SHA1(60ad74e56265a7936cf19e8480c657223d11f2d0), ROM_BIOS(17)) /* 06/18/1998-EQ82C6618A-ET-2A5LDS2FC-29 */ \
 	ROM_RELOAD( 0x20000, 0x20000 ) \
 	ROM_SYSTEM_BIOS(18, "test", "TEST (Soyo SY-5EAS)") /* BIOS update labeled as "TEST", from the Silverball software update files */ \

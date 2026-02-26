@@ -155,7 +155,7 @@ void startouch_state::europl01(machine_config &config)
 	VT82C586B_ACPI(config, "pci:07.3", 0);
 	ACPI_PIPC     (config, "pci:07.3:acpi");
 
-	PCI_SLOT(config, "pci:01.0:1", agp_cards, 1, 0, 1, 2, 3, nullptr);
+	PCI_SLOT(config, "pci:01.0:0", agp_cards, 0, 0, 1, 2, 3, nullptr);
 
 	PCI_SLOT(config, "pci:1", pci_cards, 13, 0, 1, 2, 3, nullptr);
 	PCI_SLOT(config, "pci:2", pci_cards, 14, 1, 2, 3, 0, nullptr);

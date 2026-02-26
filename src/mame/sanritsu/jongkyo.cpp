@@ -592,4 +592,4 @@ void jongkyo_state::init_jongkyo()
  *
  *************************************/
 
-GAME( 1985, jongkyo, 0, jongkyo, jongkyo, jongkyo_state, init_jongkyo, ROT0, "Kiwako", "Jongkyo", MACHINE_IMPERFECT_COLORS | MACHINE_UNEMULATED_PROTECTION | MACHINE_SUPPORTS_SAVE )
+GAME( 1985, jongkyo, 0, jongkyo, jongkyo, jongkyo_state, init_jongkyo, ROT0, "Sanritsu / Kiwako", "Jongkyo", MACHINE_IMPERFECT_COLORS | MACHINE_UNEMULATED_PROTECTION | MACHINE_SUPPORTS_SAVE )

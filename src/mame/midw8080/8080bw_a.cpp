@@ -1128,7 +1128,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(_8080bw_state::schaser_effect_555_cb)
 		else
 			new_time = attotime::never;
 	}
-	m_schaser_effect_555_timer->adjust(new_time, effect);
+	m_schaser_effect_555_timer->adjust(new_time, m_schaser_last_effect);
 	m_sn->enable_w(!(m_schaser_effect_555_is_low || m_schaser_explosion));
 	m_sn->one_shot_cap_voltage_w(!(m_schaser_effect_555_is_low || m_schaser_explosion) ? 0 : sn76477_device::EXTERNAL_VOLTAGE_DISCONNECT);
 }
