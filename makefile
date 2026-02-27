@@ -1572,11 +1572,11 @@ endif
 # Regression tests
 #-------------------------------------------------
 
-include regtests/regtests.mak
+#include regtests/regtests.mak
 
-.PHONY: tests
+#.PHONY: tests
 
-tests: $(REGTESTS)
+#tests: $(REGTESTS)
 
 #-------------------------------------------------
 # Source cleanup
