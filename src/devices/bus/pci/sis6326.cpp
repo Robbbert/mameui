@@ -29,7 +29,7 @@ DEFINE_DEVICE_TYPE(SIS6326_AGP, sis6326_agp_device,   "sis6326_agp",   "SiS 6326
 sis6326_pci_device::sis6326_pci_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
 	: pci_card_device(mconfig, type, tag, owner, clock)
 	, m_vga(*this, "vga")
-	, m_vga_rom(*this, "vga_rom")
+	, m_bios(*this, "bios")
 {
 	set_ids(0x10396326, 0xa0, 0x030000, 0x10396326);
 }
@@ -40,7 +40,7 @@ sis6326_pci_device::sis6326_pci_device(const machine_config &mconfig, const char
 }
 
 ROM_START( sis6326pci )
-	ROM_REGION32_LE( 0x10000, "vga_rom", ROMREGION_ERASEFF )
+	ROM_REGION32_LE( 0x10000, "bios", ROMREGION_ERASEFF )
 	ROM_DEFAULT_BIOS("sis")
 
 	ROM_SYSTEM_BIOS( 0, "sis", "SiS6326 4MB 1.25" )
@@ -77,7 +77,7 @@ void sis6326_pci_device::device_start()
 	add_map(128, M_IO, FUNC(sis6326_pci_device::vmi_map));
 
 	// TODO: should really read the actual BIOS size and set md23 accordingly
-	add_rom((u8 *)m_vga_rom->base(), 0x10000);
+	add_rom((u8 *)m_bios->base(), 0x10000);
 	expansion_rom_base = 0xc0000;
 
 	// INTA#
@@ -233,7 +233,7 @@ void sis6326_pci_device::legacy_memory_map(address_map &map)
 
 void sis6326_pci_device::legacy_io_map(address_map &map)
 {
-	map(0, 0x02f).m(m_vga, FUNC(sis6326_vga_device::io_map));
+	map(0x03b0, 0x03df).m(m_vga, FUNC(sis6326_vga_device::io_map));
 }
 
 uint8_t sis6326_pci_device::vram_r(offs_t offset)
@@ -256,7 +256,7 @@ void sis6326_pci_device::map_extra(uint64_t memory_window_start, uint64_t memory
 
 	if (BIT(command, 0))
 	{
-		io_space->install_device(0x03b0, 0x03df, *this, &sis6326_pci_device::legacy_io_map);
+		io_space->install_device(0x0000, 0xffff, *this, &sis6326_pci_device::legacy_io_map);
 	}
 }
 
@@ -312,11 +312,10 @@ u8 sis6326_pci_device::get_pat_fgcol(u32 y, u32 x)
 	return m_fg_color;
 }
 
-// TODO: not yet sure about how this works either
 // testable in win98se shutdown options
 u8 sis6326_pci_device::get_pat_regs(u32 y, u32 x)
 {
-	return m_pattern_data[x & 3];
+	return m_pattern_data[((y & 7) << 3) | (x & 7)];
 }
 
 // TODO: this is special, uses regs in a different way
@@ -546,7 +545,7 @@ sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, const char
 }
 
 ROM_START( sis6326agp )
-	ROM_REGION32_LE( 0x10000, "vga_rom", ROMREGION_ERASEFF )
+	ROM_REGION32_LE( 0x10000, "bios", ROMREGION_ERASEFF )
 	// Default is AOpen for supporting OpenGL
 	ROM_DEFAULT_BIOS("aopen")
 

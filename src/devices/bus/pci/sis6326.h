@@ -36,7 +36,7 @@ protected:
 	void vmi_map(address_map &map) ATTR_COLD;
 
 	required_device<sis6326_vga_device> m_vga;
-	required_memory_region m_vga_rom;
+	required_memory_region m_bios;
 private:
 	void legacy_memory_map(address_map &map) ATTR_COLD;
 	void legacy_io_map(address_map &map) ATTR_COLD;

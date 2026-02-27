@@ -189,6 +189,7 @@ Notes on possible shutms11 BIOS bugs:
 #include "machine/sis7001_usb.h"
 #include "machine/sis7018_audio.h"
 #include "machine/sis900_eth.h"
+#include "machine/sis950_acpi.h"
 #include "machine/sis950_lpc.h"
 #include "machine/sis950_smbus.h"
 
@@ -266,7 +267,7 @@ void sis630_state::sis630(machine_config &config)
 //  m_maincpu->set_addrmap(AS_PROGRAM, &sis630_state::main_map);
 //  m_maincpu->set_addrmap(AS_IO, &sis630_state::main_io);
 	m_maincpu->set_irq_acknowledge_callback("pci:01.0:pic_master", FUNC(pic8259_device::inta_cb));
-//  m_maincpu->smiact().set("pci:00.0", FUNC(sis950_lpc_device::smi_act_w));
+	m_maincpu->smiact().set("pci:00.0", FUNC(sis630_host_device::smi_act_w));
 
 	// TODO: unknown flash ROM types
 	// Needs a $80000 sized ROM
@@ -287,7 +288,8 @@ void sis630_state::sis630(machine_config &config)
 		if (state)
 			machine().schedule_soft_reset();
 	});
-	LPC_ACPI(config, "pci:01.0:acpi", 0);
+	sis950_acpi_device &acpi(SIS950_ACPI(config, "pci:01.0:acpi", 0));
+	acpi.smi().set_inputline("maincpu", INPUT_LINE_SMI);
 	SIS950_SMBUS(config, "pci:01.0:smbus", 0);
 
 	SIS900_ETH(config, "pci:01.1", 0);

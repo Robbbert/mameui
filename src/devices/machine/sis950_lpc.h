@@ -10,7 +10,7 @@
 
 #include "bus/ata/ataintf.h"
 #include "bus/isa/isa.h"
-#include "lpc-acpi.h"
+#include "sis950_acpi.h"
 #include "sis950_smbus.h"
 
 #include "cpu/i386/i386.h"
@@ -95,7 +95,7 @@ private:
 	required_device<ds12885ext_device> m_rtc;
 	required_device<pc_kbdc_device> m_ps2_con;
 	required_device<pc_kbdc_device> m_aux_con;
-	required_device<lpc_acpi_device> m_acpi;
+	required_device<sis950_acpi_device> m_acpi;
 	required_device<sis950_smbus_device> m_smbus;
 
 	devcb_write_line m_fast_reset_cb;

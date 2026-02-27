@@ -2940,6 +2940,8 @@ if MACHINES["PCI"] then
 		MAME_DIR .. "src/devices/machine/sis7018_audio.h",
 		MAME_DIR .. "src/devices/machine/sis900_eth.cpp",
 		MAME_DIR .. "src/devices/machine/sis900_eth.h",
+		MAME_DIR .. "src/devices/machine/sis950_acpi.cpp",
+		MAME_DIR .. "src/devices/machine/sis950_acpi.h",
 		MAME_DIR .. "src/devices/machine/sis950_lpc.cpp",
 		MAME_DIR .. "src/devices/machine/sis950_lpc.h",
 		MAME_DIR .. "src/devices/machine/sis950_smbus.cpp",

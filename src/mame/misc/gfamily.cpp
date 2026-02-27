@@ -3,13 +3,15 @@
 /*
 Games Family P4-4P (Pentium 4 - 4 Players)
 
-PC with Chinese Windows 2000 Pro and several emulators, including (programs may change on other revisions):
+PC with Chinese Windows 2000 Pro (build 2195: "Service Pack 4Free") and several emulators, including:
  -MAME v0.78 (Dec 30 2003)
  -MAME v0.96u3 (May 25 2005)
  -MAME v0.106 (May 16 2006)
  -Nebula 2.1.5
  -FB Alpha v0.2.94.98
  -ZiNc 1.1
+ -A copy of "KOF2002_WinKawaks1.45" in roms folder (leftover?)
+(programs may change on other revisions)
 
 SiS651/SiS962 based chipset plus an additional PCB for JAMMA, inputs and basic config (and protection) with:
  Atmel AT89C2051 (near a 4 dipswitches bank and a 6.000 MHz xtal)
@@ -17,10 +19,24 @@ SiS651/SiS962 based chipset plus an additional PCB for JAMMA, inputs and basic c
  2 x Microchip PIC12F508
  Altera Max EPM7128SQC100-10 CPLD
 
+HDD has traces of following drivers:
+- C-Media 3D Audio
+- SiS651 VGA and AGP drivers
+- Realtek/Avance Logic ALC201A(101) AC'97 (SiS OEM?)
+- a PPJoyBus.sys and PPortJoy.sys
+- a C:\VGATVWIN folder (may need typical SiS TV Out)
+- C:\mamep\babystar.exe loads an English version frontend, C:\mamew\babystar.exe loads a Chinese one;
+- C:\emu\game2\play1.exe is a stock MAME 0.106. Notice that has -ddraw and -direct3d enabled by
+  default (which you have to disable if fiddling in Safe Mode)
+
 TODO:
 - Upgrade '630 to '651 variants;
 - Hangs at ISA $c1 the first time around, soft reset makes it to go further;
 - Hangs on CPU check;
+- On shutms11 tries to install Ethernet and SiS7018 drivers, shows "System Loading" for a split
+  second then proceeds in pinging the USB port (on Safe Mode too, dongle?);
+- MAME runs at 800x600@37fps, fix it in pc_vga_sis;
+- "Type OK" screen cannot be surpassed, bug in keyboard emulation or just like above?
 
 */
 
@@ -42,6 +58,7 @@ TODO:
 #include "machine/sis7001_usb.h"
 #include "machine/sis7018_audio.h"
 #include "machine/sis900_eth.h"
+#include "machine/sis950_acpi.h"
 #include "machine/sis950_lpc.h"
 #include "machine/sis950_smbus.h"
 
@@ -109,7 +126,7 @@ void gfamily_state::gfamily(machine_config &config)
 	// Actually an Intel Celeron SL6SC 1.7GHz (with the config found with the default BIOS)
 	PENTIUM4(config, m_maincpu, 100'000'000); //1'700'000'000);
 	m_maincpu->set_irq_acknowledge_callback("pci:01.0:pic_master", FUNC(pic8259_device::inta_cb));
-//  m_maincpu->smiact().set("pci:00.0", FUNC(sis950_lpc_device::smi_act_w));
+	m_maincpu->smiact().set("pci:00.0", FUNC(sis630_host_device::smi_act_w));
 
 	// TODO: everything below needs upgrading to SiS651
 	// TODO: unknown flash ROM types
@@ -131,7 +148,8 @@ void gfamily_state::gfamily(machine_config &config)
 		if (state)
 			machine().schedule_soft_reset();
 	});
-	LPC_ACPI(config, "pci:01.0:acpi", 0);
+	sis950_acpi_device &acpi(SIS950_ACPI(config, "pci:01.0:acpi", 0));
+	acpi.smi().set_inputline("maincpu", INPUT_LINE_SMI);
 	SIS950_SMBUS(config, "pci:01.0:smbus", 0);
 
 	SIS900_ETH(config, "pci:01.1", 0);
@@ -203,4 +221,4 @@ ROM_END
 } // Anonymous namespace
 
 
-GAME( 200?, gmfamily, 0, gfamily, 0, gfamily_state, empty_init, ROT0, "bootleg", "Games Family", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
+GAME( 2007?, gmfamily, 0, gfamily, 0, gfamily_state, empty_init, ROT0, "bootleg", "Games Family", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION ) // C:\Windows\system32\drivers folder has a 2007-11-11 timestamp

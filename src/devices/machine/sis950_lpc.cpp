@@ -476,6 +476,7 @@ void sis950_lpc_device::io_map(address_map &map)
 
 	// map(0x00e0, 0x00ef) MCA bus (cfr. Bochs) or PnP
 	map(0x00eb, 0x00eb).lw8(NAME([] (offs_t offset, u8 data) { }));
+	map(0x00ed, 0x00ed).lw8(NAME([] (offs_t offset, u8 data) { }));
 
 	// map(0x00f0, 0x00f0) COPRO error
 	// map(0x0480, 0x048f) DMA high page registers
@@ -549,7 +550,7 @@ void sis950_lpc_device::map_extra(uint64_t memory_window_start, uint64_t memory_
 	if (BIT(m_bios_control, 7))
 	{
 		LOGMAP("- ACPI enable (%02x) %04x-%04x\n", m_bios_control, m_acpi_base, m_acpi_base + 0xff);
-		// shutms11 BIOS POST maps this at $5000
+		// shutms11 BIOS POST maps this at $5000, gamecstl at $8000
 		m_acpi->map_device(memory_window_start, memory_window_end, 0, memory_space, io_window_start, io_window_end, m_acpi_base, io_space);
 		io_space->install_device(m_acpi_base | 0x80, m_acpi_base | 0xff, *m_smbus, &sis950_smbus_device::map);
 	}

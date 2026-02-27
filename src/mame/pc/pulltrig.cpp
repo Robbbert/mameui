@@ -10,7 +10,7 @@ TODO:
 - At startup it needs a missing soft reset trigger;
 - It then draw a basic Phoenix BIOS but afterwards it accesses a missing BAR I/O
   which craps out the flash memory somehow;
-- In shutms11 HDD image just resets during loading;
+- In shutms11 HDD image just triple faults during loading;
 
 ===================================================================================================
 
@@ -53,6 +53,7 @@ named "DSR-PT1 MEMORY" (they were probably for sale).
 #include "machine/sis7001_usb.h"
 #include "machine/sis7018_audio.h"
 #include "machine/sis900_eth.h"
+#include "machine/sis950_acpi.h"
 #include "machine/sis950_lpc.h"
 #include "machine/sis950_smbus.h"
 
@@ -117,7 +118,7 @@ void pulltrig_state::pulltrig(machine_config &config)
 {
 	PENTIUM4(config, m_maincpu, 100'000'000); // Exact CPU and frequency unknown
 	m_maincpu->set_irq_acknowledge_callback("pci:01.0:pic_master", FUNC(pic8259_device::inta_cb));
-//  m_maincpu->smiact().set("pci:00.0", FUNC(sis950_lpc_device::smi_act_w));
+	m_maincpu->smiact().set("pci:00.0", FUNC(sis630_host_device::smi_act_w));
 
 	// TODO: everything below needs upgrading to SiS651
 	// TODO: unknown flash ROM type (wrong one)
@@ -138,7 +139,8 @@ void pulltrig_state::pulltrig(machine_config &config)
 		if (state)
 			machine().schedule_soft_reset();
 	});
-	LPC_ACPI(config, "pci:01.0:acpi", 0);
+	sis950_acpi_device &acpi(SIS950_ACPI(config, "pci:01.0:acpi", 0));
+	acpi.smi().set_inputline("maincpu", INPUT_LINE_SMI);
 	SIS950_SMBUS(config, "pci:01.0:smbus", 0);
 
 	SIS900_ETH(config, "pci:01.1", 0);

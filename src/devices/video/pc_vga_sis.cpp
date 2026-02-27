@@ -820,7 +820,14 @@ uint32_t sis6326_vga_device::screen_update(screen_device &screen, bitmap_rgb32 &
 				if (cursor_gfx == transparent_pen)
 					continue;
 
-				bitmap.pix(res_y, res_x) = m_cursor.color[cursor_gfx & 1];
+				// RMW invert (win98se NotePad "I" caret)
+				if (cursor_gfx == 3)
+				{
+					u32 const *dot = &bitmap.pix(res_y, 0);
+					bitmap.pix(res_y, res_x) = dot[res_x] ^ 0xffffff;
+				}
+				else
+					bitmap.pix(res_y, res_x) = m_cursor.color[cursor_gfx & 1];
 			}
 		}
 	}

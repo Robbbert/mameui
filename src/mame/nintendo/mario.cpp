@@ -40,6 +40,9 @@ TODO:
 - draw_sprites should adopt the scanline logic from dkong, the schematics have
   the same logic for sprite buffering
 - a lot of soundlatch warnings in error.log, it's probably harmless
+- Dump M58715 internal ROM. The EA pin dumping method does not work, is the
+  MCU read protected? It's probably a small initialization routine, followed
+  by a jump to external ROM. MAME has a fake bootstrap for now.
 
 BTANB:
 - erratic line at top when scrolling down "Mario Bros" title is confirmed
@@ -237,6 +240,7 @@ protected:
 	virtual void sound_start() override ATTR_COLD;
 	virtual void sound_reset() override ATTR_COLD;
 
+private:
 	void soundirq_w(uint8_t data);
 
 	void masao_map(address_map &map) ATTR_COLD;
@@ -273,15 +277,15 @@ void mario_state::machine_reset()
 
 void mario_state::sound_start()
 {
-	uint8_t *SND = memregion("audiocpu")->base();
-
-	// Hack to bootstrap MCU program into external MB1
-	SND[0x0000] = 0xf5;
-	SND[0x0001] = 0x04;
-	SND[0x0002] = 0x00;
-
 	for (int i = 0; i < 2; i++)
 		m_walk_timer[i] = timer_alloc(FUNC(mario_state::walk_off), this);
+
+	// Hack to bootstrap MCU program into external MB1
+	uint8_t *SND = memregion("audiocpu")->base();
+
+	SND[0x0000] = 0xf5; // sel mb1
+	SND[0x0001] = 0x04; // jmp 0
+	SND[0x0002] = 0x00;
 }
 
 void mario_state::sound_reset()
