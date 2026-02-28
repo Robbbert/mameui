@@ -485,32 +485,33 @@ void vicdual_state::invinco_audio_w(uint8_t data)
 
 	if (bitsGoneLow & OUT_INVINCO_PORT_2_SAUCER)
 	{
-		PLAY(m_samples, SND_INVINCO_SAUCER, 0);
+		if (!m_samples2->playing(SND_INVINCO_SAUCER))
+			PLAY( m_samples2, SND_INVINCO_SAUCER, 0 );
 	}
 
 	if (bitsGoneLow & OUT_INVINCO_PORT_2_MOVE1)
 	{
-		PLAY(m_samples, SND_INVINCO_MOVE1, 0);
+		PLAY(m_samples2, SND_INVINCO_MOVE1, 0);
 	}
 
 	if (bitsGoneLow & OUT_INVINCO_PORT_2_MOVE2)
 	{
-		PLAY(m_samples, SND_INVINCO_MOVE2, 0);
+		PLAY(m_samples2, SND_INVINCO_MOVE2, 0);
 	}
 
 	if (bitsGoneLow & OUT_INVINCO_PORT_2_FIRE)
 	{
-		PLAY(m_samples, SND_INVINCO_FIRE, 0);
+		PLAY(m_samples2, SND_INVINCO_FIRE, 0);
 	}
 
 	if (bitsGoneLow & OUT_INVINCO_PORT_2_INVHIT)
 	{
-		PLAY(m_samples, SND_INVINCO_INVHIT, 0);
+		PLAY(m_samples2, SND_INVINCO_INVHIT, 0);
 	}
 
 	if (bitsGoneLow & OUT_INVINCO_PORT_2_SHIPHIT)
 	{
-		PLAY(m_samples, SND_INVINCO_SHIPHIT, 0);
+		PLAY(m_samples2, SND_INVINCO_SHIPHIT, 0);
 	}
 }
 
@@ -518,10 +519,10 @@ void vicdual_state::invinco_audio_w(uint8_t data)
 void vicdual_state::invinco_audio(machine_config &config)
 {
 	// samples
-	SAMPLES(config, m_samples);
-	m_samples->set_channels(8);
-	m_samples->set_samples_names(invinco_sample_names);
-	m_samples->add_route(ALL_OUTPUTS, "mono", 0.5);
+	SAMPLES(config, m_samples2);
+	m_samples2->set_channels(8);
+	m_samples2->set_samples_names(invinco_sample_names);
+	m_samples2->add_route(ALL_OUTPUTS, "mono", 0.5);
 }
 
 
@@ -1211,6 +1212,34 @@ void vicdual_state::frogs(machine_config &config)
  *
  *************************************/
 
+static const char *const sspaceat_sample_names[] =
+{
+	"*invinco",
+	"fire",
+	"invhit",
+	"move1",
+	"move2",
+	"move3",    // not used
+	"shiphit",
+	"move4",
+	"saucer",
+	nullptr
+};
+
+void vicdual_state::sspaceat_sound_w(uint8_t data)
+{
+	if (data < 0xff)
+	{
+		for (uint8_t i = 0; i < 7; i++)
+			if (!BIT(data, i))
+				m_samples2->start(i,i);
+
+		if (data == 0x7f)
+			if (!m_samples2->playing(7))
+				m_samples2->start(7,7);
+	}
+}
+
 uint8_t vicdual_state::headon_io_r(offs_t offset)
 {
 	uint8_t data = 0xff;
@@ -1267,6 +1296,7 @@ void vicdual_state::sspaceat_io_map(address_map &map)
 
 	// no decoder, just logic gates, so in theory the game can read/write from multiple locations at once
 	map(0x00, 0x0f).rw(FUNC(vicdual_state::sspaceat_io_r), FUNC(vicdual_state::headon_io_w));
+	map(0x02, 0x02).w(FUNC(vicdual_state::sspaceat_sound_w));
 }
 
 
@@ -1513,6 +1543,13 @@ void vicdual_state::sspaceat(machine_config &config)
 
 	// video hardware
 	m_screen->set_screen_update(FUNC(vicdual_state::screen_update_bw_or_color));
+
+	// samples
+	SPEAKER(config, "mono").front_center();
+	SAMPLES(config, m_samples2);
+	m_samples2->set_channels(8);
+	m_samples2->set_samples_names(sspaceat_sample_names);
+	m_samples2->add_route(ALL_OUTPUTS, "mono", 0.5);
 }
 
 
@@ -1823,24 +1860,23 @@ void vicdual_state::invho2_io_w(offs_t offset, uint8_t data)
 void vicdual_state::invds_io_w(offs_t offset, uint8_t data)
 {
 	if (offset & 0x01) invinco_audio_w(data);
-	if (offset & 0x02) { /* deepscan_audio_w(0, data) */ }
+	if (offset & 0x02) depthch_audio_w(bitswap<5>(~data,7,6,5,4,3));
 	if (offset & 0x08) assert_coin_status();
 	if (offset & 0x40) palette_bank_w(data);
 }
 
 void vicdual_state::carhntds_io_w(offs_t offset, uint8_t data)
 {
-	if (offset & 0x01) { /* invinco_audio_w(data); */ }
-	if (offset & 0x02) { /* deepscan_audio_w(0, data) */ }
+	if (offset & 0x01) carhunt_audio_w(data);
+	if (offset & 0x02) depthch_audio_w(bitswap<5>(~data,7,6,5,4,3));
 	if (offset & 0x08) assert_coin_status();
 	if (offset & 0x40) palette_bank_w(data);
 }
 
-
-void vicdual_state::sspacaho_io_w(offs_t offset, uint8_t data)
+void vicdual_state::invcarht_io_w(offs_t offset, uint8_t data)
 {
-	if (offset & 0x01) invho2_audio_w(data);
-	if (offset & 0x02) { /* sspaceatt_audio_w(data) */ }
+	if (offset & 0x01) carhunt_audio_w(data);
+	if (offset & 0x02) invinco_audio_w(data);
 	if (offset & 0x08) assert_coin_status();
 	if (offset & 0x40) palette_bank_w(data);
 }
@@ -1894,15 +1930,6 @@ void vicdual_state::heiankyo_io_w(offs_t offset, uint8_t data)
 	if (offset & 0x01) { /* heiankyo_audio_1_w(0, data) */ }
 	if (offset & 0x02) { /* heiankyo_audio_2_w(0, data) */ }
 	if (offset & 0x08) assert_coin_status();
-}
-
-
-void vicdual_state::alphaho_io_w(offs_t offset, uint8_t data)
-{
-	if (offset & 0x01) { /* headon_audio_w(0, data) */ }
-	if (offset & 0x02) { /* alphaf_audio_w(0, data) */ }
-	if (offset & 0x08) assert_coin_status();
-	if (offset & 0x40) palette_bank_w(data);
 }
 
 
@@ -2035,6 +2062,7 @@ void vicdual_state::carhntds_dualgame_map(address_map &map)
 	map(0x8800, 0x8fff).mirror(0x7000).ram().w(FUNC(vicdual_state::characterram_w)).share("characterram");
 }
 
+// invaders and head-on: sspacaho, invho, invho2, alphaho, alphahob
 void vicdual_state::invho2_io_map(address_map &map)
 {
 	map.global_mask(0x7f);
@@ -2075,17 +2103,12 @@ void vicdual_state::carhntds_io_map(address_map &map)
 	map(0x00, 0x7f).w(FUNC(vicdual_state::carhntds_io_w));
 }
 
-void vicdual_state::sspacaho_io_map(address_map &map)
+void vicdual_state::invcarht_io_map(address_map &map)
 {
+	carhntds_io_map(map);
 	map.global_mask(0x7f);
 
-	map(0x00, 0x00).mirror(0x7c).portr("IN0");
-	map(0x01, 0x01).mirror(0x7c).portr("IN1");
-	map(0x02, 0x02).mirror(0x7c).portr("IN2");
-	map(0x03, 0x03).mirror(0x7c).portr("IN3");
-
-	// no decoder, just logic gates, so in theory the game can write to multiple locations at once
-	map(0x00, 0x7f).w(FUNC(vicdual_state::sspacaho_io_w));
+	map(0x00, 0x7f).w(FUNC(vicdual_state::invcarht_io_w));
 }
 
 
@@ -2170,20 +2193,6 @@ void vicdual_state::heiankyo_io_map(address_map &map)
 
 	// no decoder, just logic gates, so in theory the game can write to multiple locations at once
 	map(0x00, 0x0f).w(FUNC(vicdual_state::heiankyo_io_w));
-}
-
-
-void vicdual_state::alphaho_io_map(address_map &map)
-{
-	map.global_mask(0x7f);
-
-	map(0x00, 0x00).mirror(0x7c).portr("IN0");
-	map(0x01, 0x01).mirror(0x7c).portr("IN1");
-	map(0x02, 0x02).mirror(0x7c).portr("IN2");
-	map(0x03, 0x03).mirror(0x7c).portr("IN3");
-
-	// no decoder, just logic gates, so in theory the game can write to multiple locations at once
-	map(0x00, 0x7f).w(FUNC(vicdual_state::alphaho_io_w));
 }
 
 
@@ -3006,6 +3015,7 @@ void vicdual_state::invds(machine_config &config)
 	// audio hardware
 	SPEAKER(config, "mono").front_center();
 	invinco_audio(config);
+	depthch_audio(config);
 }
 
 void vicdual_state::carhntds(machine_config &config)
@@ -3015,19 +3025,25 @@ void vicdual_state::carhntds(machine_config &config)
 	// basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &vicdual_state::carhntds_dualgame_map);
 	m_maincpu->set_addrmap(AS_IO, &vicdual_state::carhntds_io_map);
-}
-
-
-void vicdual_state::sspacaho(machine_config &config)
-{
-	vicdual_dualgame_root(config);
-
-	// basic machine hardware
-	m_maincpu->set_addrmap(AS_IO, &vicdual_state::sspacaho_io_map);
 
 	// audio hardware
 	SPEAKER(config, "mono").front_center();
 	headon_audio(config);
+	depthch_audio(config);
+}
+
+void vicdual_state::invcarht(machine_config &config)
+{
+	vicdual_dualgame_root(config);
+
+	// basic machine hardware
+	m_maincpu->set_addrmap(AS_PROGRAM, &vicdual_state::carhntds_dualgame_map);
+	m_maincpu->set_addrmap(AS_IO, &vicdual_state::invcarht_io_map);
+
+	// audio hardware
+	SPEAKER(config, "mono").front_center();
+	headon_audio(config);
+	invinco_audio(config);
 }
 
 
@@ -3124,15 +3140,6 @@ void vicdual_state::heiankyo(machine_config &config)
 
 	// basic machine hardware
 	m_maincpu->set_addrmap(AS_IO, &vicdual_state::heiankyo_io_map);
-}
-
-
-void vicdual_state::alphaho(machine_config &config)
-{
-	vicdual_dualgame_root(config);
-
-	// basic machine hardware
-	m_maincpu->set_addrmap(AS_IO, &vicdual_state::alphaho_io_map);
 }
 
 
@@ -3605,18 +3612,6 @@ void nsub_state::nsubc(machine_config &config)
  *
  *************************************/
 
-uint8_t vicdual_state::invinco_io_r(offs_t offset)
-{
-	uint8_t data = 0xff;
-
-	if (offset & 0x01) data &= m_in0->read();
-	if (offset & 0x04) data &= m_in1->read();
-	if (offset & 0x08) data &= m_in2->read();
-
-	return data;
-}
-
-
 void vicdual_state::invinco_io_w(offs_t offset, uint8_t data)
 {
 	if (offset & 0x01) assert_coin_status();
@@ -3639,8 +3634,9 @@ void vicdual_state::invinco_io_map(address_map &map)
 {
 	map.global_mask(0x0f);
 
-	// no decoder, just logic gates, so in theory the game can read/write from multiple locations at once
-	map(0x00, 0x0f).rw(FUNC(vicdual_state::invinco_io_r), FUNC(vicdual_state::invinco_io_w));
+	/* no decoder, just logic gates, so in theory the
+	   game can read/write from multiple locations at once */
+	map(0x00, 0x0f).rw(FUNC(vicdual_state::sspaceat_io_r), FUNC(vicdual_state::invinco_io_w));
 }
 
 
@@ -4334,7 +4330,8 @@ ROM_START( invho2a ) // found on a Gremlin 'EXTENDED ROM VIDEO LOGIC ASSY NO 800
 	ROM_LOAD( "341.u1",  0x3c00, 0x0400, CRC(0b7a0607) SHA1(bdb58da071d9b7d2796b3f244c6a95ce1c9f2833) )
 
 	ROM_REGION( 0x0020, "proms", 0 )
-	ROM_LOAD( "pr-16.u49", 0x0000, 0x0020, CRC(733eac6f) SHA1(3cf488155992977875a76f8aa0ce73c1faf8a1a4) ) // TODO: multiple dump attempts give consistent results, but with this Head On 2 is completely black, while Invinco shows unexpected colors
+	//ROM_LOAD( "pr-16.u49", 0x0000, 0x0020, CRC(733eac6f) SHA1(3cf488155992977875a76f8aa0ce73c1faf8a1a4) ) // TODO: multiple dump attempts give consistent results, but with this Head On 2 is completely black, while Invinco shows unexpected colors
+	ROM_LOAD( "316-0287.u49", 0x0000, 0x0020, BAD_DUMP CRC(d4374b01) SHA1(85ea0915f23571358e2e0c2b66b968e7b93f4bd6) ) // from invho2
 
 	ROM_REGION( 0x0040, "user1", 0 )    // timing PROMs
 	ROM_LOAD( "pr-34.u14", 0x0000, 0x0020, CRC(e60a7960) SHA1(b8b8716e859c57c35310efc4594262afedb84823) ) // == 316-0043 - control PROM
@@ -5196,18 +5193,18 @@ GAMEL(1977, subhunt,    depthch,  depthch,   depthch,   vicdual_state,   empty_i
 GAME( 1977, safari,     0,        safari,    safari,    vicdual_state,   empty_init, ROT0,   "Gremlin",                 "Safari (set 1)",                                         MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1977, safaria,    safari,   safari,    safari,    vicdual_state,   empty_init, ROT0,   "Gremlin",                 "Safari (set 2, bootleg?)",                               MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE ) // on a bootleg board, but seems a different code revision too
 GAME( 1978, frogs,      0,        frogs,     frogs,     vicdual_state,   empty_init, ROT0,   "Gremlin",                 "Frogs",                                                  MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, sspaceat,   0,        sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (upright set 1)",                           MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, sspaceat2,  sspaceat, sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (upright set 2)",                           MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, sspaceat3,  sspaceat, sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (upright set 3)",                           MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, sspaceatc,  sspaceat, sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (cocktail)",                                MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, sspacaho,   0,        sspacaho,  sspacaho,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack / Head On",                                 MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, sspaceat,   0,        sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (upright set 1)",                           MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, sspaceat2,  sspaceat, sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (upright set 2)",                           MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, sspaceat3,  sspaceat, sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (upright set 3)",                           MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, sspaceatc,  sspaceat, sspaceat,  sspaceat,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack (cocktail)",                                MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, sspacaho,   0,        invho2,    sspacaho,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Attack / Head On",                                 MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, headon,     0,        headon,    headon,    vicdual_state,   empty_init, ROT0,   "Gremlin",                 "Head On (2 players)",                                    MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, headon1,    headon,   headon,    headon,    vicdual_state,   empty_init, ROT0,   "Gremlin",                 "Head On (1 player)",                                     MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, headonn,    headon,   headonn,   headonn,   vicdual_state,   empty_init, ROT270, "Nintendo",                "Head On N",                                              MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, headons,    headon,   headons,   headons,   vicdual_state,   empty_init, ROT0,   "bootleg (Sidam)",         "Head On (Sidam bootleg, set 1)",                         MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, headonsa,   headon,   headons,   headonsa,  headonsa_state,  empty_init, ROT0,   "bootleg (Sidam)",         "Head On (Sidam bootleg, set 2)",                         MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, headonmz,   headon,   headon,    headonmz,  vicdual_state,   empty_init, ROT0,   "bootleg",                 "Head On (bootleg, alt maze)",                            MACHINE_SUPPORTS_SAVE )
-GAME( 1979, supcrash,   headon,   headons,   supcrash,  vicdual_state,   empty_init, ROT0,   "bootleg (VGG)",           "Super Crash (bootleg of Head On)",                       MACHINE_IMPERFECT_SOUND  | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, supcrash,   headon,   headons,   supcrash,  vicdual_state,   empty_init, ROT0,   "bootleg (VGG)",           "Super Crash (bootleg of Head On)",                       MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, hocrash,    headon,   headons,   hocrash,   vicdual_state,   empty_init, ROT0,   "bootleg (Fraber)",        "Crash (bootleg of Head On)",                             MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, bumba,      headon,   headons,   headons,   vicdual_state,   empty_init, ROT0,   "bootleg (Niemer)",        "Bumba (bootleg of Head On)",                             MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, colision,   headon,   headons,   colision,  vicdual_state,   empty_init, ROT0,   "bootleg (ASSA)",          "Colision (bootleg of Head On)",                          MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
@@ -5222,9 +5219,9 @@ GAME( 1980, nsubc,      nsub,     nsubc,     nsubc,     nsub_state,      empty_i
 GAME( 1980, samurai,    0,        samurai,   samurai,   vicdual_state,   empty_init, ROT270, "Sega",                    "Samurai (World)",                                        MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1980, samuraij,   samurai,  samurai,   samurai,   vicdual_state,   empty_init, ROT270, "Sega",                    "Samurai (Japan)",                                        MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, invinco,    0,        invinco,   invinco,   vicdual_state,   empty_init, ROT270, "Sega",                    "Invinco",                                                MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, invcarht,   0,        carhntds,  carhntds,  vicdual_state,   empty_init, ROT270, "Sega",                    "Invinco / Car Hunt (Germany)",                           MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, invcarht,   0,        invcarht,  carhntds,  vicdual_state,   empty_init, ROT270, "Sega",                    "Invinco / Car Hunt (Germany)",                           MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, invds,      0,        invds,     invds,     vicdual_state,   empty_init, ROT270, "Sega",                    "Invinco / Deep Scan",                                    MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, carhntds,   0,        carhntds,  carhntds,  vicdual_state,   empty_init, ROT270, "Sega",                    "Car Hunt / Deep Scan (France)",                          MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, carhntds,   0,        carhntds,  carhntds,  vicdual_state,   empty_init, ROT270, "Sega",                    "Car Hunt / Deep Scan (France)",                          MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1980, tranqgun,   0,        tranqgun,  tranqgun,  tranqgun_state,  empty_init, ROT270, "Sega",                    "Tranquillizer Gun",                                      MACHINE_SUPPORTS_SAVE )
 GAME( 1980, spacetrk,   0,        spacetrk,  spacetrk,  vicdual_state,   empty_init, ROT270, "Sega",                    "Space Trek (upright)",                                   MACHINE_IMPERFECT_GRAPHICS | MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1980, spacetrkc,  spacetrk, spacetrk,  spacetrkc, vicdual_state,   empty_init, ROT270, "Sega",                    "Space Trek (cocktail)",                                  MACHINE_IMPERFECT_GRAPHICS |MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
@@ -5246,6 +5243,6 @@ GAME( 198?, startrks,   nostromo, headons,   startrks,  vicdual_state,   empty_i
 GAME( 1980, digger,     0,        digger,    digger,    vicdual_state,   empty_init, ROT270, "Sega",                    "Digger",                                                 MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1981, pulsar,     0,        pulsar,    pulsar,    vicdual_state,   empty_init, ROT270, "Sega",                    "Pulsar",                                                 MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, heiankyo,   0,        heiankyo,  heiankyo,  vicdual_state,   empty_init, ROT270, "Denki Onkyo",             "Heiankyo Alien",                                         MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 19??, alphaho,    0,        alphaho,   alphaho,   vicdual_state,   empty_init, ROT270, "Data East Corporation",   "Alpha Fighter / Head On",                                MACHINE_WRONG_COLORS | MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 19??, alphahob,   alphaho,  alphaho,   alphahob,  vicdual_state,   empty_init, ROT270, "bootleg",                 "Missile / Circuit (bootleg of Alpha Fighter / Head On)", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 19??, alphaho,    0,        invho2,    alphaho,   vicdual_state,   empty_init, ROT270, "Data East Corporation",   "Alpha Fighter / Head On",                                MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 19??, alphahob,   alphaho,  invho2,    alphahob,  vicdual_state,   empty_init, ROT270, "bootleg",                 "Missile / Circuit (bootleg of Alpha Fighter / Head On)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1982, wantsega,   0,        carhntds,  wantsega,  vicdual_state,   empty_init, ROT270, "Sega",                    "Wanted (Sega)",                                          MACHINE_NO_SOUND | MACHINE_IMPERFECT_CONTROLS | MACHINE_SUPPORTS_SAVE )

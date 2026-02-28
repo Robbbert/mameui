@@ -27,6 +27,7 @@ public:
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this,"maincpu"),
 		m_samples(*this, "samples"),
+		m_samples2(*this, "samples2"),
 		m_discrete(*this, "discrete"),
 		m_coinstate_timer(*this, "coinstate"),
 		m_screen(*this, "screen"),
@@ -47,7 +48,6 @@ public:
 	void heiankyo(machine_config &config);
 	void headon(machine_config &config);
 	void headon_audio(machine_config &config);
-	void sspacaho(machine_config &config);
 	void headonn(machine_config &config);
 	void invho2(machine_config &config);
 	void frogs(machine_config &config);
@@ -68,7 +68,7 @@ public:
 	void depthch(machine_config &config);
 	void depthch_audio(machine_config &config);
 	void carhntds(machine_config &config);
-	void alphaho(machine_config &config);
+	void invcarht(machine_config &config);
 
 	int coin_status_r();
 	int get_64v();
@@ -82,6 +82,7 @@ public:
 protected:
 	required_device<cpu_device> m_maincpu;
 	optional_device<samples_device> m_samples;
+	optional_device<samples_device> m_samples2;
 	optional_device<discrete_sound_device> m_discrete;
 	required_device<timer_device> m_coinstate_timer;
 	required_device<screen_device> m_screen;
@@ -130,16 +131,14 @@ protected:
 	void invho2_io_w(offs_t offset, uint8_t data);
 	void invds_io_w(offs_t offset, uint8_t data);
 	void carhntds_io_w(offs_t offset, uint8_t data);
-	void sspacaho_io_w(offs_t offset, uint8_t data);
+	void invcarht_io_w(offs_t offset, uint8_t data);
 	void headonn_io_w(offs_t offset, uint8_t data);
 	void spacetrk_io_w(offs_t offset, uint8_t data);
 	void brdrline_io_w(offs_t offset, uint8_t data);
 	void pulsar_io_w(offs_t offset, uint8_t data);
 	void heiankyo_io_w(offs_t offset, uint8_t data);
-	void alphaho_io_w(offs_t offset, uint8_t data);
 	void samurai_protection_w(uint8_t data);
 	void samurai_io_w(offs_t offset, uint8_t data);
-	uint8_t invinco_io_r(offs_t offset);
 	void invinco_io_w(offs_t offset, uint8_t data);
 
 	void depthch_audio_w(uint8_t data);
@@ -147,9 +146,11 @@ protected:
 	void pulsar_audio_1_w(uint8_t data);
 	void pulsar_audio_2_w(uint8_t data);
 
+	void sspaceat_sound_w(u8);
 	//----------- defined in audio/vicdual.cpp -----------
 	void headon_audio_w(uint8_t data);
 	void invho2_audio_w(uint8_t data);
+	void carhunt_audio_w(uint8_t data);
 
 	TIMER_DEVICE_CALLBACK_MEMBER(clear_coin_status);
 
@@ -164,10 +165,10 @@ protected:
 	int is_cabinet_color();
 	virtual pen_t choose_pen(uint8_t x, uint8_t y, pen_t back_pen);
 
-	void alphaho_io_map(address_map &map) ATTR_COLD;
 	void brdrline_io_map(address_map &map) ATTR_COLD;
 	void carhntds_dualgame_map(address_map &map) ATTR_COLD;
 	void carhntds_io_map(address_map &map) ATTR_COLD;
+	void invcarht_io_map(address_map &map) ATTR_COLD;
 	void depthch_io_map(address_map &map) ATTR_COLD;
 	void depthch_map(address_map &map) ATTR_COLD;
 	void digger_io_map(address_map &map) ATTR_COLD;
@@ -189,7 +190,6 @@ protected:
 	void samurai_io_map(address_map &map) ATTR_COLD;
 	void samurai_map(address_map &map) ATTR_COLD;
 	void spacetrk_io_map(address_map &map) ATTR_COLD;
-	void sspacaho_io_map(address_map &map) ATTR_COLD;
 	void sspaceat_io_map(address_map &map) ATTR_COLD;
 	void vicdual_dualgame_map(address_map &map) ATTR_COLD;
 };
