@@ -7,9 +7,7 @@
 
 #include "32xsdasm.h"
 
-#include "cpu/drcfe.h"
 #include "cpu/drcuml.h"
-#include "cpu/drcumlsh.h"
 
 #include <utility>
 
@@ -43,9 +41,6 @@
 //**************************************************************************
 //  TYPE DEFINITIONS
 //**************************************************************************
-
-class e132xs_frontend;
-
 
 enum
 {
@@ -107,8 +102,6 @@ enum
 // Used by core CPU interface
 class hyperstone_device : public cpu_device, public hyperstone_disassembler::config
 {
-	friend class e132xs_frontend;
-
 public:
 	// input line numbers
 	static inline constexpr int INPUT_INT1 = 0;
@@ -125,6 +118,9 @@ public:
 	virtual ~hyperstone_device() override;
 
 protected:
+	class frontend;
+	class opcode_desc;
+
 	using b_r_delegate  = delegate<uint8_t  (offs_t)>;
 	using hw_r_delegate = delegate<uint16_t (offs_t)>;
 	using w_r_delegate  = delegate<uint32_t (offs_t)>;
@@ -445,7 +441,7 @@ private:
 
 	drc_cache m_cache;
 	std::unique_ptr<drcuml_state> m_drcuml;
-	std::unique_ptr<e132xs_frontend> m_drcfe;
+	std::unique_ptr<frontend> m_drcfe;
 	uint32_t m_drcoptions;
 	bool m_single_instruction_mode;
 	uint8_t m_cache_dirty;

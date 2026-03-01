@@ -6,19 +6,65 @@
 #pragma once
 
 #include "e132xs.h"
+
 #include "cpu/drcfe.h"
 
-class e132xs_frontend : public drc_frontend
+#include <algorithm>
+#include <bitset>
+
+
+class hyperstone_device::opcode_desc : public opcode_desc_base<opcode_desc, 32>
 {
 public:
-	e132xs_frontend(hyperstone_device &cpu, uint32_t window_start, uint32_t window_end, uint32_t max_sequence);
-	void flush();
+	uint16_t        opptr[3];               // copy of up to 3 halfwords of opcode
+
+	void set_can_change_modes() { m_extra_flags.set(CAN_CHANGE_MODES); }
+	void set_reads_memory() { m_extra_flags.set(READS_MEMORY); }
+	void set_writes_memory() { m_extra_flags.set(WRITES_MEMORY); }
+
+	bool can_change_modes() const { return m_extra_flags[CAN_CHANGE_MODES]; }
+	bool reads_memory() const { return m_extra_flags[READS_MEMORY]; }
+	bool writes_memory() const { return m_extra_flags[WRITES_MEMORY]; }
+
+	// epc - compute the exception PC
+	uint32_t epc() const
+	{
+		return in_delay_slot() ? branch->pc : pc;
+	}
+
+	void reset(offs_t curpc, bool in_delay_slot)
+	{
+		opcode_desc_base::reset(curpc, in_delay_slot);
+
+		std::fill(std::begin(opptr), std::end(opptr), 0);
+		m_extra_flags.reset();
+	}
 
 protected:
-	// required overrides
-	virtual bool describe(opcode_desc &desc, const opcode_desc *prev) override;
+	enum
+	{
+		CAN_CHANGE_MODES = 0,
+		READS_MEMORY,
+		WRITES_MEMORY,
+
+		EXTRA_FLAG_COUNT
+	};
+
+	std::bitset<EXTRA_FLAG_COUNT> m_extra_flags;
+};
+
+
+class hyperstone_device::frontend : public drc_frontend_base<opcode_desc>
+{
+public:
+	frontend(hyperstone_device &cpu, uint32_t window_start, uint32_t window_end, uint32_t max_sequence);
+	~frontend();
+
+	opcode_desc const *describe_code(offs_t startpc);
 
 private:
+	bool describe(opcode_desc &desc, opcode_desc const *prev);
+
 	uint16_t read_word(opcode_desc &desc);
 	uint16_t read_imm1(opcode_desc &desc);
 	uint16_t read_imm2(opcode_desc &desc);
