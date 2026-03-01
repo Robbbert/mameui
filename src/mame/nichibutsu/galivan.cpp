@@ -207,7 +207,6 @@ protected:
 	void io_map(address_map &map) ATTR_COLD;
 
 	void common(machine_config &config);
-	void video_config(machine_config &config);
 
 private:
 	uint8_t m_scrollx[2]{}, m_scrolly[2]{};
@@ -884,7 +883,7 @@ static INPUT_PORTS_START( galivan )
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(1)
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_PLAYER(1)
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(1) // hold to move while hanging
 
 	PORT_START("P2")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_JOYSTICK_UP ) PORT_8WAY PORT_PLAYER(2)
@@ -894,7 +893,7 @@ static INPUT_PORTS_START( galivan )
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(2)
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_PLAYER(2)
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(2) // hold to move while hanging
 
 	PORT_START("SYSTEM")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_START1 )
@@ -963,6 +962,12 @@ INPUT_PORTS_END
 static INPUT_PORTS_START( dangar )
 	PORT_INCLUDE( galivan )
 
+	PORT_MODIFY("P1")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+
+	PORT_MODIFY("P2")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+
 	PORT_MODIFY("SYSTEM")
 	PORT_SERVICE( 0x20, IP_ACTIVE_LOW )
 
@@ -1023,10 +1028,12 @@ static INPUT_PORTS_START( ninjemak )
 	PORT_INCLUDE( galivan )
 
 	PORT_MODIFY("P1")
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(1)
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(1) // only in test mode
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
 	PORT_MODIFY("P2")
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(2)
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON3 ) PORT_PLAYER(2) // only in test mode
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
 	PORT_MODIFY("DSW1")
 	PORT_DIPNAME( 0x30, 0x30, DEF_STR( Coin_A ) )           PORT_DIPLOCATION("SW1:5,6")
@@ -1156,17 +1163,6 @@ void ninjemak_state::machine_reset()
 	m_dispdisable = 0;
 }
 
-void galivan_state::video_config(machine_config &config)
-{
-	BUFFERED_SPRITERAM8(config, m_spriteram);
-
-	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	// TODO: not measured, ~60 Hz
-	m_screen->set_raw(XTAL(12'000'000) / 2, 382, 0, 32 * 8, 262, 2 * 8, 30 * 8);
-	m_screen->screen_vblank().set(m_spriteram, FUNC(buffered_spriteram8_device::vblank_copy_rising));
-	m_screen->set_palette(m_palette);
-}
-
 void galivan_state::common(machine_config &config)
 {
 	// basic machine hardware
@@ -1179,7 +1175,12 @@ void galivan_state::common(machine_config &config)
 	audiocpu.set_periodic_int(FUNC(galivan_state::irq0_line_hold), attotime::from_hz(XTAL(8'000'000) / 2 / 512));   // ?
 
 	// video hardware
-	video_config(config);
+	BUFFERED_SPRITERAM8(config, m_spriteram);
+
+	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
+	m_screen->set_raw(XTAL(12'000'000) / 2, 384, 0, 32 * 8, 263, 2 * 8, 30 * 8);
+	m_screen->screen_vblank().set(m_spriteram, FUNC(buffered_spriteram8_device::vblank_copy_rising));
+	m_screen->set_palette(m_palette);
 
 	// sound hardware
 	SPEAKER(config, "speaker").front_center();
