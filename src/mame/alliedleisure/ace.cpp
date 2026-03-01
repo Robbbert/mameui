@@ -55,6 +55,8 @@ A1                   2101            2101
 
 #include "emupal.h"
 #include "screen.h"
+#include "sound/samples.h"
+#include "speaker.h"
 
 #include "ace.lh"
 
@@ -73,6 +75,7 @@ public:
 		m_gfxdecode(*this, "gfxdecode"),
 		m_palette(*this, "palette"),
 		m_in(*this, "IN%u", 0U)
+		, m_samples(*this, "samples")
 	{ }
 
 	void ace(machine_config &config);
@@ -88,12 +91,15 @@ private:
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
 	required_ioport_array<3> m_in;
+	required_device<samples_device> m_samples;
 
 	void palette(palette_device &palette) const;
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void ace_characterram_w(offs_t offset, uint8_t data);
 	void ace_scoreram_w(offs_t offset, uint8_t data);
+	uint8_t sound_r(offs_t);
+	bool m_fly = 0;
 
 	template<int N> uint8_t input_r(offs_t offset) { return BIT(m_in[N]->read(), offset); }
 
@@ -170,6 +176,40 @@ void ace_state::ace_scoreram_w(offs_t offset, uint8_t data)
 	m_gfxdecode->gfx(4)->mark_dirty(offset / 32);
 }
 
+static const char *const ace_sample_names[] =
+{
+	"*invaders",
+	"4",  // game start
+	"5",  // fly
+	"6",  // not used
+	"1",  // shoot
+	"2",  // crash
+	"3",  // hit
+	"8",  // machine boot / game over
+	0
+};
+
+uint8_t ace_state::sound_r(offs_t offset)
+{
+	uint8_t i = offset;
+	switch(i)
+	{
+		case 1:
+			m_fly ^= 1;
+			if (m_fly)
+				m_samples->start(i,i,1);
+			else
+				m_samples->stop(i);
+			break;
+		case 6:
+			m_fly = 0;
+			m_samples->stop(1);
+			break;
+		default:
+			m_samples->start(i,i);
+	}
+	return 0;
+}
 
 
 /*************************************
@@ -196,7 +236,7 @@ void ace_state::main_map(address_map &map)
 	map(0xc018, 0xc018).portr("RANGE");
 	map(0xc019, 0xc019).portr("TIME");
 
-	map(0xc020, 0xc026).unmapr(); // sound triggers
+	map(0xc020, 0xc026).r(FUNC(ace_state::sound_r)); // sound triggers
 }
 
 
@@ -355,7 +395,11 @@ void ace_state::ace(machine_config &config)
 	PALETTE(config, m_palette, FUNC(ace_state::palette), 4);
 
 	// sound hardware
-	// TODO
+	SPEAKER(config, "mono").front_center();
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(7);
+	m_samples->set_samples_names(ace_sample_names);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 
@@ -388,4 +432,4 @@ ROM_END
  *
  *************************************/
 
-GAMEL(1976, ace, 0, ace, ace, ace_state, empty_init, ROT0, "Allied Leisure", "Ace", MACHINE_SUPPORTS_SAVE | MACHINE_NO_SOUND, layout_ace )
+GAMEL(1976, ace, 0, ace, ace, ace_state, empty_init, ROT0, "Allied Leisure", "Ace", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_SOUND, layout_ace )

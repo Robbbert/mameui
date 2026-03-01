@@ -429,6 +429,7 @@
 #define IDC_SPLASH                      1266
 #define IDC_HLSL_ON                     1279
 #define IDC_SNAPBURNIN                  1280
+#define IDC_DRC_CORE                    1281
 #define IDC_GLSLPOW                     1300
 #define IDC_GLSLTEXTURE                 1301
 #define IDC_GLSLVBO                     1302
