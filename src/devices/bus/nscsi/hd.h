@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "machine/nscsi_bus.h"
+#include "machine/nscsi_hle.h"
 #include "imagedev/harddriv.h"
 
 class nscsi_harddisk_device : public nscsi_full_device
