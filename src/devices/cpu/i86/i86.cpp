@@ -118,6 +118,7 @@ i8086_cpu_device::i8086_cpu_device(const machine_config &mconfig, const char *ta
 	: i8086_cpu_device(mconfig, I8086, tag, owner, clock, 16)
 {
 	memcpy(m_timing, m_i8086_timing, sizeof(m_i8086_timing));
+	memcpy(m_ea_timing, m_i8086_ea_timing, sizeof(m_i8086_ea_timing));
 }
 
 i8086_cpu_device::i8086_cpu_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock, int data_bus_size)
@@ -393,7 +394,7 @@ i8086_common_cpu_device::i8086_common_cpu_device(const machine_config &mconfig, 
 	static const BREGS reg_name[8]={ AL, CL, DL, BL, AH, CH, DH, BH };
 
 	/* Set up parity lookup table. */
-	for (uint16_t i = 0;i < 256; i++)
+	for (uint16_t i = 0; i < 256; i++)
 	{
 		uint16_t c = 0;
 		for (uint16_t j = i; j > 0; j >>= 1)
