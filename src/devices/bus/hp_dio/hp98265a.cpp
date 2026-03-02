@@ -82,7 +82,7 @@ void dio16_98265a_device::mb87030_scsi_adapter(device_t *device)
 
 void dio16_98265a_device::device_add_mconfig(machine_config &config)
 {
-	NSCSI_BUS(config, m_scsibus, 0);
+	auto &scsi(NSCSI_BUS(config, m_scsibus));
 	nscsi_connector &scsicon0(NSCSI_CONNECTOR(config, "scsibus:0", 0));
 	default_scsi_devices(scsicon0);
 	scsicon0.set_default_option("harddisk");
@@ -97,11 +97,11 @@ void dio16_98265a_device::device_add_mconfig(machine_config &config)
 	scsicon5.set_default_option("cdrom");
 
 	default_scsi_devices(NSCSI_CONNECTOR(config, "scsibus:6", 0));
-	nscsi_connector &scsicon7(NSCSI_CONNECTOR(config, "scsibus:7", 0));
-	scsicon7.option_add_internal("mb87030", MB87030);
-	scsicon7.set_default_option("mb87030");
-	scsicon7.set_fixed(true);
-	scsicon7.set_option_machine_config("mb87030", mb87030_scsi_adapter);
+
+	MB87030(config, m_spc, 8_MHz_XTAL);
+	scsi.set_external_device(7, m_spc);
+	m_spc->out_irq_callback().set(DEVICE_SELF, FUNC(dio16_98265a_device::irq_w));
+	m_spc->out_dreq_callback().set(DEVICE_SELF, FUNC(dio16_98265a_device::dmar0_w));
 }
 
 dio16_98265a_device::dio16_98265a_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
@@ -113,7 +113,7 @@ dio16_98265a_device::dio16_98265a_device(const machine_config &mconfig, device_t
 	device_t(mconfig, type, tag, owner, clock),
 	device_dio32_card_interface(mconfig, *this),
 	m_scsibus(*this, "scsibus"),
-	m_spc(*this, "scsibus:7:mb87030"),
+	m_spc(*this, "mb87030"),
 	m_sw1(*this, "SW1"),
 	m_sw2(*this, "SW2"),
 	m_installed_io(false),

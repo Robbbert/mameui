@@ -2490,7 +2490,7 @@ void segas32_state::system32_cd_map(address_map &map)
 {
 	map.unmap_value_high();
 	system32_map(map);
-	map(0xc00040, 0xc0005f).mirror(0x0fff80).m("scsi:7:spc", FUNC(mb89352_device::map)).umask16(0x00ff);
+	map(0xc00040, 0xc0005f).mirror(0x0fff80).m("spc", FUNC(mb89352_device::map)).umask16(0x00ff);
 	map(0xc00060, 0xc0006f).mirror(0x0fff80).rw("cxdio", FUNC(cxd1095_device::read), FUNC(cxd1095_device::write)).umask16(0x00ff);
 }
 
@@ -2505,7 +2505,7 @@ void segas32_cd_state::device_add_mconfig(machine_config &config)
 
 	m_maincpu->set_addrmap(AS_PROGRAM, &segas32_cd_state::system32_cd_map);
 
-	NSCSI_BUS(config, "scsi");
+	auto &scsi(NSCSI_BUS(config, "scsi"));
 	NSCSI_CONNECTOR(config, "scsi:0").option_set("cdrom", NSCSI_CDROM).machine_config(
 		[](device_t *device)
 		{
@@ -2518,15 +2518,11 @@ void segas32_cd_state::device_add_mconfig(machine_config &config)
 	NSCSI_CONNECTOR(config, "scsi:4", scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:5", scsi_devices, nullptr);
 	NSCSI_CONNECTOR(config, "scsi:6", scsi_devices, nullptr);
-	NSCSI_CONNECTOR(config, "scsi:7").option_set("spc", MB89352).machine_config(
-		[this](device_t *device)
-		{
-			mb89352_device &spc = downcast<mb89352_device &>(*device);
 
-			spc.set_clock(8_MHz_XTAL);
-			spc.out_irq_callback().set(*this, FUNC(segas32_cd_state::scsi_irq_w));
-			spc.out_dreq_callback().set(*this, FUNC(segas32_cd_state::scsi_drq_w));
-		});
+	auto &spc(MB89352(config, "spc", 8_MHz_XTAL));
+	scsi.set_external_device(7, spc);
+	spc.out_irq_callback().set(DEVICE_SELF, FUNC(segas32_cd_state::scsi_irq_w));
+	spc.out_dreq_callback().set(DEVICE_SELF, FUNC(segas32_cd_state::scsi_drq_w));
 
 	cxd1095_device &cxdio(CXD1095(config, "cxdio"));
 	cxdio.out_porta_cb().set(FUNC(segas32_cd_state::lamps1_w));
