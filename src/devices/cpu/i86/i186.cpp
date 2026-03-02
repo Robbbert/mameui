@@ -326,7 +326,7 @@ void i80186_cpu_device::execute_run()
 						interrupt(5);
 					}
 					CLK(BOUND);
-					logerror("%06x: bound %i < %i < %i\n", m_pc, low, idx, high);
+					logerror("%06x: bound %i <= %i <= %i\n", m_pc, low, idx, high);
 				}
 				break;
 
