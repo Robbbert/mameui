@@ -473,10 +473,10 @@ void es1373_device::reg_w(offs_t offset, uint32_t data, uint32_t mem_mask)
 			break;
 		case ES_CODEC:
 			if (data&(1<<23)) {
-				// Read from AC97 codec registers
+				// Read from AC'97 codec registers
 				m_es_regs[offset] = (data&0xFFFF0000) | m_ac97_regs[(data>>16)&0x7f] | 0x80000000;
 			} else {
-				// Write to AC97 codec registers
+				// Write to AC'97 codec registers
 				m_ac97_regs[(data>>16)&0x7f] = data&0xFFFF;
 			}
 			break;

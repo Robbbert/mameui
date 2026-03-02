@@ -28,6 +28,7 @@
 #include "sis6326.h"
 #include "sonicvibes.h"
 #include "sw1000xg.h"
+#include "trident_4dwavedx.h"
 #include "trio_pci.h"
 #include "virge_pci.h"
 #include "vision.h"
@@ -146,6 +147,7 @@ void pci_cards(device_slot_interface &device)
 	device.option_add("ds2416",         DS2416);
 	device.option_add("sonicvibes",     SONICVIBES);
 	device.option_add("ess_solo1",      ES1946_SOLO1E);
+	device.option_add("4dwavedx",       TRIDENT_4DWAVEDX);
 	device.option_add("zr36057",        ZR36057_PCI);
 	device.option_add("audiowerk2",     AUDIOWERK2);
 

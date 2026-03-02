@@ -2,7 +2,7 @@
 // copyright-holders: Angelo Salese
 /**************************************************************************************************
 
-SiS 7018 Audio device (AC97 compliant)
+SiS 7018 Audio device (AC'97 compliant)
 
 TODO:
 - Stub interface, to be improved;
