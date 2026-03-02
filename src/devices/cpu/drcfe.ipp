@@ -356,7 +356,7 @@ void drc_frontend_base<Desc>::accumulate_required_backwards(Desc &desc, typename
 
 	// if this is a branch, we have to reset our requests
 	if (desc.is_branch())
-		reqmask = reqmask = reqmask = reqmask.set();
+		reqmask.set();
 
 	// determine the required registers
 	desc.regreq = desc.regout & reqmask;
