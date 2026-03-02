@@ -293,12 +293,12 @@ OP( 0x15, i_adc_axd16) { DEF_axd16; ADDCW;   Wreg(AW)=dst;           CLKS(4,4,2)
 OP( 0x16, i_push_ss  ) { PUSH(Sreg(SS));        CLKS(12,8,3);   }
 OP( 0x17, i_pop_ss   ) { POP(Sreg(SS));     CLKS(12,8,5);   m_no_interrupt=1; }
 
-OP( 0x18, i_sbb_br8  ) { DEF_br8;   SUBBB;   PutbackRMByte(ModRM,dst);   CLKM(2,2,2,16,16,7);        }
-OP( 0x19, i_sbb_wr16 ) { DEF_wr16;  SUBBW;   PutbackRMWord(ModRM,dst);   CLKR(24,24,11,24,16,7,2,m_EA);}
-OP( 0x1a, i_sbb_r8b  ) { DEF_r8b;   SUBBB;   RegByte(ModRM)=dst;         CLKM(2,2,2,11,11,6);        }
-OP( 0x1b, i_sbb_r16w ) { DEF_r16w;  SUBBW;   RegWord(ModRM)=dst;         CLKR(15,15,8,15,11,6,2,m_EA); }
-OP( 0x1c, i_sbb_ald8 ) { DEF_ald8;  SUBBB;   Breg(AL)=dst;           CLKS(4,4,2);                }
-OP( 0x1d, i_sbb_axd16) { DEF_axd16; SUBBW;   Wreg(AW)=dst;           CLKS(4,4,2);    }
+OP( 0x18, i_sbb_br8  ) { DEF_br8;   SUBCB;   PutbackRMByte(ModRM,dst);   CLKM(2,2,2,16,16,7);        }
+OP( 0x19, i_sbb_wr16 ) { DEF_wr16;  SUBCW;   PutbackRMWord(ModRM,dst);   CLKR(24,24,11,24,16,7,2,m_EA);}
+OP( 0x1a, i_sbb_r8b  ) { DEF_r8b;   SUBCB;   RegByte(ModRM)=dst;         CLKM(2,2,2,11,11,6);        }
+OP( 0x1b, i_sbb_r16w ) { DEF_r16w;  SUBCW;   RegWord(ModRM)=dst;         CLKR(15,15,8,15,11,6,2,m_EA); }
+OP( 0x1c, i_sbb_ald8 ) { DEF_ald8;  SUBCB;   Breg(AL)=dst;           CLKS(4,4,2);                }
+OP( 0x1d, i_sbb_axd16) { DEF_axd16; SUBCW;   Wreg(AW)=dst;           CLKS(4,4,2);    }
 OP( 0x1e, i_push_ds  ) { PUSH(Sreg(DS0));       CLKS(12,8,3);   }
 OP( 0x1f, i_pop_ds   ) { POP(Sreg(DS0));        CLKS(12,8,5);   }
 
@@ -444,7 +444,7 @@ OP( 0x80, i_80pre   ) { uint32_t dst, src; GetModRM; dst = GetRMByte(ModRM); src
 		case 0x00: ADDB;            PutbackRMByte(ModRM,dst);   break;
 		case 0x08: ORB;             PutbackRMByte(ModRM,dst);   break;
 		case 0x10: ADDCB;           PutbackRMByte(ModRM,dst);   break;
-		case 0x18: SUBBB;           PutbackRMByte(ModRM,dst);   break;
+		case 0x18: SUBCB;           PutbackRMByte(ModRM,dst);   break;
 		case 0x20: ANDB;            PutbackRMByte(ModRM,dst);   break;
 		case 0x28: SUBB;            PutbackRMByte(ModRM,dst);   break;
 		case 0x30: XORB;            PutbackRMByte(ModRM,dst);   break;
@@ -458,7 +458,7 @@ OP( 0x81, i_81pre   ) { uint32_t dst, src; GetModRM; dst = GetRMWord(ModRM); src
 		case 0x00: ADDW;            PutbackRMWord(ModRM,dst);   break;
 		case 0x08: ORW;             PutbackRMWord(ModRM,dst);   break;
 		case 0x10: ADDCW;           PutbackRMWord(ModRM,dst);   break;
-		case 0x18: SUBBW;           PutbackRMWord(ModRM,dst);   break;
+		case 0x18: SUBCW;           PutbackRMWord(ModRM,dst);   break;
 		case 0x20: ANDW;            PutbackRMWord(ModRM,dst);   break;
 		case 0x28: SUBW;            PutbackRMWord(ModRM,dst);   break;
 		case 0x30: XORW;            PutbackRMWord(ModRM,dst);   break;
@@ -472,7 +472,7 @@ OP( 0x82, i_82pre   ) { uint32_t dst, src; GetModRM; dst = GetRMByte(ModRM); src
 		case 0x00: ADDB;            PutbackRMByte(ModRM,dst);   break;
 		case 0x08: ORB;             PutbackRMByte(ModRM,dst);   break;
 		case 0x10: ADDCB;           PutbackRMByte(ModRM,dst);   break;
-		case 0x18: SUBBB;           PutbackRMByte(ModRM,dst);   break;
+		case 0x18: SUBCB;           PutbackRMByte(ModRM,dst);   break;
 		case 0x20: ANDB;            PutbackRMByte(ModRM,dst);   break;
 		case 0x28: SUBB;            PutbackRMByte(ModRM,dst);   break;
 		case 0x30: XORB;            PutbackRMByte(ModRM,dst);   break;
@@ -486,7 +486,7 @@ OP( 0x83, i_83pre   ) { uint32_t dst, src; GetModRM; dst = GetRMWord(ModRM); src
 		case 0x00: ADDW;            PutbackRMWord(ModRM,dst);   break;
 		case 0x08: ORW;             PutbackRMWord(ModRM,dst);   break;
 		case 0x10: ADDCW;           PutbackRMWord(ModRM,dst);   break;
-		case 0x18: SUBBW;           PutbackRMWord(ModRM,dst);   break;
+		case 0x18: SUBCW;           PutbackRMWord(ModRM,dst);   break;
 		case 0x20: ANDW;            PutbackRMWord(ModRM,dst);   break;
 		case 0x28: SUBW;            PutbackRMWord(ModRM,dst);   break;
 		case 0x30: XORW;            PutbackRMWord(ModRM,dst);   break;
