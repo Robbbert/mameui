@@ -37,15 +37,14 @@ adsp21062_device::opcode_desc const *adsp21062_device::frontend::describe_code(o
 
 void adsp21062_device::frontend::flush()
 {
-	LOOP_ENTRY *map = m_loopmap.get();
-
-	memset(map, 0, sizeof(LOOP_ENTRY) * 0x20000);
+	for (unsigned i = 0; 0x20000 > i; ++i)
+		m_loopmap[i].clear();
 }
 
 void adsp21062_device::frontend::add_loop_entry(uint32_t pc, uint8_t type, opcode_desc::extra_flags const &userflags)
 {
-	uint32_t l2 = pc >> 17;
-	uint32_t l1 = pc & 0x1ffff;
+	uint32_t const l2 = pc >> 17;
+	uint32_t const l1 = pc & 0x1ffff;
 
 	if (l2 != 0x1)
 		fatalerror("adsp21062_device::frontend::add_loop_entry: PC = %08X", pc);

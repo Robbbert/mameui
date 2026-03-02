@@ -254,6 +254,8 @@ private:
 	{
 		uint16_t entrytype;
 		opcode_desc::extra_flags userflags;
+
+		void clear() { entrytype = 0; userflags.reset(); }
 	};
 
 	struct LOOP_DESCRIPTOR

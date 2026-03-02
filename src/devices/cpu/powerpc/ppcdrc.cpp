@@ -1761,8 +1761,6 @@ void ppc_device::generate_sequence_instruction(drcuml_block &block, compiler_sta
 
 void ppc_device::generate_compute_flags(drcuml_block &block, const opcode_desc *desc, int updatecr, uint32_t xermask, int invertcarry)
 {
-	uint32_t xerflags;
-
 	/* modify inputs based on required flags */
 	if (!DISABLE_FLAG_OPTIMIZATIONS)
 	{
@@ -1771,7 +1769,7 @@ void ppc_device::generate_compute_flags(drcuml_block &block, const opcode_desc *
 		if (!frontend::REGFLAG_CR(desc->regreq, 0))
 			updatecr = 0;
 	}
-	xerflags = ((xermask & XER_OV) ? uml::FLAG_V : 0) | ((xermask & XER_CA) ? uml::FLAG_C : 0);
+	const uint32_t xerflags = ((xermask & XER_OV) ? uml::FLAG_V : 0) | ((xermask & XER_CA) ? uml::FLAG_C : 0);
 
 	/* easy case: nothing to do */
 	if (!updatecr && xermask == 0)

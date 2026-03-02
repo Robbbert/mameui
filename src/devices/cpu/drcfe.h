@@ -34,6 +34,7 @@
 #pragma once
 
 #include <bitset>
+#include <type_traits>
 #include <vector>
 
 
@@ -157,6 +158,20 @@ protected:
 		// set the delay slot flag
 		if (in_delay_slot)
 			set_in_delay_slot();
+	}
+
+	// TODO: make these constexpr when GCC/GNU libstdc++ catch up
+	template <size_t Start, size_t Width>
+	static std::enable_if_t<Width <= (sizeof(unsigned long) * 8), unsigned long> regmask_field(regmask const &r)
+	{
+		static_assert((Width > 0) && ((Start + Width) <= N));
+		return ((r << (N - Start - Width)) >> (N - Width)).to_ulong();
+	}
+	template <size_t Start, size_t Width>
+	static std::enable_if_t<(Width > (sizeof(unsigned long) * 8)) && (Width <= (sizeof(unsigned long long) * 8)), unsigned long long> regmask_field(regmask const &r)
+	{
+		static_assert((Width > 0) && ((Start + Width) <= N));
+		return ((r << (N - Start - Width)) >> (N - Width)).to_ullong();
 	}
 
 	std::bitset<FLAG_COUNT> m_flags;

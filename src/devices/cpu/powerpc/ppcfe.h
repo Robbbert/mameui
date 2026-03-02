@@ -75,11 +75,12 @@ protected:
 class ppc_device::frontend : public drc_frontend_base<opcode_desc>
 {
 public:
+	// TODO: uncomment constexpr when GCC/GNU libstdc++ catch up
 	static constexpr bool     REGFLAG_R(const opcode_desc::regmask &r, unsigned n)      { return r[REG_BIT_R0 + n]; }
 	static constexpr bool     REGFLAG_RZ(const opcode_desc::regmask &r, unsigned n)     { return n && REGFLAG_R(r, n); }
 	static constexpr bool     REGFLAG_FR(const opcode_desc::regmask &r, unsigned n)     { return r[REG_BIT_FR0 + n]; }
-	static constexpr uint32_t REGFLAG_CR(const opcode_desc::regmask &r)                 { return uint32_t(((r << 32) >> (128 - 32)).to_ulong()); }
-	static constexpr uint8_t  REGFLAG_CR(const opcode_desc::regmask &r, unsigned n)     { return uint8_t(((r << ((4 * n) + 32)) >> (128 - 4)).to_ulong()); }
+	static /*constexpr*/ uint32_t REGFLAG_CR(const opcode_desc::regmask &r)                 { return uint32_t(((r << 32) >> (128 - 32)).to_ulong()); }
+	static /*constexpr*/ uint8_t  REGFLAG_CR(const opcode_desc::regmask &r, unsigned n)     { return uint8_t(((r << ((4 * n) + 32)) >> (128 - 4)).to_ulong()); }
 	static constexpr bool     REGFLAG_CR_BIT(const opcode_desc::regmask &r, unsigned n) { return r[64 + 31 - n]; }
 	static constexpr bool     REGFLAG_XER_CA(const opcode_desc::regmask &r)             { return r[REG_BIT_XER_CA]; }
 	static constexpr bool     REGFLAG_XER_OV(const opcode_desc::regmask &r)             { return r[REG_BIT_XER_OV]; }
