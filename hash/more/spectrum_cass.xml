@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7806 -->
+<!-- Number of items in this list = 7807 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -33169,6 +33169,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="118898">
 				<rom name="Jet Set Willy 128K (1996)(John Elliott).tap" size="118898" crc="1ec78ad5" sha1="01d1e13ae596b514c59b13f374ce1d21c4aa850b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7cab0728312bf">
+		<description>Jet Set Willy 48K (1984)(Software Projects)(Original, 4 bug fix, no keycode)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33298">
+				<rom name="Jet Set Willy 48K (1984)(Software Projects)(Original, 4 bug fix, no keycode).tzx" size="33298" crc="93c0db2f" sha1="7cab0728312bf8fba8afb105cb0ac409196cd481"/>
 			</dataarea>
 		</part>
 	</software>

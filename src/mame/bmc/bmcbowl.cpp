@@ -315,6 +315,8 @@ void bmcbowl_state::machine_start()
 
 void bmcbowl_state::machine_reset()
 {
+	m_maincpu->set_input_line(M68K_IRQ_4, CLEAR_LINE);  // ARCADE, Robbbert, 2024-05-16, MT 08815
+
 #ifdef NVRAM_HACK
 	for (int i = 0; i < m_stats_ram.bytes()/2; i++)
 		m_stats_ram[i] = 0xffff;
