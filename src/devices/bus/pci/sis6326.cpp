@@ -82,7 +82,7 @@ void sis6326_pci_device::device_start()
 
 	// INTA#
 	// TODO: VGA D3/MD27 can strap this to no irq pin
-	// ls5amvp3 goes N/A, assume it's disabled by default
+	// ls5amvp3 goes N/A in Award Config list, assume it's disabled by default
 	intr_pin = 0;
 }
 
