@@ -71,15 +71,6 @@ private:
 	bool m_dmar0;
 };
 
-void dio16_98265a_device::mb87030_scsi_adapter(device_t *device)
-{
-	mb87030_device &spc = downcast<mb87030_device &>(*device);
-	spc.set_clock(8_MHz_XTAL);
-
-	spc.out_irq_callback().set("^^", FUNC(dio16_98265a_device::irq_w));
-	spc.out_dreq_callback().set("^^", FUNC(dio16_98265a_device::dmar0_w));
-}
-
 void dio16_98265a_device::device_add_mconfig(machine_config &config)
 {
 	auto &scsi(NSCSI_BUS(config, m_scsibus));
