@@ -16,6 +16,8 @@ public:
 
 	auto out_bsy_callback() { return m_bsy_handler.bind(); }
 
+	template <typename T> void set_external_device(int id, T &&tag) { m_external_devices[id].set_tag(std::forward<T>(tag)); }
+
 	void ctrl_w(int refid, uint32_t lines, uint32_t mask);
 	void data_w(int refid, uint32_t lines);
 	void ctrl_wait(int refid, uint32_t lines, uint32_t mask);
@@ -34,6 +36,8 @@ private:
 		uint32_t ctrl, wait_ctrl;
 		uint32_t data;
 	};
+
+	optional_device_array<nscsi_device, 16> m_external_devices;
 
 	devcb_write_line m_bsy_handler;
 

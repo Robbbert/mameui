@@ -26,7 +26,11 @@ DEFINE_DEVICE_TYPE(NSCSI_CONNECTOR, nscsi_connector,  "nscsi_connector", "SCSI C
 
 
 nscsi_bus_device::nscsi_bus_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, NSCSI_BUS, tag, owner, clock), m_bsy_handler(*this), data(0), ctrl(0)
+	device_t(mconfig, NSCSI_BUS, tag, owner, clock),
+	m_external_devices(*this, finder_base::DUMMY_TAG, 0),
+	m_bsy_handler(*this),
+	data(0),
+	ctrl(0)
 {
 	devcnt = 0;
 	std::fill(std::begin(dev), std::end(dev), dev_t{ nullptr, 0, 0, 0 });
@@ -138,8 +142,13 @@ void nscsi_bus_device::ctrl_wait(int refid, uint32_t lines, uint32_t mask)
 void nscsi_bus_device::device_resolve_objects()
 {
 	for(int i=0; i<16; i++) {
-		device_t *subdev = subdevice(string_format("%d", i));
-		nscsi_device *sdev = subdev ? downcast<nscsi_connector &>(*subdev).get_device() : nullptr;
+		nscsi_device *sdev = nullptr;
+		if(m_external_devices[i])
+			sdev = m_external_devices[i];
+		else {
+			device_t *subdev = subdevice(string_format("%d", i));
+			sdev = subdev ? downcast<nscsi_connector &>(*subdev).get_device() : nullptr;
+		}
 		if(sdev) {
 			int rid = devcnt++;
 			dev[rid].dev = sdev;
