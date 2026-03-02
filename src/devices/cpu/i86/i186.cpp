@@ -319,13 +319,14 @@ void i80186_cpu_device::execute_run()
 			case 0x62: // i_bound
 				{
 					m_modrm = fetch();
-					uint32_t low = GetRMWord();
-					uint32_t high = GetnextRMWord();
-					uint32_t tmp = RegWord();
-					if (tmp < low || tmp > high)
+					int16_t low = (int16_t)GetRMWord();
+					int16_t high = (int16_t)GetnextRMWord();
+					int16_t idx = (int16_t)RegWord();
+					if (idx < low || idx > high) {
 						interrupt(5);
+					}
 					CLK(BOUND);
-					logerror("%06x: bound %04x high %04x low %04x tmp\n", m_pc, high, low, tmp);
+					logerror("%06x: bound %i < %i < %i\n", m_pc, low, idx, high);
 				}
 				break;
 
