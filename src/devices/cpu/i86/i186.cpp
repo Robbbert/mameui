@@ -395,7 +395,6 @@ void i80186_cpu_device::execute_run()
 					break;
 				default:
 					logerror("%06x: Mov Sreg - Invalid register\n", m_pc);
-					m_ip = m_prev_ip;
 					interrupt(6);
 					break;
 				}
@@ -646,7 +645,6 @@ void i80186_cpu_device::execute_run()
 				{
 					m_icount -= 10; // UD fault timing?
 					logerror("%06x: Invalid Opcode %02x\n", m_pc, op);
-					m_ip = m_prev_ip;
 					interrupt(6); // 80186 has #UD
 					break;
 				}
