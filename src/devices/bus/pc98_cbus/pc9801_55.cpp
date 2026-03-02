@@ -352,9 +352,9 @@ void pc9801_55_device::internal_map(address_map &map)
 	// --xx xxxx DSW1 INT and SCSI ID
 	map(0x33, 0x33).lr8(
 		NAME([this] (offs_t offset) {
-			u8 scsi_reset = (m_scsi_bus->ctrl_r() & nscsi_device::S_RST) ? 0x80 : 0;
+			u8 scsi_reset = (m_scsi_bus->ctrl_r() & nscsi_device_interface::S_RST) ? 0x80 : 0;
 			if (!machine().side_effects_disabled())
-				m_scsi_bus->ctrl_w(7, 0, nscsi_device::S_RST);
+				m_scsi_bus->ctrl_w(7, 0, nscsi_device_interface::S_RST);
 			return (m_dsw1->read() & 0x3f) | scsi_reset;
 		})
 	);

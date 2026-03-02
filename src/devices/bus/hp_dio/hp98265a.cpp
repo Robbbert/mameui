@@ -276,18 +276,18 @@ void dio16_98265a_device::io_w(offs_t offset, uint16_t data)
 	case 2:
 		uint8_t val = 0;
 		if (data & 0x80)
-			val |= nscsi_device::S_REQ;
+			val |= nscsi_device_interface::S_REQ;
 		if (data & 0x40)
-			val |= nscsi_device::S_ACK;
+			val |= nscsi_device_interface::S_ACK;
 		if (data & 0x08)
-			val |= nscsi_device::S_BSY;
+			val |= nscsi_device_interface::S_BSY;
 		if (data & 0x04)
-			val |= nscsi_device::S_MSG;
+			val |= nscsi_device_interface::S_MSG;
 		if (data & 0x02)
-			val |= nscsi_device::S_CTL;
+			val |= nscsi_device_interface::S_CTL;
 		if (data & 0x01)
-			val |= nscsi_device::S_INP;
-		m_spc->ctrl_write(val, nscsi_device::S_ALL);
+			val |= nscsi_device_interface::S_INP;
+		m_spc->ctrl_write(val, nscsi_device_interface::S_ALL);
 		break;
 	}
 }

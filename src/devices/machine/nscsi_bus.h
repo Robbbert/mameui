@@ -6,7 +6,7 @@
 #pragma once
 
 
-class nscsi_device;
+class nscsi_device_interface;
 class nscsi_slot_card_interface;
 
 class nscsi_bus_device : public device_t
@@ -32,19 +32,19 @@ protected:
 
 private:
 	struct dev_t {
-		nscsi_device *dev;
-		uint32_t ctrl, wait_ctrl;
-		uint32_t data;
+		nscsi_device_interface *m_dev;
+		uint32_t m_ctrl, m_wait_ctrl;
+		uint32_t m_data;
 	};
 
-	optional_device_array<nscsi_device, 16> m_external_devices;
+	optional_device_array<nscsi_device_interface, 16> m_external_devices;
 
 	devcb_write_line m_bsy_handler;
 
-	dev_t dev[16];
-	int devcnt;
+	dev_t m_dev[16];
+	int m_devcnt;
 
-	uint32_t data, ctrl;
+	uint32_t m_data, m_ctrl;
 
 	void regen_data();
 	void regen_ctrl(int refid);
@@ -66,7 +66,7 @@ public:
 	nscsi_connector(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = 0);
 	virtual ~nscsi_connector();
 
-	nscsi_device *get_device();
+	nscsi_device_interface *get_device();
 
 protected:
 	virtual void device_start() override ATTR_COLD;
@@ -80,10 +80,10 @@ public:
 	nscsi_slot_card_interface(const machine_config &mconfig, device_t &device, const char *nscsi_tag);
 
 private:
-	required_device<nscsi_device> m_nscsi;
+	required_device<nscsi_device_interface> m_nscsi;
 };
 
-class nscsi_device : public device_t
+class nscsi_device_interface : public device_interface
 {
 public:
 	// Here because the biggest users are the devices, not the bus
@@ -139,16 +139,16 @@ public:
 	virtual void scsi_ctrl_changed();
 
 protected:
-	nscsi_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);
+	nscsi_device_interface(const machine_config &mconfig, device_t &device);
 
-	virtual void device_start() override ATTR_COLD;
+	virtual void interface_pre_start() override ATTR_COLD;
 
-	int scsi_id;
-	int scsi_refid;
-	nscsi_bus_device *scsi_bus;
+	int m_scsi_id;
+	int m_scsi_refid;
+	nscsi_bus_device *m_scsi_bus;
 };
 
-class nscsi_full_device : public nscsi_device, public nscsi_slot_card_interface
+class nscsi_full_device : public device_t, public nscsi_device_interface, public nscsi_slot_card_interface
 {
 public:
 	virtual void scsi_ctrl_changed() override;
@@ -794,10 +794,10 @@ protected:
 	// Command delay (immediate)
 	virtual attotime scsi_data_command_delay();
 
-	uint8_t scsi_cmdbuf[4096];
-	uint8_t scsi_sense_buffer[18];
-	int scsi_cmdsize;
-	uint8_t scsi_identify;
+	uint8_t m_scsi_cmdbuf[4096];
+	uint8_t m_scsi_sense_buffer[18];
+	int m_scsi_cmdsize;
+	uint8_t m_scsi_identify;
 
 private:
 	enum {
@@ -839,19 +839,19 @@ private:
 	};
 
 	struct control {
-		int action;
-		int param1, param2;
+		int m_action;
+		int m_param1, m_param2;
 	};
 
-	emu_timer *scsi_timer;
+	emu_timer *m_scsi_timer;
 
-	int scsi_state, scsi_substate;
-	int scsi_initiator_id;
-	int data_buffer_id, data_buffer_size, data_buffer_pos;
+	int m_scsi_state, m_scsi_substate;
+	int m_scsi_initiator_id;
+	int m_data_buffer_id, m_data_buffer_size, m_data_buffer_pos;
 
-	control buf_control[32];
-	int buf_control_rpos;
-	int buf_control_wpos;
+	control m_buf_control[32];
+	int m_buf_control_rpos;
+	int m_buf_control_wpos;
 
 	control *buf_control_push();
 	control *buf_control_pop();

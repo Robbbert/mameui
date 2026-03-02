@@ -31,7 +31,8 @@
 #include "machine/nscsi_bus.h"
 
 class spifi3_device
-	: public nscsi_device,
+	: public device_t,
+	  public nscsi_device_interface,
 	  public nscsi_slot_card_interface
 {
 public:
