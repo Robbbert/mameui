@@ -938,4 +938,31 @@ void sis950_lpc_device::irq_handler(int line, int state)
 	redirect_irq(line, state);
 }
 
-// TODO: public setter for connections (cfr. table in irq_remap_w)
+// IDE can only redirect one IRQ, bit 4 select between Primary (0) or Secondary (1)
+void sis950_lpc_device::pc_iirqa_w(int state)
+{
+	u8 setting = m_irq_remap[IRQ_IDE];
+
+	if (BIT(setting, 7) || BIT(setting, 4))
+	{
+		redirect_irq(14, state);
+		return;
+	}
+
+	redirect_irq(setting & 0xf, state);
+}
+
+void sis950_lpc_device::pc_iirqb_w(int state)
+{
+	u8 setting = m_irq_remap[IRQ_IDE];
+
+	if (BIT(setting, 7) || !BIT(setting, 4))
+	{
+		redirect_irq(15, state);
+		return;
+	}
+
+	redirect_irq(setting & 0xf, state);
+}
+
+// TODO: public setter for remaining connections (cfr. table in irq_remap_w)

@@ -64,6 +64,10 @@ public:
 	void pc_irq14_w(int state);
 	void pc_irq15_w(int state);
 
+	// IDE Primary/Secondary Channel interrupts
+	void pc_iirqa_w(int state);
+	void pc_iirqb_w(int state);
+
 protected:
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_reset() override ATTR_COLD;
