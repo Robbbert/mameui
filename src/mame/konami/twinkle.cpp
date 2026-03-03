@@ -1367,7 +1367,7 @@ ROM_START( bmiidx )
 	ROM_REGION( 0x224, "security", 0 )
 	ROM_LOAD( "863a02", 0x000000, 0x000224, BAD_DUMP CRC(078be99f) SHA1(7def88d18a9250a8e4b54a51bf663161676cd9be) )
 
-	DISK_REGION( "scsi:4:cdrom" ) // program
+	DISK_REGION( "cdrom" ) // program
 	DISK_IMAGE_READONLY( "gq863-jab01", 0, SHA1(331f80b40ed560c7e017621b7daeeb8275d92b9a) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1383,7 +1383,7 @@ ROM_START( bmiidxa )
 	ROM_REGION( 0x224, "security", 0 )
 	ROM_LOAD( "863a02", 0x000000, 0x000224, BAD_DUMP CRC(078be99f) SHA1(7def88d18a9250a8e4b54a51bf663161676cd9be) )
 
-	DISK_REGION( "scsi:4:cdrom" ) // program
+	DISK_REGION( "cdrom" ) // program
 	DISK_IMAGE_READONLY( "gq863a01", 0, SHA1(07fc467f6500504729becbaf77dabc093a134e65) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1399,7 +1399,7 @@ ROM_START( bmiidx2 )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "985a02", 0x000000, 0x000100, CRC(059c1f99) SHA1(f094a12c9a56d351667746a765804c94cb3f96bb) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "gc985a01", 0, SHA1(0b783f11317f64552ebf3323459139529e7f315f) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1415,7 +1415,7 @@ ROM_START( bmiidx3 )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "992a02", 0x000000, 0x000100, CRC(92520992) SHA1(c4a47dd0e805807df0f086fd9602c000fe2baa61) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "gc992-jac01", 0, SHA1(c02d6e58439be678ec0d7171eae2dfd53a21acc7) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1431,7 +1431,7 @@ ROM_START( bmiidx3b )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "992a02", 0x000000, 0x000100, CRC(92520992) SHA1(c4a47dd0e805807df0f086fd9602c000fe2baa61) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "gc992-jab01", 0, SHA1(7a5bc08e5723c2705fb7954a8bb727f96514ec2e) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1447,7 +1447,7 @@ ROM_START( bmiidx3a )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "992a02", 0x000000, 0x000100, CRC(92520992) SHA1(c4a47dd0e805807df0f086fd9602c000fe2baa61) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "gc992-jaa01", 0, SHA1(d86dab5c8130859e73a3e2936b7fd6231e1c025d) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1463,7 +1463,7 @@ ROM_START( bmiidx4 )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "a03", 0x000000, 0x000100, CRC(9ccf71f9) SHA1(01c4060ac6e2cdc156c034797ea2e305cbbc31ef) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "a03jaa01", 0, SHA1(f54fc778c2187ccd950402a159babef956b71492) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1479,7 +1479,7 @@ ROM_START( bmiidx5 )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "a17", 0x000000, 0x000100, CRC(70ae9983) SHA1(de0b9ce8ca09e794a35722737958fa7ee6eef6ce) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "a17jaa01", 0, SHA1(5ac46973b42b2c66ae63297d1a7fd69b33ef4d1d) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1495,7 +1495,7 @@ ROM_START( bmiidx6 )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "b4u", 0x000000, 0x000100, CRC(5c134715) SHA1(2bc40388c5e2d54e99e9fdfd63216820b5c939c0) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "b4ujab01", 0, SHA1(aaae77f473c4a44ce6838da3ef6dab27e4afa0e4) )
 
 	DISK_REGION( "cdrom1" ) // DVD
@@ -1511,7 +1511,7 @@ ROM_START( bmiidx6a )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "b4u", 0x000000, 0x000100, CRC(5c134715) SHA1(2bc40388c5e2d54e99e9fdfd63216820b5c939c0) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "b4ujaa01", 0, SHA1(22589f2a2b421e910d8dc3d98b375d7939a94921) )
 
 	DISK_REGION( "cdrom1" ) // DVD
@@ -1527,7 +1527,7 @@ ROM_START( bmiidx7 )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "b44", 0x000000, 0x000100, CRC(fb6aaa40) SHA1(7a93a8b69d71c2e448d176a6a9d175a01bd8a5f1) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "b44jab01", 0, SHA1(f04411b2c7a671dc9544635b187db7a5f3eae6aa) )
 
 	DISK_REGION( "cdrom1" ) // DVD
@@ -1543,7 +1543,7 @@ ROM_START( bmiidx7a )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "b44", 0x000000, 0x000100, CRC(fb6aaa40) SHA1(7a93a8b69d71c2e448d176a6a9d175a01bd8a5f1) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "b44jaa01", 0, SHA1(57fb0312d8102e959658e48a97e46aa16e592b60) )
 
 	DISK_REGION( "cdrom1" ) // DVD
@@ -1559,7 +1559,7 @@ ROM_START( bmiidx8 )
 	ROM_REGION( 0x100, "security", 0 )
 	ROM_LOAD( "c44", 0x000000, 0x000100, CRC(3afc8048) SHA1(36cf01288a5ca4f03060de44a89472650e9f8dcc) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "c44jaa01", 0, SHA1(dd2aeb925182ed75ade510ca3a0f913d667a2be2) )
 
 	DISK_REGION( "cdrom1" ) // DVD
@@ -1575,7 +1575,7 @@ ROM_START( bmiidxc )
 	ROM_REGION( 0x224, "security", 0 )
 	ROM_LOAD( "863a02", 0x000000, 0x000224, BAD_DUMP CRC(078be99f) SHA1(7def88d18a9250a8e4b54a51bf663161676cd9be) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "896jabbm", 0, SHA1(09fb638bc5b3e64af13ae3df66ba25e490440946) )
 
 	DISK_REGION( "cdrom1" ) // video CD, same as bmiidx
@@ -1591,7 +1591,7 @@ ROM_START( bmiidxca )
 	ROM_REGION( 0x224, "security", 0 )
 	ROM_LOAD( "863a02", 0x000000, 0x000224, BAD_DUMP CRC(078be99f) SHA1(7def88d18a9250a8e4b54a51bf663161676cd9be) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "896jaabm", 0, SHA1(ea7205f86543d9273efcc226666ab530c32b23c1) )
 
 	DISK_REGION( "cdrom1" ) // video CD, same as bmiidx
@@ -1607,7 +1607,7 @@ ROM_START( bmiidxs )
 	ROM_REGION( 0x224, "security", 0 )
 	ROM_LOAD( "983a02", 0x000000, 0x000224, BAD_DUMP CRC(6a6ace82) SHA1(1e1373f40c469c117316c03db414d9984567dd42) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "gc983a01", 0, SHA1(7a80380f9c18c7da9643e0b9954ad8367eda5948) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1623,7 +1623,7 @@ ROM_START( bmiidxsa )
 	ROM_REGION( 0x224, "security", 0 )
 	ROM_LOAD( "983aa02", 0x000000, 0x000224, BAD_DUMP CRC(bcc8965c) SHA1(e152d19a92544212e321a332c6e6678d623dab21) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "gc983aa,a01", 0, SHA1(9ef5725fc79a7f4f524ef93849af42b2758102cd) )
 
 	DISK_REGION( "cdrom1" ) // video CD
@@ -1639,7 +1639,7 @@ ROM_START( bmiidxc2 )
 	ROM_REGION( 0x224, "security", 0 )
 	ROM_LOAD( "984a02", 0x000000, 0x000224, BAD_DUMP CRC(786db814) SHA1(722c709d95d54cd519856ddea64b9176ef191b0d) )
 
-	DISK_REGION( "scsi:4:cdrom" )
+	DISK_REGION( "cdrom" )
 	DISK_IMAGE_READONLY( "ge984a01,bm", 0, SHA1(03b083ba09652dfab6f328000c3c9de2a7a4e618) )
 
 	DISK_REGION( "cdrom1" ) // video CD, same as bmiidxs

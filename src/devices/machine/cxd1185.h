@@ -11,7 +11,6 @@
 class cxd1185_device
 	: public device_t
 	, public nscsi_device_interface
-	, public nscsi_slot_card_interface
 {
 public:
 	cxd1185_device(machine_config const &mconfig, char const *tag, device_t *owner, u32 clock);

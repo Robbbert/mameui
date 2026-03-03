@@ -45,7 +45,6 @@ ALLOW_SAVE_TYPE(cxd1185_device::state);
 cxd1185_device::cxd1185_device(machine_config const &mconfig, char const *tag, device_t *owner, u32 clock)
 	: device_t(mconfig, CXD1185, tag, owner, clock)
 	, nscsi_device_interface(mconfig, *this)
-	, nscsi_slot_card_interface(mconfig, *this, DEVICE_SELF)
 	, m_irq_out_cb(*this)
 	, m_drq_out_cb(*this)
 	, m_port_out_cb(*this)
