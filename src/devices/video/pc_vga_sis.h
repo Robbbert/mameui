@@ -26,6 +26,8 @@ public:
 	auto md21_cb() { return m_md21_cb.bind(); }
 	// Enable 64K ROM
 	auto md23_cb() { return m_md23_cb.bind(); }
+	// Enable INTA#
+	auto md27_cb() { return m_md27_cb.bind(); }
 
 	virtual uint32_t screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect) override;
 
@@ -63,6 +65,8 @@ protected:
 	devcb_read_line m_md21_cb;
 
 	devcb_read_line m_md23_cb;
+
+	devcb_read_line m_md27_cb;
 
 	u8 m_ramdac_mode = 0;
 	u8 m_ext_sr07;

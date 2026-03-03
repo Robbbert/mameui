@@ -75,6 +75,7 @@ sis6326_vga_device::sis6326_vga_device(const machine_config &mconfig, device_typ
 	, m_md20_cb(*this, 0)
 	, m_md21_cb(*this, 0)
 	, m_md23_cb(*this, 0)
+	, m_md27_cb(*this, 0)
 {
 }
 
@@ -508,7 +509,7 @@ void sis6326_vga_device::sequencer_map(address_map &map)
 		// ---- x--- MD27 INTA# enable
 		// ---- -x-- MD26 BIOS ROM disable
 		// ---- --xx MD25~MD24 <reserved>
-		NAME([] () { return (0 << 3); })
+		NAME([this] () { return (m_md27_cb() << 3); })
 	);
 	map(0x0f, 0x10).lrw8(
 		NAME([this] (offs_t offset) {

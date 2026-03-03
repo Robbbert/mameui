@@ -65,6 +65,7 @@ void sis6326_pci_device::device_add_mconfig(machine_config &config)
 	m_vga->md20_cb().set_constant(0);
 	m_vga->md21_cb().set_constant(0);
 	m_vga->md23_cb().set_constant(1);
+	m_vga->md27_cb().set_constant(1);
 }
 
 void sis6326_pci_device::device_start()
@@ -82,8 +83,7 @@ void sis6326_pci_device::device_start()
 
 	// INTA#
 	// TODO: VGA D3/MD27 can strap this to no irq pin
-	// ls5amvp3 goes N/A in Award Config list, assume it's disabled by default
-	intr_pin = 0;
+	intr_pin = 1;
 }
 
 void sis6326_pci_device::device_reset()
@@ -356,6 +356,9 @@ uint32_t sis6326_pci_device::GetROP(uint8_t rop, uint32_t src, uint32_t dst, uin
 		case 0x88:  // DSa
 			ret = dst & src;
 			break;
+		case 0xa0:  // DPa (win98se help tooltip borders)
+			ret = dst & pat;
+			break;
 		case 0xaa:  // D
 			ret = dst;
 			break;
@@ -515,7 +518,7 @@ void sis6326_pci_device::trigger_2d_command()
 					const u8 dst = m_vga->read_memory(xi + dst_base);
 					const u8 dot = (m_pattern_data[pattern_base] >> (7 - x) & 1);
 					// ROP and pattern depends on pattern
-					// win98se start menu hovering depends on this
+					// - win98se start menu hovering
 					const u8 res = GetROP(dot ? m_fg_rop : m_bg_rop, src, dst, dot ? m_fg_color : m_bg_color) & 0xff;
 					m_vga->write_memory(xi + dst_base, res & 0xff);
 				}
@@ -574,6 +577,7 @@ void sis6326_agp_device::device_add_mconfig(machine_config &config)
 	m_vga->md20_cb().set_constant(1);
 	m_vga->md21_cb().set_constant(1);
 	m_vga->md23_cb().set_constant(1);
+	m_vga->md27_cb().set_constant(1);
 }
 
 void sis6326_agp_device::device_reset()
