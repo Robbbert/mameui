@@ -221,6 +221,8 @@ void sis6326_pci_device::mmio_map(address_map &map)
 	map(0x8378, 0x837f).w(m_vga, FUNC(sis6326_vga_device::cursor_mmio_w));
 	// HACK: Same deal for 3D Engine Status
 	map(0x89fc, 0x89ff).lr32(NAME([] () { return (0x3ff << 16) | 3; }));
+
+	map(0x8afc, 0x8aff).nopw(); // winamp, verbose (TEND dummy register)
 }
 
 void sis6326_pci_device::vmi_map(address_map &map)

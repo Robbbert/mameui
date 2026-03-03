@@ -8,6 +8,8 @@
 
 #include "pci_slot.h"
 
+#include "bus/pc_joy/pc_joy.h"
+
 class trident_4dwavedx_device : public pci_card_device
 {
 public:
@@ -32,6 +34,10 @@ protected:
 private:
 	void io_map(address_map &map);
 	void mmio_map(address_map &map);
+
+	void gameport_map(address_map &map);
+
+	required_device<pc_joy_device> m_joy;
 
 	u32 m_ddma_config;
 	u32 m_legacy_control;

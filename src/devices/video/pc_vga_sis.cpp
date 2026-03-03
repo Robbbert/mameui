@@ -39,7 +39,7 @@ TODO (sis630):
 
 #define LOG_LOCKED (1U << 4) // log lock/unlock sequences
 
-#define VERBOSE (LOG_GENERAL | LOG_SEQ)
+#define VERBOSE (LOG_GENERAL)
 //#define LOG_OUTPUT_FUNC osd_printf_info
 
 #define LOGSEQ(...)       LOGMASKED(LOG_SEQ, __VA_ARGS__)
@@ -345,7 +345,8 @@ void sis6326_vga_device::sequencer_map(address_map &map)
 		}),
 		NAME([this] (offs_t offset, u8 data) {
 			m_ramdac_mode = data;
-			LOG("SR06: RAMDAC mode %02x\n", data);
+			// verbose in win98se
+			LOGSEQ("SR06: RAMDAC mode %02x\n", data);
 
 			svga.rgb8_en = svga.rgb15_en = svga.rgb16_en = svga.rgb24_en = svga.rgb32_en = 0;
 
@@ -443,7 +444,8 @@ void sis6326_vga_device::sequencer_map(address_map &map)
 			return m_ext_sr0b;
 		}),
 		NAME([this] (offs_t offset, u8 data) {
-			LOG("SR0B: Misc. Control 1 %02x\n", data);
+			// verbose in win98se
+			LOGSEQ("SR0B: Misc. Control 1 %02x\n", data);
 			LOGSEQ("\tTrue Color format %s MMIO space sel %d True Color frame rate modulation %d\n"
 				, BIT(data, 7) ? "BGR" : "RGB"
 				, (data >> 5) & 3
