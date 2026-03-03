@@ -111,6 +111,7 @@ protected:
 private:
 	address_space_config const m_mem_config;
 	address_space_config const m_pio_config;
+	address_space_config const m_p2m_config;
 
 	devcb_write_line::array<8> m_int_cb;
 	devcb_write_line m_xack_cb;

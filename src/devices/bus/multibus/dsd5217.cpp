@@ -29,7 +29,7 @@
 #include "multibyte.h"
 
 #define LOG_PORT (1U << 1)
-//#define VERBOSE (LOG_GENERAL)
+#define VERBOSE (LOG_GENERAL)
 
 #include "logmacro.h"
 
