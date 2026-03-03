@@ -15,6 +15,7 @@ TODO (main):
 - EISA slots;
 - SMBus;
 - PS/2 mouse is unstable, worked around by disabling and using a serial mouse instead.
+- BIOS won't recognize PCI_SLOT expansion ROMs;
 
 TODO (usability, to be moved in a SW list):
 - windows xp sp3: tests HW then does an ACPI devtrap write ($48), will eventually BSoD with
@@ -28,7 +29,7 @@ TODO (usability, to be moved in a SW list):
   with a STOP #a0 INTERNAL_POWER_ERROR with param1 0x5 ("reserved"!?)
 
 - gamecstl Kontron BIOS:
-\- hangs at PC=0xf3cf2, again wanting a SMI# from devtrap_en_w;
+\- hangs at PC=0xf3cf2 with a jp $-2, after software SMI#;
 \- No PS/2 inputs;
 
 - gamecstl dump (tested from shutms11, also see notes below):
@@ -174,6 +175,7 @@ Notes on possible shutms11 BIOS bugs:
 #include "emu.h"
 #include "cpu/i386/i386.h"
 #include "bus/isa/isa_cards.h"
+#include "bus/pci/pci_slot.h"
 #include "bus/pc_kbd/keyboards.h"
 #include "bus/rs232/hlemouse.h"
 #include "bus/rs232/null_modem.h"
@@ -310,13 +312,16 @@ void sis630_state::sis630(machine_config &config)
 //  "pci:08.0" SCSI controller (vendor=1000 NCR / LSI Logic / Symbios Logic device=0012 53C895A)
 //  "pci:09.0" IEEE1394 controller (vendor=1033 NEC device=00ce uPD72872 / μPD72872)
 
-	// TODO: 3 expansion PCI slots (PC104+)
+	// 3 expansion PCI slots (PC104+)
 	// "pci:09.x" to "pci:12.x"?
+	PCI_SLOT(config, "pci:1", pci_cards, 9,  0, 1, 2, 3, nullptr);
+	PCI_SLOT(config, "pci:2", pci_cards, 10, 1, 2, 3, 0, nullptr);
+	PCI_SLOT(config, "pci:3", pci_cards, 11, 2, 3, 0, 1, nullptr);
+
 	// (PIC-MG)
 	// "pci:20.x" to "pci:17.x"?
 
-	// TODO: 1 parallel + 2 serial ports
-	// TODO: 1 game port ('7018?)
+	// TODO: 1 game port (as connection in '7018?)
 
 	// TODO: move in MB implementations
 	// (some unsupported variants uses W83697HF, namely Gigabyte GA-6SMZ7)

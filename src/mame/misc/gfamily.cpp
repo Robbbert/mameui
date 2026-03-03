@@ -165,6 +165,8 @@ void gfamily_state::gfamily(machine_config &config)
 	// This will be correctly identified as bus #1-dev #0-func #0 by the Award BIOS
 	SIS630_GUI(config, "pci:02.0:00.0", 0);
 
+	// TODO: PCI/AGP slots
+
 	// TODO: looks different
 	ISA16_SLOT(config, "superio", 0, "pci:01.0:isabus", isa_internal_devices, "it8705f", true).set_option_machine_config("it8705f", ite_superio_config);
 

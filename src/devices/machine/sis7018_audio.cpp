@@ -6,6 +6,7 @@ SiS 7018 Audio device (AC'97 compliant)
 
 TODO:
 - Stub interface, to be improved;
+- shutms11 uses an AD1881 as AC'97 engine;
 - Reportedly based off Trident 4DWave technology, some registers effectively matches up;
 
 **************************************************************************************************/
