@@ -207,6 +207,7 @@ bool ppc_device::frontend::describe(opcode_desc &desc, const opcode_desc *prev)
 			if (!(m_ppc.m_cap & (PPCCAP_OEA | PPCCAP_4XX)))
 				return false;
 			desc.set_will_cause_exception();
+			desc.set_end_sequence();
 			if (is_601_class())
 				desc.cycles = 16;   // 601
 			else if (is_603_class())

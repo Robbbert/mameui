@@ -1,5 +1,12 @@
 // license:BSD-3-Clause
-// copyright-holders:Ryan Holtz
+// copyright-holders:Vas Crabb
+/***************************************************************************
+
+    e132xsfe.h
+
+    Hyperstone E1 instruction decoder
+
+***************************************************************************/
 #ifndef MAME_CPU_E132XS_E132XSFE_H
 #define MAME_CPU_E132XS_E132XSFE_H
 
@@ -10,13 +17,99 @@
 #include "cpu/drcfe.h"
 
 #include <algorithm>
+#include <cassert>
 #include <bitset>
 
 
-class hyperstone_device::opcode_desc : public opcode_desc_base<opcode_desc, 32>
+class hyperstone_device::opcode_desc : public opcode_desc_base<opcode_desc, 40>
 {
 public:
-	uint16_t        opptr[3];               // copy of up to 3 halfwords of opcode
+	uint16_t        opptr[3];
+	uint8_t         dst_code;
+	uint8_t         src_code;
+	bool            dst_local;
+	bool            src_local;
+	uint32_t        imm;
+
+	void set_g_used(unsigned n)
+	{
+		regin.set(REG_G0 + n);
+		if (n == 1) // SR
+		{
+			regin.set(REG_C);
+			regin.set(REG_Z);
+			regin.set(REG_N);
+			regin.set(REG_V);
+			regin.set(REG_FP);
+		}
+	}
+
+	void set_c_used() { regin.set(REG_C); }
+	void set_z_used() { regin.set(REG_Z); }
+	void set_n_used() { regin.set(REG_N); }
+	void set_v_used() { regin.set(REG_V); }
+	void set_fp_used() { regin.set(REG_FP); }
+
+	void set_cz_used()
+	{
+		set_c_used();
+		set_z_used();
+	}
+
+	void set_g_modified(unsigned n)
+	{
+		regout.set(REG_G0 + n);
+		if (n == 1) // SR
+		{
+			regout.set(REG_C);
+			regout.set(REG_Z);
+			regout.set(REG_N);
+			regout.set(REG_V);
+		}
+	}
+
+	void set_z_modified()
+	{
+		regout.set(REG_SR);
+		regout.set(REG_Z);
+	}
+
+	void set_znv_modified()
+	{
+		regout.set(REG_SR);
+		regout.set(REG_Z);
+		regout.set(REG_N);
+		regout.set(REG_V);
+	}
+
+	void set_czn_modified()
+	{
+		regout.set(REG_SR);
+		regout.set(REG_C);
+		regout.set(REG_Z);
+		regout.set(REG_N);
+	}
+
+	void set_cznv_modified()
+	{
+		regout.set(REG_SR);
+		regout.set(REG_C);
+		regout.set(REG_Z);
+		regout.set(REG_N);
+		regout.set(REG_V);
+	}
+
+	void set_fp_modified()
+	{
+		regout.set(REG_SR);
+		regout.set(REG_FP);
+	}
+
+	bool c_calc_required() const { return regreq[REG_C] || in_delay_slot(); }
+	bool z_calc_required() const { return regreq[REG_Z] || in_delay_slot(); }
+	bool n_calc_required() const { return regreq[REG_N] || in_delay_slot(); }
+	bool v_calc_required() const { return regreq[REG_V] || in_delay_slot(); }
+	bool condition_calc_required() const { return regreq[REG_C] || regreq[REG_Z] || regreq[REG_N] || regreq[REG_V] || in_delay_slot(); }
 
 	void set_can_change_modes() { m_extra_flags.set(CAN_CHANGE_MODES); }
 	void set_reads_memory() { m_extra_flags.set(READS_MEMORY); }
@@ -26,6 +119,12 @@ public:
 	bool reads_memory() const { return m_extra_flags[READS_MEMORY]; }
 	bool writes_memory() const { return m_extra_flags[WRITES_MEMORY]; }
 
+	bool dst_is_src() const { return (dst_local == src_local) && (dst_code == src_code); }
+	bool dst_is_pc() const { return !dst_local && (dst_code == 0); }
+	bool dst_is_sr() const { return !dst_local && (dst_code == 1); }
+	bool src_is_pc() const { return !src_local && (src_code == 0); }
+	bool src_is_sr() const { return !src_local && (src_code == 1); }
+
 	// epc - compute the exception PC
 	uint32_t epc() const
 	{
@@ -34,13 +133,35 @@ public:
 
 	void reset(offs_t curpc, bool in_delay_slot)
 	{
+		static_assert(REG_COUNT <= 40);
+
 		opcode_desc_base::reset(curpc, in_delay_slot);
 
 		std::fill(std::begin(opptr), std::end(opptr), 0);
+		dst_code = ~uint8_t(0);
+		src_code = ~uint8_t(0);
+		dst_local = false;
+		src_local = false;
+		imm = 0x80000000;
 		m_extra_flags.reset();
 	}
 
 protected:
+	enum
+	{
+		REG_G0 = 0,
+		REG_PC = REG_G0,
+		REG_SR = REG_G0 + 1,
+
+		REG_C = REG_G0 + 32,
+		REG_Z,
+		REG_N,
+		REG_V,
+		REG_FP,
+
+		REG_COUNT
+	};
+
 	enum
 	{
 		CAN_CHANGE_MODES = 0,
@@ -65,13 +186,23 @@ public:
 private:
 	bool describe(opcode_desc &desc, opcode_desc const *prev);
 
-	uint16_t read_word(opcode_desc &desc);
-	uint16_t read_imm1(opcode_desc &desc);
-	uint16_t read_imm2(opcode_desc &desc);
-	uint32_t read_ldstxx_imm(opcode_desc &desc);
-	uint32_t read_limm(opcode_desc &desc, uint16_t op);
-	int32_t decode_pcrel(opcode_desc &desc, uint16_t op);
-	int32_t decode_call(opcode_desc &desc);
+	void read_op(opcode_desc &desc);
+	void read_imm1(opcode_desc &desc);
+	void read_imm2(opcode_desc &desc);
+	void decode_const(opcode_desc &desc);
+
+	void decode_ll(opcode_desc &desc);
+	void decode_llext(opcode_desc &desc);
+	void decode_lr(opcode_desc &desc);
+	void decode_rr(opcode_desc &desc);
+	void decode_ln(opcode_desc &desc);
+	void decode_rn(opcode_desc &desc);
+	void decode_pcrel(opcode_desc &desc);
+	void decode_lrconst(opcode_desc &desc);
+	void decode_rrconst(opcode_desc &desc);
+	void decode_rrdis(opcode_desc &desc);
+	void decode_rimm(opcode_desc &desc, bool cmpbi_andni);
+	void decode_rrlim(opcode_desc &desc);
 
 	hyperstone_device &m_cpu;
 };

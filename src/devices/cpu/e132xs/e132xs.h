@@ -493,9 +493,6 @@ private:
 	bool generate_opcode(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc);
 
 	void generate_get_trap_addr(drcuml_block &block, uml::code_label &label, uml::parameter trapno);
-	uint32_t generate_get_const(const opcode_desc *desc);
-	uint32_t generate_get_immediate_s(const opcode_desc *desc);
-	uint32_t generate_get_pcrel(const opcode_desc *desc);
 	std::pair<uint16_t, uint32_t> generate_get_d_code_dis(const opcode_desc *opcode);
 
 	void generate_get_global_register_high(drcuml_block &block, compiler_state &compiler, uint32_t code, uml::parameter dst);
