@@ -9,15 +9,15 @@ SiS 6326
 #include "emu.h"
 #include "sis6326.h"
 
-#define LOG_WARN      (1U << 1)
+#define LOG_BLIT      (1U << 1)
 #define LOG_AGP       (1U << 2)
 
-#define VERBOSE (LOG_GENERAL | LOG_WARN | LOG_AGP)
+#define VERBOSE (LOG_GENERAL | LOG_AGP)
 //#define LOG_OUTPUT_FUNC osd_printf_info
 
 #include "logmacro.h"
 
-#define LOGWARN(...)            LOGMASKED(LOG_WARN, __VA_ARGS__)
+#define LOGBLIT(...)            LOGMASKED(LOG_BLIT, __VA_ARGS__)
 #define LOGAGP(...)             LOGMASKED(LOG_AGP, __VA_ARGS__)
 
 
@@ -45,6 +45,10 @@ ROM_START( sis6326pci )
 
 	ROM_SYSTEM_BIOS( 0, "sis", "SiS6326 4MB 1.25" )
 	ROMX_LOAD( "sis6326_75mhz.vbi", 0x000000, 0x008000, CRC(1c74109d) SHA1(c9180a32e78481c9082ad5bc75082ef4b289ad76), ROM_BIOS(0) )
+	ROM_SYSTEM_BIOS( 1, "3dpro", "3DPro 4MB EDO 1.06 (12-18-97)" )
+	ROMX_LOAD( "3dpro4mbedo.bin", 0x000000, 0x010000, CRC(f04b374c) SHA1(6eb96f7517df6eb566c615c2ab9ec5567035b6a5), ROM_BIOS(1) )
+	ROM_SYSTEM_BIOS( 2, "siso", "SiS6326 4MB 1.21d (08-18-98)" )
+	ROMX_LOAD( "4mb_pci.vbi",  0x000000, 0x00c000, CRC(8fca47be) SHA1(7ce995ec0d8b9ac4f0f40ccd0a61d7fc209d313f), ROM_BIOS(2) )
 ROM_END
 
 const tiny_rom_entry *sis6326_pci_device::device_rom_region() const
@@ -406,17 +410,17 @@ void sis6326_pci_device::trigger_2d_command()
 	const std::string src_types[] = { "bgcol", "fgcol", "memory", "CPU" };
 	// NOTE: pat type 3 may really select Direct Draw mode
 	const std::string pat_types[] = { "bgcol", "fgcol", "pattern", "<reserved>" };
-	LOG("Command: %04x: SRC %s, PAT %s, XY: %d|%d, clip: %d%d\n"
+	LOGBLIT("Command: %04x: SRC %s, PAT %s, XY: %d|%d, clip: %d%d\n"
 		, m_draw_command, src_types[src_select], pat_types[pat_select]
 		, x_dir, y_dir, clip_enable, clip_external
 	);
 	if (clip_enable)
 	{
-		LOG("cliprange X %d %d ~ Y %d %d\n", m_clip_left, m_clip_right, m_clip_top, m_clip_bottom);
+		LOGBLIT("cliprange X %d %d ~ Y %d %d\n", m_clip_left, m_clip_right, m_clip_top, m_clip_bottom);
 		// (a very unlikely) sanity check
 		if (m_dst_pitch == 0)
 		{
-			LOG("\tWarning: dst pitch == 0, ignored!\n");
+			LOGBLIT("\tWarning: dst pitch == 0, ignored!\n");
 			return;
 		}
 	}
@@ -428,10 +432,10 @@ void sis6326_pci_device::trigger_2d_command()
 	{
 		case 0:
 		{
-			LOG("\tBitBlt\n");
-			LOG("\tSRC Addr %06x DST Addr %06x Sel %02x\n", m_src_start_addr, m_dst_start_addr, m_draw_sel);
-			LOG("\tSRC Pitch %d DST Pitch %d Rect %dx%d\n", m_src_pitch, m_dst_pitch, m_rect_width, m_rect_height);
-			LOG("\tFG ROP %02x Color %06x | BG ROP %02x Color %06x\n", m_fg_rop, m_fg_color, m_bg_rop, m_bg_color);
+			LOGBLIT("\tBitBlt\n");
+			LOGBLIT("\tSRC Addr %06x DST Addr %06x Sel %02x\n", m_src_start_addr, m_dst_start_addr, m_draw_sel);
+			LOGBLIT("\tSRC Pitch %d DST Pitch %d Rect %dx%d\n", m_src_pitch, m_dst_pitch, m_rect_width, m_rect_height);
+			LOGBLIT("\tFG ROP %02x Color %06x | BG ROP %02x Color %06x\n", m_fg_rop, m_fg_color, m_bg_rop, m_bg_color);
 
 			for (s32 y = 0; y < m_rect_height; y++)
 			{
@@ -469,7 +473,7 @@ void sis6326_pci_device::trigger_2d_command()
 		}
 		case 1:
 		{
-			LOG("\tBitBlt with mask\n");
+			LOGBLIT("\tBitBlt with mask\n");
 			// ...
 			break;
 		}
@@ -477,14 +481,14 @@ void sis6326_pci_device::trigger_2d_command()
 		{
 			const bool color_exp = !!BIT(m_draw_command, 12);
 			const bool font_exp = !!BIT(m_draw_command, 13);
-			LOG("\tColor/Font expansion: Color enhanced %d Font enhanced %d\n", color_exp, font_exp);
-			LOG("\tSRC Addr %06x DST Addr %06x Sel %02x\n", m_src_start_addr, m_dst_start_addr, m_draw_sel);
-			LOG("\tSRC Pitch %d DST Pitch %d Rect %dx%d\n", m_src_pitch, m_dst_pitch, m_rect_width, m_rect_height);
-			LOG("\tFG ROP %02x Color %06x | BG ROP %02x Color %06x\n", m_fg_rop, m_fg_color, m_bg_rop, m_bg_color);
+			LOGBLIT("\tColor/Font expansion: Color enhanced %d Font enhanced %d\n", color_exp, font_exp);
+			LOGBLIT("\tSRC Addr %06x DST Addr %06x Sel %02x\n", m_src_start_addr, m_dst_start_addr, m_draw_sel);
+			LOGBLIT("\tSRC Pitch %d DST Pitch %d Rect %dx%d\n", m_src_pitch, m_dst_pitch, m_rect_width, m_rect_height);
+			LOGBLIT("\tFG ROP %02x Color %06x | BG ROP %02x Color %06x\n", m_fg_rop, m_fg_color, m_bg_rop, m_bg_color);
 
 			if (m_rect_width > 8)
 			{
-				LOG("\tWarning: rect width > 8, ignored!\n");
+				LOGBLIT("\tWarning: rect width > 8, ignored!\n");
 				return;
 			}
 
@@ -530,7 +534,7 @@ void sis6326_pci_device::trigger_2d_command()
 		{
 			const bool major_axis = !!BIT(m_draw_command, 10);
 			const bool last_pixel = !!BIT(m_draw_command, 11);
-			LOG("\tLine: major axis %s %d\n", major_axis ? "Y" : "X", !last_pixel);
+			LOGBLIT("\tLine: major axis %s %d\n", major_axis ? "Y" : "X", !last_pixel);
 			// ...
 			break;
 		}
@@ -549,21 +553,17 @@ sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, const char
 
 ROM_START( sis6326agp )
 	ROM_REGION32_LE( 0x10000, "bios", ROMREGION_ERASEFF )
-	// Default is AOpen for supporting OpenGL
+	// Default is AOpen for supporting OpenGL in its driver
 	ROM_DEFAULT_BIOS("aopen")
 
-	ROM_SYSTEM_BIOS( 0, "aopen", "AOpen PA50V 2.25" )
+	ROM_SYSTEM_BIOS( 0, "aopen", "AOpen PA50V 4MB 2.25" )
 	ROMX_LOAD( "aopenpa50v.vbi", 0x000000, 0x008000, CRC(6c4c7518) SHA1(36bb29a23d565e34d548701acc248d50c99d7da4), ROM_BIOS(0) )
-	ROM_SYSTEM_BIOS( 1, "3dpro", "3DPro 4MB EDO 1.06" )
-	ROMX_LOAD( "3dpro4mbedo.bin", 0x000000, 0x010000, CRC(f04b374c) SHA1(6eb96f7517df6eb566c615c2ab9ec5567035b6a5), ROM_BIOS(1) )
-	ROM_SYSTEM_BIOS( 2, "siso", "SiS6326 4MB 1.21d" )
-	ROMX_LOAD( "4mbsdr.vbi",   0x000000, 0x00c000, CRC(a5f8c7f7) SHA1(9e5cfcf8d34e0c5829343179c87fb2b97f7a7f9c), ROM_BIOS(2) )
-	ROM_SYSTEM_BIOS( 3, "sis", "SiS6326 4MB 1.25" )
-	ROMX_LOAD( "sis6326agp.bin", 0x000000, 0x010000, CRC(a671255c) SHA1(332ab9499142e8f7a235afe046e8e8d21a28580d), ROM_BIOS(3) )
-
-	// basically identical to siso
-//  ROM_SYSTEM_BIOS( 3, "sisvbi", "SiS6326 4MB PCI 1.21d" )
-//  ROMX_LOAD( "4mb_pci.vbi",  0x000000, 0x00c000, CRC(8fca47be) SHA1(7ce995ec0d8b9ac4f0f40ccd0a61d7fc209d313f), ROM_BIOS(3) )
+	// AGP/PCI
+	ROM_SYSTEM_BIOS( 1, "siso", "SiS6326 4MB 1.21d (08-18-98)" )
+	ROMX_LOAD( "4mbsdr.vbi",   0x000000, 0x00c000, CRC(a5f8c7f7) SHA1(9e5cfcf8d34e0c5829343179c87fb2b97f7a7f9c), ROM_BIOS(1) )
+	// AGP variant of the sis6326pci one
+	ROM_SYSTEM_BIOS( 2, "sis", "SiS6326 4MB 1.25" )
+	ROMX_LOAD( "sis6326agp.bin", 0x000000, 0x010000, CRC(a671255c) SHA1(332ab9499142e8f7a235afe046e8e8d21a28580d), ROM_BIOS(2) )
 ROM_END
 
 const tiny_rom_entry *sis6326_agp_device::device_rom_region() const
