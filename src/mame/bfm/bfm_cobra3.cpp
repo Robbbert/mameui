@@ -43,7 +43,7 @@ public:
 			m_meters(*this, "meters"),
 			m_lamps(*this, "lamp%u", 0U),
 			m_scsibus(*this, "scsi"),
-			m_scsic(*this, "scsi:6:ncr5380"),
+			m_scsic(*this, "ncr5380"),
 			m_watchdog(*this, "watchdog")
 	{ }
 
@@ -81,7 +81,6 @@ protected:
 	uint8_t m_volume;
 
 	virtual void machine_start() override ATTR_COLD;
-	static void scsi_devices(device_slot_interface &device);
 	void dma1_drq(int state);
 	void scc66470_map(address_map &map);
 	void scc66470_irq(int state);
@@ -379,12 +378,6 @@ void bfm_cobra3_state::machine_start()
 }
 
 
-static void cobra_scsi_devices(device_slot_interface &device)
-{
-	device.option_add("cdrom", NSCSI_CDROM);
-	device.option_add_internal("ncr53c80", NCR53C80);
-}
-
 void bfm_cobra3_state::dma1_drq(int state)
 {
 //	m_maincpu->dma_dreq1_w(state);
@@ -487,15 +480,13 @@ void bfm_cobra3_state::bfm_cobra3(machine_config &config)
 	m_scc66470->set_screen("screen");
 	m_scc66470->irq().set(FUNC(bfm_cobra3_state::scc66470_irq));
 
-	NSCSI_BUS(config, m_scsibus);
+	auto &scsi(NSCSI_BUS(config, m_scsibus));
+	auto &cdrom(NSCSI_CDROM(config, "cdrom"));
+	scsi.set_external_device(2, cdrom);
 
-	NSCSI_CONNECTOR(config, "scsi:2", cobra_scsi_devices, "cdrom");
-	NSCSI_CONNECTOR(config, "scsi:6").option_set("ncr5380", NCR5380).machine_config(
-		[this] (device_t *device)
-		{
-			ncr53c80_device &adapter = downcast<ncr53c80_device &>(*device);
-			adapter.drq_handler().set(*this, FUNC(bfm_cobra3_state::dma1_drq));
-		});
+	NCR5380(config, m_scsic);
+	scsi.set_external_device(6, m_scsic);
+	m_scsic->drq_handler().set(DEVICE_SELF, FUNC(bfm_cobra3_state::dma1_drq));
 
 	WATCHDOG_TIMER(config, "watchdog").set_time(PERIOD_OF_555_MONOSTABLE(120000,100e-9)); //TODO: Check timings	
 	METERS(config, m_meters, 0).set_number(4);

@@ -303,7 +303,7 @@ public:
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
 		m_audiocpu(*this, "audiocpu"),
-		m_ncr53cf96(*this, "scsi:7:ncr53cf96"),
+		m_ncr53cf96(*this, "ncr53cf96"),
 		m_ata(*this, "ata"),
 		m_dpram(*this, "dpram"),
 		m_waveram(*this, "rfsnd"),
@@ -1150,20 +1150,15 @@ void twinkle_state::twinkle(machine_config &config)
 	CY7C131(config, m_dpram); // or IDT7130 at some PCBs
 	m_dpram->intl_callback().set_inputline(m_audiocpu, M68K_IRQ_4);
 
-	NSCSI_BUS(config, "scsi");
-	NSCSI_CONNECTOR(config, "scsi:4").option_set("cdrom", NSCSI_XM5401).machine_config(
-			[](device_t *device)
-			{
-				device->subdevice<cdda_device>("cdda")->add_route(0, "^^speaker", 1.0, 0);
-				device->subdevice<cdda_device>("cdda")->add_route(1, "^^speaker", 1.0, 1);
-			});
-	NSCSI_CONNECTOR(config, "scsi:7").option_set("ncr53cf96", NCR53CF96).clock(32_MHz_XTAL/2).machine_config(
-			[this](device_t *device)
-			{
-				ncr53cf96_device &adapter = downcast<ncr53cf96_device &>(*device);
-				adapter.irq_handler_cb().set(":maincpu:irq", FUNC(psxirq_device::intin10));
-				adapter.drq_handler_cb().set(*this, FUNC(twinkle_state::scsi_drq));
-			});
+	auto &scsi(NSCSI_BUS(config, "scsi"));
+	auto &cdrom(NSCSI_XM5401(config, "cdrom"));
+	scsi.set_external_device(4, cdrom);
+	cdrom.subdevice<cdda_device>("cdda")->add_route(0, ":speaker", 1.0, 0);
+	cdrom.subdevice<cdda_device>("cdda")->add_route(1, ":speaker", 1.0, 1);
+	NCR53CF96(config, m_ncr53cf96, 32_MHz_XTAL/2);
+	scsi.set_external_device(7, m_ncr53cf96);
+	m_ncr53cf96->irq_handler_cb().set(":maincpu:irq", FUNC(psxirq_device::intin10));
+	m_ncr53cf96->drq_handler_cb().set(DEVICE_SELF, FUNC(twinkle_state::scsi_drq));
 
 	ATA_INTERFACE(config, m_ata).options(ata_devices, "hdd", nullptr, true);
 	m_ata->irq_handler().set(FUNC(twinkle_state::spu_ata_irq));
