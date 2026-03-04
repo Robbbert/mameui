@@ -14,6 +14,56 @@
 #include "cpu/drcfe.ipp"
 
 
+
+/*-------------------------------------------------
+    log_flags - log the instruction description to
+    a stream
+-------------------------------------------------*/
+
+void sh_common_execution::opcode_desc::log_flags(std::ostream &stream) const
+{
+	// branches
+	if (is_unconditional_branch())
+		stream << 'U';
+	else if (is_conditional_branch())
+		stream << 'C';
+	else
+		stream << '.';
+
+	// intrablock branches
+	stream << (intrablock_branch() ? 'i' : '.');
+
+	// branch targets
+	stream << (is_branch_target() ? 'B' : '.');
+
+	// delay slots
+	stream << (in_delay_slot() ? 'D' : '.');
+
+	// exceptions
+	if (will_cause_exception())
+		stream << 'E';
+	else if (can_cause_exception())
+		stream << 'e';
+	else
+		stream << '.';
+
+	// read/write
+	if (reads_memory())
+		stream << (writes_memory() ? '+' : 'R');
+	else if (writes_memory())
+		stream << 'W';
+	else
+		stream << '.';
+
+	// TLB validation
+	stream << (validate_tlb() ? 'V' : '.');
+
+	// redispatch
+	stream << (redispatch() ? 'R' : '.');
+}
+
+
+
 /***************************************************************************
     INSTRUCTION PARSERS
 ***************************************************************************/

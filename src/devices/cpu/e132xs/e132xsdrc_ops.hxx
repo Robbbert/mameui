@@ -3873,7 +3873,6 @@ void hyperstone_device::generate_call(drcuml_block &block, compiler_state &compi
 		dst_code = 16;
 
 	UML_BFXU(block, I3, DRC_SR, FP_SHIFT, 7);
-	UML_MOV(block, I1, desc->imm);
 
 	if (SrcGlobal)
 	{

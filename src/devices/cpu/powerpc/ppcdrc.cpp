@@ -23,6 +23,10 @@
 #include "cpu/drcuml.h"
 #include "cpu/drcumlsh.h"
 
+#include "util/vecstream.h"
+
+#include <locale>
+
 
 
 /***************************************************************************
@@ -1764,9 +1768,9 @@ void ppc_device::generate_compute_flags(drcuml_block &block, const opcode_desc *
 	/* modify inputs based on required flags */
 	if (!DISABLE_FLAG_OPTIMIZATIONS)
 	{
-		if (!frontend::REGFLAG_XER_CA(desc->regreq))
+		if (!desc->xer_ca_required())
 			xermask &= ~XER_CA;
-		if (!frontend::REGFLAG_CR(desc->regreq, 0))
+		if (!desc->cr_required(0))
 			updatecr = 0;
 	}
 	const uint32_t xerflags = ((xermask & XER_OV) ? uml::FLAG_V : 0) | ((xermask & XER_CA) ? uml::FLAG_C : 0);
@@ -2969,7 +2973,7 @@ bool ppc_device::generate_instruction_1f(drcuml_block &block, compiler_state *co
 			UML_CMP(block, I2, 0x00000020);                     // cmp rb,0x20
 			UML_JMPc(block, COND_S, compiler->labelnum);        // bs 1:
 
-			if (DISABLE_FLAG_OPTIMIZATIONS || frontend::REGFLAG_XER_CA(desc->regreq))
+			if (DISABLE_FLAG_OPTIMIZATIONS || desc->xer_ca_required())
 			{
 				// for shift amt > 32, carry flag is the sign bit of Rs and the sign bit fills all bit positions
 				UML_TEST(block, R32(G_RS(op)), 0x80000000);
@@ -2980,7 +2984,7 @@ bool ppc_device::generate_instruction_1f(drcuml_block &block, compiler_state *co
 			UML_JMP(block, compiler->labelnum+1);               // bra 2:
 
 			UML_LABEL(block, compiler->labelnum++);             // 1:
-			if (DISABLE_FLAG_OPTIMIZATIONS || frontend::REGFLAG_XER_CA(desc->regreq))
+			if (DISABLE_FLAG_OPTIMIZATIONS || desc->xer_ca_required())
 			{
 				UML_SHL(block, I1, 0xffffffff, I2);                         // shl     i1,0xffffffff,i2
 				UML_XOR(block, I1, I1, ~0);                                 // xor     i1,i1,~0
@@ -3001,7 +3005,7 @@ bool ppc_device::generate_instruction_1f(drcuml_block &block, compiler_state *co
 			return true;
 
 		case 0x338: /* SRAWIx */
-			if (DISABLE_FLAG_OPTIMIZATIONS || frontend::REGFLAG_XER_CA(desc->regreq))
+			if (DISABLE_FLAG_OPTIMIZATIONS || desc->xer_ca_required())
 			{
 				UML_AND(block, I0, R32(G_RS(op)), ~(0xffffffff << (G_SH(op) & 31)));// and   i0,rs,~(0xffffffff << (sh & 31))
 				UML_SAR(block, I1, R32(G_RS(op)), 31);                          // sar     i1,rs,31
@@ -3917,213 +3921,56 @@ void ppc_device::log_add_disasm_comment(drcuml_block &block, uint32_t pc, uint32
 
 
 /*-------------------------------------------------
-    log_desc_flags_to_string - generate a string
-    representing the instruction description
-    flags
--------------------------------------------------*/
-
-const char *ppc_device::log_desc_flags_to_string(const opcode_desc &desc)
-{
-	static char tempbuf[30];
-	char *dest = tempbuf;
-
-	/* branches */
-	if (desc.is_unconditional_branch())
-		*dest++ = 'U';
-	else if (desc.is_conditional_branch())
-		*dest++ = 'C';
-	else
-		*dest++ = '.';
-
-	/* intrablock branches */
-	*dest++ = desc.intrablock_branch() ? 'i' : '.';
-
-	/* branch targets */
-	*dest++ = desc.is_branch_target() ? 'B' : '.';
-
-	/* delay slots */
-	*dest++ = desc.in_delay_slot() ? 'D' : '.';
-
-	/* exceptions */
-	if (desc.will_cause_exception())
-		*dest++ = 'E';
-	else if (desc.can_cause_exception())
-		*dest++ = 'e';
-	else
-		*dest++ = '.';
-
-	/* read/write */
-	if (desc.reads_memory())
-		*dest++ = 'R';
-	else if (desc.writes_memory())
-		*dest++ = 'W';
-	else
-		*dest++ = '.';
-
-	/* TLB validation */
-	*dest++ = desc.validate_tlb() ? 'V' : '.';
-
-	/* redispatch */
-	*dest++ = desc.redispatch() ? 'R' : '.';
-	return tempbuf;
-}
-
-
-/*-------------------------------------------------
-    log_register_list - log a list of GPR registers
--------------------------------------------------*/
-
-void ppc_device::log_register_list(const char *string, const std::bitset<128> &reglist, const std::bitset<128> *regnostarlist)
-{
-	static const char *const crtext[4] = { "lt", "gt", "eq", "so" };
-	int count = 0;
-	int regnum;
-	int crnum;
-
-	/* skip if nothing */
-	if (reglist.none())
-		return;
-
-	m_drcuml->log_printf("[%s:", string);
-
-	for (regnum = 0; regnum < 32; regnum++)
-	{
-		if (frontend::REGFLAG_R(reglist, regnum))
-		{
-			m_drcuml->log_printf("%sr%d", (count++ == 0) ? "" : ",", regnum);
-			if (regnostarlist && !frontend::REGFLAG_R(*regnostarlist, regnum))
-				m_drcuml->log_printf("*");
-		}
-	}
-
-	for (regnum = 0; regnum < 32; regnum++)
-	{
-		if (frontend::REGFLAG_FR(reglist, regnum))
-		{
-			m_drcuml->log_printf("%sfr%d", (count++ == 0) ? "" : ",", regnum);
-			if (regnostarlist && !frontend::REGFLAG_FR(*regnostarlist, regnum))
-				m_drcuml->log_printf("*");
-		}
-	}
-
-	for (regnum = 0; regnum < 8; regnum++)
-	{
-		if (frontend::REGFLAG_CR(reglist, regnum))
-		{
-			if ((frontend::REGFLAG_CR(reglist, regnum) == 0x0f) && (!regnostarlist || (frontend::REGFLAG_CR(*regnostarlist, regnum) == 0x0f)))
-			{
-				m_drcuml->log_printf("%scr%d", (count++ == 0) ? "" : ",", regnum);
-				if (regnostarlist && !frontend::REGFLAG_CR(*regnostarlist, regnum))
-					m_drcuml->log_printf("*");
-			}
-			else
-			{
-				for (crnum = 0; crnum < 4; crnum++)
-				{
-					if (frontend::REGFLAG_CR_BIT(reglist, regnum * 4 + crnum))
-					{
-						m_drcuml->log_printf("%scr%d[%s]", (count++ == 0) ? "" : ",", regnum, crtext[crnum]);
-						if (regnostarlist && !frontend::REGFLAG_CR_BIT(*regnostarlist, regnum * 4 + crnum))
-							m_drcuml->log_printf("*");
-					}
-				}
-			}
-		}
-	}
-
-	if (frontend::REGFLAG_XER_CA(reglist))
-	{
-		m_drcuml->log_printf("%sxer_ca", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !frontend::REGFLAG_XER_CA(*regnostarlist))
-			m_drcuml->log_printf("*");
-	}
-	if (frontend::REGFLAG_XER_OV(reglist))
-	{
-		m_drcuml->log_printf("%sxer_ov", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !frontend::REGFLAG_XER_OV(*regnostarlist))
-			m_drcuml->log_printf("*");
-	}
-	if (frontend::REGFLAG_XER_SO(reglist))
-	{
-		m_drcuml->log_printf("%sxer_so", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !frontend::REGFLAG_XER_SO(*regnostarlist))
-			m_drcuml->log_printf("*");
-	}
-	if (frontend::REGFLAG_XER_COUNT(reglist))
-	{
-		m_drcuml->log_printf("%sxer_count", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !frontend::REGFLAG_XER_COUNT(*regnostarlist))
-			m_drcuml->log_printf("*");
-	}
-	if (frontend::REGFLAG_CTR(reglist))
-	{
-		m_drcuml->log_printf("%sctr", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !frontend::REGFLAG_CTR(*regnostarlist))
-			m_drcuml->log_printf("*");
-	}
-	if (frontend::REGFLAG_LR(reglist))
-	{
-		m_drcuml->log_printf("%slr", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !frontend::REGFLAG_LR(*regnostarlist))
-			m_drcuml->log_printf("*");
-	}
-
-	for (regnum = 0; regnum < 8; regnum++)
-	{
-		if (frontend::REGFLAG_FPSCR(reglist, regnum))
-		{
-			m_drcuml->log_printf("%sfpscr%d", (count++ == 0) ? "" : ",", regnum);
-			if (regnostarlist && !frontend::REGFLAG_FPSCR(*regnostarlist, regnum))
-				m_drcuml->log_printf("*");
-		}
-	}
-
-	m_drcuml->log_printf("] ");
-}
-
-
-/*-------------------------------------------------
     log_opcode_desc - log a list of descriptions
 -------------------------------------------------*/
 
 void ppc_device::log_opcode_desc(const opcode_desc *desclist, int indent)
 {
 	util::ovectorstream buffer;
+	buffer.imbue(std::locale::classic());
 
-	/* open the file, creating it if necessary */
+	// assume no indent is the start of a sequence and needs a heading
 	if (indent == 0)
 		m_drcuml->log_printf("\nDescriptor list @ %08X\n", desclist->pc);
 
-	/* output each descriptor */
+	// output each description
 	for ( ; desclist != nullptr; desclist = desclist->next())
 	{
 		buffer.clear();
 		buffer.seekp(0);
-
-		/* disassemble the current instruction and output it to the log */
-		if (m_drcuml->logging() || m_drcuml->logging_native())
-		{
-			if (desclist->virtual_noop())
-				buffer << "<virtual nop>";
-			else
-				m_dasm.dasm_one(buffer, desclist->pc, desclist->opptr);
-		}
-		else
-			buffer << "???";
-
+		desclist->log_flags(buffer);
 		buffer.put('\0');
-		m_drcuml->log_printf("%08X [%08X] t:%08X f:%s: %-30s", desclist->pc, desclist->physpc, desclist->targetpc, log_desc_flags_to_string(*desclist), &buffer.vec()[0]);
+		m_drcuml->log_printf("%08X [%08X] t:%08X f:%s: ", desclist->pc, desclist->physpc, desclist->targetpc, &buffer.vec()[0]);
 
-		/* output register states */
-		log_register_list("use", desclist->regin, nullptr);
-		log_register_list("mod", desclist->regout, &desclist->regreq);
-		m_drcuml->log_printf("\n");
+		// disassemble the current instruction and output it to the log
+		buffer.clear();
+		buffer.seekp(0);
+		if (desclist->virtual_noop())
+			buffer << "<virtual nop>";
+		else
+			m_dasm.dasm_one(buffer, desclist->pc, desclist->opptr);
+		buffer.put('\0');
+		m_drcuml->log_printf("%-30s", &buffer.vec()[0]);
 
-		/* if we have a delay slot, output it recursively */
+		// output register dependencies
+		buffer.clear();
+		buffer.seekp(0);
+		if (!desclist->regin.none())
+		{
+			desclist->log_registers_used(buffer);
+			if (!desclist->regout.none())
+				buffer << ' ';
+		}
+		if (!desclist->regout.none())
+			desclist->log_registers_modified(buffer);
+		buffer.put('\0');
+		m_drcuml->log_printf("%s\n", &buffer.vec()[0]);
+
+		// if we have a delay slot, output it recursively
 		if (desclist->delay.first() != nullptr)
 			log_opcode_desc(desclist->delay.first(), indent + 1);
 
-		/* at the end of a sequence add a dividing line */
+		// at the end of a sequence add a dividing line
 		if (desclist->end_sequence())
 			m_drcuml->log_printf("-----\n");
 	}

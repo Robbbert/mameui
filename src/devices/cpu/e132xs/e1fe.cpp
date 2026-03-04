@@ -2,19 +2,118 @@
 // copyright-holders:Vas Crabb
 /***************************************************************************
 
-    e132xsfe.cpp
+    e1fe.cpp
 
     Hyperstone E1 instruction decoder
 
 ***************************************************************************/
 
 #include "emu.h"
-#include "e132xsfe.h"
+#include "e1fe.h"
 
-#include "32xsdefs.h"
+#include "e1defs.h"
 
 #include "cpu/drcfe.ipp"
 
+
+
+void hyperstone_device::opcode_desc::log_flags(std::ostream &stream) const
+{
+	// branches
+	if (is_unconditional_branch())
+		stream << 'U';
+	else if (is_conditional_branch())
+		stream << 'C';
+	else
+		stream << '.';
+
+	// intrablock branches
+	stream << (intrablock_branch() ? 'i' : '.');
+
+	// branch targets
+	stream << (is_branch_target() ? 'B' : '.');
+
+	// delay slots
+	stream << (in_delay_slot() ? 'D' : '.');
+
+	// check H flag
+	stream << (check_h() ? 'H' : '.');
+
+	// modes
+	stream << (can_change_modes() ? 'M' : '.');
+
+	// exceptions
+	if (will_cause_exception())
+		stream << 'E';
+	else if (can_cause_exception())
+		stream << 'e';
+	else
+		stream << '.';
+
+	// read/write
+	if (reads_memory())
+		stream << 'R';
+	else if (writes_memory())
+		stream << 'W';
+	else
+		stream << '.';
+
+	// TLB validation
+	stream << (validate_tlb() ? 'V' : '.');
+
+	// redispatch
+	stream << (redispatch() ? 'R' : '.');
+}
+
+void hyperstone_device::opcode_desc::log_registers_used(std::ostream &stream) const
+{
+	stream << "[use:";
+	log_register_list(stream, regin, nullptr);
+	stream << ']';
+}
+
+void hyperstone_device::opcode_desc::log_registers_modified(std::ostream &stream) const
+{
+	stream << "[mod:";
+	log_register_list(stream, regout, &regreq);
+	stream << ']';
+}
+
+void hyperstone_device::opcode_desc::log_register_list(std::ostream &stream, const regmask &reglist, const regmask *regnostarlist)
+{
+	int count = 0;
+
+	for (int regnum = 0; regnum < 32; regnum++)
+	{
+		if (reglist[REG_G0 + regnum])
+		{
+			if (count++)
+				stream << ',';
+			stream << 'G' << regnum;
+			if (regnostarlist && !(*regnostarlist)[REG_G0 + regnum])
+				stream << '*';
+		}
+	}
+
+	const auto log_bit =
+			[&stream, &count, &reglist, &regnostarlist] (size_t bit, const char *name)
+			{
+				if (reglist[bit])
+				{
+					if (count++)
+						stream << ',';
+					stream << name;
+					if (regnostarlist && !(*regnostarlist)[bit])
+						stream << '*';
+				}
+			};
+
+	log_bit(REG_C,  "C");
+	log_bit(REG_Z,  "Z");
+	log_bit(REG_N,  "N");
+	log_bit(REG_V,  "V");
+	log_bit(REG_FP, "FP");
+}
 
 
 hyperstone_device::frontend::frontend(hyperstone_device &cpu, uint32_t window_start, uint32_t window_end, uint32_t max_sequence)
@@ -409,7 +508,11 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		if (desc.dst_local || desc.src_local)
 			desc.set_fp_used();
 		if (!desc.dst_local || !desc.src_local)
+		{
+			if (!prev || prev->regout[SR_REGISTER])
+				desc.set_check_h();
 			desc.regin.set(SR_REGISTER); // only the H bit is used
+		}
 		if (!desc.src_local)
 		{
 			desc.set_g_used(desc.src_code);
@@ -418,6 +521,8 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		if (!desc.dst_local)
 		{
 			desc.set_can_cause_exception();
+			desc.set_g_used(desc.dst_code);
+			desc.set_g_used(desc.dst_code + 16);
 			desc.set_g_modified(desc.dst_code);
 			desc.set_g_modified(desc.dst_code + 16);
 			if (desc.dst_code == PC_REGISTER)
@@ -594,14 +699,14 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		else
 			desc.set_znv_modified(); // negs
 		break;
-	case 0x60: // cmpi global,imm
-	case 0x61: // cmpi global,imm
-	case 0x62: // cmpi local,imm
-	case 0x63: // cmpi local,imm
-	case 0x70: // cmpbi global,imm
-	case 0x71: // cmpbi global,imm
-	case 0x72: // cmpbi local,imm
-	case 0x73: // cmpbi local,imm
+	case 0x60: // cmpi global
+	case 0x61: // cmpi global
+	case 0x62: // cmpi local
+	case 0x63: // cmpi local
+	case 0x70: // cmpbi global
+	case 0x71: // cmpbi global
+	case 0x72: // cmpbi local
+	case 0x73: // cmpbi local
 		decode_rimm(desc, op & 0x1000);
 		if (desc.dst_local)
 			desc.set_fp_used();
@@ -612,10 +717,14 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		else
 			desc.set_cznv_modified(); // cmpi
 		break;
-	case 0x64: // movi global,imm
-	case 0x65: // movi global,imm
+	case 0x64: // movi global
+	case 0x65: // movi global
 		decode_rimm(desc, false);
 		desc.set_can_cause_exception();
+		if (!prev || prev->regout[SR_REGISTER])
+			desc.set_check_h();
+		desc.set_g_used(desc.dst_code);
+		desc.set_g_used(desc.dst_code + 16);
 		desc.regin.set(SR_REGISTER); // only the H bit is used
 		desc.set_g_modified(desc.dst_code);
 		desc.set_g_modified(desc.dst_code + 16);
@@ -630,20 +739,20 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			desc.set_end_sequence();
 		}
 		break;
-	case 0x66: // movi local,imm
-	case 0x67: // movi local,imm
+	case 0x66: // movi local
+	case 0x67: // movi local
 		decode_rimm(desc, false);
 		desc.set_fp_used();
 		desc.set_znv_modified();
 		break;
-	case 0x68: // addi global,imm
-	case 0x69: // addi global,imm
-	case 0x6a: // addi local,imm
-	case 0x6b: // addi local,imm
-	case 0x6c: // addsi global,imm
-	case 0x6d: // addsi global,imm
-	case 0x6e: // addsi local,imm
-	case 0x6f: // addsi local,imm
+	case 0x68: // addi global
+	case 0x69: // addi global
+	case 0x6a: // addi local
+	case 0x6b: // addi local
+	case 0x6c: // addsi global
+	case 0x6d: // addsi global
+	case 0x6e: // addsi local
+	case 0x6f: // addsi local
 		decode_rimm(desc, false);
 		if (op & 0x0400)
 			desc.set_can_cause_exception(); // addsi
@@ -667,12 +776,12 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		else
 			desc.set_cznv_modified(); // addi
 		break;
-	case 0x74: // andni global,imm
-	case 0x75: // andni global,imm
-	case 0x78: // ori global,imm
-	case 0x79: // ori global,imm
-	case 0x7c: // xori global,imm
-	case 0x7d: // xori global,imm
+	case 0x74: // andni global
+	case 0x75: // andni global
+	case 0x78: // ori global
+	case 0x79: // ori global
+	case 0x7c: // xori global
+	case 0x7d: // xori global
 		decode_rimm(desc, !(op & 0x0800));
 		desc.set_g_used(desc.dst_code);
 		desc.set_g_modified(desc.dst_code);
@@ -689,12 +798,12 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		}
 		desc.set_z_modified();
 		break;
-	case 0x76: // andni local,imm
-	case 0x77: // andni local,imm
-	case 0x7a: // ori local,imm
-	case 0x7b: // ori local,imm
-	case 0x7e: // xori local,imm
-	case 0x7f: // xori local,imm
+	case 0x76: // andni local
+	case 0x77: // andni local
+	case 0x7a: // ori local
+	case 0x7b: // ori local
+	case 0x7e: // xori local
+	case 0x7f: // xori local
 		decode_rimm(desc, !(op & 0x0800));
 		desc.set_fp_used();
 		desc.set_z_modified();

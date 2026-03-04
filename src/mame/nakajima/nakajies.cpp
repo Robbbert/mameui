@@ -302,8 +302,7 @@ public:
 		, m_rtc(*this, "rtc")
 		, m_view{
 			{*this, "view_0"}, {*this, "view_1"}, {*this, "view_2"}, {*this, "view_3"},
-		    {*this, "view_4"}, {*this, "view_5"}, {*this, "view_6"}, {*this, "view_7"}
-		}
+			{*this, "view_4"}, {*this, "view_5"}, {*this, "view_6"}, {*this, "view_7"} }
 		, m_port_row(*this, "ROW%u", 0U)
 		, m_port_debug(*this, "debug")
 		, m_rombank(*this, "rombank%u", 0U)
@@ -312,11 +311,11 @@ public:
 	{
 	}
 
-	void nakajies210(machine_config &config);
-	void nakajies220(machine_config &config);
-	void nakajies220_256(machine_config &config);
-	void nakajies250(machine_config &config);
-	void dator3k(machine_config &config);
+	void nakajies210(machine_config &config) ATTR_COLD;
+	void nakajies220(machine_config &config) ATTR_COLD;
+	void nakajies220_256(machine_config &config) ATTR_COLD;
+	void nakajies250(machine_config &config) ATTR_COLD;
+	void dator3k(machine_config &config) ATTR_COLD;
 
 	DECLARE_INPUT_CHANGED_MEMBER(trigger_irq);
 
@@ -621,16 +620,14 @@ void nakajies_state::machine_reset()
 	m_lcd_memory_start = 0;
 	m_matrix = 0;
 
-	for (int i = 0; i < 8; i++)
-	{
-		m_view[i].select(0);
-	}
+	for (auto &view : m_view)
+		view.select(0);
 
-	for (int i = 0; i < 8; i++)
-	{
-		m_rombank[i]->set_entry(0x0f);
-		m_rambank[i]->set_entry(0x0f);
-	}
+	for (auto &bank : m_rombank)
+		bank->set_entry(0x0f);
+
+	for (auto &bank : m_rambank)
+		bank->set_entry(0x0f);
 }
 
 u32 nakajies_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
@@ -826,11 +823,11 @@ ROM_END
 } // anonymous namespace
 
 
-//    YEAR  NAME      PARENT    COMPAT  MACHINE      INPUT     CLASS           INIT        COMPANY     FULLNAME            FLAGS
-COMP( 199?, wales210, 0,        0,      nakajies210, nakajies, nakajies_state, empty_init, "Walther",  "ES-210",           MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // German, 128KB RAM
-COMP( 199?, dator3k,  wales210, 0,      dator3k,     nakajies, nakajies_state, empty_init, "Dator",    "Dator 3000",       MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // Spanish, 128KB RAM
-COMP( 199?, es210_es, wales210, 0,      nakajies210, nakajies, nakajies_state, empty_init, "Nakajima", "ES-210 (Spain)",   MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // Spanish, 128KB RAM
-COMP( 199?, drwrt100, wales210, 0,      nakajies220, nakajies, nakajies_state, empty_init, "NTS",      "DreamWriter T100", MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // English, 128KB RAM
+//    YEAR  NAME      PARENT    COMPAT  MACHINE          INPUT     CLASS           INIT        COMPANY     FULLNAME            FLAGS
+COMP( 199?, wales210, 0,        0,      nakajies210,     nakajies, nakajies_state, empty_init, "Walther",  "ES-210",           MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // German, 128KB RAM
+COMP( 199?, dator3k,  wales210, 0,      dator3k,         nakajies, nakajies_state, empty_init, "Dator",    "Dator 3000",       MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // Spanish, 128KB RAM
+COMP( 199?, es210_es, wales210, 0,      nakajies210,     nakajies, nakajies_state, empty_init, "Nakajima", "ES-210 (Spain)",   MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // Spanish, 128KB RAM
+COMP( 199?, drwrt100, wales210, 0,      nakajies220,     nakajies, nakajies_state, empty_init, "NTS",      "DreamWriter T100", MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // English, 128KB RAM
 COMP( 1996, drwrt400, wales210, 0,      nakajies220_256, nakajies, nakajies_state, empty_init, "NTS",      "DreamWriter T400", MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // English, 256KB RAM, also found a machine with 160KB RAM
-COMP( 199?, drwrt450, wales210, 0,      nakajies220, nakajies, nakajies_state, empty_init, "NTS",      "DreamWriter 450",  MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // English, 128KB RAM
-COMP( 199?, drwrt200, wales210, 0,      nakajies250, nakajies, nakajies_state, empty_init, "NTS",      "DreamWriter T200", MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // English, 256KB? RAM
+COMP( 199?, drwrt450, wales210, 0,      nakajies220,     nakajies, nakajies_state, empty_init, "NTS",      "DreamWriter 450",  MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // English, 128KB RAM
+COMP( 199?, drwrt200, wales210, 0,      nakajies250,     nakajies, nakajies_state, empty_init, "NTS",      "DreamWriter T200", MACHINE_NOT_WORKING | MACHINE_NO_SOUND ) // English, 256KB? RAM

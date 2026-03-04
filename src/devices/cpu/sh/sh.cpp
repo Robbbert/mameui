@@ -11,6 +11,10 @@
 
 #include "emuopts.h"
 
+#include "util/vecstream.h"
+
+#include <locale>
+
 
 sh_common_execution::sh_common_execution(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock, endianness_t endianness, address_map_constructor internal)
 	: cpu_device(mconfig, type, tag, owner, clock)
@@ -2029,59 +2033,6 @@ void sh_common_execution::save_fast_iregs(drcuml_block &block)
 
 
 /*-------------------------------------------------
-    log_desc_flags_to_string - generate a string
-    representing the instruction description
-    flags
--------------------------------------------------*/
-
-const char *sh_common_execution::log_desc_flags_to_string(const opcode_desc &desc)
-{
-	static char tempbuf[30];
-	char *dest = tempbuf;
-
-	/* branches */
-	if (desc.is_unconditional_branch())
-		*dest++ = 'U';
-	else if (desc.is_conditional_branch())
-		*dest++ = 'C';
-	else
-		*dest++ = '.';
-
-	/* intrablock branches */
-	*dest++ = desc.intrablock_branch() ? 'i' : '.';
-
-	/* branch targets */
-	*dest++ = desc.is_branch_target() ? 'B' : '.';
-
-	/* delay slots */
-	*dest++ = desc.in_delay_slot() ? 'D' : '.';
-
-	/* exceptions */
-	if (desc.will_cause_exception())
-		*dest++ = 'E';
-	else if (desc.can_cause_exception())
-		*dest++ = 'e';
-	else
-		*dest++ = '.';
-
-	/* read/write */
-	if (desc.reads_memory())
-		*dest++ = 'R';
-	else if (desc.writes_memory())
-		*dest++ = 'W';
-	else
-		*dest++ = '.';
-
-	/* TLB validation */
-	*dest++ = desc.validate_tlb() ? 'V' : '.';
-
-	/* redispatch */
-	*dest++ = desc.redispatch() ? 'R' : '.';
-	return tempbuf;
-}
-
-
-/*-------------------------------------------------
     log_register_list - log a list of GPR registers
 -------------------------------------------------*/
 
@@ -2156,6 +2107,10 @@ void sh_common_execution::log_register_list(const char *string, const std::bitse
 
 void sh_common_execution::log_opcode_desc(const opcode_desc *desclist, int indent)
 {
+	sh_disassembler sh2d(false);
+	util::ovectorstream buffer;
+	buffer.imbue(std::locale::classic());
+
 	/* open the file, creating it if necessary */
 	if (indent == 0)
 		m_drcuml->log_printf("\nDescriptor list @ %08X\n", desclist->pc);
@@ -2163,22 +2118,21 @@ void sh_common_execution::log_opcode_desc(const opcode_desc *desclist, int inden
 	/* output each descriptor */
 	for ( ; desclist != nullptr; desclist = desclist->next())
 	{
-		std::ostringstream stream;
+		buffer.clear();
+		buffer.seekp(0);
+		desclist->log_flags(buffer);
+		buffer.put('\0');
+		m_drcuml->log_printf("%08X [%08X] t:%08X f:%s: ", desclist->pc, desclist->physpc, desclist->targetpc, &buffer.vec()[0]);
 
 		/* disassemle the current instruction and output it to the log */
-		if (m_drcuml->logging() || m_drcuml->logging_native())
-		{
-			if (desclist->virtual_noop())
-				stream << "<virtual nop>";
-			else
-			{
-				sh_disassembler sh2d(false);
-				sh2d.dasm_one(stream, desclist->pc, desclist->opptr);
-			}
-		}
+		buffer.clear();
+		buffer.seekp(0);
+		if (desclist->virtual_noop())
+			buffer << "<virtual nop>";
 		else
-			stream << "???";
-		m_drcuml->log_printf("%08X [%08X] t:%08X f:%s: %-30s", desclist->pc, desclist->physpc, desclist->targetpc, log_desc_flags_to_string(*desclist), stream.str());
+			sh2d.dasm_one(buffer, desclist->pc, desclist->opptr);
+		buffer.put('\0');
+		m_drcuml->log_printf("%-36s", &buffer.vec()[0]);
 
 		/* output register states */
 		log_register_list("use", desclist->regin, nullptr);

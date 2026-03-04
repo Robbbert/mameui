@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "32xsdasm.h"
+#include "e1dasm.h"
 
 #include "cpu/drcuml.h"
 
@@ -439,6 +439,7 @@ private:
 	FILE *m_trace_log;
 #endif
 
+	hyperstone_disassembler m_disassembler;
 	drc_cache m_cache;
 	std::unique_ptr<drcuml_state> m_drcuml;
 	std::unique_ptr<frontend> m_drcfe;
@@ -477,6 +478,7 @@ private:
 	void flush_drc_cache();
 	void generate_invariant();
 	void code_compile_block(uint8_t mode, offs_t pc);
+	void log_descriptions(const opcode_desc *desc_list, unsigned indent);
 	//void load_fast_iregs(drcuml_block &block);
 	//void save_fast_iregs(drcuml_block &block);
 	void static_generate_helpers(drcuml_block &block, uml::code_label &label);

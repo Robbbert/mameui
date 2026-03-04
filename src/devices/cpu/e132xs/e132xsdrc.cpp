@@ -4,13 +4,17 @@
 #include "emu.h"
 #include "e132xs.h"
 
-#include "32xsdefs.h"
-#include "e132xsfe.h"
+#include "e1defs.h"
+#include "e1fe.h"
 
 #include "cpu/drcumlsh.h"
 
+#include "util/vecstream.h"
 
-/* map variables */
+#include <locale>
+
+
+// map variables
 #define MAPVAR_PC       M0
 #define MAPVAR_CYCLES   M1
 
@@ -266,8 +270,10 @@ void hyperstone_device::code_compile_block(uint8_t mode, offs_t pc)
 
 	auto profile = g_profiler.start(PROFILER_DRC_COMPILE);
 
-	/* get a description of this sequence */
+	// describe a sequence of instructions
 	const opcode_desc *desclist = m_drcfe->describe_code(pc);
+	if (m_drcuml->logging())
+		log_descriptions(desclist, 0);
 
 	bool succeeded = false;
 	while (!succeeded)
@@ -351,6 +357,60 @@ void hyperstone_device::code_compile_block(uint8_t mode, offs_t pc)
 		}
 	}
 }
+
+void hyperstone_device::log_descriptions(const opcode_desc *desc_list, unsigned indent)
+{
+	util::ovectorstream buffer;
+	buffer.imbue(std::locale::classic());
+
+	// assume no indent is the start of a sequence and needs a heading
+	if (!indent)
+		m_drcuml->log_printf("\nDescriptor list @ %08X\n", desc_list->pc);
+
+	for ( ; desc_list; desc_list = desc_list->next())
+	{
+		buffer.clear();
+		buffer.seekp(0);
+		desc_list->log_flags(buffer);
+		buffer.put('\0');
+
+		m_drcuml->log_printf("%08X t:%08X f:%s: ", desc_list->pc, desc_list->targetpc, &buffer.vec()[0]);
+
+		// disassemble the current instruction and output it to the log
+		buffer.clear();
+		buffer.seekp(0);
+		util::stream_format(buffer, "%*s", 4 * indent, "");
+		if (desc_list->virtual_noop())
+			buffer << "<virtual nop>";
+		else
+			m_disassembler.disassemble_one(buffer, desc_list->pc, desc_list->opptr);
+		buffer.put('\0');
+		m_drcuml->log_printf("%-36s", &buffer.vec()[0]);
+
+		// output register dependencies
+		buffer.clear();
+		buffer.seekp(0);
+		if (!desc_list->regin.none())
+		{
+			desc_list->log_registers_used(buffer);
+			if (!desc_list->regout.none())
+				buffer << ' ';
+		}
+		if (!desc_list->regout.none())
+			desc_list->log_registers_modified(buffer);
+		buffer.put('\0');
+		m_drcuml->log_printf("%s\n", &buffer.vec()[0]);
+
+		// if we have a delay slot, output it recursively
+		if (desc_list->delay.first())
+			log_descriptions(desc_list->delay.first(), indent + 1);
+
+		// at the end of a sequence add a dividing line
+		if (desc_list->end_sequence())
+			m_drcuml->log_printf("-----\n");
+	}
+}
+
 
 /***************************************************************************
     STATIC CODEGEN

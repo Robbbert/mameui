@@ -2,13 +2,13 @@
 // copyright-holders:Vas Crabb
 /***************************************************************************
 
-    e132xsfe.h
+    e1fe.h
 
     Hyperstone E1 instruction decoder
 
 ***************************************************************************/
-#ifndef MAME_CPU_E132XS_E132XSFE_H
-#define MAME_CPU_E132XS_E132XSFE_H
+#ifndef MAME_CPU_E132XS_E1FE_H
+#define MAME_CPU_E132XS_E1FE_H
 
 #pragma once
 
@@ -19,6 +19,7 @@
 #include <algorithm>
 #include <cassert>
 #include <bitset>
+#include <iosfwd>
 
 
 class hyperstone_device::opcode_desc : public opcode_desc_base<opcode_desc, 40>
@@ -70,13 +71,11 @@ public:
 
 	void set_z_modified()
 	{
-		regout.set(REG_SR);
 		regout.set(REG_Z);
 	}
 
 	void set_znv_modified()
 	{
-		regout.set(REG_SR);
 		regout.set(REG_Z);
 		regout.set(REG_N);
 		regout.set(REG_V);
@@ -84,7 +83,6 @@ public:
 
 	void set_czn_modified()
 	{
-		regout.set(REG_SR);
 		regout.set(REG_C);
 		regout.set(REG_Z);
 		regout.set(REG_N);
@@ -92,7 +90,6 @@ public:
 
 	void set_cznv_modified()
 	{
-		regout.set(REG_SR);
 		regout.set(REG_C);
 		regout.set(REG_Z);
 		regout.set(REG_N);
@@ -101,7 +98,6 @@ public:
 
 	void set_fp_modified()
 	{
-		regout.set(REG_SR);
 		regout.set(REG_FP);
 	}
 
@@ -111,10 +107,12 @@ public:
 	bool v_calc_required() const { return regreq[REG_V] || in_delay_slot(); }
 	bool condition_calc_required() const { return regreq[REG_C] || regreq[REG_Z] || regreq[REG_N] || regreq[REG_V] || in_delay_slot(); }
 
+	void set_check_h() { m_extra_flags.set(CHECK_H); }
 	void set_can_change_modes() { m_extra_flags.set(CAN_CHANGE_MODES); }
 	void set_reads_memory() { m_extra_flags.set(READS_MEMORY); }
 	void set_writes_memory() { m_extra_flags.set(WRITES_MEMORY); }
 
+	bool check_h() const { return m_extra_flags[CHECK_H]; }
 	bool can_change_modes() const { return m_extra_flags[CAN_CHANGE_MODES]; }
 	bool reads_memory() const { return m_extra_flags[READS_MEMORY]; }
 	bool writes_memory() const { return m_extra_flags[WRITES_MEMORY]; }
@@ -146,6 +144,10 @@ public:
 		m_extra_flags.reset();
 	}
 
+	void log_flags(std::ostream &stream) const;
+	void log_registers_used(std::ostream &stream) const;
+	void log_registers_modified(std::ostream &stream) const;
+
 protected:
 	enum
 	{
@@ -164,12 +166,15 @@ protected:
 
 	enum
 	{
-		CAN_CHANGE_MODES = 0,
+		CHECK_H = 0,
+		CAN_CHANGE_MODES,
 		READS_MEMORY,
 		WRITES_MEMORY,
 
 		EXTRA_FLAG_COUNT
 	};
+
+	static void log_register_list(std::ostream &stream, const regmask &reglist, const regmask *regnostarlist);
 
 	std::bitset<EXTRA_FLAG_COUNT> m_extra_flags;
 };
@@ -207,4 +212,4 @@ private:
 	hyperstone_device &m_cpu;
 };
 
-#endif // MAME_CPU_E132XS_E132XSFE_H
+#endif // MAME_CPU_E132XS_E1FE_H

@@ -16,6 +16,9 @@
 
 #include "cpu/drcfe.h"
 
+#include <cassert>
+#include <iosfwd>
+
 
 class sh_common_execution::opcode_desc : public opcode_desc_base<opcode_desc, 32>
 {
@@ -82,6 +85,8 @@ public:
 		m_writes_memory = false;
 		m_can_expose_external_int = false;
 	}
+
+	void log_flags(std::ostream &stream) const;
 
 private:
 	bool m_reads_memory;

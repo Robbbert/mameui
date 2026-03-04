@@ -2,14 +2,17 @@
 // copyright-holders:Pierpaolo Prazzoli
 /*
 
- Hyperstone disassembler
+ Hyperstone E1 disassembler
  written by Pierpaolo Prazzoli
 
 */
 
 #include "emu.h"
-#include "32xsdasm.h"
-#include "32xsdefs.h"
+#include "e1dasm.h"
+
+#include "e1defs.h"
+
+#include <cassert>
 
 
 namespace {
@@ -128,7 +131,8 @@ void format_addsub(
 
 
 
-uint32_t hyperstone_disassembler::LRconst_format(std::string_view &source, std::string_view &dest, uint16_t op, offs_t pc, const data_buffer &opcodes)
+template <typename T>
+uint32_t hyperstone_disassembler::LRconst_format(std::string_view &source, std::string_view &dest, uint16_t op, offs_t pc, T &&read_hw)
 {
 	uint16_t next_op;
 	uint32_t const_val;
@@ -143,7 +147,7 @@ uint32_t hyperstone_disassembler::LRconst_format(std::string_view &source, std::
 	size = 4;
 
 	pc += 2;
-	next_op = opcodes.r16(pc);
+	next_op = read_hw(pc);
 
 	if (E_BIT(next_op))
 	{
@@ -152,7 +156,7 @@ uint32_t hyperstone_disassembler::LRconst_format(std::string_view &source, std::
 		size = 6;
 
 		pc += 2;
-		next_op2 = opcodes.r16(pc);
+		next_op2 = read_hw(pc);
 		const_val = next_op2;
 		const_val |= ((next_op & 0x3fff) << 16 );
 
@@ -170,7 +174,8 @@ uint32_t hyperstone_disassembler::LRconst_format(std::string_view &source, std::
 	return const_val;
 }
 
-uint32_t hyperstone_disassembler::RRconst_format(std::string_view &source, std::string_view &dest, uint16_t op, offs_t pc, const data_buffer &opcodes)
+template <typename T>
+uint32_t hyperstone_disassembler::RRconst_format(std::string_view &source, std::string_view &dest, uint16_t op, offs_t pc, T &&read_hw)
 {
 	uint16_t next_op;
 	uint32_t const_val;
@@ -188,7 +193,7 @@ uint32_t hyperstone_disassembler::RRconst_format(std::string_view &source, std::
 	size = 4;
 
 	pc += 2;
-	next_op = opcodes.r16(pc);
+	next_op = read_hw(pc);
 
 	if (E_BIT(next_op))
 	{
@@ -197,7 +202,7 @@ uint32_t hyperstone_disassembler::RRconst_format(std::string_view &source, std::
 		size = 6;
 
 		pc += 2;
-		next_op2 = opcodes.r16(pc);
+		next_op2 = read_hw(pc);
 		const_val = next_op2;
 		const_val |= ((next_op & 0x3fff) << 16 );
 
@@ -217,7 +222,8 @@ uint32_t hyperstone_disassembler::RRconst_format(std::string_view &source, std::
 	return const_val;
 }
 
-int32_t hyperstone_disassembler::Rimm_format(std::string_view &dest, uint16_t op, offs_t pc, const data_buffer &opcodes, unsigned h_flag)
+template <typename T>
+int32_t hyperstone_disassembler::Rimm_format(std::string_view &dest, uint16_t op, offs_t pc, T &&read_hw, unsigned h_flag)
 {
 	uint16_t imm1, imm2;
 	int32_t ret;
@@ -237,9 +243,9 @@ int32_t hyperstone_disassembler::Rimm_format(std::string_view &dest, uint16_t op
 
 		case 17:
 			pc += 2;
-			imm1 = opcodes.r16(pc);
+			imm1 = read_hw(pc);
 			pc += 2;
-			imm2 = opcodes.r16(pc);
+			imm2 = read_hw(pc);
 			ret = (imm1 << 16) | imm2;
 
 			size = 6;
@@ -248,14 +254,14 @@ int32_t hyperstone_disassembler::Rimm_format(std::string_view &dest, uint16_t op
 
 		case 18:
 			pc += 2;
-			ret = opcodes.r16(pc);
+			ret = read_hw(pc);
 
 			size = 4;
 			return ret;
 
 		case 19:
 			pc += 2;
-			ret = (int32_t) (0xffff0000 | opcodes.r16(pc));
+			ret = (int32_t) (0xffff0000 | read_hw(pc));
 
 			size = 4;
 			return ret;
@@ -301,7 +307,8 @@ int32_t hyperstone_disassembler::Rimm_format(std::string_view &dest, uint16_t op
 	}
 }
 
-int32_t hyperstone_disassembler::PCrel_format(uint16_t op, offs_t pc, const data_buffer &opcodes)
+template <typename T>
+int32_t hyperstone_disassembler::PCrel_format(uint16_t op, offs_t pc, T &&read_hw)
 {
 	int32_t ret;
 
@@ -313,7 +320,7 @@ int32_t hyperstone_disassembler::PCrel_format(uint16_t op, offs_t pc, const data
 
 		pc += 2;
 
-		next = opcodes.r16(pc);
+		next = read_hw(pc);
 
 		ret = (op & 0x7f) << 16;
 
@@ -333,7 +340,8 @@ int32_t hyperstone_disassembler::PCrel_format(uint16_t op, offs_t pc, const data
 	return (pc + ret);
 }
 
-uint32_t hyperstone_disassembler::RRdis_format(std::string_view &source, std::string_view &dest, uint16_t op, uint16_t next_op, offs_t pc, const data_buffer &opcodes)
+template <typename T>
+uint32_t hyperstone_disassembler::RRdis_format(std::string_view &source, std::string_view &dest, uint16_t op, uint16_t next_op, offs_t pc, T &&read_hw)
 {
 	uint32_t ret;
 
@@ -353,7 +361,7 @@ uint32_t hyperstone_disassembler::RRdis_format(std::string_view &source, std::st
 
 		size = 6;
 
-		next = opcodes.r16(pc + 4);
+		next = read_hw(pc + 4);
 
 		ret = next;
 		ret |= ( ( next_op & 0xfff ) << 16 );
@@ -384,15 +392,35 @@ hyperstone_disassembler::hyperstone_disassembler(config *conf) : m_config(conf)
 {
 }
 
+offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, const data_buffer &opcodes, const data_buffer &params)
+{
+	return do_disassemble(stream, pc, [&opcodes] (offs_t addr) { return opcodes.r16(addr); });
+}
+
+offs_t hyperstone_disassembler::disassemble_one(std::ostream &stream, offs_t pc, const uint16_t *opptr)
+{
+	return do_disassemble(
+			stream,
+			pc,
+			[pc, opptr] (offs_t addr)
+			{
+				assert(addr >= pc);
+				assert(addr < (pc + 6));
+				return opptr[(addr - pc) >> 1];
+			});
+}
+
+
 /*****************************/
 /* Main disassembly function */
 /*****************************/
-offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, const data_buffer &opcodes, const data_buffer &params)
+template <typename T>
+offs_t hyperstone_disassembler::do_disassemble(std::ostream &stream, offs_t pc, T &&read_hw)
 {
 	std::string_view source, dest;
 	uint32_t flags = 0;
 
-	const uint16_t op = opcodes.r16(pc);
+	const uint16_t op = read_hw(pc);
 
 	size = 2;
 
@@ -401,7 +429,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 	const uint8_t source_bit = SOURCEBIT(op);
 	const uint8_t dest_bit = DESTBIT(op);
 
-	const int h_flag = m_config->get_h();
+	const int h_flag = m_config ? m_config->get_h() : 0;
 
 	const uint8_t op_num = (op & 0xff00) >> 8;
 
@@ -465,7 +493,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 				size = 4;
 
 				pc += 2;
-				const uint16_t ilm1 = opcodes.r16(pc);
+				const uint16_t ilm1 = read_hw(pc);
 
 				const int xcode = X_CODE(ilm1);
 
@@ -478,7 +506,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 						size = 6;
 
 						pc += 2;
-						const uint16_t ilm2 = opcodes.r16(pc);
+						const uint16_t ilm2 = read_hw(pc);
 
 						lim = ((ilm1 & 0xfff) << 16) | ilm2;
 					}
@@ -499,7 +527,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		// MASK
 		case 0x14: case 0x15: case 0x16: case 0x17:
 			{
-				const uint32_t const_val = RRconst_format(source, dest, op, pc, opcodes);
+				const uint32_t const_val = RRconst_format(source, dest, op, pc, read_hw);
 				util::stream_format(stream, "MASK    %s, %s, $%x", dest, source, const_val);
 				if (!source_bit && (source_code == PC_REGISTER))
 					util::stream_format(stream, " ; $%x", uint32_t((pc + size) & const_val));
@@ -509,7 +537,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		case 0x18: case 0x19: case 0x1a: case 0x1b: // SUM
 		case 0x1c: case 0x1d: case 0x1e: case 0x1f: // SUMS
 			{
-				const uint32_t const_val = RRconst_format(source, dest, op, pc, opcodes);
+				const uint32_t const_val = RRconst_format(source, dest, op, pc, read_hw);
 				util::stream_format(stream, "SUM%c    %s, %s, $%x",
 						(op_num & 0x4) ? 'S' : ' ',
 						dest,
@@ -601,7 +629,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		// CMPI
 		case 0x60: case 0x61: case 0x62: case 0x63:
 			{
-				const uint32_t imm = Rimm_format(dest, op, pc, opcodes, 0);
+				const uint32_t imm = Rimm_format(dest, op, pc, read_hw, 0);
 				util::stream_format(stream, "CMPI    %s, $%x", dest, imm);
 			}
 			break;
@@ -609,7 +637,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		// MOVI
 		case 0x64: case 0x65: case 0x66: case 0x67:
 			{
-				const uint32_t imm = Rimm_format(dest, op, pc, opcodes, h_flag);
+				const uint32_t imm = Rimm_format(dest, op, pc, read_hw, h_flag);
 				util::stream_format(stream, "MOVI    %s, $%x", dest, imm);
 			}
 			break;
@@ -622,7 +650,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 			}
 			else
 			{
-				const uint32_t imm = Rimm_format(dest, op, pc, opcodes, 0);
+				const uint32_t imm = Rimm_format(dest, op, pc, read_hw, 0);
 				util::stream_format(stream, "%-7s %s, $%x", (op_num & 0x4) ? "ADDSI" : "ADDI", dest, imm);
 				if (!dest_bit && (dest_code == PC_REGISTER))
 					util::stream_format(stream, " ; $%x", uint32_t(pc + size + imm));
@@ -637,7 +665,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 			}
 			else
 			{
-				uint32_t imm = Rimm_format(dest, op, pc, opcodes, 0);
+				uint32_t imm = Rimm_format(dest, op, pc, read_hw, 0);
 				if (DASM_N_VALUE(op) == 31)
 					imm = 0x7fffffff; //bit 31 = 0, others = 1
 
@@ -648,7 +676,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		// ANDNI
 		case 0x74: case 0x75: case 0x76: case 0x77:
 			{
-				uint32_t imm = Rimm_format(dest, op, pc, opcodes, 0);
+				uint32_t imm = Rimm_format(dest, op, pc, read_hw, 0);
 				if (DASM_N_VALUE(op) == 31)
 					imm = 0x7fffffff; //bit 31 = 0, others = 1
 
@@ -661,7 +689,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		// ORI
 		case 0x78: case 0x79: case 0x7a: case 0x7b:
 			{
-				const uint32_t imm = Rimm_format(dest, op, pc, opcodes, 0);
+				const uint32_t imm = Rimm_format(dest, op, pc, read_hw, 0);
 
 				util::stream_format(stream, "ORI     %s, $%x", dest, imm);
 				if (!dest_bit && (dest_code == PC_REGISTER))
@@ -672,7 +700,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		// XORI
 		case 0x7c: case 0x7d: case 0x7e: case 0x7f:
 			{
-				const uint32_t imm = Rimm_format(dest, op, pc, opcodes, 0);
+				const uint32_t imm = Rimm_format(dest, op, pc, read_hw, 0);
 
 				util::stream_format(stream, "XORI    %s, $%x", dest, imm);
 				if (!dest_bit && (dest_code == PC_REGISTER))
@@ -735,8 +763,8 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		case 0x90: case 0x91: case 0x92: case 0x93: // LDxx.D/A/IOD/IOA
 		case 0x98: case 0x99: case 0x9a: case 0x9b: // STxx.D/A/IOD/IOA
 			{
-				const uint16_t next_op = opcodes.r16(pc + 2);
-				const uint32_t dis = RRdis_format(source, dest, op, next_op, pc, opcodes);
+				const uint16_t next_op = read_hw(pc + 2);
+				const uint32_t dis = RRdis_format(source, dest, op, next_op, pc, read_hw);
 
 				if (size == 2)
 					size = 4;
@@ -797,8 +825,8 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		case 0x94: case 0x95: case 0x96: case 0x97: // LDxx.N/S
 		case 0x9c: case 0x9d: case 0x9e: case 0x9f: // STxx.N/S
 			{
-				const uint16_t next_op = opcodes.r16(pc + 2);
-				const uint32_t dis = RRdis_format(source, dest, op, next_op, pc, opcodes);
+				const uint16_t next_op = read_hw(pc + 2);
+				const uint32_t dis = RRdis_format(source, dest, op, next_op, pc, read_hw);
 
 				if (size == 2)
 					size = 4;
@@ -931,7 +959,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 				LL_format(source, dest, op);
 
 				pc += 2;
-				const uint16_t extended_op = opcodes.r16(pc);
+				const uint16_t extended_op = read_hw(pc);
 
 				size = 4;
 
@@ -1039,7 +1067,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		case 0xeb: // DBGT
 		case 0xec: // DBR
 			{
-				const int32_t rel = PCrel_format(op, pc, opcodes) + 2;
+				const int32_t rel = PCrel_format(op, pc, read_hw) + 2;
 				util::stream_format(stream, "D%-6s $%x", Bxx[op_num & 0xf], rel);
 				if (op_num != 0xec)
 					flags = STEP_COND | step_over_extra(1);
@@ -1055,7 +1083,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		// CALL
 		case 0xee: case 0xef:
 			{
-				const uint32_t const_val = LRconst_format(source, dest, op, pc, opcodes);
+				const uint32_t const_val = LRconst_format(source, dest, op, pc, read_hw);
 
 				util::stream_format(stream, "CALL    %s, %s, $%x", dest, (!source_bit && (source_code == SR_REGISTER)) ? "0" : source, const_val);
 				if (!source_bit && (source_code == PC_REGISTER))
@@ -1078,7 +1106,7 @@ offs_t hyperstone_disassembler::disassemble(std::ostream &stream, offs_t pc, con
 		case 0xfb: // BGT
 		case 0xfc: // BR
 			{
-				const int32_t rel = PCrel_format(op, pc, opcodes) + 2;
+				const int32_t rel = PCrel_format(op, pc, read_hw) + 2;
 				util::stream_format(stream, "%-7s $%x", Bxx[op_num & 0xf], rel);
 				if (op_num != 0xfc)
 					flags = STEP_COND;
