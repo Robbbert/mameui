@@ -221,7 +221,7 @@ void luxor_4105_device::update_dma()
 	{
 		irq = 0;
 	}
-	m_slot->irq_w(!irq);
+	m_slot->irq_w(irq);
 }
 
 
