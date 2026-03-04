@@ -14,6 +14,9 @@
 #include <locale>
 
 
+// configuration
+enum { DO_ELIDE_CONDITION_CALC = 1 };
+
 // map variables
 #define MAPVAR_PC       M0
 #define MAPVAR_CYCLES   M1
@@ -385,7 +388,7 @@ void hyperstone_device::log_descriptions(const opcode_desc *desc_list, unsigned 
 		else
 			m_disassembler.disassemble_one(buffer, desc_list->pc, desc_list->opptr);
 		buffer.put('\0');
-		m_drcuml->log_printf("%-36s", &buffer.vec()[0]);
+		m_drcuml->log_printf("%-40s", &buffer.vec()[0]);
 
 		// output register dependencies
 		buffer.clear();

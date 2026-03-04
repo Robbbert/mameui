@@ -509,12 +509,12 @@ private:
 	void generate_add_dis(drcuml_block &block, compiler_state &compiler, uml::parameter dst, uml::parameter base, uint32_t dis, unsigned alignment);
 	void generate_set_register(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, reg_bank global, uint32_t code, uml::parameter src, uml::parameter localidx, bool calcidx);
 	void generate_set_dst(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, reg_bank global, uint32_t code, uml::parameter src, uml::parameter localidx, bool calcidx);
-	void generate_update_flags_addsub(drcuml_block &block, compiler_state &compiler, uml::parameter sr);
-	void generate_update_flags_addsubc(drcuml_block &block, compiler_state &compiler, uml::parameter sr);
-	void generate_update_flags_addsubs(drcuml_block &block, compiler_state &compiler, uml::parameter sr);
-	void generate_update_flags_cmp(drcuml_block &block, compiler_state &compiler, uml::parameter sr);
-	void generate_update_nz(drcuml_block &block, compiler_state &compiler, uml::parameter sr);
-	void generate_update_nz_d(drcuml_block &block, compiler_state &compiler, uml::parameter sr);
+	void generate_update_flags_addsub(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr);
+	void generate_update_flags_addsubc(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr);
+	void generate_update_flags_addsubs(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr);
+	void generate_update_flags_cmp(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr);
+	void generate_update_nz(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr);
+	void generate_update_nz_d(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr);
 
 	template <trap_exception_or_int TYPE> void generate_trap_exception_or_int(drcuml_block &block, uml::code_label &label, uml::parameter trapno);
 	void generate_software(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc);

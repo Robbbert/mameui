@@ -483,9 +483,11 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 	case 0x20: // cmp global,global
 	case 0x21: // cmp global,local
 	case 0x22: // cmp local,global
+	case 0x23: // cmp local,local
 	case 0x30: // cmpb global,global
 	case 0x31: // cmpb global,local
 	case 0x32: // cmpb local,global
+	case 0x33: // cmpb local,local
 		decode_rr(desc);
 		if (desc.dst_local || desc.src_local)
 			desc.set_fp_used();
@@ -1027,7 +1029,7 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 	case 0xdf: // stdp local
 		decode_lr(desc);
 		desc.set_fp_used();
-		if (!desc.src_local)
+		if (!desc.src_local && !desc.src_is_sr())
 		{
 			desc.set_g_used(desc.src_code);
 			if (op & 0x0200)

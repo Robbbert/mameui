@@ -388,93 +388,158 @@ void hyperstone_device::generate_set_dst(drcuml_block &block, compiler_state &co
 }
 
 
-void hyperstone_device::generate_update_flags_addsub(drcuml_block &block, compiler_state &compiler, uml::parameter sr)
+void hyperstone_device::generate_update_flags_addsub(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr)
 {
 	// expects result in I0 and UML flags set by ADD/SUB
 	// clobbers I1, I4 and I5
 
-	UML_SETc(block, uml::COND_V, I4);               // I4 = ...V
-	UML_SETc(block, uml::COND_Z, I5);               // I5 = ...Z
-	UML_SETc(block, uml::COND_C, I1);               // I1 = ...C
-	UML_SHL(block, I4, I4, V_SHIFT);                // I4 = V...
-	UML_OR(block, I1, I1, I4);                      // I1 = V..C
-	UML_SHL(block, I4, I5, Z_SHIFT);                // I4 = ..Z.
-	UML_OR(block, I1, I1, I4);                      // I1 = V.ZC
-	UML_ROLAND(block, I4, I0, N_SHIFT + 1, N_MASK); // I4 = .N..
-	UML_OR(block, I1, I1, I4);                      // I1 = VNZC
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_SETc(block, uml::COND_V, I4);                   // I4 = ...V
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+		UML_SETc(block, uml::COND_Z, I5);                   // I5 = ...Z
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+		UML_SETc(block, uml::COND_C, I1);                   // I1 = ...C
+	else
+		UML_MOV(block, I1, 0);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+	{
+		UML_SHL(block, I4, I4, V_SHIFT);                    // I4 = V...
+		UML_OR(block, I1, I1, I4);                          // I1 = V..C
+	}
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+	{
+		UML_SHL(block, I4, I5, Z_SHIFT);                    // I4 = ..Z.
+		UML_OR(block, I1, I1, I4);                          // I1 = V.ZC
+	}
+	if (!DO_ELIDE_CONDITION_CALC || desc->n_calc_required())
+	{
+		UML_ROLAND(block, I4, I0, N_SHIFT + 1, N_MASK);     // I4 = .N..
+		UML_OR(block, I1, I1, I4);                          // I1 = VNZC
+	}
 
 	UML_ROLINS(block, sr, I1, 0, (V_MASK | N_MASK | Z_MASK | C_MASK));
 }
 
-void hyperstone_device::generate_update_flags_addsubc(drcuml_block &block, compiler_state &compiler, uml::parameter sr)
+void hyperstone_device::generate_update_flags_addsubc(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr)
 {
 	// expects result in I0 and UML flags set by ADD/SUB
 	// clobbers I1, I4 and I5
 
-	UML_SETc(block, uml::COND_V, I4);               // I4 = ...V
-	UML_SETc(block, uml::COND_Z, I5);               // I5 = ...Z
-	UML_SETc(block, uml::COND_C, I1);               // I1 = ...C
-	UML_SHL(block, I4, I4, V_SHIFT);                // I4 = V...
-	UML_OR(block, I1, I1, I4);                      // I1 = V..C
-	UML_SHL(block, I4, I5, Z_SHIFT);                // I4 = ..Z.
-	UML_OR(block, I1, I1, I4);                      // I1 = V.ZC
-	UML_ROLAND(block, I4, I0, N_SHIFT + 1, N_MASK); // I4 = .N..
-	UML_OR(block, I1, I1, I4);                      // I1 = VNZC
-	UML_OR(block, I4, I2, ~Z_MASK);                 // combine with old Z flag
-	UML_AND(block, I1, I1, I4);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_SETc(block, uml::COND_V, I4);                   // I4 = ...V
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+		UML_SETc(block, uml::COND_Z, I5);                   // I5 = ...Z
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+		UML_SETc(block, uml::COND_C, I1);                   // I1 = ...C
+	else
+		UML_MOV(block, I1, 0);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+	{
+		UML_SHL(block, I4, I4, V_SHIFT);                    // I4 = V...
+		UML_OR(block, I1, I1, I4);                          // I1 = V..C
+	}
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+	{
+		UML_SHL(block, I4, I5, Z_SHIFT);                    // I4 = ..Z.
+		UML_OR(block, I1, I1, I4);                          // I1 = V.ZC
+	}
+	if (!DO_ELIDE_CONDITION_CALC || desc->n_calc_required())
+	{
+		UML_ROLAND(block, I4, I0, N_SHIFT + 1, N_MASK);     // I4 = .N..
+		UML_OR(block, I1, I1, I4);                          // I1 = VNZC
+	}
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+	{
+		UML_OR(block, I4, sr, ~Z_MASK);                     // combine with old Z flag
+		UML_AND(block, I1, I1, I4);
+	}
 
 	UML_ROLINS(block, sr, I1, 0, (V_MASK | N_MASK | Z_MASK | C_MASK));
 }
 
-void hyperstone_device::generate_update_flags_addsubs(drcuml_block &block, compiler_state &compiler, uml::parameter sr)
+void hyperstone_device::generate_update_flags_addsubs(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr)
 {
 	// expects UML flags set by ADD/SUB
 	// clobbers I1, I4 and I5
 
-	UML_SETc(block, uml::COND_V, I4);       // I4 = ...V
-	UML_SETc(block, uml::COND_S, I1);       // I1 = ...S
-	UML_SETc(block, uml::COND_Z, I5);       // I5 = ...Z
-	UML_SHL(block, I4, I4, V_SHIFT);        // I4 = V...
-	UML_SHL(block, I1, I1, N_SHIFT);        // I1 = .N..
-	UML_OR(block, I1, I1, I4);              // I1 = VN..
-	UML_SHL(block, I4, I5, Z_SHIFT);        // I4 = ..Z.
-	UML_OR(block, I1, I1, I4);              // I1 = VNZ.
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_SETc(block, uml::COND_V, I4);                   // I4 = ...V
+	if (!DO_ELIDE_CONDITION_CALC || desc->n_calc_required())
+		UML_SETc(block, uml::COND_S, I1);                   // I1 = ...N
+	else
+		UML_MOV(block, I1, 0);
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+		UML_SETc(block, uml::COND_Z, I5);                   // I5 = ...Z
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_SHL(block, I4, I4, V_SHIFT);                    // I4 = V...
+	if (!DO_ELIDE_CONDITION_CALC || desc->n_calc_required())
+		UML_SHL(block, I1, I1, N_SHIFT);                    // I1 = .N..
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_OR(block, I1, I1, I4);                          // I1 = VN..
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+	{
+		UML_SHL(block, I4, I5, Z_SHIFT);                    // I4 = ..Z.
+		UML_OR(block, I1, I1, I4);                          // I1 = VNZ.
+	}
 
 	UML_ROLINS(block, sr, I1, 0, (V_MASK | N_MASK | Z_MASK));
 }
 
-void hyperstone_device::generate_update_flags_cmp(drcuml_block &block, compiler_state &compiler, uml::parameter sr)
+void hyperstone_device::generate_update_flags_cmp(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr)
 {
 	// expects UML flags set by ADD/SUB
 	// clobbers I0, I1, I3 and I4
 
-	UML_SETc(block, uml::COND_V, I0);               // I0 = ...V
-	UML_SETc(block, uml::COND_L, I1);               // I1 = ...N
-	UML_SETc(block, uml::COND_Z, I3);               // I3 = ...Z
-	UML_SETc(block, uml::COND_C, I4);               // I4 = ...C
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_SETc(block, uml::COND_V, I0);                   // I0 = ...V
+	if (!DO_ELIDE_CONDITION_CALC || desc->n_calc_required())
+		UML_SETc(block, uml::COND_L, I1);                   // I1 = ...N
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+		UML_SETc(block, uml::COND_Z, I3);                   // I3 = ...Z
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+		UML_SETc(block, uml::COND_C, I4);                   // I4 = ...C
 	UML_AND(block, sr, sr, ~(V_MASK | N_MASK | Z_MASK | C_MASK));
-	UML_SHL(block, I0, I0, V_SHIFT);                // I0 = V...
-	UML_SHL(block, I1, I1, N_SHIFT);                // I1 = .N..
-	UML_SHL(block, I3, I3, Z_SHIFT);                // I3 = ..Z.
-	UML_SHL(block, I4, I4, C_SHIFT);                // I4 = ...C
-	UML_OR(block, I0, I0, I1);                      // I0 = VN..
-	UML_OR(block, I3, I3, I4);                      // I1 = ..ZC
-	UML_OR(block, sr, sr, I0);
-	UML_OR(block, sr, sr, I3);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_SHL(block, I0, I0, V_SHIFT);                    // I0 = V...
+	if (!DO_ELIDE_CONDITION_CALC || desc->n_calc_required())
+		UML_SHL(block, I1, I1, N_SHIFT);                    // I1 = .N..
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+		UML_SHL(block, I3, I3, Z_SHIFT);                    // I3 = ..Z.
+	if (!DO_ELIDE_CONDITION_CALC || (desc->v_calc_required() && desc->n_calc_required()))
+		UML_OR(block, I0, I0, I1);                          // I0 = VN..
+	if (!DO_ELIDE_CONDITION_CALC || (desc->c_calc_required() && desc->z_calc_required()))
+		UML_OR(block, I3, I3, I4);                          // I3 = ..ZC
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_OR(block, sr, sr, I0);
+	else if (desc->n_calc_required())
+		UML_OR(block, sr, sr, I1);
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+		UML_OR(block, sr, sr, I3);
+	else if (desc->c_calc_required())
+		UML_OR(block, sr, sr, I4);
 }
 
-void hyperstone_device::generate_update_nz(drcuml_block &block, compiler_state &compiler, uml::parameter sr)
+void hyperstone_device::generate_update_nz(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr)
 {
 	// expects result in I0 and UML Z flag to be set
 	// clobbers I1
 
-	UML_SETc(block, uml::COND_Z, I1);
-	UML_SHL(block, I1, I1, Z_SHIFT);
-	UML_ROLINS(block, I1, I0, N_SHIFT + 1, N_MASK);
-	UML_OR(block, sr, sr, I1);
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required())
+	{
+		UML_SETc(block, uml::COND_Z, I1);
+		UML_SHL(block, I1, I1, Z_SHIFT);
+		if (!DO_ELIDE_CONDITION_CALC || desc->n_calc_required())
+			UML_ROLINS(block, I1, I0, N_SHIFT + 1, N_MASK);
+	}
+	else if (desc->n_calc_required())
+	{
+		UML_ROLAND(block, I1, I0, N_SHIFT + 1, N_MASK);
+	}
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required() || desc->n_calc_required())
+		UML_OR(block, sr, sr, I1);
 }
 
-void hyperstone_device::generate_update_nz_d(drcuml_block &block, compiler_state &compiler, uml::parameter sr)
+void hyperstone_device::generate_update_nz_d(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, uml::parameter sr)
 {
 	// expects result in I0 and UML Z flag to be set
 	// assumes Z and N bits in sr have already been cleared
@@ -1134,8 +1199,11 @@ void hyperstone_device::generate_sum(drcuml_block &block, compiler_state &compil
 				(BIT(result, 31) << N_SHIFT) |
 				(BIT((compiler.pc() ^ result) & (src ^ result), 31) << V_SHIFT);
 
-		UML_ROLINS(block, I2, flags, 0, V_MASK | N_MASK | Z_MASK | C_MASK);
-		UML_MOV(block, DRC_SR, I2);
+		if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		{
+			UML_ROLINS(block, I2, flags, 0, V_MASK | N_MASK | Z_MASK | C_MASK);
+			UML_MOV(block, DRC_SR, I2);
+		}
 
 		generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uint32_t(result), uml::I3, true);
 	}
@@ -1145,8 +1213,11 @@ void hyperstone_device::generate_sum(drcuml_block &block, compiler_state &compil
 
 		UML_ADD(block, I0, I0, src);
 
-		generate_update_flags_addsub(block, compiler, uml::I2);
-		UML_MOV(block, DRC_SR, I2);
+		if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		{
+			generate_update_flags_addsub(block, compiler, desc, uml::I2);
+			UML_MOV(block, DRC_SR, I2);
+		}
 
 		generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, true);
 	}
@@ -1171,8 +1242,11 @@ void hyperstone_device::generate_sums(drcuml_block &block, compiler_state &compi
 
 	UML_ADD(block, I0, I0, src);
 
-	generate_update_flags_addsubs(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsubs(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_register(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, true);
 	generate_exception_on_overflow(block, compiler, desc, uml::I2);
@@ -1211,8 +1285,11 @@ void hyperstone_device::generate_cmp(drcuml_block &block, compiler_state &compil
 
 	UML_CMP(block, I0, I1);
 
-	generate_update_flags_cmp(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_cmp(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 }
 
 template <hyperstone_device::reg_bank DstGlobal, hyperstone_device::reg_bank SrcGlobal>
@@ -1275,8 +1352,11 @@ void hyperstone_device::generate_mov(drcuml_block &block, compiler_state &compil
 		UML_LOAD(block, I0, (void *)m_core->local_regs, I0, SIZE_DWORD, SCALE_x4);
 	}
 
-	UML_TEST(block, I0, ~uint32_t(0));
-	generate_update_nz(block, compiler, uml::I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		UML_TEST(block, I0, ~uint32_t(0));
+		generate_update_nz(block, compiler, desc, uml::I2);
+	}
 
 	if (DstGlobal)
 	{
@@ -1363,8 +1443,11 @@ void hyperstone_device::generate_add(drcuml_block &block, compiler_state &compil
 					(BIT(result, 31) << N_SHIFT) |
 					(BIT((compiler.pc() ^ result), 31) << V_SHIFT);
 
-			UML_ROLINS(block, I2, flags, 0, M_MASK | V_MASK | N_MASK | Z_MASK | C_MASK);
-			UML_MOV(block, DRC_SR, I2);
+			if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+			{
+				UML_ROLINS(block, I2, flags, 0, M_MASK | V_MASK | N_MASK | Z_MASK | C_MASK);
+				UML_MOV(block, DRC_SR, I2);
+			}
 
 			UML_MOV(block, DRC_PC, result);
 			generate_branch(block, compiler, compiler.mode(), result, desc);
@@ -1376,8 +1459,11 @@ void hyperstone_device::generate_add(drcuml_block &block, compiler_state &compil
 
 			UML_ADD(block, I0, I0, compiler.pc());
 
-			generate_update_flags_addsub(block, compiler, uml::I2);
-			UML_MOV(block, DRC_SR, I2);
+			if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+			{
+				generate_update_flags_addsub(block, compiler, desc, uml::I2);
+				UML_MOV(block, DRC_SR, I2);
+			}
 
 			generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 			return;
@@ -1388,7 +1474,8 @@ void hyperstone_device::generate_add(drcuml_block &block, compiler_state &compil
 
 			UML_ADD(block, I0, I0, compiler.pc());
 
-			generate_update_flags_addsub(block, compiler, uml::I2);
+			if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+				generate_update_flags_addsub(block, compiler, desc, uml::I2);
 			UML_AND(block, I2, I2, ~M_MASK);
 			UML_MOV(block, DRC_SR, I2);
 
@@ -1404,8 +1491,11 @@ void hyperstone_device::generate_add(drcuml_block &block, compiler_state &compil
 
 	UML_ADD(block, I0, I0, I1);
 
-	generate_update_flags_addsub(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsub(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 }
@@ -1429,8 +1519,11 @@ void hyperstone_device::generate_adds(drcuml_block &block, compiler_state &compi
 
 	UML_ADD(block, I0, I0, I1);
 
-	generate_update_flags_addsubs(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsubs(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_register(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 	generate_exception_on_overflow(block, compiler, desc, uml::I2);
@@ -1498,8 +1591,11 @@ void hyperstone_device::generate_subc(drcuml_block &block, compiler_state &compi
 		UML_SUB(block, I0, I0, I1);
 	}
 
-	generate_update_flags_addsubc(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsubc(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 }
@@ -1523,8 +1619,11 @@ void hyperstone_device::generate_sub(drcuml_block &block, compiler_state &compil
 
 	UML_SUB(block, I0, I0, I1);
 
-	generate_update_flags_addsub(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsub(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 }
@@ -1548,8 +1647,11 @@ void hyperstone_device::generate_subs(drcuml_block &block, compiler_state &compi
 
 	UML_SUB(block, I0, I0, I1);
 
-	generate_update_flags_addsubs(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsubs(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_register(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 	generate_exception_on_overflow(block, compiler, desc, uml::I2);
@@ -1596,8 +1698,11 @@ void hyperstone_device::generate_addc(drcuml_block &block, compiler_state &compi
 		UML_ADD(block, I0, I0, I1);
 	}
 
-	generate_update_flags_addsubc(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsubc(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 }
@@ -1620,8 +1725,11 @@ void hyperstone_device::generate_neg(drcuml_block &block, compiler_state &compil
 
 	UML_SUB(block, I0, 0, I0);
 
-	generate_update_flags_addsub(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsub(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, true);
 }
@@ -1644,8 +1752,11 @@ void hyperstone_device::generate_negs(drcuml_block &block, compiler_state &compi
 
 	UML_SUB(block, I0, 0, I0);
 
-	generate_update_flags_addsubs(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_addsubs(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_register(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, true);
 
@@ -1766,8 +1877,11 @@ void hyperstone_device::generate_cmpi(drcuml_block &block, compiler_state &compi
 
 	UML_CMP(block, I0, src);
 
-	generate_update_flags_cmp(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_flags_cmp(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 }
 
 
@@ -1884,8 +1998,11 @@ void hyperstone_device::generate_addi(drcuml_block &block, compiler_state &compi
 					(BIT((compiler.pc() ^ result) & (src ^ result), 31) << V_SHIFT);
 		}
 
-		UML_ROLINS(block, I2, flags, 0, M_MASK | V_MASK | N_MASK | Z_MASK | C_MASK);
-		UML_MOV(block, DRC_SR, I2);
+		if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		{
+			UML_ROLINS(block, I2, flags, 0, M_MASK | V_MASK | N_MASK | Z_MASK | C_MASK);
+			UML_MOV(block, DRC_SR, I2);
+		}
 
 		result = uint32_t(result) & uint32_t(1);
 		UML_MOV(block, DRC_PC, result);
@@ -1906,8 +2023,11 @@ void hyperstone_device::generate_addi(drcuml_block &block, compiler_state &compi
 
 		UML_ADD(block, I0, I0, srcp);
 
-		generate_update_flags_addsub(block, compiler, uml::I2);
-		UML_MOV(block, DRC_SR, I2);
+		if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		{
+			generate_update_flags_addsub(block, compiler, desc, uml::I2);
+			UML_MOV(block, DRC_SR, I2);
+		}
 
 		generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 	}
@@ -2044,16 +2164,20 @@ void hyperstone_device::generate_shrdi(drcuml_block &block, compiler_state &comp
 	UML_DSHL(block, I1, I1, 32);
 	UML_DOR(block, I0, I0, I1);
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
-	if (n)
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required()))
 	{
 		UML_DROLAND(block, I1, I0, 64 - C_SHIFT + 1 - n, C_MASK);
 		UML_OR(block, I2, I2, I1);
 	}
 
 	UML_DSHR(block, I0, I0, n);
-	generate_update_nz_d(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz_d(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	UML_DSHR(block, I1, I0, 32);
 	UML_STORE(block, (void *)m_core->local_regs, I4, I1, SIZE_DWORD, SCALE_x4);
@@ -2085,18 +2209,25 @@ void hyperstone_device::generate_shrd(drcuml_block &block, compiler_state &compi
 
 	generate_load_operand(block, compiler, LOCAL, src_code, uml::I1, uml::I3);
 
-	const int no_shift = compiler.next_label();
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
 	UML_AND(block, I1, I1, 0x1f);
-	UML_JMPc(block, uml::COND_Z, no_shift);
-	UML_SUB(block, I3, 64 - C_SHIFT + 1, I1);
-	UML_DROLAND(block, I3, I0, I3, C_MASK);
-	UML_OR(block, I2, I2, I3);
-	UML_LABEL(block, no_shift);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+	{
+		const int no_shift = compiler.next_label();
+		UML_JMPc(block, uml::COND_Z, no_shift);
+		UML_SUB(block, I3, 64 - C_SHIFT + 1, I1);
+		UML_DROLAND(block, I3, I0, I3, C_MASK);
+		UML_OR(block, I2, I2, I3);
+		UML_LABEL(block, no_shift);
+	}
 
 	UML_DSHR(block, I0, I0, I1);
-	generate_update_nz_d(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz_d(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	UML_DSHR(block, I1, I0, 32);
 	UML_STORE(block, (void *)m_core->local_regs, I4, I1, SIZE_DWORD, SCALE_x4);
@@ -2118,18 +2249,25 @@ void hyperstone_device::generate_shr(drcuml_block &block, compiler_state &compil
 	generate_load_operand(block, compiler, LOCAL, src_code, uml::I1, uml::I1);
 	generate_load_operand(block, compiler, LOCAL, dst_code, uml::I0, uml::I3);
 
-	const int no_shift = compiler.next_label();
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
 	UML_AND(block, I1, I1, 0x1f);
-	UML_JMPc(block, uml::COND_Z, no_shift);
-	UML_SUB(block, I4, 32 - C_SHIFT + 1, I1);
-	UML_ROLAND(block, I4, I0, I4, C_MASK);
-	UML_OR(block, I2, I2, I4);
-	UML_LABEL(block, no_shift);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+	{
+		const int no_shift = compiler.next_label();
+		UML_JMPc(block, uml::COND_Z, no_shift);
+		UML_SUB(block, I4, 32 - C_SHIFT + 1, I1);
+		UML_ROLAND(block, I4, I0, I4, C_MASK);
+		UML_OR(block, I2, I2, I4);
+		UML_LABEL(block, no_shift);
+	}
 
 	UML_SHR(block, I0, I0, I1);
-	generate_update_nz(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	UML_STORE(block, (void *)m_core->local_regs, I3, I0, SIZE_DWORD, SCALE_x4);
 }
@@ -2150,16 +2288,20 @@ void hyperstone_device::generate_shri(drcuml_block &block, compiler_state &compi
 
 	generate_load_operand(block, compiler, DstGlobal, dst_code, uml::I0, uml::I3);
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
-	if (n)
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required()))
 	{
 		UML_ROLAND(block, I4, I0, 32 - C_SHIFT + 1 - n, C_MASK);
 		UML_OR(block, I2, I2, I4);
 	}
 
 	UML_SHR(block, I0, I0, n);
-	generate_update_nz(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 }
@@ -2183,16 +2325,20 @@ void hyperstone_device::generate_sardi(drcuml_block &block, compiler_state &comp
 	UML_DSHL(block, I1, I1, 32);
 	UML_DOR(block, I0, I0, I1);
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
-	if (n)
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required()))
 	{
 		UML_DROLAND(block, I1, I0, 64 - C_SHIFT + 1 - n, C_MASK);
 		UML_OR(block, I2, I2, I1);
 	}
 
 	UML_DSAR(block, I0, I0, n);
-	generate_update_nz_d(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz_d(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	UML_DSHR(block, I1, I0, 32);
 	UML_STORE(block, (void *)m_core->local_regs, I4, I1, SIZE_DWORD, SCALE_x4);
@@ -2224,18 +2370,25 @@ void hyperstone_device::generate_sard(drcuml_block &block, compiler_state &compi
 
 	generate_load_operand(block, compiler, LOCAL, src_code, uml::I1, uml::I3);
 
-	const int no_shift = compiler.next_label();
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
 	UML_AND(block, I1, I1, 0x1f);
-	UML_JMPc(block, uml::COND_Z, no_shift);
-	UML_SUB(block, I3, 64 - C_SHIFT + 1, I1);
-	UML_DROLAND(block, I3, I0, I3, C_MASK);
-	UML_OR(block, I2, I2, I3);
-	UML_LABEL(block, no_shift);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+	{
+		const int no_shift = compiler.next_label();
+		UML_JMPc(block, uml::COND_Z, no_shift);
+		UML_SUB(block, I3, 64 - C_SHIFT + 1, I1);
+		UML_DROLAND(block, I3, I0, I3, C_MASK);
+		UML_OR(block, I2, I2, I3);
+		UML_LABEL(block, no_shift);
+	}
 
 	UML_DSAR(block, I0, I0, I1);
-	generate_update_nz_d(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz_d(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	UML_DSHR(block, I1, I0, 32);
 	UML_STORE(block, (void *)m_core->local_regs, I4, I1, SIZE_DWORD, SCALE_x4);
@@ -2257,18 +2410,25 @@ void hyperstone_device::generate_sar(drcuml_block &block, compiler_state &compil
 	generate_load_operand(block, compiler, LOCAL, src_code, uml::I1, uml::I1);
 	generate_load_operand(block, compiler, LOCAL, dst_code, uml::I0, uml::I3);
 
-	const int no_shift = compiler.next_label();
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
 	UML_AND(block, I1, I1, 0x1f);
-	UML_JMPc(block, uml::COND_Z, no_shift);
-	UML_SUB(block, I4, 32 - C_SHIFT + 1, I1);
-	UML_ROLAND(block, I4, I0, I4, C_MASK);
-	UML_OR(block, I2, I2, I4);
-	UML_LABEL(block, no_shift);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+	{
+		const int no_shift = compiler.next_label();
+		UML_JMPc(block, uml::COND_Z, no_shift);
+		UML_SUB(block, I4, 32 - C_SHIFT + 1, I1);
+		UML_ROLAND(block, I4, I0, I4, C_MASK);
+		UML_OR(block, I2, I2, I4);
+		UML_LABEL(block, no_shift);
+	}
 
 	UML_SAR(block, I0, I0, I1);
-	generate_update_nz(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	UML_STORE(block, (void *)m_core->local_regs, I3, I0, SIZE_DWORD, SCALE_x4);
 }
@@ -2289,16 +2449,20 @@ void hyperstone_device::generate_sari(drcuml_block &block, compiler_state &compi
 
 	generate_load_operand(block, compiler, DstGlobal, dst_code, uml::I0, uml::I3);
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
-	if (n)
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK));
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required()))
 	{
 		UML_ROLAND(block, I4, I0, 32 - C_SHIFT + 1 - n, C_MASK);
 		UML_OR(block, I2, I2, I4);
 	}
 
 	UML_SAR(block, I0, I0, n);
-	generate_update_nz(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+	{
+		generate_update_nz(block, compiler, desc, uml::I2);
+		UML_MOV(block, DRC_SR, I2);
+	}
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 }
@@ -2319,23 +2483,25 @@ void hyperstone_device::generate_shldi(drcuml_block &block, compiler_state &comp
 	generate_load_operand(block, compiler, LOCAL, dst_code, uml::I1, uml::I4);
 	generate_load_operand(block, compiler, LOCAL, dst_code + 1, uml::I0, uml::I5);
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
-	if (n)
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
+	if (n && (!DO_ELIDE_CONDITION_CALC || (desc->c_calc_required() || desc->v_calc_required())))
 		UML_SHR(block, I3, I1, 32 - n);
 
 	UML_DSHL(block, I1, I1, 32);
 	UML_DOR(block, I0, I0, I1);
 
-	if (n)
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required()))
 	{
 		UML_ROLAND(block, I1, I3, C_SHIFT, C_MASK);
 		UML_OR(block, I2, I2, I1);
 	}
 
 	UML_DSHL(block, I0, I0, n);
-	generate_update_nz_d(block, compiler, uml::I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		generate_update_nz_d(block, compiler, desc, uml::I2);
 
-	if (n)
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required()))
 	{
 		UML_DTEST(block, I0, ~uint64_t(0));
 		UML_MOV(block, I1, util::make_bitmask<uint32_t>(n));
@@ -2346,7 +2512,8 @@ void hyperstone_device::generate_shldi(drcuml_block &block, compiler_state &comp
 		UML_OR(block, I2, I2, I1);
 	}
 
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_MOV(block, DRC_SR, I2);
 
 	UML_DSHR(block, I1, I0, 32);
 	UML_STORE(block, (void *)m_core->local_regs, I4, I1, SIZE_DWORD, SCALE_x4);
@@ -2378,31 +2545,44 @@ void hyperstone_device::generate_shld(drcuml_block &block, compiler_state &compi
 
 	generate_load_operand(block, compiler, LOCAL, src_code, uml::I1, uml::I3);
 
-	const int no_shift = compiler.next_label();
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
 	UML_AND(block, I1, I1, 0x1f);
-	UML_JMPc(block, uml::COND_Z, no_shift);
-	UML_SUB(block, I3, 64, I1);
-	UML_DSHR(block, I4, I0, I3);
-	UML_ROLINS(block, I2, I4, C_SHIFT, C_MASK);
-	UML_LABEL(block, no_shift);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required() || desc->v_calc_required())
+	{
+		const int no_shift = compiler.next_label();
+		UML_JMPc(block, uml::COND_Z, no_shift);
+		UML_SUB(block, I3, 64, I1);
+		UML_DSHR(block, I4, I0, I3);
+		if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+			UML_ROLINS(block, I2, I4, C_SHIFT, C_MASK);
+		UML_LABEL(block, no_shift);
+	}
 
 	UML_DSHL(block, I0, I0, I1);
 
-	const int no_overflow = compiler.next_label();
-	UML_TEST(block, I1, ~uint32_t(0));
-	UML_JMPc(block, uml::COND_Z, no_overflow);
-	UML_SHR(block, I1, ~uint32_t(0), I3);
-	UML_DTEST(block, I0, ~uint64_t(0));
-	UML_MOVc(block, uml::COND_NS, I1, 0);
-	UML_CMP(block, I4, I1);
-	UML_JMPc(block, uml::COND_E, no_overflow);
-	UML_OR(block, I2, I2, V_MASK);
-	UML_LABEL(block, no_overflow);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+	{
+		const int no_overflow = compiler.next_label();
+		UML_TEST(block, I1, ~uint32_t(0));
+		UML_JMPc(block, uml::COND_Z, no_overflow);
+		UML_SHR(block, I1, ~uint32_t(0), I3);
+		UML_DTEST(block, I0, ~uint64_t(0));
+		UML_MOVc(block, uml::COND_NS, I1, 0);
+		UML_CMP(block, I4, I1);
+		UML_JMPc(block, uml::COND_E, no_overflow);
+		UML_OR(block, I2, I2, V_MASK);
+		UML_LABEL(block, no_overflow);
+	}
 
-	UML_DTEST(block, I0, I0);
-	generate_update_nz_d(block, compiler, uml::I2);
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->z_calc_required() || desc->n_calc_required())
+	{
+		if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+			UML_DTEST(block, I0, I0);
+		generate_update_nz_d(block, compiler, desc, uml::I2);
+	}
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_MOV(block, DRC_SR, I2);
 
 	UML_DSHR(block, I1, I0, 32);
 	UML_STORE(block, (void *)m_core->local_regs, I5, I1, SIZE_DWORD, SCALE_x4);
@@ -2433,26 +2613,39 @@ void hyperstone_device::generate_shl(drcuml_block &block, compiler_state &compil
 		UML_AND(block, I1, I0, 0x1f);
 	}
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
 
-	UML_SUB(block, I4, 32, I1);
-	UML_SHR(block, I5, ~uint32_t(0), I4);
-	UML_SHR(block, I4, I0, I4);
-	UML_TEST(block, I1, 0xffffffff);
-	UML_MOVc(block, uml::COND_Z, I4, 0);
-	UML_MOVc(block, uml::COND_Z, I5, 0);
-	UML_ROLINS(block, I2, I4, C_SHIFT, C_MASK);
+	if (!DO_ELIDE_CONDITION_CALC || (desc->c_calc_required() || desc->v_calc_required()))
+	{
+		UML_SUB(block, I4, 32, I1);
+		if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+			UML_SHR(block, I5, ~uint32_t(0), I4);
+		UML_SHR(block, I4, I0, I4);
+		UML_TEST(block, I1, 0xffffffff);
+		UML_MOVc(block, uml::COND_Z, I4, 0);
+		if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+			UML_MOVc(block, uml::COND_Z, I5, 0);
+		if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+			UML_ROLINS(block, I2, I4, C_SHIFT, C_MASK);
+	}
 
 	UML_SHL(block, I0, I0, I1);
-	UML_MOVc(block, uml::COND_NS, I5, 0);
-	generate_update_nz(block, compiler, uml::I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_MOVc(block, uml::COND_NS, I5, 0);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		generate_update_nz(block, compiler, desc, uml::I2);
 
-	UML_CMP(block, I4, I5);
-	UML_MOV(block, I1, V_MASK);
-	UML_MOVc(block, uml::COND_E, I1, 0);
-	UML_OR(block, I2, I2, I1);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+	{
+		UML_CMP(block, I4, I5);
+		UML_MOV(block, I1, V_MASK);
+		UML_MOVc(block, uml::COND_E, I1, 0);
+		UML_OR(block, I2, I2, I1);
+	}
 
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_MOV(block, DRC_SR, I2);
 
 	UML_STORE(block, (void *)m_core->local_regs, I3, I0, SIZE_DWORD, SCALE_x4);
 }
@@ -2473,23 +2666,32 @@ void hyperstone_device::generate_shli(drcuml_block &block, compiler_state &compi
 
 	generate_load_operand(block, compiler, DstGlobal, dst_code, uml::I0, uml::I3);
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
-	if (n)
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required() || desc->v_calc_required()))
 	{
-		UML_SHR(block, I4, I0, 32 - n);
-		UML_MOV(block, I5, util::make_bitmask<uint32_t>(n));
-		UML_ROLAND(block, I1, I4, C_SHIFT, C_MASK);
-		UML_OR(block, I2, I2, I1);
+		if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		{
+			UML_SHR(block, I4, I0, 32 - n);
+			UML_MOV(block, I5, util::make_bitmask<uint32_t>(n));
+			if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+				UML_ROLAND(block, I1, I4, C_SHIFT, C_MASK);
+		}
+		else
+		{
+			UML_ROLAND(block, I1, I0, n + C_SHIFT, C_MASK);
+		}
+		if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+			UML_OR(block, I2, I2, I1);
 	}
 
 	UML_SHL(block, I0, I0, n);
-	if (n)
-	{
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required()))
 		UML_MOVc(block, uml::COND_NS, I5, 0);
-	}
-	generate_update_nz(block, compiler, uml::I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		generate_update_nz(block, compiler, desc, uml::I2);
 
-	if (n)
+	if (n && (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required()))
 	{
 		UML_CMP(block, I4, I5);
 		UML_MOV(block, I1, V_MASK);
@@ -2497,7 +2699,8 @@ void hyperstone_device::generate_shli(drcuml_block &block, compiler_state &compi
 		UML_OR(block, I2, I2, I1);
 	}
 
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_MOV(block, DRC_SR, I2);
 
 	generate_set_dst(block, compiler, desc, DstGlobal, dst_code, uml::I0, uml::I3, false);
 }
@@ -2544,26 +2747,38 @@ void hyperstone_device::generate_rol(drcuml_block &block, compiler_state &compil
 		UML_AND(block, I1, I0, 0x1f);
 	}
 
-	UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_AND(block, I2, I2, ~(C_MASK | Z_MASK | N_MASK | V_MASK));
 
-	UML_SUB(block, I4, 32, I1);
-	UML_SHR(block, I4, ~uint32_t(0), I4);
-	UML_TEST(block, I1, 0xffffffff);
-	UML_MOVc(block, uml::COND_Z, I4, 0);
-	UML_MOV(block, I5, I4);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required() || desc->v_calc_required())
+	{
+		UML_SUB(block, I4, 32, I1);
+		UML_SHR(block, I4, ~uint32_t(0), I4);
+		UML_TEST(block, I1, 0xffffffff);
+		UML_MOVc(block, uml::COND_Z, I4, 0);
+		UML_MOV(block, I5, I4);
+	}
 
 	UML_ROL(block, I0, I0, I1);
-	UML_MOVc(block, uml::COND_NS, I4, 0);
-	generate_update_nz(block, compiler, uml::I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+		UML_MOVc(block, uml::COND_NS, I4, 0);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		generate_update_nz(block, compiler, desc, uml::I2);
 
-	UML_AND(block, I1, I5, I0);
-	UML_ROLINS(block, I2, I1, C_SHIFT, C_MASK);
-	UML_CMP(block, I4, I1);
-	UML_MOV(block, I1, V_MASK);
-	UML_MOVc(block, uml::COND_E, I1, 0);
-	UML_OR(block, I2, I2, I1);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required() || desc->v_calc_required())
+		UML_AND(block, I1, I5, I0);
+	if (!DO_ELIDE_CONDITION_CALC || desc->c_calc_required())
+		UML_ROLINS(block, I2, I1, C_SHIFT, C_MASK);
+	if (!DO_ELIDE_CONDITION_CALC || desc->v_calc_required())
+	{
+		UML_CMP(block, I4, I1);
+		UML_MOV(block, I1, V_MASK);
+		UML_MOVc(block, uml::COND_E, I1, 0);
+		UML_OR(block, I2, I2, I1);
+	}
 
-	UML_MOV(block, DRC_SR, I2);
+	if (!DO_ELIDE_CONDITION_CALC || desc->condition_calc_required())
+		UML_MOV(block, DRC_SR, I2);
 
 	UML_STORE(block, (void *)m_core->local_regs, I3, I0, SIZE_DWORD, SCALE_x4);
 }
