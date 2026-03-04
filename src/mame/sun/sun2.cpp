@@ -119,6 +119,23 @@ How the architecture works:
     See http://sunstuff.org/Sun-Hardware-Ref/s2hr/part2
 ****************************************************************************/
 
+/*
+ * Sun-2/120
+ *  - 9 slots, 4 used (cpu, memory, scsi, network)
+ *  - 1MB
+ *  - integral disk/tape option
+ *  - pedestal
+ *  - display standard
+ *  
+ * Sun-2/170
+ *  - 15 slots, 4 used (cpu, memory, scsi, network)
+ *  - 2MB
+ *  - rack mount
+ *  - display optional
+ *
+ * color card: 640x480x8, 24-bit color + RS-170 display
+ */
+
 #include "emu.h"
 #include "bus/rs232/rs232.h"
 #include "cpu/m68000/m68010.h"
@@ -135,6 +152,7 @@ How the architecture works:
 //#define VERBOSE 1
 #include "logmacro.h"
 
+#include "sun2.lh"
 
 namespace {
 
@@ -737,10 +755,10 @@ private:
 
 static void sun2_mt1_cards(device_slot_interface &device)
 {
-	device.option_add("cpu", SUN_MT1);
-	device.option_add("bw2", SUN_BW2);
-	device.option_add("ram", SUN_RAM);
-	device.option_add("scsi", SUN_SCSI);
+	device.option_add("cpu", SUN2_MT1);
+	device.option_add("bw2", SUN2_BW2);
+	device.option_add("ram", SUN2_RAM);
+	device.option_add("sc",  SUN2_SCSI);
 }
 
 void sun2_mt1_state::sun2_120(machine_config &config)
@@ -749,14 +767,16 @@ void sun2_mt1_state::sun2_120(machine_config &config)
 
 	// processor side slots
 	MULTIBUS_SLOT(config, m_slot[0], m_bus, sun2_mt1_cards, "cpu",   false);
-	MULTIBUS_SLOT(config, m_slot[1], m_bus, sun2_mt1_cards, "bw2",   false);
-	MULTIBUS_SLOT(config, m_slot[2], m_bus, sun2_mt1_cards, "ram",   false);
-	MULTIBUS_SLOT(config, m_slot[3], m_bus, sun2_mt1_cards, "scsi",  false);
+	MULTIBUS_SLOT(config, m_slot[1], m_bus, sun2_mt1_cards, "ram",   false);
+	MULTIBUS_SLOT(config, m_slot[2], m_bus, sun2_mt1_cards, "bw2",   false);
+	MULTIBUS_SLOT(config, m_slot[3], m_bus, sun2_mt1_cards, "sc",    false);
 	MULTIBUS_SLOT(config, m_slot[4], m_bus, sun2_mt1_cards, nullptr, false);
 	MULTIBUS_SLOT(config, m_slot[5], m_bus, sun2_mt1_cards, nullptr, false);
 	MULTIBUS_SLOT(config, m_slot[6], m_bus, sun2_mt1_cards, nullptr, false);
 	MULTIBUS_SLOT(config, m_slot[7], m_bus, sun2_mt1_cards, nullptr, false);
 	MULTIBUS_SLOT(config, m_slot[8], m_bus, sun2_mt1_cards, nullptr, false);
+
+	config.set_default_layout(layout_sun2);
 }
 
 ROM_START(sun2_120)

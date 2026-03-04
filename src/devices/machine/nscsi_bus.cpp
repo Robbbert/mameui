@@ -8,7 +8,7 @@
 
 #define LOG_CONTROL     (1U << 1)
 
-//#define VERBOSE (LOG_CONTROL)
+#define VERBOSE (LOG_CONTROL)
 //#define LOG_OUTPUT_FUNC osd_printf_info
 
 
