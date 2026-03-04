@@ -9,6 +9,7 @@
 #include "pci_slot.h"
 
 #include "bus/pc_joy/pc_joy.h"
+#include "sound/ac97_stac9704.h"
 
 class trident_4dwavedx_device : public pci_card_device
 {
@@ -37,6 +38,7 @@ private:
 
 	void gameport_map(address_map &map);
 
+	required_device<ac97_stac9704_device> m_ac97;
 	required_device<pc_joy_device> m_joy;
 
 	u32 m_ddma_config;

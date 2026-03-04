@@ -27,6 +27,7 @@ DEFINE_DEVICE_TYPE(TRIDENT_4DWAVEDX, trident_4dwavedx_device,   "trident_4dwaved
 
 trident_4dwavedx_device::trident_4dwavedx_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
 	: pci_card_device(mconfig, type, tag, owner, clock)
+	, m_ac97(*this, "ac97")
 	, m_joy(*this, "pc_joy")
 {
 }
@@ -39,8 +40,11 @@ trident_4dwavedx_device::trident_4dwavedx_device(const machine_config &mconfig, 
 
 void trident_4dwavedx_device::device_add_mconfig(machine_config &config)
 {
-	// TODO: SigmaTel STAC9704T or STAC9700T
 	// Trident suggests to use an AD1819A
+	// known actual configs:
+	// '9700 for Hoontech ST-DIGITAL 4D_NX/SoundTrack 4D Wave (with the -NX variant)
+	// '9704 for Addonics SV750/SIIG IC1607/GoodWell EPC-C4DWV840
+	AC97_STAC9704(config, m_ac97, 12'288'000);
 
 	PC_JOY(config, m_joy);
 }
@@ -111,7 +115,7 @@ void trident_4dwavedx_device::config_map(address_map &map)
 			m_ddma_config &= ~(3 << 1);
 			LOG("PCI 40h: %08x & %08x\n", data, mem_mask);
 			LOG("\tDDMA config write: address %08x Extended Address %d Slave Channel Access %d\n"
-				, m_ddma_config >> 4, BIT(m_ddma_config, 3), BIT(m_ddma_config, 0));
+				, m_ddma_config & ~0xf, BIT(m_ddma_config, 3), BIT(m_ddma_config, 0));
 		})
 	);
 //	map(0x44, 0x44) Legacy I/O Base
@@ -170,6 +174,9 @@ void trident_4dwavedx_device::config_map(address_map &map)
 
 void trident_4dwavedx_device::io_map(address_map &map)
 {
+	map(0x40, 0x43).rw(m_ac97, FUNC(ac97_stac9704_device::codec_write_r), FUNC(ac97_stac9704_device::codec_write_w));
+	map(0x44, 0x47).rw(m_ac97, FUNC(ac97_stac9704_device::codec_read_r), FUNC(ac97_stac9704_device::codec_read_w));
+
 	map(0x5c, 0x5f).lrw32(
 		NAME([this] (offs_t offset) {
 			return m_asr4 | (m_asr5 << 16) | (m_asr6 << 24);
