@@ -355,7 +355,6 @@ void koikoi_state::koikoi(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &koikoi_state::program_map);
 	m_maincpu->set_addrmap(AS_IO, &koikoi_state::io_map);
 
-
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_refresh_hz(60);
