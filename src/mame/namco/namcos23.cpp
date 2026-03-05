@@ -1246,7 +1246,6 @@ It can also be used with Final Furlong when wired correctly.
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
-#include "tilemap.h"
 
 #include "md8412b_s23.h"
 #include "namco_settings.h"
@@ -1614,6 +1613,7 @@ struct c404_t
 	u16 spritedata_idx;
 	u64 rowscroll_frame;
 	u16 rowscroll[480];
+	u16 linexscroll[1024];
 	u16 lastrow;
 	u16 xscroll;
 	u16 yscroll;
@@ -1667,7 +1667,6 @@ public:
 		m_charram(*this, "charram"),
 		m_textram(*this, "textram"),
 		m_czattr(*this, "czattr", 0x10, ENDIANNESS_BIG),
-		m_gfxdecode(*this, "gfxdecode"),
 		m_lightx(*this, "LIGHTX"),
 		m_lighty(*this, "LIGHTY"),
 		m_p1(*this, "P1"),
@@ -1681,7 +1680,6 @@ public:
 		m_texram(nullptr),
 		m_tileid_mask(0),
 		m_tile_mask(0),
-		m_bgtilemap(nullptr),
 		m_jvs_sense(jvs_port_device::sense::None),
 		m_main_irqcause(0),
 		m_ctl_vbl_active(false),
@@ -1881,14 +1879,12 @@ protected:
 	u8 mcu_p6_r();
 	void mcu_p6_w(u8 data);
 
-	TILE_GET_INFO_MEMBER(text_tilemap_get_info);
 	virtual u32 screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
 	TIMER_CALLBACK_MEMBER(subcpu_scanline_on_tick);
 	TIMER_CALLBACK_MEMBER(subcpu_scanline_off_tick);
 	virtual void vblank(int state);
 
 	u8 nthbyte(const u32 *pSource, int offs);
-	u16 nthword(const u32 *pSource, int offs);
 	float f24_to_f32(u32 v);
 
 	void render_apply_transform(s32 xi, s32 yi, s32 zi, const namcos23_render_entry *re, float &x, float &y, float &z);
@@ -1896,13 +1892,13 @@ protected:
 	void render_project(poly_vertex &v);
 	void render_model(const namcos23_render_entry *re);
 	void render_direct_poly(const namcos23_render_entry *re);
-	void render_sprite(const namcos23_render_entry *re);
-	void render_sprite_tile(u32 code_offset, const namcos23_render_entry *re, int row, int col);
 	void render_immediate(const namcos23_render_entry *re);
+	virtual void dispatch_render_entry(const namcos23_render_entry *re);
 	virtual void render_run(screen_device &screen, bitmap_rgb32 &bitmap);
 
 	void update_text_rowscroll();
 	void apply_text_scroll();
+	void draw_text_layer(screen_device &screen);
 	void mix_text_layer(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect, int prival);
 
 	required_device<mips3_device> m_maincpu;
@@ -1916,7 +1912,6 @@ protected:
 	required_shared_ptr<u32> m_charram;
 	required_shared_ptr<u32> m_textram;
 	memory_share_creator<u32> m_czattr;
-	required_device<gfxdecode_device> m_gfxdecode;
 	optional_ioport m_lightx;
 	optional_ioport m_lighty;
 	required_ioport m_p1;
@@ -1940,7 +1935,6 @@ protected:
 	const u16 *m_texram;
 	u32 m_tileid_mask;
 	u32 m_tile_mask;
-	tilemap_t *m_bgtilemap;
 
 	u8 m_jvs_sense;
 
@@ -1995,7 +1989,8 @@ class gorgon_state : public namcos23_state
 {
 public:
 	gorgon_state(const machine_config &mconfig, device_type type, const char *tag) :
-		namcos23_state(mconfig, type, tag)
+		namcos23_state(mconfig, type, tag),
+		m_gfxdecode(*this, "gfxdecode")
 	{
 	}
 
@@ -2017,11 +2012,17 @@ protected:
 
 	void c435_pio_mode_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 
+	void render_sprite(const namcos23_render_entry *re);
+	void render_sprite_tile(u32 code_offset, const namcos23_render_entry *re, int row, int col);
+
 	virtual u32 screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect) override;
+	virtual void dispatch_render_entry(const namcos23_render_entry *re) override;
 	virtual void render_run(screen_device &screen, bitmap_rgb32 &bitmap) override;
 	virtual void vblank(int state) override;
 
 	void recalc_czram();
+
+	required_device<gfxdecode_device> m_gfxdecode;
 
 	std::unique_ptr<u16[]> m_banked_czram[4];
 	std::unique_ptr<u8[]> m_recalc_czram[4];
@@ -2275,12 +2276,6 @@ u8 namcos23_state::nthbyte(const u32 *pSource, int offs)
 {
 	pSource += offs/4;
 	return (pSource[0]<<((offs&3)*8))>>24;
-}
-
-u16 namcos23_state::nthword(const u32 *pSource, int offs)
-{
-	pSource += offs/2;
-	return (pSource[0]<<((offs&1)*16))>>16;
 }
 
 
@@ -3752,7 +3747,7 @@ void namcos23_state::render_direct_poly(const namcos23_render_entry *re)
 	}
 }
 
-void namcos23_state::render_sprite(const namcos23_render_entry *re)
+void gorgon_state::render_sprite(const namcos23_render_entry *re)
 {
 	int offset = 0;
 
@@ -3766,14 +3761,14 @@ void namcos23_state::render_sprite(const namcos23_render_entry *re)
 	}
 }
 
-void namcos23_state::render_sprite_tile(u32 code_offset, const namcos23_render_entry *re, int row, int col)
+void gorgon_state::render_sprite_tile(u32 code_offset, const namcos23_render_entry *re, int row, int col)
 {
 	const namcos23_sprite_data &sprite = re->sprite;
 	render_t &render = m_render;
 
 	u32 code = sprite.code + code_offset;
 
-	gfx_element *gfx = m_gfxdecode->gfx(2);
+	gfx_element *gfx = m_gfxdecode->gfx(0);
 	s32 sprite_screen_height = (((sprite.ysize << 16) >> 5) * gfx->height() + 0x8000) >> 16;
 	s32 sprite_screen_width = (((sprite.xsize << 16) >> 5) * gfx->width() + 0x8000) >> 16;
 	if (sprite_screen_width && sprite_screen_height)
@@ -4443,6 +4438,38 @@ void gorgon_state::render_run(screen_device &screen, bitmap_rgb32 &bitmap)
 	namcos23_state::render_run(screen, bitmap);
 }
 
+void gorgon_state::dispatch_render_entry(const namcos23_render_entry *re)
+{
+	switch (re->type)
+	{
+	case SPRITE:
+		render_sprite(re);
+		return;
+	default:
+		namcos23_state::dispatch_render_entry(re);
+		return;
+	}
+}
+
+void namcos23_state::dispatch_render_entry(const namcos23_render_entry *re)
+{
+	switch (re->type)
+	{
+	case MODEL:
+		if (m_c404.layer_flags & 1)
+			render_model(re);
+		return;
+	case DIRECT:
+		if (m_c404.layer_flags & 1)
+			render_direct_poly(re);
+		return;
+	case IMMEDIATE:
+		if (m_c404.layer_flags & 1)
+			render_immediate(re);
+		return;
+	}
+}
+
 void namcos23_state::render_run(screen_device &screen, bitmap_rgb32 &bitmap)
 {
 	render_t &render = m_render;
@@ -4451,24 +4478,7 @@ void namcos23_state::render_run(screen_device &screen, bitmap_rgb32 &bitmap)
 	render.poly_count = 0;
 	for (int i = 0; i < render.count[!render.cur]; i++)
 	{
-		switch (re->type)
-		{
-		case MODEL:
-			if (m_c404.layer_flags & 1)
-				render_model(re);
-			break;
-		case DIRECT:
-			if (m_c404.layer_flags & 1)
-				render_direct_poly(re);
-			break;
-		case IMMEDIATE:
-			if (m_c404.layer_flags & 1)
-				render_immediate(re);
-			break;
-		case SPRITE:
-			render_sprite(re);
-			break;
-		}
+		dispatch_render_entry(re);
 		re++;
 	}
 
@@ -4514,28 +4524,14 @@ void namcos23_state::paletteram_w(offs_t offset, u32 data, u32 mem_mask)
 
 // C361 (text)
 
-TILE_GET_INFO_MEMBER(namcos23_state::text_tilemap_get_info)
-{
-	u16 data = nthword(m_textram, tile_index);
-	/**
-	* xxxx.----.----.---- palette select
-	* ----.xx--.----.---- flip
-	* ----.--xx.xxxx.xxxx code
-	*/
-	tileinfo.set(0, data & 0x03ff, data >> 12, TILE_FLIPYX((data & 0x0c00) >> 10));
-}
-
 void namcos23_state::textram_w(offs_t offset, u32 data, u32 mem_mask)
 {
 	COMBINE_DATA(&m_textram[offset]);
-	m_bgtilemap->mark_tile_dirty(offset*2);
-	m_bgtilemap->mark_tile_dirty((offset*2)+1);
 }
 
 void namcos23_state::textchar_w(offs_t offset, u32 data, u32 mem_mask)
 {
 	COMBINE_DATA(&m_charram[offset]);
-	m_gfxdecode->gfx(0)->mark_dirty(offset/32);
 }
 
 // C404 (mixing, gamma RAM)
@@ -4723,23 +4719,80 @@ void namcos23_state::video_start()
 	m_tileid_mask = (memregion("textilemapl")->bytes()/2 - 1) & ~0xff; // Used for y masking
 	m_tile_mask = memregion("textile")->bytes()/256 - 1;
 
-	m_gfxdecode->gfx(0)->set_source(reinterpret_cast<u8 *>(m_charram.target()));
 	m_mix_bitmap = std::make_unique<bitmap_ind16>(640, 480);
-	m_bgtilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(namcos23_state::text_tilemap_get_info)), TILEMAP_SCAN_ROWS, 16, 16, 64, 64);
-	m_bgtilemap->set_scroll_rows(64 * 16); // fake
-	m_bgtilemap->set_transparent_pen(0xf);
 	m_render.polymgr = std::make_unique<namcos23_renderer>(*this, m_tmlrom, m_tmhrom, m_texrom, m_c412.sram, m_tileid_mask, m_tile_mask);
 
 	m_ptrom_limit = memregion("pointrom")->bytes()/4;
-
-	for (int i = 0; i < m_gfxdecode->gfx(1)->elements(); i++)
-		m_gfxdecode->gfx(1)->get_data(i);
 }
 
 void gorgon_state::video_start()
 {
 	namcos23_state::video_start();
 	m_sprrom = memregion("sprites")->base();
+}
+
+void namcos23_state::draw_text_layer(screen_device &screen)
+{
+	// tile width: 16
+	// tile height: 16
+	// total elements: 0x3c0
+	// bitplanes: 4
+	// plane offsets: 0, 1, 2, 3
+	// bit offset of each horizontal pixel:
+	//     0,   4,   8,  12,  16,  20,  24,  28,  32,  36,  40,  44,  48,  52,  56,  60
+	// bit offset of each vertical pixel:
+	//     0,  64, 128, 192, 256, 320, 384, 448, 512, 576, 640, 704, 768, 832, 896, 960
+	// tile spacing (in bits): 1024
+
+	// xxxx.----.----.---- palette select
+	// ----.xx--.----.---- flip
+	// ----.--xx.xxxx.xxxx code
+
+	for (u32 tmy = 0; tmy < 30; tmy++)
+	{
+		for (u32 ty = 0; ty < 16; ty++)
+		{
+			const u32 y = (tmy << 4) | ty;
+			u16 *dst = &m_mix_bitmap->pix(y);
+			u8 *pri = &screen.priority().pix(y);
+			const u32 scrolled_y = (y + m_c404.yscroll) & 0x03ff;
+			const u32 adjusted_tmy = scrolled_y >> 4;
+			const u32 adjusted_ty = scrolled_y & 0xf;
+			for (u32 tmx = 0; tmx < 40; tmx++)
+			{
+				const u16 scroll_x = m_c404.linexscroll[scrolled_y];
+				u16 tile_scroll = scroll_x >> 4;
+				s16 pix_scroll = scroll_x & 0xf;
+				u16 tile_data = util::big_endian_cast<const u16>(m_textram.target())[(adjusted_tmy << 6) | ((tmx + tile_scroll) & 0x3f)];
+				u32 pal_select = BIT(tile_data, 12, 4) << 4;
+				u32 tile_code = (tile_data & 0x03ff) << 5;
+				u8 flipx_mask = BIT(tile_data, 10) ? 0x00 : 0x3c;
+				u16 flipy_mask = BIT(tile_data, 11) ? 0x1e : 0x00;
+				u64 char_data = ((u64)m_charram[tile_code | (adjusted_ty << 1)] << 32) | m_charram[tile_code | ((adjusted_ty << 1) ^ flipy_mask) | 1];
+				for (u32 tx = 0; tx < 16; tx++)
+				{
+					const u8 val = BIT(char_data, ((tx + pix_scroll) << 2) ^ flipx_mask, 4);
+					if (val != 0xf)
+					{
+						*dst = m_c404.palbase | pal_select | val;
+						*pri = 4;
+					}
+					dst++;
+					pri++;
+					if (pix_scroll && (tx + pix_scroll) == 15)
+					{
+						tile_data = util::big_endian_cast<const u16>(m_textram.target())[(adjusted_tmy << 6) | ((tmx + tile_scroll + 1) & 0x3f)];
+						pal_select = BIT(tile_data, 12, 4) << 4;
+						tile_code = (tile_data & 0x03ff) << 5;
+						flipx_mask = BIT(tile_data, 10) ? 0x00 : 0x3c;
+						flipy_mask = BIT(tile_data, 11) ? 0x1e : 0x00;
+						char_data = ((u64)m_charram[tile_code | (adjusted_ty << 1)] << 32) | m_charram[tile_code | ((adjusted_ty << 1) ^ flipy_mask) | 1];
+						pix_scroll -= 16;
+					}
+				}
+			}
+		}
+	}
 }
 
 void namcos23_state::mix_text_layer(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect, int prival)
@@ -4819,7 +4872,6 @@ u32 namcos23_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, c
 		return UPDATE_HAS_NOT_CHANGED;
 	}
 
-	m_bgtilemap->set_palette_offset(m_c404.palbase);
 	screen.priority().fill(0, cliprect);
 
 	// background color
@@ -4841,9 +4893,8 @@ u32 namcos23_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, c
 	if (m_c404.layer_flags & 4)
 	{
 		apply_text_scroll();
-		m_bgtilemap->set_palette_offset(m_c404.palbase);
 
-		m_bgtilemap->draw(screen, *m_mix_bitmap, cliprect, 0, 4, 4);
+		draw_text_layer(screen);
 		mix_text_layer(screen, bitmap, cliprect, 4);
 	}
 
@@ -5374,17 +5425,11 @@ void namcos23_state::update_text_rowscroll()
 void namcos23_state::apply_text_scroll()
 {
 	update_text_rowscroll();
-	int scroll_y = m_c404.yscroll & 0x3ff;
-
-	m_bgtilemap->set_scrolly(0, scroll_y);
-
-	for (int i = 0; i < 0x400; i++)
-		m_bgtilemap->set_scrollx(i, m_c404.rowscroll[0]);
 
 	// apply current frame x scroll updates to tilemap
 	for (int i = 0; i < 480; i++)
 	{
-		m_bgtilemap->set_scrollx((i + scroll_y + 4) & 0x3ff, m_c404.rowscroll[i]);
+		m_c404.linexscroll[(i + (m_c404.yscroll & 0x3ff) + 4) & 0x3ff] = m_c404.rowscroll[i];
 	}
 }
 
@@ -6464,34 +6509,10 @@ void namcoss23_gmen_state::machine_reset()
 	m_vpx_sdao = 0;
 }
 
-
-
-#define XOR(a) WORD2_XOR_BE(a)
-static const gfx_layout namcos23_cg_layout =
-{
-	16,16,
-	0x400, /* 0x3c0 */
-	4,
-	{ 0,1,2,3 },
-	{ XOR(0)*4, XOR(1)*4,  XOR(2)*4,  XOR(3)*4,  XOR(4)*4,  XOR(5)*4,  XOR(6)*4,  XOR(7)*4,
-		XOR(8)*4, XOR(9)*4, XOR(10)*4, XOR(11)*4, XOR(12)*4, XOR(13)*4, XOR(14)*4, XOR(15)*4 },
-	{ 64*0,64*1,64*2,64*3,64*4,64*5,64*6,64*7,64*8,64*9,64*10,64*11,64*12,64*13,64*14,64*15 },
-	64*16
-}; /* cg_layout */
-
-#undef XOR
-
-static GFXLAYOUT_RAW(namcos23_sprite_layout, 32, 32, 32*8, 32*32*8)
-
-static GFXDECODE_START( gfx_namcos23 )
-	GFXDECODE_RAM(   nullptr,   0, namcos23_cg_layout, 0, 0x800 )
-	GFXDECODE_ENTRY( "textile", 0, gfx_16x16x8_raw,    0, 0x80 )
-GFXDECODE_END
+static GFXLAYOUT_RAW(gorgon_sprite_layout, 32, 32, 32*8, 32*32*8)
 
 static GFXDECODE_START( gfx_gorgon )
-	GFXDECODE_RAM(   nullptr,   0, namcos23_cg_layout,     0, 0x800 )
-	GFXDECODE_ENTRY( "textile", 0, gfx_16x16x8_raw,        0, 0x80 )
-	GFXDECODE_ENTRY( "sprites", 0, namcos23_sprite_layout, 0, 0x80 )
+	GFXDECODE_ENTRY( "sprites", 0, gorgon_sprite_layout, 0, 0x80 )
 GFXDECODE_END
 
 void gorgon_state::gorgon(machine_config &config)
@@ -6616,8 +6637,6 @@ void namcos23_state::s23(machine_config &config)
 	m_screen->set_video_attributes(VIDEO_ALWAYS_UPDATE);
 
 	PALETTE(config, m_palette).set_entries(0x8000);
-
-	GFXDECODE(config, m_gfxdecode, m_palette, gfx_namcos23);
 
 	/* sound hardware */
 	SPEAKER(config, "speaker", 2).front();
