@@ -1046,17 +1046,18 @@ if CPUS["E1"] then
 	files {
 		MAME_DIR .. "src/devices/cpu/e132xs/e132xs.cpp",
 		MAME_DIR .. "src/devices/cpu/e132xs/e132xs.h",
-		MAME_DIR .. "src/devices/cpu/e132xs/32xsdefs.h",
-		MAME_DIR .. "src/devices/cpu/e132xs/e132xsop.hxx",
-		MAME_DIR .. "src/devices/cpu/e132xs/e132xsfe.cpp",
 		MAME_DIR .. "src/devices/cpu/e132xs/e132xsdrc.cpp",
 		MAME_DIR .. "src/devices/cpu/e132xs/e132xsdrc_ops.hxx",
+		MAME_DIR .. "src/devices/cpu/e132xs/e132xsop.hxx",
+		MAME_DIR .. "src/devices/cpu/e132xs/e1defs.h",
+		MAME_DIR .. "src/devices/cpu/e132xs/e1fe.cpp",
+		MAME_DIR .. "src/devices/cpu/e132xs/e1fe.h",
 	}
 end
 
 if opt_tool(CPUS, "E1") then
-	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/e132xs/32xsdasm.cpp")
-	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/e132xs/32xsdasm.h")
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/e132xs/e1dasm.cpp")
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/e132xs/e1dasm.h")
 end
 
 --------------------------------------------------
