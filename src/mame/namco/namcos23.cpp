@@ -1735,8 +1735,6 @@ protected:
 	virtual void irq_update(u32 cause);
 	void subcpu_irq1_update(int state);
 
-	void textram_w(offs_t offset, u32 data, u32 mem_mask = ~0);
-	void textchar_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 	void paletteram_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 	void sprites_idx_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 	void sprites_data_w(offs_t offset, u16 data, u16 mem_mask = ~0);
@@ -4522,18 +4520,6 @@ void namcos23_state::paletteram_w(offs_t offset, u32 data, u32 mem_mask)
 
 
 
-// C361 (text)
-
-void namcos23_state::textram_w(offs_t offset, u32 data, u32 mem_mask)
-{
-	COMBINE_DATA(&m_textram[offset]);
-}
-
-void namcos23_state::textchar_w(offs_t offset, u32 data, u32 mem_mask)
-{
-	COMBINE_DATA(&m_charram[offset]);
-}
-
 // C404 (mixing, gamma RAM)
 
 u16 namcos23_state::c404_ram_r(offs_t offset)
@@ -5797,8 +5783,8 @@ void gorgon_state::mips_map(address_map &map)
 	map(0x06110000, 0x0613ffff).ram().w(FUNC(gorgon_state::paletteram_w)).share("paletteram"); // Palette RAM (C404)
 	map(0x06300000, 0x06300001).w(FUNC(gorgon_state::sprites_idx_w));
 	map(0x06300002, 0x06300003).w(FUNC(gorgon_state::sprites_data_w));
-	map(0x06400000, 0x0641dfff).ram().w(FUNC(gorgon_state::textchar_w)).share("charram"); // Text CGRAM (C361)
-	map(0x0641e000, 0x0641ffff).ram().w(FUNC(gorgon_state::textram_w)).share("textram"); // Text VRAM (C361)
+	map(0x06400000, 0x0641dfff).ram().share("charram"); // Text CGRAM (C361)
+	map(0x0641e000, 0x0641ffff).ram().share("textram"); // Text VRAM (C361)
 
 	c361_map(map, 0x06420000);
 
@@ -5822,8 +5808,8 @@ void namcos23_state::mips_map(address_map &map)
 	map(0x06200000, 0x06203fff).ram(); // C422 RAM
 	map(0x06400000, 0x0640000f).rw(FUNC(namcos23_state::c422_r), FUNC(namcos23_state::c422_w)); // C422 registers
 	map(0x06400002, 0x06400003).w(FUNC(gorgon_state::c422_irq_w));
-	map(0x06800000, 0x0681dfff).ram().w(FUNC(namcos23_state::textchar_w)).share("charram"); // Text CGRAM (C361)
-	map(0x0681e000, 0x0681ffff).ram().w(FUNC(namcos23_state::textram_w)).share("textram"); // Text VRAM (C361)
+	map(0x06800000, 0x0681dfff).ram().share("charram"); // Text CGRAM (C361)
+	map(0x0681e000, 0x0681ffff).ram().share("textram"); // Text VRAM (C361)
 
 	c361_map(map, 0x06820000);
 	c404_map(map, 0x06a08000);
@@ -5881,8 +5867,8 @@ void crszone_state::mips_map(address_map &map)
 	map(0x16200000, 0x16203fff).ram(); // C422 RAM
 	map(0x16400000, 0x1640000f).rw(FUNC(crszone_state::c422_r), FUNC(crszone_state::c422_w)); // C422 registers
 	map(0x16400002, 0x16400003).w(FUNC(crszone_state::c422_irq_w));
-	map(0x16800000, 0x1681dfff).ram().w(FUNC(crszone_state::textchar_w)).share("charram"); // Text CGRAM (C361)
-	map(0x1681e000, 0x1681ffff).ram().w(FUNC(crszone_state::textram_w)).share("textram"); // Text VRAM (C361)
+	map(0x16800000, 0x1681dfff).ram().share("charram"); // Text CGRAM (C361)
+	map(0x1681e000, 0x1681ffff).ram().share("textram"); // Text VRAM (C361)
 
 	c361_map(map, 0x16820000);
 	c404_map(map, 0x16a08000);
