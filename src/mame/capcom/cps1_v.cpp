@@ -2664,9 +2664,19 @@ void cps_state::cps1_build_palette(const uint16_t* const palette_base)
 				// component is set to 0 it should reduce brightness to 1/3
 				bright = 0x0f + ((palette >> 12) << 1);
 
-				r = ((palette >> 8) & 0x0f) * 0x11 * bright / 0x2d;
-				g = ((palette >> 4) & 0x0f) * 0x11 * bright / 0x2d;
-				b = ((palette >> 0) & 0x0f) * 0x11 * bright / 0x2d;
+				// MAMEFX start, Robbbert
+				//r = ((palette >> 8) & 0x0f) * 0x11 * bright / 0x2d;
+				//g = ((palette >> 4) & 0x0f) * 0x11 * bright / 0x2d;
+				//b = ((palette >> 0) & 0x0f) * 0x11 * bright / 0x2d;
+
+				// Code to get rid of grey squares
+				r = BIT(palette, 8, 4);
+				g = BIT(palette, 4, 4);
+				b = BIT(palette, 0, 4);
+				r = (r > 1) ? r * 0x11 * bright / 0x2d : 0;
+				g = (g > 1) ? g * 0x11 * bright / 0x2d : 0;
+				b = (b > 1) ? b * 0x11 * bright / 0x2d : 0;
+				// MAMEFX end
 
 				m_palette->set_pen_color(0x200 * page + offset, rgb_t(r, g, b));
 			}

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3997 -->
+<!-- Number of items in this list = 3998 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7459,6 +7459,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Doopliss Level Sample (SMW1 Hack).sfc" size="2097152" crc="b89670e6" sha1="11cf17c6c21e69c9ddecc16d0675b0785278f6cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns12e2d4f07ccc6">
+		<description>Doraemon - Nobita to Yousei no Kuni T-Eng v0.98 (2026)(torvusY)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Doraemon - Nobita to Yousei no Kuni T-Eng v0.98 (2026)(torvusY).sfc" size="524288" crc="19d069a2" sha1="12e2d4f07ccc6787c298a0053463cdb45109c74c"/>
 			</dataarea>
 		</part>
 	</software>

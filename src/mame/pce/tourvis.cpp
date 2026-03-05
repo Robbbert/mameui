@@ -448,4 +448,4 @@ ROM_END
 
 } // anonymous namespace
 
-GAME( 19??, tourvis, 0, tourvision, tourvision, tourvision_state, init_pce_common, ROT0, u8"bootleg (TourVisión)", u8"TourVisión (PC Engine bootleg)", MACHINE_IS_BIOS_ROOT | MACHINE_NOT_WORKING )
+GAME( 19??, tourvis, 0, tourvision, tourvision, tourvision_state, init_pce_common, ROT0, u8"bootleg (TourVisión)", u8"TourVision (PC Engine bootleg)", MACHINE_IS_BIOS_ROOT | MACHINE_NOT_WORKING )
