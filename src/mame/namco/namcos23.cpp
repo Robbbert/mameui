@@ -4754,7 +4754,8 @@ void namcos23_state::draw_text_layer(screen_device &screen)
 				u32 tile_code = (tile_data & 0x03ff) << 5;
 				u8 flipx_mask = BIT(tile_data, 10) ? 0x00 : 0x3c;
 				u16 flipy_mask = BIT(tile_data, 11) ? 0x1e : 0x00;
-				u64 char_data = ((u64)m_charram[tile_code | (adjusted_ty << 1)] << 32) | m_charram[tile_code | ((adjusted_ty << 1) ^ flipy_mask) | 1];
+				const u32 char_addr = tile_code | ((adjusted_ty << 1) ^ flipy_mask);
+				u64 char_data = ((u64)m_charram[char_addr] << 32) | m_charram[char_addr | 1];
 				for (u32 tx = 0; tx < 16; tx++)
 				{
 					const u8 val = BIT(char_data, ((tx + pix_scroll) << 2) ^ flipx_mask, 4);
@@ -4772,7 +4773,8 @@ void namcos23_state::draw_text_layer(screen_device &screen)
 						tile_code = (tile_data & 0x03ff) << 5;
 						flipx_mask = BIT(tile_data, 10) ? 0x00 : 0x3c;
 						flipy_mask = BIT(tile_data, 11) ? 0x1e : 0x00;
-						char_data = ((u64)m_charram[tile_code | (adjusted_ty << 1)] << 32) | m_charram[tile_code | ((adjusted_ty << 1) ^ flipy_mask) | 1];
+						const u32 char_addr = tile_code | ((adjusted_ty << 1) ^ flipy_mask);
+						char_data = ((u64)m_charram[char_addr] << 32) | m_charram[char_addr | 1];
 						pix_scroll -= 16;
 					}
 				}
