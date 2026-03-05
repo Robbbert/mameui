@@ -629,7 +629,7 @@ bool adsp21062_device::frontend::describe(opcode_desc &desc, const opcode_desc *
 					break;
 
 				default:
-					fatalerror("adsp21062_device::frontend::describe: unknown subop %02X in opcode %04X%08X", subop, (uint16_t)(opcode >> 32), (uint32_t)(opcode));
+					fatalerror("adsp21062_device::frontend::describe: unknown subop %02X in opcode %012X", subop, opcode);
 					return false;
 			}
 			break;
@@ -1137,7 +1137,7 @@ bool adsp21062_device::frontend::describe_compute(opcode_desc &desc, uint64_t op
 				break;
 
 			default:
-				fatalerror("adsp21062_device::frontend::describe_compute: unknown multiop %02X in opcode %04X%08X at %08X", multiop, (uint16_t)(opcode >> 32), (uint32_t)(opcode), desc.pc);
+				fatalerror("adsp21062_device::frontend::describe_compute: unknown multiop %02X in opcode %012X at %08X", multiop, opcode, desc.pc);
 				return false;
 		}
 	}
@@ -1244,7 +1244,7 @@ bool adsp21062_device::frontend::describe_compute(opcode_desc &desc, uint64_t op
 					}
 
 					default:
-						fatalerror("adsp21062_device::frontend::describe_compute: unknown ALU op %02X in opcode %04X%08X at %08X", operation, (uint16_t)(opcode >> 32), (uint32_t)(opcode), desc.pc);
+						fatalerror("adsp21062_device::frontend::describe_compute: unknown ALU op %02X in opcode %012X at %08X", operation, opcode, desc.pc);
 						return false;
 				}
 				break;
@@ -1528,7 +1528,7 @@ bool adsp21062_device::frontend::describe_compute(opcode_desc &desc, uint64_t op
 						break;
 
 					default:
-						fatalerror("adsp21062_device::frontend::describe_compute: unknown mult op %02X in opcode %04X%08X at %08X", operation, (uint16_t)(opcode >> 32), (uint32_t)(opcode), desc.pc);
+						fatalerror("adsp21062_device::frontend::describe_compute: unknown mult op %02X in opcode %012X at %08X", operation, opcode, desc.pc);
 				}
 				break;
 			}
@@ -1581,13 +1581,13 @@ bool adsp21062_device::frontend::describe_compute(opcode_desc &desc, uint64_t op
 						break;
 
 					default:
-						fatalerror("adsp21062_device::frontend::describe_compute: unknown shift op %02X in opcode %04X%08X at %08X", operation, (uint16_t)(opcode >> 32), (uint32_t)(opcode), desc.pc);
+						fatalerror("adsp21062_device::frontend::describe_compute: unknown shift op %02X in opcode %012X at %08X", operation, opcode, desc.pc);
 				}
 				break;
 			}
 
 			default:
-				fatalerror("adsp21062_device::frontend::describe_compute: unknown operation type in opcode %04X%08X at %08X", (uint16_t)(opcode >> 32), (uint32_t)(opcode), desc.pc);
+				fatalerror("adsp21062_device::frontend::describe_compute: unknown operation type in opcode %012X at %08X", opcode, desc.pc);
 				return false;
 		}
 	}

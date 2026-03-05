@@ -1863,7 +1863,7 @@ void drcbe_arm64::op_handle(a64::Assembler &a, const uml::instruction &inst)
 	a.bind(handle);
 
 	// emit a jump around the stack adjust in case code falls through here
-	Label skip = a.new_label();
+	Label const skip = a.new_label();
 	a.b(skip);
 
 	// register the current pointer for the handle
@@ -2319,9 +2319,9 @@ void drcbe_arm64::op_setfmod(a64::Assembler &a, const uml::instruction &inst)
 	assert_no_flags(inst);
 
 	be_parameter srcp(*this, inst.param(0), PTYPE_MRI);
-	const a64::Gp scratch = select_register(TEMP_REG1, inst.size());
+	a64::Gp const scratch = select_register(TEMP_REG1, inst.size());
 
-	emit_ldrb_mem(a, TEMP_REG2.w(), &m_near.nominal_fmod);
+	emit_ldrb_mem(a, TEMP_REG2.w(), &m_state.fmod);
 
 	if (srcp.is_immediate())
 	{
@@ -2329,20 +2329,29 @@ void drcbe_arm64::op_setfmod(a64::Assembler &a, const uml::instruction &inst)
 	}
 	else
 	{
-		const a64::Gp src = srcp.select_register(scratch, inst.size());
+		a64::Gp const src = srcp.select_register(scratch, inst.size());
 
 		mov_reg_param(a, inst.size(), src, srcp);
 		a.and_(scratch, src, 3);
 	}
 
+	Label const skip = a.new_label();
+	a.cmp(TEMP_REG2.w(), scratch.w());
+	a.b_eq(skip);
+
+	emit_ldrb_mem(a, TEMP_REG2.w(), &m_near.nominal_fmod);
 	emit_strb_mem(a, scratch.w(), &m_state.fmod);
+
 	a.cmp(TEMP_REG2.w(), scratch.w());
 	a.cset(TEMP_REG2.w(), a64::CondCode::kNE);
 	emit_strb_mem(a, TEMP_REG2.w(), &m_near.fmod_changed);
+
 	a.mrs(TEMP_REG2, a64::Predicate::SysReg::kFPCR);
 	a.sub(scratch.w(), scratch.w(), 1);
 	a.bfi(TEMP_REG2, scratch.x(), 22, 2);
 	a.msr(a64::Predicate::SysReg::kFPCR, TEMP_REG2);
+
+	a.bind(skip);
 }
 
 void drcbe_arm64::op_getfmod(a64::Assembler &a, const uml::instruction &inst)

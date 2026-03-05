@@ -439,10 +439,10 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		desc.set_z_modified();
 		if (desc.dst_is_pc())
 		{
-			if (!desc.src_is_pc())
+			if (!desc.src_is_pc() || desc.pc_value_unknown())
 				desc.targetpc = BRANCH_TARGET_DYNAMIC;
 			else
-				desc.targetpc = (desc.pc + desc.length) & desc.imm;
+				desc.targetpc = desc.pc_value() & desc.imm;
 			desc.set_is_unconditional_branch();
 			desc.set_end_sequence();
 		}
@@ -472,10 +472,10 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			desc.set_cznv_modified(); // sum
 		if (desc.dst_is_pc())
 		{
-			if (!desc.src_is_pc())
+			if (!desc.src_is_pc() || desc.pc_value_unknown())
 				desc.targetpc = BRANCH_TARGET_DYNAMIC;
 			else
-				desc.targetpc = ((desc.pc + desc.length) + desc.imm) & ~uint32_t(1);
+				desc.targetpc = (desc.pc_value() + desc.imm) & ~uint32_t(1);
 			desc.set_is_unconditional_branch();
 			desc.set_end_sequence();
 		}
@@ -529,11 +529,11 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			desc.set_g_modified(desc.dst_code + 16);
 			if (desc.dst_code == PC_REGISTER)
 			{
-				if (!desc.src_is_pc())
+				if (!desc.src_is_pc() || desc.pc_value_unknown())
 					desc.targetpc = BRANCH_TARGET_DYNAMIC;
 				else
-					desc.targetpc = desc.pc + desc.length;
-				desc.set_is_conditional_branch(); // technically it won't branch if H is clear
+					desc.targetpc = desc.pc_value();
+				desc.set_is_conditional_branch(); // technically it won't branch if H is set
 				desc.set_end_sequence();
 			}
 			else if (desc.dst_code == 5) // TPR_REGISTER & 0xf
@@ -576,10 +576,12 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			{
 				if (!desc.src_is_pc())
 					desc.targetpc = BRANCH_TARGET_DYNAMIC;
-				else if ((op & 0xf800) == 0x2800)
-					desc.targetpc = (desc.pc + desc.length) << 1; // add, adds
-				else
+				else if ((op & 0xf800) == 0x4800)
 					desc.targetpc = 0; // sub, subs
+				else if (!desc.pc_value_unknown())
+					desc.targetpc = desc.pc_value() << 1; // add, adds
+				else
+					desc.targetpc = BRANCH_TARGET_DYNAMIC;
 				desc.set_is_unconditional_branch();
 				desc.set_end_sequence();
 			}
@@ -620,8 +622,10 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 					desc.targetpc = BRANCH_TARGET_DYNAMIC;
 				else if ((op & 0xf400) == 0x3400)
 					desc.targetpc = 0; // andn, xor
+				else if (!desc.pc_value_unknown())
+					desc.targetpc = desc.pc_value(); // or, and
 				else
-					desc.targetpc = desc.pc + desc.length; // or, and
+					desc.targetpc = BRANCH_TARGET_DYNAMIC;
 				desc.set_is_unconditional_branch();
 				desc.set_end_sequence();
 			}
@@ -648,10 +652,10 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			desc.set_g_modified(desc.dst_code);
 			if (desc.dst_code == PC_REGISTER)
 			{
-				if (!desc.src_is_sr() || ((op & 0xfc00) == 0x4000))
+				if (!desc.src_is_sr() || desc.pc_value_unknown() || ((op & 0xfc00) == 0x4000))
 					desc.targetpc = BRANCH_TARGET_DYNAMIC;
 				else
-					desc.targetpc = desc.pc + desc.length;
+					desc.targetpc = desc.pc_value();
 				desc.set_is_unconditional_branch();
 				desc.set_end_sequence();
 			}
@@ -684,12 +688,12 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			desc.set_g_modified(desc.dst_code);
 			if (desc.dst_code == PC_REGISTER)
 			{
-				if (!desc.src_is_pc())
+				if (!desc.src_is_pc() || desc.pc_value_unknown())
 					desc.targetpc = BRANCH_TARGET_DYNAMIC;
 				else if ((op & 0xfc00) == 0x4400)
-					desc.targetpc = ~(desc.pc + desc.length) & ~uint32_t(1); // not
+					desc.targetpc = ~desc.pc_value() & ~uint32_t(1); // not
 				else
-					desc.targetpc = uint32_t(-int32_t(desc.pc + desc.length)) & ~uint32_t(1); // neg, negs
+					desc.targetpc = uint32_t(-int32_t(desc.pc_value())) & ~uint32_t(1); // neg, negs
 				desc.set_is_unconditional_branch();
 				desc.set_end_sequence();
 			}
@@ -768,7 +772,10 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			desc.set_g_modified(desc.dst_code);
 			if (desc.dst_code == PC_REGISTER)
 			{
-				desc.targetpc = (desc.pc + desc.length + desc.imm) & ~uint32_t(1);
+				if (desc.pc_value_unknown())
+					desc.targetpc = BRANCH_TARGET_DYNAMIC;
+				else
+					desc.targetpc = (desc.pc_value() + desc.imm) & ~uint32_t(1);
 				desc.set_is_unconditional_branch();
 				desc.set_end_sequence();
 			}
@@ -789,12 +796,14 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		desc.set_g_modified(desc.dst_code);
 		if (desc.dst_code == PC_REGISTER)
 		{
-			if (!(op & 0x0800))
-				desc.targetpc = (desc.pc + desc.length) & ~desc.imm; // andni
+			if (desc.pc_value_unknown())
+				desc.targetpc = BRANCH_TARGET_DYNAMIC;
+			else if (!(op & 0x0800))
+				desc.targetpc = desc.pc_value() & ~desc.imm; // andni
 			else if (!(op & 0x0400))
-				desc.targetpc = ((desc.pc + desc.length) | desc.imm) & ~uint32_t(1); // ori
+				desc.targetpc = (desc.pc_value() | desc.imm) & ~uint32_t(1); // ori
 			else
-				desc.targetpc = ((desc.pc + desc.length) ^ desc.imm) & ~uint32_t(1); // xori
+				desc.targetpc = (desc.pc_value() ^ desc.imm) & ~uint32_t(1); // xori
 			desc.set_is_unconditional_branch();
 			desc.set_end_sequence();
 		}
@@ -1075,7 +1084,10 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 		if ((op & 0x0f00) != 0x0c00)
 			desc.set_is_conditional_branch();
 		desc.delayslots = (op & 0x1000) ? 0 : 1;
-		desc.targetpc = desc.pc + desc.length + desc.imm;
+		if (desc.pc_value_unknown())
+			desc.targetpc = BRANCH_TARGET_DYNAMIC;
+		else
+			desc.targetpc = desc.pc_value() + desc.imm;
 		break;
 	case 0xed: // frame
 		desc.set_can_cause_exception();
@@ -1094,10 +1106,10 @@ bool hyperstone_device::frontend::describe(opcode_desc &desc, const opcode_desc 
 			desc.set_g_used(desc.src_code);
 		desc.set_g_used(PC_REGISTER);
 		desc.set_g_used(SR_REGISTER);
-		if (desc.src_is_pc())
-			desc.targetpc = (desc.pc + desc.length + desc.imm) & ~uint32_t(1);
-		else if (desc.src_is_sr())
+		if (desc.src_is_sr())
 			desc.targetpc = desc.imm & ~uint32_t(1);
+		else if (desc.src_is_pc() && !desc.pc_value_unknown())
+			desc.targetpc = (desc.pc_value() + desc.imm) & ~uint32_t(1);
 		else
 			desc.targetpc = BRANCH_TARGET_DYNAMIC;
 		desc.set_is_unconditional_branch();

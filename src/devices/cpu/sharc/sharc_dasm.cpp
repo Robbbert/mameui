@@ -7,12 +7,14 @@
 */
 
 #include "emu.h"
-#include "sharcdsm.h"
+#include "sharc_dasm.h"
 
 #include <stdexcept>
 
 
-const char sharc_disassembler::ureg_names[256][16] =
+namespace {
+
+const char ureg_names[256][16] =
 {
 	"R0",       "R1",       "R2",       "R3",       "R4",       "R5",       "R6",       "R7",
 	"R8",       "R9",       "R10",      "R11",      "R12",      "R13",      "R14",      "R15",
@@ -48,12 +50,12 @@ const char sharc_disassembler::ureg_names[256][16] =
 	"???",      "???",      "???",      "???",      "???",      "???",      "???",      "???"
 };
 
-const char sharc_disassembler::bopnames[8][8] =
+const char bopnames[8][8] =
 {
 	"SET",      "CLEAR",    "TOGGLE",   "???",      "TEST",     "XOR",      "???",      "???"
 };
 
-const char sharc_disassembler::condition_codes_if[32][32] =
+const char condition_codes_if[32][32] =
 {
 	"EQ",           "LT",           "LE",           "AC",
 	"AV",           "MV",           "MS",           "SV",
@@ -65,7 +67,7 @@ const char sharc_disassembler::condition_codes_if[32][32] =
 	"NOT FLAG3_IN", "NOT TF",       "NBM",          ""
 };
 
-const char sharc_disassembler::condition_codes_do[32][32] =
+const char condition_codes_do[32][32] =
 {
 	"EQ",           "LT",           "LE",           "AC",
 	"AV",           "MV",           "MS",           "SV",
@@ -77,7 +79,7 @@ const char sharc_disassembler::condition_codes_do[32][32] =
 	"NOT FLAG3_IN", "NOT TF",       "NBM",          "FOREVER"
 };
 
-const char sharc_disassembler::mr_regnames[16][8] =
+const char mr_regnames[16][8] =
 {
 	"MR0F", "MR1F", "MR2F", "MR0B", "MR1B", "MR2B", "???",  "???",
 	"???",  "???",  "???",  "???",  "???",  "???",  "???",  "???"
@@ -95,8 +97,10 @@ const char sharc_disassembler::mr_regnames[16][8] =
 #define GET_DAG2_L(x)   (GET_UREG(0x30 | (8 + (x & 0x7))))
 #define GET_DAG2_B(x)   (GET_UREG(0x40 | (8 + (x & 0x7))))
 
+} // anonymous namespace
 
-void sharc_disassembler::compute(std::ostream &stream, uint32_t opcode)
+
+void sharc_disassembler::compute(std::ostream &stream, uint32_t opcode) const
 {
 	int op = (opcode >> 12) & 0xff;
 	int cu = (opcode >> 20) & 0x3;
@@ -347,7 +351,7 @@ void sharc_disassembler::compute(std::ostream &stream, uint32_t opcode)
 	}
 }
 
-void sharc_disassembler::get_if_condition(std::ostream &stream, int cond)
+void sharc_disassembler::get_if_condition(std::ostream &stream, int cond) const
 {
 	if (cond != 31)
 	{
@@ -355,7 +359,7 @@ void sharc_disassembler::get_if_condition(std::ostream &stream, int cond)
 	}
 }
 
-void sharc_disassembler::pm_dm_ureg(std::ostream &stream, int g, int d, int i, int m, int ureg, int update)
+void sharc_disassembler::pm_dm_ureg(std::ostream &stream, int g, int d, int i, int m, int ureg, int update) const
 {
 	if (update)     // post-modify
 	{
@@ -410,7 +414,7 @@ void sharc_disassembler::pm_dm_ureg(std::ostream &stream, int g, int d, int i, i
 	}
 }
 
-void sharc_disassembler::pm_dm_imm_dreg(std::ostream &stream, int g, int d, int i, int data, int dreg, int update)
+void sharc_disassembler::pm_dm_imm_dreg(std::ostream &stream, int g, int d, int i, int data, int dreg, int update) const
 {
 	const char *sign = "";
 	if (data & 0x20)
@@ -471,7 +475,7 @@ void sharc_disassembler::pm_dm_imm_dreg(std::ostream &stream, int g, int d, int 
 	}
 }
 
-void sharc_disassembler::pm_dm_dreg(std::ostream &stream, int g, int d, int i, int m, int dreg)
+void sharc_disassembler::pm_dm_dreg(std::ostream &stream, int g, int d, int i, int m, int dreg) const
 {
 	if (d)
 	{
@@ -497,7 +501,7 @@ void sharc_disassembler::pm_dm_dreg(std::ostream &stream, int g, int d, int i, i
 	}
 }
 
-void sharc_disassembler::shiftop(std::ostream &stream, int shift, int data, int rn, int rx)
+void sharc_disassembler::shiftop(std::ostream &stream, int shift, int data, int rn, int rx) const
 {
 	int8_t data8 = data & 0xff;
 	int bit6 = data & 0x3f;
@@ -530,7 +534,7 @@ void sharc_disassembler::shiftop(std::ostream &stream, int shift, int data, int 
 	}
 }
 
-uint32_t sharc_disassembler::dasm_compute_dreg_dmpm(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_compute_dreg_dmpm(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int dmi = (opcode >> 41) & 0x7;
 	int dmm = (opcode >> 38) & 0x7;
@@ -566,7 +570,7 @@ uint32_t sharc_disassembler::dasm_compute_dreg_dmpm(std::ostream &stream, uint32
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_compute(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_compute(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int cond = (opcode >> 33) & 0x1f;
 	int comp = opcode & 0x7fffff;
@@ -579,7 +583,7 @@ uint32_t sharc_disassembler::dasm_compute(std::ostream &stream, uint32_t pc, uin
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_compute_uregdmpm_regmod(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_compute_uregdmpm_regmod(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int cond = (opcode >> 33) & 0x1f;
 	int g = (opcode >> 32) & 0x1;
@@ -600,7 +604,7 @@ uint32_t sharc_disassembler::dasm_compute_uregdmpm_regmod(std::ostream &stream, 
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_compute_dregdmpm_immmod(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_compute_dregdmpm_immmod(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int cond = (opcode >> 33) & 0x1f;
 	int g = (opcode >> 40) & 0x1;
@@ -621,7 +625,7 @@ uint32_t sharc_disassembler::dasm_compute_dregdmpm_immmod(std::ostream &stream, 
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_compute_ureg_ureg(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_compute_ureg_ureg(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int cond = (opcode >> 31) & 0x1f;
 	int uregs = (opcode >> 36) & 0xff;
@@ -638,7 +642,7 @@ uint32_t sharc_disassembler::dasm_compute_ureg_ureg(std::ostream &stream, uint32
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_immshift_dregdmpm(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_immshift_dregdmpm(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int cond = (opcode >> 33) & 0x1f;
 	int g = (opcode >> 32) & 0x1;
@@ -658,7 +662,7 @@ uint32_t sharc_disassembler::dasm_immshift_dregdmpm(std::ostream &stream, uint32
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_immshift_dregdmpm_nodata(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_immshift_dregdmpm_nodata(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int cond = (opcode >> 33) & 0x1f;
 	int rn = (opcode >> 4) & 0xf;
@@ -671,7 +675,7 @@ uint32_t sharc_disassembler::dasm_immshift_dregdmpm_nodata(std::ostream &stream,
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_compute_modify(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_compute_modify(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int cond = (opcode >> 33) & 0x1f;
 	int g = (opcode >> 38) & 0x7;
@@ -689,7 +693,7 @@ uint32_t sharc_disassembler::dasm_compute_modify(std::ostream &stream, uint32_t 
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_direct_jump(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_direct_jump(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int j = (opcode >> 26) & 0x1;
 	int cond = (opcode >> 33) & 0x1f;
@@ -730,7 +734,7 @@ uint32_t sharc_disassembler::dasm_direct_jump(std::ostream &stream, uint32_t pc,
 	return flags;
 }
 
-uint32_t sharc_disassembler::dasm_indirect_jump_compute(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_indirect_jump_compute(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int b = (opcode >> 39) & 0x1;
 	int j = (opcode >> 26) & 0x1;
@@ -787,7 +791,7 @@ uint32_t sharc_disassembler::dasm_indirect_jump_compute(std::ostream &stream, ui
 	return flags;
 }
 
-uint32_t sharc_disassembler::dasm_indirect_jump_compute_dregdm(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_indirect_jump_compute_dregdm(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int d = (opcode >> 44) & 0x1;
 	int cond = (opcode >> 33) & 0x1f;
@@ -829,7 +833,7 @@ uint32_t sharc_disassembler::dasm_indirect_jump_compute_dregdm(std::ostream &str
 	return flags;
 }
 
-uint32_t sharc_disassembler::dasm_rts_compute(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_rts_compute(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int j = (opcode >> 26) & 0x1;
 	int e = (opcode >> 25) & 0x1;
@@ -874,7 +878,7 @@ uint32_t sharc_disassembler::dasm_rts_compute(std::ostream &stream, uint32_t pc,
 	return flags;
 }
 
-uint32_t sharc_disassembler::dasm_do_until_counter(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_do_until_counter(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int data = (opcode >> 24) & 0xffff;
 	int ureg = (opcode >> 32) & 0xff;
@@ -893,7 +897,7 @@ uint32_t sharc_disassembler::dasm_do_until_counter(std::ostream &stream, uint32_
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_do_until(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_do_until(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int term = (opcode >> 33) & 0x1f;
 	uint32_t addr = opcode & 0xffffff;
@@ -902,7 +906,7 @@ uint32_t sharc_disassembler::dasm_do_until(std::ostream &stream, uint32_t pc, ui
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_immmove_uregdmpm(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_immmove_uregdmpm(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int d = (opcode >> 40) & 0x1;
 	int g = (opcode >> 41) & 0x1;
@@ -934,7 +938,7 @@ uint32_t sharc_disassembler::dasm_immmove_uregdmpm(std::ostream &stream, uint32_
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_immmove_uregdmpm_indirect(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_immmove_uregdmpm_indirect(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int d = (opcode >> 40) & 0x1;
 	int g = (opcode >> 44) & 0x1;
@@ -967,7 +971,7 @@ uint32_t sharc_disassembler::dasm_immmove_uregdmpm_indirect(std::ostream &stream
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_immmove_immdata_dmpm(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_immmove_immdata_dmpm(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int g = (opcode >> 37) & 0x1;
 	int i = (opcode >> 41) & 0x7;
@@ -985,7 +989,7 @@ uint32_t sharc_disassembler::dasm_immmove_immdata_dmpm(std::ostream &stream, uin
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_immmove_immdata_ureg(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_immmove_immdata_ureg(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int ureg = (opcode >> 32) & 0xff;
 	uint32_t data = opcode & 0xffffffff;
@@ -994,7 +998,7 @@ uint32_t sharc_disassembler::dasm_immmove_immdata_ureg(std::ostream &stream, uin
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_sysreg_bitop(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_sysreg_bitop(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int bop = (opcode >> 37) & 0x7;
 	int sreg = (opcode >> 32) & 0xf;
@@ -1007,7 +1011,7 @@ uint32_t sharc_disassembler::dasm_sysreg_bitop(std::ostream &stream, uint32_t pc
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_ireg_modify(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_ireg_modify(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int g = (opcode >> 38) & 0x1;
 	int i = (opcode >> 32) & 0x7;
@@ -1038,7 +1042,7 @@ uint32_t sharc_disassembler::dasm_ireg_modify(std::ostream &stream, uint32_t pc,
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_misc(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_misc(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	int bits = (opcode >> 33) & 0x7f;
 	int lpu = (opcode >> 39) & 0x1;
@@ -1104,7 +1108,7 @@ uint32_t sharc_disassembler::dasm_misc(std::ostream &stream, uint32_t pc, uint64
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_idlenop(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_idlenop(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	if (opcode & 0x8000000000U)
 	{
@@ -1117,7 +1121,7 @@ uint32_t sharc_disassembler::dasm_idlenop(std::ostream &stream, uint32_t pc, uin
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_cjump_rframe(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_cjump_rframe(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	/* TODO */
 	if (opcode & 0x10000000000U)    /* RFRAME */
@@ -1131,7 +1135,7 @@ uint32_t sharc_disassembler::dasm_cjump_rframe(std::ostream &stream, uint32_t pc
 	return 0;
 }
 
-uint32_t sharc_disassembler::dasm_invalid(std::ostream &stream, uint32_t pc, uint64_t opcode)
+uint32_t sharc_disassembler::dasm_invalid(std::ostream &stream, uint32_t pc, uint64_t opcode) const
 {
 	util::stream_format(stream, "?");
 	return 0;
@@ -1208,19 +1212,16 @@ const sharc_disassembler::SHARC_DASM_OP sharc_disassembler::sharc_dasm_ops[] =
 
 sharc_disassembler::sharc_disassembler()
 {
-	int i, j;
-	int num_ops = sizeof(sharc_dasm_ops) / sizeof(SHARC_DASM_OP);
-
-	for (i=0; i < 256; i++)
+	for (int i = 0; i < 256; i++)
 	{
 		sharcdasm_table[i] = &sharc_disassembler::dasm_invalid;
 	}
 
-	for (i=0; i < 256; i++)
+	for (int i = 0; i < 256; i++)
 	{
-		uint16_t op = i << 8;
+		const uint16_t op = i << 8;
 
-		for (j=0; j < num_ops; j++)
+		for (int j = 0; j < std::size(sharc_dasm_ops); j++)
 		{
 			if ((sharc_dasm_ops[j].op_mask & op) == sharc_dasm_ops[j].op_bits)
 			{
@@ -1239,8 +1240,12 @@ sharc_disassembler::sharc_disassembler()
 
 offs_t sharc_disassembler::disassemble(std::ostream &stream, offs_t pc, const data_buffer &opcodes, const data_buffer &params)
 {
-	u64 opcode = opcodes.r64(pc);
-	int op = (opcode >> 40) & 0xff;
+	return disassemble_one(stream, pc, opcodes.r64(pc));
+}
+
+offs_t sharc_disassembler::disassemble_one(std::ostream &stream, offs_t pc, uint64_t opcode) const
+{
+	const int op = (opcode >> 40) & 0xff;
 
 	return 1 | (this->*sharcdasm_table[op])(stream, pc, opcode) | SUPPORTED;
 }

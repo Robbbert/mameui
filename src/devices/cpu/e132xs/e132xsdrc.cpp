@@ -388,18 +388,20 @@ void hyperstone_device::log_descriptions(const opcode_desc *desc_list, unsigned 
 		else
 			m_disassembler.disassemble_one(buffer, desc_list->pc, desc_list->opptr);
 		buffer.put('\0');
-		m_drcuml->log_printf("%-40s", &buffer.vec()[0]);
+		m_drcuml->log_printf(
+				(desc_list->regin.any() || desc_list->regout.any()) ? "%-40s" : "%s",
+				&buffer.vec()[0]);
 
 		// output register dependencies
 		buffer.clear();
 		buffer.seekp(0);
-		if (!desc_list->regin.none())
+		if (desc_list->regin.any())
 		{
 			desc_list->log_registers_used(buffer);
-			if (!desc_list->regout.none())
+			if (desc_list->regout.any())
 				buffer << ' ';
 		}
-		if (!desc_list->regout.none())
+		if (desc_list->regout.any())
 			desc_list->log_registers_modified(buffer);
 		buffer.put('\0');
 		m_drcuml->log_printf("%s\n", &buffer.vec()[0]);
@@ -919,7 +921,10 @@ void hyperstone_device::generate_sequence_instruction(drcuml_block &block, compi
 			UML_TEST(block, mem(&m_core->delay_slot), ~uint32_t(0));
 			UML_JMPc(block, uml::COND_NZ, set_delay_pc);
 
-			UML_ADD(block, DRC_PC, DRC_PC, desc->length);
+			if (desc->pc_value_unknown())
+				UML_ADD(block, DRC_PC, DRC_PC, desc->length);
+			else
+				UML_MOV(block, DRC_PC, desc->pc_value());
 			UML_MOV(block, mem(&m_core->delay_slot_taken), 0);
 			UML_JMP(block, done);
 
@@ -931,7 +936,10 @@ void hyperstone_device::generate_sequence_instruction(drcuml_block &block, compi
 		}
 		else
 		{
-			UML_ADD(block, DRC_PC, DRC_PC, desc->length);
+			if (desc->pc_value_unknown())
+				UML_ADD(block, DRC_PC, DRC_PC, desc->length);
+			else
+				UML_MOV(block, DRC_PC, desc->pc_value());
 			UML_MOV(block, mem(&m_core->delay_slot_taken), 0);
 		}
 

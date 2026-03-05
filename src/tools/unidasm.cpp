@@ -169,7 +169,7 @@ using util::BIT;
 #include "cpu/scudsp/scudspdasm.h"
 #include "cpu/se3208/se3208dis.h"
 #include "cpu/sh/sh_dasm.h"
-#include "cpu/sharc/sharcdsm.h"
+#include "cpu/sharc/sharc_dasm.h"
 #include "cpu/sigma2/sigma2d.h"
 #include "cpu/sm510/sm510d.h"
 #include "cpu/sm8500/sm8500d.h"

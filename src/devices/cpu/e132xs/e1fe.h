@@ -129,6 +129,17 @@ public:
 		return in_delay_slot() ? branch->pc : pc;
 	}
 
+	// pc_value - value of PC when used for arithmetic
+	uint32_t pc_value() const
+	{
+		return in_delay_slot() ? branch->targetpc : (pc + length);
+	}
+
+	bool pc_value_unknown() const
+	{
+		return in_delay_slot() && (branch->targetpc == BRANCH_TARGET_DYNAMIC);
+	}
+
 	void reset(offs_t curpc, bool in_delay_slot)
 	{
 		static_assert(REG_COUNT <= 40);

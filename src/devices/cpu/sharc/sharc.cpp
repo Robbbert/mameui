@@ -8,7 +8,7 @@
 #include "emu.h"
 #include "sharc.h"
 
-#include "sharcdsm.h"
+#include "sharc_dasm.h"
 #include "sharcfe.h"
 #include "sharcinternal.ipp"
 
@@ -18,6 +18,8 @@
 
 #include <algorithm>
 #include <cstdio>
+#include <locale>
+#include <sstream>
 
 //#define VERBOSE 1
 #include "logmacro.h"
@@ -66,6 +68,17 @@ enum
 
 DEFINE_DEVICE_TYPE(ADSP21062, adsp21062_device, "adsp21062", "Analog Devices ADSP21062 \"SHARC\"")
 DEFINE_DEVICE_TYPE(ADSP21060, adsp21060_device, "adsp21060", "Analog Devices ADSP21060 \"SHARC\"")
+
+
+std::string adsp21062_device::disassemble_one(uint32_t pc, uint64_t opcode)
+{
+	// expensive - don't use this frequently
+	std::ostringstream stream;
+	stream.imbue(std::locale::classic());
+	sharc_disassembler().disassemble_one(stream, pc, opcode);
+	return std::move(stream).str();
+}
+
 
 void adsp21062_device::pgm_2m(address_map &map)
 {
