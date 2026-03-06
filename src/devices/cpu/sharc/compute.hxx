@@ -335,7 +335,7 @@ void adsp21062_device::compute_max(int rn, int rx, int ry)
 /* Rn = CLIP Rx BY Ry */
 void adsp21062_device::compute_clip(int rn, int rx, int ry)
 {
-	const int32_t absry = sd::abs(int32_t(REG(ry)));
+	const int32_t absry = std::abs(int32_t(REG(ry)));
 	const uint32_t r = std::clamp(int32_t(REG(rx)), -absry, absry);
 
 	CLEAR_ALU_FLAGS();
