@@ -1510,10 +1510,10 @@ GAME( 1979, acombat4,  astrof,   abattle,  abattle,   astrof_state, init_abattle
 GAME( 1979, strfight,  astrof,   abattle,  abattle,   astrof_state, init_acombat3, ROT90, "bootleg (VGG)",            "Star Fighter (bootleg of Astro Fighter)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1979, sstarbtl,  astrof,   abattle,  abattle,   astrof_state, init_sstarbtl, ROT90, "bootleg (SG-Florence)",    "Super Star Battle",                       MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 
-GAME( 1979, spfghmk2,  0,        spfghmk2, spfghmk2,  astrof_state, empty_init,    ROT90, "Data East",                "Space Fighter Mark II (set 1)",           MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, spfghmk22, spfghmk2, spfghmk2, spfghmk22, astrof_state, empty_init,    ROT90, "Data East",                "Space Fighter Mark II (set 2)",           MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, spfghmk2,  0,        spfghmk2, spfghmk2,  astrof_state, empty_init,    ROT90, "Data East",                "Space Fighter Mark II (set 1)",           MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, spfghmk22, spfghmk2, spfghmk2, spfghmk22, astrof_state, empty_init,    ROT90, "Data East",                "Space Fighter Mark II (set 2)",           MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 
-GAME( 1979, satsf3d,   0,        spfghmk2, spfghmk2,  astrof_state, empty_init,    ROT90, "Data East",                "Saturn: Space Fighter 3D",                MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, satsf3d,   0,        spfghmk2, spfghmk2,  astrof_state, empty_init,    ROT90, "Data East",                "Saturn: Space Fighter 3D",                MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 
 GAME( 1980, tomahawk,  0,        tomahawk, tomahawk,  astrof_state, empty_init,    ROT90, "Data East",                "Tomahawk 777 (rev 5)",                    MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1980, tomahawk1, tomahawk, tomahawk, tomahawk1, astrof_state, empty_init,    ROT90, "Data East",                "Tomahawk 777 (rev 1)",                    MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )

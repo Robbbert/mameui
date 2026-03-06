@@ -158,13 +158,41 @@ void astrof_state::astrof_audio(machine_config &config)
 
 void astrof_state::spfghmk2_audio_w(uint8_t data)
 {
-	/* nothing yet */
+	if (data < 0xff)
+	{
+		uint8_t c = m_port_2_last ^ data;
+
+		for (uint8_t i = 0; i < 8; i++)
+			if (BIT(c, i))
+				if (!BIT(data, i))
+					m_samples->start(i,i);
+	}
+
+	m_port_2_last = data;
 }
 
+static const char *const spfghmk2_sample_names[] =
+{
+	"*invaders",
+	"0",  // not used
+	"1",
+	"2",
+	"3",
+	"4",
+	"5",
+	"6",
+	"7",
+	0
+};
 
 void astrof_state::spfghmk2_audio(machine_config &config)
 {
 	/* nothing yet */
+	SPEAKER(config, "mono").front_center();
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(8);
+	m_samples->set_samples_names(spfghmk2_sample_names);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 

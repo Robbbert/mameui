@@ -300,7 +300,7 @@ vp415_state::vp415_state(const machine_config &mconfig, device_type type, const 
 	, m_datacpu(*this, DATACPU_TAG)
 	, m_datamcu(*this, DATAMCU_TAG)
 //	, m_scsi(*this, SCSI_TAG)
-	, m_scsi(*this, "scsi:7:ncr5385")
+	, m_scsi(*this, "ncr5385")
 	, m_drivecpu(*this, DRIVECPU_TAG)
 	, m_ctrlcpu(*this, CTRLCPU_TAG)
 	, m_ctrlmcu(*this, CTRLMCU_TAG)
@@ -736,7 +736,7 @@ void vp415_state::vp415(machine_config &config)
 	m_datamcu->p2_out_cb().set(FUNC(vp415_state::data_mcu_port2_w));
 	m_datamcu->set_addrmap(AS_PROGRAM, &vp415_state::datamcu_program_map);
 
-	NSCSI_BUS(config, "scsi");
+	auto &scsi(NSCSI_BUS(config, "scsi"));
 	NSCSI_CONNECTOR(config, "scsi:0", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:1", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:2", scsi_devices, nullptr, false);
@@ -744,18 +744,21 @@ void vp415_state::vp415(machine_config &config)
 	NSCSI_CONNECTOR(config, "scsi:4", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:5", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:6", scsi_devices, nullptr, false);
-	NSCSI_CONNECTOR(config, "scsi:7").option_set("ncr5385", NCR5385).machine_config
-	(
-		[this](device_t *device)
-		{
-			ncr5385_device &ncr5385(downcast<ncr5385_device &>(*device));
+//	NSCSI_CONNECTOR(config, "scsi:7").option_set("ncr5385", NCR5385).machine_config
+//	(
+//		[this](device_t *device)
+//		{
+//			ncr5385_device &ncr5385(downcast<ncr5385_device &>(*device));
 
-			ncr5385.set_clock(8'000'000/2); // Same clock signal as above, per schematic
+//			ncr5385.set_clock(8'000'000/2); // Same clock signal as above, per schematic
 
-			ncr5385.irq().set(*this, FUNC(vp415_state::cpu_int1_w));
-			//ncr5385.dreq().set_inputline(m_iop, INPUT_LINE_NMI);
-		}
-	);
+//			ncr5385.irq().set(*this, FUNC(vp415_state::cpu_int1_w));
+//			//ncr5385.dreq().set_inputline(m_iop, INPUT_LINE_NMI);
+//		}
+//	);
+	NCR5385(config, m_scsi, 8'000'000/2);
+	scsi.set_external_device(7, m_scsi);
+	m_scsi->irq().set(DEVICE_SELF, FUNC(vp415_state::cpu_int1_w));
 
 	// Module S: Control
 	I8031(config, m_ctrlcpu, XTAL(11'059'200)); // 11.059MHz, per schematic
