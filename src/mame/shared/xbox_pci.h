@@ -401,8 +401,6 @@ private:
 	} apust;
 	void apu_mmio(address_map &map) ATTR_COLD;
 	void p_map(address_map &map) ATTR_COLD;
-	uint8_t minimum_grant_r() { return 1; }
-	uint8_t maximum_latency_r() { return 0xc; }
 	uint32_t program_memory_r(offs_t offset);
 };
 
