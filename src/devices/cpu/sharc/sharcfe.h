@@ -17,6 +17,7 @@
 
 #include <cassert>
 #include <bitset>
+#include <iosfwd>
 
 
 class adsp21062_device::opcode_desc : public opcode_desc_base<opcode_desc, 96>
@@ -26,11 +27,12 @@ public:
 	{
 		LOOP = 0,
 		ASTAT_DELAY_COPY_AZ,
+		ASTAT_DELAY_COPY_AV,
 		ASTAT_DELAY_COPY_AN,
 		ASTAT_DELAY_COPY_AC,
-		ASTAT_DELAY_COPY_AV,
 		ASTAT_DELAY_COPY_MV,
 		ASTAT_DELAY_COPY_MN,
+		ASTAT_DELAY_COPY_AF,
 		ASTAT_DELAY_COPY_SV,
 		ASTAT_DELAY_COPY_SZ,
 		ASTAT_DELAY_COPY_BTF,
@@ -69,6 +71,8 @@ public:
 	void set_mu_modified()              { regout.set(REG_MU); }
 	void set_mi_used()                  { regin.set(REG_MI); }
 	void set_mi_modified()              { regout.set(REG_MI); }
+	void set_af_used()                  { regin.set(REG_AF); }
+	void set_af_modified()              { regout.set(REG_AF); }
 	void set_sv_used()                  { regin.set(REG_SV); }
 	void set_sv_modified()              { regout.set(REG_SV); }
 	void set_sz_used()                  { regin.set(REG_SZ); }
@@ -77,35 +81,34 @@ public:
 	void set_ss_modified()              { regout.set(REG_SS); }
 	void set_btf_used()                 { regin.set(REG_BTF); }
 	void set_btf_modified()             { regout.set(REG_BTF); }
-	void set_af_used()                  { regin.set(REG_AF); }
-	void set_af_modified()              { regout.set(REG_AF); }
-
-	void set_pm_i_used(unsigned x)      { regin.set(REG_PM_I0 + x); }
-	void set_pm_i_modified(unsigned x)  { regout.set(REG_PM_I0 + x); }
-	void set_pm_m_used(unsigned x)      { regin.set(REG_PM_M0 + x); }
-	void set_pm_m_modified(unsigned x)  { regout.set(REG_PM_M0 + x); }
-	void set_pm_b_used(unsigned x)      { regin.set(REG_PM_B0 + x); }
-	void set_pm_b_modified(unsigned x)  { regout.set(REG_PM_B0 + x); }
-	void set_pm_l_used(unsigned x)      { regin.set(REG_PM_L0 + x); }
-	void set_pm_l_modified(unsigned x)  { regout.set(REG_PM_L0 + x); }
 
 	void set_dm_i_used(unsigned x)      { regin.set(REG_DM_I0 + x); }
 	void set_dm_i_modified(unsigned x)  { regout.set(REG_DM_I0 + x); }
 	void set_dm_m_used(unsigned x)      { regin.set(REG_DM_M0 + x); }
 	void set_dm_m_modified(unsigned x)  { regout.set(REG_DM_M0 + x); }
-	void set_dm_b_used(unsigned x)      { regin.set(REG_DM_B0 + x); }
-	void set_dm_b_modified(unsigned x)  { regout.set(REG_DM_B0 + x); }
 	void set_dm_l_used(unsigned x)      { regin.set(REG_DM_L0 + x); }
 	void set_dm_l_modified(unsigned x)  { regout.set(REG_DM_L0 + x); }
+	void set_dm_b_used(unsigned x)      { regin.set(REG_DM_B0 + x); }
+	void set_dm_b_modified(unsigned x)  { regout.set(REG_DM_B0 + x); }
+
+	void set_pm_i_used(unsigned x)      { regin.set(REG_PM_I0 + x); }
+	void set_pm_i_modified(unsigned x)  { regout.set(REG_PM_I0 + x); }
+	void set_pm_m_used(unsigned x)      { regin.set(REG_PM_M0 + x); }
+	void set_pm_m_modified(unsigned x)  { regout.set(REG_PM_M0 + x); }
+	void set_pm_l_used(unsigned x)      { regin.set(REG_PM_L0 + x); }
+	void set_pm_l_modified(unsigned x)  { regout.set(REG_PM_L0 + x); }
+	void set_pm_b_used(unsigned x)      { regin.set(REG_PM_B0 + x); }
+	void set_pm_b_modified(unsigned x)  { regout.set(REG_PM_B0 + x); }
 
 	void set_alu_flags_modified()
 	{
 		set_az_modified();
-		set_an_modified();
 		set_av_modified();
+		set_an_modified();
 		set_ac_modified();
 		set_as_modified();
 		set_ai_modified();
+		set_af_modified();
 	}
 
 	void set_mult_flags_modified()
@@ -118,8 +121,8 @@ public:
 
 	void set_shift_flags_modified()
 	{
-		set_sz_modified();
 		set_sv_modified();
+		set_sz_modified();
 		set_ss_modified();
 	}
 
@@ -133,11 +136,11 @@ public:
 	bool mv_calc_required() const       { return regreq[REG_MV] || in_delay_slot(); }
 	bool mu_calc_required() const       { return regreq[REG_MU] || in_delay_slot(); }
 	bool mi_calc_required() const       { return regreq[REG_MI] || in_delay_slot(); }
+	bool af_calc_required() const       { return regreq[REG_AF] || in_delay_slot(); }
 	bool sv_calc_required() const       { return regreq[REG_SV] || in_delay_slot(); }
 	bool sz_calc_required() const       { return regreq[REG_SZ] || in_delay_slot(); }
 	bool ss_calc_required() const       { return regreq[REG_SS] || in_delay_slot(); }
 	bool btf_calc_required() const      { return regreq[REG_BTF] || in_delay_slot(); }
-	bool af_calc_required() const       { return regreq[REG_AF] || in_delay_slot(); }
 
 	void set_loop()                     { m_extra_flags.set(LOOP); }
 	void set_astat_delay_copy_az()      { m_extra_flags.set(ASTAT_DELAY_COPY_AZ); }
@@ -182,6 +185,10 @@ public:
 		m_extra_flags.reset();
 	}
 
+	void log_flags(std::ostream &stream) const;
+	void log_registers_used(std::ostream &stream) const;
+	void log_registers_modified(std::ostream &stream) const;
+
 private:
 	enum
 	{
@@ -197,24 +204,26 @@ private:
 		REG_MV,
 		REG_MU,
 		REG_MI,
+		REG_AF,
 		REG_SV,
 		REG_SZ,
 		REG_SS,
 		REG_BTF,
-		REG_AF,
 
-		REG_PM_I0,
-		REG_PM_M0 = REG_PM_I0 + 8,
-		REG_PM_B0 = REG_PM_M0 + 8,
-		REG_PM_L0 = REG_PM_B0 + 8,
-
-		REG_DM_I0 = REG_PM_L0 + 8,
+		REG_DM_I0,
 		REG_DM_M0 = REG_DM_I0 + 8,
-		REG_DM_B0 = REG_DM_M0 + 8,
-		REG_DM_L0 = REG_DM_B0 + 8,
+		REG_DM_L0 = REG_DM_M0 + 8,
+		REG_DM_B0 = REG_DM_L0 + 8,
 
-		REG_COUNT = REG_DM_L0 + 8
+		REG_PM_I0 = REG_DM_B0 + 8,
+		REG_PM_M0 = REG_PM_I0 + 8,
+		REG_PM_L0 = REG_PM_M0 + 8,
+		REG_PM_B0 = REG_PM_L0 + 8,
+
+		REG_COUNT = REG_PM_B0 + 8
 	};
+
+	static void log_register_list(std::ostream &stream, const regmask &reglist, const regmask *regnostarlist);
 
 	extra_flags m_extra_flags;
 };

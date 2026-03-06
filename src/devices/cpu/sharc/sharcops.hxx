@@ -81,30 +81,30 @@ void adsp21062_device::add_systemreg_write_latency_effect(int sysreg, uint32_t d
 
 void adsp21062_device::systemreg_write_latency_effect()
 {
-	uint32_t data = m_core->systemreg_latency_data;
-	uint32_t old_data = m_core->systemreg_previous_data;
+	uint32_t const data = m_core->systemreg_latency_data;
+	uint32_t const old_data = m_core->systemreg_previous_data;
 
 	switch (m_core->systemreg_latency_reg)
 	{
 		case 0xb:   /* MODE1 */
 		{
-			uint32_t oldreg = old_data;
+			uint32_t const diff = data ^ old_data;
 			m_core->mode1 = data;
 
-			if ((data & 0x1) != (oldreg & 0x1))
+			if (diff & MODE1_BR8)
 			{
 				throw emu_fatalerror("%s: systemreg_latency_op: enable I8 bit-reversing", tag());
 			}
-			if ((data & 0x2) != (oldreg & 0x2))
+			if (diff & MODE1_BR0)
 			{
 				throw emu_fatalerror("%s: systemreg_latency_op: enable I0 bit-reversing", tag());
 			}
-			if ((data & 0x4) != (oldreg & 0x4))
+			if (diff & MODE1_SRCU)
 			{
 				throw emu_fatalerror("%s: systemreg_latency_op: enable MR alternate", tag());
 			}
 
-			if ((data & 0x8) != (oldreg & 0x8))         /* Switch DAG1 7-4 */
+			if (diff & MODE1_SRD1H) // Switch DAG1 7-4
 			{
 				using std::swap;
 				swap(m_core->dag1.i[4], m_core->dag1_alt.i[4]);
@@ -124,7 +124,7 @@ void adsp21062_device::systemreg_write_latency_effect()
 				swap(m_core->dag1.b[6], m_core->dag1_alt.b[6]);
 				swap(m_core->dag1.b[7], m_core->dag1_alt.b[7]);
 			}
-			if ((data & 0x10) != (oldreg & 0x10))       /* Switch DAG1 3-0 */
+			if (diff & MODE1_SRD1L) // Switch DAG1 3-0
 			{
 				using std::swap;
 				swap(m_core->dag1.i[0], m_core->dag1_alt.i[0]);
@@ -144,7 +144,7 @@ void adsp21062_device::systemreg_write_latency_effect()
 				swap(m_core->dag1.b[2], m_core->dag1_alt.b[2]);
 				swap(m_core->dag1.b[3], m_core->dag1_alt.b[3]);
 			}
-			if ((data & 0x20) != (oldreg & 0x20))       /* Switch DAG2 15-12 */
+			if (diff & MODE1_SRD2H) // Switch DAG2 15-12
 			{
 				using std::swap;
 				swap(m_core->dag2.i[4], m_core->dag2_alt.i[4]);
@@ -164,7 +164,7 @@ void adsp21062_device::systemreg_write_latency_effect()
 				swap(m_core->dag2.b[6], m_core->dag2_alt.b[6]);
 				swap(m_core->dag2.b[7], m_core->dag2_alt.b[7]);
 			}
-			if ((data & 0x40) != (oldreg & 0x40))       /* Switch DAG2 11-8 */
+			if (diff & MODE1_SRD2L) // Switch DAG2 11-8
 			{
 				using std::swap;
 				swap(m_core->dag2.i[0], m_core->dag2_alt.i[0]);
@@ -184,17 +184,24 @@ void adsp21062_device::systemreg_write_latency_effect()
 				swap(m_core->dag2.b[2], m_core->dag2_alt.b[2]);
 				swap(m_core->dag2.b[3], m_core->dag2_alt.b[3]);
 			}
-			if ((data & 0x80) != (oldreg & 0x80))
+			if (diff & MODE1_SRRFH)
 			{
 				using std::swap;
-				for (int i=8; i<16; i++)
+				for (int i = 8; i < 16; i++)
 					swap(m_core->r[i].r, m_core->reg_alt[i].r);
 			}
-			if ((data & 0x400) != (oldreg & 0x400))
+			if (diff & MODE1_SRRFL)
 			{
 				using std::swap;
-				for (int i=0; i<8; i++)
+				for (int i = 0; i < 8; i++)
 					swap(m_core->r[i].r, m_core->reg_alt[i].r);
+			}
+			if (diff & MODE1_SSE)   // Short word sign extension
+			{
+				if (data & MODE1_SSE)
+					m_dm_short_view.select(0);
+				else
+					m_dm_short_view.disable();
 			}
 			break;
 		}

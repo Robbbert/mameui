@@ -8,6 +8,9 @@
 #include "cpu/drcuml.h"
 
 
+class sharc_disassembler;
+
+
 class adsp21062_device : public cpu_device
 {
 public:
@@ -38,8 +41,9 @@ public:
 
 	template <unsigned N> uint64_t pm_r(offs_t offset);
 	template <unsigned N> void pm_w(offs_t offset, uint64_t data, uint64_t mem_mask = ~0);
-	template <unsigned N> uint32_t dmw_r(offs_t offset);
-	template <unsigned N> void dmw_w(offs_t offset, uint32_t data);
+	template <unsigned N> uint32_t dm_short_r(offs_t offset);
+	template <unsigned N> uint32_t dm_short_se_r(offs_t offset);
+	template <unsigned N> void dm_short_w(offs_t offset, uint32_t data);
 	uint32_t iop_r(offs_t offset);
 	void iop_w(offs_t offset, uint32_t data);
 
@@ -130,7 +134,7 @@ private:
 	static constexpr uint32_t MV =              0x0000'0080;    // Multiplier overflow
 	static constexpr uint32_t MU =              0x0000'0100;    // Multiplier underflow
 	static constexpr uint32_t MI =              0x0000'0200;    // Multiplier floating-point invalid operation
-	static constexpr uint32_t AF =              0x0000'0400;
+	static constexpr uint32_t AF =              0x0000'0400;    // Last ALU operation was a floating-point operation
 	static constexpr uint32_t SV =              0x0000'0800;    // Shifter overflow
 	static constexpr uint32_t SZ =              0x0000'1000;    // Shifter result zero
 	static constexpr uint32_t SS =              0x0000'2000;    // Shifter input sign
@@ -187,6 +191,8 @@ private:
 	static constexpr uint32_t MODE2_FLG3O =     0x0004'0000;    // FLAG3 (1) Output / (0) Input
 	static constexpr uint32_t MODE2_CAFRZ =     0x0008'0000;    // Cache freeze
 
+
+	struct cfuncs;
 
 	using opcode_func = void (adsp21062_device::*)();
 	struct SHARC_OP
@@ -283,6 +289,7 @@ private:
 	uml::code_handle *m_swap_r0_7;
 	uml::code_handle *m_swap_r8_15;
 
+	memory_view m_dm_short_view;
 	memory_access<24, 3, -3, ENDIANNESS_LITTLE>::specific m_program;
 	memory_access<32, 2, -2, ENDIANNESS_LITTLE>::specific m_data;
 
@@ -300,8 +307,8 @@ private:
 	bool m_input_update_pending;
 	bool m_enable_drc;
 
-	static std::string disassemble_one(uint32_t pc, uint64_t opcode);
-	void build_opcode_table();
+	static std::string disassemble_one(uint32_t pc, uint64_t opcode) ATTR_COLD;
+	void build_opcode_table() ATTR_COLD;
 
 	TIMER_CALLBACK_MEMBER(sharc_iop_delayed_write_callback);
 	TIMER_CALLBACK_MEMBER(sharc_dma_callback);
@@ -380,7 +387,7 @@ private:
 	void sharcop_push_pop_stacks();
 	void sharcop_nop();
 	void sharcop_idle();
-	void sharcop_unimplemented();
+	[[noreturn]] void sharcop_unimplemented() ATTR_COLD;
 	inline void compute_add(int rn, int rx, int ry);
 	inline void compute_sub(int rn, int rx, int ry);
 	inline void compute_add_ci(int rn, int rx, int ry);
@@ -454,6 +461,7 @@ private:
 	};
 
 	void execute_run_drc();
+	void log_descriptions(const sharc_disassembler &disassembler, const opcode_desc *desc_list, unsigned indent);
 	void generate_invariant();
 	void flush_drc_cache();
 	void compile_block(offs_t pc);
@@ -496,18 +504,6 @@ private:
 
 	bool if_condition_always_true(int condition);
 	uint32_t do_condition_astat_bits(int condition);
-
-	template <unsigned N> static void cfunc_update_flag_out(void *param);
-
-	[[noreturn]] static void cfunc_unimplemented(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_unimplemented_compute(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_unimplemented_shiftimm(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_pcstack_overflow(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_pcstack_underflow(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_loopstack_overflow(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_loopstack_underflow(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_statusstack_overflow(void *param) ATTR_COLD;
-	[[noreturn]] static void cfunc_statusstack_underflow(void *param) ATTR_COLD;
 };
 
 
