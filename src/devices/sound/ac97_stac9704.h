@@ -6,10 +6,13 @@
 #pragma once
 
 class ac97_stac9704_device : public device_t
+                           , public device_mixer_interface
                            , public device_memory_interface
 {
 public:
 	ac97_stac9704_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
+
+	template <typename T> void set_pcm_tag(T &&tag) { m_pcm.set_tag(std::forward<T>(tag)); }
 
 	void codec_write_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 	u32 codec_write_r(offs_t offset, u32 mem_mask = ~0);
@@ -25,6 +28,7 @@ protected:
 
 private:
 	address_space_config m_space_config;
+	required_device<device_sound_interface> m_pcm;
 
 	void mixer_map(address_map &map);
 
@@ -38,6 +42,8 @@ private:
 	u16 m_general_purpose, m_3d_control, m_power_ctrl;
 
 	u16 m_vendor_id1, m_vendor_id2;
+
+	void update_gain_levels();
 };
 
 DECLARE_DEVICE_TYPE(AC97_STAC9704, ac97_stac9704_device)

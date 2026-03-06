@@ -2,7 +2,7 @@
 // copyright-holders: Angelo Salese
 /**************************************************************************************************
 
-Trident 4DWAVE-DX
+Trident 4DWAVE-DX / 4DWAVE-NX
 
 AC'97 v1.x (fixed 48 kHz)
 
@@ -12,9 +12,10 @@ TODO:
 - Add mono, 8-bit and unsigned modes;
 - Missing features in Bank A (testable in dxdiag -> Music -> Trident PCI WaveTable MIDI);
 - winamp has encoding issues with negative numbers (CPU core bug?);
-- Hookup wave engine output to AC'97 input;
+- Mix-in wave engine output to AC'97 input, upsample to 48 kHz there;
 - wavetsr.com can't find a free IRQ for SB emulation under DOS;
 - Soundblaster, FM and MPU-401 are emulated by the 4dwave sound engine;
+- Support for 4DWAVE-NX (minor upgrade with extra TLB, scatter-gather and SPDIF interface)
 
 **************************************************************************************************/
 
@@ -49,12 +50,6 @@ trident_4dwavedx_device::trident_4dwavedx_device(const machine_config &mconfig, 
 
 void trident_4dwavedx_device::device_add_mconfig(machine_config &config)
 {
-	// Trident suggests to use an AD1819A
-	// known actual configs:
-	// '9700 for Hoontech ST-DIGITAL 4D_NX/SoundTrack 4D Wave (with the -NX variant)
-	// '9704 for Addonics SV750/SIIG IC1607/GoodWell EPC-C4DWV840
-	AC97_STAC9704(config, m_ac97, 12'288'000);
-
 	SPEAKER(config, "speaker", 2).front();
 
 	T4DWAVE_PCM(config, m_pcm, 0);
@@ -68,8 +63,17 @@ void trident_4dwavedx_device::device_add_mconfig(machine_config &config)
 		//if (state)
 		//	irq_pin_w(0, 1);
 	});
-	m_pcm->add_route(0, "speaker", 0.50, 0);
-	m_pcm->add_route(1, "speaker", 0.50, 1);
+	m_pcm->add_route(0, m_ac97, 1.00, 0);
+	m_pcm->add_route(1, m_ac97, 1.00, 1);
+
+	// Trident suggests to use an AD1819A
+	// known actual configs:
+	// '9700 for Hoontech ST-DIGITAL 4D_NX/SoundTrack 4D Wave (with the -NX variant)
+	// '9704 for Addonics SV750/SIIG IC1607/GoodWell EPC-C4DWV840
+	AC97_STAC9704(config, m_ac97, 12'288'000);
+	m_ac97->set_pcm_tag(m_pcm);
+	m_ac97->add_route(0, "speaker", 1.0, 0);
+	m_ac97->add_route(1, "speaker", 1.0, 1);
 
 	PC_JOY(config, m_joy);
 }
@@ -352,7 +356,7 @@ t4dwave_pcm_device::t4dwave_pcm_device(const machine_config &mconfig, const char
 
 void t4dwave_pcm_device::device_start()
 {
-	m_stream = stream_alloc(0, 2, 48000 / 2);
+	m_stream = stream_alloc(0, 2, 44100 / 2);
 
 	save_item(NAME(m_global_control));
 	save_item(NAME(m_cir));
@@ -520,10 +524,7 @@ u32 t4dwave_pcm_device::cso_r(offs_t offset)
 	channel_t &channel = m_channel[m_cir];
 
 	if (!machine().side_effects_disabled())
-	{
-		//printf("%d: %08x\n", m_cir, channel.cso);
 		m_stream->update();
-	}
 	return (channel.cso >> 2) << 16;
 }
 
@@ -596,7 +597,6 @@ void t4dwave_pcm_device::gvsel_w(offs_t offset, u32 data, u32 mem_mask)
 
 void t4dwave_pcm_device::update_irq_state()
 {
-	//printf("%08x & %08x\n", m_ainb, m_aintenb);
 	m_irq_cb(((m_aina & m_aintena) || (m_ainb & m_aintenb)) ? 1 : 0);
 }
 
@@ -609,9 +609,7 @@ void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
 	if (!m_bankA_keyon && !m_bankB_keyon)
 		return;
 
-	int ch;
-
-	for (ch = 0; ch < 64; ch ++)
+	for (int ch = 0; ch < 64; ch ++)
 	{
 		channel_t &channel = m_channel[ch];
 
@@ -622,7 +620,7 @@ void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
 
 		s16 left = 0, right = 0;
 
-		popmessage("%d: %08x -> %04x %04x delta %04x |16-bit %d sign %d stereo %d| control: %08x %d", ch, channel.lba, channel.cso, channel.eso, channel.delta, channel.is_16bit, channel.is_signed, channel.is_stereo, m_global_control, stream.samples());
+		//popmessage("%d: %08x -> %04x %04x delta %04x |16-bit %d sign %d stereo %d| control: %08x %d", ch, channel.lba, channel.cso, channel.eso, channel.delta, channel.is_16bit, channel.is_signed, channel.is_stereo, m_global_control, stream.samples());
 
 		for (int sampindex = 0; sampindex < stream.samples(); sampindex++)
 		{

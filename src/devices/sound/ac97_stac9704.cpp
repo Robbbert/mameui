@@ -16,7 +16,9 @@ DEFINE_DEVICE_TYPE(AC97_STAC9704, ac97_stac9704_device, "ac97_stac9704", "SigmaT
 
 ac97_stac9704_device::ac97_stac9704_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
 	: device_t(mconfig, type, tag, owner, clock)
+	, device_mixer_interface(mconfig, *this)
 	, device_memory_interface(mconfig, *this)
+	, m_pcm(*this, finder_base::DUMMY_TAG)
 {
 }
 
@@ -79,6 +81,8 @@ void ac97_stac9704_device::device_reset()
 	m_general_purpose = 0;
 	m_3d_control = 0;
 	m_power_ctrl = 0x000f;
+
+	update_gain_levels();
 }
 
 // TODO: the whole thing is asynchronous, bit 15 goes high if the codec is busy
@@ -117,7 +121,8 @@ void ac97_stac9704_device::mixer_map(address_map &map)
 {
 	map(0x00, 0x00).lrw16(
 		NAME([this] (offs_t offset) {
-			LOG("REG #00: Reset read ID\n");
+			if (!machine().side_effects_disabled())
+				LOG("REG #00: Reset read ID\n");
 			// TODO: unverified
 			// just bit 15 known to be low
 			return 0x1704;
@@ -135,6 +140,7 @@ void ac97_stac9704_device::mixer_map(address_map &map)
 		NAME([this] (offs_t offset, u16 data) {
 			LOG("REG #02: Master Volume %04x\n", data);
 			m_master_vol = data & 0x9f1f;
+			update_gain_levels();
 		})
 	);
 	map(0x04, 0x04).lrw16(
@@ -225,6 +231,7 @@ void ac97_stac9704_device::mixer_map(address_map &map)
 		NAME([this] (offs_t offset, u16 data) {
 			LOG("REG #18: PCM Out Volume %04x\n", data);
 			m_pcm_out_vol = data & 0x9f1f;
+			update_gain_levels();
 		})
 	);
 	map(0x1a, 0x1a).lrw16(
@@ -274,7 +281,28 @@ void ac97_stac9704_device::mixer_map(address_map &map)
 			m_power_ctrl = data & 0xff00;
 		})
 	);
-	map(0x7c, 0x7c).lr16(NAME([this] () { LOG("REG #7C: Vendor ID1 read\n"); return m_vendor_id1; }));
-	map(0x7e, 0x7e).lr16(NAME([this] () { LOG("REG #7E: Vendor ID2 read\n"); return m_vendor_id2; }));
+	map(0x7c, 0x7c).lr16(NAME([this] () {
+		if (!machine().side_effects_disabled()) { LOG("REG #7C: Vendor ID1 read\n"); } return m_vendor_id1; }));
+	map(0x7e, 0x7e).lr16(NAME([this] () {
+		if (!machine().side_effects_disabled()) { LOG("REG #7E: Vendor ID2 read\n"); } return m_vendor_id2; }));
 }
 
+void ac97_stac9704_device::update_gain_levels()
+{
+	float mainL = (0x1f - ((m_master_vol & 0x1f00) >> 8)) / 31.0;
+	float mainR = (0x1f - (m_master_vol & 0x1f)) / 31.0;
+	bool global_mute = !!BIT(m_master_vol, 15);
+
+	if (global_mute || BIT(m_pcm_out_vol, 15))
+	{
+		m_pcm->set_output_gain(0, 0.0);
+		m_pcm->set_output_gain(1, 0.0);
+	}
+	else
+	{
+		float pcmL = (0x1f - ((m_pcm_out_vol & 0x1f00) >> 8)) / 31.0;
+		float pcmR = (0x1f - (m_pcm_out_vol & 0x1f)) / 31.0;
+		m_pcm->set_output_gain(0, mainL * pcmL);
+		m_pcm->set_output_gain(1, mainR * pcmR);
+	}
+}
