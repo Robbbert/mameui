@@ -273,8 +273,6 @@ private:
 	void smbus_io2(address_map &map) ATTR_COLD;
 	uint32_t smbus_read(int bus, offs_t offset, uint32_t mem_mask);
 	void smbus_write(int bus, offs_t offset, uint32_t data, uint32_t mem_mask);
-	uint8_t minimum_grant_r() { return 3; }
-	uint8_t maximum_latency_r() { return 1; }
 };
 
 DECLARE_DEVICE_TYPE(MCPX_SMBUS, mcpx_smbus_device)
@@ -316,8 +314,6 @@ private:
 		int port;
 	} connecteds[4];
 	int connecteds_count;
-	uint8_t minimum_grant_r() { return 3; }
-	uint8_t maximum_latency_r() { return 1; }
 };
 
 DECLARE_DEVICE_TYPE(MCPX_OHCI, mcpx_ohci_device)
@@ -402,8 +398,6 @@ private:
 	} apust;
 	void apu_mmio(address_map &map) ATTR_COLD;
 	void p_map(address_map &map) ATTR_COLD;
-	uint8_t minimum_grant_r() { return 1; }
-	uint8_t maximum_latency_r() { return 0xc; }
 };
 
 DECLARE_DEVICE_TYPE(MCPX_APU, mcpx_apu_device)
@@ -438,8 +432,6 @@ private:
 	void ac97_mmio(address_map &map) ATTR_COLD;
 	void ac97_io0(address_map &map) ATTR_COLD;
 	void ac97_io1(address_map &map) ATTR_COLD;
-	uint8_t minimum_grant_r() { return 2; }
-	uint8_t maximum_latency_r() { return 5; }
 };
 
 DECLARE_DEVICE_TYPE(MCPX_AC97_AUDIO, mcpx_ac97_audio_device)
@@ -504,8 +496,6 @@ private:
 	void ide_io(address_map &map) ATTR_COLD;
 	void ide_pri_interrupt(int state);
 	void ide_sec_interrupt(int state);
-	uint8_t minimum_grant_r() { return 3; }
-	uint8_t maximum_latency_r() { return 1; }
 };
 
 DECLARE_DEVICE_TYPE(MCPX_IDE, mcpx_ide_device)

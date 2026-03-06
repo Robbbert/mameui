@@ -89,7 +89,9 @@ void trident_4dwavedx_device::device_start()
 	intr_pin = 1;
 	intr_line = 0x05;
 
-	// TODO: max_lat = 0x05, min_gnt = 0x02
+	// min_gnt = 0.5 usec, max_lat = 1.25 usec
+	minimum_grant = 0x02;
+	maximum_latency = 0x05;
 
 	save_item(NAME(m_ddma_config));
 	save_item(NAME(m_legacy_control));
