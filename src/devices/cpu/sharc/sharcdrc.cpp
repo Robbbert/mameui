@@ -136,19 +136,22 @@ void adsp21062_device::cfunc_update_flag_out(void *param)
 void adsp21062_device::cfunc_unimplemented(void *param)
 {
 	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
-	throw emu_fatalerror("%s: PC=%08X: Unimplemented op %012X", sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64);
+	throw emu_fatalerror("%s: PC=%08X: Unimplemented op %012X: %s",
+			sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64, disassemble_one(sharc.m_core->pc, sharc.m_core->arg64));
 }
 
 void adsp21062_device::cfunc_unimplemented_compute(void *param)
 {
 	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
-	throw emu_fatalerror("%s: PC=%08X: Unimplemented compute %012X", sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64);
+	throw emu_fatalerror("%s: PC=%08X: Unimplemented compute %012X: %s",
+			sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64, disassemble_one(sharc.m_core->pc, sharc.m_core->arg64));
 }
 
 void adsp21062_device::cfunc_unimplemented_shiftimm(void *param)
 {
 	auto &sharc = *reinterpret_cast<adsp21062_device *>(param);
-	throw emu_fatalerror("%s: PC=%08X: Unimplemented shiftimm %012X", sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64);
+	throw emu_fatalerror("%s: PC=%08X: Unimplemented shiftimm %012X: %s",
+			sharc.tag(), sharc.m_core->pc, sharc.m_core->arg64, disassemble_one(sharc.m_core->pc, sharc.m_core->arg64));
 }
 
 void adsp21062_device::cfunc_pcstack_overflow(void *param)

@@ -63,6 +63,62 @@ void sh_common_execution::opcode_desc::log_flags(std::ostream &stream) const
 }
 
 
+/*-------------------------------------------------
+    log_register_list - log a list of registers
+-------------------------------------------------*/
+
+void sh_common_execution::opcode_desc::log_registers_used(std::ostream &stream) const
+{
+	stream << "[use:";
+	log_register_list(stream, regin, nullptr);
+	stream << ']';
+}
+
+void sh_common_execution::opcode_desc::log_registers_modified(std::ostream &stream) const
+{
+	stream << "[mod:";
+	log_register_list(stream, regout, &regreq);
+	stream << ']';
+}
+
+void sh_common_execution::opcode_desc::log_register_list(std::ostream &stream, const regmask &reglist, const regmask *regnostarlist)
+{
+	int count = 0;
+
+	for (int regnum = 0; regnum < 16; regnum++)
+	{
+		if (reglist[REG_R0 + regnum])
+		{
+			if (count++)
+				stream << ',';
+			stream << 'r' << regnum;
+			if (regnostarlist && !(*regnostarlist)[REG_R0 + regnum])
+				stream << '*';
+		}
+	}
+
+	const auto log_bit =
+			[&stream, &count, &reglist, &regnostarlist] (size_t bit, const char *name)
+			{
+				if (reglist[bit])
+				{
+					if (count++)
+						stream << ',';
+					stream << name;
+					if (regnostarlist && !(*regnostarlist)[bit])
+						stream << '*';
+				}
+			};
+
+	log_bit(REG_PR,   "pr");
+	log_bit(REG_SR,   "sr");
+	log_bit(REG_MACL, "macl");
+	log_bit(REG_MACH, "mach");
+	log_bit(REG_GBR,  "gbr");
+	log_bit(REG_VBR,  "vbr");
+}
+
+
 
 /***************************************************************************
     INSTRUCTION PARSERS
@@ -313,7 +369,7 @@ bool sh_common_execution::frontend::describe_group_6(opcode_desc &desc, const op
 	case  5: // MOVWP(Rm, Rn);
 	case  6: // MOVLP(Rm, Rn);
 		desc.set_r_used(REG_M);
-		desc.set_r_used(REG_N);
+		desc.set_r_modified(REG_M);
 		desc.set_r_modified(REG_N);
 		desc.set_reads_memory();
 		return true;
@@ -631,7 +687,7 @@ bool sh_common_execution::frontend::describe_group_0(opcode_desc &desc, const op
 
 bool sh_common_execution::frontend::describe_group_4(opcode_desc &desc, const opcode_desc *prev, uint16_t opcode)
 {
-	switch (opcode & 0x3F)
+	switch (opcode & 0x3f)
 	{
 	case 0x00: // SHLL(Rn);
 	case 0x01: // SHLR(Rn);

@@ -283,8 +283,8 @@ if CPUS["ADSP2106X"] then
 end
 
 if opt_tool(CPUS, "ADSP2106X") then
-	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/sharc/sharcdsm.cpp")
-	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/sharc/sharcdsm.h")
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/sharc/sharc_dasm.cpp")
+	table.insert(disasm_files , MAME_DIR .. "src/devices/cpu/sharc/sharc_dasm.h")
 end
 
 --------------------------------------------------

@@ -300,6 +300,9 @@ private:
 	bool m_input_update_pending;
 	bool m_enable_drc;
 
+	static std::string disassemble_one(uint32_t pc, uint64_t opcode);
+	void build_opcode_table();
+
 	TIMER_CALLBACK_MEMBER(sharc_iop_delayed_write_callback);
 	TIMER_CALLBACK_MEMBER(sharc_dma_callback);
 	TIMER_CALLBACK_MEMBER(sharc_update_inputs);
@@ -391,6 +394,7 @@ private:
 	inline void compute_dec(int rn, int rx);
 	inline void compute_min(int rn, int rx, int ry);
 	inline void compute_max(int rn, int rx, int ry);
+	inline void compute_clip(int rn, int rx, int ry);
 	inline void compute_neg(int rn, int rx);
 	inline void compute_not(int rn, int rx);
 	inline uint32_t SCALB(SHARC_REG rx, int ry);
@@ -434,7 +438,6 @@ private:
 	inline void compute_fmul_fmax(int fm, int fxm, int fym, int fa, int fxa, int fya);
 	inline void compute_fmul_fmin(int fm, int fxm, int fym, int fa, int fxa, int fya);
 	inline void compute_fmul_dual_fadd_fsub(int fm, int fxm, int fym, int fa, int fs, int fxa, int fya);
-	void build_opcode_table();
 
 	// internal compiler state
 	struct compiler_state

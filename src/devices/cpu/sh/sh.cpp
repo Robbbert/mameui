@@ -2033,75 +2033,6 @@ void sh_common_execution::save_fast_iregs(drcuml_block &block)
 
 
 /*-------------------------------------------------
-    log_register_list - log a list of GPR registers
--------------------------------------------------*/
-
-void sh_common_execution::log_register_list(const char *string, const std::bitset<32> &reglist, const std::bitset<32> *regnostarlist)
-{
-	int count = 0;
-
-	/* skip if nothing */
-	if (reglist.none())
-		return;
-
-	m_drcuml->log_printf("[%s:", string);
-
-	for (int regnum = 0; regnum < 16; regnum++)
-	{
-		if (reglist[opcode_desc::REG_R0 + regnum])
-		{
-			m_drcuml->log_printf("%sr%d", (count++ == 0) ? "" : ",", regnum);
-			if (regnostarlist && !(*regnostarlist)[opcode_desc::REG_R0 + regnum])
-				m_drcuml->log_printf("*");
-		}
-	}
-
-	if (reglist[opcode_desc::REG_PR])
-	{
-		m_drcuml->log_printf("%spr", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !(*regnostarlist)[opcode_desc::REG_PR])
-			m_drcuml->log_printf("*");
-	}
-
-	if (reglist[opcode_desc::REG_SR])
-	{
-		m_drcuml->log_printf("%ssr", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !(*regnostarlist)[opcode_desc::REG_SR])
-			m_drcuml->log_printf("*");
-	}
-
-	if (reglist[opcode_desc::REG_MACL])
-	{
-		m_drcuml->log_printf("%smacl", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !(*regnostarlist)[opcode_desc::REG_MACL])
-			m_drcuml->log_printf("*");
-	}
-
-	if (reglist[opcode_desc::REG_MACH])
-	{
-		m_drcuml->log_printf("%smach", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !(*regnostarlist)[opcode_desc::REG_MACH])
-			m_drcuml->log_printf("*");
-	}
-
-	if (reglist[opcode_desc::REG_GBR])
-	{
-		m_drcuml->log_printf("%sgbr", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !(*regnostarlist)[opcode_desc::REG_GBR])
-			m_drcuml->log_printf("*");
-	}
-
-	if (reglist[opcode_desc::REG_VBR])
-	{
-		m_drcuml->log_printf("%svbr", (count++ == 0) ? "" : ",");
-		if (regnostarlist && !(*regnostarlist)[opcode_desc::REG_VBR])
-			m_drcuml->log_printf("*");
-	}
-
-	m_drcuml->log_printf("] ");
-}
-
-/*-------------------------------------------------
     log_opcode_desc - log a list of descriptions
 -------------------------------------------------*/
 
@@ -2124,20 +2055,32 @@ void sh_common_execution::log_opcode_desc(const opcode_desc *desclist, int inden
 		buffer.put('\0');
 		m_drcuml->log_printf("%08X [%08X] t:%08X f:%s: ", desclist->pc, desclist->physpc, desclist->targetpc, &buffer.vec()[0]);
 
-		/* disassemle the current instruction and output it to the log */
+		/* disassemble the current instruction and output it to the log */
 		buffer.clear();
 		buffer.seekp(0);
+		util::stream_format(buffer, "%*s", 4 * indent, "");
 		if (desclist->virtual_noop())
 			buffer << "<virtual nop>";
 		else
 			sh2d.dasm_one(buffer, desclist->pc, desclist->opptr);
 		buffer.put('\0');
-		m_drcuml->log_printf("%-36s", &buffer.vec()[0]);
+		m_drcuml->log_printf(
+				(desclist->regin.any() || desclist->regout.any()) ? "%-36s" : "%s",
+				&buffer.vec()[0]);
 
-		/* output register states */
-		log_register_list("use", desclist->regin, nullptr);
-		log_register_list("mod", desclist->regout, &desclist->regreq);
-		m_drcuml->log_printf("\n");
+		/* output register dependencies */
+		buffer.clear();
+		buffer.seekp(0);
+		if (desclist->regin.any())
+		{
+			desclist->log_registers_used(buffer);
+			if (desclist->regout.any())
+				buffer << ' ';
+		}
+		if (desclist->regout.any())
+			desclist->log_registers_modified(buffer);
+		buffer.put('\0');
+		m_drcuml->log_printf("%s\n", &buffer.vec()[0]);
 
 		/* if we have a delay slot, output it recursively */
 		if (desclist->delay.first() != nullptr)

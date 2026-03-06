@@ -3914,8 +3914,9 @@ void ppc_device::log_add_disasm_comment(drcuml_block &block, uint32_t pc, uint32
 	if (m_drcuml->logging())
 	{
 		std::ostringstream stream;
+		stream.imbue(std::locale::classic());
 		m_dasm.dasm_one(stream, pc, op);
-		block.append_comment("%08X: %s", pc, stream.str());                                  // comment
+		block.append_comment("%08X: %s", pc, std::move(stream).str());
 	}
 }
 
@@ -3950,18 +3951,20 @@ void ppc_device::log_opcode_desc(const opcode_desc *desclist, int indent)
 		else
 			m_dasm.dasm_one(buffer, desclist->pc, desclist->opptr);
 		buffer.put('\0');
-		m_drcuml->log_printf("%-30s", &buffer.vec()[0]);
+		m_drcuml->log_printf(
+				(desclist->regin.any() || desclist->regout.any()) ? "%-30s" : "%s",
+				&buffer.vec()[0]);
 
 		// output register dependencies
 		buffer.clear();
 		buffer.seekp(0);
-		if (!desclist->regin.none())
+		if (desclist->regin.any())
 		{
 			desclist->log_registers_used(buffer);
-			if (!desclist->regout.none())
+			if (desclist->regout.any())
 				buffer << ' ';
 		}
-		if (!desclist->regout.none())
+		if (desclist->regout.any())
 			desclist->log_registers_modified(buffer);
 		buffer.put('\0');
 		m_drcuml->log_printf("%s\n", &buffer.vec()[0]);
