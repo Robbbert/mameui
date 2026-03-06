@@ -97,7 +97,8 @@ void sis6326_pci_device::device_reset()
 	// doc makes multiple ninja jumps in messing up these defaults
 	// bus master (hardwired)
 	command = 0x0004;
-	command_mask = 0x23;
+	// palette snoop, uses <reserved> bit 7 as r/w buffer
+	command_mask = 0xa3;
 	// medium DEVSEL#
 	// assume capability list & 66 MHz disabled in this variant
 	status = 0x0200;
@@ -589,7 +590,7 @@ void sis6326_agp_device::device_reset()
 	// doc makes multiple ninja jumps in messing up these defaults
 	// bus master (hardwired)
 	command = 0x0004;
-	command_mask = 0x23;
+	command_mask = 0xa3;
 	// medium DEVSEL#, 66 MHz capable, has capabilities list
 	status = 0x0230;
 
