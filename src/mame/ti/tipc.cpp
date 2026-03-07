@@ -69,7 +69,7 @@ public:
 		, m_floppies(*this, "fdc:%u", 0U)
 	{ }
 
-	void tipc(machine_config &config);
+	void tipc(machine_config &config) ATTR_COLD;
 
 protected:
 	void machine_start() override ATTR_COLD;
@@ -86,22 +86,6 @@ private:
 
 	void tipc_io(address_map &map) ATTR_COLD;
 	void tipc_map(address_map &map) ATTR_COLD;
-
-	required_device<cpu_device> m_maincpu;
-	required_ioport m_dsw0;
-	required_device<i8251_device> m_upd8251;
-	required_device<pit8253_device> m_pit8253;
-	required_device<pic8259_device>  m_pic8259;
-	required_device<rs232_port_device> m_rs232;
-	required_device<input_merger_all_high_device> m_irq2_merger;
-	required_device<input_merger_all_high_device> m_irq3_merger;
-	required_device<ram_device> m_ram;
-	required_device<sy6545_1_device> m_crtc;
-	required_device<palette_device> m_palette;
-	required_region_ptr<u8> m_vdu_char_rom;
-	required_shared_ptr_array<uint8_t, 3> m_crtc_gfx;
-	required_device<fd1793_device> m_fdc;
-	required_device_array<floppy_connector, 2> m_floppies;
 
 	MC6845_UPDATE_ROW(crtc_update_row);
 	MC6845_ON_UPDATE_ADDR_CHANGED(crtc_addr_changed);
@@ -126,6 +110,22 @@ private:
 	void palette_w(offs_t offset, uint8_t data);
 
 	void vsync_changed(int state);
+
+	required_device<cpu_device> m_maincpu;
+	required_ioport m_dsw0;
+	required_device<i8251_device> m_upd8251;
+	required_device<pit8253_device> m_pit8253;
+	required_device<pic8259_device>  m_pic8259;
+	required_device<rs232_port_device> m_rs232;
+	required_device<input_merger_all_high_device> m_irq2_merger;
+	required_device<input_merger_all_high_device> m_irq3_merger;
+	required_device<ram_device> m_ram;
+	required_device<sy6545_1_device> m_crtc;
+	required_device<palette_device> m_palette;
+	required_region_ptr<u8> m_vdu_char_rom;
+	required_shared_ptr_array<uint8_t, 3> m_crtc_gfx;
+	required_device<fd1793_device> m_fdc;
+	required_device_array<floppy_connector, 2> m_floppies;
 
 	uint8_t m_u47;
 

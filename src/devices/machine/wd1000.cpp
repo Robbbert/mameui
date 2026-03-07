@@ -234,13 +234,11 @@ bool wd1000_device::validate_id_field()
 {
 	harddisk_image_device *file = m_drives[drive()];
 	const auto &info = file->get_info();
-	int16_t sector = m_sector_number - m_sector_base;
-	if (m_cylinder > info.cylinders ||
-	    head() >= info.heads || sector < 0 ||
-	    sector >= info.sectors ||
-	    sector_bytes() != info.sectorbytes) {
+	if ((m_cylinder > info.cylinders) || (head() >= info.heads))
 		return false;
-	}
+	const int16_t sector = m_sector_number - m_sector_base;
+	if ((sector < 0) || (sector >= info.sectors) || (sector_bytes() != info.sectorbytes))
+		return false;
 	return true;
 }
 
@@ -561,13 +559,14 @@ void wd1000_device::cmd_restore()
 // so it is not necessary to guard that case in these functions.
 void wd1000_device::cmd_read_sector()
 {
-	harddisk_image_device *file = m_drives[drive()];
-
-	if (!validate_id_field()) {
+	if (!validate_id_field())
+	{
 		set_error(ERR_ID);
 		end_command();
 		return;
 	}
+
+	harddisk_image_device *file = m_drives[drive()];
 
 	uint8_t dma = BIT(m_command, 3);
 	file->read(get_lbasector(), m_buffer);
@@ -588,9 +587,8 @@ void wd1000_device::cmd_read_sector()
 
 void wd1000_device::cmd_write_sector()
 {
-	harddisk_image_device *file = m_drives[drive()];
-
-	if (!validate_id_field()) {
+	if (!validate_id_field())
+	{
 		set_error(ERR_ID);
 		end_command();
 		return;
@@ -600,6 +598,8 @@ void wd1000_device::cmd_write_sector()
 	{
 		logerror("%s: Unexpected unfilled buffer on write, only %d or %d bytes filled\n", machine().describe_context(), m_buffer_index, sector_bytes());
 	}
+
+	harddisk_image_device *file = m_drives[drive()];
 
 	file->write(get_lbasector(), m_buffer);
 

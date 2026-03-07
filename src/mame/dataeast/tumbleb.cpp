@@ -299,20 +299,21 @@ Stephh's notes (based on the games M68000 code and some tests) :
 ***************************************************************************/
 
 #include "emu.h"
-#include "emupal.h"
-
-#include "cpu/z80/z80.h"
-#include "cpu/m68000/m68000.h"
-#include "cpu/h6280/h6280.h"
-#include "cpu/mcs51/i80c52.h" // for semicom mcu
-#include "cpu/pic16c5x/pic16c5x.h"
-#include "machine/gen_latch.h"
-#include "sound/okim6295.h"
-#include "sound/ymopm.h"
-#include "sound/ymopl.h"
 
 #include "decocrpt.h"
 #include "decospr.h"
+
+#include "cpu/h6280/h6280.h"
+#include "cpu/m68000/m68000.h"
+#include "cpu/mcs51/i80c52.h" // for semicom mcu
+#include "cpu/pic16c5x/pic16c5x.h"
+#include "cpu/z80/z80.h"
+#include "machine/gen_latch.h"
+#include "sound/okim6295.h"
+#include "sound/ymopl.h"
+#include "sound/ymopm.h"
+
+#include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
 #include "tilemap.h"
@@ -346,38 +347,38 @@ public:
 		m_protbase(0)
 	{ }
 
-	void tumblepb(machine_config &config);
-	void tumblepba(machine_config &config);
-	void bcstory(machine_config &config);
-	void pangpang(machine_config &config);
-	void semibase(machine_config &config);
-	void tumbleb2(machine_config &config);
-	void cookbib(machine_config &config);
-	void metlsavr(machine_config &config);
-	void fncywld(machine_config &config);
-	void magipur(machine_config &config);
-	void suprtrio(machine_config &config);
-	void htchctch(machine_config &config);
-	void htchctch_mcu(machine_config &config);
-	void sdfight(machine_config &config);
-	void chokchok(machine_config &config);
-	void cookbib_mcu(machine_config &config);
-	void jumpkids(machine_config &config);
+	void tumblepb(machine_config &config) ATTR_COLD;
+	void tumblepba(machine_config &config) ATTR_COLD;
+	void bcstory(machine_config &config) ATTR_COLD;
+	void pangpang(machine_config &config) ATTR_COLD;
+	void semibase(machine_config &config) ATTR_COLD;
+	void tumbleb2(machine_config &config) ATTR_COLD;
+	void cookbib(machine_config &config) ATTR_COLD;
+	void metlsavr(machine_config &config) ATTR_COLD;
+	void fncywld(machine_config &config) ATTR_COLD;
+	void magipur(machine_config &config) ATTR_COLD;
+	void suprtrio(machine_config &config) ATTR_COLD;
+	void htchctch(machine_config &config) ATTR_COLD;
+	void htchctch_mcu(machine_config &config) ATTR_COLD;
+	void sdfight(machine_config &config) ATTR_COLD;
+	void chokchok(machine_config &config) ATTR_COLD;
+	void cookbib_mcu(machine_config &config) ATTR_COLD;
+	void jumpkids(machine_config &config) ATTR_COLD;
 
-	void init_dquizgo();
-	void init_jumpkids();
-	void init_htchctch();
-	void init_wlstar();
-	void init_suprtrio();
-	void init_tumblepb();
-	void init_tumblepba();
-	void init_bcstory();
-	void init_wondl96();
-	void init_tumbleb2();
-	void init_chokchok();
-	void init_fncywld();
-	void init_magipur();
-	void init_carket();
+	void init_dquizgo() ATTR_COLD;
+	void init_jumpkids() ATTR_COLD;
+	void init_htchctch() ATTR_COLD;
+	void init_wlstar() ATTR_COLD;
+	void init_suprtrio() ATTR_COLD;
+	void init_tumblepb() ATTR_COLD;
+	void init_tumblepba() ATTR_COLD;
+	void init_bcstory() ATTR_COLD;
+	void init_wondl96() ATTR_COLD;
+	void init_tumbleb2() ATTR_COLD;
+	void init_chokchok() ATTR_COLD;
+	void init_fncywld() ATTR_COLD;
+	void init_magipur() ATTR_COLD;
+	void init_carket() ATTR_COLD;
 
 	ioport_value suprtrio_prot_latch_r();
 
@@ -414,6 +415,9 @@ protected:
 
 	uint8_t m_semicom_prot_offset = 0;
 	uint16_t m_protbase;
+
+	u8 m_suprtrio_prot_latch = 0;
+
 	void tumblepb_oki_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	uint16_t tumblepb_prot_r();
 	uint16_t tumblepopb_controls_r(offs_t offset);
@@ -469,15 +473,15 @@ protected:
 	uint32_t screen_update_sdfight(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 	INTERRUPT_GEN_MEMBER(tumbleb2_interrupt);
 	void tumbleb_tilemap_redraw();
-	inline void get_bg_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base);
-	inline void get_fncywld_bg_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base);
-	inline void pangpang_get_bg_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base );
-	inline void pangpang_get_bg2x_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base );
+	inline void get_bg_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base);
+	inline void get_fncywld_bg_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base);
+	inline void pangpang_get_bg_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base);
+	inline void pangpang_get_bg2x_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base);
 	void tumbleb_draw_common(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect, int pf1x_offs, int pf1y_offs, int pf2x_offs, int pf2y_offs);
-	void tumbleb2_set_music_bank( int bank );
-	void tumbleb2_play_sound( okim6295_device *oki, int data );
+	void tumbleb2_set_music_bank(int bank);
+	void tumbleb2_play_sound(okim6295_device *oki, int data);
 	void tumbleb2_playmusic(okim6295_device *oki);
-	void process_tumbleb2_music_command( okim6295_device *oki, int data );
+	void process_tumbleb2_music_command(okim6295_device *oki, int data);
 	void tumblepb_gfx_rearrange(int rgn);
 	void suprtrio_decrypt_code();
 	void suprtrio_decrypt_gfx();
@@ -494,8 +498,6 @@ protected:
 	void suprtrio_sound_map(address_map &map) ATTR_COLD;
 	void tumblepopb_main_map(address_map &map) ATTR_COLD;
 	void tumblepopba_main_map(address_map &map) ATTR_COLD;
-
-	u8 m_suprtrio_prot_latch = 0;
 };
 
 class tumbleb_pic_state : public tumbleb_state
@@ -633,7 +635,7 @@ TILEMAP_MAPPER_MEMBER(tumbleb_state::tumblep_scan)
 	return (col & 0x1f) + ((row & 0x1f) << 5) + ((col & 0x60) << 5);
 }
 
-inline void tumbleb_state::get_bg_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base)
+inline void tumbleb_state::get_bg_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base)
 {
 	int data = gfx_base[tile_index];
 
@@ -656,7 +658,7 @@ TILE_GET_INFO_MEMBER(tumbleb_state::get_fg_tile_info)
 			0);
 }
 
-inline void tumbleb_state::get_fncywld_bg_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base)
+inline void tumbleb_state::get_fncywld_bg_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base)
 {
 	int data = gfx_base[tile_index * 2];
 	int attr = gfx_base[tile_index * 2 + 1];
@@ -681,7 +683,7 @@ TILE_GET_INFO_MEMBER(tumbleb_state::get_fncywld_fg_tile_info)
 			0);
 }
 
-inline void tumbleb_state::pangpang_get_bg_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base )
+inline void tumbleb_state::pangpang_get_bg_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base)
 {
 	int data = gfx_base[tile_index * 2 + 1];
 	int attr = gfx_base[tile_index * 2];
@@ -692,7 +694,7 @@ inline void tumbleb_state::pangpang_get_bg_tile_info( tile_data &tileinfo, int t
 			0);
 }
 
-inline void tumbleb_state::pangpang_get_bg2x_tile_info( tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base )
+inline void tumbleb_state::pangpang_get_bg2x_tile_info(tile_data &tileinfo, int tile_index, int gfx_bank, uint16_t *gfx_base)
 {
 	int data = gfx_base[tile_index * 2 + 1];
 	int attr = gfx_base[tile_index * 2];
@@ -1143,7 +1145,7 @@ static const int tumbleb_sound_lookup[256] = {
 };
 
 /* we use channels 1,2,3 for sound effects, and channel 4 for music */
-void tumbleb_state::tumbleb2_set_music_bank( int bank )
+void tumbleb_state::tumbleb2_set_music_bank(int bank)
 {
 	uint8_t *oki = memregion("oki")->base();
 	memcpy(&oki[0x38000], &oki[0x80000 + 0x38000 + 0x8000 * bank], 0x8000);

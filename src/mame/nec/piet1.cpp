@@ -39,7 +39,7 @@ public:
 		, m_screen(*this, "screen")
 	{ }
 
-	void piet1(machine_config &config);
+	void piet1(machine_config &config) ATTR_COLD;
 
 protected:
 	virtual void machine_start() override ATTR_COLD;

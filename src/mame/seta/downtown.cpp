@@ -1065,8 +1065,8 @@ void downtown_state::calibr50_sub_reset_w(u8 data)
 void downtown_state::calibr50_sub_map(address_map &map)
 {
 	map(0x0000, 0x1fff).lrw8(
-			 NAME([this](offs_t offset) { return m_x1snd->read(offset ^ 0x1000); }),
-			 NAME([this](offs_t offset, u8 data) { m_x1snd->write(offset ^ 0x1000, data); }));
+			NAME([this] (offs_t offset) { return m_x1snd->read(offset ^ 0x1000); }),
+			NAME([this] (offs_t offset, u8 data) { m_x1snd->write(offset ^ 0x1000, data); }));
 	map(0x4000, 0x4000).r(m_soundlatch[0], FUNC(generic_latch_8_device::read));
 	map(0x4000, 0x4000).w(FUNC(downtown_state::calibr50_sub_bankswitch_w));
 	map(0x8000, 0xbfff).bankr(m_subbank);
