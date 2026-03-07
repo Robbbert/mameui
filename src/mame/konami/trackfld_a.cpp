@@ -3,7 +3,6 @@
 #include "emu.h"
 #include "sound/sn76496.h"
 #include "sound/msm5205.h"
-#include "trackfld.h"
 #include "trackfld_a.h"
 
 
