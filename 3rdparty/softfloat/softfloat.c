@@ -958,6 +958,9 @@ floatx80 int64_to_floatx80( int64 a )
 	int8 shiftCount;
 
 	if ( a == 0 ) return packFloatx80( 0, 0, 0 );
+	if ( a == (sbits64) LIT64( 0x8000000000000000 ) ) {
+		return packFloatx80( 1, 0x403E, 0x8000000000000000 );
+	}
 	zSign = ( a < 0 );
 	absA = zSign ? - a : a;
 	shiftCount = countLeadingZeros64( absA );
