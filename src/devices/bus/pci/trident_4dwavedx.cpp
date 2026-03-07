@@ -7,10 +7,10 @@ Trident 4DWAVE-DX / 4DWAVE-NX
 AC'97 v1.x (fixed 48 kHz)
 
 TODO:
-- Fix loop repeats in wave engine (busmastering and/or actual FIFO);
 - Add delta sample rate;
 - Add mono, 8-bit and unsigned modes;
 - Missing features in Bank A (testable in dxdiag -> Music -> Trident PCI WaveTable MIDI);
+- Move DMA reading out of sound_stream_update;
 - winamp has encoding issues with negative numbers (CPU core bug?);
 - Mix-in wave engine output to AC'97 input, upsample to 48 kHz there;
 - wavetsr.com can't find a free IRQ for SB emulation under DOS;
@@ -89,7 +89,9 @@ void trident_4dwavedx_device::device_start()
 	intr_pin = 1;
 	intr_line = 0x05;
 
-	// TODO: max_lat = 0x05, min_gnt = 0x02
+	// min_gnt = 0.5 usec, max_lat = 1.25 usec
+	minimum_grant = 0x02;
+	maximum_latency = 0x05;
 
 	save_item(NAME(m_ddma_config));
 	save_item(NAME(m_legacy_control));
@@ -633,7 +635,7 @@ void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
 			stream.add_int(1, sampindex, right * m_volR[channel.gvsel], 32768 << 6);
 
 			channel.cso += 4;
-			if (channel.cso >= channel.hso * 4)
+			if (channel.cso >= channel.hso)
 			{
 				// MIDLP_IE
 				if (BIT(m_global_control, 13))

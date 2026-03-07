@@ -833,4 +833,4 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1991, bigkarnkm,  bigkarnk,  bigkarnkm,  bigkarnkm,  bigkarnk_ms_state, init_bigkarnkm, ROT0, "Gaelco", "Big Karnak (Modular System)", MACHINE_NOT_WORKING | MACHINE_NO_SOUND )
+GAME( 1991, bigkarnkm,  bigkarnk,  bigkarnkm,  bigkarnkm,  bigkarnk_ms_state, init_bigkarnkm, ROT0, "Gaelco", "Big Karnak (Modular System)", 0 )
