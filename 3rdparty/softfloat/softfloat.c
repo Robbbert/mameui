@@ -827,6 +827,7 @@ float64 int32_to_float64( int32 a )
 	bits64 zSig;
 
 	if ( a == 0 ) return 0;
+	if ( a == (sbits32) 0x80000000 ) return packFloat64( 1, 0x41E, 0 );
 	zSign = ( a < 0 );
 	absA = zSign ? - a : a;
 	shiftCount = countLeadingZeros32( absA ) + 21;
@@ -852,6 +853,7 @@ floatx80 int32_to_floatx80( int32 a )
 	bits64 zSig;
 
 	if ( a == 0 ) return packFloatx80( 0, 0, 0 );
+	if ( a == (sbits32) 0x80000000 ) return packFloatx80( 1, 0x401E, 0 );
 	zSign = ( a < 0 );
 	absA = zSign ? - a : a;
 	shiftCount = countLeadingZeros32( absA ) + 32;
