@@ -407,7 +407,7 @@ void vrender0soc_device::tmcnt_w(offs_t offset, u16 data, u16 mem_mask)
 // bit 5 and bit 3 of the DMA control don't in/decrement source/destination addresses if enabled.
 // At the time of writing P's Attack is the only SW that uses this feature,
 // in a work RAM to area $4500000 transfer, probably to extend something ...
-static inline int dma_setup_hold(u8 setting, u8 holdbit, u8 dirbit)
+inline int dma_setup_hold(u8 setting, u8 holdbit, u8 dirbit)
 {
 	if (BIT(setting, holdbit))
 		return 0;

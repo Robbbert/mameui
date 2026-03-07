@@ -484,6 +484,8 @@ private:
 	void static_generate_mode1_ops();
 	void load_fast_iregs(drcuml_block &block);
 	void save_fast_iregs(drcuml_block &block);
+	void update_az_an_fixed(drcuml_block &block, const opcode_desc *desc);
+	void update_az_av_an_ac_fixed(drcuml_block &block, const opcode_desc *desc, bool sub);
 	void generate_sequence_instruction(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc, bool last_delayslot);
 	void generate_update_cycles(drcuml_block &block, compiler_state &compiler, uml::parameter param, bool allow_exception);
 	bool generate_opcode(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc);
@@ -503,7 +505,6 @@ private:
 	void generate_astat_copy(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc);
 
 	bool if_condition_always_true(int condition);
-	uint32_t do_condition_astat_bits(int condition);
 };
 
 

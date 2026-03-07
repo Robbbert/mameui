@@ -212,23 +212,19 @@ void adsp21062_device::compute_and(int rn, int rx, int ry)
 /* COMP(Rx, Ry) */
 void adsp21062_device::compute_comp(int rx, int ry)
 {
-	uint32_t comp_accum;
-
 	CLEAR_ALU_FLAGS();
-	if( REG(rx) == REG(ry) )
+	if (REG(rx) == REG(ry) )
 		m_core->astat |= AZ;
-	if( (int32_t)REG(rx) < (int32_t)REG(ry) )
+	if (int32_t(REG(rx)) < int32_t(REG(ry)))
 		m_core->astat |= AN;
 
 	// Update ASTAT compare accumulation register
-	comp_accum = (m_core->astat >> 24) & 0xff;
-	comp_accum >>= 1;
-	if ((m_core->astat & (AZ|AN)) == 0)
-	{
-		comp_accum |= 0x80;
-	}
-	m_core->astat &= 0xffffff;
-	m_core->astat |= comp_accum << 24;
+	uint32_t comp_accum = (m_core->astat >> 1) & 0x7f000000;
+	if ((m_core->astat & (AZ | AN)) == 0)
+		comp_accum |= 0x80000000;
+
+	m_core->astat &= 0x00ffffff;
+	m_core->astat |= comp_accum;
 
 	m_core->astat &= ~AF;
 }
