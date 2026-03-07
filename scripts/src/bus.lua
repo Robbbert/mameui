@@ -86,6 +86,8 @@ if BUSES["A2BUS"] then
 		MAME_DIR .. "src/devices/bus/a2bus/a2scsi.h",
 		MAME_DIR .. "src/devices/bus/a2bus/a2sd.cpp",
 		MAME_DIR .. "src/devices/bus/a2bus/a2sd.h",
+		MAME_DIR .. "src/devices/bus/a2bus/a2sic.cpp",
+		MAME_DIR .. "src/devices/bus/a2bus/a2sic.h",
 		MAME_DIR .. "src/devices/bus/a2bus/a2softcard.cpp",
 		MAME_DIR .. "src/devices/bus/a2bus/a2softcard.h",
 		MAME_DIR .. "src/devices/bus/a2bus/a2ssc.cpp",
