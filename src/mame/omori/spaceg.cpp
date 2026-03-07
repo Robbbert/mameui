@@ -203,7 +203,7 @@ public:
 	void spaceg(machine_config &config);
 
 protected:
-	virtual void driver_start() override;
+	virtual void machine_start() override;
 
 private:
 	required_shared_ptr<uint8_t> m_colorram;
@@ -226,13 +226,12 @@ private:
 	void sound2_w(uint8_t data);
 	void sound3_w(uint8_t data);
 
-	void spaceg_palette(palette_device &palette) const;
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void spaceg_map(address_map &map) ATTR_COLD;
 };
 
-void spaceg_state::driver_start()
+void spaceg_state::machine_start()
 {
 	save_item(NAME(m_sound1));
 	save_item(NAME(m_sound2));
@@ -246,31 +245,6 @@ void spaceg_state::driver_start()
  *
  *************************************/
 
-void spaceg_state::spaceg_palette(palette_device &palette) const
-{
-	for (int i = 0; i < 128; i++)
-		palette.set_pen_color(i, rgb_t(0x00, 0x00, 0x00));
-
-	// proms are currently undumped...
-	palette.set_pen_color( 0, rgb_t(0x00, 0x00, 0x00)); //ok czarny
-	palette.set_pen_color( 1, rgb_t(0x7f, 0x00, 0x00)); //???
-	palette.set_pen_color( 2, rgb_t(0xff, 0xff, 0xff)); //ok+ bialy
-	palette.set_pen_color( 3, rgb_t(0xff, 0x00, 0x00)); //ok j.czerw.
-	palette.set_pen_color( 4, rgb_t(0x3f, 0x3f, 0xff)); //ok j.niebieski
-	palette.set_pen_color( 5, rgb_t(0x3f, 0xff, 0x3f)); //ok j.zielony
-	palette.set_pen_color( 6, rgb_t(0xff, 0xbf, 0xbf)); //ok+ 'majtki'
-	palette.set_pen_color( 7, rgb_t(0xff, 0xff, 0x00)); //ok+ zolty
-
-	palette.set_pen_color( 8, rgb_t(0xff, 0x7f, 0x00)); //ok+ pomaranczowy
-	palette.set_pen_color( 9, rgb_t(0x3f, 0xbf, 0xff)); //ok j.niebieski (ciemniejszy od 13)
-	palette.set_pen_color(10, rgb_t(0x3f, 0xbf, 0x3f)); //ok+ c.zielony
-	palette.set_pen_color(11, rgb_t(0x00, 0xff, 0x00)); //ok j.zielony
-	palette.set_pen_color(12, rgb_t(0x7f, 0x00, 0x00)); //ok brazowy (c.czerw)
-	palette.set_pen_color(13, rgb_t(0x7f, 0xbf, 0xff)); //ok j.niebieski (jasniejszy od 9)
-	palette.set_pen_color(14, rgb_t(0x00, 0xff, 0xff)); //???
-	palette.set_pen_color(15, rgb_t(0x7f, 0x7f, 0x7f)); //???
-}
-
 void spaceg_state::zvideoram_w(offs_t offset, uint8_t data)
 {
 	int col = m_colorram[0x400];
@@ -279,7 +253,7 @@ void spaceg_state::zvideoram_w(offs_t offset, uint8_t data)
 	uint16_t sdata = data << (8 - xoff);
 	uint16_t vram_data = m_videoram[offset] << 8 | (m_videoram[offset2]);
 
-	if (col > 0x0f) popmessage("color > 0x0f = %2d", col);
+	if (col > 0x0f) logerror("color > 0x0f = %2d\n", col);
 	col &= 0x0f;
 
 	switch (*m_io9401)
@@ -303,7 +277,6 @@ void spaceg_state::zvideoram_w(offs_t offset, uint8_t data)
 
 		default:
 			logerror("mode = %02x pc = %04x\n", *m_io9401, m_maincpu->pc());
-			popmessage("mode = %02x pc = %04x\n", *m_io9401, m_maincpu->pc());
 			return;
 	}
 
@@ -314,28 +287,23 @@ void spaceg_state::zvideoram_w(offs_t offset, uint8_t data)
 
 uint8_t spaceg_state::colorram_r(offs_t offset)
 {
-	if (offset < 0x400)
+	if (!machine().side_effects_disabled())
 	{
-		int rgbcolor = (m_colorram[offset] << 1) | ((offset & 0x100) >> 8);
+		if (offset < 0x400)
+		{
+			if ((offset & 0xff) < 0x20)
+			{
+				const int rgbcolor = (m_colorram[offset] << 1) | ((offset & 0x100) >> 8);
+				const int index = (offset & 0x1f) | (~offset >> 4 & 0x20);
+				m_palette->set_pen_color(index, pal3bit(rgbcolor >> 0), pal3bit(rgbcolor >> 6), pal3bit(rgbcolor >> 3));
+			}
+			else
+				logerror("palette? read from colorram offset = %04x\n", offset);
+		}
 
-		if ((offset >= 0x200) && (offset < 0x220)) /* 0xa200- 0xa21f */
-		{
-			/* palette 1 */
-			int col_ind = offset & 0x1f;
-			m_palette->set_pen_color(0x10 + 0x00 + col_ind, pal3bit(rgbcolor >> 0), pal3bit(rgbcolor >> 6), pal3bit(rgbcolor >> 3));
-		}
-		else if ((offset >= 0x300) && (offset < 0x320)) /* 0xa300- 0xa31f */
-		{
-			/* palette 2 */
-			int col_ind = offset & 0x1f;
-			m_palette->set_pen_color(0x10 + 0x00 + col_ind, pal3bit(rgbcolor >> 0), pal3bit(rgbcolor >> 6), pal3bit(rgbcolor >> 3));
-		}
-		else
-			logerror("palette? read from colorram offset = %04x\n",offset);
+		if (*m_io9401 != 0x40)
+			logerror("colorram read in mode: 9401 = %02x (offset = %04x)\n", *m_io9401, offset);
 	}
-
-	if (*m_io9401 != 0x40)
-		logerror("colorram read in mode: 9401 = %02x (offset = %04x)\n", *m_io9401, offset);
 
 	return m_colorram[offset];
 }
@@ -351,7 +319,7 @@ uint32_t spaceg_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap
 
 		for (int i = 0; i < 8; i++)
 		{
-			bitmap.pix(y, x) = (data & 0x80) ? m_colorram[offs] : 0;
+			bitmap.pix(y, x) = (data & 0x80) ? (m_colorram[offs] & 0x0f) : 0x20;
 
 			x++;
 			data <<= 1;
@@ -470,19 +438,24 @@ void spaceg_state::spaceg_map(address_map &map)
 
 static INPUT_PORTS_START( spaceg )
 	PORT_START("9800")
-	PORT_DIPUNUSED(  0x01, IP_ACTIVE_HIGH )                 /* was related to coinage */
-	PORT_DIPUNKNOWN( 0x02, IP_ACTIVE_HIGH )                 /* check code at 0x127d - when bases are supposed to disappear */
-	PORT_DIPNAME( 0x0c, 0x00, DEF_STR( Lives ) )
+	PORT_DIPNAME( 0x01, 0x00, DEF_STR( Coinage ) ) PORT_DIPLOCATION("SW:1")
+	PORT_DIPSETTING(    0x01, DEF_STR( 2C_1C ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( 1C_1C ) )
+	PORT_DIPNAME( 0x02, 0x00, "Swarm Trips" ) PORT_DIPLOCATION("SW:2")
+	PORT_DIPSETTING(    0x00, "3" )
+	PORT_DIPSETTING(    0x02, "4" )
+	PORT_DIPNAME( 0x0c, 0x00, DEF_STR( Lives ) ) PORT_DIPLOCATION("SW:3,4")
 	PORT_DIPSETTING(    0x00, "3" )
 	PORT_DIPSETTING(    0x04, "4" )
 	PORT_DIPSETTING(    0x08, "5" )
 	PORT_DIPSETTING(    0x0c, "6" )
-	PORT_DIPNAME( 0x30, 0x00, DEF_STR( Bonus_Life ) )
+	PORT_DIPNAME( 0x30, 0x00, DEF_STR( Bonus_Life ) ) PORT_DIPLOCATION("SW:5,6")
 	PORT_DIPSETTING(    0x00, "10000" )
 	PORT_DIPSETTING(    0x20, "30000" )
 	PORT_DIPSETTING(    0x10, "40000" )
 	PORT_DIPSETTING(    0x30, "50000" )
-	PORT_DIPNAME( 0xc0, 0x00, DEF_STR( Unknown ) )          /* set bit 2 of 0x9402 depending on score - previously 2nd bonus life ? */
+	// SW7,8: Unlisted in manual, set bit 2 of 0x9402 depending on score - previously 2nd bonus life?
+	PORT_DIPNAME( 0xc0, 0x00, DEF_STR( Unknown ) ) PORT_DIPLOCATION("SW:7,8")
 	PORT_DIPSETTING(    0x00, "10000" )
 	PORT_DIPSETTING(    0x80, "30000" )
 	PORT_DIPSETTING(    0x40, "40000" )
@@ -497,11 +470,11 @@ static INPUT_PORTS_START( spaceg )
 	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_START1 )
 	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_START2 )
 
-	PORT_START("9805")    /* player 1 */
+	PORT_START("9805")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_JOYSTICK_LEFT  ) PORT_2WAY PORT_PLAYER(1)
 	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_JOYSTICK_RIGHT ) PORT_2WAY PORT_PLAYER(1)
 
-	PORT_START("9806")    /* player 2 */
+	PORT_START("9806")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_JOYSTICK_LEFT  ) PORT_2WAY PORT_PLAYER(2)
 	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_JOYSTICK_RIGHT ) PORT_2WAY PORT_PLAYER(2)
 INPUT_PORTS_END
@@ -529,7 +502,7 @@ void spaceg_state::spaceg(machine_config &config)
 	screen.set_palette(m_palette);
 	screen.screen_vblank().set_inputline("maincpu", INPUT_LINE_NMI); // 60 Hz NMIs (verified)
 
-	PALETTE(config, m_palette, FUNC(spaceg_state::spaceg_palette), 16+128-16);
+	PALETTE(config, m_palette, palette_device::BLACK, 0x40);
 
 	/* sound hardware */
 	SPEAKER(config, "mono").front_center();
