@@ -397,6 +397,8 @@ private:
 	inline void compute_pass(int rn, int rx);
 	inline void compute_xor(int rn, int rx, int ry);
 	inline void compute_or(int rn, int rx, int ry);
+	inline void compute_add_ci(int rn, int rx);
+	inline void compute_sub_ci(int rn, int rx);
 	inline void compute_inc(int rn, int rx);
 	inline void compute_dec(int rn, int rx);
 	inline void compute_min(int rn, int rx, int ry);

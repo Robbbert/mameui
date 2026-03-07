@@ -4443,11 +4443,6 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 						update_az_av_an_ac_fixed(block, desc, true);
 						return;
 
-					case 0x29:      // Rn = Rx + 1
-						UML_ADD(block, REG(rn), REG(rx), 1);
-						update_az_av_an_ac_fixed(block, desc, false);
-						return;
-
 					case 0x25:      // Rn = Rx + CI
 						UML_ADD(block, REG(rn), REG(rx), ASTAT_AC);
 						update_az_av_an_ac_fixed(block, desc, false);
@@ -4457,6 +4452,11 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 						UML_XOR(block, I0, ASTAT_AC, 1);
 						UML_SUB(block, REG(rn), REG(rx), I0);
 						update_az_av_an_ac_fixed(block, desc, true);
+						return;
+
+					case 0x29:      // Rn = Rx + 1
+						UML_ADD(block, REG(rn), REG(rx), 1);
+						update_az_av_an_ac_fixed(block, desc, false);
 						return;
 
 					case 0x2a:      // Rn = Rx - 1
