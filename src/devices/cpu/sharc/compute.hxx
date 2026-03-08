@@ -10,9 +10,9 @@
 #define SET_FLAG_AZ(r)              do { m_core->astat |= (((r) == 0) ? AZ : 0); } while (false)
 #define SET_FLAG_AN(r)              do { m_core->astat |= (((r) & 0x80000000) ? AN : 0); } while (false)
 #define SET_FLAG_AC_ADD(r,a,b)      do { m_core->astat |= ((uint32_t(r) < uint32_t(a)) ? AC : 0); } while (false)
-#define SET_FLAG_AV_ADD(r,a,b)      do { m_core->astat |= (((~((a) ^ (b)) & ((a) ^ (r))) & 0x80000000) ? AV : 0); } while (false)
+#define SET_FLAG_AV_ADD(r,a,b)      do { m_core->astat |= ((~((a) ^ (b)) & ((a) ^ (r)) & 0x80000000) ? AV : 0); } while (false)
 #define SET_FLAG_AC_SUB(r,a,b)      do { m_core->astat |= ((uint32_t(r) <= uint32_t(a)) ? AC : 0); } while (false)
-#define SET_FLAG_AV_SUB(r,a,b)      do { m_core->astat |= (((((a) ^ (b)) & ((a) ^ (r))) & 0x80000000) ? AV : 0); } while (false)
+#define SET_FLAG_AV_SUB(r,a,b)      do { m_core->astat |= ((((a) ^ (b)) & ((a) ^ (r)) & 0x80000000) ? AV : 0); } while (false)
 
 #define CLEAR_MULTIPLIER_FLAGS()    do { m_core->astat &= ~(MN|MV|MU|MI); } while (false)
 
@@ -1111,26 +1111,21 @@ void adsp21062_device::compute_dual_add_sub(int ra, int rs, int rx, int ry)
 {
 	uint32_t r_add = REG(rx) + REG(ry);
 	uint32_t r_sub = REG(rx) - REG(ry);
+	bool const av_add = ~(REG(rx) ^ REG(ry)) & (REG(rx) ^ r_add) & 0x80000000;
+	bool const av_sub = (REG(rx) ^ REG(ry)) & (REG(rx) ^ r_sub) & 0x80000000;
 
 	CLEAR_ALU_FLAGS();
-	if (r_add == 0 || r_sub == 0)
+	m_core->astat |= (av_add || av_sub) ? AV : 0;
+	m_core->astat |= ((r_add < uint32_t(REG(rx))) || (r_sub <= uint32_t(REG(rx)))) ? AC : 0;
+
+	if (m_core->mode1 & MODE1_ALUSAT)
 	{
-		m_core->astat |= AZ;
+		if (av_add) SATURATE(r_add);
+		if (av_sub) SATURATE(r_sub);
 	}
-	if (r_add & 0x80000000 || r_sub & 0x80000000)
-	{
-		m_core->astat |= AN;
-	}
-	if (((~(REG(rx) ^ REG(ry)) & (REG(rx) ^ r_add)) & 0x80000000) ||
-		(( (REG(rx) ^ REG(ry)) & (REG(rx) ^ r_sub)) & 0x80000000))
-	{
-		m_core->astat |= AV;
-	}
-	if (((uint32_t)r_add < (uint32_t)REG(rx)) ||
-		(!((uint32_t)r_sub < (uint32_t)REG(rx))))
-	{
-		m_core->astat |= AC;
-	}
+
+	m_core->astat |= ((r_add == 0) || (r_sub == 0)) ? AZ : 0;
+	m_core->astat |= ((r_add | r_sub) & 0x80000000) ? AN : 0;
 
 	REG(ra) = r_add;
 	REG(rs) = r_sub;
