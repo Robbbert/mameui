@@ -1531,12 +1531,13 @@ void sis6326_vga_device::draw_overlay(screen_device &screen, bitmap_rgb32 &bitma
 		const u32 base_addr = (m_overlay.display_fb_addr << 2) + ((y * m_overlay.fb_offset) << 2);
 		for (int x = 0; x < 176; x++)
 		{
+			const u32 pixel_addr = (base_addr + x * 4);
 			// YUYV 4:2:2 format (mode 2, as used by SiS MMPlayer and mplayer2 with VCDs)
 			// TODO: any other format, including pure RGB555/565
-			u8 const y1 = vga.memory[(base_addr + x * 4) + 0];
-			u8 const u =  vga.memory[(base_addr + x * 4) + 1];
-			u8 const y2 = vga.memory[(base_addr + x * 4) + 2];
-			u8 const v =  vga.memory[(base_addr + x * 4) + 3];
+			u8 const y1 = vga.memory[pixel_addr + 0];
+			u8 const u =  vga.memory[pixel_addr + 1];
+			u8 const y2 = vga.memory[pixel_addr + 2];
+			u8 const v =  vga.memory[pixel_addr + 3];
 
 			bitmap.pix(y, x * 2 + 0) = yuvtorgb32(y1, u, v);
 			bitmap.pix(y, x * 2 + 1) = yuvtorgb32(y2, u, v);
