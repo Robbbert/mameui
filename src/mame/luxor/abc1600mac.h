@@ -107,7 +107,6 @@ private:
 	uint8_t dma_iorq_r(int dmamap, offs_t offset);
 	void dma_iorq_w(int dmamap, offs_t offset, uint8_t data);
 
-	void program_map(address_map &map) ATTR_COLD;
 	void mac_map(address_map &map) ATTR_COLD;
 	const address_space_config m_program_config;
 	const address_space_config m_mac_config;

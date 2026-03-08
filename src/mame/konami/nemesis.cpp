@@ -386,22 +386,22 @@ void gx400_state::speech_w(offs_t offset, uint8_t data)
 		m_vlm->data_w(data);
 
 	// bit 5: ST, bit 6: RST
-	m_vlm->st(BIT(offset, 5));
-	m_vlm->rst(BIT(offset, 6));
+	m_vlm->st_w(BIT(offset, 5));
+	m_vlm->rst_w(BIT(offset, 6));
 
 	m_speech_offset = offset;
 }
 
 void salamand_state::speech_start_w(uint8_t data)
 {
-	m_vlm->rst(BIT(data, 0));
-	m_vlm->st(BIT(data, 1));
+	m_vlm->rst_w(BIT(data, 0));
+	m_vlm->st_w(BIT(data, 1));
 	// bit 2 is OE for VLM data
 }
 
 uint8_t salamand_state::speech_busy_r()
 {
-	return m_vlm->bsy();
+	return m_vlm->bsy_r();
 }
 
 uint8_t gx400_state::nemesis_portA_r()
@@ -416,7 +416,7 @@ uint8_t gx400_state::nemesis_portA_r()
 
 	res |= 0xd0;
 
-	if (m_vlm != nullptr && m_vlm->bsy())
+	if (m_vlm != nullptr && m_vlm->bsy_r())
 		res |= 0x20;
 
 	return res;

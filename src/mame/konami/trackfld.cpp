@@ -489,9 +489,8 @@ void trackfld_state::draw_sprites( bitmap_ind16 &bitmap, const rectangle &clipre
 {
 	uint8_t *spriteram = m_spriteram;
 	uint8_t *spriteram_2 = m_spriteram2;
-	int offs;
 
-	for (offs = m_spriteram.bytes() - 2; offs >= 0; offs -= 2)
+	for (int offs = m_spriteram.bytes() - 2; offs >= 0; offs -= 2)
 	{
 		int attr = spriteram_2[offs];
 		int code = spriteram[offs + 1];
@@ -520,17 +519,14 @@ void trackfld_state::draw_sprites( bitmap_ind16 &bitmap, const rectangle &clipre
 		//  sy++;   /* fix title screen & garbage at the bottom of the screen */
 		//}
 
-
-
-			m_gfxdecode->gfx(0)->transmask(bitmap,cliprect,
+		m_gfxdecode->gfx(0)->transmask(bitmap,cliprect,
 			code + m_sprite_bank1 + m_sprite_bank2, color,
 			flipx, flipy,
 			sx, sy,
 			m_palette->transpen_mask(*m_gfxdecode->gfx(0), color, 0));
 
 		/* redraw with wraparound */
-
-			m_gfxdecode->gfx(0)->transmask(bitmap,cliprect,
+		m_gfxdecode->gfx(0)->transmask(bitmap,cliprect,
 			code + m_sprite_bank1 + m_sprite_bank2, color,
 			flipx, flipy,
 			sx - 256, sy,
@@ -617,17 +613,14 @@ void trackfld_state::nmi_mask_w(int state)
 
 uint8_t trackfld_state::trackfld_speech_r()
 {
-	if (m_vlm->bsy())
-		return 1;
-	else
-		return 0;
+	return m_vlm->bsy_r();
 }
 
 void trackfld_state::trackfld_VLM5030_control_w(uint8_t data)
 {
 	/* bit 0 is latch direction */
-	m_vlm->st((data >> 1) & 1);
-	m_vlm->rst((data >> 2) & 1);
+	m_vlm->st_w(BIT(data, 1));
+	m_vlm->rst_w(BIT(data, 2));
 }
 
 
