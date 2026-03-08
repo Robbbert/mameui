@@ -537,8 +537,15 @@ void sis6326_pci_device::trigger_2d_command()
 		{
 			const bool major_axis = !!BIT(m_draw_command, 10);
 			const bool last_pixel = !!BIT(m_draw_command, 11);
-			LOGBLIT("\tLine: major axis %s %d\n", major_axis ? "Y" : "X", !last_pixel);
-			// ...
+			const u16 k1_term = (m_mask[0] | (m_mask[1] << 8)) & 0x3fff;
+			const u16 k2_term = (m_mask[2] | (m_mask[3] << 8)) & 0x3fff;
+			const u16 error_term = (m_mask[4] | (m_mask[5] << 8)) & 0x3fff;
+			const u16 line_style = (m_mask[6] | (m_mask[7] << 8));
+			LOGBLIT("\tLine: major axis %s last pixel %d\n", major_axis ? "Y" : "X", !last_pixel);
+			LOGBLIT("\tSRC Addr %06x DST Addr %06x Sel %02x\n", m_src_start_addr, m_dst_start_addr, m_draw_sel);
+			LOGBLIT("\tMajor Axial Pixel Count %d K1 %d K2 %d error %d style %04x\n", m_rect_width, k1_term, k2_term, error_term, line_style);
+			LOGBLIT("\tFG ROP %02x Color %06x | BG ROP %02x Color %06x\n", m_fg_rop, m_fg_color, m_bg_rop, m_bg_color);
+
 			break;
 		}
 	}
