@@ -47,11 +47,6 @@
 DEFINE_DEVICE_TYPE(ABC1600_MAC, abc1600_mac_device, "abc1600mac", "ABC 1600 MAC")
 
 
-void abc1600_mac_device::program_map(address_map &map)
-{
-	// populated in src/mame/luxor/abc1600.cpp
-}
-
 void abc1600_mac_device::mac_map(address_map &map)
 {
 	map(0x80000, 0x80000).mirror(0x006f8).select(0x7f900).rw(FUNC(abc1600_mac_device::page_hi_r), FUNC(abc1600_mac_device::page_hi_w));
@@ -106,7 +101,7 @@ const tiny_rom_entry *abc1600_mac_device::device_rom_region() const
 abc1600_mac_device::abc1600_mac_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	device_t(mconfig, ABC1600_MAC, tag, owner, clock),
 	device_memory_interface(mconfig, *this),
-	m_program_config("program", ENDIANNESS_BIG, 8, 21, 0, address_map_constructor(FUNC(abc1600_mac_device::program_map), this)),
+	m_program_config("program", ENDIANNESS_BIG, 8, 21, 0),
 	m_mac_config("mac", ENDIANNESS_BIG, 8, 20, 0, address_map_constructor(FUNC(abc1600_mac_device::mac_map), this)),
 	m_rom(*this, "boot"),
 	m_cpu(*this, finder_base::DUMMY_TAG),

@@ -864,14 +864,14 @@ uint8_t abc1600_state::cio_pa_r()
 
 	uint8_t data = 0;
 
-	data |= m_bus2->irq_r();
-	data |= m_bus1->irq_r() << 1;
-	data |= m_bus0x->xint2_r() << 2;
-	data |= m_bus0x->xint3_r() << 3;
-	data |= m_bus0x->xint4_r() << 4;
-	data |= m_bus0x->xint5_r() << 5;
-	data |= m_bus0x->irq_r() << 6;
-	data |= m_bus0i->irq_r() << 7;
+	data |= !m_bus2->irq_r();
+	data |= !m_bus1->irq_r() << 1;
+	data |= !m_bus0x->xint2_r() << 2;
+	data |= !m_bus0x->xint3_r() << 3;
+	data |= !m_bus0x->xint4_r() << 4;
+	data |= !m_bus0x->xint5_r() << 5;
+	data |= !m_bus0x->irq_r() << 6;
+	data |= !m_bus0i->irq_r() << 7;
 
 	return data;
 }
@@ -1181,22 +1181,22 @@ void abc1600_state::abc1600(machine_config &config)
 	m_bus0i->trrq_callback().set(FUNC(abc1600_state::update_drdy0));
 
 	ABCBUS_SLOT(config, m_bus0x, 64_MHz_XTAL / 16, abc1600bus_cards, nullptr);
-	m_bus0x->irq_callback().set(m_cio, FUNC(z8536_device::pa6_w));
+	m_bus0x->irq_callback().set(m_cio, FUNC(z8536_device::pa6_w)).invert();
 	m_bus0x->nmi_callback().set(FUNC(abc1600_state::nmi_w));
-	m_bus0x->xint2_callback().set(m_cio, FUNC(z8536_device::pa2_w));
-	m_bus0x->xint3_callback().set(m_cio, FUNC(z8536_device::pa3_w));
-	m_bus0x->xint4_callback().set(m_cio, FUNC(z8536_device::pa4_w));
-	m_bus0x->xint5_callback().set(m_cio, FUNC(z8536_device::pa5_w));
+	m_bus0x->xint2_callback().set(m_cio, FUNC(z8536_device::pa2_w)).invert();
+	m_bus0x->xint3_callback().set(m_cio, FUNC(z8536_device::pa3_w)).invert();
+	m_bus0x->xint4_callback().set(m_cio, FUNC(z8536_device::pa4_w)).invert();
+	m_bus0x->xint5_callback().set(m_cio, FUNC(z8536_device::pa5_w)).invert();
 	m_bus0x->pren_callback().set(FUNC(abc1600_state::update_pren0));
 	m_bus0x->trrq_callback().set(FUNC(abc1600_state::update_drdy0));
 
 	ABCBUS_SLOT(config, m_bus1, 64_MHz_XTAL / 16, abc1600bus_cards, nullptr);
-	m_bus1->irq_callback().set(m_cio, FUNC(z8536_device::pa1_w));
+	m_bus1->irq_callback().set(m_cio, FUNC(z8536_device::pa1_w)).invert();
 	m_bus1->pren_callback().set(FUNC(abc1600_state::update_pren1));
 	m_bus1->trrq_callback().set(FUNC(abc1600_state::update_drdy1));
 
 	ABCBUS_SLOT(config, m_bus2, 64_MHz_XTAL / 16, abc1600bus_cards, "4105");
-	m_bus2->irq_callback().set(m_cio, FUNC(z8536_device::pa0_w));
+	m_bus2->irq_callback().set(m_cio, FUNC(z8536_device::pa0_w)).invert();
 	m_bus2->pren_callback().set(m_dma2, FUNC(z80dma_device::iei_w)).exor(1);
 	m_bus2->trrq_callback().set(m_dma2, FUNC(z80dma_device::rdy_w));
 
