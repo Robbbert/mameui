@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7807 -->
+<!-- Number of items in this list = 7808 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -38262,6 +38262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs841b7cc17a858">
+		<description>Manic Miner 48K (1983)(Bug-Byte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33205">
+				<rom name="Manic Miner 48K (1983)(Bug-Byte).tzx" size="33205" crc="f89b74af" sha1="841b7cc17a858fd9eb6bb4dcddef7ce5b3fe9754"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4482d3cdb5cba">
 		<description>Manic Miner 48K (1983)(Software Projects)</description>
 		<year>????</year>
@@ -38269,6 +38279,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="33317">
 				<rom name="Manic Miner 48K (1983)(Software Projects).tap" size="33317" crc="eac88ad3" sha1="4482d3cdb5cba3d78cf6eda5738eb0e89bf5216f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e282447aab6a">
+		<description>Manic Miner 48K (1983)(Software Projects)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33299">
+				<rom name="Manic Miner 48K (1983)(Software Projects).tzx" size="33299" crc="3b212860" sha1="2e282447aab6a32e893767aa30d3c067b5bd45af"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38299,16 +38319,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="69775">
 				<rom name="Manic Miner Screen Editor (1998)(Broadsoft)[b].tap" size="69775" crc="cb42ccc9" sha1="4f96c6d0a2120f7e7d6e293f1fbcf0d4573bd349"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs2e282447aab6a">
-		<description>Manic Miner</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="33299">
-				<rom name="Manic Miner.tzx" size="33299" crc="3b212860" sha1="2e282447aab6a32e893767aa30d3c067b5bd45af"/>
 			</dataarea>
 		</part>
 	</software>

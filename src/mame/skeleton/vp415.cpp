@@ -744,18 +744,7 @@ void vp415_state::vp415(machine_config &config)
 	NSCSI_CONNECTOR(config, "scsi:4", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:5", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:6", scsi_devices, nullptr, false);
-//	NSCSI_CONNECTOR(config, "scsi:7").option_set("ncr5385", NCR5385).machine_config
-//	(
-//		[this](device_t *device)
-//		{
-//			ncr5385_device &ncr5385(downcast<ncr5385_device &>(*device));
 
-//			ncr5385.set_clock(8'000'000/2); // Same clock signal as above, per schematic
-
-//			ncr5385.irq().set(*this, FUNC(vp415_state::cpu_int1_w));
-//			//ncr5385.dreq().set_inputline(m_iop, INPUT_LINE_NMI);
-//		}
-//	);
 	NCR5385(config, m_scsi, 8'000'000/2);
 	scsi.set_external_device(7, m_scsi);
 	m_scsi->irq().set(DEVICE_SELF, FUNC(vp415_state::cpu_int1_w));

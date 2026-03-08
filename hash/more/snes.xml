@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 3998 -->
+<!-- Number of items in this list = 4008 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3742,6 +3742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsfa2d2a6c7478b">
+		<description>Battle Soccer - Futebol dos Herois T-Por (2003)(Trans-Center)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Battle Soccer - Futebol dos Herois T-Por (2003)(Trans-Center).sfc" size="1048576" crc="8e06ca02" sha1="fa2d2a6c7478b0a80f32bf560496d5d43bfa6fd4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsf805dd448412e">
 		<description>Battle Soccer 2 (J)(1994)(Banpresto)</description>
 		<year>????</year>
@@ -5129,6 +5139,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="BSB Demo (SMW1 Hack).smc" size="2097152" crc="d480d761" sha1="ea18fabe363ced3f72f521db2a9eccd69c5764f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb1409843ac8d3">
+		<description>Bubsy - Less Bad Edition v1.3 (2026)(NoPLo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bubsy - Less Bad Edition v1.3 (2026)(NoPLo).sfc" size="2097152" crc="72f7fc86" sha1="b1409843ac8d382b3ac1b0ffb773b100c29c50bf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7312,6 +7332,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsd00c08332f93f">
+		<description>Disney's Goof Troop T-Ita (2022)(Raviolo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Disney's Goof Troop T-Ita (2022)(Raviolo).sfc" size="1048576" crc="ccaa5e67" sha1="d00c08332f93f17c8b3bdebd18f11fc67509b4b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns25edc5d7481e0">
+		<description>Disney's The Jungle Book T-Por (2019)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Disney's The Jungle Book T-Por (2019)(Ripman).sfc" size="2097152" crc="894760b1" sha1="25edc5d7481e0fc4bee728f64afde2afb4799419"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd397becf7fa67">
+		<description>Disney's The Jungle Book T-Spa (2018)(Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Disney's The Jungle Book T-Spa (2018)(Wave).sfc" size="2097152" crc="8a419a6a" sha1="d397becf7fa676445cd3481e63b3074fda382057"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns79d2dbbd7ee61">
 		<description>dm (SMW1 Hack)</description>
 		<year>????</year>
@@ -8819,6 +8869,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Feda - The Emblem of Justice (Japan)[En v0.95 by Stealth].sfc" size="3145728" crc="8a9c36a3" sha1="4e25a7ebbb695af523763f7757355df0a4217754"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns02e3a4b1e0168">
+		<description>Feudal Bros - Tonosama 1 (W)(1995-2025)(Sunsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Feudal Bros - Tonosama 1 (W)(1995-2025)(Sunsoft).sfc" size="2097152" crc="d283f4e9" sha1="02e3a4b1e01682debeb51edd26e805ad8cfe51dd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13549,6 +13609,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Kaizo Factory_1 (SMW1 Hack).sfc" size="2097152" crc="d0ac7ddd" sha1="62c65d31e5c8bfa8d39bce6cf1a9e274a4585bd4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc310eeed4ede1">
+		<description>Kaizo Goof Troop EN (2026)(MegaStriker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kaizo Goof Troop EN (2026)(MegaStriker).sfc" size="1048576" crc="8ca05167" sha1="c310eeed4ede1c77e01c6ec7a46b96873d4735a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3b9826d2b17aa">
+		<description>Kaizo Goof Troop PT (2026)(MegaStriker)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Kaizo Goof Troop PT (2026)(MegaStriker).sfc" size="1048576" crc="28ae336a" sha1="3b9826d2b17aa5e3d694c3ab96887c952c2be8e5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21149,6 +21229,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Pitfall - Atari VCS 2600 (2022)(Nokia3310).sfc" size="2097152" crc="12c81eda" sha1="15997c3202e2b1dc503d8bceb4163a4648b4cc90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3b6dd1e5e45fa">
+		<description>Pitfall - The Mayan Adventure T-Por (2019)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Pitfall - The Mayan Adventure T-Por (2019)(Ripman).sfc" size="2097152" crc="6e40f40f" sha1="3b6dd1e5e45fae3558427fe88a8207f16f44f0f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37389,6 +37479,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Tale of Elementia.sfc" size="4194304" crc="003cc4d8" sha1="2ee6318d003b63d094acfe9dfdedfed5bd3e72e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns593f7ffbf7d5c">
+		<description>Tales of Phantasia T-Por (2002)(SandMan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291968">
+				<rom name="Tales of Phantasia T-Por (2002)(SandMan).sfc" size="6291968" crc="0413b3b8" sha1="593f7ffbf7d5c033457096c8b0b8efd0e406f0bf"/>
 			</dataarea>
 		</part>
 	</software>
