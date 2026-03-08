@@ -843,6 +843,8 @@ void adsp21062_device::COMPUTE(uint32_t opcode)
 					case 0x0a:      compute_comp(rx, ry); break;
 					case 0x21:      compute_pass(rn, rx); break;
 					case 0x22:      compute_neg(rn, rx); break;
+					case 0x25:      compute_add_ci(rn, rx); break;
+					case 0x26:      compute_sub_ci(rn, rx); break;
 					case 0x29:      compute_inc(rn, rx); break;
 					case 0x2a:      compute_dec(rn, rx); break;
 					case 0x40:      compute_and(rn, rx, ry); break;

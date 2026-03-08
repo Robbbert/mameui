@@ -193,19 +193,41 @@ void adsp21062_device::frontend::insert_loop(const LOOP_DESCRIPTOR &loopdesc)
 	add_loop_entry(loopdesc.end_pc, LOOP_ENTRY_EVALUATION, 0);
 	if (loopdesc.astat_check_pc != 0xffffffff)
 	{
-		uint32_t flags = m_sharc->do_condition_astat_bits(loopdesc.condition);
 		opcode_desc::extra_flags userflags;
 		userflags.reset();
-		if (flags & AZ) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_AZ); }
-		if (flags & AV) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_AV); }
-		if (flags & AN) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_AN); }
-		if (flags & AC) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_AC); }
-		if (flags & MN) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_MN); }
-		if (flags & MV) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_MV); }
-		if (flags & AF) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_AF); }
-		if (flags & SV) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_SV); }
-		if (flags & SZ) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_SZ); }
-		if (flags & BTF) { userflags.set(opcode_desc::ASTAT_DELAY_COPY_BTF); }
+		switch (loopdesc.condition)
+		{
+		case 0x00: case 0x10:                       // EQ  NE
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_AZ);
+			break;
+		case 0x01: case 0x11: case 0x02: case 0x12: // LT  GE  LE  GT
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_AZ);
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_AV);
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_AN);
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_AF);
+			break;
+		case 0x03: case 0x13:                       // AC  NOT AC
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_AC);
+			break;
+		case 0x04: case 0x14:                       // AV  NOT AV
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_AV);
+			break;
+		case 0x05: case 0x15:                       // MV  NOT MV
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_MV);
+			break;
+		case 0x06: case 0x16:                       // MS  NOT MS
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_MN);
+			break;
+		case 0x07: case 0x17:                       // SV  NOT SV
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_SV);
+			break;
+		case 0x08: case 0x18:                       // SZ  NOT SZ
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_SZ);
+			break;
+		case 0x0d: case 0x1d:                       // TF  NOT TF
+			userflags.set(opcode_desc::ASTAT_DELAY_COPY_BTF);
+			break;
+		}
 		add_loop_entry(loopdesc.astat_check_pc, LOOP_ENTRY_ASTAT_CHECK, userflags);
 	}
 }
@@ -269,11 +291,12 @@ bool adsp21062_device::frontend::describe(opcode_desc &desc, const opcode_desc *
 		int index = desc.pc & 0x1ffff;
 		desc.set_extra_flags(map[index].userflags);
 		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_AZ]) { desc.set_az_used(); }
-		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_AN]) { desc.set_an_used(); }
 		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_AV]) { desc.set_av_used(); }
+		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_AN]) { desc.set_an_used(); }
 		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_AC]) { desc.set_ac_used(); }
-		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_MN]) { desc.set_mn_used(); }
 		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_MV]) { desc.set_mv_used(); }
+		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_MN]) { desc.set_mn_used(); }
+		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_AF]) { desc.set_af_used(); }
 		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_SV]) { desc.set_sv_used(); }
 		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_SZ]) { desc.set_sz_used(); }
 		if (map[index].userflags[opcode_desc::ASTAT_DELAY_COPY_BTF]) { desc.set_btf_used(); }

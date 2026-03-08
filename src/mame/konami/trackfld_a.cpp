@@ -1,13 +1,10 @@
 // license:BSD-3-Clause
 // copyright-holders:Chris Hardy
 #include "emu.h"
-#include "sound/sn76496.h"
-#include "sound/msm5205.h"
-#include "trackfld.h"
 #include "trackfld_a.h"
 
 
-#define TIMER_RATE (4096/4)
+constexpr unsigned TIMER_RATE = 4096 / 4;
 
 
 
@@ -28,7 +25,6 @@ trackfld_audio_device::trackfld_audio_device(const machine_config &mconfig, cons
 
 void trackfld_audio_device::device_start()
 {
-	/* sound */
 	save_item(NAME(m_last_addr));
 	save_item(NAME(m_last_irq));
 }
@@ -39,8 +35,6 @@ void trackfld_audio_device::device_start()
 
 void trackfld_audio_device::device_reset()
 {
-	m_last_addr = 0;
-	m_last_irq = 0;
 }
 
 /* The timer port on TnF and HyperSports sound hardware is derived from
@@ -68,17 +62,17 @@ uint8_t trackfld_audio_device::trackfld_speech_r()
 
 void trackfld_audio_device::trackfld_sound_w(offs_t offset, uint8_t data)
 {
-	int changes = offset ^ m_last_addr;
+	const uint8_t changes = offset ^ m_last_addr;
 
-	/* A7 = data enable for VLM5030 (don't care )          */
-	/* A8 = STA pin (1->0 data data  , 0->1 start speech   */
-	/* A9 = RST pin 1=reset                                */
+	// A7 = data enable for VLM5030 (don't care)
+	// A8 = STA pin (1->0 data data  , 0->1 start speech
+	// A9 = RST pin 1=reset
 
-	/* A8 VLM5030 ST pin */
+	// A8 VLM5030 ST pin
 	if (changes & 0x100)
 		m_vlm->st(offset & 0x100);
 
-	/* A9 VLM5030 RST pin */
+	// A9 VLM5030 RST pin
 	if (changes & 0x200)
 		m_vlm->rst(offset & 0x200);
 
@@ -97,20 +91,20 @@ uint8_t trackfld_audio_device::hyperspt_sh_timer_r()
 
 void trackfld_audio_device::hyperspt_sound_w(offs_t offset, uint8_t data)
 {
-	int changes = offset ^ m_last_addr;
+	const uint8_t changes = offset ^ m_last_addr;
 
-	/* A3 = data enable for VLM5030 (don't care )          */
-	/* A4 = STA pin (1->0 data data  , 0->1 start speech   */
-	/* A5 = RST pin 1=reset                                */
-	/* A6 = VLM5030    output disable (don't care ) */
-	/* A7 = kONAMI DAC output disable (don't care ) */
-	/* A8 = SN76489AN  output disable (don't care ) */
+	// A3 = data enable for VLM5030 (don't care )
+	// A4 = STA pin (1->0 data data  , 0->1 start speech
+	// A5 = RST pin 1=reset
+	// A6 = VLM5030    output disable (don't care )
+	// A7 = kONAMI DAC output disable (don't care )
+	// A8 = SN76489AN  output disable (don't care )
 
-	/* A4 VLM5030 ST pin */
+	// A4 VLM5030 ST pin
 	if (changes & 0x10)
 		m_vlm->st(offset & 0x10);
 
-	/* A5 VLM5030 RST pin */
+	// A5 VLM5030 RST pin
 	if( changes & 0x20 )
 		m_vlm->rst(offset & 0x20);
 
@@ -121,11 +115,9 @@ void trackfld_audio_device::hyperspt_sound_w(offs_t offset, uint8_t data)
 
 void trackfld_audio_device::sh_irqtrigger_w(int state)
 {
+	// setting bit 0 low then high triggers IRQ on the sound CPU
 	if (m_last_irq == 0 && state)
-	{
-		/* setting bit 0 low then high triggers IRQ on the sound CPU */
 		m_audiocpu->set_input_line_and_vector(0, HOLD_LINE, 0xff); // Z80
-	}
 
 	m_last_irq = state;
 }

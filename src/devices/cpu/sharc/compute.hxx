@@ -11,7 +11,7 @@
 #define SET_FLAG_AN(r)              do { m_core->astat |= (((r) & 0x80000000) ? AN : 0); } while (false)
 #define SET_FLAG_AC_ADD(r,a,b)      do { m_core->astat |= ((uint32_t(r) < uint32_t(a)) ? AC : 0); } while (false)
 #define SET_FLAG_AV_ADD(r,a,b)      do { m_core->astat |= (((~((a) ^ (b)) & ((a) ^ (r))) & 0x80000000) ? AV : 0); } while (false)
-#define SET_FLAG_AC_SUB(r,a,b)      do { m_core->astat |= (!(uint32_t(a) < uint32_t(b)) ? AC : 0); } while (false)
+#define SET_FLAG_AC_SUB(r,a,b)      do { m_core->astat |= ((uint32_t(r) <= uint32_t(a)) ? AC : 0); } while (false)
 #define SET_FLAG_AV_SUB(r,a,b)      do { m_core->astat |= (((((a) ^ (b)) & ((a) ^ (r))) & 0x80000000) ? AV : 0); } while (false)
 
 #define CLEAR_MULTIPLIER_FLAGS()    do { m_core->astat &= ~(MN|MV|MU|MI); } while (false)
@@ -153,13 +153,13 @@ void adsp21062_device::compute_sub(int rn, int rx, int ry)
 /* Rn = Rx + Ry + CI */
 void adsp21062_device::compute_add_ci(int rn, int rx, int ry)
 {
-	int c = (m_core->astat & AC) ? 1 : 0;
+	int const c = (m_core->astat & AC) ? 1 : 0;
 	uint32_t r = REG(rx) + REG(ry) + c;
 
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AV_ADD(r, REG(rx), REG(ry));
 	SET_FLAG_AC_ADD(r, REG(rx), REG(ry));
-	if (c == 1 && REG(ry) == 0xffffffff)
+	if ((c == 1) && (REG(ry) == 0xffffffff))
 		m_core->astat |= AC;
 
 	if ((m_core->mode1 & MODE1_ALUSAT) && (m_core->astat & AV))
@@ -176,14 +176,13 @@ void adsp21062_device::compute_add_ci(int rn, int rx, int ry)
 /* Rn = Rx - Ry + CI - 1 */
 void adsp21062_device::compute_sub_ci(int rn, int rx, int ry)
 {
-	int c = (m_core->astat & AC) ? 1 : 0;
+	int const c = (m_core->astat & AC) ? 1 : 0;
 	uint32_t r = REG(rx) - REG(ry) + c - 1;
 
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AV_SUB(r, REG(rx), REG(ry));
-	SET_FLAG_AC_SUB(r, REG(rx), REG(ry));
-	if (c == 0 && REG(ry) == 0xffffffff)
-		m_core->astat |= AC;
+	if ((c != 0) || (REG(ry) != 0xffffffff))
+		SET_FLAG_AC_SUB(r, REG(rx), REG(ry));
 
 	if ((m_core->mode1 & MODE1_ALUSAT) && (m_core->astat & AV))
 		SATURATE(r);
@@ -199,7 +198,7 @@ void adsp21062_device::compute_sub_ci(int rn, int rx, int ry)
 /* Rn = Rx AND Ry */
 void adsp21062_device::compute_and(int rn, int rx, int ry)
 {
-	uint32_t r = REG(rx) & REG(ry);
+	uint32_t const r = REG(rx) & REG(ry);
 
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AN(r);
@@ -212,23 +211,19 @@ void adsp21062_device::compute_and(int rn, int rx, int ry)
 /* COMP(Rx, Ry) */
 void adsp21062_device::compute_comp(int rx, int ry)
 {
-	uint32_t comp_accum;
-
 	CLEAR_ALU_FLAGS();
-	if( REG(rx) == REG(ry) )
+	if (REG(rx) == REG(ry) )
 		m_core->astat |= AZ;
-	if( (int32_t)REG(rx) < (int32_t)REG(ry) )
+	if (int32_t(REG(rx)) < int32_t(REG(ry)))
 		m_core->astat |= AN;
 
 	// Update ASTAT compare accumulation register
-	comp_accum = (m_core->astat >> 24) & 0xff;
-	comp_accum >>= 1;
-	if ((m_core->astat & (AZ|AN)) == 0)
-	{
-		comp_accum |= 0x80;
-	}
-	m_core->astat &= 0xffffff;
-	m_core->astat |= comp_accum << 24;
+	uint32_t comp_accum = (m_core->astat >> 1) & 0x7f000000;
+	if ((m_core->astat & (AZ | AN)) == 0)
+		comp_accum |= 0x80000000;
+
+	m_core->astat &= 0x00ffffff;
+	m_core->astat |= comp_accum;
 
 	m_core->astat &= ~AF;
 }
@@ -251,7 +246,7 @@ void adsp21062_device::compute_pass(int rn, int rx)
 /* Rn = Rx XOR Ry */
 void adsp21062_device::compute_xor(int rn, int rx, int ry)
 {
-	uint32_t r = REG(rx) ^ REG(ry);
+	uint32_t const r = REG(rx) ^ REG(ry);
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AN(r);
 	SET_FLAG_AZ(r);
@@ -263,10 +258,52 @@ void adsp21062_device::compute_xor(int rn, int rx, int ry)
 /* Rn = Rx OR Ry */
 void adsp21062_device::compute_or(int rn, int rx, int ry)
 {
-	uint32_t r = REG(rx) | REG(ry);
+	uint32_t const r = REG(rx) | REG(ry);
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AN(r);
 	SET_FLAG_AZ(r);
+	REG(rn) = r;
+
+	m_core->astat &= ~AF;
+}
+
+/* Rn = Rx + CI */
+void adsp21062_device::compute_add_ci(int rn, int rx)
+{
+	int const c = (m_core->astat & AC) ? 1 : 0;
+	uint32_t r = REG(rx) + c;
+
+	CLEAR_ALU_FLAGS();
+	SET_FLAG_AV_ADD(r, REG(rx), 0);
+	SET_FLAG_AC_ADD(r, REG(rx), 0);
+
+	if ((m_core->mode1 & MODE1_ALUSAT) && (m_core->astat & AV))
+		SATURATE(r);
+
+	SET_FLAG_AN(r);
+	SET_FLAG_AZ(r);
+
+	REG(rn) = r;
+
+	m_core->astat &= ~AF;
+}
+
+/* Rn = Rx + CI - 1 */
+void adsp21062_device::compute_sub_ci(int rn, int rx)
+{
+	int const c = (m_core->astat & AC) ? 1 : 0;
+	uint32_t r = REG(rx) + c - 1;
+
+	CLEAR_ALU_FLAGS();
+	SET_FLAG_AV_SUB(r, REG(rx), 0);
+	SET_FLAG_AC_SUB(r, REG(rx), 0);
+
+	if ((m_core->mode1 & MODE1_ALUSAT) && (m_core->astat & AV))
+		SATURATE(r);
+
+	SET_FLAG_AN(r);
+	SET_FLAG_AZ(r);
+
 	REG(rn) = r;
 
 	m_core->astat &= ~AF;
@@ -278,10 +315,14 @@ void adsp21062_device::compute_inc(int rn, int rx)
 	uint32_t r = REG(rx) + 1;
 
 	CLEAR_ALU_FLAGS();
-	SET_FLAG_AN(r);
-	SET_FLAG_AZ(r);
 	SET_FLAG_AV_ADD(r, REG(rx), 1);
 	SET_FLAG_AC_ADD(r, REG(rx), 1);
+
+	if ((m_core->mode1 & MODE1_ALUSAT) && (m_core->astat & AV))
+		SATURATE(r);
+
+	SET_FLAG_AN(r);
+	SET_FLAG_AZ(r);
 
 	REG(rn) = r;
 
@@ -294,10 +335,14 @@ void adsp21062_device::compute_dec(int rn, int rx)
 	uint32_t r = REG(rx) - 1;
 
 	CLEAR_ALU_FLAGS();
-	SET_FLAG_AN(r);
-	SET_FLAG_AZ(r);
 	SET_FLAG_AV_SUB(r, REG(rx), 1);
 	SET_FLAG_AC_SUB(r, REG(rx), 1);
+
+	if ((m_core->mode1 & MODE1_ALUSAT) && (m_core->astat & AV))
+		SATURATE(r);
+
+	SET_FLAG_AN(r);
+	SET_FLAG_AZ(r);
 
 	REG(rn) = r;
 
@@ -307,7 +352,7 @@ void adsp21062_device::compute_dec(int rn, int rx)
 /* Rn = MIN(Rx, Ry) */
 void adsp21062_device::compute_min(int rn, int rx, int ry)
 {
-	uint32_t r = std::min((int32_t)REG(rx), (int32_t)REG(ry));
+	uint32_t const r = std::min(int32_t(REG(rx)), int32_t(REG(ry)));
 
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AN(r);
@@ -321,7 +366,7 @@ void adsp21062_device::compute_min(int rn, int rx, int ry)
 /* Rn = MAX(Rx, Ry) */
 void adsp21062_device::compute_max(int rn, int rx, int ry)
 {
-	uint32_t r = std::max((int32_t)REG(rx), (int32_t)REG(ry));
+	uint32_t const r = std::max(int32_t(REG(rx)), int32_t(REG(ry)));
 
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AN(r);
@@ -350,13 +395,17 @@ void adsp21062_device::compute_clip(int rn, int rx, int ry)
 /* Rn = -Rx */
 void adsp21062_device::compute_neg(int rn, int rx)
 {
-	uint32_t r = -(int32_t)(REG(rx));
+	uint32_t r = -int32_t(REG(rx));
 
 	CLEAR_ALU_FLAGS();
-	SET_FLAG_AN(r);
-	SET_FLAG_AZ(r);
 	SET_FLAG_AV_SUB(r, 0, REG(rx));
 	SET_FLAG_AC_SUB(r, 0, REG(rx));
+
+	if ((m_core->mode1 & MODE1_ALUSAT) && (m_core->astat & AV))
+		SATURATE(r);
+
+	SET_FLAG_AN(r);
+	SET_FLAG_AZ(r);
 
 	REG(rn) = r;
 
@@ -366,7 +415,7 @@ void adsp21062_device::compute_neg(int rn, int rx)
 /* Rn = NOT Rx */
 void adsp21062_device::compute_not(int rn, int rx)
 {
-	uint32_t r = ~REG(rx);
+	uint32_t const r = ~REG(rx);
 
 	CLEAR_ALU_FLAGS();
 	SET_FLAG_AN(r);

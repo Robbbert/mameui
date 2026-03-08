@@ -463,6 +463,7 @@ funlddlx
 funlddlx2
 funlddlx4
 quickjac
+sbsoli
 skattv
 skattva
 trumpfas
@@ -522,17 +523,34 @@ vmulti
 action
 allfred
 bigjkpot
+bigwinnr
+disc4000
+discfun
+dpplson
 dscbonus
 dscjkpot
+gjubil
 grandhnd
+grnada
+jack4000
 jkrpoker
 jmbojmbo
 jmbojmbf
+jumbo400
+jumboa
 kleoptra
+kometf1
+mdouble
+moneyf1
 multmult
+multprim
+multstar
+mystjack
+nunran
 st_ohla
 st_vulkn
 sunny
+suprdisc
 taipan
 turbosun
 
@@ -17693,6 +17711,10 @@ aviion_4600
 @source:dgrm/blackt96.cpp
 blackt96
 
+@source:dgrm/onetwo.cpp
+onetwo
+onetwoe
+
 @source:dgrm/pokechmp.cpp
 billlist
 pokechmp
@@ -18888,6 +18910,7 @@ glass10a
 glass10b
 glass10c
 glass10d
+glass10e
 glassa
 glassat
 glasskr
@@ -18909,10 +18932,13 @@ goldartpuk
 goldartuk
 
 @source:gaelco/lotoplay.cpp
-lotoplay
-lotoplaya
-lotoplayb
-lotoplayp
+lotoply
+lotoplya
+lotoplyb
+lotoplyp
+lotoplyz
+lotoplyza
+lotoplyzb
 
 @source:gaelco/mastboy.cpp
 mastboy
@@ -32729,10 +32755,6 @@ komocomo
 maddonnab
 oneshot
 
-@source:misc/onetwo.cpp
-onetwo
-onetwoe
-
 @source:misc/opercoin.cpp
 multibaby
 spirulo
@@ -34983,6 +35005,9 @@ tg16
 @source:nec/pcfx.cpp
 pcfx
 pcfxga
+
+@source:nec/piet1.cpp
+piet1
 
 @source:nec/tk80bs.cpp
 tk80bs
@@ -46992,6 +47017,9 @@ ti990_10
 @source:ti/ti990_4.cpp
 ti990_4
 ti990_4v
+
+@source:ti/tipc.cpp
+tipc
 
 @source:ti/tm990189.cpp
 990189

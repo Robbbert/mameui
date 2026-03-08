@@ -126,6 +126,22 @@ public:
 		set_ss_modified();
 	}
 
+	bool az_used() const                { return regin[REG_AZ]; }
+	bool av_used() const                { return regin[REG_AV]; }
+	bool an_used() const                { return regin[REG_AN]; }
+	bool ac_used() const                { return regin[REG_AC]; }
+	bool as_used() const                { return regin[REG_AS]; }
+	bool ai_used() const                { return regin[REG_AI]; }
+	bool mn_used() const                { return regin[REG_MN]; }
+	bool mv_used() const                { return regin[REG_MV]; }
+	bool mu_used() const                { return regin[REG_MU]; }
+	bool mi_used() const                { return regin[REG_MI]; }
+	bool af_used() const                { return regin[REG_AF]; }
+	bool sv_used() const                { return regin[REG_SV]; }
+	bool sz_used() const                { return regin[REG_SZ]; }
+	bool ss_used() const                { return regin[REG_SS]; }
+	bool btf_used() const               { return regin[REG_BTF]; }
+
 	bool az_calc_required() const       { return regreq[REG_AZ] || in_delay_slot(); }
 	bool av_calc_required() const       { return regreq[REG_AV] || in_delay_slot(); }
 	bool an_calc_required() const       { return regreq[REG_AN] || in_delay_slot(); }
@@ -144,11 +160,12 @@ public:
 
 	void set_loop()                     { m_extra_flags.set(LOOP); }
 	void set_astat_delay_copy_az()      { m_extra_flags.set(ASTAT_DELAY_COPY_AZ); }
+	void set_astat_delay_copy_av()      { m_extra_flags.set(ASTAT_DELAY_COPY_AV); }
 	void set_astat_delay_copy_an()      { m_extra_flags.set(ASTAT_DELAY_COPY_AN); }
 	void set_astat_delay_copy_ac()      { m_extra_flags.set(ASTAT_DELAY_COPY_AC); }
-	void set_astat_delay_copy_av()      { m_extra_flags.set(ASTAT_DELAY_COPY_AV); }
 	void set_astat_delay_copy_mv()      { m_extra_flags.set(ASTAT_DELAY_COPY_MV); }
 	void set_astat_delay_copy_mn()      { m_extra_flags.set(ASTAT_DELAY_COPY_MN); }
+	void set_astat_delay_copy_af()      { m_extra_flags.set(ASTAT_DELAY_COPY_AF); }
 	void set_astat_delay_copy_sv()      { m_extra_flags.set(ASTAT_DELAY_COPY_SV); }
 	void set_astat_delay_copy_sz()      { m_extra_flags.set(ASTAT_DELAY_COPY_SZ); }
 	void set_astat_delay_copy_btf()     { m_extra_flags.set(ASTAT_DELAY_COPY_BTF); }
@@ -163,11 +180,12 @@ public:
 
 	bool loop() const                   { return m_extra_flags[LOOP]; }
 	bool astat_delay_copy_az() const    { return m_extra_flags[ASTAT_DELAY_COPY_AZ]; }
+	bool astat_delay_copy_av() const    { return m_extra_flags[ASTAT_DELAY_COPY_AV]; }
 	bool astat_delay_copy_an() const    { return m_extra_flags[ASTAT_DELAY_COPY_AN]; }
 	bool astat_delay_copy_ac() const    { return m_extra_flags[ASTAT_DELAY_COPY_AC]; }
-	bool astat_delay_copy_av() const    { return m_extra_flags[ASTAT_DELAY_COPY_AV]; }
 	bool astat_delay_copy_mv() const    { return m_extra_flags[ASTAT_DELAY_COPY_MV]; }
 	bool astat_delay_copy_mn() const    { return m_extra_flags[ASTAT_DELAY_COPY_MN]; }
+	bool astat_delay_copy_af() const    { return m_extra_flags[ASTAT_DELAY_COPY_AF]; }
 	bool astat_delay_copy_sv() const    { return m_extra_flags[ASTAT_DELAY_COPY_SV]; }
 	bool astat_delay_copy_sz() const    { return m_extra_flags[ASTAT_DELAY_COPY_SZ]; }
 	bool astat_delay_copy_btf() const   { return m_extra_flags[ASTAT_DELAY_COPY_BTF]; }

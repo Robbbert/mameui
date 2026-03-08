@@ -180,7 +180,7 @@ Remaining Video issues
  - End of Blit should send IRQ1. (one game has a valid irq routine that looks like it was used for profiling, but nothing depends on it)
 
 Timing
- - Correct CPU slowdown emulation and flags (and speed of RAM). Most slowdown seems due to SH-3 uncached RAM access wait states, which is not implemented.
+ - Experimental SH7709S cache/memory timing
  - Requires to measure screen raw params for correct video timing?
 
 31/12/2021:
@@ -194,7 +194,7 @@ Timing
 #include "cv1k_v.h"
 
 #include "cpu/sh/sh3comn.h"
-#include "cpu/sh/sh4.h"
+#include "cpu/sh/sh7709s.h"
 #include "machine/nandflash.h"
 #include "machine/rtc9701.h"
 #include "sound/ymz770.h"

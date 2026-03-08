@@ -206,36 +206,6 @@ bool adsp21062_device::if_condition_always_true(int condition)
 		return false;
 }
 
-uint32_t adsp21062_device::do_condition_astat_bits(int condition)
-{
-	uint32_t r = 0;
-	switch (condition)
-	{
-		case 0x00: r = AZ; break;                   // EQ
-		case 0x01: r = AZ | AV | AN | AF; break;    // LT
-		case 0x02: r = AZ | AV | AN | AF; break;    // LE
-		case 0x03: r = AC; break;                   // AC
-		case 0x04: r = AV; break;                   // AV
-		case 0x05: r = MV; break;                   // MV
-		case 0x06: r = MN; break;                   // MS
-		case 0x07: r = SV; break;                   // SV
-		case 0x08: r = SZ; break;                   // SZ
-		case 0x0d: r = BTF; break;                  // TF
-		case 0x10: r = AZ; break;                   // NOT EQUAL
-		case 0x11: r = AZ | AV | AN | AF; break;    // GE
-		case 0x12: r = AZ | AV | AN | AF; break;    // GT
-		case 0x13: r = AC; break;                   // NOT AC
-		case 0x14: r = AV; break;                   // NOT AV
-		case 0x15: r = MV; break;                   // NOT MV
-		case 0x16: r = MN; break;                   // NOT MS
-		case 0x17: r = SV; break;                   // NOT SV
-		case 0x18: r = SZ; break;                   // NOT SZ
-		case 0x1d: r = BTF; break;                  // NOT TF
-	}
-
-	return r;
-}
-
 
 /*-------------------------------------------------
 load_fast_iregs - load any fast integer
@@ -265,6 +235,32 @@ void adsp21062_device::save_fast_iregs(drcuml_block &block)
 			UML_MOV(block, mem(&m_core->r[regnum]), ireg(m_regmap[regnum].ireg() - REG_I0));
 	}
 }
+
+
+void adsp21062_device::update_az_an_fixed(drcuml_block &block, const opcode_desc *desc)
+{
+	// expects Z and S flags to be set appropriately
+	if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
+	if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
+	if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
+	if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
+	if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
+	if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+	if (AF_CALC_REQUIRED) UML_MOV(block, ASTAT_AF, 0);
+}
+
+void adsp21062_device::update_az_av_an_ac_fixed(drcuml_block &block, const opcode_desc *desc, bool sub)
+{
+	// expects Z, V, S and C flags to be set appropriately
+	if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
+	if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
+	if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
+	if (AC_CALC_REQUIRED) UML_SETc(block, sub ? COND_NC : COND_C, ASTAT_AC);
+	if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
+	if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+	if (AF_CALC_REQUIRED) UML_MOV(block, ASTAT_AF, 0);
+}
+
 
 void adsp21062_device::static_generate_memory_accessors()
 {
@@ -1524,10 +1520,10 @@ void adsp21062_device::generate_sequence_instruction(drcuml_block &block, compil
 	// copy ASTAT bits over for conditional loop
 	if (desc->astat_delay_copy_az())
 		UML_MOV(block, mem(&m_core->astat_delay_copy.az), mem(&m_core->astat_drc.az));
-	if (desc->astat_delay_copy_an())
-		UML_MOV(block, mem(&m_core->astat_delay_copy.an), mem(&m_core->astat_drc.an));
 	if (desc->astat_delay_copy_av())
 		UML_MOV(block, mem(&m_core->astat_delay_copy.av), mem(&m_core->astat_drc.av));
+	if (desc->astat_delay_copy_an())
+		UML_MOV(block, mem(&m_core->astat_delay_copy.an), mem(&m_core->astat_drc.an));
 	if (desc->astat_delay_copy_ac())
 		UML_MOV(block, mem(&m_core->astat_delay_copy.ac), mem(&m_core->astat_drc.ac));
 	if (desc->astat_delay_copy_mn())
@@ -1540,6 +1536,8 @@ void adsp21062_device::generate_sequence_instruction(drcuml_block &block, compil
 		UML_MOV(block, mem(&m_core->astat_delay_copy.sz), mem(&m_core->astat_drc.sz));
 	if (desc->astat_delay_copy_btf())
 		UML_MOV(block, mem(&m_core->astat_delay_copy.btf), mem(&m_core->astat_drc.btf));
+	if (desc->astat_delay_copy_af())
+		UML_MOV(block, mem(&m_core->astat_delay_copy.af), mem(&m_core->astat_drc.af));
 }
 
 void adsp21062_device::generate_update_cycles(drcuml_block &block, compiler_state &compiler, uml::parameter param, bool allow_exception)
@@ -1757,21 +1755,34 @@ void adsp21062_device::generate_update_circular_buffer(drcuml_block &block, comp
 
 void adsp21062_device::generate_astat_copy(drcuml_block &block, compiler_state &compiler, const opcode_desc *desc)
 {
-	UML_MOV(block, mem(&m_core->astat_drc_copy.az), ASTAT_AZ);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.av), ASTAT_AV);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.an), ASTAT_AN);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.av), ASTAT_AV);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.as), ASTAT_AS);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.ai), ASTAT_AI);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.af), ASTAT_AF);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.mn), ASTAT_MN);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.mv), ASTAT_MV);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.mu), ASTAT_MU);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.mi), ASTAT_MI);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.sv), ASTAT_SV);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.sz), ASTAT_SZ);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.ss), ASTAT_SS);
-	UML_MOV(block, mem(&m_core->astat_drc_copy.btf), ASTAT_BTF);
+	if (desc->az_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.az), ASTAT_AZ);
+	if (desc->av_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.av), ASTAT_AV);
+	if (desc->an_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.an), ASTAT_AN);
+	if (desc->as_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.as), ASTAT_AS);
+	if (desc->ai_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.ai), ASTAT_AI);
+	if (desc->mn_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.mn), ASTAT_MN);
+	if (desc->mv_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.mv), ASTAT_MV);
+	if (desc->mu_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.mu), ASTAT_MU);
+	if (desc->mi_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.mi), ASTAT_MI);
+	if (desc->sv_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.sv), ASTAT_SV);
+	if (desc->sz_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.sz), ASTAT_SZ);
+	if (desc->ss_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.ss), ASTAT_SS);
+	if (desc->btf_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.btf), ASTAT_BTF);
+	if (desc->af_used())
+		UML_MOV(block, mem(&m_core->astat_drc_copy.af), ASTAT_AF);
 	UML_MOV(block, mem(&m_core->astat_drc_copy.cacc), mem(&m_core->astat_drc.cacc));
 }
 
@@ -4038,12 +4049,7 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 				UML_DSHR(block, I0, I0, 31);
 
 				UML_ADD(block, I2, REG(fxa), REG(fya));
-				if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-				if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-				if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-				if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-				if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-				if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+				update_az_av_an_ac_fixed(block, desc, false);
 
 				// TODO: multiplier flags
 
@@ -4058,12 +4064,7 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 				UML_DSHR(block, I0, I0, 31);
 
 				UML_SUB(block, I2, REG(fxa), REG(fya));
-				if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-				if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-				if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-				if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-				if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-				if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+				update_az_av_an_ac_fixed(block, desc, true);
 
 				// TODO: multiplier flags
 
@@ -4370,14 +4371,9 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 				switch (operation)
 				{
 					case 0x09:      // Rn = (Rx + Ry) / 2
-					case 0x63:      // Rn = CLIP Rx BY Ry
 					case 0x92:      // Fn = ABS(Fx - Fy)
 					case 0xdd:      // Rn = TRUNC Fx BY Ry
 					case 0xe0:      // Fn = Fx COPYSIGN Fy
-					case 0x05:      // Rn = Rx + Ry + CI
-					case 0x06:      // Rn = Rx - Ry + CI - 1
-					case 0x25:      // Rn = Rx + CI
-					case 0x26:      // Rn = Rx + CI - 1
 					case 0x30:      // Rn = ABS Rx
 					case 0xa5:      // Fn = RND Fx
 					case 0xad:      // Rn = MANT Fx
@@ -4387,125 +4383,105 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 
 					case 0x01:      // Rn = Rx + Ry
 						UML_ADD(block, REG(rn), REG(rx), REG(ry));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-						if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_av_an_ac_fixed(block, desc, false);
 						return;
 
 					case 0x02:      // Rn = Rx - Ry
 						UML_SUB(block, REG(rn), REG(rx), REG(ry));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-						if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_av_an_ac_fixed(block, desc, true);
+						return;
+
+					case 0x05:      // Rn = Rx + Ry + CI
+						UML_CARRY(block, ASTAT_AC, 0);
+						UML_ADDC(block, REG(rn), REG(rx), REG(ry));
+						update_az_av_an_ac_fixed(block, desc, false);
+						return;
+
+					case 0x06:      // Rn = Rx - Ry + CI - 1
+						UML_XOR(block, I0, ASTAT_AC, 0xffffffff);
+						UML_CARRY(block, I0, 0);
+						UML_SUBB(block, REG(rn), REG(rx), REG(ry));
+						update_az_av_an_ac_fixed(block, desc, true);
 						return;
 
 					case 0x0a:      // COMP(Rx, Ry)
+						UML_SHR(block, I1, mem(&m_core->astat_drc.cacc), 1);
 						UML_CMP(block, REG(rx), REG(ry));
-						UML_SETc(block, COND_Z, I0);
-						UML_SETc(block, COND_L, I1);
-						UML_MOV(block, ASTAT_AZ, I0);
-						UML_MOV(block, ASTAT_AN, I1);
-						UML_XOR(block, I0, I0, 1);
-						UML_XOR(block, I1, I1, 1);
-						UML_AND(block, I0, I0, I1);
-						UML_SHL(block, I0, I0, 7);
 
-						UML_SHR(block, I2, mem(&m_core->astat_drc.cacc), 1);
-						UML_OR(block, I2, I2, I0);
-						UML_MOV(block, mem(&m_core->astat_drc.cacc), I2);
-
+						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_E, ASTAT_AZ);
 						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
+						if (AN_CALC_REQUIRED) UML_SETc(block, COND_L, ASTAT_AN);
 						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
 						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
 						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						if (AF_CALC_REQUIRED) UML_MOV(block, ASTAT_AF, 0);
+
+						UML_SETc(block, COND_G, I0);
+						UML_SHL(block, I0, I0, 7);
+						UML_OR(block, mem(&m_core->astat_drc.cacc), I0, I1);
 						return;
 
 					case 0x21:      // Rn = PASS Rx
-						UML_MOV(block, REG(rn), REG(rx));
-						if (AZ_CALC_REQUIRED || AN_CALC_REQUIRED)
-							UML_CMP(block, REG(rn), 0);
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
-						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						if (!AZ_CALC_REQUIRED && !AN_CALC_REQUIRED)
+						{
+							UML_MOV(block, REG(rn), REG(rx));
+						}
+						else if (rn == rx)
+						{
+							UML_TEST(block, REG(rx), 0xffffffff);
+						}
+						else
+						{
+							UML_AND(block, I0, REG(rx), 0xffffffff);
+							UML_MOV(block, REG(rn), I0);
+						}
+						update_az_an_fixed(block, desc);
 						return;
 
 					case 0x22:      // Rn = -Rx
 						UML_SUB(block, REG(rn), 0, REG(rx));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-						if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_av_an_ac_fixed(block, desc, true);
+						return;
+
+					case 0x25:      // Rn = Rx + CI
+						UML_ADD(block, REG(rn), REG(rx), ASTAT_AC);
+						update_az_av_an_ac_fixed(block, desc, false);
+						return;
+
+					case 0x26:      // Rn = Rx + CI - 1
+						UML_XOR(block, I0, ASTAT_AC, 1);
+						UML_SUB(block, REG(rn), REG(rx), I0);
+						update_az_av_an_ac_fixed(block, desc, true);
 						return;
 
 					case 0x29:      // Rn = Rx + 1
 						UML_ADD(block, REG(rn), REG(rx), 1);
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-						if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_av_an_ac_fixed(block, desc, false);
 						return;
 
 					case 0x2a:      // Rn = Rx - 1
 						UML_SUB(block, REG(rn), REG(rx), 1);
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-						if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_av_an_ac_fixed(block, desc, true);
 						return;
 
 					case 0x40:      // Rn = Rx AND Ry
 						UML_AND(block, REG(rn), REG(rx), REG(ry));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
-						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_an_fixed(block, desc);
 						return;
 
 					case 0x41:      // Rn = Rx OR Ry
 						UML_OR(block, REG(rn), REG(rx), REG(ry));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
-						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_an_fixed(block, desc);
 						return;
 
 					case 0x42:      // Rn = Rx XOR Ry
 						UML_XOR(block, REG(rn), REG(rx), REG(ry));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
-						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_an_fixed(block, desc);
 						return;
 
 					case 0x43:      // Rn = NOT Rx
 						UML_XOR(block, REG(rn), REG(rx), 0xffffffff);
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
-						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+						update_az_an_fixed(block, desc);
 						return;
 
 					case 0x61:      // Rn = MIN(Rx, Ry)
@@ -4515,13 +4491,8 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 						if (rn != ry)
 							UML_MOVc(block, COND_G, REG(rn), REG(ry));
 						if (AZ_CALC_REQUIRED || AN_CALC_REQUIRED)
-							UML_CMP(block, REG(rn), 0);
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
-						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+							UML_TEST(block, REG(rn), 0xffffffff);
+						update_az_an_fixed(block, desc);
 						return;
 
 					case 0x62:      // Rn = MAX(Rx, Ry)
@@ -4531,39 +4502,44 @@ void adsp21062_device::generate_compute(drcuml_block &block, compiler_state &com
 						if (rn != ry)
 							UML_MOVc(block, COND_L, REG(rn), REG(ry));
 						if (AZ_CALC_REQUIRED || AN_CALC_REQUIRED)
-							UML_CMP(block, REG(rn), 0);
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_MOV(block, ASTAT_AV, 0);
-						if (AC_CALC_REQUIRED) UML_MOV(block, ASTAT_AC, 0);
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
+							UML_TEST(block, REG(rn), 0xffffffff);
+						update_az_an_fixed(block, desc);
+						return;
+
+					case 0x63:      // Rn = CLIP Rx BY Ry
+						UML_MOV(block, I0, REG(ry));
+						UML_SUB(block, I1, 0, I0);
+						UML_MOV(block, I2, I0);
+						UML_MOVc(block, COND_NS, I2, I1);
+						UML_MOVc(block, COND_NS, I1, I0);
+						UML_MOV(block, I0, REG(rx));
+						UML_CMP(block, I0, I1);
+						UML_MOVc(block, COND_L, I0, I1);
+						UML_CMP(block, I0, I2);
+						UML_MOVc(block, COND_G, I0, I2);
+						UML_MOV(block, REG(rn), I0);
+						if (AZ_CALC_REQUIRED || AN_CALC_REQUIRED)
+							UML_TEST(block, I0, 0xffffffff);
+						update_az_an_fixed(block, desc);
 						return;
 
 					case 0x70: case 0x71: case 0x72: case 0x73: case 0x74: case 0x75: case 0x76: case 0x77:
 					case 0x78: case 0x79: case 0x7a: case 0x7b: case 0x7c: case 0x7d: case 0x7e: case 0x7f:
-					{
-						/* Fixed-point Dual Add/Subtract */
-						UML_ADD(block, I0, REG(rx), REG(ry));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, ASTAT_AZ);
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, ASTAT_AN);
-						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, ASTAT_AV);
-						if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, ASTAT_AC);
-						UML_SUB(block, I1, REG(rx), REG(ry));
-						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, mem(&m_core->arg0));
-						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, mem(&m_core->arg1));
-						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, mem(&m_core->arg2));
-						if (AC_CALC_REQUIRED) UML_SETc(block, COND_C, mem(&m_core->arg3));
-						if (AZ_CALC_REQUIRED) UML_OR(block, ASTAT_AZ, ASTAT_AZ, mem(&m_core->arg0));
-						if (AN_CALC_REQUIRED) UML_OR(block, ASTAT_AN, ASTAT_AN, mem(&m_core->arg1));
-						if (AV_CALC_REQUIRED) UML_OR(block, ASTAT_AV, ASTAT_AV, mem(&m_core->arg2));
-						if (AC_CALC_REQUIRED) UML_OR(block, ASTAT_AC, ASTAT_AC, mem(&m_core->arg3));
-						if (AS_CALC_REQUIRED) UML_MOV(block, ASTAT_AS, 0);
-						if (AI_CALC_REQUIRED) UML_MOV(block, ASTAT_AI, 0);
-						UML_MOV(block, REG(ra), I0);
-						UML_MOV(block, REG(rs), I1);
+						// Fixed-point Dual Add/Subtract
+						UML_MOV(block, I0, REG(rx));
+						UML_MOV(block, I1, REG(ry));
+						UML_ADD(block, REG(ra), I0, I1);
+						update_az_av_an_ac_fixed(block, desc, false);
+						UML_SUB(block, REG(rs), I0, I1);
+						if (AZ_CALC_REQUIRED) UML_SETc(block, COND_Z, I0);
+						if (AV_CALC_REQUIRED) UML_SETc(block, COND_V, I1);
+						if (AN_CALC_REQUIRED) UML_SETc(block, COND_S, I2);
+						if (AC_CALC_REQUIRED) UML_SETc(block, COND_NC, I3);
+						if (AZ_CALC_REQUIRED) UML_OR(block, ASTAT_AZ, ASTAT_AZ, I0);
+						if (AV_CALC_REQUIRED) UML_OR(block, ASTAT_AV, ASTAT_AV, I1);
+						if (AN_CALC_REQUIRED) UML_OR(block, ASTAT_AN, ASTAT_AN, I2);
+						if (AC_CALC_REQUIRED) UML_OR(block, ASTAT_AC, ASTAT_AC, I3);
 						return;
-					}
 
 					case 0x81:      // Fn = Fx + Fy
 						// TODO: denormals

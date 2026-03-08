@@ -33,6 +33,7 @@
 #include "a2sam.h"
 #include "a2scsi.h"
 #include "a2sd.h"
+#include "a2sic.h"
 #include "a2softcard.h"
 #include "a2ssc.h"
 #include "a2superdrive.h"
@@ -161,6 +162,7 @@ void apple2_cards(device_slot_interface &device)
 	device.option_add("romcardfp", A2BUS_ROMCARDFP);           // Apple II ROM Card with Autostart Monitor + Applesoft BASIC
 	device.option_add("romcardint", A2BUS_ROMCARDINT);         // Apple II ROM Card with Autostart Monitor + Integer BASIC
 	device.option_add("ap2", A2BUS_IBSAP2);                    // IBS Computertechnik AP 2 Serial Interface
+	device.option_add("sic", A2BUS_SIC);                       // Apple II Serial Interface Card
 }
 
 void apple2e_cards(device_slot_interface &device)
@@ -248,6 +250,7 @@ void apple2e_cards(device_slot_interface &device)
 	device.option_add("romcardfp", A2BUS_ROMCARDFP);           // Apple II ROM Card with Autostart Monitor + Applesoft BASIC
 	device.option_add("romcardint", A2BUS_ROMCARDINT);         // Apple II ROM Card with Autostart Monitor + Integer BASIC
 	device.option_add("ap2", A2BUS_IBSAP2);                    // IBS Computertechnik AP 2 Serial Interface
+	device.option_add("sic", A2BUS_SIC);                       // Apple II Serial Interface Card
 }
 
 void apple2gs_cards(device_slot_interface &device)
