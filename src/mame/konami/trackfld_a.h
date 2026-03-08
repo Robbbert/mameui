@@ -38,8 +38,7 @@ private:
 	optional_device<vlm5030_device> m_vlm;
 
 	// internal state
-	int      m_last_addr;
-	int      m_last_irq;
+	uint8_t m_last_irq;
 };
 
 DECLARE_DEVICE_TYPE(TRACKFLD_AUDIO, trackfld_audio_device)
