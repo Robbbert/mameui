@@ -18,6 +18,7 @@
 //   Writeback timing for certain operations should also overlap in some cases
 //   If the CPU supports critical word first the instruction that takes the miss should be able to start as soon as that address is read in from memory even if there are further words to be read
 
+#include "emu.h"
 #include "sh7709s.h"
 #include "sh3comn.h"
 #include "sh4comn.h"
