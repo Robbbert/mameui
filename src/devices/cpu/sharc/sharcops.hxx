@@ -847,6 +847,7 @@ void adsp21062_device::COMPUTE(uint32_t opcode)
 					case 0x26:      compute_sub_ci(rn, rx); break;
 					case 0x29:      compute_inc(rn, rx); break;
 					case 0x2a:      compute_dec(rn, rx); break;
+					case 0x30:      compute_abs(rn, rx); break;
 					case 0x40:      compute_and(rn, rx, ry); break;
 					case 0x41:      compute_or(rn, rx, ry); break;
 					case 0x42:      compute_xor(rn, rx, ry); break;
@@ -858,7 +859,8 @@ void adsp21062_device::COMPUTE(uint32_t opcode)
 					case 0x82:      compute_fsub(rn, rx, ry); break;
 					case 0x89:      compute_favg(rn, rx, ry); break;
 					case 0x8a:      compute_fcomp(rx, ry); break;
-					case 0x91:      compute_fabs_plus(rn, rx, ry); break;
+					case 0x91:      compute_fadd_abs(rn, rx, ry); break;
+					case 0x92:      compute_fsub_abs(rn, rx, ry); break;
 					case 0xa1:      compute_fpass(rn, rx); break;
 					case 0xa2:      compute_fneg(rn, rx); break;
 					case 0xb0:      compute_fabs(rn, rx); break;
