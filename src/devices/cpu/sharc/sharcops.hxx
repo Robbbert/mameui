@@ -777,13 +777,13 @@ void adsp21062_device::COMPUTE(uint32_t opcode)
 				break;
 			}
 
-			case 0x1a:      /* Fm = Fxm * Fym,   Fa = FLOAT Fxa BY Fya */
+			case 0x1a:      /* Fm = Fxm * Fym,   Fa = FLOAT Fxa BY Rya */
 			{
 				compute_fmul_float_scaled(fm, fxm, fym, fa, fxa, fya);
 				break;
 			}
 
-			case 0x1b:      /* Fm = Fxm * Fym,   Fa = FIX Fxa BY Fya */
+			case 0x1b:      /* Fm = Fxm * Fym,   Ra = FIX Fxa BY Rya */
 			{
 				compute_fmul_fix_scaled(fm, fxm, fym, fa, fxa, fya);
 				break;
@@ -797,7 +797,7 @@ void adsp21062_device::COMPUTE(uint32_t opcode)
 
 			case 0x1d:      /* Fm = Fxm * Fym,   Fa = ABS Fxa */
 			{
-				compute_fmul_abs(fm, fxm, fym, fa, fxa, fya);
+				compute_fmul_abs(fm, fxm, fym, fa, fxa);
 				break;
 			}
 
