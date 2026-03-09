@@ -23,7 +23,7 @@ SiS 6326
 
 DEFINE_DEVICE_TYPE(SIS6326_PCI, sis6326_pci_device,   "sis6326_pci",   "SiS 6326 PCI card")
 DEFINE_DEVICE_TYPE(SIS6326_AGP, sis6326_agp_device,   "sis6326_agp",   "SiS 6326 AGP card")
-
+DEFINE_DEVICE_TYPE(SIS6326_DVD, sis6326_dvd_device,   "sis6326_dvd",   "SiS 6326 DVD card")
 
 
 sis6326_pci_device::sis6326_pci_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
@@ -556,10 +556,16 @@ void sis6326_pci_device::trigger_2d_command()
  * AGP overrides
  */
 
-sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: sis6326_pci_device(mconfig, SIS6326_AGP, tag, owner, clock)
+sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
+	: sis6326_pci_device(mconfig, type, tag, owner, clock)
 {
 }
+
+sis6326_agp_device::sis6326_agp_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: sis6326_agp_device(mconfig, SIS6326_AGP, tag, owner, clock)
+{
+}
+
 
 ROM_START( sis6326agp )
 	ROM_REGION32_LE( 0x10000, "bios", ROMREGION_ERASEFF )
@@ -652,5 +658,36 @@ void sis6326_agp_device::config_map(address_map &map)
 	map(0x54, 0x57).lr32(NAME([] () { return 0x01000003; } ));
 	map(0x58, 0x5b).rw(FUNC(sis6326_agp_device::agp_command_r), FUNC(sis6326_agp_device::agp_command_w));
 	map(0x5c, 0x5f).lr32(NAME([] () { return 0x00000000; } )); // NULL terminator
+}
+
+/*
+ * DVD overrides
+ */
+
+sis6326_dvd_device::sis6326_dvd_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: sis6326_agp_device(mconfig, SIS6326_DVD, tag, owner, clock)
+{
+	set_ids(0x10396326, 0xa0, 0x030000, 0x10924920);
+}
+
+ROM_START( sis6326dvd )
+	ROM_REGION32_LE( 0x10000, "bios", ROMREGION_ERASEFF )
+	ROM_DEFAULT_BIOS("diamond")
+
+	ROM_SYSTEM_BIOS( 0, "diamond", "Diamond SpeedStar A70 (123A0A50)" )
+	ROMX_LOAD( "diamondspeedstar_a70.vbi", 0x000000, 0x00c000, CRC(9501f6fc) SHA1(7566f1483c3e963762ef19b4deeb8fc24ccd217f), ROM_BIOS(0) )
+ROM_END
+
+const tiny_rom_entry *sis6326_dvd_device::device_rom_region() const
+{
+	return ROM_NAME(sis6326dvd);
+}
+
+void sis6326_dvd_device::device_add_mconfig(machine_config &config)
+{
+	sis6326_agp_device::device_add_mconfig(config);
+	// TODO: allegedly a 8MB card but gets 4 even if properly mapped (something inside the VGA core?)
+
+	// TODO: extra TV out (by definition)
 }
 
