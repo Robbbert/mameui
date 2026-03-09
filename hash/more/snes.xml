@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4008 -->
+<!-- Number of items in this list = 4012 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -4462,6 +4462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsd197660cecd6c">
+		<description>Brain Lord PT-BR v1.05 (2024-26)(Dindo - Mumble)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Brain Lord PT-BR v1.05 (2024-26)(Dindo - Mumble).sfc" size="2097152" crc="7ce76c1b" sha1="d197660cecd6c26b7bb55638234b08f32ece3a72"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3ad1e0b7d09ca">
 		<description>Bramble invasion Brazil Contest version</description>
 		<year>????</year>
@@ -7769,6 +7779,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Dragon Ball Z - Final Bout (U)(Unl)(1998)(DVS Electronic).sfc" size="2097152" crc="4d027796" sha1="b31dbe50335018a8deff79dec0a6b8d1ef546888"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf58a3b6fe7762">
+		<description>Dragon Ball Z - Hiper Dimensao PT-BR (2024)(Vila Oculta do Romhacking)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3670016">
+				<rom name="Dragon Ball Z - Hiper Dimensao PT-BR (2024)(Vila Oculta do Romhacking).sfc" size="3670016" crc="d319b002" sha1="f58a3b6fe776243cc2f9e6d0c22b97c2b48f63ba"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16299,6 +16319,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Majuu Ou - King of Demons T-Eng v1.01 (2005)(Aeon Genesis).sfc" size="1572864" crc="14dcc20d" sha1="2147c2b1fd24184e54e774f9afb92059d40ffacb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns64f797df9dce0">
+		<description>Manda Ver! Goemon II - O Estranho General MacGuiness PT-BR (2024)(Maverick Blue Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Manda Ver! Goemon II - O Estranho General MacGuiness PT-BR (2024)(Maverick Blue Warrior).sfc" size="4194304" crc="297329d2" sha1="64f797df9dce01a00c0beb2bca9b3d1e75be72ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -31799,6 +31829,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Super 3D Baseball (J)(1993)(Jaleco).sfc" size="1572864" crc="304123c2" sha1="124ee1ee5bae9268095037abd7d51045de6ac55e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5c34e4ad90b33">
+		<description>Super Adventure Island II PT-BR v1.01(2025)(Patryckpo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Adventure Island II PT-BR v1.01(2025)(Patryckpo).sfc" size="2097152" crc="6a33ddd7" sha1="5c34e4ad90b338d28832f04e4997f315a181a8ff"/>
 			</dataarea>
 		</part>
 	</software>

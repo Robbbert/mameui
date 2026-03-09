@@ -64,8 +64,10 @@ Stephh's notes (based on the games Z80 code and some tests) :
 
 #include "cpu/z80/z80.h"
 #include "machine/timer.h"
+#include "sound/samples.h"
 
 #include "screen.h"
+#include "speaker.h"
 
 #include "beaminv.lh"
 #include "ctainv.lh"
@@ -83,6 +85,7 @@ public:
 		m_screen(*this, "screen"),
 		m_videoram(*this, "videoram"),
 		m_inputs(*this, "IN%u", 0)
+		, m_samples(*this, "samples")
 	{ }
 
 	void beaminv(machine_config &config) ATTR_COLD;
@@ -96,13 +99,17 @@ private:
 	required_device<screen_device> m_screen;
 	required_shared_ptr<uint8_t> m_videoram;
 	required_ioport_array<3> m_inputs;
+	required_device<samples_device> m_samples;
 
 	uint8_t m_controller_select = 0;
+	uint8_t m_prev_sound = 0;
+	uint8_t m_step = 0;
 
 	uint32_t screen_update_beaminv(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
 	uint8_t v128_r();
 	void controller_select_w(uint8_t data);
 	uint8_t controller_r();
+	void sound_w(uint8_t data);
 
 	void main_map(address_map &map) ATTR_COLD;
 	void ctainv_map(address_map &map) ATTR_COLD;
@@ -185,6 +192,56 @@ uint8_t beaminv_state::controller_r()
 	return data;
 }
 
+/*************************************
+ *
+ *  Sound
+ *
+ *************************************/
+static const char *const beaminv_sample_names[] =
+{
+	"*invaders",
+	"4",
+	"5",
+	"6",
+	"7",
+	"1",
+	"3",
+	"0",
+	"8",
+	"2",
+	0
+};
+
+void beaminv_state::sound_w(uint8_t data)
+{
+	uint8_t c = m_prev_sound ^ data;
+
+	for (uint8_t i = 0; i < 6; i++)
+		if (BIT(c, i))
+		{
+			if (i == 3) // ufo moving
+			{
+				if (!BIT(data, i))
+					m_samples->start(i,i+3,1);
+				else
+					m_samples->stop(i);
+			}
+			else
+			if (i == 0) // invaders moving
+			{
+				if (!BIT(data, i))
+				{
+					m_step = (m_step + 1) & 3;
+					m_samples->start(i,m_step);
+				}
+			}
+			else
+				if (!BIT(data, i))
+					m_samples->start(i,i+3);
+		}
+
+	m_prev_sound = data;
+}
 
 
 /*************************************
@@ -202,7 +259,7 @@ void beaminv_state::main_map(address_map &map)
 	map(0x2800, 0x2800).mirror(0x03ff).portr("IN0");
 	map(0x3400, 0x3400).mirror(0x03ff).r(FUNC(beaminv_state::controller_r));
 	map(0x3800, 0x3800).mirror(0x03ff).r(FUNC(beaminv_state::v128_r));
-	map(0x4000, 0x5fff).ram().share("videoram");
+	map(0x4000, 0x5fff).ram().mirror(0x2000).share("videoram");
 }
 
 
@@ -218,6 +275,8 @@ void beaminv_state::main_io_map(address_map &map)
 {
 	map.global_mask(0xff);
 	map(0x00, 0x00).w(FUNC(beaminv_state::controller_select_w));
+	map(0x01, 0x01).nopw();
+	map(0x03, 0x03).w(FUNC(beaminv_state::sound_w));
 }
 
 
@@ -326,6 +385,12 @@ void beaminv_state::beaminv(machine_config &config)
 	m_screen->set_visarea(0*8, 32*8-1, 2*8, 29*8-1);
 	m_screen->set_refresh_hz(60);
 	m_screen->set_screen_update(FUNC(beaminv_state::screen_update_beaminv));
+
+	SPEAKER(config, "mono").front_center();
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(6);
+	m_samples->set_samples_names(beaminv_sample_names);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 
@@ -408,8 +473,8 @@ ROM_END
  *
  *************************************/
 
-GAMEL( 1979, beaminv,   0,       beaminv, beaminv,  beaminv_state, empty_init, ROT270, "Teknon Kogyo",              "Beam Invader",          MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE, layout_beaminv )
-GAMEL( 1979, pacominv,  beaminv, beaminv, pacominv, beaminv_state, empty_init, ROT270, "Pacom Corporation",         "Pacom Invader (set 1)", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE, layout_pacominv ) // bootleg?
-GAMEL( 1979, pacominva, beaminv, beaminv, pacominv, beaminv_state, empty_init, ROT270, "Pacom Corporation",         "Pacom Invader (set 2)", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE, layout_pacominv ) // "
-GAMEL( 19??, ctainv,    beaminv, ctainv,  ctainv,   beaminv_state, empty_init, ROT270, "bootleg (CTA Corporation)", "CTA Invader",           MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE, layout_ctainv )
-GAMEL( 19??, worldinv,  beaminv, beaminv, ctainv,   beaminv_state, empty_init, ROT270, "bootleg (World Vending)",   "World Invader",         MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE, layout_beaminv )
+GAMEL( 1979, beaminv,   0,       beaminv, beaminv,  beaminv_state, empty_init, ROT270, "Teknon Kogyo",              "Beam Invader",          MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE, layout_beaminv )
+GAMEL( 1979, pacominv,  beaminv, beaminv, pacominv, beaminv_state, empty_init, ROT270, "Pacom Corporation",         "Pacom Invader (set 1)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE, layout_pacominv ) // bootleg?
+GAMEL( 1979, pacominva, beaminv, beaminv, pacominv, beaminv_state, empty_init, ROT270, "Pacom Corporation",         "Pacom Invader (set 2)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE, layout_pacominv ) // "
+GAMEL( 19??, ctainv,    beaminv, ctainv,  ctainv,   beaminv_state, empty_init, ROT270, "bootleg (CTA Corporation)", "CTA Invader",           MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE, layout_ctainv )
+GAMEL( 19??, worldinv,  beaminv, beaminv, ctainv,   beaminv_state, empty_init, ROT270, "bootleg (World Vending)",   "World Invader",         MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE, layout_beaminv )
