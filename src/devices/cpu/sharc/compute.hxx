@@ -23,7 +23,7 @@
 #define SET_FLAG_MU(r)              do { m_core->astat |= (((uint32_t((r) >> 32) == 0) && (uint32_t(r)) != 0) ? MU : 0); } while (false)
 
 // saturate overflowed result
-inline void SATURATE(uint32_t &r)                       { r = (r ^ 0x80000000) | 0x7fffffff; }
+inline void SATURATE(uint32_t &r)                       { r = uint32_t((int32_t(r) >> 31) ^ 0x80000000); }
 
 constexpr bool IS_FLOAT_ZERO(uint32_t r)                { return (r & (FLOAT_EXPONENT_MASK | FLOAT_MANTISSA_MASK)) == 0; }
 constexpr bool IS_FLOAT_DENORMAL(uint32_t r)            { return ((r & FLOAT_EXPONENT_MASK) == 0) && ((r & FLOAT_MANTISSA_MASK) != 0); }
