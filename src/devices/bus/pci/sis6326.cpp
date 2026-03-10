@@ -590,6 +590,7 @@ const tiny_rom_entry *sis6326_agp_device::device_rom_region() const
 void sis6326_agp_device::device_add_mconfig(machine_config &config)
 {
 	sis6326_pci_device::device_add_mconfig(config);
+	// TODO: JP1 to MD18 (NTSC/PAL select), JP2 to MD27 (INTA# enable)
 	m_vga->md20_cb().set_constant(1);
 	m_vga->md21_cb().set_constant(1);
 	m_vga->md23_cb().set_constant(1);
@@ -686,6 +687,7 @@ const tiny_rom_entry *sis6326_dvd_device::device_rom_region() const
 void sis6326_dvd_device::device_add_mconfig(machine_config &config)
 {
 	sis6326_agp_device::device_add_mconfig(config);
+	// Tip Top 6326AGP-E variant has feature connector, Diamond doesn't (solder pads in its place)
 	// TODO: allegedly a 8MB card but gets 4 even if properly mapped (something inside the VGA core?)
 
 	// TODO: extra TV out (by definition)

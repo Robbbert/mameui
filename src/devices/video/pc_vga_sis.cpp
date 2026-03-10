@@ -37,7 +37,7 @@ TODO (sis630):
 
 #define LOG_SEQ    (1U << 1) // extended sequencer register descriptions
 #define LOG_CRTC   (1U << 2) // extended CRTC registers (overlay)
-
+#define LOG_PLL    (1U << 3) // PLL calculation (verbose, needs dirty flag)
 #define LOG_LOCKED (1U << 4) // log lock/unlock sequences
 
 #define VERBOSE (LOG_GENERAL | LOG_CRTC)
@@ -45,7 +45,7 @@ TODO (sis630):
 
 #define LOGSEQ(...)       LOGMASKED(LOG_SEQ, __VA_ARGS__)
 #define LOGCRTC(...)      LOGMASKED(LOG_CRTC, __VA_ARGS__)
-
+#define LOGPLL(...)       LOGMASKED(LOG_PLL, __VA_ARGS__)
 #define LOGLOCKED(...)    LOGMASKED(LOG_LOCKED, __VA_ARGS__)
 
 #include "logmacro.h"
@@ -202,7 +202,7 @@ void sis6326_vga_device::device_reset()
 	// irrelevant really
 	m_crtc_hcounter_latch = m_crtc_vcounter_latch = 0xffff;
 
-	// everything else shouldn't matter for cursor
+	// everything else shouldn't matter for cursor (enable disabled with RAMDAC mode above)
 	// initialize fixed part here: HW cannot set any other bit beyond 21 ~ 18.
 	// On win98se this will map at bottom of VRAM i.e. at $3f'fc00 on 4MiB cards
 	m_cursor.address_base = 0x03'fc00;
@@ -1271,10 +1271,6 @@ void sis6326_vga_device::sequencer_map(address_map &map)
 		}),
 		NAME([this] (offs_t offset, u8 data) {
 			LOG("SR38: Misc. Control 7 %02x\n", data);
-			//if ((m_ext_sr38 & 3) != (data & 3))
-			//{
-			//	recompute_params();
-			//}
 			m_ext_sr38 = data;
 			m_cursor.address_base &= ~0x3c'0000;
 			m_cursor.address_base |= (data >> 4) << 18;
@@ -1282,6 +1278,7 @@ void sis6326_vga_device::sequencer_map(address_map &map)
 			// testable at 1600x1200, needs HW test
 			vga.crtc.line_compare = (vga.crtc.line_compare & 0x3ff) | (BIT(data, 2) * 0xfc00);
 			//vga.crtc.line_compare = (vga.crtc.line_compare & 0x3ff) | (BIT(data, 2) << 10);
+			recompute_params();
 		})
 	);
 
@@ -1444,8 +1441,26 @@ void sis6326_vga_device::recompute_params()
 		// TODO: stub, barely enough to make BeOS 5 to set ~60 Hz for 640x480x16
 		case 2:
 		default:
-			xtal = XTAL(25'174'800).value();
+		{
+			// TODO: setting 2 is external (all available card pics shows a 14 MHz XTAL anyway)
+			// TODO: PLL calculation is not necessarily correct or even confirmed
+			// - shutms11 beos5 expects a 25 MHz base clock for getting ~60 Hz
+			// - SDD tests, particularly stuff that enables interlace (tbd)
+			const int clock_select[] = { 25'174'800, 28'636'363, 14'318'181, 14'318'181 };
+
+			float numerator = (m_vclk_int[0] & 0x7f) + 1;
+			float denominator = (m_vclk_int[1] & 0x1f) + 1;
+			const u8 postscale_types[] = { 1, 2, 3, 4, 1, 1, 6, 8 };
+			// assume doc mistake for bit 6 (claims bit 7 that is MCLK related instead)
+			float postscale = postscale_types[((m_vclk_int[1] & 0x60) >> 5) | BIT(m_ext_sr13, 6) << 2];
+			float div = BIT(m_vclk_int[0], 7) + 1;
+			float raw_xtal = ((XTAL(clock_select[m_ext_sr38 & 3]).value() / 2) * (numerator / denominator) * (div / postscale));
+			xtal = (int)raw_xtal;
+			LOGPLL("SR13 %02x SR2A %02x SR2B %02x SR38[0:1] %01x\n", m_ext_sr13, m_vclk_int[0], m_vclk_int[1], m_ext_sr38 & 3);
+			LOGPLL("num %f dem %f postscale %f div %f ->\n", numerator, denominator, postscale, div);
+			LOGPLL("%f %d\n", raw_xtal, xtal);
 			break;
+		}
 	}
 
 	recompute_params_clock(1, xtal);
