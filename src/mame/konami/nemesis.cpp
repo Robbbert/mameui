@@ -353,20 +353,20 @@ uint16_t gx400_base_state::konamigt_input_word_r()
     bit 12-15: accel
 */
 
-	int const data = m_io_in3->read();
+	int const data = m_io_in[3]->read();
 	int const data2 = m_io_wheel->read();
 
 	int ret = 0x0000;
 
-//  if (BIT(data, 4)) ret |= 0x0800;          // turbo/gear?
-//  if (BIT(data, 7)) ret |= 0x0400;          // turbo?
+//  if (BIT(data, 4)) ret |= 0x0800; // turbo/gear?
+//  if (BIT(data, 7)) ret |= 0x0400; // turbo?
 	if (BIT(data, 5))
-		ret |= 0x0300;          // brake        (0-3)
+		ret |= 0x0300; // brake (0-3)
 
 	if (BIT(data, 6))
-		ret |= 0xf000;          // accel        (0-f)
+		ret |= 0xf000; // accel (0-f)
 
-	ret |= data2 & 0x7f;                    // steering wheel, not exactly sure if DIAL works ok.
+	ret |= data2 & 0x7f; // steering wheel, not exactly sure if DIAL works ok.
 
 	return ret;
 }
@@ -381,9 +381,9 @@ uint8_t hcrash_state::selected_ip_r()
 	// From WEC Le Mans Schems:
 	switch (m_selected_ip & 0xf)
 	{
-		case 0xc:  return m_io_accel->read();  // Accel - Schems: Accelevr
+		case 0xc:  return m_io_accel->read(); // Accel - Schems: Accelevr
 		case 0:    return m_io_accel->read();
-		case 0xd:  return m_io_wheel->read();  // Wheel - Schems: Handlevr
+		case 0xd:  return m_io_wheel->read(); // Wheel - Schems: Handlevr
 		case 1:    return m_io_wheel->read();
 
 		default: return ~0;
@@ -1509,15 +1509,21 @@ static INPUT_PORTS_START( hcrash )
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_UNKNOWN )
 	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_UNKNOWN )
 	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_UNKNOWN )
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_BUTTON2 ) PORT_CONDITION("DSW1", 0x03, EQUALS, 0x02)        // only in WEC Le Mans 24 cabinets
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_BUTTON2 ) PORT_CONDITION("DSW1", 0x03, EQUALS, 0x02) // only in WEC Le Mans 24 cabinets
 	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_UNKNOWN ) PORT_CONDITION("DSW1", 0x03, NOTEQUALS, 0x02) // player 2?
 	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_BUTTON3 )
-	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_CUSTOM )   // must be 0 otherwise game freezes when using WEC Le Mans 24 cabinet
+	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_CUSTOM ) // must be 0 otherwise game freezes when using WEC Le Mans 24 cabinet
 	PORT_BIT( 0x40, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("adc", FUNC(adc0804_device::intr_r))
 	PORT_BIT( 0x80, IP_ACTIVE_HIGH, IPT_UNKNOWN )
 
 	PORT_START("IN2")
 	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
+
+	PORT_START("IN3") // Konami GT cabinet
+	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_BUTTON2 ) PORT_CONDITION("DSW1", 0x03, EQUALS, 0x01) // only in Konami GT cabinet with brake
+	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_UNKNOWN ) PORT_CONDITION("DSW1", 0x03, NOTEQUALS, 0x01)
+	PORT_BIT( 0x40, IP_ACTIVE_HIGH, IPT_BUTTON1 ) PORT_CONDITION("DSW1", 0x03, NOTEQUALS, 0x02)
+//  PORT_BIT( 0x80, IP_ACTIVE_HIGH, IPT_BUTTON4 )
 
 	PORT_START("DSW0")
 	KONAMI_COINAGE_LOC(DEF_STR( Free_Play ), "Invalid", SW1)
@@ -1526,8 +1532,8 @@ static INPUT_PORTS_START( hcrash )
 	PORT_START("DSW1")
 	PORT_DIPNAME( 0x03, 0x02, DEF_STR( Cabinet ) )      PORT_DIPLOCATION("SW2:1,2")
 	PORT_DIPSETTING(    0x03, "Konami GT without brake" )
-	PORT_DIPSETTING(    0x02, "WEC Le Mans 24 Upright" )
 	PORT_DIPSETTING(    0x01, "Konami GT with brake" )
+	PORT_DIPSETTING(    0x02, "WEC Le Mans 24 Upright" )
 	// 0x00 WEC Le Mans 24 Upright again
 	PORT_BIT( 0x1c, IP_ACTIVE_LOW, IPT_UNUSED )
 	PORT_DIPNAME( 0x60, 0x40, DEF_STR( Difficulty ) )   PORT_DIPLOCATION("SW2:6,7")
@@ -1552,22 +1558,12 @@ static INPUT_PORTS_START( hcrash )
 	PORT_DIPSETTING(    0x00, "M.P.H." )
 	PORT_BIT( 0xf0, IP_ACTIVE_HIGH, IPT_UNKNOWN )
 
-	/* Konami GT specific control */
-	PORT_START("PADDLE")
-	PORT_BIT( 0x7f, 0x40, IPT_PADDLE ) PORT_SENSITIVITY(25) PORT_KEYDELTA(10) PORT_CONDITION("DSW1", 0x03, NOTEQUALS, 0x02)
-
-	PORT_START("IN3")
-	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_BUTTON2 ) PORT_CONDITION("DSW1", 0x03, EQUALS, 0x01)        // only in Konami GT cabinet with brake
-	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_UNKNOWN ) PORT_CONDITION("DSW1", 0x03, NOTEQUALS, 0x01)
-	PORT_BIT( 0x40, IP_ACTIVE_HIGH, IPT_BUTTON1 )
-//  PORT_BIT( 0x80, IP_ACTIVE_HIGH, IPT_BUTTON4 )
-
-	/* WEC Le Mans 24 specific control */
-	PORT_START("ACCEL")     /* Accelerator */
+	PORT_START("ACCEL") // WEC Le Mans 24 cabinet
 	PORT_BIT( 0xff, 0x00, IPT_PEDAL ) PORT_MINMAX(0,0x80) PORT_SENSITIVITY(30) PORT_KEYDELTA(10) PORT_CONDITION("DSW1", 0x03, EQUALS, 0x02)
 
-	PORT_START("WHEEL")     /* Steering Wheel */
-	PORT_BIT( 0xff, 0x80, IPT_PADDLE ) PORT_SENSITIVITY(50) PORT_KEYDELTA(5) PORT_CONDITION("DSW1", 0x03, EQUALS, 0x02)
+	PORT_START("WHEEL")
+	PORT_BIT( 0xff, 0x80, IPT_PADDLE ) PORT_SENSITIVITY(50) PORT_KEYDELTA(5) PORT_CONDITION("DSW1", 0x03, EQUALS, 0x02) // WEC Le Mans 24 cabinet
+	PORT_BIT( 0xff, 0x00, IPT_DIAL ) PORT_SENSITIVITY(25) PORT_KEYDELTA(5) PORT_CONDITION("DSW1", 0x03, NOTEQUALS, 0x02) // Konami GT cabinet
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( bubsys )
@@ -1808,7 +1804,6 @@ void hcrash_state::machine_start()
 void gx400_state::machine_start()
 {
 	gx400_base_state::machine_start();
-	//save_item(NAME(m_gx400_irq1_cnt));
 	save_item(NAME(m_speech_offset));
 }
 
@@ -1834,7 +1829,6 @@ void hcrash_state::machine_reset()
 void gx400_state::machine_reset()
 {
 	gx400_base_state::machine_reset();
-	//m_gx400_irq1_cnt = 0;
 	m_speech_offset = 0;
 }
 

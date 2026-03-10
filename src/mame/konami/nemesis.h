@@ -33,7 +33,7 @@ protected:
 		m_videoram(*this, "videoram%u", 1U),
 		m_colorram(*this, "colorram%u", 1U),
 		m_spriteram(*this, "spriteram"),
-		m_io_in3(*this, "IN3"),
+		m_io_in(*this, "IN%u", 0),
 		m_io_wheel(*this, "WHEEL")
 	{ }
 
@@ -56,7 +56,7 @@ protected:
 	required_shared_ptr_array<uint16_t, 2> m_colorram;
 	required_shared_ptr<uint16_t> m_spriteram;
 
-	optional_ioport m_io_in3;
+	optional_ioport_array<4> m_io_in;
 	optional_ioport m_io_wheel;
 
 	/* video-related */
@@ -198,7 +198,6 @@ protected:
 	uint8_t   m_palette_lookup[32]{};
 
 	/* misc */
-	//int32_t   m_gx400_irq1_cnt = 0;
 	uint32_t  m_speech_offset = 0;
 
 	uint16_t sound_sharedram_word_r(offs_t offset);
