@@ -182,6 +182,8 @@ if BUSES["A2BUS"] then
 		MAME_DIR .. "src/devices/bus/a2bus/ssprite.h",
 		MAME_DIR .. "src/devices/bus/a2bus/suprterminal.cpp",
 		MAME_DIR .. "src/devices/bus/a2bus/suprterminal.h",
+		MAME_DIR .. "src/devices/bus/a2bus/sweetalk.cpp",
+		MAME_DIR .. "src/devices/bus/a2bus/sweetalk.h",
 		MAME_DIR .. "src/devices/bus/a2bus/timemasterho.cpp",
 		MAME_DIR .. "src/devices/bus/a2bus/timemasterho.h",
 		MAME_DIR .. "src/devices/bus/a2bus/titan3plus2.cpp",

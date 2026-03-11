@@ -42,9 +42,10 @@ protected:
 	class abuffer {
 	public:
 		abuffer(uint32_t channels) noexcept;
+		void set_latency(uint32_t latency);
+		void clear();
 		void get(int16_t *data, uint32_t samples) noexcept;
 		void push(const int16_t *data, uint32_t samples);
-		void clear() noexcept { m_used_buffers = 0; }
 		uint32_t channels() const noexcept { return m_channels; }
 		uint32_t available() const noexcept;
 
@@ -66,6 +67,11 @@ protected:
 		int32_t m_delta, m_delta2;
 		uint32_t m_channels;
 		uint32_t m_used_buffers;
+		uint32_t m_used_buffers_prev;
+		uint32_t m_max_buffers;
+		std::array<int32_t, 8> m_history;
+		uint8_t m_hindex;
+		bool m_overrun;
 		std::vector<int16_t> m_last_sample;
 		std::vector<buffer> m_buffers;
 	};
