@@ -19,7 +19,10 @@ various jumpers
 bank of 8 switches
 reset push-button
 
-TODO: currently stops at the manufacturer logo
+TODO:
+- currently stops at the manufacturer logo (tight loops between two JMPs);
+- transmits to SIO if above is skipped;
+
 */
 
 #include "emu.h"
@@ -54,18 +57,46 @@ private:
 	required_device<vrender0soc_device> m_vr0soc;
 
 	void program_map(address_map &map) ATTR_COLD;
+
+	u32 pioldat_r();
+	void pioldat_w(offs_t offset, u32 data, u32 mem_mask = ~0);
+	u32 pioedat_r();
+
+	u32 m_pio;
 };
+
+u32 haiwei_state::pioldat_r()
+{
+	return m_pio;
+}
+
+// PIO Latched output DATa Register
+// TODO: bits 4 and 29 sets as output (latter flips between 1 and 0)
+void haiwei_state::pioldat_w(offs_t offset, u32 data, u32 mem_mask)
+{
+	COMBINE_DATA(&m_pio);
+}
+
+// PIO External DATa Register
+u32 haiwei_state::pioedat_r()
+{
+	return 0;
+}
 
 
 void haiwei_state::program_map(address_map &map)
 {
 	map(0x00000000, 0x005fffff).rom();
 
-//  map(0x01500000, 0x01500003).portr("IN0");
-//  map(0x01500004, 0x01500007).portr("IN1");
-//  map(0x01500008, 0x0150000b).portr("IN2");
+	map(0x01500000, 0x01500003).portr("IN0");
+	map(0x01500008, 0x0150000b).portr("IN1");
 
 	map(0x01800000, 0x01ffffff).m(m_vr0soc, FUNC(vrender0soc_device::regs_map));
+	map(0x01802004, 0x01802007).rw(FUNC(haiwei_state::pioldat_r), FUNC(haiwei_state::pioldat_w));
+	map(0x01802008, 0x0180200b).r(FUNC(haiwei_state::pioedat_r));
+	// TODO: from SIO
+	map(0x01802804, 0x01802807).nopw();
+	map(0x01802810, 0x01802813).lr32(NAME([] () { return 0x4; }));
 
 	map(0x02000000, 0x027fffff).ram().share("workram");
 
@@ -75,14 +106,82 @@ void haiwei_state::program_map(address_map &map)
 
 static INPUT_PORTS_START( hqdf )
 	PORT_START("IN0")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_DIPNAME( 0x00000001, 0x00000001, "IN0" )
+	PORT_DIPSETTING(          0x00000001, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00000002, 0x00000002, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00000002, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00000004, 0x00000004, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00000004, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00000008, 0x00000008, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00000008, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00000010, 0x00000010, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00000010, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00000020, 0x00000020, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00000020, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00000040, 0x00000040, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00000040, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00000080, 0x00000080, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00000080, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00010000, 0x00010000, "IN0-1" )
+	PORT_DIPSETTING(          0x00010000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00020000, 0x00020000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00020000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00040000, 0x00040000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00040000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00080000, 0x00080000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00080000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00100000, 0x00100000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00100000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00200000, 0x00200000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00200000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00400000, 0x00400000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00400000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00800000, 0x00800000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00800000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_BIT( 0xff00ff00, IP_ACTIVE_LOW, IPT_UNKNOWN )
+
+	PORT_START("IN1")
+	PORT_DIPNAME( 0x00010000, 0x00010000, "IN1" )
+	PORT_DIPSETTING(          0x00010000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00020000, 0x00020000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00020000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00040000, 0x00040000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00040000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00080000, 0x00080000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00080000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00100000, 0x00100000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00100000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00200000, 0x00200000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00200000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00400000, 0x00400000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00400000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_DIPNAME( 0x00800000, 0x00800000, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(          0x00800000, DEF_STR( Off ) )
+	PORT_DIPSETTING(          0x00000000, DEF_STR( On ) )
+	PORT_BIT( 0xff00ffff, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
 	PORT_START("DSW1")
 	PORT_DIPUNKNOWN_DIPLOC(0x01, 0x01, "SW1:1")
