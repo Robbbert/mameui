@@ -2666,7 +2666,7 @@ void sound_manager::mapping_update()
 
 u64 sound_manager::rate_and_time_to_index(attotime time, u32 sample_rate) const
 {
-	return time.m_seconds * sample_rate + muldivu_64(time.m_attoseconds, sample_rate,  ATTOSECONDS_PER_SECOND);
+	return time.m_seconds * sample_rate + muldivu_64(time.m_attoseconds, sample_rate, ATTOSECONDS_PER_SECOND);
 }
 
 void sound_manager::update(s32)

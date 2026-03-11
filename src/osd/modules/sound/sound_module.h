@@ -67,7 +67,7 @@ protected:
 		uint32_t m_channels;
 		uint32_t m_used_buffers;
 		uint32_t m_used_buffers_prev;
-		std::array<int32_t, 10> m_history;
+		std::array<int32_t, 8> m_history;
 		uint8_t m_hindex;
 		bool m_overflow;
 		std::vector<int16_t> m_last_sample;

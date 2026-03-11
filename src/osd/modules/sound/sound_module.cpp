@@ -69,7 +69,7 @@ void sound_module::abuffer::get(int16_t *data, uint32_t samples) noexcept
 		pos += avail;
 		data += avail * m_channels;
 	}
-	//printf("# %d %d\n", m_delta, m_delta2);
+	//printf("# %d %d %d\n", m_used_buffers, m_delta, m_delta2);
 }
 
 void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
@@ -85,24 +85,32 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 	m_history[m_hindex] = m_used_buffers_prev - m_used_buffers;
 	m_hindex = (m_hindex + 1) % m_history.size();
 
+	auto reduce_buffers = [&](uint32_t n) {
+		for(uint32_t i = 0; i != m_used_buffers - n; i++)
+			m_delta2 -= (m_buffers[i].m_data.size() / m_channels - m_buffers[i].m_cpos);
+		for(uint32_t i = 0; i < n; i++) {
+			using std::swap;
+			swap(m_buffers[i], m_buffers[m_used_buffers + i - n]);
+		}
+		m_used_buffers = n;
+	};
+
 	if(m_overflow && std::accumulate(m_history.begin(), m_history.end(), 0) >= -2) {
-		// Once it's stabilized after an overflow, clear the buffers
-		// to immediately reduce latency to the minimum.
-		clear();
+		if(m_used_buffers > 1) {
+			// Once it's stabilized after an overflow, reduce latency to the minimum
+			reduce_buffers(1);
+			std::fill(m_history.begin(), m_history.end(), 0);
+		}
+		m_overflow = false;
 	}
 	else if(m_used_buffers > 8) {
-		for(uint32_t i = 0; i != m_used_buffers - 8; i++)
-			m_delta2 -= (m_buffers[i].m_data.size() / m_channels - m_buffers[i].m_cpos);
 		// If there are way too many buffers, drop some so only 8 are left (roughly 0.16s)
-		for(uint32_t i = 0; i < 8; i++) {
-			using std::swap;
-			swap(m_buffers[i], m_buffers[m_used_buffers + i - 8]);
-		}
-		m_used_buffers = 8;
+		reduce_buffers(8);
 		m_overflow = true;
 	}
+
 	m_used_buffers_prev = m_used_buffers;
-	//printf("# %d %d\n", m_delta, m_delta2);
+	//printf("# %d %d %d\n", m_used_buffers, m_delta, m_delta2);
 }
 
 uint32_t sound_module::abuffer::available() const noexcept
