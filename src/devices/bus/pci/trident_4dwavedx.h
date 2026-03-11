@@ -80,6 +80,7 @@ public:
 	void global_control_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 
 	u32 miscint_r(offs_t offset);
+	void miscint_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 
 	u32 bankb_status_r(offs_t offset);
 	void startb_w(offs_t offset, u32 data, u32 mem_mask = ~0);
@@ -119,7 +120,7 @@ private:
 		u32 cso; // current sample pointer
 		u32 hso; // half trigger irq
 		u32 eso; // end trigger irq
-		s16 delta;
+		u16 delta; // 4.12 format / 48 kHz
 
 		u32 gvsel_cache;
 		bool gvsel;
@@ -132,6 +133,11 @@ private:
 		bool loop_enable;
 		u16 ec_envelope;
 		u8 pci_buf;
+
+		// internal variables for interpolation
+		u32 ticks;
+		u32 sample_data;
+		bool dma_fetch;
 	};
 
 	u32 m_global_control;
@@ -142,6 +148,18 @@ private:
 
 	u32 m_ainb, m_aintenb;
 	u32 m_bankB_keyon;
+
+	enum {
+		PB_UNDERUN_IRQ = 0,
+		REC_OVERUN_IRQ,
+		SB_IRQ,
+		MPU401_IRQ,
+		OPL3_IRQ,
+		ADDRESS_IRQ,
+		ENVELOPE_IRQ
+	};
+
+	u32 m_miscint;
 
 	enum {
 		MUSICVOL = 0,

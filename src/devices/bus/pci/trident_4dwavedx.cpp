@@ -7,15 +7,16 @@ Trident 4DWAVE-DX / 4DWAVE-NX
 AC'97 v1.x (fixed 48 kHz)
 
 TODO:
-- Add delta sample rate;
 - Add mono, 8-bit and unsigned modes;
 - Missing features in Bank A (testable in dxdiag -> Music -> Trident PCI WaveTable MIDI);
 - Move DMA reading out of sound_stream_update;
-- winamp has encoding issues with negative numbers (CPU core bug?);
-- Mix-in wave engine output to AC'97 input, upsample to 48 kHz there;
+- Mix-in wave engine output to AC'97 input;
 - wavetsr.com can't find a free IRQ for SB emulation under DOS;
 - Soundblaster, FM and MPU-401 are emulated by the 4dwave sound engine;
 - Support for 4DWAVE-NX (minor upgrade with extra TLB, scatter-gather and SPDIF interface)
+
+Notes:
+- 66 MHz CPU is too slow for winamp, will hiccup a ton on "serious" playback;
 
 **************************************************************************************************/
 
@@ -270,7 +271,7 @@ void trident_4dwavedx_device::io_map(address_map &map)
 	map(0xa4, 0xa7).rw(m_pcm, FUNC(t4dwave_pcm_device::aintena_r), FUNC(t4dwave_pcm_device::aintena_w));
 	map(0xa8, 0xab).rw(m_pcm, FUNC(t4dwave_pcm_device::wavevol_r), FUNC(t4dwave_pcm_device::wavevol_w));
 //	map(0xac, 0xaf) DELTAR
-	map(0xb0, 0xb3).r(m_pcm, FUNC(t4dwave_pcm_device::miscint_r));
+	map(0xb0, 0xb3).rw(m_pcm, FUNC(t4dwave_pcm_device::miscint_r), FUNC(t4dwave_pcm_device::miscint_w));
 	map(0xb4, 0xb7).rw(m_pcm, FUNC(t4dwave_pcm_device::bankb_status_r), FUNC(t4dwave_pcm_device::startb_w));
 	map(0xb8, 0xbb).rw(m_pcm, FUNC(t4dwave_pcm_device::bankb_status_r), FUNC(t4dwave_pcm_device::stopb_w));
 //	map(0xbc, 0xbf) CSPFB
@@ -358,7 +359,7 @@ t4dwave_pcm_device::t4dwave_pcm_device(const machine_config &mconfig, const char
 
 void t4dwave_pcm_device::device_start()
 {
-	m_stream = stream_alloc(0, 2, 44100 / 2);
+	m_stream = stream_alloc(0, 2, 48000);
 
 	save_item(NAME(m_global_control));
 	save_item(NAME(m_cir));
@@ -370,6 +371,8 @@ void t4dwave_pcm_device::device_start()
 	save_item(NAME(m_ainb));
 	save_item(NAME(m_aintenb));
 	save_item(NAME(m_bankB_keyon));
+
+	save_item(NAME(m_miscint));
 
 	save_item(NAME(m_vol_cache));
 	save_item(NAME(m_volL));
@@ -391,6 +394,10 @@ void t4dwave_pcm_device::device_start()
 	save_item(STRUCT_MEMBER(m_channel, loop_enable));
 	save_item(STRUCT_MEMBER(m_channel, ec_envelope));
 	save_item(STRUCT_MEMBER(m_channel, pci_buf));
+
+	save_item(STRUCT_MEMBER(m_channel, ticks));
+	save_item(STRUCT_MEMBER(m_channel, sample_data));
+	save_item(STRUCT_MEMBER(m_channel, dma_fetch));
 }
 
 void t4dwave_pcm_device::device_reset()
@@ -398,6 +405,7 @@ void t4dwave_pcm_device::device_reset()
 	m_global_control = 0;
 	m_cir = 0;
 
+	m_miscint = 0;
 	m_aina = m_aintena = m_ainb = m_aintenb = 0;
 	m_bankA_keyon = m_bankB_keyon = 0;
 }
@@ -473,12 +481,41 @@ void t4dwave_pcm_device::global_control_w(offs_t offset, u32 data, u32 mem_mask)
 		m_cir = data & 0x3f;
 }
 
+// ---- ---- ---- --x- ---- ---- ---- ---- opltimer_ie
+// ---- ---- ---- ---x ---- ---- ---- ---- pb_24k_mode
+// ---- ---- ---- ---- ---x ---- ---- ---- SB Record Interrupt Control
+// ---- ---- ---- ---- ---- x--- ---- ---- mixer overflow flag (wc)
+// ---- ---- ---- ---- ---- -x-- ---- ---- mixer underflow flag (wc)
+// ---- ---- ---- ---- ---- --x- ---- ---- rec overrun status (wc)
+// ---- ---- ---- ---- ---- ---x ---- ---- playback underrun (wc)
+// ---- ---- ---- ---- ---- ---- -x-- ---- envelope irq (ro)
+// ---- ---- ---- ---- ---- ---- --x- ---- address irq (ro)
+// ---- ---- ---- ---- ---- ---- ---x ---- opl3 irq (ro)
+// ---- ---- ---- ---- ---- ---- ---- x--- mpu401 irq (ro)
+// ---- ---- ---- ---- ---- ---- ---- -x-- sb irq (ro)
+// ---- ---- ---- ---- ---- ---- ---- --x- rec overrun irq (ro)
+// ---- ---- ---- ---- ---- ---- ---- ---x playback overrun irq (ro)
 u32 t4dwave_pcm_device::miscint_r(offs_t offset)
 {
-	u32 res = 0;
-	if ((m_aina & m_aintena) || (m_ainb & m_aintenb))
-		res |= (1 << 5);
+	u32 res = m_miscint & 0x0003'1f7f;
 	return res;
+}
+
+void t4dwave_pcm_device::miscint_w(offs_t offset, u32 data, u32 mem_mask)
+{
+	if (ACCESSING_BITS_16_23)
+	{
+		m_miscint &= 0xff00'ffff;
+		m_miscint |= (data & 0x0003'0000);
+	}
+
+	if (ACCESSING_BITS_8_15)
+	{
+		m_miscint &= ~(1 << 12);
+		m_miscint |= BIT(data, 12) << 12;
+		// apply write clear flags
+		m_miscint &= ~(data & 0x0f00);
+	}
 }
 
 // START_B / STOP_B
@@ -566,7 +603,13 @@ void t4dwave_pcm_device::eso_w(offs_t offset, u32 data, u32 mem_mask)
 		channel.hso = channel.eso >> 1;
 	}
 	if (ACCESSING_BITS_0_15)
+	{
 		channel.delta = data & 0xffff;
+		// internal variables init-ed here for convenience
+		channel.ticks = 0;
+		channel.sample_data = 0;
+		channel.dma_fetch = true;
+	}
 	m_stream->update();
 }
 
@@ -599,7 +642,16 @@ void t4dwave_pcm_device::gvsel_w(offs_t offset, u32 data, u32 mem_mask)
 
 void t4dwave_pcm_device::update_irq_state()
 {
-	m_irq_cb(((m_aina & m_aintena) || (m_ainb & m_aintenb)) ? 1 : 0);
+	const u32 irq_state = (m_aina & m_aintena) || (m_ainb & m_aintenb);
+	m_miscint &= ~(1 << ADDRESS_IRQ);
+
+	if (irq_state)
+	{
+		m_miscint |= 1 << ADDRESS_IRQ;
+		m_irq_cb(1);
+	}
+	else
+		m_irq_cb(0);
 }
 
 /*
@@ -622,50 +674,61 @@ void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
 
 		s16 left = 0, right = 0;
 
-		//popmessage("%d: %08x -> %04x %04x delta %04x |16-bit %d sign %d stereo %d| control: %08x %d", ch, channel.lba, channel.cso, channel.eso, channel.delta, channel.is_16bit, channel.is_signed, channel.is_stereo, m_global_control, stream.samples());
+		//popmessage("%d: %08x -> %04x %04x delta %04x |16-bit %d sign %d stereo %d| control: %08x %d | miscint %08x", ch, channel.lba, channel.cso, channel.eso, channel.delta, channel.is_16bit, channel.is_signed, channel.is_stereo, m_global_control, stream.samples(), m_miscint);
 
 		for (int sampindex = 0; sampindex < stream.samples(); sampindex++)
 		{
-			u32 sample_data = m_datain_cb(channel.lba + channel.cso);
+			if (channel.dma_fetch)
+			{
+				channel.sample_data = m_datain_cb(channel.lba + channel.cso);
+				channel.dma_fetch = false;
+			}
 
-			left  = (s16)(sample_data >> 16);
-			right = (s16)(sample_data & 0xffff);
+			left  = (s16)(channel.sample_data >> 16);
+			right = (s16)(channel.sample_data & 0xffff);
 
 			stream.add_int(0, sampindex, left  * m_volL[channel.gvsel], 32768 << 6);
 			stream.add_int(1, sampindex, right * m_volR[channel.gvsel], 32768 << 6);
 
-			channel.cso += 4;
-			if (channel.cso >= channel.hso)
+			channel.ticks += channel.delta;
+			if (channel.ticks & 0x1000)
 			{
-				// MIDLP_IE
-				if (BIT(m_global_control, 13))
+				channel.dma_fetch = true;
+				channel.ticks -= 0x1000;
+
+				channel.cso += 4;
+				if (channel.cso >= channel.hso)
 				{
-					if (is_bankB)
-						m_ainb |= 1 << chB;
-					else
-						m_aina |= 1 << ch;
-					update_irq_state();
+					// MIDLP_IE
+					if (BIT(m_global_control, 13))
+					{
+						if (is_bankB)
+							m_ainb |= 1 << chB;
+						else
+							m_aina |= 1 << ch;
+						update_irq_state();
+					}
 				}
-			}
-			if (channel.cso >= channel.eso)
-			{
-				channel.cso = 0;
-				// ENDLP_IE
-				if (BIT(m_global_control, 12))
+				if (channel.cso >= channel.eso)
 				{
-					if (is_bankB)
-						m_ainb |= 1 << chB;
-					else
-						m_aina |= 1 << ch;
-					update_irq_state();
-				}
-				if (!channel.loop_enable)
-				{
-					if (is_bankB)
-						m_bankB_keyon &= ~(1 << chB);
-					else
-						m_bankA_keyon &= ~(1 << ch);
-					continue;
+					channel.cso = 0;
+					// ENDLP_IE
+					if (BIT(m_global_control, 12))
+					{
+						if (is_bankB)
+							m_ainb |= 1 << chB;
+						else
+							m_aina |= 1 << ch;
+						update_irq_state();
+					}
+					if (!channel.loop_enable)
+					{
+						if (is_bankB)
+							m_bankB_keyon &= ~(1 << chB);
+						else
+							m_bankA_keyon &= ~(1 << ch);
+						continue;
+					}
 				}
 			}
 		}
