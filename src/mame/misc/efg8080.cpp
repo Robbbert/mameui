@@ -37,6 +37,8 @@ TODO:
 #include "emupal.h"
 #include "screen.h"
 #include "tilemap.h"
+#include "sound/samples.h"
+#include "speaker.h"
 
 
 namespace {
@@ -49,6 +51,7 @@ public:
 		m_maincpu(*this, "maincpu"),
 		m_gfxdecode(*this, "gfxdecode"),
 		m_video_ram(*this, "video_ram")
+		, m_samples(*this, "samples")
 	{ }
 
 	void foolrace(machine_config &config);
@@ -62,10 +65,13 @@ private:
 	required_device<gfxdecode_device> m_gfxdecode;
 
 	required_shared_ptr<u8> m_video_ram;
+	required_device<samples_device> m_samples;
 
 	tilemap_t *m_tilemap = nullptr;
 
 	void video_ram_w(offs_t offset, u8 data);
+	void port01_w(u8);
+	void port02_w(u8);
 
 	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
@@ -105,6 +111,33 @@ void efg_state::video_ram_w(offs_t offset, u8 data)
 	m_tilemap->mark_tile_dirty(offset);
 }
 
+void efg_state::port01_w(u8 data)
+{
+	if (data == 0x20)
+		m_samples->start(4,4);
+}
+
+void efg_state::port02_w(u8 data)
+{
+	if (data)
+	{
+		data >>= 4;
+		for (uint8_t i = 0; i < 4; i++)
+			if (BIT(data, i))
+				m_samples->start(i,i);
+	}
+}
+
+static const char *const foolrace_sample_names[] =
+{
+	"*invaders",
+	"4",
+	"0", // not used
+	"1",
+	"2",
+	"3",
+	0
+};
 
 
 /******************************************************************************
@@ -120,8 +153,10 @@ void efg_state::foolrace_map(address_map &map)
 
 void efg_state::foolrace_io(address_map &map)
 {
-	map(0x01, 0x01).portr("IN0");
-	map(0x04, 0x04).portr("DSW");
+	map(0x01, 0x01).portr("IN0").w(FUNC(efg_state::port01_w));
+	map(0x02, 0x02).w(FUNC(efg_state::port02_w));
+	map(0x04, 0x04).portr("DSW").nopw();
+	map(0x08, 0x08).nopw();
 }
 
 void efg_state::blackhol_map(address_map &map)
@@ -262,7 +297,11 @@ void efg_state::foolrace(machine_config &config)
 	PALETTE(config, "palette", palette_device::MONOCHROME);
 
 	/* sound hardware */
-	// TODO
+	SPEAKER(config, "mono").front_center();
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(5);
+	m_samples->set_samples_names(foolrace_sample_names);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 void efg_state::blackhol(machine_config &config)
@@ -322,5 +361,5 @@ ROM_END
 ******************************************************************************/
 
 //    YEAR   NAME      PARENT  MACHINE   INPUT     CLASS      INIT        SCREEN  COMPANY, FULLNAME, FLAGS
-GAME( 1979?, foolrace, 0,      foolrace, foolrace, efg_state, empty_init, ROT0,   "EFG Sanremo", "Fool Race", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE ) // imitation of Sega's Head On
-GAME( 1981?, blackhol, 0,      blackhol, blackhol, efg_state, empty_init, ROT270, "EFG Sanremo", "Black Hole (EFG Sanremo)", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE ) // imitation of Universal's Space Panic
+GAME( 1979?, foolrace, 0,      foolrace, foolrace, efg_state, empty_init, ROT0,   "EFG Sanremo", "Fool Race", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE ) // imitation of Sega's Head On
+GAME( 1981?, blackhol, 0,      blackhol, blackhol, efg_state, empty_init, ROT270, "EFG Sanremo", "Black Hole (EFG Sanremo)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE ) // imitation of Universal's Space Panic
