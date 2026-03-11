@@ -17,17 +17,25 @@ sound_module::~sound_module()
 
 sound_module::abuffer::abuffer(uint32_t channels) noexcept :
 	m_channels(channels),
+	m_max_buffers(8),
 	m_hindex(0),
 	m_last_sample(channels, 0)
 {
 	clear();
 }
 
+void sound_module::abuffer::set_latency(uint32_t latency)
+{
+	// set maximum buffers from latency in 20ms steps (the default of 8 is 0.16s)
+	m_max_buffers = std::max(latency + latency / 2, latency + 3);
+	m_max_buffers = std::clamp(m_max_buffers, 4U, 50U);
+}
+
 void sound_module::abuffer::clear()
 {
 	m_used_buffers = 0;
 	m_used_buffers_prev = 0;
-	m_overflow = false;
+	m_overrun = false;
 	std::fill(m_history.begin(), m_history.end(), 0);
 
 	m_delta = 0;
@@ -85,7 +93,7 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 	m_history[m_hindex] = m_used_buffers_prev - m_used_buffers;
 	m_hindex = (m_hindex + 1) % m_history.size();
 
-	auto reduce_buffers = [&](uint32_t n) {
+	auto flush_buffers = [&](uint32_t n) {
 		for(uint32_t i = 0; i != m_used_buffers - n; i++)
 			m_delta2 -= (m_buffers[i].m_data.size() / m_channels - m_buffers[i].m_cpos);
 		for(uint32_t i = 0; i < n; i++) {
@@ -95,17 +103,22 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 		m_used_buffers = n;
 	};
 
-	if(m_overflow && std::accumulate(m_history.begin(), m_history.end(), 0) >= -2) {
+	if(m_overrun && std::accumulate(m_history.begin(), m_history.end(), 0) >= -2) {
 		if(m_used_buffers > 2) {
-			// Once it's stabilized after an overflow, reduce buffers to 2
-			reduce_buffers(2);
+			// Once it's stabilized after an overrun, reduce buffers to 2
+			flush_buffers(2);
 			std::fill(m_history.begin(), m_history.end(), 0);
 		}
-		m_overflow = false;
-	} else if(m_used_buffers > 8) {
-		// If there are way too many buffers, drop some so only 8 are left (roughly 0.16s)
-		reduce_buffers(8);
-		m_overflow = true;
+		m_overrun = false;
+	}
+
+	// maximum amount of buffers relative to samples
+	const uint32_t max_buffers = std::max(m_max_buffers * 48000 / samples / 50, 4U);
+
+	if(m_used_buffers > max_buffers) {
+		// If there are too many buffers, drop some and mark this event as an overrun
+		flush_buffers(max_buffers);
+		m_overrun = true;
 	}
 
 	m_used_buffers_prev = m_used_buffers;

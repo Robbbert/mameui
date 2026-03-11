@@ -1056,27 +1056,27 @@ void sound_manager::run_effects()
 				eb.prepare_space(source_samples / sf + 1);
 				int source_sample_index = 0;
 				int dest_index = 0;
-				double m_phase = si.m_speed_phase;
+				double phase = si.m_speed_phase;
 				for(int channel = 0; channel != channels; channel ++) {
 					const sample_t *src = si.m_buffer.ptrs(channel, 0);
-					m_phase = si.m_speed_phase;
-					if(m_phase >= 1) {
-						source_sample_index = int(m_phase);
-						m_phase -= int(m_phase);
+					phase = si.m_speed_phase;
+					if(phase >= 1) {
+						source_sample_index = int(phase);
+						phase -= int(phase);
 					} else
 						source_sample_index = 0;
 					sample_t *dest = eb.ptrw(channel, 0);
 					dest_index = 0;
 					while(source_sample_index < source_samples) {
 						dest[dest_index++] = m_muted ? 0.0 : src[source_sample_index];
-						m_phase += sf;
-						if(m_phase >= 1) {
-							source_sample_index += int(m_phase);
-							m_phase -= int(m_phase);
+						phase += sf;
+						if(phase >= 1) {
+							source_sample_index += int(phase);
+							phase -= int(phase);
 						}
 					}
 				}
-				si.m_speed_phase = m_phase + (source_sample_index - source_samples);
+				si.m_speed_phase = phase + (source_sample_index - source_samples);
 				eb.commit(dest_index);
 			}
 		}
