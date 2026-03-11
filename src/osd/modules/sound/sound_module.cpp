@@ -96,14 +96,13 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 	};
 
 	if(m_overflow && std::accumulate(m_history.begin(), m_history.end(), 0) >= -2) {
-		if(m_used_buffers > 1) {
-			// Once it's stabilized after an overflow, reduce latency to the minimum
-			reduce_buffers(1);
+		if(m_used_buffers > 2) {
+			// Once it's stabilized after an overflow, reduce buffers to 2
+			reduce_buffers(2);
 			std::fill(m_history.begin(), m_history.end(), 0);
 		}
 		m_overflow = false;
-	}
-	else if(m_used_buffers > 8) {
+	} else if(m_used_buffers > 8) {
 		// If there are way too many buffers, drop some so only 8 are left (roughly 0.16s)
 		reduce_buffers(8);
 		m_overflow = true;
