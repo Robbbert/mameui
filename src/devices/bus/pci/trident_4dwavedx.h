@@ -172,6 +172,8 @@ private:
 	channel_t m_channel[64];
 
 	void update_irq_state();
+
+	std::string print_audio_state(u64 keyon);
 };
 
 DECLARE_DEVICE_TYPE(TRIDENT_4DWAVEDX, trident_4dwavedx_device)

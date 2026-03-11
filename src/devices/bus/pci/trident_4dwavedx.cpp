@@ -30,6 +30,8 @@ Notes:
 
 #include "logmacro.h"
 
+#define LIVE_AUDIO_VIEW 0
+
 
 DEFINE_DEVICE_TYPE(TRIDENT_4DWAVEDX, trident_4dwavedx_device,   "trident_4dwavedx",   "Trident 4D Wave-DX sound card")
 DEFINE_DEVICE_TYPE(T4DWAVE_PCM, t4dwave_pcm_device,   "t4dwave_pcm",   "Trident 4D Wave-DX PCM sound engine")
@@ -658,23 +660,45 @@ void t4dwave_pcm_device::update_irq_state()
  * Sound Stream
  */
 
-void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
+std::string t4dwave_pcm_device::print_audio_state(u64 keyon)
 {
-	if (!m_bankA_keyon && !m_bankB_keyon)
-		return;
+	std::ostringstream outbuffer;
+
+	util::stream_format(outbuffer, "LFO_A & GC & CIR %08x | MISCINT %08x\n", m_global_control, m_miscint);
 
 	for (int ch = 0; ch < 64; ch ++)
 	{
 		channel_t &channel = m_channel[ch];
 
-		const bool is_bankB = !!BIT(ch, 5);
-		const u8 chB = ch - 32;
-		if ((!is_bankB && !BIT(m_bankA_keyon, ch)) || (is_bankB && !BIT(m_bankB_keyon, chB)) || channel.cso >= channel.eso)
+		if (!BIT(keyon, ch) || channel.cso >= channel.eso)
+			continue;
+		util::stream_format(outbuffer, "%d: LBA %08x -> CSO %05x ESO %05x DELTA %04x |16-bit %d sign %d stereo %d\n", ch, channel.lba, channel.cso, channel.eso, channel.delta, channel.is_16bit, channel.is_signed, channel.is_stereo);
+	}
+
+	return outbuffer.str();
+}
+
+void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
+{
+	const u64 keyon = m_bankA_keyon | ((u64)m_bankB_keyon << 32);
+
+	if (!keyon)
+		return;
+
+	if (LIVE_AUDIO_VIEW)
+		popmessage(print_audio_state(keyon));
+
+	for (int ch = 0; ch < 64; ch ++)
+	{
+		channel_t &channel = m_channel[ch];
+
+		if (!BIT(keyon, ch) || channel.cso >= channel.eso)
 			continue;
 
-		s16 left = 0, right = 0;
+		const bool is_bankB = !!BIT(ch, 5);
+		const u8 chB = ch - 32;
 
-		//popmessage("%d: %08x -> %04x %04x delta %04x |16-bit %d sign %d stereo %d| control: %08x %d | miscint %08x", ch, channel.lba, channel.cso, channel.eso, channel.delta, channel.is_16bit, channel.is_signed, channel.is_stereo, m_global_control, stream.samples(), m_miscint);
+		s16 left = 0, right = 0;
 
 		for (int sampindex = 0; sampindex < stream.samples(); sampindex++)
 		{
