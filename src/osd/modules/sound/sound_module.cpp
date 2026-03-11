@@ -6,6 +6,7 @@
 
 #include <algorithm>
 #include <cassert>
+#include <numeric>
 #include <utility>
 
 
@@ -14,8 +15,21 @@ sound_module::~sound_module()
 	// implementing this here forces the vtable and inline virtual member functions to be instantiated
 }
 
-sound_module::abuffer::abuffer(uint32_t channels) noexcept : m_channels(channels), m_used_buffers(0), m_last_sample(channels, 0)
+sound_module::abuffer::abuffer(uint32_t channels) noexcept :
+	m_channels(channels),
+	m_hindex(0),
+	m_last_sample(channels, 0)
 {
+	clear();
+}
+
+void sound_module::abuffer::clear()
+{
+	m_used_buffers = 0;
+	m_used_buffers_prev = 0;
+	m_overflow = false;
+	std::fill(m_history.begin(), m_history.end(), 0);
+
 	m_delta = 0;
 	m_delta2 = 0;
 }
@@ -55,7 +69,7 @@ void sound_module::abuffer::get(int16_t *data, uint32_t samples) noexcept
 		pos += avail;
 		data += avail * m_channels;
 	}
-	//  printf("# %d %d\n", m_delta, m_delta2);
+	//printf("# %d %d\n", m_delta, m_delta2);
 }
 
 void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
@@ -68,23 +82,27 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 	std::copy_n(data, samples * m_channels, buf.m_data.data());
 	std::copy_n(data + ((samples - 1) * m_channels), m_channels, m_last_sample.data());
 
-	if(m_used_buffers > 10) {
-		for(uint32_t i=0; i != m_used_buffers-10; i++)
-			m_delta2 -= (m_buffers[i].m_data.size()/m_channels - m_buffers[i].m_cpos);
-		// If there are way too many buffers, drop some so only 10 are left (roughly 0.2s)
-		for(unsigned i = 0; 10 > i; ++i) {
-			using std::swap;
-			swap(m_buffers[i], m_buffers[m_used_buffers + i - 10]);
-		}
-		m_used_buffers = 10;
-	} else if(m_used_buffers >= 5) {
-		// If there are too many buffers, remove five samples per buffer
-		// to slowly resync to reduce latency (4 seconds to
-		// compensate one buffer, roughly)
-		m_delta2 -= std::max<uint32_t>(samples / 200, 1);
-		buf.m_cpos = std::max<uint32_t>(samples / 200, 1);
+	m_history[m_hindex] = m_used_buffers_prev - m_used_buffers;
+	m_hindex = (m_hindex + 1) % m_history.size();
+
+	if(m_overflow && std::accumulate(m_history.begin(), m_history.end(), 0) >= -2) {
+		// Once it's stabilized after an overflow, clear the buffers
+		// to immediately reduce latency to the minimum.
+		clear();
 	}
-	//  printf("# %d %d\n", m_delta, m_delta2);
+	else if(m_used_buffers > 8) {
+		for(uint32_t i = 0; i != m_used_buffers - 8; i++)
+			m_delta2 -= (m_buffers[i].m_data.size() / m_channels - m_buffers[i].m_cpos);
+		// If there are way too many buffers, drop some so only 8 are left (roughly 0.16s)
+		for(uint32_t i = 0; i < 8; i++) {
+			using std::swap;
+			swap(m_buffers[i], m_buffers[m_used_buffers + i - 8]);
+		}
+		m_used_buffers = 8;
+		m_overflow = true;
+	}
+	m_used_buffers_prev = m_used_buffers;
+	//printf("# %d %d\n", m_delta, m_delta2);
 }
 
 uint32_t sound_module::abuffer::available() const noexcept

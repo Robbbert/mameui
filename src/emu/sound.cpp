@@ -1158,16 +1158,14 @@ void sound_manager::run_effects()
 		for(auto &si : m_speakers)
 			si.m_effects.back().m_buffer.sync();
 
-		if(!(m_muted & (MUTE_REASON_PAUSE | MUTE_REASON_UI | MUTE_REASON_DEBUGGER))) {
-			machine().osd().sound_begin_update();
+		machine().osd().sound_begin_update();
 
-			// Send the result to the osd
-			for(auto &stream : m_osd_output_streams)
-				if(stream.m_samples)
-					machine().osd().sound_stream_sink_update(stream.m_id, stream.m_buffer.data(), stream.m_samples);
+		// Send the result to the osd
+		for(auto &stream : m_osd_output_streams)
+			if(stream.m_samples)
+				machine().osd().sound_stream_sink_update(stream.m_id, stream.m_buffer.data(), stream.m_samples);
 
-			machine().osd().sound_end_update();
-		}
+		machine().osd().sound_end_update();
 #ifndef SOUND_DISABLE_THREADING
 
 		dlock.lock();
