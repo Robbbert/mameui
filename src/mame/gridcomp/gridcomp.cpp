@@ -46,16 +46,16 @@
     - EAROM, RTC
     - serial port (incomplete), modem (incl. DTMF generator)
     - proper custom DMA logic timing
-    - implement units other than 1101
+    - loading ROMs for Compass II
 
     missing dumps:
 
-    - BIOS from models other than 1139 and late 1101 revision (the latter one is detected as 1108 in VERIFYPROM utility)
+    - dumps from 1100, 1107, 1121, 1131
     - GRiDROM's
     - keyboard MCU
     - external floppy and hard disk (2101, 2102)
 
-    to boot CCOS 3.0.1:
+    to boot GRID-OS:
     - convert GRIDOS.IMD to IMG format
     - create zero-filled 384K bubble memory image and attach it as -memcard
     - attach floppy with `-ieee_grid grid2102 -flop GRIDOS.IMG`
@@ -455,149 +455,53 @@ void gridcomp_state::grid1139(machine_config &config)
 ROM_START( grid1101 )
 	ROM_REGION16_LE(0x10000, "user1", 0)
 
-	ROM_SYSTEM_BIOS(0, "ccos", "ccos bios")
-	ROMX_LOAD("bios1101_0_25.bin", 0x0000, 0x4000, CRC(625388cb) SHA1(4c52c62fa9bc2f9a9a0a1e7f3beddef6809b9eed), ROM_BIOS(0))
+	ROM_SYSTEM_BIOS(0, "1101.rev4", "CCPROM 1101 revision 4")
+	ROMX_LOAD("1101even.rev4.bin", 0x0000, 0x2000, CRC(051b11e5) SHA1(73fb510c114f7fcbe1e616bb20cd97cb2c062e62), ROM_SKIP(1) | ROM_BIOS(0))
+	ROMX_LOAD("1101odd.rev4.bin", 0x0001, 0x2000, CRC(898d7ce2) SHA1(3e2c0deff5234b0b69cc407cf9858648a3e687b9), ROM_SKIP(1) | ROM_BIOS(0))
+
+	ROM_SYSTEM_BIOS(1, "1101.rev3", "CCPROM 1101 revision 3")
+	ROMX_LOAD("1101even.rev3.bin", 0x0000, 0x2000, CRC(bd7a385a) SHA1(924d5a04e5a5f57cd86849a47de50cb00d0fef40), ROM_SKIP(1) | ROM_BIOS(1))
+	ROMX_LOAD("1101odd.rev3.bin", 0x0001, 0x2000, CRC(751c893e) SHA1(28212f6180de0c8dabcea95f0580eaf9b1db48a3), ROM_SKIP(1) | ROM_BIOS(1))
 ROM_END
 
 ROM_START( grid1109 )
 	ROM_REGION16_LE(0x10000, "user1", 0)
 
-	ROM_SYSTEM_BIOS(0, "ccos", "ccos bios")
-	ROMX_LOAD("1109even.bin", 0x0000, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
-	ROMX_LOAD("1109odd.bin",  0x0001, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
+	ROM_SYSTEM_BIOS(0, "1109", "CCPROM 1109")
+	ROMX_LOAD("1109even.ccprom.bin", 0x0000, 0x2000, CRC(2545092e) SHA1(bafa84b59d4bd010db296c41063ea6b50431722c), ROM_SKIP(1) | ROM_BIOS(0))
+	ROMX_LOAD("1109odd.ccprom.bin", 0x0001, 0x2000, CRC(315d90b6) SHA1(e9447d615200942319ddf955644b1209025be867), ROM_SKIP(1) | ROM_BIOS(0))
 ROM_END
 
 ROM_START( grid1121 )
 	ROM_REGION16_LE(0x10000, "user1", 0)
 
-	ROM_SYSTEM_BIOS(0, "ccos", "ccos bios")
-	ROMX_LOAD("1121even.bin", 0x0000, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
-	ROMX_LOAD("1121odd.bin",  0x0001, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
+	ROM_SYSTEM_BIOS(0, "1121", "CCPROM 1121")
+	ROMX_LOAD("1121even.ccprom.bin", 0x0000, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
+	ROMX_LOAD("1121odd.ccprom.bin", 0x0001, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
 ROM_END
 
 ROM_START( grid1129 )
 	ROM_REGION16_LE(0x10000, "user1", 0)
-	ROM_DEFAULT_BIOS("ccos")
 
-	ROM_SYSTEM_BIOS(0, "ccos", "ccos bios")
-	ROMX_LOAD("1129even.bin", 0x0000, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
-	ROMX_LOAD("1129odd.bin",  0x0001, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
-
-	ROM_SYSTEM_BIOS(1, "patched", "patched 1139 bios")
-	ROMX_LOAD("1139even.bin", 0x0000, 0x2000, CRC(67071849) SHA1(782239c155fa5821f8dbd2607cee9152d175e90e), ROM_SKIP(1) | ROM_BIOS(1))
-	ROMX_LOAD("1139odd.bin",  0x0001, 0x2000, CRC(13ed4bf0) SHA1(f7087f86dbbc911bee985125bccd2417e0374e8e), ROM_SKIP(1) | ROM_BIOS(1))
-
-	// change bubble driver setup to read floppy images with 512-byte sectors
-	ROM_FILL(0x3114,1,0x00)
-	ROM_FILL(0x3115,1,0x02)
-	ROM_FILL(0x3116,1,0xf8)
-	ROM_FILL(0x3117,1,0x01)
-
-	// move work area from 0440h:XXXX to 0298h:XXXX
-	ROM_FILL(0x23,1,0x98)
-	ROM_FILL(0x24,1,0x2)
-	ROM_FILL(0xbc,1,0x98)
-	ROM_FILL(0xbd,1,0x2)
-	ROM_FILL(0x14e,1,0xc1)  //
-	ROM_FILL(0x14f,1,0x2)   //
-	ROM_FILL(0x15a,1,0xc2)  //
-	ROM_FILL(0x15b,1,0x2)   //
-	ROM_FILL(0x17b,1,0x45)  //
-	ROM_FILL(0x17c,1,0x3)   //
-	ROM_FILL(0x28c,1,0x98)
-	ROM_FILL(0x28d,1,0x2)
-	ROM_FILL(0x28f,1,0x98)
-	ROM_FILL(0x290,1,0x2)
-	ROM_FILL(0x2b9,1,0x98)
-	ROM_FILL(0x2ba,1,0x2)
-	ROM_FILL(0x2d0,1,0x98)
-	ROM_FILL(0x2d1,1,0x2)
-	ROM_FILL(0x31a,1,0x98)
-	ROM_FILL(0x31b,1,0x2)
-	ROM_FILL(0x3a0,1,0x98)
-	ROM_FILL(0x3a1,1,0x2)
-	ROM_FILL(0x3a3,1,0x98)
-	ROM_FILL(0x3a4,1,0x2)
-	ROM_FILL(0x3e2,1,0x98)
-	ROM_FILL(0x3e3,1,0x2)
-	ROM_FILL(0x43e,1,0x98)
-	ROM_FILL(0x43f,1,0x2)
-	ROM_FILL(0x46d,1,0x98)
-	ROM_FILL(0x46e,1,0x2)
-	ROM_FILL(0x4fe,1,0x98)
-	ROM_FILL(0x4ff,1,0x2)
-	ROM_FILL(0x512,1,0x98)
-	ROM_FILL(0x513,1,0x2)
-	ROM_FILL(0x768,1,0x98)
-	ROM_FILL(0x769,1,0x2)
-	ROM_FILL(0x79e,1,0x98)
-	ROM_FILL(0x79f,1,0x2)
-	ROM_FILL(0x7f5,1,0x98)
-	ROM_FILL(0x7f6,1,0x2)
-	ROM_FILL(0x92a,1,0x98)
-	ROM_FILL(0x92b,1,0x2)
-	ROM_FILL(0xe50,1,0x98)
-	ROM_FILL(0xe51,1,0x2)
-	ROM_FILL(0xfa6,1,0x98)
-	ROM_FILL(0xfa7,1,0x2)
-	ROM_FILL(0x15fe,1,0xce) //
-	ROM_FILL(0x15ff,1,0x2)  //
-	ROM_FILL(0x1628,1,0xd0) //
-	ROM_FILL(0x1629,1,0x2)  //
-	ROM_FILL(0x1700,1,0x98)
-	ROM_FILL(0x1701,1,0x2)
-	ROM_FILL(0x1833,1,0xd6) //
-	ROM_FILL(0x1834,1,0x2)  //
-	ROM_FILL(0x184a,1,0xd6) //
-	ROM_FILL(0x184b,1,0x2)  //
-	ROM_FILL(0x1a2e,1,0xd6) //
-	ROM_FILL(0x1a2f,1,0x2)  //
-	ROM_FILL(0x19c2,1,0x98)
-	ROM_FILL(0x19c3,1,0x2)
-	ROM_FILL(0x1ee0,1,0x98)
-	ROM_FILL(0x1ee1,1,0x2)
-	ROM_FILL(0x1f1d,1,0x98)
-	ROM_FILL(0x1f1e,1,0x2)
-	ROM_FILL(0x1f40,1,0x98)
-	ROM_FILL(0x1f41,1,0x2)
-	ROM_FILL(0x2253,1,0x98)
-	ROM_FILL(0x2254,1,0x2)
-	ROM_FILL(0x2437,1,0x98)
-	ROM_FILL(0x2438,1,0x2)
-	ROM_FILL(0x283a,1,0x98)
-	ROM_FILL(0x283b,1,0x2)
-	ROM_FILL(0x2868,1,0x98)
-	ROM_FILL(0x2869,1,0x2)
-	ROM_FILL(0x288f,1,0x98)
-	ROM_FILL(0x2890,1,0x2)
-	ROM_FILL(0x2942,1,0x98)
-	ROM_FILL(0x2943,1,0x2)
-	ROM_FILL(0x295c,1,0x98)
-	ROM_FILL(0x295d,1,0x2)
-	ROM_FILL(0x2a5e,1,0x98)
-	ROM_FILL(0x2a5f,1,0x2)
-	ROM_FILL(0x315c,1,0xc9) //
-	ROM_FILL(0x315d,1,0x2)  //
-	ROM_FILL(0x3160,1,0xce) //
-	ROM_FILL(0x3161,1,0x2)  //
-	ROM_FILL(0x3164,1,0xcf) //
-	ROM_FILL(0x3165,1,0x2)  //
+	ROM_SYSTEM_BIOS(0, "1129", "CCPROM 1129")
+	ROMX_LOAD("1129even.ccprom.bin", 0x0000, 0x2000, CRC(0ede3636) SHA1(9bc2dadec3ee2b78cbe7d79e70d033c60527ba8d), ROM_SKIP(1) | ROM_BIOS(0))
+	ROMX_LOAD("1129odd.ccprom.bin", 0x0001, 0x2000, CRC(07b29b05) SHA1(e6b1726e39b6f83b082b1a86ee9b0491e95b45d0), ROM_SKIP(1) | ROM_BIOS(0))
 ROM_END
 
 ROM_START( grid1131 )
 	ROM_REGION16_LE(0x10000, "user1", 0)
 
-	ROM_SYSTEM_BIOS(0, "ccos", "ccos bios")
-	ROMX_LOAD("1131even.bin", 0x0000, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
-	ROMX_LOAD("1131odd.bin",  0x0001, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
+	ROM_SYSTEM_BIOS(0, "1131", "CCPROM 1131")
+	ROMX_LOAD("1131even.ccprom.bin", 0x0000, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
+	ROMX_LOAD("1131odd.ccprom.bin", 0x0001, 0x2000, NO_DUMP, ROM_SKIP(1) | ROM_BIOS(0))
 ROM_END
 
 ROM_START( grid1139 )
 	ROM_REGION16_LE(0x10000, "user1", 0)
 
-	ROM_SYSTEM_BIOS(0, "normal", "normal bios")
-	ROMX_LOAD("1139even.bin", 0x0000, 0x2000, CRC(67071849) SHA1(782239c155fa5821f8dbd2607cee9152d175e90e), ROM_SKIP(1) | ROM_BIOS(0))
-	ROMX_LOAD("1139odd.bin",  0x0001, 0x2000, CRC(13ed4bf0) SHA1(f7087f86dbbc911bee985125bccd2417e0374e8e), ROM_SKIP(1) | ROM_BIOS(0))
+	ROM_SYSTEM_BIOS(0, "1139", "CCPROM 1139")
+	ROMX_LOAD("1139even.ccprom.bin", 0x0000, 0x2000, CRC(67071849) SHA1(782239c155fa5821f8dbd2607cee9152d175e90e), ROM_SKIP(1) | ROM_BIOS(0))
+	ROMX_LOAD("1139odd.ccprom.bin", 0x0001, 0x2000, CRC(13ed4bf0) SHA1(f7087f86dbbc911bee985125bccd2417e0374e8e), ROM_SKIP(1) | ROM_BIOS(0))
 ROM_END
 
 } // anonymous namespace
@@ -610,9 +514,9 @@ ROM_END
 ***************************************************************************/
 
 //    YEAR  NAME      PARENT    COMPAT  MACHINE   INPUT     CLASS           INIT        COMPANY           FULLNAME           FLAGS
-COMP( 1982, grid1101, 0,        0,      grid1101, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass 1101",    MACHINE_NO_SOUND_HW | MACHINE_IMPERFECT_CONTROLS )
-COMP( 1982, grid1109, grid1101, 0,      grid1109, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass 1109",    MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
-COMP( 1984, grid1121, 0,        0,      grid1121, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1121", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
-COMP( 1984, grid1129, grid1121, 0,      grid1129, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1129", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
-COMP( 1984, grid1131, grid1121, 0,      grid1131, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1131", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
-COMP( 1984, grid1139, grid1121, 0,      grid1139, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1139", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
+COMP( 1982, grid1101, 0,        0,      grid1101, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass 1101",    MACHINE_NO_SOUND | MACHINE_IMPERFECT_CONTROLS )
+COMP( 1982, grid1109, grid1101, 0,      grid1109, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass 1109",    MACHINE_NO_SOUND | MACHINE_IMPERFECT_CONTROLS | MACHINE_NOT_WORKING )
+COMP( 1984, grid1121, 0,        0,      grid1121, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1121", MACHINE_NO_SOUND | MACHINE_IMPERFECT_CONTROLS | MACHINE_NOT_WORKING )
+COMP( 1984, grid1129, grid1121, 0,      grid1129, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1129", MACHINE_NO_SOUND | MACHINE_IMPERFECT_CONTROLS )
+COMP( 1984, grid1131, grid1121, 0,      grid1131, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1131", MACHINE_NO_SOUND | MACHINE_IMPERFECT_CONTROLS | MACHINE_NOT_WORKING )
+COMP( 1984, grid1139, grid1121, 0,      grid1139, gridcomp, gridcomp_state, empty_init, "GRiD Computers", "Compass II 1139", MACHINE_NO_SOUND | MACHINE_IMPERFECT_CONTROLS )
