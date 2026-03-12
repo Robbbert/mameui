@@ -40,11 +40,9 @@
 
     to do:
 
-    - keyboard: decode and add the rest of keycodes
-        keycode table can be found here on page A-2:
-        http://deltacxx.insomnia247.nl/gridcompass/large_files/Yahoo%20group%20backup/RuGRiD-Laptop/files/6_GRiD-OS-Programming/3_GRiD-OS-Reference.pdf
-    - EAROM, RTC
+	- EAROM, RTC
     - serial port (incomplete), modem (incl. DTMF generator)
+	- keyboard MCU emulation
     - proper custom DMA logic timing
     - loading ROMs for Compass II
 
@@ -52,7 +50,6 @@
 
     - dumps from 1100, 1107, 1121, 1131
     - GRiDROM's
-    - keyboard MCU
     - external floppy and hard disk (2101, 2102)
 
     to boot GRID-OS:
