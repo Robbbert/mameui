@@ -64,7 +64,6 @@ protected:
 		void pop_buffer() noexcept;
 		buffer &push_buffer();
 
-		int32_t m_delta, m_delta2;
 		uint32_t m_channels;
 		uint32_t m_used_buffers;
 		uint32_t m_used_buffers_prev;
@@ -74,6 +73,10 @@ protected:
 		bool m_overrun;
 		std::vector<int16_t> m_last_sample;
 		std::vector<buffer> m_buffers;
+
+		// statistics
+		int32_t m_delta, m_delta2;
+		uint32_t m_underruns, m_overruns;
 	};
 };
 
