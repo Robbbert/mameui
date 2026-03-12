@@ -75,7 +75,6 @@
 #include "machine/ram.h"
 #include "machine/tms9914.h"
 #include "machine/z80sio.h"
-#include "speaker.h"
 #include "sound/dac.h"
 
 #include "emupal.h"
