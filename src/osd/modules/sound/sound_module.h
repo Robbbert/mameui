@@ -1,9 +1,6 @@
 // license:BSD-3-Clause
-// copyright-holders:Couriersud
-/*
- * sound_module.h
- *
- */
+// copyright-holders:O. Galibert
+
 #ifndef MAME_OSD_SOUND_SOUND_MODULE_H
 #define MAME_OSD_SOUND_SOUND_MODULE_H
 

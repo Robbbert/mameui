@@ -1,7 +1,6 @@
 // license:BSD-3-Clause
 // copyright-holders:O. Galibert
 
-
 #include "sound_module.h"
 
 #include <algorithm>
@@ -94,11 +93,12 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 	std::copy_n(data + ((samples - 1) * m_channels), m_channels, m_last_sample.data());
 
 	// maximum number of buffers relative to samples
+	// unless -speed or -refreshspeed is used, this is same as m_max_buffers
 	const uint32_t max_buffers = std::max(m_max_buffers * 48000 / samples / 50, 4U);
 
 	// minimum number of buffers after overrun
-	// (lower limit of 2 prevents buffer underruns with push(this), get, get, push)
-	const uint32_t min_buffers = std::max(max_buffers / 4, 2U);
+	// lower limit of 2 prevents buffer underruns with push(this), get, get, push
+	const uint32_t min_buffers = std::max(max_buffers / 3, 2U);
 
 	m_history[m_hindex] = m_used_buffers_prev - m_used_buffers;
 	m_hindex = (m_hindex + 1) % m_history.size();
@@ -115,13 +115,13 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 
 	if(m_overrun && std::accumulate(m_history.begin(), m_history.end(), 0) >= -2) {
 		if(m_used_buffers > min_buffers) {
-			// Once it's stabilized after an overrun, reduce buffers to minimum latency
+			// once it's stabilized after an overrun, reduce buffers to minimum latency
 			flush_buffers(min_buffers);
 			std::fill(m_history.begin(), m_history.end(), 0);
 		}
 		m_overrun = false;
 	} else if(m_used_buffers > max_buffers) {
-		// If there are too many buffers, drop some and mark this event as an overrun
+		// if there are too many buffers, drop some and mark this event as an overrun
 		flush_buffers(max_buffers);
 		m_overrun = true;
 		m_overruns++;
