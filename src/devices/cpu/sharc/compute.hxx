@@ -46,6 +46,13 @@ inline bool IS_FLOAT_NAN_SUB(uint32_t a, uint32_t b)
 	return (aemax && ((a & FLOAT_MANTISSA_MASK) != 0)) || (bemax && ((b & FLOAT_MANTISSA_MASK) != 0)) || (aemax && bemax && !((a ^ b) & FLOAT_SIGN_MASK));
 }
 
+inline bool IS_FLOAT_NAN_MUL(uint32_t a, uint32_t b)
+{
+	bool const aemax = (a & FLOAT_EXPONENT_MASK) == FLOAT_EXPONENT_MASK;
+	bool const bemax = (b & FLOAT_EXPONENT_MASK) == FLOAT_EXPONENT_MASK;
+	return (aemax && (((a & FLOAT_MANTISSA_MASK) != 0) || IS_FLOAT_ZERO(b))) || (bemax && (((b & FLOAT_MANTISSA_MASK) != 0) || IS_FLOAT_ZERO(a)));
+}
+
 constexpr uint32_t FLOAT_FLUSH_DENORMAL(uint32_t r)     { return IS_FLOAT_DENORMAL_OR_ZERO(r) ? (r & FLOAT_SIGN_MASK) : r; }
 
 
@@ -203,7 +210,7 @@ adsp21062_device::SHARC_REG adsp21062_device::FSUB(int fx, int fy)
 	return r;
 }
 
-// (Fx + Fy) / 2
+/* (Fx + Fy) / 2 */
 adsp21062_device::SHARC_REG adsp21062_device::FAVG(int fx, int fy)
 {
 	SHARC_REG r;
@@ -241,7 +248,7 @@ adsp21062_device::SHARC_REG adsp21062_device::FAVG(int fx, int fy)
 	return r;
 }
 
-// ABS Fx
+/* ABS Fx */
 adsp21062_device::SHARC_REG adsp21062_device::FABS(int fx)
 {
 	SHARC_REG r;
@@ -269,7 +276,7 @@ adsp21062_device::SHARC_REG adsp21062_device::FABS(int fx)
 	return r;
 }
 
-// MIN(Fx, Fy)
+/* MIN(Fx, Fy) */
 adsp21062_device::SHARC_REG adsp21062_device::FMIN(int fx, int fy)
 {
 	SHARC_REG r;
@@ -292,7 +299,7 @@ adsp21062_device::SHARC_REG adsp21062_device::FMIN(int fx, int fy)
 	return r;
 }
 
-// MAX(Fx, Fy)
+/* MAX(Fx, Fy) */
 adsp21062_device::SHARC_REG adsp21062_device::FMAX(int fx, int fy)
 {
 	SHARC_REG r;
@@ -309,6 +316,85 @@ adsp21062_device::SHARC_REG adsp21062_device::FMAX(int fx, int fy)
 
 		m_core->astat |= (r.f < 0.0f) ? AN : 0;
 		m_core->astat |= (IS_FLOAT_ZERO(r.r)) ? AZ : 0;
+	}
+
+	m_core->astat |= AF;
+	return r;
+}
+
+/* Fx + Fy,   Fx - Fy */
+std::pair<adsp21062_device::SHARC_REG, adsp21062_device::SHARC_REG> adsp21062_device::FADD_FSUB(int fx, int fy)
+{
+	std::pair<SHARC_REG, SHARC_REG> r;
+	bool const xemax = (REG(fx) & FLOAT_EXPONENT_MASK) == FLOAT_EXPONENT_MASK;
+	bool const yemax = (REG(fy) & FLOAT_EXPONENT_MASK) == FLOAT_EXPONENT_MASK;
+
+	if ((xemax && ((REG(fx) & FLOAT_MANTISSA_MASK) != 0)) || (yemax && (REG(fy) & FLOAT_MANTISSA_MASK) != 0))
+	{
+		// at least one NaN
+		r.first.r = FLOAT_CANONICAL_NAN;
+		r.second.r = FLOAT_CANONICAL_NAN;
+		m_core->astat |= AI;
+		m_core->stky |= AIS;
+	}
+	else if (!xemax || !yemax)
+	{
+		// neither NaN, at least one not infinity
+		SHARC_REG x, y;
+		x.r = FLOAT_FLUSH_DENORMAL(REG(fx));
+		y.r = FLOAT_FLUSH_DENORMAL(REG(fy));
+		r.first.f = x.f + y.f;
+		r.second.f = x.f - y.f;
+
+		if (IS_FLOAT_INFINITY(r.first.r))
+		{
+			m_core->astat |= AV;
+			m_core->stky |= AVS;
+			if (m_core->mode1 & MODE1_TRUNCATE)
+				r.first.r = (r.first.r & FLOAT_SIGN_MASK) | 0x7f7fffff;
+		}
+		else if (IS_FLOAT_DENORMAL_OR_ZERO(r.first.r))
+		{
+			m_core->astat |= AZ;
+			m_core->stky |= ((r.first.r & FLOAT_MANTISSA_MASK) != 0) ? AUS : 0;
+			r.first.r &= FLOAT_SIGN_MASK;
+		}
+
+		if (IS_FLOAT_INFINITY(r.second.r))
+		{
+			m_core->astat |= AV;
+			m_core->stky |= AVS;
+			if (m_core->mode1 & MODE1_TRUNCATE)
+				r.second.r = (r.second.r & FLOAT_SIGN_MASK) | 0x7f7fffff;
+		}
+		else if (IS_FLOAT_DENORMAL_OR_ZERO(r.second.r))
+		{
+			m_core->astat |= AZ;
+			m_core->stky |= ((r.second.r & FLOAT_MANTISSA_MASK) != 0) ? AUS : 0;
+			r.second.r &= FLOAT_SIGN_MASK;
+		}
+
+		m_core->astat |= ((r.first.r | r.second.r) & FLOAT_SIGN_MASK) ? AN : 0;
+	}
+	else
+	{
+		// both infinity
+		if ((REG(fx) ^ REG(fy)) & FLOAT_SIGN_MASK)
+		{
+			// opposite signs - sum is NaN
+			r.first.r = FLOAT_CANONICAL_NAN;
+			r.second.f =  (REG(fx) & FLOAT_SIGN_MASK) | ((m_core->mode1 & MODE1_TRUNCATE) ? 0x7f7fffff : FLOAT_INFINITY);
+		}
+		else
+		{
+			// same sign - difference is NaN
+			r.first.f =  (REG(fx) & FLOAT_SIGN_MASK) | ((m_core->mode1 & MODE1_TRUNCATE) ? 0x7f7fffff : FLOAT_INFINITY);
+			r.second.r = FLOAT_CANONICAL_NAN;
+		}
+
+		m_core->astat |= (REG(fx) & FLOAT_SIGN_MASK) ? AN : 0;
+		m_core->astat |= AV | AI;
+		m_core->stky |= AVS | AIS;
 	}
 
 	m_core->astat |= AF;
@@ -339,6 +425,33 @@ uint32_t adsp21062_device::SCALB(SHARC_REG fx, int ry)
 	{
 		return sign | float_make_biased_exponent(exponent) | mantissa;
 	}
+}
+
+
+/*****************************************************************************/
+/* Multiplier helpers */
+
+/* Fn = Fx * Fy */
+adsp21062_device::SHARC_REG adsp21062_device::FMUL(int fx, int fy)
+{
+	SHARC_REG r;
+	if (IS_FLOAT_NAN_MUL(REG(fx), REG(fy)))
+	{
+		r.r = FLOAT_CANONICAL_NAN;
+		m_core->astat |= MI;
+		m_core->stky |= MIS;
+	}
+	else
+	{
+		r.f = FREG(fx) * FREG(fy);
+
+		m_core->astat |= (r.r & FLOAT_SIGN_MASK) ? MN : 0;
+		m_core->astat |= IS_FLOAT_INFINITY(r.r) ? MV : 0;
+		m_core->astat |= IS_FLOAT_DENORMAL(r.r) ? MU : 0;
+		m_core->stky |= IS_FLOAT_INFINITY(r.r) ? MVS : 0;
+		m_core->stky |= IS_FLOAT_DENORMAL(r.r) ? MUS : 0;
+	}
+	return r;
 }
 
 
@@ -1271,15 +1384,10 @@ uint32_t adsp21062_device::compute_mrb_plus_mul_ssin(int rx, int ry)
 }
 
 /* Fn = Fx * Fy */
-void adsp21062_device::compute_fmul(int rn, int rx, int ry)
+void adsp21062_device::compute_fmul(int fn, int fx, int fy)
 {
-	FREG(rn) = FREG(rx) * FREG(ry);
-
 	CLEAR_MULTIPLIER_FLAGS();
-	SET_FLAG_MN(REG(rn));
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
+	FREG(fn) = FMUL(fx, fy).f;
 }
 
 /*****************************************************************************/
@@ -1401,31 +1509,16 @@ void adsp21062_device::compute_mul_ssfr_sub(int rm, int rxm, int rym, int ra, in
 }
 
 
+/*****************************************************************************/
+/* Dual add/subtract */
+
 /* Fa = Fx + Fy,   Fs = Fx - Fy */
-void adsp21062_device::compute_dual_fadd_fsub(int ra, int rs, int rx, int ry)
+void adsp21062_device::compute_dual_fadd_fsub(int fa, int fs, int fx, int fy)
 {
-	SHARC_REG r_add, r_sub;
-	r_add.f = FREG(rx) + FREG(ry);
-	r_sub.f = FREG(rx) - FREG(ry);
-
 	CLEAR_ALU_FLAGS();
-	// AN
-	m_core->astat |= ((r_add.f < 0.0f) || (r_sub.f < 0.0f)) ? AN : 0;
-	// AZ
-	m_core->astat |= (IS_FLOAT_DENORMAL_OR_ZERO(r_add.r) ||
-					IS_FLOAT_DENORMAL_OR_ZERO(r_sub.r)) ? AZ : 0;
-	// AUS
-	m_core->stky |= (IS_FLOAT_DENORMAL(r_add.r) || IS_FLOAT_DENORMAL(r_sub.r)) ? AUS : 0;
-	// AI
-	m_core->astat |= (IS_FLOAT_NAN(REG(rx)) || IS_FLOAT_NAN(REG(ry))) ? AI : 0;
-	/* TODO: AV flag */
-
-	// AIS
-	if (m_core->astat & AI)   m_core->stky |= AIS;
-
-	FREG(ra) = r_add.f;
-	FREG(rs) = r_sub.f;
-	m_core->astat |= AF;
+	auto [r_add, r_sub] = FADD_FSUB(fx, fy);
+	FREG(fa) = r_add.f;
+	FREG(fs) = r_sub.f;
 }
 
 
@@ -1438,14 +1531,7 @@ void adsp21062_device::compute_fmul_fadd(int fm, int fxm, int fym, int fa, int f
 	CLEAR_MULTIPLIER_FLAGS();
 	CLEAR_ALU_FLAGS();
 
-	SHARC_REG r_mul;
-	r_mul.f = FREG(fxm) * FREG(fym);
-
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
+	SHARC_REG r_mul = FMUL(fxm, fym);
 	SHARC_REG r_alu = FADD(fxa, fya);
 
 	FREG(fm) = r_mul.f;
@@ -1458,14 +1544,7 @@ void adsp21062_device::compute_fmul_fsub(int fm, int fxm, int fym, int fa, int f
 	CLEAR_MULTIPLIER_FLAGS();
 	CLEAR_ALU_FLAGS();
 
-	SHARC_REG r_mul;
-	r_mul.f = FREG(fxm) * FREG(fym);
-
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
+	SHARC_REG r_mul = FMUL(fxm, fym);
 	SHARC_REG r_alu = FSUB(fxa, fya);
 
 	FREG(fm) = r_mul.f;
@@ -1475,21 +1554,18 @@ void adsp21062_device::compute_fmul_fsub(int fm, int fxm, int fym, int fa, int f
 /* Fm = Fxm * Fym,   Fa = FLOAT Rxa BY Rya */
 void adsp21062_device::compute_fmul_float_scaled(int fm, int fxm, int fym, int fa, int rxa, int rya)
 {
+	CLEAR_MULTIPLIER_FLAGS();
+	CLEAR_ALU_FLAGS();
+
+	SHARC_REG r_mul = FMUL(fxm, fym);
+
 	SHARC_REG x;
-	SHARC_REG r_mul, r_alu;
-	r_mul.f = FREG(fxm) * FREG(fym);
+	SHARC_REG r_alu;
 
 	x.f = float(int32_t(REG(rxa)));
 
 	r_alu.r = SCALB(x, rya);
 
-	CLEAR_MULTIPLIER_FLAGS();
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
-	CLEAR_ALU_FLAGS();
 	m_core->astat |= (r_alu.f < 0.0f) ? AN : 0;
 	// AZ
 	m_core->astat |= IS_FLOAT_DENORMAL_OR_ZERO(r_alu.r) ? AZ : 0;
@@ -1505,9 +1581,13 @@ void adsp21062_device::compute_fmul_float_scaled(int fm, int fxm, int fym, int f
 /* Fm = Fxm * Fym,   Ra = FIX Fxa BY Rya */
 void adsp21062_device::compute_fmul_fix_scaled(int fm, int fxm, int fym, int ra, int fxa, int rya)
 {
+	CLEAR_MULTIPLIER_FLAGS();
+	CLEAR_ALU_FLAGS();
+
+	SHARC_REG r_mul = FMUL(fxm, fym);
+
 	int32_t alu_i;
-	SHARC_REG r_mul, r_alu;
-	r_mul.f = FREG(fxm) * FREG(fym);
+	SHARC_REG r_alu;
 
 	r_alu.r = SCALB(m_core->r[fxa], rya);
 
@@ -1520,13 +1600,6 @@ void adsp21062_device::compute_fmul_fix_scaled(int fm, int fxm, int fym, int ra,
 		alu_i = int32_t(nearbyintf(r_alu.f)); // assume rounding mode is set to FE_TONEAREST
 	}
 
-	CLEAR_MULTIPLIER_FLAGS();
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
-	CLEAR_ALU_FLAGS();
 	SET_FLAG_AN(alu_i);
 	// AZ
 	SET_FLAG_AZ(alu_i);
@@ -1541,38 +1614,24 @@ void adsp21062_device::compute_fmul_fix_scaled(int fm, int fxm, int fym, int ra,
 	m_core->astat |= AF;
 }
 
-void adsp21062_device::compute_fmul_avg(int fm, int fxm, int fym, int fa, int fxa, int fya)
+void adsp21062_device::compute_fmul_favg(int fm, int fxm, int fym, int fa, int fxa, int fya)
 {
 	CLEAR_MULTIPLIER_FLAGS();
 	CLEAR_ALU_FLAGS();
 
-	SHARC_REG r_mul;
-	r_mul.f = FREG(fxm) * FREG(fym);
-
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
+	SHARC_REG r_mul = FMUL(fxm, fym);
 	SHARC_REG r_alu = FAVG(fxa, fya);
 
 	FREG(fm) = r_mul.f;
 	FREG(fa) = r_alu.f;
 }
 
-void adsp21062_device::compute_fmul_abs(int fm, int fxm, int fym, int fa, int fxa)
+void adsp21062_device::compute_fmul_fabs(int fm, int fxm, int fym, int fa, int fxa)
 {
 	CLEAR_MULTIPLIER_FLAGS();
 	CLEAR_ALU_FLAGS();
 
-	SHARC_REG r_mul;
-	r_mul.f = FREG(fxm) * FREG(fym);
-
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
+	SHARC_REG r_mul = FMUL(fxm, fym);
 	SHARC_REG r_alu = FABS(fxa);
 
 	FREG(fm) = r_mul.f;
@@ -1585,14 +1644,7 @@ void adsp21062_device::compute_fmul_fmax(int fm, int fxm, int fym, int fa, int f
 	CLEAR_MULTIPLIER_FLAGS();
 	CLEAR_ALU_FLAGS();
 
-	SHARC_REG r_mul;
-	r_mul.f = FREG(fxm) * FREG(fym);
-
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
+	SHARC_REG r_mul = FMUL(fxm, fym);
 	SHARC_REG r_alu = FMAX(fxa, fya);
 
 	FREG(fm) = r_mul.f;
@@ -1606,14 +1658,7 @@ void adsp21062_device::compute_fmul_fmin(int fm, int fxm, int fym, int fa, int f
 	CLEAR_MULTIPLIER_FLAGS();
 	CLEAR_ALU_FLAGS();
 
-	SHARC_REG r_mul;
-	r_mul.f = FREG(fxm) * FREG(fym);
-
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
+	SHARC_REG r_mul = FMUL(fxm, fym);
 	SHARC_REG r_alu = FMIN(fxa, fya);
 
 	FREG(fm) = r_mul.f;
@@ -1627,34 +1672,13 @@ void adsp21062_device::compute_fmul_fmin(int fm, int fxm, int fym, int fa, int f
 /* Fm = Fxm * Fym,   Fa = Fxa + Fya,   Fs = Fxa - Fya */
 void adsp21062_device::compute_fmul_dual_fadd_fsub(int fm, int fxm, int fym, int fa, int fs, int fxa, int fya)
 {
-	SHARC_REG r_mul, r_add, r_sub;
-	r_mul.f = FREG(fxm) * FREG(fym);
-	r_add.f = FREG(fxa) + FREG(fya);
-	r_sub.f = FREG(fxa) - FREG(fya);
-
 	CLEAR_MULTIPLIER_FLAGS();
-	SET_FLAG_MN(r_mul.r);
-	/* TODO: MV flag */
-	/* TODO: MU flag */
-	/* TODO: MI flag */
-
 	CLEAR_ALU_FLAGS();
-	// AN
-	m_core->astat |= ((r_add.r < 0.0f) || (r_sub.r < 0.0f)) ? AN : 0;
-	// AZ
-	m_core->astat |= (IS_FLOAT_DENORMAL(r_add.r) || IS_FLOAT_ZERO(r_add.r) ||
-					IS_FLOAT_DENORMAL(r_sub.r) || IS_FLOAT_ZERO(r_sub.r)) ? AZ : 0;
-	// AUS
-	m_core->stky |= (IS_FLOAT_DENORMAL(r_add.r) || IS_FLOAT_DENORMAL(r_sub.r)) ? AUS : 0;
-	// AI
-	m_core->astat |= (IS_FLOAT_NAN(REG(fxa)) || IS_FLOAT_NAN(REG(fya))) ? AI : 0;
-	/* TODO: AV flag */
 
-	// AIS
-	if (m_core->astat & AI)   m_core->stky |= AIS;
+	SHARC_REG r_mul = FMUL(fxm, fym);
+	auto [r_add, r_sub] = FADD_FSUB(fxa, fya);
 
 	FREG(fm) = r_mul.f;
 	FREG(fa) = r_add.f;
 	FREG(fs) = r_sub.f;
-	m_core->astat |= AF;
 }

@@ -167,6 +167,8 @@ Given CS numbers, this is released after the other Gun Champ
 #include "emupal.h"
 #include "screen.h"
 #include "tilemap.h"
+#include "sound/samples.h"
+#include "speaker.h"
 
 #include "gunchamps.lh"
 
@@ -182,6 +184,7 @@ public:
 		m_gfxdecode(*this, "gfxdecode"),
 		m_screen(*this, "screen"),
 		m_videoram(*this, "videoram")
+		, m_samples(*this, "samples")
 	{ }
 
 	void sshot(machine_config &config);
@@ -190,8 +193,8 @@ private:
 	required_device<ins8060_device> m_maincpu;
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<screen_device> m_screen;
-
 	required_shared_ptr<uint8_t> m_videoram;
+	required_device<samples_device> m_samples;
 	tilemap_t *m_tilemap = nullptr;
 
 	void sshot_vidram_w(offs_t offset, uint8_t data);
@@ -203,6 +206,8 @@ private:
 	uint32_t screen_update_sshot(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void sshot_map(address_map &map) ATTR_COLD;
+	uint8_t m_prev_sound0 = 0;
+	uint8_t m_prev_sound1 = 0;
 };
 
 
@@ -242,6 +247,18 @@ void sshot_state::sshot_vidram_w(offs_t offset, uint8_t data)
  *
  *************************************/
 
+static const char *const sshot_sample_names[] =
+{
+	"*sshot",
+	"glass",
+	"pop",
+	"bounce",
+	"exp",
+	"shoot",
+	"bonus",
+	0
+};
+
 void sshot_state::sshot_output0_w(uint8_t data)
 {
 	/*
@@ -256,6 +273,14 @@ void sshot_state::sshot_output0_w(uint8_t data)
 	    6       n.c.
 	    7       H           n.c.
 	*/
+	uint8_t c = m_prev_sound0 ^ data;
+
+	if (BIT(c,1) && BIT(data,1))
+		m_samples->start(4,4);
+	if (BIT(c,3) && BIT(data,3))
+		m_samples->start(5,5);
+
+	m_prev_sound0 = data;
 }
 
 void sshot_state::sshot_output1_w(uint8_t data)
@@ -272,6 +297,20 @@ void sshot_state::sshot_output1_w(uint8_t data)
 	    6       N           EXPLOSIONE CERCHIO (CIRCLE EXPLOSION)
 	    7       11          SIBILO SPIRALE (PATHY SPIRAL)
 	*/
+	uint8_t c = m_prev_sound1 ^ data;
+
+	if (BIT(c,0) && BIT(data,0))
+		m_samples->start(0,0);
+	if (BIT(c,2) && BIT(data,2))
+		m_samples->start(1,1);
+	if (BIT(c,4) && BIT(data,4))
+		m_samples->start(0,2);
+	if (BIT(c,6) && BIT(data,6))
+		m_samples->start(1,3);
+	if (BIT(c,7) && BIT(data,7))
+		m_samples->start(2,2);
+
+	m_prev_sound1 = data;
 }
 
 
@@ -290,7 +329,7 @@ void sshot_state::sshot_map(address_map &map)
 	map(0x4201, 0x4201).portr("GUNY");
 	map(0x4202, 0x4202).portr("IN0");
 	map(0x4203, 0x4203).portr("DSW");
-	map(0x4206, 0x4206).w(FUNC(sshot_state::sshot_output0_w));
+	map(0x4206, 0x4206).nopr().w(FUNC(sshot_state::sshot_output0_w));
 	map(0x4207, 0x4207).w(FUNC(sshot_state::sshot_output1_w));
 }
 
@@ -392,7 +431,11 @@ void sshot_state::sshot(machine_config &config)
 	PALETTE(config, "palette", palette_device::MONOCHROME);
 
 	// sound hardware
-	//...
+	SPEAKER(config, "mono").front_center();
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(6);
+	m_samples->set_samples_names(sshot_sample_names);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 
@@ -458,6 +501,6 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1979, sshot,     0,        sshot, sshot,    sshot_state, empty_init, ROT0, "Model Racing", "Super Shot (set 1)",                     MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, sshota,    sshot,    sshot, sshot,    sshot_state, empty_init, ROT0, "Model Racing", "Super Shot (set 2)",                     MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAMEL(1980, gunchamps, gunchamp, sshot, gunchamp, sshot_state, empty_init, ROT0, "Model Racing", "Gun Champ (newer, Super Shot hardware)", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE, layout_gunchamps )
+GAME( 1979, sshot,     0,        sshot, sshot,    sshot_state, empty_init, ROT0, "Model Racing", "Super Shot (set 1)",                     MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, sshota,    sshot,    sshot, sshot,    sshot_state, empty_init, ROT0, "Model Racing", "Super Shot (set 2)",                     MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAMEL(1980, gunchamps, gunchamp, sshot, gunchamp, sshot_state, empty_init, ROT0, "Model Racing", "Gun Champ (newer, Super Shot hardware)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE, layout_gunchamps )

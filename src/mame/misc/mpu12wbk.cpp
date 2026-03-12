@@ -1405,6 +1405,7 @@ ROM_START( goldnjkra )
 
 	ROM_REGION( 0x1000, "nvram", 0 )    // first 0x1000 of the battery backed MB8464A-10L
 	ROM_LOAD( "goldnjkra_nvram.bin",  0x0000, 0x1000, CRC(89681d3a) SHA1(923e7bf29d68e0707275e6d66b6d8821e6c2584c) )
+	ROM_FILL(0x110,1,0) // ARCADE, Robbbert 2024-05-16, MT 08863
 
 	ROM_REGION( 0x0800, "nvram2", 0 )    // last 0x0800 of the battery backed MB8464A-10L
 	ROM_LOAD( "goldnjkra_nvram2.bin", 0x0000, 0x0800, CRC(f33601ca) SHA1(246555d62d5a5584d708a80036c244b33cd6002f) )

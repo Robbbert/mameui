@@ -26,6 +26,10 @@ Differences between these sets include
 #include "emupal.h"
 #include "screen.h"
 
+#include "sound/beep.h"
+#include "sound/spkrdev.h"
+#include "speaker.h"
+
 
 namespace {
 
@@ -42,6 +46,8 @@ public:
 		m_video_ram(*this, "video_ram"),
 		m_in1(*this, "IN1"),
 		m_paddle(*this, "PADDLE%u", 0U)
+		, m_beep(*this, "beep_%u",0)
+		, m_speaker(*this, "speaker")
 	{ }
 
 	void fgoal(machine_config &config);
@@ -67,6 +73,8 @@ private:
 	// I/O ports
 	required_ioport m_in1;
 	required_ioport_array<2> m_paddle;
+	required_device_array<beep_device, 4> m_beep;
+	required_device<speaker_sound_device> m_speaker;
 
 	// video-related
 	bitmap_ind16 m_bgbitmap{};
@@ -351,26 +359,34 @@ uint8_t fgoal_state::shifter_reverse_r()
 
 void fgoal_state::sound1_w(uint8_t data)
 {
-	// BIT0 => SX2
-	// BIT1 => SX1
+	// BIT0 => SX2 music
+	// BIT1 => SX1 beepers
 	// BIT2 => SX1
 	// BIT3 => SX1
 	// BIT4 => SX1
 	// BIT5 => SX1
 	// BIT6 => SX1
 	// BIT7 => SX1
+
+	m_speaker->level_w(BIT(data, 0));
+
+	m_beep[3]->set_state((data & 0x02) ? 1 : 0);
+	m_beep[2]->set_state((data & 0x90) ? 1 : 0);
+	m_beep[1]->set_state((data & 0x24) ? 1 : 0); // guess; diagram unreadable
+	m_beep[0]->set_state((data & 0x48) ? 1 : 0); // guess; diagram unreadable
 }
 
 
 void fgoal_state::sound2_w(uint8_t data)
 {
 	// BIT0 => CX0
-	// BIT1 => SX6
+	// BIT1 => SX6 laugh
 	// BIT2 => N/C
 	// BIT3 => SX5
-	// BIT4 => SX4
-	// BIT5 => SX3
+	// BIT4 => SX4 down
+	// BIT5 => SX3 target
 	m_player = data & 1;
+	// SX3/5/6 discrete; still to be done
 }
 
 
@@ -553,7 +569,12 @@ void fgoal_state::fgoal(machine_config &config)
 	PALETTE(config, m_palette, FUNC(fgoal_state::palette), 128 + 16 + 1);
 
 	// sound hardware
-	// TODO: netlist
+	SPEAKER(config, "mono").front_center();
+	BEEP(config, m_beep[0], 246).add_route(ALL_OUTPUTS, "mono", 0.30);
+	BEEP(config, m_beep[1], 492).add_route(ALL_OUTPUTS, "mono", 0.30);
+	BEEP(config, m_beep[2], 984).add_route(ALL_OUTPUTS, "mono", 0.30);
+	BEEP(config, m_beep[3], 1968).add_route(ALL_OUTPUTS, "mono", 0.30);
+	SPEAKER_SOUND(config, m_speaker).add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 
@@ -606,5 +627,5 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1979, fgoal,  0,     fgoal, fgoal, fgoal_state, empty_init, ROT90, "Taito", "Field Goal (set 1)", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
-GAME( 1979, fgoala, fgoal, fgoal, fgoal, fgoal_state, empty_init, ROT90, "Taito", "Field Goal (set 2)", MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, fgoal,  0,     fgoal, fgoal, fgoal_state, empty_init, ROT90, "Taito", "Field Goal (set 1)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1979, fgoala, fgoal, fgoal, fgoal, fgoal_state, empty_init, ROT90, "Taito", "Field Goal (set 2)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
