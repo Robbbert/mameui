@@ -7,6 +7,8 @@
 
 #include "cpu/drcuml.h"
 
+#include <utility>
+
 
 class sharc_disassembler;
 
@@ -396,7 +398,11 @@ private:
 	inline SHARC_REG FABS(int fx);
 	inline SHARC_REG FMIN(int fx, int fy);
 	inline SHARC_REG FMAX(int fx, int fy);
+	inline std::pair<SHARC_REG, SHARC_REG> FADD_FSUB(int fx, int fy);
 	inline uint32_t SCALB(SHARC_REG fx, int ry);
+
+	// Multiplier helpers
+	inline SHARC_REG FMUL(int fx, int fy);
 
 	// ALU fixed-point
 	inline void compute_add(int rn, int rx, int ry);
@@ -447,11 +453,11 @@ private:
 	inline void compute_mul_ssin(int rn, int rx, int ry);
 	inline uint32_t compute_mrf_plus_mul_ssin(int rx, int ry);
 	inline uint32_t compute_mrb_plus_mul_ssin(int rx, int ry);
-	inline void compute_fmul(int rn, int rx, int ry);
+	inline void compute_fmul(int fn, int fx, int fy);
 
 	// Dual add/subtract
 	inline void compute_dual_add_sub(int ra, int rs, int rx, int ry);
-	inline void compute_dual_fadd_fsub(int ra, int rs, int rx, int ry);
+	inline void compute_dual_fadd_fsub(int fa, int fs, int fx, int fy);
 
 	// Fixed-Point multiply/accumulate and add, subtract or average
 	inline void compute_mul_ssfr_add(int rm, int rxm, int rym, int ra, int rxa, int rya);
@@ -462,8 +468,8 @@ private:
 	inline void compute_fmul_fsub(int fm, int fxm, int fym, int fa, int fxa, int fya);
 	inline void compute_fmul_float_scaled(int fm, int fxm, int fym, int fa, int rxa, int rya);
 	inline void compute_fmul_fix_scaled(int fm, int fxm, int fym, int ra, int fxa, int rya);
-	inline void compute_fmul_avg(int fm, int fxm, int fym, int fa, int fxa, int fya);
-	inline void compute_fmul_abs(int fm, int fxm, int fym, int fa, int fxa);
+	inline void compute_fmul_favg(int fm, int fxm, int fym, int fa, int fxa, int fya);
+	inline void compute_fmul_fabs(int fm, int fxm, int fym, int fa, int fxa);
 	inline void compute_fmul_fmax(int fm, int fxm, int fym, int fa, int fxa, int fya);
 	inline void compute_fmul_fmin(int fm, int fxm, int fym, int fa, int fxa, int fya);
 
