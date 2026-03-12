@@ -23,10 +23,10 @@ sound_module::abuffer::abuffer(uint32_t channels) noexcept :
 	clear();
 }
 
-void sound_module::abuffer::set_latency(uint32_t latency)
+void sound_module::abuffer::set_latency(float latency)
 {
 	// set maximum buffers from latency in 20ms steps (the default of 8 is 0.16s)
-	m_max_buffers = std::max(latency + latency / 2, latency + 3);
+	m_max_buffers = std::max<uint32_t>(latency + latency / 2.0f, latency + 3);
 	m_max_buffers = std::clamp(m_max_buffers, 4U, 50U);
 }
 
