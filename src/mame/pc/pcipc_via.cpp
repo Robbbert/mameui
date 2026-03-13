@@ -187,4 +187,4 @@ ROM_END
 } // anonymous namespace
 
 
-COMP(1998, ls5amvp3,    0,     0, mvp3,   0, mvp3_state, empty_init, "Lucky Star", "5AMVP3 (VIA MVP3 chipset)", MACHINE_NOT_WORKING | MACHINE_NO_SOUND )
+COMP(1998, ls5amvp3,    0,     0, mvp3,   0, mvp3_state, empty_init, "Lucky Star", "5AMVP3 (VIA MVP3 chipset)", MACHINE_NOT_WORKING )

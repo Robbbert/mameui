@@ -19,6 +19,7 @@ public:
 	trident_4dwavedx_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	static constexpr feature_type imperfect_features() { return feature::SOUND; }
+	static constexpr feature_type unemulated_features() { return feature::MICROPHONE; }
 
 protected:
 	trident_4dwavedx_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);
@@ -80,6 +81,7 @@ public:
 	void global_control_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 
 	u32 miscint_r(offs_t offset);
+	void miscint_w(offs_t offset, u32 data, u32 mem_mask = ~0);
 
 	u32 bankb_status_r(offs_t offset);
 	void startb_w(offs_t offset, u32 data, u32 mem_mask = ~0);
@@ -117,21 +119,28 @@ private:
 	struct channel_t {
 		u32 lba;
 		u32 cso; // current sample pointer
-		u32 hso; // half trigger irq
-		u32 eso; // end trigger irq
-		s16 delta;
+		u32 eso_cache;
+		u32 hso[8]; // half trigger irq
+		u32 eso[8]; // end trigger irq
+		u16 delta; // 4.12 format / 48 kHz
 
 		u32 gvsel_cache;
 		bool gvsel;
 		bool pan_control;
 		u8 pan_vol;
 		u8 vol;
-		bool is_16bit;
-		bool is_stereo;
-		bool is_signed;
+		u8 play_mode;
+		//bool is_16bit;
+		//bool is_stereo;
+		//bool is_signed;
 		bool loop_enable;
 		u16 ec_envelope;
 		u8 pci_buf;
+
+		// internal variables for interpolation
+		u32 ticks;
+		u32 sample_data;
+		bool dma_fetch;
 	};
 
 	u32 m_global_control;
@@ -144,6 +153,18 @@ private:
 	u32 m_bankB_keyon;
 
 	enum {
+		PB_UNDERUN_IRQ = 0,
+		REC_OVERUN_IRQ,
+		SB_IRQ,
+		MPU401_IRQ,
+		OPL3_IRQ,
+		ADDRESS_IRQ,
+		ENVELOPE_IRQ
+	};
+
+	u32 m_miscint;
+
+	enum {
 		MUSICVOL = 0,
 		WAVEVOL = 1
 	};
@@ -154,6 +175,21 @@ private:
 	channel_t m_channel[64];
 
 	void update_irq_state();
+
+	typedef std::tuple<s16, s16> (t4dwave_pcm_device::*get_sample_func)(u32 sample_data);
+	static const get_sample_func get_sample_table[8];
+
+	std::tuple<s16, s16> get_sample_u8_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s8_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_u8_stereo(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s8_stereo(u32 sample_data);
+	std::tuple<s16, s16> get_sample_u16_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s16_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_u16_stereo(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s16_stereo(u32 sample_data);
+
+
+	std::string print_audio_state(u64 keyon);
 };
 
 DECLARE_DEVICE_TYPE(TRIDENT_4DWAVEDX, trident_4dwavedx_device)
