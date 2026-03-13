@@ -29,6 +29,7 @@
 
 #include "cpu/s2650/s2650.h"
 #include "machine/s2636.h"
+#include "sound/samples.h"
 
 #include "emupal.h"
 #include "screen.h"
@@ -53,6 +54,7 @@ public:
 		m_palette(*this, "palette"),
 		m_videoram(*this, "videoram"),
 		m_s2636_0_ram(*this, "s2636_0_ram")
+		, m_samples(*this, "samples")
 	{ }
 
 	void tinvader(machine_config &config);
@@ -74,6 +76,7 @@ private:
 	// memory pointers
 	required_shared_ptr<uint8_t> m_videoram;
 	required_shared_ptr<uint8_t> m_s2636_0_ram;
+	required_device<samples_device> m_samples;
 
 	bitmap_ind16 m_bitmap;
 	bitmap_ind16 m_spritebitmap;
@@ -81,7 +84,8 @@ private:
 	uint8_t m_collision_sprite = 0;
 	tilemap_t *m_bg_tilemap = nullptr;
 
-	void sound_w(uint8_t data);
+	void inv_sound_w(uint8_t data);
+	void dodgem_sound_w(uint8_t data);
 	void videoram_w(offs_t offset, uint8_t data);
 	uint8_t s2636_r(offs_t offset);
 	void s2636_w(offs_t offset, uint8_t data);
@@ -92,6 +96,7 @@ private:
 	void draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void main_map(address_map &map) ATTR_COLD;
+	void dodgem_map(address_map &map) ATTR_COLD;
 };
 
 
@@ -300,19 +305,55 @@ uint32_t zac1b1120_state::screen_update(screen_device &screen, bitmap_ind16 &bit
     Sound
 *******************************************************************************/
 
-void zac1b1120_state::sound_w(uint8_t data)
+static const char *const zac_sample_names[] =
+{
+	"*invaders",
+	"1",
+	"2",
+	"3",
+	"8",
+	"9",
+	0
+};
+
+void zac1b1120_state::inv_sound_w(uint8_t data)
 {
 	// sounds are NOT the same as space invaders
-	logerror("Register %x = Data %d\n", data & 0xfe, data & 0x01);
+	//logerror("Register %x = Data %d\n", data & 0xfe, data & 0x01);
 
 	// 08 = hit invader
 	// 20 = bonus (extra base)
-	// 40 = saucer
+	// 40 = saucer on screen, but don't play sample - comes from 2636 instead
 	// 84 = fire
 	// 90 = die
-	// c4 = hit saucer
+	// 02 = hit saucer
+	// ufo and walk sounds come out of the 2636.
+
+	if (BIT(data, 0)) // sound enable
+	{
+		if (BIT(data, 1))
+			m_samples->start(2,3); // ufo explode
+		if (BIT(data, 3))
+			m_samples->start(1,2); // invader explode
+		if (BIT(data, 5))
+			m_samples->start(3,4); // bonus
+		if (BIT(data, 7))
+			m_samples->start(0,0); // shoot
+		if (BIT(data, 4))
+			m_samples->start(0,1); // death; use same channel to overrule shoot sound
+	}
 }
 
+void zac1b1120_state::dodgem_sound_w(uint8_t data)
+{
+	// motor sound and bonus tunes come out of the 2636.
+	if (BIT(data, 0))
+		m_samples->start(1,1); // crash
+	if (BIT(data, 1))
+		m_samples->start(2,2); // run over a dot
+	if (BIT(data, 7))
+		m_samples->start(0,0); // skid
+}
 
 /*******************************************************************************
     Address Maps
@@ -324,14 +365,20 @@ void zac1b1120_state::main_map(address_map &map)
 	map(0x1800, 0x1bff).ram().w(FUNC(zac1b1120_state::videoram_w)).share(m_videoram);
 	map(0x1c00, 0x1cff).ram();
 	map(0x1d00, 0x1dff).ram();
-	map(0x1e80, 0x1e80).portr("1E80").w(FUNC(zac1b1120_state::sound_w));
+	map(0x1e80, 0x1e80).portr("1E80").w(FUNC(zac1b1120_state::inv_sound_w));
 	map(0x1e81, 0x1e81).portr("1E81");
 	map(0x1e82, 0x1e82).portr("1E82");
-	map(0x1e85, 0x1e85).portr("1E85"); // Dodgem only
-	map(0x1e86, 0x1e86).portr("1E86").nopw(); // Dodgem only
+	map(0x1e86, 0x1e87).nopw();
 	map(0x1f00, 0x1fff).rw(FUNC(zac1b1120_state::s2636_r), FUNC(zac1b1120_state::s2636_w)).share(m_s2636_0_ram);
 }
 
+void zac1b1120_state::dodgem_map(address_map &map)
+{
+	main_map(map);
+	map(0x1e80, 0x1e80).w(FUNC(zac1b1120_state::dodgem_sound_w));
+	map(0x1e85, 0x1e85).portr("1E85");
+	map(0x1e86, 0x1e86).portr("1E86");
+}
 
 /*******************************************************************************
     Input Ports
@@ -524,6 +571,10 @@ void zac1b1120_state::tinvader(machine_config &config)
 	// sound hardware
 	SPEAKER(config, "mono").front_center();
 	S2636(config, m_s2636, 0).add_route(ALL_OUTPUTS, "mono", 0.25);
+	SAMPLES(config, m_samples);
+	m_samples->set_channels(4);
+	m_samples->set_samples_names(zac_sample_names);
+	m_samples->add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 void zac1b1120_state::dodgem(machine_config &config)
@@ -532,6 +583,8 @@ void zac1b1120_state::dodgem(machine_config &config)
 
 	// XTAL value is different
 	m_maincpu->set_clock(14.318181_MHz_XTAL / 16);
+	m_maincpu->set_addrmap(AS_PROGRAM, &zac1b1120_state::dodgem_map);
+
 	m_screen->set_raw(14.318181_MHz_XTAL, 227 * 4, 0, 180 * 4, 312, 0, 256); // TBD: verify refresh rate
 
 	// TODO: sound board (different from The Invaders)
