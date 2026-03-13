@@ -19,6 +19,7 @@ public:
 	trident_4dwavedx_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	static constexpr feature_type imperfect_features() { return feature::SOUND; }
+	static constexpr feature_type unemulated_features() { return feature::MICROPHONE; }
 
 protected:
 	trident_4dwavedx_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);
@@ -118,8 +119,9 @@ private:
 	struct channel_t {
 		u32 lba;
 		u32 cso; // current sample pointer
-		u32 hso; // half trigger irq
-		u32 eso; // end trigger irq
+		u32 eso_cache;
+		u32 hso[8]; // half trigger irq
+		u32 eso[8]; // end trigger irq
 		u16 delta; // 4.12 format / 48 kHz
 
 		u32 gvsel_cache;
@@ -127,9 +129,10 @@ private:
 		bool pan_control;
 		u8 pan_vol;
 		u8 vol;
-		bool is_16bit;
-		bool is_stereo;
-		bool is_signed;
+		u8 play_mode;
+		//bool is_16bit;
+		//bool is_stereo;
+		//bool is_signed;
 		bool loop_enable;
 		u16 ec_envelope;
 		u8 pci_buf;
@@ -172,6 +175,19 @@ private:
 	channel_t m_channel[64];
 
 	void update_irq_state();
+
+	typedef std::tuple<s16, s16> (t4dwave_pcm_device::*get_sample_func)(u32 sample_data);
+	static const get_sample_func get_sample_table[8];
+
+	std::tuple<s16, s16> get_sample_u8_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s8_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_u8_stereo(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s8_stereo(u32 sample_data);
+	std::tuple<s16, s16> get_sample_u16_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s16_mono(u32 sample_data);
+	std::tuple<s16, s16> get_sample_u16_stereo(u32 sample_data);
+	std::tuple<s16, s16> get_sample_s16_stereo(u32 sample_data);
+
 
 	std::string print_audio_state(u64 keyon);
 };

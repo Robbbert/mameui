@@ -7,7 +7,8 @@ Trident 4DWAVE-DX / 4DWAVE-NX
 AC'97 v1.x (fixed 48 kHz)
 
 TODO:
-- Add mono, 8-bit and unsigned modes;
+- dxdiag: sound test don't playback on lower modes;
+- diablo: ambient BGM doesn't work, SFXs don't playback from time to time;
 - Missing features in Bank A (testable in dxdiag -> Music -> Trident PCI WaveTable MIDI);
 - Move DMA reading out of sound_stream_update;
 - Mix-in wave engine output to AC'97 input;
@@ -384,15 +385,17 @@ void t4dwave_pcm_device::device_start()
 	save_item(STRUCT_MEMBER(m_channel, cso));
 	save_item(STRUCT_MEMBER(m_channel, hso));
 	save_item(STRUCT_MEMBER(m_channel, eso));
+	save_item(STRUCT_MEMBER(m_channel, eso_cache));
 	save_item(STRUCT_MEMBER(m_channel, delta));
 	save_item(STRUCT_MEMBER(m_channel, gvsel_cache));
 	save_item(STRUCT_MEMBER(m_channel, gvsel));
 	save_item(STRUCT_MEMBER(m_channel, pan_control));
 	save_item(STRUCT_MEMBER(m_channel, pan_vol));
 	save_item(STRUCT_MEMBER(m_channel, vol));
-	save_item(STRUCT_MEMBER(m_channel, is_16bit));
-	save_item(STRUCT_MEMBER(m_channel, is_stereo));
-	save_item(STRUCT_MEMBER(m_channel, is_signed));
+	save_item(STRUCT_MEMBER(m_channel, play_mode));
+//	save_item(STRUCT_MEMBER(m_channel, is_16bit));
+//	save_item(STRUCT_MEMBER(m_channel, is_stereo));
+//	save_item(STRUCT_MEMBER(m_channel, is_signed));
 	save_item(STRUCT_MEMBER(m_channel, loop_enable));
 	save_item(STRUCT_MEMBER(m_channel, ec_envelope));
 	save_item(STRUCT_MEMBER(m_channel, pci_buf));
@@ -477,7 +480,8 @@ void t4dwave_pcm_device::global_control_w(offs_t offset, u32 data, u32 mem_mask)
 {
 	COMBINE_DATA(&m_global_control);
 
-	LOG("WAVE A0: Global Control %08x & %08x\n", data, mem_mask);
+	if (mem_mask & 0xffff'ff00)
+		LOG("WAVE A0: Global Control %08x & %08x\n", data, mem_mask);
 
 	if (ACCESSING_BITS_0_7)
 		m_cir = data & 0x3f;
@@ -566,7 +570,7 @@ u32 t4dwave_pcm_device::cso_r(offs_t offset)
 
 	if (!machine().side_effects_disabled())
 		m_stream->update();
-	return (channel.cso >> 2) << 16;
+	return (channel.cso) << 16;
 }
 
 void t4dwave_pcm_device::cso_w(offs_t offset, u32 data, u32 mem_mask)
@@ -574,7 +578,7 @@ void t4dwave_pcm_device::cso_w(offs_t offset, u32 data, u32 mem_mask)
 	channel_t &channel = m_channel[m_cir];
 
 	if (ACCESSING_BITS_16_31)
-		channel.cso = (data >> 16) << 2;
+		channel.cso = (data >> 16);
 }
 
 void t4dwave_pcm_device::lba_w(offs_t offset, u32 data, u32 mem_mask)
@@ -592,7 +596,7 @@ u32 t4dwave_pcm_device::eso_r(offs_t offset)
 {
 	channel_t &channel = m_channel[m_cir];
 
-	return ((channel.eso >> 2) << 16) | (channel.delta & 0xffff);
+	return (channel.eso_cache << 16) | (channel.delta & 0xffff);
 }
 
 void t4dwave_pcm_device::eso_w(offs_t offset, u32 data, u32 mem_mask)
@@ -601,8 +605,20 @@ void t4dwave_pcm_device::eso_w(offs_t offset, u32 data, u32 mem_mask)
 
 	if (ACCESSING_BITS_16_31)
 	{
-		channel.eso = ((data >> 16) + 1) << 2;
-		channel.hso = channel.eso >> 1;
+		channel.eso_cache = (data >> 16);
+		const u32 eso_shift_table[4] = { 2, 1, 1, 0 };
+
+		// prepare ESO/HSO table here, actual range depends on mode used
+		for (int i = 0; i < 8; i += 2)
+		{
+			const u32 eso_shift = eso_shift_table[i >> 1];
+			// TODO: on 16-bit stereo loops clearly ends at +1, others apparently don't
+			channel.eso[i + 0] = (channel.eso_cache + 1) >> eso_shift;
+			channel.eso[i + 1] = channel.eso[i + 0];
+
+			channel.hso[i + 0] = channel.eso[i + 0] >> 1;
+			channel.hso[i + 1] = channel.hso[i + 0];
+		}
 	}
 	if (ACCESSING_BITS_0_15)
 	{
@@ -629,9 +645,10 @@ void t4dwave_pcm_device::gvsel_w(offs_t offset, u32 data, u32 mem_mask)
 	channel.pan_control = !!BIT(channel.gvsel_cache, 30);
 	channel.pan_vol =     (channel.gvsel_cache >> 24) & 0x3f;
 	channel.vol =         (channel.gvsel_cache >> 16) & 0xff;
-	channel.is_16bit =    !!BIT(channel.gvsel_cache, 15);
-	channel.is_stereo =   !!BIT(channel.gvsel_cache, 14);
-	channel.is_signed =   !!BIT(channel.gvsel_cache, 13);
+	channel.play_mode =   (channel.gvsel_cache >> 13) & 7;
+//	channel.is_16bit =    !!BIT(channel.gvsel_cache, 15);
+//	channel.is_stereo =   !!BIT(channel.gvsel_cache, 14);
+//	channel.is_signed =   !!BIT(channel.gvsel_cache, 13);
 	channel.loop_enable = !!BIT(channel.gvsel_cache, 12);
 	channel.ec_envelope = channel.gvsel_cache & 0xfff;
 
@@ -662,6 +679,17 @@ void t4dwave_pcm_device::update_irq_state()
 
 std::string t4dwave_pcm_device::print_audio_state(u64 keyon)
 {
+	std::map<u8, std::string> sample_modes = {
+		{ 0, "u8  mono  " },
+		{ 1, "s8  mono  " },
+		{ 2, "u8  stereo" },
+		{ 3, "s8  stereo" },
+		{ 4, "u16 mono  " },
+		{ 5, "s16 mono  " },
+		{ 6, "u16 stereo" },
+		{ 7, "s16 stereo" }
+	};
+
 	std::ostringstream outbuffer;
 
 	util::stream_format(outbuffer, "LFO_A & GC & CIR %08x | MISCINT %08x\n", m_global_control, m_miscint);
@@ -670,16 +698,86 @@ std::string t4dwave_pcm_device::print_audio_state(u64 keyon)
 	{
 		channel_t &channel = m_channel[ch];
 
-		if (!BIT(keyon, ch) || channel.cso >= channel.eso)
+		if (!BIT(keyon, ch) || channel.cso >= channel.eso[channel.play_mode])
 			continue;
-		util::stream_format(outbuffer, "%d: LBA %08x -> CSO %05x ESO %05x DELTA %04x |16-bit %d sign %d stereo %d\n", ch, channel.lba, channel.cso, channel.eso, channel.delta, channel.is_16bit, channel.is_signed, channel.is_stereo);
+
+		util::stream_format(outbuffer, "%d: LBA %08x -> CSO %05x ESO %05x DELTA %04x |%s loop %d\n",
+			ch, channel.lba, channel.cso, channel.eso[channel.play_mode], channel.delta,
+			sample_modes.at(channel.play_mode), channel.loop_enable);
 	}
 
 	return outbuffer.str();
 }
 
+const t4dwave_pcm_device::get_sample_func t4dwave_pcm_device::get_sample_table[8] =
+{
+	&t4dwave_pcm_device::get_sample_u8_mono,
+	&t4dwave_pcm_device::get_sample_s8_mono,
+	&t4dwave_pcm_device::get_sample_u8_stereo,
+	&t4dwave_pcm_device::get_sample_s8_stereo,
+	&t4dwave_pcm_device::get_sample_u16_mono,
+	&t4dwave_pcm_device::get_sample_s16_mono,
+	&t4dwave_pcm_device::get_sample_u16_stereo,
+	&t4dwave_pcm_device::get_sample_s16_stereo
+};
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_u8_mono(u32 sample_data)
+{
+	u16 sample = (sample_data & 0xff) ^ 0x80;
+	s16 out = (s16)(sample << 8);
+	return std::make_tuple(out, out);
+}
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_s8_mono(u32 sample_data)
+{
+	u16 sample = (sample_data & 0xff);
+	s16 out = (s16)(sample << 8);
+	return std::make_tuple(out, out);
+}
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_u8_stereo(u32 sample_data)
+{
+	u16 sample = (sample_data & 0xffff) ^ 0x8080;
+	return std::make_tuple((s16)(sample & 0xff00), (s16)((sample & 0x00ff) << 8));
+}
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_s8_stereo(u32 sample_data)
+{
+	u16 sample = (sample_data & 0xffff);
+	return std::make_tuple((s16)(sample & 0xff00), (s16)((sample & 0x00ff) << 8));
+}
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_u16_mono(u32 sample_data)
+{
+	u16 sample = (sample_data & 0xffff) ^ 0x8000;
+	s16 out = (s16)sample;
+	return std::make_tuple(out, out);
+}
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_s16_mono(u32 sample_data)
+{
+	u16 sample = (sample_data & 0xffff);
+	s16 out = (s16)sample;
+	return std::make_tuple(out, out);
+}
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_u16_stereo(u32 sample_data)
+{
+	u16 lsample = (sample_data >> 16) ^ 0x8000;
+	u16 rsample = (sample_data & 0xffff) ^ 0x8000;
+	return std::make_tuple((s16)lsample, (s16)rsample);
+}
+
+std::tuple<s16, s16> t4dwave_pcm_device::get_sample_s16_stereo(u32 sample_data)
+{
+	return std::make_tuple((s16)(sample_data >> 16), (s16)(sample_data & 0xffff));
+}
+
 void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
 {
+	const u32 cso_increment_table[8] = { 1, 1, 2, 2, 2, 2, 4, 4 };
+	const u32 sample_shift[8] = { 8, 8, 16, 16, 16, 16, 32, 32 };
+
 	const u64 keyon = m_bankA_keyon | ((u64)m_bankB_keyon << 32);
 
 	if (!keyon)
@@ -691,25 +789,26 @@ void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
 	for (int ch = 0; ch < 64; ch ++)
 	{
 		channel_t &channel = m_channel[ch];
+		const u8 play_mode = channel.play_mode;
 
-		if (!BIT(keyon, ch) || channel.cso >= channel.eso)
+		if (!BIT(keyon, ch) || channel.cso >= channel.eso[play_mode])
 			continue;
 
 		const bool is_bankB = !!BIT(ch, 5);
 		const u8 chB = ch - 32;
 
-		s16 left = 0, right = 0;
-
 		for (int sampindex = 0; sampindex < stream.samples(); sampindex++)
 		{
 			if (channel.dma_fetch)
 			{
-				channel.sample_data = m_datain_cb(channel.lba + channel.cso);
+				if (channel.pci_buf)
+					channel.sample_data >>= sample_shift[channel.play_mode];
+				else
+					channel.sample_data = m_datain_cb(channel.lba + (channel.cso << 2));
 				channel.dma_fetch = false;
 			}
 
-			left  = (s16)(channel.sample_data >> 16);
-			right = (s16)(channel.sample_data & 0xffff);
+			auto [left, right] = (this->*get_sample_table[channel.play_mode])(channel.sample_data);
 
 			stream.add_int(0, sampindex, left  * m_volL[channel.gvsel], 32768 << 6);
 			stream.add_int(1, sampindex, right * m_volR[channel.gvsel], 32768 << 6);
@@ -720,38 +819,43 @@ void t4dwave_pcm_device::sound_stream_update(sound_stream &stream)
 				channel.dma_fetch = true;
 				channel.ticks -= 0x1000;
 
-				channel.cso += 4;
-				if (channel.cso >= channel.hso)
+				channel.pci_buf += cso_increment_table[channel.play_mode];
+				channel.pci_buf &= 3;
+				if (channel.pci_buf == 0)
 				{
-					// MIDLP_IE
-					if (BIT(m_global_control, 13))
+					channel.cso ++;
+					if (channel.cso >= channel.hso[play_mode])
 					{
-						if (is_bankB)
-							m_ainb |= 1 << chB;
-						else
-							m_aina |= 1 << ch;
-						update_irq_state();
+						// MIDLP_IE
+						if (BIT(m_global_control, 13))
+						{
+							if (is_bankB)
+								m_ainb |= 1 << chB;
+							else
+								m_aina |= 1 << ch;
+							update_irq_state();
+						}
 					}
-				}
-				if (channel.cso >= channel.eso)
-				{
-					channel.cso = 0;
-					// ENDLP_IE
-					if (BIT(m_global_control, 12))
+					if (channel.cso >= channel.eso[play_mode])
 					{
-						if (is_bankB)
-							m_ainb |= 1 << chB;
-						else
-							m_aina |= 1 << ch;
-						update_irq_state();
-					}
-					if (!channel.loop_enable)
-					{
-						if (is_bankB)
-							m_bankB_keyon &= ~(1 << chB);
-						else
-							m_bankA_keyon &= ~(1 << ch);
-						continue;
+						channel.cso = 0;
+						// ENDLP_IE
+						if (BIT(m_global_control, 12))
+						{
+							if (is_bankB)
+								m_ainb |= 1 << chB;
+							else
+								m_aina |= 1 << ch;
+							update_irq_state();
+						}
+						if (!channel.loop_enable)
+						{
+							if (is_bankB)
+								m_bankB_keyon &= ~(1 << chB);
+							else
+								m_bankA_keyon &= ~(1 << ch);
+							continue;
+						}
 					}
 				}
 			}
