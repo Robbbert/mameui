@@ -2,24 +2,21 @@
 // copyright-holders:Nicola Salmoria, Dan Boris
 /***************************************************************************
 
-    Sasuke vs. Commander
-    SNK
+SNK Sasuke vs. Commander
 
-    driver by ?
+Games supported:
+    * Sasuke vs. Commander
+    * Satan of Saturn          [2 sets]
+    * Zarzon (clone of 'satansat')
+    * Vanguard                 [3 sets]
+    * Fantasy                  [3 sets]       G-202
+    * Pioneer Balloon                         G-204
+    * Nibbler                  [4 sets]       G-208
 
-    Games supported:
-        * Sasuke vs. Commander
-        * Satan of Saturn          [2 sets]
-        * Zarzon (clone of 'satansat')
-        * Vanguard                 [3 sets]
-        * Fantasy                  [3 sets]       G-202
-        * Pioneer Balloon                         G-204
-        * Nibbler                  [4 sets]       G-208
-
-    DIP locations verified from manual for:
-        * Zarzon    (Satan of Saturn uses the same code, so I guess locations are the same)
-        * Vanguard
-        * Nibbler
+DIP locations verified from manual for:
+    * Zarzon    (Satan of Saturn uses the same code, so I guess locations are the same)
+    * Vanguard
+    * Nibbler
 
 ****************************************************************************
 
@@ -287,12 +284,16 @@ Stephh's notes (based on the games M6502 code and some tests) :
 #include "sound/samples.h"
 #include "sound/sn76477.h"
 #include "video/mc6845.h"
+
 #include "screen.h"
 #include "speaker.h"
 
 
-#define MASTER_CLOCK    XTAL(11'289'000)
-
+/*************************************
+ *
+ *  Machine initialisation
+ *
+ *************************************/
 
 void snk6502_state::machine_start()
 {
@@ -304,13 +305,7 @@ void snk6502_state::machine_start()
 	save_item(NAME(m_irq_mask)); // satansat only
 }
 
-/* binary counter (1.4MHz update) */
-TIMER_DEVICE_CALLBACK_MEMBER(snk6502_state::sasuke_update_counter)
-{
-	m_sasuke_counter += 0x10;
-}
-
-void snk6502_state::sasuke_start_counter()
+void snk6502_state::machine_reset()
 {
 	m_sasuke_counter = 0;
 }
@@ -322,9 +317,15 @@ void snk6502_state::sasuke_start_counter()
  *
  *************************************/
 
+/* binary counter (1.4MHz update) */
+TIMER_DEVICE_CALLBACK_MEMBER(snk6502_state::sasuke_update_counter)
+{
+	m_sasuke_counter = (m_sasuke_counter + 1) & 0xf;
+}
+
 ioport_value snk6502_state::sasuke_count_r()
 {
-	return (m_sasuke_counter >> 4);
+	return m_sasuke_counter;
 }
 
 
@@ -814,18 +815,6 @@ INTERRUPT_GEN_MEMBER(snk6502_state::snk6502_interrupt)
 
 /*************************************
  *
- *  Machine initialisation
- *
- *************************************/
-
-MACHINE_RESET_MEMBER(snk6502_state,sasuke)
-{
-	sasuke_start_counter();
-}
-
-
-/*************************************
- *
  *  Machine drivers
  *
  *************************************/
@@ -833,30 +822,25 @@ MACHINE_RESET_MEMBER(snk6502_state,sasuke)
 void snk6502_state::sasuke(machine_config &config)
 {
 	// basic machine hardware
-	M6502(config, m_maincpu, MASTER_CLOCK / 16); // 700 kHz
+	M6502(config, m_maincpu, 11.289_MHz_XTAL / 16); // 700 kHz
 	m_maincpu->set_addrmap(AS_PROGRAM, &snk6502_state::sasuke_map);
 	m_maincpu->set_vblank_int("screen", FUNC(snk6502_state::satansat_interrupt));
 
-	MCFG_MACHINE_RESET_OVERRIDE(snk6502_state,sasuke)
-
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_refresh_hz((MASTER_CLOCK / 16) / (45 * 32 * 8));
-	screen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
-	screen.set_size(32*8, 32*8);
-	screen.set_visarea(0*8, 32*8-1, 0*8, 28*8-1);
+	screen.set_raw(11.289_MHz_XTAL / 2, 360, 256, 0, 262, 0, 224); // from crtc
 	screen.set_screen_update(FUNC(snk6502_state::screen_update));
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_sasuke);
 	PALETTE(config, m_palette, FUNC(snk6502_state::satansat_palette), 32);
 	MCFG_VIDEO_START_OVERRIDE(snk6502_state,satansat)
 
-	mc6845_device &crtc(MC6845(config, "crtc", MASTER_CLOCK / 16));
+	mc6845_device &crtc(MC6845(config, "crtc", 11.289_MHz_XTAL / 16));
 	crtc.set_screen("screen");
 	crtc.set_show_border_area(false);
 	crtc.set_char_width(8);
 
-	TIMER(config, "sasuke_timer").configure_periodic(FUNC(snk6502_state::sasuke_update_counter), attotime::from_hz(MASTER_CLOCK / 8));
+	TIMER(config, "sasuke_timer").configure_periodic(FUNC(snk6502_state::sasuke_update_counter), attotime::from_hz(11.289_MHz_XTAL / 8));
 
 	// sound hardware
 	SASUKE_SOUND(config, "snk6502", 0);
@@ -879,7 +863,7 @@ void snk6502_state::satansat(machine_config &config)
 void vanguard_state::vanguard(machine_config &config)
 {
 	// basic machine hardware
-	M6502(config, m_maincpu, MASTER_CLOCK / 8); // runs twice as fast as CRTC
+	M6502(config, m_maincpu, 11.289_MHz_XTAL / 8); // runs twice as fast as CRTC
 	m_maincpu->set_addrmap(AS_PROGRAM, &vanguard_state::vanguard_map);
 	m_maincpu->set_vblank_int("screen", FUNC(vanguard_state::snk6502_interrupt));
 
@@ -890,17 +874,14 @@ void vanguard_state::vanguard(machine_config &config)
 
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_refresh_hz((MASTER_CLOCK / 16) / (45 * 32 * 8));
-	screen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
-	screen.set_size(32*8, 32*8);
-	screen.set_visarea(0*8, 32*8-1, 0*8, 28*8-1);
+	screen.set_raw(11.289_MHz_XTAL / 2, 360, 256, 0, 262, 0, 224); // from crtc
 	screen.set_screen_update(FUNC(vanguard_state::screen_update));
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_vanguard);
 	PALETTE(config, m_palette, FUNC(vanguard_state::snk6502_palette), 64);
 	MCFG_VIDEO_START_OVERRIDE(vanguard_state,snk6502)
 
-	mc6845_device &crtc(MC6845(config, "crtc", MASTER_CLOCK / 16));
+	mc6845_device &crtc(MC6845(config, "crtc", 11.289_MHz_XTAL / 16));
 	crtc.set_screen("screen");
 	crtc.set_show_border_area(false);
 	crtc.set_char_width(8);
@@ -936,7 +917,7 @@ void fantasy_state::pballoon(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &fantasy_state::pballoon_map);
 	m_highmem->set_addrmap(AS_PROGRAM, &fantasy_state::pballoon_upper_map);
 
-	MCFG_VIDEO_START_OVERRIDE(snk6502_state, pballoon)
+	MCFG_VIDEO_START_OVERRIDE(fantasy_state, pballoon)
 
 	// sound hardware
 	PBALLOON_SOUND(config.replace(), "snk6502", 0);

@@ -2,7 +2,7 @@
 // copyright-holders:Nicola Salmoria, Dan Boris
 /*************************************************************************
 
-    rokola hardware
+    SNK Sasuke vs. Commander
 
 *************************************************************************/
 #ifndef MAME_SNK_SNK6502_H
@@ -38,8 +38,6 @@ public:
 
 	ioport_value sasuke_count_r();
 	DECLARE_INPUT_CHANGED_MEMBER(coin_inserted);
-
-	DECLARE_VIDEO_START(pballoon);
 
 protected:
 	required_device<cpu_device> m_maincpu;
@@ -77,10 +75,11 @@ protected:
 	TILE_GET_INFO_MEMBER(satansat_get_fg_tile_info);
 
 	virtual void machine_start() override ATTR_COLD;
-	DECLARE_MACHINE_RESET(sasuke);
-	DECLARE_VIDEO_START(satansat);
-	void satansat_palette(palette_device &palette);
+	virtual void machine_reset() override ATTR_COLD;
 	DECLARE_VIDEO_START(snk6502);
+	DECLARE_VIDEO_START(satansat);
+
+	void satansat_palette(palette_device &palette);
 	void snk6502_palette(palette_device &palette);
 
 	uint32_t screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect);
@@ -136,6 +135,8 @@ private:
 	void fantasy_map(address_map &map) ATTR_COLD;
 	void pballoon_map(address_map &map) ATTR_COLD;
 	void pballoon_upper_map(address_map &map) ATTR_COLD;
+
+	DECLARE_VIDEO_START(pballoon);
 
 	required_device<fantasy_sound_device> m_sound;
 };
