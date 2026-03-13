@@ -474,13 +474,13 @@ inline void x1_020_dx_101_device::drawgfx_line(
 	if (flipy)
 		line = 7 - line;
 
-	const uint8_t* const source = addr + line * 8;
+	const uint8_t *const source = addr + line * 8;
 
 	if (xzoom < 0x10000) // shrink
 	{
-		const int x0 = flipx ? (base_sx + (8 * xzoom) - xzoom) : (base_sx);
+		const int x0 = flipx ? (base_sx + (8 * xzoom) - xzoom) : base_sx;
 		const int x1 = flipx ? (base_sx - xzoom) : (x0 + (8 * xzoom));
-		const int dx = flipx ? (-xzoom) : (xzoom);
+		const int dx = flipx ? -xzoom : xzoom;
 
 		for (int sx = x0, column = 0; sx != x1; sx += dx, column++)
 		{
@@ -489,21 +489,11 @@ inline void x1_020_dx_101_device::drawgfx_line(
 	}
 	else // enlarge or no zoom
 	{
-		const int x0 = (base_sx);
-		const int x1 = (x0 + (8 * xzoom));
+		const int x0 = base_sx;
+		const int x1 = x0 + (8 * xzoom);
+		const int column_inc = flipx ? -1 : 1;
 
-		int column, column_inc;
-		if (!flipx)
-		{
-			column = 0;
-			column_inc = 1;
-		}
-		else
-		{
-			column = 7;
-			column_inc = -1;
-		}
-
+		int column = flipx ? 7 : 0;
 		uint32_t countx = 0;
 		for (int sx = x0; sx < x1; sx += 0x10000)
 		{
@@ -574,10 +564,10 @@ inline void x1_020_dx_101_device::get_tile(
 
 int x1_020_dx_101_device::calculate_global_xoffset(bool nozoom_fixedpalette_fixedposition)
 {
-	/*
+#if 0
 	int global_xoffset = (m_vregs[0x12/2] & 0x7ff); // and 0x10/2 for low bits
 	if (global_xoffset & 0x400)
-	    global_xoffset -= 0x800;
+		global_xoffset -= 0x800;
 
 	// funcube3 sets a global xoffset of -1 causing a single pixel shift, does something else compensate for it?
 	// note, it also writes a different address for the sprite buffering (related?) but doesn't also have the global zoom set to negative like Star Audition which also writes there.
@@ -588,9 +578,9 @@ int x1_020_dx_101_device::calculate_global_xoffset(bool nozoom_fixedpalette_fixe
 	// TODO: properly render negative zoom sprites
 	if (global_xzoom & 0x400)
 	{
-	    global_xoffset -= 0x14f;
+		global_xoffset -= 0x14f;
 	}
-	*/
+#endif
 
 	int global_xoffset = 0;
 
@@ -858,7 +848,7 @@ void x1_020_dx_101_device::draw_sprites_line(bitmap_ind16 &bitmap, const rectang
 
 					// see myangel, myangel2 and grdians
 					int basecode = (code &= ~((sizex + 1) * (sizey + 1) - 1)) + 
-						((flipy ? sizey - y : y) * (sizex + 1)) + (flipx ? sizex : 0);
+						((flipy ? (sizey - y) : y) * (sizex + 1)) + (flipx ? sizex : 0);
 
 					const int code_inc = flipx ? -1 : 1;
 
