@@ -11,7 +11,6 @@
 #pragma once
 
 #include "machine/bankdev.h"
-#include "machine/timer.h"
 
 #include "emupal.h"
 #include "tilemap.h"
@@ -49,7 +48,6 @@ protected:
 	required_shared_ptr<uint8_t> m_colorram;
 	required_shared_ptr<uint8_t> m_charram;
 
-	uint8_t m_sasuke_counter = 0;
 	int m_charbank = 0;
 	int m_backcolor = 0;
 	tilemap_t *m_bg_tilemap = nullptr;
@@ -75,7 +73,6 @@ protected:
 	TILE_GET_INFO_MEMBER(satansat_get_fg_tile_info);
 
 	virtual void machine_start() override ATTR_COLD;
-	virtual void machine_reset() override ATTR_COLD;
 	DECLARE_VIDEO_START(snk6502);
 	DECLARE_VIDEO_START(satansat);
 
@@ -86,7 +83,6 @@ protected:
 
 	INTERRUPT_GEN_MEMBER(satansat_interrupt);
 	INTERRUPT_GEN_MEMBER(snk6502_interrupt);
-	TIMER_DEVICE_CALLBACK_MEMBER(sasuke_update_counter);
 
 	void sasuke_start_counter();
 

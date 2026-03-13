@@ -18,6 +18,13 @@ DIP locations verified from manual for:
     * Vanguard
     * Nibbler
 
+TODO:
+    * sasuke/satansat/vanguard discrete sound
+    * vanguard/fantasy speech (hd38880/hd38882 emulation)
+    * music freq (Satan of Saturn and clone)
+    * correct music waveform/volume control
+    * correct ROM names
+
 ****************************************************************************
 
 Vanguard memory map (preliminary)
@@ -264,18 +271,6 @@ Stephh's notes (based on the games M6502 code and some tests) :
 
 ***************************************************************************/
 
-/*
-
-    TODO:
-
-    - sasuke/satansat/vanguard discrete sound
-    - vanguard/fantasy speech (hd38880/hd38882 emulation)
-    - music freq (Satan of Saturn and clone)
-    - correct music waveform/volume control
-    - correct ROM names
-
-*/
-
 #include "emu.h"
 #include "snk6502.h"
 #include "snk6502_a.h"
@@ -299,15 +294,9 @@ void snk6502_state::machine_start()
 {
 	// these could be split in different MACHINE_STARTs to save only
 	// what's actually needed, but is the extra complexity really worth it?
-	save_item(NAME(m_sasuke_counter)); // sasuke only
 	save_item(NAME(m_charbank));
 	save_item(NAME(m_backcolor));
 	save_item(NAME(m_irq_mask)); // satansat only
-}
-
-void snk6502_state::machine_reset()
-{
-	m_sasuke_counter = 0;
 }
 
 
@@ -317,15 +306,15 @@ void snk6502_state::machine_reset()
  *
  *************************************/
 
-/* binary counter (1.4MHz update) */
-TIMER_DEVICE_CALLBACK_MEMBER(snk6502_state::sasuke_update_counter)
+INPUT_CHANGED_MEMBER(snk6502_state::coin_inserted)
 {
-	m_sasuke_counter = (m_sasuke_counter + 1) & 0xf;
+	m_maincpu->set_input_line(INPUT_LINE_NMI, newval ? CLEAR_LINE : ASSERT_LINE);
 }
 
 ioport_value snk6502_state::sasuke_count_r()
 {
-	return m_sasuke_counter;
+	// binary counter (1.4MHz update)
+	return (machine().time().as_ticks(m_maincpu->clock() * 2)) & 0xf;
 }
 
 
@@ -472,11 +461,6 @@ void fantasy_state::pballoon_upper_map(address_map &map)
  *  Port definitions
  *
  *************************************/
-
-INPUT_CHANGED_MEMBER(snk6502_state::coin_inserted)
-{
-	m_maincpu->set_input_line(INPUT_LINE_NMI, newval ? CLEAR_LINE : ASSERT_LINE);
-}
 
 static INPUT_PORTS_START( snk6502_generic_joy8way )
 	PORT_START("IN0")
@@ -839,8 +823,6 @@ void snk6502_state::sasuke(machine_config &config)
 	crtc.set_screen("screen");
 	crtc.set_show_border_area(false);
 	crtc.set_char_width(8);
-
-	TIMER(config, "sasuke_timer").configure_periodic(FUNC(snk6502_state::sasuke_update_counter), attotime::from_hz(11.289_MHz_XTAL / 8));
 
 	// sound hardware
 	SASUKE_SOUND(config, "snk6502", 0);
