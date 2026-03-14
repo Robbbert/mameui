@@ -38,7 +38,6 @@
 #include "machine/vt82c586b_isa.h"
 #include "machine/vt82c586b_usb.h"
 #include "machine/vt82c598mvp.h"
-//#include "video/voodoo_pci.h"
 
 #include "softlist.h"
 #include "softlist_dev.h"
