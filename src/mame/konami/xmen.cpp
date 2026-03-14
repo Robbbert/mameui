@@ -3,8 +3,7 @@
 
 /***************************************************************************
 
-X-Men
-
+Konami X-Men
 driver by Nicola Salmoria
 
 notes:
@@ -142,7 +141,7 @@ public:
 
 	void xmen6p(machine_config &config);
 
-	int frame_r();
+	int field_r() { return (m_screen->frame_number() & 1) ^ m_screen->vblank(); }
 
 protected:
 	virtual void video_start() override ATTR_COLD;
@@ -273,19 +272,13 @@ uint32_t xmen6p_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap
 	return 0;
 }
 
-int xmen6p_state::frame_r()
-{
-	// toggles at scanline 0
-	return (m_screen->frame_number() & 1) ^ (m_screen->vpos() < m_screen->visible_area().top()) ? 1 : 0;
-}
-
 // my lefts and rights are mixed up in several places..
 void xmen6p_state::screen_vblank(int state)
 {
 	// rising edge
 	if (state)
 	{
-		int index = frame_r();
+		int index = field_r();
 		bitmap_ind16 &renderbitmap = m_screen_bitmap[index];
 		rectangle cliprect = m_screen->cliprect();
 
@@ -581,7 +574,7 @@ static INPUT_PORTS_START( xmen6p )
 	PORT_BIT( 0x1000, IP_ACTIVE_LOW, IPT_START5 ) // not verified
 	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_START6 ) // not verified
 	PORT_SERVICE_NO_TOGGLE( 0x4000, IP_ACTIVE_LOW )
-	PORT_BIT( 0x8000, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_MEMBER(FUNC(xmen6p_state::frame_r))  // screen indicator?
+	PORT_BIT( 0x8000, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_MEMBER(FUNC(xmen6p_state::field_r)) // screen indicator?
 
 	PORT_START( "EEPROMOUT" )
 	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::di_write))
@@ -627,8 +620,12 @@ TIMER_DEVICE_CALLBACK_MEMBER(xmen_state::scanline)
 {
 	int const scanline = param;
 
-	if (scanline == 0 && m_irq5_enable && m_k053246->k053246_is_irq_enabled()) // sprite DMA end irq
-		m_maincpu->set_input_line(5, ASSERT_LINE);
+	if (scanline == 0)
+	{
+		// sprite DMA end irq
+		if (m_irq5_enable && m_k053246->k053246_is_irq_enabled())
+			m_maincpu->set_input_line(5, ASSERT_LINE);
+	}
 }
 
 void xmen_state::sound_hardware(machine_config &config)
@@ -722,11 +719,11 @@ void xmen6p_state::xmen6p(machine_config &config)
 
 	m_screen->set_raw(24_MHz_XTAL / 4, 384, 0, 320-32, 264, 16, 240);
 	m_screen->set_screen_update(FUNC(xmen6p_state::screen_update<0>));
+	m_screen->screen_vblank().set(FUNC(xmen6p_state::screen_vblank));
 
 	screen_device &screen2(SCREEN(config, "screen2", SCREEN_TYPE_RASTER));
 	screen2.set_raw(24_MHz_XTAL / 4, 384, 0+32, 320, 264, 16, 240);
 	screen2.set_screen_update(FUNC(xmen6p_state::screen_update<1>));
-	screen2.screen_vblank().set(FUNC(xmen6p_state::screen_vblank));
 	screen2.set_palette("palette");
 
 	m_k053246->set_screen(m_screen);
