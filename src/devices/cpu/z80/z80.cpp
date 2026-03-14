@@ -676,6 +676,7 @@ void z80_device::device_start()
 	save_item(NAME(m_shared_data.w));
 	save_item(NAME(m_shared_data2.w));
 	save_item(NAME(m_rtemp));
+	save_item(NAME(m_reset_time));
 	save_item(NAME(m_ref));
 
 	// Reset registers to their initial values
@@ -771,6 +772,8 @@ void z80_device::device_reset()
 	m_iff1 = 0;
 	m_iff2 = 0;
 
+	m_reset_time = machine().time();
+
 	set_service_attention<SA_NMI_PENDING, 0>();
 	set_service_attention<SA_AFTER_EI, 0>();
 	set_service_attention<SA_AFTER_LDAIR, 0>();
@@ -795,8 +798,8 @@ void z80_device::execute_set_input(int inputnum, int state)
 		break;
 
 	case INPUT_LINE_NMI:
-		// mark an NMI pending on the rising edge
-		if (m_nmi_state == CLEAR_LINE && state != CLEAR_LINE)
+		// mark an NMI pending on the rising edge (not when it's at the same time RESET is cleared)
+		if (m_nmi_state == CLEAR_LINE && state != CLEAR_LINE && machine().time() > m_reset_time)
 			set_service_attention<SA_NMI_PENDING, 1>();
 		m_nmi_state = state;
 		break;

@@ -515,6 +515,7 @@ void i8086_common_cpu_device::device_start()
 	save_item(NAME(m_seg_prefix));
 	save_item(NAME(m_seg_prefix_next));
 	save_item(NAME(m_prefix_seg));
+	save_item(NAME(m_reset_time));
 	save_item(NAME(m_halt));
 
 	// Register state for debugger
@@ -575,6 +576,7 @@ void i8086_common_cpu_device::device_reset()
 	m_modrm = 0;
 	m_dst = 0;
 	m_src = 0;
+	m_reset_time = machine().time();
 	m_halt = false;
 	m_lock = false;
 	m_easeg = DS;
@@ -606,10 +608,9 @@ void i8086_common_cpu_device::execute_set_input( int inptnum, int state )
 {
 	if (inptnum == INPUT_LINE_NMI)
 	{
-		if (!m_nmi_state && state)
-		{
+		// don't accept NMI edge at exactly the same time RESET is cleared
+		if (!m_nmi_state && state && machine().time() > m_reset_time)
 			m_pending_irq |= NMI_IRQ;
-		}
 		m_nmi_state = state;
 	}
 	else if (inptnum == INPUT_LINE_TEST)
@@ -619,13 +620,9 @@ void i8086_common_cpu_device::execute_set_input( int inptnum, int state )
 	else
 	{
 		if (state == CLEAR_LINE)
-		{
 			m_pending_irq &= ~INT_IRQ;
-		}
 		else
-		{
 			m_pending_irq |= INT_IRQ;
-		}
 	}
 }
 
