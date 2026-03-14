@@ -276,7 +276,7 @@ uint32_t xmen6p_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap
 int xmen6p_state::frame_r()
 {
 	// toggles at scanline 0
-	return (m_screen->frame_number() & 1) ^ (m_screen->vpos() < m_screen->visible_area().top());
+	return (m_screen->frame_number() & 1) ^ (m_screen->vpos() < m_screen->visible_area().top()) ? 1 : 0;
 }
 
 // my lefts and rights are mixed up in several places..
