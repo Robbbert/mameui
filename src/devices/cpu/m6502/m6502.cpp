@@ -88,7 +88,6 @@ void m6502_device::init()
 	save_item(NAME(m_inst_substate));
 	save_item(NAME(m_inst_state_base));
 	save_item(NAME(m_inhibit_interrupts));
-	save_item(NAME(m_reset_time));
 
 	set_icountptr(m_icount);
 
@@ -128,7 +127,6 @@ void m6502_device::device_reset()
 	m_sync = false;
 	m_sync_w(CLEAR_LINE);
 	m_inhibit_interrupts = false;
-	m_reset_time = machine().time();
 }
 
 
@@ -410,13 +408,13 @@ void m6502_device::execute_set_input(int inputnum, int state)
 	case APU_IRQ_LINE: m_apu_irq_state = state == ASSERT_LINE; break;
 	case NMI_LINE:
 		// don't accept NMI edge at exactly the same time RESET is cleared
-		if(!m_nmi_state && state == ASSERT_LINE && machine().time() > m_reset_time)
+		if(!m_nmi_state && state == ASSERT_LINE && total_cycles())
 			m_nmi_pending = true;
 		m_nmi_state = state == ASSERT_LINE;
 		break;
 	case V_LINE:
 		// don't accept SO edge at exactly the same time RESET is cleared
-		if(!m_v_state && state == ASSERT_LINE && machine().time() > m_reset_time)
+		if(!m_v_state && state == ASSERT_LINE && total_cycles())
 			m_P |= F_V;
 		m_v_state = state == ASSERT_LINE;
 		break;

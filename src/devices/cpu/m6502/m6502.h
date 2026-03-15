@@ -137,7 +137,6 @@ protected:
 	bool m_nmi_state, m_irq_state, m_apu_irq_state, m_v_state;
 	bool m_nmi_pending, m_irq_taken, m_sync, m_inhibit_interrupts;
 	bool m_uses_custom_memory_interface;
-	attotime m_reset_time;
 
 	uint8_t read(uint16_t adr) { return m_mintf->read(adr); }
 	uint8_t read_9(uint16_t adr) { return m_mintf->read_9(adr); }
