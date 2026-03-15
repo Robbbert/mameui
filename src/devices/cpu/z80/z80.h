@@ -209,7 +209,6 @@ protected:
 	PAIR16 m_shared_data;
 	PAIR16 m_shared_data2;
 	u8     m_rtemp;
-	attotime m_reset_time;
 
 	u32    m_ref;
 	u8     m_m1_cycles;

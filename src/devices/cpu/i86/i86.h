@@ -329,7 +329,6 @@ protected:
 		} RM;
 	} m_Mod_RM;
 
-	attotime m_reset_time;
 	uint8_t m_timing[200];
 	uint8_t m_ea_timing[200];
 	bool m_halt;
