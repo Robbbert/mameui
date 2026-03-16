@@ -62,9 +62,9 @@ public:
 		m_k053246(*this, "k053246"),
 		m_k053251(*this, "k053251"),
 		m_screen(*this, "screen"),
+		m_eeprom(*this, "eeprom"),
 		m_z80bank(*this, "z80bank"),
-		m_okibank(*this, "okibank"),
-		m_eeprom_out(*this, "EEPROMOUT")
+		m_okibank(*this, "okibank")
 	{ }
 
 	void xmen(machine_config &config);
@@ -89,6 +89,7 @@ protected:
 	required_device<k053247_device> m_k053246;
 	required_device<k053251_device> m_k053251;
 	required_device<screen_device> m_screen;
+	required_device<eeprom_serial_er5911_device> m_eeprom;
 
 	void control_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 
@@ -97,8 +98,6 @@ protected:
 private:
 	optional_memory_bank m_z80bank;
 	optional_memory_bank m_okibank;
-
-	required_ioport m_eeprom_out;
 
 	void sound_bankswitch_w(uint8_t data);
 
@@ -336,7 +335,9 @@ void xmen_state::control_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 		// bit 2 = EEPROM data
 		// bit 3 = EEPROM clock (active high)
 		// bit 4 = EEPROM cs (active low)
-		m_eeprom_out->write(data, 0xff);
+		m_eeprom->di_write(BIT(data, 2));
+		m_eeprom->cs_write(BIT(data, 4));
+		m_eeprom->clk_write(BIT(data, 3));
 
 		// bit 5 is enabled in IRQ3, disabled in IRQ5 (sprite DMA end)
 		m_irq5_enable = bool(BIT(data, 5));
@@ -416,7 +417,7 @@ void xmen_state::sound_map(address_map &map)
 
 void xmen_state::oki_map(address_map &map)
 {
-	map(0x00000, 0x2ffff).rom();
+	map(0x00000, 0x2ffff).rom().region("oki", 0);
 	map(0x30000, 0x3ffff).bankr(m_okibank);
 }
 
@@ -501,11 +502,6 @@ static INPUT_PORTS_START( xmen )
 	PORT_BIT( 0x3000, IP_ACTIVE_LOW, IPT_UNKNOWN )  // unused?
 	PORT_SERVICE_NO_TOGGLE( 0x4000, IP_ACTIVE_LOW )
 	PORT_BIT( 0x8000, IP_ACTIVE_LOW, IPT_UNKNOWN )  // unused?
-
-	PORT_START( "EEPROMOUT" )
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::di_write))
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::clk_write))
-	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::cs_write))
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( xmen2p )
@@ -530,11 +526,6 @@ static INPUT_PORTS_START( xmen2p )
 	PORT_BIT( 0x3000, IP_ACTIVE_LOW, IPT_UNKNOWN )  // unused?
 	PORT_SERVICE_NO_TOGGLE( 0x4000, IP_ACTIVE_LOW )
 	PORT_BIT( 0x8000, IP_ACTIVE_LOW, IPT_UNKNOWN )  // unused?
-
-	PORT_START( "EEPROMOUT" )
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::di_write))
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::clk_write))
-	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::cs_write))
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( xmen6p )
@@ -562,11 +553,6 @@ static INPUT_PORTS_START( xmen6p )
 	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_START6 ) // not verified
 	PORT_SERVICE_NO_TOGGLE( 0x4000, IP_ACTIVE_LOW )
 	PORT_BIT( 0x8000, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_MEMBER(FUNC(xmen6p_state::field_r)) // screen indicator?
-
-	PORT_START( "EEPROMOUT" )
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::di_write))
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::clk_write))
-	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_er5911_device::cs_write))
 INPUT_PORTS_END
 
 
@@ -581,7 +567,7 @@ void xmen_state::machine_start()
 	if (m_okibank)
 	{
 		m_okibank->configure_entries(0, 16, memregion("oki")->base(), 0x10000);
-		m_okibank->set_entry(0);
+		m_okibank->set_entry(3);
 	}
 
 	save_item(NAME(m_sprite_colorbase));
@@ -601,7 +587,7 @@ void xmen_state::machine_reset()
 	}
 
 	m_sprite_colorbase = 0;
-	m_irq5_enable = false;
+	control_w(0, 0);
 }
 
 TIMER_DEVICE_CALLBACK_MEMBER(xmen_state::scanline)
@@ -624,7 +610,7 @@ void xmen_state::base(machine_config &config)
 
 	TIMER(config, "scantimer").configure_scanline(FUNC(xmen_state::scanline), "screen", 0, 1);
 
-	EEPROM_ER5911_8BIT(config, "eeprom");
+	EEPROM_ER5911_8BIT(config, m_eeprom);
 
 	WATCHDOG_TIMER(config, "watchdog");
 
