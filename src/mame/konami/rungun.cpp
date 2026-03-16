@@ -246,6 +246,7 @@ void rungun_state::sysregs_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 			    bit 7-4: base address for 53936 ROM readback.
 			*/
 			m_k055673->k053246_set_objcha_line(BIT(data, 2) ? ASSERT_LINE : CLEAR_LINE);
+			machine().sound().system_mute(!BIT(data, 3));
 			m_roz_rombase = (data & 0xf0) >> 4;
 			break;
 	}

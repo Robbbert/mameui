@@ -49,20 +49,6 @@ Reverse-engineered schematics: https://github.com/jotego/jtbin/blob/master/sch/x
 #include "layout/generic.h"
 
 
-// configurable logging
-#define LOG_EEPROMW     (1U << 1)
-#define LOG_SOUNDIRQ    (1U << 2)
-#define LOG_OKI         (1U << 3)
-
-//#define VERBOSE (LOG_GENERAL | LOG_EEPROMW | LOG_SOUNDIRQ | LOG_OKI)
-
-#include "logmacro.h"
-
-#define LOGEEPROMW(...)     LOGMASKED(LOG_EEPROMW,     __VA_ARGS__)
-#define LOGSOUNDIRQ(...)    LOGMASKED(LOG_SOUNDIRQ,    __VA_ARGS__)
-#define LOGOKI(...)         LOGMASKED(LOG_OKI,         __VA_ARGS__)
-
-
 namespace {
 
 class xmen_state : public driver_device
@@ -94,6 +80,7 @@ protected:
 	int32_t m_layerpri[3]{};
 	bool m_tilemap_select = false;
 	bool m_irq5_enable = false;
+	bool m_sound_irq = false;
 
 	// devices
 	required_device<cpu_device> m_maincpu;
@@ -103,10 +90,9 @@ protected:
 	required_device<k053251_device> m_k053251;
 	required_device<screen_device> m_screen;
 
-	void eeprom_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
+	void control_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 
 	void base(machine_config &config);
-	void sound_hardware(machine_config &config);
 
 private:
 	optional_memory_bank m_z80bank;
@@ -126,8 +112,6 @@ private:
 	void main_map(address_map &map) ATTR_COLD;
 	void oki_map(address_map &map) ATTR_COLD;
 	void sound_map(address_map &map) ATTR_COLD;
-
-	void bootleg_sound_hardware(machine_config &config);
 };
 
 class xmen6p_state : public xmen_state
@@ -336,21 +320,22 @@ void xmen6p_state::screen_vblank(int state)
 
 /***************************************************************************
 
-  EEPROM
+  Control
 
 ***************************************************************************/
 
-void xmen_state::eeprom_w(offs_t offset, uint16_t data, uint16_t mem_mask)
+void xmen_state::control_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
-	LOGEEPROMW("%06x: write %04x to 108000\n", m_maincpu->pc(), data);
+	//logerror("%06x: write %04x mask %04x to 108000\n", m_maincpu->pc(), data, mem_mask);
 	if (ACCESSING_BITS_0_7)
 	{
-		// bit 0 = coin counter
-		machine().bookkeeping().coin_counter_w(0, data & 0x01);
+		// bits 0/1 = coin counters
+		machine().bookkeeping().coin_counter_w(0, BIT(data, 0));
+		machine().bookkeeping().coin_counter_w(0, BIT(data, 1)); // only for 2p version
 
-		// bit 2 is data
-		// bit 3 is clock (active high)
-		// bit 4 is cs (active low)
+		// bit 2 = EEPROM data
+		// bit 3 = EEPROM clock (active high)
+		// bit 4 = EEPROM cs (active low)
 		m_eeprom_out->write(data, 0xff);
 
 		// bit 5 is enabled in IRQ3, disabled in IRQ5 (sprite DMA end)
@@ -364,16 +349,18 @@ void xmen_state::eeprom_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	if (ACCESSING_BITS_8_15)
 	{
 		// bit 8 = enable sprite ROM reading
-		m_k053246->k053246_set_objcha_line((data & 0x0100) ? ASSERT_LINE : CLEAR_LINE);
+		m_k053246->k053246_set_objcha_line(BIT(data, 8) ? ASSERT_LINE : CLEAR_LINE);
+
 		// bit 9 = enable char ROM reading through the video RAM
-		// bit 10 = sound irq, but with some kind of hold
-		m_k052109->set_rmrd_line((data & 0x0200) ? ASSERT_LINE : CLEAR_LINE);
-		if (data & 0x400)
-		{
-			LOGSOUNDIRQ("tick!\n");
-			if (m_audiocpu)
-				m_audiocpu->set_input_line(0, HOLD_LINE);
-		}
+		m_k052109->set_rmrd_line(BIT(data, 9) ? ASSERT_LINE : CLEAR_LINE);
+
+		// bit 10 = sound irq flip flop (actually through 054321)
+		if (m_audiocpu && !m_sound_irq && BIT(data, 10))
+			m_audiocpu->set_input_line(0, HOLD_LINE);
+		m_sound_irq = BIT(data, 10);
+
+		// bit 11 = mute
+		machine().sound().system_mute(!BIT(data, 11));
 	}
 }
 
@@ -389,7 +376,7 @@ void xmen_state::base_main_map(address_map &map)
 	map(0x100000, 0x100fff).rw(m_k053246, FUNC(k053247_device::k053247_word_r), FUNC(k053247_device::k053247_word_w));
 	map(0x101000, 0x101fff).ram();
 	map(0x104000, 0x104fff).ram().w("palette", FUNC(palette_device::write16)).share("palette");
-	map(0x108000, 0x108001).w(FUNC(xmen_state::eeprom_w));
+	map(0x108000, 0x108001).w(FUNC(xmen_state::control_w));
 	map(0x108020, 0x108027).w(m_k053246, FUNC(k053247_device::k053246_w));
 	map(0x108060, 0x10807f).w(m_k053251, FUNC(k053251_device::write)).umask16(0x00ff);
 	map(0x10a000, 0x10a001).portr("P2_P4").w("watchdog", FUNC(watchdog_timer_device::reset16_w));
@@ -412,7 +399,7 @@ void xmen_state::bootleg_main_map(address_map &map)
 	base_main_map(map);
 
 	// map(0x103ffe, 0x103fff) // sound related, too?
-	map(0x10804d, 0x10804d).lw8(NAME([this] (uint8_t data) { m_okibank->set_entry(data & 0x0f); LOGOKI("oki bank :%02x\n", data); })); // TODO: verify once oki ROM 1 is redumped / confirmed
+	map(0x10804d, 0x10804d).lw8(NAME([this] (uint8_t data) { m_okibank->set_entry((data + 3) & 0x0f); }));
 	map(0x10804f, 0x10804f).rw("oki", FUNC(okim6295_device::read), FUNC(okim6295_device::write));
 }
 
@@ -442,7 +429,7 @@ void xmen6p_state::main_map(address_map &map)
 	map(0x102000, 0x102fff).ram().share(m_spriteram[1]); // right screen
 	map(0x103000, 0x103fff).ram();     // 6p - a buffer?
 	map(0x104000, 0x104fff).ram().w("palette", FUNC(palette_device::write16)).share("palette");
-	map(0x108000, 0x108001).w(FUNC(xmen6p_state::eeprom_w));
+	map(0x108000, 0x108001).w(FUNC(xmen6p_state::control_w));
 	map(0x108020, 0x108027).w(m_k053246, FUNC(k053247_device::k053246_w)); // sprites
 	map(0x108040, 0x10805f).m("k054321", FUNC(k054321_device::main_map)).umask16(0x00ff);
 	map(0x108060, 0x10807f).w(m_k053251, FUNC(k053251_device::write)).umask16(0x00ff);
@@ -600,8 +587,9 @@ void xmen_state::machine_start()
 	save_item(NAME(m_sprite_colorbase));
 	save_item(NAME(m_layer_colorbase));
 	save_item(NAME(m_layerpri));
-	save_item(NAME(m_irq5_enable));
 	save_item(NAME(m_tilemap_select));
+	save_item(NAME(m_irq5_enable));
+	save_item(NAME(m_sound_irq));
 }
 
 void xmen_state::machine_reset()
@@ -626,35 +614,6 @@ TIMER_DEVICE_CALLBACK_MEMBER(xmen_state::scanline)
 		if (m_irq5_enable && m_k053246->k053246_is_irq_enabled())
 			m_maincpu->set_input_line(5, ASSERT_LINE);
 	}
-}
-
-void xmen_state::sound_hardware(machine_config &config)
-{
-	Z80(config, m_audiocpu, 16_MHz_XTAL / 2); // verified on PCB
-	m_audiocpu->set_addrmap(AS_PROGRAM, &xmen_state::sound_map);
-
-	// sound hardware
-	SPEAKER(config, "speaker", 2).front();
-
-	K054321(config, "k054321", "speaker");
-
-	ym2151_device &ymsnd(YM2151(config, "ymsnd", 16_MHz_XTAL / 4)); // verified on PCB
-	ymsnd.add_route(0, "speaker", 0.20, 1);
-	ymsnd.add_route(1, "speaker", 0.20, 0);
-
-	k054539_device &k054539(K054539(config, "k054539", 18.432_MHz_XTAL));
-	k054539.add_route(0, "speaker", 1.00, 1);
-	k054539.add_route(1, "speaker", 1.00, 0);
-}
-
-void xmen_state::bootleg_sound_hardware(machine_config &config)
-{
-	// sound hardware
-	SPEAKER(config, "mono").front_center();
-
-	okim6295_device &oki(OKIM6295(config, "oki", 1'000'000, okim6295_device::PIN7_HIGH)); // clock and pin7 not verified
-	oki.set_addrmap(0, &xmen_state::oki_map);
-	oki.add_route(ALL_OUTPUTS, "mono", 1.0);
 }
 
 void xmen_state::base(machine_config &config)
@@ -695,7 +654,21 @@ void xmen_state::xmen(machine_config &config)
 {
 	base(config);
 
-	sound_hardware(config);
+	Z80(config, m_audiocpu, 16_MHz_XTAL / 2); // verified on PCB
+	m_audiocpu->set_addrmap(AS_PROGRAM, &xmen_state::sound_map);
+
+	// sound hardware
+	SPEAKER(config, "speaker", 2).front();
+
+	K054321(config, "k054321", "speaker");
+
+	ym2151_device &ymsnd(YM2151(config, "ymsnd", 16_MHz_XTAL / 4)); // verified on PCB
+	ymsnd.add_route(0, "speaker", 0.20, 1);
+	ymsnd.add_route(1, "speaker", 0.20, 0);
+
+	k054539_device &k054539(K054539(config, "k054539", 18.432_MHz_XTAL));
+	k054539.add_route(0, "speaker", 1.00, 1);
+	k054539.add_route(1, "speaker", 1.00, 0);
 }
 
 void xmen_state::xmenabl(machine_config &config)
@@ -704,7 +677,12 @@ void xmen_state::xmenabl(machine_config &config)
 
 	m_maincpu->set_addrmap(AS_PROGRAM, &xmen_state::bootleg_main_map);
 
-	bootleg_sound_hardware(config);
+	// sound hardware
+	SPEAKER(config, "mono").front_center();
+
+	okim6295_device &oki(OKIM6295(config, "oki", 1'000'000, okim6295_device::PIN7_LOW)); // clock and pin7 not verified
+	oki.set_addrmap(0, &xmen_state::oki_map);
+	oki.add_route(ALL_OUTPUTS, "mono", 1.0);
 }
 
 void xmen6p_state::xmen6p(machine_config &config)
@@ -1241,7 +1219,7 @@ GAME( 1992, xmenj,   xmen, xmen,    xmen,   xmen_state,   empty_init, ROT0, "Kon
 GAME( 1992, xmenja,  xmen, xmen,    xmen,   xmen_state,   empty_init, ROT0, "Konami",  "X-Men (4 Players ver JEA)",          MACHINE_SUPPORTS_SAVE )
 GAME( 1992, xmena,   xmen, xmen,    xmen,   xmen_state,   empty_init, ROT0, "Konami",  "X-Men (4 Players ver AEA)",          MACHINE_SUPPORTS_SAVE )
 GAME( 1992, xmenaa,  xmen, xmen,    xmen,   xmen_state,   empty_init, ROT0, "Konami",  "X-Men (4 Players ver ADA)",          MACHINE_SUPPORTS_SAVE )
-GAME( 1992, xmenabl, xmen, xmenabl, xmen,   xmen_state,   empty_init, ROT0, "bootleg", "X-Men (4 Players ver AEA, bootleg)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE ) // sprites are wrong, Oki banking not correct (doubtful it can be this bad, even being a bootleg)
+GAME( 1992, xmenabl, xmen, xmenabl, xmen,   xmen_state,   empty_init, ROT0, "bootleg", "X-Men (4 Players ver AEA, bootleg)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE ) // sprites are wrong
 
 GAME( 1992, xmen2pe, xmen, xmen,    xmen2p, xmen_state,   empty_init, ROT0, "Konami",  "X-Men (2 Players ver EAA)",          MACHINE_SUPPORTS_SAVE )
 GAME( 1992, xmen2pu, xmen, xmen,    xmen2p, xmen_state,   empty_init, ROT0, "Konami",  "X-Men (2 Players ver UAB)",          MACHINE_SUPPORTS_SAVE )
