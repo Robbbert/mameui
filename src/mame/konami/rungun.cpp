@@ -635,7 +635,7 @@ void rungun_state::machine_start()
 void rungun_state::machine_reset()
 {
 	for (int i = 0; i < 0x10; i++)
-		sysregs_w(0, 0);
+		sysregs_w(i, 0);
 
 	sound_ctrl_w(0);
 }
