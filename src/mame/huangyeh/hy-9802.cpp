@@ -3,7 +3,8 @@
 /**************************************************************************************************
 
 TODO:
-- Crashes strong with ACRTC, plenty of unsupported features (starting with COMMAND_DWT);
+- wlzb crashes strong with ACRTC, plenty of unsupported features (starting with COMMAND_DWT);
+- wlfx hangs strong with ACRTC, plenty of unsupported features (starting with area detection);
 - OKI bank (standard 0/0x40000 layout);
 - I/Os;
 
@@ -86,10 +87,10 @@ Notes:
 
 namespace {
 
-class huangyeh_m68k_state : public driver_device
+class hy9802_state : public driver_device
 {
 public:
-	huangyeh_m68k_state(const machine_config &mconfig, device_type type, const char *tag)
+	hy9802_state(const machine_config &mconfig, device_type type, const char *tag)
 		: driver_device(mconfig, type, tag)
 		, m_maincpu(*this, "maincpu")
 		, m_acrtc(*this, "acrtc")
@@ -97,6 +98,7 @@ public:
 	{ }
 
 	void wlzb(machine_config &config) ATTR_COLD;
+	void wlfx(machine_config &config) ATTR_COLD;
 
 
 private:
@@ -104,14 +106,15 @@ private:
 	required_device<hd63484_device> m_acrtc;
 	required_device<generic_latch_8_device> m_soundlatch;
 
-	void main_program_map(address_map &map) ATTR_COLD;
+	void wlzb_main_program_map(address_map &map) ATTR_COLD;
+	void wlfx_main_program_map(address_map &map) ATTR_COLD;
 	void audio_program_map(address_map &map) ATTR_COLD;
 	void ramdac_map(address_map &map) ATTR_COLD;
 	void hd63484_map(address_map &map) ATTR_COLD;
 };
 
 
-void huangyeh_m68k_state::main_program_map(address_map &map)
+void hy9802_state::wlzb_main_program_map(address_map &map)
 {
 	map.unmap_value_high();
 	map(0x000000, 0x0fffff).rom();
@@ -127,7 +130,23 @@ void huangyeh_m68k_state::main_program_map(address_map &map)
 	map(0x1f0000, 0x1f3fff).ram();
 }
 
-void huangyeh_m68k_state::audio_program_map(address_map &map)
+void hy9802_state::wlfx_main_program_map(address_map &map)
+{
+	map.unmap_value_high();
+	map(0x000000, 0x03ffff).rom();
+	map(0x120000, 0x120001).portr("DSW1");
+	map(0x120020, 0x120021).portr("IN0");
+	map(0x120051, 0x120051).w(m_soundlatch, FUNC(generic_latch_8_device::write));
+	map(0x120060, 0x120061).nopw(); // key matrix at $100061
+	map(0x130000, 0x130001).portr("DSW2");
+	map(0x1a0000, 0x1a0003).rw("acrtc", FUNC(hd63484_device::read16), FUNC(hd63484_device::write16));
+	map(0x1a0009, 0x1a0009).w("ramdac", FUNC(ramdac_device::index_w));
+	map(0x1a000b, 0x1a000b).w("ramdac", FUNC(ramdac_device::pal_w));
+	map(0x1a000d, 0x1a000d).w("ramdac", FUNC(ramdac_device::mask_w));
+	map(0x1f0000, 0x1f3fff).ram();
+}
+
+void hy9802_state::audio_program_map(address_map &map)
 {
 	map(0x0000, 0x7fff).rom();
 	map(0xf000, 0xf7ff).ram();
@@ -138,15 +157,16 @@ void huangyeh_m68k_state::audio_program_map(address_map &map)
 	map(0xf8e0, 0xf8e0).lw8(NAME([this] (offs_t offset, u8 data) { m_soundlatch->acknowledge_w(); }));
 }
 
-void huangyeh_m68k_state::ramdac_map(address_map &map)
+void hy9802_state::ramdac_map(address_map &map)
 {
 	map(0x000, 0x3ff).rw("ramdac", FUNC(ramdac_device::ramdac_pal_r), FUNC(ramdac_device::ramdac_rgb666_w));
 }
 
-void huangyeh_m68k_state::hd63484_map(address_map &map)
+void hy9802_state::hd63484_map(address_map &map)
 {
 	// TODO: likely banked, also writes
 	map(0x00000, 0xfffff).rom().region("tiles", 0);
+	map(0x00000, 0xfffff).ram().writeonly(); // TODO: just here to avoid spamming the log
 }
 
 
@@ -198,16 +218,16 @@ static GFXDECODE_START( gfx )
 GFXDECODE_END
 
 
-void huangyeh_m68k_state::wlzb(machine_config &config)
+void hy9802_state::wlzb(machine_config &config)
 {
 	// basic machine hardware
 	M68000(config, m_maincpu, 8.448_MHz_XTAL);
-	m_maincpu->set_addrmap(AS_PROGRAM, &huangyeh_m68k_state::main_program_map);
+	m_maincpu->set_addrmap(AS_PROGRAM, &hy9802_state::wlzb_main_program_map);
 	// delay loops at $1f1712
-	m_maincpu->set_vblank_int("screen", FUNC(huangyeh_m68k_state::irq3_line_hold));
+	m_maincpu->set_vblank_int("screen", FUNC(hy9802_state::irq3_line_hold));
 
 	z80_device &audiocpu(Z80(config, "audiocpu", 8.448_MHz_XTAL / 2));
-	audiocpu.set_addrmap(AS_PROGRAM, &huangyeh_m68k_state::audio_program_map);
+	audiocpu.set_addrmap(AS_PROGRAM, &hy9802_state::audio_program_map);
 
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER)); // TODO: verify everything once emulation works
@@ -222,9 +242,9 @@ void huangyeh_m68k_state::wlzb(machine_config &config)
 
 	PALETTE(config, "palette").set_entries(0x100); // TODO
 
-	RAMDAC(config, "ramdac", 0, "palette").set_addrmap(0, &huangyeh_m68k_state::ramdac_map);
+	RAMDAC(config, "ramdac", 0, "palette").set_addrmap(0, &hy9802_state::ramdac_map);
 
-	HD63484(config, m_acrtc, 22_MHz_XTAL / 4).set_addrmap(0, &huangyeh_m68k_state::hd63484_map);
+	HD63484(config, m_acrtc, 22_MHz_XTAL / 4).set_addrmap(0, &hy9802_state::hd63484_map);
 
 	GENERIC_LATCH_8(config, m_soundlatch);
 	m_soundlatch->data_pending_callback().set_inputline("audiocpu", INPUT_LINE_NMI);
@@ -237,6 +257,13 @@ void huangyeh_m68k_state::wlzb(machine_config &config)
 	ymsnd.add_route(ALL_OUTPUTS, "mono", 1.0);
 
 	OKIM6295(config, "oki", 8.448_MHz_XTAL / 4, okim6295_device::PIN7_LOW).add_route(ALL_OUTPUTS, "mono", 1.0);
+}
+
+void hy9802_state::wlfx(machine_config &config)
+{
+	wlzb(config);
+
+	m_maincpu->set_addrmap(AS_PROGRAM, &hy9802_state::wlfx_main_program_map);
 }
 
 
@@ -260,7 +287,7 @@ ROM_END
 
 // 五路福星 (Wǔ Lù Fúxīng)
 ROM_START( wlfx )
-	ROM_REGION( 0x100000, "maincpu", ROMREGION_ERASE00 )
+	ROM_REGION( 0x40000, "maincpu", 0 )
 	ROM_LOAD16_BYTE( "51.u9", 0x00000, 0x20000, CRC(e73e63d5) SHA1(b6028d1c5fce074969973a70f9004c0c095fadd2) ) // 1xxxxxxxxxxxxxxxx = 0xFF
 	ROM_LOAD16_BYTE( "52.u8", 0x00001, 0x20000, CRC(09821949) SHA1(45dbe3bab15ca70f7fabd05929dd42700c92786d) ) // 1xxxxxxxxxxxxxxxx = 0xFF
 
@@ -280,5 +307,5 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1999, wlzb, 0, wlzb, wlzb, huangyeh_m68k_state, empty_init, ROT0, "Huang Yeh", "Wu Lin Zhengba", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
-GAME( 199?, wlfx, 0, wlzb, wlzb, huangyeh_m68k_state, empty_init, ROT0, "Huang Yeh", "Wu Lu Fuxing",   MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
+GAME( 1999, wlzb, 0, wlzb, wlzb, hy9802_state, empty_init, ROT0, "Huang Yeh", "Wu Lin Zhengba",  MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
+GAME( 1998, wlfx, 0, wlfx, wlzb, hy9802_state, empty_init, ROT0, "Huang Yeh", "Wu Lu Fuxing",    MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
