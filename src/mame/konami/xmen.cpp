@@ -48,6 +48,9 @@ Reverse-engineered schematics: https://github.com/jotego/jtbin/blob/master/sch/x
 
 #include "layout/generic.h"
 
+//#define VERBOSE 1
+#include "logmacro.h"
+
 
 namespace {
 
@@ -67,12 +70,16 @@ public:
 		m_okibank(*this, "okibank")
 	{ }
 
-	void xmen(machine_config &config);
-	void xmenabl(machine_config &config);
+	void xmen(machine_config &config) ATTR_COLD;
+	void xmenabl(machine_config &config) ATTR_COLD;
 
 protected:
 	virtual void machine_start() override ATTR_COLD;
 	virtual void machine_reset() override ATTR_COLD;
+
+	void control_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
+
+	void base(machine_config &config) ATTR_COLD;
 
 	// video-related
 	uint8_t m_layer_colorbase[3]{};
@@ -91,14 +98,7 @@ protected:
 	required_device<screen_device> m_screen;
 	required_device<eeprom_serial_er5911_device> m_eeprom;
 
-	void control_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
-
-	void base(machine_config &config);
-
 private:
-	optional_memory_bank m_z80bank;
-	optional_memory_bank m_okibank;
-
 	void sound_bankswitch_w(uint8_t data);
 
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
@@ -111,6 +111,9 @@ private:
 	void main_map(address_map &map) ATTR_COLD;
 	void oki_map(address_map &map) ATTR_COLD;
 	void sound_map(address_map &map) ATTR_COLD;
+
+	optional_memory_bank m_z80bank;
+	optional_memory_bank m_okibank;
 };
 
 class xmen6p_state : public xmen_state
@@ -122,7 +125,7 @@ public:
 		m_tilemap(*this, "tilemap%u", 0)
 	{ }
 
-	void xmen6p(machine_config &config);
+	void xmen6p(machine_config &config) ATTR_COLD;
 
 	int field_r() { return (m_screen->frame_number() & 1) ^ m_screen->vblank(); }
 
@@ -130,15 +133,15 @@ protected:
 	virtual void video_start() override ATTR_COLD;
 
 private:
-	bitmap_ind16 m_screen_bitmap[2]; // 0 left screen, 1 right screen
-	required_shared_ptr_array<uint16_t, 2> m_spriteram;
-	required_shared_ptr_array<uint16_t, 4> m_tilemap;
-	uint16_t *m_k053247_ram;
-
 	template <uint8_t Which> uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 	void screen_vblank(int state);
 
 	void main_map(address_map &map) ATTR_COLD;
+
+	bitmap_ind16 m_screen_bitmap[2]; // 0 left screen, 1 right screen
+	required_shared_ptr_array<uint16_t, 2> m_spriteram;
+	required_shared_ptr_array<uint16_t, 4> m_tilemap;
+	uint16_t *m_k053247_ram;
 };
 
 
@@ -325,7 +328,7 @@ void xmen6p_state::screen_vblank(int state)
 
 void xmen_state::control_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
-	//logerror("%06x: write %04x mask %04x to 108000\n", m_maincpu->pc(), data, mem_mask);
+	LOG("%06x: write %04x mask %04x to 108000\n", m_maincpu->pc(), data, mem_mask);
 	if (ACCESSING_BITS_0_7)
 	{
 		// bits 0/1 = coin counters
