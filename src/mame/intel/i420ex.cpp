@@ -132,6 +132,10 @@ void i420ex_state::i420ex(machine_config &config)
 	ib.rtcale().set([this](u8 data) { m_rtc->address_w(data); });
 	ib.rtccs_read().set([this]() { return m_rtc->data_r(); });
 	ib.rtccs_write().set([this](u8 data) { m_rtc->data_w(data); });
+	ib.cpurst().set([this] (int state) {
+		if (state)
+			machine().schedule_soft_reset();
+	});
 
 	// TODO: config space not known
 	// 05.0 is clearly host: it's what the BIOS addresses at startup

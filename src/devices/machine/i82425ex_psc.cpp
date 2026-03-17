@@ -7,7 +7,7 @@
 #define LOG_MAP         (1U << 1)
 
 #define VERBOSE (LOG_GENERAL)
-//#define LOG_OUTPUT_FUNC osd_printf_warning
+//#define LOG_OUTPUT_FUNC osd_printf_info
 
 #define LOGMAP(...)    LOGMASKED(LOG_MAP,  __VA_ARGS__)
 
@@ -340,7 +340,14 @@ void i82425ex_psc_device::config_map(address_map &map)
 			m_ctltmrh = data;
 		})
 	);
+}
 
+void i82425ex_psc_device::config_address_w(offs_t offset, uint32_t data, uint32_t mem_mask)
+{
+	if (mem_mask == 0x0000'ff00)
+		m_ib->trc_w(offset, data >> 8);
+	else
+		pci_host_device::config_address_w(offset, data, mem_mask);
 }
 
 void i82425ex_psc_device::map_bios(address_space *memory_space, uint32_t start, uint32_t end)

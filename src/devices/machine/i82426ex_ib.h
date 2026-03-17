@@ -39,8 +39,12 @@ public:
 	auto rtccs_read() { return m_rtccs_read.bind(); }
 	auto rtccs_write() { return m_rtccs_write.bind(); }
 
+	auto cpurst() { return m_write_cpurst.bind(); }
+
 	template <typename T> void set_hostcputag(T &&tag) { m_host_cpu.set_tag(std::forward<T>(tag)); }
 	template <typename T> void set_keybctag(T &&tag) { m_keybc.set_tag(std::forward<T>(tag)); }
+
+	void trc_w(offs_t offset, u8 data);
 
 protected:
 	virtual void device_start() override;
@@ -60,6 +64,7 @@ private:
 
 	devcb_write_line m_write_intr;
 	devcb_write_line m_write_spkr;
+	devcb_write_line m_write_cpurst;
 
 	devcb_write8 m_rtcale;
 	devcb_read8 m_rtccs_read;

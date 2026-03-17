@@ -50,6 +50,8 @@ protected:
 
 	virtual void config_map(address_map &map) override ATTR_COLD;
 
+	virtual void config_address_w(offs_t offset, uint32_t data, uint32_t mem_mask = ~0) override;
+
 private:
 	required_device<cpu_device> m_host_cpu;
 	required_device<i82426ex_ib_device> m_ib;

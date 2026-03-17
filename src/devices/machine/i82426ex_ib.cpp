@@ -4,6 +4,11 @@
 #include "emu.h"
 #include "i82426ex_ib.h"
 
+#define VERBOSE (LOG_GENERAL)
+//#define LOG_OUTPUT_FUNC osd_printf_info
+
+#include "logmacro.h"
+
 DEFINE_DEVICE_TYPE(I82426EX_IB, i82426ex_ib_device, "i82426ex_ib", "Intel 82425EX ISA Bridge")
 
 i82426ex_ib_device::i82426ex_ib_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
@@ -16,6 +21,7 @@ i82426ex_ib_device::i82426ex_ib_device(const machine_config &mconfig, const char
 	, m_isabus(*this, "isabus")
 	, m_write_intr(*this)
 	, m_write_spkr(*this)
+	, m_write_cpurst(*this)
 	, m_rtcale(*this)
 	, m_rtccs_read(*this, 0xff)
 	, m_rtccs_write(*this)
@@ -219,6 +225,17 @@ void i82426ex_ib_device::portb_w(u8 data)
 		m_portb &= 0xbf;
 		m_host_cpu->set_input_line(INPUT_LINE_NMI, CLEAR_LINE);
 	}
+}
+
+// NOTE: $cf9 actually belongs to IB, cfr. CPURST/PCIRST# definitions at page 34
+void i82426ex_ib_device::trc_w(offs_t offset, u8 data)
+{
+	LOG("CF9h: TRC Turbo/Reset Control %02x\n", data);
+	// TODO: bit 1 actually controls if reset type is soft (0) or hard (1)
+	// (former just resets the CPU?)
+	if (BIT(data, 2))
+		m_write_cpurst(1);
+	// TODO: bit 0 for deturbo mode, and whatever is <reserved> bit 5 actually used by entrada
 }
 
 /*
