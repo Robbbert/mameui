@@ -2898,6 +2898,10 @@ if MACHINES["PCI"] then
 		MAME_DIR .. "src/devices/machine/i82875p.h",
 		MAME_DIR .. "src/devices/machine/i6300esb.cpp",
 		MAME_DIR .. "src/devices/machine/i6300esb.h",
+		MAME_DIR .. "src/devices/machine/i82425ex_psc.cpp",
+		MAME_DIR .. "src/devices/machine/i82425ex_psc.h",
+		MAME_DIR .. "src/devices/machine/i82426ex_ib.cpp",
+		MAME_DIR .. "src/devices/machine/i82426ex_ib.h",
 		MAME_DIR .. "src/devices/machine/i82439hx.cpp",
 		MAME_DIR .. "src/devices/machine/i82439hx.h",
 		MAME_DIR .. "src/devices/machine/i82439tx.cpp",
@@ -4619,6 +4623,18 @@ if MACHINES["FDC37C93X"] then
 	files {
 		MAME_DIR .. "src/devices/machine/fdc37c93x.cpp",
 		MAME_DIR .. "src/devices/machine/fdc37c93x.h",
+	}
+end
+
+---------------------------------------------------
+--
+--@src/devices/machine/i82091aa.h,MACHINES["I82091AA"] = true
+---------------------------------------------------
+
+if MACHINES["I82091AA"] then
+	files {
+		MAME_DIR .. "src/devices/machine/i82091aa.cpp",
+		MAME_DIR .. "src/devices/machine/i82091aa.h",
 	}
 end
 

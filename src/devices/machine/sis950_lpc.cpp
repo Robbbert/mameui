@@ -43,7 +43,7 @@ TODO:
 #define LOG_IRQ    (1U << 5) // log IRQ remaps
 
 #define VERBOSE (LOG_GENERAL | LOG_IO | LOG_TODO | LOG_IRQ)
-//#define LOG_OUTPUT_FUNC osd_printf_warning
+//#define LOG_OUTPUT_FUNC osd_printf_info
 
 #include "logmacro.h"
 

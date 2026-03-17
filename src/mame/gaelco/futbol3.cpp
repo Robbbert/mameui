@@ -43,8 +43,10 @@
 */
 
 #include "emu.h"
+
 #include "cpu/pic16c5x/pic16c5x.h"
 #include "sound/okim6295.h"
+
 #include "speaker.h"
 
 
@@ -58,7 +60,7 @@ public:
 		m_maincpu(*this, "maincpu")
 	{ }
 
-	void gaelcof3(machine_config &config);
+	void gaelcof3(machine_config &config) ATTR_COLD;
 
 private:
 	required_device<pic16c56_device> m_maincpu;

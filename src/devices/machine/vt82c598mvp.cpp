@@ -7,7 +7,7 @@
 #define LOG_MAP         (1U << 1)
 
 #define VERBOSE (LOG_GENERAL)
-//#define LOG_OUTPUT_FUNC osd_printf_warning
+//#define LOG_OUTPUT_FUNC osd_printf_info
 
 #define LOGMAP(...)    LOGMASKED(LOG_MAP,  __VA_ARGS__)
 

@@ -29,7 +29,7 @@ TODO:
 #define LOG_PMTMR  (1U << 4) // verbose timer reads and processor levels
 
 #define VERBOSE (LOG_GENERAL | LOG_ACPI | LOG_ACPIEX | LOG_GPIO)
-//#define LOG_OUTPUT_FUNC osd_printf_warning
+//#define LOG_OUTPUT_FUNC osd_printf_info
 
 #include "logmacro.h"
 
