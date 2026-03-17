@@ -251,45 +251,44 @@ offs_t i82426ex_ib_device::page_offset()
 }
 
 
-uint8_t i82426ex_ib_device::dma_read_byte(offs_t offset)
+u8 i82426ex_ib_device::dma_read_byte(offs_t offset)
 {
 	address_space &prog_space = m_host_cpu->space(AS_PROGRAM);
 	if (m_dma_channel == -1)
 		return 0xff;
-	uint8_t result;
-	result = prog_space.read_byte((page_offset() << 16) + offset);
+	u8 result = prog_space.read_byte(page_offset() + offset);
 	return result;
 }
 
-void i82426ex_ib_device::dma_write_byte(offs_t offset, uint8_t data)
+void i82426ex_ib_device::dma_write_byte(offs_t offset, u8 data)
 {
 	address_space &prog_space = m_host_cpu->space(AS_PROGRAM);
 	if (m_dma_channel == -1)
 		return;
 
-	prog_space.write_byte((page_offset() << 16) + offset, data);
+	prog_space.write_byte(page_offset() + offset, data);
 }
 
-uint8_t i82426ex_ib_device::dma_read_word(offs_t offset)
+u8 i82426ex_ib_device::dma_read_word(offs_t offset)
 {
 	address_space &prog_space = m_host_cpu->space(AS_PROGRAM);
+
 	if (m_dma_channel == -1)
 		return 0xff;
-	uint16_t result;
 
-	result = prog_space.read_word(((page_offset() << 16) & 0xfe0000) | (offset << 1));
+	u16 result = prog_space.read_word((page_offset() & 0xfe0000) | (offset << 1));
 	m_dma_high_byte = result >> 8;
 
-	return result & 0xFF;
+	return result;
 }
 
-void i82426ex_ib_device::dma_write_word(offs_t offset, uint8_t data)
+void i82426ex_ib_device::dma_write_word(offs_t offset, u8 data)
 {
-	address_space &prog_space = m_host_cpu->space(AS_PROGRAM);
 	if (m_dma_channel == -1)
 		return;
+	address_space &prog_space = m_host_cpu->space(AS_PROGRAM);
 
-	prog_space.write_word(((page_offset() << 16) & 0xfe0000) | (offset << 1), m_dma_high_byte | data);
+	prog_space.write_word((page_offset() & 0xfe0000) | (offset << 1), m_dma_high_byte | data);
 }
 
 void i82426ex_ib_device::dma1_eop_w(int state)

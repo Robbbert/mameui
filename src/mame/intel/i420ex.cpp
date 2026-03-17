@@ -20,7 +20,7 @@ TODO:
   (workaround: fix it manually then "Exit Saving Changes");
 - AZ08 / AZ07 BIOSes: goes "Auto Configuration Error" with PCI bus, propagate that if cards are
   hooked up;
-- isa1:sb16_lle: DMA crashes with testsb16.exe
+- isa1:sb16_lle: DMA crashes with high DMA (unsupported?)
 - serport0:logitech_mouse: fails freedos13 init on every odd boot;
 
 **************************************************************************************************/
