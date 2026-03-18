@@ -41,7 +41,11 @@ void w65c02_device::do_sbc_d(uint8_t val)
 		m_P |= F_V;
 	if(!(diff & 0xff00))
 		m_P |= F_C;
-	m_A = ((ah << 4) | (al & 15)) - ((int8_t(ah) < 0 ? 0x60 : 0) | (int8_t(al) < 0 ? 6 : 0));
+	m_A = (ah << 4) | (al & 15);
+	if(int8_t(al) < 0)
+		m_A -= 6;
+	if(int8_t(ah) < 0)
+		m_A -= 0x60;
 }
 
 std::unique_ptr<util::disasm_interface> w65c02_device::create_disassembler()
