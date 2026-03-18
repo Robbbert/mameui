@@ -92,17 +92,17 @@ void i82426ex_ib_device::device_add_mconfig(machine_config &config)
 	});
 
 	ISA16(config, m_isabus, 0);
-	m_isabus->irq3_callback().set([this] (int state)  { m_intc[0]->ir3_w(state); });
-	m_isabus->irq4_callback().set([this] (int state)  { m_intc[0]->ir4_w(state); });
-	m_isabus->irq5_callback().set([this] (int state)  { m_intc[0]->ir5_w(state); });
-	m_isabus->irq6_callback().set([this] (int state)  { m_intc[0]->ir6_w(state); });
-	m_isabus->irq7_callback().set([this] (int state)  { m_intc[0]->ir7_w(state); });
-	m_isabus->irq2_callback().set([this] (int state)  { m_intc[1]->ir1_w(state); });
-	m_isabus->irq10_callback().set([this] (int state) { m_intc[1]->ir2_w(state); });
-	m_isabus->irq11_callback().set([this] (int state) { m_intc[1]->ir3_w(state); });
-	m_isabus->irq12_callback().set([this] (int state) { m_intc[1]->ir4_w(state); });
-	m_isabus->irq14_callback().set([this] (int state) { m_intc[1]->ir6_w(state); });
-	m_isabus->irq15_callback().set([this] (int state) { m_intc[1]->ir7_w(state); });
+	m_isabus->irq3_callback().set( m_intc[0], FUNC(pic8259_device::ir3_w));
+	m_isabus->irq4_callback().set( m_intc[0], FUNC(pic8259_device::ir4_w));
+	m_isabus->irq5_callback().set( m_intc[0], FUNC(pic8259_device::ir5_w));
+	m_isabus->irq6_callback().set( m_intc[0], FUNC(pic8259_device::ir6_w));
+	m_isabus->irq7_callback().set( m_intc[0], FUNC(pic8259_device::ir7_w));
+	m_isabus->irq2_callback().set( m_intc[1], FUNC(pic8259_device::ir1_w));
+	m_isabus->irq10_callback().set(m_intc[1], FUNC(pic8259_device::ir2_w));
+	m_isabus->irq11_callback().set(m_intc[1], FUNC(pic8259_device::ir3_w));
+	m_isabus->irq12_callback().set(m_intc[1], FUNC(pic8259_device::ir4_w));
+	m_isabus->irq14_callback().set(m_intc[1], FUNC(pic8259_device::ir6_w));
+	m_isabus->irq15_callback().set(m_intc[1], FUNC(pic8259_device::ir7_w));
 	m_isabus->drq0_callback().set(m_dma[0], FUNC(am9517a_device::dreq0_w));
 	m_isabus->drq1_callback().set(m_dma[0], FUNC(am9517a_device::dreq1_w));
 	m_isabus->drq2_callback().set(m_dma[0], FUNC(am9517a_device::dreq2_w));

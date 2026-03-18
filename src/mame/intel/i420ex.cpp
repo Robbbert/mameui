@@ -62,9 +62,12 @@ public:
 		, m_speaker(*this, "speaker")
 	{ }
 
-	void i420ex(machine_config &config) ATTR_COLD;
+	void entrada(machine_config &config) ATTR_COLD;
+	void a486ap4(machine_config &config) ATTR_COLD;
 
 protected:
+	void i420ex(machine_config &config) ATTR_COLD;
+
 	required_device<cpu_device> m_maincpu;
 	required_device<ds12885_device> m_rtc;
 	required_device<speaker_sound_device> m_speaker;
@@ -144,15 +147,6 @@ void i420ex_state::i420ex(machine_config &config)
 	psc.ide1_irq_w().set("ib:intc2", FUNC(pic8259_device::ir6_w));
 	psc.ide2_irq_w().set("ib:intc2", FUNC(pic8259_device::ir7_w));
 
-	GD5434_PCI(config, "pci:06.0", 0);
-
-	// TODO: on proprietary riser
-	PCI_SLOT(config, "pci:1", pci_cards, 7,  0, 1, 2, 3, nullptr);
-	PCI_SLOT(config, "pci:2", pci_cards, 8,  1, 2, 3, 0, nullptr);
-
-	ISA16_SLOT(config, "board1", 0, "ib:isabus", pc_isa_onboard, "superio", true).set_option_machine_config("superio", intel_superio_config);
-	ISA16_SLOT(config, "isa1",   0, "ib:isabus", pc_isa16_cards, nullptr, false);
-
 	// TODO: really DS12887
 	DS12885(config, m_rtc);
 	m_rtc->irq().set("ib:intc2", FUNC(pic8259_device::ir0_w));
@@ -179,6 +173,23 @@ void i420ex_state::i420ex(machine_config &config)
 	aux_kbdc.out_clock_cb().set(keybc, FUNC(at_kbc_device_base::kbd_clk_w));
 	aux_kbdc.out_data_cb().set(keybc, FUNC(at_kbc_device_base::kbd_data_w));
 
+	SPEAKER(config, "mono").front_center();
+	SPEAKER_SOUND(config, m_speaker).add_route(ALL_OUTPUTS, "mono", 0.50);
+}
+
+void i420ex_state::entrada(machine_config &config)
+{
+	i420ex(config);
+
+	GD5434_PCI(config, "pci:06.0", 0);
+
+	// TODO: on proprietary PISA riser
+	PCI_SLOT(config, "pci:1", pci_cards, 7,  0, 1, 2, 3, nullptr);
+	PCI_SLOT(config, "pci:2", pci_cards, 8,  1, 2, 3, 0, nullptr);
+
+	ISA16_SLOT(config, "board1", 0, "ib:isabus", pc_isa_onboard, "superio", true).set_option_machine_config("superio", intel_superio_config);
+	ISA16_SLOT(config, "isa1",   0, "ib:isabus", pc_isa16_cards, nullptr, false);
+
 	rs232_port_device& serport0(RS232_PORT(config, "serport0", isa_com, "logitech_mouse"));
 	serport0.rxd_handler().set("board1:superio", FUNC(i82091aa_device::rxd1_w));
 	serport0.dcd_handler().set("board1:superio", FUNC(i82091aa_device::ndcd1_w));
@@ -192,9 +203,23 @@ void i420ex_state::i420ex(machine_config &config)
 	serport1.dsr_handler().set("board1:superio", FUNC(i82091aa_device::ndsr2_w));
 	serport1.ri_handler().set("board1:superio", FUNC(i82091aa_device::nri2_w));
 	serport1.cts_handler().set("board1:superio", FUNC(i82091aa_device::ncts2_w));
+}
 
-	SPEAKER(config, "mono").front_center();
-	SPEAKER_SOUND(config, m_speaker).add_route(ALL_OUTPUTS, "mono", 0.50);
+void i420ex_state::a486ap4(machine_config &config)
+{
+	i420ex(config);
+
+	PCI_SLOT(config, "pci:1", pci_cards, 7,  0, 1, 2, 3, nullptr);
+	PCI_SLOT(config, "pci:2", pci_cards, 8,  1, 2, 3, 0, nullptr);
+	PCI_SLOT(config, "pci:3", pci_cards, 9,  2, 3, 0, 1, nullptr);
+	PCI_SLOT(config, "pci:4", pci_cards, 10, 3, 0, 1, 2, nullptr);
+
+	ISA16_SLOT(config, "isa1",   0, "ib:isabus", pc_isa16_cards, "fdc_smc", false);
+	ISA16_SLOT(config, "isa2",   0, "ib:isabus", pc_isa16_cards, "comat", false);
+	ISA16_SLOT(config, "isa3",   0, "ib:isabus", pc_isa16_cards, "lpt", false);
+	ISA16_SLOT(config, "isa4",   0, "ib:isabus", pc_isa16_cards, nullptr, false);
+	// TODO: VLB really
+	ISA16_SLOT(config, "isa5",   0, "ib:isabus", pc_isa16_cards, "svga_et4k", false);
 }
 
 
@@ -225,8 +250,28 @@ ROM_START( entrada )
 	// AZ02 known to exist
 ROM_END
 
+// ASUS PVI-486AP4 (Socket 3, 4xSIMM72, Cache: 128/256/512KB, 4 PCI, 4 ISA, 1 VLB)
+// Intel Aries PCIset S82425EX + S82426EX; DS12887 RTC; VIA VT82C42N - BIOS: 32pin
+ROM_START( a486ap4 )
+	ROM_REGION32_LE(0x20000, "pci:05.0", 0)
+	// 0: BIOS-String: 07/20/94-ARIES-P/I-AP4G-00 / #401A0-0104
+	ROM_SYSTEM_BIOS(0, "486ap4v104", "ASUS PVI-486AP4 V1.04")
+	ROMX_LOAD( "awai0104.bin", 0x00000, 0x20000, CRC(52ea7123) SHA1(3d242ea6d1bcdddd41e32e40708133c72f2bd060), ROM_BIOS(0))
+	// 1: BIOS-String: 10/21/94-ARIES-P/I-AP4G-00 / #401A0-0203
+	ROM_SYSTEM_BIOS(1, "486ap4v203", "ASUS PVI-486AP4 V2.03")
+	ROMX_LOAD( "awai0203.bin", 0x00000, 0x20000, CRC(68d3a3f4) SHA1(6eee0c9aed2ede028eb170f8dd7921563293b99f), ROM_BIOS(1))
+	// 2: BIOS-String: 11/08/94-ARIES-P/I-AP4G-00 / #401A0-0204
+	ROM_SYSTEM_BIOS(2, "486ap4v204", "ASUS PVI-486AP4 V2.04")
+	ROMX_LOAD( "awai0204.bin", 0x00000, 0x20000, CRC(b62b35bb) SHA1(b6fa3d7b1c88da37ce74aca329a31d2587652d97), ROM_BIOS(2))
+	// 3: BIOS-String: 11/25/97/ARIES-P/I-AP4G-00 / #401A0-0205-2
+	ROM_SYSTEM_BIOS(3, "486ap4v205-2", "ASUS PVI-486AP4 V2.05-2")
+	ROMX_LOAD( "0205.002", 0x00000, 0x20000, CRC(632e8ee6) SHA1(3cf57b2654b0365e41ef5f5c82f68eeadf0e7a21), ROM_BIOS(3))
+ROM_END
+
+
 } // anonymous namespace
 
 
-COMP( 1994, entrada, 0, 0,      i420ex, 0, i420ex_state, empty_init, "Intel", "Classic/PCI LP \"Entrada\" (Intel I420EX Aries chipset)", MACHINE_NOT_WORKING )
+COMP( 1994, entrada, 0, 0,      entrada, 0, i420ex_state, empty_init, "Intel", "Classic/PCI LP \"Entrada\" (Intel I420EX Aries chipset)", MACHINE_NOT_WORKING )
+COMP( 1994, a486ap4, 0, 0,      a486ap4, 0, i420ex_state, empty_init, "Asus",  "PVI-486AP4 (Intel I420EX Aries chipset)", MACHINE_NOT_WORKING )
 

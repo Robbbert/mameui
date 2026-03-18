@@ -39,17 +39,24 @@ ROM_START( gd5434 )
 	// VESA feature connector - Jumpers: IRQ9 enable/disable, Green control
 	ROM_REGION32_LE( 0x8000, "bios", ROMREGION_ERASEFF )
 	ROM_DEFAULT_BIOS("122")
-    ROM_SYSTEM_BIOS(0, "110b", "PCI VGA BIOS Version 1.10B")
-    ROMX_LOAD("cl543x_pci_rev4.bin", 0x00000, 0x8000, CRC(553171a3) SHA1(b72edc318710c46c9cb280e9b1b3c9f8a34844f2), ROM_BIOS(0) )
+	// doesn't boot, bad?
+    ROM_SYSTEM_BIOS(0, "100e", "PCI VGA BIOS Version 1.00e")
+    ROMX_LOAD("cirrus5434.bin", 0x00000, 0x8000, CRC(bc271648) SHA1(08afd4468c4c1a1630a200de1007b1671f109b3c), ROM_BIOS(0) )
+    ROM_SYSTEM_BIOS(1, "122", "PCI VGA BIOS Version 1.22 (01/18/95)")
+    ROMX_LOAD("gd5434pci.bin", 0x00000, 0x8000, CRC(fa76dabf) SHA1(0310ef02df941e7d35e1d832400e2e4dd07d6309), ROM_BIOS(1) )
+	// 1ST AND 2ND HALF IDENTICAL crc="1d8d54e3" sha1="3e3b67dee603f8afaf17d3ccdf9439e742983bab"
+    ROM_SYSTEM_BIOS(2, "110b", "PCI VGA BIOS Version 1.10B (06/28/94)")
+    ROMX_LOAD("gd5434.bin", 0x00000, 0x8000, CRC(403020a4) SHA1(1ee70f6cc3c7b9a9afb402a1bc939f9f2e0cc739), ROM_BIOS(2) )
     ROM_IGNORE( 0x8000 )
-    ROM_SYSTEM_BIOS(1, "100e", "PCI VGA BIOS Version 1.00e")
-    ROMX_LOAD("cirrus5434.bin", 0x00000, 0x8000, CRC(bc271648) SHA1(08afd4468c4c1a1630a200de1007b1671f109b3c), ROM_BIOS(1) )
-    ROM_SYSTEM_BIOS(2, "122", "PCI VGA BIOS Version 1.22")
-    ROMX_LOAD("gd5434pci.bin", 0x00000, 0x8000, CRC(fa76dabf) SHA1(0310ef02df941e7d35e1d832400e2e4dd07d6309), ROM_BIOS(2) )
-    ROM_SYSTEM_BIOS(3, "110b_jap", "PCI VGA BIOS Version 1.10B Japan chip")
-    ROMX_LOAD("japan.bin", 0x00000, 0x8000, CRC(46fe9efa) SHA1(58712b00faf102509c4129c0babeb98df2b6e042), ROM_BIOS(3) )
-//    ROM_SYSTEM_BIOS(4, "124", "CL-GD543x PCI VGA BIOS Version 1.24")
-//    ROMX_LOAD("1.24.bin", 0x00000,0x8000, CRC(174fa427) SHA1(3e490f3cc3af33dbfac6ff3ddac5e90bdc895646), ROM_BIOS(4) )
+	// same as above with 1xxxxxxxxxxxxxxx = 0xFF instead
+//  ROM_SYSTEM_BIOS(3, "110b_jap", "PCI VGA BIOS Version 1.10B Japan chip (06/28/94)")
+//  ROMX_LOAD("japan.bin", 0x00000, 0x8000, CRC(46fe9efa) SHA1(58712b00faf102509c4129c0babeb98df2b6e042), ROM_BIOS(3) )
+//  ROM_IGNORE( 0x8000 )
+//  ROM_SYSTEM_BIOS(4, "110b_alt", "PCI VGA BIOS Version 1.10B")
+//  ROMX_LOAD("cl543x_pci_rev4.bin", 0x00000, 0x8000, CRC(553171a3) SHA1(b72edc318710c46c9cb280e9b1b3c9f8a34844f2), ROM_BIOS(4) )
+//  ROM_IGNORE( 0x8000 )
+//  ROM_SYSTEM_BIOS(5, "124", "CL-GD543x PCI VGA BIOS Version 1.24")
+//  ROMX_LOAD("1.24.bin", 0x00000,0x8000, CRC(174fa427) SHA1(3e490f3cc3af33dbfac6ff3ddac5e90bdc895646), ROM_BIOS(5) )
 ROM_END
 
 const tiny_rom_entry *cirrus_gd5434_pci_device::device_rom_region() const

@@ -25,6 +25,29 @@ w65c02_device::w65c02_device(const machine_config &mconfig, device_type type, co
 {
 }
 
+void w65c02_device::do_sbc_d(uint8_t val)
+{
+	// SBC allows interdigit carry from decimal adjustment on 65C02
+	uint8_t c = m_P & F_C ? 0 : 1;
+	m_P &= ~(F_N|F_V|F_Z|F_C);
+	uint16_t diff = m_A - val - c;
+	uint8_t al = (m_A & 15) - (val & 15) - c;
+	uint8_t ah = (m_A >> 4) - (val >> 4) - (int8_t(al) < 0);
+	if(!uint8_t(diff))
+		m_P |= F_Z;
+	else if(diff & 0x80)
+		m_P |= F_N;
+	if((m_A^val) & (m_A^diff) & 0x80)
+		m_P |= F_V;
+	if(!(diff & 0xff00))
+		m_P |= F_C;
+	m_A = (ah << 4) | (al & 15);
+	if(int8_t(al) < 0)
+		m_A -= 6;
+	if(int8_t(ah) < 0)
+		m_A -= 0x60;
+}
+
 std::unique_ptr<util::disasm_interface> w65c02_device::create_disassembler()
 {
 	return std::make_unique<w65c02_disassembler>();

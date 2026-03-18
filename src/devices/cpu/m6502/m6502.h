@@ -164,7 +164,7 @@ protected:
 
 	void do_adc_d(uint8_t val);
 	void do_adc_nd(uint8_t val);
-	void do_sbc_d(uint8_t val);
+	virtual void do_sbc_d(uint8_t val);
 	void do_sbc_nd(uint8_t val);
 	void do_arr_d();
 	void do_arr_nd();
