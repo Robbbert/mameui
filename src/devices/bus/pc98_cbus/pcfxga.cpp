@@ -19,12 +19,19 @@ TODO:
 #include "emu.h"
 #include "pcfxga.h"
 
+#include "softlist_dev.h"
+
 DEFINE_DEVICE_TYPE(PCFXGA_CBUS, pcfxga_cbus_device, "pcfxga_cbus", "NEC PC-FXGA C-Bus i/f")
 
 pcfxga_cbus_device::pcfxga_cbus_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
 	: device_t(mconfig, PCFXGA_CBUS, tag, owner, clock)
 	, device_pc98_cbus_slot_interface(mconfig, *this)
 {
+}
+
+void pcfxga_cbus_device::device_add_mconfig(machine_config &config)
+{
+	SOFTWARE_LIST(config, "cdfx_list").set_original("pcfx");
 }
 
 void pcfxga_cbus_device::device_start()
