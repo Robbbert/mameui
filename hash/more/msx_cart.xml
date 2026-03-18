@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 707 -->
+<!-- Number of items in this list = 713 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -539,6 +539,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Aspar GP Master (1988)(Dinamic).rom" size="65536" crc="62d71a05" sha1="4b7ca4cf9c730f4b81f3666770b7a0816d470425"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxcb6a3b0727c59">
+		<description>Astro Jump (2026)(Tiago Tresoldi, Freja Lindgren)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Astro Jump (2026)(Tiago Tresoldi, Freja Lindgren).rom" size="16384" crc="cbce45b7" sha1="cb6a3b0727c59673d5f0cf32a553b3d7daa9aee8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1292,6 +1302,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx64df7f8d1c404">
+		<description>Chrono Runner (2026)(MSX Italia Association)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Chrono Runner (2026)(MSX Italia Association).rom" size="131072" crc="d7879f27" sha1="64df7f8d1c404ef0f47bf8604a6f0ffaeaef8328"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx50fecdd1ed3b6">
+		<description>Chrono Runner v1.1 (2026)(MSX Italia Association)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Chrono Runner v1.1 (2026)(MSX Italia Association).rom" size="131072" crc="5652e7a1" sha1="50fecdd1ed3b6d9acba98740daaaf68d1641b533"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx3dfde89db8f33">
 		<description>Circus</description>
 		<year>????</year>
@@ -1959,6 +1989,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="EXO-TICAL ES (2025)(Roolandoo).rom" size="49152" crc="498b8f87" sha1="95fbe04b84b3e3cdf270ca7f9fe4082a16fe0fc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx69425c1bc3da8">
+		<description>Eye Brawls v1.1 (2026)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Eye Brawls v1.1 (2026)(Jess Creations).rom" size="32768" crc="26b6648d" sha1="69425c1bc3da81b3bce81cdee62399f034be764d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5152,6 +5192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxa8c04f47cad87">
+		<description>Shift v1.1 (2026)(Haplo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Shift v1.1 (2026)(Haplo).rom" size="32768" crc="d4faed12" sha1="a8c04f47cad87fb9c303618dd63178dd795ca161"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx1c609721b5217">
 		<description>Shiper (2026)(GameCast)</description>
 		<year>????</year>
@@ -5979,6 +6029,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Tower of Damnation v1.2 (2023)(BigFive)_1.rom" size="49152" crc="d679ddd0" sha1="d4e116853834f3cc96138ec8e9ad9a3403257fb3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxcd71fec39b8c0">
+		<description>Toxic Tubes (2026)(Murilo T. Carmello)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Toxic Tubes (2026)(Murilo T. Carmello).rom" size="49152" crc="5931a8cd" sha1="cd71fec39b8c0ce428e5c31aca5738967747dec2"/>
 			</dataarea>
 		</part>
 	</software>

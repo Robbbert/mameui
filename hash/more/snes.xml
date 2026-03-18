@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4012 -->
+<!-- Number of items in this list = 4013 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -32399,6 +32399,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Ghouls'n Ghosts (U, Proto)(1991)(Capcom).sfc" size="2097152" crc="f1073bb3" sha1="ac81a92a91fb2908d3532f7b2ef3c6bc92015842"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9639f4564ef3f">
+		<description>Super Ghouls'n Ghosts Enhanced Hack (2026)(Tiken)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Ghouls'n Ghosts Enhanced Hack (2026)(Tiken).sfc" size="1048576" crc="ebb9c790" sha1="9639f4564ef3f4a8f42a1c8690e4989d392060c8"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2058 -->
+<!-- Number of items in this list = 2059 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5599,6 +5599,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="deadly moves (Hack, Spanish).bin" size="1048576" crc="bdc2eaf1" sha1="dfed5cf9387a97ee595153f9822d802870c39aec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3e473a991dee1">
+		<description>Death &amp; Lead (2025)(Kai Magazine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Death &amp; Lead (2025)(Kai Magazine).bin" size="4194304" crc="e1b3ee1f" sha1="3e473a991dee175b232bda86672dd7670c890ab8"/>
 			</dataarea>
 		</part>
 	</software>
