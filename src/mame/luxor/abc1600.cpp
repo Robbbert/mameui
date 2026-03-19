@@ -6,7 +6,6 @@
 
     How to create HDD image:
     ------------------------
-    ./chdman createhd -chs 615,4,17 -ss 512 -o necd5126a.chd
     ./chdman createhd -chs 1024,8,17 -ss 512 -o micr1325a.chd
 
     How to format HDD:
@@ -24,9 +23,8 @@
     mf(2,0)
     mf(2,0)
     abcenix
-    loadsys1
-    <enter>
-    <enter>
+    loadsys1 -wt micr1325a -we sa40 -bs 512
+	loadsys
 
     ABCenix <= D-NIX <= AT&T Unix System V
 
@@ -37,11 +35,9 @@
     TODO:
 
 	- write to floppy fails with status 0x04 (lost byte) after commit 339bb2758640202e5378a1c2b1c19b2ef46fa1d9
-    - abcenix panics while booting after commit 78661e9aa92c7e43c9a96039e7dfb3dabc79a287
     - systest1600 failures
         - CIO timer (works if CIO clock is 4219000)
         - DMA (expects to read 0xff from 0x18000..)
-    - loadsys1 core dump (/etc/mkfs -b 1024 -v 69000 /dev/sa40)
     - crashes after reset
     - Z80 SCC/DART interrupt chain
     - [:2a:chb] - TX FIFO is full, discarding data
@@ -597,7 +593,7 @@ void abc1600_state::dmadis_w(int state)
 	LOG("%s _DMADIS %d\n", machine().describe_context(), state);
 
 	m_dmadis = state;
-	
+
 	update_br();
 }
 
@@ -1206,7 +1202,7 @@ ROM_START( abc1600 )
 	ROM_LOAD( "1031", 0x71c, 0x144, CRC(0aedc9fc) SHA1(2cbbc7d5cb16b410d296062feb77ed26ff01af24) ) // NS32081 IN ABC1600
 
 	ROM_REGION( 0x20, NMC9306_TAG, 0 )
-	ROM_LOAD( "nmc9306.14c", 0x00, 0x20, CRC(1cb59b6e) SHA1(3c955a667034db86fa1b848f0c0317157a3a48f6) )
+	ROM_LOAD( "nmc9306.14c", 0x00, 0x20, CRC(0edfc912) SHA1(a4d080456d32a6731d8969dd3727fba76cfe252d) )
 ROM_END
 
 } // anonymous namespace
@@ -1218,4 +1214,4 @@ ROM_END
 //**************************************************************************
 
 //    YEAR  NAME     PARENT  COMPAT  MACHINE  INPUT    CLASS          INIT        COMPANY  FULLNAME    FLAGS
-COMP( 1985, abc1600, 0,      0,      abc1600, abc1600, abc1600_state, empty_init, "Luxor", "ABC 1600", MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE )
+COMP( 1985, abc1600, 0,      0,      abc1600, abc1600, abc1600_state, empty_init, "Luxor", "ABC 1600", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_CONTROLS | MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )

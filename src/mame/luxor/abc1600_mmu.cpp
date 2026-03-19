@@ -91,8 +91,8 @@ abc1600_mmu_device::abc1600_mmu_device(machine_config const &mconfig, char const
 {
 }
 
-abc1600_mmu_device::mmu::mmu(m68008_device *maincpu, address_space &boot, address_space &program, address_space &cpu_space, address_space &mac_space, u8 *segment_ram, u16 *page_ram) : 
-    m_maincpu(maincpu), 
+abc1600_mmu_device::mmu::mmu(m68008_device *maincpu, address_space &boot, address_space &program, address_space &cpu_space, address_space &mac_space, u8 *segment_ram, u16 *page_ram) :
+    m_maincpu(maincpu),
 	m_segment_ram(segment_ram),
 	m_page_ram(page_ram),
 	m_a_boot(boot),
@@ -223,7 +223,7 @@ bool abc1600_mmu_device::mmu::translate(int spacenum, int intention, offs_t &add
 		target_space = &m_a_mac_space;
 		return true;
 	}
- 
+
 	bool nonx, wp;
 	address = get_physical_address(address, intention, nonx, wp);
 
@@ -241,7 +241,7 @@ u8 abc1600_mmu_device::mmu::mmu_read(offs_t logical, int intention)
 
 	if (!ifc2(intention) && BIT(logical, 19))
 		return m_s_program.read_interruptible(logical);
-	
+
 	bool nonx, wp;
 	offs_t physical = get_physical_address(logical, intention, nonx, wp);
 
@@ -276,7 +276,7 @@ u8 abc1600_mmu_device::mmu::read_program(offs_t logical)
 	return mmu_read(logical, TR_FETCH);
 }
 
-void abc1600_mmu_device::mmu::write_program(offs_t logical, u8 data) 
+void abc1600_mmu_device::mmu::write_program(offs_t logical, u8 data)
 {
 	mmu_write(logical, data);
 }
