@@ -180,7 +180,8 @@ void labyrunr_state::draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprec
 
 uint32_t labyrunr_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	uint8_t ctrl_0 = m_k007121->ctrl_r(0);
+	const uint8_t ctrl_0 = m_k007121->ctrl_r(0);
+	const uint8_t ctrl_2 = m_k007121->ctrl_r(2);
 
 	const int bgpen = (m_k007121->ctrl_r(6) & 0x30) * 2 + 16;
 	bitmap.fill(bgpen << 4, cliprect);
@@ -190,7 +191,7 @@ uint32_t labyrunr_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 	rectangle clip[3];
 	clip[0] = clip[1] = clip[2] = visarea;
 
-	if (m_k007121->ctrl_r(3) & 0x10)
+	if (BIT(m_k007121->ctrl_r(3), 4))
 	{
 		// compute clipping
 		if (m_k007121->flipscreen())
@@ -206,26 +207,22 @@ uint32_t labyrunr_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 
 		clip[0] &= cliprect;
 		clip[1] &= cliprect;
+		clip[2] = clip[0];
 
 		// set scroll registers
-		m_tilemap[0]->set_scrollx(0, ctrl_0 - 40);
-		m_tilemap[1]->set_scrollx(0, 0);
+		m_tilemap[0]->set_scrollx(ctrl_0 - 40);
+		m_tilemap[1]->set_scrollx(0);
+		m_tilemap[1]->set_scrolly(0);
 		m_k007121->set_sprite_offsets(40, 16);
 
-		for (int i = 0; i < 32; i++)
+		// enable colscroll
+		if (BIT(m_k007121->ctrl_r(1), 1))
 		{
-			// enable colscroll
-			if (m_k007121->ctrl_r(1) & 2)
+			for (int i = 0; i < 32; i++)
 				m_tilemap[0]->set_scrolly((i + 2) & 0x1f, m_k007121->scroll_r(i));
-			else
-				m_tilemap[0]->set_scrolly((i + 2) & 0x1f, m_k007121->ctrl_r(2));
 		}
-
-		// draw the graphics
-		m_tilemap[0]->draw(screen, bitmap, clip[0], TILEMAP_DRAW_OPAQUE | TILEMAP_DRAW_CATEGORY(0), 0);
-		draw_sprites(bitmap, clip[0], screen.priority());
-		m_tilemap[0]->draw(screen, bitmap, clip[0], TILEMAP_DRAW_OPAQUE | TILEMAP_DRAW_CATEGORY(1), 0);
-		m_tilemap[1]->draw(screen, bitmap, clip[1], 0, 0);
+		else
+			m_tilemap[0]->set_scrolly(ctrl_2);
 	}
 	else
 	{
@@ -242,7 +239,7 @@ uint32_t labyrunr_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 		}
 
 		// width of 240 or 256
-		if (m_k007121->ctrl_r(3) & 0x40)
+		if (BIT(m_k007121->ctrl_r(3), 6))
 		{
 			clip[2].min_x += 24;
 			clip[2].max_x -= 16;
@@ -268,16 +265,19 @@ uint32_t labyrunr_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 		}
 
 		// set scroll registers
-		m_tilemap[0]->set_scrollx(0, ctrl_0 - 16);
-		m_tilemap[1]->set_scrollx(0, ctrl_0 - 16);
+		m_tilemap[0]->set_scrollx(ctrl_0 - 16);
+		m_tilemap[1]->set_scrollx(ctrl_0 - 16);
+		m_tilemap[0]->set_scrolly(ctrl_2);
+		m_tilemap[1]->set_scrolly(ctrl_2);
 		m_k007121->set_sprite_offsets(16, -8);
-
-		// draw the graphics
-		m_tilemap[0]->draw(screen, bitmap, clip[0], TILEMAP_DRAW_CATEGORY(0), 0);
-		draw_sprites(bitmap, clip[2], screen.priority());
-		m_tilemap[0]->draw(screen, bitmap, clip[0], TILEMAP_DRAW_CATEGORY(1), 0);
-		m_tilemap[1]->draw(screen, bitmap, clip[1], 0, 0);
 	}
+
+	// draw the graphics
+	const uint32_t opaque = BIT(m_k007121->ctrl_r(3), 5) ? 0 : TILEMAP_DRAW_OPAQUE;
+	m_tilemap[0]->draw(screen, bitmap, clip[0], opaque | TILEMAP_DRAW_CATEGORY(0), 0);
+	draw_sprites(bitmap, clip[2], screen.priority());
+	m_tilemap[0]->draw(screen, bitmap, clip[0], opaque | TILEMAP_DRAW_CATEGORY(1), 0);
+	m_tilemap[1]->draw(screen, bitmap, clip[1], 0, 0);
 
 	return 0;
 }
