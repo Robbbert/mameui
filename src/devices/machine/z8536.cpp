@@ -860,14 +860,36 @@ void cio_base_device::gate(int id, int state)
 void cio_base_device::match_pattern(int port)
 {
 	u8 pms = m_register[PORT_A_MODE_SPECIFICATION + (port << 3)];
-	u8 pm = m_register[PORT_A_PATTERN_MASK + (port << 3)];
 	u8 ddr = m_register[PORT_A_DATA_DIRECTION + (port << 3)];
-	u8 pol = m_register[PORT_A_PATTERN_POLARITY + (port << 3)];
+	
+	u8 pm = m_register[PORT_A_PATTERN_MASK + (port << 3)];
+	u8 pt = m_register[PORT_A_PATTERN_TRANSITION + (port << 3)];
+	u8 pp = m_register[PORT_A_PATTERN_POLARITY + (port << 3)];
+
+	if (pt) {
+		logerror("%s: Z8536 Port %c Pattern Transition mode not implemented\n", machine().describe_context(), 'A' + port);
+		return;
+	}
+
+	u8 data = (m_input[port] & ddr) | (m_output[port] & ~ddr);
+	u8 match = 0;
+
+	for (int bit = 0; bit < 8; bit++) {
+		if (!BIT(pm, bit))
+			continue;
+
+		if (BIT(pp, bit) == BIT(data, bit))
+			match |= 1 << bit;
+	}
 
 	switch ((pms & PMS_PMS_MASK) >> 1)
 	{
+	case PMS_DISABLE:
+		m_match[port] = 0;
+		return;
+		
 	case PMS_OR_PEV:
-		m_match[port] = (m_input[port] ^ ~pol) & ddr & pm;
+		m_match[port] = match;
 
 		if (m_match[port])
 		{
@@ -875,6 +897,10 @@ void cio_base_device::match_pattern(int port)
 			m_register[PORT_A_COMMAND_AND_STATUS + port] |= PCS_IP;
 			check_interrupt();
 		}
+		break;
+
+	default:
+		logerror("%s: Z8536 Port %c Pattern Mode %u not implemented\n", machine().describe_context(), 'A' + port, (pms & PMS_PMS_MASK) >> 1);
 		break;
 	}
 }

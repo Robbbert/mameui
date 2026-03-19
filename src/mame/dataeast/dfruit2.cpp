@@ -21,12 +21,14 @@ bank of 8 switches
 
 NOTES:
 
-appears to be ported from the version on tc009xlvc hardware, with some of the features
-of that SoC reproduced here
+- appears to be ported from the version on tc009xlvc hardware, with some of the features
+  of that SoC reproduced here;
+- while the game has DIPs, most configuration options are found in service mode.
 
 TODO:
 - complete I/O
 - IRQ handling may be incomplete
+- hopper hookup may be imperfect
 - various unknown reads / writes
 */
 
@@ -38,6 +40,7 @@ TODO:
 
 #include "cpu/z80/z80.h"
 #include "machine/i8255.h"
+#include "machine/ticket.h"
 #include "machine/timer.h"
 #include "sound/ymopn.h"
 
@@ -55,6 +58,7 @@ public:
 	dfruit2_state(const machine_config &mconfig, device_type type, const char *tag) :
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
+		m_hopper(*this, "hopper"),
 		m_palette(*this, "palette"),
 		m_deco_tilegen(*this, "tilegen"),
 		m_sprgen(*this, "sprgen"),
@@ -71,6 +75,7 @@ protected:
 
 private:
 	required_device<cpu_device> m_maincpu;
+	required_device<hopper_device> m_hopper;
 	required_device<palette_device> m_palette;
 	required_device<deco16ic_device> m_deco_tilegen;
 	required_device<decospr_device> m_sprgen;
@@ -95,6 +100,7 @@ private:
 	uint8_t bank_r();
 	void bank_w(uint8_t data);
 	void b109_w(uint8_t data);
+	void counters_w(uint8_t data);
 	void program_map(address_map &map) ATTR_COLD;
 };
 
@@ -205,6 +211,23 @@ void dfruit2_state::bank_w(uint8_t data)
 void dfruit2_state::b109_w(uint8_t data)
 {
 	m_b109 = data;
+	if (m_b109 & 0xfe)
+		logerror("%s b109_w: %02x\n", machine().describe_context(), data);
+
+	// TODO: bit 1 seems to be set only during double up game. What is it used for?
+}
+
+void dfruit2_state::counters_w(uint8_t data)
+{
+	machine().bookkeeping().coin_counter_w(0, BIT(data, 0));
+	machine().bookkeeping().coin_counter_w(1, BIT(data, 1));
+
+	m_hopper->motor_w(BIT(data, 2)); // or maybe 3?
+
+	if (data & 0x0c)
+		logerror("%s output_w: %02x\n", machine().describe_context(), data);
+
+	// 0xf0 always on?
 }
 
 void dfruit2_state::machine_start()
@@ -250,14 +273,14 @@ void dfruit2_state::program_map(address_map &map)
 
 static INPUT_PORTS_START( dfruit2 )
 	PORT_START("IN0")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_COIN1 )
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_SERVICE1 ) // no coin counter, so assume service
 	PORT_SERVICE_NO_TOGGLE( 0x02, IP_ACTIVE_LOW ) // or book-keeping?
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_COIN2 )
+	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_COIN1 )
 	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_GAMBLE_KEYIN )
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_GAMBLE_TAKE )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_SERVICE ) // also service / book-keeping
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("hopper", FUNC(ticket_dispenser_device::line_r))
 
 	PORT_START("IN1")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
@@ -270,7 +293,7 @@ static INPUT_PORTS_START( dfruit2 )
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
 	PORT_START("IN2")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_GAMBLE_PAYOUT ) // by default only works with at least 300 credits, changeable in service mode
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_SLOT_STOP1 ) PORT_NAME("Stop Reel 1 / Double Up")
 	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_SLOT_STOP3 ) PORT_NAME("Stop Reel 3 / Black")
@@ -343,7 +366,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(dfruit2_state::scanline_cb)
 {
 	int const scanline = param;
 
-	if (m_b109 & 1)
+	if (BIT(m_b109, 0))
 		m_irq_source = 0x10;
 	else
 		m_irq_source = 0x00;
@@ -364,6 +387,8 @@ void dfruit2_state::dfruit2(machine_config &config)
 	ppi.in_pa_callback().set_ioport("IN0");
 	ppi.in_pb_callback().set_ioport("IN1");
 	ppi.in_pc_callback().set_ioport("IN2");
+
+	HOPPER(config, m_hopper, attotime::from_msec(200)); // TODO: probably wrong period
 
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_refresh_hz(58);
@@ -394,6 +419,7 @@ void dfruit2_state::dfruit2(machine_config &config)
 	SPEAKER(config, "mono").front_center();
 
 	ym2203_device &ym(YM2203(config, "ym", 28_MHz_XTAL / 8));
+	ym.port_a_write_callback().set(FUNC(dfruit2_state::counters_w));
 	ym.port_b_read_callback().set_ioport("DSW");
 	ym.add_route(ALL_OUTPUTS, "mono", 1.00); // divider not verified
 }

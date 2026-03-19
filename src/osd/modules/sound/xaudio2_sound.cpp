@@ -937,7 +937,7 @@ sound_xaudio2::voice_info::voice_info(sound_xaudio2 &host, WAVEFORMATEX const &f
 	volume_matrix(std::make_unique<float []>(format.nChannels * format.nChannels)),
 	m_host(host),
 	m_buffer_pool(4, calculate_packet_bytes(format)),
-	m_buffer(format.nChannels),
+	m_buffer(format.nChannels, format.nSamplesPerSec),
 	m_packet_bytes(calculate_packet_bytes(format)),
 	m_sample_bytes(format.nBlockAlign),
 	m_need_update(false),

@@ -23,7 +23,8 @@ public:
 	virtual void do_exec_full() override;
 	virtual void do_exec_partial() override;
 
-	virtual void do_sbc_d(uint8_t val) override;
+	void do_sbc_cd(uint8_t val);
+	void do_sbc_c(uint8_t val);
 
 protected:
 	w65c02_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);

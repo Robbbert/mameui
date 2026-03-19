@@ -38,7 +38,7 @@ public:
 protected:
 	class abuffer {
 	public:
-		abuffer(uint32_t channels) noexcept;
+		abuffer(uint32_t channels, uint32_t rate) noexcept;
 		void set_latency(float latency);
 		void clear();
 		void get(int16_t *data, uint32_t samples) noexcept;
@@ -62,6 +62,7 @@ protected:
 		buffer &push_buffer();
 
 		uint32_t m_channels;
+		uint32_t m_rate;
 		uint32_t m_used_buffers;
 		uint32_t m_used_buffers_prev;
 		uint32_t m_max_buffers;
