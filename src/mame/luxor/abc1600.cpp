@@ -43,7 +43,6 @@
         - DMA (expects to read 0xff from 0x18000..)
     - loadsys1 core dump (/etc/mkfs -b 1024 -v 69000 /dev/sa40)
     - crashes after reset
-    - connect RS-232 printer port
     - Z80 SCC/DART interrupt chain
     - [:2a:chb] - TX FIFO is full, discarding data
         [:] SCC write 000003
@@ -62,6 +61,7 @@
 #include "imagedev/floppy.h"
 #include "machine/74259.h"
 #include "machine/e0516.h"
+#include "machine/input_merger.h"
 #include "machine/nmc9306.h"
 #include "machine/ram.h"
 #include "machine/wd_fdc.h"
@@ -76,7 +76,7 @@
 //  CONSTANTS / MACROS
 //**************************************************************************
 
-#define VERBOSE 0
+//#define VERBOSE 0
 #include "logmacro.h"
 
 #define MC68008P8_TAG       "3f"
@@ -133,7 +133,7 @@ public:
 	abc1600_state(const machine_config &mconfig, device_type type, const char *tag) :
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, MC68008P8_TAG),
-		m_mac(*this, "mmu"),
+		m_mac(*this, "mac"),
 		m_dma0(*this, Z8410AB1_0_TAG),
 		m_dma1(*this, Z8410AB1_1_TAG),
 		m_dma2(*this, Z8410AB1_2_TAG),
@@ -219,8 +219,6 @@ private:
 	void update_drdy1(int state);
 	void sccrq_a_w(int state) { m_sccrq_a = state; update_drdy1(0); }
 	void sccrq_b_w(int state) { m_sccrq_b = state; update_drdy1(0); }
-	void dart_irq_w(int state) { m_dart_irq = state; m_maincpu->set_input_line(M68K_IRQ_5, (m_dart_irq || m_scc_irq) ? ASSERT_LINE : CLEAR_LINE); }
-	void scc_irq_w(int state) { m_scc_irq = state; m_maincpu->set_input_line(M68K_IRQ_5, (m_dart_irq || m_scc_irq) ? ASSERT_LINE : CLEAR_LINE); }
 
 	// DMA
 	int m_dmadis = 0;
@@ -241,8 +239,6 @@ private:
 	int m_btce = 0;                 // V.24 channel B external clock enable
 	bool m_sccrq_a = 0;
 	bool m_sccrq_b = 0;
-	int m_scc_irq = 0;
-	int m_dart_irq = 0;
 };
 
 
@@ -664,7 +660,7 @@ void abc1600_state::mac_mem(address_map &map)
 	map(0x1ffa00, 0x1ffaff).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr2_map));
 	map(0x1ffb00, 0x1ffb00).mirror(0x7e).w(FUNC(abc1600_state::fw0_w));
 	map(0x1ffb01, 0x1ffb01).mirror(0x7e).w(FUNC(abc1600_state::fw1_w));
-	map(0x1ffd00, 0x1ffd07).mirror(0xf8).w("mmu", FUNC(abc1600_mmu_device::dmamap_w));
+	map(0x1ffd00, 0x1ffd07).mirror(0xf8).w("mac", FUNC(abc1600_mmu_device::dmamap_w));
 	map(0x1ffe00, 0x1ffe00).mirror(0xff).w("spec_contr_reg", FUNC(ls259_device::write_nibble_d3));
 }
 
@@ -1016,8 +1012,6 @@ void abc1600_state::machine_start()
 	save_item(NAME(m_btce));
 	save_item(NAME(m_sccrq_a));
 	save_item(NAME(m_sccrq_b));
-	save_item(NAME(m_scc_irq));
-	save_item(NAME(m_dart_irq));
 }
 
 
@@ -1044,8 +1038,10 @@ void abc1600_state::machine_reset()
 void abc1600_state::abc1600(machine_config &config)
 {
 	// basic machine hardware
-	M68008(config, m_maincpu, 64_MHz_XTAL / 8);
+	M68008(config, m_maincpu, 16000000);//64_MHz_XTAL / 8);
 	m_maincpu->enable_mmu8();
+
+	INPUT_MERGER_ANY_HIGH(config, "irq5").output_handler().set_inputline(m_maincpu, M68K_IRQ_5);
 
 	LUXOR_ABC1600_MMU(config, m_mac);
 	m_mac->set_addrmap(AS_PROGRAM, &abc1600_state::mac_mem);
@@ -1097,10 +1093,10 @@ void abc1600_state::abc1600(machine_config &config)
 	m_dma2->out_iorq_callback().set(m_mac, FUNC(abc1600_mmu_device::dma2_iorq_w));
 
 	Z80DART(config, m_dart, 64_MHz_XTAL / 16);
-	m_dart->out_int_callback().set(FUNC(abc1600_state::dart_irq_w));
+	m_dart->out_int_callback().set("irq5", FUNC(input_merger_device::in_w<0>));
 	m_dart->out_txda_callback().set(RS232_PR_TAG, FUNC(rs232_port_device::write_txd));
-	//m_dart->out_dtra_callback().set(RS232_PR_TAG, FUNC(rs232_port_device::write_dcd));
-	//m_dart->out_rtsa_callback().set(RS232_PR_TAG, FUNC(rs232_port_device::write_cts));
+	m_dart->out_dtra_callback().set(RS232_PR_TAG, FUNC(rs232_port_device::write_dtr));
+	m_dart->out_rtsa_callback().set(RS232_PR_TAG, FUNC(rs232_port_device::write_rts));
 	m_dart->out_txdb_callback().set(ABC_KEYBOARD_PORT_TAG, FUNC(abc_keyboard_port_device::txd_w));
 
 	abc_keyboard_port_device &kb(ABC_KEYBOARD_PORT(config, ABC_KEYBOARD_PORT_TAG, abc_keyboard_devices, "abc99"));
@@ -1110,11 +1106,11 @@ void abc1600_state::abc1600(machine_config &config)
 
 	rs232_port_device &rs232pr(RS232_PORT(config, RS232_PR_TAG, default_rs232_devices, nullptr));
 	rs232pr.rxd_handler().set(m_dart, FUNC(z80dart_device::rxa_w));
-	//rs232pr.rts_handler().set(m_dart, FUNC(z80dart_device::ctsa_w));
-	//rs232pr.dtr_handler().set(m_dart, FUNC(z80dart_device::dcda_w));
+	rs232pr.dcd_handler().set(m_dart, FUNC(z80dart_device::dcda_w));
+	rs232pr.cts_handler().set(m_dart, FUNC(z80dart_device::ctsa_w));
 
 	SCC8530(config, m_scc, 64_MHz_XTAL / 16);
-	m_scc->out_int_callback().set(FUNC(abc1600_state::scc_irq_w));
+	m_scc->out_int_callback().set("irq5", FUNC(input_merger_device::in_w<1>));
 	m_scc->out_wreqa_callback().set(FUNC(abc1600_state::sccrq_a_w));
 	m_scc->out_wreqb_callback().set(FUNC(abc1600_state::sccrq_b_w));
 	m_scc->out_txda_callback().set(RS232_A_TAG, FUNC(rs232_port_device::write_txd));

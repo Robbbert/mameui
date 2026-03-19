@@ -99,6 +99,10 @@ private:
 		memory_access<20, 0, 0, ENDIANNESS_BIG>::specific m_s_program;
 
         void reset();
+		bool ifc2(int intention) const;
+		offs_t get_segment_address(offs_t logical, int intention) const;
+		bool force_task0(offs_t logical, int intention) const;
+		int get_task(offs_t logical, int intention) const;
         offs_t get_physical_address(offs_t logical, int task, bool &nonx, bool &wp);
         u8 mmu_read(offs_t logical, int intention);
         void mmu_write(offs_t logical, u8 data);
@@ -123,6 +127,9 @@ private:
     void boot_map(address_map &map) ATTR_COLD;
 	void mac_map(address_map &map) ATTR_COLD;
 
+	uint8_t mac_r(offs_t offset);
+	void mac_w(offs_t offset, uint8_t data);
+	
 	uint8_t cause_r();
 	void task_w(offs_t offset, uint8_t data);
 	uint8_t segment_r(offs_t offset);
