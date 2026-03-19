@@ -79,7 +79,7 @@ private:
 		SDL_AudioDeviceID m_sdl_id;
 		SDL_AudioStream *m_sdl_stream;
 		abuffer m_buffer;
-		stream_info(uint32_t id, uint8_t channels) : m_id(id), m_sdl_id(0), m_buffer(channels) {}
+		stream_info(uint32_t id, uint8_t channels, uint32_t rate) : m_id(id), m_sdl_id(0), m_buffer(channels, rate) {}
 	};
 
 	std::vector<device_info> m_devices;
@@ -257,7 +257,7 @@ uint32_t sound_sdl3::stream_sink_open(uint32_t node, std::string name, uint32_t 
 	dspec.format = SDL_AUDIO_S16;
 	dspec.channels = m_devices[devnode].m_channels;
 
-	std::unique_ptr<stream_info> stream = std::make_unique<stream_info>(m_stream_next_id ++, dspec.channels);
+	std::unique_ptr<stream_info> stream = std::make_unique<stream_info>(m_stream_next_id ++, dspec.channels, rate);
 
 	stream->m_sdl_id = SDL_OpenAudioDevice(device_id, &dspec);
 	if(!stream->m_sdl_id) {
@@ -295,7 +295,7 @@ uint32_t sound_sdl3::stream_source_open(uint32_t node, std::string name, uint32_
 	dspec.format = SDL_AUDIO_S16;
 	dspec.channels = m_devices[devnode].m_channels;
 
-	std::unique_ptr<stream_info> stream = std::make_unique<stream_info>(m_stream_next_id++, dspec.channels);
+	std::unique_ptr<stream_info> stream = std::make_unique<stream_info>(m_stream_next_id++, dspec.channels, rate);
 
 	printf("opening source device %d at rate %d channels %d\n", device_id, dspec.freq, dspec.channels);
 

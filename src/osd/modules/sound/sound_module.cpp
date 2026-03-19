@@ -14,8 +14,9 @@ sound_module::~sound_module()
 	// implementing this here forces the vtable and inline virtual member functions to be instantiated
 }
 
-sound_module::abuffer::abuffer(uint32_t channels) noexcept :
+sound_module::abuffer::abuffer(uint32_t channels, uint32_t rate) noexcept :
 	m_channels(channels),
+	m_rate(rate),
 	m_max_buffers(8),
 	m_hindex(0),
 	m_last_sample(channels, 0)
@@ -94,7 +95,7 @@ void sound_module::abuffer::push(const int16_t *data, uint32_t samples)
 
 	// maximum number of buffers relative to samples
 	// unless -speed or -refreshspeed is used, this is same as m_max_buffers
-	const uint32_t max_buffers = std::max(m_max_buffers * 48000 / samples / 50, 4U);
+	const uint32_t max_buffers = std::max(m_max_buffers * m_rate / samples / 50, 4U);
 
 	// minimum number of buffers after overrun
 	// lower limit of 2 prevents buffer underruns with push(this), get, get, push
