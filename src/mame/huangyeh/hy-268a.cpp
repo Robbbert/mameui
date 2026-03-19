@@ -17,7 +17,7 @@ HUANG YEH HY9826 160-pin custom (GFX related?)
 2x Altera EPM70325LC44-10 FPGA
 U6295 ADPCM (Oki M6295 clone)
 UM3567 OPL (YM2413 clone)
-ATMEL 93C45 EEPROM
+ATMEL 93C46 EEPROM
 
 
 TODO:
@@ -126,7 +126,7 @@ void hy268a_state::xycs(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &hy268a_state::program_map);
 	m_maincpu->set_vblank_int("screen", FUNC(hy268a_state::irq3_line_hold));
 
-	EEPROM_93C46_16BIT(config, "eeprom");  // 93C45
+	EEPROM_93C46_16BIT(config, "eeprom");
 
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER)); // TODO: verify everything once emulation works
