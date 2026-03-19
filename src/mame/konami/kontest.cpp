@@ -103,27 +103,28 @@ void kontest_state::kontest_palette(palette_device &palette) const
 	}
 }
 
-uint32_t kontest_state::screen_update( screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect )
+uint32_t kontest_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
-	for (int y = 0; y < 32; y++)
+	for (int y = (cliprect.top() >> 3); y <= (cliprect.bottom() >> 3); y++)
 	{
-		for (int x = 0; x < 64; x++)
+		for (int x = (cliprect.left() >> 3); x <= (cliprect.right() >> 3); x++)
 		{
-			uint8_t const tile = m_ram[(x + y * 64) | 0x800];
-			uint8_t const attr = m_ram[(x + ((y >> 1) * 64))] & 7;
+			uint8_t const tile = m_ram[x | (y << 6) | 0x820];
+			uint8_t const attr = m_ram[x | ((y >> 1) << 6) | 0x20] & 7;
 
 			for (int yi = 0; yi < 8; yi++)
 			{
+				int const res_y = (y << 3) | yi;
 				for (int xi = 0; xi < 8; xi++)
 				{
-					uint8_t const pen = m_ram[(yi << 1) | (xi >> 2) | (tile << 4) | 0x1000];
-					uint8_t const color = BIT(pen >> 4, ~xi & 3) << 1 | BIT(pen, ~xi & 3);
-
-					int const res_x = x * 8 + xi - 256;
-					int const res_y = y * 8 + yi;
-
+					int const res_x = (x << 3) | xi;
 					if (cliprect.contains(res_x, res_y))
-						bitmap.pix(res_y, res_x) = m_palette->pen(color | attr * 4);
+					{
+						uint8_t const pen = m_ram[(yi << 1) | (xi >> 2) | (tile << 4) | 0x1000];
+						uint8_t const color = bitswap<2>(pen, (~xi & 3) | 4, ~xi & 3);
+
+						bitmap.pix(res_y, res_x) = m_palette->pen(color | (attr << 2));
+					}
 				}
 			}
 		}
