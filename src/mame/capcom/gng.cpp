@@ -2,11 +2,10 @@
 // copyright-holders:Pierpaolo Prazzoli
 /***************************************************************************
 
-Ghosts'n Goblins
-Diamond Run
-
+Capcom Ghosts'n Goblins hardware
 
 Notes:
+
 - Diamond Run doesn't use all the ROMs. d5 is not used at all, and the second
   half of d3o is not used either. There are 0x38 levels in total, the data for
   levels 0x00-0x0f is taken from ROM space 0x8000-0xbfff, the data for levels
@@ -20,14 +19,17 @@ Notes:
 - Increased "sprites" to address 0x400 sprites, to avoid Ghosts'n Goblins
   drawing a bad sprite. (18/08/2005 Pierpaolo Prazzoli)
 
+- There is no watchdog in GnG, as previously stated in the MAME driver.
+  Instead, there is a DMA circuit that copies object data from the CPU RAM to
+  a buffer, this also slows down the CPU as it is halted during that time.
+  The DMA is triggered when a certain memory location is addressed. That
+  location was thought to be a watchdog before. - Jose Tejada (jotego)
 
-Notes by Jose Tejada (jotego):
-
-There is no watchdog in GnG, as previously stated in the MAME driver.
-Instead, there is a DMA circuit that copies object data from the CPU RAM to a buffer,
-this also slows down the CPU as it is halted during that time.
-The DMA is triggered when a certain memory location is addressed. That location was
-thought to be a watchdog before.
+- Writing to palette during active display causes bus conflicts, this happens
+  at busy moments and the vblank routine overflows to the next frame, see:
+  https://www.youtube.com/watch?v=h7473QQwZYA&t=1301s
+  https://www.youtube.com/watch?v=KWUphU2rx9Y&t=1439s
+  The glitchy 'lightning' effect is currently not emulated.
 
 ***************************************************************************/
 
@@ -633,7 +635,7 @@ void gng_state::diamrun(machine_config &config)
 
 /* Newer PCB, with visible wires and mask ROMs (85606-A-5 / 85606-B-4).
    The ROM contents are a mix between 'gnga' and 'makaimurb'.
-   
+
    The ROM configuration is set with a jumpers bank at 1F.
     Mask ROMs:     EPROMs (eg. gnga):
 	J2 = Short     Open
