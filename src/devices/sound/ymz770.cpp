@@ -12,7 +12,6 @@ TODO:
 - Simple Access mode. SACs is register / data lists same as SEQ. in 770C, when both /SEL and /CS pins goes low - will be run SAC with number set at data bus.
   can not be used in CV1K (/SEL pin is NC, internally pulled to VCC), probably not used in PGM2 too.
  770:
-- Configurable clock (currently hardcoded at 16kHz)
 - sequencer timers implemented but seems unused, presumably because of design flaws or bugs, likely due to lack of automatic adding of sequencer # to register offset.
   in result sequences uses very long chains of 32-sample wait commands instead, wasting a lot of ROM space.
 - sequencer triggers not implemented, not sure how they works (Deathsmiles ending tune starts sequence with TGST = 01h, likely a bug and don't affect tune playback)
@@ -49,15 +48,15 @@ DEFINE_DEVICE_TYPE(YMZ774, ymz774_device, "ymz774", "Yamaha YMZ774 AMMS2C")
 //-------------------------------------------------
 
 ymz770_device::ymz770_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: ymz770_device(mconfig, YMZ770, tag, owner, clock, 16000)
+	: ymz770_device(mconfig, YMZ770, tag, owner, clock, 1024)
 {
 }
 
-ymz770_device::ymz770_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock, uint32_t sclock)
+ymz770_device::ymz770_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock, uint32_t divider)
 	: device_t(mconfig, type, tag, owner, clock)
 	, device_sound_interface(mconfig, *this)
 	, m_stream(nullptr)
-	, m_sclock(sclock)
+	, m_divider(divider)
 	, m_cur_reg(0)
 	, m_mute(0)
 	, m_doen(0)
@@ -77,7 +76,7 @@ ymz770_device::ymz770_device(const machine_config &mconfig, device_type type, co
 void ymz770_device::device_start()
 {
 	// create the stream
-	m_stream = stream_alloc(0, 2, m_sclock);
+	m_stream = stream_alloc(0, 2, clock() / m_divider);
 
 	for (auto & channel : m_channels)
 	{
@@ -454,7 +453,7 @@ void ymz770_device::internal_reg_write(uint8_t reg, uint8_t data)
 //-------------------------------------------------
 
 ymz774_device::ymz774_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: ymz770_device(mconfig, YMZ774, tag, owner, clock, 44100)
+	: ymz770_device(mconfig, YMZ774, tag, owner, clock, 512)
 {
 	// calculate volume increments, fixed point values, fractions of 0x20000
 	for (u32 i = 0; i < 256; i++)
