@@ -750,6 +750,7 @@ public:
 	void kotbinyo(machine_config &config) ATTR_COLD;
 	void daireach(machine_config &config) ATTR_COLD;
 	void hnrose(machine_config &config) ATTR_COLD;
+	void mjswacads(machine_config &config) ATTR_COLD;
 
 private:
 	DECLARE_MACHINE_START(hanakanz);
@@ -804,6 +805,7 @@ private:
 	void mjgnight_portmap(address_map &map) ATTR_COLD;
 	void mjnigiri_portmap(address_map &map) ATTR_COLD;
 	void mjreach1_portmap(address_map &map) ATTR_COLD;
+	void mjswacads_portmap(address_map &map) ATTR_COLD;
 	void momotaro_portmap(address_map &map) ATTR_COLD;
 
 	memory_share_creator<uint8_t> m_banked_nvram;
@@ -4863,6 +4865,13 @@ void hanakanz_state::mjnigiri_portmap(address_map &map)
 	map(0xb0, 0xb0).w(FUNC(hanakanz_state::mjflove_rombank_w));
 	map(0xc0, 0xc0).w(FUNC(hanakanz_state::mjmyster_rambank_w));
 	map(0xe0, 0xe0).r(FUNC(hanakanz_state::technotop_protection_r<0xf2>));
+}
+
+void hanakanz_state::mjswacads_portmap(address_map &map)
+{
+	daimyojn_portmap(map);
+
+	map(0xe0, 0xe0).r(FUNC(hanakanz_state::technotop_protection_r<0x0a>));
 }
 
 
@@ -10599,6 +10608,13 @@ void hanakanz_state::mjnigiri(machine_config &config)
 	m_maincpu->set_addrmap(AS_IO, &hanakanz_state::mjnigiri_portmap);
 }
 
+void hanakanz_state::mjswacads(machine_config &config)
+{
+	daimyojn(config);
+
+	m_maincpu->set_addrmap(AS_IO, &hanakanz_state::mjswacads_portmap);
+}
+
 void hanakanz_state::hnrose(machine_config &config)
 {
 	daimyojn(config);
@@ -13300,6 +13316,33 @@ ROM_START( mjswacad )
 	ROM_LOAD( "01001.2b", 0x000000, 0x200000, CRC(4b84f45c) SHA1(2ad92b15986d88d4c9254f43ce251a0ebd90a48b) ) // 1xxxxxxxxxxxxxxxxxxxx = 0xFF
 ROM_END
 
+
+/***************************************************************************
+
+Mahjong Sweet Academy Special
+
+Techno-Top, Limited
+
+TTL.0103 sticker
+
+Has 4 banks of 10 DIP switches
+
+***************************************************************************/
+
+ROM_START( mjswacads )
+	ROM_REGION( 0x80000, "maincpu", 0 )
+	ROM_LOAD( "p0102y5.5b", 0x00000, 0x80000, CRC(8ae679ad) SHA1(f47cdf6c8d8ec71e5c36369ad68447471bfc48f9) ) // different from mjswacad
+
+	ROM_REGION( 0x800000, "blitter", 0 )
+	ROM_LOAD( "01003.7b",     0x000000, 0x200000, CRC(1df7a355) SHA1(3122570a845bb046936e8296423636281b39cc4a) )
+	ROM_LOAD( "01004.8b",     0x200000, 0x200000, CRC(198904d4) SHA1(d34a297cd08c227767808dfa695573ef596022c9) )
+	ROM_LOAD( "01005.9b",     0x400000, 0x200000, CRC(4dbcf7cf) SHA1(8bf4eaff1a280b2d5bf1221dc516647936e146d7) )
+	ROM_LOAD( "01006_2.11b ", 0x600000, 0x200000, CRC(7c646f5c) SHA1(d911f497b2b4b10da1693308a2bfab9f70d2e34a) ) // only different one from mjswacad
+
+	ROM_REGION( 0x100000, "oki", 0 )
+	ROM_LOAD( "01001.2b", 0x000000, 0x100000, CRC(ee30d20a) SHA1(14689196486bc4eab4a174fe880b425fa544cd25) ) // same as mjswacad but half size (no empty half)
+ROM_END
+
 } // anonymous namespace
 
 DEFINE_DEVICE_TYPE_PRIVATE(HGOKOU_JOYSTICK, device_mahjong_panel_interface, hgokou_joystick_device, "hgokou_joystick", "Hanafuda Hana Gokou joystick")
@@ -13408,6 +13451,8 @@ GAME( 2000, jongoh,      0,        jongoh,    jongoh,     ddenlovr_state, empty_
 GAME( 2001, daireach,    0,        daireach,  seljan2,    hanakanz_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai-Reach (Japan, TSM012-C01)",                          MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL )
 
 GAME( 2002, daimyojn,    0,        daimyojn,  daimyojn,   hanakanz_state, empty_init,    ROT0, "Dynax / Techno-Top / Techno-Planning",        "Mahjong Daimyojin (Japan, T017-PB-00)",                          MACHINE_NO_COCKTAIL  )
+
+GAME( 2002, mjswacads,   0,        mjswacads, daimyojn,   hanakanz_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Sweet Academy Special (Japan, P010B-Y05)",               MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // needs verifying of inputs, outputs (DIP sheet available)
 
 GAME( 2002, mjtenho,     0,        daimyojn,  daimyojn,   hanakanz_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Tenho (Japan, P016B-000)",                               MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL  )
 
