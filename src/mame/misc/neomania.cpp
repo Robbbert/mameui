@@ -17,7 +17,14 @@ TODO:
 - Extract "Guard.zip" and understand what is for;
 \- WARNING: once in non-Safe Mode Windows (after drivers installation etc.) the OS has a Startup
    item for the frontend (neofend.exe). If protection fails it will proceed to *wipe out* the
-   entire HDD, it is advised to backup the .dif before fiddling with that.
+   entire HDD and any non-write protected floppy, it is advised to backup the .dif before fiddling
+   with that.
+\- PPM puts following files in memory, with header "NeomaniaUniversalMonitorVer5":
+   - C:/Neomania/Pkunzip.exe;Guard.zip;Pkzip.exe
+   - C:/windows/win.ini;user.dat
+   - <A scrambled pattern in between>, xor with 0xff gives back the same
+     'C:/Neomania/Driver/Ppm.exe' (...)
+   - C:/Neomania/Neofend.dat (as a key result for the protection?)
 
 ===================================================================================================
 
