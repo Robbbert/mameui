@@ -671,7 +671,7 @@ ROM_END
 
 /* Newer PCB, with visible wires and mask ROMs (85606-A-5 / 85606-B-4).
    The ROM contents are a mix between 'gngb' and 'makaimurb'.
-   It has the Japanese cross weapon srpite, but retains the shield icon in the tiles.
+   It has the Japanese cross weapon sprite, but retains the shield icon in the tiles.
 
    The ROM configuration is set with a jumpers bank at 1F.
     Mask ROMs:     EPROMs (eg. gngb):
