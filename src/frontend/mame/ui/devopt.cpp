@@ -54,10 +54,12 @@ void menu_device_config::populate_text(std::optional<text_layout> &layout, float
 
 		machine_config &mconfig(const_cast<machine_config &>(machine().config()));
 		machine_config::token const tok(mconfig.begin_configuration(mconfig.root_device()));
-		device_t *const dev = mconfig.device_add(m_option->name(), m_option->devtype(), 0);
+		device_t *const dev = mconfig.device_add(std::string(m_option->name()).c_str(), m_option->devtype(), 0); // TODO: support string_view tags
 		for (device_t &d : device_enumerator(*dev))
+		{
 			if (!d.configured())
 				d.config_complete();
+		}
 
 		// get decimal separator
 		std::string point;
@@ -393,7 +395,7 @@ void menu_device_config::populate_text(std::optional<text_layout> &layout, float
 				+ input + input_mj + input_hana + input_gamble + input_analog + input_adjust + input_keypad + input_keyboard) == 0)
 			layout->add_text(_("[None]\n"), color);
 
-		mconfig.device_remove(m_option->name());
+		mconfig.device_remove(std::string(m_option->name()).c_str()); // TODO: support string_view tags
 		lines = layout->lines();
 	}
 	width = layout->actual_width();

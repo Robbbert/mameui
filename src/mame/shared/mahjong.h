@@ -31,10 +31,7 @@ public:
 			bool const fixed)
 		: mahjong_panel_connector_device(mconfig, tag, owner, u32(0))
 	{
-		option_reset();
-		opts(*this);
-		set_default_option(dflt);
-		set_fixed(fixed);
+		set_options(std::forward<T>(opts), dflt, fixed);
 	}
 	mahjong_panel_connector_device(machine_config const &mconfig, char const *tag, device_t *owner, u32 clock);
 	virtual ~mahjong_panel_connector_device();

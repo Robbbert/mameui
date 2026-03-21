@@ -2730,7 +2730,7 @@ void validity_checker::validate_devices(machine_config &config)
 				device_t *card;
 				{
 					machine_config::token const tok(config.begin_configuration(slot->device()));
-					card = config.device_add(option.second->name(), option.second->devtype(), option.second->clock());
+					card = config.device_add(std::string(option.second->name()).c_str(), option.second->devtype(), option.second->clock()); // TODO: support string_view tags
 
 					const char *const def_bios = option.second->default_bios();
 					if (def_bios)
@@ -2745,14 +2745,14 @@ void validity_checker::validate_devices(machine_config &config)
 
 				for (device_slot_interface &subslot : slot_interface_enumerator(*card))
 				{
-					if (subslot.fixed())
+					if (subslot.fixed() && subslot.default_option())
 					{
 						// TODO: make this self-contained so it can apply itself
-						device_slot_interface::slot_option const *suboption = subslot.option(subslot.default_option());
+						device_slot_interface::slot_option const *const suboption = subslot.option(subslot.default_option());
 						if (suboption)
 						{
 							machine_config::token const tok(config.begin_configuration(subslot.device()));
-							device_t *const sub_card = config.device_add(suboption->name(), suboption->devtype(), suboption->clock());
+							device_t *const sub_card = config.device_add(std::string(suboption->name()).c_str(), suboption->devtype(), suboption->clock()); // TODO: support string_view tags
 							const char *const sub_bios = suboption->default_bios();
 							if (sub_bios)
 								sub_card->set_default_bios_tag(sub_bios);
@@ -2778,7 +2778,7 @@ void validity_checker::validate_devices(machine_config &config)
 				}
 
 				machine_config::token const tok(config.begin_configuration(slot->device()));
-				config.device_remove(option.second->name());
+				config.device_remove(std::string(option.second->name()).c_str()); // TODO: support string_view tags
 				m_checking_card = false;
 			}
 		}

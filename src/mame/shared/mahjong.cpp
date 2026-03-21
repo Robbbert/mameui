@@ -37,6 +37,42 @@
  Reach         *       *     *      *
  Ron           *       *     *      *
 
+
+ "Standard" mahjong keyboards use a 4*6 matrix.  Gambling controls add an additional row.
+
+ A         E         I         M         Kan       Start
+ B         F         J         N         Reach     Bet
+ C         G         K         Chi       Ron       -
+ D         H         L         Pon       -         -
+ Last      Take      W-Up      F.Flop    Big       Small
+
+ Hanafuda keyboards use a subset of the matrix.
+ These are rare.  A mahjong panel with additional labels would usually be used.
+
+ 1         5         -         Yes       -         Start
+ 2         6         -         No        -         Bet
+ 3         7         -         -         -         -
+ 4         8         -         -         -         -
+ -         Take      W-Up      F.Flop    Big       Small
+
+ Rarest of all is the 6-button hanafuda (or "hanaroku") keyboard, using a 6*6 matrix.
+ This has controls for two player positions in one matrix.
+
+ 1P 1      1P 2      1P 3      1P 4      Payout    F.Flop
+ 1P 5      1P No     1P Yes    1P 6      -         -
+ -         1P Start  1P Bet    -         -         -
+ 2P 1      2P 2      2P 3      2P 4      -         -
+ 2P 5      2P No     2P Yes    2P 6      -         -
+ -         2P Start  2P Bet    -         -         -
+
+ Columns are usually wired from left to right from least significant to most significant bit.
+ Nichibutsu wires the bits in the opposite order.
+ The Jaleco MegaSystem 32 has the columns rotated by one position so the Start column is the least significant bit.
+
+ Note that non-standard mahjong/hanafuda keyboards exist:
+ * Some Nichibutsu hanafuda games use the Reach/Ron positions for Yes/No (rather than M/N).
+ * SNK Neo Geo mahjong keyboards use a non-standard 3*7 matrix.
+
  */
 #include "emu.h"
 #include "mahjong.h"
