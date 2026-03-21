@@ -1,27 +1,35 @@
 // license:BSD-3-Clause
 // copyright-holders:Olivier Galibert, R. Belmont, MetalliC
-/***************************************************************************
+/*******************************************************************************
 
     Yamaha YMZ770B "AMMSL", YMZ770C "AMMS-A" and YMZ774 "AMMS2C"
 
     Emulation by R. Belmont and MetalliC
     AMM decode by Olivier Galibert
 
------
+--------------------------------------------------------------------------------
+
 TODO:
-- Simple Access mode. SACs is register / data lists same as SEQ. in 770C, when both /SEL and /CS pins goes low - will be run SAC with number set at data bus.
-  can not be used in CV1K (/SEL pin is NC, internally pulled to VCC), probably not used in PGM2 too.
- 770:
-- sequencer timers implemented but seems unused, presumably because of design flaws or bugs, likely due to lack of automatic adding of sequencer # to register offset.
-  in result sequences uses very long chains of 32-sample wait commands instead, wasting a lot of ROM space.
-- sequencer triggers not implemented, not sure how they works (Deathsmiles ending tune starts sequence with TGST = 01h, likely a bug and don't affect tune playback)
- 774:
+- Simple Access mode. SACs is register / data lists same as SEQ. in 770C, when
+  both /SEL and /CS pins goes low - will be run SAC with number set at data bus.
+  It can not be used in CV1K (/SEL pin is NC, internally pulled to VCC), probably
+  not used in PGM2 too.
+- Configurable sample clock divider (currently hardcoded)
+770:
+- Sequencer timers are implemented but seem unused, presumably because of design
+  flaws or bugs, likely due to lack of automatic adding of sequencer # to register
+  offset. In result, sequences use very long chains of 32-sample wait commands
+  instead, wasting a lot of ROM space.
+- Sequencer triggers are not implemented, not sure how they work (Deathsmiles
+  ending tune starts sequence with TGST = 01h, likely a bug and doesn't affect
+  tune playback)
+774:
 - 4 channel output
 - Equalizer
 - pan delayed transition (not used in games)
 - sequencer off trigger (not used in games)
 
- known SPUs in this series:
+known SPUs in this series:
   YMZ770B  AMMSL    Capcom medal hardware (alien.cpp)
   YMZ770C  AMMS-A   Cave CV1000
   YMZ771   SSGS3
@@ -33,7 +41,7 @@ TODO:
   YMZ779   AMMS3D
   YMZ870   AMMS3EX
 
-***************************************************************************/
+*******************************************************************************/
 
 #include "emu.h"
 #include "ymz770.h"
