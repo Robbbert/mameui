@@ -98,6 +98,7 @@ void ymz770_device::device_start()
 		sqc.is_playing = false;
 
 	// register for save states
+	save_item(NAME(m_sclock));
 	save_item(NAME(m_cur_reg));
 	save_item(NAME(m_mute));
 	save_item(NAME(m_doen));
@@ -184,6 +185,10 @@ void ymz770_device::device_reset()
 	}
 }
 
+TIMER_CALLBACK_MEMBER(ymz770_device::update_sample_rate)
+{
+	m_stream->set_sample_rate(m_sclock);
+}
 
 //-------------------------------------------------
 //  sound_stream_update - handle update requests for
@@ -254,7 +259,7 @@ retry:
 					if (sample_rate != m_sclock)
 					{
 						m_sclock = sample_rate;
-						m_stream->set_sample_rate(m_sclock);
+						machine().scheduler().synchronize(timer_expired_delegate(FUNC(ymz770_device::update_sample_rate), this));
 					}
 
 					channel.last_block = channel.output_remaining < 1152;

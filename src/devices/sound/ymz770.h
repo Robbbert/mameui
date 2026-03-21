@@ -32,7 +32,7 @@ protected:
 	// device-level overrides
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_reset() override ATTR_COLD;
-
+	TIMER_CALLBACK_MEMBER(update_sample_rate);
 	virtual void sound_stream_update(sound_stream &stream) override;
 
 	virtual void internal_reg_write(uint8_t reg, uint8_t data);
