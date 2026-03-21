@@ -172,7 +172,7 @@ u8 cio_base_device::acknowledge_interrupt()
 	else if ((m_register[COUNTER_TIMER_3_COMMAND_AND_STATUS] & (CTCS_IP | CTCS_IE | CTCS_IUS)) == (CTCS_IP | CTCS_IE))
 	{
 		data = get_timer_vector(ct_vis);
-		
+
 		m_register[COUNTER_TIMER_3_COMMAND_AND_STATUS] |= CTCS_IUS;
 
 		LOG("%s: Z8536 Counter/Timer 3 Interrupt Acknowledge with Vector %02x\n", machine().describe_context(), data);
@@ -243,7 +243,7 @@ void cio_base_device::check_interrupt()
 		}
 	}
 
-	if (ip_level > ius_level) 
+	if (ip_level > ius_level)
 	{
 		state = ASSERT_LINE;
 	}
@@ -276,7 +276,7 @@ u8 cio_base_device::read_register(offs_t offset)
 	case PORT_B_INTERRUPT_VECTOR:
 		data = get_port_b_vector(mie);
 		break;
-		
+
 	case COUNTER_TIMER_INTERRUPT_VECTOR:
 		data = get_timer_vector(mie);
 		break;
@@ -861,7 +861,7 @@ void cio_base_device::match_pattern(int port)
 {
 	u8 pms = m_register[PORT_A_MODE_SPECIFICATION + (port << 3)];
 	u8 ddr = m_register[PORT_A_DATA_DIRECTION + (port << 3)];
-	
+
 	u8 pm = m_register[PORT_A_PATTERN_MASK + (port << 3)];
 	u8 pt = m_register[PORT_A_PATTERN_TRANSITION + (port << 3)];
 	u8 pp = m_register[PORT_A_PATTERN_POLARITY + (port << 3)];
@@ -887,7 +887,7 @@ void cio_base_device::match_pattern(int port)
 	case PMS_DISABLE:
 		m_match[port] = 0;
 		return;
-		
+
 	case PMS_OR_PEV:
 		m_match[port] = match;
 

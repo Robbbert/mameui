@@ -847,7 +847,7 @@ void x1_020_dx_101_device::draw_sprites_line(bitmap_ind16 &bitmap, const rectang
 					}
 
 					// see myangel, myangel2 and grdians
-					int basecode = (code &= ~((sizex + 1) * (sizey + 1) - 1)) + 
+					int basecode = (code &= ~((sizex + 1) * (sizey + 1) - 1)) +
 						((flipy ? (sizey - y) : y) * (sizex + 1)) + (flipx ? sizex : 0);
 
 					const int code_inc = flipx ? -1 : 1;

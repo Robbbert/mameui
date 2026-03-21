@@ -190,7 +190,7 @@ void vt82c586b_acpi_device::map_extra(
 {
 	if (BIT(m_general_config, 7))
 	{
-//		io_space->install_device(m_iobase & 0xfffe, m_iobase | 0xff, *m_acpi, &acpi_pipc_device::map);
+//      io_space->install_device(m_iobase & 0xfffe, m_iobase | 0xff, *m_acpi, &acpi_pipc_device::map);
 		m_acpi->map_device(memory_window_start, memory_window_end, 0, memory_space, io_window_start, io_window_end, m_iobase, io_space);
 	}
 }

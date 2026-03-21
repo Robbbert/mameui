@@ -380,7 +380,7 @@ void bfm_cobra3_state::machine_start()
 
 void bfm_cobra3_state::dma1_drq(int state)
 {
-//	m_maincpu->dma_dreq1_w(state);
+//  m_maincpu->dma_dreq1_w(state);
 }
 
 void bfm_cobra3_state::scc66470_irq(int state)
@@ -488,7 +488,7 @@ void bfm_cobra3_state::bfm_cobra3(machine_config &config)
 	scsi.set_external_device(6, m_scsic);
 	m_scsic->drq_handler().set(DEVICE_SELF, FUNC(bfm_cobra3_state::dma1_drq));
 
-	WATCHDOG_TIMER(config, "watchdog").set_time(PERIOD_OF_555_MONOSTABLE(120000,100e-9)); //TODO: Check timings	
+	WATCHDOG_TIMER(config, "watchdog").set_time(PERIOD_OF_555_MONOSTABLE(120000,100e-9)); //TODO: Check timings
 	METERS(config, m_meters, 0).set_number(4);
 }
 

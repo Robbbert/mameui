@@ -195,7 +195,7 @@ void sis630_host_device::smi_act_w(int state)
 		m_smiact = 1;
 
 	if (m_smiact == 0)
-	    machine().debug_break();
+		machine().debug_break();
 	remap_cb();
 }
 

@@ -73,7 +73,7 @@ u8 specnext_uart_device::status_reg_r()
 {
 	// TODO:
 	//o_cpu_d <= uart0_status_rx_err_break & uart0_status_rx_err_framing & (uart0_rx_o(8) and uart0_status_rx_avail) & uart0_status_tx_empty &
-	//			uart0_status_rx_near_full & uart0_status_rx_err_overflow & uart0_status_tx_full & uart0_status_rx_avail;
+	//          uart0_status_rx_near_full & uart0_status_rx_err_overflow & uart0_status_tx_full & uart0_status_rx_avail;
 
 	const bool rx_overflow = !m_rx_empty && (m_rx_head == m_rx_tail);
 	const u8 status = (fifo_empty() << 4)

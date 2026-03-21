@@ -44,7 +44,7 @@ private:
 };
 
 class acpi_pipc_device : public lpc_device
-                       , public device_memory_interface
+					   , public device_memory_interface
 {
 public:
 	acpi_pipc_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = XTAL(3'579'545).value());
@@ -100,7 +100,7 @@ private:
 	void gp_sci_enable_w(offs_t offset, u8 data);
 
 	void check_smi();
-//	void check_sci();
+//  void check_sci();
 };
 
 DECLARE_DEVICE_TYPE(VT82C586B_ACPI, vt82c586b_acpi_device)

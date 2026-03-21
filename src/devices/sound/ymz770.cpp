@@ -14,7 +14,7 @@ TODO:
   both /SEL and /CS pins goes low - will be run SAC with number set at data bus.
   It can not be used in CV1K (/SEL pin is NC, internally pulled to VCC), probably
   not used in PGM2 too.
-- Configurable sample clock divider (currently hardcoded)
+- Configurable sample clock divider needs more research
 770:
 - Sequencer timers are implemented but seem unused, presumably because of design
   flaws or bugs, likely due to lack of automatic adding of sequencer # to register
@@ -84,7 +84,8 @@ ymz770_device::ymz770_device(const machine_config &mconfig, device_type type, co
 void ymz770_device::device_start()
 {
 	// create the stream
-	m_stream = stream_alloc(0, 2, clock() / m_divider);
+	m_sclock = clock() / m_divider;
+	m_stream = stream_alloc(0, 2, m_sclock);
 
 	for (auto & channel : m_channels)
 	{
@@ -97,6 +98,7 @@ void ymz770_device::device_start()
 		sqc.is_playing = false;
 
 	// register for save states
+	save_item(NAME(m_sclock));
 	save_item(NAME(m_cur_reg));
 	save_item(NAME(m_mute));
 	save_item(NAME(m_doen));
@@ -183,6 +185,10 @@ void ymz770_device::device_reset()
 	}
 }
 
+TIMER_CALLBACK_MEMBER(ymz770_device::update_sample_rate)
+{
+	m_stream->set_sample_rate(m_sclock);
+}
 
 //-------------------------------------------------
 //  sound_stream_update - handle update requests for
@@ -239,13 +245,21 @@ retry:
 				if (channel.is_playing)
 				{
 					// next block
-					int sample_rate, channel_count;
+					int sample_rate = m_sclock, channel_count;
 					if (!channel.decoder->decode_buffer(channel.pptr, m_rom.bytes()*8, channel.output_data, channel.output_remaining, sample_rate, channel_count, channel.atbl) || channel.output_remaining == 0)
 					{
 						channel.is_playing = !channel.last_block; // detect infinite retry loop
 						channel.last_block = true;
 						channel.output_remaining = 0;
 						goto retry;
+					}
+
+					// it's not clear how exactly clock divider selection works, so far we simply set sample rate as per AMM header,
+					// in theory may cause problems if samples will have it wrong or use several rates.
+					if (sample_rate != m_sclock)
+					{
+						m_sclock = sample_rate;
+						machine().scheduler().synchronize(timer_expired_delegate(FUNC(ymz770_device::update_sample_rate), this));
 					}
 
 					channel.last_block = channel.output_remaining < 1152;

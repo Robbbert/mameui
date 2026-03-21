@@ -304,8 +304,8 @@ void sdl_window_info::update_cursor_state()
 
 int sdl_window_info::xy_to_render_target(int x, int y, int *xt, int *yt)
 {
- 	osd_dim const logical = get_size();
-    osd_dim const pixel = get_size_pixels();
+	osd_dim const logical = get_size();
+	osd_dim const pixel = get_size_pixels();
 	float const x_scale = pixel.width() / logical.width();
 	float const y_scale = pixel.height() / logical.height();
 	x = std::lround(x * x_scale);

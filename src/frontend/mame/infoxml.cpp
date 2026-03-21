@@ -2173,7 +2173,7 @@ void output_slots(std::ostream &out, machine_config &config, device_t &device, c
 					{
 						util::stream_format(out, "\t\t\t<slotoption name=\"%s\"", normalize_string(option.second->name()));
 						util::stream_format(out, " devname=\"%s\"", normalize_string(dev->shortname()));
-						if (slot.default_option() && !strcmp(slot.default_option(), option.second->name()))
+						if (slot.default_option() && (slot.default_option() == option.second->name()))
 							out << " default=\"yes\"";
 						out << "/>\n";
 					}

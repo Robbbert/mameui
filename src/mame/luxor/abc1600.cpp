@@ -24,7 +24,7 @@
     mf(2,0)
     abcenix
     loadsys1 -wt micr1325a -we sa40 -bs 512
-	loadsys
+    loadsys
 
     ABCenix <= D-NIX <= AT&T Unix System V
 
@@ -34,7 +34,7 @@
 
     TODO:
 
-	- write to floppy fails with status 0x04 (lost byte) after commit 339bb2758640202e5378a1c2b1c19b2ef46fa1d9
+    - write to floppy fails with status 0x04 (lost byte) after commit 339bb2758640202e5378a1c2b1c19b2ef46fa1d9
     - systest1600 failures
         - CIO timer (works if CIO clock is 4219000)
         - DMA (expects to read 0xff from 0x18000..)
