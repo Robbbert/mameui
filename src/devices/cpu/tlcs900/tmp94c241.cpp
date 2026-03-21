@@ -32,7 +32,7 @@ const tmp94c241_device::irq_vector_entry tmp94c241_device::irq_vector_map[] =
 	{ INTE45,   0x80, 0x30, 0x0c},  // INT5 Pin
 	{ INTE67,   0x08, 0x34, 0x0d},  // INT6 Pin
 	{ INTE67,   0x80, 0x38, 0x0e},  // INT7 Pin
-	                                 // 0x3c - reserved
+									 // 0x3c - reserved
 	{ INTE89,   0x08, 0x40, 0x10},  // INT8 Pin
 	{ INTE89,   0x80, 0x44, 0x11},  // INT9 Pin
 	{ INTEAB,   0x08, 0x48, 0x12},  // INTA Pin
@@ -62,7 +62,7 @@ const tmp94c241_device::irq_vector_entry tmp94c241_device::irq_vector_map[] =
 	{ INTETC45, 0x80, 0xa8, 0x2a},  // INTTC5: micro-DMA completion Ch.5
 	{ INTETC67, 0x08, 0xac, 0x2b},  // INTTC6: micro-DMA completion Ch.6
 	{ INTETC67, 0x80, 0xb0, 0x2c},  // INTTC7: micro-DMA completion Ch.7
-	                                 /* 0xb4 ... 0xfc (Reserved) */
+									 /* 0xb4 ... 0xfc (Reserved) */
 };
 
 

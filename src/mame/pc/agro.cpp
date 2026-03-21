@@ -75,7 +75,7 @@ ROM_START( agro )
 	ROM_REGION32_LE( 0x100000, "bios", 0 )
 	// BADADDR    -x-xxxxxxxxxxxxxxxxx, oversized?
 	ROM_LOAD( "du98504.u38", 0, 0x100000, CRC(f0d44dbe) SHA1(e66e1c4839ef6595e4ced6ac0f3651291abb0b28) )
-//	ROM_LOAD( "5901202s.rom", 0xe0000, 0x20000, CRC(2ccdef7a) SHA1(ce2a62540e253679c31dbebd0a9bee7ff0afdeec) )
+//  ROM_LOAD( "5901202s.rom", 0xe0000, 0x20000, CRC(2ccdef7a) SHA1(ce2a62540e253679c31dbebd0a9bee7ff0afdeec) )
 
 	DISK_REGION( "pci:07.0:ide1:0:cdrom" )
 	DISK_IMAGE( "agro", 0, SHA1(edf27fd243944c0ff1468b532874f15346f74442) )

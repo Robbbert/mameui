@@ -40,9 +40,9 @@
 
     to do:
 
-	- EAROM, RTC
+    - EAROM, RTC
     - serial port (incomplete), modem (incl. DTMF generator)
-	- keyboard MCU emulation
+    - keyboard MCU emulation
     - proper custom DMA logic timing
     - loading ROMs for Compass II
 

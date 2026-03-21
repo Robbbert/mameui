@@ -675,7 +675,7 @@ ROM_END
 
    The ROM configuration is set with a jumpers bank at 1F.
     Mask ROMs:     EPROMs (eg. gngb):
-	J2 = Short     Open
+    J2 = Short     Open
     J3 = Short     Open
     J4 = Open      Short
     J5 = Short     Open

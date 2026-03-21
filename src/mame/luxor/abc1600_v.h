@@ -42,7 +42,7 @@ public:
 	virtual void iowr2_map(address_map &map) ATTR_COLD;
 
 	void mover_map(address_map &map) ATTR_COLD;
-	
+
 protected:
 	// device-level overrides
 	virtual void device_start() override ATTR_COLD;
