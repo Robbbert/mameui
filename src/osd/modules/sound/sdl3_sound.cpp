@@ -86,6 +86,7 @@ private:
 	uint32_t m_default_sink, m_default_source;
 	uint32_t m_stream_next_id;
 	osd::audio_info m_deviceinfo;
+	uint32_t m_max_frames;
 
 	std::map<uint32_t, std::unique_ptr<stream_info>> m_streams;
 };
@@ -107,8 +108,8 @@ int sound_sdl3::init(osd_interface &osd, const osd_options &options)
 	char const *const audio_driver = SDL_GetCurrentAudioDriver();
 	osd_printf_verbose("SDL Audio: Driver is %s\n", audio_driver ? audio_driver : "not initialized");
 
-	if(options.audio_latency() > 0.0f)
-		osd_printf_verbose("SDL Audio: %s module does not support audio_latency option\n", name());
+	const float latency = options.audio_latency();
+	m_max_frames = (latency > 0.0f) ? latency + 3 : 8;
 
 	int dev_count = 0;
 	SDL_AudioSpec spec;
@@ -349,7 +350,7 @@ void sound_sdl3::stream_sink_update(uint32_t id, const int16_t *buffer, int samp
 
 	const stream_info *stream = si->second.get();
 	const auto queue_size = SDL_GetAudioStreamQueued(stream->m_sdl_stream);
-	if (queue_size <= 8 * samples_this_frame)
+	if (queue_size < m_max_frames * samples_this_frame)
 	{
 		SDL_PutAudioStreamData(stream->m_sdl_stream, (void *)buffer, samples_this_frame * sizeof(int16_t) * stream->m_buffer.channels());
 	}
