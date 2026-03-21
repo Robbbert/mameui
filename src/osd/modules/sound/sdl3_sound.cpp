@@ -88,8 +88,6 @@ private:
 	osd::audio_info m_deviceinfo;
 
 	std::map<uint32_t, std::unique_ptr<stream_info>> m_streams;
-
-	static void sink_callback(void *userdata, Uint8 *stream, int len);
 };
 
 //============================================================
@@ -344,18 +342,28 @@ void sound_sdl3::stream_close(uint32_t id)
 void sound_sdl3::stream_sink_update(uint32_t id, const int16_t *buffer, int samples_this_frame)
 {
 	auto si = m_streams.find(id);
-	if(si == m_streams.end())
+	if (si == m_streams.end())
+	{
 		return;
-	stream_info *stream = si->second.get();
-	SDL_PutAudioStreamData(stream->m_sdl_stream, (void *)buffer, samples_this_frame * sizeof(int16_t) * stream->m_buffer.channels());
+	}
+
+	const stream_info *stream = si->second.get();
+	const auto queue_size = SDL_GetAudioStreamQueued(stream->m_sdl_stream);
+	if (queue_size <= 8 * samples_this_frame)
+	{
+		SDL_PutAudioStreamData(stream->m_sdl_stream, (void *)buffer, samples_this_frame * sizeof(int16_t) * stream->m_buffer.channels());
+	}
 }
 
 void sound_sdl3::stream_source_update(uint32_t id, int16_t *buffer, int samples_this_frame)
 {
 	auto si = m_streams.find(id);
 	if (si == m_streams.end())
+	{
 		return;
-	stream_info *stream = si->second.get();
+	}
+
+	const stream_info *stream = si->second.get();
 	SDL_GetAudioStreamData(stream->m_sdl_stream, (void *)buffer, samples_this_frame * sizeof(int16_t) * stream->m_buffer.channels());
 }
 
