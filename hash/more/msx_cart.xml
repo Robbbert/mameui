@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 713 -->
+<!-- Number of items in this list = 719 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -539,6 +539,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Aspar GP Master (1988)(Dinamic).rom" size="65536" crc="62d71a05" sha1="4b7ca4cf9c730f4b81f3666770b7a0816d470425"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx786b56c435c2b">
+		<description>Asteroid Rescue (2026)(Electric Adventures)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Asteroid Rescue (2026)(Electric Adventures).rom" size="49152" crc="f80fc416" sha1="786b56c435c2b0d7ef758914c8df9cc0cfc944ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2962,6 +2972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxbcc4d2d128d57">
+		<description>Isa Brave - Underworld keys (2026)(Tom Martin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Isa Brave - Underworld keys (2026)(Tom Martin).rom" size="49152" crc="75dcd405" sha1="bcc4d2d128d5705ba5383f42d781b3a7ce37dad9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx617933101a195">
 		<description>Issunhoushi no Donnamondai - Little Samurai (1987)(Casio)[h Sammi]</description>
 		<year>????</year>
@@ -3032,6 +3052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx2ff9c7a154522">
+		<description>Joselin El Saltarin ES (2026)(joesg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Joselin El Saltarin ES (2026)(joesg).rom" size="32768" crc="1cfe705d" sha1="2ff9c7a154522f1d356d036bbdee576a815fd341"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxab924f3b59a5a">
 		<description>Jump Coaster (1984)(Colpax)[o2]</description>
 		<year>????</year>
@@ -3059,6 +3089,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Jump Land (1985)(Nippon Columbia - Colpax - Universal).rom" size="16384" crc="0f8699ba" sha1="0b3a217d3278a43d7460136f955171c762a1f8e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7c753eae67949">
+		<description>Jumpin Joselin EN (2026)(joesg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Jumpin Joselin EN (2026)(joesg).rom" size="32768" crc="756c1e26" sha1="7c753eae67949f72f4f593b854c7617d60d450ad"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3129,16 +3169,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Kageno Densetsu - The Legend of Kage (1986)(Taito)[b].rom" size="32768" crc="548f6f5e" sha1="3d78b0345fc88d7600192f2c268c6646fda6ae1a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msx762751f816ada">
-		<description>Kenja no Ishi - The Stone of Wisdom (T-Eng Hack)(2021)(GDX)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Kenja no Ishi - The Stone of Wisdom (T-Eng Hack)(2021)(GDX).rom" size="32768" crc="f728c9de" sha1="762751f816ada1cef6e9ab539ffffd37ab498b1f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5412,6 +5442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx5a711440dd5ca">
+		<description>Space Bash - Contact !! (2026)(Dave's Retro Forge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="557056">
+				<rom name="Space Bash - Contact !! (2026)(Dave's Retro Forge).rom" size="557056" crc="14dad385" sha1="5a711440dd5ca9f7b6d545e43ee79c3afb66eb53"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx6580f0c72bac8">
 		<description>Space Maze Attack (1983)(HAL Laboratory)(JP)[o]</description>
 		<year>????</year>
@@ -5569,6 +5609,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Stijger.rom" size="16384" crc="7ceaf2e3" sha1="9871040618c0e02e0e99a9bac8d466dea35fe73d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx762751f816ada">
+		<description>Stone of Wisdom, The (T-Eng)(2021)(GDX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Stone of Wisdom, The (T-Eng)(2021)(GDX).rom" size="32768" crc="f728c9de" sha1="762751f816ada1cef6e9ab539ffffd37ab498b1f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5989,6 +6039,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Top Roller (1984)(Jaleco).rom" size="16384" crc="ca28cbb2" sha1="174437bfb20e2895f0f552602da823ca17b2fe93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx37c85041128ee">
+		<description>Top Roller (Japan)(1984)(Jaleco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Top Roller (Japan)(1984)(Jaleco).rom" size="16384" crc="fc609730" sha1="37c85041128ee21300327726b7300a20ef6b84dd"/>
 			</dataarea>
 		</part>
 	</software>

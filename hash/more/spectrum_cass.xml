@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7808 -->
+<!-- Number of items in this list = 7805 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10199,16 +10199,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8953">
 				<rom name="Black Hole, The (1983)(Quest Microsoftware).tap" size="8953" crc="79ca7375" sha1="6bb79e25f0036bd30b3e05d225a7e4b6f340f13b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs7b7d3f585e93a">
-		<description>Black Horse (2009)(Digital Brains)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="31400">
-				<rom name="Black Horse (2009)(Digital Brains).tzx" size="31400" crc="71452670" sha1="7b7d3f585e93a7daeeaac92578cbbaec48579f10"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44259,26 +44249,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="63934">
 				<rom name="Odd Job Eddie (1985)(Strobe).tap" size="63934" crc="258b9281" sha1="1f23a5ed5309accd617bad9b7f7c526e91bb9288"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs0da47b3d97f4c">
-		<description>Oddi The Viking 128K (2010)(Digital Brains)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="40224">
-				<rom name="Oddi The Viking 128K (2010)(Digital Brains).tzx" size="40224" crc="095f0aaf" sha1="0da47b3d97f4c0f004e135b9469ee7033befb49b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsab90cdbf43c5d">
-		<description>Oddi The Viking 48K (2010)(Digital Brains)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="33267">
-				<rom name="Oddi The Viking 48K (2010)(Digital Brains).tzx" size="33267" crc="a9b440bd" sha1="ab90cdbf43c5dab3e14691bacd4e9cd45fb514a7"/>
 			</dataarea>
 		</part>
 	</software>
