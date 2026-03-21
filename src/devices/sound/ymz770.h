@@ -45,6 +45,7 @@ protected:
 
 	sound_stream *m_stream;
 	uint32_t m_divider;
+	uint32_t m_sclock;
 
 	// data
 	uint8_t m_cur_reg;
