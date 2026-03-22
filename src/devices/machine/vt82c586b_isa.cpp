@@ -485,7 +485,7 @@ void vt82c586b_isa_device::map_extra(
 	io_space->install_device(0, 0xffff, *this, &vt82c586b_isa_device::internal_io_map);
 
 	// Internal PS/2
-	// TODO: BIT 1 enables internal AUX too
+	// TODO: bit 1 enables internal AUX too
 	if (BIT(m_xd_power_on, 0))
 	{
 		m_isabus->install_device(0x60, 0x60, read8smo_delegate(*m_keybc, FUNC(ps2_keyboard_controller_device::data_r)), write8smo_delegate(*m_keybc, FUNC(ps2_keyboard_controller_device::data_w)));

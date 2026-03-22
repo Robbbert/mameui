@@ -50,6 +50,12 @@ C:\Windows has driver installs for:
 - a Sound Blaster AudioPCI 128
 - an ATI All-In-Wonder / All-In-Wonder Pro (with leftover "SYSTEM.I~I" footprint with
   "display.drv=ATI Rage IIC AGP (Português)").
+Root C: actually has a detlog.txt hidden file, containing the actual detected MB configuration:
+- VIA VT82C691 "Apollo Pro" (upgraded MVP3)
+- VIA VT82C596 PIPC (upgraded 'C586B)
+- ATI Rage IIC AGP, subvendor "Rage 3D Pro AGP 2x XPERT 98"
+- Creative Labs CT2518, subvendor "Audio PCI 64V/128/5200 / Creative CT4810/CT5803/CT5806 [Sound Blaster PCI]"
+Makes Soyo SY-6VZA the most likely target for this.
 
 **************************************************************************************************/
 
