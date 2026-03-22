@@ -56,10 +56,7 @@ public:
 	cg_exp_slot_device(machine_config const &mconfig, char const *tag, device_t *owner)
 		: cg_exp_slot_device(mconfig, tag, owner, (uint32_t)0)
 	{
-		option_reset();
-		cg_exp_slot_carts(*this);
-		set_default_option(nullptr);
-		set_fixed(false);
+		set_options(cg_exp_slot_carts, nullptr, false);
 	}
 	cg_exp_slot_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 	virtual ~cg_exp_slot_device();
@@ -81,7 +78,7 @@ public:
 	required_address_space m_io;
 
 protected:
-	// device-level overrides
+	// device_t implementation
 	virtual void device_start() override ATTR_COLD;
 
 	device_cg_exp_interface *m_cart;
@@ -105,7 +102,7 @@ protected:
 	cg_exp_slot_device *m_slot;
 };
 
-// device type definition
+// device type declaration
 DECLARE_DEVICE_TYPE(CG_EXP_SLOT, cg_exp_slot_device)
 
 #endif // MAME_BUS_CGENIE_EXPANSION_EXPANSION_H

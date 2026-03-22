@@ -56,10 +56,7 @@ public:
 	vtech_memexp_slot_device(machine_config const &mconfig, char const *tag, device_t *owner)
 		: vtech_memexp_slot_device(mconfig, tag, owner, (uint32_t)0)
 	{
-		option_reset();
-		vtech_memexp_carts(*this);
-		set_default_option(nullptr);
-		set_fixed(false);
+		set_options(vtech_memexp_carts, nullptr, false);
 	}
 	vtech_memexp_slot_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 	virtual ~vtech_memexp_slot_device();
@@ -78,7 +75,7 @@ public:
 	void reset_w(int state) { m_reset_handler(state); }
 
 protected:
-	// device-level overrides
+	// device_t implementation
 	virtual void device_start() override ATTR_COLD;
 
 private:
@@ -133,7 +130,7 @@ protected:
 	required_device<address_map_bank_device> m_io;
 };
 
-// device type definition
+// device type declaration
 DECLARE_DEVICE_TYPE(VTECH_MEMEXP_SLOT, vtech_memexp_slot_device)
 
 #endif // MAME_BUS_VTECH_MEMEXP_MEMEXP_H
