@@ -10789,8 +10789,8 @@ GAME( 1997, redhawksa,  stagger1, redhawki,     stagger1,     afega_state, init_
 GAME( 1997, redhawkg,   stagger1, redhawki,     stagger1,     afega_state, init_redhawkg,        ROT0,               "Afega",                             "Red Hawk (horizontal, Greece)", 0 )
 GAME( 1997, redhawke,   stagger1, stagger1,     stagger1,     afega_state, empty_init,           ROT270,             "Afega (Excellent Co. license)",     "Red Hawk (Excellent Co., Ltd)", 0 ) // earlier revision? different afega logo and score and credit number fonts compared to other sets
 GAME( 1997, redhawkk,   stagger1, stagger1,     stagger1,     afega_state, empty_init,           ROT270,             "Afega",                             "Red Hawk (Korea)", 0 )
+GAME( 1997, redhawkc,   stagger1, stagger1,     stagger1,     afega_state, empty_init,           ROT270,             "Afega (Zhuojia Co. license)",       "Red Hawk (China & Hong Kong)", 0 )
 GAME( 1997, redhawkb,   stagger1, redhawkb,     redhawkb,     afega_state, empty_init,           ROT0,               "bootleg (Vince)",                   "Red Hawk (horizontal, bootleg)", 0 )
-GAME( 1997, redhawkc,   stagger1, stagger1,     stagger1,     afega_state, empty_init,           ROT270,             "Afega (Zhuojia Co. license",        "Red Hawk (China & Hong Kong)", 0 )
 
 GAME( 1998, grdnstrm,   0,        grdnstrm,     grdnstrm,     afega_state, empty_init,           ORIENTATION_FLIP_Y, "Afega (Apples Industries license)", "Guardian Storm (horizontal, not encrypted)", 0 ) // flip-screen doesn't work on sprites for all sets
 GAME( 1998, grdnstrmv,  grdnstrm, grdnstrmk,    grdnstrk,     afega_state, init_grdnstrm,        ROT270,             "Afega (Apples Industries license)", "Guardian Storm (vertical)", 0 )
