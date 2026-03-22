@@ -13270,7 +13270,7 @@ ROM_START( mjswacads )
 	ROM_LOAD( "01003.7b",     0x000000, 0x200000, CRC(1df7a355) SHA1(3122570a845bb046936e8296423636281b39cc4a) )
 	ROM_LOAD( "01004.8b",     0x200000, 0x200000, CRC(198904d4) SHA1(d34a297cd08c227767808dfa695573ef596022c9) )
 	ROM_LOAD( "01005.9b",     0x400000, 0x200000, CRC(4dbcf7cf) SHA1(8bf4eaff1a280b2d5bf1221dc516647936e146d7) )
-	ROM_LOAD( "01006_2.11b ", 0x600000, 0x200000, CRC(7c646f5c) SHA1(d911f497b2b4b10da1693308a2bfab9f70d2e34a) ) // only different one from mjswacad
+	ROM_LOAD( "01006_2.11b",  0x600000, 0x200000, CRC(7c646f5c) SHA1(d911f497b2b4b10da1693308a2bfab9f70d2e34a) ) // only different one from mjswacad
 
 	ROM_REGION( 0x100000, "oki", 0 )
 	ROM_LOAD( "01001.2b", 0x000000, 0x100000, CRC(ee30d20a) SHA1(14689196486bc4eab4a174fe880b425fa544cd25) ) // same as mjswacad but half size (no empty half)
