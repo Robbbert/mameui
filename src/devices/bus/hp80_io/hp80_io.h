@@ -36,13 +36,7 @@ class hp80_io_slot_device : public device_t,
 {
 public:
 	// construction/destruction
-	hp80_io_slot_device(machine_config const &mconfig, char const *tag, device_t *owner)
-		: hp80_io_slot_device(mconfig, tag, owner, (uint32_t)0)
-	{
-		set_options(hp80_io_slot_devices, nullptr, false);
-	}
-
-	hp80_io_slot_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
+	hp80_io_slot_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = 0);
 	virtual ~hp80_io_slot_device();
 
 	// configuration helpers

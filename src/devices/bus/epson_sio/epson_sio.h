@@ -28,7 +28,7 @@ public:
 	epson_sio_device(machine_config const &mconfig, char const *tag, device_t *owner, char const *dflt)
 		: epson_sio_device(mconfig, tag, owner, (uint32_t)0)
 	{
-		set_options(epson_sio_devices, dflt, false);
+		set_default_option(dflt);
 	}
 
 	epson_sio_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = 0);

@@ -68,7 +68,7 @@ public:
 	ep64_expansion_bus_slot_device(machine_config const &mconfig, char const *tag, device_t *owner, char const *dflt)
 		: ep64_expansion_bus_slot_device(mconfig, tag, owner, (uint32_t)0)
 	{
-		set_options(ep64_expansion_bus_cards, dflt, false);
+		set_default_option(dflt);
 	}
 	ep64_expansion_bus_slot_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
