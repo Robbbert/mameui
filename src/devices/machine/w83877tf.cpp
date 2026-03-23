@@ -172,7 +172,7 @@ void w83877tf_device::device_add_mconfig(machine_config &config)
 	N82077AA(config, m_fdc, XTAL(24'000'000), upd765_family_device::mode_t::AT);
 	m_fdc->intrq_wr_callback().set(FUNC(w83877tf_device::irq_floppy_w));
 	m_fdc->drq_wr_callback().set(FUNC(w83877tf_device::drq_floppy_w));
-	FLOPPY_CONNECTOR(config, "fdc:0", pc_hd_floppies, "35hd", w83877tf_device::floppy_formats).enable_sound(true);
+	FLOPPY_CONNECTOR(config, "fdc:0", pc_hd_floppies, "35hd", w83877tf_device::floppy_formats);
 	FLOPPY_CONNECTOR(config, "fdc:1", pc_hd_floppies, "35hd", w83877tf_device::floppy_formats);
 
 	PC_LPT(config, m_lpt);
