@@ -345,7 +345,7 @@ uint16_t pc9821_state::pc9821_grcg_gvram_r(offs_t offset, uint16_t mem_mask)
 				u32 tmp = (shift_dir ? (addr + 15 - i) : (addr + i)) & 0x7ffff;
 				u8 pixel_data = ext_gvram[tmp];
 
-				if ((pixel_data ^ pal1) & ~plane_mask)
+				if (!((pixel_data ^ pal1) & ~plane_mask))
 					ret |= (1 << i);
 
 				if (pat_update)
@@ -1054,6 +1054,22 @@ MACHINE_START_MEMBER(pc9821_state,pc9821)
 {
 	m_pit_delay = timer_alloc(FUNC(pc9821_state::pit_delay), this);
 	MACHINE_START_CALL_MEMBER(pc9801bx2);
+	save_item(STRUCT_MEMBER(m_pegc, pal_entry));
+	save_pointer(NAME(m_pegc.r), 0x100);
+	save_pointer(NAME(m_pegc.g), 0x100);
+	save_pointer(NAME(m_pegc.b), 0x100);
+	save_item(STRUCT_MEMBER(m_pegc, bank), 2);
+	save_item(STRUCT_MEMBER(m_pegc, packed_mode));
+	save_pointer(NAME(m_pegc.regs), 0x100);
+	save_pointer(NAME(m_pegc.lastdata), 64);
+	save_pointer(NAME(m_pegc.pattern), 32);
+	save_item(STRUCT_MEMBER(m_pegc, pattern_mask));
+	save_item(STRUCT_MEMBER(m_pegc, lastdatalen));
+	save_item(STRUCT_MEMBER(m_pegc, remain));
+	save_item(STRUCT_MEMBER(m_pegc, first_process_w));
+	save_item(STRUCT_MEMBER(m_pegc, first_process_r));
+	save_pointer(NAME(m_pegc.shift_buffer), 64);
+	save_item(STRUCT_MEMBER(m_pegc, shift_cnt));
 
 	// ...
 }
