@@ -55,6 +55,7 @@ public:
 	void pc_irq6_w(int state);
 	void pc_irq7_w(int state);
 	void pc_irq8n_w(int state);
+	void pc_irq9_w(int state);
 	void pc_irq12m_w(int state);
 	// TODO: remaps externally for IDE, cfr. config $4a
 	void pc_irq14_w(int state);
@@ -165,7 +166,6 @@ private:
 	void at_speaker_set_spkrdata(uint8_t data);
 	uint8_t get_slave_ack(offs_t offset);
 	void pc_irq5_w(int state);
-	void pc_irq9_w(int state);
 	void pc_irq10_w(int state);
 	void pc_irq11_w(int state);
 	void iochck_w(int state);
