@@ -19,11 +19,8 @@ VT82C586B PCIC ISA section
 
 DEFINE_DEVICE_TYPE(VT82C586B_ISA, vt82c586b_isa_device, "vt82c586b_isa", "VT82C586B \"PIPC\" PCI-to-ISA bridge")
 
-vt82c586b_isa_device::vt82c586b_isa_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: pci_device(mconfig, VT82C586B_ISA, tag, owner, clock)
-//  , m_smi_callback(*this)
-//  , m_nmi_callback(*this)
-//  , m_stpclk_callback(*this)
+vt82c586b_isa_device::vt82c586b_isa_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
+	: pci_device(mconfig, type, tag, owner, clock)
 	, m_host_cpu(*this, finder_base::DUMMY_TAG)
 	, m_pic(*this, "pic%u", 0U)
 	, m_dma(*this, "dma%u", 0U)
@@ -39,6 +36,17 @@ vt82c586b_isa_device::vt82c586b_isa_device(const machine_config &mconfig, const 
 	, m_write_pcirst(*this)
 	, m_boot_state_hook(*this)
 {
+}
+
+vt82c586b_isa_device::vt82c586b_isa_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: vt82c586b_isa_device(mconfig, VT82C586B_ISA, tag, owner, clock)
+{
+	// revisions:
+	// 0*h for regular VT82C586
+	// 2*h for '586A
+	// 3*h for '586B OEM Silicon
+	// 4*h for '586B Production Silicon
+	set_ids(0x11060586, 0x41, 0x060100, 0x00000000);
 }
 
 void vt82c586b_isa_device::device_add_mconfig(machine_config &config)
@@ -439,7 +447,7 @@ void vt82c586b_isa_device::ide_irq_routing_w(offs_t offset, u8 data)
 	static const u8 irq_nums[4] = { 14, 15, 10, 11 };
 	m_ide_pin_config[0] = irq_nums[m_ide_irq_routing & 3];
 	m_ide_pin_config[1] = irq_nums[(m_ide_irq_routing >> 2) & 3];
-	LOG("\tIDE Primary IRQ%d Secondary IRQ%d", m_ide_pin_config[0], m_ide_pin_config[1]);
+	LOG("\tIDE Primary IRQ%d Secondary IRQ%d\n", m_ide_pin_config[0], m_ide_pin_config[1]);
 }
 
 void vt82c586b_isa_device::internal_io_map(address_map &map)
@@ -970,3 +978,15 @@ void vt82c586b_isa_device::pc_mirq2_w(int state)
 	redirect_irq(irq, state);
 }
 
+/*
+ * '596 overrides
+ */
+
+DEFINE_DEVICE_TYPE(VT82C596B_ISA, vt82c596b_isa_device, "vt82c596b_isa", "VT82C596B \"PIPC Mobile South\" PCI-to-ISA bridge")
+
+vt82c596b_isa_device::vt82c596b_isa_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
+	: vt82c586b_isa_device(mconfig, VT82C596B_ISA, tag, owner, clock)
+{
+	// Rev. 23 from neomania detlog.txt
+	set_ids(0x11060596, 0x23, 0x060100, 0x00000000);
+}

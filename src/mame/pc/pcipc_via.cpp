@@ -289,8 +289,7 @@ void mvp3_state::ga6vx(machine_config &config)
 	VT82C691_HOST(config, "pci:00.0", 0, "maincpu", 256*1024*1024);
 	VT82C691_BRIDGE(config, "pci:01.0", 0 );
 
-	// TODO: bump me
-	vt82c586b_isa_device &isa(VT82C586B_ISA(config, "pci:07.0", XTAL(33'000'000), "maincpu"));
+	vt82c596b_isa_device &isa(VT82C596B_ISA(config, "pci:07.0", XTAL(33'000'000), "maincpu"));
 	isa.boot_state_hook().set([](u8 data) { /* printf("%02x\n", data); */ });
 	isa.a20m().set_inputline("maincpu", INPUT_LINE_A20);
 	isa.cpureset().set_inputline("maincpu", INPUT_LINE_RESET);
@@ -306,12 +305,12 @@ void mvp3_state::ga6vx(machine_config &config)
 
 	VT82C586B_USB (config, "pci:07.2", 0);
 
-	// TODO: bump me
-	vt82c586b_acpi_device &acpi_pci(VT82C586B_ACPI(config, "pci:07.3", 0));
+	vt82c596b_acpi_device &acpi_pci(VT82C596B_ACPI(config, "pci:07.3", 0));
 	acpi_pci.sci_pin_cb().set("pci:07.0", FUNC(vt82c586b_isa_device::acpi_pin_config_w));
 	acpi_pipc_device &acpi_dev(ACPI_PIPC(config, "pci:07.3:acpi"));
 	acpi_dev.smi().set_inputline("maincpu", INPUT_LINE_SMI);
 	acpi_dev.sci().set("pci:07.0", FUNC(vt82c586b_isa_device::pc_acpi_w));
+	SMBUS_PIPC(config, "pci:07.3:smbus", 0);
 
 	PCI_SLOT(config, "pci:01.0:0", agp_cards, 0, 0, 1, 2, 3, nullptr);
 
