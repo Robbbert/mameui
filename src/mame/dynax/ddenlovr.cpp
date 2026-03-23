@@ -122,7 +122,7 @@ TODO:
 
 - hgokou: joystick controls are incomplete
 
-- daichuka: different code base, not checked yet
+- daichuka: needs a redump of the program ROM
 
 - daichukaa: setting of time to next inspection doesn't stick, even without resetting, so the game is always
   stuck with the 'inspection needed' message
@@ -313,6 +313,7 @@ public:
 	void hgokou(machine_config &config) ATTR_COLD;
 	void seljan2(machine_config &config) ATTR_COLD;
 	void jongoh(machine_config &config) ATTR_COLD;
+	void daichuka(machine_config &config) ATTR_COLD;
 	void daichukaa(machine_config &config) ATTR_COLD;
 	void janshinp(machine_config &config) ATTR_COLD;
 	void ultrchmp(machine_config &config) ATTR_COLD;
@@ -497,6 +498,7 @@ private:
 	void copylayer(bitmap_rgb32 &bitmap, const rectangle &cliprect, int layer);
 
 	void akamaru_map(address_map &map) ATTR_COLD;
+	void daichuka_portmap(address_map &map) ATTR_COLD;
 	void daichukaa_portmap(address_map &map) ATTR_COLD;
 	void ddenlovj_map(address_map &map) ATTR_COLD;
 	void ddenlovr_map(address_map &map) ATTR_COLD;
@@ -4448,6 +4450,18 @@ void ddenlovr_state::jongoh_portmap(address_map &map)
 	map(0xb0, 0xb0).r(FUNC(ddenlovr_state::technotop_protection_r<0x06>));
 	map(0xe4, 0xe4).w(FUNC(ddenlovr_state::seljan2_palette_enab_w));
 	map(0xe8, 0xe8).w(FUNC(ddenlovr_state::protection_w));
+}
+
+void ddenlovr_state::daichuka_portmap(address_map &map)
+{
+	seljan2_portmap(map);
+
+	map(0x60, 0x60).w(FUNC(ddenlovr_state::seljan2_rombank_w));
+	map(0x70, 0x70).nopr().w(FUNC(ddenlovr_state::sryudens_rambank_w));
+	map(0x80, 0x80).unmapw();
+	map(0xb0, 0xb0).r(FUNC(ddenlovr_state::technotop_protection_r<0x07>));
+	map(0xd4, 0xd4).w(FUNC(ddenlovr_state::seljan2_palette_enab_w));
+	map(0xdc, 0xdc).w(FUNC(ddenlovr_state::protection_w));
 }
 
 void ddenlovr_state::daichukaa_portmap(address_map &map)
@@ -10491,6 +10505,13 @@ void ddenlovr_state::jongoh(machine_config &config)
 	m_maincpu->set_addrmap(AS_IO, &hanakanz_state::jongoh_portmap);
 }
 
+void ddenlovr_state::daichuka(machine_config &config)
+{
+	seljan2(config);
+
+	m_maincpu->set_addrmap(AS_IO, &hanakanz_state::daichuka_portmap);
+}
+
 void ddenlovr_state::daichukaa(machine_config &config)
 {
 	seljan2(config);
@@ -13132,7 +13153,8 @@ ROM_END
 
 ROM_START( daichuka ) // NM504-2 PCB
 	ROM_REGION( 0x90000+0x8000+16*0x1000, "maincpu", 0 )
-	ROM_LOAD( "3062a5.4c", 0x00000, 0x80000, CRC(40fbf627) SHA1(b7d49ec96f5163062c66763a52c2823bea146dd5) )
+	// despite various attempts with different programmers, has 0xff at 0x92 and 0xa2 for every block of 0x100
+	ROM_LOAD( "3062a5.4c", 0x00000, 0x80000, CRC(40fbf627) SHA1(b7d49ec96f5163062c66763a52c2823bea146dd5) BAD_DUMP )
 	ROM_RELOAD(            0x10000, 0x80000 )
 
 	ROM_REGION( 0x600000, "blitter", 0 )
@@ -13434,7 +13456,7 @@ GAME( 2000, jongoh,      0,        jongoh,    jongoh,     ddenlovr_state, empty_
 
 GAME( 2001, daireach,    0,        daireach,  seljan2,    hanakanz_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai-Reach (Japan, TSM012-C01)",                          MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL )
 
-GAME( 2002, daichuka,    0,        jongoh,    jongoh,     ddenlovr_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai Chuuka Ken (Japan, P830 006A-005)",                  MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // not looked at yet
+GAME( 2002, daichuka,    0,        daichuka,  jongoh,     ddenlovr_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai Chuuka Ken (Japan, P830 006A-005)",                  MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // bad dump
 GAME( 2002, daichukaa,   daichuka, daichukaa, jongoh,     ddenlovr_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai Chuuka Ken (Japan, P830-004A-004)",                  MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // stuck at the operator control check
 
 GAME( 2002, daimyojn,    0,        daimyojn,  daimyojn,   hanakanz_state, empty_init,    ROT0, "Dynax / Techno-Top / Techno-Planning",        "Mahjong Daimyojin (Japan, T017-PB-00)",                          MACHINE_NO_COCKTAIL  )

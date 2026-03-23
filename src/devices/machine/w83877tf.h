@@ -81,7 +81,6 @@ private:
 	int m_last_dma_line;
 
 	u8 m_hefras, m_hefere;
-	u8 m_lockreg;
 	u8 m_lock_sequence;
 	u8 m_ipd, m_pnpcvs;
 	u8 m_clkinsel;
