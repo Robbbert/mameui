@@ -24,6 +24,9 @@
  * - BIOSes 108 and 106 seems unable to save to CMOS, worked around to use 105 by default
  *   (don't want long memory test);
  *
+ * TODO (ga6vx)
+ * - Has SMI problems, doesn't set m_shadow_ram_control[2] at all (?)
+ *
  */
 
 #include "emu.h"
@@ -215,7 +218,7 @@ void mvp3_state::apollopro(machine_config &config)
 	maincpu.set_addrmap(AS_PROGRAM, &mvp3_state::main_map);
 	maincpu.set_addrmap(AS_IO, &mvp3_state::main_io);
 	maincpu.set_irq_acknowledge_callback("pci:07.0:pic0", FUNC(pic8259_device::inta_cb));
-	maincpu.smiact().set("pci:00.0", FUNC(vt82c598mvp_host_device::smi_act_w));
+	maincpu.smiact().set("pci:00.0", FUNC(vt82c691_host_device::smi_act_w));
 
 	// TODO: config space not known
 	PCI_ROOT(config, "pci", 0);
@@ -281,7 +284,7 @@ void mvp3_state::ga6vx(machine_config &config)
 	maincpu.set_addrmap(AS_PROGRAM, &mvp3_state::main_map);
 	maincpu.set_addrmap(AS_IO, &mvp3_state::main_io);
 	maincpu.set_irq_acknowledge_callback("pci:07.0:pic0", FUNC(pic8259_device::inta_cb));
-	maincpu.smiact().set("pci:00.0", FUNC(vt82c598mvp_host_device::smi_act_w));
+	maincpu.smiact().set("pci:00.0", FUNC(vt82c691_host_device::smi_act_w));
 
 	// TODO: config space not known
 	PCI_ROOT(config, "pci", 0);
