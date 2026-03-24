@@ -40,17 +40,18 @@
 
     to do:
 
-    - EAROM, RTC
-    - serial port (incomplete), modem (incl. DTMF generator)
+    - EAROM (X2210D)
+    - modem (incl. DTMF generator)
+    - proper serial port connection (incl. PAL 16R4 300135-02)
     - keyboard MCU emulation
     - proper custom DMA logic timing
     - loading ROMs for Compass II
+	- proper 2101 and 2102 emulation
 
     missing dumps:
 
-    - dumps from 1100, 1107, 1121, 1131
+    - dumps from 1100, 1107, 1121, 1131, 1137
     - GRiDROM's
-    - external floppy and hard disk (2101, 2102)
 
     to boot GRID-OS:
     - convert GRIDOS.IMD to IMG format
@@ -66,6 +67,8 @@
 
 #include "bus/ieee488/ieee488.h"
 #include "bus/rs232/rs232.h"
+#include "bus/rs232/hlemouse.h"
+#include "bus/rs232/printer.h"
 #include "cpu/i86/i86.h"
 #include "machine/i7220.h"
 #include "machine/i80130.h"
@@ -79,7 +82,6 @@
 
 #include "emupal.h"
 #include "screen.h"
-#include "softlist.h"
 #include "speaker.h"
 
 #define LOG_KEYBOARD  (1U << 1)
@@ -162,6 +164,22 @@ private:
 	void grid1101_map(address_map &map) ATTR_COLD;
 	void grid1121_map(address_map &map) ATTR_COLD;
 };
+
+
+static void rs232_devices(device_slot_interface &device)
+{
+	device.option_add("microsoft_mouse", MSFT_HLE_SERIAL_MOUSE);
+	device.option_add("logitech_mouse", LOGITECH_HLE_SERIAL_MOUSE);
+	/*
+		FIXME:
+		The GRiDPaint documentation states that this mouse should work.
+		But for some reason, the laptop does not recognize it.
+
+		device.option_add("msystems_mouse", MSYSTEMS_HLE_SERIAL_MOUSE);
+	*/
+
+	device.option_add("printer", SERIAL_PRINTER);
+}
 
 
 [[maybe_unused]] uint16_t gridcomp_state::grid_9ff0_r(offs_t offset)
@@ -307,7 +325,7 @@ void gridcomp_state::grid1101_map(address_map &map)
 	map(0xdfe80, 0xdfe83).rw("i7220", FUNC(i7220_device::read), FUNC(i7220_device::write)).umask16(0x00ff);
 	map(0xdfea0, 0xdfeaf).unmaprw(); // ??
 	map(0xdfec0, 0xdfecf).rw(FUNC(gridcomp_state::grid_modem_r), FUNC(gridcomp_state::grid_modem_w)).umask16(0x00ff); // incl. DTMF generator
-	map(0xdff00, 0xdff1f).rw("uart8274", FUNC(i8274_device::ba_cd_r), FUNC(i8274_device::ba_cd_w)).umask16(0x00ff);
+	map(0xdff00, 0xdff1f).rw(m_uart8274, FUNC(i8274_device::cd_ba_r), FUNC(i8274_device::cd_ba_w)).umask16(0x00ff);
 	map(0xdff40, 0xdff5f).rw(m_rtc, FUNC(mm58174_device::read), FUNC(mm58174_device::write)).umask16(0xff00);
 	map(0xdff80, 0xdff8f).rw("hpib", FUNC(tms9914_device::read), FUNC(tms9914_device::write)).umask16(0x00ff);
 	map(0xdffc0, 0xdffcf).rw(FUNC(gridcomp_state::grid_keyb_r), FUNC(gridcomp_state::grid_keyb_w)); // Intel 8741 MCU
@@ -322,11 +340,12 @@ void gridcomp_state::grid1121_map(address_map &map)
 	map(0x9ff00, 0x9ff0f).unmaprw(); // .r(FUNC(gridcomp_state::grid_9ff0_r)); // ?? ROM?
 	map(0xc0000, 0xcffff).unmaprw(); // ?? ROM slot -- signature expected: 0x4554, 0x5048
 	map(0xdfa00, 0xdfdff).rw(FUNC(gridcomp_state::grid_dma_r), FUNC(gridcomp_state::grid_dma_w)); // DMA
-	map(0xdfe00, 0xdfe1f).unmaprw(); // .rw("uart8274", FUNC(i8274_device::ba_cd_r), FUNC(i8274_device::ba_cd_w)).umask16(0x00ff);
+	map(0xdfe00, 0xdfe1f).unmaprw(); // ??
 	map(0xdfe40, 0xdfe4f).w(FUNC(gridcomp_state::grid_sound_w));  // modem controller??
 	map(0xdfe80, 0xdfe83).rw("i7220", FUNC(i7220_device::read), FUNC(i7220_device::write)).umask16(0x00ff);
 	map(0xdfea0, 0xdfeaf).unmaprw(); // ??
 	map(0xdfec0, 0xdfecf).rw(FUNC(gridcomp_state::grid_modem_r), FUNC(gridcomp_state::grid_modem_w)).umask16(0x00ff); // incl. DTMF generator
+	map(0xdff00, 0xdff1f).rw(m_uart8274, FUNC(i8274_device::cd_ba_r), FUNC(i8274_device::cd_ba_w)).umask16(0x00ff);
 	map(0xdff40, 0xdff5f).rw(m_rtc, FUNC(mm58174_device::read), FUNC(mm58174_device::write)).umask16(0xff00);
 	map(0xdff80, 0xdff8f).rw("hpib", FUNC(tms9914_device::read), FUNC(tms9914_device::write)).umask16(0x00ff);
 	map(0xdffc0, 0xdffcf).rw(FUNC(gridcomp_state::grid_keyb_r), FUNC(gridcomp_state::grid_keyb_w)); // Intel 8741 MCU
@@ -366,6 +385,8 @@ void gridcomp_state::grid1101(machine_config &config)
 
 	I80130(config, m_osp, XTAL(15'000'000)/3);
 	m_osp->irq().set_inputline("maincpu", 0);
+	m_osp->baud().set(m_uart8274, FUNC(i8274_device::rxca_w));
+	m_osp->baud().append(m_uart8274, FUNC(i8274_device::txca_w));
 
 	MM58174(config, m_rtc, 32.768_kHz_XTAL);
 
@@ -422,11 +443,12 @@ void gridcomp_state::grid1101(machine_config &config)
 	m_uart8274->out_txda_callback().set("rs232_port", FUNC(rs232_port_device::write_txd));
 	m_uart8274->out_dtra_callback().set("rs232_port", FUNC(rs232_port_device::write_dtr));
 	m_uart8274->out_rtsa_callback().set("rs232_port", FUNC(rs232_port_device::write_rts));
+	m_uart8274->out_int_callback().set(I80130_TAG, FUNC(i80130_device::ir0_w));
 
-	rs232_port_device &rs232_port(RS232_PORT(config, "rs232_port", default_rs232_devices, nullptr));
-	rs232_port.rxd_handler().set("uart8274", FUNC(i8274_device::rxa_w));
-	rs232_port.dcd_handler().set("uart8274", FUNC(i8274_device::dcda_w));
-	rs232_port.cts_handler().set("uart8274", FUNC(i8274_device::ctsa_w));
+	rs232_port_device &rs232_port(RS232_PORT(config, "rs232_port", rs232_devices, nullptr));
+	rs232_port.rxd_handler().set(m_uart8274, FUNC(i8274_device::rxa_w));
+	rs232_port.dcd_handler().set(m_uart8274, FUNC(i8274_device::dcda_w));
+	rs232_port.cts_handler().set(m_uart8274, FUNC(i8274_device::ctsa_w));
 
 	I8255(config, "modem", 0);
 
