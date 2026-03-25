@@ -17,10 +17,9 @@
 #include "imagedev/floppy.h"
 #include "machine/e0516.h"
 #include "machine/hd63450.h"
+#include "machine/input_merger.h"
 #include "machine/nmc9306.h"
 #include "machine/ns32081.h"
-#include "machine/nscsi_bus.h"
-#include "machine/nscsi_cb.h"
 #include "machine/wd_fdc.h"
 #include "machine/z80scc.h"
 #include "machine/z8536.h"
@@ -50,10 +49,10 @@ public:
 		m_dmac(*this, MC68450_TAG),
 		m_cio(*this, Z8536A_TAG),
 		m_nvram(*this, NMC9306_TAG),
+		m_rtc(*this, E050_16_TAG),
 		m_scc(*this, {Z8530A_0_TAG, Z8530A_1_TAG, Z8530A_2_TAG}),
 		m_fdc(*this, FD1797_TAG),
-		m_floppy(*this, FD1797_TAG":%u", 0U),
-		m_sasi(*this, "sasi:7:scsicb")
+		m_floppy(*this, FD1797_TAG":%u", 0U)
 	{ }
 
 	void x37(machine_config &config);
@@ -64,17 +63,18 @@ private:
 	required_device<hd63450_device> m_dmac;
 	required_device<z8536_device> m_cio;
 	required_device<nmc9306_device> m_nvram;
+	required_device<e0516_device> m_rtc;
 	required_device_array<scc8530_device, 3> m_scc;
 	required_device<fd1797_device> m_fdc;
 	required_device_array<floppy_connector, 3> m_floppy;
-	required_device<nscsi_callback_device> m_sasi;
-
-	virtual void machine_reset() override ATTR_COLD;
 
 	static void floppy_formats(format_registration &fr);
 
 	void program_map(address_map &map) ATTR_COLD;
 	void cpu_space_map(address_map &map) ATTR_COLD;
+
+	uint8_t cio_pc_r();
+	void cio_pc_w(uint8_t data);
 };
 
 void x37_state::program_map(address_map &map)
@@ -90,9 +90,52 @@ void x37_state::cpu_space_map(address_map &map)
 static INPUT_PORTS_START( x37 )
 INPUT_PORTS_END
 
-void x37_state::machine_reset()
+uint8_t x37_state::cio_pc_r()
 {
-	m_fpu->reset();
+	/*
+
+	    bit     description
+
+	    PC0     1
+	    PC1     DATA IN
+	    PC2     1
+	    PC3     1
+
+	*/
+
+	uint8_t data = 0x0d;
+
+	// data in
+	data |= (m_rtc->dio_r() || m_nvram->do_r()) << 1;
+
+	return data;
+}
+
+void x37_state::cio_pc_w(uint8_t data)
+{
+	/*
+
+	    bit     description
+
+	    PC0     CLOCK
+	    PC1     DATA OUT
+	    PC2     RTC CS
+	    PC3     NVRAM CS
+
+	*/
+
+	int clock = BIT(data, 0);
+	int data_out = BIT(data, 1);
+	int rtc_cs = BIT(data, 2);
+	int nvram_cs = BIT(data, 3);
+
+	m_rtc->cs_w(rtc_cs);
+	m_rtc->dio_w(data_out);
+	m_rtc->clk_w(clock);
+
+	m_nvram->cs_w(nvram_cs);
+	m_nvram->di_w(data_out);
+	m_nvram->sk_w(clock);
 }
 
 static void x37_floppies(device_slot_interface &device)
@@ -118,26 +161,44 @@ void x37_state::x37(machine_config &config)
 	HD63450(config, m_dmac, 20'000'000/2, m_cpu, AS_PROGRAM);
 
 	Z8536(config, m_cio, 6000000);
+	m_cio->irq_wr_cb().set_inputline(m_cpu, M68K_IRQ_3);
+	m_cio->pc_rd_cb().set(FUNC(x37_state::cio_pc_r));
+	m_cio->pc_wr_cb().set(FUNC(x37_state::cio_pc_w));
+
 	NMC9306(config, m_nvram, 0);
-	E0516(config, E050_16_TAG, 32'768);
+
+	E0516(config, m_rtc, XTAL(32'768));
+	m_rtc->outsel_rd_cb().set_constant(0);
+
+	INPUT_MERGER_ANY_HIGH(config, "irq4").output_handler().set_inputline(m_cpu, M68K_IRQ_4);
+	INPUT_MERGER_ANY_HIGH(config, "req3").output_handler().set(m_dmac, FUNC(hd63450_device::drq3_w));
 
 	SCC8530(config, m_scc[0], 6000000);
-	SCC8530(config, m_scc[1], 6000000);
-	SCC8530(config, m_scc[2], 6000000);
+	m_scc[0]->out_int_callback().set("irq4", FUNC(input_merger_device::in_w<0>));
+	m_scc[0]->out_wreqa_callback().set("req3", FUNC(input_merger_device::in_w<0>));
+	m_scc[0]->out_wreqb_callback().set("req3", FUNC(input_merger_device::in_w<1>));
 
-	FD1797(config, m_fdc, 16'000'000/16);
+	SCC8530(config, m_scc[1], 6000000);
+	m_scc[1]->out_int_callback().set("irq4", FUNC(input_merger_device::in_w<1>));
+	m_scc[1]->out_wreqa_callback().set("req3", FUNC(input_merger_device::in_w<2>));
+	m_scc[1]->out_wreqb_callback().set("req3", FUNC(input_merger_device::in_w<3>));
+
+	SCC8530(config, m_scc[2], 6000000);
+	m_scc[2]->out_int_callback().set("irq4", FUNC(input_merger_device::in_w<2>));
+	m_scc[2]->out_wreqa_callback().set("req3", FUNC(input_merger_device::in_w<4>));
+	m_scc[2]->out_wreqb_callback().set("req3", FUNC(input_merger_device::in_w<5>));
+
+	FD1797(config, m_fdc, XTAL(16'000'000)/16);
+	m_fdc->intrq_wr_callback().set_inputline(m_cpu, M68K_IRQ_2);
+	m_fdc->drq_wr_callback().set(m_dmac, FUNC(hd63450_device::drq2_w));
 
 	FLOPPY_CONNECTOR(config, m_floppy[0], x37_floppies, nullptr, x37_state::floppy_formats).enable_sound(true);
 	FLOPPY_CONNECTOR(config, m_floppy[1], x37_floppies, nullptr, x37_state::floppy_formats).enable_sound(true);
 	FLOPPY_CONNECTOR(config, m_floppy[2], x37_floppies, "525qd", x37_state::floppy_formats).enable_sound(true);
 
-	NSCSI_BUS(config, "sasi");
-	NSCSI_CONNECTOR(config, "sasi:0", default_scsi_devices, "s1410");
-	NSCSI_CONNECTOR(config, "sasi:7", default_scsi_devices, "scsicb", true)
-		.option_add_internal("scsicb", NSCSI_CB);
-
 	// video hardware
-	ABC1600_MOVER(config, ABC1600_MOVER_TAG, 0);
+	abc1600_mover_device &mover(ABC1600_MOVER(config, ABC1600_MOVER_TAG, XTAL(64'000'000)));
+	mover.amm_callback().set(m_cio, FUNC(z8536_device::pa0_w));
 
 	// software list
 	SOFTWARE_LIST(config, "flop_list").set_original("x37_flop");
