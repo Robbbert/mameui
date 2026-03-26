@@ -123,21 +123,25 @@ void ymz770_device::device_start()
 	save_item(NAME(m_bsl));
 	save_item(NAME(m_cpl));
 
-//	save_item(STRUCT_MEMBER(m_channels, current.pan));
-//	save_item(STRUCT_MEMBER(m_channels, current.pan_delay));
-//	save_item(STRUCT_MEMBER(m_channels, current.pan1));
-//	save_item(STRUCT_MEMBER(m_channels, current.pan1_delay));
-//	save_item(STRUCT_MEMBER(m_channels, current.volume_target));
-//	save_item(STRUCT_MEMBER(m_channels, current.volume_delay));
-//	save_item(STRUCT_MEMBER(m_channels, current.volume2));
-//
-//	save_item(STRUCT_MEMBER(m_channels, latch.pan));
-//	save_item(STRUCT_MEMBER(m_channels, latch.pan_delay));
-//	save_item(STRUCT_MEMBER(m_channels, latch.pan1));
-//	save_item(STRUCT_MEMBER(m_channels, latch.pan1_delay));
-//	save_item(STRUCT_MEMBER(m_channels, latch.volume_target));
-//	save_item(STRUCT_MEMBER(m_channels, latch.volume_delay));
-//	save_item(STRUCT_MEMBER(m_channels, latch.volume2));
+	// STRUCT_MEMBER can't be used here?
+	for (int i = 0; i < 16; i++)
+	{
+		save_item(NAME(m_channels[i].current.pan), i);
+		save_item(NAME(m_channels[i].current.pan_delay), i);
+		save_item(NAME(m_channels[i].current.pan1), i);
+		save_item(NAME(m_channels[i].current.pan1_delay), i);
+		save_item(NAME(m_channels[i].current.volume_target), i);
+		save_item(NAME(m_channels[i].current.volume_delay), i);
+		save_item(NAME(m_channels[i].current.volume2), i);
+
+		save_item(NAME(m_channels[i].latch.pan), i);
+		save_item(NAME(m_channels[i].latch.pan_delay), i);
+		save_item(NAME(m_channels[i].latch.pan1), i);
+		save_item(NAME(m_channels[i].latch.pan1_delay), i);
+		save_item(NAME(m_channels[i].latch.volume_target), i);
+		save_item(NAME(m_channels[i].latch.volume_delay), i);
+		save_item(NAME(m_channels[i].latch.volume2), i);
+	}
 
 	save_item(STRUCT_MEMBER(m_channels, phrase));
 	save_item(STRUCT_MEMBER(m_channels, volume));
