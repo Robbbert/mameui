@@ -13,6 +13,7 @@
 #include "softlist_dev.h"
 #include "bus/abckb/abckb.h"
 #include "bus/nscsi/devices.h"
+#include "bus/rs232/rs232.h"
 #include "cpu/m68000/m68010.h"
 #include "formats/abc1600_dsk.h"
 #include "imagedev/floppy.h"
@@ -82,13 +83,13 @@ private:
 	uint16_t mapper_r(offs_t offset);
 	void mapper_w(offs_t offset, uint16_t data);
 
-	uint8_t edc_status_r(offs_t offset);
+	uint16_t edc_status_r(offs_t offset);
 
 	void cio_pb_w(uint8_t data) { logerror("CB %02x\n", data); m_cb = data; };
 	uint8_t cio_pc_r();
 	void cio_pc_w(uint8_t data);
 
-	void xdck_w(offs_t offset, uint8_t data);
+	void xdck_w(offs_t offset, uint16_t data);
 
 	u8 m_cb;
 };
@@ -112,7 +113,7 @@ void x37_state::program_map(address_map &map)
 	map(0x480a00, 0x480aff).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr2_map)).umask16(0xff00);*/
 	map(0x800000, 0xbfffff).rw(FUNC(x37_state::mapper_r), FUNC(x37_state::mapper_w));
 	//map(0x800100, 0x8001ff).rw(m_cio, FUNC(z8536_device::read), FUNC(z8536_device::write));
-	map(0x810100, 0x810100).r(FUNC(x37_state::edc_status_r));
+	map(0x810100, 0x810101).r(FUNC(x37_state::edc_status_r));
 	//map(0x820100, 0x82010f).rw(m_fpu, FUNC(ns32081_device::read), FUNC(ns32081_device::write));
 	//map(0x830100, 0x8301ff).rw(m_dmac, FUNC(hd63450_device::read), FUNC(hd63450_device::write));
 	map(0xc00000, 0xc00007).mirror(0x3c0000).rw(m_scc[0], FUNC(z80scc_device::ab_dc_r), FUNC(z80scc_device::ab_dc_w)).umask16(0x00ff);
@@ -171,7 +172,7 @@ void x37_state::mapper_w(offs_t offset, uint16_t data)
 	}
 }
 
-uint8_t x37_state::edc_status_r(offs_t offset)
+uint16_t x37_state::edc_status_r(offs_t offset)
 {
 	/*
 
@@ -247,7 +248,7 @@ void x37_state::cio_pc_w(uint8_t data)
 	m_nvram->sk_w(clock);
 }
 
-void x37_state::xdck_w(offs_t offset, uint8_t data)
+void x37_state::xdck_w(offs_t offset, uint16_t data)
 {
 	/*
 
@@ -328,21 +329,61 @@ void x37_state::x37(machine_config &config)
 	m_scc[0]->out_int_callback().set("irq4", FUNC(input_merger_device::in_w<0>));
 	m_scc[0]->out_wreqa_callback().set("req3", FUNC(input_merger_device::in_w<0>));
 	m_scc[0]->out_wreqb_callback().set("req3", FUNC(input_merger_device::in_w<1>));
+	m_scc[0]->out_txda_callback().set("tty01", FUNC(rs232_port_device::write_txd));
+	m_scc[0]->out_dtra_callback().set("tty01", FUNC(rs232_port_device::write_dtr));
+	m_scc[0]->out_rtsa_callback().set("tty01", FUNC(rs232_port_device::write_rts));
 
 	abc_keyboard_port_device &kb(ABC_KEYBOARD_PORT(config, "kb", abc_keyboard_devices, "abc99"));
 	kb.out_rx_handler().set(m_scc[0], FUNC(z80scc_device::rxb_w));
 	kb.out_trxc_handler().set(m_scc[0], FUNC(z80scc_device::rxtxcb_w));
 	kb.out_keydown_handler().set(m_scc[0], FUNC(z80scc_device::dcdb_w));
 
+	rs232_port_device &tty01(RS232_PORT(config, "tty01", default_rs232_devices, nullptr));
+	tty01.rxd_handler().set(m_scc[0], FUNC(z80scc_device::rxa_w));
+	tty01.dcd_handler().set(m_scc[0], FUNC(z80scc_device::dcda_w));
+	tty01.cts_handler().set(m_scc[0], FUNC(z80scc_device::ctsa_w));
+
 	SCC8530(config, m_scc[1], XTAL(20'000'000)/5);
 	m_scc[1]->out_int_callback().set("irq4", FUNC(input_merger_device::in_w<1>));
 	m_scc[1]->out_wreqa_callback().set("req3", FUNC(input_merger_device::in_w<2>));
 	m_scc[1]->out_wreqb_callback().set("req3", FUNC(input_merger_device::in_w<3>));
+	m_scc[1]->out_txdb_callback().set("tty02", FUNC(rs232_port_device::write_txd));
+	m_scc[1]->out_dtrb_callback().set("tty02", FUNC(rs232_port_device::write_dtr));
+	m_scc[1]->out_rtsb_callback().set("tty02", FUNC(rs232_port_device::write_rts));
+	m_scc[1]->out_txda_callback().set("tty03", FUNC(rs232_port_device::write_txd));
+	m_scc[1]->out_dtra_callback().set("tty03", FUNC(rs232_port_device::write_dtr));
+	m_scc[1]->out_rtsa_callback().set("tty03", FUNC(rs232_port_device::write_rts));
+
+	rs232_port_device &tty02(RS232_PORT(config, "tty02", default_rs232_devices, nullptr));
+	tty02.rxd_handler().set(m_scc[1], FUNC(z80scc_device::rxb_w));
+	tty02.dcd_handler().set(m_scc[1], FUNC(z80scc_device::dcdb_w));
+	tty02.cts_handler().set(m_scc[1], FUNC(z80scc_device::ctsb_w));
+
+	rs232_port_device &tty03(RS232_PORT(config, "tty03", default_rs232_devices, nullptr));
+	tty03.rxd_handler().set(m_scc[1], FUNC(z80scc_device::rxa_w));
+	tty03.dcd_handler().set(m_scc[1], FUNC(z80scc_device::dcda_w));
+	tty03.cts_handler().set(m_scc[1], FUNC(z80scc_device::ctsa_w));
 
 	SCC8530(config, m_scc[2], XTAL(20'000'000)/5);
 	m_scc[2]->out_int_callback().set("irq4", FUNC(input_merger_device::in_w<2>));
 	m_scc[2]->out_wreqa_callback().set("req3", FUNC(input_merger_device::in_w<4>));
 	m_scc[2]->out_wreqb_callback().set("req3", FUNC(input_merger_device::in_w<5>));
+	m_scc[2]->out_txdb_callback().set("tty04", FUNC(rs232_port_device::write_txd));
+	m_scc[2]->out_dtrb_callback().set("tty04", FUNC(rs232_port_device::write_dtr));
+	m_scc[2]->out_rtsb_callback().set("tty04", FUNC(rs232_port_device::write_rts));
+	m_scc[2]->out_txda_callback().set("tty05", FUNC(rs232_port_device::write_txd));
+	m_scc[2]->out_dtra_callback().set("tty05", FUNC(rs232_port_device::write_dtr));
+	m_scc[2]->out_rtsa_callback().set("tty05", FUNC(rs232_port_device::write_rts));
+
+	rs232_port_device &tty04(RS232_PORT(config, "tty04", default_rs232_devices, nullptr));
+	tty04.rxd_handler().set(m_scc[2], FUNC(z80scc_device::rxb_w));
+	tty04.dcd_handler().set(m_scc[2], FUNC(z80scc_device::dcdb_w));
+	tty04.cts_handler().set(m_scc[2], FUNC(z80scc_device::ctsb_w));
+
+	rs232_port_device &tty05(RS232_PORT(config, "tty05", default_rs232_devices, nullptr));
+	tty05.rxd_handler().set(m_scc[2], FUNC(z80scc_device::rxa_w));
+	tty05.dcd_handler().set(m_scc[2], FUNC(z80scc_device::dcda_w));
+	tty05.cts_handler().set(m_scc[2], FUNC(z80scc_device::ctsa_w));
 
 	FD1797(config, m_fdc, XTAL(16'000'000)/16);
 	m_fdc->intrq_wr_callback().set_inputline(m_cpu, M68K_IRQ_2);
