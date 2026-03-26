@@ -10,7 +10,9 @@
 */
 
 #include "emu.h"
-#include "softlist_dev.h"
+
+#include "abc1600_v.h"
+
 #include "bus/abckb/abckb.h"
 #include "bus/nscsi/devices.h"
 #include "bus/rs232/rs232.h"
@@ -25,7 +27,8 @@
 #include "machine/wd_fdc.h"
 #include "machine/z80scc.h"
 #include "machine/z8536.h"
-#include "abc1600_v.h"
+
+#include "softlist_dev.h"
 
 
 namespace {
@@ -74,6 +77,8 @@ private:
 	memory_share_creator<u8> m_segment_ram;
 	memory_share_creator<u16> m_page_ram;
 
+	u8 m_cb = 0;
+
 	static void floppy_formats(format_registration &fr);
 
 	void program_map(address_map &map) ATTR_COLD;
@@ -89,9 +94,7 @@ private:
 	uint8_t cio_pc_r();
 	void cio_pc_w(uint8_t data);
 
-	void xdck_w(offs_t offset, uint16_t data);
-
-	u8 m_cb;
+	[[maybe_unused]] void xdck_w(offs_t offset, uint16_t data);
 };
 
 void x37_state::program_map(address_map &map)
