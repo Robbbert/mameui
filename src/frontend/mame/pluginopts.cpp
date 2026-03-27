@@ -75,13 +75,13 @@ bool plugin_options::load_plugin(const std::string &path)
 	if (document.HasParseError())
 	{
 		const std::string error(GetParseError_En(document.GetParseError()));
-		osd_printf_error("Unable to parse plugin definition file %s. Errors returned:\n%s", path, error);
+		osd_printf_warning("Unable to parse plugin definition file %s. Errors returned:\n%s", path, error); // MESSUI
 		return false;
 	}
 
 	if (!document["plugin"].IsObject())
 	{
-		osd_printf_error("Bad plugin definition file %s:\n", path);
+		osd_printf_warning("Bad plugin definition file %s:\n", path); // MESSUI
 		return false;
 	}
 

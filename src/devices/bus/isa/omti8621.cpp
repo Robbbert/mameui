@@ -365,7 +365,7 @@ void omti8621_device::remap(int space_id, offs_t start, offs_t end)
 {
 	if (space_id == AS_PROGRAM)
 	{
-		if (m_bios_enable)
+		if (m_bios_enable && device_rom_region())
 			m_isa->install_rom(this, m_bios_base, m_bios_base | 0x1fff, OMTI_BIOS_REGION);
 	}
 	else if (space_id == AS_IO)

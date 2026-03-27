@@ -888,9 +888,6 @@ namespace {
 		INPUT_PORT_DIGITAL_TYPE(  0, OTHER,   KEYBOARD,             N_p("input-name", "Keyboard"),               input_seq() ) \
 		CORE_INPUT_TYPES_END()
 
-//	Pause on pause key (replace pause definition below, and add backslash at end if you want to use this)
-//	INPUT_PORT_DIGITAL_TYPE(0, UI, UI_PAUSE, N_p("input-name", "Pause"), input_seq(KEYCODE_NUMLOCK, input_seq::not_code, KEYCODE_LSHIFT, input_seq::not_code, KEYCODE_RSHIFT) )
-
 #define CORE_INPUT_TYPES_UI \
 		CORE_INPUT_TYPES_BEGIN(ui) \
 		INPUT_PORT_DIGITAL_TYPE( 0, UI,       UI_MENU,              N_p("input-name", "Show/Hide Menu"),         input_seq(KEYCODE_TAB) ) \

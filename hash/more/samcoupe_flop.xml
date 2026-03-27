@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 691 -->
+<!-- Number of items in this list = 690 -->
 <softwarelist name="samcoupe_flop" description="samcoupe_flop loose roms">
 	<software name="sama71fee3f5df19">
 		<description>(ama13)amiga_mod-arch_v1-3</description>
@@ -4509,16 +4509,6 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819200">
 				<rom name="Mega1 (19xx)(-).mgt" size="819200" crc="d3077915" sha1="40c20fe27bf3d43c6058819d650664a18e878c70"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sam2020786c073e0">
-		<description>Mind Games II (199x) (Enigma Variations)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="flop1" interface="floppy_3_5">
-			<dataarea name="flop" size="819200">
-				<rom name="Mind Games II (199x) (Enigma Variations).mgt" size="819200" crc="09a91a79" sha1="2020786c073e039a0130e0f640f338d6b41a6807"/>
 			</dataarea>
 		</part>
 	</software>

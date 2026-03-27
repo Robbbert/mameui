@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7805 -->
+<!-- Number of items in this list = 7815 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -12722,13 +12722,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsfe10f56be0402">
+		<description>Buzzsaw+ Box Deluxe Mix 48K (2013)(Joefish)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42710">
+				<rom name="Buzzsaw+ Box Deluxe Mix 48K (2013)(Joefish).tap" size="42710" crc="7893b915" sha1="fe10f56be040242612c932a4558d9fdf2ddd9494"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs721fef6a2aba0">
-		<description>Buzzsaw+ (2011)(Jason J. Railton)</description>
+		<description>Buzzsaw+ Foxton Locks Mix 48K (2011)(Joefish)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42988">
-				<rom name="Buzzsaw+ (2011)(Jason J. Railton).tap" size="42988" crc="f066f06d" sha1="721fef6a2aba0a1c11276b441906007b1dde6d2f"/>
+				<rom name="Buzzsaw+ Foxton Locks Mix 48K (2011)(Joefish).tap" size="42988" crc="f066f06d" sha1="721fef6a2aba0a1c11276b441906007b1dde6d2f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19899,6 +19909,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43037">
 				<rom name="Doctor Adventures ES 48K (2015)(errecepe).tap" size="43037" crc="e74af4dc" sha1="45e5131ba67324c4db13b7516a52e6f1fa5a389d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55d81522be576">
+		<description>Doctor La Mort EN 48K-128K (2026)(Toku Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32211">
+				<rom name="Doctor La Mort EN 48K-128K (2026)(Toku Soft).tap" size="32211" crc="2e4ebe74" sha1="55d81522be576499db4fa095f7a92732e64f9e7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa9ea24aab7fa1">
+		<description>Doctor La Mort ES 48K-128K (2026)(Toku Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32211">
+				<rom name="Doctor La Mort ES 48K-128K (2026)(Toku Soft).tap" size="32211" crc="a6a85a54" sha1="a9ea24aab7fa18e0681ce85d94f414200fc97d29"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41752,6 +41782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7bbfbcacf099d">
+		<description>Mouse Life, A 48K (2026)(BAD BITS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="25424">
+				<rom name="Mouse Life, A 48K (2026)(BAD BITS).tap" size="25424" crc="63616f45" sha1="7bbfbcacf099d7110b2b87288f1dd01d3c3dd9b6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1d0120947dacf">
 		<description>Mousetrap 48K (2020)(Chris Maling)</description>
 		<year>????</year>
@@ -59252,6 +59292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxscee760ac441db">
+		<description>Sweet Fightin' +II 128K (2025-26)(ZX Presh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="605916">
+				<rom name="Sweet Fightin' +II 128K (2025-26)(ZX Presh).tap" size="605916" crc="b886316f" sha1="cee760ac441db15d024f2aacd945cfbe6721739f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc7ad4010b45f2">
 		<description>Sweevo's World (1986)(Gargoyle Games)(128K)</description>
 		<year>????</year>
@@ -59439,6 +59489,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40384">
 				<rom name="Syrion - The Time of the Dragon IT 48K-128K (2025)(S&amp;R).tap" size="40384" crc="9f8e3248" sha1="95e3dcb23c4e9d94b1464f975f1a56733cd035ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa24bb23bd0c38">
+		<description>Syrion II EN 48K-128K (2026)(S&amp;R)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40080">
+				<rom name="Syrion II EN 48K-128K (2026)(S&amp;R).tap" size="40080" crc="b279e742" sha1="a24bb23bd0c386b44bfe95ce06be207c211f4a36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs127f1d2d29056">
+		<description>Syrion II ES 48K-128K (2026)(S&amp;R)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40100">
+				<rom name="Syrion II ES 48K-128K (2026)(S&amp;R).tap" size="40100" crc="60bcaa93" sha1="127f1d2d29056216d6e45d3bea6be5dbb8713b69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd544a5ad5bf6e">
+		<description>Syrion II IT 48K-128K (2026)(S&amp;R)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40096">
+				<rom name="Syrion II IT 48K-128K (2026)(S&amp;R).tap" size="40096" crc="63d8295b" sha1="d544a5ad5bf6ea4ed6436354c5edf3de5641f778"/>
 			</dataarea>
 		</part>
 	</software>
@@ -63649,6 +63729,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="125681">
 				<rom name="Viaje al Centro de la Tierra ES 48K (1989)(Topo Soft).tap" size="125681" crc="dbc5e51b" sha1="51f1fb2757a9d0e1ba85dfccb32275c1fb0641d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5fa986a83b84e">
+		<description>Vice City Blues 128K (2026)(Softimar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="403236">
+				<rom name="Vice City Blues 128K (2026)(Softimar).tap" size="403236" crc="316bfbd4" sha1="5fa986a83b84ed12b6b44caf9e7c1dabcfcb6e90"/>
 			</dataarea>
 		</part>
 	</software>
@@ -75799,6 +75889,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="9216">
 				<rom name="_Sheer Panic (1983)(Visions Software Factory)[a].tap" size="9216" crc="4c7ca110" sha1="07f41d2035228c1f756c23aa5018d8572a747339"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs22312d9eb101c">
+		<description>_Shiftex 48K (2026)(Anate Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46066">
+				<rom name="_Shiftex 48K (2026)(Anate Studio).tap" size="46066" crc="37a77f8d" sha1="22312d9eb101cae3f0ed0bdc271f90be3403071e"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 648 -->
+<!-- Number of items in this list = 649 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -5599,6 +5599,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="13794">
 				<rom name="Super MineField (1983-2013)(CollectorVision).rom" size="13794" crc="f26ea356" sha1="aec38f4d253da88764c8af6f38a50c7a3092bf87"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col934a345001da6">
+		<description>Super Space Acer (1989-2023)(Mike Brent)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Space Acer (1989-2023)(Mike Brent).rom" size="262144" crc="9e92c874" sha1="934a345001da6cc3ea57a9575f1c4a789170d21e"/>
 			</dataarea>
 		</part>
 	</software>

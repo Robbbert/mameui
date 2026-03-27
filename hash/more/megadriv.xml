@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2059 -->
+<!-- Number of items in this list = 2062 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3412,6 +3412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen1204d40713560">
+		<description>Alice Sisters (2024)(PixelHeart)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Alice Sisters (2024)(PixelHeart).bin" size="4194304" crc="49025566" sha1="1204d40713560ac57a87c098b2952a1f4a93d4fa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen4a8f536c89fa0">
 		<description>Alien 3 PT-BR (2005)(Odin Games)</description>
 		<year>????</year>
@@ -6249,6 +6259,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Escape 2042 PT v1.1 (2022)(Afsblood).bin" size="4194304" crc="f6fc656a" sha1="b7f5462fd1d9f6454b4ac7a4a35dbc63eb282eb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen89542a37a909d">
+		<description>Escape 2049 (2025-26)(OrionSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Escape 2049 (2025-26)(OrionSoft).bin" size="4194304" crc="b8a2492c" sha1="89542a37a909df8bb0c64847043dc4ff79ff2994"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12999,6 +13019,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="Pop'n Wizz v2 (2026)(format_c).bin" size="393216" crc="17654df8" sha1="8c4e907a482d084a18c3495ee7adc818bf032780"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen631e8a61b404f">
+		<description>Popeye in High Seas High-Jinks - Fixed Samples (2026)(Devan Wolf)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Popeye in High Seas High-Jinks - Fixed Samples (2026)(Devan Wolf).bin" size="2097152" crc="561f5933" sha1="631e8a61b404f052e54515ea719b15018525fef9"/>
 			</dataarea>
 		</part>
 	</software>
