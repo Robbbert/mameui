@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 649 -->
+<!-- Number of items in this list = 651 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -4552,6 +4552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col2a567f5e552c8">
+		<description>Scramble (2024)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="27902">
+				<rom name="Scramble (2024)(CollectorVision).rom" size="27902" crc="fc65fcd0" sha1="2a567f5e552c8d23234be1e977b7457165cf0402"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col09e9347706a90">
 		<description>Search For The Stolen Crown Jewels (2006) (Good Deal Games)</description>
 		<year>????</year>
@@ -6159,6 +6169,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Video Hustler (1984) (Konami) (Unreleased) [o1].rom" size="16384" crc="960cbe1e" sha1="47f0fddca5a04268d5f9f4c0f55baf80d833deea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col8da33f6b1a59f">
+		<description>Virix (2024)(8 bit Milli Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Virix (2024)(8 bit Milli Games).rom" size="131072" crc="c68d3768" sha1="8da33f6b1a59f11dfb45e442c75cb356e270d22a"/>
 			</dataarea>
 		</part>
 	</software>

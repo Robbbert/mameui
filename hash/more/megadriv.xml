@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2062 -->
+<!-- Number of items in this list = 2064 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -9079,6 +9079,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="Hack by krizal.bin" size="393216" crc="4176fa8c" sha1="160dadd961e3413bfe14dc0acac74b116bc83f04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen99e36008037ca">
+		<description>Halo Zero demo_ntsc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="917504">
+				<rom name="Halo Zero demo_ntsc.bin" size="917504" crc="f18238cc" sha1="99e36008037cad4e184896f5a3edf29de7e25e70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen06dd48fd0ecb2">
+		<description>Halo Zero demo_pal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="917504">
+				<rom name="Halo Zero demo_pal.bin" size="917504" crc="fe972d89" sha1="06dd48fd0ecb25f1b293687d62be2eaed3cebd20"/>
 			</dataarea>
 		</part>
 	</software>
