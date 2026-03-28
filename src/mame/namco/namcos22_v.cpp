@@ -425,31 +425,33 @@ void namcos22_renderer::poly3d_drawquad(screen_device &screen, bitmap_rgb32 &bit
 	}
 
 	// disable textures, shading (and maybe more)
-	if (objectflags & 0xc00000)
+	if (objectflags)
 	{
-		extra.shade_enabled = false;
 		extra.texture_enabled = false;
-	}
+		extra.cmode = 0;
 
-	if (objectflags & 0x200000)
-	{
-		// disable textures?
-		if ((cz_adjust & 0x7f0000) == 0x3a0000)
-			extra.texture_enabled = false;
+		// pen is from cz_adjust
+		const u8 shift = (objectflags & 4) ? 0 : (objectflags & 2) ? 8 : 16;
+		u8 pen = cz_adjust >> shift;
+
+		if (objectflags & 6)
+		{
+			// absolute pen, and shading is disabled
+			extra.pens = &m_state.m_palette->pen(pen);
+			extra.shade_enabled = false;
+		}
+		else
+		{
+			// unknown masking? timecris sets pen to 0x3a at the helicopter when it definitely wants 0x1a
+			extra.pens += pen & 0x7f & (color | 0x1f);
+		}
 	}
 
 	// disable poly fog
-	if (cz_adjust & 0x800000)
+	if (BIT(cz_adjust, 23))
 	{
 		extra.zfog_enabled = false;
 		extra.fogfactor = 0;
-	}
-
-	// for disabled textures, pen is from lower bits of cz_adjust
-	if (!extra.texture_enabled)
-	{
-		extra.cmode = 0;
-		extra.pens = &m_state.m_palette->pen(cz_adjust & 0xff);
 	}
 
 	if (m_state.m_is_ss22)
@@ -1259,7 +1261,7 @@ void namcos22_state::blit_polyobject(int code, float m[4][4])
 	}
 
 	// flag applies to single object (see timecris stage 1-3 car)
-	m_objectflags &= ~0x400000;
+	m_objectflags &= ~2;
 }
 
 
@@ -1334,7 +1336,7 @@ void namcos22_state::slavesim_handle_bb0003(const s32 *src)
 	// clear model rendering options (see acedrive name entry screen)
 	m_cz_adjust = 0;
 	m_objectshift = 0;
-	m_objectflags = 0x1fffff;
+	m_objectflags = 0;
 
 }
 
@@ -1411,27 +1413,28 @@ void namcos22_state::slavesim_handle_233002(const s32 *src)
 
 	    cz_adjust:
 	    00000000: common
-	    00020000: adillor arrows on level select screen (no effect?)
-	    00310000: propcycl attract mode particles when Solitar rises (unknown effect)
-	    00390000: "
-	    003d0000: "
-	    003a0000: timecris shoot helicopter (white, but shading enabled)
 	    00800000: alpinr2b cancel fogging on selection screen
 	    00800000: raverace cancel fogging on sky in attract mode
-		------xx: pen when texture is disabled (eg. acedrive name entry screen)
+		--xx----: pen when textures are disabled with objectflags 003fffff
+		----xx--: pen when textures are disabled with objectflags 005fffff?
+		------xx: pen when textures are disabled with objectflags 009fffff
+
+	    objectshift:
+        00800000: set at same time as objectflags 009fffff
+		--xxxxxx: low 22 bits: object z bias adjust (see blit_single_quad)
 
 	    objectflags:
 	    001fffff: common
-	    003fffff: adillor arrows on level select screen
-	    003fffff: propcycl attract mode particles when Solitar rises
-	    003fffff: timecris shoot helicopter
+	    003fffff: adillor arrows on level select screen (no effect?)
+	    003fffff: propcycl attract mode particles when Solitar rises (unknown effect)
+	    003fffff: timecris shoot helicopter (white, but shading enabled)
 	    005fffff: timecris shoot other destructible object (opaque white, 1 object)
 	    009fffff: cybrcomm shoot enemy with machine gun (opaque white)
-	    009fffff: acedrive name entry screen (color from cz_adjust lower bits)
+	    009fffff: acedrive name entry screen (opaque color from cz_adjust lower bits)
 	*/
-	m_cz_adjust = src[1];
-	m_objectshift = src[2];
-	m_objectflags = src[3];
+	m_cz_adjust = src[1] & 0xffffff;
+	m_objectshift = src[2] & 0xffffff;
+	m_objectflags = src[3] >> 21 & 7;
 }
 
 void namcos22_state::simulate_slavedsp()
