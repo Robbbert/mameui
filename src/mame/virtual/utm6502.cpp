@@ -139,7 +139,7 @@ void utm6502_state::observe_read(offs_t offset, u8 data)
 		break;
 
 	case PHASE_FINISHED:
-		logerror("PASS\n");
+		osd_printf_info("PASS\n");
 		machine().schedule_exit();
 		break;
 	}
