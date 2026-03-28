@@ -32,7 +32,7 @@ private:
 		PHASE_OPERAND_HI,
 		PHASE_DATA,
 		PHASE_NEXT_FETCH,
-		PHASE_IDLE
+		PHASE_FINISHED
 	};
 
 	required_device<m6502_device> m_maincpu;
@@ -135,12 +135,12 @@ void utm6502_state::observe_read(offs_t offset, u8 data)
 	case PHASE_NEXT_FETCH:
 		if ((cycle != (m_opcode_cycle + 6)) || (offset != 0xc003) || (data != 0xea))
 			fail("expected next opcode fetch at opcode+6");
-		logerror("PASS\n");
-		m_phase = PHASE_IDLE;
+		m_phase = PHASE_FINISHED;
 		break;
 
-	case PHASE_IDLE:
-		m_slice_timer->reset();
+	case PHASE_FINISHED:
+		logerror("PASS\n");
+		machine().schedule_exit();
 		break;
 	}
 }
@@ -173,7 +173,7 @@ char const *utm6502_state::phase_name() const
 	case PHASE_OPERAND_HI: return "OPERAND_HI";
 	case PHASE_DATA:       return "DATA";
 	case PHASE_NEXT_FETCH: return "NEXT_FETCH";
-	case PHASE_IDLE:       return "IDLE";
+	case PHASE_FINISHED:   return "FINISHED";
 	}
 
 	return "UNKNOWN";
@@ -228,9 +228,6 @@ void utm6502_state::machine_reset()
 	m_ram[0xc001] = 0x34;
 	m_ram[0xc002] = 0x12;
 	m_ram[0xc003] = 0xea; // NOP
-	m_ram[0xc004] = 0x4c; // JMP $C004
-	m_ram[0xc005] = 0x04;
-	m_ram[0xc006] = 0xc0;
 	m_ram[0x1234] = 0x56;
 	m_ram[0xfffc] = 0x00;
 	m_ram[0xfffd] = 0xc0;
