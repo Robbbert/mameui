@@ -614,7 +614,7 @@ come from... they might be eventually removed -->
 	<software name="spaceintr" supported="yes">
 		<description>Space Intruders</description>
 		<year>1987</year>
-		<publisher>&lt;QuickSilva ltd.&gt;</publisher>
+		<publisher>QuickSilva ltd.</publisher>
 		<info name="usage" value="Requires 36k or more RAM" />
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="6144">
@@ -688,7 +688,7 @@ come from... they might be eventually removed -->
 	<software name="brno_con" supported="yes">
 		<description>Boot for Brno ramdisk [console version]</description>
 		<year>1989</year>
-		<publisher>&lt;Pavel Brychta a spol.&gt;</publisher>
+		<publisher>Pavel Brychta a spol.</publisher>
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="3456">
 				<rom name="brno_boot.rom" size="3456" crc="60008729" sha1="fb26e2ae9f74b0ae0d723b417a038a8ef3d72782" offset="00000"/>
@@ -699,7 +699,7 @@ come from... they might be eventually removed -->
 	<software name="brno_win" supported="yes">
 		<description>Boot for Brno ramdisk [windows version]</description>
 		<year>1989</year>
-		<publisher>&lt;Ladislav Novak&gt;</publisher>
+		<publisher>Ladislav Novak</publisher>
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="brno_win.rom" size="8192" crc="f4cfb2ee" sha1="23f41d2d9ac915545409dd0163f3dc298f04eea2" offset="00000"/>
