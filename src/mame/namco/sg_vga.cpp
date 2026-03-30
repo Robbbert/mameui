@@ -327,9 +327,10 @@ static INPUT_PORTS_START( hplanet )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
-// 3 irqs used:
+// 3 irqs:
 // 0 vblank
-// 1 and 2 unknown
+// 1 may be raster irq like other Namco games (unused?)
+// 2 unknown
 void sg_vga_state::sg_vga(machine_config &config)
 {
 	// basic machine hardware
@@ -342,8 +343,8 @@ void sg_vga_state::sg_vga(machine_config &config)
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_refresh_hz(60);
 	screen.set_vblank_time(ATTOSECONDS_IN_USEC(2500));
-	screen.set_size(0x220, 0x180);
-	screen.set_visarea(0x00, 0x1d0-1, 0x00, 0x170-1);
+	screen.set_size(0x25a, 0x1b6); // 0x2c 0x58 0x22a 0x25a / 0x06 0x21 0x191 0x1b6
+	screen.set_visarea(0x00, 0x1d2-1, 0x00, 0x170-1);
 	screen.set_screen_update(m_video, FUNC(x1_020_dx_101_device::screen_update));
 	screen.screen_vblank().set(m_video, FUNC(x1_020_dx_101_device::screen_vblank));
 	screen.screen_vblank().append_inputline(m_maincpu, 0);
@@ -375,10 +376,10 @@ ROM_START( hplanet )
 	ROM_LOAD16_WORD_SWAP( "hp1_mpr-0a.u02", 0x00000, 0x80000, CRC(83dd903f) SHA1(37ca41f8423bcf6e7ae422a5a6e1aef0e52a38cc) )
 
 	ROM_REGION( 0x2000000, "video", 0 )
-	ROM_LOAD64_WORD( "hp1_obj-1a.u01", 0x000000, 0x800000, CRC(124f99b9) SHA1(41970a06a95875688f8bc21465a5bbd80b8cf8ce) )
-	ROM_LOAD64_WORD( "hp1_obj-0a.u02", 0x000002, 0x800000, CRC(597e179c) SHA1(5130c5f4f7f8b3c730363ff843440fa5f059663c) )
-	ROM_LOAD64_WORD( "hp1_obj-3a.u03", 0x000004, 0x800000, CRC(17eeb4fd) SHA1(3bc30cd8f6a43d4aee9cd2da119dbab66c99565e) )
-	ROM_LOAD64_WORD( "hp1_obj-2a.u04", 0x000006, 0x800000, CRC(31f71432) SHA1(b572045af0c0ad54df72d9396168be004c07f7f7) )
+	ROM_LOAD64_WORD( "hp1_obj-1a.u01", 0x000002, 0x800000, CRC(124f99b9) SHA1(41970a06a95875688f8bc21465a5bbd80b8cf8ce) )
+	ROM_LOAD64_WORD( "hp1_obj-0a.u02", 0x000000, 0x800000, CRC(597e179c) SHA1(5130c5f4f7f8b3c730363ff843440fa5f059663c) )
+	ROM_LOAD64_WORD( "hp1_obj-3a.u03", 0x000006, 0x800000, CRC(17eeb4fd) SHA1(3bc30cd8f6a43d4aee9cd2da119dbab66c99565e) )
+	ROM_LOAD64_WORD( "hp1_obj-2a.u04", 0x000004, 0x800000, CRC(31f71432) SHA1(b572045af0c0ad54df72d9396168be004c07f7f7) )
 
 	ROM_REGION( 0x400000, "x1snd", 0 ) // TODO: bankswitched?
 	ROM_LOAD( "hp1_snd-0a.u42", 0x000000, 0x400000, CRC(a78b01e5) SHA1(20e904a2e01a7e40c037a7c4ab9bd1b4e9054c4d) )
@@ -387,4 +388,4 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 2001, hplanet, 0, sg_vga, hplanet, sg_vga_state, empty_init, ROT0, "Namco", "Happy Planet", MACHINE_NO_SOUND | MACHINE_NOT_WORKING )
+GAME( 2001, hplanet, 0, sg_vga, hplanet, sg_vga_state, empty_init, ROT0, "Namco", "Happy Planet (Japan)", MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING )
