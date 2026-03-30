@@ -138,10 +138,10 @@ void x37_state::program_map(address_map &map)
 
 	map(0x000000, 0x3fffff).rw(FUNC(x37_state::ram_r), FUNC(x37_state::ram_w));
 	map(0x400000, 0x47ffff).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::vram_map)).umask16(0xffff);
-	map(0x480100, 0x4801ff).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::crtc_map)).umask16(0xffff);
-	map(0x480800, 0x480807).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr0_map)).umask16(0xffff);
-	map(0x480900, 0x480907).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr1_map)).umask16(0xffff);
-	map(0x480a00, 0x480a07).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr2_map)).umask16(0xffff);
+	map(0x480100, 0x480101).mirror(0xfe).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::crtc_map)).umask16(0xffff);
+	map(0x480800, 0x480807).mirror(0xf8).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr0_map)).umask16(0xffff);
+	map(0x480900, 0x480907).mirror(0xf8).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr1_map)).umask16(0xffff);
+	map(0x480a00, 0x480a07).mirror(0xf8).m(ABC1600_MOVER_TAG, FUNC(abc1600_mover_device::iowr2_map)).umask16(0xffff);
 	for (offs_t base = 0x800000; base < 0xc00000; base += 0x200)
 	{
 		offs_t const mapper_base = (base - 0x800000) >> 1;
@@ -156,15 +156,15 @@ void x37_state::program_map(address_map &map)
 	map(0xfc0000, 0xfc0007).rw(m_scc[0], FUNC(z80scc_device::ab_dc_r), FUNC(z80scc_device::ab_dc_w)).umask16(0x00ff);
 	map(0xfc0010, 0xfc0017).rw(m_scc[1], FUNC(z80scc_device::ab_dc_r), FUNC(z80scc_device::ab_dc_w)).umask16(0x00ff);
 	map(0xfc0020, 0xfc0027).rw(m_scc[2], FUNC(z80scc_device::ab_dc_r), FUNC(z80scc_device::ab_dc_w)).umask16(0x00ff);
-	// SASI CTRL
-	// SASI STAT
+	map(0xfd5000, 0xfd5001).rw(m_sasi, FUNC(luxor_x37_sasi_device::tre_r), FUNC(luxor_x37_sasi_device::tre_w));
+	map(0xfd5080, 0xfd509f).rw(m_sasi, FUNC(luxor_x37_sasi_device::stat_r), FUNC(luxor_x37_sasi_device::ctrl_w));
 	map(0xfdb040, 0xfdb041).rw(m_fdc, FUNC(fd1797_device::status_r), FUNC(fd1797_device::cmd_w)).umask16(0x00ff);
 	map(0xfdb042, 0xfdb043).rw(m_fdc, FUNC(fd1797_device::track_r), FUNC(fd1797_device::track_w)).umask16(0x00ff);
 	map(0xfdb044, 0xfdb045).rw(m_fdc, FUNC(fd1797_device::sector_r), FUNC(fd1797_device::sector_w)).umask16(0x00ff);
 	map(0xfdb046, 0xfdb047).rw(m_fdc, FUNC(fd1797_device::data_r), FUNC(fd1797_device::data_w)).umask16(0x00ff);
 	map(0xfdb080, 0xfdb081).w(FUNC(x37_state::xdck_w));
 
-	// 0xfd5080 > SI ERR off line
+	// tst.w 0xfffffc ??
 }
 
 void x37_state::cpu_space_map(address_map &map)
@@ -585,6 +585,7 @@ void x37_state::x37(machine_config &config)
 	LUXOR_X37_SASI(config, m_sasi, 0);
 	m_sasi->int_callback().set(m_cio, FUNC(z8536_device::pa7_w));
 	m_sasi->int_callback().append(FUNC(x37_state::sasi_int_w));
+	m_sasi->req0_callback().set(m_dmac, FUNC(hd63450_device::drq0_w));
 
 	// video hardware
 	abc1600_mover_device &mover(ABC1600_MOVER(config, ABC1600_MOVER_TAG, XTAL(64'000'000)));
