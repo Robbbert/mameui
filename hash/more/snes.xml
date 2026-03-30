@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4013 -->
+<!-- Number of items in this list = 4017 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6752,6 +6752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns63163eebc6955">
+		<description>Dark Half PT-BR v1.3 (2024)(PSGM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Dark Half PT-BR v1.3 (2024)(PSGM).sfc" size="4194304" crc="1fd2bafe" sha1="63163eebc695507060931936f1216f8b0825cc32"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns8567b555a998a">
 		<description>Dark Half T-Eng (2015)(Aeon Genesis)</description>
 		<year>????</year>
@@ -7919,6 +7929,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Dragon Quest III - Soshite Densetsu he... (Japan) [En v0.14 by DeJap] (Incomplete) (~Dragon Quest III - Into the Legend).sfc" size="4194304" crc="8c5244f2" sha1="45bdf443ff080874f3d60cda60a243a44adf01f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc8d7317e8042b">
+		<description>Dragon Quest III PT-BR v1.01 (2023)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Dragon Quest III PT-BR v1.01 (2023)(Dindo).sfc" size="6291456" crc="602c21d9" sha1="c8d7317e8042ba74b283b09a00553eb373f83616"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11612,6 +11632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns4baaaaaae732e">
+		<description>Go Go Ackman 3 PT-BR (2021)(Linconlln)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Go Go Ackman 3 PT-BR (2021)(Linconlln).sfc" size="2097152" crc="07379672" sha1="4baaaaaae732ec1e0053936aeb8c2f6fade478fd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns4e1343d91f45b">
 		<description>Go Go Ackman 3 T-Eng (2020)(Reld)</description>
 		<year>????</year>
@@ -12509,6 +12539,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="Hong Kong 97 (PD).smc" size="524800" crc="a6c42c06" sha1="d62896e9d574873a0284f53162311a5b887e98c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6927f6d4fc255">
+		<description>Hook PT-BR v2.0 (2026)(juliano_did)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Hook PT-BR v2.0 (2026)(juliano_did).sfc" size="1048576" crc="d6ca1fad" sha1="6927f6d4fc255569ef0002f955a847333ac1fb0f"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2064 -->
+<!-- Number of items in this list = 2065 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -10579,6 +10579,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Light_Crusader.bin" size="2097152" crc="600e5709" sha1="a249d61a0002d34686110fd4cd9ff574cc0d5822"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc458e54fd6309">
+		<description>Linda Guerreira Sailor Moon PT-BR (2020)(Anime_World)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Linda Guerreira Sailor Moon PT-BR (2020)(Anime_World).bin" size="4194304" crc="cf90364b" sha1="c458e54fd63093e43ff7e6e138dca9e2c535bdda"/>
 			</dataarea>
 		</part>
 	</software>
