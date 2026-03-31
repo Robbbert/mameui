@@ -132,6 +132,8 @@ void tagteam_state::palette(palette_device &palette) const
 	std::vector<rgb_t> rgb;
 	compute_res_net_all(rgb, color_prom, tagteam_decode_info, tagteam_net_info);
 	palette.set_pen_colors(0x00, rgb);
+
+	palette.palette()->normalize_range(0, 31);
 }
 
 
@@ -248,20 +250,17 @@ void tagteam_state::draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprect
 			flipy = !flipy;
 		}
 
-
 		m_gfxdecode->gfx(1)->transpen(bitmap, cliprect,
-		code, color,
-		flipx, flipy,
-		sx, sy, 0);
+			code, color,
+			flipx, flipy,
+			sx, sy, 0);
 
 		// Wrap around
-
 		code = m_videoram[offs + 0x20] + 256 * spritebank;
 		color = m_palettebank;
 		sy += (flip_screen() ? -256 : 256);
 
-
-			m_gfxdecode->gfx(1)->transpen(bitmap, cliprect,
+		m_gfxdecode->gfx(1)->transpen(bitmap, cliprect,
 			code, color,
 			flipx, flipy,
 			sx, sy, 0);
@@ -363,7 +362,7 @@ static INPUT_PORTS_START( bigprowr )
 	PORT_DIPSETTING(    0x40, "Upright, Dual Controls" )
 	PORT_DIPSETTING(    0x20, "Cocktail, Single Controls" ) // IMPOSSIBLE !
 	PORT_DIPSETTING(    0x60, DEF_STR( Cocktail ) )     // "Cocktail, Dual Controls"
-	PORT_BIT( 0x80, IP_ACTIVE_HIGH, IPT_CUSTOM  ) PORT_READ_LINE_DEVICE_MEMBER("screen", FUNC(screen_device::vblank))
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_CUSTOM  ) PORT_READ_LINE_DEVICE_MEMBER("screen", FUNC(screen_device::vblank))
 
 	PORT_START("DSW2")
 	PORT_DIPNAME( 0x01, 0x01, DEF_STR( Difficulty ) )   PORT_DIPLOCATION("SW2:1")
@@ -430,6 +429,10 @@ GFXDECODE_END
 
 TIMER_DEVICE_CALLBACK_MEMBER(tagteam_state::v8_timer_irq)
 {
+	// 16 times per frame
+	if (param > 256)
+		return;
+
 	// same source for both interrupts
 	m_maincpu->set_input_line(M6502_IRQ_LINE, ASSERT_LINE);
 	if (m_sound_nmi_mask)
@@ -466,7 +469,7 @@ void tagteam_state::tagteam(machine_config &config)
 	AY8910(config, "ay1", 12_MHz_XTAL / 8).add_route(ALL_OUTPUTS, "speaker", 0.25);
 	AY8910(config, "ay2", 12_MHz_XTAL / 8).add_route(ALL_OUTPUTS, "speaker", 0.25);
 
-	DAC_8BIT_R2R(config, "dac", 0).add_route(ALL_OUTPUTS, "speaker", 0.25); // unknown DAC
+	DAC_8BIT_R2R(config, "dac").add_route(ALL_OUTPUTS, "speaker", 0.25); // unknown DAC
 }
 
 

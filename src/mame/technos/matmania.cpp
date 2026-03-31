@@ -397,7 +397,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(matmania_state::scanline)
 	const int scanline = param;
 
 	// 16 sound NMIs per frame (disabled during DAC voice)
-	if (m_sound_nmi_enable && (scanline % 16) == 0 && scanline < 256)
+	if (m_sound_nmi_enable && scanline < 256)
 		m_audiocpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
 }
 
@@ -631,14 +631,14 @@ GFXDECODE_END
 void matmania_state::matmania(machine_config &config)
 {
 	// basic machine hardware
-	M6502(config, m_maincpu, 12_MHz_XTAL / 8);  // 1.5MHz?
+	M6502(config, m_maincpu, 12_MHz_XTAL / 8); // 1.5MHz?
 	m_maincpu->set_addrmap(AS_PROGRAM, &matmania_state::main_map);
 	m_maincpu->set_vblank_int("screen", FUNC(matmania_state::irq0_line_hold));
 
-	M6502(config, m_audiocpu, 12_MHz_XTAL / 3 / 4); // 1.0MHz
+	M6502(config, m_audiocpu, 12_MHz_XTAL / 2 / 6); // 1.0MHz
 	m_audiocpu->set_addrmap(AS_PROGRAM, &matmania_state::sound_map);
 
-	TIMER(config, "scantimer").configure_scanline(FUNC(matmania_state::scanline), "screen", 0, 1);
+	TIMER(config, "scantimer").configure_scanline(FUNC(matmania_state::scanline), "screen", 8, 16);
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
@@ -654,8 +654,8 @@ void matmania_state::matmania(machine_config &config)
 
 	GENERIC_LATCH_8(config, "soundlatch").data_pending_callback().set_inputline(m_audiocpu, M6502_IRQ_LINE);
 
-	AY8910(config, "ay1", 12_MHz_XTAL / 8).add_route(ALL_OUTPUTS, "speaker", 0.3);
-	AY8910(config, "ay2", 12_MHz_XTAL / 8).add_route(ALL_OUTPUTS, "speaker", 0.3);
+	AY8910(config, "ay1", 12_MHz_XTAL / 8).add_route(ALL_OUTPUTS, "speaker", 0.3); // 1.5MHz
+	AY8910(config, "ay2", 12_MHz_XTAL / 8).add_route(ALL_OUTPUTS, "speaker", 0.3); // 1.5MHz
 
 	DAC_8BIT_R2R(config, "dac").add_route(ALL_OUTPUTS, "speaker", 0.4); // unknown DAC
 }
