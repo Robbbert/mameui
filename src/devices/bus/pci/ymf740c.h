@@ -7,6 +7,7 @@
 #pragma once
 
 #include "pci_slot.h"
+#include "sound/ymopl.h"
 
 class ymf740c_device : public pci_card_device
 {
@@ -18,14 +19,22 @@ public:
 protected:
 	ymf740c_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);
 
-	virtual void device_start() override;
-	virtual void device_reset() override;
-	virtual void device_add_mconfig(machine_config &config) override;
+	virtual void device_start() override ATTR_COLD;
+	virtual void device_reset() override ATTR_COLD;
+	virtual void device_add_mconfig(machine_config &config) override ATTR_COLD;
 
-	virtual void config_map(address_map &map) override;
+	virtual void map_extra(uint64_t memory_window_start, uint64_t memory_window_end, uint64_t memory_offset, address_space *memory_space,
+		uint64_t io_window_start, uint64_t io_window_end, uint64_t io_offset, address_space *io_space) override;
+
+	virtual void config_map(address_map &map) override ATTR_COLD;
 	virtual u8 capptr_r() override;
 private:
-	void map(address_map &map);
+	required_device<ymf262_device> m_opl3;
+
+	void map(address_map &map) ATTR_COLD;
+	void fm_map(address_map &map) ATTR_COLD;
+
+	u32 m_legacy_audio_control;
 };
 
 DECLARE_DEVICE_TYPE(YMF740C, ymf740c_device)
