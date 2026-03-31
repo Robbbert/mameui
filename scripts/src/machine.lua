@@ -4171,6 +4171,19 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/machine/x28.h,MACHINES["X28"] = true
+---------------------------------------------------
+
+if MACHINES["X28"] then
+	files {
+		MAME_DIR .. "src/devices/machine/x28.cpp",
+		MAME_DIR .. "src/devices/machine/x28.ipp",
+		MAME_DIR .. "src/devices/machine/x28.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/machine/x76f041.h,MACHINES["X76F041"] = true
 ---------------------------------------------------
 
@@ -4700,6 +4713,18 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/machine/w83877tf.h,MACHINES["W83877F"] = true
+---------------------------------------------------
+
+if MACHINES["W83877F"] then
+	files {
+		MAME_DIR .. "src/devices/machine/w83877tf.cpp",
+		MAME_DIR .. "src/devices/machine/w83877tf.h",
+	}
+end
+
+---------------------------------------------------
+--
 --@src/devices/machine/w83977tf.h,MACHINES["W83977TF"] = true
 ---------------------------------------------------
 
@@ -4709,7 +4734,6 @@ if MACHINES["W83977TF"] then
 		MAME_DIR .. "src/devices/machine/w83977tf.h",
 	}
 end
-
 
 ---------------------------------------------------
 --

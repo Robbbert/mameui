@@ -122,6 +122,11 @@ TODO:
 
 - hgokou: joystick controls are incomplete
 
+- daichuka: needs a redump of the program ROM
+
+- daichukaa: setting of time to next inspection doesn't stick, even without resetting, so the game is always
+  stuck with the 'inspection needed' message
+
 Notes:
 
 - all games using black as default palette is trusted from a real rongrong PCB;
@@ -308,6 +313,8 @@ public:
 	void hgokou(machine_config &config) ATTR_COLD;
 	void seljan2(machine_config &config) ATTR_COLD;
 	void jongoh(machine_config &config) ATTR_COLD;
+	void daichuka(machine_config &config) ATTR_COLD;
+	void daichukaa(machine_config &config) ATTR_COLD;
 	void janshinp(machine_config &config) ATTR_COLD;
 	void ultrchmp(machine_config &config) ATTR_COLD;
 	void rongrong(machine_config &config) ATTR_COLD;
@@ -491,6 +498,8 @@ private:
 	void copylayer(bitmap_rgb32 &bitmap, const rectangle &cliprect, int layer);
 
 	void akamaru_map(address_map &map) ATTR_COLD;
+	void daichuka_portmap(address_map &map) ATTR_COLD;
+	void daichukaa_portmap(address_map &map) ATTR_COLD;
 	void ddenlovj_map(address_map &map) ATTR_COLD;
 	void ddenlovr_map(address_map &map) ATTR_COLD;
 	void ddenlovrk_map(address_map &map) ATTR_COLD;
@@ -4439,8 +4448,32 @@ void ddenlovr_state::jongoh_portmap(address_map &map)
 	map(0x70, 0x70).nopr().w(FUNC(ddenlovr_state::sryudens_rambank_w));    // ? ack on RTC int
 	map(0x80, 0x80).unmapw();
 	map(0xb0, 0xb0).r(FUNC(ddenlovr_state::technotop_protection_r<0x06>));
-	map(0xe4, 0xe4).w(FUNC(hanakanz_state::seljan2_palette_enab_w));
+	map(0xe4, 0xe4).w(FUNC(ddenlovr_state::seljan2_palette_enab_w));
 	map(0xe8, 0xe8).w(FUNC(ddenlovr_state::protection_w));
+}
+
+void ddenlovr_state::daichuka_portmap(address_map &map)
+{
+	seljan2_portmap(map);
+
+	map(0x60, 0x60).w(FUNC(ddenlovr_state::seljan2_rombank_w));
+	map(0x70, 0x70).nopr().w(FUNC(ddenlovr_state::sryudens_rambank_w));
+	map(0x80, 0x80).unmapw();
+	map(0xb0, 0xb0).r(FUNC(ddenlovr_state::technotop_protection_r<0x07>));
+	map(0xd4, 0xd4).w(FUNC(ddenlovr_state::seljan2_palette_enab_w));
+	map(0xdc, 0xdc).w(FUNC(ddenlovr_state::protection_w));
+}
+
+void ddenlovr_state::daichukaa_portmap(address_map &map)
+{
+	seljan2_portmap(map);
+
+	map(0x60, 0x60).w(FUNC(ddenlovr_state::seljan2_rombank_w));
+	map(0x70, 0x70).nopr().w(FUNC(ddenlovr_state::sryudens_rambank_w));    // ? ack on RTC int
+	map(0x80, 0x80).unmapw();
+	map(0xb0, 0xb0).r(FUNC(ddenlovr_state::technotop_protection_r<0x05>));
+	map(0xd8, 0xd8).w(FUNC(ddenlovr_state::seljan2_palette_enab_w));
+	map(0xdc, 0xdc).w(FUNC(ddenlovr_state::protection_w));
 }
 
 /***************************************************************************
@@ -10472,6 +10505,20 @@ void ddenlovr_state::jongoh(machine_config &config)
 	m_maincpu->set_addrmap(AS_IO, &hanakanz_state::jongoh_portmap);
 }
 
+void ddenlovr_state::daichuka(machine_config &config)
+{
+	seljan2(config);
+
+	m_maincpu->set_addrmap(AS_IO, &hanakanz_state::daichuka_portmap);
+}
+
+void ddenlovr_state::daichukaa(machine_config &config)
+{
+	seljan2(config);
+
+	m_maincpu->set_addrmap(AS_IO, &hanakanz_state::daichukaa_portmap);
+}
+
 void hanakanz_state::daireach(machine_config &config)
 {
 	seljan2(config);
@@ -13104,6 +13151,32 @@ ROM_START( jongoh )
 	ROM_LOAD( "t8031.1c", 0x000000, 0x80000, CRC(5a8cd45c) SHA1(25ca573b8ba226fb3f2de48c57b5ced6884eaa63) )  // same as sryudens, seljan2
 ROM_END
 
+ROM_START( daichuka ) // NM504-2 PCB
+	ROM_REGION( 0x90000+0x8000+16*0x1000, "maincpu", 0 )
+	// despite various attempts with different programmers, has 0xff at 0x92 and 0xa2 for every block of 0x100
+	ROM_LOAD( "3062a5.4c", 0x00000, 0x80000, CRC(40fbf627) SHA1(b7d49ec96f5163062c66763a52c2823bea146dd5) BAD_DUMP )
+	ROM_RELOAD(            0x10000, 0x80000 )
+
+	ROM_REGION( 0x600000, "blitter", 0 )
+	ROM_LOAD( "t83063.11c",   0x000000, 0x200000, CRC(2c0a7cf6) SHA1(7e726212355af30e0b85f74b77e3d9c6b65863f7) )
+	ROM_LOAD( "83604_2.sub",  0x400000, 0x200000, CRC(0faeaf86) SHA1(b1cfe32c622b41bdb96f2556daf4f616f6e8d25f) ) // 0xxxxxxxxxxxxxxxxxxxx = 0xFF
+
+	ROM_REGION( 0x80000, "oki", 0 )
+	ROM_LOAD( "t83061.1c", 0x00000, 0x80000, CRC(52666107) SHA1(1e1c17b1da7ded5fc52422c7e569ef02af1ee11d) )
+ROM_END
+
+ROM_START( daichukaa ) // NM504-2 PCB
+	ROM_REGION( 0x90000+0x8000+16*0x1000, "maincpu", 0 )
+	ROM_LOAD( "p3042a4.4c", 0x00000, 0x80000, CRC(04155ff0) SHA1(97080dcdac6f7bcb183681ff72fe233797a1a303) )
+	ROM_RELOAD(             0x10000, 0x80000 )
+
+	ROM_REGION( 0x600000, "blitter", 0 )
+	ROM_LOAD( "83043_2.sub", 0x400000, 0x200000, CRC(7d1cdaf4) SHA1(4c3f84abecc7caf52a52ac88a7d178ad33538cb4) )
+
+	ROM_REGION( 0x80000, "oki", 0 )
+	ROM_LOAD( "t83041.1c", 0x00000, 0x80000, CRC(c92065a9) SHA1(65c38c3a31d3f4b8240a16fdcdf376acdf5c17d2) ) // same as mjschuka
+ROM_END
+
 /***************************************************************************
 
 Hanafuda Hana Tengoku
@@ -13270,7 +13343,7 @@ ROM_START( mjswacads )
 	ROM_LOAD( "01003.7b",     0x000000, 0x200000, CRC(1df7a355) SHA1(3122570a845bb046936e8296423636281b39cc4a) )
 	ROM_LOAD( "01004.8b",     0x200000, 0x200000, CRC(198904d4) SHA1(d34a297cd08c227767808dfa695573ef596022c9) )
 	ROM_LOAD( "01005.9b",     0x400000, 0x200000, CRC(4dbcf7cf) SHA1(8bf4eaff1a280b2d5bf1221dc516647936e146d7) )
-	ROM_LOAD( "01006_2.11b ", 0x600000, 0x200000, CRC(7c646f5c) SHA1(d911f497b2b4b10da1693308a2bfab9f70d2e34a) ) // only different one from mjswacad
+	ROM_LOAD( "01006_2.11b",  0x600000, 0x200000, CRC(7c646f5c) SHA1(d911f497b2b4b10da1693308a2bfab9f70d2e34a) ) // only different one from mjswacad
 
 	ROM_REGION( 0x100000, "oki", 0 )
 	ROM_LOAD( "01001.2b", 0x000000, 0x100000, CRC(ee30d20a) SHA1(14689196486bc4eab4a174fe880b425fa544cd25) ) // same as mjswacad but half size (no empty half)
@@ -13383,9 +13456,12 @@ GAME( 2000, jongoh,      0,        jongoh,    jongoh,     ddenlovr_state, empty_
 
 GAME( 2001, daireach,    0,        daireach,  seljan2,    hanakanz_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai-Reach (Japan, TSM012-C01)",                          MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL )
 
+GAME( 2002, daichuka,    0,        daichuka,  jongoh,     ddenlovr_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai Chuuka Ken (Japan, P830 006A-005)",                  MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // bad dump
+GAME( 2002, daichukaa,   daichuka, daichukaa, jongoh,     ddenlovr_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Dai Chuuka Ken (Japan, P830-004A-004)",                  MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // stuck at the operator control check
+
 GAME( 2002, daimyojn,    0,        daimyojn,  daimyojn,   hanakanz_state, empty_init,    ROT0, "Dynax / Techno-Top / Techno-Planning",        "Mahjong Daimyojin (Japan, T017-PB-00)",                          MACHINE_NO_COCKTAIL  )
 
-GAME( 2002, mjswacads,   0,        mjswacads, daimyojn,   hanakanz_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Sweet Academy Special (Japan, P010B-Y05)",               MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // needs verifying of inputs, outputs (DIP sheet available)
+GAME( 2002, mjswacads,   0,        mjswacads, daimyojn,   hanakanz_state, empty_init,    ROT0, "Techno-Top / Long Stone",                     "Mahjong Sweet Academy Special (Japan, P010B-Y05)",               MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL ) // needs verifying of inputs, outputs
 
 GAME( 2002, mjtenho,     0,        daimyojn,  daimyojn,   hanakanz_state, empty_init,    ROT0, "Techno-Top",                                  "Mahjong Tenho (Japan, P016B-000)",                               MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL  )
 
