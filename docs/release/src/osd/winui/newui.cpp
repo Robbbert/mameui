@@ -2939,7 +2939,8 @@ static void prepare_menus(HWND wnd)
 		std::string opt_name="0", current="0";
 
 		// name this option
-		const char *slot_option_name = slot.slot_name();
+		std::string slot_temp = std::string(slot.slot_name());
+		const char *slot_option_name = slot_temp.c_str();
 		current = window->machine().options().slot_option(slot_option_name).value();
 
 		const device_slot_interface::slot_option *option = slot.option(current.c_str());
@@ -2948,7 +2949,7 @@ static void prepare_menus(HWND wnd)
 
 		sub_menu = CreateMenu();
 		// add the slot
-		win_append_menu_utf8(slot_menu, MF_POPUP, (UINT_PTR)sub_menu, slot.slot_name());
+		win_append_menu_utf8(slot_menu, MF_POPUP, (UINT_PTR)sub_menu, slot_temp.c_str());
 		// build a list of user-selectable options
 		std::vector<device_slot_interface::slot_option *> option_list;
 		for (auto &option : slot.option_list())
@@ -2956,17 +2957,19 @@ static void prepare_menus(HWND wnd)
 				option_list.push_back(option.second.get());
 
 		// add the empty option
-		slot_map[cnt] = slot_data { slot.slot_name(), "" };
+		slot_map[cnt] = slot_data { slot_temp.c_str(), "" };
 		win_append_menu_utf8(sub_menu, MF_STRING | (opt_name == "0") ? MF_CHECKED : 0, cnt++, "[Empty]");
 
 		// sort them by name
-		std::sort(option_list.begin(), option_list.end(), [](device_slot_interface::slot_option *opt1, device_slot_interface::slot_option *opt2) {return strcmp(opt1->name(), opt2->name()) < 0;});
+		std::sort(option_list.begin(), option_list.end(), [](device_slot_interface::slot_option *opt1, device_slot_interface::slot_option *opt2)
+		{ std::string temp1 = std::string(opt1->name()), temp2 = std::string(opt1->name());
+			return strcmp(temp1.c_str(), temp2.c_str()) < 0;});
 
 		// add each option in sorted order
 		for (device_slot_interface::slot_option *opt : option_list)
 		{
-			std::string temp = opt->name() + std::string(" (") + opt->devtype().fullname() + std::string(")");
-			slot_map[cnt] = slot_data { slot.slot_name(), opt->name() };
+			std::string temp = std::string(opt->name()) + std::string(" (") + opt->devtype().fullname() + std::string(")");
+			slot_map[cnt] = slot_data { std::string(slot.slot_name()), std::string(opt->name()) };
 			win_append_menu_utf8(sub_menu, MF_STRING | (opt->name()==opt_name) ? MF_CHECKED : 0, cnt++, temp.c_str());
 		}
 	}

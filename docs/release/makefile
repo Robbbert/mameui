@@ -6,7 +6,7 @@
 #
 ###########################################################################
 
-BARE_VERS := 0.286
+BARE_VERS := 0.287
 LONG_VERS := $(BARE_VERS).0
 
 ###########################################################################
@@ -1010,6 +1010,10 @@ $(info Clang $(CLANG_VERSION) detected)
 ifneq ($(TARGETOS),asmjs)
 ifeq ($(ARCHITECTURE),_x64)
 ARCHITECTURE := _x64_clang
+else ifneq ($(filter aarch64%,$(UNAME_M)),)
+ARCHITECTURE := _arm64_clang
+else ifneq ($(filter aarch64%,$(UNAME_P)),)
+ARCHITECTURE := _arm64_clang
 else ifneq ($(filter arm64%,$(UNAME_M)),)
 ARCHITECTURE := _arm64_clang
 else
@@ -1259,6 +1263,11 @@ $(PROJECTDIR)/$(MAKETYPE)-linux-clang/Makefile: makefile $(SCRIPTS) $(GENIE)
 
 .PHONY: linux_x64_clang
 linux_x64_clang: generate $(PROJECTDIR)/$(MAKETYPE)-linux-clang/Makefile
+	$(SILENT) $(MAKE) $(MAKEPARAMS) -C $(PROJECTDIR)/$(MAKETYPE)-linux-clang config=$(CONFIG)64 precompile
+	$(SILENT) $(MAKE) $(MAKEPARAMS) -C $(PROJECTDIR)/$(MAKETYPE)-linux-clang config=$(CONFIG)64
+
+.PHONY: linux_arm64_clang
+linux_arm64_clang: generate $(PROJECTDIR)/$(MAKETYPE)-linux-clang/Makefile
 	$(SILENT) $(MAKE) $(MAKEPARAMS) -C $(PROJECTDIR)/$(MAKETYPE)-linux-clang config=$(CONFIG)64 precompile
 	$(SILENT) $(MAKE) $(MAKEPARAMS) -C $(PROJECTDIR)/$(MAKETYPE)-linux-clang config=$(CONFIG)64
 
@@ -1572,11 +1581,11 @@ endif
 # Regression tests
 #-------------------------------------------------
 
-include regtests/regtests.mak
+#include regtests/regtests.mak
 
-.PHONY: tests
+#.PHONY: tests
 
-tests: $(REGTESTS)
+#tests: $(REGTESTS)
 
 #-------------------------------------------------
 # Source cleanup

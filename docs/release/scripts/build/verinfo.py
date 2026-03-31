@@ -86,9 +86,9 @@ else:
 
 if build == "mess":
     # MESS
-    author = "MESS Team"
+    author = "Robbbert and the MAME Team"
     comments = "Multi Emulation Super System"
-    company_name = "MESS Team"
+    company_name = "MAME Team"
     file_description = "MESS"
     internal_name = "MESS"
     original_filename = "MESS"

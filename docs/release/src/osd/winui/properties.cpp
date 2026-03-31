@@ -2467,6 +2467,7 @@ static void BuildDataMap(void)
 	datamap_add(properties_datamap, IDC_PLUGIN,					DM_STRING,	OPTION_PLUGIN);
 	datamap_add(properties_datamap, IDC_NVRAM_SAVE,				DM_BOOL,	OPTION_NVRAM_SAVE);
 	datamap_add(properties_datamap, IDC_REWIND,					DM_BOOL,	OPTION_REWIND);
+	datamap_add(properties_datamap, IDC_DRC_CORE,				DM_BOOL,	OPTION_DRC);
 	datamap_add(properties_datamap, IDC_NATURAL,				DM_BOOL,	OPTION_NATURAL_KEYBOARD);
 	datamap_add(properties_datamap, IDC_HLSL_ON,				DM_BOOL,	WINOPTION_HLSL_ENABLE);
 	datamap_add(properties_datamap, IDC_SAVE_INI,				DM_BOOL,	OPTION_WRITECONFIG);
