@@ -18,11 +18,12 @@ Stephh's notes :
   - When the "Cabinet" Dip Switch is set to "Cocktail", the screen status
     depends on which player is the main wrestler on the ring :
 
-      * player 1 : normal screen
-      * player 2 : inverted screen
+    * player 1 : normal screen
+    * player 2 : inverted screen
 
 TODO:
-        * fix hi-score (reset) bug
+  - fix hi-score (reset) bug
+  - verify vcount chain (exact interrupt timing and vblank flag on DSW1.7)
 
 ***************************************************************************/
 

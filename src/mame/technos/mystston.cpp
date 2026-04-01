@@ -18,6 +18,11 @@
       It's currently presumed that it does, but need to find a PCB video
       reference to double check via music tempo.
 
+      The vcount chain is probably same for all these Technos games, see
+      xain.cpp for example. The remaining question is the duration of the
+      software vblank flag on DSW1.7, whether or not it will receive two
+      interrupts with that flag active.
+
 ***************************************************************************/
 
 #include "emu.h"

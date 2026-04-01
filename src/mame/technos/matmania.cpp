@@ -8,6 +8,10 @@ Memetron, 1985
 
 driver by Brad Oliver
 
+TODO:
+- verify vcount chain (exact interrupt timing and vblank flag on DSW1.7)
+
+
 MAIN BOARD:
 
 0000-0fff RAM
