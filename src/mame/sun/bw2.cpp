@@ -7,7 +7,7 @@
  *  - interrupts
  */
 #include "emu.h"
-#include "sun2_bw2.h"
+#include "bw2.h"
 
 #include "machine/z80scc.h"
 #include "bus/rs232/rs232.h"
@@ -31,13 +31,13 @@ enum ctrl_mask : u16
 	VIDEN   = 0x8000,
 };
 
-class sun2_bw2_device
+class sun_bw2_device
 	: public device_t
 	, public device_multibus_interface
 {
 public:
-	sun2_bw2_device(machine_config const &mconfig, char const *tag, device_t *owner, u32 clock)
-		: device_t(mconfig, SUN2_BW2, tag, owner, clock)
+	sun_bw2_device(machine_config const &mconfig, char const *tag, device_t *owner, u32 clock)
+		: device_t(mconfig, SUN_BW2, tag, owner, clock)
 		, device_multibus_interface(mconfig, *this)
 		, m_screen(*this, "screen")
 		, m_scc(*this, "scc")
@@ -69,21 +69,21 @@ private:
 	u16 m_ctrl;
 };
 
-void sun2_bw2_device::device_start()
+void sun_bw2_device::device_start()
 {
-	m_bus->space(AS_DATA).install_device(0x70'0000, 0x7f'ffff, *this, &sun2_bw2_device::map);
+	m_bus->space(AS_DATA).install_device(0x70'0000, 0x7f'ffff, *this, &sun_bw2_device::map);
 }
 
-void sun2_bw2_device::device_reset()
+void sun_bw2_device::device_reset()
 {
 	m_ctrl = 0;
 }
 
-void sun2_bw2_device::device_add_mconfig(machine_config &config)
+void sun_bw2_device::device_add_mconfig(machine_config &config)
 {
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_raw(100_MHz_XTAL, 1600, 0, 1152, 937, 0, 900);
-	m_screen->set_screen_update(FUNC(sun2_bw2_device::screen_update));
+	m_screen->set_screen_update(FUNC(sun_bw2_device::screen_update));
 
 	SCC8530(config, m_scc, 19.6608_MHz_XTAL / 4);
 	m_scc->out_txda_callback().set(m_kport, FUNC(sun_keyboard_port_device::write_txd));
@@ -97,16 +97,16 @@ void sun2_bw2_device::device_add_mconfig(machine_config &config)
 	m_mport->rxd_handler().set(m_scc, FUNC(z80scc_device::rxb_w));
 }
 
-void sun2_bw2_device::map(address_map &map)
+void sun_bw2_device::map(address_map &map)
 {
 	map(0x0'0000, 0x1'ffff).mirror(0x6'0000).ram().share(m_ram);
 	map(0x8'0000, 0x8'0007).mirror(0x7'e7f8).rw(m_scc, FUNC(scc8530_device::ab_dc_r), FUNC(scc8530_device::ab_dc_w)).umask16(0xff00);
-	map(0x8'1800, 0x8'1801).mirror(0x7'e7fe).rw(FUNC(sun2_bw2_device::ctrl_r), FUNC(sun2_bw2_device::ctrl_w));
+	map(0x8'1800, 0x8'1801).mirror(0x7'e7fe).rw(FUNC(sun_bw2_device::ctrl_r), FUNC(sun_bw2_device::ctrl_w));
 }
 
-u32 sun2_bw2_device::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, rectangle const &cliprect)
+u32 sun_bw2_device::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, rectangle const &cliprect)
 {
-	if (true) //m_ctrl & VIDEN)
+	if (m_ctrl & VIDEN)
 	{
 		rgb_t const palette[] = { rgb_t::black(), rgb_t::white() };
 
@@ -143,12 +143,12 @@ u32 sun2_bw2_device::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, 
 	return 0;
 }
 
-u16 sun2_bw2_device::ctrl_r()
+u16 sun_bw2_device::ctrl_r()
 {
 	return m_ctrl;
 }
 
-void sun2_bw2_device::ctrl_w(u16 data)
+void sun_bw2_device::ctrl_w(u16 data)
 {
 	LOG("%s: ctrl_w 0x%04x\n", machine().describe_context(), data);
 
@@ -157,4 +157,4 @@ void sun2_bw2_device::ctrl_w(u16 data)
 
 } // anonymous namespace
 
-DEFINE_DEVICE_TYPE_PRIVATE(SUN2_BW2, device_multibus_interface, sun2_bw2_device, "sun2_bw2", "Sun Microsystems Sun-2/120 video board")
+DEFINE_DEVICE_TYPE_PRIVATE(SUN_BW2, device_multibus_interface, sun_bw2_device, "sun_bw2", "Sun Microsystems Sun-2/120 video board")
