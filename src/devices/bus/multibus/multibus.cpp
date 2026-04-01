@@ -29,7 +29,6 @@ multibus_device::multibus_device(machine_config const &mconfig, char const *tag,
 	, device_memory_interface(mconfig, *this)
 	, m_mem_config("mem", ENDIANNESS_LITTLE, 16, 24, 0, address_map_constructor(FUNC(multibus_device::mem_map), this))
 	, m_pio_config("pio", ENDIANNESS_LITTLE, 16, 16, 0, address_map_constructor(FUNC(multibus_device::pio_map), this))
-	, m_p2m_config("p2m", ENDIANNESS_BIG, 16, 24, 0) // TODO: make configurable?
 	, m_int_cb(*this)
 	, m_xack_cb(*this)
 {
@@ -37,7 +36,7 @@ multibus_device::multibus_device(machine_config const &mconfig, char const *tag,
 
 device_memory_interface::space_config_vector multibus_device::memory_space_config() const
 {
-	return space_config_vector{ { AS_PROGRAM, &m_mem_config }, { AS_IO, &m_pio_config }, { AS_DATA, &m_p2m_config } };
+	return space_config_vector { std::make_pair(AS_PROGRAM, &m_mem_config), std::make_pair(AS_IO, &m_pio_config) };
 }
 
 void multibus_device::device_start()
