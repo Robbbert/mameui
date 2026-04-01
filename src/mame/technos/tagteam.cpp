@@ -52,6 +52,7 @@ public:
 		m_audiocpu(*this, "audiocpu"),
 		m_gfxdecode(*this, "gfxdecode"),
 		m_palette(*this, "palette"),
+		m_screen(*this, "screen"),
 		m_soundlatch(*this, "soundlatch"),
 		m_videoram(*this, "videoram"),
 		m_colorram(*this, "colorram")
@@ -70,6 +71,7 @@ private:
 	required_device<cpu_device> m_audiocpu;
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
+	required_device<screen_device> m_screen;
 	required_device<generic_latch_8_device> m_soundlatch;
 
 	required_shared_ptr<uint8_t> m_videoram;
@@ -452,10 +454,10 @@ void tagteam_state::tagteam(machine_config &config)
 	TIMER(config, "v8").configure_scanline(FUNC(tagteam_state::v8_timer_irq), "screen", 8, 16); // connected to bit 4 of vcount (basically once every 16 scanlines)
 
 	// video hardware
-	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_raw(12_MHz_XTAL / 2, 384, 0, 256, 272, 8, 248); // confirmed from schematics; 57 Hz measured?
-	screen.set_screen_update(FUNC(tagteam_state::screen_update));
-	screen.set_palette(m_palette);
+	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
+	m_screen->set_raw(12_MHz_XTAL / 2, 384, 0, 256, 272, 8, 248); // confirmed from schematics; 57 Hz measured?
+	m_screen->set_screen_update(FUNC(tagteam_state::screen_update));
+	m_screen->set_palette(m_palette);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_tagteam);
 	PALETTE(config, m_palette, FUNC(tagteam_state::palette), 32);

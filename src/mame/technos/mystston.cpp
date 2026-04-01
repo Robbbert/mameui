@@ -14,8 +14,9 @@
       the stack. The newer set also resets the audio chips more often.
 
     TODO:
-    * Should it have 16 instead of 17 interrupts per frame? So, slightly
-      slower music tempo (need to find PCB video).
+    * Verify that it has 16 interrupts per frame like other Technos hardware.
+      It's currently presumed that it does, but need to find a PCB video
+      reference to double check via music tempo.
 
 ***************************************************************************/
 
@@ -139,8 +140,9 @@ TIMER_CALLBACK_MEMBER(mystston_state::interrupt_callback)
 
 	on_scanline_interrupt();
 
+	// 16 interrupts per frame
 	scanline = scanline + 16;
-	if (scanline >= VTOTAL)
+	if (scanline > VBSTART)
 		scanline = FIRST_INT_VPOS;
 
 	// the vertical synch chain is clocked by H256 -- this is probably not important, but oh well
