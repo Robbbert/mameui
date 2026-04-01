@@ -767,7 +767,7 @@ private:
 	// return identification byte for self test pass response
 	virtual uint8_t ident_byte() override
 	{
-		return 0x02U;
+		return 0x03U;
 	}
 };
 

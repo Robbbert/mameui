@@ -134,18 +134,9 @@ How the architecture works:
  *  - display optional
  *
  * color card: 640x480x8, 24-bit color + RS-170 display
- *
- * WIP
- * ---
- *  - network interrupts
- *  - test tape install
- *  - SunOS 2.0 copy mode issue, dvma?
- *  - vme-ize 2/50
  */
 
 #include "emu.h"
-
-#include "bus/multibus/multibus.h"
 #include "bus/rs232/rs232.h"
 #include "cpu/m68000/m68010.h"
 #include "machine/am9513.h"
@@ -155,12 +146,6 @@ How the architecture works:
 #include "machine/mm58167.h"
 #include "machine/ram.h"
 #include "machine/z80scc.h"
-
-#include "sun2_mt1.h"
-#include "sun2_bwtwo.h"
-#include "sun2_enet.h"
-#include "sun2_ram.h"
-#include "sun2_scsi.h"
 
 #include "screen.h"
 
@@ -747,33 +732,11 @@ ROM_START( sun2_50 )
 	ROM_LOAD("sun250-idprom.bin", 0x000000, 0x000020, CRC(927744ab) SHA1(d29302b69128165e69dd3a79b8c8d45f2163b88a))
 ROM_END
 
-static void sun2_mt1_cards(device_slot_interface &device)
-{
-	device.option_add("1mb", SUN2_1MB);
-	device.option_add("4mb", SUN2_4MB);
-	device.option_add("bw2", SUN2_BWTWO);
-	device.option_add("cpu", SUN2_MT1);
-	device.option_add("ie", SUN2_ENET);
-	device.option_add("sc", SUN2_SCSI);
-}
 
-static DEVICE_INPUT_DEFAULTS_START(ram0)
-	DEVICE_INPUT_DEFAULTS("U506", 0xff, 0x01)
-DEVICE_INPUT_DEFAULTS_END
-static DEVICE_INPUT_DEFAULTS_START(ram1)
-	DEVICE_INPUT_DEFAULTS("U506", 0xff, 0x02)
-DEVICE_INPUT_DEFAULTS_END
-static DEVICE_INPUT_DEFAULTS_START(ram2)
-	DEVICE_INPUT_DEFAULTS("U506", 0xff, 0x04)
-DEVICE_INPUT_DEFAULTS_END
-static DEVICE_INPUT_DEFAULTS_START(ram3)
-	DEVICE_INPUT_DEFAULTS("U506", 0xff, 0x08)
-DEVICE_INPUT_DEFAULTS_END
-
-class sun2_120_state : public driver_device
+class sun2_mt1_state : public driver_device
 {
 public:
-	sun2_120_state(const machine_config &mconfig, device_type type, const char *tag)
+	sun2_mt1_state(const machine_config &mconfig, device_type type, const char *tag)
 		: driver_device(mconfig, type, tag)
 		, m_bus(*this, "bus")
 		, m_slot(*this, "slot%u", 1U)
@@ -790,92 +753,37 @@ private:
 	required_device_array<multibus_slot_device, 9> m_slot;
 };
 
-void sun2_120_state::sun2_120(machine_config &config)
+static void sun2_mt1_cards(device_slot_interface &device)
 {
-	MULTIBUS(config, m_bus, 10'000'000);
-
-	// slots are defined in descending order of arbiter priority, grouped by P2 connectivity
-
-	// CPU, memory, video
-	MULTIBUS_SLOT(config, m_slot[0], m_bus, sun2_mt1_cards, "cpu", false).set_option_default_bios("cpu", "revr");
-	MULTIBUS_SLOT(config, m_slot[1], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram0));
-	MULTIBUS_SLOT(config, m_slot[2], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram1));
-	MULTIBUS_SLOT(config, m_slot[3], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram2));
-	MULTIBUS_SLOT(config, m_slot[4], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram3));
-	MULTIBUS_SLOT(config, m_slot[5], m_bus, sun2_mt1_cards, "bw2", false);
-
-	// I/O
-	MULTIBUS_SLOT(config, m_slot[6], m_bus, sun2_mt1_cards, "sc", false);
-	MULTIBUS_SLOT(config, m_slot[7], m_bus, sun2_mt1_cards, "ie", false);
-
-	// I/O
-	MULTIBUS_SLOT(config, m_slot[8], m_bus, sun2_mt1_cards, nullptr, false);
-
-	config.set_default_layout(layout_sun2);
+	device.option_add("cpu", SUN2_MT1);
+	device.option_add("bw2", SUN2_BW2);
+	device.option_add("ram", SUN2_RAM);
+	device.option_add("sc",  SUN2_SCSI);
 }
 
-class sun2_170_state : public driver_device
-{
-public:
-	sun2_170_state(const machine_config &mconfig, device_type type, const char *tag)
-		: driver_device(mconfig, type, tag)
-		, m_bus(*this, "bus")
-		, m_slot(*this, "slot%u", 1U)
-	{
-	}
-
-	void sun2_170(machine_config &config);
-
-private:
-	virtual void machine_start() override ATTR_COLD {}
-	virtual void machine_reset() override ATTR_COLD {}
-
-	required_device<multibus_device> m_bus;
-	required_device_array<multibus_slot_device, 15> m_slot;
-};
-
-void sun2_170_state::sun2_170(machine_config &config)
+void sun2_mt1_state::sun2_120(machine_config &config)
 {
 	MULTIBUS(config, m_bus, 10'000'000);
 
-	// slots are defined in descending order of arbiter priority, grouped by P2 connectivity
-
-	// CPU, memory, video
-	MULTIBUS_SLOT(config,  m_slot[0], m_bus, sun2_mt1_cards, "cpu", false).set_option_default_bios("cpu", "revr");
-	MULTIBUS_SLOT(config,  m_slot[1], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram0));
-	MULTIBUS_SLOT(config,  m_slot[2], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram1));
-	MULTIBUS_SLOT(config,  m_slot[3], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram2));
-	MULTIBUS_SLOT(config,  m_slot[4], m_bus, sun2_mt1_cards, "1mb", false).set_option_device_input_defaults("1mb", DEVICE_INPUT_DEFAULTS_NAME(ram3));
-	MULTIBUS_SLOT(config,  m_slot[5], m_bus, sun2_mt1_cards, "bw2", false);
-
-	// I/O
-	MULTIBUS_SLOT(config,  m_slot[6], m_bus, sun2_mt1_cards, "sc",    false);
-	MULTIBUS_SLOT(config,  m_slot[7], m_bus, sun2_mt1_cards, "ie",    false);
-	MULTIBUS_SLOT(config,  m_slot[8], m_bus, sun2_mt1_cards, nullptr, false);
-	MULTIBUS_SLOT(config,  m_slot[9], m_bus, sun2_mt1_cards, nullptr, false);
-	MULTIBUS_SLOT(config, m_slot[10], m_bus, sun2_mt1_cards, nullptr, false);
-
-	// I/O
-	MULTIBUS_SLOT(config, m_slot[11], m_bus, sun2_mt1_cards, nullptr, false);
-	MULTIBUS_SLOT(config, m_slot[12], m_bus, sun2_mt1_cards, nullptr, false);
-
-	// I/O
-	MULTIBUS_SLOT(config, m_slot[13], m_bus, sun2_mt1_cards, nullptr, false);
-
-	// I/O
-	MULTIBUS_SLOT(config, m_slot[14], m_bus, sun2_mt1_cards, nullptr, false);
+	// processor side slots
+	MULTIBUS_SLOT(config, m_slot[0], m_bus, sun2_mt1_cards, "cpu",   false);
+	MULTIBUS_SLOT(config, m_slot[1], m_bus, sun2_mt1_cards, "ram",   false);
+	MULTIBUS_SLOT(config, m_slot[2], m_bus, sun2_mt1_cards, "bw2",   false);
+	MULTIBUS_SLOT(config, m_slot[3], m_bus, sun2_mt1_cards, "sc",    false);
+	MULTIBUS_SLOT(config, m_slot[4], m_bus, sun2_mt1_cards, nullptr, false);
+	MULTIBUS_SLOT(config, m_slot[5], m_bus, sun2_mt1_cards, nullptr, false);
+	MULTIBUS_SLOT(config, m_slot[6], m_bus, sun2_mt1_cards, nullptr, false);
+	MULTIBUS_SLOT(config, m_slot[7], m_bus, sun2_mt1_cards, nullptr, false);
+	MULTIBUS_SLOT(config, m_slot[8], m_bus, sun2_mt1_cards, nullptr, false);
 
 	config.set_default_layout(layout_sun2);
 }
 
 ROM_START(sun2_120)
 ROM_END
-ROM_START(sun2_170)
-ROM_END
 
 } // anonymous namespace
 
 //    YEAR  NAME      PARENT  COMPAT  MACHINE   INPUT  CLASS           INIT        COMPANY             FULLNAME     FLAGS
 COMP( 1984, sun2_50,  0,      0,      sun2vme,  sun2,  sun2_state,     empty_init, "Sun Microsystems", "Sun 2/50",  MACHINE_NOT_WORKING | MACHINE_NO_SOUND)
-COMP( 1983, sun2_120, 0,      0,      sun2_120, sun2,  sun2_120_state, empty_init, "Sun Microsystems", "Sun-2/120", MACHINE_NOT_WORKING | MACHINE_NO_SOUND)
-COMP( 1983, sun2_170, 0,      0,      sun2_170, sun2,  sun2_170_state, empty_init, "Sun Microsystems", "Sun-2/170", MACHINE_NOT_WORKING | MACHINE_NO_SOUND)
+COMP( 1984, sun2_120, 0,      0,      sun2_120, sun2,  sun2_mt1_state, empty_init, "Sun Microsystems", "Sun 2/120", MACHINE_NOT_WORKING | MACHINE_NO_SOUND)

@@ -113,12 +113,7 @@ void nscsi_harddisk_device::scsi_command()
 	switch(m_scsi_cmdbuf[0]) {
 	case SC_TEST_UNIT_READY:
 		LOG("command TEST UNIT READY\n");
-		if(!get_lun(m_scsi_cmdbuf[1] >> 5))
-			scsi_status_complete(SS_GOOD);
-		else {
-			scsi_status_complete(SS_CHECK_CONDITION);
-			sense(false, SK_ILLEGAL_REQUEST, SK_ASC_LOGICAL_UNIT_NOT_SUPPORTED);
-		}
+		scsi_status_complete(SS_GOOD);
 		break;
 
 	case SC_READ_6:

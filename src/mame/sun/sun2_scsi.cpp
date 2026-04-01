@@ -2,21 +2,17 @@
 // copyright-holders:Patrick Mackinlay
 
 /*
- * Sun-2 SCSI Board
- *
- * Sources:
- *  - Sun SCSI Theory of Operation, W. M. Bradley, 83/08/12
- * 
  * TODO:
- *  - byte mode
- *  - non-dma data
- *  - unexpected BSY negation
+ *
+ * WIP
+ * --
+ *  - sun2 crashes at 0 after reading first block
+ * 
  */
 
 #include "emu.h"
 #include "sun2_scsi.h"
 
-#include "machine/input_merger.h"
 #include "machine/nscsi_bus.h"
 #include "machine/z80scc.h"
 #include "bus/rs232/rs232.h"
@@ -24,7 +20,7 @@
 #include "bus/nscsi/hd.h"
 #include "bus/nscsi/tape.h"
 
-//#define VERBOSE (LOG_GENERAL)
+#define VERBOSE (LOG_GENERAL)
 #include "logmacro.h"
 
 namespace {
@@ -65,8 +61,6 @@ public:
 		, m_scsi(*this, "scsi")
 		, m_scc(*this, "scc%u", 0U)
 		, m_port(*this, "port%u", 0U)
-		, m_u312(*this, "U312")
-		, m_u315(*this, "U315")
 		, m_dma(nullptr)
 	{
 	}
@@ -75,13 +69,11 @@ public:
 
 protected:
 	virtual void device_add_mconfig(machine_config &config) override ATTR_COLD;
-	virtual ioport_constructor device_input_ports() const override ATTR_COLD;
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_reset() override ATTR_COLD;
 
 	virtual void scsi_ctrl_changed() override;
 
-	// handlers
 	u16 data_r(offs_t offset, u16 mem_mask);
 	void data_w(offs_t offset, u16 data, u16 mem_mask);
 	u8 status_r();
@@ -92,8 +84,8 @@ protected:
 	u16 count_r();
 	void count_w(u16 data);
 
-	// helpers
 	void dma(s32 param);
+
 	void interrupt(bool assert);
 
 private:
@@ -101,18 +93,12 @@ private:
 	required_device_array<scc8530_device, 2> m_scc;
 	required_device_array<rs232_port_device, 4> m_port;
 
-	required_ioport m_u312;
-	required_ioport m_u315;
-
 	emu_timer *m_dma;
 
 	u16 m_data;
 	u16 m_ctrl;
 	u32 m_addr;
 	u16 m_count;
-
-	std::optional<unsigned> m_sint;
-	std::optional<unsigned> m_uint;
 };
 
 static void scsi_devices(device_slot_interface &device)
@@ -127,16 +113,12 @@ void sun2_scsi_device::device_add_mconfig(machine_config &config)
 	NSCSI_CONNECTOR(config, "scsi:1", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:2", scsi_devices, nullptr, false);
 	NSCSI_CONNECTOR(config, "scsi:3", scsi_devices, nullptr, false);
-	NSCSI_CONNECTOR(config, "scsi:4", scsi_devices, "tape",  false);
-	NSCSI_CONNECTOR(config, "scsi:5", scsi_devices, nullptr, false);
+	NSCSI_CONNECTOR(config, "scsi:4", scsi_devices, nullptr, false);
+	NSCSI_CONNECTOR(config, "scsi:5", scsi_devices, nullptr,  false);
 	NSCSI_CONNECTOR(config, "scsi:6", scsi_devices, nullptr, false);
 	m_scsi->set_external_device(7, *this);
 
-	input_merger_any_high_device &scc_irq(INPUT_MERGER_ANY_HIGH(config, "scc_irq"));
-	scc_irq.output_handler().set([this](int state) { if (m_uint) int_w(*m_uint, !state); });
-
 	SCC8530(config, m_scc[0], 19.6608_MHz_XTAL / 4);
-	m_scc[0]->out_int_callback().set(scc_irq, FUNC(input_merger_any_high_device::in_w<0>));
 	m_scc[0]->out_txda_callback().set(m_port[0], FUNC(rs232_port_device::write_txd));
 	m_scc[0]->out_txdb_callback().set(m_port[1], FUNC(rs232_port_device::write_txd));
 
@@ -151,7 +133,6 @@ void sun2_scsi_device::device_add_mconfig(machine_config &config)
 	m_port[1]->cts_handler().set(m_scc[0], FUNC(scc8530_device::ctsb_w));
 
 	SCC8530(config, m_scc[1], 19.6608_MHz_XTAL / 4);
-	m_scc[1]->out_int_callback().set(scc_irq, FUNC(input_merger_any_high_device::in_w<1>));
 	m_scc[1]->out_txda_callback().set(m_port[2], FUNC(rs232_port_device::write_txd));
 	m_scc[1]->out_txdb_callback().set(m_port[3], FUNC(rs232_port_device::write_txd));
 
@@ -168,14 +149,8 @@ void sun2_scsi_device::device_add_mconfig(machine_config &config)
 
 void sun2_scsi_device::device_start()
 {
-	save_item(NAME(m_data));
-	save_item(NAME(m_ctrl));
-	save_item(NAME(m_addr));
-	save_item(NAME(m_count));
-
 	m_dma = timer_alloc(FUNC(sun2_scsi_device::dma), this);
 
-	m_data = 0;
 	m_ctrl = 0;
 	m_addr = 0;
 	m_count = 0;
@@ -183,32 +158,6 @@ void sun2_scsi_device::device_start()
 
 void sun2_scsi_device::device_reset()
 {
-	switch (m_u312->read())
-	{
-	case 0x01: m_sint = 7; break;
-	case 0x02: m_sint = 6; break;
-	case 0x04: m_sint = 5; break;
-	case 0x08: m_sint = 4; break;
-	case 0x10: m_sint = 3; break;
-	case 0x20: m_sint = 2; break;
-	case 0x40: m_sint = 1; break;
-	case 0x80: m_sint = 0; break;
-	default: m_sint = std::nullopt; break;
-	}
-
-	switch (m_u315->read())
-	{
-	case 0x01: m_uint = 7; break;
-	case 0x02: m_uint = 6; break;
-	case 0x04: m_uint = 5; break;
-	case 0x08: m_uint = 4; break;
-	case 0x10: m_uint = 3; break;
-	case 0x20: m_uint = 2; break;
-	case 0x40: m_uint = 1; break;
-	case 0x80: m_uint = 0; break;
-	default: m_uint = std::nullopt; break;
-	}
-
 	m_bus->space(AS_PROGRAM).install_device(0x8'0000, 0x8'3fff, *this, &sun2_scsi_device::map);
 
 	// monitor all control lines
@@ -220,14 +169,12 @@ void sun2_scsi_device::map(address_map &map)
 	map(0x0000, 0x0001).rw(FUNC(sun2_scsi_device::data_r), FUNC(sun2_scsi_device::data_w));
 	map(0x0003, 0x0003).rw(FUNC(sun2_scsi_device::status_r), FUNC(sun2_scsi_device::command_w));
 	map(0x0004, 0x0005).rw(FUNC(sun2_scsi_device::ctrl_r), FUNC(sun2_scsi_device::ctrl_w));
-	map(0x0006, 0x0007).noprw();
 	map(0x0008, 0x0009).w(FUNC(sun2_scsi_device::addr_w<1>));
 	map(0x000a, 0x000b).w(FUNC(sun2_scsi_device::addr_w<0>));
 	map(0x000c, 0x000d).rw(FUNC(sun2_scsi_device::count_r), FUNC(sun2_scsi_device::count_w));
-	map(0x000e, 0x000f).noprw();
 
-	map(0x0800, 0x0807).rw(m_scc[0], FUNC(scc8530_device::ab_dc_r), FUNC(scc8530_device::ab_dc_w)).umask16(0x00ff);
-	map(0x1000, 0x1007).rw(m_scc[1], FUNC(scc8530_device::ab_dc_r), FUNC(scc8530_device::ab_dc_w)).umask16(0x00ff);
+	//map(0x0800, 0x0807).rw(m_scc[0], FUNC(scc8530_device::ab_dc_r), FUNC(scc8530_device::ab_dc_w)).umask16(0xff00);
+	//map(0x1000, 0x1007).rw(m_scc[1], FUNC(scc8530_device::ab_dc_r), FUNC(scc8530_device::ab_dc_w)).umask16(0xff00);
 }
 
 void sun2_scsi_device::scsi_ctrl_changed()
@@ -259,40 +206,26 @@ void sun2_scsi_device::scsi_ctrl_changed()
 		}
 	}
 	else
-	{
-		if (!(ctrl & S_INP))
-			m_scsi_bus->data_w(m_scsi_refid, 0);
-
 		m_scsi_bus->ctrl_w(m_scsi_refid, 0, S_ACK);
-	}
 }
 
 u16 sun2_scsi_device::data_r(offs_t offset, u16 mem_mask)
 {
-	LOG("%s: data_r 0x%04x mask 0x%04x\n", machine().describe_context(), m_data, mem_mask);
-
-	return m_data;
+	return m_scsi_bus->data_r() << 8;
 }
-
 void sun2_scsi_device::data_w(offs_t offset, u16 data, u16 mem_mask)
 {
 	LOG("%s: data_w 0x%04x mask 0x%04x\n", machine().describe_context(), data, mem_mask);
 
-	if (!(m_scsi_bus->ctrl_r() & S_BSY))
-		m_scsi_bus->data_w(m_scsi_refid, data >> 8);
-
-	COMBINE_DATA(&m_data);
+	m_scsi_bus->data_w(m_scsi_refid, data >> 8);
 }
-
 u8 sun2_scsi_device::status_r()
 {
-	u8 data = 0;
-
 	if ((m_scsi_bus->ctrl_r() & (S_REQ | S_CTL | S_INP)) == (S_REQ | S_CTL | S_INP))
 	{
 		m_ctrl &= ~CTRL_REQ;
 
-		data = m_scsi_bus->data_r();
+		u8 const data = m_scsi_bus->data_r();
 		LOG("%s: status_r 0x%02x\n", machine().describe_context(), data);
 
 		m_scsi_bus->ctrl_w(m_scsi_refid, S_ACK, S_ACK);
@@ -302,9 +235,8 @@ u8 sun2_scsi_device::status_r()
 	else
 		LOG("%s: status_r\n", machine().describe_context());
 
-	return data;
+	return 0;
 }
-
 void sun2_scsi_device::command_w(u8 data)
 {
 	LOG("%s: command_w 0x%02x\n", machine().describe_context(), data);
@@ -317,7 +249,6 @@ void sun2_scsi_device::command_w(u8 data)
 		m_scsi_bus->ctrl_w(m_scsi_refid, S_ACK, S_ACK);
 	}
 }
-
 u16 sun2_scsi_device::ctrl_r()
 {
 	u16 data = m_ctrl & CTRL_RMASK;
@@ -342,7 +273,6 @@ u16 sun2_scsi_device::ctrl_r()
 
 	return data;
 }
-
 void sun2_scsi_device::ctrl_w(u16 data)
 {
 	LOG("%s: ctrl_w 0x%04x\n", machine().describe_context(), data);
@@ -355,7 +285,6 @@ void sun2_scsi_device::ctrl_w(u16 data)
 
 	m_ctrl = (m_ctrl & ~CTRL_WMASK) | (data & CTRL_WMASK);
 }
-
 template <bool High> void sun2_scsi_device::addr_w(u16 data)
 {
 	LOG("%s: addr_w<%u> 0x%04x\n", machine().describe_context(), High, data);
@@ -365,14 +294,10 @@ template <bool High> void sun2_scsi_device::addr_w(u16 data)
 	else
 		m_addr = (m_addr & 0x00ff'0000U) | data;
 }
-
 u16 sun2_scsi_device::count_r()
 {
-	LOG("%s: count_r 0x%04x\n", machine().describe_context(), m_count);
-
 	return m_count;
 }
-
 void sun2_scsi_device::count_w(u16 data)
 {
 	LOG("%s: count_w 0x%04x\n", machine().describe_context(), data);
@@ -439,41 +364,10 @@ void sun2_scsi_device::interrupt(bool assert)
 	else
 		m_ctrl &= ~CTRL_IRQ;
 
-	if ((m_ctrl & CTRL_IRQEN) && m_sint)
-		int_w(*m_sint, !assert);
-}
-
-INPUT_PORTS_START(sun2_scsi)
-	PORT_START("U312")
-	PORT_DIPNAME(0xff, 0x20, "SCSI Interrupt")
-	PORT_DIPSETTING(0x00, "None")
-	PORT_DIPSETTING(0x01, "7")
-	PORT_DIPSETTING(0x02, "6")
-	PORT_DIPSETTING(0x04, "5")
-	PORT_DIPSETTING(0x08, "4")
-	PORT_DIPSETTING(0x10, "3")
-	PORT_DIPSETTING(0x20, "2")
-	PORT_DIPSETTING(0x40, "1")
-	PORT_DIPSETTING(0x80, "0")
-
-	PORT_START("U315")
-	PORT_DIPNAME(0xff, 0x02, "Serial Interrupt")
-	PORT_DIPSETTING(0x00, "None")
-	PORT_DIPSETTING(0x01, "7")
-	PORT_DIPSETTING(0x02, "6")
-	PORT_DIPSETTING(0x04, "5")
-	PORT_DIPSETTING(0x08, "4")
-	PORT_DIPSETTING(0x10, "3")
-	PORT_DIPSETTING(0x20, "2")
-	PORT_DIPSETTING(0x40, "1")
-	PORT_DIPSETTING(0x80, "0")
-INPUT_PORTS_END
-
-ioport_constructor sun2_scsi_device::device_input_ports() const
-{
-	return INPUT_PORTS_NAME(sun2_scsi);
+	if (m_ctrl & CTRL_IRQEN)
+		int_w<2>(!assert);
 }
 
 } // anonymous namespace
 
-DEFINE_DEVICE_TYPE_PRIVATE(SUN2_SCSI, device_multibus_interface, sun2_scsi_device, "sun2_scsi", "Sun-2 SCSI")
+DEFINE_DEVICE_TYPE_PRIVATE(SUN2_SCSI, device_multibus_interface, sun2_scsi_device, "sun2_scsi", "Sun Microsystems Sun-2/120 SCSI board")

@@ -13,65 +13,62 @@ class sun2_mmu_device
 public:
 	enum spaces : int
 	{
-		OBM = 4, // on-board memory (P2)
-		OBI = 5, // on-board I/O
+		OB_MEM = 4,
+		OB_PIO = 5,
+		P1_MEM = 6,
+		P1_PIO = 7
 	};
-	enum berr_type : u8
-	{
-		FAULT = 1,
-		READ  = 2,
-	};
+	template <typename T> void set_ob_mem(T &&tag, int spacenum) { m_ob_mem.set_tag(std::forward<T>(tag), spacenum); }
+	template <typename T> void set_p1_mem(T &&tag, int spacenum) { m_p1m.set_tag(std::forward<T>(tag), spacenum); }
+	template <typename T> void set_p1_pio(T &&tag, int spacenum) { m_p1i.set_tag(std::forward<T>(tag), spacenum); }
 	template <typename T> void set_boot_prom(T &&tag) { m_boot.set_tag(std::forward<T>(tag)); }
-	template <typename T> void set_p1m(T &&tag, int spacenum) { m_p1m_as.set_tag(std::forward<T>(tag), spacenum); }
-	template <typename T> void set_p1i(T &&tag, int spacenum) { m_p1i_as.set_tag(std::forward<T>(tag), spacenum); }
 
-	auto berr() { return m_berr_cb.bind(); }
+	auto berr() { return m_berr.bind(); }
 
 	sun2_mmu_device(machine_config const &mconfig, char const *tag, device_t *owner, u32 clock = 0);
 
-	// translated accessors
 	u16 mmu_r(u8 fc, offs_t offset, u16 mem_mask);
 	void mmu_w(u8 fc, offs_t offset, u16 data, u16 mem_mask);
-	u16 dvma_r(offs_t offset, u16 mem_mask);
-	void dvma_w(offs_t offset, u16 data, u16 mem_mask); 
 
-	// registers
 	u16 context_r();
 	void context_w(offs_t offset, u16 data, u16 mem_mask);
 	u8 segment_r(offs_t offset);
 	void segment_w(offs_t offset, u8 data);
 	u16 page_r(offs_t offset);
-	void page_w(offs_t offset, u16 data, u16 mem_mask);
+	void page_w(offs_t offset, u16 data);
+
 	u16 buserror_r();
 
+	u32 lookup(u8 fc, offs_t offset, bool write);
+
 protected:
+	void device_add_mconfig(machine_config &config) override ATTR_COLD;
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_reset() override ATTR_COLD;
 
 	virtual space_config_vector memory_space_config() const override ATTR_COLD;
-
-	std::tuple<u32 &, offs_t> translate(bool super, offs_t va);
-	void berr_w(offs_t offset, u16 data, u8 flags);
+	//virtual space_config_vector memory_logical_space_config() const;
+	//virtual bool memory_translate(int spacenum, int intention, offs_t &address, address_space *&target_space);
 
 private:
-	address_space_config m_obm_cfg;
-	address_space_config m_obi_cfg;
+	//address_space_config m_ob_mem;
+	required_address_space m_ob_mem;
+	address_space_config m_ob_pio;
 
-	required_address_space m_p1m_as;
-	required_address_space m_p1i_as;
+	required_address_space m_p1m;
+	required_address_space m_p1i;
+
 	required_region_ptr<u16> m_boot;
 
-	devcb_write8 m_berr_cb;
+	devcb_write8 m_berr;
 
-	memory_access<23, 1, 0, ENDIANNESS_BIG>::specific m_obm;    // on-board memory (Multibus P2)
-	memory_access<14, 1, 0, ENDIANNESS_BIG>::specific m_obi;    // on-board I/O
-	memory_access<24, 1, 0, ENDIANNESS_LITTLE>::specific m_p1m; // Multibus memory
-	memory_access<16, 1, 0, ENDIANNESS_LITTLE>::specific m_p1i; // Multibus I/O
+	memory_access<24, 1, 0, ENDIANNESS_LITTLE>::specific m_bus_mem;
+	memory_access<16, 1, 0, ENDIANNESS_LITTLE>::specific m_bus_pio;
 
 	u16 m_context;
 	std::unique_ptr<u8[][512]> m_segment;
 	std::unique_ptr<u32[][16]> m_page;
-	u16 m_berr;
+	u16 m_buserror;
 };
 
 DECLARE_DEVICE_TYPE(SUN2_MMU, sun2_mmu_device)

@@ -81,8 +81,6 @@ class multibus_device
 	, public device_memory_interface
 {
 public:
-	template <typename T> void set_p2(T &&tag, int spacenum) { m_p2.set_tag(std::forward<T>(tag), spacenum); }
-
 	multibus_device(machine_config const &mconfig, char const *tag, device_t *owner, u32 clock);
 
 	enum flags : u16
@@ -100,8 +98,6 @@ public:
 	// Set XACK/ signal (this is meant for "device_multibus_interface" devices)
 	void xack_w(int state) { m_xack_cb(state); }
 
-	address_space *p2() { return m_p2.target(); }
-
 protected:
 	// device_t overrides
 	virtual void device_start() override ATTR_COLD;
@@ -115,7 +111,7 @@ protected:
 private:
 	address_space_config const m_mem_config;
 	address_space_config const m_pio_config;
-	optional_address_space m_p2;
+	address_space_config const m_p2m_config;
 
 	devcb_write_line::array<8> m_int_cb;
 	devcb_write_line m_xack_cb;
