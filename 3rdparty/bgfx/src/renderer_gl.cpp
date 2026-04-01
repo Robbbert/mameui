@@ -2396,7 +2396,7 @@ namespace bgfx { namespace gl
 				s_extension[Extension::ARB_shader_storage_buffer_object].m_initialize = false;
 			}
 
-			if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES > 0)
+			if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES)
 			&&  0 == bx::strCmp(m_vendor, "Imagination Technologies")
 			&&  !bx::strFind(m_version, "1.8@905891").isEmpty() )
 			{
@@ -2538,7 +2538,7 @@ namespace bgfx { namespace gl
 				s_textureFormat[TextureFormat::PTC22].m_supported |= ptc2Supported;
 				s_textureFormat[TextureFormat::PTC24].m_supported |= ptc2Supported;
 
-				if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES > 0) )
+				if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES) )
 				{
 					if (m_gles3)
 					{
@@ -3022,7 +3022,7 @@ namespace bgfx { namespace gl
 
 				g_caps.supported |= m_glctx.getCaps();
 
-				if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES > 0) )
+				if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES) )
 				{
 					m_srgbWriteControlSupport = s_extension[Extension::EXT_sRGB_write_control].m_supported;
 
@@ -6301,7 +6301,7 @@ namespace bgfx { namespace gl
 				char* temp = (char*)alloca(tempLen);
 				bx::StaticMemoryBlockWriter writer(temp, tempLen);
 
-				if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES > 0)
+				if (BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES)
 				&&  !s_renderGL->m_gles3)
 				{
 					bx::write(&writer
@@ -7279,7 +7279,7 @@ namespace bgfx { namespace gl
 		uint32_t dsFlags = _flags & (BGFX_CLEAR_DISCARD_DEPTH|BGFX_CLEAR_DISCARD_STENCIL);
 		if (BGFX_CLEAR_NONE != dsFlags)
 		{
-			if (!BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES > 0)
+			if (!BX_ENABLED(BGFX_CONFIG_RENDERER_OPENGLES)
 			&&  (BGFX_CLEAR_DISCARD_DEPTH|BGFX_CLEAR_DISCARD_STENCIL) == dsFlags)
 			{
 				buffers[idx++] = GL_DEPTH_STENCIL_ATTACHMENT;
