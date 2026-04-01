@@ -187,14 +187,15 @@ offs_t x37_state::get_ma(offs_t offset, bool &at0, bool &at1)
 	at0 = BIT(pgd, 14);
 	at1 = BIT(pgd, 15);
 
-	offs_t ma = ((pgd & 0xfff) << 11) | ((offset << 1) & 0x7ff);
+	offs_t const logical = offset << 1;
+	offs_t ma = ((pgd & 0xfff) << 11) | (logical & 0x7ff);
 
 	// TPT
 	int const fc = m_cpu->get_fc();
 	if (BIT(fc, 2) && ((m_cb & 0xc0) == 0xc0)) {
-		if (!(offset & 0x600000) || ((offset & 0x600080) == 0x600000)) {
-			ma = ((offset << 1) & 0x380000) | (ma & 0x47ffff);
-			at1 = BIT(offset, 22);
+		if (!(logical & 0xc00000) || ((logical & 0xc00100) == 0xc00000)) {
+			ma = (logical & 0x380000) | (ma & 0x47ffff);
+			at1 = BIT(logical, 22);
 		}
 	}
 	return ma;
@@ -341,7 +342,7 @@ uint8_t x37_state::cio_pa_r()
 
 	u8 data = 0x7e;
 
-	data |= m_mint << 0;
+	data |= m_mint;
 	data |= m_sasi_int << 7;
 
 	return data;
@@ -518,6 +519,7 @@ void x37_state::x37(machine_config &config)
 	m_scc[0]->out_int_callback().set("irq4", FUNC(input_merger_device::in_w<0>));
 	m_scc[0]->out_wreqa_callback().set("req3", FUNC(input_merger_device::in_w<0>));
 	m_scc[0]->out_wreqb_callback().set("req3", FUNC(input_merger_device::in_w<1>));
+	m_scc[0]->out_txdb_callback().set("kb", FUNC(abc_keyboard_port_device::txd_w));
 	m_scc[0]->out_txda_callback().set("tty01", FUNC(rs232_port_device::write_txd));
 	m_scc[0]->out_dtra_callback().set("tty01", FUNC(rs232_port_device::write_dtr));
 	m_scc[0]->out_rtsa_callback().set("tty01", FUNC(rs232_port_device::write_rts));
@@ -602,6 +604,7 @@ ROM_START( x37 )
 	ROM_LOAD( "x37.07o", 0x0000, 0x8000, CRC(d505e7e7) SHA1(a3ad839e47b1f71c394e5ce28bce199e5e4810d2) )
 
 	ROM_REGION( 0xa28, "plds", 0 )
+	//ROM_LOAD( "pat8000", 0x000, 0x104, NO_DUMP ) // Strobe decoder for X35 video adapter
 	ROM_LOAD( "pat8003.12l", 0x000, 0x104, CRC(7c7b6dd1) SHA1(ab98fe70d589273b6a0437a818d9ae4bf9319ad5) ) // SCC decoder and clock multiplexor control
 	ROM_LOAD( "pat8031.05h", 0x104, 0x104, CRC(2836e65b) SHA1(305feb8dff7d6762f2ab50d25316ad43140456eb) ) // DS60 MAPPER CONTROL
 	ROM_LOAD( "pat8032.07h", 0x208, 0x104, CRC(356118d2) SHA1(e8e1dc6accdb8f0de481b91aa844f4b95f967826) ) // DS60 MAIN FUNCTION ENCODER
