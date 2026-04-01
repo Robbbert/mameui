@@ -7,11 +7,15 @@
     driver by Nicola Salmoria
 
     Notes:
-        * The subtitle of the two sets is slightly different:
-          "Dr. John's Adventure" vs. "Dr. Kick in Adventure".
-          The Dr John's is a bug fix. See the routine at 4376/4384 for example.
-          The old set thrashes the Y register, the new one saves in on
-          the stack. The newer set also resets the audio chips more often.
+    * The subtitle of the two sets is slightly different:
+      "Dr. John's Adventure" vs. "Dr. Kick in Adventure".
+      The Dr John's is a bug fix. See the routine at 4376/4384 for example.
+      The old set thrashes the Y register, the new one saves in on
+      the stack. The newer set also resets the audio chips more often.
+
+    TODO:
+    * Should it have 16 instead of 17 interrupts per frame? So, slightly
+      slower music tempo (need to find PCB video).
 
 ***************************************************************************/
 
@@ -32,8 +36,8 @@ namespace {
 class mystston_state : public driver_device
 {
 public:
-	mystston_state(const machine_config &mconfig, device_type type, const char *tag)
-		: driver_device(mconfig, type, tag),
+	mystston_state(const machine_config &mconfig, device_type type, const char *tag) :
+		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
 		m_ay8910(*this, "ay%u", 1U),
 		m_ay8910_data(*this, "ay8910_data"),
@@ -511,7 +515,7 @@ static INPUT_PORTS_START( mystston )
 	PORT_DIPNAME(0x40, 0x00, DEF_STR( Cabinet ) )       PORT_DIPLOCATION("SW1:7")
 	PORT_DIPSETTING(   0x00, DEF_STR( Upright ) )
 	PORT_DIPSETTING(   0x40, DEF_STR( Cocktail ) )
-	PORT_BIT( 0x80, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("screen", FUNC(screen_device::vblank))
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("screen", FUNC(screen_device::vblank))
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( myststonoi )
@@ -673,6 +677,6 @@ ROM_END
  *
  *************************************/
 
-GAME( 1984, mystston,   0,        mystston, mystston,   mystston_state, empty_init, ROT270, "Technos Japan", "Mysterious Stones - Dr. John's Adventure",              MACHINE_SUPPORTS_SAVE )
-GAME( 1984, myststono,  mystston, mystston, mystston,   mystston_state, empty_init, ROT270, "Technos Japan", "Mysterious Stones - Dr. Kick in Adventure",             MACHINE_SUPPORTS_SAVE )
-GAME( 1984, myststonoi, mystston, mystston, myststonoi, mystston_state, empty_init, ROT270, "Technos Japan", "Mysterious Stones - Dr. Kick in Adventure (Itisa PCB)", MACHINE_SUPPORTS_SAVE )
+GAME( 1984, mystston,   0,        mystston, mystston,   mystston_state, empty_init, ROT270, "Technos Japan", "Mysterious Stones: Dr. John's Adventure",              MACHINE_SUPPORTS_SAVE )
+GAME( 1984, myststono,  mystston, mystston, mystston,   mystston_state, empty_init, ROT270, "Technos Japan", "Mysterious Stones: Dr. Kick in Adventure",             MACHINE_SUPPORTS_SAVE )
+GAME( 1984, myststonoi, mystston, mystston, myststonoi, mystston_state, empty_init, ROT270, "Technos Japan", "Mysterious Stones: Dr. Kick in Adventure (Itisa PCB)", MACHINE_SUPPORTS_SAVE )

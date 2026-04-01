@@ -109,9 +109,9 @@ static const res_net_info tagteam_net_info =
 {
 	RES_NET_VCC_5V | RES_NET_VBIAS_5V | RES_NET_VIN_TTL_OUT,
 	{
-		{ RES_NET_AMP_EMITTER, 4700, 0, 3, { 4700, 3300, 1500 } },
-		{ RES_NET_AMP_EMITTER, 4700, 0, 3, { 4700, 3300, 1500 } },
-		{ RES_NET_AMP_EMITTER, 4700, 0, 2, {       3300, 1500 } }
+		{ RES_NET_AMP_NONE, 0, 0, 3, { 4700, 3300, 1500 } },
+		{ RES_NET_AMP_NONE, 0, 0, 3, { 4700, 3300, 1500 } },
+		{ RES_NET_AMP_NONE, 0, 0, 2, {       3300, 1500 } }
 	}
 };
 
