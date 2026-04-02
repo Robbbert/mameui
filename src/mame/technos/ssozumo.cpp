@@ -7,6 +7,10 @@ Syusse Oozumou
 
 Driver by Takahiro Nogi 1999/10/04
 
+TODO:
+- verify clocks, especially audiocpu
+- verify vcount chain (exact interrupt timing and vblank flag on DSW1.7)
+
 ***************************************************************************/
 
 #include "emu.h"

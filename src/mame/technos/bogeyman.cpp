@@ -15,6 +15,9 @@
     2008-07
     Dip Locations added based on crazykong BogeyManor.txt
 
+    TODO:
+    - verify vcount chain (exact interrupt timing and vblank flag on P2.7)
+
 ***************************************************************************/
 
 #include "emu.h"
@@ -443,7 +446,7 @@ void bogeyman_state::bogeyman(machine_config &config)
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_raw(XTAL(12'000'000) / 2, 384, 0, 256, 272, 8, 248); // DECO video CRTC, unverified
+	m_screen->set_raw(12_MHz_XTAL / 2, 384, 0, 256, 272, 8, 248); // DECO video CRTC, unverified
 	m_screen->set_screen_update(FUNC(bogeyman_state::screen_update));
 	m_screen->set_palette(m_palette);
 

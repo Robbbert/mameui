@@ -118,8 +118,11 @@ end
 links {
 	"utils",
 	ext_lib("expat"),
+	"7z",
 	"ocore_" .. _OPTIONS["osd"],
 	ext_lib("zlib"),
+	ext_lib("zstd"),
+	ext_lib("flac"),
 	ext_lib("utf8proc"),
 }
 
