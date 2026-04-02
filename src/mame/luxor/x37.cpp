@@ -42,6 +42,9 @@
 
 namespace {
 
+//#define VERBOSE 0
+#include "logmacro.h"
+
 #define MC68010_TAG  "14m"
 #define NS32081_TAG  "06o"
 #define MC68450_TAG  "11m"
@@ -216,13 +219,11 @@ uint16_t x37_state::ram_r(offs_t offset, uint16_t mem_mask)
 		offs_t const ma = get_ma(offset, at0, at1);
 
 		if (ma < 0x400000) {
-			//logerror("r offs %06x ma %06x\n", offset, ma);
 			if (ACCESSING_BITS_0_7)
 				data |= m_ram[ma & ~1];
 			if (ACCESSING_BITS_8_15)
 				data |= m_ram[ma | 1] << 8;
 		} else {
-			logerror("r offs %06x ma2 %06x\n", offset, ma);
 			data = m_cpu->space(AS_PROGRAM).read_word(ma);
 		}
 	}
@@ -236,13 +237,11 @@ void x37_state::ram_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 	offs_t const ma = get_ma(offset, at0, at1);
 
 	if (ma < 0x400000) {
-		//logerror("w offs %06x ma %06x\n", offset, ma);
 		if (ACCESSING_BITS_0_7)
 			m_ram[ma & ~1] = data;
 		if (ACCESSING_BITS_8_15)
 			m_ram[ma | 1] = data >> 8;
 	} else {
-		logerror("w offs %06x ma2 %06x\n", offset, ma);
 		m_cpu->space(AS_PROGRAM).write_word(ma, data, mem_mask);
 	}
 }
@@ -281,12 +280,12 @@ void x37_state::mapper_w(offs_t offset, uint16_t data)
 		offs_t const pga = ((offset & 0x3c00) >> 2) | (segd & 0x7f);
 		m_page_ram[pga] = data;
 
-		logerror("%s: %06x PAGE RAM %03x:%04x (SEG %03x:%04x)\n", machine().describe_context(), offset, pga, data, sega, (BIT(segd, 7) << 15) | (segd & 0x7f));
+		LOG("%s: %06x PAGE RAM %03x:%04x (SEG %03x:%04x)\n", machine().describe_context(), offset, pga, data, sega, (BIT(segd, 7) << 15) | (segd & 0x7f));
 	} else {
 		u8 const segd = (BIT(data, 15) << 7) | (data & 0x7f);
 		m_segment_ram[sega] = segd;
 
-		logerror("%s: %06x SEGMENT RAM %03x:%04x\n", machine().describe_context(), offset, sega, segd);
+		LOG("%s: %06x SEGMENT RAM %03x:%04x\n", machine().describe_context(), offset, sega, segd);
 	}
 }
 
@@ -440,8 +439,6 @@ void x37_state::xdck_w(offs_t offset, uint16_t data)
 		15      N/C
 
 	*/
-
-	logerror("XDCK %04x\n", data);
 
 	m_fdc->mr_w(BIT(data, 0));
 	m_fdc->dden_w(BIT(data, 1));
@@ -602,6 +599,9 @@ void x37_state::x37(machine_config &config)
 ROM_START( x37 )
 	ROM_REGION( 0x8000, MC68010_TAG, 0 )
 	ROM_LOAD( "x37.07o", 0x0000, 0x8000, CRC(d505e7e7) SHA1(a3ad839e47b1f71c394e5ce28bce199e5e4810d2) )
+
+	ROM_REGION( 0x20, NMC9306_TAG, 0 )
+	//ROM_LOAD( "nmc9306.05k", 0x00, 0x20, CRC(233e90a6) SHA1(f7e35dc0f2be88a191a9c1ce037e35b91a7cf1c4) )
 
 	ROM_REGION( 0xa28, "plds", 0 )
 	//ROM_LOAD( "pat8000", 0x000, 0x104, NO_DUMP ) // Strobe decoder for X35 video adapter
