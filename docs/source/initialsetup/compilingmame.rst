@@ -141,8 +141,9 @@ building for.
 **64-bit x86-64 (libstdc++/MSVCRT)**
 
 * You’ll need ``mingw-w64-x86_64-gcc`` and ``mingw-w64-x86_64-python``.
-* To link using the LLVM linker (generally much faster than the GNU linker),
-  you’ll need ``mingw-w64-x86_64-lld``, ``mingw-w64-x86_64-llvm`` and
+* To use the LLVM linker and archiver (generally much faster than the GNU linker
+  and archiver), you’ll need ``mingw-w64-x86_64-lld``,
+  ``mingw-w64-x86_64-llvm-tools``, ``mingw-w64-x86_64-llvm`` and
   ``mingw-w64-x86_64-libc++``.
 * To build against the portable SDL interfaces, you’ll need
   ``mingw-w64-x86_64-SDL2`` and ``mingw-w64-x86_64-SDL2_ttf``.
@@ -155,9 +156,10 @@ building for.
 
 * You’ll need ``mingw-w64-clang-x86_64-clang``,
   ``mingw-w64-clang-x86_64-python`` and ``mingw-w64-clang-x86_64-gcc-compat``.
-* To link using the LLVM linker (generally much faster than the GNU linker),
-  you’ll need ``mingw-w64-clang-x86_64-lld``, ``mingw-w64-clang-x86_64-llvm``
-  and ``mingw-w64-clang-x86_64-libc++``.
+* To use the LLVM linker and archiver (generally much faster than the GNU linker
+  and archiver), you’ll need ``mingw-w64-clang-x86_64-lld``,
+  ``mingw-w64-clang-x86_64-llvm-tools``, ``mingw-w64-clang-x86_64-llvm`` and
+  ``mingw-w64-clang-x86_64-libc++``.
 * To build against the portable SDL interfaces, you’ll need
   ``mingw-w64-clang-x86_64-SDL2`` and ``mingw-w64-clang-x86_64-SDL2_ttf``.
 * To build the Qt debugger, you’ll need ``mingw-w64-clang-x86_64-qt5``.
@@ -169,9 +171,10 @@ building for.
 
 * You’ll need ``mingw-w64-clang-aarch64-clang``,
   ``mingw-w64-clang-aarch64-python`` and ``mingw-w64-clang-aarch64-gcc-compat``.
-* To link using the LLVM linker (generally much faster than the GNU linker),
-  you’ll need ``mingw-w64-clang-aarch64-lld``, ``mingw-w64-clang-aarch64-llvm``
-  and ``mingw-w64-clang-aarch64-libc++``.
+* To use the LLVM linker and archiver (generally much faster than the GNU linker
+  and archiver), you’ll need ``mingw-w64-clang-aarch64-lld``,
+  ``mingw-w64-clang-aarch64-llvm-tools``, ``mingw-w64-clang-aarch64-llvm`` and
+  ``mingw-w64-clang-aarch64-libc++``.
 * To build against the portable SDL interfaces, you’ll need
   ``mingw-w64-clang-aarch64-SDL2`` and ``mingw-w64-clang-aarch64-SDL2_ttf``.
 * To build the Qt debugger, you’ll need ``mingw-w64-clang-aarch64-qt5``.
@@ -571,6 +574,8 @@ OVERRIDE_LD
     Set the linker command.  This is often not necessary or useful because the C
     or C++ compiler command is used to invoke the linker.  (This sets the target
     linker command when cross-compiling.)
+OVERRIDE_AR
+    Set static library archiver command.
 PYTHON_EXECUTABLE
     Set the Python interpreter command.  You need Python 3.2 or later to build
     MAME.
@@ -750,13 +755,6 @@ USE_SYSTEM_LIB_PUGIXML
 Known Issues
 ------------
 
-Issues with specific compiler versions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* GCC 7 for 32-bit x86 targets produces spurious out-of-bounds access warnings.
-  Adding **NOWERROR=1** to your build options works around this by not treating
-  warnings as errors.
-
 GNU C Library fortify source feature
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -826,6 +824,16 @@ system operations (e.g. Microsoft Windows, or when compiling on a disk mounted
 over a network).  To use the LLVM linker with GCC, ensure the LLVM linker is
 installed and add ``-fuse-ld=lld`` to the linker options (e.g. in the
 **LDFLAGS** environment variable or in the **ARCHOPTS** setting).
+
+Creating static libraries using the LLVM archiver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The LLVM archiver is generally faster than the GNU archiver that is used by
+default.  This is more pronounced on systems with a high overhead for file
+system operations (e.g. Microsoft Windows, or when compiling on a disk mounted
+over a network).  To use the LLVM archiver, ensure the LLVM archiver is
+installed and add ``OVERRIDE_AR=llvm-ar`` to the options passed to make when
+generating the project files.
 
 Cross-compiling MAME
 ~~~~~~~~~~~~~~~~~~~~
