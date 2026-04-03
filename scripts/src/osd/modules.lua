@@ -358,6 +358,11 @@ function qtdebuggerbuild()
 			buildoptions {
 				"-Wno-error=inconsistent-missing-override",
 			}
+			if _OPTIONS["targetos"]=="windows" then
+				buildoptions {
+					"-Wno-ignored-attributes",
+				}
+			end
 		configuration { }
 	end
 
