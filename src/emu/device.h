@@ -512,7 +512,7 @@ class device_t : public delegate_late_bind
 
 		// private state
 		simple_list<device_t>   m_list;         // list of sub-devices we own
-		std::unordered_map<std::string_view, std::reference_wrapper<device_t>> m_tagmap;      // map of devices looked up and found by subtag
+		std::unordered_map<std::string_view, std::reference_wrapper<device_t> > m_tagmap;      // map of devices looked up and found by subtag
 	};
 
 	class interface_list
