@@ -147,7 +147,7 @@ building for.
   ``mingw-w64-x86_64-libc++``.
 * To build against the portable SDL interfaces, you’ll need
   ``mingw-w64-x86_64-SDL2`` and ``mingw-w64-x86_64-SDL2_ttf``.
-* To build the Qt debugger, you’ll need ``mingw-w64-x86_64-qt5``.
+* To build the Qt debugger, you’ll need ``mingw-w64-x86_64-qt6-base``.
 * Open the **mingw64.exe** helper from the **msys64** installation folder or the
   **MSYS2 MinGW 64-bit** shortcut from the start menu to start a Bash shell
   configured with the correct paths and environment variables.
@@ -162,7 +162,7 @@ building for.
   ``mingw-w64-clang-x86_64-libc++``.
 * To build against the portable SDL interfaces, you’ll need
   ``mingw-w64-clang-x86_64-SDL2`` and ``mingw-w64-clang-x86_64-SDL2_ttf``.
-* To build the Qt debugger, you’ll need ``mingw-w64-clang-x86_64-qt5``.
+* To build the Qt debugger, you’ll need ``mingw-w64-clang-x86_64-qt6-base``.
 * Open the **clang64.exe** helper from the **msys64** installation folder or use
   the **MSYS2 CLANG64** shortcut to start a Bash shell configured with the
   correct paths and environment variables.
@@ -177,7 +177,7 @@ building for.
   ``mingw-w64-clang-aarch64-libc++``.
 * To build against the portable SDL interfaces, you’ll need
   ``mingw-w64-clang-aarch64-SDL2`` and ``mingw-w64-clang-aarch64-SDL2_ttf``.
-* To build the Qt debugger, you’ll need ``mingw-w64-clang-aarch64-qt5``.
+* To build the Qt debugger, you’ll need ``mingw-w64-clang-aarch64-qt6-base``.
 * Open the **clangarm64.exe** helper from the **msys64** installation folder or
   use the **MSYS2 CLANGARM64** shortcut to start a Bash shell configured with
   the correct paths and environment variables.
@@ -190,7 +190,7 @@ building for.
   ``mingw-w64-i686-libc++``.
 * To build against the portable SDL interfaces, you’ll need
   ``mingw-w64-i686-SDL2`` and ``mingw-w64-i686-SDL2_ttf``.
-* To build the Qt debugger, you’ll need ``mingw-w64-i686-qt5``.
+* It is no longer possible to include the Qt debugger in 32-bit builds.
 * Open the **mingw32.exe** helper from the **msys64** installation folder or the
   **MSYS2 MinGW 32-bit** shortcut from the start menu to start a Bash shell
   configured with the correct paths and environment variables.

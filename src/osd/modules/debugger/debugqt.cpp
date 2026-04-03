@@ -70,7 +70,7 @@ public:
 	virtual void wait_for_debugger(device_t &device, bool firststop) override;
 	virtual void debugger_update() override;
 #if defined(_WIN32) && !defined(SDLMAME_WIN32)
-	virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *) override
+	virtual bool nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result) override
 	{
 		winwindow_qt_filter(message);
 		return false;
