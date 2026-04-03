@@ -510,7 +510,7 @@ private:
 	bool can_skip_upper_load(Assembler &a, uint32_t *memref, Gp const &reghi);
 
 	[[noreturn]] void end_of_block() const;
-	static void debug_log_hashjmp(int mode, offs_t pc);
+	static void debug_log_hashjmp(char const *tag, int mode, offs_t pc);
 
 	void generate_one(Assembler &a, const uml::instruction &inst);
 
@@ -1382,7 +1382,7 @@ void drcbe_x86::generate(drcuml_block &block, const instruction *instlist, uint3
 	uintptr_t linemask = 63;
 	if (err)
 	{
-		osd_printf_verbose("Error getting cache line size (%s:%d %s), assuming 64 bytes\n", err.category().name(), err.value(), err.message());
+		osd_printf_verbose("drcbe_x86(%s): Error getting cache line size (%s:%d %s), assuming 64 bytes\n", m_device.tag(), err.category().name(), err.value(), err.message());
 	}
 	else
 	{
@@ -2866,7 +2866,7 @@ void drcbe_x86::emit_fstp_p(Assembler &a, int size, be_parameter const &param)
 
 [[noreturn]] void drcbe_x86::end_of_block() const
 {
-	osd_printf_error("drcbe_x86(%s): fell off the end of a generated code block!\n", m_device.tag());
+	osd_printf_error("drcbe_x86(%s): Fell off the end of a generated code block!\n", m_device.tag());
 	std::fflush(stdout);
 	std::fflush(stderr);
 	std::abort();
@@ -2878,9 +2878,9 @@ void drcbe_x86::emit_fstp_p(Assembler &a, int size, be_parameter const &param)
 //  logging of hashjmps
 //-------------------------------------------------
 
-void drcbe_x86::debug_log_hashjmp(int mode, offs_t pc)
+void drcbe_x86::debug_log_hashjmp(char const *tag, int mode, offs_t pc)
 {
-	std::printf("mode=%d PC=%08X\n", mode, pc);
+	osd_printf_info("drcbe_x86(%s): HASHJMP mode=%d PC=%08X\n", tag, mode, pc);
 }
 
 
@@ -3097,6 +3097,7 @@ void drcbe_x86::op_hashjmp(Assembler &a, const instruction &inst)
 
 	if (LOG_HASHJMPS)
 	{
+		a.mov(dword_ptr(esp, 8), imm(uintptr_t(m_device.tag())));
 		emit_mov_m32_p32(a, dword_ptr(esp, 4), pcp);
 		emit_mov_m32_p32(a, dword_ptr(esp, 0), modep);
 		a.call(imm(debug_log_hashjmp));
