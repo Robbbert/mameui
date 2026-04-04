@@ -127,9 +127,10 @@ from Brett Selwood and Andrew Davies.
 
 #include "emu.h"
 #include "mbee.h"
+
 #include "formats/mbee_cas.h"
-#include "sound/sn76496.h"
 #include "softlist_dev.h"
+
 #include "speaker.h"
 
 void mbee_state::mbee_mem(address_map &map)
@@ -253,7 +254,7 @@ void mbee_state::mbeett_io(address_map &map)
 	map(0x0018, 0x001b).mirror(0xff00).r(FUNC(mbee_state::port18_r));
 	map(0x001c, 0x001f).mirror(0xff00).rw(FUNC(mbee_state::port1c_r), FUNC(mbee_state::port1c_w));
 	map(0x0009, 0x0009).select(0xff00).r(FUNC(mbee_state::speed_r));
-	map(0x0068, 0x006f).mirror(0xff00).noprw();    // swallow i/o to SCC which was never fitted to production machines
+	map(0x0068, 0x006f).mirror(0xff00).noprw(); // swallow i/o to SCC which was never fitted to production machines
 }
 
 void mbee_state::mbee56_io(address_map &map)
@@ -289,36 +290,29 @@ void mbee_state::mbee128_io(address_map &map)
 	map(0x50, 0x57).w(FUNC(mbee_state::port50_w));
 }
 
-void mbee_state::mbee128p_io(address_map &map)
+void mbee_state::mbee256_io(address_map &map)
 {
 	map.global_mask(0xff);
 	map.unmap_value_high();
-	mbee128_io(map);
-	map(0x10, 0x13).w("sn1", FUNC(sn76489a_device::write));
-}
-
-void mbee_state::mbee256_io(address_map &map)
-{
-	map.unmap_value_high();
-	map(0x0000, 0x0003).mirror(0xff00).rw(m_pio, FUNC(z80pio_device::read_alt), FUNC(z80pio_device::write_alt));
-	map(0x0004, 0x0004).mirror(0xff00).w(m_rtc, FUNC(mc146818_device::address_w));
-	map(0x0006, 0x0006).mirror(0xff00).w(m_rtc, FUNC(mc146818_device::data_w));
-	map(0x0007, 0x0007).mirror(0xff00).r(m_rtc, FUNC(mc146818_device::data_r));
-	map(0x0008, 0x0008).mirror(0xff00).rw(FUNC(mbee_state::port08_r), FUNC(mbee_state::port08_w));
-	map(0x0009, 0x0009).select(0xff00).r(FUNC(mbee_state::speed_r));
-	map(0x0009, 0x0009).mirror(0xff00).nopw();
-	map(0x000b, 0x000b).mirror(0xff00).w(FUNC(mbee_state::port0b_w));
-	map(0x000c, 0x000c).mirror(0xff00).r(m_crtc, FUNC(mc6845_device::status_r)).w(FUNC(mbee_state::m6545_index_w));
-	map(0x000d, 0x000d).mirror(0xff00).r(m_crtc, FUNC(mc6845_device::register_r)).w(FUNC(mbee_state::m6545_data_w));
-	map(0x0010, 0x0013).mirror(0xff00).w("sn1", FUNC(sn76489a_device::write));
-	map(0x0018, 0x001b).mirror(0xff00).r(FUNC(mbee_state::port18_r));
-	map(0x001c, 0x001f).mirror(0xff00).rw(FUNC(mbee_state::port1c_r), FUNC(mbee_state::port1c_w));
-	map(0x0044, 0x0047).mirror(0xff00).rw(m_fdc, FUNC(wd2793_device::read), FUNC(wd2793_device::write));
-	map(0x0048, 0x004f).mirror(0xff00).rw(FUNC(mbee_state::fdc_status_r), FUNC(mbee_state::fdc_motor_w));
-	map(0x0050, 0x0057).mirror(0xff00).w(FUNC(mbee_state::port50_w));
-	// map(0x0058, 0x005f).mirror(0xff00); External options: floppy drive, hard drive and keyboard
-	// map(0x0060, 0x0067).mirror(0xff00); Reserved for file server selection (unused)
-	// map(0x0068, 0x006f).mirror(0xff00); Reserved for 8530 SCC (never used)
+	map(0x0000, 0x0003).rw(m_pio, FUNC(z80pio_device::read_alt), FUNC(z80pio_device::write_alt));
+	map(0x0004, 0x0004).w(m_rtc, FUNC(mc146818_device::address_w));
+	map(0x0006, 0x0006).w(m_rtc, FUNC(mc146818_device::data_w));
+	map(0x0007, 0x0007).r(m_rtc, FUNC(mc146818_device::data_r));
+	map(0x0008, 0x0008).rw(FUNC(mbee_state::port08_r), FUNC(mbee_state::port08_w));
+	map(0x0009, 0x0009).r(FUNC(mbee_state::speed_r));
+	map(0x0009, 0x0009).nopw();
+	map(0x000b, 0x000b).w(FUNC(mbee_state::port0b_w));
+	map(0x000c, 0x000c).r(m_crtc, FUNC(mc6845_device::status_r)).w(FUNC(mbee_state::m6545_index_w));
+	map(0x000d, 0x000d).r(m_crtc, FUNC(mc6845_device::register_r)).w(FUNC(mbee_state::m6545_data_w));
+	// map(0x0010, 0x0013); Reserved for SN76489AN (not populated on PCB, never initialized by BIOS)
+	map(0x0018, 0x001b).r(FUNC(mbee_state::port18_r));
+	map(0x001c, 0x001f).rw(FUNC(mbee_state::port1c_r), FUNC(mbee_state::port1c_w));
+	map(0x0044, 0x0047).rw(m_fdc, FUNC(wd2793_device::read), FUNC(wd2793_device::write));
+	map(0x0048, 0x004f).rw(FUNC(mbee_state::fdc_status_r), FUNC(mbee_state::fdc_motor_w));
+	map(0x0050, 0x0057).w(FUNC(mbee_state::port50_w));
+	// map(0x0058, 0x005f); External options: floppy drive, hard drive and keyboard
+	// map(0x0060, 0x0067); Reserved for file server selection (unused)
+	// map(0x0068, 0x006f); Reserved for 8530 SCC (never used)
 }
 
 static INPUT_PORTS_START( oldkb )
@@ -845,7 +839,7 @@ void mbee_state::mbee128p(machine_config &config)
 {
 	mbeeppc(config);
 	m_maincpu->set_addrmap(AS_PROGRAM, &mbee_state::mbee256_mem);
-	m_maincpu->set_addrmap(AS_IO, &mbee_state::mbee128p_io);
+	m_maincpu->set_addrmap(AS_IO, &mbee_state::mbee128_io);
 
 	WD2793(config, m_fdc, 4_MHz_XTAL / 2);
 	m_fdc->intrq_wr_callback().set(FUNC(mbee_state::fdc_intrq_w));
@@ -853,8 +847,6 @@ void mbee_state::mbee128p(machine_config &config)
 	m_fdc->enmf_rd_callback().set_constant(0);
 	FLOPPY_CONNECTOR(config, m_floppy0, mbee_floppies, "35dd", floppy_image_device::default_mfm_floppy_formats).enable_sound(true);
 	FLOPPY_CONNECTOR(config, m_floppy1, mbee_floppies, "35dd", floppy_image_device::default_mfm_floppy_formats).enable_sound(true);
-
-	SN76489A(config, "sn1", 13.5_MHz_XTAL / 4).add_route(ALL_OUTPUTS, "mono", 0.50);
 
 	SOFTWARE_LIST(config, "flop_list").set_original("mbee_flop").set_filter("3");
 	remove_carts(config);
