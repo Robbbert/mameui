@@ -22,6 +22,8 @@ Hardware notes:
 
 TODO:
 - dump/add English version
+- figure out unknown_w, maybe one of the bits is for crtc reset
+- are IN bits 0-5 used for anything? they're read during boot
 - Currently, MAME only has CGA emulation on ISA cards, but this thing is not an
   ISA card, nor compatible with IBM CGA standard. So if MAME ever adds a more
   generic CGA device, use that.
