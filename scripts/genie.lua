@@ -1012,8 +1012,8 @@ end
 
 		local version = str_to_version(_OPTIONS["gcc_version"])
 		if string.find(_OPTIONS["gcc"], "clang") or string.find(_OPTIONS["gcc"], "asmjs") or string.find(_OPTIONS["gcc"], "android") then
-			if version < 70000 then
-				print("Clang version 7.0 or later needed")
+			if version < 130000 then
+				print("Clang version 13 or later needed")
 				os.exit(-1)
 			end
 			buildoptions {
@@ -1202,18 +1202,12 @@ configuration { "osx*" }
 		}
 
 configuration { "mingw*" }
-		if _OPTIONS["osd"]=="sdl" then
-			linkoptions {
-				"-Wl,--start-group",
-			}
-		else
-			linkoptions {
-				"-static",
-			}
-			flags {
-				"LinkSupportCircularDependencies",
-			}
-		end
+		linkoptions {
+			"-static",
+		}
+		flags {
+			"LinkSupportCircularDependencies",
+		}
 		links {
 			"user32",
 			"winmm",

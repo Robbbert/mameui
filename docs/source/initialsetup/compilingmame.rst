@@ -9,7 +9,7 @@ All Platforms
 -------------
 
 * To compile MAME, you need a C++20 compiler and runtime library.  We
-  support building with GCC version 11 or later and clang version 11 or
+  support building with GCC version 11 or later and clang version 13 or
   later.  MAME should run with GNU libstdc++ version 11 or later or
   libc++ version 11 or later.  The initial release of any major version
   of GCC should be avoided.  For example, if you want to compile MAME
@@ -96,7 +96,7 @@ Windows 11 or later.
   will need to install the MSYS2 packages for SDL 2 version 2.0.14 or later.
 * By default, MAME will include the native Windows debugger.  To also include
   the portable Qt debugger, add **USE_QTDEBUG=1** to the make options.  You
-  will need to install the MSYS2 packages for Qt 5.
+  will need to install the MSYS2 packages for Qt 6.
 
 Using a standard MSYS2 installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,18 +119,22 @@ These instructions assume you have some familiarity with MSYS2 and the
   ``bash``, ``git`` and ``make``.
 * For debugging you may want to install ``gdb``.
 * To build the HTML user/developer documentation, you’ll need
-  ``mingw-w64-x86_64-librsvg``, ``mingw-w64-x86_64-python-sphinx``,
-  ``mingw-w64-x86_64-python-sphinx_rtd_theme`` and
-  ``mingw-w64-x86_64-python-sphinxcontrib-svg2pdfconverter`` for a 64-bit MinGW
-  environment (or alternatively ``mingw-w64-i686-librsvg``,
-  ``mingw-w64-i686-python-sphinx``, ``mingw-w64-i686-python-sphinx_rtd_theme``
-  and ``mingw-w64-x86_64-python-sphinxcontrib-svg2pdfconverter`` a 32-bit MinGW
-  environment).
+  ``mingw-w64-clang-x86_64-librsvg``, ``mingw-w64-clang-x86_64-python-sphinx``,
+  ``mingw-w64-clang-x86_64-python-sphinx_rtd_theme`` and
+  ``mingw-w64-clang-x86_64-python-sphinxcontrib-svg2pdfconverter`` for a CLANG64
+  environment (or alternatively ``mingw-w64-clang-aarch64-librsvg``,
+  ``mingw-w64-clang-aarch64-python-sphinx``,
+  ``mingw-w64-clang-aarch64-python-sphinx_rtd_theme`` and
+  ``mingw-w64-clang-aarch64-python-sphinxcontrib-svg2pdfconverter`` a CLANGARM64
+  environment).  You must build the PDF documentation using the CLANG64 (or
+  CLANGARM64) environment.
 * To build the PDF documentation, you’ll additionally need
-  ``mingw-w64-x86_64-texlive-latex-extra`` and
-  ``mingw-w64-x86_64-texlive-fonts-recommended`` (or
-  ``mingw-w64-i686-texlive-latex-extra`` and
-  ``mingw-w64-i686-texlive-fonts-recommended`` for a 32-bit MinGW environment).
+  ``mingw-w64-clang-x86_64-texlive-latex-extra`` and
+  ``mingw-w64-clang-x86_64-texlive-fonts-recommended`` (or
+  ``mingw-w64-clang-aarch64-texlive-latex-extra`` and
+  ``mingw-w64-clang-aarch64-texlive-fonts-recommended`` for a 64-bit ARM
+  system).  You must build the PDF documentation using the CLANG64 (or
+  CLANGARM64) environment.
 * To generate API documentation from source, you’ll need ``doxygen``.
 * If you plan to rebuild bgfx shaders and you want to rebuild the GLSL parser,
   you’ll need ``bison``.
@@ -182,46 +186,15 @@ building for.
   use the **MSYS2 CLANGARM64** shortcut to start a Bash shell configured with
   the correct paths and environment variables.
 
-**32-bit x86 (libstdc++/MSVCRT)**
+**32-bit x86**
 
-* You’ll need ``mingw-w64-i686-gcc`` and ``mingw-w64-i686-python``.
-* To link using the LLVM linker (generally much faster than the GNU linker),
-  you’ll need ``mingw-w64-i686-lld``, ``mingw-w64-i686-llvm`` and
-  ``mingw-w64-i686-libc++``.
-* To build against the portable SDL interfaces, you’ll need
-  ``mingw-w64-i686-SDL2`` and ``mingw-w64-i686-SDL2_ttf``.
-* It is no longer possible to include the Qt debugger in 32-bit builds.
-* Open the **mingw32.exe** helper from the **msys64** installation folder or the
-  **MSYS2 MinGW 32-bit** shortcut from the start menu to start a Bash shell
-  configured with the correct paths and environment variables.
-
-For example you could use these commands to ensure you have the packages you
-need to compile MAME, omitting the ones for configurations you don’t plan to
-build for or combining multiple **pacman** commands to install more packages at
-once::
-
-    pacman -Syu
-    pacman -S curl git make
-    pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-python
-    pacman -S mingw-w64-x86_64-llvm mingw-w64-x86_64-libc++ mingw-w64-x86_64-lld
-    pacman -S mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
-    pacman -S mingw-w64-x86_64-qt5
-    pacman -S mingw-w64-i686-gcc mingw-w64-i686-python
-    pacman -S mingw-w64-i686-llvm mingw-w64-i686-libc++ mingw-w64-i686-lld
-    pacman -S mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
-    pacman -S mingw-w64-i686-qt5
-    pacman -S mingw-w64-clang-aarch64-clang mingw-w64-clang-aarch64-python mingw-w64-clang-aarch64-gcc-compat
-    pacman -S mingw-w64-clang-aarch64-lld mingw-w64-clang-aarch64-llvm mingw-w64-clang-aarch64-libc++
-    pacman -S mingw-w64-clang-aarch64-SDL2 mingw-w64-clang-aarch64-SDL2_ttf
-    pacman -S mingw-w64-clang-aarch64-qt5
-
-You could use these commands to install the current version of the
-mame-essentials package and add the MAME package repository to your pacman
-configuration::
-
-    curl -O "https://repo.mamedev.org/x86_64/mame-essentials-1.0.6-1-x86_64.pkg.tar.xz"
-    pacman -U mame-essentials-1.0.6-1-x86_64.pkg.tar.xz
-    echo -e '\n[mame]\nInclude = /etc/pacman.d/mirrorlist.mame\nSigLevel = Never' >> /etc/pacman.conf
+It is no longer possible to compile 32-bit x86 MAME build using an MSYS2
+environment.  Up-to-date 32-bit versions of GCC exceed the available address
+space when compiling MAME’s address space classes and Lua bindings.  MSYS2 no
+longer provides 32-bit x86 LLVM and clang packages.  To build MAME for 32-bit
+x86 systems, you must use an environment that allows cross-compiling for a
+32-bit target using 64-bit tools (e.g. using a MinGW environment on  a Linux
+system).
 
 Building with Microsoft Visual Studio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -298,7 +271,7 @@ Fedora Linux
 You’ll need a few prerequisites from your Linux distribution.  Make sure you get
 SDL 2 version 2.0.14 or later as earlier versions lack required functionality::
 
-    sudo dnf install gcc gcc-c++ SDL2-devel SDL2_ttf-devel libXi-devel libXinerama-devel qt5-qtbase-devel qt5-qttools expat-devel fontconfig-devel alsa-lib-devel pulseaudio-libs-devel
+    sudo dnf install git gcc gcc-c++ SDL2-devel SDL2_ttf-devel libXi-devel libXinerama-devel qt6-qtbase-devel expat-devel fontconfig-devel alsa-lib-devel pulseaudio-libs-devel
 
 If you want to use the more efficient LLVM tools for archiving static libraries
 and linking, you’ll need to install the corresponding packages::
@@ -314,7 +287,7 @@ the theme and the SVG converter::
 
 The HTML documentation can be built with this command::
 
-    make -C docs SPHINXBUILD=sphinx-build-3 html
+    make -C docs html
 
 
 .. _compiling-ubuntu:
@@ -325,7 +298,7 @@ Debian and Ubuntu (including Raspberry Pi and ODROID devices)
 You’ll need a few prerequisites from your Linux distribution.  Make sure you get
 SDL 2 version 2.0.14 or later as earlier versions lack required functionality::
 
-    sudo apt-get install git build-essential python3 libsdl2-dev libsdl2-ttf-dev libfontconfig-dev libpulse-dev qtbase5-dev qtbase5-dev-tools qtchooser qt5-qmake
+    sudo apt-get install git build-essential python3 libsdl2-dev libsdl2-ttf-dev libfontconfig-dev libpulse-dev qt6-base-dev qt6-base-dev-tools qtchooser
 
 Compilation is exactly as described above in All Platforms.  Note the Ubuntu
 Linux modifies GCC to enable the GNU C Library “fortify source” feature by
@@ -339,7 +312,7 @@ Arch Linux
 
 You’ll need a few prerequisites from your distro::
 
-    sudo pacman -S base-devel git sdl2_ttf python libxinerama libpulse alsa-lib qt5-base
+    sudo pacman -S base-devel git sdl2_ttf python libxinerama libpulse alsa-lib qt6-base
 
 Compilation is exactly as described above in All Platforms.
 
