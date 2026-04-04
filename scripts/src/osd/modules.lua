@@ -549,7 +549,6 @@ function osdmodulestargetconf()
 				linkoptions {
 					"-L" .. backtick(_OPTIONS["QT_HOME"] .. "/bin/qmake -query QT_INSTALL_LIBS"),
 				}
-				end
 			else
 				linkoptions {
 					"-L$(shell qmake6 -query QT_INSTALL_LIBS)",
