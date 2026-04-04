@@ -155,12 +155,6 @@ function osdmodulesbuild()
 		ext_includedir("asio"),
 	}
 
-	if _OPTIONS["gcc"]~=nil and string.find(_OPTIONS["gcc"], "clang") then
-		buildoptions {
-			"-Wno-unused-private-field",
-		}
-	end
-
 	if _OPTIONS["targetos"]=="windows" or _OPTIONS["targetos"]=="winui" or _OPTIONS["targetos"]=="messui" then
 		includedirs {
 			MAME_DIR .. "3rdparty/compat/mingw",
@@ -364,6 +358,11 @@ function qtdebuggerbuild()
 			buildoptions {
 				"-Wno-error=inconsistent-missing-override",
 			}
+			if _OPTIONS["targetos"]=="windows" then
+				buildoptions {
+					"-Wno-ignored-attributes",
+				}
+			end
 		configuration { }
 	end
 
@@ -407,7 +406,19 @@ function qtdebuggerbuild()
 
 		local MOC = ""
 		if (os.is("windows")) then
-			MOC = "moc"
+			local qt_host_libexecs
+			if _OPTIONS["QT_HOME"]~=nil then
+				qt_host_libexecs = backtick(_OPTIONS["QT_HOME"] .. "/bin/qmake -query QT_HOST_LIBEXECS")
+			else
+				qt_host_libexecs = backtick("qmake -query QT_HOST_LIBEXECS")
+			end
+			MOCTST = backtick(qt_host_libexecs .. "/moc --version")
+			if MOCTST=='' then
+				print("Qt's Meta Object Compiler (moc) wasn't found!")
+				os.exit(1)
+			else
+				MOC = qt_host_libexecs .. "/moc"
+			end
 		else
 			if _OPTIONS["QT_HOME"]~=nil then
 				local MOCTST = backtick(_OPTIONS["QT_HOME"] .. "/bin/moc --version 2>/dev/null")
@@ -521,9 +532,9 @@ function osdmodulestargetconf()
 				"-L$(shell qmake -query QT_INSTALL_LIBS)",
 			}
 			links {
-				"Qt5Core.dll",
-				"Qt5Gui.dll",
-				"Qt5Widgets.dll",
+				"Qt6Core.dll",
+				"Qt6Gui.dll",
+				"Qt6Widgets.dll",
 			}
 		elseif _OPTIONS["targetos"]=="macosx" then
 			local qt_version = str_to_version(backtick("qmake -query QT_VERSION"))

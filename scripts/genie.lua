@@ -1252,11 +1252,8 @@ configuration { "vs20*" }
 if _OPTIONS["vs"]==nil then
 		buildoptions {
 			"/bigobj",
-			"/permissive-",
 			"/utf-8",
-			"/Zc:enumTypes",
 			"/Zc:preprocessor",
-			"/Zc:templateScope",
 		}
 
 		buildoptions {
@@ -1293,10 +1290,13 @@ if _OPTIONS["vs"]==nil then
 
 		buildoptions_cpp {
 			"/Zc:__cplusplus",
-			"/std:c++20",
+			"/Zc:enumTypes",
+			"/Zc:templateScope",
+			"/Zc:u8EscapeEncoding",
 		}
 
 		flags {
+			"Cpp20",
 			"ExtraWarnings",
 		}
 elseif _OPTIONS["vs"]=="intel-15" then
@@ -1359,6 +1359,7 @@ elseif _OPTIONS["vs"]=="clangcl" then
 	end
 
 		flags {
+			"Cpp20",
 			-- don't set ExtraWarnings flag (/W4 == -Wall -Wextra); use default (/W3 == -Wall) instead
 		}
 end

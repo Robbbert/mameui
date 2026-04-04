@@ -816,6 +816,13 @@ if (_OPTIONS["osd"] == "sdl") or (_OPTIONS["osd"] == "sdl3") then
 				end
 				links {
 					libsdl,
+					"gdi32",
+					"imm32",
+					"ole32",
+					"oleaut32",
+					"setupapi",
+					"uuid",
+					"version",
 				}
 			configuration { "vs*" }
 				links {
