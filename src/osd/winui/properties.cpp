@@ -265,12 +265,12 @@ const DUALCOMBOSTR m_cb_Video[] =
 
 const DUALCOMBOSTR m_cb_Sound[] =
 {
-	{ TEXT("None"),                  "none"    },
-	{ TEXT("Auto"),                  "auto"    },
-	{ TEXT("DirectSound"),           "dsound"  },
-	{ TEXT("PortAudio"),             "portaudio" },
-	{ TEXT("Wasapi"),                "wasapi" },
-	{ TEXT("XAudio2 (Win10+ only)"), "xaudio2" },
+	{ TEXT("None"),             "none"    },
+	{ TEXT("Auto"),             "auto"    },
+	{ TEXT("DirectSound"),      "dsound"  },
+	{ TEXT("PortAudio"),        "portaudio" },
+	{ TEXT("Wasapi"),           "wasapi" },
+	{ TEXT("XAudio2"),          "xaudio2" },
 };
 #define NUMSOUND (sizeof(m_cb_Sound) / sizeof(m_cb_Sound[0]))
 

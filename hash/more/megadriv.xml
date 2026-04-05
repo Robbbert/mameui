@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2065 -->
+<!-- Number of items in this list = 2066 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -13249,6 +13249,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Punisher NG.bin" size="2097152" crc="497a07fe" sha1="3da4cb7f63bc863ca6d5067846c0d596bb727e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8f2e3978084f0">
+		<description>Punisher, The PT-BR v2.0 (2010)(Monkey's Traducoes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097386">
+				<rom name="Punisher, The PT-BR v2.0 (2010)(Monkey's Traducoes).bin" size="2097386" crc="b9483d26" sha1="8f2e3978084f0ee875919dd275b56e839a674722"/>
 			</dataarea>
 		</part>
 	</software>

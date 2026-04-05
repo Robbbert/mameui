@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4017 -->
+<!-- Number of items in this list = 4018 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5159,6 +5159,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Bubsy - Less Bad Edition v1.3 (2026)(NoPLo).sfc" size="2097152" crc="72f7fc86" sha1="b1409843ac8d382b3ac1b0ffb773b100c29c50bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns471618fd33129">
+		<description>Bubsy - Less Bad Edition v2.11 (2026)(NoPLo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bubsy - Less Bad Edition v2.11 (2026)(NoPLo).sfc" size="2097152" crc="4837d7de" sha1="471618fd33129d53c88051d8fc0ff4d08f1714e3"/>
 			</dataarea>
 		</part>
 	</software>

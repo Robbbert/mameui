@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 44 -->
+<!-- Number of items in this list = 47 -->
 <softwarelist name="m5_cart" description="m5_cart loose roms">
 	<software name="m51017b98d9a193f">
 		<description>Aerial</description>
@@ -212,6 +212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m54e4900f42cbc76">
+		<description>guttang gottong (1981)(konami)(jp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8448">
+				<rom name="guttang gottong (1981)(konami)(jp).bin" size="8448" crc="0f70fa69" sha1="4e4900f42cbc76e4e795ed32ee18b2e27246e90f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m5ad77e589ee17eb">
 		<description>H-Tron</description>
 		<year>????</year>
@@ -402,6 +412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m55867090fbe2584">
+		<description>tank battalion (1980)(namco)(jp)(put into cart2,require em_5 in cart1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="tank battalion (1980)(namco)(jp)(put into cart2,require em_5 in cart1).bin" size="8192" crc="daa0d610" sha1="5867090fbe2584654dd2c2aaa215e69243f2f599"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m51c4d1b687bddfe">
 		<description>tankbattalion_1</description>
 		<year>????</year>
@@ -419,6 +439,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="14290">
 				<rom name="VexedM5_115.rom" size="14290" crc="3fd127d4" sha1="cd836f7b9d1114a4c9ba848dd303902a55765cf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5bcb7442c6d320e">
+		<description>wonder hole (1982)(irem)(jp)(put into cart2,require em_5 in cart1)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8320">
+				<rom name="wonder hole (1982)(irem)(jp)(put into cart2,require em_5 in cart1).bin" size="8320" crc="aba2cece" sha1="bcb7442c6d320eb166e224c3ac0f50514906ad4c"/>
 			</dataarea>
 		</part>
 	</software>
