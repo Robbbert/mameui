@@ -211,12 +211,6 @@ endif
 
 ifeq ($(firstword $(filter Linux,$(UNAME))),Linux)
 OS := linux
-else ifeq ($(firstword $(filter Solaris,$(UNAME))),Solaris)
-OS := solaris
-GENIEOS := solaris
-else ifeq ($(firstword $(filter SunOS,$(UNAME))),SunOS)
-OS := solaris
-GENIEOS := solaris
 else ifeq ($(firstword $(filter FreeBSD,$(UNAME))),FreeBSD)
 OS := freebsd
 GENIEOS := bsd
@@ -465,8 +459,6 @@ OSD := sdl
 else ifeq ($(TARGETOS),netbsd)
 OSD := sdl
 else ifeq ($(TARGETOS),openbsd)
-OSD := sdl
-else ifeq ($(TARGETOS),solaris)
 OSD := sdl
 else ifeq ($(TARGETOS),macosx)
 OSD := sdl3
@@ -1322,48 +1314,6 @@ macosx_arm64_clang: generate $(PROJECTDIR)/$(MAKETYPE)-osx-clang/Makefile
 macosx_x86_clang: generate $(PROJECTDIR)/$(MAKETYPE)-osx-clang/Makefile
 	$(SILENT) $(MAKE) $(MAKEPARAMS) -C $(PROJECTDIR)/$(MAKETYPE)-osx-clang config=$(CONFIG)32 precompile
 	$(SILENT) $(MAKE) $(MAKEPARAMS) -C $(PROJECTDIR)/$(MAKETYPE)-osx-clang config=$(CONFIG)32
-
-#-------------------------------------------------
-# gmake-solaris
-#-------------------------------------------------
-
-ifndef CLANG_VERSION
-$(PROJECTDIR)/$(MAKETYPE)-solaris/Makefile: makefile $(SCRIPTS) $(GENIE)
-	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=solaris --gcc_version=$(GCC_VERSION) $(MAKETYPE)
-endif
-.PHONY: solaris_x64
-solaris_x64: generate $(PROJECTDIR)/$(MAKETYPE)-solaris/Makefile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)64 precompile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)64
-
-.PHONY: solaris
-solaris: solaris_x86
-
-.PHONY: solaris_x86
-solaris_x86: generate $(PROJECTDIR)/$(MAKETYPE)-solaris/Makefile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)32 precompile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)32
-
-#-------------------------------------------------
-# gmake-solaris-clang
-#-------------------------------------------------
-
-ifdef CLANG_VERSION
-$(PROJECTDIR)/$(MAKETYPE)-solaris/Makefile: makefile $(SCRIPTS) $(GENIE)
-	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=solaris --gcc_version=$(CLANG_VERSION) $(MAKETYPE)
-endif
-.PHONY: solaris_x64_clang
-solaris_x64_clang: generate $(PROJECTDIR)/$(MAKETYPE)-solaris/Makefile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)64 precompile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)64
-
-.PHONY: solaris_clang
-solaris_clang: solaris_x86_clang
-
-.PHONY: solaris_x86_clang
-solaris_x86_clang: generate $(PROJECTDIR)/$(MAKETYPE)-solaris/Makefile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)32 precompile
-	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-solaris config=$(CONFIG)32
 
 #-------------------------------------------------
 # gmake-freebsd

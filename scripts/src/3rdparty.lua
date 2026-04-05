@@ -1006,11 +1006,6 @@ elseif _OPTIONS["vs"]=="intel-15" then
 end
 
 	configuration { }
-		defines {
-			"LUA_COMPAT_ALL",
-			"LUA_COMPAT_5_1",
-			"LUA_COMPAT_5_2",
-		}
 	if (_OPTIONS["targetos"] ~= "windows") and (_OPTIONS["targetos"] ~= "asmjs") then
 		defines {
 			"LUA_USE_POSIX",
@@ -1100,9 +1095,6 @@ elseif _OPTIONS["vs"]=="clangcl" then
 end
 
 	configuration { }
-		defines {
-			"LUA_COMPAT_ALL",
-		}
 
 	includedirs {
 		MAME_DIR .. "3rdparty",
