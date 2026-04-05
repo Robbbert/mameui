@@ -186,6 +186,7 @@ void h8_sci_device::tdr_w(u8 data)
 	m_tdr = data;
 	if((m_cpu->access_is_dma()) && (m_scr & SCR_TE)) {
 		m_ssr &= ~(SSR_TDRE | SSR_TEND);
+		m_ssr_read &= m_ssr;
 		if(m_tx_state == ST_IDLE)
 			tx_start();
 	}
@@ -203,6 +204,7 @@ void h8_sci_device::ssr_w(u8 data)
 	if((m_scr & SCR_TE) && (m_ssr & m_ssr_read & SSR_TDRE) && !(data & SSR_TDRE))
 		m_ssr &= ~(SSR_TDRE | SSR_TEND);
 	m_ssr = (m_ssr & (~m_ssr_read | data | SSR_TDRE | SSR_TEND | SSR_MPB) & ~SSR_MPBT) | (data & SSR_MPBT);
+	m_ssr_read &= m_ssr;
 	LOGMASKED(LOG_REGS, "ssr_w %02x -> %02x (%06x)\n", data, m_ssr, m_cpu->pc());
 
 	if(m_tx_state == ST_IDLE && !(m_ssr & SSR_TDRE))
@@ -225,8 +227,10 @@ u8 h8_sci_device::rdr_r()
 	if(!machine().side_effects_disabled())
 		LOGMASKED(LOG_RREGS, "rdr_r %02x (%06x)\n", m_rdr, m_cpu->pc());
 
-	if(!machine().side_effects_disabled() && m_cpu->access_is_dma())
+	if(!machine().side_effects_disabled() && m_cpu->access_is_dma()) {
 		m_ssr &= ~SSR_RDRF;
+		m_ssr_read &= m_ssr;
+	}
 	return m_rdr;
 }
 
