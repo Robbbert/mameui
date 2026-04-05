@@ -5,6 +5,7 @@
 
 #include <algorithm>
 #include <cassert>
+#include <cstring>
 #include <numeric>
 #include <utility>
 
@@ -17,9 +18,9 @@ sound_module::~sound_module()
 sound_module::abuffer::abuffer(uint32_t channels, uint32_t rate) noexcept :
 	m_channels(channels),
 	m_rate(rate),
+	m_used_buffers(0),
 	m_max_buffers(8),
 	m_hindex(0),
-	m_internal_get(false),
 	m_last_sample(channels, 0)
 {
 	clear();
@@ -34,6 +35,7 @@ void sound_module::abuffer::set_latency(float latency)
 
 void sound_module::abuffer::clear()
 {
+	get(m_last_sample.data(), 1);
 	m_used_buffers = 0;
 	m_used_buffers_prev = 0;
 	m_overrun = false;
@@ -56,7 +58,7 @@ void sound_module::abuffer::get(int16_t *data, uint32_t samples, bool internal) 
 			m_delta2 += samples - pos;
 			m_underruns++;
 			while(pos != samples) {
-				std::copy_n(m_last_sample.data(), m_channels, data);
+				std::memmove(data, m_last_sample.data(), m_channels);
 				data += m_channels;
 				pos++;
 			}
@@ -88,6 +90,8 @@ void sound_module::abuffer::get(int16_t *data, uint32_t samples, bool internal) 
 
 void sound_module::abuffer::flush_buffers(uint32_t remain)
 {
+	assert(remain);
+
 	for(uint32_t i = 0; i != m_used_buffers - remain; i++)
 		m_delta2 -= (m_buffers[i].data.size() / m_channels - m_buffers[i].cpos);
 
