@@ -84,9 +84,9 @@ Microsoft Windows
 -----------------
 
 MAME for Windows is built using the MSYS2 environment.  You will need a 64-bit
-version of Windows 10 or later and a reasonably up-to-date MSYS2 installation.
-Building for 64-bit ARM (AArch64) requires a 64-bit ARM system running
-Windows 11 or later.
+version of Windows 10 1809 or later and a reasonably up-to-date MSYS2
+installation.  Building for 64-bit ARM (AArch64) requires a 64-bit ARM system
+running Windows 11 or later.
 
 * By default, MAME will be built using native Windows OS interfaces for
   window management, audio/video output, font rendering, etc.  If you want to
@@ -126,15 +126,15 @@ These instructions assume you have some familiarity with MSYS2 and the
   ``mingw-w64-clang-aarch64-python-sphinx``,
   ``mingw-w64-clang-aarch64-python-sphinx_rtd_theme`` and
   ``mingw-w64-clang-aarch64-python-sphinxcontrib-svg2pdfconverter`` a CLANGARM64
-  environment).  You must build the PDF documentation using the CLANG64 (or
-  CLANGARM64) environment.
+  environment).
 * To build the PDF documentation, you’ll additionally need
-  ``mingw-w64-clang-x86_64-texlive-latex-extra`` and
-  ``mingw-w64-clang-x86_64-texlive-fonts-recommended`` (or
-  ``mingw-w64-clang-aarch64-texlive-latex-extra`` and
-  ``mingw-w64-clang-aarch64-texlive-fonts-recommended`` for a 64-bit ARM
-  system).  You must build the PDF documentation using the CLANG64 (or
-  CLANGARM64) environment.
+  ``mingw-w64-ucrt-x86_64-texlive-latex-extra`` and
+  ``mingw-w64-ucrt-x86_64-texlive-fonts-recommended`` for a UCRT64 environment,
+  or ``mingw-w64-clang-x86_64-texlive-latex-extra`` and
+  ``mingw-w64-clang-x86_64-texlive-fonts-recommended`` for a CLANG64
+  environment.  You must build the PDF documentation using the UCRT64 or CLANG64
+  environment as the TeX Live tools currently do not work with the CLANGARM64
+  environment.
 * To generate API documentation from source, you’ll need ``doxygen``.
 * If you plan to rebuild bgfx shaders and you want to rebuild the GLSL parser,
   you’ll need ``bison``.
@@ -142,21 +142,24 @@ These instructions assume you have some familiarity with MSYS2 and the
 The additional packages you’ll need depend on the CPU architecture you’re
 building for.
 
-**64-bit x86-64 (libstdc++/MSVCRT)**
+**64-bit x86-64 (libstdc++/UCRT)**
 
-* You’ll need ``mingw-w64-x86_64-gcc`` and ``mingw-w64-x86_64-python``.
+* You’ll need ``mingw-w64-ucrt-x86_64-gcc`` and
+  ``mingw-w64-ucrt-x86_64-python``.
+* To compile using the clang compiler, you’ll also need
+  ``mingw-w64-ucrt-x86_64-clang``.
 * To use the LLVM linker and archiver (generally much faster than the GNU linker
-  and archiver), you’ll need ``mingw-w64-x86_64-lld``,
-  ``mingw-w64-x86_64-llvm-tools``, ``mingw-w64-x86_64-llvm`` and
-  ``mingw-w64-x86_64-libc++``.
+  and archiver), you’ll need ``mingw-w64-ucrt-x86_64-lld``,
+  ``mingw-w64-ucrt-x86_64-llvm-tools``, ``mingw-w64-ucrt-x86_64-llvm`` and
+  ``mingw-w64-ucrt-x86_64-libc++``.
 * To build against the portable SDL interfaces, you’ll need
-  ``mingw-w64-x86_64-SDL2`` and ``mingw-w64-x86_64-SDL2_ttf``.
-* To build the Qt debugger, you’ll need ``mingw-w64-x86_64-qt6-base``.
-* Open the **mingw64.exe** helper from the **msys64** installation folder or the
-  **MSYS2 MinGW 64-bit** shortcut from the start menu to start a Bash shell
-  configured with the correct paths and environment variables.
+  ``mingw-w64-ucrt-x86_64-SDL2`` and ``mingw-w64-ucrt-x86_64-SDL2_ttf``.
+* To build the Qt debugger, you’ll need ``mingw-w64-ucrt-x86_64-qt6-base``.
+* Open the **ucrt64.exe** helper from the **msys64** installation folder or the
+  **MSYS2 UCRT64** shortcut from the start menu to start a Bash shell configured
+  with the correct paths and environment variables.
 
-**64-bit x86-64 (libc++/ucrt)**
+**64-bit x86-64 (libc++/UCRT)**
 
 * You’ll need ``mingw-w64-clang-x86_64-clang``,
   ``mingw-w64-clang-x86_64-python`` and ``mingw-w64-clang-x86_64-gcc-compat``.
@@ -171,7 +174,7 @@ building for.
   the **MSYS2 CLANG64** shortcut to start a Bash shell configured with the
   correct paths and environment variables.
 
-**64-bit ARM (libc++/ucrt)**
+**64-bit ARM (libc++/UCRT)**
 
 * You’ll need ``mingw-w64-clang-aarch64-clang``,
   ``mingw-w64-clang-aarch64-python`` and ``mingw-w64-clang-aarch64-gcc-compat``.
@@ -225,8 +228,8 @@ with helpful information on using the pacman package management tool.
 The MSYS2 environment includes two kinds of tools: MSYS2 tools designed to work
 in a UNIX-like environment on top of Windows, and MinGW tools designed to work
 in a more Windows-like environment.  The MSYS2 tools are installed in
-``/usr/bin`` while the MinGW tools are installed in ``/ming64/bin``,
-``/mingw32/bin`` and/or ``/clangarm64/bin`` (relative to the MSYS2 installation
+``/usr/bin`` while the MinGW tools are installed in ``/ucrt64/bin``,
+``/clang64/bin`` and/or ``/clangarm64/bin`` (relative to the MSYS2 installation
 directory).  MSYS2 tools work best in an MSYS2 terminal, while MinGW tools work
 best in a Microsoft command prompt.
 
@@ -250,12 +253,6 @@ shell.  One issue to be aware of when using the cmd.exe shell is that the
 ``copy`` command doesn’t provide a useful exit status, so file copy tasks can
 fail silently.  This may cause your build to appear to succeed while producing
 incorrect results.
-
-It is not possible to cross-compile a 32-bit version of MAME using 64-bit MinGW
-tools on Windows, the 32-bit MinGW tools must be used.  This causes issues due
-to the size of MAME.  It’s impossible to make a 32-bit build with full local
-variable symbols.  GCC may run out of memory, and certain source files may
-exceed the limit of 32,768 sections imposed by the PE/COFF object file format.
 
 A complete build of MAME including line number symbols exceeds the size limit
 imposed by the PE file format and cannot be run.  Workarounds include including
