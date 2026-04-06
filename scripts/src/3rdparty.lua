@@ -101,6 +101,12 @@ if _OPTIONS["gcc"]~=nil then
 		}
 	end
 end
+if _OPTIONS["targetos"]=="windows" then
+		buildoptions_c {
+			"-Wno-error=format", -- GCC with UCRT produces warnings for the non-standard I64 size modifier
+			"-Wno-error=format-extra-args",
+		}
+end
 
 	configuration { }
 
