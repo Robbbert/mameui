@@ -13,12 +13,6 @@
 
 #if (USE_QTDEBUG)
 
-#include <vector>
-
-#include <QtWidgets/QApplication>
-#include <QtCore/QAbstractEventDispatcher>
-#include <QtCore/QAbstractNativeEventFilter>
-
 #include "emu.h"
 #include "config.h"
 #include "debugger.h"
@@ -33,6 +27,16 @@
 #include "qt/deviceinformationwindow.h"
 
 #include "util/xmlfile.h"
+
+#ifdef __aarch64__
+#include <arm_acle.h> // QtCore/qyieldcpu.h uses __yield() without #including this, causing an error
+#endif
+
+#include <QtWidgets/QApplication>
+#include <QtCore/QAbstractEventDispatcher>
+#include <QtCore/QAbstractNativeEventFilter>
+
+#include <vector>
 
 
 #if defined(SDLMAME_UNIX) || defined(SDLMAME_WIN32)
