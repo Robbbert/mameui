@@ -153,7 +153,6 @@ newoption {
 		{ "macosx",        "OSX"                    },
 		{ "windows",       "Windows"                },
 		{ "haiku",         "Haiku"                  },
-		{ "solaris",       "Solaris SunOS"          },
 	},
 }
 
@@ -695,12 +694,6 @@ elseif (_OPTIONS["PLATFORM"] == "x86") or (_OPTIONS["PLATFORM"] == "arm64") then
 			"ASMJIT_STATIC",
 		}
 end
-
-	defines {
-		"LUA_COMPAT_ALL",
-		"LUA_COMPAT_5_1",
-		"LUA_COMPAT_5_2",
-	}
 
 	if _ACTION == "gmake" or _ACTION == "ninja" then
 

@@ -247,7 +247,7 @@ static INPUT_PORTS_START( tigeroad )
 	PORT_BIT( 0x0400, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x0800, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x1000, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_COIN3 )
+	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_SERVICE1 )
 	PORT_BIT( 0x4000, IP_ACTIVE_LOW, IPT_COIN1 )
 	PORT_BIT( 0x8000, IP_ACTIVE_LOW, IPT_COIN2 )
 
@@ -323,7 +323,7 @@ static INPUT_PORTS_START( toramich )
 	PORT_BIT( 0x0400, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x0800, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x1000, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_COIN3 )
+	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_SERVICE1 )
 	PORT_BIT( 0x4000, IP_ACTIVE_LOW, IPT_COIN1 )
 	PORT_BIT( 0x8000, IP_ACTIVE_LOW, IPT_COIN2 )
 
@@ -400,7 +400,7 @@ static INPUT_PORTS_START( f1dream )
 	PORT_BIT( 0x0400, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x0800, IP_ACTIVE_LOW, IPT_UNKNOWN )
 	PORT_BIT( 0x1000, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_COIN3 )
+	PORT_BIT( 0x2000, IP_ACTIVE_LOW, IPT_SERVICE1 )
 	PORT_BIT( 0x4000, IP_ACTIVE_LOW, IPT_COIN1 )
 	PORT_BIT( 0x8000, IP_ACTIVE_LOW, IPT_COIN2 )
 
@@ -1088,6 +1088,41 @@ ROM_END
 
 ROM_START( f1dream ) // N86614A-5 + N86614B-6 board combo
 	ROM_REGION( 0x40000, "maincpu", 0 ) // 256K for 68000 code
+	ROM_LOAD16_BYTE( "f1_hi.6j", 0x00000, 0x20000, CRC(c94f9c7d) SHA1(bf0f5c9ebb8b9db0365a5e8c315e83e007b9d224) )
+	ROM_LOAD16_BYTE( "f1_lo.6k", 0x00001, 0x20000, CRC(28bb2b3d) SHA1(f31b0b7a4725fab852d5f29a094b152ab0b8a8b4) )
+
+	ROM_REGION( 0x10000, "audiocpu", 0 )
+	ROM_LOAD( "f1_04.12k", 0x0000, 0x8000, CRC(4b9a7524) SHA1(19004958c19ac0af35f2c97790b0082ee2c15bc4) )
+
+	ROM_REGION( 0x1000, "mcu", 0 )  // i8751 microcontroller
+	ROM_LOAD( "f1.9j", 0x0000, 0x1000, CRC(c8e6075c) SHA1(d98bd358d30d22a8009cd2728dde1871a8140c23) ) // labeled F1
+
+	ROM_REGION( 0x008000, "text", 0 )
+	ROM_LOAD( "f1_01.10d", 0x00000, 0x08000, CRC(361caf00) SHA1(8a109e4e116d0c5eea86f9c57c05359754daa5b9) ) // 8x8 text
+
+	ROM_REGION( 0x060000, "tiles", 0 )
+	ROM_LOAD( "f1_12.3f",  0x00000, 0x10000, CRC(bc13e43c) SHA1(f9528839858d7a45395062a43b71d80400c73173) )
+	ROM_LOAD( "f1_10.1f",  0x10000, 0x10000, CRC(f7617ad9) SHA1(746a0ec433d5246ac4dbae17d6498e3d154e2df1) )
+	ROM_LOAD( "f1_14.3h",  0x20000, 0x10000, CRC(e33cd438) SHA1(89a6faea19e8a01b38ba45413609603e559877e9) )
+	ROM_LOAD( "f1_11.2f",  0x30000, 0x10000, CRC(4aa49cd7) SHA1(b7052d51a3cb570299f4db1492a1293c4d8b067f) )
+	ROM_LOAD( "f1_09.17f", 0x40000, 0x10000, CRC(ca622155) SHA1(00ae4a8e9cad2c42a10b410b594b0e414ada6cfe) )
+	ROM_LOAD( "f1_13.2h",  0x50000, 0x10000, CRC(2a63961e) SHA1(a35e9bf0408716f460487a8d2ae336572a98d2fb) )
+
+	ROM_REGION( 0x040000, "spritegen", 0 )
+	ROM_LOAD32_BYTE( "f1_06.3b", 0x00003, 0x10000, CRC(5e54e391) SHA1(475c968bfeb41b0448e621f59724c7b70d184d36) )
+	ROM_LOAD32_BYTE( "f1_05.2b", 0x00002, 0x10000, CRC(cdd119fd) SHA1(e279ada53f5a1e2ada0195b93399731af213f518) )
+	ROM_LOAD32_BYTE( "f1_08.3d", 0x00001, 0x10000, CRC(811f2e22) SHA1(cca7e8cc43408c2c3067a731a98a8a6418a000aa) )
+	ROM_LOAD32_BYTE( "f1_07.2d", 0x00000, 0x10000, CRC(aa9a1233) SHA1(c2079ad81d67b54483ea5f69ac2edf276ad58ca9) )
+
+	ROM_REGION16_LE( 0x08000, "bgmap", 0 )
+	ROM_LOAD16_WORD( "f1_15.7l", 0x0000, 0x8000, CRC(978758b7) SHA1(ebd415d70e2f1af3b1bd51f40e7d60f22369638c) )
+
+	ROM_REGION( 0x0100, "proms", 0 )
+	ROM_LOAD( "tr.9e", 0x0000, 0x0100, CRC(ec80ae36) SHA1(397ec8fc1b106c8b8d4bf6798aa429e8768a101a) ) // priority (not used) - N82S129A or compatible
+ROM_END
+
+ROM_START( f1dreama ) // N86614A-5 + N86614B-6 board combo
+	ROM_REGION( 0x40000, "maincpu", 0 ) // 256K for 68000 code
 	ROM_LOAD16_BYTE( "f1_02.6j", 0x00000, 0x20000, CRC(3c2ec697) SHA1(bccb431ad92455484420f91770e91db6d69b09ec) )
 	ROM_LOAD16_BYTE( "f1_03.6k", 0x00001, 0x20000, CRC(85ebad91) SHA1(000f5c617417ff20ee9b378166776fecfacdff95) )
 
@@ -1416,15 +1451,16 @@ GAME( 1987, tigeroadb,  tigeroad, tigeroad, tigeroad, tigeroad_state, init_tiger
 GAME( 1987, tigeroadba, tigeroad, tigeroad, tigeroad, tigeroad_state, empty_init,     ROT0, "bootleg",                  "Tiger Road (US bootleg, set 2)",   MACHINE_SUPPORTS_SAVE )
 
 // F1 Dream has an Intel 8751 microcontroller for protection
-GAME( 1988, f1dream,  0,       f1dream,  f1dream, f1dream_state,  empty_init, ROT0, "Capcom (Romstar license)", "F-1 Dream",                  MACHINE_SUPPORTS_SAVE )
-GAME( 1988, f1dreamb, f1dream, tigeroad, f1dream, tigeroad_state, empty_init, ROT0, "bootleg",                  "F-1 Dream (bootleg, set 1)", MACHINE_SUPPORTS_SAVE )
-GAME( 1988, f1dreamba,f1dream, tigeroad, f1dream, tigeroad_state, empty_init, ROT0, "bootleg",                  "F-1 Dream (bootleg, set 2)", MACHINE_SUPPORTS_SAVE )
+GAME( 1988, f1dream,    0,        f1dream,  f1dream,  f1dream_state,  empty_init,     ROT0, "Capcom (Romstar license)", "F-1 Dream (set 1)",          MACHINE_SUPPORTS_SAVE )
+GAME( 1988, f1dreama,   f1dream,  f1dream,  f1dream,  f1dream_state,  empty_init,     ROT0, "Capcom (Romstar license)", "F-1 Dream (set 2)",          MACHINE_SUPPORTS_SAVE )
+GAME( 1988, f1dreamb,   f1dream,  tigeroad, f1dream,  tigeroad_state, empty_init,     ROT0, "bootleg",                  "F-1 Dream (bootleg, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 1988, f1dreamba,  f1dream,  tigeroad, f1dream,  tigeroad_state, empty_init,     ROT0, "bootleg",                  "F-1 Dream (bootleg, set 2)", MACHINE_SUPPORTS_SAVE )
 
 // This Comad hardware is based around the F1 Dream design
-GAME( 1990, pushman,  0,       pushman, pushman, pushman_state, empty_init, ROT0, "Comad",                          "Pushman (Korea, set 1)",           MACHINE_SUPPORTS_SAVE )
-GAME( 1990, pushmana, pushman, pushman, pushman, pushman_state, empty_init, ROT0, "Comad",                          "Pushman (Korea, set 2)",           MACHINE_SUPPORTS_SAVE )
-GAME( 1990, pushmans, pushman, pushman, pushman, pushman_state, empty_init, ROT0, "Comad (American Sammy license)", "Pushman (American Sammy license)", MACHINE_SUPPORTS_SAVE )
-GAME( 1990, pushmant, pushman, pushman, pushman, pushman_state, empty_init, ROT0, "Comad (Top Tronic license)",     "Pushman (Top Tronic license)",     MACHINE_SUPPORTS_SAVE )
+GAME( 1990, pushman,    0,        pushman,  pushman,  pushman_state,  empty_init,     ROT0, "Comad",                          "Pushman (Korea, set 1)",           MACHINE_SUPPORTS_SAVE )
+GAME( 1990, pushmana,   pushman,  pushman,  pushman,  pushman_state,  empty_init,     ROT0, "Comad",                          "Pushman (Korea, set 2)",           MACHINE_SUPPORTS_SAVE )
+GAME( 1990, pushmans,   pushman,  pushman,  pushman,  pushman_state,  empty_init,     ROT0, "Comad (American Sammy license)", "Pushman (American Sammy license)", MACHINE_SUPPORTS_SAVE )
+GAME( 1990, pushmant,   pushman,  pushman,  pushman,  pushman_state,  empty_init,     ROT0, "Comad (Top Tronic license)",     "Pushman (Top Tronic license)",     MACHINE_SUPPORTS_SAVE )
 
-GAME( 1991, bballs,  0,      bballs, bballs, pushman_state, empty_init, ROT0, "Comad", "Bouncing Balls",         MACHINE_SUPPORTS_SAVE )
-GAME( 1991, bballsa, bballs, bballs, bballs, pushman_state, empty_init, ROT0, "Comad", "Bouncing Balls (Adult)", MACHINE_SUPPORTS_SAVE )
+GAME( 1991, bballs,     0,        bballs,   bballs,   pushman_state,  empty_init,     ROT0, "Comad", "Bouncing Balls",         MACHINE_SUPPORTS_SAVE )
+GAME( 1991, bballsa,    bballs,   bballs,   bballs,   pushman_state,  empty_init,     ROT0, "Comad", "Bouncing Balls (Adult)", MACHINE_SUPPORTS_SAVE )

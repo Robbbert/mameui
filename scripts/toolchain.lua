@@ -33,7 +33,6 @@ newoption {
 		{ "openbsd-clang", "OpenBSD (clang compiler)"},
 		{ "osx",           "OSX (GCC compiler)"     },
 		{ "osx-clang",     "OSX (Clang compiler)"   },
-		{ "solaris",       "Solaris"                },
 	},
 }
 
@@ -143,10 +142,6 @@ function toolchain(_buildDir, _subDir)
 		if "linux-gcc" == _OPTIONS["gcc"] then
 			premake.gcc.ar  = "ar"
 			location (_buildDir .. "projects/" .. _subDir .. "/".. _ACTION .. "-linux")
-		end
-
-		if "solaris" == _OPTIONS["gcc"] then
-			location (_buildDir .. "projects/" .. _subDir .. "/".. _ACTION .. "-solaris")
 		end
 
 
@@ -376,35 +371,6 @@ function toolchain(_buildDir, _subDir)
 	configuration { "linux-clang", "x64", "Debug" }
 		targetdir (_buildDir .. "linux_clang" .. "/bin/x64/Debug")
 
-	configuration { "solaris", "x32" }
-		objdir (_buildDir .. "solaris" .. "/obj")
-		buildoptions {
-			"-m32",
-		}
-
-	configuration { "solaris", "x32", "Release" }
-		targetdir (_buildDir .. "solaris" .. "/bin/x32/Release")
-
-	configuration { "solaris", "x32", "Debug" }
-		targetdir (_buildDir .. "solaris" .. "/bin/x32/Debug")
-
-	configuration { "solaris", "x64" }
-		objdir (_buildDir .. "solaris" .. "/obj")
-		buildoptions {
-			"-m64",
-		}
-
-	configuration { "solaris", "x64", "Release" }
-		targetdir (_buildDir .. "solaris" .. "/bin/x64/Release")
-
-	configuration { "solaris", "x64", "Debug" }
-		targetdir (_buildDir .. "solaris" .. "/bin/x64/Debug")
-
-	configuration { "freebsd", "x32" }
-		objdir (_buildDir .. "freebsd" .. "/obj")
-		buildoptions {
-			"-m32",
-		}
 
 	configuration { "freebsd", "x32", "Release" }
 		targetdir (_buildDir .. "freebsd" .. "/bin/x32/Release")

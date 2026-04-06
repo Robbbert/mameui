@@ -31,11 +31,16 @@ void rm380z_state::port_write(offs_t offset, uint8_t data)
 	switch (offset)
 	{
 	case 0xfc:      // PORT0
-		if ((data & 0x01) && !(m_port0 & 0x01))
+		if (!BIT(data, 0))
 		{
-			// only clear keyboard latch if bit has changed value
-			m_port0_kbd = 0;
+			// clear keyboard latch (active low)
 			m_port1 &= ~0x01;
+		}
+
+		if (BIT(data, 1))
+		{
+			// NMIEN is active low (reset counter when high)
+			m_nmi_counter = 0;
 		}
 
 		m_port0 = data;
@@ -293,6 +298,17 @@ uint8_t rm380z_state::rm380z_porthi_r()
 void rm380z_state::rm380z_porthi_w(offs_t offset, uint8_t data)
 {
 	//logerror("port write [%x] [%x]\n",offset+0xc5,data);
+}
+
+void rm380z_state::z80_m1_w(uint8_t data)
+{
+	if (!BIT(m_port0, 1))
+	{
+		// increment counter when NMIEN is active (low)
+		m_nmi_counter++;
+		// trigger NMI after the 8th instruction to service front panel "single-step" debugging command
+		m_maincpu->set_input_line(INPUT_LINE_NMI, (m_nmi_counter == 8) ? ASSERT_LINE : CLEAR_LINE);
+	}
 }
 
 void rm380z_state::keyboard_put(u8 data)
