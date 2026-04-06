@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 663 -->
+<!-- Number of items in this list = 669 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -649,6 +649,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Brain Strainers (USA)(1984)(Coleco).rom" size="16384" crc="829c967d" sha1="fe6235b99889388ff858c19eae7337dd0b75944a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col06f17cf95f914">
+		<description>Bubbles (1982-2024)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Bubbles (1982-2024)(CollectorVision).rom" size="32768" crc="6e518f13" sha1="06f17cf95f9141045b0214764dc904ffb1fd01dc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1902,6 +1912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col03d0c4c625851">
+		<description>Fairyland Story, The SGM (1987-2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Fairyland Story, The SGM (1987-2023)(CollectorVision).rom" size="131072" crc="87f3f556" sha1="03d0c4c625851bb40d3fa29cb111c053c16dd238"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col4158a3296dcd8">
 		<description>Fall Guy (1983)(Fox Video Games)(proto)</description>
 		<year>????</year>
@@ -1969,6 +1989,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Fireman (USA)(1984)(Coleco).rom" size="32768" crc="64ec761e" sha1="077182c21b67182b334d4a6b69aab44eb3eecda9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col9597b9aff1dba">
+		<description>Fireworks Factory (1984)(Nice Ideas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Fireworks Factory (1984)(Nice Ideas).rom" size="24576" crc="9425a648" sha1="9597b9aff1dba1b464291732ede0c6d6962dfd9e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3122,6 +3152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col495cbd8de4c6b">
+		<description>Lunar Ball SGM (1985-2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Lunar Ball SGM (1985-2023)(CollectorVision).rom" size="32768" crc="e7922c9b" sha1="495cbd8de4c6b9129c602038d59cbb9c45ea1c16"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colec9f4104211c4">
 		<description>Lunar Leeper (1982-2019)(Nanochess)</description>
 		<year>????</year>
@@ -3259,6 +3299,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Masters of the Universe - The Power of He-man.rom" size="32768" crc="838a9742" sha1="d5ea5aa25fa074dce0a4f871e0f9f45887938c54"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col1f91717defd05">
+		<description>Math Quest SGM (2021)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Math Quest SGM (2021)(CollectorVision).rom" size="32768" crc="0d5581cb" sha1="1f91717defd059864dacecce93bec84e2bf4740d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5613,12 +5663,12 @@
 		</part>
 	</software>
 	<software name="col80741b860cae8">
-		<description>Super Action Bowling</description>
+		<description>Super Action Bowling SGM (1986-2022)(Coleco)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
-				<rom name="Super Action Bowling.rom" size="131072" crc="6875c8d1" sha1="80741b860cae8c4ad5efaf4d02245a136b11f8f9"/>
+				<rom name="Super Action Bowling SGM (1986-2022)(Coleco).rom" size="131072" crc="6875c8d1" sha1="80741b860cae8c4ad5efaf4d02245a136b11f8f9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5763,12 +5813,12 @@
 		</part>
 	</software>
 	<software name="col045320962d08a">
-		<description>Super Uwol</description>
+		<description>Super Uwol (2016-2021)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
-				<rom name="Super Uwol.rom" size="131072" crc="13462ba5" sha1="045320962d08ab2798fb562fc2e9637ce4326050"/>
+				<rom name="Super Uwol (2016-2021)(CollectorVision).rom" size="131072" crc="13462ba5" sha1="045320962d08ab2798fb562fc2e9637ce4326050"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6083,12 +6133,12 @@
 		</part>
 	</software>
 	<software name="colde065a964cdc6">
-		<description>Treasure Hunt</description>
+		<description>Treasure Hunt (1983-2022)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="20464">
-				<rom name="Treasure Hunt.rom" size="20464" crc="0ac0067c" sha1="de065a964cdc6cbe5bc485ade8d68e21f7f15b0b"/>
+				<rom name="Treasure Hunt (1983-2022)(CollectorVision).rom" size="20464" crc="0ac0067c" sha1="de065a964cdc6cbe5bc485ade8d68e21f7f15b0b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6459,6 +6509,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Word Feud (1984)(K-Tel Productions).rom" size="16384" crc="9f49bed8" sha1="28e0113c74f277a52b51dcbf12cde06353db3cee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cold3912fb57f220">
+		<description>Wordle v1.7 (2022)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Wordle v1.7 (2022)(CollectorVision).rom" size="32768" crc="35db2611" sha1="d3912fb57f220aa5afcfa8c9fd7b089938f4a165"/>
 			</dataarea>
 		</part>
 	</software>
