@@ -171,15 +171,14 @@ u8 nss_tvinterface_device::p2_r()
 void nss_tvinterface_device::p2_w(u8 data)
 {
 	// P24: serial out (blocked by default)
-	if (m_conf->read() & 1)
-		output_rxd(BIT(data, 4));
+	output_rxd(BIT(data, 4) | BIT(m_conf->read(), 0));
 }
 
 void nss_tvinterface_device::main_map(address_map &map)
 {
 	map(0x8000, 0x87ff).ram().share(m_vram);
 
-	map(0xa3bd, 0xa3bd).portr("IN");
+	map(0xa3bd, 0xa3bd).portr("IN"); // actually through TM6310
 	map(0xa3be, 0xa3be).w(FUNC(nss_tvinterface_device::unknown_w));
 
 	map(0xa3d0, 0xa3d0).mirror(0x0006).w(m_crtc, FUNC(mc6845_device::address_w));
@@ -207,9 +206,9 @@ static INPUT_PORTS_START( nss_tvinterface )
 	PORT_BIT(0x80, IP_ACTIVE_HIGH, IPT_BUTTON2) PORT_NAME("Change")
 
 	PORT_START("CONF")
-	PORT_CONFNAME( 0x01, 0x00, "Serial TxD" )
-	PORT_CONFSETTING(    0x00, DEF_STR( Off ) )
-	PORT_CONFSETTING(    0x01, DEF_STR( On ) )
+	PORT_CONFNAME( 0x01, 0x01, "Serial TxD" )
+	PORT_CONFSETTING(    0x01, DEF_STR( Off ) )
+	PORT_CONFSETTING(    0x00, DEF_STR( On ) )
 INPUT_PORTS_END
 
 ioport_constructor nss_tvinterface_device::device_input_ports() const

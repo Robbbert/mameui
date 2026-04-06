@@ -129,8 +129,7 @@ public:
 	f1dream_state(const machine_config &mconfig, device_type type, const char *tag)
 		: tigeroad_state(mconfig, type, tag)
 		, m_mcu(*this, "mcu")
-		, m_ram16(*this, "ram16")
-		, m_old_p3(0xff)
+		, m_mcu_p3(0xff)
 	{
 	}
 
@@ -143,7 +142,7 @@ private:
 	void f1dream_map(address_map &map) ATTR_COLD;
 	void f1dream_mcu_data(address_map &map) ATTR_COLD;
 
-	void out3_w(u8 data);
+	void mcu_out3_w(u8 data);
 
 	u8 mcu_shared_r(offs_t offset);
 	void mcu_shared_w(offs_t offset, u8 data);
@@ -151,6 +150,5 @@ private:
 	void to_mcu_w(u16 data);
 
 	required_device<i8751_device> m_mcu;
-	required_shared_ptr<u16> m_ram16;
-	u8 m_old_p3;
+	u8 m_mcu_p3;
 };

@@ -7,18 +7,22 @@ F1 Dream       (C) 1988 Capcom
 
 cloned hardware:
 Pushman        (C) 1990 Comad
-Bouncing Balls (c) 1991 Comad
+Bouncing Balls (C) 1991 Comad
 
 Please contact Phil Stroffolino (phil@maya.com) if there are any questions
 regarding this driver.
 
+Video timing: measured 60.08Hz on Tiger Road, and 60.096Hz with 260 scanlines
+on F1 Dream. Pixel clock is 6MHz like other Capcom games.
+
 TODO:
-- F1 Dream throws an address error if player wins all the races (i.e. when the
-  game is supposed to give an ending):
+- F1 Dream throws an address error if player wins all the races in the highest
+  tier (when the game is supposed to show the ranking and highscore table):
   010C68: 102E 001C      move.b  ($1c,A6), D0       ; reads 0xf from work RAM (misaligned)
   010C6C: 207B 000E      movea.l ($e,PC,D0.w), A0   ; table from 0x10c7c onward
   010C70: 4E90           jsr     (A0)               ; throws address error here
-  None of the available 5 vectors seems to fit here, btanb?
+  None of the available 5 vectors seems to fit here.
+- what's up with the OBJ RAM test going up to 0xfe1807? address mirror?
 
 BTANB:
 - race track fg tiles have priority over minimap in f1dream
@@ -32,7 +36,7 @@ Memory Overview:
     0xfe4002    protection (F1 Dream only)
     0xfe8000    scroll registers
     0xff8200    palette
-    0xffC000    working RAM
+    0xffc000    working RAM
 
 **************************************************************************
 
@@ -71,35 +75,40 @@ void tigeroad_state::msm5205_w(u8 data)
 	m_msm->data_w(data & 0xf);
 }
 
-void f1dream_state::out3_w(u8 data)
+
+// F1 Dream protection
+
+u8 f1dream_state::mcu_shared_r(offs_t offset)
 {
-	if ((m_old_p3 & 0x20) != (data & 0x20))
-	{
-		// toggles at the start and end of interrupt
-	}
+	if (!BIT(m_mcu_p3, 5))
+		return m_maincpu->space(AS_PROGRAM).read_byte(0xffffe0 | offset << 1 | 1);
+	else
+		return 0xff;
+}
 
-	if ((m_old_p3 & 0x01) != (data & 0x01))
-	{
-		// toggles at the end of interrupt
-		if (!(data & 0x01))
-		{
-			m_maincpu->resume(SUSPEND_REASON_HALT);
-		}
-	}
+void f1dream_state::mcu_shared_w(offs_t offset, u8 data)
+{
+	if (!BIT(m_mcu_p3, 5))
+		m_maincpu->space(AS_PROGRAM).write_byte(0xffffe0 | offset << 1 | 1, data);
+}
 
-	m_old_p3 = data;
+void f1dream_state::mcu_out3_w(u8 data)
+{
+	// toggles at the end of interrupt
+	if (m_mcu_p3 & ~data & 1)
+		m_maincpu->resume(SUSPEND_REASON_HALT);
+
+	m_mcu_p3 = data;
 }
 
 void f1dream_state::to_mcu_w(u16 data)
 {
 	m_mcu->set_input_line(MCS51_INT0_LINE, HOLD_LINE);
 
-	/* after triggering this address there are one or two NOPs in the 68k code, then it expects the response to be ready
-	   the MCU isn't that fast, so either the CPU is suspended on write, or when bit 0x20 of MCU Port 3 toggles in the
-	   MCU interrupt code, however no combination of increasing the clock / boosting interleave etc. allows the MCU code
-	   to get there in time before the 68k is already expecting a result */
+	// after triggering this address there are one or two NOPs in the 68k code, then it expects the response to be ready
 	m_maincpu->suspend(SUSPEND_REASON_HALT, true);
 }
+
 
 /***************************************************************************/
 
@@ -115,36 +124,24 @@ void tigeroad_state::main_map(address_map &map)
 	map(0xfe4002, 0xfe4002).w("soundlatch", FUNC(generic_latch_8_device::write));
 	map(0xfe4004, 0xfe4005).portr("DSW");
 	map(0xfe8000, 0xfe8003).w(FUNC(tigeroad_state::scroll_w));
-	map(0xfe800e, 0xfe800f).nopw();    // fe800e = watchdog or IRQ acknowledge
+	map(0xfe800e, 0xfe800f).nopw();    // fe800e = watchdog or IRQ acknowledge or sprite DMA
 	map(0xfec000, 0xfec7ff).ram().w(FUNC(tigeroad_state::videoram_w)).share("videoram");
 
 	map(0xff8000, 0xff87ff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
-	map(0xffc000, 0xffffff).ram().share("ram16");
-}
-
-
-u8 f1dream_state::mcu_shared_r(offs_t offset)
-{
-	u8 ret = m_ram16[(0x3fe0 / 2) + offset];
-	return ret;
-}
-
-void f1dream_state::mcu_shared_w(offs_t offset, u8 data)
-{
-	m_ram16[(0x3fe0 / 2) + offset] = (m_ram16[(0x3fe0 / 2) + offset] & 0xff00) | data;
+	map(0xffc000, 0xffffff).ram();
 }
 
 void f1dream_state::f1dream_map(address_map &map)
 {
 	main_map(map);
-	map(0xfe4002, 0xfe4003).portr("SYSTEM").w(FUNC(f1dream_state::to_mcu_w));
+	map(0xfe4002, 0xfe4003).w(FUNC(f1dream_state::to_mcu_w));
 }
 
 void f1dream_state::f1dream_mcu_data(address_map &map)
 {
+	// never accesses under 0x7f0
 	map(0x7f0, 0x7ff).rw(FUNC(f1dream_state::mcu_shared_r), FUNC(f1dream_state::mcu_shared_w));
 }
-
 
 void pushman_state::pushman_map(address_map &map)
 {
@@ -172,7 +169,7 @@ void pushman_state::bballs_map(address_map &map)
 	map(0xec000, 0xec7ff).ram().w(FUNC(pushman_state::videoram_w)).share("videoram");
 
 	map(0xf8000, 0xf87ff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
-	map(0xfc000, 0xfffff).ram().share("ram16");
+	map(0xfc000, 0xfffff).ram();
 }
 
 // Capcom games ONLY
@@ -637,9 +634,8 @@ void tigeroad_state::tigeroad(machine_config &config)
 	// video hardware
 	BUFFERED_SPRITERAM16(config, "spriteram");
 
-	// Timings may be different, driver originally had 60.08Hz vblank.
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_raw(24_MHz_XTAL / 4, 384, 0, 256, 262, 16, 240); // hsync is 306..333 (offset by 128), vsync is 251..253 (offset by 6)
+	screen.set_raw(24_MHz_XTAL / 4, 384, 0, 256, 260, 16, 240);
 	screen.set_screen_update(FUNC(tigeroad_state::screen_update));
 	screen.screen_vblank().set("spriteram", FUNC(buffered_spriteram16_device::vblank_copy_rising));
 	screen.set_palette(m_palette);
@@ -668,7 +664,7 @@ void tigeroad_state::tigeroad(machine_config &config)
 
 void f1dream_state::machine_start()
 {
-	save_item(NAME(m_old_p3));
+	save_item(NAME(m_mcu_p3));
 }
 
 void f1dream_state::f1dream(machine_config &config)
@@ -677,10 +673,10 @@ void f1dream_state::f1dream(machine_config &config)
 
 	m_maincpu->set_addrmap(AS_PROGRAM, &f1dream_state::f1dream_map);
 
-	I8751(config, m_mcu, 10_MHz_XTAL); // 8MHz rated chip, 10MHz or 6MHz(24/4)?
+	I8751(config, m_mcu, 24_MHz_XTAL / 4); // 6MHz
 	m_mcu->set_addrmap(AS_DATA, &f1dream_state::f1dream_mcu_data);
 	m_mcu->port_out_cb<1>().set("soundlatch", FUNC(generic_latch_8_device::write));
-	m_mcu->port_out_cb<3>().set(FUNC(f1dream_state::out3_w));
+	m_mcu->port_out_cb<3>().set(FUNC(f1dream_state::mcu_out3_w));
 }
 
 // same as above but with additional Z80 for samples playback
@@ -717,7 +713,7 @@ void tigeroad_state::f1dream_comad(machine_config &config) // COMAD-01 PCB with 
 	BUFFERED_SPRITERAM16(config, "spriteram");
 
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_raw(24_MHz_XTAL / 4, 384, 0, 256, 262, 16, 240); // hsync is 306..333 (offset by 128), vsync is 251..253 (offset by 6)
+	screen.set_raw(24_MHz_XTAL / 4, 384, 0, 256, 260, 16, 240); // assume same as tigeroad
 	screen.set_screen_update(FUNC(tigeroad_state::screen_update));
 	screen.screen_vblank().set("spriteram", FUNC(buffered_spriteram16_device::vblank_copy_rising));
 	screen.set_palette(m_palette);
