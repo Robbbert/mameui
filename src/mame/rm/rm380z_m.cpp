@@ -34,6 +34,7 @@ void rm380z_state::port_write(offs_t offset, uint8_t data)
 		if (!BIT(data, 0))
 		{
 			// clear keyboard latch (active low)
+			m_port0_kbd = 0;
 			m_port1 &= ~0x01;
 		}
 
@@ -353,6 +354,7 @@ void rm380z_state::machine_reset()
 	m_port0_kbd = 0x00;
 	m_port1 = 0x00;
 	m_fbfe = 0x00;
+	m_nmi_counter = 0;
 
 	config_memory_map();
 	m_fdc->reset();
