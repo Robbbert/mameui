@@ -46,7 +46,7 @@
 
     The above claims result in 6MHz/(386*260) = ~59.78Hz, not 60.024Hz. MAME
     is using 384*260 instead like tigeroad, which nearly matches an older
-    Bionic Commando measurement of H=60.093Hz, V=15.625kHz.
+    Bionic Commando measurement of H=15.625kHz, V=60.093Hz.
 
     BTANB [MT00209] (verified on real PCB):
     - misplaced sprites (see beginning of level 1 or 2 for example)
