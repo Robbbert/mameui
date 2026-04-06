@@ -1154,8 +1154,8 @@ void running_machine::nvram_load()
 		emu_file file(options().nvram_directory(), OPEN_FLAG_READ);
 		if (nvram.nvram_backup_enabled() && !file.open(nvram_filename(nvram.device())))
 		{
-			//if (!nvram.nvram_load(file))
-				//osd_printf_error("Error reading NVRAM file %s\n", file.filename());
+			if (!nvram.nvram_load(file))
+				osd_printf_info("Error reading NVRAM file %s\n", file.filename());
 			file.close();
 		}
 		else
