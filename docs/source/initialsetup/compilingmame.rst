@@ -108,13 +108,6 @@ These instructions assume you have some familiarity with MSYS2 and the
 
 * Install the MSYS2 environment from  the `MSYS2 homepage
   <https://www.msys2.org/>`_.
-* Optionally download the latest version of the ``mame-essentials`` package from
-  the `MAME package repository <https://repo.mamedev.org/x86_64/>`_ and install
-  it using the **pacman** command.
-* If you installed the ``mame-essentials`` package, add the ``mame`` package
-  repository to ``/etc/pacman.conf`` using ``/etc/pacman.d/mirrorlist.mame`` for
-  locations, and disable signature verification for this repository
-  (``SigLevel = Never``).
 * Install packages necessary to build MAME.  At the very least, you’ll need
   ``bash``, ``git`` and ``make``.
 * For debugging you may want to install ``gdb``.
@@ -206,7 +199,7 @@ Building with Microsoft Visual Studio
   solution and project files will be created in
   ``build/projects/windows/mame/vs2022`` by default (the name of the ``build``
   folder can be changed using the ``BUILDDIR`` option).  This will always
-  regenerate the settings, so **REGENIE=1** is *not* needed.
+  regenerate the projects, so **REGENIE=1** is *not* needed.
 * Adding **MSBUILD=1** to the make options will build the solution using
   the Microsoft Build Engine after generating the project files.  Note that this
   requires paths and environment variables to be configured so the correct
@@ -248,16 +241,20 @@ MSYS2 gdb may have issues debugging MinGW programs like MAME.  You may get
 better results by installing the MinGW version of gdb and running it from a
 Microsoft command prompt window to debug MAME.
 
-GNU make supports both POSIX-style shells (e.g. bash) and the Microsoft cmd.exe
-shell.  One issue to be aware of when using the cmd.exe shell is that the
-``copy`` command doesn’t provide a useful exit status, so file copy tasks can
-fail silently.  This may cause your build to appear to succeed while producing
-incorrect results.
+GNU Make supports both POSIX-style shells (e.g. bash) and the Microsoft cmd.exe
+shell.  When using the cmd.exe shell, the ``copy`` command doesn’t provide a
+useful exit status, so file copy tasks can fail silently.  This may cause your
+build to appear to succeed while producing incorrect results.  The command to
+link MAME exceeds the maximum command length supported by the cmd.exe shell, so
+you will not be able to produce a complete build of MAME.  As such, we recommend
+that you *do not* install MinGW versions of GNU Make, and use the MSYS2 version
+of GNU Make from the ``make`` package.
 
 A complete build of MAME including line number symbols exceeds the size limit
 imposed by the PE file format and cannot be run.  Workarounds include including
-only a subset of the systems supported by MAME or extracting symbols to a
-separate file and stripping excess symbols from the MAME executable.
+only a subset of the systems supported by MAME, extracting symbols to a separate
+file and stripping excess symbols from the MAME executable, or compiling MAME
+using clang with the option to place symbols in external PDB files.
 
 
 .. _compiling-fedora:
@@ -525,10 +522,10 @@ BUILDDIR
 REGENIE
     Set to **1** to force project files to be regenerated.
 VERBOSE
-    Set to **1** to show full commands when using GNU make as the build tool.
+    Set to **1** to show full commands when using GNU Make as the build tool.
     This option applies immediately without needing regenerate project files.
 IGNORE_GIT
-    Set to **1** to skip the working tree scan and not attempt to embed a git
+    Set to **1** to skip the working tree scan and not attempt to embed a Git
     revision description in the version string.
 
 Tool locations
