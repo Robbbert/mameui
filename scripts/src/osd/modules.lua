@@ -710,15 +710,6 @@ if not _OPTIONS["NO_USE_PIPEWIRE"] then
 end
 
 newoption {
-	trigger = "MODERN_WIN_API",
-	description = "Use Modern Windows APIs",
-	allowed = {
-		{ "0",  "Use classic Windows APIs - allows support for XP and later"   },
-		{ "1",  "Use Modern Windows APIs - support for Windows 8.1 and later"  },
-	},
-}
-
-newoption {
 	trigger = "USE_QTDEBUG",
 	description = "Use QT debugger",
 	allowed = {

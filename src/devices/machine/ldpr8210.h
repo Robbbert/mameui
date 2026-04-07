@@ -139,7 +139,7 @@ class simutrek_special_device : public pioneer_pr8210_device
 {
 public:
 	// construction/destruction
-	simutrek_special_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
+	simutrek_special_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = 0);
 
 	// input and output
 	void data_w(uint8_t data);

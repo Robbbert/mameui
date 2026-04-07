@@ -28,7 +28,6 @@ LONG_VERS := $(BARE_VERS).x
 
 # NO_OPENGL = 0
 # USE_DISPATCH_GL = 0
-# MODERN_WIN_API = 0
 # USE_SDL = 1
 # SDL_INI_PATH = .;$HOME/.mame/;ini;
 # SDL2_MULTIAPI = 1
@@ -746,10 +745,6 @@ endif
 
 ifdef USE_QTDEBUG
 PARAMS += --USE_QTDEBUG='$(USE_QTDEBUG)'
-endif
-
-ifdef MODERN_WIN_API
-PARAMS += --MODERN_WIN_API='$(MODERN_WIN_API)'
 endif
 
 ifdef USE_SDL

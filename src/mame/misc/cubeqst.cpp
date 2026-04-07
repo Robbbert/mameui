@@ -7,24 +7,31 @@
     driver by Phil Bennett
 
     TODO:
-       * Accurate video timings
-        - Derive from PROMs
-       * More accurate line fill circuitry emulation
-        - Use PROMs
+    * Accurate video timings
+      - Derive from PROMs
+    * More accurate line fill circuitry emulation
+      - Use PROMs
+    * It should be able to detect when a laserdisc is not inserted (or the
+      player is turned off/not hooked up). The game will then take a while
+      to boot, and substitute the background graphics with simpler ones.
+      Not supplying the CHD worked in MAME 0.132, but that's too long ago to
+      find out what caused it to regress.
 
     Known bugs:
-        * The graphics tend go screwy when you add the first credit on the
-          'Cubic History' screen.
-        * The guardians' pincer thingies shouldn't distort when they rotate
+    * The graphics tend go screwy when you add the first credit on the
+      'Cubic History' screen.
+    * The guardians' pincer thingies shouldn't distort when they rotate
 
 ****************************************************************************/
 
 #include "emu.h"
+
 #include "cpu/cubeqcpu/cubeqcpu.h"
 #include "cpu/m68000/m68000.h"
 #include "machine/ldpr8210.h"
 #include "machine/nvram.h"
 #include "sound/dac.h"
+
 #include "speaker.h"
 
 
@@ -387,7 +394,7 @@ static INPUT_PORTS_START( cubeqst )
 	PORT_BIT( 0x0040, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_NAME("Right Fire")
 	PORT_BIT( 0x0080, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_NAME("Left Fire")
 	PORT_BIT( 0x0100, IP_ACTIVE_LOW, IPT_SERVICE )
-	PORT_BIT( 0x0200, IP_ACTIVE_LOW, IPT_COIN3 ) PORT_NAME("Free Game")
+	PORT_BIT( 0x0200, IP_ACTIVE_LOW, IPT_SERVICE1 )
 	PORT_BIT( 0x0400, IP_ACTIVE_LOW, IPT_UNUSED )
 	PORT_BIT( 0xf800, IP_ACTIVE_LOW, IPT_UNUSED )
 
@@ -539,11 +546,11 @@ void cubeqst_state::cubeqst(machine_config &config)
 	m_soundcpu->dac_w().set(FUNC(cubeqst_state::sound_dac_w));
 	m_soundcpu->set_sound_region("soundproms");
 
-	config.set_maximum_quantum(attotime::from_hz(48000));
+	config.set_maximum_quantum(attotime::from_hz(50000));
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
-	SIMUTREK_SPECIAL(config, m_laserdisc, 0);
+	SIMUTREK_SPECIAL(config, m_laserdisc);
 	m_laserdisc->set_overlay(CUBEQST_HBLANK, CUBEQST_VCOUNT, FUNC(cubeqst_state::screen_update_cubeqst));
 	m_laserdisc->set_overlay_clip(0, 320-1, 0, 256-8);
 	m_laserdisc->set_overlay_position(0.002f, -0.018f);
@@ -661,7 +668,7 @@ ROM_START( cubeqst )
 	ROM_LOAD( "fill_board_82s129.14p", 0x400, 0x100, CRC(6b572b73) SHA1(4a065cb05c12ce34e5598341e0de0cc571b2d387) )
 
 	DISK_REGION( "laserdisc" )
-	DISK_IMAGE_READONLY( "cubeqst", 0, SHA1(d0e24bb5d0ae424e0816110ec7d6b21189044d57) )
+	DISK_IMAGE_READONLY_OPTIONAL( "cubeqst", 0, SHA1(d0e24bb5d0ae424e0816110ec7d6b21189044d57) )
 ROM_END
 
 
@@ -748,7 +755,7 @@ ROM_START( cubeqsta )
 	ROM_LOAD( "fill_board_82s129.14p", 0x400, 0x100, CRC(6b572b73) SHA1(4a065cb05c12ce34e5598341e0de0cc571b2d387) )
 
 	DISK_REGION( "laserdisc" )
-	DISK_IMAGE_READONLY( "cubeqst", 0, SHA1(d0e24bb5d0ae424e0816110ec7d6b21189044d57) )
+	DISK_IMAGE_READONLY_OPTIONAL( "cubeqst", 0, SHA1(d0e24bb5d0ae424e0816110ec7d6b21189044d57) )
 ROM_END
 
 } // anonymous namespace
