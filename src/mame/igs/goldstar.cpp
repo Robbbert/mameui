@@ -28472,10 +28472,17 @@ ROM_START( cmtetrisb )
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_LOAD( "rom8.u53",  0x0000, 0x10000, CRC(e92443d3) SHA1(4b6ca4521841610054165f085ae05510e77af191) )
 
-	// proms taken from cmv4, probably wrong
+	// dumper said that proms are common cmv4.
+	// with the following scheme, colors are close to the original.
+	// degradee on tetris title is not green.
+	// the circles screen is color perfect.
 	ROM_REGION( 0x200, "proms", 0 )
-	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
-	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+	ROM_LOAD( "82s129.u84", 0x0020, 0x0060, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_CONTINUE(           0x0000, 0x0020 )
+	ROM_CONTINUE(           0x0080, 0x0080 )
+	ROM_LOAD( "82s129.u79", 0x0120, 0x0060, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+	ROM_CONTINUE(           0x0100, 0x0020 )
+	ROM_CONTINUE(           0x0180, 0x0080 )
 
 	ROM_REGION( 0x100, "proms2", 0 )
 	ROM_LOAD( "82s129.u43", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
