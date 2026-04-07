@@ -7,6 +7,7 @@
     driver by Phil Bennett
 
     TODO:
+    * Make laserdisc unit an optional slot device?
     * Accurate video timings
       - Derive from PROMs
     * More accurate line fill circuitry emulation
@@ -404,7 +405,7 @@ static INPUT_PORTS_START( cubeqst )
 	PORT_START("CONF")
 	PORT_CONFNAME( 0x01, 0x01, "Laserdisc" )
 	PORT_CONFSETTING(    0x00, DEF_STR( No ) )
-	PORT_CONFSETTING(    0x01, DEF_STR( Yes ) )
+	PORT_CONFSETTING(    0x01, "Auto" )
 INPUT_PORTS_END
 
 
