@@ -44,7 +44,9 @@
     Timings verified at SYNC pin and BLUE pin (jamma edge),
     using an Agilent DSO9404A scope and two N2873A 500MHz probes.
 
-    MAME is using jotego's timing instead (262*384).
+    The above claims result in 6MHz/(386*260) = ~59.78Hz, not 60.024Hz. MAME
+    is using 384*260 instead like tigeroad, which nearly matches an older
+    Bionic Commando measurement of H=15.625kHz, V=60.093Hz.
 
     BTANB [MT00209] (verified on real PCB):
     - misplaced sprites (see beginning of level 1 or 2 for example)
@@ -78,7 +80,6 @@
       to 128 currently to compensate.
     - The game doesn't set the coin lockout in service mode, so the coin inputs
       can't be tested there if you uncomment and enable it.
-    - Reverify video timing.
 
 ***************************************************************************/
 
@@ -516,7 +517,7 @@ u8 bionicc_state::mcu_dma_r(offs_t offset)
 {
 	u8 data = 0xff;
 
-	if (BIT(m_mcu_p3, 5) == 0)
+	if (!BIT(m_mcu_p3, 5))
 	{
 		// various address bits are pulled high because the mcu doesn't drive them
 		// the 3 upper address bits (p2.0, p2.1, p2.2) are connected to a14 to a16
@@ -529,7 +530,7 @@ u8 bionicc_state::mcu_dma_r(offs_t offset)
 
 void bionicc_state::mcu_dma_w(offs_t offset, u8 data)
 {
-	if (BIT(m_mcu_p3, 5) == 0)
+	if (!BIT(m_mcu_p3, 5))
 	{
 		offs_t address = 0xe3e01 | ((offset & 0x700) << 6) | ((offset & 0xff) << 1);
 		m_maincpu->space(AS_PROGRAM).write_byte(address, data);
@@ -547,16 +548,16 @@ void bionicc_state::mcu_p3_w(u8 data)
 	// ------1-  int0 flip-flop preset
 	// -------0  int0 ack
 
-	if (BIT(m_mcu_p3, 0) == 1 && BIT(data, 0) == 0)
+	if (BIT(m_mcu_p3, 0) && !BIT(data, 0))
 	{
 		m_mcu->set_input_line(MCS51_INT0_LINE, CLEAR_LINE);
 		m_maincpu->resume(SUSPEND_REASON_HALT);
 	}
 
-	if (BIT(m_mcu_p3, 4) == 1 && BIT(data, 4) == 0)
+	if (BIT(m_mcu_p3, 4) && !BIT(data, 4))
 		m_mcu->set_input_line(MCS51_INT1_LINE, CLEAR_LINE);
 
-	if (BIT(m_mcu_p3, 6) == 1 && BIT(data, 6) == 0)
+	if (BIT(m_mcu_p3, 6) && !BIT(data, 6))
 		m_mcu_to_audiocpu = m_mcu_p1;
 
 	m_mcu_p3 = data;
@@ -656,7 +657,7 @@ void bionicc_state::bionicc(machine_config &config)
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_raw(24_MHz_XTAL / 4, 384, 0, 256, 262, 16, 240); // hsync is 306..333 (offset by 128), vsync is 251..253 (offset by 6)
+	m_screen->set_raw(24_MHz_XTAL / 4, 384, 0, 256, 260, 16, 240);
 	m_screen->set_screen_update(FUNC(bionicc_state::screen_update));
 	m_screen->set_palette(m_palette);
 

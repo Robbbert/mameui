@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 669 -->
+<!-- Number of items in this list = 680 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -382,6 +382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col5dbbbb242b965">
+		<description>BarnBuster (2026)(DiRoccoVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="BarnBuster (2026)(DiRoccoVision).rom" size="32768" crc="75a4713d" sha1="5dbbbb242b9650ce07872a1670ddc4786a116ad6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col683973d7e24cb">
 		<description>BC's Quest (1983)(Sierra-Sydney Development Corp)</description>
 		<year>????</year>
@@ -449,6 +459,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Berzerk (2022)(CollectorVision).rom" size="32768" crc="6328ffc1" sha1="4cb20f83e4b6d84990b53606890ea055bb108cab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col5c71341868d99">
+		<description>Big Catch (2026)(DiRoccoVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Big Catch (2026)(DiRoccoVision).rom" size="32768" crc="9ea3a524" sha1="5c71341868d99eb124f4709054ebfb8766cc231f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -639,6 +659,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Boulder Dash (USA, Proto)(1984)(Micro Fun).rom" size="16384" crc="1796de5e" sha1="ad266ca4d270ea35def306381eaf05d36c811218"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colebdb94e04b402">
+		<description>Bounty Bob Strikes Back (1984-2024)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Bounty Bob Strikes Back (1984-2024)(CollectorVision).rom" size="32768" crc="86db78b3" sha1="ebdb94e04b4029d747bfc66fa2cdd46ee817cd9c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1522,6 +1552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col80837fd9e459d">
+		<description>Demon Attack (1983-2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Demon Attack (1983-2023)(CollectorVision).rom" size="32768" crc="ba7049b7" sha1="80837fd9e459d2a408cbb09a6a05a71b0c8f698d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb1fdcf7bb50eb">
 		<description>Demon Attack - New Atlantis (2023)(Cote Gamers)</description>
 		<year>????</year>
@@ -1842,6 +1882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col25666c30248e1">
+		<description>Electronic Quarterback (2026)(DiRoccoVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Electronic Quarterback (2026)(DiRoccoVision).rom" size="32768" crc="722f7376" sha1="25666c30248e180d9f8a72247ab6e6f0666044b3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colfb3260cffd4bf">
 		<description>Elevator Action (1985-2012)(CollectorVision)</description>
 		<year>????</year>
@@ -1899,6 +1949,36 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Evolution (USA, Canada)(1983)(Sydney).rom" size="16384" crc="4cd4e185" sha1="5c775dd65722be72436d0b6dd99bd0143c938b33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col01c6d15f9524b">
+		<description>Face to Face Football (2026)(DiRoccoVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Face to Face Football (2026)(DiRoccoVision).rom" size="32768" crc="f56f48f3" sha1="01c6d15f9524b6afebed62b00431f5517f9d4ceb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col262d0636b2b9f">
+		<description>Face to Face Hockey (2026)(DiRoccoVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Face to Face Hockey (2026)(DiRoccoVision).rom" size="32768" crc="acd9d815" sha1="262d0636b2b9fb8347f3d90653031b92f538e3a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col1b468087f2602">
+		<description>Face to Face Soccer (2026)(DiRoccoVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Face to Face Soccer (2026)(DiRoccoVision).rom" size="32768" crc="d7002128" sha1="1b468087f26022964f25b4dd49e7ba9c6070ce15"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2612,6 +2692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col78e867f29fe9d">
+		<description>Hard Hat Mack SGM (1983-2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Hard Hat Mack SGM (1983-2023)(CollectorVision).rom" size="32768" crc="eaf5c5e1" sha1="78e867f29fe9d290bbcece63e52e7fcd2f48a46a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col583c25a2e2d28">
 		<description>Heist, The (U)</description>
 		<year>????</year>
@@ -2829,6 +2919,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="2432">
 				<rom name="jod.rom" size="2432" crc="edb051fd" sha1="7fcaef64fa7fc142a358ce34bfbe04d29085d11b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cola4bb31d05d5d5">
+		<description>Joe The Eskimo (Proto)(2022)(8 bit Milli Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Joe The Eskimo (Proto)(2022)(8 bit Milli Games).rom" size="32768" crc="c644860a" sha1="a4bb31d05d5d5c233b760e5d3ea5a1774f8b58a4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6129,6 +6229,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Track and Field (2011)(Team Pixelboy).rom" size="32768" crc="96dd114a" sha1="cb9a8b9df4b7563fab0a0d5e31b58d49ff3b5556"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7dc2cd6cc9afa">
+		<description>Trail Drive (2026)(DiRoccoVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Trail Drive (2026)(DiRoccoVision).rom" size="131072" crc="0a334c0e" sha1="7dc2cd6cc9afac79475a4edde65a0300b904c7f2"/>
 			</dataarea>
 		</part>
 	</software>
