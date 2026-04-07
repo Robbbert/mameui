@@ -10606,6 +10606,7 @@ static INPUT_PORTS_START( bingowng )
 	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )          PORT_DIPLOCATION("DSW1:8")
 	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+
 /*  On a W-4 PCB these are used as: "Special Odds-Prohibition Of Winning...(Odds B)" - see DSW2-7
     PORT_DIPNAME( 0x80, 0x00, "Special Odds" )              PORT_DIPLOCATION("DSW1:7,8")
     PORT_DIPSETTING(    0x00, "None" )
@@ -10637,6 +10638,7 @@ static INPUT_PORTS_START( bingowng )
 	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )      PORT_DIPLOCATION("DSW2:8")
 	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+
 /*  On a W-4 PCB these are used as:
     PORT_DIPNAME( 0x40, 0x40, "Odds" )                  PORT_DIPLOCATION("DSW2:7")
     PORT_DIPSETTING(    0x40, "Type A" )
@@ -12791,9 +12793,9 @@ static INPUT_PORTS_START( unkch4 )
 	PORT_MODIFY("IN0")
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_COIN3 ) PORT_IMPULSE(2) PORT_NAME("Coin C")
 
-	/* Like many of the other games on this hardware, there is an
-	input & dip test screen that you can stumble in to. Also a picture viewer option. Can't figure
-	out exactly how to make it repeatable... */
+	// Like many of the other games on this hardware, there is an input & DIP test screen
+	// that you can stumble in to. Also a picture viewer option. Can't figure out exactly
+	// how to make it repeatable...
 
 	PORT_START("DSW1")
 	PORT_DIPNAME( 0x03, 0x03, "Game Level" )                PORT_DIPLOCATION("DSW1:1,2")  // OK
@@ -17329,12 +17331,13 @@ ROM_START( chrygld )
 ROM_END
 
 
-/* Moon Light (V.0629)
-   Rip off / clone of Gold Star.
+/*
+  Moon Light (V.0629)
+  Rip off / clone of Gold Star.
 
-   The program ROM is double size and stores two different programs.
-   Whilst we have not idea about the real addressing, we can support
-   both sets separately.
+  The program ROM is double size and stores two different programs.
+  Whilst we have not idea about the real addressing, we can support
+  both sets separately.
 
 */
 ROM_START( moonlght )
@@ -17366,25 +17369,26 @@ ROM_START( moonlghta )
 	ROM_LOAD( "gs1-snd.bin",  0x0000, 0x20000, CRC(9d58960f) SHA1(c68edf95743e146398aabf6b9617d18e1f9bf25b) )
 ROM_END
 
-/* Moon Light (V.02L0A)
-   Rip off / clone of Gold Star.
+/*
+  Moon Light (V.02L0A)
+  Rip off / clone of Gold Star.
 
-   The program ROM is double size and stores two different programs.
-   Whilst we have not idea about the real addressing, we can support
-   both sets separately.
+  The program ROM is double size and stores two different programs.
+  Whilst we have not idea about the real addressing, we can support
+  both sets separately.
 
-   GFX devices are 4 times bigger and contains 4 times the same data.
-   Maybe the manufacturers run out of proper devices...
+  GFX devices are 4 times bigger and contains 4 times the same data.
+  Maybe the manufacturers run out of proper devices...
 
-   The background is not set properly due to a palette error. The program ROM stores
-   the palette at offset 0xC700 onwards... The value stored at 0xC780 (color 0x80) should
-   be black to mask the reels tilemaps and turn them 'invisible'. This program has a value
-   of 0x40 instead, turning the tilemaps blue and therefore visible. The results is an odd
-   effect that shouldn't be there. Maybe is product of a bad dump. Need to be checked with
-   the real board.
+  The background is not set properly due to a palette error. The program ROM stores
+  the palette at offset 0xC700 onwards... The value stored at 0xC780 (color 0x80) should
+  be black to mask the reels tilemaps and turn them 'invisible'. This program has a value
+  of 0x40 instead, turning the tilemaps blue and therefore visible. The results is an odd
+  effect that shouldn't be there. Maybe is product of a bad dump. Need to be checked with
+  the real board.
 
-   The hardware currently uses only the second half of the program ROM (high program), that
-   replaces the double-up's cards graphics with 'drakkars' (scandinavian / viking ships).
+  The hardware currently uses only the second half of the program ROM (high program), that
+  replaces the double-up's cards graphics with 'drakkars' (scandinavian / viking ships).
 
   ----------------------------------------------------------------------------------------
   28.bin                                          FIXED BITS (00xxxxxx)
@@ -17458,11 +17462,11 @@ ROM_END
 
 
 /*
-   Gold Fruit
+  Gold Fruit
 
-   Graphics are packed/encoded in a different way.
-   Game rate is fixed in 40%.
-   Coin A and B are fixed to 100 credits by pulse.
+  Graphics are packed/encoded in a different way.
+  Game rate is fixed in 40%.
+  Coin A and B are fixed to 100 credits by pulse.
 
 */
 ROM_START( goldfrui )
@@ -17485,18 +17489,18 @@ ROM_END
 
 
 /*
-    Super Nove by Playmark
+  Super Nove by Playmark
 
-    load the first half of the program ROM, bp 2db
-    the next call ($0C33) hangs the game
-    since there are ascii strings there
-    instead of code.
+  load the first half of the program ROM, bp 2db
+  the next call ($0C33) hangs the game
+  since there are ascii strings there
+  instead of code.
 
-    the second half seems to work, but where is the palette?
+  the second half seems to work, but where is the palette?
 
-    are the two halves banked somehow?
+  are the two halves banked somehow?
+
 */
-
 ROM_START( super9 )
 	ROM_REGION( 0x20000, "maincpu", 0 )
 	ROM_LOAD( "27e010.30", 0x10000, 0x10000, CRC(1aaea8d3) SHA1(71395a6d74a7cd55606daa57d17ff4628aa5f577) )
