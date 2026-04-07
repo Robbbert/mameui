@@ -33641,21 +33641,21 @@ GAME(  1993, missbingo,  pkrmast,   pkrmast,   pkrmast,   cmaster_state, init_pk
 GAME(  1997, crazybonb,  0,         crazybonb, crazybonb, cmaster_state, init_crazybonb, ROT0, "bootleg (TV Games)", "Crazy Bonus 2002 (Ver. 1, dual game)",         MACHINE_UNEMULATED_PROTECTION ) // F.B. & POKER 94, VER.1 in NVRAM
 GAME(  1993, missbingoc, crazybonb, crazybonb, crazybonb, cmaster_state, init_crazybonb, ROT0, "bootleg",            "Miss Bingo (Crazy Bonus DB, dual game)",       MACHINE_UNEMULATED_PROTECTION ) // same program as crazybonb
 
-GAME(  199?, chthree,    cmaster,  cm,       cmaster,  cmaster_state,  init_chthree,   ROT0, "Promat",            "Channel Three",                               0 ) // hack of cmaster, still shows DYNA CM-1 V1.01 in book-keeping
+GAME(  199?, chthree,    cmaster,   cm,        cmaster,   cmaster_state, init_chthree,   ROT0, "Promat",             "Channel Three",                                0 ) // hack of cmaster, still shows DYNA CM-1 V1.01 in book-keeping
 
 // Dyna D9101 PCB
-GAMEL( 1991, eldoraddoa,  eldoradd, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",             "El Dorado (V1.4D)",                          0,                   layout_animalhs )
-GAMEL( 1991, eldoraddoab, eldoradd, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna / Grayhound", "El Dorado (V1.5U, Dyna/Grayhound)",          0,                   layout_animalhs )
-GAMEL( 1991, animalhs,    0,        animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 1)",                 0,                   layout_animalhs )
-GAMEL( 1991, animalhsa,   animalhs, animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 2)",                 0,                   layout_animalhs )
+GAMEL( 1991, eldoraddoa,  0         , animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",              "El Dorado (V1.4D)",                          0,                   layout_animalhs )
+GAMEL( 1991, eldoraddoab, eldoraddoa, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna / Grayhound",  "El Dorado (V1.5U, Dyna/Grayhound)",          0,                   layout_animalhs )
+GAMEL( 1991, animalhs,    0,          animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",      "Animal House (V1.0, set 1)",                 0,                   layout_animalhs )
+GAMEL( 1991, animalhsa,   animalhs,   animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",      "Animal House (V1.0, set 2)",                 0,                   layout_animalhs )
 
-GAME(  1991, cmast91,    0,        cmast91,  cmast91,  cmaster_state,  init_cmast91,   ROT0, "Dyna",              "Cherry Master '91 (ver.1.30)",                0 )
-GAMEL( 1991, cll,        0,        cmast91,  cmast91,  cmaster_state,  init_cll,       ROT0, "Dyna / TAB Austria","Cuty Line Limited (ver.1.30)",                0,                   layout_cmv4 ) // needs verifying dips, missing girls
-GAMEL( 1996, cmast97,    0,        cmast97,  cmast97,  cmast97_state,  init_cm97,      ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 1)",             0,                   layout_cmast97 )
-GAMEL( 1997, cmast97a,   cmast97,  cmast97,  cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 2, no girls)",   0,                   layout_cmast97 )
-GAMEL( 1996, cmast97b,   cmast97,  cmast97,  cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 3, no girls)",   0,                   layout_cmast97 )
-GAMEL( 1996, cmast97i,   cmast97,  cmast97,  cmast97i, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cheri Mondo '97 (V1.4I)",                     0,                   layout_cmast97 )
-GAMEL( 1997, jpknight,   0,        jpknight, cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna / R-Stone",    "Jackpot Knight (V1.1)",                       0,                   layout_cmast97 ) // check inputs
+GAME(  1991, cmast91,     0,          cmast91,  cmast91,  cmaster_state,  init_cmast91,    ROT0, "Dyna",              "Cherry Master '91 (ver.1.30)",               0 )
+GAMEL( 1991, cll,         0,          cmast91,  cmast91,  cmaster_state,  init_cll,        ROT0, "Dyna / TAB Austria","Cuty Line Limited (ver.1.30)",               0,                   layout_cmv4 ) // needs verifying dips, missing girls
+GAMEL( 1996, cmast97,     0,          cmast97,  cmast97,  cmast97_state,  init_cm97,       ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 1)",            0,                   layout_cmast97 )
+GAMEL( 1997, cmast97a,    cmast97,    cmast97,  cmast97a, cmast97_state,  empty_init,      ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 2, no girls)",  0,                   layout_cmast97 )
+GAMEL( 1996, cmast97b,    cmast97,    cmast97,  cmast97a, cmast97_state,  empty_init,      ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 3, no girls)",  0,                   layout_cmast97 )
+GAMEL( 1996, cmast97i,    cmast97,    cmast97,  cmast97i, cmast97_state,  empty_init,      ROT0, "Dyna",              "Cheri Mondo '97 (V1.4I)",                    0,                   layout_cmast97 )
+GAMEL( 1997, jpknight,    0,          jpknight, cmast97a, cmast97_state,  empty_init,      ROT0, "Dyna / R-Stone",    "Jackpot Knight (V1.1)",                      0,                   layout_cmast97 ) // check inputs
 
 // Dyna CM99 hardware (dynamic banking)
 GAMEL( 1999, cmast99,    0,        cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "Dyna",              "Cherry Master '99 (QL-1 V9B.00)",             MACHINE_NOT_WORKING,   layout_cmv4 )
