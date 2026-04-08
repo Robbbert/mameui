@@ -82,13 +82,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4244", -- warning C4244: 'argument' : conversion from 'xxx' to 'xxx', possible loss of data
 			"/wd4456", -- warning C4456: declaration of 'xxx' hides previous local declaration
 		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd111",              -- remark #111: statement is unreachable
-			"/Qwd1879",             -- warning #1879: unimplemented pragma ignored
-			"/Qwd2557",             -- remark #2557: comparison between signed and unsigned operands
-			"/Qwd869",              -- remark #869: parameter "xxx" was never referenced
-		}
 end
 
 	configuration { "gmake or ninja" }
@@ -146,11 +139,6 @@ if _OPTIONS["vs"]==nil then
 		buildoptions {
 			"/wd4127", -- warning C4127: conditional expression is constant
 			"/wd4244", -- warning C4244: 'argument' : conversion from 'xxx' to 'xxx', possible loss of data
-		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd111",              -- remark #111: statement is unreachable
-			"/Qwd280",              -- remark #280: selector expression is constant
 		}
 end
 	configuration "Debug"
@@ -274,10 +262,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4244", -- warning C4244: 'argument' : conversion from 'xxx' to 'xxx', possible loss of data
 			"/wd4146", -- warning C4146: unary minus operator applied to unsigned type, result still unsigned
 			"/wd4018", -- warning C4018: 'x' : signed/unsigned mismatch
-		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd2557",             -- remark #2557: comparison between signed and unsigned operands
 		}
 end
 	configuration { }
@@ -673,10 +657,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4127", -- warning C4127: conditional expression is constant
 			"/wd4244", -- warning C4244: 'argument' : conversion from 'xxx' to 'xxx', possible loss of data
 		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd869",              -- remark #869: parameter "xxx" was never referenced
-		}
 end
 
 	configuration { }
@@ -754,14 +734,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4100", -- warning C4100: 'xxx' : unreferenced formal parameter
 			"/wd4456", -- warning C4456: declaration of 'xxx' hides previous local declaration
 			"/wd4702", -- warning C4702: unreachable code
-		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd111",              -- remark #111: statement is unreachable
-			"/Qwd177",              -- remark #177: function "xxx" was declared but never referenced
-			"/Qwd181",              -- remark #181: argument of type "UINT32={unsigned int}" is incompatible with format "%d", expecting argument of type "int"
-			"/Qwd188",              -- error #188: enumerated type mixed with another type
-			"/Qwd869",              -- remark #869: parameter "xxx" was never referenced
 		}
 end
 
@@ -916,10 +888,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4456", -- warning C4456: declaration of 'xxx' hides previous local declaration
 			"/wd4457", -- warning C4457: declaration of 'xxx' hides function parameter
 		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd869",              -- remark #869: parameter "xxx" was never referenced
-		}
 end
 	configuration { }
 		defines {
@@ -1004,10 +972,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4244", -- warning C4244: 'argument' : conversion from 'xxx' to 'xxx', possible loss of data
 			"/wd4702", -- warning C4702: unreachable code
 			"/wd4310", -- warning C4310: cast truncates constant value
-		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd592", -- error #592: variable "xxx" is used before its value is set
 		}
 end
 
@@ -1196,13 +1160,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4244", -- warning C4244: 'argument' : conversion from 'xxx' to 'xxx', possible loss of data
 			"/wd4456", -- warning C4456: declaration of 'xxx' hides previous local declaration
 			"/wd4706", -- warning C4706: assignment within conditional expression
-		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd188",              -- error #188: enumerated type mixed with another type
-			"/Qwd344",              -- remark #344: typedef name has already been declared (with same type)
-			"/Qwd869",              -- remark #869: parameter "xxx" was never referenced
-			"/Qwd2557",             -- remark #2557: comparison between signed and unsigned operands
 		}
 elseif _OPTIONS["vs"]=="clangcl" then
 		buildoptions {
@@ -1505,12 +1462,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4310", -- warning C4310: cast truncates constant value
 			"/wd4701", -- warning C4701: potentially uninitialized local variable 'xxx' used
 		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd906",              -- message #906: effect of this "#pragma pack" directive is local to function "xxx"
-			"/Qwd1879",             -- warning #1879: unimplemented pragma ignored
-			"/Qwd82",               -- remark #82: storage class is not first
-		}
 elseif _OPTIONS["vs"]=="clangcl" then
 		buildoptions {
 			"-Wno-uninitialized",
@@ -1706,13 +1657,6 @@ if _OPTIONS["vs"]==nil then
 			"/wd4204", -- warning C4204: nonstandard extension used : non-constant aggregate initializer
 			"/wd4701", -- warning C4701: potentially uninitialized local variable 'xxx' used
 			"/wd4057", -- warning C4057: 'function': 'xxx' differs in indirection to slightly different base types from 'xxx'
-		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/Qwd869",  -- remark #869: parameter "xxx" was never referenced
-			"/Qwd1478", -- warning #1478: function "xxx" (declared at line yyy of "zzz") was declared deprecated
-			"/Qwd2544", -- message #2544: empty dependent statement in if-statement
-			"/Qwd1879", -- warning #1879: unimplemented pragma ignored
 		}
 elseif _OPTIONS["vs"]=="clangcl" then
 		buildoptions {

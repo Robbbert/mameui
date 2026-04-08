@@ -1287,49 +1287,6 @@ if _OPTIONS["vs"]==nil then
 			"Cpp20",
 			"ExtraWarnings",
 		}
-elseif _OPTIONS["vs"]=="intel-15" then
-		buildoptions {
-			"/bigobj",
-		}
-
-		buildoptions {
-			"/Qwd9",                -- remark #9: nested comment is not allowed
-			"/Qwd82",               -- remark #82: storage class is not first
-			"/Qwd111",              -- remark #111: statement is unreachable
-			"/Qwd128",              -- remark #128: loop is not reachable
-			"/Qwd177",              -- remark #177: function "xxx" was declared but never referenced
-			"/Qwd181",              -- remark #181: argument of type "UINT32={unsigned int}" is incompatible with format "%d", expecting argument of type "int"
-			"/Qwd185",              -- remark #185: dynamic initialization in unreachable code
-			"/Qwd280",              -- remark #280: selector expression is constant
-			"/Qwd344",              -- remark #344: typedef name has already been declared (with same type)
-			"/Qwd411",              -- remark #411: class "xxx" defines no constructor to initialize the following
-			"/Qwd869",              -- remark #869: parameter "xxx" was never referenced
-			"/Qwd2545",             -- remark #2545: empty dependent statement in "else" clause of if - statement
-			"/Qwd2553",             -- remark #2553: nonstandard second parameter "TCHAR={WCHAR = { __wchar_t } } **" of "main", expected "char *[]" or "char **" extern "C" int _tmain(int argc, TCHAR **argv)
-			"/Qwd2557",             -- remark #2557: comparison between signed and unsigned operands
-			"/Qwd3280",             -- remark #3280: declaration hides member "attotime::seconds" (declared at line 126) static attotime from_seconds(INT32 seconds) { return attotime(seconds, 0); }
-
-			"/Qwd170",              -- error #170: pointer points outside of underlying object
-			"/Qwd188",              -- error #188: enumerated type mixed with another type
-
-			"/Qwd63",               -- warning #63: shift count is too large
-			"/Qwd177",              -- warning #177: label "xxx" was declared but never referenced
-			"/Qwd186",              -- warning #186: pointless comparison of unsigned integer with zero
-			"/Qwd488",              -- warning #488: template parameter "_FunctionClass" is not used in declaring the parameter types of function template "device_delegate<_Signature>::device_delegate<_FunctionClass>(delegate<_Signature>:
-			"/Qwd1478",             -- warning #1478: function "xxx" (declared at line yyy of "zzz") was declared deprecated
-			"/Qwd1879",             -- warning #1879: unimplemented pragma ignored
-			"/Qwd3291",             -- warning #3291: invalid narrowing conversion from "double" to "int"
-			"/Qwd1195",             -- error #1195: conversion from integer to smaller pointer
-			"/Qwd47",               -- error #47: incompatible redefinition of macro "xxx"
-			"/Qwd265",              -- error #265: floating-point operation result is out of range
-			-- these occur on a release build, while we can increase the size limits instead some of the files do require extreme amounts
-			"/Qwd11074",            -- remark #11074: Inlining inhibited by limit max-size  / remark #11074: Inlining inhibited by limit max-total-size
-			"/Qwd11075",            -- remark #11075: To get full report use -Qopt-report:4 -Qopt-report-phase ipo
-		}
-
-		flags {
-			"ExtraWarnings",
-		}
 elseif _OPTIONS["vs"]=="clangcl" then
 		buildoptions {
 			"-Wno-ignored-qualifiers",
