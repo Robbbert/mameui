@@ -1677,6 +1677,7 @@ void taitosj_state::nomcu(machine_config &config)
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_raw(12_MHz_XTAL / 2, 384, 0, 256, 264, 16, 240); // verified from schematics
 	m_screen->set_screen_update(FUNC(taitosj_state::screen_update));
+	m_screen->set_video_attributes(VIDEO_ALWAYS_UPDATE); // collision detection
 	m_screen->set_palette(m_palette);
 	m_screen->screen_vblank().set_inputline(m_maincpu, INPUT_LINE_IRQ0, HOLD_LINE);
 
