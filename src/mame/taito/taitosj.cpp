@@ -214,6 +214,7 @@ void taitosj_state::main_nomcu_map(address_map &map)
 	map(0xc800, 0xcbff).ram().share(m_videoram[1]);
 	map(0xcc00, 0xcfff).ram().share(m_videoram[2]);
 	map(0xd000, 0xd05f).ram().share(m_colscrolly);
+	map(0xd060, 0xd0ff).ram();
 	map(0xd100, 0xd1ff).ram().share(m_spriteram);
 	map(0xd200, 0xd27f).mirror(0x0080).ram().share(m_paletteram);
 	map(0xd300, 0xd300).mirror(0x00ff).writeonly().share(m_video_priority);
