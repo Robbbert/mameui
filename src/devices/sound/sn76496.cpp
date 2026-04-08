@@ -246,7 +246,7 @@ void sn76496_base_device::device_start()
 	{
 		m_output[i] = 0;
 		m_count[i] = 0;
-		m_period[i] = (m_sega_style_psg || i == 3) ? 0 : 0x400;
+		m_period[i] = 0;//(m_sega_style_psg || i == 3) ? 0 : 0x400;
 	}
 
 	m_RNG = m_feedback_mask;
@@ -278,7 +278,7 @@ void sn76496_base_device::device_start()
 	m_vol_table[15] = 0;
 
 	for (int i = 0; i < 4; i++)
-		m_volume[i] = m_vol_table[m_register[i * 2 + 1]];
+		m_volume[i] = 0;//m_vol_table[m_register[i * 2 + 1]];
 
 	m_ready_state = -1;
 
