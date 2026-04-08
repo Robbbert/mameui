@@ -794,7 +794,7 @@ static void IncrementPlayVariable(int drvindex, const char *play_variable, uint3
 
 void IncrementPlayCount(int drvindex)
 {
-	if (drvindex > 0)
+	if (drvindex >= 0)
 		IncrementPlayVariable(drvindex, "count", 1);
 }
 
