@@ -7,10 +7,9 @@
 #include "cpu/m6805/m68705.h"
 #include "cpu/z80/z80.h"
 #include "cpu/mcs51/i8051.h"
-
+#include "machine/gen_latch.h"
 #include "sound/msm5205.h"
 #include "sound/ymopn.h"
-
 #include "video/bufsprite.h"
 
 #include "emupal.h"
@@ -24,6 +23,7 @@ public:
 		: driver_device(mconfig, type, tag)
 		, m_maincpu(*this, "maincpu")
 		, m_audiocpu(*this, "audiocpu")
+		, m_soundlatch(*this, "soundlatch")
 		, m_palette(*this, "palette")
 		, m_has_coinlock(true)
 		, m_spriteram(*this, "spriteram")
@@ -43,6 +43,7 @@ public:
 protected:
 	required_device<cpu_device> m_maincpu;
 	required_device<cpu_device> m_audiocpu;
+	required_device<generic_latch_8_device> m_soundlatch;
 	required_device<palette_device> m_palette;
 
 	void soundcmd_w(offs_t offset, u16 data, u16 mem_mask = ~0);
@@ -51,6 +52,9 @@ protected:
 	void scroll_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 
 	void main_map(address_map &map) ATTR_COLD;
+	void sound_map(address_map &map) ATTR_COLD;
+	void sound_port_map(address_map &map) ATTR_COLD;
+
 	bool m_has_coinlock;
 
 private:
@@ -69,8 +73,6 @@ private:
 	void comad_sound_map(address_map &map) ATTR_COLD;
 	void sample_map(address_map &map) ATTR_COLD;
 	void sample_port_map(address_map &map) ATTR_COLD;
-	void sound_map(address_map &map) ATTR_COLD;
-	void sound_port_map(address_map &map) ATTR_COLD;
 
 	void msm5205_w(u8 data);
 	TILE_GET_INFO_MEMBER(get_bg_tile_info);
@@ -130,6 +132,7 @@ public:
 		: tigeroad_state(mconfig, type, tag)
 		, m_mcu(*this, "mcu")
 		, m_mcu_p3(0xff)
+		, m_soundlatch_data(0xff)
 	{
 	}
 
@@ -151,4 +154,5 @@ private:
 
 	required_device<i8751_device> m_mcu;
 	u8 m_mcu_p3;
+	u8 m_soundlatch_data;
 };

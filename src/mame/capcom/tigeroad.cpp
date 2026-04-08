@@ -61,11 +61,25 @@ single plane board.
 #include "emu.h"
 #include "tigeroad.h"
 
-#include "machine/gen_latch.h"
-
 #include "screen.h"
 #include "speaker.h"
 
+
+void f1dream_state::machine_start()
+{
+	save_item(NAME(m_mcu_p3));
+	save_item(NAME(m_soundlatch_data));
+}
+
+void pushman_state::machine_start()
+{
+	save_item(NAME(m_host_semaphore));
+	save_item(NAME(m_mcu_semaphore));
+	save_item(NAME(m_host_latch));
+	save_item(NAME(m_mcu_latch));
+	save_item(NAME(m_mcu_output));
+	save_item(NAME(m_mcu_latch_ctl));
+}
 
 void tigeroad_state::msm5205_w(u8 data)
 {
@@ -95,8 +109,11 @@ void f1dream_state::mcu_shared_w(offs_t offset, u8 data)
 void f1dream_state::mcu_out3_w(u8 data)
 {
 	// toggles at the end of interrupt
-	if (m_mcu_p3 & ~data & 1)
+	if (BIT(m_mcu_p3, 0) && !BIT(data, 0))
 		m_maincpu->resume(SUSPEND_REASON_HALT);
+
+	if (BIT(m_mcu_p3, 6) && !BIT(data, 6))
+		m_soundlatch->write(m_soundlatch_data);
 
 	m_mcu_p3 = data;
 }
@@ -121,7 +138,7 @@ void tigeroad_state::main_map(address_map &map)
 	map(0xfe4000, 0xfe4001).portr("P1_P2");
 	map(0xfe4000, 0xfe4000).w(FUNC(tigeroad_state::videoctrl_w));   // char bank, coin counters, + ?
 	map(0xfe4002, 0xfe4003).portr("SYSTEM");
-	map(0xfe4002, 0xfe4002).w("soundlatch", FUNC(generic_latch_8_device::write));
+	map(0xfe4002, 0xfe4002).w(m_soundlatch, FUNC(generic_latch_8_device::write));
 	map(0xfe4004, 0xfe4005).portr("DSW");
 	map(0xfe8000, 0xfe8003).w(FUNC(tigeroad_state::scroll_w));
 	map(0xfe800e, 0xfe800f).nopw();    // fe800e = watchdog or IRQ acknowledge or sprite DMA
@@ -162,7 +179,7 @@ void pushman_state::bballs_map(address_map &map)
 	map(0xe4000, 0xe4001).portr("P1_P2");
 	map(0xe4000, 0xe4000).w(FUNC(pushman_state::videoctrl_w));
 	map(0xe4002, 0xe4003).portr("SYSTEM");
-	map(0xe4002, 0xe4002).w("soundlatch", FUNC(generic_latch_8_device::write));
+	map(0xe4002, 0xe4002).w(m_soundlatch, FUNC(generic_latch_8_device::write));
 	map(0xe4004, 0xe4005).portr("DSW");
 	map(0xe8000, 0xe8003).w(FUNC(pushman_state::scroll_w));
 	map(0xe800e, 0xe800f).nopw(); // ?
@@ -179,7 +196,7 @@ void tigeroad_state::sound_map(address_map &map)
 	map(0x8000, 0x8001).rw("ym1", FUNC(ym2203_device::read), FUNC(ym2203_device::write));
 	map(0xa000, 0xa001).rw("ym2", FUNC(ym2203_device::read), FUNC(ym2203_device::write));
 	map(0xc000, 0xc7ff).ram();
-	map(0xe000, 0xe000).r("soundlatch", FUNC(generic_latch_8_device::read));
+	map(0xe000, 0xe000).r(m_soundlatch, FUNC(generic_latch_8_device::read));
 }
 
 void tigeroad_state::sound_port_map(address_map &map)
@@ -206,7 +223,7 @@ void tigeroad_state::comad_sound_map(address_map &map)
 {
 	map(0x0000, 0x7fff).rom();
 	map(0xc000, 0xc7ff).ram();
-	map(0xe000, 0xe000).r("soundlatch", FUNC(generic_latch_8_device::read));
+	map(0xe000, 0xe000).r(m_soundlatch, FUNC(generic_latch_8_device::read));
 }
 
 void tigeroad_state::comad_sound_io_map(address_map &map)
@@ -627,9 +644,6 @@ void tigeroad_state::tigeroad(machine_config &config)
 
 	Z80(config, m_audiocpu, 3.579545_MHz_XTAL); // verified on pcb
 	m_audiocpu->set_addrmap(AS_PROGRAM, &tigeroad_state::sound_map);
-	m_audiocpu->set_addrmap(AS_IO, &tigeroad_state::sound_port_map);
-
-	// IRQs are triggered by the YM2203
 
 	// video hardware
 	BUFFERED_SPRITERAM16(config, "spriteram");
@@ -651,8 +665,7 @@ void tigeroad_state::tigeroad(machine_config &config)
 	// sound hardware
 	SPEAKER(config, "mono").front_center();
 
-	GENERIC_LATCH_8(config, "soundlatch");
-	GENERIC_LATCH_8(config, "soundlatch2");
+	GENERIC_LATCH_8(config, m_soundlatch);
 
 	ym2203_device &ym1(YM2203(config, "ym1", 3.579545_MHz_XTAL)); // verified on pcb
 	ym1.irq_handler().set_inputline(m_audiocpu, 0);
@@ -660,11 +673,6 @@ void tigeroad_state::tigeroad(machine_config &config)
 
 	ym2203_device &ym2(YM2203(config, "ym2", 3.579545_MHz_XTAL)); // verified on pcb
 	ym2.add_route(ALL_OUTPUTS, "mono", 0.25);
-}
-
-void f1dream_state::machine_start()
-{
-	save_item(NAME(m_mcu_p3));
 }
 
 void f1dream_state::f1dream(machine_config &config)
@@ -675,8 +683,13 @@ void f1dream_state::f1dream(machine_config &config)
 
 	I8751(config, m_mcu, 24_MHz_XTAL / 4); // 6MHz
 	m_mcu->set_addrmap(AS_DATA, &f1dream_state::f1dream_mcu_data);
-	m_mcu->port_out_cb<1>().set("soundlatch", FUNC(generic_latch_8_device::write));
+	m_mcu->port_out_cb<1>().set([this](u8 data) { m_soundlatch_data = data; });
 	m_mcu->port_out_cb<3>().set(FUNC(f1dream_state::mcu_out3_w));
+
+	// make sure audiocpu is CPU #3, so soundlatch gets synchronized correctly
+	config.device_remove("audiocpu");
+	Z80(config, m_audiocpu, 3.579545_MHz_XTAL);
+	m_audiocpu->set_addrmap(AS_PROGRAM, &f1dream_state::sound_map);
 }
 
 // same as above but with additional Z80 for samples playback
@@ -685,11 +698,15 @@ void tigeroad_state::toramich(machine_config &config)
 	tigeroad(config);
 
 	// basic machine hardware
+	m_audiocpu->set_addrmap(AS_IO, &tigeroad_state::sound_port_map);
+
 	z80_device &sample(Z80(config, "sample", 3.579545_MHz_XTAL));
 	sample.set_addrmap(AS_PROGRAM, &tigeroad_state::sample_map);
 	sample.set_addrmap(AS_IO, &tigeroad_state::sample_port_map);
 
 	// sound hardware
+	GENERIC_LATCH_8(config, "soundlatch2");
+
 	MSM5205(config, m_msm, 384_kHz_XTAL);
 	m_msm->vck_callback().set_inputline("sample", 0, HOLD_LINE);
 	m_msm->set_prescaler_selector(msm5205_device::S96_4B); // 4 KHz
@@ -706,8 +723,6 @@ void tigeroad_state::f1dream_comad(machine_config &config) // COMAD-01 PCB with 
 	Z80(config, m_audiocpu, 8_MHz_XTAL / 2); // 4MHz
 	m_audiocpu->set_addrmap(AS_PROGRAM, &tigeroad_state::comad_sound_map);
 	m_audiocpu->set_addrmap(AS_IO, &tigeroad_state::comad_sound_io_map);
-
-	config.set_maximum_quantum(attotime::from_hz(3600));
 
 	// video hardware
 	BUFFERED_SPRITERAM16(config, "spriteram");
@@ -729,7 +744,7 @@ void tigeroad_state::f1dream_comad(machine_config &config) // COMAD-01 PCB with 
 	// sound hardware
 	SPEAKER(config, "mono").front_center();
 
-	GENERIC_LATCH_8(config, "soundlatch");
+	GENERIC_LATCH_8(config, m_soundlatch);
 
 	ym2203_device &ym1(YM2203(config, "ym1", 8_MHz_XTAL / 4)); // 2MHz
 	ym1.irq_handler().set_inputline("audiocpu", 0);
@@ -739,20 +754,11 @@ void tigeroad_state::f1dream_comad(machine_config &config) // COMAD-01 PCB with 
 	ym2.add_route(ALL_OUTPUTS, "mono", 0.40);
 }
 
-
-void pushman_state::machine_start()
-{
-	save_item(NAME(m_host_semaphore));
-	save_item(NAME(m_mcu_semaphore));
-	save_item(NAME(m_host_latch));
-	save_item(NAME(m_mcu_latch));
-	save_item(NAME(m_mcu_output));
-	save_item(NAME(m_mcu_latch_ctl));
-}
-
 void pushman_state::pushman(machine_config &config) // all clocks measured on PCB
 {
 	f1dream_comad(config);
+
+	// basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &pushman_state::pushman_map);
 	m_maincpu->set_clock(8_MHz_XTAL);
 
@@ -762,6 +768,8 @@ void pushman_state::pushman(machine_config &config) // all clocks measured on PC
 	m_mcu->porta_w().set(FUNC(pushman_state::mcu_pa_w));
 	m_mcu->portb_w().set(FUNC(pushman_state::mcu_pb_w));
 	m_mcu->portc_w().set(FUNC(pushman_state::mcu_pc_w));
+
+	config.set_maximum_quantum(attotime::from_hz(3600));
 }
 
 void pushman_state::bballs(machine_config &config)
