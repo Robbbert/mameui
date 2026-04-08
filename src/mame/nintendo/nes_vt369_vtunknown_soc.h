@@ -172,13 +172,28 @@ public:
 	vt369_soc_introm_gbox2020_device(const machine_config& mconfig, const char* tag, device_t* owner, u32 clock);
 
 protected:
+	virtual void device_add_mconfig(machine_config& config) override ATTR_COLD;
 	virtual void device_start() override ATTR_COLD;
+
+private:
+	void gbox_411c_w(u8 data);
+
+	void nes_vt_gbox_map(address_map &map) ATTR_COLD;
 };
 
 class vt369_soc_introm_s10swap_device : public vt369_soc_introm_vibesswap_device
 {
 public:
 	vt369_soc_introm_s10swap_device(const machine_config& mconfig, const char* tag, device_t* owner, u32 clock);
+
+protected:
+	virtual void device_start() override ATTR_COLD;
+};
+
+class vt369_soc_introm_rsps300swap_device : public vt369_soc_introm_noswap_device
+{
+public:
+	vt369_soc_introm_rsps300swap_device(const machine_config& mconfig, const char* tag, device_t* owner, u32 clock);
 
 protected:
 	virtual void device_start() override ATTR_COLD;
@@ -208,6 +223,7 @@ DECLARE_DEVICE_TYPE(VT369_SOC_INTROM_ALTSWAP,   vt369_soc_introm_altswap_device)
 DECLARE_DEVICE_TYPE(VT369_SOC_INTROM_VIBESSWAP,   vt369_soc_introm_vibesswap_device)
 DECLARE_DEVICE_TYPE(VT369_SOC_INTROM_GBOX2020,   vt369_soc_introm_gbox2020_device)
 DECLARE_DEVICE_TYPE(VT369_SOC_INTROM_S10SWAP,   vt369_soc_introm_s10swap_device)
+DECLARE_DEVICE_TYPE(VT369_SOC_INTROM_RSPS300SWAP,   vt369_soc_introm_rsps300swap_device)
 
 DECLARE_DEVICE_TYPE(VT3XX_SOC_UNK_DG, vt3xx_soc_unk_dg_device)
 

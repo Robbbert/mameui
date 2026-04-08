@@ -143,8 +143,8 @@ public:
 
 	// input and output
 	void data_w(uint8_t data);
-	uint8_t ready_r() const { return !m_data_ready; }
-	uint8_t status_r() const { return ((m_i8748_port2 & 0x03) == 0x03) ? ASSERT_LINE : CLEAR_LINE; }
+	int ready_r() const { return m_data_ready ? 1 : 0; }
+	int status_r() const { return ((m_i8748_port2 & 0x03) == 0x03) ? 1 : 0; }
 
 	// external controls
 	void set_external_audio_squelch(int state);

@@ -205,7 +205,6 @@
 
   * Tetris + Cherry Master (+K, Canada Version, encrypted) (cmtetrisb)
 
-  Start the game and you can find some garbage due to wrong graphics banks.
   Press the key "insert" to throttle the game. Keep the key pressed till
   you can see what seems the attract working (still with wrong graphics).
 
@@ -10607,6 +10606,7 @@ static INPUT_PORTS_START( bingowng )
 	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )          PORT_DIPLOCATION("DSW1:8")
 	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+
 /*  On a W-4 PCB these are used as: "Special Odds-Prohibition Of Winning...(Odds B)" - see DSW2-7
     PORT_DIPNAME( 0x80, 0x00, "Special Odds" )              PORT_DIPLOCATION("DSW1:7,8")
     PORT_DIPSETTING(    0x00, "None" )
@@ -10638,6 +10638,7 @@ static INPUT_PORTS_START( bingowng )
 	PORT_DIPNAME( 0x80, 0x80, DEF_STR( Unknown ) )      PORT_DIPLOCATION("DSW2:8")
 	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
+
 /*  On a W-4 PCB these are used as:
     PORT_DIPNAME( 0x40, 0x40, "Odds" )                  PORT_DIPLOCATION("DSW2:7")
     PORT_DIPSETTING(    0x40, "Type A" )
@@ -12792,9 +12793,9 @@ static INPUT_PORTS_START( unkch4 )
 	PORT_MODIFY("IN0")
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_COIN3 ) PORT_IMPULSE(2) PORT_NAME("Coin C")
 
-	/* Like many of the other games on this hardware, there is an
-	input & dip test screen that you can stumble in to. Also a picture viewer option. Can't figure
-	out exactly how to make it repeatable... */
+	// Like many of the other games on this hardware, there is an input & DIP test screen
+	// that you can stumble in to. Also a picture viewer option. Can't figure out exactly
+	// how to make it repeatable...
 
 	PORT_START("DSW1")
 	PORT_DIPNAME( 0x03, 0x03, "Game Level" )                PORT_DIPLOCATION("DSW1:1,2")  // OK
@@ -17330,12 +17331,13 @@ ROM_START( chrygld )
 ROM_END
 
 
-/* Moon Light (V.0629)
-   Rip off / clone of Gold Star.
+/*
+  Moon Light (V.0629)
+  Rip off / clone of Gold Star.
 
-   The program ROM is double size and stores two different programs.
-   Whilst we have not idea about the real addressing, we can support
-   both sets separately.
+  The program ROM is double size and stores two different programs.
+  Whilst we have not idea about the real addressing, we can support
+  both sets separately.
 
 */
 ROM_START( moonlght )
@@ -17367,25 +17369,26 @@ ROM_START( moonlghta )
 	ROM_LOAD( "gs1-snd.bin",  0x0000, 0x20000, CRC(9d58960f) SHA1(c68edf95743e146398aabf6b9617d18e1f9bf25b) )
 ROM_END
 
-/* Moon Light (V.02L0A)
-   Rip off / clone of Gold Star.
+/*
+  Moon Light (V.02L0A)
+  Rip off / clone of Gold Star.
 
-   The program ROM is double size and stores two different programs.
-   Whilst we have not idea about the real addressing, we can support
-   both sets separately.
+  The program ROM is double size and stores two different programs.
+  Whilst we have not idea about the real addressing, we can support
+  both sets separately.
 
-   GFX devices are 4 times bigger and contains 4 times the same data.
-   Maybe the manufacturers run out of proper devices...
+  GFX devices are 4 times bigger and contains 4 times the same data.
+  Maybe the manufacturers run out of proper devices...
 
-   The background is not set properly due to a palette error. The program ROM stores
-   the palette at offset 0xC700 onwards... The value stored at 0xC780 (color 0x80) should
-   be black to mask the reels tilemaps and turn them 'invisible'. This program has a value
-   of 0x40 instead, turning the tilemaps blue and therefore visible. The results is an odd
-   effect that shouldn't be there. Maybe is product of a bad dump. Need to be checked with
-   the real board.
+  The background is not set properly due to a palette error. The program ROM stores
+  the palette at offset 0xC700 onwards... The value stored at 0xC780 (color 0x80) should
+  be black to mask the reels tilemaps and turn them 'invisible'. This program has a value
+  of 0x40 instead, turning the tilemaps blue and therefore visible. The results is an odd
+  effect that shouldn't be there. Maybe is product of a bad dump. Need to be checked with
+  the real board.
 
-   The hardware currently uses only the second half of the program ROM (high program), that
-   replaces the double-up's cards graphics with 'drakkars' (scandinavian / viking ships).
+  The hardware currently uses only the second half of the program ROM (high program), that
+  replaces the double-up's cards graphics with 'drakkars' (scandinavian / viking ships).
 
   ----------------------------------------------------------------------------------------
   28.bin                                          FIXED BITS (00xxxxxx)
@@ -17459,11 +17462,11 @@ ROM_END
 
 
 /*
-   Gold Fruit
+  Gold Fruit
 
-   Graphics are packed/encoded in a different way.
-   Game rate is fixed in 40%.
-   Coin A and B are fixed to 100 credits by pulse.
+  Graphics are packed/encoded in a different way.
+  Game rate is fixed in 40%.
+  Coin A and B are fixed to 100 credits by pulse.
 
 */
 ROM_START( goldfrui )
@@ -17486,18 +17489,18 @@ ROM_END
 
 
 /*
-    Super Nove by Playmark
+  Super Nove by Playmark
 
-    load the first half of the program ROM, bp 2db
-    the next call ($0C33) hangs the game
-    since there are ascii strings there
-    instead of code.
+  load the first half of the program ROM, bp 2db
+  the next call ($0C33) hangs the game
+  since there are ascii strings there
+  instead of code.
 
-    the second half seems to work, but where is the palette?
+  the second half seems to work, but where is the palette?
 
-    are the two halves banked somehow?
+  are the two halves banked somehow?
+
 */
-
 ROM_START( super9 )
 	ROM_REGION( 0x20000, "maincpu", 0 )
 	ROM_LOAD( "27e010.30", 0x10000, 0x10000, CRC(1aaea8d3) SHA1(71395a6d74a7cd55606daa57d17ff4628aa5f577) )
@@ -28410,6 +28413,9 @@ ROM_END
   The game runs in the blue old cherry master hardware,
   with a daughterboard placed in the Z80 socket.
 
+  The program is partially decrypted and needs more work.
+
+
   Daughterboard specs:
 
   Silkscreened: AMUS89 REV.0
@@ -28454,9 +28460,12 @@ ROM_START( cmtetrisb )
 	ROM_LOAD( "9__canada_daughterboard.bin",  0x0000,  0x10000, CRC(9810b853) SHA1(cf1216414f93cc78c7c9e5a3998e8b162692e05e) )
 
 	ROM_REGION( 0x30000, "gfx1", 0 )
-	ROM_LOAD( "rom7.u16", 0x00000,  0x10000, CRC(51498501) SHA1(7ac92129b449f7d4407f847c6200bf278c196c02) )
-	ROM_LOAD( "rom6.u11", 0x10000,  0x10000, CRC(8b113a3c) SHA1(aa24edd672c05a06f476286b343f8b1a40d5f0c9) )
-	ROM_LOAD( "rom5.u4",  0x20000,  0x10000, CRC(c3de5ce1) SHA1(2945c8e336c6d8638899b798fbe79c5757941fd8) )
+	ROM_LOAD( "rom7.u16", 0x08000,  0x08000, CRC(51498501) SHA1(7ac92129b449f7d4407f847c6200bf278c196c02) )
+	ROM_CONTINUE(         0x00000,  0x08000 )
+	ROM_LOAD( "rom6.u11", 0x18000,  0x08000, CRC(8b113a3c) SHA1(aa24edd672c05a06f476286b343f8b1a40d5f0c9) )
+	ROM_CONTINUE(         0x10000,  0x08000 )
+	ROM_LOAD( "rom5.u4",  0x28000,  0x08000, CRC(c3de5ce1) SHA1(2945c8e336c6d8638899b798fbe79c5757941fd8) )
+	ROM_CONTINUE(         0x20000,  0x08000 )
 
 	ROM_REGION( 0x8000, "gfx2", 0 )
 	ROM_LOAD( "rom4.u15",  0x0000,  0x2000, CRC(8607ffd9) SHA1(9bc94715554aa2473ae2ed249a47f29c7886b3dc) )
@@ -28467,10 +28476,17 @@ ROM_START( cmtetrisb )
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_LOAD( "rom8.u53",  0x0000, 0x10000, CRC(e92443d3) SHA1(4b6ca4521841610054165f085ae05510e77af191) )
 
-	// proms taken from cmv4, probably wrong
+	// dumper said that proms are common cmv4.
+	// with the following scheme, colors are close to the original.
+	// degradee on tetris title is not green.
+	// the circles screen is color perfect.
 	ROM_REGION( 0x200, "proms", 0 )
-	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
-	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+	ROM_LOAD( "82s129.u84", 0x0020, 0x0060, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
+	ROM_CONTINUE(           0x0000, 0x0020 )
+	ROM_CONTINUE(           0x0080, 0x0080 )
+	ROM_LOAD( "82s129.u79", 0x0120, 0x0060, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
+	ROM_CONTINUE(           0x0100, 0x0020 )
+	ROM_CONTINUE(           0x0180, 0x0080 )
 
 	ROM_REGION( 0x100, "proms2", 0 )
 	ROM_LOAD( "82s129.u43", 0x0000, 0x0100, CRC(50ec383b) SHA1(ae95b92bd3946b40134bcdc22708d5c6b0f4c23e) )
@@ -33629,21 +33645,21 @@ GAME(  1993, missbingo,  pkrmast,   pkrmast,   pkrmast,   cmaster_state, init_pk
 GAME(  1997, crazybonb,  0,         crazybonb, crazybonb, cmaster_state, init_crazybonb, ROT0, "bootleg (TV Games)", "Crazy Bonus 2002 (Ver. 1, dual game)",         MACHINE_UNEMULATED_PROTECTION ) // F.B. & POKER 94, VER.1 in NVRAM
 GAME(  1993, missbingoc, crazybonb, crazybonb, crazybonb, cmaster_state, init_crazybonb, ROT0, "bootleg",            "Miss Bingo (Crazy Bonus DB, dual game)",       MACHINE_UNEMULATED_PROTECTION ) // same program as crazybonb
 
-GAME(  199?, chthree,    cmaster,  cm,       cmaster,  cmaster_state,  init_chthree,   ROT0, "Promat",            "Channel Three",                               0 ) // hack of cmaster, still shows DYNA CM-1 V1.01 in book-keeping
+GAME(  199?, chthree,    cmaster,   cm,        cmaster,   cmaster_state, init_chthree,   ROT0, "Promat",             "Channel Three",                                0 ) // hack of cmaster, still shows DYNA CM-1 V1.01 in book-keeping
 
 // Dyna D9101 PCB
-GAMEL( 1991, eldoraddoa,  eldoradd, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",             "El Dorado (V1.4D)",                          0,                   layout_animalhs )
-GAMEL( 1991, eldoraddoab, eldoradd, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna / Grayhound", "El Dorado (V1.5U, Dyna/Grayhound)",          0,                   layout_animalhs )
-GAMEL( 1991, animalhs,    0,        animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 1)",                 0,                   layout_animalhs )
-GAMEL( 1991, animalhsa,   animalhs, animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",     "Animal House (V1.0, set 2)",                 0,                   layout_animalhs )
+GAMEL( 1991, eldoraddoa,  0         , animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",              "El Dorado (V1.4D)",                          0,                   layout_animalhs )
+GAMEL( 1991, eldoraddoab, eldoraddoa, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna / Grayhound",  "El Dorado (V1.5U, Dyna/Grayhound)",          0,                   layout_animalhs )
+GAMEL( 1991, animalhs,    0,          animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",      "Animal House (V1.0, set 1)",                 0,                   layout_animalhs )
+GAMEL( 1991, animalhsa,   animalhs,   animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",      "Animal House (V1.0, set 2)",                 0,                   layout_animalhs )
 
-GAME(  1991, cmast91,    0,        cmast91,  cmast91,  cmaster_state,  init_cmast91,   ROT0, "Dyna",              "Cherry Master '91 (ver.1.30)",                0 )
-GAMEL( 1991, cll,        0,        cmast91,  cmast91,  cmaster_state,  init_cll,       ROT0, "Dyna / TAB Austria","Cuty Line Limited (ver.1.30)",                0,                   layout_cmv4 ) // needs verifying dips, missing girls
-GAMEL( 1996, cmast97,    0,        cmast97,  cmast97,  cmast97_state,  init_cm97,      ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 1)",             0,                   layout_cmast97 )
-GAMEL( 1997, cmast97a,   cmast97,  cmast97,  cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 2, no girls)",   0,                   layout_cmast97 )
-GAMEL( 1996, cmast97b,   cmast97,  cmast97,  cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 3, no girls)",   0,                   layout_cmast97 )
-GAMEL( 1996, cmast97i,   cmast97,  cmast97,  cmast97i, cmast97_state,  empty_init,     ROT0, "Dyna",              "Cheri Mondo '97 (V1.4I)",                     0,                   layout_cmast97 )
-GAMEL( 1997, jpknight,   0,        jpknight, cmast97a, cmast97_state,  empty_init,     ROT0, "Dyna / R-Stone",    "Jackpot Knight (V1.1)",                       0,                   layout_cmast97 ) // check inputs
+GAME(  1991, cmast91,     0,          cmast91,  cmast91,  cmaster_state,  init_cmast91,    ROT0, "Dyna",              "Cherry Master '91 (ver.1.30)",               0 )
+GAMEL( 1991, cll,         0,          cmast91,  cmast91,  cmaster_state,  init_cll,        ROT0, "Dyna / TAB Austria","Cuty Line Limited (ver.1.30)",               0,                   layout_cmv4 ) // needs verifying dips, missing girls
+GAMEL( 1996, cmast97,     0,          cmast97,  cmast97,  cmast97_state,  init_cm97,       ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 1)",            0,                   layout_cmast97 )
+GAMEL( 1997, cmast97a,    cmast97,    cmast97,  cmast97a, cmast97_state,  empty_init,      ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 2, no girls)",  0,                   layout_cmast97 )
+GAMEL( 1996, cmast97b,    cmast97,    cmast97,  cmast97a, cmast97_state,  empty_init,      ROT0, "Dyna",              "Cherry Master '97 (V1.7, set 3, no girls)",  0,                   layout_cmast97 )
+GAMEL( 1996, cmast97i,    cmast97,    cmast97,  cmast97i, cmast97_state,  empty_init,      ROT0, "Dyna",              "Cheri Mondo '97 (V1.4I)",                    0,                   layout_cmast97 )
+GAMEL( 1997, jpknight,    0,          jpknight, cmast97a, cmast97_state,  empty_init,      ROT0, "Dyna / R-Stone",    "Jackpot Knight (V1.1)",                      0,                   layout_cmast97 ) // check inputs
 
 // Dyna CM99 hardware (dynamic banking)
 GAMEL( 1999, cmast99,    0,        cm99,     cmast99,  cmaster_state,  init_cm99,      ROT0, "Dyna",              "Cherry Master '99 (QL-1 V9B.00)",             MACHINE_NOT_WORKING,   layout_cmv4 )
@@ -33924,7 +33940,7 @@ GAMEL( 198?, cmpacmana,  cmpacman, cm,        cmpacman, cmaster_state,  init_cm,
 GAMEL( 198?, cmpacmanb,  cmpacman, cm,        cmpacman, cmaster_state,  init_cmpacmanb, ROT0, "<unknown>",               "Super Pacman (v1.2) + Cherry Master (Corsica, v8.31, encrypted)",          0,                                              layout_cmpacman ) // need to press K to switch between games...
 GAMEL( 198?, cmtetris,   0,        cm,        cmtetris, cmaster_state,  init_cm,        ROT0, "<unknown>",               "Tetris + Cherry Master (Corsica, v8.01, unencrypted, set 1)",              0,                                              layout_cmpacman ) // need to press K/L to switch between games...
 GAMEL( 198?, cmtetrisa,  cmtetris, cm,        cmtetris, cmaster_state,  init_cm,        ROT0, "<unknown>",               "Tetris + Cherry Master (Corsica, v8.01, unencrypted, set 2)",              0,                                              layout_cmpacman )
-GAMEL( 198?, cmtetrisb,  cmtetris, cm,        cmtetris, cmaster_state,  init_cm,        ROT0, "<unknown>",               "Tetris + Cherry Master (+K, Canada Version, encrypted)",                   MACHINE_NOT_WORKING,                            layout_cmpacman ) // different Tetris game. press insert to throttle and see the attract running.
+GAMEL( 198?, cmtetrisb,  cmtetris, cm,        cmtetris, cmaster_state,  init_cm,        ROT0, "<unknown>",               "Tetris + Cherry Master (+K, Canada Version, encrypted)",                   MACHINE_NOT_WORKING,                            layout_cmpacman ) // different Tetris game. incomplete program decryption. press insert to throttle and see the attract running.
 GAMEL( 198?, cmtetrisc,  cmtetris, cm,        cmtetris, cmaster_state,  init_cmtetrisc, ROT0, "<unknown>",               "Tetris + Cherry Master (Corsica, v8.01, encrypted)",                       0,                                              layout_cmpacman )
 GAMEL( 198?, cmtetrisd,  cmtetris, cm,        cmtetris, cmaster_state,  init_cmtetrisd, ROT0, "bootleg (Aidonis Games)", "Tetris + Cherry Master (Aidonis Games bootleg)",                           0,                                              layout_cmpacman ) // seems to have been hacked to run the slot game as default, see 0x8ba8
 GAMEL( 198?, cmtetrise,  cmtetris, cm,        cmtetris, cmaster_state,  empty_init,     ROT0, "bootleg",                 "Tetris + Cherry Master (unencrypted bootleg, set 1)",                      0,                                              layout_cmpacman ) // seems to have been hacked to run the slot game as default, see 0x8ba8

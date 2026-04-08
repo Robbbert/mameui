@@ -3,7 +3,7 @@
 // thanks-to:Achim, Berger
 /*******************************************************************************
 
-Novag Super System Peripheral: TV Interface
+Novag Super System peripheral: TV Interface
 
 It's a box that connects to a CRT TV, for showing an in-progress chess game.
 
