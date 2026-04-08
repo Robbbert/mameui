@@ -28,8 +28,7 @@ public:
 		driver_device(mconfig, type, tag),
 		m_io0(*this, "IO0"),
 		m_io1(*this, "IO1"),
-		m_exin(*this, "EXTRAIN%u", 0U),
-		m_prgrom(*this, "mainrom")
+		m_exin(*this, "EXTRAIN%u", 0U)
 	{ }
 
 protected:
@@ -50,11 +49,6 @@ protected:
 	uint8_t m_previous_port0;
 
 	optional_ioport_array<4> m_exin;
-
-	required_region_ptr<uint8_t> m_prgrom;
-
-	uint8_t vt_rom_r(offs_t offset);
-	[[maybe_unused]] void vtspace_w(offs_t offset, uint8_t data);
 
 	void configure_soc(nes_vt02_vt03_soc_device* soc);
 
@@ -297,63 +291,53 @@ private:
 };
 
 
-uint8_t nes_vt_base_state::vt_rom_r(offs_t offset)
-{
-	return m_prgrom[offset];
-}
-
-void nes_vt_base_state::vtspace_w(offs_t offset, uint8_t data)
-{
-	logerror("%s: vtspace_w %08x : %02x", machine().describe_context(), offset, data);
-}
-
 // VTxx can address 25-bit address space (32MB of ROM) so use maps with mirroring in depending on ROM size
 void nes_vt_state::vt_external_space_map_32mbyte(address_map &map)
 {
-	map(0x0000000, 0x1ffffff).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x1ffffff).rom().region("mainrom", 0);
 }
 
 void nes_vt_state::vt_external_space_map_16mbyte(address_map &map)
 {
-	map(0x0000000, 0x0ffffff).mirror(0x1000000).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x0ffffff).mirror(0x1000000).rom().region("mainrom", 0);
 }
 
 void nes_vt_state::vt_external_space_map_8mbyte(address_map &map)
 {
-	map(0x0000000, 0x07fffff).mirror(0x1800000).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x07fffff).mirror(0x1800000).rom().region("mainrom", 0);
 }
 
 void nes_vt_state::vt_external_space_map_4mbyte(address_map &map)
 {
-	map(0x0000000, 0x03fffff).mirror(0x1c00000).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x03fffff).mirror(0x1c00000).rom().region("mainrom", 0);
 }
 
 void nes_vt_state::vt_external_space_map_2mbyte(address_map &map)
 {
-	map(0x0000000, 0x01fffff).mirror(0x1e00000).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x01fffff).mirror(0x1e00000).rom().region("mainrom", 0);
 }
 
 void nes_vt_state::vt_external_space_map_1mbyte(address_map &map)
 {
-	map(0x0000000, 0x00fffff).mirror(0x1f00000).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x00fffff).mirror(0x1f00000).rom().region("mainrom", 0);
 }
 
 void nes_vt_state::vt_external_space_map_512kbyte(address_map &map)
 {
-	map(0x0000000, 0x007ffff).mirror(0x1f80000).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x007ffff).mirror(0x1f80000).rom().region("mainrom", 0);
 }
 
 // Win Lose Draw has RAM as well as ROM
 void nes_vt_swap_op_d5_d6_state::vt_external_space_map_senwld_512kbyte(address_map &map)
 {
-	map(0x0000000, 0x007ffff).r(FUNC(nes_vt_swap_op_d5_d6_state::vt_rom_r));
+	map(0x0000000, 0x007ffff).rom().region("mainrom", 0);
 	map(0x0100000, 0x010ffff).ram();
-	map(0x0180000, 0x01fffff).r(FUNC(nes_vt_swap_op_d5_d6_state::vt_rom_r));
+	map(0x0180000, 0x01fffff).rom().region("mainrom", 0);
 }
 
 void nes_vt_state::vt_external_space_map_1mbyte_majkon(address_map &map)
 {
-	map(0x0000000, 0x00fffff).mirror(0x1f00000).r(FUNC(nes_vt_state::vt_rom_r));
+	map(0x0000000, 0x00fffff).mirror(0x1f00000).rom().region("mainrom", 0);
 	map(0x1400000, 0x1401fff).ram(); // rush'n attack writes to chr space, after setting the program and character outer bank to a mirror, is the correct way to handle it?
 }
 

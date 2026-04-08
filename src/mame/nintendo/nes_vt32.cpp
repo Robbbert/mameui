@@ -24,8 +24,7 @@ public:
 		m_io0(*this, "IO0"),
 		m_io1(*this, "IO1"),
 		m_cartsel(*this, "CARTSEL"),
-		m_exin(*this, "EXTRAIN%u", 0U),
-		m_prgrom(*this, "mainrom")
+		m_exin(*this, "EXTRAIN%u", 0U)
 	{ }
 
 protected:
@@ -48,11 +47,6 @@ protected:
 
 	/* Misc */
 	uint32_t m_ahigh; // external banking bits
-
-	required_region_ptr<uint8_t> m_prgrom;
-
-	uint8_t vt_rom_r(offs_t offset);
-	[[maybe_unused]] void vtspace_w(offs_t offset, uint8_t data);
 
 	void configure_soc(nes_vt02_vt03_soc_device* soc);
 
@@ -88,7 +82,8 @@ class nes_vt32_unk_state : public nes_vt32_state
 {
 public:
 	nes_vt32_unk_state(const machine_config& mconfig, device_type type, const char* tag) :
-		nes_vt32_state(mconfig, type, tag)
+		nes_vt32_state(mconfig, type, tag),
+		m_prgrom(*this, "mainrom")
 	{ }
 
 	void nes_vt32_fp(machine_config& config);
@@ -100,10 +95,6 @@ public:
 
 	void nes_vt32_pal_32mb(machine_config& config);
 
-	void init_rfcp168();
-	void init_g9_666();
-	void init_hhgc319();
-
 protected:
 	uint8_t vt_rom_banked_r(offs_t offset);
 
@@ -112,47 +103,39 @@ private:
 
 	uint8_t fcpocket_412d_r();
 	void fcpocket_412c_w(uint8_t data);
+
+	required_region_ptr<uint8_t> m_prgrom;
 };
-
-uint8_t nes_vt32_base_state::vt_rom_r(offs_t offset)
-{
-	return m_prgrom[offset];
-}
-
-void nes_vt32_base_state::vtspace_w(offs_t offset, uint8_t data)
-{
-	logerror("%s: vtspace_w %08x : %02x", machine().describe_context(), offset, data);
-}
 
 // VTxx can address 25-bit address space (32MB of ROM) so use maps with mirroring in depending on ROM size
 void nes_vt32_state::vt_external_space_map_1mbyte(address_map &map)
 {
-	map(0x0000000, 0x00fffff).mirror(0x1f00000).r(FUNC(nes_vt32_state::vt_rom_r));
+	map(0x0000000, 0x00fffff).mirror(0x1f00000).rom().region("mainrom", 0);
 }
 
 void nes_vt32_state::vt_external_space_map_2mbyte(address_map &map)
 {
-	map(0x0000000, 0x01fffff).mirror(0x1e00000).r(FUNC(nes_vt32_state::vt_rom_r));
+	map(0x0000000, 0x01fffff).mirror(0x1e00000).rom().region("mainrom", 0);
 }
 
 void nes_vt32_state::vt_external_space_map_4mbyte(address_map &map)
 {
-	map(0x0000000, 0x03fffff).mirror(0x1c00000).r(FUNC(nes_vt32_state::vt_rom_r));
+	map(0x0000000, 0x03fffff).mirror(0x1c00000).rom().region("mainrom", 0);
 }
 
 void nes_vt32_state::vt_external_space_map_8mbyte(address_map &map)
 {
-	map(0x0000000, 0x07fffff).mirror(0x1800000).r(FUNC(nes_vt32_state::vt_rom_r));
+	map(0x0000000, 0x07fffff).mirror(0x1800000).rom().region("mainrom", 0);
 }
 
 void nes_vt32_state::vt_external_space_map_16mbyte(address_map &map)
 {
-	map(0x0000000, 0x0ffffff).mirror(0x1000000).r(FUNC(nes_vt32_state::vt_rom_r));
+	map(0x0000000, 0x0ffffff).mirror(0x1000000).rom().region("mainrom", 0);
 }
 
 void nes_vt32_state::vt_external_space_map_32mbyte(address_map &map)
 {
-	map(0x0000000, 0x1ffffff).r(FUNC(nes_vt32_state::vt_rom_r));
+	map(0x0000000, 0x1ffffff).rom().region("mainrom", 0);
 }
 
 
