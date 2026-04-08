@@ -127,7 +127,7 @@ void specnext_layer2_device::draw_256(screen_device &screen, bitmap_rgb32 &bitma
 			screen, bitmap, blendprio, clip, info, offset_h, offset_v,
 			[this, &blend_op] (u16 pen_base, const u8 *scr, u32 *pix, u8 *prio, u32 *bprio, u16 &hpos, u16 &vpos)
 			{
-				const u16 idx = pen_base + (*scr);
+				const u16 idx = pen_base + ((*scr + (m_palette_offset << 4)) % 0x100);
 				const rgb_t pen = palette().pen_color(idx);
 				const bool is_prio_color = m_pen_priority[idx];
 				blend_op(prio[0], pix[0], bprio[0], pen, is_prio_color);
@@ -155,14 +155,14 @@ void specnext_layer2_device::draw_16(screen_device &screen, bitmap_rgb32 &bitmap
 					hpos ^= 1;
 				else
 				{
-					const u16 idx = pen_base + (*scr >> 4);
+					const u16 idx = (pen_base | (m_palette_offset << 4)) + (*scr >> 4);
 					const rgb_t pen = palette().pen_color(idx);
 					const bool is_prio_color = m_pen_priority[idx];
 					blend_op(prio[0], pix[0], bprio[0], pen, is_prio_color);
 				}
 
 				{
-					const u16 idx = pen_base + (*scr & 0x0f);
+					const u16 idx = (pen_base | (m_palette_offset << 4)) + (*scr & 0x0f);
 					const rgb_t pen = palette().pen_color(idx);
 					const bool is_prio_color = m_pen_priority[idx];
 					blend_op(prio[1], pix[1], bprio[1], pen, is_prio_color);
@@ -176,9 +176,10 @@ void specnext_layer2_device::do_draw(screen_device &screen, bitmap_rgb32 &bitmap
 	if (clip.empty())
 		return;
 
-	const u16 pen_base = (m_layer2_palette_select ? m_palette_alt_offset : m_palette_base_offset) | (m_palette_offset << 4);
-	const u16 x_min = (((clip.left() - offset_h) >> 1) + m_scroll_x) % info[0];
-	const bool x_overscan = m_scroll_x >= info[0] && info[3] == 256;
+	const u16 pen_base = m_layer2_palette_select ? m_palette_alt_offset : m_palette_base_offset;
+	u16 x_min = ((clip.left() - offset_h) >> 1) + m_scroll_x;
+	const bool x_scrollover = m_scroll_x >= info[0] && info[3] == 256;
+	if (x_scrollover) x_min -= info[0];
 	for (u16 vpos = clip.top(); vpos <= clip.bottom(); vpos++)
 	{
 		const u16 y = (vpos - offset_v + m_scroll_y) % info[1];
@@ -192,7 +193,7 @@ void specnext_layer2_device::do_draw(screen_device &screen, bitmap_rgb32 &bitmap
 			plot_op(pen_base, scr, pix, prio, bprio, hpos, vpos);
 
 			++x %= info[0];
-			if (x == 0  && !x_overscan)
+			if (x == 0  && !x_scrollover)
 				scr = m_host_ram_ptr + (m_layer2_active_bank << 14) + (y * info[4]);
 			else
 				scr += info[3];

@@ -17,7 +17,9 @@ TODO:
 - IRQs are wrong and just stubbed enough to make it do something;
 - stops after showing first card. IRQ problem or protection? Some suspect reads with checks;
 - DIPs ports are correct but they don't affect the game / never change in the DIP test screen;
-- fully recover password (checked from 0x1ce6 on. It starts with 19490817 but where are last two digits checked?)
+
+NOTES:
+- default password is '19490817A0' (checked from 0x1ce6)
 */
 
 #include "emu.h"
@@ -80,10 +82,10 @@ void ps_m3_state::video_start()
 	m_tilemap[2] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_tile_info<2>)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
 	m_tilemap[3] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_tile_info<3>)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
 	// TODO
-	m_tilemap[4] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<4>)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_tilemap[5] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<5>)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_tilemap[6] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<6>)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
-	m_tilemap[7] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<7>)), TILEMAP_SCAN_ROWS, 8, 8, 64, 32);
+	m_tilemap[4] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<4>)), TILEMAP_SCAN_ROWS, 8, 16, 64, 32);
+	m_tilemap[5] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<5>)), TILEMAP_SCAN_ROWS, 8, 16, 64, 32);
+	m_tilemap[6] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<6>)), TILEMAP_SCAN_ROWS, 8, 16, 64, 32);
+	m_tilemap[7] = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(ps_m3_state::get_alt_tile_info<7>)), TILEMAP_SCAN_ROWS, 8, 16, 64, 32);
 
 	for (int i = 1; i < 0x08; i++)
 		m_tilemap[i]->set_transparent_pen(0);
@@ -102,10 +104,10 @@ TILE_GET_INFO_MEMBER(ps_m3_state::get_tile_info)
 template <uint8_t Which>
 TILE_GET_INFO_MEMBER(ps_m3_state::get_alt_tile_info)
 {
-	int const tile = m_vram[Which][tile_index * 2 + 1];
-	//int const color = ; // TODO
+	int const tile = m_vram[Which][tile_index * 2 + 1] & 0x1fff;
+	int const color = (m_vram[Which][tile_index * 2 + 1] & 0xe000) >> 13;
 
-	tileinfo.set(1, tile, 0, 0);
+	tileinfo.set(1, tile, color, 0);
 }
 
 template <uint8_t Which>
@@ -146,7 +148,7 @@ void ps_m3_state::program_map(address_map &map)
 {
 	map.unmap_value_high();
 	map(0x000000, 0x0fffff).rom();
-	map(0x400000, 0x40ffff).ram();
+	map(0x400000, 0x40ffff).ram().share("nvram");
 	map(0x800000, 0x801fff).ram().w(FUNC(ps_m3_state::vram_w<0>)).share(m_vram[0]);
 	map(0x802000, 0x803fff).ram().w(FUNC(ps_m3_state::vram_w<1>)).share(m_vram[1]);
 	map(0x804000, 0x805fff).ram().w(FUNC(ps_m3_state::vram_w<2>)).share(m_vram[2]);
@@ -325,10 +327,20 @@ static INPUT_PORTS_START( dreamcha )
 	PORT_BIT( 0xff00, IP_ACTIVE_LOW, IPT_UNUSED )
 INPUT_PORTS_END
 
+static const gfx_layout gfx_8x16x7 =
+{
+	8,16,
+	RGN_FRAC(1,1),
+	7,
+	{ 1,2,3,4,5,6,7 },
+	{ 0,8,16,24,32,40,48,56},
+	{ 0*64, 1*64, 2*64, 3*64, 4*64, 5*64, 6*64, 7*64, 8*64, 9*64, 10*64, 11*64, 12*64, 13*64, 14*64, 15*64 },
+	8*128
+};
 
 static GFXDECODE_START( gfx_ps_m3 )
-	GFXDECODE_ENTRY( "tiles", 0, gfx_8x8x4_planar, 0x1800, 0x10)
-	GFXDECODE_ENTRY( "tiles2", 0, gfx_16x16x8_raw, 0, 16 ) // TODO: wrong
+	GFXDECODE_ENTRY( "tiles", 0, gfx_8x8x4_planar, 0x0800, 0x100)
+	GFXDECODE_ENTRY( "tiles2", 0, gfx_8x16x7, 0, 16 )
 GFXDECODE_END
 
 
@@ -358,7 +370,7 @@ void ps_m3_state::ps_m3(machine_config &config)
 
 	TIMER(config, "scantimer").configure_scanline(FUNC(ps_m3_state::scanline_cb), "screen", 0, 1);
 
-	//NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
+	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	// video hardware
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER)); // TODO
@@ -392,20 +404,20 @@ ROM_START( dreamcha )
 	ROM_LOAD( "dhc2.u14", 0x100000, 0x80000, CRC(2047b3c7) SHA1(8a978ec50858570414e5caba0e7e2d9454464927) )
 	ROM_LOAD( "dhc3.u15", 0x180000, 0x80000, CRC(36686061) SHA1(dab490fafe886d05af1308d8ffd977e1aaf04ada) )
 
-	ROM_REGION( 0x100000, "tiles2", 0 ) // TODO: verify ROM loading
-	ROM_LOAD16_BYTE( "dhdc0.u16", 0x00000, 0x80000, CRC(f62cfca5) SHA1(76e89baebabe22b48db723d02504036cccc2286c) ) // FIXED BITS (0xxxxxxx). Is this correct? Dumps always the same on 2 different programmers
-	ROM_LOAD16_BYTE( "dhdc1.u17", 0x00001, 0x80000, CRC(1b11fa22) SHA1(57af78e979a50201d89ebdefe076cf538fc1d2dd) )
+	ROM_REGION( 0x100000, "tiles2", 0 ) // 7bpp background data
+	ROM_LOAD( "dhdc0.u16", 0x00000, 0x80000, CRC(f62cfca5) SHA1(76e89baebabe22b48db723d02504036cccc2286c) ) // FIXED BITS (0xxxxxxx) (correct)
+	ROM_LOAD( "dhdc1.u17", 0x80000, 0x80000, CRC(1b11fa22) SHA1(57af78e979a50201d89ebdefe076cf538fc1d2dd) )
 
 	ROM_REGION( 0x100000, "oki", 0 ) // TODO: verify how it's banked and adjust ROM loading accordingly
 	ROM_LOAD( "dhs0.u29", 0x00000, 0x80000, CRC(a0dccbd0) SHA1(5771e1729c33bd0851d566ac50de9e9b1ae8ae57) ) // 0xxxxxxxxxxxxxxxxxx = 0xFF
 	ROM_LOAD( "dhs1.u28", 0x80000, 0x80000, CRC(4ecb8245) SHA1(55bbd2fb1215d1b4b8d53beb08f901b213922ff8) ) // 1xxxxxxxxxxxxxxxxxx = 0xFF
 
-	//ROM_REGION( 0x4000, "nvram", ROMREGION_ERASE00 ) // to bypass license expiration
-	// TODO
+	ROM_REGION( 0x10000, "nvram", ROMREGION_ERASE00 ) // to bypass license expiration / password
+	ROM_LOAD( "nvram", 0x00000, 0x10000, CRC(8e5fcbe0) SHA1(b9a03e4023870a66091bbf2f67853b91fc8ebad0) )
 ROM_END
 
 } // anonymous namespace
 
 
 // possibly Dream Chance
-GAME( 2004, dreamcha, 0, ps_m3, dreamcha, ps_m3_state, empty_init, ROT0, "Paradise", "Dream Chance", MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 2004, dreamcha, 0, ps_m3, dreamcha, ps_m3_state, empty_init, ROT0, "Able Corporation / Light Corporation / Paradise Electronics", "Dream Hold", MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_SUPPORTS_SAVE )

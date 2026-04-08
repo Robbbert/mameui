@@ -115,7 +115,7 @@ void sound_module::abuffer::flush_buffers(uint32_t remain)
 		m_used_buffers = remain;
 	}
 
-	if (!m_used_buffers || samples > (m_buffers[0].data.size() / m_channels - m_buffers[0].cpos))
+	if(!m_used_buffers || samples > (m_buffers[0].data.size() / m_channels - m_buffers[0].cpos))
 		return;
 	int16_t *dest = &m_buffers[0].data[m_channels * m_buffers[0].cpos];
 

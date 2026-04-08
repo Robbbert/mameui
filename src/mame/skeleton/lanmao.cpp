@@ -23,11 +23,14 @@ Oki M6295 (or clone, not readable)
 1 MHz resonator
 3x switch
 
-TODO (both):
+TODO (all):
 - SVG / less simplistic layout?
 
 TODO (panda2):
 - stuck at error 02 (missing meter counter)
+
+TODO (msaiche):
+- doesn't coin up
 
 Schematics and manual with list of error codes are available.
 
@@ -476,6 +479,17 @@ ROM_START( panda2 )
 	ROM_LOAD( "at28c16.u9", 0x000, 0x800, CRC(bd67af27) SHA1(19d19bf00fbe8573e13fb6026db31889023d4194) )
 ROM_END
 
+ROM_START( msaiche ) // 玛莉赛车 (Mǎlì Sàichē - Mario Racing)
+	ROM_REGION( 0x8000, "maincpu", 0 )
+	ROM_LOAD( "w78e065", 0x0000, 0x8000, CRC(dd945526) SHA1(96f6ff1329a90fdfbb276a49bcd1926122da2012) )
+
+	ROM_REGION( 0x800, "at28c16", 0 )
+	ROM_LOAD( "at28c16.u9", 0x000, 0x800, CRC(bd67af27) SHA1(19d19bf00fbe8573e13fb6026db31889023d4194) ) // same as panda2?
+
+	ROM_REGION( 0x800, "nvram", 0 )
+	ROM_LOAD( "nvram", 0x000, 0x800, CRC(eba9271c) SHA1(1c7308f83b7f016c11d83055de09029104702c19) ) // pre-initialized
+ROM_END
+
 ROM_START( lanmao )
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "w78e065", 0x00000, 0x10000, CRC(57a89c7f) SHA1(be54c40ae17df1155b2aaa67b4b0bf45d307eba1) ) // 1xxxxxxxxxxxxxxx = 0xFF
@@ -493,5 +507,6 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1996, panda2, 0, panda2, panda2, panda2_state, empty_init, ROT0, "Kelly",                       "Panda 2", MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING | MACHINE_MECHANICAL )
-GAME( 2003, lanmao, 0, lanmao, lanmao, lanmao_state, empty_init, ROT0, "Changsheng Electric Company", "Lan Mao", MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING | MACHINE_MECHANICAL )
+GAME( 1991, msaiche, 0, panda2, panda2, panda2_state, empty_init, ROT0, "Hengfa Electronics",          "Mali Saiche", MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING | MACHINE_MECHANICAL )
+GAME( 1996, panda2,  0, panda2, panda2, panda2_state, empty_init, ROT0, "Kelly",                       "Panda 2",     MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING | MACHINE_MECHANICAL )
+GAME( 2003, lanmao,  0, lanmao, lanmao, lanmao_state, empty_init, ROT0, "Changsheng Electric Company", "Lan Mao",     MACHINE_IMPERFECT_SOUND | MACHINE_NOT_WORKING | MACHINE_MECHANICAL )

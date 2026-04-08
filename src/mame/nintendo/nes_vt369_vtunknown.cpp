@@ -67,7 +67,6 @@ protected:
 
 	required_region_ptr<u8> m_prgrom;
 
-	u8 vt_rom_r(offs_t offset);
 	void configure_soc(nes_vt02_vt03_soc_device* soc);
 
 	void extbank_w(u8 data);
@@ -208,11 +207,6 @@ void vt36x_tetrtin_state::machine_reset()
 	}
 }
 
-u8 vt369_base_state::vt_rom_r(offs_t offset)
-{
-	return m_prgrom[offset];
-}
-
 u8 vt369_state::vt_rom_banked_r(offs_t offset)
 {
 	return m_prgrom[m_ahigh | offset];
@@ -221,7 +215,7 @@ u8 vt369_state::vt_rom_banked_r(offs_t offset)
 // VTxx can address 25-bit address space (32MB of ROM) so use maps with mirroring in depending on ROM size
 void vt369_state::vt_external_space_map_32mbyte(address_map &map)
 {
-	map(0x0000000, 0x1ffffff).r(FUNC(vt369_state::vt_rom_r));
+	map(0x0000000, 0x1ffffff).rom().region("mainrom", 0);
 }
 
 void vt369_state::vt_external_space_map_32mbyte_bank(address_map &map)
@@ -231,32 +225,32 @@ void vt369_state::vt_external_space_map_32mbyte_bank(address_map &map)
 
 void vt369_state::vt_external_space_map_16mbyte(address_map &map)
 {
-	map(0x0000000, 0x0ffffff).mirror(0x1000000).r(FUNC(vt369_state::vt_rom_r));
+	map(0x0000000, 0x0ffffff).mirror(0x1000000).rom().region("mainrom", 0);
 }
 
 void vt369_state::vt_external_space_map_8mbyte(address_map &map)
 {
-	map(0x0000000, 0x07fffff).mirror(0x1800000).r(FUNC(vt369_state::vt_rom_r));
+	map(0x0000000, 0x07fffff).mirror(0x1800000).rom().region("mainrom", 0);
 }
 
 void vt369_state::vt_external_space_map_4mbyte(address_map &map)
 {
-	map(0x0000000, 0x03fffff).mirror(0x1c00000).r(FUNC(vt369_state::vt_rom_r));
+	map(0x0000000, 0x03fffff).mirror(0x1c00000).rom().region("mainrom", 0);
 }
 
 void vt369_state::vt_external_space_map_2mbyte(address_map &map)
 {
-	map(0x0000000, 0x01fffff).mirror(0x1e00000).r(FUNC(vt369_state::vt_rom_r));
+	map(0x0000000, 0x01fffff).mirror(0x1e00000).rom().region("mainrom", 0);
 }
 
 void vt369_state::vt_external_space_map_1mbyte(address_map &map)
 {
-	map(0x0000000, 0x00fffff).mirror(0x1f00000).r(FUNC(vt369_state::vt_rom_r));
+	map(0x0000000, 0x00fffff).mirror(0x1f00000).rom().region("mainrom", 0);
 }
 
 void vt369_state::vt_external_space_map_512kbyte(address_map &map)
 {
-	map(0x0000000, 0x007ffff).mirror(0x1f80000).r(FUNC(vt369_state::vt_rom_r));
+	map(0x0000000, 0x007ffff).mirror(0x1f80000).rom().region("mainrom", 0);
 }
 
 template <u8 NUM> u8 vt369_base_state::extrain_r()
@@ -486,13 +480,13 @@ void vt36x_state::vt36x_gbox2020_8mb(machine_config &config)
 	configure_soc(m_soc);
 	//m_soc->set_default_palette_mode(PAL_MODE_NEW_RGB);
 	m_soc->force_bad_dma();
-	m_soc->set_addrmap(AS_PROGRAM, &vt36x_state::vt_external_space_map_16mbyte);
+	m_soc->set_addrmap(AS_PROGRAM, &vt36x_state::vt_external_space_map_8mbyte);
 }
 
 void vt36x_state::vt36x_gbox2020_16mb(machine_config &config)
 {
 	vt36x_gbox2020_8mb(config);
-	m_soc->set_addrmap(AS_PROGRAM, &vt36x_state::vt_external_space_map_8mbyte);
+	m_soc->set_addrmap(AS_PROGRAM, &vt36x_state::vt_external_space_map_16mbyte);
 }
 
 void vt36x_state::vt36x_s10swap_8mb(machine_config &config)
