@@ -27224,7 +27224,7 @@ ROM_END
 
 ROM_START( eldoraddoac )  // Dyna ELD2 V1.2D (string in ROM)
 	ROM_REGION( 0x10000, "maincpu", 0 )
-	ROM_LOAD( "512.h12", 0x00000, 0x10000, CRC(072ce59f) SHA1(683e5169f536e4cea124307b0d5a0321660a9c74) )
+	ROM_LOAD( "512.h12", 0x00000, 0x10000, CRC(4d6fce75) SHA1(4a3bb668add4ccb6b144ca26bfc8fa4b40f883f2) )
 
 	ROM_REGION( 0x20000, "gfx1", 0 )
 	ROM_LOAD( "el9a.d10", 0x00000, 0x20000, CRC(ee7b1537) SHA1(e10b2f3c9291d836782148c4ae388c94ee47a964) )
@@ -33775,9 +33775,9 @@ GAME(  1993, missbingoc, crazybonb, crazybonb, crazybonb, cmaster_state, init_cr
 GAME(  199?, chthree,    cmaster,   cm,        cmaster,   cmaster_state, init_chthree,   ROT0, "Promat",             "Channel Three",                                0 ) // hack of cmaster, still shows DYNA CM-1 V1.01 in book-keeping
 
 // Dyna D9101 PCB
-GAMEL( 1991, eldoraddoa,  0         , animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",               "El Dorado (V1.4D)",                          0,                   layout_animalhs )
-GAMEL( 1991, eldoraddoab, eldoraddoa, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna / Grayhound",   "El Dorado (V1.5U, Dyna/Grayhound)",          0,                   layout_animalhs )
-GAMEL( 1991, eldoraddoac, eldoraddoa, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",               "El Dorado (V1.2D)",                          0,                   layout_animalhs ) // different custom ICs
+GAMEL( 1991, eldoraddoa,  0         , animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",               "El Dorado (Dyna D9101 HW, V1.4D)",                 0,             layout_animalhs )
+GAMEL( 1991, eldoraddoab, eldoraddoa, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna / Grayhound",   "El Dorado (Dyna D9101 HW, V1.5U, Dyna/Grayhound)", 0,             layout_animalhs )
+GAMEL( 1991, eldoraddoac, eldoraddoa, animalhs, eldoradoa, cmaster_state, init_eldoraddoa, ROT0, "Dyna",               "El Dorado (Dyna D9101 HW, V1.2D)",                 0,             layout_animalhs ) // original with different custom ICs
 GAMEL( 1991, animalhs,    0,          animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",       "Animal House (V1.0, set 1)",                 0,                   layout_animalhs )
 GAMEL( 1991, animalhsa,   animalhs,   animalhs, animalhs,  cmaster_state, init_animalhs,   ROT0, "Suns Co Ltd.",       "Animal House (V1.0, set 2)",                 0,                   layout_animalhs )
 
