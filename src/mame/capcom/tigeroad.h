@@ -8,6 +8,7 @@
 #include "cpu/z80/z80.h"
 #include "cpu/mcs51/i8051.h"
 #include "machine/gen_latch.h"
+#include "machine/timer.h"
 #include "sound/msm5205.h"
 #include "sound/ymopn.h"
 #include "video/bufsprite.h"
@@ -25,8 +26,8 @@ public:
 		, m_audiocpu(*this, "audiocpu")
 		, m_soundlatch(*this, "soundlatch")
 		, m_palette(*this, "palette")
-		, m_has_coinlock(true)
 		, m_spriteram(*this, "spriteram")
+		, m_has_coinlock(true)
 		, m_videoram(*this, "videoram")
 		, m_bgmap(*this, "bgmap")
 		, m_msm(*this, "msm")
@@ -45,7 +46,9 @@ protected:
 	required_device<cpu_device> m_audiocpu;
 	required_device<generic_latch_8_device> m_soundlatch;
 	required_device<palette_device> m_palette;
+	required_device<buffered_spriteram16_device> m_spriteram;
 
+	TIMER_DEVICE_CALLBACK_MEMBER(scanline);
 	void soundcmd_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 	void videoram_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 	void videoctrl_w(u8 data);
@@ -58,7 +61,6 @@ protected:
 	bool m_has_coinlock;
 
 private:
-	required_device<buffered_spriteram16_device> m_spriteram;
 	required_shared_ptr<u16> m_videoram;
 	required_region_ptr<u16> m_bgmap;
 	optional_device<msm5205_device> m_msm;

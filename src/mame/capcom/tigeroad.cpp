@@ -22,6 +22,9 @@ TODO:
   010C6C: 207B 000E      movea.l ($e,PC,D0.w), A0   ; table from 0x10c7c onward
   010C70: 4E90           jsr     (A0)               ; throws address error here
   None of the available 5 vectors seems to fit here.
+  A full playthrough takes about half an hour. A faster way to test it is by
+  enabling all the cheats while running MAME unthrottled, and 'play' by looking
+  at the minimap. This comes with the risk that cheats might affect the bug.
 - what's up with the OBJ RAM test going up to 0xfe1807? address mirror?
 
 BTANB:
@@ -89,6 +92,19 @@ void tigeroad_state::msm5205_w(u8 data)
 	m_msm->data_w(data & 0xf);
 }
 
+TIMER_DEVICE_CALLBACK_MEMBER(tigeroad_state::scanline)
+{
+	const int scanline = param;
+
+	// vblank interrupt is on IRQ2
+	if (scanline == 240)
+		m_maincpu->set_input_line(2, HOLD_LINE);
+
+	// IRQ4 112 scanlines before IRQ2
+	if (scanline == 128)
+		m_maincpu->set_input_line(4, HOLD_LINE);
+}
+
 
 // F1 Dream protection
 
@@ -134,14 +150,14 @@ void tigeroad_state::main_map(address_map &map)
 	map(0x000000, 0x03ffff).rom();
 
 	map(0xfe0800, 0xfe0cff).ram().share("spriteram");
-	map(0xfe0d00, 0xfe1807).ram();     // still part of OBJ RAM
+	map(0xfe0d00, 0xfe1807).ram(); // still part of OBJ RAM
 	map(0xfe4000, 0xfe4001).portr("P1_P2");
-	map(0xfe4000, 0xfe4000).w(FUNC(tigeroad_state::videoctrl_w));   // char bank, coin counters, + ?
+	map(0xfe4000, 0xfe4000).w(FUNC(tigeroad_state::videoctrl_w)); // char bank, coin counters, + ?
 	map(0xfe4002, 0xfe4003).portr("SYSTEM");
 	map(0xfe4002, 0xfe4002).w(m_soundlatch, FUNC(generic_latch_8_device::write));
 	map(0xfe4004, 0xfe4005).portr("DSW");
 	map(0xfe8000, 0xfe8003).w(FUNC(tigeroad_state::scroll_w));
-	map(0xfe800e, 0xfe800f).nopw();    // fe800e = watchdog or IRQ acknowledge or sprite DMA
+	map(0xfe800e, 0xfe800f).w(m_spriteram, FUNC(buffered_spriteram16_device::write)); // should only work in vblank
 	map(0xfec000, 0xfec7ff).ram().w(FUNC(tigeroad_state::videoram_w)).share("videoram");
 
 	map(0xff8000, 0xff87ff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
@@ -182,7 +198,7 @@ void pushman_state::bballs_map(address_map &map)
 	map(0xe4002, 0xe4002).w(m_soundlatch, FUNC(generic_latch_8_device::write));
 	map(0xe4004, 0xe4005).portr("DSW");
 	map(0xe8000, 0xe8003).w(FUNC(pushman_state::scroll_w));
-	map(0xe800e, 0xe800f).nopw(); // ?
+	map(0xe800e, 0xe800f).w(m_spriteram, FUNC(buffered_spriteram16_device::write));
 	map(0xec000, 0xec7ff).ram().w(FUNC(pushman_state::videoram_w)).share("videoram");
 
 	map(0xf8000, 0xf87ff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
@@ -640,10 +656,11 @@ void tigeroad_state::tigeroad(machine_config &config)
 	// basic machine hardware
 	M68000(config, m_maincpu, 10_MHz_XTAL); // verified on pcb
 	m_maincpu->set_addrmap(AS_PROGRAM, &tigeroad_state::main_map);
-	m_maincpu->set_vblank_int("screen", FUNC(tigeroad_state::irq2_line_hold));
 
 	Z80(config, m_audiocpu, 3.579545_MHz_XTAL); // verified on pcb
 	m_audiocpu->set_addrmap(AS_PROGRAM, &tigeroad_state::sound_map);
+
+	TIMER(config, "scantimer").configure_scanline(FUNC(tigeroad_state::scanline), "screen", 128, 112);
 
 	// video hardware
 	BUFFERED_SPRITERAM16(config, "spriteram");
@@ -651,7 +668,6 @@ void tigeroad_state::tigeroad(machine_config &config)
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_raw(24_MHz_XTAL / 4, 384, 0, 256, 260, 16, 240);
 	screen.set_screen_update(FUNC(tigeroad_state::screen_update));
-	screen.screen_vblank().set("spriteram", FUNC(buffered_spriteram16_device::vblank_copy_rising));
 	screen.set_palette(m_palette);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_tigeroad);
@@ -718,11 +734,12 @@ void tigeroad_state::f1dream_comad(machine_config &config) // COMAD-01 PCB with 
 	// basic machine hardware
 	M68000(config, m_maincpu, 10_MHz_XTAL);
 	m_maincpu->set_addrmap(AS_PROGRAM, &tigeroad_state::main_map);
-	m_maincpu->set_vblank_int("screen", FUNC(tigeroad_state::irq2_line_hold));
 
 	Z80(config, m_audiocpu, 8_MHz_XTAL / 2); // 4MHz
 	m_audiocpu->set_addrmap(AS_PROGRAM, &tigeroad_state::comad_sound_map);
 	m_audiocpu->set_addrmap(AS_IO, &tigeroad_state::comad_sound_io_map);
+
+	TIMER(config, "scantimer").configure_scanline(FUNC(tigeroad_state::scanline), "screen", 128, 112);
 
 	// video hardware
 	BUFFERED_SPRITERAM16(config, "spriteram");
@@ -730,7 +747,6 @@ void tigeroad_state::f1dream_comad(machine_config &config) // COMAD-01 PCB with 
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_raw(24_MHz_XTAL / 4, 384, 0, 256, 260, 16, 240); // assume same as tigeroad
 	screen.set_screen_update(FUNC(tigeroad_state::screen_update));
-	screen.screen_vblank().set("spriteram", FUNC(buffered_spriteram16_device::vblank_copy_rising));
 	screen.set_palette(m_palette);
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_tigeroad);

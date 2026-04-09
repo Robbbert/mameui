@@ -200,7 +200,7 @@ void bionicc_state::main_map(address_map &map)
 	map(0xe4002, 0xe4002).mirror(0x3ffc).w(FUNC(bionicc_state::audiocpu_nmi_w));
 	map(0xe4002, 0xe4003).mirror(0x3ffc).portr("DSW");
 	map(0xe8010, 0xe8017).w(FUNC(bionicc_state::scroll_w));
-	map(0xe8018, 0xe8019).w(m_spriteram, FUNC(buffered_spriteram16_device::write));
+	map(0xe8018, 0xe8019).w(m_spriteram, FUNC(buffered_spriteram16_device::write)); // should only work in vblank?
 	map(0xe801a, 0xe801b).w(FUNC(bionicc_state::dmaon_w));
 	map(0xec000, 0xecfff).mirror(0x3000).ram().w(FUNC(bionicc_state::txvideoram_w)).share("txvideoram");
 	map(0xf0000, 0xf3fff).ram().w(FUNC(bionicc_state::fgvideoram_w)).share("fgvideoram");
