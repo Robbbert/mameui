@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 719 -->
+<!-- Number of items in this list = 723 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1252,6 +1252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxee4cea6057884">
+		<description>Champion Billiards (2020)(Mastropiero)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Champion Billiards (2020)(Mastropiero).rom" size="32768" crc="6e647e49" sha1="ee4cea6057884916a2f67b5a09a9af591af04c85"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx9c59ad2426f87">
 		<description>Champions Grand National (Jpn)(1984)(Pony Canyon)</description>
 		<year>????</year>
@@ -1419,6 +1429,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Computer Billiards (1983)(Konami - Sony)[a].rom" size="16384" crc="4faa985b" sha1="0d8b7fffbaccddcae324e38f7f85722ece8d5976"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe81cea60b72e5">
+		<description>Congo Bongo - The Isometric Edition (2026)(Mastropiero)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Congo Bongo - The Isometric Edition (2026)(Mastropiero).rom" size="32768" crc="3c403f70" sha1="e81cea60b72e5facd86833bafd53eeaab5821310"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5732,6 +5752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxc510b591be1fd">
+		<description>Super Pac-Man (2026)(Mastropiero)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Super Pac-Man (2026)(Mastropiero).rom" size="16384" crc="e90ca974" sha1="c510b591be1fd68e38aab8073e4969a6fdba6661"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxfeaa75bbe0b99">
 		<description>Super Pierrot (1987)(Nippon Columbia - Universal)</description>
 		<year>????</year>
@@ -5759,6 +5789,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Super Runner (1987)(Pony Canyon).rom" size="131072" crc="ed2118ab" sha1="1ab38b014480745eaae143c9e6f67b542e62442f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa3c790aaa4511">
+		<description>Super Tank (2026)(Mastropiero)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Super Tank (2026)(Mastropiero).rom" size="32768" crc="a0b9e89d" sha1="a3c790aaa45115b40004b51e2d15c1a874982ccf"/>
 			</dataarea>
 		</part>
 	</software>
