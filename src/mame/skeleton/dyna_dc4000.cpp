@@ -389,14 +389,14 @@ ROM_END
 
 
 // Dyna D9106 / D9106B / D9106C PCB
-GAME(  1991, eldoradd,   0,        d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (V5.1DR)",        MACHINE_NOT_WORKING )
-GAME(  1991, aladdin,    0,        d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "The Aladdin (V1.2U)",       MACHINE_NOT_WORKING )
-GAME(  1991, aladdina,   aladdin,  d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "The Aladdin (V1.1A)",       MACHINE_NOT_WORKING )
-GAME(  1992, cmast92,    0,        d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "Cherry Master '92 (V1.2D)", MACHINE_NOT_WORKING )
-GAME(  1992, cmast92a,   cmast92,  d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "Cherry Master '92 (V1.1D)", MACHINE_NOT_WORKING )
+GAME(  1991, eldoradd,   0,        d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (Dyna D9106 HW, V5.1DR)", MACHINE_NOT_WORKING )
+GAME(  1991, aladdin,    0,        d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "The Aladdin (V1.2U)",               MACHINE_NOT_WORKING )
+GAME(  1991, aladdina,   aladdin,  d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "The Aladdin (V1.1A)",               MACHINE_NOT_WORKING )
+GAME(  1992, cmast92,    0,        d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "Cherry Master '92 (V1.2D)",         MACHINE_NOT_WORKING )
+GAME(  1992, cmast92a,   cmast92,  d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "Cherry Master '92 (V1.1D)",         MACHINE_NOT_WORKING )
 
 // Dyna D9105 PCB
-GAME(  1991, eldoraddo,  eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (V1.1TA)",        MACHINE_NOT_WORKING )
-GAME(  1991, eldoraddob, eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (V2.0D)",         MACHINE_NOT_WORKING )
-GAME(  1991, eldoraddoc, eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (V1.1J)",         MACHINE_NOT_WORKING )
-GAME(  1991, eldoraddod, eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (V1.1U)",         MACHINE_NOT_WORKING )
+GAME(  1991, eldoraddo,  eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (Dyna D9105 HW, V1.1TA)", MACHINE_NOT_WORKING )
+GAME(  1991, eldoraddob, eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (Dyna D9105 HW, V2.0D)",  MACHINE_NOT_WORKING )
+GAME(  1991, eldoraddoc, eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (Dyna D9105 HW, V1.1J)",  MACHINE_NOT_WORKING )
+GAME(  1991, eldoraddod, eldoradd, d9106, default, dyna_dc4000_state, empty_init, ROT0, "Dyna", "El Dorado (Dyna D9105 HW, V1.1U)",  MACHINE_NOT_WORKING )

@@ -37,7 +37,7 @@ Hardware notes:
 
 ================================================================================
 
-Novag Chess Teacher (model 9306)
+Novag Chess Teacher (model 9306) (aka Professeur d'Echecs Novag)
 --------------------------------
 
 Unlike references online claiming it's a Sapphire in disguise, Chess Teacher is
