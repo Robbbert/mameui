@@ -74,24 +74,22 @@
       dword RAM location. The dword RAM location is rotated by 8 bits each time
       this happens. This is probably done to be pedantic about coin insertions
       (might be protection related).
-
-    TODO:
-    - Firing IRQ4 at line 16 causes the game to often miss coin inserts. Set
-      to 128 currently to compensate.
-    - The game doesn't set the coin lockout in service mode, so the coin inputs
-      can't be tested there if you uncomment and enable it.
+    - Coin lockouts are set in service mode, assumed deliberate as you can
+      still press the physical coin switches. In MAME, set -nocoinlock to
+      be able to test the coin inputs.
 
 ***************************************************************************/
 
 #include "emu.h"
 
+#include "tigeroad_spr.h"
+
 #include "cpu/m68000/m68000.h"
 #include "cpu/mcs51/i8051.h"
 #include "cpu/z80/z80.h"
 #include "machine/timer.h"
-#include "video/bufsprite.h"
-#include "tigeroad_spr.h"
 #include "sound/ymopm.h"
+#include "video/bufsprite.h"
 
 #include "emupal.h"
 #include "screen.h"
@@ -600,21 +598,19 @@ void bionicc_state::output_w(u8 data)
 
 	flip_screen_set(BIT(data, 0));
 
-	// commented out, else you can't test the coin inputs in service mode
-//  machine().bookkeeping().coin_lockout_w(1, BIT(~data, 4));
-//  machine().bookkeeping().coin_lockout_w(0, BIT(~data, 5));
+	machine().bookkeeping().coin_lockout_w(1, BIT(~data, 4));
+	machine().bookkeeping().coin_lockout_w(0, BIT(~data, 5));
 	machine().bookkeeping().coin_counter_w(1, BIT(data, 6));
 	machine().bookkeeping().coin_counter_w(0, BIT(data, 7));
 }
 
 TIMER_DEVICE_CALLBACK_MEMBER(bionicc_state::scanline)
 {
-	// vblank-out irq - drives the game (V256?)
+	// IRQ2 is vblank (drives the game)
 	if (param == 240)
 		m_maincpu->set_input_line(2, HOLD_LINE);
 
-	// vblank-in irq - processes inputs (!LVBL)
-	// should be 16? but then often loses coin inserts
+	// IRQ4 processes inputs
 	if (param == 128)
 		m_maincpu->set_input_line(4, HOLD_LINE);
 }
