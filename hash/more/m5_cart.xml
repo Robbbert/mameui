@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 47 -->
+<!-- Number of items in this list = 46 -->
 <softwarelist name="m5_cart" description="m5_cart loose roms">
 	<software name="m51017b98d9a193f">
 		<description>Aerial</description>
@@ -449,16 +449,6 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8320">
 				<rom name="wonder hole (1982)(irem)(jp)(put into cart2,require em_5 in cart1).bin" size="8320" crc="aba2cece" sha1="bcb7442c6d320eb166e224c3ac0f50514906ad4c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="m5667f09f256bd8b">
-		<description>Wonder Hole (1982)(Irem)(JP)[Req 36k RAM]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="m5_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Wonder Hole (1982)(Irem)(JP)[Req 36k RAM].bin" size="8192" crc="5274f575" sha1="667f09f256bd8b2fb7f77681d10426970961490f"/>
 			</dataarea>
 		</part>
 	</software>

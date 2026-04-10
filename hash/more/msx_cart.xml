@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 723 -->
+<!-- Number of items in this list = 722 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1249,16 +1249,6 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="ChacknPop.rom" size="16384" crc="4520e867" sha1="1a0bf0846cc8767100cb89786a47f22af062a027"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="msxee4cea6057884">
-		<description>Champion Billiards (2020)(Mastropiero)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="msx_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Champion Billiards (2020)(Mastropiero).rom" size="32768" crc="6e647e49" sha1="ee4cea6057884916a2f67b5a09a9af591af04c85"/>
 			</dataarea>
 		</part>
 	</software>

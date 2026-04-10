@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 200 -->
+<!-- Number of items in this list = 199 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -949,16 +949,6 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Crest of Gaia (Gaia no Monshou) [tr En 1.0e Derrick Sobodash].pce" size="262144" crc="8d782f5d" sha1="98583505f00c1c08483c74b0574d62f063766416"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pce5bbf5e6bd3d2c">
-		<description>Daichi Kun Crisis - Do Natural (Japan)(1989)(Salio)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pce_cart">
-			<dataarea name="rom" size="393216">
-				<rom name="Daichi Kun Crisis - Do Natural (Japan)(1989)(Salio).pce" size="393216" crc="61a2935f" sha1="5bbf5e6bd3d2cda38c3a6ef8189a159aaf709a98"/>
 			</dataarea>
 		</part>
 	</software>
