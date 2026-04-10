@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 199 -->
+<!-- Number of items in this list = 200 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -172,16 +172,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pce97849edf5ceb8">
-		<description>(demo)FireTag V.01 [PD] (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pce_cart">
-			<dataarea name="rom" size="98816">
-				<rom name="(demo)FireTag V.01 [PD] (2).pce" size="98816" crc="4f736d78" sha1="97849edf5ceb80eb5d419c14c52034a0683fa89d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pcedfe65e27ed7b9">
 		<description>(demo)FireTag V.01 [PD]</description>
 		<year>????</year>
@@ -189,6 +179,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="98304">
 				<rom name="(demo)FireTag V.01 [PD].pce" size="98304" crc="dbced057" sha1="dfe65e27ed7b9cc12eed83aa99fe1a2315387173"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce97849edf5ceb8">
+		<description>(demo)FireTag V.01 [PD]_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="98816">
+				<rom name="(demo)FireTag V.01 [PD]_1.pce" size="98816" crc="4f736d78" sha1="97849edf5ceb80eb5d419c14c52034a0683fa89d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -312,16 +312,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pce55e176fc0b506">
-		<description>(demo)Speech Demo (-)(16ton) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="pce_cart">
-			<dataarea name="rom" size="246272">
-				<rom name="(demo)Speech Demo (-)(16ton) (2).pce" size="246272" crc="2900e62d" sha1="55e176fc0b506fcb039d241469a7d7aeba3a02e6"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pce8ca21c07a3da3">
 		<description>(demo)Speech Demo (-)(16ton)</description>
 		<year>????</year>
@@ -329,6 +319,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="245760">
 				<rom name="(demo)Speech Demo (-)(16ton).pce" size="245760" crc="2bcd3d7b" sha1="8ca21c07a3da391f45c6e59cf3d258a60a5dc27f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce55e176fc0b506">
+		<description>(demo)Speech Demo (-)(16ton)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="246272">
+				<rom name="(demo)Speech Demo (-)(16ton)_1.pce" size="246272" crc="2900e62d" sha1="55e176fc0b506fcb039d241469a7d7aeba3a02e6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1119,6 +1119,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Fortress of Necros T-Eng v1.2 (2025)(washbear).pce" size="524288" crc="6cebf8b7" sha1="bb86c0bef7a18b870ecf3e3f0593b871d8f35e6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcec3629adf5f211">
+		<description>Fortress of Necros T-Eng v1.3 (2025-26)(washbear)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Fortress of Necros T-Eng v1.3 (2025-26)(washbear).pce" size="524288" crc="e4965ab6" sha1="c3629adf5f211d5efc4d345c743181dac01af541"/>
 			</dataarea>
 		</part>
 	</software>

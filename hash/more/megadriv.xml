@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2066 -->
+<!-- Number of items in this list = 2068 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -13292,6 +13292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb18d1de937310">
+		<description>PuzzuL SwaP - Rev. 02 (2023-24)(GF64)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="PuzzuL SwaP - Rev. 02 (2023-24)(GF64).bin" size="524288" crc="4e1660f2" sha1="b18d1de937310bd7cc7c8ca0d55b70f105834dac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen640309b14b11b">
 		<description>quack shot starring donald duck (Hack, Spanish)</description>
 		<year>????</year>
@@ -19159,6 +19169,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="tom clown (unl) [f1].bin" size="524288" crc="bd741108" sha1="c235827e27eed98130e9da98f9b58c2e37cff8e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen50f9db4f91533">
+		<description>Toogle - Rev 01 (2025)(Dune)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Toogle - Rev 01 (2025)(Dune).bin" size="786432" crc="793b87c5" sha1="50f9db4f9153390c1f69561f640572c9e45c3bcc"/>
 			</dataarea>
 		</part>
 	</software>
