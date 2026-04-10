@@ -18,17 +18,75 @@ and GROM clocked by 3.12MHz/8=390kHz.
 *******************************************************************************/
 
 #include "emu.h"
+
 #include "cpu/m6805/m68705.h"
 #include "machine/clock.h"
 #include "machine/tmc0430.h"
 #include "sound/sp0250.h"
+
 #include "speaker.h"
 
 // internal artwork
 #include "milton.lh"
 
-class milton_filter_device;
 
+/*******************************************************************************
+    LED Filter
+*******************************************************************************/
+
+class milton_filter_device : public device_t, public device_sound_interface
+{
+public:
+	milton_filter_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = 0);
+
+protected:
+	virtual void device_start() override ATTR_COLD;
+	virtual void sound_stream_update(sound_stream &stream) override;
+
+private:
+	sound_stream *m_stream = nullptr;
+	output_finder<> m_led_out;
+};
+
+DEFINE_DEVICE_TYPE(MILTON_LED_FILTER, milton_filter_device, "milton_led_filter", "Milton LED Filter")
+
+
+milton_filter_device::milton_filter_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
+	device_t(mconfig, MILTON_LED_FILTER, tag, owner, clock),
+	device_sound_interface(mconfig, *this),
+	m_led_out(*this, "led")
+{ }
+
+void milton_filter_device::device_start()
+{
+	m_stream = stream_alloc(1, 1, SAMPLE_RATE_OUTPUT_ADAPTIVE);
+	m_led_out.resolve();
+}
+
+void milton_filter_device::sound_stream_update(sound_stream &stream)
+{
+	sound_stream::sample_t level = 0;
+
+	for (int i = 0; i < stream.samples(); i++)
+		level += fabsf(stream.get(0, i));
+
+	stream.copy(0, 0);
+
+	if (stream.samples() > 0)
+		level /= stream.samples();
+
+	// 2 leds connected to the audio circuit
+	const sound_stream::sample_t threshold = 1500.0 / 32768.0;
+	m_led_out = (level > threshold) ? 1 : 0;
+}
+
+
+
+/*******************************************************************************
+    Driver Class
+*******************************************************************************/
+
+namespace {
 
 class milton_state : public driver_device
 {
@@ -71,58 +129,6 @@ void milton_state::machine_start()
 	// register for savestates
 	save_item(NAME(m_data));
 	save_item(NAME(m_control));
-}
-
-
-
-/*******************************************************************************
-    LED Filter
-*******************************************************************************/
-
-class milton_filter_device : public device_t, public device_sound_interface
-{
-public:
-	milton_filter_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock = 0);
-
-protected:
-	virtual void device_start() override ATTR_COLD;
-	virtual void sound_stream_update(sound_stream &stream) override;
-
-private:
-	sound_stream *m_stream = nullptr;
-	output_finder<> m_led_out;
-};
-
-DEFINE_DEVICE_TYPE(MILTON_LED_FILTER, milton_filter_device, "milton_led_filter", "Milton LED Filter")
-
-
-milton_filter_device::milton_filter_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, MILTON_LED_FILTER, tag, owner, clock),
-	device_sound_interface(mconfig, *this),
-	m_led_out(*this, "led")
-{ }
-
-void milton_filter_device::device_start()
-{
-	m_stream = stream_alloc(1, 1, machine().sample_rate());
-	m_led_out.resolve();
-}
-
-void milton_filter_device::sound_stream_update(sound_stream &stream)
-{
-	sound_stream::sample_t level = 0;
-
-	for (int i = 0; i < stream.samples(); i++)
-		level += fabsf(stream.get(0, i));
-
-	stream.copy(0, 0);
-
-	if (stream.samples() > 0)
-		level /= stream.samples();
-
-	// 2 leds connected to the audio circuit
-	const sound_stream::sample_t threshold = 1500.0 / 32768.0;
-	m_led_out = (level > threshold) ? 1 : 0;
 }
 
 
@@ -292,6 +298,8 @@ ROM_START( milton )
 	ROM_LOAD("4043-003", 0x0000, 0x1800, CRC(d95df757) SHA1(6723480866f6393d310e304ef3b61e3a319a7beb) )
 	ROM_LOAD("4043-004", 0x2000, 0x1800, CRC(9ac929f7) SHA1(1a27d56fc49eb4e58ea3b5c58d7fbedc5a751592) )
 ROM_END
+
+} // anonymous namespace
 
 
 
