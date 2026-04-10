@@ -126,7 +126,10 @@ void f1dream_state::mcu_out3_w(u8 data)
 {
 	// toggles at the end of interrupt
 	if (BIT(m_mcu_p3, 0) && !BIT(data, 0))
+	{
+		m_mcu->set_input_line(MCS51_INT0_LINE, CLEAR_LINE);
 		m_maincpu->resume(SUSPEND_REASON_HALT);
+	}
 
 	if (BIT(m_mcu_p3, 6) && !BIT(data, 6))
 		m_soundlatch->write(m_soundlatch_data);
@@ -136,10 +139,13 @@ void f1dream_state::mcu_out3_w(u8 data)
 
 void f1dream_state::to_mcu_w(u16 data)
 {
-	m_mcu->set_input_line(MCS51_INT0_LINE, HOLD_LINE);
+	m_mcu->set_input_line(MCS51_INT0_LINE, ASSERT_LINE);
 
 	// after triggering this address there are one or two NOPs in the 68k code, then it expects the response to be ready
 	m_maincpu->suspend(SUSPEND_REASON_HALT, true);
+
+	// enough time for the MCU interrupt routine to finish
+	machine().scheduler().perfect_quantum(attotime::from_usec(500));
 }
 
 
