@@ -27,7 +27,6 @@ public:
 		, m_soundlatch(*this, "soundlatch")
 		, m_palette(*this, "palette")
 		, m_spriteram(*this, "spriteram")
-		, m_has_coinlock(true)
 		, m_videoram(*this, "videoram")
 		, m_bgmap(*this, "bgmap")
 		, m_msm(*this, "msm")
@@ -51,14 +50,12 @@ protected:
 	TIMER_DEVICE_CALLBACK_MEMBER(scanline);
 	void soundcmd_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 	void videoram_w(offs_t offset, u16 data, u16 mem_mask = ~0);
-	void videoctrl_w(u8 data);
+	virtual void videoctrl_w(u8 data);
 	void scroll_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 
 	void main_map(address_map &map) ATTR_COLD;
 	void sound_map(address_map &map) ATTR_COLD;
 	void sound_port_map(address_map &map) ATTR_COLD;
-
-	bool m_has_coinlock;
 
 private:
 	required_shared_ptr<u16> m_videoram;
@@ -82,49 +79,6 @@ private:
 	TILEMAP_MAPPER_MEMBER(tigeroad_tilemap_scan);
 	virtual void video_start() override ATTR_COLD;
 	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
-};
-
-
-class pushman_state : public tigeroad_state
-{
-public:
-	pushman_state(const machine_config &mconfig, device_type type, const char *tag)
-		: tigeroad_state(mconfig, type, tag)
-		, m_mcu(*this, "mcu")
-		, m_host_semaphore(false)
-		, m_mcu_semaphore(false)
-		, m_host_latch(0xffff)
-		, m_mcu_latch(0xffff)
-		, m_mcu_output(0xffff)
-		, m_mcu_latch_ctl(0xff)
-	{
-		m_has_coinlock = false;
-	}
-
-	void pushman(machine_config &config);
-	void bballs(machine_config &config);
-
-protected:
-	virtual void machine_start() override ATTR_COLD;
-
-private:
-	u16 mcu_comm_r(offs_t offset, u16 mem_mask = ~0);
-	void pushman_mcu_comm_w(offs_t offset, u16 data);
-	void bballs_mcu_comm_w(u16 data);
-
-	void mcu_pa_w(u8 data);
-	void mcu_pb_w(u8 data);
-	void mcu_pc_w(u8 data);
-
-	void bballs_map(address_map &map) ATTR_COLD;
-	void pushman_map(address_map &map) ATTR_COLD;
-
-	required_device<m68705u_device> m_mcu;
-
-	bool    m_host_semaphore, m_mcu_semaphore;
-	u16     m_host_latch, m_mcu_latch;
-	u16     m_mcu_output;
-	u8      m_mcu_latch_ctl;
 };
 
 class f1dream_state : public tigeroad_state
@@ -157,4 +111,47 @@ private:
 	required_device<i8751_device> m_mcu;
 	u8 m_mcu_p3;
 	u8 m_soundlatch_data;
+};
+
+class pushman_state : public tigeroad_state
+{
+public:
+	pushman_state(const machine_config &mconfig, device_type type, const char *tag)
+		: tigeroad_state(mconfig, type, tag)
+		, m_mcu(*this, "mcu")
+		, m_host_semaphore(false)
+		, m_mcu_semaphore(false)
+		, m_host_latch(0xffff)
+		, m_mcu_latch(0xffff)
+		, m_mcu_output(0xffff)
+		, m_mcu_latch_ctl(0xff)
+	{ }
+
+	void pushman(machine_config &config);
+	void bballs(machine_config &config);
+
+protected:
+	virtual void machine_start() override ATTR_COLD;
+
+	// mask out coin lockouts
+	virtual void videoctrl_w(u8 data) override { tigeroad_state::videoctrl_w(data | 0x30); }
+
+private:
+	u16 mcu_comm_r(offs_t offset, u16 mem_mask = ~0);
+	void pushman_mcu_comm_w(offs_t offset, u16 data);
+	void bballs_mcu_comm_w(u16 data);
+
+	void mcu_pa_w(u8 data);
+	void mcu_pb_w(u8 data);
+	void mcu_pc_w(u8 data);
+
+	void bballs_map(address_map &map) ATTR_COLD;
+	void pushman_map(address_map &map) ATTR_COLD;
+
+	required_device<m68705u_device> m_mcu;
+
+	bool    m_host_semaphore, m_mcu_semaphore;
+	u16     m_host_latch, m_mcu_latch;
+	u16     m_mcu_output;
+	u8      m_mcu_latch_ctl;
 };
