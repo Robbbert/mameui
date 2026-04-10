@@ -192,9 +192,11 @@ void bionicc_state::main_map(address_map &map)
 {
 	map.global_mask(0xfffff);
 	map(0x00000, 0x3ffff).rom();
-	map(0xe0000, 0xe07ff).ram(); // RAM?
-	map(0xe0800, 0xe0cff).ram().share("spriteram");
-	map(0xe0d00, 0xe3fff).ram(); // RAM?
+
+	map(0xe0000, 0xe07ff).mirror(0x3000).ram();
+	map(0xe0800, 0xe0cff).mirror(0x3000).ram().share("spriteram");
+	map(0xe0d00, 0xe0fff).mirror(0x3000).ram();
+
 	map(0xe4000, 0xe4000).mirror(0x3ffc).w(FUNC(bionicc_state::output_w));
 	map(0xe4000, 0xe4001).mirror(0x3ffc).portr("INPUTS");
 	map(0xe4002, 0xe4002).mirror(0x3ffc).w(FUNC(bionicc_state::audiocpu_nmi_w));
