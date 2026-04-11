@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 680 -->
+<!-- Number of items in this list = 685 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -1352,6 +1352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colabd1c4dcde206">
+		<description>Cure, The (2020)(Team Pixelboy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Cure, The (2020)(Team Pixelboy).rom" size="131072" crc="78e07081" sha1="abd1c4dcde206ba58ca3553993288c3d3dcb6591"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb544d650ed3d0">
 		<description>Cye 1.0 (2007 Philip Klaus Krause) [Playable Demo]</description>
 		<year>????</year>
@@ -1479,6 +1489,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="dantructor.rom" size="32768" crc="5379ecbe" sha1="aca92993f0cf8a054cbb4ae6c1a7121aad195e09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col31365388fe5d5">
+		<description>Death Race (2011)(Dav)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Death Race (2011)(Dav).rom" size="8192" crc="da6d5616" sha1="31365388fe5d550ee775df2d899cd9a6c5ea9062"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3393,12 +3413,12 @@
 		</part>
 	</software>
 	<software name="cold5ea5aa25fa07">
-		<description>Masters of the Universe - The Power of He-man</description>
+		<description>Masters of the Universe - The Power of He-Man (1983-2022)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Masters of the Universe - The Power of He-man.rom" size="32768" crc="838a9742" sha1="d5ea5aa25fa074dce0a4f871e0f9f45887938c54"/>
+				<rom name="Masters of the Universe - The Power of He-Man (1983-2022)(CollectorVision).rom" size="32768" crc="838a9742" sha1="d5ea5aa25fa074dce0a4f871e0f9f45887938c54"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4339,6 +4359,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32621">
 				<rom name="Plants vs Zombies.rom" size="32621" crc="66a9f825" sha1="4da719ff18fb5b30e268fb4b409f986e92c712ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col19b02cb002b62">
+		<description>Pong (2014)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32750">
+				<rom name="Pong (2014)(CollectorVision).rom" size="32750" crc="8aad0831" sha1="19b02cb002b624c649a2e9c810115a912bcb62be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6072,6 +6102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colbe3e055fe283b">
+		<description>Telebunny (Alt)(2014)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="30641">
+				<rom name="Telebunny (Alt)(2014)(CollectorVision).rom" size="30641" crc="26896d4b" sha1="be3e055fe283b570b4e16d70544d20d88e4dec6c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colc0157c0622a75">
 		<description>Telly Turtle (1984)(Carousel Software Inc.)</description>
 		<year>????</year>
@@ -6249,6 +6289,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="20464">
 				<rom name="Treasure Hunt (1983-2022)(CollectorVision).rom" size="20464" crc="0ac0067c" sha1="de065a964cdc6cbe5bc485ade8d68e21f7f15b0b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7ac6050433d03">
+		<description>Tunnels &amp; Trolls (Demo) (2010)(CollectorVision Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Tunnels &amp; Trolls (Demo) (2010)(CollectorVision Games).rom" size="16384" crc="a82ca225" sha1="7ac6050433d037adb2c77ed4331df7fc55150c06"/>
 			</dataarea>
 		</part>
 	</software>
