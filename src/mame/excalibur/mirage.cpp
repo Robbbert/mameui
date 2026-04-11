@@ -6,7 +6,7 @@ Excalibur Mirage (model 702E)
 
 It's Excalibur's first chess computer, and also Ron Nelson's official return to
 chess programming. The x/y motorized magnet is similar to the one used in
-Fidelity Phantom (and Milton Bradley Grand·Master before that).
+Fidelity Phantom (and Milton Bradley Grand Master before that).
 
 Before moving a piece, wait until the computer is done with its own move. After
 capturing a piece, select the captured piece from the MAME sensorboard spawn
