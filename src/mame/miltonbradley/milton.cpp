@@ -3,7 +3,7 @@
 // thanks-to:Sean Riddle
 /*******************************************************************************
 
-Milton Bradley Milton
+Milton Bradley (Electronic) Milton
 
 This is the talking tabletop game, not the chess computer with the same name.
 
@@ -12,8 +12,8 @@ Game 2: Same as game 1, but all in one turn.
 Game 3: Press phrase end buttons, memorize them, press Go and match them.
 
 Hardware is an odd combination: MC6805P2 MCU, GI SP0250 speech + 2*TMC0430 GROM.
-See patent 4326710 for detailed information, except MC6805 clocked from SP0250 3.12MHz
-and GROM clocked by 3.12MHz/8=390kHz.
+See patent 4326710 for detailed information, except MC6805 clocked from SP0250
+3.12MHz and GROM clocked by 3.12MHz/8=390kHz.
 
 *******************************************************************************/
 
@@ -308,4 +308,4 @@ ROM_END
 *******************************************************************************/
 
 //    YEAR  NAME    PARENT  COMPAT  MACHINE  INPUT   CLASS         INIT        COMPANY, FULLNAME, FLAGS
-SYST( 1980, milton, 0,      0,      milton,  milton, milton_state, empty_init, "Milton Bradley", "Electronic Milton", MACHINE_SUPPORTS_SAVE )
+SYST( 1980, milton, 0,      0,      milton,  milton, milton_state, empty_init, "Milton Bradley", "Milton", MACHINE_SUPPORTS_SAVE )

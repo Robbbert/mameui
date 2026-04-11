@@ -5,7 +5,7 @@
 
 Fidelity Phantom (model 6100)
 
-Fidelity licensed (or perhaps bought) the design of Milton Bradley's Grand·Master
+Fidelity licensed (or perhaps bought) the design of Milton Bradley's Grand Master
 motorized chessboard and released their own version. It has a small LCD panel added,
 the rest looks nearly the same from the outside. After Fidelity was taken over by H+G,
 it was rereleased in 1990 as the Mephisto Phantom. This is assumed to be identical.
