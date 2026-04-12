@@ -55,12 +55,11 @@ private:
 	memory_share_creator<u16> m_buffer;
 
 	bool m_int = 1;
-	bool m_req0 = 1;
+	bool m_brq = 1;
 	u8 m_data_out = 0;
 	offs_t m_a = 0;
 	bool m_hlc = 0;
 	bool m_dir = 0;
-	bool m_rc = 1;
 };
 
 

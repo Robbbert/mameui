@@ -15,7 +15,6 @@
 
 	- trap 46 on boot
 	- SASI
-	- bus errors
 	- tst.w 0xfffffc
 	- SCC interrupt acknowledge
 
@@ -207,7 +206,12 @@ uint16_t x37_state::ram_r(offs_t offset, uint16_t mem_mask)
 		bool at0, at1;
 		offs_t const ma = get_ma(offset, at0, at1);
 
-		if (ma < 0x400000) {
+		if (!machine().side_effects_disabled() && at1 && !at0) {
+			// AT1=1, AT0=0: no access
+			m_cpu->set_input_line(M68K_LINE_BUSERROR, ASSERT_LINE);
+			m_cpu->set_input_line(M68K_LINE_BUSERROR, CLEAR_LINE);
+			logerror("%s: Invalid RAM read at offset %06x (MA %06x, AT1=1, AT0=0)\n", machine().describe_context(), offset<<1, ma);
+		} else if (ma < 0x400000) {
 			if (ACCESSING_BITS_0_7)
 				data |= m_ram[ma & ~1];
 			if (ACCESSING_BITS_8_15)
@@ -224,6 +228,14 @@ void x37_state::ram_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	bool at0, at1;
 	offs_t const ma = get_ma(offset, at0, at1);
+
+	if (!machine().side_effects_disabled() && !at0) {
+		// AT0=0: read-only (AT1=0) or no access (AT1=1)
+		m_cpu->set_input_line(M68K_LINE_BUSERROR, ASSERT_LINE);
+		m_cpu->set_input_line(M68K_LINE_BUSERROR, CLEAR_LINE);
+		logerror("%s: Invalid RAM write at offset %06x (MA %06x, AT1=%d, AT0=0)\n", machine().describe_context(), offset<<1, ma, at1);
+		return;
+	}
 
 	if (ma < 0x400000) {
 		if (ACCESSING_BITS_0_7)
@@ -429,7 +441,7 @@ void x37_state::xdck_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 
 	*/
 
-	logerror("%s XDCK %04x\n", machine().describe_context(), data);
+	LOG("%s XDCK %04x\n", machine().describe_context(), data);
 
 	if (ACCESSING_BITS_0_7) {
 		m_fdc->mr_w(BIT(data, 0));
