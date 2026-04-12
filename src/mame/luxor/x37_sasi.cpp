@@ -30,12 +30,11 @@ luxor_x37_sasi_device::luxor_x37_sasi_device(const machine_config &mconfig, cons
 void luxor_x37_sasi_device::device_start()
 {
 	save_item(NAME(m_int));
-	save_item(NAME(m_req0));
+	save_item(NAME(m_brq));
 	save_item(NAME(m_data_out));
 	save_item(NAME(m_a));
 	save_item(NAME(m_hlc));
 	save_item(NAME(m_dir));
-	save_item(NAME(m_rc));
 }
 
 void luxor_x37_sasi_device::device_reset()
@@ -52,32 +51,37 @@ void luxor_x37_sasi_device::scsi_ctrl_changed()
 
 	if (m_scsi_bus->ctrl_r() & S_REQ) {
 		if (m_dir)
-			if (m_hlc)
+			if (!m_hlc)
 				m_buffer[m_a] = (m_scsi_bus->data_r() << 8) | (m_buffer[m_a] & 0xff);
 			else
 				m_buffer[m_a] = m_scsi_bus->data_r() | (m_buffer[m_a] & 0xff00);
 		else
-			if (m_hlc)
+			if (!m_hlc)
 				m_scsi_bus->data_w(m_scsi_refid, m_buffer[m_a] >> 8);
 			else
 				m_scsi_bus->data_w(m_scsi_refid, m_buffer[m_a] & 0xff);
 
 		m_hlc = !m_hlc;
 
-		if (m_hlc) {
-			m_rc = 0;
+		if (!m_hlc) {
+			m_brq = 1;
 			m_a++;
 			if (m_a == 16) {
-				m_rc = 1;
+				m_brq = 0;
 				m_a = 0;
 			}
 
-			// TODO write_req0
+			m_write_req0(!m_brq);
 		}
 
 		m_scsi_bus->ctrl_w(m_scsi_refid, S_ACK, S_ACK);
-	} else
+	} else {
+		if (m_brq) {
+			m_brq = 0;
+			m_write_req0(1);
+		}
 		m_scsi_bus->ctrl_w(m_scsi_refid, 0, S_ACK);
+	}
 }
 
 uint16_t luxor_x37_sasi_device::stat_r(offs_t offset, uint16_t mem_mask)
@@ -94,7 +98,7 @@ uint16_t luxor_x37_sasi_device::stat_r(offs_t offset, uint16_t mem_mask)
 		5		0
 		6		0
 		7		0
-		8		*REQ0
+		8		BRQ
 		9		SCSIDIR
 		10
 		11
@@ -109,7 +113,7 @@ uint16_t luxor_x37_sasi_device::stat_r(offs_t offset, uint16_t mem_mask)
 
 	data |= m_hlc;
 	data |= m_a << 1;
-	data |= m_req0 << 8;
+	data |= !m_brq << 8;
 	data |= m_dir << 9;
 	data |= m_scsi_bus->ctrl_r() & S_BSY ? 1 << 14 : 0;
 	data |= m_int << 15;
