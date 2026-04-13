@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 463 -->
+<!-- Number of items in this list = 464 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -4479,6 +4479,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="70035">
 				<rom name="Wonder Boy (1987)(Activision)[128K].z80" size="70035" crc="b492a055" sha1="d112727f9e2101690b21052fe7c27cced9aa7704"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs068c5e70825d5">
+		<description>World Series Baseball 48K (1985)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="35249">
+				<rom name="World Series Baseball 48K (1985)(Imagine Software).z80" size="35249" crc="7bdb465b" sha1="068c5e70825d5a7bf34a83a2ded1537c6e33d732"/>
 			</dataarea>
 		</part>
 	</software>

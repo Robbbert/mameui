@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4018 -->
+<!-- Number of items in this list = 4021 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5562,6 +5562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns94acb21d42847">
+		<description>Castlevania Dracula X PT-BR v3.0 (2023)(ByFTR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Castlevania Dracula X PT-BR v3.0 (2023)(ByFTR).sfc" size="2097152" crc="b82c9024" sha1="94acb21d428475377d479f2cc52d1f0321735d31"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns92f97411e319c">
 		<description>Castlevania Dracula X</description>
 		<year>????</year>
@@ -6459,6 +6469,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Cutthroat Island (U) [T+Por_Monkey].sfc" size="2097664" crc="dc42a2a1" sha1="7ebbfa434d4614107793dc0c3ccae442da58d826"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8c978ee76052f">
+		<description>CutThroat Island PT-BR (2010)(Monkey's Traducoes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="CutThroat Island PT-BR (2010)(Monkey's Traducoes).sfc" size="2097152" crc="eaa49af7" sha1="8c978ee76052f071cc64110a5e0910457e61ed0a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11829,6 +11849,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Gourmet Warriors (U)(2018)(Piko Interactive).sfc" size="2621440" crc="690a9540" sha1="d028d7876d390b7a8ccf0691851d3d7609914c78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5a1b82333ea73">
+		<description>Grande Aventura de Mickey na Disneylandia de Toquio, A PT-BR v1.4 (2022)(Svambo, Maverick B. Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Grande Aventura de Mickey na Disneylandia de Toquio, A PT-BR v1.4 (2022)(Svambo, Maverick B. Warrior).sfc" size="1572864" crc="bcc63775" sha1="5a1b82333ea735a524284dc68bfa72fcfc980f44"/>
 			</dataarea>
 		</part>
 	</software>
