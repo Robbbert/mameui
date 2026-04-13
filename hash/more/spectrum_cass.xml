@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7831 -->
+<!-- Number of items in this list = 7833 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -33962,6 +33962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs819e97848776c">
+		<description>Jurl 48K (2026)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34433">
+				<rom name="Jurl 48K (2026)(Tonsomo Entertainment).tap" size="34433" crc="ea757683" sha1="819e97848776cabaf9d4d4abe57f953c0c14a33d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf5bbd4a020153">
 		<description>jurl</description>
 		<year>????</year>
@@ -55699,6 +55709,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="45089">
 				<rom name="Soko Ban 1000 v1.1 48K (2025)(Serdjuk).tap" size="45089" crc="22c579e2" sha1="bc8b9b290240b62e2fb22e41e10e3e9c2de38fad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f5e4b1a80261">
+		<description>SOKO64+ 48K (2024)(Marco Spedaletti)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20470">
+				<rom name="SOKO64+ 48K (2024)(Marco Spedaletti).tap" size="20470" crc="ccbd5bc9" sha1="1f5e4b1a80261d1503590fce87a97a19014eca54"/>
 			</dataarea>
 		</part>
 	</software>

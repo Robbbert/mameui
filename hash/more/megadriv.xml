@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2068 -->
+<!-- Number of items in this list = 2069 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -14709,6 +14709,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Simpsons, The - Bart vs. the Space Mutants (USA, Europe) (Rev A).bin" size="524288" crc="310ef622" sha1="144f2ad1bc3c34b2383b02b49d16f3c379013995"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7d678be4dafb4">
+		<description>Sir Ababol v1.01 (2025)(The Mojon Twins - Tzar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="655360">
+				<rom name="Sir Ababol v1.01 (2025)(The Mojon Twins - Tzar).bin" size="655360" crc="45875ed8" sha1="7d678be4dafb49004a5c8e87b5174a9c89b4a901"/>
 			</dataarea>
 		</part>
 	</software>

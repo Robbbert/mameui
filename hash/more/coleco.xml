@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 685 -->
+<!-- Number of items in this list = 693 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -682,6 +682,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colc06cb5b5bb732">
+		<description>Breakout Joystick Version (2023)(AnalogKid)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="6660">
+				<rom name="Breakout Joystick Version (2023)(AnalogKid).rom" size="6660" crc="928a1ffc" sha1="c06cb5b5bb732a680a670c64de747cc0f3687f33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cold621c604c88b1">
+		<description>Breakout Roller Version (2023)(AnalogKid)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="6562">
+				<rom name="Breakout Roller Version (2023)(AnalogKid).rom" size="6562" crc="2f758657" sha1="d621c604c88b1367d3469098bbe7d5b3b4daf2e9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col06f17cf95f914">
 		<description>Bubbles (1982-2024)(CollectorVision)</description>
 		<year>????</year>
@@ -989,6 +1009,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="23680">
 				<rom name="Cavern Fighter (2021)(Electric Adventures).rom" size="23680" crc="846faf14" sha1="a6e6d0e13ad51aa0e6c9de9feb30e04f3e6eea3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cole9822ee24c72c">
+		<description>Cavit (2021)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9824">
+				<rom name="Cavit (2021)(Inufuto).rom" size="9824" crc="8d3e9de3" sha1="e9822ee24c72c24418288f15096a6e160e8a1a80"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1969,6 +1999,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Evolution (USA, Canada)(1983)(Sydney).rom" size="16384" crc="4cd4e185" sha1="5c775dd65722be72436d0b6dd99bd0143c938b33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7fe0c728419a4">
+		<description>Exerion (1983-2010)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Exerion (1983-2010)(CollectorVision).rom" size="32768" crc="66dba33b" sha1="7fe0c728419a40719d066d4a6947b2fe223483c2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3062,6 +3102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cola55f13a2288cf">
+		<description>Jurl v1.1a (2025)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jurl v1.1a (2025)(Tonsomo Entertainment).rom" size="16384" crc="050ddb57" sha1="a55f13a2288cfae187d654608ac069a7dd42ee21"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cole12bde5a73f42">
 		<description>Karateka 2 (2021)(Nanochess)</description>
 		<year>????</year>
@@ -3213,12 +3263,12 @@
 		</part>
 	</software>
 	<software name="colbf89ff961056e">
-		<description>Lock'n Chase-Black Label Edition</description>
+		<description>Lock'n Chase Black Label Edition (2013)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="28982">
-				<rom name="Lock'n Chase-Black Label Edition.rom" size="28982" crc="93429913" sha1="bf89ff961056e0d3614746e8ff371c8298a80bc7"/>
+				<rom name="Lock'n Chase Black Label Edition (2013)(CollectorVision).rom" size="28982" crc="93429913" sha1="bf89ff961056e0d3614746e8ff371c8298a80bc7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3902,6 +3952,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col0a3f196bdb8fa">
+		<description>Mr. Turtle (2015-2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32499">
+				<rom name="Mr. Turtle (2015-2023)(CollectorVision).rom" size="32499" crc="7aef297d" sha1="0a3f196bdb8fa9dde46ca1f71c20e106fa3d35b1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col369a3134870fe">
 		<description>MrDoRunRun</description>
 		<year>????</year>
@@ -4453,12 +4513,12 @@
 		</part>
 	</software>
 	<software name="col88b4a564ca9f2">
-		<description>PV2000 (2012 Nicolas Campion)</description>
+		<description>PV2000 (2012)(Nicolas Campion)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="10733">
-				<rom name="PV2000 (2012 Nicolas Campion).rom" size="10733" crc="ded6a3b4" sha1="88b4a564ca9f2b1b9e8ed8b9cecd9923b6a060e1"/>
+				<rom name="PV2000 (2012)(Nicolas Campion).rom" size="10733" crc="ded6a3b4" sha1="88b4a564ca9f2b1b9e8ed8b9cecd9923b6a060e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5002,6 +5062,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col881d636171e00">
+		<description>Sir Ababol 20200415 v1.1 (2020)(The Mojon Twins - Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32767">
+				<rom name="Sir Ababol 20200415 v1.1 (2020)(The Mojon Twins - Alekmaul).rom" size="32767" crc="690e8dd5" sha1="881d636171e00a1538224544b896de0c81d78fd8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cola856572f0c9bb">
+		<description>Sir Ababol 20200918 (2020)(Cote Gamers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Sir Ababol 20200918 (2020)(Cote Gamers).rom" size="32768" crc="fd0dc225" sha1="a856572f0c9bb68e194d8135c1eb1e543e83d917"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col4309865f8a18e">
 		<description>Sir Lancelot (1983)(Xonox)</description>
 		<year>????</year>
@@ -5019,16 +5099,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Sir Lancelot (USA)(1983)(Xonox).rom" size="16384" crc="df84ffb5" sha1="15e6f8197caee5a500c6ce33952d51beca6a43cc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col881d636171e00">
-		<description>sir_ababol_v11</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32767">
-				<rom name="sir_ababol_v11.rom" size="32767" crc="690e8dd5" sha1="881d636171e00a1538224544b896de0c81d78fd8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5209,6 +5279,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32734">
 				<rom name="So you want to be a Knight.rom" size="32734" crc="5f5136e1" sha1="d39daa4a7a0b5f5e2611d6ea518df66247b176d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colc1c9afd00cfb6">
+		<description>SOKO64+ (2024)(Marco Spedaletti)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="SOKO64+ (2024)(Marco Spedaletti).rom" size="32768" crc="c27920f3" sha1="c1c9afd00cfb67fbf66fae5fdeb2a4cc1f762789"/>
 			</dataarea>
 		</part>
 	</software>
