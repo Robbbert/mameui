@@ -44,6 +44,7 @@ namespace netlist
 				 .insert({alias, detail::alias_t(type, alias, points_to)})
 				 .second)
 		{
+			log().fatal(MF_ALIAS_ALREAD_EXISTS_1(alias));
 			throw nl_exception(MF_ALIAS_ALREAD_EXISTS_1(alias));
 		}
 	}
@@ -76,6 +77,8 @@ namespace netlist
 		const auto list(plib::psplit(terms, pstring(", ")));
 		if (list.empty() || (list.size() % 2) == 1)
 		{
+			log().fatal(
+				MF_DIP_PINS_MUST_BE_AN_EQUAL_NUMBER_OF_PINS_1(build_fqn("")));
 			throw nl_exception(
 				MF_DIP_PINS_MUST_BE_AN_EQUAL_NUMBER_OF_PINS_1(build_fqn("")));
 		}
@@ -125,6 +128,7 @@ namespace netlist
 		pstring key = build_fqn(name);
 		if (device_exists(key))
 		{
+			log().fatal(MF_DEVICE_ALREADY_EXISTS_1(key));
 			throw nl_exception(MF_DEVICE_ALREADY_EXISTS_1(key));
 		}
 
@@ -146,6 +150,7 @@ namespace netlist
 					{
 						auto err = MF_PARAM_COUNT_MISMATCH_2(
 							name, params_and_connections.size());
+						log().fatal(err);
 						throw nl_exception(err);
 						// break;
 					}
@@ -168,6 +173,7 @@ namespace netlist
 					{
 						auto err = MF_PARAM_COUNT_MISMATCH_2(
 							name, params_and_connections.size());
+						log().fatal(err);
 						throw nl_exception(err);
 					}
 					pstring fully_qualified_name = name + "." + tp;
@@ -184,6 +190,7 @@ namespace netlist
 			{
 				MF_PARAM_COUNT_EXCEEDED_2 err(name,
 											  params_and_connections.size());
+				log().fatal(err);
 				throw nl_exception(err);
 			}
 		}
@@ -197,6 +204,7 @@ namespace netlist
 		const auto name = build_fqn(object_name) + hint_name;
 		if (!m_abstract.m_hints.insert({name, false}).second)
 		{
+			log().fatal(MF_ADDING_HINT_1(name));
 			throw nl_exception(MF_ADDING_HINT_1(name));
 		}
 	}
@@ -212,6 +220,7 @@ namespace netlist
 		const auto list(plib::psplit(terms, pstring(", ")));
 		if (list.size() < 2)
 		{
+			log().fatal(MF_NET_C_NEEDS_AT_LEAST_2_TERMINAL());
 			throw nl_exception(MF_NET_C_NEEDS_AT_LEAST_2_TERMINAL());
 		}
 		for (std::size_t i = 1; i < list.size(); i++)
@@ -226,6 +235,7 @@ namespace netlist
 				[this, &netlist_name](source_netlist_t *src)
 				{ return src->parse(*this, netlist_name); }))
 			return;
+		log().fatal(MF_NOT_FOUND_IN_SOURCE_COLLECTION(netlist_name));
 		throw nl_exception(MF_NOT_FOUND_IN_SOURCE_COLLECTION(netlist_name));
 	}
 
@@ -266,6 +276,7 @@ namespace netlist
 		{
 			if (!m_abstract.m_param_values.insert({fqn, val}).second)
 			{
+				log().fatal(MF_ADDING_PARAMETER_1_TO_PARAMETER_LIST(param));
 				throw nl_exception(
 					MF_ADDING_PARAMETER_1_TO_PARAMETER_LIST(param));
 			}
@@ -340,6 +351,7 @@ namespace netlist
 		}
 		if (!found)
 		{
+			log().fatal(MF_FOUND_NO_OCCURRENCE_OF_1(attach));
 			throw nl_exception(MF_FOUND_NO_OCCURRENCE_OF_1(attach));
 		}
 		register_connection(attach, frontier_name + ".Q");
@@ -469,6 +481,7 @@ namespace netlist
 		}
 		if (!found)
 		{
+			log().fatal(MF_FOUND_NO_OCCURRENCE_OF_1(pin));
 			throw nl_exception(MF_FOUND_NO_OCCURRENCE_OF_1(pin));
 		}
 	}
@@ -582,6 +595,8 @@ namespace netlist
 		log().debug("{1} {2}\n", termtype_as_str(term), term.name());
 		if (!m_terminals.insert({term.name(), &term}).second)
 		{
+			log().fatal(MF_ADDING_1_2_TO_TERMINAL_LIST(termtype_as_str(term),
+													   term.name()));
 			throw nl_exception(MF_ADDING_1_2_TO_TERMINAL_LIST(
 				termtype_as_str(term), term.name()));
 		}
@@ -602,6 +617,7 @@ namespace netlist
 		if (!m_params.insert({param.name(), param_ref_t(param.device(), param)})
 				 .second)
 		{
+			log().fatal(MF_ADDING_PARAMETER_1_TO_PARAMETER_LIST(param.name()));
 			throw nl_exception(
 				MF_ADDING_PARAMETER_1_TO_PARAMETER_LIST(param.name()));
 		}
@@ -705,6 +721,7 @@ namespace netlist
 
 		if (term == nullptr && required)
 		{
+			log().fatal(MF_TERMINAL_1_2_NOT_FOUND(terminal_in, tname));
 			throw nl_exception(MF_TERMINAL_1_2_NOT_FOUND(terminal_in, tname));
 		}
 		if (term != nullptr)
@@ -729,6 +746,7 @@ namespace netlist
 		}
 		if (ret == m_terminals.end() && required)
 		{
+			log().fatal(MF_TERMINAL_1_2_NOT_FOUND(terminal_in, tname));
 			throw nl_exception(MF_TERMINAL_1_2_NOT_FOUND(terminal_in, tname));
 		}
 		detail::core_terminal_t *term = (ret == m_terminals.end()
@@ -739,6 +757,7 @@ namespace netlist
 		{
 			if (required)
 			{
+				log().fatal(MF_OBJECT_1_2_WRONG_TYPE(terminal_in, tname));
 				throw nl_exception(
 					MF_OBJECT_1_2_WRONG_TYPE(terminal_in, tname));
 			}
@@ -757,6 +776,8 @@ namespace netlist
 		auto          ret(m_params.find(resolved_param_name));
 		if (ret == m_params.end())
 		{
+			log().fatal(
+				MF_PARAMETER_1_2_NOT_FOUND(param_in, resolved_param_name));
 			throw nl_exception(
 				MF_PARAMETER_1_2_NOT_FOUND(param_in, resolved_param_name));
 		}
@@ -793,6 +814,8 @@ namespace netlist
 			p->clear_net(); // de-link from all nets ...
 			if (!connect(new_proxy->proxy_term(), *p))
 			{
+				log().fatal(MF_CONNECTING_1_TO_2(new_proxy->proxy_term().name(),
+												 (*p).name()));
 				throw nl_exception(MF_CONNECTING_1_TO_2(
 					new_proxy->proxy_term().name(), (*p).name()));
 			}
@@ -851,6 +874,8 @@ namespace netlist
 					p->clear_net(); // de-link from all nets ...
 					if (!connect(ret->proxy_term(), *p))
 					{
+						log().fatal(MF_CONNECTING_1_TO_2(
+							ret->proxy_term().name(), (*p).name()));
 						throw nl_exception(MF_CONNECTING_1_TO_2(
 							ret->proxy_term().name(), (*p).name()));
 					}
@@ -888,6 +913,8 @@ namespace netlist
 
 		if (this_net.is_rail_net() && other_net.is_rail_net())
 		{
+			log().fatal(
+				MF_MERGE_RAIL_NETS_1_AND_2(this_net.name(), other_net.name()));
 			throw nl_exception(
 				MF_MERGE_RAIL_NETS_1_AND_2(this_net.name(), other_net.name()));
 		}
@@ -909,6 +936,7 @@ namespace netlist
 	{
 		if (input.has_net() && input.net().is_rail_net())
 		{
+			log().fatal(MF_INPUT_1_ALREADY_CONNECTED(input.name()));
 			throw nl_exception(MF_INPUT_1_ALREADY_CONNECTED(input.name()));
 		}
 		if (output.is_analog() && input.is_logic())
@@ -931,6 +959,8 @@ namespace netlist
 				output.net().add_terminal(input);
 			else
 			{
+				log().fatal(
+					ME_TERMINALS_1_2_WITHOUT_NET(input.name(), output.name()));
 				throw nl_exception(
 					ME_TERMINALS_1_2_WITHOUT_NET(input.name(), output.name()));
 			}
@@ -960,6 +990,7 @@ namespace netlist
 		}
 		else
 		{
+			log().fatal(MF_OBJECT_INPUT_TYPE_1(input.name()));
 			throw nl_exception(MF_OBJECT_INPUT_TYPE_1(input.name()));
 		}
 	}
@@ -997,6 +1028,7 @@ namespace netlist
 		}
 		else
 		{
+			log().fatal(MF_OBJECT_OUTPUT_TYPE_1(output.name()));
 			throw nl_exception(MF_OBJECT_OUTPUT_TYPE_1(output.name()));
 		}
 	}
@@ -1227,6 +1259,8 @@ namespace netlist
 				log().warning(MF_CONNECTING_1_TO_2(de_alias(link.first),
 												   de_alias(link.second)));
 
+			log().fatal(
+				MF_LINK_TRIES_EXCEEDED(m_netlist_params->m_max_link_loops()));
 			throw nl_exception(
 				MF_LINK_TRIES_EXCEEDED(m_netlist_params->m_max_link_loops()));
 		}
@@ -1318,6 +1352,7 @@ namespace netlist
 		}
 		if (err)
 		{
+			log().fatal(MF_TERMINALS_WITHOUT_NET());
 			throw nl_exception(MF_TERMINALS_WITHOUT_NET());
 		}
 	}
@@ -1793,6 +1828,7 @@ namespace netlist
 
 		if (error_count > 0)
 		{
+			log().fatal(MF_ERRORS_FOUND(error_count));
 			throw nl_exception(MF_ERRORS_FOUND(error_count));
 		}
 	}

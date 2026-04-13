@@ -184,6 +184,7 @@ namespace netlist::solver
 					}
 					break;
 					case detail::terminal_type::OUTPUT:
+						log().fatal(MF_UNHANDLED_ELEMENT_1_FOUND(p->name()));
 						throw nl_exception(
 							MF_UNHANDLED_ELEMENT_1_FOUND(p->name()));
 				}
@@ -722,6 +723,7 @@ namespace netlist::solver
 			}
 			else
 			{
+				log().fatal(MF_FOUND_TERM_WITH_MISSING_OTHERNET(term->name()));
 				throw nl_exception(
 					MF_FOUND_TERM_WITH_MISSING_OTHERNET(term->name()));
 			}

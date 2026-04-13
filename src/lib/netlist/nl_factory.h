@@ -195,7 +195,7 @@ namespace netlist::factory
 		bool exists(const pstring &name) const noexcept;
 
 	private:
-		[[maybe_unused]] log_type &m_log;
+		log_type &m_log;
 	};
 
 	// -------------------------------------------------------------------------
