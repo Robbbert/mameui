@@ -15,7 +15,7 @@ driver provided with thanks to:
 TODO:
 - finish slave DSP emulation
 - emulate System22 I/O board C74 instead of HLE (inputs, outputs, volume control - HLE only handles the inputs)
-- C139 for linked cabinets, as well as in RR fullscale
+- C139 for linked cabinets, as well as in RR fullscale and RR 3 monitor version
 - confirm DSP and MCU IRQ timing
 - EEPROM write timing should be around 5ms, it doesn't do any data/rdy polling
 - Rave Racer car will sometimes do a 'strafe slide' when playing the game with a small analog device (such as an
@@ -3045,11 +3045,11 @@ static INPUT_PORTS_START( ridgerac3m )
 	PORT_INCLUDE( ridgera )
 
 	PORT_MODIFY("DSW")
-	PORT_DIPNAME(0x00030000, 0x00010000, "PCB (screen) Select") PORT_DIPLOCATION("SW2:1,2")
-	PORT_DIPSETTING(         0x00000000, "Center/Main (PCB 2)")     // No exit from Service Mode due to lack C139 and full 3 screen implementation???
-	PORT_DIPSETTING(         0x00010000, "Center/Main (PCB 2)")
-	PORT_DIPSETTING(         0x00020000, "Left (PCB 1)")            // shows black screen due to lack C139 and full 3 screen implementation
-	PORT_DIPSETTING(         0x00030000, "Right (PCB 3)")           // shows black screen due to lack C139 and full 3 screen implementation
+	PORT_DIPNAME( 0x00030000, 0x00010000, "PCB (screen) Select") PORT_DIPLOCATION("SW2:1,2")
+	PORT_DIPSETTING(          0x00000000, "Center/Main (PCB 2)") // No exit from Service Mode due to lack C139 and full 3 screen implementation???
+	PORT_DIPSETTING(          0x00010000, "Center/Main (PCB 2)")
+	PORT_DIPSETTING(          0x00020000, "Left (PCB 1)")        // shows black screen due to lack C139 and full 3 screen implementation
+	PORT_DIPSETTING(          0x00030000, "Right (PCB 3)")       // shows black screen due to lack C139 and full 3 screen implementation
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( ridgeracf )
@@ -6404,7 +6404,7 @@ GAME( 1993, ridgeraca,  ridgerac, namcos22,  ridgera,    namcos22_state,  init_r
 GAME( 1993, ridgeracb,  ridgerac, namcos22,  ridgera,    namcos22_state,  init_ridgerac,  ROT0, "Namco", "Ridge Racer (US, RR3 Ver.B)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS ) // 1994-01-17, reports as "-Foreign B-" RR3 means USA?
 GAME( 1993, ridgeracc,  ridgerac, namcos22,  ridgera,    namcos22_state,  init_ridgerac,  ROT0, "Namco", "Ridge Racer (US, RR3)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS ) // 1993-10-28, reports as "-Foreign B-"
 GAME( 1993, ridgeracj,  ridgerac, namcos22,  ridgera,    namcos22_state,  init_ridgerac,  ROT0, "Namco", "Ridge Racer (Japan, RR1)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS ) // 1993-10-07
-GAME( 1994, ridgerac3m, ridgerac, namcos22,  ridgerac3m, namcos22_state,  init_ridgerac,  ROT0, "Namco", "Ridge Racer (World, Three Monitor Version)", MACHINE_SUPPORTS_SAVE| MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING ) // 1994-07-01, Standard game with 3 monitor linkup
+GAME( 1994, ridgerac3m, ridgerac, namcos22,  ridgerac3m, namcos22_state,  init_ridgerac,  ROT0, "Namco", "Ridge Racer (World, RRC, Three Monitor Version)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING ) // 1994-07-01, Standard game with 3 monitor linkup
 GAME( 1993, ridgeracf,  0,        namcos22,  ridgeracf,  namcos22_state,  init_ridgerac,  ROT0, "Namco", "Ridge Racer Full Scale (World, RRF2)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING ) // 1993-12-13, very different version, incomplete dump.
 GAME( 1994, ridgera2,   0,        namcos22,  ridgera2,   namcos22_state,  init_ridgera2,  ROT0, "Namco", "Ridge Racer 2 (World, RRS2)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN ) // 1994-06-21 - NOT labeled "B" but based off Japan Rev.B
 GAME( 1994, ridgera2j,  ridgera2, namcos22,  ridgera2,   namcos22_state,  init_ridgera2,  ROT0, "Namco", "Ridge Racer 2 (Japan, RRS1 Ver.B)", MACHINE_SUPPORTS_SAVE | MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN ) // 1994-06-21
