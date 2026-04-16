@@ -31,7 +31,8 @@ TODO:
 #include "emu.h"
 #include "gmboard.h"
 
-#define LOG_DRIFT  (1 << 1U)
+#define LOG_MAGNET (1 << 1U)
+#define LOG_DRIFT  (2 << 1U)
 
 //#define VERBOSE (LOG_DRIFT)
 //#define LOG_OUTPUT_FUNC osd_printf_info
@@ -215,6 +216,7 @@ void gmboard_device::magnet_w(int state)
 
 	int mx = dx + 0.5;
 	int my = dy + 0.5;
+	int gx = mx, gy = my;
 
 	// convert motors position into board coordinates
 	int x = mx / 4 - 2;
@@ -227,6 +229,8 @@ void gmboard_device::magnet_w(int state)
 
 	if (state)
 	{
+		bool found = false;
+
 		if (valid_pos)
 		{
 			// pick up piece, unless it was picked up by the user
@@ -237,41 +241,62 @@ void gmboard_device::magnet_w(int state)
 
 				if (m_piece_hand != 0)
 				{
+					found = true;
 					m_board->write_piece(x, y, 0);
 					m_board->refresh();
 				}
 			}
 		}
-		else
+
+		if (!found)
 		{
-			// pick up piece from internal pieces map
-			m_piece_hand = m_pieces_map[my][mx];
-			m_pieces_map[my][mx] = 0;
+			int count = 0;
+
+			// check surrounding area for piece
+			for (int sy = my - 1; sy <= my + 1; sy++)
+				for (int sx = mx - 1; sx <= mx + 1; sx++)
+					if (sy >= 0 && sx >= 0 && m_pieces_map[sy][sx] != 0)
+					{
+						gx = sx; gy = sy;
+						m_piece_hand = m_pieces_map[sy][sx];
+						m_pieces_map[sy][sx] = 0;
+						count++;
+					}
+
+			// more than one piece found (shouldn't happen)
+			if (count > 1)
+				popmessage("Internal collision!");
 		}
 	}
-	else if (m_piece_hand != 0)
+
+	if (m_piece_hand)
 	{
-		if (valid_pos)
+		LOGMASKED(LOG_MAGNET, "%s piece %2d @ %2d,%2d (%2d,%2d)\n", state ? "grab" : "drop", m_piece_hand, x, y, gx, gy);
+
+		if (!state)
 		{
-			// collision with piece on board (user interference)
-			if (m_board->read_piece(x, y) != 0)
-				popmessage("Collision at %c%d!", x + 'A', y + 1);
+			if (valid_pos)
+			{
+				// collision with piece on board (user interference)
+				if (m_board->read_piece(x, y) != 0)
+					popmessage("Collision at %c%d!", x + 'A', y + 1);
+				else
+				{
+					m_board->write_piece(x, y, m_piece_hand);
+					m_board->refresh();
+				}
+			}
 			else
 			{
-				m_board->write_piece(x, y, m_piece_hand);
-				m_board->refresh();
+				// collision with internal pieces map (shouldn't happen)
+				if (m_pieces_map[my][mx] != 0)
+					popmessage("Internal collision!");
+				else
+					m_pieces_map[my][mx] = m_piece_hand;
 			}
-		}
-		else
-		{
-			// collision with internal pieces map (shouldn't happen)
-			if (m_pieces_map[my][mx] != 0)
-				popmessage("Internal collision!");
-			else
-				m_pieces_map[my][mx] = m_piece_hand;
-		}
 
-		m_piece_hand = 0;
+			m_piece_hand = 0;
+		}
 	}
 }
 
