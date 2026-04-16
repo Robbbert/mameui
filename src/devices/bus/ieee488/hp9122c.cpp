@@ -52,8 +52,6 @@ protected:
 	virtual void ieee488_ren(int state) override;
 
 private:
-
-
 	/* Control register bits:
 	 * 0 - Head select
 	 * 1 - unused
@@ -100,10 +98,7 @@ private:
 	void i8291a_dav_w(int state);
 	void i8291a_nrfd_w(int state);
 	void i8291a_ndac_w(int state);
-	[[maybe_unused]] void i8291a_ifc_w(int state);
 	void i8291a_srq_w(int state);
-	[[maybe_unused]] void i8291a_atn_w(int state);
-	[[maybe_unused]] void i8291a_ren_w(int state);
 
 	uint8_t i8291a_dio_r();
 	void i8291a_dio_w(uint8_t data);
@@ -156,11 +151,11 @@ private:
 hp9122c_device::hp9122c_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
 	device_t{mconfig, GPIB_HP9122C, tag, owner, clock},
 	device_ieee488_interface{mconfig, *this},
-	m_cpu{*this , "cpu"},
+	m_cpu{*this, "cpu"},
 	m_i8291a{*this, "i8291a"},
 	m_fdc{*this, "mb8876"},
 	m_floppy{*this, "floppy%u", 0},
-	m_hpib_addr{*this , "ADDRESS"},
+	m_hpib_addr{*this, "ADDRESS"},
 	m_testmode{*this, "TESTMODE"},
 	m_leds{*this, "led%d", 0U},
 	m_intsel{3},
@@ -178,7 +173,7 @@ hp9122c_device::hp9122c_device(const machine_config &mconfig, const char *tag, d
 
 static INPUT_PORTS_START(hp9122c_port)
 	PORT_START("ADDRESS")
-	PORT_CONFNAME(0x1f, 0x00 , "HPIB address")
+	PORT_CONFNAME(0x1f, 0x00, "HPIB address")
 	PORT_CONFSETTING(0, "0")
 	PORT_CONFSETTING(1, "1")
 	PORT_CONFSETTING(2, "2")
@@ -200,7 +195,6 @@ static INPUT_PORTS_START(hp9122c_port)
 	PORT_CONFNAME(0x01, 0x00, "Testmode")
 	PORT_CONFSETTING(0, DEF_STR(Off))
 	PORT_CONFSETTING(1, DEF_STR(On))
-
 INPUT_PORTS_END
 
 ioport_constructor hp9122c_device::device_input_ports() const
@@ -210,7 +204,6 @@ ioport_constructor hp9122c_device::device_input_ports() const
 
 void hp9122c_device::device_start()
 {
-
 	m_leds.resolve();
 
 	for (auto &floppy : m_floppy)
@@ -311,24 +304,9 @@ void hp9122c_device::i8291a_ndac_w(int state)
 	m_bus->ndac_w(this, state);
 }
 
-void hp9122c_device::i8291a_ifc_w(int state)
-{
-	m_bus->ifc_w(this, state);
-}
-
 void hp9122c_device::i8291a_srq_w(int state)
 {
 	m_bus->srq_w(this, state);
-}
-
-void hp9122c_device::i8291a_atn_w(int state)
-{
-	m_bus->atn_w(this, state);
-}
-
-void hp9122c_device::i8291a_ren_w(int state)
-{
-	m_bus->ren_w(this, state);
 }
 
 void hp9122c_device::i8291a_int_w(int state)
@@ -481,14 +459,14 @@ void hp9122c_device::clridx_w(uint8_t data)
 }
 
 ROM_START(hp9122c)
-	ROM_REGION(0x4000 , "cpu" , 0)
-	ROM_LOAD("09122-15515.bin" , 0x0000, 0x4000 , CRC(d385e488) SHA1(93b2015037d76cc68b6252df03d6f184104605b9))
+	ROM_REGION(0x4000, "cpu", 0)
+	ROM_LOAD("09122-15515.bin", 0x0000, 0x4000, CRC(d385e488) SHA1(93b2015037d76cc68b6252df03d6f184104605b9))
 ROM_END
 
 static void hp9122c_floppies(device_slot_interface &device)
 {
-	device.option_add("35dd" , FLOPPY_35_DD);
-	device.option_add("35hd" , FLOPPY_35_HD);
+	device.option_add("35dd", FLOPPY_35_DD);
+	device.option_add("35hd", FLOPPY_35_HD);
 }
 
 const tiny_rom_entry *hp9122c_device::device_rom_region() const
@@ -529,8 +507,8 @@ void hp9122c_device::device_add_mconfig(machine_config &config)
 	m_i8291a->int_write().set(FUNC(hp9122c_device::i8291a_int_w));
 	m_i8291a->dreq_write().set(FUNC(hp9122c_device::i8291a_dreq_w));
 
-	FLOPPY_CONNECTOR(config, "floppy0" , hp9122c_floppies , "35hd" , floppy_image_device::default_mfm_floppy_formats, true).enable_sound(true);
-	FLOPPY_CONNECTOR(config, "floppy1" , hp9122c_floppies , "35hd" , floppy_image_device::default_mfm_floppy_formats, true).enable_sound(true);
+	FLOPPY_CONNECTOR(config, "floppy0", hp9122c_floppies, "35hd", floppy_image_device::default_mfm_floppy_formats, true).enable_sound(true);
+	FLOPPY_CONNECTOR(config, "floppy1", hp9122c_floppies, "35hd", floppy_image_device::default_mfm_floppy_formats, true).enable_sound(true);
 	config.set_default_layout(layout_hp9122c);
 }
 
