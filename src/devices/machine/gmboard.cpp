@@ -15,7 +15,7 @@ Used in:
 
 Hardware notes:
 - electronic chessboard, with room on each side for captured pieces
-- X/Y plotter motors, electromagnet (optionally including a hall affect sensor)
+- X/Y plotter motors, electromagnet (optionally including a hall effect sensor)
 
 Concept/design by Milton Bradley, for use in the Grand Master. Fidelity licensed
 or bought the design, and applied it nearly unchanged to Fidelity Phantom. Years
@@ -26,17 +26,16 @@ TODO:
 - optionally change output finders to callbacks, currently not needed
 - sensorboard undo buffer goes out of control, probably not worth solving this issue
 
-BTANB:
-- Motors gradually drift in Mirage, causing it to place/pick up pieces off-center.
-  It recalibrates itself once in a while but it's not enough. MAME's sensorboard
-  device can't deal with it, so there's a workaround (see realign_magnet_pos).
-  The programmer anecdotally blamed it on the hardware engineer, but it's mainly
-  a software bug.
-
 */
 
 #include "emu.h"
 #include "gmboard.h"
+
+#define LOG_DRIFT  (1 << 1U)
+
+//#define VERBOSE (LOG_DRIFT)
+//#define LOG_OUTPUT_FUNC osd_printf_info
+#include "logmacro.h"
 
 
 DEFINE_DEVICE_TYPE(MB_GMBOARD, gmboard_device, "mb_gmboard", "Milton Bradley Grand Master chessboard")
@@ -171,28 +170,30 @@ void gmboard_device::output_magnet_pos()
 
 void gmboard_device::realign_magnet_pos()
 {
-	// compensate for gradual drift, see BTANB
-	for (int i = 0; i < 2; )
+	// compensate for possible gradual drift, eg. emirage
+	for (int m = 0; m < 2; )
 	{
 		double pos[2];
 		get_scaled_pos(&pos[0], &pos[1]);
 
-		const double limit = 1.0 / (m_square / 16.0);
+		const double limit = 4.0 / (m_square / 4.0);
+		const int step = std::max(m_square / (4 * 8), 1);
 		int inc = 0;
 
-		if ((round(pos[i]) - pos[i]) > limit && m_motor_pos[i] < m_motor_max[i] - 4)
+		if ((round(pos[m]) - pos[m]) > limit && m_motor_pos[m] < m_motor_max[m] - step)
 			inc = 1;
-		else if ((round(pos[i]) - pos[i]) < -limit && m_motor_pos[i] > 4)
+		else if ((round(pos[m]) - pos[m]) < -limit && m_motor_pos[m] > step)
 			inc = -1;
 		else
-			i++;
+			m++;
 
 		if (inc != 0)
 		{
-			m_motor_pos[i] += inc * 4;
-			m_motor_drift[i] -= inc;
+			int prev = m_motor_pos[m];
+			m_motor_pos[m] += inc * step;
+			m_motor_drift[m] -= inc;
 
-			logerror("motor %c drift error (%d total)\n", 'X' + i, m_motor_drift[i]);
+			LOGMASKED(LOG_DRIFT, "motor %c drift error (%4d->%4d, %d total)\n", 'X' + m, prev, m_motor_pos[m], m_motor_drift[m]);
 		}
 	}
 }
@@ -224,7 +225,6 @@ void gmboard_device::magnet_w(int state)
 
 	const bool valid_pos = (mx & 3) == 2 && (my & 3) == 2;
 
-	// sensorboard handling is almost the same as fidelity/phantom.cpp
 	if (state)
 	{
 		if (valid_pos)
@@ -280,7 +280,7 @@ TIMER_CALLBACK_MEMBER(gmboard_device::motor_count)
 	const int m = param ? 1 : 0;
 	assert(m_motor_dir[m] & 3);
 
-	// 1 quarter rotation per period
+	// 1 quarter rotation step per period
 	int inc = 0;
 	if (m_motor_dir[m] & 2)
 	{
@@ -298,6 +298,12 @@ TIMER_CALLBACK_MEMBER(gmboard_device::motor_count)
 	m_motor_pos[m] += inc;
 	m_motor_timer[m]->adjust(m_motor_period, m);
 
+	if (m_motor_pos[m] == 0 || m_motor_pos[m] == m_motor_max[m])
+	{
+		m_motor_drift[m] = 0;
+		LOGMASKED(LOG_DRIFT, "motor %c calibrated\n", 'X' + m);
+	}
+
 	output_magnet_pos();
 
 	// update quadrature encoder
@@ -313,7 +319,7 @@ void gmboard_device::motor_w(offs_t offset, u8 data)
 	data &= 3;
 
 	for (int i = 0; i < 2; i++)
-		m_out_motor[offset * 2 + i] = BIT(data, i);
+		m_out_motor[m * 2 + i] = BIT(data, i);
 
 	// it's not moving when both directions are set
 	if (data == 3)
@@ -336,7 +342,7 @@ void gmboard_device::motor_w(offs_t offset, u8 data)
 	m_motor_dir[m] = data;
 
 	// (re)start the timer
-	if (data & 3)
+	if (data)
 		m_motor_timer[m]->adjust(m_motor_remain[m], m);
 }
 

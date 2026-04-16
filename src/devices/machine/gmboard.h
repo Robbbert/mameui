@@ -62,7 +62,7 @@ private:
 
 	u16 m_width;          // motor range
 	u16 m_height;         // "
-	u16 m_square;         // number of quarter rotations per square
+	u16 m_square;         // number of quarter rotation steps per square
 	u16 m_x_offset;       // unscaled offset relative to the bottom-left corner
 	u16 m_y_offset;       // "
 	attotime m_speed;     // time per square at full speed

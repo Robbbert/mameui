@@ -6,6 +6,16 @@
 Milton Bradley (Electronic) Grand Master (stylized as Grand·Master) (model 4243)
 aka Phantom Chess Computer in the UK, and Milton in the rest of Europe
 
+Hardware notes:
+- PCB label: ASSY 1274243001 PN 7924243001
+- SY6502A @ 1.79MHz (3.58MHz resonator)
+- 16KB ROM (2*2364), 2KB RAM (4*MM2114N-25)
+- 2 DC motors under chessboard, electromagnet for automatically moving chess pieces
+- piezo speaker, 16 LEDs, 12*8 chessboard buttons
+
+There's also a newer revision with mask ROM labels C19679 7830043002 and C19680
+7830043001, ROM contents is confirmed to be the same.
+
 TODO:
 - WIP
 
@@ -230,7 +240,6 @@ void grandmas_state::grandmas(machine_config &config)
 
 	// video hardware
 	PWM_DISPLAY(config, m_display).set_size(2, 8);
-
 	//config.set_default_layout(layout_grandmaster);
 
 	// sound hardware
@@ -246,8 +255,8 @@ void grandmas_state::grandmas(machine_config &config)
 
 ROM_START( grandmas )
 	ROM_REGION( 0x4000, "maincpu", 0 )
-	ROM_LOAD("c19679_7830043002.u3", 0x0000, 0x2000, CRC(c7a91b34) SHA1(43f9caf8a13ae1a3274851fbcc411bc50c21fe1d) )
-	ROM_LOAD("c19680_7830043001.u2", 0x2000, 0x2000, CRC(b47dda81) SHA1(02c946fa47db1c7edfb59e11ad3c802b92f4d3a1) )
+	ROM_LOAD("c19660_7834243004_reva.u3", 0x0000, 0x2000, CRC(c7a91b34) SHA1(43f9caf8a13ae1a3274851fbcc411bc50c21fe1d) )
+	ROM_LOAD("c19661_7834243003_reva.u2", 0x2000, 0x2000, CRC(b47dda81) SHA1(02c946fa47db1c7edfb59e11ad3c802b92f4d3a1) )
 ROM_END
 
 } // anonymous namespace
