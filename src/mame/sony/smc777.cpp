@@ -173,62 +173,67 @@ private:
 
 void smc777_state::video_start()
 {
+	m_vram = make_unique_clear<uint8_t[]>(0x800);
+	m_attr = make_unique_clear<uint8_t[]>(0x800);
+	m_gvram = make_unique_clear<uint8_t[]>(0x8000);
+	m_pcg = make_unique_clear<uint8_t[]>(0x800);
+
+	save_pointer(NAME(m_vram), 0x800);
+	save_pointer(NAME(m_attr), 0x800);
+	save_pointer(NAME(m_gvram), 0x8000);
+	save_pointer(NAME(m_pcg), 0x800);
+	save_item(NAME(m_crtc_vreg));
 }
 
+// TODO: cleanup, move to device, honor cliprect
 uint32_t smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	uint16_t count;
-
-//  popmessage("%d %d %d %d",mc6845_v_char_total,mc6845_v_total_adj,mc6845_v_display,mc6845_v_sync_pos);
-
 	bitmap.fill(m_palette->pen(m_backdrop_pen), cliprect);
 
-	int x_width = ((m_display_reg & 0x80) >> 7);
+	int x_width = BIT(m_display_reg, 7);
 
-	count = 0x0000;
+	const u16 bitmap_pitch = mc6845_h_display * 2;
 
-	for(int yi = 0; yi < 8; yi++)
+	for(int y = 0; y < mc6845_v_display; y++)
 	{
-		for(int y = 0; y < 200; y+=8)
+		// comp2:HETZER uses start address for double buffering
+		const u32 base_address = y * bitmap_pitch + mc6845_start_addr * 2;
+		for(int x = 0; x < bitmap_pitch; x++)
 		{
-			for(int x = 0; x < 160; x++)
+			for(int yi = 0; yi < 8; yi++)
 			{
-				uint16_t color = (m_gvram[count] & 0xf0) >> 4;
+				u8 color = (m_gvram[base_address + x + yi * 0x1000] & 0xf0) >> 4;
 
-				/* todo: clean this up! */
 				//if(x_width)
 				{
-					bitmap.pix(y + yi + CRTC_MIN_Y, x * 4 + 0 + CRTC_MIN_X) = m_palette->pen(color);
-					bitmap.pix(y + yi + CRTC_MIN_Y, x * 4 + 1 + CRTC_MIN_X) = m_palette->pen(color);
+					bitmap.pix(y * 8 + yi + CRTC_MIN_Y, x * 4 + 0 + CRTC_MIN_X) = m_palette->pen(color);
+					bitmap.pix(y * 8 + yi + CRTC_MIN_Y, x * 4 + 1 + CRTC_MIN_X) = m_palette->pen(color);
 				}
 				//else
 				//{
 				//  bitmap.pix(y+yi+CRTC_MIN_Y, x*2+0+CRTC_MIN_X) = m_palette->pen(color);
 				//}
 
-				color = (m_gvram[count] & 0x0f) >> 0;
+				color = (m_gvram[base_address + x + yi * 0x1000] & 0x0f) >> 0;
 				//if(x_width)
 				{
-					bitmap.pix(y + yi + CRTC_MIN_Y, x * 4 + 2 + CRTC_MIN_X) = m_palette->pen(color);
-					bitmap.pix(y + yi + CRTC_MIN_Y, x * 4 + 3 + CRTC_MIN_X) = m_palette->pen(color);
+					bitmap.pix(y * 8 + yi + CRTC_MIN_Y, x * 4 + 2 + CRTC_MIN_X) = m_palette->pen(color);
+					bitmap.pix(y * 8 + yi + CRTC_MIN_Y, x * 4 + 3 + CRTC_MIN_X) = m_palette->pen(color);
 				}
 				//else
 				//{
 				//  bitmap.pix(y+yi+CRTC_MIN_Y, x*2+1+CRTC_MIN_X) = m_palette->pen(color);
 				//}
 
-				count++;
-
 			}
 		}
-		count += 0x60;
 	}
 
-	count = 0x0000;
+	u16 count = 0x0000;
 
-	for(int y = 0; y < 25; y++)
+	for(int y = 0; y < mc6845_v_display; y++)
 	{
-		for(int x = 0; x < 80 / (x_width+1); x++)
+		for(int x = 0; x < mc6845_h_display / (x_width + 1); x++)
 		{
 			/*
 			-x-- ---- blink
@@ -1016,16 +1021,8 @@ void smc777_state::machine_start()
 {
 	m_ipl_rom = memregion("ipl")->base();
 	m_work_ram = make_unique_clear<uint8_t[]>(0x10000);
-	m_vram = make_unique_clear<uint8_t[]>(0x800);
-	m_attr = make_unique_clear<uint8_t[]>(0x800);
-	m_gvram = make_unique_clear<uint8_t[]>(0x8000);
-	m_pcg = make_unique_clear<uint8_t[]>(0x800);
 
 	save_pointer(NAME(m_work_ram), 0x10000);
-	save_pointer(NAME(m_vram), 0x800);
-	save_pointer(NAME(m_attr), 0x800);
-	save_pointer(NAME(m_gvram), 0x8000);
-	save_pointer(NAME(m_pcg), 0x800);
 
 	m_gfxdecode->set_gfx(0, std::make_unique<gfx_element>(m_palette, smc777_charlayout, m_pcg.get(), 0, 8, 0));
 }
