@@ -12,12 +12,12 @@ it was rereleased in 1990 as the Mephisto Phantom. This is assumed to be identic
 
 At boot-up, the computer will do a self-test, the user can start playing after the
 motor has moved to the upper-right corner. The computer will continue positioning
-pieces though, so it may be a bit distracting. Or, just hold INSERT (on PC) for a
-while to speed up MAME before starting a new game.
+pieces though, so it may be a bit distracting. Or, just fast forward MAME for a while
+(hold INS key on Windows) before starting a new game.
 
 After the user captures a piece, select the captured piece from the MAME sensorboard
-spawn block and place it anywhere on a free spot at the designated box at the
-edge of the chessboard.
+spawn block and place it anywhere on a free spot at the designated box at the edge
+of the chessboard.
 
 Hardware notes:
 - PCB label: 510.1128A01

@@ -6,6 +6,18 @@
 Milton Bradley (Electronic) Grand Master (stylized as Grand·Master) (model 4243)
 aka Phantom Chess Computer in the UK, and Milton in the rest of Europe
 
+Chess computer with plotter style motor + magnet hidden underneath it. When it's
+the computer's turn, it will automatically do the move. Programmed by Intelligent
+Software, still some time before Richard Lang joined the company.
+
+At boot-up, the computer will do a self-test. Although the user can start playing
+immediately, it may be a big distracting. So, just fast forward MAME for a while
+(hold INS key on Windows) before starting a new game.
+
+After the user captures a piece, select the captured piece from the MAME sensorboard
+spawn block and place it anywhere on a free spot at the designated box at the edge
+of the chessboard.
+
 Hardware notes:
 - PCB label: ASSY 1274243001 PN 7924243001
 - SY6502A @ 1.79MHz (3.58MHz resonator)
@@ -17,7 +29,7 @@ There's also a newer revision with mask ROM labels C19679 7830043002 and C19680
 7830043001, ROM contents is confirmed to be the same.
 
 TODO:
-- WIP
+- finish internal artwork
 
 *******************************************************************************/
 
@@ -34,7 +46,7 @@ TODO:
 #include "speaker.h"
 
 // internal artwork
-//#include "grandmaster.lh"
+#include "grandmaster.lh"
 
 
 namespace {
@@ -160,10 +172,16 @@ u8 grandmas_state::input_r(offs_t offset)
 {
 	u16 data = 0;
 
-	if (m_inp_mux == 8)
+	// read chessboard
+	if (m_inp_mux < 8)
+		data = m_board->read_rank(m_inp_mux);
+
+	// read buttons
+	else if (m_inp_mux == 8)
 		data = m_inputs->read();
 
-	return ~data >> (offset * 6) | 0xc0;
+	data = bitswap<4>(data,10,11,8,9) << 8 | (data & 0xff);
+	return ~data >> ((offset ^ 1) * 6) | 0xc0;
 }
 
 
@@ -196,18 +214,18 @@ void grandmas_state::main_map(address_map &map)
 
 static INPUT_PORTS_START( grandmas )
 	PORT_START("IN.0")
-	PORT_BIT(0x001, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_1) // auto/problem
-	PORT_BIT(0x002, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_2)
-	PORT_BIT(0x004, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_3)
-	PORT_BIT(0x008, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_4)
-	PORT_BIT(0x010, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_5)
-	PORT_BIT(0x020, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_6)
-	PORT_BIT(0x040, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_7)
-	PORT_BIT(0x080, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_8)
-	PORT_BIT(0x100, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_Q)
-	PORT_BIT(0x200, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_W)
-	PORT_BIT(0x400, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_E)
-	PORT_BIT(0x800, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_R)
+	PORT_BIT(0x001, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_L) PORT_NAME("Level / Stop")
+	PORT_BIT(0x002, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_H) PORT_NAME("Hint / New")
+	PORT_BIT(0x004, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_C) PORT_NAME("Change / Replay")
+	PORT_BIT(0x008, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_F) PORT_NAME("Forward / Back")
+	PORT_BIT(0x010, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_V) PORT_NAME("Verify / Setup")
+	PORT_BIT(0x020, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_G) PORT_NAME("Game / Manual")
+	PORT_BIT(0x040, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_A) PORT_NAME("Auto / Problem")
+	PORT_BIT(0x080, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_O) PORT_NAME("Sound / Legal")
+	PORT_BIT(0x100, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_BIT(0x200, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_BIT(0x400, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_BIT(0x800, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_S) PORT_NAME("Shift")
 INPUT_PORTS_END
 
 
@@ -240,7 +258,7 @@ void grandmas_state::grandmas(machine_config &config)
 
 	// video hardware
 	PWM_DISPLAY(config, m_display).set_size(2, 8);
-	//config.set_default_layout(layout_grandmaster);
+	config.set_default_layout(layout_grandmaster);
 
 	// sound hardware
 	SPEAKER(config, "speaker").front_center();
@@ -268,4 +286,4 @@ ROM_END
 *******************************************************************************/
 
 //    YEAR  NAME      PARENT  COMPAT  MACHINE   INPUT     CLASS           INIT        COMPANY, FULLNAME, FLAGS
-SYST( 1983, grandmas, 0,      0,      grandmas, grandmas, grandmas_state, empty_init, "Milton Bradley", "Grand Master", MACHINE_SUPPORTS_SAVE | MACHINE_NOT_WORKING )
+SYST( 1983, grandmas, 0,      0,      grandmas, grandmas, grandmas_state, empty_init, "Milton Bradley", "Grand Master (Milton Bradley)", MACHINE_SUPPORTS_SAVE | MACHINE_MECHANICAL | MACHINE_IMPERFECT_CONTROLS | MACHINE_NOT_WORKING )
