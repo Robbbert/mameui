@@ -110,10 +110,7 @@ void namcos21_3d_device::renderscanline_flat(const edge *e1, const edge *e2, int
 				z += crop * dz;
 				x0 = 0;
 			}
-			if (x1 > m_poly_frame_width - 1)
-			{
-				x1 = m_poly_frame_width - 1;
-			}
+			x1 = std::min(x1, m_poly_frame_width);
 
 			for (x = x0; x < x1; x++)
 			{
@@ -207,7 +204,7 @@ void namcos21_3d_device::rendertri(const n21_vertex *v0, const n21_vertex *v1, c
 				e1.z += dz1dy * crop;
 				ystart = 0;
 			}
-			if (yend > m_poly_frame_height - 1) yend = m_poly_frame_height - 1;
+			yend = std::min(yend, m_poly_frame_height);
 
 			for (y = ystart; y < yend; y++)
 			{
@@ -239,10 +236,7 @@ void namcos21_3d_device::rendertri(const n21_vertex *v0, const n21_vertex *v1, c
 				e1.z += dz1dy * crop;
 				ystart = 0;
 			}
-			if (yend > m_poly_frame_height - 1)
-			{
-				yend = m_poly_frame_height - 1;
-			}
+			yend = std::min(yend, m_poly_frame_height);
 			for (y = ystart; y < yend; y++)
 			{
 				renderscanline_flat(&e1, &e2, y, color, depthcueenable);
