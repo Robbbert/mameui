@@ -14,7 +14,6 @@
 	TODO
 
 	- trap on boot
-	- SASI
 	- tst.w 0xfffffc
 	- SCC interrupt acknowledge
 
@@ -43,7 +42,7 @@
 
 namespace {
 
-//#define VERBOSE 0
+//#define VERBOSE 1
 #include "logmacro.h"
 
 #define MC68010_TAG  "14m"

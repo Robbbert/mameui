@@ -53,7 +53,13 @@ private:
 	devcb_write_line m_write_req0;
 
 	memory_share_creator<u16> m_buffer;
+	emu_timer *m_sel_clear_timer;
+	emu_timer *m_ack_set_timer;
+	emu_timer *m_ack_clear_timer;
 
+	TIMER_CALLBACK_MEMBER(clear_sel);
+	TIMER_CALLBACK_MEMBER(set_ack);
+	TIMER_CALLBACK_MEMBER(clear_ack);
 	void transfer();
 	void count();
 	void update_int(bool state) { if (m_int != state) { logerror("int %u\n", state); m_int = state; m_write_int(state); } }
