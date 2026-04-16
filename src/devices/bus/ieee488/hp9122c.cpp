@@ -100,10 +100,10 @@ private:
 	void i8291a_dav_w(int state);
 	void i8291a_nrfd_w(int state);
 	void i8291a_ndac_w(int state);
-	void i8291a_ifc_w(int state);
+	[[maybe_unused]] void i8291a_ifc_w(int state);
 	void i8291a_srq_w(int state);
-	void i8291a_atn_w(int state);
-	void i8291a_ren_w(int state);
+	[[maybe_unused]] void i8291a_atn_w(int state);
+	[[maybe_unused]] void i8291a_ren_w(int state);
 
 	uint8_t i8291a_dio_r();
 	void i8291a_dio_w(uint8_t data);
