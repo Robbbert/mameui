@@ -7,7 +7,9 @@ IGS011 blitter with protection
 implementation based from igs/igs011.cpp, by Luca Elia/Olivier Galibert.
 
 TODO:
-- transparent pixel is wrong in dbc title screen
+- video disable bit
+- realistic blitter timings
+
 */
 
 #include "emu.h"

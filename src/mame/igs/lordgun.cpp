@@ -22,7 +22,7 @@ Year + Game                PCB              FM Sound  Custom IGS Chips          
 1994  Alien Challenge      NO-0085          YMF278B   IGS005 IGS006 IGS007 IGS008  Not encrypted
 -------------------------------------------------------------------------------------------------
 
-To do:
+TODO:
 
 - lordgun: in the 3rd leg of the ship stage, sometimes part of a far jetboat is drawn above a nearer sub (both sprites).
   But this is correct considering both priorities and sprite list positions. Original game bug?
@@ -35,7 +35,7 @@ Notes:
 - aliencha: when booting into service mode, keep buttons 1, 2 and 3 pressed to show more options
 - aliencha: original videos at http://www.youtube.com/watch?v=TRHb3WTGuvk, http://www.youtube.com/watch?v=_RaCpHwyS78.
   The latter shows English text and a 1995 copyright (instead of 1994) in a different font.
-- aliencha: routine at A34 - english/chinese text, A38 - english/chinese names, A3C - Alien Challenge/Round House Rumble title
+- aliencha: routine at A34 - English/Chinese text, A38 - English/Chinese names, A3C - Alien Challenge/Round House Rumble title
 
 *************************************************************************************************************/
 
@@ -46,6 +46,7 @@ Notes:
 #include "cpu/z80/z80.h"
 #include "machine/i8255.h"
 #include "sound/ymopl.h"
+
 #include "speaker.h"
 
 
