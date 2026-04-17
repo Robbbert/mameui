@@ -58,12 +58,22 @@ TODO:
 
 Notes:
 
-- In most games, keep test button pressed during boot to access the
+- In most games, keep the Test button pressed during boot to access the
   input test and sound test.
 
+Original game bugs that are emulated faithfully:
+
 - dbc: The title screen background palette is wrong since the fade
-  routine is called with incorrect argument values, but the PCB does the
-  same thing.
+  routine is called with incorrect argument values.
+
+- drgnwrld: The copyright text on the title screen was updated to show
+  "1997" (rather than "1995") by drawing the "7" over the top using the
+  CPU rather than the blitter.  The font and background of the "7"
+  appears mismatched.
+
+- drgnwrld: If you change the Background DIP switch setting (SW2 2) to
+  "Scene", you'll still see the "Girl" animation, albeit with incorrect
+  colours, after completing some stages.
 
 ***************************************************************************/
 
