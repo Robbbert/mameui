@@ -318,7 +318,7 @@ u8 phantom_state::motors_r(offs_t offset)
 {
 	u8 data = 0x3f;
 
-	// IRQ F/F output
+	// IRQ F/F Q
 	if (offset)
 	{
 		data |= m_irq_ff[1]->output_r() << 6;

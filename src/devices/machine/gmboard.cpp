@@ -19,7 +19,7 @@ Hardware notes:
 
 Concept/design by Milton Bradley, for use in the Grand Master. Fidelity licensed
 or bought the design, and applied it nearly unchanged to Fidelity Phantom. Years
-later, the ex chief engineer of by then defunct Fidelity used the same technology
+later, the ex chief engineer of Fidelity (by then defunct) used the same technology
 while working for Excalibur.
 
 TODO:
@@ -99,8 +99,6 @@ void gmboard_device::device_start()
 void gmboard_device::device_reset()
 {
 	memset(m_motor_drift, 0, sizeof(m_motor_drift));
-	m_magnet = 0;
-
 	output_magnet_pos();
 }
 
@@ -207,7 +205,7 @@ void gmboard_device::magnet_w(int state)
 		return;
 	m_magnet = state;
 
-	if (m_piece_hand != 0)
+	if (m_piece_hand)
 		realign_magnet_pos();
 	output_magnet_pos();
 
@@ -229,8 +227,6 @@ void gmboard_device::magnet_w(int state)
 
 	if (state)
 	{
-		bool found = false;
-
 		if (valid_pos)
 		{
 			// pick up piece, unless it was picked up by the user
@@ -239,16 +235,15 @@ void gmboard_device::magnet_w(int state)
 			{
 				m_piece_hand = m_board->read_piece(x, y);
 
-				if (m_piece_hand != 0)
+				if (m_piece_hand)
 				{
-					found = true;
 					m_board->write_piece(x, y, 0);
 					m_board->refresh();
 				}
 			}
 		}
 
-		if (!found)
+		if (!m_piece_hand)
 		{
 			int count = 0;
 
@@ -273,6 +268,7 @@ void gmboard_device::magnet_w(int state)
 	{
 		LOGMASKED(LOG_MAGNET, "%s piece %2d @ %2d,%2d (%2d,%2d)\n", state ? "grab" : "drop", m_piece_hand, x, y, gx, gy);
 
+		// drop piece
 		if (!state)
 		{
 			if (valid_pos)

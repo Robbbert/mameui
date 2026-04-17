@@ -6,9 +6,11 @@
 Milton Bradley (Electronic) Grand Master (stylized as Grand·Master) (model 4243)
 aka Phantom Chess Computer in the UK, and Milton in the rest of Europe
 
-Chess computer with plotter style motor + magnet hidden underneath it. When it's
-the computer's turn, it will automatically do the move. Programmed by Intelligent
-Software, still some time before Richard Lang joined the company.
+It's a Chess computer with plotter style motor + magnet hidden underneath it. When
+it's the computer's turn, it will automatically do the move. Programmed by Intelligent
+Software, still some time before Richard Lang joined the company. The chess engine
+is weaker than the one in SciSys Mark V. The hardware design and technology was
+sold to Fidelity a couple of years later (fphantom in MAME).
 
 At boot-up, the computer will do a self-test. Although the user can start playing
 immediately, it may be a big distracting. So, just fast forward MAME for a while
@@ -27,9 +29,6 @@ Hardware notes:
 
 There's also a newer revision with mask ROM labels C19679 7830043002 and C19680
 7830043001, ROM contents is confirmed to be the same.
-
-TODO:
-- finish internal artwork
 
 *******************************************************************************/
 
@@ -160,12 +159,11 @@ void grandmas_state::control_w(u8 data)
 void grandmas_state::leds_w(u8 data)
 {
 	// d0-d3: 74145 A-D
-	// 74145 1-8: led data
-	// 74145 0-8: input mux
+	// 74145 0-8: input mux, led data
 	m_inp_mux = data & 0xf;
 
 	// d4,d5: led select
-	m_display->matrix(data >> 4 & 3, (1 << m_inp_mux) >> 1);
+	m_display->matrix(data >> 4 & 3, 1 << m_inp_mux);
 }
 
 u8 grandmas_state::input_r(offs_t offset)
@@ -257,7 +255,7 @@ void grandmas_state::grandmas(machine_config &config)
 	m_board->quad_cb<1>().set(m_irq_ff[2], FUNC(ttl7474_device::clock_w)).bit(1);
 
 	// video hardware
-	PWM_DISPLAY(config, m_display).set_size(2, 8);
+	PWM_DISPLAY(config, m_display).set_size(2, 9);
 	config.set_default_layout(layout_grandmaster);
 
 	// sound hardware
@@ -286,4 +284,4 @@ ROM_END
 *******************************************************************************/
 
 //    YEAR  NAME      PARENT  COMPAT  MACHINE   INPUT     CLASS           INIT        COMPANY, FULLNAME, FLAGS
-SYST( 1983, grandmas, 0,      0,      grandmas, grandmas, grandmas_state, empty_init, "Milton Bradley", "Grand Master (Milton Bradley)", MACHINE_SUPPORTS_SAVE | MACHINE_MECHANICAL | MACHINE_IMPERFECT_CONTROLS | MACHINE_NOT_WORKING )
+SYST( 1983, grandmas, 0,      0,      grandmas, grandmas, grandmas_state, empty_init, "Milton Bradley", "Grand Master (Milton Bradley)", MACHINE_SUPPORTS_SAVE | MACHINE_MECHANICAL | MACHINE_IMPERFECT_CONTROLS )
