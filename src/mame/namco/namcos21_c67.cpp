@@ -401,14 +401,28 @@ u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitma
 	screen.priority().fill(0, cliprect);
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 
+	const u16 pri1 = (m_palette->read16_ext(0) >> 8) & 7;
+//	const u16 pri2 = (m_palette->read16_ext(1) >> 8) & 7; // always '2'?
+
 	m_c355spr->draw(screen, bitmap, cliprect, 2);
 
 	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0x7fc0, 0x7ffe);
 
-	m_c355spr->draw(screen, bitmap, cliprect, 0);
-	m_c355spr->draw(screen, bitmap, cliprect, 1);
-
-	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
+	switch(pri1)
+	{
+		case 0: // aircomb mission select & gameplay
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
+			m_c355spr->draw(screen, bitmap, cliprect, 0);
+			m_c355spr->draw(screen, bitmap, cliprect, 1);
+			break;
+		case 4: // default gameplay for all games, aircomb attract mode
+		case 2: // TODO: starblad/solvalou when going in service mode
+		default:
+			m_c355spr->draw(screen, bitmap, cliprect, 0);
+			m_c355spr->draw(screen, bitmap, cliprect, 1);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
+			break;
+	}
 
 	/* draw high priority 2d sprites */
 	for (int pri = pivot; pri < 8; pri++)
