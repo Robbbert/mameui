@@ -271,14 +271,16 @@ void namcos21_3d_device::draw_quad(int sx[4], int sy[4], int zcode[4], int color
 	else
 	{ /* map color code to hardware pen */
 		int code = color >> 8;
-		if (code & 0x80)
-		{
-			color = color & 0xff;
-			// color = 0x3e00|color;
-			color = 0x2100 | color;
-			depthcueenable = 0;
-		}
-		else
+		// TODO: aircomb dislikes this logic
+		// (not sure what would use it anyway)
+		//if (code & 0x80)
+		//{
+		//	color = color & 0xff;
+		//	// color = 0x3e00|color;
+		//	color = 0x2100 | color;
+		//	depthcueenable = 0;
+		//}
+		//else
 		{
 			color &= 0xff;
 			color = 0x3e00 | color;

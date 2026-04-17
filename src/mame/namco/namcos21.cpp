@@ -474,6 +474,7 @@ void namcos21_state::winrun_bitmap_draw(bitmap_ind16 &bitmap, const rectangle &c
 			// TODO: additive blending?
 			// - winrun car select uses register [0xc] for a xscroll value
 			// - winrun windshield during gameplay (reversed 0x6000 and 0x4000 bases?)
+			// NOTE: very similar to namcos21_c67_state::sprite_mix_callback
 			case 0x00:
 				pDest[sx] = (pDest[sx]&0x1fff)+0x4000;
 				break;

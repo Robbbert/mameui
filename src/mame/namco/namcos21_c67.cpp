@@ -1,10 +1,19 @@
 // license:BSD-3-Clause
 // copyright-holders:Phil Stroffolino
 /*
-    NOTES:
 
-    Air Combat:
-         priority issues
+TODO (2026 update):
+- how the 3d rasterizer really selects banks 1 & 2? aircomb is the odd one, it has a red shaded
+  bank from time to time;
+- aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen);
+- aircomb: sprites blends badly with background pen when warning appears and the src target is the sky color
+  (i.e. pen 0xff with current handling);
+- aircomb: level select/continue screen draws with a red pen, should be pure black according to refs;
+- aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
+- cybsled: https://mametesters.org/view.php?id=6302
+- solvalou: https://mametesters.org/view.php?id=2085
+- solvalou: black screen on service mode (cfr. shared/namco_c355spr.cpp);
+- starblad: 3d freezes after exiting service mode;
 
 TODO:   namcoic.c: in StarBlade, the sprite list is stored at a different location during startup tests.
         What register controls this?
