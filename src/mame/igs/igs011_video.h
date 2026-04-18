@@ -51,7 +51,6 @@ private:
 	void prot_addr_change_w(s32 data);
 	void prot_mem_range_set();
 
-	// blitter
 	struct blitter_t
 	{
 		blitter_t()

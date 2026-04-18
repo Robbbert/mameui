@@ -7,8 +7,8 @@ IGS011 blitter with protection
 implementation based from igs/igs011.cpp, by Luca Elia/Olivier Galibert.
 
 TODO:
-- video disable bit
 - realistic blitter timings
+- blitter busy flag
 
 */
 
@@ -127,9 +127,6 @@ u32 igs011_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, co
 {
 #ifdef MAME_DEBUG
 	int layer_enable = -1;
-#endif
-
-#ifdef MAME_DEBUG
 	if (machine().input().code_pressed(KEYCODE_Z))
 	{
 		int mask = 0;
@@ -150,6 +147,7 @@ u32 igs011_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, co
 
 	if (BIT(m_blitter.depth, 4))
 	{
+		// video output disabled
 		u16 const pri = pri_ram[0xff] & 7;
 		bitmap.fill((pri << 8) | 0xff, cliprect);
 		return 0;
@@ -170,7 +168,7 @@ u32 igs011_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, co
 				layerpix[l] = m_layer_ram[i++][scr_addr];
 				if (layerpix[l] != 0xff)
 #ifdef MAME_DEBUG
-					if (layer_enable & (1 << l))
+					if (BIT(layer_enable, l))
 #endif
 						pri_addr &= ~(1 << l);
 				++l;
@@ -180,17 +178,21 @@ u32 igs011_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, co
 				u8 const pixdata = m_layer_ram[i++][scr_addr];
 				layerpix[l] = pixdata & 0x0f;
 				if (layerpix[l] != 0x0f)
+				{
 #ifdef MAME_DEBUG
-					if (layer_enable & (1 << l))
+					if (BIT(layer_enable, l))
 #endif
 						pri_addr &= ~(1 << l);
+				}
 				++l;
 				layerpix[l] = (pixdata >> 4) & 0x0f;
 				if (layerpix[l] != 0x0f)
+				{
 #ifdef MAME_DEBUG
-					if (layer_enable & (1 << l))
+					if (BIT(layer_enable, l))
 #endif
 						pri_addr &= ~(1 << l);
+				}
 				++l;
 			}
 
@@ -279,6 +281,8 @@ void igs011_device::blit_h_w(offs_t offset, u16 data, u16 mem_mask)
 
 void igs011_device::blit_depth_w(offs_t offset, u16 data, u16 mem_mask)
 {
+	// ---X ---- disable video output
+	// ---- -XXX layer depth configuration expressed as number of buffers used as dual 4bpp layers
 	COMBINE_DATA(&m_blitter.depth);
 }
 

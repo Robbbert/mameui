@@ -2952,18 +2952,18 @@ TIMER_DEVICE_CALLBACK_MEMBER(adillor_state::trackball_update)
 	if (BIT(m_config_switches->read(), 1))
 	{
 		double const ox = x, oy = y;
-		double const a = M_PI / 4.0;
-		x = ox*cos(a) - oy*sin(a);
-		y = ox*sin(a) + oy*cos(a);
+		double const scale = 1.0 / std::sqrt(2.0);
+		x = (ox - oy) * scale;
+		y = (oy + ox) * scale;
 	}
 
-	// tied to mcu A2/A3 timer (speed determines frequency)
+	// tied to MCU A2/A3 timer (speed determines frequency)
 	double t[2];
 	t[0] = fabs(y); // y -> A2
 	t[1] = fabs(x); // x -> A3
 	int params[2] = { (y >= 0.0) ? 2 : 0, (x <= 0.0) ? 3 : 1 };
 
-	// these values(in hz) may need tweaking:
+	// these values(in Hz) may need tweaking:
 	const double base = 20;
 	const double range = 1250;
 
