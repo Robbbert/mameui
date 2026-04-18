@@ -9,7 +9,7 @@
   System Overview:
 
   This is a Scaleable, Multi-CPU and Multi-User System.
-  The largest scale configuration known so far was capable of 28(!) players and 16 screens wraped around. (retaired in the early 2000's)
+  The largest scale configuration known so far was capable of 28(!) players and 16 screens wrapped around. (retired in the early 2000's)
 
   System has one Master 68020 CPU Board for game play, and one or more Slave 68020 CPU Boards for graphics.
 
@@ -138,7 +138,6 @@ better notes (complete chip lists) for each board still needed
 #include "cpu/tms320c2x/tms320c2x.h"
 #include "machine/nvram.h"
 #include "sound/c140.h"
-
 
 #include "emupal.h"
 #include "layout/generic.h"
@@ -622,6 +621,7 @@ INPUT_PORTS_END
 
 void gal3_state::gal3(machine_config &config)
 {
+	// basic machine hardware
 	m68020_device &maincpu(M68020(config, "maincpu", 49152000/2));
 	maincpu.set_addrmap(AS_PROGRAM, &gal3_state::cpu_mst_map);
 	maincpu.set_vblank_int("lscreen", FUNC(gal3_state::irq1_line_hold));
@@ -651,7 +651,6 @@ void gal3_state::gal3(machine_config &config)
 	NVRAM(config, "nvmem", nvram_device::DEFAULT_ALL_0);
 
 	// video chain 1
-
 	screen_device &lscreen(SCREEN(config, "lscreen", SCREEN_TYPE_RASTER));
 	lscreen.set_refresh_hz(60);
 	lscreen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
@@ -666,7 +665,7 @@ void gal3_state::gal3(machine_config &config)
 	NAMCO_C355SPR(config, m_c355spr[0], 0);
 	m_c355spr[0]->set_screen("lscreen");
 	m_c355spr[0]->set_palette(m_palette[0]);
-	m_c355spr[0]->set_scroll_offsets(0x26, 0x19);
+	m_c355spr[0]->set_scroll_offsets(0, 0x20);
 	m_c355spr[0]->set_mix_callback(FUNC(gal3_state::sprite_mix_callback));
 	m_c355spr[0]->set_color_base(0x1000); // TODO : verify palette offset
 	m_c355spr[0]->set_external_prifill(true);
@@ -680,7 +679,6 @@ void gal3_state::gal3(machine_config &config)
 	m_namcos21_dsp_c67[0]->set_renderer_tag("namcos21_3d_1");
 
 	// video chain 2
-
 	screen_device &rscreen(SCREEN(config, "rscreen", SCREEN_TYPE_RASTER));
 	rscreen.set_refresh_hz(60);
 	rscreen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
@@ -695,7 +693,7 @@ void gal3_state::gal3(machine_config &config)
 	NAMCO_C355SPR(config, m_c355spr[1], 0);
 	m_c355spr[1]->set_screen("rscreen");
 	m_c355spr[1]->set_palette(m_palette[1]);
-	m_c355spr[1]->set_scroll_offsets(0x26, 0x19);
+	m_c355spr[1]->set_scroll_offsets(0, 0x20);
 	m_c355spr[1]->set_mix_callback(FUNC(gal3_state::sprite_mix_callback));
 	m_c355spr[1]->set_color_base(0x1000); // TODO : verify palette offset
 	m_c355spr[1]->set_external_prifill(true);
@@ -708,7 +706,7 @@ void gal3_state::gal3(machine_config &config)
 	NAMCOS21_DSP_C67(config, m_namcos21_dsp_c67[1], 0);
 	m_namcos21_dsp_c67[1]->set_renderer_tag("namcos21_3d_2");
 
-
+	// sound hardware
 	SPEAKER(config, "speaker", 2).front();
 
 	// TODO: Total 5 of C140s in sound board, verified from gal3zlgr PCB - gal3 uses same board?
