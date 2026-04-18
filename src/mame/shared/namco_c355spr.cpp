@@ -290,7 +290,6 @@ void namco_c355spr_device::device_start()
 	m_mix_cb.resolve();
 
 	save_item(NAME(m_position));
-
 }
 
 void namco_c355spr_device::device_stop()
@@ -529,20 +528,12 @@ void namco_c355spr_device::get_single_sprite(u16 which, c355_sprite *sprite_ptr,
 	int xscroll = util::sext<s16>(m_position[1], 9);
 	int yscroll = util::sext<s16>(m_position[0], 9);
 
+	/* Medium Resolution: system21 adjust */
 	if (screen().height() > 384)
-	{ /* Medium Resolution: system21 adjust */
-			xscroll = util::sext<s16>(m_position[1], 10);
-			if (yscroll < 0)
-			{ /* solvalou */
-				yscroll += 0x20;
-			}
-			yscroll += 0x10;
-	}
-	else
-	{
-		xscroll += m_scrolloffs[0];
-		yscroll += m_scrolloffs[1];
-	}
+		xscroll = util::sext<s16>(m_position[1], 10);
+
+	xscroll += m_scrolloffs[0];
+	yscroll += m_scrolloffs[1];
 
 	hpos -= xscroll;
 	vpos -= yscroll;
@@ -657,4 +648,3 @@ void namco_c355spr_device::get_single_sprite(u16 which, c355_sprite *sprite_ptr,
 		source_height_remaining -= 16;
 	} /* next row */
 }
-

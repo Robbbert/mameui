@@ -199,7 +199,7 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 	NAMCO_C355SPR(config, m_c355spr, 0);
 	m_c355spr->set_screen(m_screen);
 	m_c355spr->set_palette(m_palette);
-	m_c355spr->set_scroll_offsets(0x26, 0x19);
+	m_c355spr->set_scroll_offsets(0, 0x20);
 	m_c355spr->set_mix_callback(FUNC(namco_de_pcbstack_device::sprite_mix_callback));
 	m_c355spr->set_color_base(0x1000);
 	m_c355spr->set_external_prifill(true);
@@ -858,4 +858,3 @@ ROM_END
 
 // 3 PCB stacks in a single cage (3x 4 PCBs) linked for 3 screen panorama, boards look similar to original Namco System 21 (not 21B) including TMS320C25 DSP, but use C68 I/O MCU and sprite chip instead of "68000 'GPU'" ?
 GAME( 1992, driveyes,  0,        driveyes, driveyes,   namcos21_de_state, empty_init,    ROT0,    "Namco", "Driver's Eyes (Japan) (1992/01/10, Main Ver 2.1, Sub Ver 1.1)",                 MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN)
-
