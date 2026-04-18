@@ -747,7 +747,7 @@ void asc_device::write(offs_t offset, u8 data)
 
 // asc_v8_device implementation
 asc_v8_device::asc_v8_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock)
-	: asc_v8_device(mconfig, ASC, tag, owner, clock)
+	: asc_v8_device(mconfig, ASC_V8, tag, owner, clock)
 {
 }
 
