@@ -323,7 +323,7 @@ int gmboard_device::magnet_r()
 	if (m_piece_hand)
 		return 1;
 
-	return check_board(true, true) ? 1 : 0;
+	return check_board(m_magnet, true) ? 1 : 0;
 }
 
 TIMER_CALLBACK_MEMBER(gmboard_device::motor_count)
