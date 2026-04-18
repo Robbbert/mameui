@@ -127,7 +127,7 @@ u8 grandmas_state::irq_clear_r(offs_t offset)
 u8 grandmas_state::status_r()
 {
 	// d0: magnet sensor
-	u8 data = m_board->magnet_r();
+	u8 data = m_board->magnet_r() ^ 1;
 
 	// d1,d3,d5: IRQ F/F Q
 	for (int i = 0; i < 3; i++)
