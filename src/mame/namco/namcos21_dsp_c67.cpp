@@ -72,10 +72,11 @@ void namcos21_dsp_c67_device::device_reset()
 
 	/* DSP startup hacks */
 	m_mbNeedsKickstart = 20;
-	if (m_gametype == NAMCOS21_CYBERSLED)
-	{
-		m_mbNeedsKickstart = 200;
-	}
+	// looks unnecessary, also causes 3d drift on title screen
+//	if (m_gametype == NAMCOS21_CYBERSLED)
+//	{
+//		m_mbNeedsKickstart = 200;
+//	}
 
 	/* Wipe the framebuffers */
 	m_renderer->swap_and_clear_poly_framebuffer();
@@ -109,6 +110,10 @@ void namcos21_dsp_c67_device::device_reset()
 
 void namcos21_dsp_c67_device::reset_dsps(int state)
 {
+	// starblad/solvalou exiting service mode requires this otherwise 3d becomes non-functional
+	if (state)
+		this->reset();
+
 	if (m_c67master)
 		m_c67master->set_input_line(INPUT_LINE_RESET, state);
 

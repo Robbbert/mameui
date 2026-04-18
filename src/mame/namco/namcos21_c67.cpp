@@ -5,21 +5,30 @@
 TODO (2026 update):
 - how the 3d rasterizer really selects banks 1 & 2? aircomb is the odd one, it has a red shaded
   bank from time to time;
-- aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen);
+- fix 3d/sprite vertical offsets;
+- lamp/vibration outputs, from MCU? (particularly starblad);
+- aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen),
+  and on pilot parachuting with a time over;
 - aircomb: sprites blends badly with background pen when warning appears and the src target is the sky color
   (i.e. pen 0xff with current handling);
-- aircomb: level select/continue screen draws with a red pen, should be pure black according to refs;
+- aircomb: level select/continue screen draws with a red backdrop pen, should be pure black
+  according to refs;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
+- aircomb: bad sprite colors on debriefing medal screen;
 - cybsled: https://mametesters.org/view.php?id=6302
 - solvalou: https://mametesters.org/view.php?id=2085
-- solvalou: black screen on service mode (cfr. shared/namco_c355spr.cpp);
-- starblad: 3d freezes after exiting service mode;
+- solvalou: black screen on service mode, is it due of the various hacks or it's in shared/namco_c355spr.cpp?;
+- solvalou: implement cabinet layout, upper part should be Y flipped thru a mirror,
+  unless it's actually sprite responsibility?
+- solvalou: new game transition should fill green on terrain instead of white-ish (comes from 3d
+  render);
+- starblad: service mode has heavy sprite glitches if entered from live gameplay (verify)
+
+NOTES:
+- aircomb: intro cockpit closure is one pixel off on left edge, confirmed btanb from ref;
 
 TODO:   namcoic.c: in StarBlade, the sprite list is stored at a different location during startup tests.
         What register controls this?
-
-TODO:   Map lamps/vibration outputs as used by StarBlade (and possibly other titles).
-        These likely involve the MCU.
 
 ---------------------------------------------------------------------------
 
@@ -260,9 +269,7 @@ Namco System 21 Video Hardware
 */
 
 #include "emu.h"
-#include "screen.h"
-#include "emupal.h"
-#include "speaker.h"
+
 #include "cpu/m68000/m68000.h"
 #include "cpu/m6805/m6805.h"
 #include "cpu/m6809/m6809.h"
@@ -278,7 +285,10 @@ Namco System 21 Video Hardware
 #include "namcos21_3d.h"
 #include "sound/c140.h"
 #include "sound/ymopm.h"
+
 #include "emupal.h"
+#include "screen.h"
+#include "speaker.h"
 
 #define ENABLE_LOGGING      0
 
@@ -408,6 +418,11 @@ u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitma
 	int pivot = 3;
 	bitmap.fill(0xff, cliprect);
 	screen.priority().fill(0, cliprect);
+
+	// solvalou after POST, definitely blanks screen
+	if (!BIT(m_video_enable, 6))
+		return 0;
+
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 
 	const u16 pri1 = (m_palette->read16_ext(0) >> 8) & 7;
@@ -446,12 +461,14 @@ u16 namcos21_c67_state::video_enable_r()
 	return m_video_enable;
 }
 
+// bit 6: video enable
+// other bits unknown (if ever used)
 void namcos21_c67_state::video_enable_w(offs_t offset, u16 data, u16 mem_mask)
 {
-	COMBINE_DATA( &m_video_enable ); /* 0x40 = enable */
-	if (m_video_enable != 0 && m_video_enable != 0x40)
+	COMBINE_DATA( &m_video_enable );
+	if (m_video_enable & ~0x40)
 	{
-		logerror("%s: unexpected video_enable_w=0x%x\n", machine().describe_context(), m_video_enable);
+		popmessage("Video Enable %04x!", m_video_enable);
 	}
 }
 
