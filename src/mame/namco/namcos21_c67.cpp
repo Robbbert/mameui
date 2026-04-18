@@ -5,7 +5,6 @@
 TODO (2026 update):
 - how the 3d rasterizer really selects banks 1 & 2? aircomb is the odd one, it has a red shaded
   bank from time to time;
-- fix 3d/sprite vertical offsets;
 - lamp/vibration outputs, from MCU? (particularly starblad);
 - aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen),
   and on pilot parachuting with a time over;
@@ -18,8 +17,6 @@ TODO (2026 update):
 - cybsled: https://mametesters.org/view.php?id=6302
 - solvalou: https://mametesters.org/view.php?id=2085
 - solvalou: black screen on service mode, is it due of the various hacks or it's in shared/namco_c355spr.cpp?;
-- solvalou: implement cabinet layout, upper part should be Y flipped thru a mirror,
-  unless it's actually sprite responsibility?
 - solvalou: new game transition should fill green on terrain instead of white-ish (comes from 3d
   render);
 - starblad: service mode has heavy sprite glitches if entered from live gameplay (verify)
@@ -27,8 +24,9 @@ TODO (2026 update):
 NOTES:
 - aircomb: intro cockpit closure is one pixel off on left edge, confirmed btanb from ref;
 
-TODO:   namcoic.c: in StarBlade, the sprite list is stored at a different location during startup tests.
-        What register controls this?
+TODO:
+- namcoic.c: in StarBlade, the sprite list is stored at a different location during startup tests.
+  What register controls this?
 
 ---------------------------------------------------------------------------
 
@@ -289,6 +287,8 @@ Namco System 21 Video Hardware
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+
+#include "solvalou.lh"
 
 #define ENABLE_LOGGING      0
 
@@ -1304,7 +1304,7 @@ void namcos21_c67_state::init_solvalou()
 // uses 5x TMS320C25 (C67, has internal ROM - dumped)
 GAME( 1991, starblad,  0,        starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST2, World)",                     MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1991, starbladj, starblad, starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST1, Japan)",                     MACHINE_IMPERFECT_GRAPHICS )
-GAME( 1991, solvalou,  0,        solvalou, s21default, namcos21_c67_state, init_solvalou, ROT0,    "Namco", "Solvalou (SV1, Japan)",                      MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING )
+GAMEL(1991, solvalou,  0,        solvalou, s21default, namcos21_c67_state, init_solvalou, ROT0,    "Namco", "Solvalou (SV1, Japan)",                      MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING, layout_solvalou )
 GAME( 1992, aircomb,   0,        aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC2, US)",                       MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS ) // There's code for a SCI, is it even possible to play multiplayer?
 GAME( 1992, aircombj,  aircomb,  aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC1, Japan)",                    MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1993, cybsled,   0,        cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY2, World)",                    MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN | MACHINE_NOT_WORKING )
