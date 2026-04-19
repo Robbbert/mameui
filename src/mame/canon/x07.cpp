@@ -42,6 +42,22 @@
     T6834 IMPLEMENTATION
 ***************************************************************************/
 
+static constexpr XTAL X07_CPU_CLOCK = 15.36_MHz_XTAL / 4;
+static constexpr XTAL BRG_INPUT_HZ = X07_CPU_CLOCK / 20; // = 192000 Hz
+
+// HD61L202F write port F4 control bits
+static constexpr uint8_t F4_W_REM   = 0x01;
+static constexpr uint8_t F4_W_BZON  = 0x02; // buzzer sound enable
+static constexpr uint8_t F4_W_MD0   = 0x04; // mode select bit 0
+static constexpr uint8_t F4_W_MD1   = 0x08; // mode select bit 1
+static constexpr uint8_t F4_W_LEO   = 0x10; // 38.4 kHz opto-coupler signal
+static constexpr uint8_t F4_W_CNTR  = 0x20; // parallel port control bit
+static constexpr uint8_t F4_W_BRGST = 0x40; // start baud-rate generator (BRG)
+static constexpr uint8_t F4_W_SETBC = 0x80; // load BRG counter from F2/F3
+
+// BRG is active when running in buzzer mode (MD1=MD0=1) with BRGST set.
+static constexpr uint8_t F4_BRG_ACTIVE = F4_W_BRGST | F4_W_MD1 | F4_W_MD0;
+
 void x07_state::t6834_cmd (uint8_t cmd)
 {
 	switch (cmd)
@@ -534,7 +550,11 @@ void x07_state::t6834_cmd (uint8_t cmd)
 		break;
 
 	case 0x38:  //click off
+		m_click_on = 0;
+		break;
+
 	case 0x39:  //click on
+		m_click_on = 1;
 		break;
 
 	case 0x3a:  //Locate Close
@@ -813,6 +833,34 @@ void x07_state::receive_bit(int bit)
 	}
 }
 
+void x07_state::t6834_set_audio()
+{
+	const uint16_t div = (m_regs_w[2] | m_regs_w[3] << 8) & 0x0fff;
+	if (div > 0)
+	{
+		const uint32_t freq = BRG_INPUT_HZ.value() / div;
+		m_beep->set_clock(freq);
+
+		const uint32_t adjusted_freq = freq * 2; // empirical to match hardware result
+		m_audio_tick->adjust(attotime::from_hz(adjusted_freq), 0, attotime::from_hz(adjusted_freq));
+	}
+	else
+	{
+		m_beep->set_clock(0);
+		m_audio_tick->reset();
+	}
+	m_beep->set_state((m_regs_w[4] & F4_W_BZON) ? 1 : 0);  // only sound if BZON set
+	m_regs_r[2] |= 0x04;  // signaling generator is running
+}
+
+void x07_state::t6834_reset_audio()
+{
+	m_beep->set_state(0);
+	m_audio_tick->reset();
+	m_regs_r[2] &= ~0x04;  // generator not running
+}
+
+
 
 /****************************************************
     this function emulate the color printer X-710
@@ -1002,6 +1050,15 @@ void x07_state::kb_irq()
 		m_regs_r[2] |= 0x01;
 		m_maincpu->set_input_line(NSC800_RSTA, ASSERT_LINE);
 		m_rsta_clear->adjust(attotime::from_msec(50));
+
+		// Produce a brief click through the buzzer, unless a tone is already playing
+		// The click is a coprocessor feature.
+		if (m_click_on && (m_regs_w[4] & F4_BRG_ACTIVE) != F4_BRG_ACTIVE)
+		{
+			m_beep->set_clock(1200);
+			m_beep->set_state(1);
+			m_click_stop->adjust(attotime::from_msec(10));
+		}
 	}
 }
 
@@ -1153,11 +1210,16 @@ void x07_state::x07_io_w(offs_t offset, uint8_t data)
 
 	case 0xf0:
 	case 0xf1:
-	case 0xf2:
-	case 0xf3:
 	case 0xf6:
 	case 0xf7:
 		m_regs_w[offset & 7] = data;
+		break;
+
+	case 0xf2:
+	case 0xf3:
+		m_regs_w[offset & 7] = data;
+		if ((m_regs_w[4] & F4_BRG_ACTIVE) == F4_BRG_ACTIVE)
+			t6834_set_audio();
 		break;
 
 	case 0xf4:
@@ -1176,16 +1238,10 @@ void x07_state::x07_io_w(offs_t offset, uint8_t data)
 			m_cass_tick->reset();
 		}
 
-		if((data & 0x0e) == 0x0e)
-		{
-			uint16_t div = (m_regs_w[2] | m_regs_w[3] << 8) & 0x0fff;
-			m_beep->set_clock((div == 0) ? 0 : 192000 / div);
-			m_beep->set_state(1);
-
-			m_beep_stop->adjust(attotime::from_msec(m_ram->pointer()[0x450] * 0x20));
-		}
+		if((data & F4_BRG_ACTIVE) == F4_BRG_ACTIVE)
+			t6834_set_audio();
 		else
-			m_beep->set_state(0);
+			t6834_reset_audio();
 		break;
 
 	case 0xf5:
@@ -1344,9 +1400,17 @@ TIMER_CALLBACK_MEMBER(x07_state::rstb_clear)
 	m_maincpu->set_input_line(NSC800_RSTB, CLEAR_LINE);
 }
 
-TIMER_CALLBACK_MEMBER(x07_state::beep_stop)
+TIMER_CALLBACK_MEMBER(x07_state::audio_tick)
 {
-	m_beep->set_state(0);
+	m_maincpu->set_input_line(NSC800_RSTB, ASSERT_LINE);
+	m_rstb_clear->adjust(attotime::from_usec(50));
+}
+
+TIMER_CALLBACK_MEMBER(x07_state::click_stop)
+{
+	// Only stop if the F4 buzzer hasn't been activated in the meantime
+	if ((m_regs_w[4] & F4_BRG_ACTIVE) != F4_BRG_ACTIVE)
+		m_beep->set_state(0);
 }
 
 static const gfx_layout x07_charlayout =
@@ -1369,7 +1433,8 @@ void x07_state::machine_start()
 	uint32_t ram_size = m_ram->size();
 	m_rsta_clear = timer_alloc(FUNC(x07_state::rsta_clear), this);
 	m_rstb_clear = timer_alloc(FUNC(x07_state::rstb_clear), this);
-	m_beep_stop = timer_alloc(FUNC(x07_state::beep_stop), this);
+	m_audio_tick = timer_alloc(FUNC(x07_state::audio_tick), this);
+	m_click_stop = timer_alloc(FUNC(x07_state::click_stop), this);
 	m_cass_poll = timer_alloc(FUNC(x07_state::cassette_poll), this);
 	m_cass_tick = timer_alloc(FUNC(x07_state::cassette_tick), this);
 
@@ -1388,6 +1453,7 @@ void x07_state::machine_start()
 	save_item(NAME(m_scroll_max));
 	save_item(NAME(m_blink));
 	save_item(NAME(m_kb_on));
+	save_item(NAME(m_click_on));
 	save_item(NAME(m_repeat_key));
 	save_item(NAME(m_kb_size));
 	save_item(NAME(m_prn_sendbit));
@@ -1454,6 +1520,7 @@ void x07_state::machine_reset()
 	m_scroll_max = 3;
 	m_blink = 0;
 	m_kb_on = 0;
+	m_click_on = 1;
 	m_repeat_key = 0;
 	m_kb_size = 0;
 	m_repeat_key = 0;
@@ -1469,7 +1536,7 @@ void x07_state::machine_reset()
 void x07_state::x07(machine_config &config)
 {
 	/* basic machine hardware */
-	NSC800(config, m_maincpu, 15.36_MHz_XTAL / 4);
+	NSC800(config, m_maincpu, X07_CPU_CLOCK);
 	m_maincpu->set_addrmap(AS_PROGRAM, &x07_state::x07_mem);
 	m_maincpu->set_addrmap(AS_IO, &x07_state::x07_io);
 
