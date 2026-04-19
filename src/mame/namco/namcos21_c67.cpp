@@ -13,7 +13,8 @@ TODO (2026 update):
 - aircomb: level select/continue screen draws with a red backdrop pen, should be pure black
   according to refs;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
-- aircomb: bad sprite colors on debriefing medal screen;
+- aircomb: bad sprite colors on debriefing medal screen, throws an IDC overflow when finishing
+  the Ace course + extra stage;
 - cybsled: https://mametesters.org/view.php?id=6302
 - solvalou: https://mametesters.org/view.php?id=2085
 - solvalou: black screen on service mode, is it due of the various hacks or it's in shared/namco_c355spr.cpp?;
