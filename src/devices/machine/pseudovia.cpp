@@ -42,6 +42,7 @@ DEFINE_DEVICE_TYPE(APPLE_SONORA_PSEUDOVIA, sonora_pseudovia_device, "snpsvia", "
 DEFINE_DEVICE_TYPE(APPLE_MSC_PSEUDOVIA, msc_pseudovia_device, "mspsvia", "Apple pseudo-VIA (MSC)")
 DEFINE_DEVICE_TYPE(APPLE_PB030_PSEUDOVIA, pb030_pseudovia_device, "pbpsvia", "Apple pseudo-VIA (Misc. GLU)")
 DEFINE_DEVICE_TYPE(APPLE_QUADRA_PSEUDOVIA, quadra_pseudovia_device, "qdpsvia", "Apple pseudo-VIA (IOSB/PrimeTime/PrimeTime II)")
+
 enum
 {
 	PVIA_PB = 0,

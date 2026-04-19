@@ -3,6 +3,7 @@
 /***************************************************************************
 
     asc.cpp
+
     Apple Sound Chip (ASC) 344S0053 (original), 344S0063 (cost-reduced)
     Enhanced Apple Sound Chip (EASC) 343S1036
     Audio portion of "V8" ASIC (343S0116)
@@ -99,11 +100,6 @@ static constexpr u8 STAT_EMPTY_OR_FULL_B    = 0x08;
 //  asc_base_device - constructor
 //-------------------------------------------------
 
-asc_base_device::asc_base_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock)
-	:asc_base_device(mconfig, ASC, tag, owner, clock)
-{
-}
-
 asc_base_device::asc_base_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock)
 	: device_t(mconfig, type, tag, owner, clock)
 	, device_sound_interface(mconfig, *this)
@@ -178,13 +174,12 @@ TIMER_CALLBACK_MEMBER(asc_base_device::delayed_stream_update)
 
 void asc_base_device::sound_stream_update(sound_stream &stream)
 {
-	int i, ch;
-	static u32 wtoffs[2] = { 0, 0x200 };
+	constexpr u32 wtoffs[2] = { 0, 0x200 };
 
 	switch (m_regs[R_MODE] & 3)
 	{
 		case 0: // chip off
-			for (i = 0; i < stream.samples(); i++)
+			for (int i = 0; i < stream.samples(); i++)
 			{
 				stream.put_int(0, i, m_last_left, 32768 / 64);
 				stream.put_int(1, i, m_last_right, 32768 / 64);
@@ -193,12 +188,10 @@ void asc_base_device::sound_stream_update(sound_stream &stream)
 
 		case 1: // FIFO mode
 		{
-			for (i = 0; i < stream.samples(); i++)
+			for (int i = 0; i < stream.samples(); i++)
 			{
-				s8 smpll, smplr;
-
-				smpll = (s8)m_fifo[0][m_fifo_rdptr[0]] ^ 0x80;
-				smplr = (s8)m_fifo[1][m_fifo_rdptr[1]] ^ 0x80;
+				s8 smpll = (s8)m_fifo[0][m_fifo_rdptr[0]] ^ 0x80;
+				s8 smplr = (s8)m_fifo[1][m_fifo_rdptr[1]] ^ 0x80;
 				if (!BIT(m_regs[R_CONTROL], CONTROL_STEREO))
 				{
 					smplr = smpll;
@@ -254,21 +247,21 @@ void asc_base_device::sound_stream_update(sound_stream &stream)
 
 		case 2: // wavetable mode
 		{
-			for (i = 0; i < stream.samples(); i++)
+			for (int i = 0; i < stream.samples(); i++)
 			{
 				s32 mixL, mixR;
-				s8 smpl;
 
 				mixL = mixR = 0;
 
 				// update channel pointers
-				for (ch = 0; ch < 4; ch++)
+				for (int ch = 0; ch < 4; ch++)
 				{
 					m_phase[ch] += m_incr[ch];
 
+					s8 smpl;
 					if (ch < 2)
 					{
-					smpl = (s8)m_fifo[0][((m_phase[ch]>>15)&0x1ff) + wtoffs[ch&1]];
+						smpl = (s8)m_fifo[0][((m_phase[ch]>>15)&0x1ff) + wtoffs[ch&1]];
 					}
 					else
 					{
@@ -309,7 +302,7 @@ u8 asc_base_device::read(offs_t offset)
 	}
 	else if (offset < 0x800)
 	{
-		return m_fifo[1][offset-0x400];
+		return m_fifo[1][offset - 0x400];
 	}
 	else
 	{
@@ -328,11 +321,14 @@ u8 asc_base_device::read(offs_t offset)
 			case R_FIFOSTAT:
 				rv = m_regs[R_FIFOSTAT];
 
-				// reading this register clears all bits, but only on original ASC
-				m_regs[R_FIFOSTAT] = 0;
+				if (!machine().side_effects_disabled())
+				{
+					// reading this register clears all bits, but only on original ASC
+					m_regs[R_FIFOSTAT] = 0;
 
-				// reading this clears interrupts
-				set_irq_line(CLEAR_LINE);
+					// reading this clears interrupts
+					set_irq_line(CLEAR_LINE);
+				}
 				return rv;
 
 			// these are known to return 1 on original ASC
@@ -366,7 +362,7 @@ u8 asc_base_device::read(offs_t offset)
 		return 0xff;
 	}
 
-	return m_regs[offset-0x800];
+	return m_regs[offset - 0x800];
 }
 
 //-------------------------------------------------
@@ -805,9 +801,7 @@ Cancel 0 0 0 0 0 $00 0
 
 void asc_v8_device::sound_stream_update(sound_stream &stream)
 {
-	int i;
-
-	for (i = 0; i < stream.samples(); i++)
+	for (int i = 0; i < stream.samples(); i++)
 	{
 		const s8 smpl = (s8)m_fifo[0][m_fifo_rdptr[0]] ^ 0x80;
 
@@ -864,7 +858,7 @@ u8 asc_v8_device::read(offs_t offset)
 
 	case R_FIFOSTAT:
 		// reading this clears interrupts, but not the FIFO status bits
-		if (!(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_A))
+		if (!machine().side_effects_disabled() && !(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_A))
 		{
 			set_irq_line(CLEAR_LINE);
 		}
@@ -972,8 +966,6 @@ void asc_sonora_device::device_reset()
 
 void asc_sonora_device::sound_stream_update(sound_stream &stream)
 {
-	int i;
-
 	// if we're in playback mode, FIFO A always reads empty
 	if (!(m_regs[R_PLAYRECA] & 1))
 	{
@@ -985,12 +977,10 @@ void asc_sonora_device::sound_stream_update(sound_stream &stream)
 		}
 	}
 
-	for (i = 0; i < stream.samples(); i++)
+	for (int i = 0; i < stream.samples(); i++)
 	{
-		s8 smpll, smplr;
-
-		smpll = (s8)m_fifo[0][m_fifo_rdptr[0]] ^ 0x80;
-		smplr = (s8)m_fifo[1][m_fifo_rdptr[1]] ^ 0x80;
+		const s8 smpll = (s8)m_fifo[0][m_fifo_rdptr[0]] ^ 0x80;
+		const s8 smplr = (s8)m_fifo[1][m_fifo_rdptr[1]] ^ 0x80;
 
 		m_last_left = smpll;
 		m_last_right = smplr;
@@ -1058,7 +1048,7 @@ u8 asc_sonora_device::read(offs_t offset)
 
 	case R_FIFOSTAT:
 		// reading this clears interrupts, but not the FIFO status bits
-		if (!(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_B))
+		if (!machine().side_effects_disabled() && !(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_B))
 		{
 			set_irq_line(CLEAR_LINE);
 		}
@@ -1177,13 +1167,11 @@ Cancel 1 1 1 1 1 $0E 0
 */
 void asc_iosb_device::sound_stream_update(sound_stream &stream)
 {
-	int i;
-
 	// printf("ASC-IOSB mode %d fl %02x cap A %x cap B %x\n", m_regs[R_MODE] & 3, m_regs[R_FIFOSTAT], m_fifo_cap[0], m_fifo_cap[1]);
 	switch (m_regs[R_MODE])
 	{
 		case 0: // chip off
-			for (i = 0; i < stream.samples(); i++)
+			for (int i = 0; i < stream.samples(); i++)
 			{
 				stream.put_int(0, i, m_last_left, 32768 / 64);
 				stream.put_int(1, i, m_last_right, 32768 / 64);
@@ -1205,12 +1193,10 @@ void asc_iosb_device::sound_stream_update(sound_stream &stream)
 				}
 			}
 
-			for (i = 0; i < stream.samples(); i++)
+			for (int i = 0; i < stream.samples(); i++)
 			{
-				s8 smpll, smplr;
-
-				smpll = (s8)m_fifo[0][m_fifo_rdptr[0]] ^ 0x80;
-				smplr = (s8)m_fifo[1][m_fifo_rdptr[1]] ^ 0x80;
+				const s8 smpll = (s8)m_fifo[0][m_fifo_rdptr[0]] ^ 0x80;
+				const s8 smplr = (s8)m_fifo[1][m_fifo_rdptr[1]] ^ 0x80;
 
 				m_last_left = smpll;
 				m_last_right = smplr;
@@ -1276,7 +1262,7 @@ u8 asc_iosb_device::read(offs_t offset)
 
 		case R_FIFOSTAT:
 			// reading this clears interrupts, but not the FIFO status bits
-			if (!(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_B))
+			if (!machine().side_effects_disabled() && !(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_B))
 			{
 				set_irq_line(CLEAR_LINE);
 			}
@@ -1361,11 +1347,11 @@ u16 asc_iosb_device::read_w(offs_t offset)
 {
 	if (offset < 0x800)
 	{
-		return ((m_fifo[0][m_fifo_rdptr[0]] ^ 0x80) << 8 | (m_fifo[1][m_fifo_rdptr[0]] ^ 0x80));
+		return ((m_fifo[0][m_fifo_rdptr[0]] ^ 0x80) << 8) | (m_fifo[1][m_fifo_rdptr[0]] ^ 0x80);
 	}
 	else
 	{
-		return read(offset<<1) << 8 | read((offset<<1) + 1);
+		return (read(offset << 1) << 8) | read((offset << 1) + 1);
 	}
 }
 
@@ -1470,12 +1456,10 @@ FIFO IRQ 1 0 0 0
 
 void asc_easc_device::sound_stream_update(sound_stream &stream)
 {
-	int i;
-
 	switch (m_regs[R_MODE] & 3)
 	{
 		case 0: // chip off
-			for (i = 0; i < stream.samples(); i++)
+			for (int i = 0; i < stream.samples(); i++)
 			{
 				stream.put_int(0, i, m_last_left, 32768);
 				stream.put_int(1, i, m_last_right, 32768);
@@ -1487,7 +1471,7 @@ void asc_easc_device::sound_stream_update(sound_stream &stream)
 
 		case 1: // FIFO mode
 		{
-			for (i = 0; i < stream.samples(); i++)
+			for (int i = 0; i < stream.samples(); i++)
 			{
 				s16 smpll = m_last_left;
 				s16 smplr = m_last_right;
@@ -1669,7 +1653,7 @@ u8 asc_easc_device::read(offs_t offset)
 	{
 	case R_FIFOSTAT:
 		// reading this clears interrupts, but not the FIFO status bits
-		if (!(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_B))
+		if (!machine().side_effects_disabled() && !(m_regs[R_FIFOSTAT] & STAT_HALF_FULL_B))
 		{
 			set_irq_line(CLEAR_LINE);
 		}

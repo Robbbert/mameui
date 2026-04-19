@@ -123,6 +123,11 @@ void igs011_device::priority_ram_w(offs_t offset, u16 data, u16 mem_mask)
 	COMBINE_DATA(&m_priority_ram[offset]);
 }
 
+int igs011_device::blitter_busy_r()
+{
+	return 0; // TODO
+}
+
 u32 igs011_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 #ifdef MAME_DEBUG

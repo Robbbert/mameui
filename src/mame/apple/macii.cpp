@@ -1175,9 +1175,9 @@ ROM_END
 } // anonymous namespace
 
 //    YEAR  NAME       PARENT    COMPAT  MACHINE   INPUT    CLASS        INIT        COMPANY           FULLNAME
-COMP( 1987, macii,     0,        0,      macii,    macii,  macii_state, macii_init, "Apple Computer", "Macintosh II",                 MACHINE_SUPPORTS_SAVE )
-COMP( 1987, maciihmu,  macii,    0,      maciihmu, macii,  macii_state, macii_init, "Apple Computer", "Macintosh II (w/o 68851 MMU)", MACHINE_SUPPORTS_SAVE )
-COMP( 1988, mac2fdhd,  0,        0,      maciihd,  macii,  macii_state, macii_init, "Apple Computer", "Macintosh II (FDHD)",          MACHINE_SUPPORTS_SAVE )
-COMP( 1988, maciix,    mac2fdhd, 0,      maciix,   macii,  macii_state, macii_init, "Apple Computer", "Macintosh IIx",                MACHINE_SUPPORTS_SAVE )
-COMP( 1989, macse30,   mac2fdhd, 0,      macse30,  macii,  macii_state, macii_init, "Apple Computer", "Macintosh SE/30",              MACHINE_SUPPORTS_SAVE )
-COMP( 1989, maciicx,   mac2fdhd, 0,      maciicx,  macii,  macii_state, macii_init, "Apple Computer", "Macintosh IIcx",               MACHINE_SUPPORTS_SAVE )
+COMP( 1987, macii,     0,        0,      macii,    macii,   macii_state, macii_init, "Apple Computer", "Macintosh II",                 MACHINE_SUPPORTS_SAVE )
+COMP( 1987, maciihmu,  macii,    0,      maciihmu, macii,   macii_state, macii_init, "Apple Computer", "Macintosh II (w/o 68851 MMU)", MACHINE_SUPPORTS_SAVE )
+COMP( 1988, mac2fdhd,  0,        0,      maciihd,  macii,   macii_state, macii_init, "Apple Computer", "Macintosh II (FDHD)",          MACHINE_SUPPORTS_SAVE )
+COMP( 1988, maciix,    mac2fdhd, 0,      maciix,   macii,   macii_state, macii_init, "Apple Computer", "Macintosh IIx",                MACHINE_SUPPORTS_SAVE )
+COMP( 1989, macse30,   mac2fdhd, 0,      macse30,  macii,   macii_state, macii_init, "Apple Computer", "Macintosh SE/30",              MACHINE_SUPPORTS_SAVE )
+COMP( 1989, maciicx,   mac2fdhd, 0,      maciicx,  macii,   macii_state, macii_init, "Apple Computer", "Macintosh IIcx",               MACHINE_SUPPORTS_SAVE )

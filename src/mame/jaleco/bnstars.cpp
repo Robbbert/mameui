@@ -89,14 +89,17 @@ ROMs    : MR96004-10.1  [125661cd] (IC5 - Samples)
 
 #include "emu.h"
 #include "ms32.h"
-
-#include "cpu/z80/z80.h"
-#include "cpu/v60/v60.h"
 #include "jalcrpt.h"
 
-#include "layout/generic.h"
+#include "mahjong.h"
+
+#include "cpu/v60/v60.h"
+#include "cpu/z80/z80.h"
+
 #include "speaker.h"
 #include "tilemap.h"
+
+#include "layout/generic.h"
 
 
 namespace {
@@ -120,8 +123,7 @@ public:
 		, m_rotate_ctrl(*this, "rotate_ctrl.%u", 0U)
 		, m_sprite(*this, "sprite.%u", 0U)
 		, m_object_vram(*this, "objram_%u", 0U, 0x10000U, ENDIANNESS_LITTLE)
-		, m_p1_keys(*this, "P1KEY.%u", 0)
-		, m_p2_keys(*this, "P2KEY.%u", 0)
+		, m_io_keys{ { *this, "KEY%u", 0 }, { *this, "KEY%u", 5 } }
 	{ }
 
 	void bnstars(machine_config &config);
@@ -152,8 +154,7 @@ private:
 	required_device_array<ms32_sprite_device, 2> m_sprite;
 	memory_share_array_creator<u16, 2> m_object_vram;
 
-	required_ioport_array<4> m_p1_keys;
-	required_ioport_array<4> m_p2_keys;
+	required_ioport_array<4> m_io_keys[2];
 
 	u32 m_bnstars1_mahjong_select = 0;
 	template <int chip> void ascii_vram_w(offs_t offset, u16 data, u16 mem_mask = ~0);
@@ -437,10 +438,10 @@ template <int chip> void ms32_bnstars_state::palette_ram_w(offs_t offset, u16 da
 template <int P>
 ioport_value ms32_bnstars_state::mahjong_ctrl_r()
 {
-	required_ioport_array<4> &keys = (P == 0) ? m_p1_keys : m_p2_keys;
-	// different routing than other ms32.cpp mahjong games, using 0x2080 as mask
-	u8 which = bitswap<2>(m_bnstars1_mahjong_select, 13, 7);
-	return keys[which]->read();
+	// different routing than other ms32.cpp mahjong games
+	// uses 0x2080 as multiplexer input rather than switch matrix
+	const u8 which = bitswap<2>(m_bnstars1_mahjong_select, 13, 7);
+	return bitswap<6>(m_io_keys[P][which]->read(), 4, 2, 3, 1, 0, 5) | 0xc0;
 }
 
 void ms32_bnstars_state::bnstars1_mahjong_select_w(u32 data)
@@ -515,41 +516,6 @@ static INPUT_PORTS_START( bnstars )
 	PORT_BIT( 0x00040000, IP_ACTIVE_LOW, IPT_SERVICE1 )
 	PORT_BIT( 0x00080000, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("P1 Test?") PORT_CODE(KEYCODE_F1)
 
-	PORT_START("P1KEY.0")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_START1 )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_A )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_E )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_M )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_I )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_MAHJONG_KAN )
-	PORT_BIT( 0xc0, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
-	PORT_START("P1KEY.1")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_B )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_F )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_N )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_J )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_MAHJONG_REACH )
-	PORT_BIT( 0xc0, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
-	PORT_START("P1KEY.2")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_C )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_G )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_CHI )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_K )
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_MAHJONG_RON )
-	PORT_BIT( 0xc0, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
-	PORT_START("P1KEY.3")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_D )
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_H )
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_PON )
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_L )
-	PORT_BIT( 0xe0, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
 	PORT_START("P2")
 	PORT_BIT( 0x000000ff, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_CUSTOM_MEMBER(FUNC(ms32_bnstars_state::mahjong_ctrl_r<1>))
 	PORT_BIT( 0x0000ff00, IP_ACTIVE_LOW, IPT_UNKNOWN )
@@ -558,40 +524,7 @@ static INPUT_PORTS_START( bnstars )
 	PORT_BIT( 0x00040000, IP_ACTIVE_LOW, IPT_SERVICE2 )
 	PORT_BIT( 0x00080000, IP_ACTIVE_LOW, IPT_OTHER ) PORT_NAME("P2 Test?") PORT_CODE(KEYCODE_F2)
 
-	PORT_START("P2KEY.0")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_START2 )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_A ) PORT_PLAYER(2)
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_E ) PORT_PLAYER(2)
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_M ) PORT_PLAYER(2)
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_I ) PORT_PLAYER(2)
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_MAHJONG_KAN ) PORT_PLAYER(2)
-	PORT_BIT( 0xc0, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
-	PORT_START("P2KEY.1")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_B ) PORT_PLAYER(2)
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_F ) PORT_PLAYER(2)
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_N ) PORT_PLAYER(2)
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_J ) PORT_PLAYER(2)
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_MAHJONG_REACH ) PORT_PLAYER(2)
-	PORT_BIT( 0xc0, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
-	PORT_START("P2KEY.2")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_C ) PORT_PLAYER(2)
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_G ) PORT_PLAYER(2)
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_CHI ) PORT_PLAYER(2)
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_K ) PORT_PLAYER(2)
-	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_MAHJONG_RON ) PORT_PLAYER(2)
-	PORT_BIT( 0xc0, IP_ACTIVE_LOW, IPT_UNKNOWN )
-
-	PORT_START("P2KEY.3")
-	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNKNOWN )
-	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_MAHJONG_D ) PORT_PLAYER(2)
-	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_MAHJONG_H ) PORT_PLAYER(2)
-	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_MAHJONG_PON ) PORT_PLAYER(2)
-	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_MAHJONG_L ) PORT_PLAYER(2)
-	PORT_BIT( 0xe0, IP_ACTIVE_LOW, IPT_UNKNOWN )
+	PORT_INCLUDE(mahjong_matrix_2p)
 
 	PORT_START("DSW")
 	PORT_DIPNAME(     0x00000001, 0x00000001, "Test Mode" ) PORT_DIPLOCATION("SW1:8")

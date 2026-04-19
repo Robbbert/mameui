@@ -393,11 +393,12 @@ u16 igs011_state_base::dips_r()
 
 	u16 ret = 0xff;
 	for (int i = 0; i < Num; i++)
+	{
 		if (BIT(~m_dips_sel, i))
 			ret &= m_io_dsw[i]->read();
+	}
 
-	// 0x0100 is blitter busy
-	return  (ret & 0xff) | 0x0000;
+	return  (ret & 0xff) | (m_igs011->blitter_busy_r() ? 0x0100 : 0x0000);
 }
 
 /***************************************************************************
