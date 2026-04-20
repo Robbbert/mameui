@@ -4,8 +4,10 @@
 
 TODO (2026 update):
 - lamp/vibration outputs, from MCU? (particularly starblad);
-- verify DSP clocks (probably 40MHz)
-- verify video timing, pixel clock is from 38.76922?
+- verify DSP clocks, they should be 40MHz, currently underclocked on purpose on MAME, otherwise polygons
+  may disappear on some frames (try playing starblad until after the asteroids), tightening quantum by
+  a factor of 40/24 does not fix it;
+- verify video timing, pixel clock is from 38.76922?;
 - verify audiocpu irq frequency;
 - is bgpen hardcoded or set somewhere? it doesn't look completely right in cybsled (see radar popup),
   but it's correct in solvalou and aircomb;

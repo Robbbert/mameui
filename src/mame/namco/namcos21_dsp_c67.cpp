@@ -129,28 +129,34 @@ void namcos21_dsp_c67_device::reset_kickstart()
 
 void namcos21_dsp_c67_device::device_add_mconfig(machine_config &config)
 {
-	namco_c67_device& dspmaster(NAMCO_C67(config, m_c67master, 24000000)); /* 24 MHz? overclocked */
-	dspmaster.set_addrmap(AS_PROGRAM, &namcos21_dsp_c67_device::master_dsp_program);
-	dspmaster.set_addrmap(AS_DATA, &namcos21_dsp_c67_device::master_dsp_data);
-	dspmaster.set_addrmap(AS_IO, &namcos21_dsp_c67_device::master_dsp_io);
-	dspmaster.xf_out_cb().set(FUNC(namcos21_dsp_c67_device::dsp_xf_w));
+	NAMCO_C67(config, m_c67master, 40_MHz_XTAL);
+	m_c67master->set_addrmap(AS_PROGRAM, &namcos21_dsp_c67_device::master_dsp_program);
+	m_c67master->set_addrmap(AS_DATA, &namcos21_dsp_c67_device::master_dsp_data);
+	m_c67master->set_addrmap(AS_IO, &namcos21_dsp_c67_device::master_dsp_io);
+	m_c67master->xf_out_cb().set(FUNC(namcos21_dsp_c67_device::dsp_xf_w));
 
 	for (int i = 0; i < 4; i++)
 	{
-		namco_c67_device& dspslave(NAMCO_C67(config, m_c67slave[i], 24000000)); /* 24 MHz? overclocked */
-		dspslave.set_addrmap(AS_PROGRAM, &namcos21_dsp_c67_device::slave_dsp_program);
-		dspslave.set_addrmap(AS_DATA, &namcos21_dsp_c67_device::slave_dsp_data);
-		dspslave.set_addrmap(AS_IO, &namcos21_dsp_c67_device::slave_dsp_io);
-		dspslave.hold_in_cb().set_constant(0);
-		dspslave.hold_ack_out_cb().set_nop();
-		dspslave.xf_out_cb().set(FUNC(namcos21_dsp_c67_device::slave_XF_output_w));
+		NAMCO_C67(config, m_c67slave[i], 40_MHz_XTAL);
+		m_c67slave[i]->set_addrmap(AS_PROGRAM, &namcos21_dsp_c67_device::slave_dsp_program);
+		m_c67slave[i]->set_addrmap(AS_DATA, &namcos21_dsp_c67_device::slave_dsp_data);
+		m_c67slave[i]->set_addrmap(AS_IO, &namcos21_dsp_c67_device::slave_dsp_io);
+		m_c67slave[i]->hold_in_cb().set_constant(0);
+		m_c67slave[i]->hold_ack_out_cb().set_nop();
+		m_c67slave[i]->xf_out_cb().set(FUNC(namcos21_dsp_c67_device::slave_XF_output_w));
 
-		// the emulation currently only uses one slave DSP clocked at 4x the normal rate instead of the master splitting the workload across the 4 slaves
-		if (i!=0)
-			dspslave.set_disable();
+		// instead of the master splitting the workload across the 4 slaves, the emulation
+		// currently only uses one slave DSP clocked at 4x the normal rate
+		if (i != 0)
+			m_c67slave[i]->set_disable();
 		else
-			dspslave.set_clock(24000000*4);
+			m_c67slave[i]->set_clock(m_c67slave[i]->clock() * 4);
 	}
+
+	// underclocked for now (see TODO note in namcos21_c67 driver)
+	m_c67master->set_clock_scale(0.6);
+	for (int i = 0; i < 4; i++)
+		m_c67slave[i]->set_clock_scale(0.6);
 }
 
 
