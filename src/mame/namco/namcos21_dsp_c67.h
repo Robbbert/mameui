@@ -107,7 +107,7 @@ private:
 
 	int32_t read_pointrom_data(unsigned offset);
 	void transmit_word_to_slave(uint16_t data);
-	void transfer_dsp_data();
+	void transfer_dsp_data(bool first);
 	uint16_t read_word_from_slave_input();
 	uint16_t get_input_bytes_advertised_for_slave();
 	void render_slave_output(uint16_t data);

@@ -212,62 +212,67 @@ void namcos21_dsp_c67_device::transmit_word_to_slave(uint16_t data)
 	}
 }
 
-void namcos21_dsp_c67_device::transfer_dsp_data()
+void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 {
 	uint16_t addr = m_mpDspState->masterSourceAddr;
 	bool const mode = BIT(addr, 15);
 	addr &= 0x7fff;
+
 	if (addr)
 	{
 		for (;;)
 		{
 			uint16_t const old = addr;
-			uint16_t const code = m_dspram16[addr++];
-			if (code == 0xffff)
+			uint16_t const code = m_dspram16[addr];
+			addr = (addr + 1) & 0x7fff;
+
+			if (!mode)
 			{
-				if (mode)
-				{
-					addr = m_dspram16[addr];
-					m_mpDspState->masterSourceAddr = addr;
-					if (ENABLE_LOGGING) logerror("LOOP:0x%04x\n", addr);
-					addr &= 0x7fff;
-					if (old == addr)
-					{
-						return;
-					}
-				}
-				else
+				if (code == 0xffff)
 				{
 					m_mpDspState->masterSourceAddr = 0;
 					return;
 				}
-			}
-			else if (!mode)
-			{
+
 				// direct data transfer
 				if (ENABLE_LOGGING) logerror("DATA TFR(0x%x)\n", code);
 				transmit_word_to_slave(code);
 				for (int i = 0; i < code; i++)
 				{
-					uint16_t const data = m_dspram16[addr++];
+					uint16_t const data = m_dspram16[addr];
+					addr = (addr + 1) & 0x7fff;
 					transmit_word_to_slave(data);
 				}
 			}
-			else if (code == 0x18 || code == 0x1a)
+			else if (first)
 			{
 				if (ENABLE_LOGGING) logerror("HEADER TFR(0x%x)\n", code);
 				transmit_word_to_slave(code + 1);
 				for (int i = 0; i < code; i++)
 				{
-					uint16_t const data = m_dspram16[addr++];
+					uint16_t const data = m_dspram16[addr];
+					addr = (addr + 1) & 0x7fff;
 					transmit_word_to_slave(data);
 				}
+			}
+			else if (code == 0xffff)
+			{
+				addr = m_dspram16[addr];
+				m_mpDspState->masterSourceAddr = addr;
+				if (ENABLE_LOGGING) logerror("GOTO:0x%04x\n", addr);
+				addr &= 0x7fff;
+
+				// return after goto self
+				if (old == addr)
+					return;
 			}
 			else
 			{
 				if (ENABLE_LOGGING) logerror("OBJ TFR(0x%x)\n", code);
 				int32_t masterAddr = read_pointrom_data(code);
-				uint16_t const len = m_dspram16[addr++];
+				uint16_t const len = m_dspram16[addr];
+				addr = (addr + 1) & 0x7fff;
+
 				for (;;)
 				{
 					int subAddr = read_pointrom_data(masterAddr++);
@@ -278,17 +283,13 @@ void namcos21_dsp_c67_device::transfer_dsp_data()
 					else
 					{
 						int const primWords = (uint16_t)read_pointrom_data(subAddr++);
-						// TODO: this function causes an IDC overflow in Solvalou, something else failed prior to that?
-						// In Header TFR when bad parameters happens there's a suspicious 0x000f 0x0003 as first two words,
-						// maybe it's supposed to have a different length there ...
-						// cfr: object code 0x17 in service mode
 						if (primWords > 2)
 						{
 							transmit_word_to_slave(0); // pad1
 							transmit_word_to_slave(len + 1);
 							for (int i = 0; i < len; i++)
-							{ // transform
-								transmit_word_to_slave(m_dspram16[addr + i]);
+							{
+								transmit_word_to_slave(m_dspram16[(addr + i) & 0x7fff]);
 							}
 							transmit_word_to_slave(0); // pad2
 							transmit_word_to_slave(primWords + 1);
@@ -302,10 +303,11 @@ void namcos21_dsp_c67_device::transfer_dsp_data()
 							if (ENABLE_LOGGING) logerror("TFR NOP?\n");
 						}
 					}
-				} // for (;;)
+				}
 				addr += len;
 			}
-		} // for(;;)
+			first = false;
+		}
 	}
 }
 
@@ -383,7 +385,7 @@ void namcos21_dsp_c67_device::dspram16_hack_w(offs_t offset, uint16_t data, uint
 	if (m_mpDspState->masterSourceAddr && offset == 1 + (m_mpDspState->masterSourceAddr & 0x7fff))
 	{
 		if (ENABLE_LOGGING) logerror("IDC-CONTINUE\n");
-		transfer_dsp_data();
+		transfer_dsp_data(false);
 	}
 	else if (m_gametype == NAMCOS21_SOLVALOU && offset == 0x103)
 	{
@@ -399,7 +401,7 @@ void namcos21_dsp_c67_device::dspram16_w(offs_t offset, uint16_t data, uint16_t 
 	if (m_mpDspState->masterSourceAddr && offset == 1 + (m_mpDspState->masterSourceAddr & 0x7fff))
 	{
 		if (ENABLE_LOGGING) logerror("IDC-CONTINUE\n");
-		transfer_dsp_data();
+		transfer_dsp_data(false);
 	}
 }
 
@@ -448,7 +450,7 @@ void namcos21_dsp_c67_device::dsp_port2_w(uint16_t data)
 {
 	if (ENABLE_LOGGING) logerror( "IDC ADDR INIT(0x%04x)\n", data );
 	m_mpDspState->masterSourceAddr = data;
-	transfer_dsp_data();
+	transfer_dsp_data(true);
 }
 
 uint16_t namcos21_dsp_c67_device::dsp_port3_idc_rcv_enable_r()

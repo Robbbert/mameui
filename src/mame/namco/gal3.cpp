@@ -8,7 +8,7 @@
 
   System Overview:
 
-  This is a Scaleable, Multi-CPU and Multi-User System.
+  This is a Scalable, Multi-CPU and Multi-User System.
   The largest scale configuration known so far was capable of 28(!) players and 16 screens wrapped around. (retired in the early 2000's)
 
   System has one Master 68020 CPU Board for game play, and one or more Slave 68020 CPU Boards for graphics.

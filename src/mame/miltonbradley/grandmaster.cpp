@@ -8,9 +8,8 @@ aka Phantom Chess Computer in the UK, and Milton in the rest of Europe
 
 It's a Chess computer with plotter style motor + magnet hidden underneath it. When
 it's the computer's turn, it will automatically do the move. Programmed by Intelligent
-Software, still some time before Richard Lang joined the company. The chess engine
-is weaker than the one in SciSys Mark V. The hardware design and technology was
-sold to Fidelity a couple of years later (fphantom in MAME).
+Software, the chess engine is weaker than the one in SciSys Mark V. The hardware design
+and technology was sold to Fidelity a couple of years later (fphantom in MAME).
 
 At boot-up, the computer will do a self-test. Although the user can start playing
 immediately, it may be a big distracting. So, just fast forward MAME for a while
