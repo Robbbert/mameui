@@ -128,7 +128,7 @@ Notes:
      CN10 - 25 pin flat cable connector (not populated / not used)
      CN11 - 3 pin connector. This is a serial port TX, RX, GND, most likely for debugging purposes.
             This connector is tied to the LT1381 on pins 7 and 8. Logic-level pins on the LT1381 are tied to the SH2 on pins 130, 131, 133 & 134
-			It appears the serial port is used in the game to drive some LEDs on a chaser PCB for the marquee that sits in the top of the cabinet
+            It appears the serial port is used in the game to drive some LEDs on a chaser PCB for the marquee that sits in the top of the cabinet
             or for other LEDs that are used in the cabinet. Note this is not used in some games, for example Pac'n Party.
      CN12 - 6 pin connector, purpose unknown.
      SW01 - 1 DIP switch with ON-position tied to SH2 pin 106 (PLLVSS). DIP is off so pin 106 is not tied to GND.
@@ -225,7 +225,7 @@ void sg_vga_state::machine_reset()
 void sg_vga_state::hplanet_program_map(address_map &map)
 {
 	map(0x000000, 0x03ffff).rom();
-//	map(0x120010, 0x120017) continously read on sound number #05 (?)
+//  map(0x120010, 0x120017) continously read on sound number #05 (?)
 	map(0x200000, 0x27ffff).rom().region("external_prg", 0);
 	// initializes in $42xxxx, reads in $43xxxx in "backup ram test"
 	map(0x420000, 0x427fff).mirror(0x8000).ram().share("nvram");
@@ -278,8 +278,8 @@ void sg_vga_state::x1_map(address_map &map)
 // everything else: unused?
 void sg_vga_state::pd_w(u32 data)
 {
-//	if (!BIT(data, 30) || data & 0xbff1'ffff)
-//		printf("%08x\n", data);
+//  if (!BIT(data, 30) || data & 0xbff1'ffff)
+//      printf("%08x\n", data);
 	m_medal_select = (data & 0x000e'0000) >> 17;
 }
 
@@ -576,7 +576,7 @@ ROM_END
 
 ROM_START( shootpar )
 	ROM_REGION( 0x40000, "maincpu", 0 ) // internal ROM
-	ROM_LOAD( "z030_ver.1.28_sh2_hd64f7045f28.u01", 0x00000, 0x40000, NO_DUMP ) // not done yet
+	ROM_LOAD( "z029_ver.1.10_sh2_hd64f7045f28.u01", 0x00000, 0x40000, NO_DUMP ) // not done yet
 
 	ROM_REGION32_BE( 0x80000, "external_prg", 0 )
 	ROM_LOAD16_WORD_SWAP( "spd1_mpr-0a.u02", 0x00000, 0x80000, CRC(3dad6e40) SHA1(4baf0b58e696cfa2235faa4d5a16bcf31ba09587) ) // 1xxxxxxxxxxxxxxxxxx = 0xFF
