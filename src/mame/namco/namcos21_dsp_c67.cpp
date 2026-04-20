@@ -27,7 +27,6 @@ namcos21_dsp_c67_device::namcos21_dsp_c67_device(const machine_config &mconfig, 
 	m_ptrom24(*this,"point24"),
 	m_master_dsp_ram(*this,"master_dsp_ram"),
 	m_gametype(0),
-	m_yield_hack_cb(*this),
 	m_irq_enable(false)
 {
 }
@@ -244,17 +243,6 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 					transmit_word_to_slave(data);
 				}
 			}
-			else if (first)
-			{
-				if (ENABLE_LOGGING) logerror("HEADER TFR(0x%x)\n", code);
-				transmit_word_to_slave(code + 1);
-				for (int i = 0; i < code; i++)
-				{
-					uint16_t const data = m_dspram16[addr];
-					addr = (addr + 1) & 0x7fff;
-					transmit_word_to_slave(data);
-				}
-			}
 			else if (code == 0xffff)
 			{
 				addr = m_dspram16[addr];
@@ -265,6 +253,19 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 				// return after goto self
 				if (old == addr)
 					return;
+				else
+					continue;
+			}
+			else if (first)
+			{
+				if (ENABLE_LOGGING) logerror("HEADER TFR(0x%x)\n", code);
+				transmit_word_to_slave(code + 1);
+				for (int i = 0; i < code; i++)
+				{
+					uint16_t const data = m_dspram16[addr];
+					addr = (addr + 1) & 0x7fff;
+					transmit_word_to_slave(data);
+				}
 			}
 			else
 			{
@@ -306,6 +307,7 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 				}
 				addr += len;
 			}
+
 			first = false;
 		}
 	}
@@ -376,22 +378,6 @@ uint16_t namcos21_dsp_c67_device::get_input_bytes_advertised_for_slave()
 uint16_t namcos21_dsp_c67_device::dspram16_r(offs_t offset)
 {
 	return m_dspram16[offset];
-}
-
-void namcos21_dsp_c67_device::dspram16_hack_w(offs_t offset, uint16_t data, uint16_t mem_mask)
-{
-	COMBINE_DATA(&m_dspram16[offset]);
-
-	if (m_mpDspState->masterSourceAddr && offset == 1 + (m_mpDspState->masterSourceAddr & 0x7fff))
-	{
-		if (ENABLE_LOGGING) logerror("IDC-CONTINUE\n");
-		transfer_dsp_data(false);
-	}
-	else if (m_gametype == NAMCOS21_SOLVALOU && offset == 0x103)
-	{
-		// HACK: synchronization for solvalou - is this really needed?
-		m_yield_hack_cb(1);
-	}
 }
 
 void namcos21_dsp_c67_device::dspram16_w(offs_t offset, uint16_t data, uint16_t mem_mask)

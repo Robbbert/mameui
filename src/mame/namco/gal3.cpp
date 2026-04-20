@@ -401,7 +401,7 @@ void gal3_state::cpu_slv_map(address_map &map)
 	map(0x80000000, 0x8007ffff).ram(); //512K Local RAM
 
 	// Video chain 1
-	map(0xf1200000, 0xf120ffff).rw(m_namcos21_dsp_c67[0], FUNC(namcos21_dsp_c67_device::dspram16_r), FUNC(namcos21_dsp_c67_device::dspram16_hack_w));
+	map(0xf1200000, 0xf120ffff).rw(m_namcos21_dsp_c67[0], FUNC(namcos21_dsp_c67_device::dspram16_r), FUNC(namcos21_dsp_c67_device::dspram16_w));
 	map(0xf1400000, 0xf1400003).w(m_namcos21_dsp_c67[0], FUNC(namcos21_dsp_c67_device::pointram_control_w));
 	map(0xf1440000, 0xf1440003).rw(m_namcos21_dsp_c67[0], FUNC(namcos21_dsp_c67_device::pointram_data_r), FUNC(namcos21_dsp_c67_device::pointram_data_w));
 	map(0xf1440004, 0xf147ffff).nopw();
@@ -414,7 +414,7 @@ void gal3_state::cpu_slv_map(address_map &map)
 	map(0xf1760000, 0xf1760001).rw(FUNC(gal3_state::video_enable_r<0>), FUNC(gal3_state::video_enable_w<0>));
 
 	// Video chain 2
-	map(0xf2200000, 0xf220ffff).rw(m_namcos21_dsp_c67[1], FUNC(namcos21_dsp_c67_device::dspram16_r), FUNC(namcos21_dsp_c67_device::dspram16_hack_w));
+	map(0xf2200000, 0xf220ffff).rw(m_namcos21_dsp_c67[1], FUNC(namcos21_dsp_c67_device::dspram16_r), FUNC(namcos21_dsp_c67_device::dspram16_w));
 	map(0xf2400000, 0xf2400003).w(m_namcos21_dsp_c67[1], FUNC(namcos21_dsp_c67_device::pointram_control_w));
 	map(0xf2440000, 0xf2440003).rw(m_namcos21_dsp_c67[1], FUNC(namcos21_dsp_c67_device::pointram_data_r), FUNC(namcos21_dsp_c67_device::pointram_data_w));
 	map(0xf2440004, 0xf247ffff).nopw();

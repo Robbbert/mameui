@@ -31,12 +31,9 @@ public:
 
 	// config
 	template <typename T> void set_renderer_tag(T &&tag) { m_renderer.set_tag(std::forward<T>(tag)); }
-	auto yield_hack_callback() { return m_yield_hack_cb.bind(); }
-
 	void set_gametype(int gametype) { m_gametype = gametype; }
 
 	uint16_t dspram16_r(offs_t offset);
-	void dspram16_hack_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	void dspram16_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	void pointram_control_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	uint16_t pointram_data_r();
@@ -87,8 +84,6 @@ private:
 	required_shared_ptr<uint16_t> m_master_dsp_ram;
 
 	int m_gametype; // hacks
-	devcb_write_line m_yield_hack_cb;
-
 	std::unique_ptr<dsp_state> m_mpDspState;
 
 	std::unique_ptr<uint8_t []> m_pointram;

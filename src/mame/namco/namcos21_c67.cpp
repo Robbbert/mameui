@@ -373,8 +373,6 @@ private:
 
 	TIMER_DEVICE_CALLBACK_MEMBER(screen_scanline);
 
-	void yield_hack(int state);
-
 	bool sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase, u16 src, int srcpri, int pri);
 	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
@@ -533,7 +531,7 @@ void namcos21_c67_state::master_map(address_map &map)
 	map(0x100000, 0x10ffff).ram(); /* private work RAM */
 	map(0x180000, 0x183fff).rw(FUNC(namcos21_c67_state::eeprom_r), FUNC(namcos21_c67_state::eeprom_w)).umask16(0x00ff);
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
-	map(0x200000, 0x20ffff).rw(m_namcos21_dsp_c67, FUNC(namcos21_dsp_c67_device::dspram16_r), FUNC(namcos21_dsp_c67_device::dspram16_hack_w));
+	map(0x200000, 0x20ffff).rw(m_namcos21_dsp_c67, FUNC(namcos21_dsp_c67_device::dspram16_r), FUNC(namcos21_dsp_c67_device::dspram16_w));
 }
 
 void namcos21_c67_state::slave_map(address_map &map)
@@ -933,16 +931,10 @@ void namcos21_c67_state::cybsled(machine_config &config)
 	m_namcos21_dsp_c67->set_gametype(namcos21_dsp_c67_device::NAMCOS21_CYBERSLED);
 }
 
-void namcos21_c67_state::yield_hack(int state)
-{
-	m_maincpu->yield();
-}
-
 void namcos21_c67_state::solvalou(machine_config &config)
 {
 	namcos21(config);
 	m_namcos21_dsp_c67->set_gametype(namcos21_dsp_c67_device::NAMCOS21_SOLVALOU);
-	m_namcos21_dsp_c67->yield_hack_callback().set(FUNC(namcos21_c67_state::yield_hack)); // VCK function
 }
 
 
