@@ -3,18 +3,14 @@
 /*
 
 TODO (2026 update):
-- how the 3d rasterizer really selects banks 1 & 2? aircomb is the odd one, it has a red shaded
-  bank from time to time;
 - lamp/vibration outputs, from MCU? (particularly starblad);
 - verify DSP clocks (probably 40MHz)
 - verify video timing, pixel clock is from 38.76922?
-- verify audiocpu irq frequency
+- verify audiocpu irq frequency;
+- is bgpen hardcoded or set somewhere? it doesn't look completely right in cybsled (see radar popup),
+  but it's correct in solvalou and aircomb;
 - aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen),
   and on pilot parachuting with a time over;
-- aircomb: sprites blends badly with background pen when warning appears and the src target is the sky color
-  (i.e. pen 0xff with current handling);
-- aircomb: level select/continue screen draws with a red backdrop pen, should be pure black
-  according to refs;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
 - aircomb: bad sprite colors on debriefing medal screen;
 - solvalou: black screen on service mode, is it due of the various hacks or it's in shared/namco_c355spr.cpp?;
@@ -55,7 +51,7 @@ The memory map below reflects DSP RAM as seen by the 68000 CPUs.
     0x200106    addr written by main cpu
     0x20010a    point rom checksum (starblade expects 0xed53)
     0x20010c    point rom checksum (starblade expects 0xd5df)
-    0x20010e    1 : upload-code-to-dsp request trigger
+    0x20010e    1: upload-code-to-dsp request trigger
     0x200110    status
     0x200112    status
     0x200114    master dsp code size
@@ -249,21 +245,19 @@ Namco System 21 Video Hardware
 - there are no tilemaps
 - 3d graphics are managed by DSP processors
 
-  Palette:
-    0x0000..0x1fff  sprite palettes (0x10 sets of 0x100 colors)
+Palette:
+  0x0000..0x1fff  sprite palettes (0x10 sets of 0x100 colors)
 
-    0x2000..0x3fff  polygon palette bank0 (0x10 sets of 0x200 colors)
-        (in starblade, some palette animation effects are performed here)
+  0x2000..0x3fff  polygon palette bank0 (0x10 sets of 0x200 colors)
+      (in starblade, some palette animation effects are performed here)
 
-    0x4000..0x5fff  polygon palette bank1 (0x10 sets of 0x200 colors)
+  0x4000..0x5fff  polygon palette bank1 (0x10 sets of 0x200 colors)
 
-    0x6000..0x7fff  polygon palette bank2 (0x10 sets of 0x200 colors)
+  0x6000..0x7fff  polygon palette bank2 (0x10 sets of 0x200 colors)
 
-    The polygon-dedicated color sets within a bank typically increase in
-    intensity from very dark to full intensity.
-
-    Probably the selected palette is determined by most significant bits of z-code.
-    This is not yet hooked up.
+  The polygon-dedicated color sets within a bank typically increase in
+  intensity from very dark to full intensity.
+  The two extra polygon palette banks are for sprite blending.
 
 */
 
@@ -396,10 +390,16 @@ bool namcos21_c67_state::sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase
 			switch (src & 0xff)
 			{
 			case 0:
-				dest = 0x4000 | (dest & 0x1fff);
+				if ((dest & 0xff) != 0xff)
+					dest = 0x4000 | (dest & 0x1fff);
+				else
+					dest = (dest & 0x1f00) | 0;
 				break;
 			case 1:
-				dest = 0x6000 | (dest & 0x1fff);
+				if ((dest & 0xff) != 0xff)
+					dest = 0x6000 | (dest & 0x1fff);
+				else
+					dest = (dest & 0x1f00) | 1;
 				break;
 			default:
 				dest = colbase + (src ^ 0xf00);
@@ -415,7 +415,7 @@ u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitma
 {
 	//u8 *videoram = m_gpu_videoram.get();
 	int pivot = 3;
-	bitmap.fill(0xff, cliprect);
+	bitmap.fill(0xdff, cliprect);
 	screen.priority().fill(0, cliprect);
 
 	// solvalou after POST, definitely blanks screen

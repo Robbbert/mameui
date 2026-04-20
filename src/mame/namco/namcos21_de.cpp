@@ -1,29 +1,26 @@
 // license:BSD-3-Clause
 // copyright-holders:Phil Stroffolino, Naibo, David Haywood
-/**
+/*
+
+Driver's Eyes
+    not yet working
 
 see http://www.tvspels-nostalgi.com/driverseye.htm for details about setup
 
 2008/06/11, by Naibo(translated to English by Mameplus team):
-Driver's Eyes works,
-    -the communication work between CPU and 3D DSP should be limited to the master M68000,
-    if the address mapping is done in the shared memory, master CPU would be disturbed by the slave one.
 
-    -The left, center and right screens have separate programs and boards, each would work independently.
-    About projection angles of left and right screen, the angle is correct on "DRIVER'S EYES" title screen, however in the tracks of demo mode it doesn't seem correct.
-    (probably wants angle sent by main board?)
+NOTES:
+- the communication work between CPU and 3D DSP should be limited to the master M68000,
+  if the address mapping is done in the shared memory, master CPU would be disturbed by the slave one.
 
-    -On demo screen, should fog effects be turned off?
+- The left, center and right screens have separate programs and boards, each would work independently.
+  About projection angles of left and right screen, the angle is correct on "DRIVER'S EYES" title screen,
+  however in the tracks of demo mode it doesn't seem correct. (probably wants angle sent by main board?)
 
-    NOTES:
+- On demo screen, should fog effects be turned off?
 
-    Driver's Eyes
-        not yet working
-
-    TODO:
-
-    Driver's Eyes
-        add communications for Left and Right screen (linked C139 or something else?)
+TODO:
+- add communications for Left and Right screen (linked C139 or something else?)
 
 */
 
@@ -225,10 +222,16 @@ bool namco_de_pcbstack_device::sprite_mix_callback(u16 &dest, u8 &destpri, u16 c
 			switch (src & 0xff)
 			{
 			case 0:
-				dest = 0x4000 | (dest & 0x1fff);
+				if ((dest & 0xff) != 0xff)
+					dest = 0x4000 | (dest & 0x1fff);
+				else
+					dest = (dest & 0x1f00) | 0;
 				break;
 			case 1:
-				dest = 0x6000 | (dest & 0x1fff);
+				if ((dest & 0xff) != 0xff)
+					dest = 0x6000 | (dest & 0x1fff);
+				else
+					dest = (dest & 0x1f00) | 1;
 				break;
 			default:
 				dest = colbase + (src ^ 0xf00);
@@ -244,7 +247,7 @@ u32 namco_de_pcbstack_device::screen_update(screen_device &screen, bitmap_ind16 
 {
 	//u8 *videoram = m_gpu_videoram.get();
 	int pivot = 3;
-	bitmap.fill(0xff, cliprect);
+	bitmap.fill(0xdff, cliprect);
 	screen.priority().fill(0, cliprect);
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 
