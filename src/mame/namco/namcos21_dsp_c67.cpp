@@ -70,19 +70,9 @@ void namcos21_dsp_c67_device::device_reset()
 	m_poly_frame_width = m_renderer->get_width();
 	m_poly_frame_height = m_renderer->get_height();
 
-	/* DSP startup hacks */
-	m_mbNeedsKickstart = 20;
-	// looks unnecessary, also causes 3d drift on title screen
-//	if (m_gametype == NAMCOS21_CYBERSLED)
-//	{
-//		m_mbNeedsKickstart = 200;
-//	}
-
 	/* Wipe the framebuffers */
 	m_renderer->swap_and_clear_poly_framebuffer();
 	m_renderer->swap_and_clear_poly_framebuffer();
-
-	//reset_dsps(ASSERT_LINE);
 
 	m_mpDspState->masterSourceAddr = 0;
 	m_mpDspState->slaveBytesAvailable = 0;
@@ -99,6 +89,7 @@ void namcos21_dsp_c67_device::device_reset()
 	m_mPointRomMSB = 0;
 	m_mbPointRomDataAvailable = 0;
 	m_irq_enable = 0;
+	m_mbNeedsKickstart = 1;
 
 	// clear these?
 	//m_depthcue[2][0x400];
@@ -125,7 +116,11 @@ void namcos21_dsp_c67_device::reset_dsps(int state)
 void namcos21_dsp_c67_device::reset_kickstart()
 {
 	//printf( "dspkick=0x%x\n", data );
-	namcos21_kickstart_hacks(1);
+	if (m_mbNeedsKickstart == 0)
+		return;
+	m_mbNeedsKickstart = 0;
+
+	namcos21_kickstart();
 }
 
 void namcos21_dsp_c67_device::device_add_mconfig(machine_config &config)
@@ -322,27 +317,8 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 
 
 
-void namcos21_dsp_c67_device::namcos21_kickstart_hacks(int internal)
+void namcos21_dsp_c67_device::namcos21_kickstart()
 {
-	/* patch dsp watchdog */
-	switch (m_gametype)
-	{
-	case namcos21_dsp_c67_device::NAMCOS21_AIRCOMBAT:
-		m_master_dsp_ram[0x008e] = 0x808f;
-		break;
-	case namcos21_dsp_c67_device::NAMCOS21_SOLVALOU:
-		m_master_dsp_ram[0x008b] = 0x808c;
-		break;
-	default:
-		break;
-	}
-	if (internal)
-	{
-		if (m_mbNeedsKickstart == 0) return;
-		m_mbNeedsKickstart--;
-		if (m_mbNeedsKickstart) return;
-	}
-
 	m_renderer->swap_and_clear_poly_framebuffer();
 	m_mpDspState->masterSourceAddr = 0;
 	m_mpDspState->slaveOutputSize = 0;
@@ -377,7 +353,7 @@ uint16_t namcos21_dsp_c67_device::get_input_bytes_advertised_for_slave()
 	}
 	else if( m_mpDspState->slaveActive && m_mpDspState->masterFinished && m_mpDspState->masterSourceAddr )
 	{
-		namcos21_kickstart_hacks(0);
+		namcos21_kickstart();
 	}
 	return m_mpDspState->slaveBytesAdvertised;
 }

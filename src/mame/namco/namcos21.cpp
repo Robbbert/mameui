@@ -413,8 +413,8 @@ uint16_t namcos21_state::winrun_gpu_register_r(offs_t offset)
 
 void namcos21_state::winrun_gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
-	COMBINE_DATA( &m_winrun_gpu_register[offset] );
 	m_screen->update_partial(m_screen->vpos());
+	COMBINE_DATA( &m_winrun_gpu_register[offset] );
 }
 
 void namcos21_state::winrun_gpu_videoram_w(offs_t offset, uint16_t data)
