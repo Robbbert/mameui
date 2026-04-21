@@ -439,7 +439,7 @@ template <int P>
 ioport_value ms32_bnstars_state::mahjong_ctrl_r()
 {
 	// different routing than other ms32.cpp mahjong games
-	// uses 0x2080 as multiplexer input rather than switch matrix
+	// uses 0x2080 as decoder input rather than directly connected switch matrix
 	const u8 which = bitswap<2>(m_bnstars1_mahjong_select, 13, 7);
 	return bitswap<6>(m_io_keys[P][which]->read(), 4, 2, 3, 1, 0, 5) | 0xc0;
 }
@@ -447,7 +447,7 @@ ioport_value ms32_bnstars_state::mahjong_ctrl_r()
 void ms32_bnstars_state::bnstars1_mahjong_select_w(u32 data)
 {
 	m_bnstars1_mahjong_select = data;
-//  logerror("%08x\n",m_bnstars1_mahjong_select);
+	//logerror("%08x\n",m_bnstars1_mahjong_select);
 }
 
 void ms32_bnstars_state::bnstars_map(address_map &map)
@@ -635,9 +635,9 @@ void ms32_bnstars_state::bnstars(machine_config &config)
 	m_sysctrl->prg_timer_cb().set(FUNC(ms32_bnstars_state::timer_irq_w));
 	m_sysctrl->sound_ack_cb().set(FUNC(ms32_bnstars_state::sound_ack_w));
 	m_sysctrl->sound_reset_cb().set(FUNC(ms32_bnstars_state::sound_reset_line_w));
-//  TODO: runs better with this on but eventually game crashes during match presentation
-//  (may be due of the field irq positioning)
-//  m_sysctrl->set_invert_vblank_lines(true);
+	// TODO: runs better with this on but eventually game crashes during match presentation
+	// (may be due of the field irq positioning)
+	//m_sysctrl->set_invert_vblank_lines(true);
 
 	/* sound hardware */
 	SPEAKER(config, "speaker", 2).front();
@@ -648,16 +648,16 @@ void ms32_bnstars_state::bnstars(machine_config &config)
 	YMF271(config, m_ymf[0], XTAL(16'934'400)); // 16.9344MHz
 	m_ymf[0]->add_route(0, "speaker", 1.0, 0);
 	m_ymf[0]->add_route(1, "speaker", 1.0, 1);
-// Output 2/3 not used?
-//  m_ymf[0]->add_route(2, "speaker", 1.0);
-//  m_ymf[0]->add_route(3, "speaker", 1.0);
+	// Output 2/3 not used?
+	//m_ymf[0]->add_route(2, "speaker", 1.0);
+	//m_ymf[0]->add_route(3, "speaker", 1.0);
 
 	YMF271(config, m_ymf[1], XTAL(16'934'400)); // 16.9344MHz
 	m_ymf[1]->add_route(0, "speaker", 1.0, 0);
 	m_ymf[1]->add_route(1, "speaker", 1.0, 1);
-// Output 2/3 not used?
-//  m_ymf[1]->add_route(2, "speaker", 1.0);
-//  m_ymf[1]->add_route(3, "speaker", 1.0);
+	// Output 2/3 not used?
+	//m_ymf[1]->add_route(2, "speaker", 1.0);
+	//m_ymf[1]->add_route(3, "speaker", 1.0);
 }
 
 
