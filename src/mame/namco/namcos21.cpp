@@ -344,22 +344,22 @@ private:
 	required_device<namcos21_dsp_device> m_namcos21_dsp;
 
 	std::unique_ptr<uint8_t[]> m_gpu_videoram;
-	std::unique_ptr<uint8_t[]> m_gpu_maskram;
 
-	uint16_t m_winrun_color = 0;
-	uint16_t m_winrun_gpu_register[0x10/2] = { };
+	uint8_t m_gpu_videoram_mask = 0;
+	uint16_t m_gpu_color = 0;
+	uint16_t m_gpu_register[0x10/2] = { };
 
 	uint16_t dpram_word_r(offs_t offset);
 	void dpram_word_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	uint8_t dpram_byte_r(offs_t offset);
 	void dpram_byte_w(offs_t offset, uint8_t data);
 
-	uint16_t winrun_gpu_color_r();
-	void winrun_gpu_color_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
-	uint16_t winrun_gpu_register_r(offs_t offset);
-	void winrun_gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
-	void winrun_gpu_videoram_w(offs_t offset, uint16_t data);
-	uint16_t winrun_gpu_videoram_r(offs_t offset);
+	uint16_t gpu_color_r();
+	void gpu_color_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
+	uint16_t gpu_register_r(offs_t offset);
+	void gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
+	void gpu_videoram_w(offs_t offset, uint16_t data);
+	uint16_t gpu_videoram_r(offs_t offset);
 
 	void eeprom_w(offs_t offset, uint8_t data);
 	uint8_t eeprom_r(offs_t offset);
@@ -376,13 +376,13 @@ private:
 
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
-	void winrun_bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect);
+	void bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void configure_c65_namcos21(machine_config &config);
 
-	void winrun_master_map(address_map &map) ATTR_COLD;
-	void winrun_slave_map(address_map &map) ATTR_COLD;
-	void winrun_gpu_map(address_map &map) ATTR_COLD;
+	void master_map(address_map &map) ATTR_COLD;
+	void slave_map(address_map &map) ATTR_COLD;
+	void gpu_map(address_map &map) ATTR_COLD;
 
 	void sound_map(address_map &map) ATTR_COLD;
 	void c140_map(address_map &map) ATTR_COLD;
@@ -391,60 +391,55 @@ private:
 void namcos21_state::video_start()
 {
 	m_gpu_videoram = std::make_unique<uint8_t[]>(0x80000);
-	m_gpu_maskram = std::make_unique<uint8_t[]>(0x80000);
-
 	save_pointer(NAME(m_gpu_videoram), 0x80000);
-	save_pointer(NAME(m_gpu_maskram), 0x80000);
 }
 
-uint16_t namcos21_state::winrun_gpu_color_r()
+uint16_t namcos21_state::gpu_color_r()
 {
-	return m_winrun_color;
+	return m_gpu_color;
 }
 
-void namcos21_state::winrun_gpu_color_w(offs_t offset, uint16_t data, uint16_t mem_mask)
+void namcos21_state::gpu_color_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
-	COMBINE_DATA( &m_winrun_color );
+	COMBINE_DATA( &m_gpu_color );
 }
 
-uint16_t namcos21_state::winrun_gpu_register_r(offs_t offset)
+uint16_t namcos21_state::gpu_register_r(offs_t offset)
 {
-	return m_winrun_gpu_register[offset];
+	return m_gpu_register[offset];
 }
 
-void namcos21_state::winrun_gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_mask)
+void namcos21_state::gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	m_screen->update_partial(m_screen->vpos());
-	COMBINE_DATA( &m_winrun_gpu_register[offset] );
+	COMBINE_DATA( &m_gpu_register[offset] );
 }
 
-void namcos21_state::winrun_gpu_videoram_w(offs_t offset, uint16_t data)
+void namcos21_state::gpu_videoram_w(offs_t offset, uint16_t data)
 {
-	int color = data>>8;
-	int mask  = data&0xff;
-	for( int i=0; i<8; i++ )
+	uint8_t color = data >> 8;
+	for (int i = 0; i < 8; i++)
 	{
-		if( mask&(0x01<<i) )
-		{
-			m_gpu_videoram[(offset+i)&0x7ffff] = color;
-			m_gpu_maskram[(offset+i)&0x7ffff] = mask;
-		}
+		if (BIT(data, i))
+			m_gpu_videoram[(offset + i) & 0x7ffff] = color;
 	}
+
+	m_gpu_videoram_mask = data & 0xff;
 }
 
-uint16_t namcos21_state::winrun_gpu_videoram_r(offs_t offset)
+uint16_t namcos21_state::gpu_videoram_r(offs_t offset)
 {
-	return (m_gpu_videoram[offset]<<8) | m_gpu_maskram[offset];
+	return (m_gpu_videoram[offset] << 8) | m_gpu_videoram_mask;
 }
 
-void namcos21_state::winrun_bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect)
+void namcos21_state::bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 	uint8_t const *const videoram = m_gpu_videoram.get();
-	//printf("%d %d (%d %d) - %04x %04x %04x|%04x %04x\n",cliprect.top(),cliprect.bottom(),m_screen->vpos(),m_gpu_intc->get_posirq_line(),m_winrun_gpu_register[0],m_winrun_gpu_register[2/2],m_winrun_gpu_register[4/2],m_winrun_gpu_register[0xa/2],m_winrun_gpu_register[0xc/2]);
+	//printf("%d %d (%d %d) - %04x %04x %04x|%04x %04x\n",cliprect.top(),cliprect.bottom(),m_screen->vpos(),m_gpu_intc->get_posirq_line(),m_gpu_register[0],m_gpu_register[2/2],m_gpu_register[4/2],m_gpu_register[0xa/2],m_gpu_register[0xc/2]);
 
-	int const yscroll = -cliprect.top()+(int16_t)m_winrun_gpu_register[0x2/2];
-	int const xscroll = 0;//m_winrun_gpu_register[0xc/2] >> 7;
-	int const base = 0x1000+0x100*(m_winrun_color&0xf);
+	int const yscroll = -cliprect.top()+(int16_t)m_gpu_register[0x2/2];
+	int const xscroll = 0;//m_gpu_register[0xc/2] >> 7;
+	int const base = 0x1000+0x100*(m_gpu_color&0xf);
 	for( int sy=cliprect.top(); sy<=cliprect.bottom(); sy++ )
 	{
 		uint8_t const *const pSource = &videoram[((yscroll+sy)&0x3ff)*0x200];
@@ -483,7 +478,7 @@ void namcos21_state::winrun_bitmap_draw(bitmap_ind16 &bitmap, const rectangle &c
 
 uint32_t namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	bitmap.fill((m_winrun_color << 8 & 0xf00) | 0xff, cliprect);
+	bitmap.fill((m_gpu_color << 8 & 0xf00) | 0xff, cliprect);
 
 	// entries 0 and 1 unused parts controls priority mixing
 	const u16 pri = (m_palette->read16_ext(1) >> 8) & 7;
@@ -492,21 +487,21 @@ uint32_t namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 	{
 		case 5: // title screen for all games here
 			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0x7fc0, 0x7ffe);
-			winrun_bitmap_draw(bitmap,cliprect);
+			bitmap_draw(bitmap,cliprect);
 			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
 			break;
 		case 0: // service mode
-			winrun_bitmap_draw(bitmap,cliprect);
+			bitmap_draw(bitmap,cliprect);
 			break;
 		case 2: // gameplay
 		default:
 			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0x7fc0, 0x7ffe);
 			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
-			winrun_bitmap_draw(bitmap,cliprect);
+			bitmap_draw(bitmap,cliprect);
 			break;
 	}
 
-	//popmessage("%04x %04x %04x|%04x %04x",m_winrun_gpu_register[0],m_winrun_gpu_register[2/2],m_winrun_gpu_register[4/2],m_winrun_gpu_register[0xa/2],m_winrun_gpu_register[0xc/2]);
+	//popmessage("%04x %04x %04x|%04x %04x",m_gpu_register[0],m_gpu_register[2/2],m_gpu_register[4/2],m_gpu_register[0xa/2],m_gpu_register[0xc/2]);
 
 	return 0;
 }
@@ -541,7 +536,7 @@ void namcos21_state::dpram_byte_w(offs_t offset, uint8_t data)
 
 /******************************************************************************/
 
-void namcos21_state::winrun_master_map(address_map &map)
+void namcos21_state::master_map(address_map &map)
 {
 	map(0x000000, 0x03ffff).rom();
 	map(0x100000, 0x10ffff).ram(); /* work RAM */
@@ -565,7 +560,7 @@ void namcos21_state::winrun_master_map(address_map &map)
 	map(0xb80000, 0xb8000f).m(m_sci, FUNC(namco_c139_device::regs_map));
 }
 
-void namcos21_state::winrun_slave_map(address_map &map)
+void namcos21_state::slave_map(address_map &map)
 {
 	map(0x000000, 0x03ffff).rom();
 	map(0x100000, 0x13ffff).ram();
@@ -579,18 +574,18 @@ void namcos21_state::winrun_slave_map(address_map &map)
 }
 
 
-void namcos21_state::winrun_gpu_map(address_map &map)
+void namcos21_state::gpu_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x100000, 0x100001).rw(FUNC(namcos21_state::winrun_gpu_color_r), FUNC(namcos21_state::winrun_gpu_color_w)); /* ? */
+	map(0x100000, 0x100001).rw(FUNC(namcos21_state::gpu_color_r), FUNC(namcos21_state::gpu_color_w)); /* ? */
 	map(0x180000, 0x19ffff).ram(); /* work RAM */
 	map(0x1c0000, 0x1fffff).m(m_gpu_intc, FUNC(namco_c148_device::map));
 	map(0x200000, 0x20ffff).ram().share("gpu_comram");
 	map(0x400000, 0x40ffff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
 	map(0x410000, 0x41ffff).ram().w(m_palette, FUNC(palette_device::write16_ext)).share("palette_ext");
 	map(0x600000, 0x6fffff).rom().region("gdata", 0);
-	map(0xc00000, 0xcfffff).rw(FUNC(namcos21_state::winrun_gpu_videoram_r), FUNC(namcos21_state::winrun_gpu_videoram_w));
-	map(0xd00000, 0xd0000f).rw(FUNC(namcos21_state::winrun_gpu_register_r), FUNC(namcos21_state::winrun_gpu_register_w));
+	map(0xc00000, 0xcfffff).rw(FUNC(namcos21_state::gpu_videoram_r), FUNC(namcos21_state::gpu_videoram_w));
+	map(0xd00000, 0xd0000f).rw(FUNC(namcos21_state::gpu_register_r), FUNC(namcos21_state::gpu_register_w));
 	map(0xe0000d, 0xe0000d).rw(m_gpu_intc, FUNC(namco_c148_device::ext_posirq_line_r), FUNC(namco_c148_device::ext_posirq_line_w));
 }
 
@@ -846,8 +841,9 @@ void namcos21_state::machine_start()
 	for (int i = 0; i < 0x10; i++)
 		m_audiobank->configure_entry(i, memregion("audiocpu")->base() + (i % max) * 0x4000);
 
-	save_item(NAME(m_winrun_color));
-	save_item(NAME(m_winrun_gpu_register));
+	save_item(NAME(m_gpu_videoram_mask));
+	save_item(NAME(m_gpu_color));
+	save_item(NAME(m_gpu_register));
 }
 
 TIMER_DEVICE_CALLBACK_MEMBER(namcos21_state::screen_scanline)
@@ -881,11 +877,11 @@ void namcos21_state::configure_c148_standard(machine_config &config)
 void namcos21_state::winrun(machine_config &config)
 {
 	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); /* Master */
-	m_maincpu->set_addrmap(AS_PROGRAM, &namcos21_state::winrun_master_map);
+	m_maincpu->set_addrmap(AS_PROGRAM, &namcos21_state::master_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(namcos21_state::screen_scanline), "screen", 0, 1);
 
 	M68000(config, m_slave, 49.152_MHz_XTAL / 4); /* Slave */
-	m_slave->set_addrmap(AS_PROGRAM, &namcos21_state::winrun_slave_map);
+	m_slave->set_addrmap(AS_PROGRAM, &namcos21_state::slave_map);
 
 	MC6809E(config, m_audiocpu, 49.152_MHz_XTAL / 24); /* Sound */
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_state::sound_map);
@@ -897,7 +893,7 @@ void namcos21_state::winrun(machine_config &config)
 	m_namcos21_dsp->set_renderer_tag("namcos21_3d");
 
 	m68000_device &gpu(M68000(config, "gpu", 49.152_MHz_XTAL / 4)); /* graphics coprocessor */
-	gpu.set_addrmap(AS_PROGRAM, &namcos21_state::winrun_gpu_map);
+	gpu.set_addrmap(AS_PROGRAM, &namcos21_state::gpu_map);
 
 	configure_c148_standard(config);
 	NAMCO_C148(config, m_gpu_intc, 0, "gpu", false);
