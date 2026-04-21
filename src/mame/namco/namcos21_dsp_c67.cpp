@@ -3,14 +3,16 @@
 
 /*
 
-Common code for the later Namco System 21 DSP board 5 TMS320C25 DSPs with custom Namco programming (marked C67) in a 1x Master, 4x Slave configuration
+Common code for the later Namco System 21 DSP board 5 TMS320C25 DSPs with custom
+Namco programming (marked C67) in a 1x Master, 4x Slave configuration
 
 used by Star Blade, Cybersled
 
-TODO: handle protection properly and with callbacks
-      handle splitting of workload across slaves
-      remove hacks!
-      some of the list processing should probably be in the 3d device, split it out
+TODO:
+- handle protection properly and with callbacks
+- handle splitting of workload across slaves
+- remove hacks!
+- some of the list processing should probably be in the 3d device, split it out
 
 */
 

@@ -16,8 +16,8 @@ TODO (2026 update):
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
 - aircomb: bad sprite colors on debriefing medal screen;
 - solvalou: black screen on service mode, is it due of the various hacks or it's in shared/namco_c355spr.cpp?;
-- solvalou: new game transition should fill green on terrain instead of white-ish, similar issue with water
-  area (comes from 3d render);
+- solvalou: sprite blend is wrong during water stages (look at the blaster/score panel), the palette
+  bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
 - starblad: service mode has heavy sprite glitches if entered from live gameplay (verify)
 
 NOTES:
@@ -928,6 +928,9 @@ void namcos21_c67_state::solvalou(machine_config &config)
 {
 	namcos21(config);
 	m_namcos21_dsp_c67->set_gametype(namcos21_dsp_c67_device::NAMCOS21_SOLVALOU);
+
+	m_namcos21_3d->set_fixed_palbase(0x3f00);
+	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
 }
 
 

@@ -1,5 +1,15 @@
 // license:BSD-3-Clause
 // copyright-holders:Phil Stroffolino, David Haywood
+/*
+
+Namco System 21 3D Rasterizer
+
+TODO:
+- it does not have a z-buffer, MAME is more capable than the real hardware
+- it does not support per-z fog either, it should be per-poly (see brightness crawling effect in solvalou)
+- any reason it's not using poly.h?
+
+*/
 
 #include "emu.h"
 #include "namcos21_3d.h"
@@ -262,34 +272,17 @@ void namcos21_3d_device::draw_quad(int sx[4], int sy[4], int zcode[4], int color
 	    0x6000..0x7fff  polygon palette bank2 (0x10 sets of 0x200 colors or 0x20 sets of 0x100 colors)
 	*/
 
-
 	if (m_fixed_palbase != -1)
 	{
 		// Winning Run & Driver's Eyes use this logic
 		color = m_fixed_palbase | (color & 0xff);
 	}
 	else
-	{ /* map color code to hardware pen */
-		int code = color >> 8;
-		// TODO: aircomb dislikes this logic
-		// (not sure what would use it anyway)
-		//if (code & 0x80)
-		//{
-		//	color = color & 0xff;
-		//	// color = 0x3e00|color;
-		//	color = 0x2100 | color;
-		//	depthcueenable = 0;
-		//}
-		//else
-		{
-			color &= 0xff;
-			color = 0x3e00 | color;
-			if ((code & 0x02) == 0)
-			{
-				color |= 0x100;
-			}
-		}
+	{
+		const int base = (color & 0x200) ? 0x3e00 : 0x3f00;
+		color = base | (color & 0xff);
 	}
+
 	a.x = sx[0];
 	a.y = sy[0];
 	a.z = zcode[0];
