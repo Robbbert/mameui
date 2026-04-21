@@ -1,13 +1,13 @@
 // license:BSD-3-Clause
 // copyright-holders:Phil Stroffolino, David Haywood
-
 /*
 
 Common code for the original Namco System 21 DSP board, with a single DSP
-used by Winning Run, Driver's Eyes
+used by Winning Run series, Driver's Eyes
 
-TODO: handle protection properly and with callbacks
-      some of the list processing should probably be in the 3d device, split it out
+TODO:
+- handle protection properly and with callbacks
+- some of the list processing should probably be in the 3d device, split it out
 
 */
 

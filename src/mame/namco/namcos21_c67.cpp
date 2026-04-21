@@ -9,8 +9,6 @@ TODO (2026 update):
   a factor of 40/24 does not fix it;
 - verify video timing, pixel clock is from 38.76922?;
 - verify audiocpu irq frequency;
-- is bgpen hardcoded or set somewhere? it doesn't look completely right in cybsled (see radar popup),
-  but it's correct in solvalou and aircomb;
 - aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen),
   and on pilot parachuting with a time over;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
@@ -20,8 +18,9 @@ TODO (2026 update):
   bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
 - starblad: service mode has heavy sprite glitches if entered from live gameplay (verify)
 
-NOTES:
-- aircomb: intro cockpit closure is one pixel off on left edge, confirmed btanb from ref;
+BTANB:
+- aircomb: intro cockpit closure is one pixel off on left edge;
+- solvalou: sprites on top of foreground polygons (eg. explosions, water splash)
 
 TODO:
 - namcoic.c: in StarBlade, the sprite list is stored at a different location during startup tests.
@@ -387,37 +386,45 @@ bool namcos21_c67_state::sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase
 {
 	if (srcpri == pri)
 	{
-		if ((src & 0xff) != 0xff)
+		src ^= 0xf00;
+
+		switch (src & 0xff)
 		{
-			switch (src & 0xff)
-			{
-			case 0:
-				if ((dest & 0xff) != 0xff)
-					dest = 0x4000 | (dest & 0x1fff);
-				else
-					dest = (dest & 0x1f00) | 0;
-				break;
-			case 1:
-				if ((dest & 0xff) != 0xff)
-					dest = 0x6000 | (dest & 0x1fff);
-				else
-					dest = (dest & 0x1f00) | 1;
-				break;
-			default:
-				dest = colbase + (src ^ 0xf00);
-				break;
-			}
-			return true;
+		case 0xff:
+			if ((dest & 0xff) == 0xff)
+				dest = (src & 0xf00) | 0xff;
+			else
+				return false;
+			break;
+
+		case 0x00:
+			if ((dest & 0xff) != 0xff)
+				dest = 0x4000 | (dest & 0x1fff);
+			else
+				dest = (src & 0xf00) | 0x00;
+			break;
+
+		case 0x01:
+			if ((dest & 0xff) != 0xff)
+				dest = 0x6000 | (dest & 0x1fff);
+			else
+				dest = (src & 0xf00) | 0x01;
+			break;
+
+		default:
+			dest = colbase | src;
+			break;
 		}
+		return true;
 	}
+
 	return false;
 }
 
 u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	//u8 *videoram = m_gpu_videoram.get();
 	int pivot = 3;
-	bitmap.fill(0xdff, cliprect);
+	bitmap.fill(0xff, cliprect);
 	screen.priority().fill(0, cliprect);
 
 	// solvalou after POST, definitely blanks screen

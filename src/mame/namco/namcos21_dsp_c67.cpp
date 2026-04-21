@@ -1,12 +1,11 @@
 // license:BSD-3-Clause
 // copyright-holders:Phil Stroffolino, David Haywood
-
 /*
 
 Common code for the later Namco System 21 DSP board 5 TMS320C25 DSPs with custom
 Namco programming (marked C67) in a 1x Master, 4x Slave configuration
 
-used by Star Blade, Cybersled
+used by Star Blade, Solvalou, Cybersled, Air Combat
 
 TODO:
 - handle protection properly and with callbacks

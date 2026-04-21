@@ -34,26 +34,14 @@ shade pixels according to their depth.
 
 -------------------
 
+TODO:
+- polygon glitches/flicker
+- posirq effects for bitmap layer not working
+- is there a video_enable flag?
 
-
-Winning Run
-    polygon glitches/flicker
-    posirq effects for bitmap layer not working
-    priority, mixing incorrection (specifically title screen and background color)
-
-
-    NOTES:
-
-    Winning Run
-    Winning Run 91
-        working
-          - some minor polygon glitches
-          - posirq handling broken
-          - priority, mixing incorrection
-
-    reference videos
-    - https://youtu.be/ZNNveBLWevg
-    - https://youtu.be/KazxHW9wQ60
+reference videos:
+- https://youtu.be/ZNNveBLWevg
+- https://youtu.be/KazxHW9wQ60
 
 *****************************
 
@@ -357,12 +345,8 @@ private:
 	std::unique_ptr<uint8_t[]> m_gpu_videoram;
 	std::unique_ptr<uint8_t[]> m_gpu_maskram;
 
-	uint16_t m_video_enable;
-
 	uint16_t m_winrun_color;
 	uint16_t m_winrun_gpu_register[0x10/2];
-	uint16_t video_enable_r();
-	void video_enable_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 
 	uint16_t dpram_word_r(offs_t offset);
 	void dpram_word_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
@@ -471,18 +455,24 @@ void namcos21_state::winrun_bitmap_draw(bitmap_ind16 &bitmap, const rectangle &c
 			{
 			case 0xff:
 				break;
-			// TODO: additive blending?
-			// - winrun car select uses register [0xc] for a xscroll value
-			// - winrun windshield during gameplay (reversed 0x6000 and 0x4000 bases?)
+
 			// NOTE: very similar to namcos21_c67_state::sprite_mix_callback
 			case 0x00:
-				pDest[sx] = (pDest[sx]&0x1fff)+0x4000;
+				if ((pDest[sx] & 0xff) != 0xff)
+					pDest[sx] = 0x4000 | (pDest[sx] & 0x1fff);
+				else
+					pDest[sx] = (base & 0xf00) | 0;
 				break;
+
 			case 0x01:
-				pDest[sx] = (pDest[sx]&0x1fff)+0x6000;
+				if ((pDest[sx] & 0xff) != 0xff)
+					pDest[sx] = 0x6000 | (pDest[sx] & 0x1fff);
+				else
+					pDest[sx] = (base & 0xf00) | 1;
 				break;
+
 			default:
-				pDest[sx] = base|pen;
+				pDest[sx] = base | pen;
 				break;
 			}
 		}
@@ -492,7 +482,7 @@ void namcos21_state::winrun_bitmap_draw(bitmap_ind16 &bitmap, const rectangle &c
 
 uint32_t namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	bitmap.fill(0, cliprect);
+	bitmap.fill((m_winrun_color << 8 & 0xf00) | 0xff, cliprect);
 
 	// entries 0 and 1 unused parts controls priority mixing
 	const u16 pri = (m_palette->read16_ext(1) >> 8) & 7;
@@ -515,27 +505,11 @@ uint32_t namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 			break;
 	}
 
-
 	//popmessage("%04x %04x %04x|%04x %04x",m_winrun_gpu_register[0],m_winrun_gpu_register[2/2],m_winrun_gpu_register[4/2],m_winrun_gpu_register[0xa/2],m_winrun_gpu_register[0xc/2]);
 
 	return 0;
 }
 
-
-
-[[maybe_unused]] uint16_t namcos21_state::video_enable_r()
-{
-	return m_video_enable;
-}
-
-[[maybe_unused]] void namcos21_state::video_enable_w(offs_t offset, uint16_t data, uint16_t mem_mask)
-{
-	COMBINE_DATA( &m_video_enable ); /* 0x40 = enable */
-	if( m_video_enable!=0 && m_video_enable!=0x40 )
-	{
-		logerror( "unexpected video_enable_w=0x%x\n", m_video_enable );
-	}
-}
 
 /***********************************************************/
 
@@ -871,7 +845,6 @@ void namcos21_state::machine_start()
 	for (int i = 0; i < 0x10; i++)
 		m_audiobank->configure_entry(i, memregion("audiocpu")->base() + (i % max) * 0x4000);
 
-	save_item(NAME(m_video_enable));
 	save_item(NAME(m_winrun_color));
 	save_item(NAME(m_winrun_gpu_register));
 }
@@ -942,7 +915,7 @@ void namcos21_state::winrun(machine_config &config)
 	PALETTE(config, m_palette).set_format(palette_device::xBRG_888, 0x10000/2);
 
 	NAMCOS21_3D(config, m_namcos21_3d, 0);
-	m_namcos21_3d->set_fixed_palbase(0x4000);
+	m_namcos21_3d->set_fixed_palbase(0x2000);
 	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
 	m_namcos21_3d->set_depth_reverse(true);
 	m_namcos21_3d->set_framebuffer_size(496,480);

@@ -215,39 +215,48 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 
 bool namco_de_pcbstack_device::sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase, u16 src, int srcpri, int pri)
 {
+	// copy/pasted from namcos21_c67.cpp
 	if (srcpri == pri)
 	{
-		if ((src & 0xff) != 0xff)
+		src ^= 0xf00;
+
+		switch (src & 0xff)
 		{
-			switch (src & 0xff)
-			{
-			case 0:
-				if ((dest & 0xff) != 0xff)
-					dest = 0x4000 | (dest & 0x1fff);
-				else
-					dest = (dest & 0x1f00) | 0;
-				break;
-			case 1:
-				if ((dest & 0xff) != 0xff)
-					dest = 0x6000 | (dest & 0x1fff);
-				else
-					dest = (dest & 0x1f00) | 1;
-				break;
-			default:
-				dest = colbase + (src ^ 0xf00);
-				break;
-			}
-			return true;
+		case 0xff:
+			if ((dest & 0xff) == 0xff)
+				dest = (src & 0xf00) | 0xff;
+			else
+				return false;
+			break;
+
+		case 0x00:
+			if ((dest & 0xff) != 0xff)
+				dest = 0x4000 | (dest & 0x1fff);
+			else
+				dest = (src & 0xf00) | 0x00;
+			break;
+
+		case 0x01:
+			if ((dest & 0xff) != 0xff)
+				dest = 0x6000 | (dest & 0x1fff);
+			else
+				dest = (src & 0xf00) | 0x01;
+			break;
+
+		default:
+			dest = colbase | src;
+			break;
 		}
+		return true;
 	}
+
 	return false;
 }
 
 u32 namco_de_pcbstack_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	//u8 *videoram = m_gpu_videoram.get();
 	int pivot = 3;
-	bitmap.fill(0xdff, cliprect);
+	bitmap.fill(0xff, cliprect);
 	screen.priority().fill(0, cliprect);
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 
