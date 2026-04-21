@@ -673,7 +673,7 @@ void gal3_state::gal3(machine_config &config)
 	NAMCOS21_3D(config, m_namcos21_3d[0], 0);
 	m_namcos21_3d[0]->set_zz_shift_mult(11, 0x200);
 	m_namcos21_3d[0]->set_depth_reverse(false);
-	m_namcos21_3d[0]->set_framebuffer_size(496,480);
+	m_namcos21_3d[0]->set_framebuffer_size(496, 480);
 
 	NAMCOS21_DSP_C67(config, m_namcos21_dsp_c67[0], 0);
 	m_namcos21_dsp_c67[0]->set_renderer_tag("namcos21_3d_1");
@@ -701,7 +701,7 @@ void gal3_state::gal3(machine_config &config)
 	NAMCOS21_3D(config, m_namcos21_3d[1], 0);
 	m_namcos21_3d[1]->set_zz_shift_mult(11, 0x200);
 	m_namcos21_3d[1]->set_depth_reverse(false);
-	m_namcos21_3d[1]->set_framebuffer_size(496,480);
+	m_namcos21_3d[1]->set_framebuffer_size(496, 480);
 
 	NAMCOS21_DSP_C67(config, m_namcos21_dsp_c67[1], 0);
 	m_namcos21_dsp_c67[1]->set_renderer_tag("namcos21_3d_2");
@@ -710,12 +710,12 @@ void gal3_state::gal3(machine_config &config)
 	SPEAKER(config, "speaker", 2).front();
 
 	// TODO: Total 5 of C140s in sound board, verified from gal3zlgr PCB - gal3 uses same board?
-	C140(config, m_c140_16g, 49152000/2304);
+	C140(config, m_c140_16g, 49152000 / 384 / 6);
 	//m_c140_16g->set_addrmap(0, &gal3_state::c140_16g_map);    //to be verified
 	m_c140_16g->add_route(0, "speaker", 0.50, 0);
 	m_c140_16g->add_route(1, "speaker", 0.50, 1);
 
-	C140(config, m_c140_16a, 49152000/2304);
+	C140(config, m_c140_16a, 49152000 / 384 / 6);
 	//m_c140_16a->set_addrmap(0, &gal3_state::c140_16a_map);    //to be verified
 	m_c140_16a->add_route(0, "speaker", 0.50, 0);
 	m_c140_16a->add_route(1, "speaker", 0.50, 1);

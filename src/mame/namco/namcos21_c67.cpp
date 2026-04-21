@@ -902,7 +902,7 @@ void namcos21_c67_state::namcos21(machine_config &config)
 	NAMCOS21_3D(config, m_namcos21_3d, 0);
 	m_namcos21_3d->set_zz_shift_mult(11, 0x200);
 	m_namcos21_3d->set_depth_reverse(false);
-	m_namcos21_3d->set_framebuffer_size(496,480);
+	m_namcos21_3d->set_framebuffer_size(496, 480);
 
 	configure_c148_standard(config);
 	NAMCO_C139(config, m_sci, 0);
@@ -919,7 +919,7 @@ void namcos21_c67_state::namcos21(machine_config &config)
 
 	SPEAKER(config, "speaker", 2).front();
 
-	C140(config, m_c140, 49.152_MHz_XTAL / 2304);
+	C140(config, m_c140, 49.152_MHz_XTAL / 384 / 6);
 	m_c140->set_addrmap(0, &namcos21_c67_state::c140_map);
 	m_c140->int1_callback().set_inputline(m_audiocpu, M6809_FIRQ_LINE);
 	m_c140->add_route(0, "speaker", 0.50, 0);
@@ -1312,8 +1312,11 @@ void namcos21_c67_state::init_solvalou()
 // uses 5x TMS320C25 (C67, has internal ROM - dumped)
 GAME( 1991, starblad,  0,        starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST2, World)",   MACHINE_IMPERFECT_GRAPHICS )
 GAME( 1991, starbladj, starblad, starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST1, Japan)",   MACHINE_IMPERFECT_GRAPHICS )
-GAMEL(1991, solvalou,  0,        solvalou, solvalou,   namcos21_c67_state, init_solvalou, ROT0,    "Namco", "Solvalou (SV1, Japan)",    MACHINE_IMPERFECT_GRAPHICS | MACHINE_NOT_WORKING, layout_solvalou )
-GAME( 1992, aircomb,   0,        aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC2, US)",     MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS ) // There's code for a SCI, is it even possible to play multiplayer?
-GAME( 1992, aircombj,  aircomb,  aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC1, Japan)",  MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS )
-GAME( 1993, cybsled,   0,        cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY2, World)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN | MACHINE_NOT_WORKING )
-GAME( 1993, cybsleda,  cybsled,  cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY1, World?)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN | MACHINE_NOT_WORKING ) // usually an 'xx1' set would be Japan, but this shows neither a warning nor Japanese text, verify on hardware
+
+GAMEL(1991, solvalou,  0,        solvalou, solvalou,   namcos21_c67_state, init_solvalou, ROT0,    "Namco", "Solvalou (SV1, Japan)",    MACHINE_IMPERFECT_GRAPHICS, layout_solvalou )
+
+GAME( 1992, aircomb,   0,        aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC2, US)",     MACHINE_IMPERFECT_GRAPHICS ) // There's code for a SCI, is it even possible to play multiplayer?
+GAME( 1992, aircombj,  aircomb,  aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC1, Japan)",  MACHINE_IMPERFECT_GRAPHICS )
+
+GAME( 1993, cybsled,   0,        cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY2, World)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN )
+GAME( 1993, cybsleda,  cybsled,  cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY1, World?)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN ) // usually an 'xx1' set would be Japan, but this shows neither a warning nor Japanese text, verify on hardware

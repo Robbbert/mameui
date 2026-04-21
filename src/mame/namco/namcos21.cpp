@@ -36,7 +36,7 @@ shade pixels according to their depth.
 
 TODO:
 - polygon glitches/flicker
-- posirq effects for bitmap layer not working
+- posirq effects for bitmap layer not working, eg. winrungp titlescreen should be a checkerboard pattern
 - is there a video_enable flag?
 
 reference videos:
@@ -345,8 +345,8 @@ private:
 	std::unique_ptr<uint8_t[]> m_gpu_videoram;
 	std::unique_ptr<uint8_t[]> m_gpu_maskram;
 
-	uint16_t m_winrun_color;
-	uint16_t m_winrun_gpu_register[0x10/2];
+	uint16_t m_winrun_color = 0;
+	uint16_t m_winrun_gpu_register[0x10/2] = { };
 
 	uint16_t dpram_word_r(offs_t offset);
 	void dpram_word_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
@@ -918,11 +918,11 @@ void namcos21_state::winrun(machine_config &config)
 	m_namcos21_3d->set_fixed_palbase(0x2000);
 	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
 	m_namcos21_3d->set_depth_reverse(true);
-	m_namcos21_3d->set_framebuffer_size(496,480);
+	m_namcos21_3d->set_framebuffer_size(496, 480);
 
 	SPEAKER(config, "speaker", 2).front();
 
-	C140(config, m_c140, 49.152_MHz_XTAL / 2304);
+	C140(config, m_c140, 49.152_MHz_XTAL / 384 / 6);
 	m_c140->set_addrmap(0, &namcos21_state::c140_map);
 	m_c140->int1_callback().set_inputline(m_audiocpu, M6809_FIRQ_LINE);
 	m_c140->add_route(0, "speaker", 0.50, 0);
@@ -1096,10 +1096,11 @@ ROM_END
 } // Anonymous namespace
 
 
-/*    YEAR  NAME       PARENT    MACHINE   INPUT       CLASS           INIT           MONITOR  COMPANY  FULLNAME                                 FLAGS */
+/*    YEAR  NAME       PARENT    MACHINE   INPUT       CLASS           INIT          MONITOR  COMPANY  FULLNAME                                                           FLAGS */
 
 // Original 'Namco System 21' with C65 I/O MCU, uses TMS320C25 DSP with no custom part number
-GAME( 1988, winrun,    0,        winrun,   winrun,     namcos21_state, empty_init,   ROT0,    "Namco", "Winning Run (World) (89/06/06, Ver.09)",                   MACHINE_IMPERFECT_GRAPHICS ) // Sub Ver.09, 1989, Graphic Ver .06, 89/01/14, Sound Ver.2.00
-GAME( 1989, winrungp,  0,        winrun,   winrungp,   namcos21_state, empty_init,   ROT0,    "Namco", "Winning Run Suzuka Grand Prix (Japan) (89/12/03, Ver.02)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN ) // Sub Ver.02, 1989, Graphic Ver.02 89/12/03, Sound Ver.0000
+GAME( 1988, winrun,    0,        winrun,   winrun,     namcos21_state, empty_init,   ROT0,    "Namco", "Winning Run (World) (89/06/06, Ver.09)",                          MACHINE_IMPERFECT_GRAPHICS ) // Sub Ver.09, 1989, Graphic Ver .06, 89/01/14, Sound Ver.2.00
+GAME( 1989, winrungp,  0,        winrun,   winrungp,   namcos21_state, empty_init,   ROT0,    "Namco", "Winning Run Suzuka Grand Prix (Japan) (89/12/03, Ver.02)",        MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN ) // Sub Ver.02, 1989, Graphic Ver.02 89/12/03, Sound Ver.0000
+
 // Available on a size/cost reduced 2 PCB set with 'Namco System 21B' printed on each board, still C65 I/O MCU, appears to be functionally identical to original NS21
-GAME( 1991, winrun91,  0,        winrun,   winrungp,   namcos21_state, empty_init,   ROT0,    "Namco", "Winning Run '91 (Japan) (1991/03/05, Main Ver 1.0, Sub Ver 1.0)",               MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN )
+GAME( 1991, winrun91,  0,        winrun,   winrungp,   namcos21_state, empty_init,   ROT0,    "Namco", "Winning Run '91 (Japan) (1991/03/05, Main Ver 1.0, Sub Ver 1.0)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN )
