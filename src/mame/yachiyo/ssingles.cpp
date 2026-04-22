@@ -179,8 +179,8 @@ public:
 		: driver_device(mconfig, type, tag)
 		, m_maincpu(*this, "maincpu")
 		, m_screen(*this, "screen")
-		, m_videoram(*this, "videoram")
-		, m_colorram(*this, "colorram")
+		//, m_videoram(*this, "videoram")
+		//, m_colorram(*this, "colorram")
 		, m_gfx_rom(*this, "gfx")
 		, m_extra(*this, "EXTRA")
 	{ }
@@ -198,8 +198,8 @@ private:
 	required_device<cpu_device> m_maincpu;
 	required_device<screen_device> m_screen;
 
-	required_shared_ptr<uint8_t> m_videoram;
-	required_shared_ptr<uint8_t> m_colorram;
+	std::unique_ptr<uint8_t[]> m_videoram;
+	std::unique_ptr<uint8_t[]> m_colorram;
 	required_region_ptr<uint8_t> m_gfx_rom;
 
 	required_ioport m_extra;
@@ -255,6 +255,12 @@ void ssingles_state::palette(palette_device &palette) const
 
 void ssingles_state::video_start()
 {
+	m_videoram = make_unique_clear<uint8_t[]>(0x100);
+	m_colorram = make_unique_clear<uint8_t[]>(0x100);
+
+	save_pointer(NAME(m_videoram), 0x100);
+	save_pointer(NAME(m_colorram), 0x100);
+
 	for (int i = 0; i < NUM_PENS; ++i)
 		m_pens[i] = ssingles_colors[i];
 }
@@ -283,6 +289,7 @@ MC6845_UPDATE_ROW(ssingles_state::ssingles_update_row)
 	}
 }
 
+// TODO: attr bit 7 really looks kanji ROM enable
 MC6845_UPDATE_ROW(ssingles_state::atamanot_update_row)
 {
 	for (int cx = 0; cx < x_count; ++cx)
@@ -333,8 +340,8 @@ ioport_value ssingles_state::controls_r()
 
 void ssingles_state::ssingles_map(address_map &map)
 {
-	map(0x0000, 0x00ff).ram().share(m_videoram);
-	map(0x0800, 0x08ff).ram().share(m_colorram);
+	map(0x0000, 0x00ff).lw8(NAME([this] (offs_t offset, u8 data) { m_videoram[offset] = data; }));
+	map(0x0800, 0x08ff).lw8(NAME([this] (offs_t offset, u8 data) { m_colorram[offset] = data; }));
 	map(0x0000, 0x1fff).rom();
 	map(0xc000, 0xc000).r(FUNC(ssingles_state::c000_r));
 	map(0xc001, 0xc001).rw(FUNC(ssingles_state::c001_r), FUNC(ssingles_state::c001_w));
@@ -358,7 +365,7 @@ uint8_t ssingles_state::atamanot_prot_r(offs_t offset)
 			return prot_id[offset % 0x11];
 
 		case 0xc0:
-			return 2; // 1 goes to service mode?
+			return 2; // 2 goes to service mode, 1 in game? (that fails due of unemulated ROM bank)
 	}
 
 	return 0;
@@ -372,8 +379,8 @@ void ssingles_state::atamanot_prot_w(uint8_t data)
 
 void ssingles_state::atamanot_map(address_map &map)
 {
-	map(0x0000, 0x00ff).ram().share(m_videoram);
-	map(0x0800, 0x08ff).ram().share(m_colorram);
+	map(0x0000, 0x00ff).lw8(NAME([this] (offs_t offset, u8 data) { m_videoram[offset] = data; }));
+	map(0x0800, 0x08ff).lw8(NAME([this] (offs_t offset, u8 data) { m_colorram[offset] = data; }));
 	map(0x0000, 0x3fff).rom();
 	map(0x4000, 0x47ff).ram();
 	map(0x6000, 0x60ff).ram(); // kanji tilemap?
@@ -409,7 +416,8 @@ void ssingles_state::atamanot_io_map(address_map &map)
 	map(0x16, 0x16).portr("DSW0");
 	map(0x18, 0x18).portr("DSW1").w(FUNC(ssingles_state::atamanot_prot_w));
 	map(0x1c, 0x1c).portr("INPUTS");
-//  map(0x1a, 0x1a).nopw(); // flip screen
+//  map(0x1a, 0x1a).nopw(); // bit 0: memory_view for area $8000? Other bits used in tandem with I/O $1e
+//	map(0x1e, 0x1e) unknown, read a lot with mask & 7
 	map(0xfe, 0xfe).w("crtc", FUNC(mc6845_device::address_w));
 	map(0xff, 0xff).w("crtc", FUNC(mc6845_device::register_w));
 }
