@@ -5,15 +5,21 @@
 SMC-777 (c) 1983 Sony
 
 TODO:
-- Implement SMC-70 specific features;
-- Implement GFX modes other than 160x100x4
-- ROM/RAM bankswitch, it apparently happens after one instruction prefetching.
-  We currently use an hackish implementation until the MAME/MESS framework can
-  support that ...
-- keyboard input is very sluggish, convert to device_matrix_interface;
+- Implement GFX modes other than 160x100x4 (cfr. nobunaga and yakyukyoa)
+- convert video to a proper mc6845, consider this as a good base for new device rewrite;
 - cursor stuck in Bird Crash;
-- add mc6845 features;
 - interlace (cfr. cpm22 in setup mode);
+- ROM/RAM bankswitch, it apparently happens after one instruction prefetching.
+  Hacked around for now;
+- keyboard input is very sluggish, convert to device_matrix_interface;
+- Most often don't survive a soft reset;
+- Hookup Kanji ROM (have dump);
+- tape;
+- far too many floppy load failures;
+- .mfi floppy format throws a crash;
+- Downgrade for SMC-70 (if/when dump is available);
+- Superimposing features (if/when SW dumps arises, cfr. SMC-70G promotional video)
+- Find better reference materials, available one lacks several pages;
 
 **************************************************************************************************/
 
@@ -1152,12 +1158,13 @@ void smc777_state::smc777(machine_config &config)
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfxdecode_device::empty);
 
-	HD6845S(config, m_crtc, MASTER_CLOCK / 16); // HD68A45SP; unknown clock, hand tuned to get ~60 fps
+	HD6845S(config, m_crtc, MASTER_CLOCK / 16); // HD46505SP-1 / HD68A45SP; unknown clock, hand tuned to get ~60 fps
 	m_crtc->set_screen(m_screen);
 	m_crtc->set_show_border_area(true);
 	m_crtc->set_char_width(8);
 	m_crtc->out_vsync_callback().set(FUNC(smc777_state::vsync_w));
 
+	// TODO: MB8877A really
 	MB8876(config, m_fdc, MASTER_CLOCK / 32); // divider not confirmed
 	m_fdc->intrq_wr_callback().set(FUNC(smc777_state::fdc_intrq_w));
 	m_fdc->drq_wr_callback().set(FUNC(smc777_state::fdc_drq_w));
