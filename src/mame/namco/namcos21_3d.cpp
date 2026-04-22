@@ -34,20 +34,16 @@ void namcos21_3d_device::device_start()
 	allocate_poly_framebuffer();
 }
 
-void namcos21_3d_device::device_reset()
-{
-}
-
 void namcos21_3d_device::allocate_poly_framebuffer()
 {
 	if (m_framebuffer_size_in_bytes == 0)
 		fatalerror("m_framebuffer_size_in_bytes == 0\n");
 
-	m_mpPolyFrameBufferZ = std::make_unique<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
-	m_mpPolyFrameBufferPens = std::make_unique<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
+	m_mpPolyFrameBufferZ = make_unique_clear<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
+	m_mpPolyFrameBufferPens = make_unique_clear<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
 
-	m_mpPolyFrameBufferZ2 = std::make_unique<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
-	m_mpPolyFrameBufferPens2 = std::make_unique<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
+	m_mpPolyFrameBufferZ2 = make_unique_clear<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
+	m_mpPolyFrameBufferPens2 = make_unique_clear<uint16_t[]>(m_framebuffer_size_in_bytes / 2);
 
 	swap_and_clear_poly_framebuffer();
 	swap_and_clear_poly_framebuffer();

@@ -68,7 +68,6 @@ protected:
 	virtual void device_reset() override ATTR_COLD;
 
 private:
-
 	INTERRUPT_GEN_MEMBER( irq0_line_hold );
 	INTERRUPT_GEN_MEMBER( irq1_line_hold );
 
@@ -223,21 +222,21 @@ bool namco_de_pcbstack_device::sprite_mix_callback(u16 &dest, u8 &destpri, u16 c
 		switch (src & 0xff)
 		{
 		case 0xff:
-			if ((dest & 0xff) == 0xff)
+			if (dest == 0xff)
 				dest = (src & 0xf00) | 0xff;
 			else
 				return false;
 			break;
 
 		case 0x00:
-			if ((dest & 0xff) != 0xff)
+			if (dest != 0xff)
 				dest = 0x4000 | (dest & 0x1fff);
 			else
 				dest = (src & 0xf00) | 0x00;
 			break;
 
 		case 0x01:
-			if ((dest & 0xff) != 0xff)
+			if (dest != 0xff)
 				dest = 0x6000 | (dest & 0x1fff);
 			else
 				dest = (src & 0xf00) | 0x01;
@@ -255,30 +254,19 @@ bool namco_de_pcbstack_device::sprite_mix_callback(u16 &dest, u8 &destpri, u16 c
 
 u32 namco_de_pcbstack_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	int pivot = 3;
 	bitmap.fill(0xff, cliprect);
 	screen.priority().fill(0, cliprect);
+
+	if (!BIT(m_video_enable, 6))
+		return 0;
+
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 
-	m_c355spr->draw(screen, bitmap, cliprect, 2);
-	m_c355spr->draw(screen, bitmap, cliprect, 14);   //driver's eyes
-
-	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0x7fc0, 0x7ffe);
-
-	m_c355spr->draw(screen, bitmap, cliprect, 0);
-	m_c355spr->draw(screen, bitmap, cliprect, 1);
-
-	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
-
-	for (int pri = pivot; pri < 8; pri++)
-	{
-		m_c355spr->draw(screen, bitmap, cliprect, pri);
-	}
-
-	m_c355spr->draw(screen, bitmap, cliprect, 15);   //driver's eyes
+	m_c355spr->draw(screen, bitmap, cliprect, 14);
+	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
+	m_c355spr->draw(screen, bitmap, cliprect, 15);
 
 	return 0;
-
 }
 
 u16 namco_de_pcbstack_device::video_enable_r()
@@ -379,7 +367,6 @@ void namco_de_pcbstack_device::configure_c68_namcos21(machine_config &config)
 /*************************************************************/
 /* Driver's Eyes Memory declarations overrides               */
 /*************************************************************/
-
 
 void namco_de_pcbstack_device::driveyes_common_map(address_map &map)
 {

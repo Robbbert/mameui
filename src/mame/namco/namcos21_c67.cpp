@@ -9,6 +9,8 @@ TODO (2026 update):
   a factor of 40/24 does not fix it;
 - verify video timing, pixel clock is from 38.76922?;
 - verify audiocpu irq frequency;
+- is m_layer0_pivot software-controlled and if so, where? (solvalou sprite layer 0 is further back than
+  starblad and cybsled);
 - aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen),
   and on pilot parachuting with a time over;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
@@ -345,6 +347,7 @@ private:
 	required_device<namcos21_3d_device> m_namcos21_3d;
 	required_device<namcos21_dsp_c67_device> m_namcos21_dsp_c67;
 
+	u16 m_layer0_pivot = 0x800;
 	u16 m_video_enable = 0;
 
 	u16 video_enable_r();
@@ -384,28 +387,28 @@ private:
 
 bool namcos21_c67_state::sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase, u16 src, int srcpri, int pri)
 {
-	if (srcpri == pri)
+	if ((srcpri & 3) == pri)
 	{
 		src ^= 0xf00;
 
 		switch (src & 0xff)
 		{
 		case 0xff:
-			if ((dest & 0xff) == 0xff)
+			if (dest == 0xff)
 				dest = (src & 0xf00) | 0xff;
 			else
 				return false;
 			break;
 
 		case 0x00:
-			if ((dest & 0xff) != 0xff)
+			if (dest != 0xff)
 				dest = 0x4000 | (dest & 0x1fff);
 			else
 				dest = (src & 0xf00) | 0x00;
 			break;
 
 		case 0x01:
-			if ((dest & 0xff) != 0xff)
+			if (dest != 0xff)
 				dest = 0x6000 | (dest & 0x1fff);
 			else
 				dest = (src & 0xf00) | 0x01;
@@ -423,7 +426,6 @@ bool namcos21_c67_state::sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase
 
 u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	int pivot = 3;
 	bitmap.fill(0xff, cliprect);
 	screen.priority().fill(0, cliprect);
 
@@ -431,36 +433,31 @@ u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitma
 	if (!BIT(m_video_enable, 6))
 		return 0;
 
+	// draw low priority 2d sprites
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
+	m_c355spr->draw(screen, bitmap, cliprect, 2);
 
 	const u16 pri1 = (m_palette->read16_ext(0) >> 8) & 7;
 //	const u16 pri2 = (m_palette->read16_ext(1) >> 8) & 7; // always '2'?
 
-	m_c355spr->draw(screen, bitmap, cliprect, 2);
-
-	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0x7fc0, 0x7ffe);
-
-	switch(pri1)
+	switch (pri1)
 	{
 		case 0: // aircomb mission select & gameplay
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
 			m_c355spr->draw(screen, bitmap, cliprect, 0);
-			m_c355spr->draw(screen, bitmap, cliprect, 1);
 			break;
 		case 4: // default gameplay for all games, aircomb attract mode
 		case 2: // TODO: starblad/solvalou when going in service mode
 		default:
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, m_layer0_pivot, 0x7ffe);
 			m_c355spr->draw(screen, bitmap, cliprect, 0);
-			m_c355spr->draw(screen, bitmap, cliprect, 1);
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, m_layer0_pivot - 1);
 			break;
 	}
 
-	/* draw high priority 2d sprites */
-	for (int pri = pivot; pri < 8; pri++)
-	{
-		m_c355spr->draw(screen, bitmap, cliprect, pri);
-	}
+	// draw high priority 2d sprites
+	m_c355spr->draw(screen, bitmap, cliprect, 3);
+
 	return 0;
 }
 
@@ -476,7 +473,7 @@ void namcos21_c67_state::video_enable_w(offs_t offset, u16 data, u16 mem_mask)
 	COMBINE_DATA( &m_video_enable );
 	if (m_video_enable & ~0x40)
 	{
-		popmessage("Video Enable %04x!", m_video_enable);
+		logerror("Video Enable %04x!\n", m_video_enable);
 	}
 }
 
@@ -623,7 +620,7 @@ static INPUT_PORTS_START( starblad )
 	PORT_BIT( 0x0f, IP_ACTIVE_LOW, IPT_UNUSED )
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_COIN2 )
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_COIN1 )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SERVICE ) PORT_NAME("Service Button") PORT_CODE(KEYCODE_0) PORT_TOGGLE // alt test mode switch
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SERVICE2 ) PORT_NAME("Service Button") PORT_TOGGLE // alt test mode switch
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_SERVICE1 )
 
 	PORT_START("AN0")       /* 63B05Z0 - 8 CHANNEL ANALOG - CHANNEL 0 */
@@ -691,8 +688,8 @@ static INPUT_PORTS_START( solvalou )
 
 	PORT_MODIFY("MCUB")     /* 63B05Z0 - PORT B */
 	PORT_BIT( 0x3f, IP_ACTIVE_LOW, IPT_UNUSED )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_START2 ) // screen freeze
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_START1 ) // debug view switch?
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SERVICE4 ) PORT_NAME("Debug Freeze")
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_SERVICE3 ) PORT_NAME("Debug Change View")
 
 	PORT_MODIFY("AN1")       /* 63B05Z0 - 8 CHANNEL ANALOG - CHANNEL 1 */
 	PORT_BIT( 0xff, 0x80, IPT_AD_STICK_X ) PORT_MINMAX(0x60,0xa0) PORT_SENSITIVITY(25) PORT_KEYDELTA(4)
@@ -953,6 +950,7 @@ void namcos21_c67_state::solvalou(machine_config &config)
 
 	m_namcos21_3d->set_fixed_palbase(0x3f00);
 	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
+	m_layer0_pivot = 0x7fc0;
 }
 
 

@@ -28,19 +28,21 @@ namcos21_dsp_c67_device::namcos21_dsp_c67_device(const machine_config &mconfig, 
 	m_ptrom24(*this,"point24"),
 	m_master_dsp_ram(*this,"master_dsp_ram"),
 	m_gametype(0),
-	m_irq_enable(false)
+	m_irq_enable(0)
 {
 }
 
 void namcos21_dsp_c67_device::device_start()
 {
-	m_dspram16 = std::make_unique<uint16_t []>(0x10000/2); // 0x8000 16-bit words
-	std::fill_n(m_dspram16.get(), 0x10000/2, 0x0000);
-
-	m_pointram = std::make_unique<uint8_t[]>(PTRAM_SIZE);
-	m_mpDspState = std::make_unique<dsp_state>();
-
+	m_dspram16 = make_unique_clear<uint16_t []>(0x10000/2); // 0x8000 16-bit words
 	save_pointer(NAME(m_dspram16), 0x10000/2);
+
+	m_pointram = make_unique_clear<uint8_t[]>(PTRAM_SIZE);
+	save_pointer(NAME(m_pointram), PTRAM_SIZE);
+
+	memset(m_depthcue, 0, sizeof(m_depthcue));
+
+	m_mpDspState = std::make_unique<dsp_state>();
 
 	save_item(NAME(m_mpDspState->masterSourceAddr));
 	save_item(NAME(m_mpDspState->slaveInputBuffer));
@@ -54,7 +56,6 @@ void namcos21_dsp_c67_device::device_start()
 	save_item(NAME(m_mpDspState->masterFinished));
 	save_item(NAME(m_mpDspState->slaveActive));
 
-	save_pointer(NAME(m_pointram), PTRAM_SIZE);
 	save_item(NAME(m_pointram_idx));
 	save_item(NAME(m_pointram_control));
 	save_item(NAME(m_pointrom_idx));
@@ -90,13 +91,6 @@ void namcos21_dsp_c67_device::device_reset()
 	m_mbPointRomDataAvailable = 0;
 	m_irq_enable = 0;
 	m_mbNeedsKickstart = 1;
-
-	// clear these?
-	//m_depthcue[2][0x400];
-	//m_pointram
-	//m_mpDspState->slaveInputBuffer[DSP_BUF_MAX];
-	//m_mpDspState->slaveOutputBuffer[DSP_BUF_MAX];
-	//m_mpDspState->masterDirectDrawBuffer[256];
 }
 
 void namcos21_dsp_c67_device::reset_dsps(int state)
@@ -320,10 +314,12 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 void namcos21_dsp_c67_device::namcos21_kickstart()
 {
 	m_renderer->swap_and_clear_poly_framebuffer();
+
 	m_mpDspState->masterSourceAddr = 0;
 	m_mpDspState->slaveOutputSize = 0;
 	m_mpDspState->masterFinished = 0;
 	m_mpDspState->slaveActive = 0;
+
 	m_c67master->set_input_line(0, HOLD_LINE);
 	m_c67slave[0]->pulse_input_line(INPUT_LINE_RESET, attotime::zero);
 }

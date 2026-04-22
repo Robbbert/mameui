@@ -79,7 +79,6 @@ private:
 
 	TIMER_CALLBACK_MEMBER(suspend_callback);
 	emu_timer *m_suspend_timer = nullptr;
-
 };
 
 DECLARE_DEVICE_TYPE(NAMCOS21_DSP, namcos21_dsp_device)

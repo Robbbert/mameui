@@ -36,8 +36,7 @@ shade pixels according to their depth.
 
 TODO:
 - polygon glitches/flicker
-- posirq effects for bitmap layer not working, eg. winrungp titlescreen should be a checkerboard pattern
-- is there a video_enable flag?
+- is there a video_enable flag? or at least one for the bitmap layer
 - car engine sound is wrong
 
 reference videos:
@@ -317,7 +316,6 @@ public:
 		m_namcos21_dsp(*this, "namcos21dsp")
 	{ }
 
-	void configure_c148_standard(machine_config &config);
 	void winrun(machine_config &config);
 
 protected:
@@ -390,7 +388,7 @@ private:
 
 void namcos21_state::video_start()
 {
-	m_gpu_videoram = std::make_unique<uint8_t[]>(0x80000);
+	m_gpu_videoram = make_unique_clear<uint8_t[]>(0x80000);
 	save_pointer(NAME(m_gpu_videoram), 0x80000);
 }
 
@@ -434,19 +432,25 @@ uint16_t namcos21_state::gpu_videoram_r(offs_t offset)
 
 void namcos21_state::bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	uint8_t const *const videoram = m_gpu_videoram.get();
-	//printf("%d %d (%d %d) - %04x %04x %04x|%04x %04x\n",cliprect.top(),cliprect.bottom(),m_screen->vpos(),m_gpu_intc->get_posirq_line(),m_gpu_register[0],m_gpu_register[2/2],m_gpu_register[4/2],m_gpu_register[0xa/2],m_gpu_register[0xc/2]);
+	// show gpu registers & related
+#if 0
+	printf("%3d %3d (%3d %3d) - ", cliprect.top(), cliprect.bottom(), m_screen->vpos(), m_gpu_intc->get_posirq_line());
+	for (int i = 0; i < 8; i++)
+		printf("%04x ", m_gpu_register[i]);
+	printf("| %04x\n", m_gpu_color);
+#endif
 
-	int const yscroll = -cliprect.top()+(int16_t)m_gpu_register[0x2/2];
-	int const xscroll = 0;//m_gpu_register[0xc/2] >> 7;
-	int const base = 0x1000+0x100*(m_gpu_color&0xf);
-	for( int sy=cliprect.top(); sy<=cliprect.bottom(); sy++ )
+	int const yscroll = -cliprect.top() + (int16_t)m_gpu_register[1];
+	int const xscroll = m_gpu_register[0] & 0xff;
+	int const base = 0x1000 | (m_gpu_color << 8 & 0xf00);
+
+	for (int sy = cliprect.top(); sy <= cliprect.bottom(); sy++)
 	{
-		uint8_t const *const pSource = &videoram[((yscroll+sy)&0x3ff)*0x200];
+		uint8_t const *const pSource = &m_gpu_videoram[((yscroll + sy) & 0x3ff) * 0x200];
 		uint16_t *const pDest = &bitmap.pix(sy);
-		for( int sx=cliprect.left(); sx<=cliprect.right(); sx++ )
+		for (int sx = cliprect.left(); sx <= cliprect.right(); sx++)
 		{
-			int const pen = pSource[(sx+xscroll) & 0x1ff];
+			int const pen = pSource[(sx + xscroll) & 0x1ff];
 			switch( pen )
 			{
 			case 0xff:
@@ -454,17 +458,17 @@ void namcos21_state::bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect
 
 			// NOTE: very similar to namcos21_c67_state::sprite_mix_callback
 			case 0x00:
-				if ((pDest[sx] & 0xff) != 0xff)
+				if (pDest[sx] != (base ^ 0x10ff))
 					pDest[sx] = 0x4000 | (pDest[sx] & 0x1fff);
 				else
-					pDest[sx] = (base & 0xf00) | 0;
+					pDest[sx] = (base & 0xf00) | 0x00;
 				break;
 
 			case 0x01:
-				if ((pDest[sx] & 0xff) != 0xff)
+				if (pDest[sx] != (base ^ 0x10ff))
 					pDest[sx] = 0x6000 | (pDest[sx] & 0x1fff);
 				else
-					pDest[sx] = (base & 0xf00) | 1;
+					pDest[sx] = (base & 0xf00) | 0x01;
 				break;
 
 			default:
@@ -495,13 +499,10 @@ uint32_t namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 			break;
 		case 2: // gameplay
 		default:
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0x7fc0, 0x7ffe);
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
 			bitmap_draw(bitmap,cliprect);
 			break;
 	}
-
-	//popmessage("%04x %04x %04x|%04x %04x",m_gpu_register[0],m_gpu_register[2/2],m_gpu_register[4/2],m_gpu_register[0xa/2],m_gpu_register[0xc/2]);
 
 	return 0;
 }
@@ -823,17 +824,6 @@ TIMER_DEVICE_CALLBACK_MEMBER(namcos21_state::screen_scanline)
 		m_gpu_intc->pos_irq_trigger();
 }
 
-void namcos21_state::configure_c148_standard(machine_config &config)
-{
-	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
-	m_master_intc->link_c148_device(m_slave_intc);
-	m_master_intc->out_ext1_callback().set(FUNC(namcos21_state::sound_reset_w));
-	m_master_intc->out_ext2_callback().set(FUNC(namcos21_state::system_reset_w));
-
-	NAMCO_C148(config, m_slave_intc, 0, m_slave, false);
-	m_slave_intc->link_c148_device(m_master_intc);
-}
-
 void namcos21_state::winrun(machine_config &config)
 {
 	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); /* Master */
@@ -855,7 +845,14 @@ void namcos21_state::winrun(machine_config &config)
 	m68000_device &gpu(M68000(config, "gpu", 49.152_MHz_XTAL / 4)); /* graphics coprocessor */
 	gpu.set_addrmap(AS_PROGRAM, &namcos21_state::gpu_map);
 
-	configure_c148_standard(config);
+	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
+	m_master_intc->link_c148_device(m_slave_intc);
+	m_master_intc->out_ext1_callback().set(FUNC(namcos21_state::sound_reset_w));
+	m_master_intc->out_ext2_callback().set(FUNC(namcos21_state::system_reset_w));
+
+	NAMCO_C148(config, m_slave_intc, 0, m_slave, false);
+	m_slave_intc->link_c148_device(m_master_intc);
+
 	NAMCO_C148(config, m_gpu_intc, 0, "gpu", false);
 	NAMCO_C139(config, m_sci, 0);
 

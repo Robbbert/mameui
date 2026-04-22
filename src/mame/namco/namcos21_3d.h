@@ -19,7 +19,7 @@ public:
 	{
 		m_poly_frame_width = width;
 		m_poly_frame_height = height;
-		m_framebuffer_size_in_bytes = (sizeof(uint16_t)*m_poly_frame_width*m_poly_frame_height);
+		m_framebuffer_size_in_bytes = sizeof(uint16_t)*m_poly_frame_width*m_poly_frame_height;
 	}
 
 	int get_width() { return m_poly_frame_width; }
@@ -33,7 +33,6 @@ public:
 protected:
 	// device-level overrides
 	virtual void device_start() override ATTR_COLD;
-	virtual void device_reset() override ATTR_COLD;
 
 private:
 	struct n21_vertex
