@@ -176,7 +176,7 @@ uint16_t namcos21_dsp_c67_device::dspcuskey_r()
 		{
 		case 0x8061: result = 0xfe95; break;
 		case 0x8069: result = 0xffff; break;
-		case 0x8070: result = 0x016A; break;
+		case 0x8070: result = 0x016a; break;
 		default:
 			break;
 		}

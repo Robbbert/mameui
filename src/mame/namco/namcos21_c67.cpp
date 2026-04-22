@@ -2,7 +2,9 @@
 // copyright-holders:Phil Stroffolino
 /*
 
-TODO (2026 update):
+Namco System 21 (later hardware with 5 TMS320C25 DSPs)
+
+TODO:
 - lamp/vibration outputs, from MCU? (particularly starblad);
 - verify DSP clocks, they should be 40MHz, currently underclocked on purpose on MAME, otherwise polygons
   may disappear on some frames (try playing starblad until after the asteroids), tightening quantum by
@@ -24,9 +26,8 @@ BTANB:
 - aircomb: intro cockpit closure is one pixel off on left edge;
 - solvalou: sprites on top of foreground polygons (eg. explosions, water splash)
 
-TODO:
-- namcoic.c: in StarBlade, the sprite list is stored at a different location during startup tests.
-  What register controls this?
+Reversed AD Stick Y control in starblad/solvalou is correct (just like aircomb). It may seem backwards
+when playing it on an MAME (eg. with mouse), so just change analog reverse setting in the UI.
 
 ---------------------------------------------------------------------------
 
@@ -316,7 +317,6 @@ public:
 		m_namcos21_dsp_c67(*this, "namcos21dsp_c67")
 	{ }
 
-	void configure_c148_standard(machine_config &config);
 	void namcos21(machine_config &config);
 	void cybsled(machine_config &config);
 	void solvalou(machine_config &config);
@@ -779,7 +779,6 @@ void namcos21_c67_state::sound_reset_w(u8 data)
 	{
 		/* Resume execution */
 		m_audiocpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
-		m_maincpu->yield();
 	}
 	else
 	{
@@ -796,9 +795,6 @@ void namcos21_c67_state::sound_reset_w(u8 data)
 void namcos21_c67_state::system_reset_w(u8 data)
 {
 	reset_all_subcpus(data & 1 ? CLEAR_LINE : ASSERT_LINE);
-
-	if (data & 0x01)
-		m_maincpu->yield();
 }
 
 void namcos21_c67_state::reset_all_subcpus(int state)
@@ -846,7 +842,6 @@ void namcos21_c67_state::machine_start()
 TIMER_DEVICE_CALLBACK_MEMBER(namcos21_c67_state::screen_scanline)
 {
 	int scanline = param;
-//  int cur_posirq = get_posirq_scanline()*2;
 
 	if (scanline == 240*2)
 	{
@@ -854,17 +849,6 @@ TIMER_DEVICE_CALLBACK_MEMBER(namcos21_c67_state::screen_scanline)
 		m_slave_intc->vblank_irq_trigger();
 		m_c68->ext_interrupt(ASSERT_LINE);
 	}
-}
-
-void namcos21_c67_state::configure_c148_standard(machine_config &config)
-{
-	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
-	m_master_intc->link_c148_device(m_slave_intc);
-	m_master_intc->out_ext1_callback().set(FUNC(namcos21_c67_state::sound_reset_w));
-	m_master_intc->out_ext2_callback().set(FUNC(namcos21_c67_state::system_reset_w));
-
-	NAMCO_C148(config, m_slave_intc, 0, m_slave, false);
-	m_slave_intc->link_c148_device(m_master_intc);
 }
 
 // starblad, solvalou, aircomb, cybsled base state
@@ -901,7 +885,14 @@ void namcos21_c67_state::namcos21(machine_config &config)
 	m_namcos21_3d->set_depth_reverse(false);
 	m_namcos21_3d->set_framebuffer_size(496, 480);
 
-	configure_c148_standard(config);
+	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
+	m_master_intc->link_c148_device(m_slave_intc);
+	m_master_intc->out_ext1_callback().set(FUNC(namcos21_c67_state::sound_reset_w));
+	m_master_intc->out_ext2_callback().set(FUNC(namcos21_c67_state::system_reset_w));
+
+	NAMCO_C148(config, m_slave_intc, 0, m_slave, false);
+	m_slave_intc->link_c148_device(m_master_intc);
+
 	NAMCO_C139(config, m_sci, 0);
 
 	PALETTE(config, m_palette).set_format(palette_device::xBRG_888, 0x10000/2);
@@ -1308,13 +1299,13 @@ void namcos21_c67_state::init_solvalou()
 /*    YEAR  NAME       PARENT    MACHINE   INPUT       CLASS               INIT           MONITOR  COMPANY  FULLNAME                    FLAGS */
 
 // uses 5x TMS320C25 (C67, has internal ROM - dumped)
-GAME( 1991, starblad,  0,        starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST2, World)",   MACHINE_IMPERFECT_GRAPHICS )
-GAME( 1991, starbladj, starblad, starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST1, Japan)",   MACHINE_IMPERFECT_GRAPHICS )
+GAME( 1991, starblad,  0,        starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST2, World)",   MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
+GAME( 1991, starbladj, starblad, starblad, starblad,   namcos21_c67_state, empty_init,    ROT0,    "Namco", "Starblade (ST1, Japan)",   MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
 
-GAMEL(1991, solvalou,  0,        solvalou, solvalou,   namcos21_c67_state, init_solvalou, ROT0,    "Namco", "Solvalou (SV1, Japan)",    MACHINE_IMPERFECT_GRAPHICS, layout_solvalou )
+GAMEL(1991, solvalou,  0,        solvalou, solvalou,   namcos21_c67_state, init_solvalou, ROT0,    "Namco", "Solvalou (SV1, Japan)",    MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE, layout_solvalou )
 
-GAME( 1992, aircomb,   0,        aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC2, US)",     MACHINE_IMPERFECT_GRAPHICS ) // There's code for a SCI, is it even possible to play multiplayer?
-GAME( 1992, aircombj,  aircomb,  aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC1, Japan)",  MACHINE_IMPERFECT_GRAPHICS )
+GAME( 1992, aircomb,   0,        aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC2, US)",     MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE ) // There's code for a SCI, is it even possible to play multiplayer?
+GAME( 1992, aircombj,  aircomb,  aircomb,  aircomb,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Air Combat (AC1, Japan)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
 
-GAME( 1993, cybsled,   0,        cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY2, World)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN )
-GAME( 1993, cybsleda,  cybsled,  cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY1, World?)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN ) // usually an 'xx1' set would be Japan, but this shows neither a warning nor Japanese text, verify on hardware
+GAME( 1993, cybsled,   0,        cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY2, World)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN | MACHINE_SUPPORTS_SAVE )
+GAME( 1993, cybsleda,  cybsled,  cybsled,  cybsled,    namcos21_c67_state, empty_init,    ROT0,    "Namco", "Cyber Sled (CY1, World?)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN | MACHINE_SUPPORTS_SAVE ) // usually an 'xx1' set would be Japan, but this shows neither a warning nor Japanese text, verify on hardware

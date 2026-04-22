@@ -28,21 +28,26 @@ namcos21_dsp_device::namcos21_dsp_device(const machine_config &mconfig, const ch
 
 void namcos21_dsp_device::device_start()
 {
-	m_winrun_dspcomram = std::make_unique<uint16_t[]>(0x1000*2);
 	m_suspend_timer = timer_alloc(FUNC(namcos21_dsp_device::suspend_callback), this);
 
-	m_pointram = std::make_unique<uint8_t[]>(PTRAM_SIZE);
 	m_pointram_idx = 0;
-
+	m_pointram_control = 0;
 	m_winrun_poly_index = 0;
+	m_winrun_pointrom_addr = 0;
+	m_winrun_dsp_alive = 0;
+
 	std::fill(std::begin(m_winrun_dspcomram_control), std::end(m_winrun_dspcomram_control), 0);
 
+	m_winrun_dspcomram = make_unique_clear<uint16_t[]>(0x1000*2);
+	save_pointer(NAME(m_winrun_dspcomram), 0x1000*2);
+
+	m_pointram = make_unique_clear<uint8_t[]>(PTRAM_SIZE);
 	save_pointer(NAME(m_pointram), PTRAM_SIZE);
+
 	save_item(NAME(m_pointram_idx));
 	save_item(NAME(m_pointram_control));
 
 	save_item(NAME(m_winrun_dspcomram_control));
-	save_pointer(NAME(m_winrun_dspcomram), 0x1000*2);
 	save_item(NAME(m_winrun_poly_buf));
 	save_item(NAME(m_winrun_poly_index));
 	save_item(NAME(m_winrun_pointrom_addr));
@@ -69,6 +74,7 @@ uint16_t namcos21_dsp_device::winrun_dspcomram_r(offs_t offset)
 	uint16_t *mem = &m_winrun_dspcomram[0x1000*bank];
 	return mem[offset];
 }
+
 void namcos21_dsp_device::winrun_dspcomram_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	int bank = 1-(m_winrun_dspcomram_control[0x4/2]&1);
@@ -82,9 +88,9 @@ uint16_t namcos21_dsp_device::winrun_cuskey_r()
 	switch( pc )
 	{
 	case 0x0064: /* winrun91 */
-		return 0xFEBB;
+		return 0xfebb;
 	case 0x006c: /* winrun91 */
-		return 0xFFFF;
+		return 0xffff;
 	case 0x0073: /* winrun91 */
 		return 0x0144;
 

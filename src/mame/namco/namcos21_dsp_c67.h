@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:David Haywood
+// copyright-holders:Phil Stroffolino, David Haywood
 #ifndef MAME_NAMCO_NAMCOS21_DSP_C67_H
 #define MAME_NAMCO_NAMCOS21_DSP_C67_H
 

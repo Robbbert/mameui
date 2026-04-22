@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:David Haywood
+// copyright-holders:Phil Stroffolino, David Haywood
 #ifndef MAME_NAMCO_NAMCOS21_DSP_H
 #define MAME_NAMCO_NAMCOS21_DSP_H
 
@@ -42,8 +42,8 @@ protected:
 	void winrun_dsp_data(address_map &map) ATTR_COLD;
 	void winrun_dsp_io(address_map &map) ATTR_COLD;
 	void winrun_dsp_program(address_map &map) ATTR_COLD;
-private:
 
+private:
 	required_device<cpu_device> m_dsp;
 	required_shared_ptr<uint16_t> m_winrun_dspbios;
 	required_shared_ptr<uint16_t> m_winrun_polydata;
@@ -51,20 +51,20 @@ private:
 
 	required_device<namcos21_3d_device> m_renderer;
 	std::unique_ptr<uint8_t[]> m_pointram;
-	int m_pointram_idx = 0;
-	uint16_t m_pointram_control = 0;
+	int m_pointram_idx;
+	uint16_t m_pointram_control;
 
-	uint16_t m_winrun_dspcomram_control[8]{};
+	uint16_t m_winrun_dspcomram_control[8];
 	std::unique_ptr<uint16_t[]> m_winrun_dspcomram;
 	uint16_t m_winrun_poly_buf[WINRUN_MAX_POLY_PARAM]{};
-	int m_winrun_poly_index = 0;
-	uint32_t m_winrun_pointrom_addr = 0;
-	int m_winrun_dsp_alive = 0;
+	int m_winrun_poly_index;
+	uint32_t m_winrun_pointrom_addr;
+	int m_winrun_dsp_alive;
+
+	int m_poly_frame_width;
+	int m_poly_frame_height;
 
 	void winrun_flush_poly();
-
-	int m_poly_frame_width = 0;
-	int m_poly_frame_height = 0;
 
 	uint16_t winrun_cuskey_r();
 	void winrun_cuskey_w(uint16_t data);
@@ -78,7 +78,7 @@ private:
 	uint16_t winrun_dsp_pointrom_data_r();
 
 	TIMER_CALLBACK_MEMBER(suspend_callback);
-	emu_timer *m_suspend_timer = nullptr;
+	emu_timer *m_suspend_timer;
 };
 
 DECLARE_DEVICE_TYPE(NAMCOS21_DSP, namcos21_dsp_device)

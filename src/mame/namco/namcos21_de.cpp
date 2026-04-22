@@ -60,16 +60,13 @@ public:
 	// construction/destruction
 	namco_de_pcbstack_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
 
-	void configure_c148_standard(machine_config &config);
-
 protected:
 	virtual void device_add_mconfig(machine_config &config) override ATTR_COLD;
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_reset() override ATTR_COLD;
 
 private:
-	INTERRUPT_GEN_MEMBER( irq0_line_hold );
-	INTERRUPT_GEN_MEMBER( irq1_line_hold );
+	INTERRUPT_GEN_MEMBER(irq0_line_hold) { device.execute().set_input_line(0, HOLD_LINE); }
 
 	required_device<cpu_device> m_maincpu;
 	required_device<cpu_device> m_audiocpu;
@@ -149,10 +146,6 @@ namco_de_pcbstack_device::namco_de_pcbstack_device(const machine_config &mconfig
 {
 }
 
-INTERRUPT_GEN_MEMBER( namco_de_pcbstack_device::irq0_line_hold )   { device.execute().set_input_line(0, HOLD_LINE); }
-INTERRUPT_GEN_MEMBER( namco_de_pcbstack_device::irq1_line_hold )   { device.execute().set_input_line(1, HOLD_LINE); }
-
-
 void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 {
 	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); /* Master */
@@ -175,7 +168,14 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
-	configure_c148_standard(config);
+	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
+	m_master_intc->link_c148_device(m_slave_intc);
+	m_master_intc->out_ext1_callback().set(FUNC(namco_de_pcbstack_device::sound_reset_w));
+	m_master_intc->out_ext2_callback().set(FUNC(namco_de_pcbstack_device::system_reset_w));
+
+	NAMCO_C148(config, m_slave_intc, 0, m_slave, false);
+	m_slave_intc->link_c148_device(m_master_intc);
+
 	NAMCO_C139(config, m_sci, 0);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
@@ -418,7 +418,6 @@ void namco_de_pcbstack_device::sound_reset_w(u8 data)
 	{
 		/* Resume execution */
 		m_audiocpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
-		m_maincpu->yield();
 	}
 	else
 	{
@@ -430,9 +429,6 @@ void namco_de_pcbstack_device::sound_reset_w(u8 data)
 void namco_de_pcbstack_device::system_reset_w(u8 data)
 {
 	reset_all_subcpus(data & 1 ? CLEAR_LINE : ASSERT_LINE);
-
-	if (data & 0x01)
-		m_maincpu->yield();
 }
 
 void namco_de_pcbstack_device::reset_all_subcpus(int state)
@@ -455,7 +451,6 @@ u8 namco_de_pcbstack_device::eeprom_r(offs_t offset)
 TIMER_DEVICE_CALLBACK_MEMBER(namco_de_pcbstack_device::screen_scanline)
 {
 	int scanline = param;
-//  int cur_posirq = get_posirq_scanline()*2;
 
 	if (scanline == 240*2)
 	{
@@ -463,17 +458,6 @@ TIMER_DEVICE_CALLBACK_MEMBER(namco_de_pcbstack_device::screen_scanline)
 		m_slave_intc->vblank_irq_trigger();
 		m_c68->ext_interrupt(ASSERT_LINE);
 	}
-}
-
-void namco_de_pcbstack_device::configure_c148_standard(machine_config &config)
-{
-	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
-	m_master_intc->link_c148_device(m_slave_intc);
-	m_master_intc->out_ext1_callback().set(FUNC(namco_de_pcbstack_device::sound_reset_w));
-	m_master_intc->out_ext2_callback().set(FUNC(namco_de_pcbstack_device::system_reset_w));
-
-	NAMCO_C148(config, m_slave_intc, 0, m_slave, false);
-	m_slave_intc->link_c148_device(m_master_intc);
 }
 
 void namco_de_pcbstack_device::device_start()
@@ -579,7 +563,7 @@ static INPUT_PORTS_START( driveyes )
 	PORT_START("pcb_1:AN1")
 	PORT_BIT( 0xff, 0x00, IPT_PEDAL ) PORT_MINMAX(0x00,0x3f) PORT_SENSITIVITY(15) PORT_KEYDELTA(10) PORT_NAME("Gas Pedal")
 	PORT_START("pcb_1:AN2")
-	PORT_BIT( 0xff, 0x80, IPT_PADDLE ) PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(25) PORT_KEYDELTA(10) PORT_NAME("Steering Wheel")
+	PORT_BIT( 0xff, 0x80, IPT_PADDLE ) PORT_MINMAX(0x00,0xff) PORT_SENSITIVITY(20) PORT_KEYDELTA(10) PORT_NAME("Steering Wheel")
 	PORT_START("pcb_1:AN3")
 	PORT_BIT( 0xff, 0x00, IPT_PEDAL2 ) PORT_MINMAX(0x00,0x3f) PORT_SENSITIVITY(15) PORT_KEYDELTA(10) PORT_NAME("Brake Pedal")
 	PORT_START("pcb_1:AN4")
@@ -856,4 +840,4 @@ ROM_END
 /*    YEAR  NAME       PARENT    MACHINE   INPUT       CLASS           INIT           MONITOR  COMPANY  FULLNAME                                 FLAGS */
 
 // 3 PCB stacks in a single cage (3x 4 PCBs) linked for 3 screen panorama, boards look similar to original Namco System 21 (not 21B) including TMS320C25 DSP, but use C68 I/O MCU and sprite chip instead of "68000 'GPU'" ?
-GAME( 1992, driveyes,  0,        driveyes, driveyes,   namcos21_de_state, empty_init, ROT0,    "Namco", "Driver's Eyes (Japan) (1992/01/10, Main Ver 2.1, Sub Ver 1.1)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND | MACHINE_NODEVICE_LAN )
+GAME( 1992, driveyes,  0,        driveyes, driveyes,   namcos21_de_state, empty_init, ROT0,    "Namco", "Driver's Eyes (Japan) (1992/01/10, Main Ver 2.1, Sub Ver 1.1)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND | MACHINE_NODEVICE_LAN | MACHINE_SUPPORTS_SAVE )
