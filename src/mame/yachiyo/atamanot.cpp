@@ -7,7 +7,9 @@ Computer Quiz Atama no Taisou
 Based off yachiyo/ssingles.cpp
 
  TODO:
- - needs a trojan, in order to understand how the protection really works.
+ - Incredibly complex bank system;
+ - Whatever is IC28 (code in l.bin?);
+ - vsync irq (NMI just like ssingles?)
  - colors (missing PROM(s) ?)
 
 ==================================================================
@@ -135,6 +137,7 @@ Dumped by Chack'n
 #include "emu.h"
 
 #include "cpu/z80/z80.h"
+#include "machine/bankdev.h"
 #include "sound/ay8910.h"
 #include "video/mc6845.h"
 
@@ -142,16 +145,7 @@ Dumped by Chack'n
 #include "screen.h"
 #include "speaker.h"
 
-
-// configurable logging
-#define LOG_ATAMANOTPROT     (1U << 1)
-
-//#define VERBOSE (LOG_GENERAL | LOG_ATAMANOTPROT)
-
 #include "logmacro.h"
-
-#define LOGATAMANOTPROT(...)     LOGMASKED(LOG_ATAMANOTPROT,     __VA_ARGS__)
-
 
 namespace {
 
@@ -168,6 +162,7 @@ public:
 		, m_colorram(*this, "colorram")
 		, m_gfx_rom(*this, "gfx")
 		, m_kanji_rom(*this, "kanji")
+		, m_bank(*this, "bank")
 		//, m_extra(*this, "EXTRA")
 	{ }
 
@@ -185,11 +180,11 @@ private:
 	required_shared_ptr<uint8_t> m_colorram;
 	required_region_ptr<uint8_t> m_gfx_rom;
 	required_region_ptr<uint8_t> m_kanji_rom;
+	required_device<address_map_bank_device> m_bank;
 
 //	required_ioport m_extra;
 
 	pen_t m_pens[NUM_PENS];
-	uint8_t m_prot_data = 0;
 
 	void palette(palette_device &palette) const;
 
@@ -199,16 +194,10 @@ private:
 	void atamanot_irq(int state);
 	MC6845_UPDATE_ROW(atamanot_update_row);
 
-	void atamanot_io_map(address_map &map) ATTR_COLD;
-	void atamanot_map(address_map &map) ATTR_COLD;
+	void main_io_map(address_map &map) ATTR_COLD;
+	void main_map(address_map &map) ATTR_COLD;
+	void bank_map(address_map &map) ATTR_COLD;
 };
-
-
-void atamanot_state::machine_start()
-{
-	save_item(NAME(m_prot_data));
-}
-
 
 // fake palette
 static constexpr rgb_t atamanot_colors[NUM_PENS] =
@@ -280,38 +269,20 @@ MC6845_UPDATE_ROW(atamanot_state::atamanot_update_row)
 	}
 }
 
-
+// NVRAM, controlled by the unknown device?
 uint8_t atamanot_state::atamanot_prot_r(offs_t offset)
 {
 	static const char prot_id[] = { "PROGRAM BY KOYAMA" };
 
-	LOGATAMANOTPROT("%04x %02x\n", offset, m_prot_data);
-
-	switch (m_prot_data)
-	{
-		case 0x20:
-		case 0x21:
-		case 0x22:
-		case 0x23:
-			return prot_id[offset % 0x11];
-
-		case 0xc0:
-			// 2 goes to what it seems an analyzer, with "NOTE 2" as header
-			// 1 draws a "Sound" NOTE 1
-			// 0 draws a "System check, please wait"
-			return 2;
-	}
-
-	return 0;
+	return prot_id[offset % 0x11];
 }
-
 
 void atamanot_state::atamanot_prot_w(uint8_t data)
 {
-	m_prot_data = data;
+	m_bank->set_bank(data);
 }
 
-void atamanot_state::atamanot_map(address_map &map)
+void atamanot_state::main_map(address_map &map)
 {
 	map(0x0000, 0x00ff).writeonly().share(m_videoram);
 	map(0x0800, 0x08ff).writeonly().share(m_colorram);
@@ -319,11 +290,11 @@ void atamanot_state::atamanot_map(address_map &map)
 	map(0x4000, 0x47ff).ram();
 	map(0x6000, 0x60ff).ram(); // ?
 //  map(0x6000, 0x7fff).rom();
-	map(0x8000, 0x9fff).rom().region("question", 0x10000);
-	map(0x8000, 0x83ff).r(FUNC(atamanot_state::atamanot_prot_r));
+	// NOTE: granularity guessed
+	map(0x8000, 0x9fff).rw(m_bank, FUNC(address_map_bank_device::read8), FUNC(address_map_bank_device::write8));
 }
 
-void atamanot_state::atamanot_io_map(address_map &map)
+void atamanot_state::main_io_map(address_map &map)
 {
 	map.global_mask(0xff);
 	map(0x00, 0x00).w("ay1", FUNC(ay8910_device::address_w));
@@ -336,12 +307,52 @@ void atamanot_state::atamanot_io_map(address_map &map)
 //	map(0x1c, 0x1c).portr("INPUTS");
 //  map(0x1a, 0x1a).nopw(); // bit 0: memory_view for area $8000? Other bits used in tandem with I/O $1e
 //	map(0x1e, 0x1e) unknown, read a lot with mask & 7
+	map(0x1e, 0x1e).portr("INPUTS");
 	map(0xfe, 0xfe).w("crtc", FUNC(mc6845_device::address_w));
 	map(0xff, 0xff).w("crtc", FUNC(mc6845_device::register_w));
 }
 
+void atamanot_state::bank_map(address_map &map)
+{
+	// Note counters maps here
+//	map(0x040000, 0x04ffff).lr8(NAME([this] (offs_t offset) { return machine().rand(); }));
+	map(0x040000, 0x04000f).r(FUNC(atamanot_state::atamanot_prot_r));
+	map(0x042110, 0x04211f).r(FUNC(atamanot_state::atamanot_prot_r));
+	map(0x044220, 0x04422f).r(FUNC(atamanot_state::atamanot_prot_r));
+	map(0x046330, 0x04633f).r(FUNC(atamanot_state::atamanot_prot_r));
+
+	// 2 goes to what it seems an analyzer, with "NOTE 2" as header
+	// 1 draws a "Sound" NOTE 1
+	// 0 draws a "System check, please wait"
+	map(0x180000, 0x180000).lr8(NAME([] () { return 2; }));
+}
 
 static INPUT_PORTS_START( atamanot )
+	PORT_START("INPUTS")
+	PORT_DIPNAME( 0x01, 0x00, "SYSA" )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x01, DEF_STR( On ) )
+	PORT_DIPNAME( 0x02, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x02, DEF_STR( On ) )
+	PORT_DIPNAME( 0x04, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x04, DEF_STR( On ) )
+	PORT_DIPNAME( 0x08, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x08, DEF_STR( On ) )
+	PORT_DIPNAME( 0x10, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x10, DEF_STR( On ) )
+	PORT_DIPNAME( 0x20, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x20, DEF_STR( On ) )
+	PORT_DIPNAME( 0x40, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x40, DEF_STR( On ) )
+	PORT_DIPNAME( 0x80, 0x00, DEF_STR( Unknown ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
+	PORT_DIPSETTING(    0x80, DEF_STR( On ) )
 INPUT_PORTS_END
 
 /*
@@ -383,6 +394,10 @@ static GFXDECODE_START( gfx_atamanot )
 	GFXDECODE_ENTRY( "kanji_lc", 0, layout_8x16,        0, 8 )
 GFXDECODE_END
 
+void atamanot_state::machine_start()
+{
+}
+
 
 void atamanot_state::atamanot_irq(int state)
 {
@@ -392,8 +407,12 @@ void atamanot_state::atamanot_irq(int state)
 void atamanot_state::atamanot(machine_config &config)
 {
 	Z80(config, m_maincpu, 14_MHz_XTAL / 4); // 3.5 MHz?
-	m_maincpu->set_addrmap(AS_PROGRAM, &atamanot_state::atamanot_map);
-	m_maincpu->set_addrmap(AS_IO, &atamanot_state::atamanot_io_map);
+	m_maincpu->set_addrmap(AS_PROGRAM, &atamanot_state::main_map);
+	m_maincpu->set_addrmap(AS_IO, &atamanot_state::main_io_map);
+
+	ADDRESS_MAP_BANK(config, m_bank);
+	m_bank->set_options(ENDIANNESS_LITTLE, 8, 21, 0x2000);
+	m_bank->set_map(&atamanot_state::bank_map);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_raw(14_MHz_XTAL / 2, 400, 0, 288, 293, 0, 192); // from CRTC
