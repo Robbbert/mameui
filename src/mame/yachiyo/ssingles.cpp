@@ -182,6 +182,7 @@ public:
 		//, m_videoram(*this, "videoram")
 		//, m_colorram(*this, "colorram")
 		, m_gfx_rom(*this, "gfx")
+		, m_kanji_rom(*this, "kanji")
 		, m_extra(*this, "EXTRA")
 	{ }
 
@@ -201,6 +202,7 @@ private:
 	std::unique_ptr<uint8_t[]> m_videoram;
 	std::unique_ptr<uint8_t[]> m_colorram;
 	required_region_ptr<uint8_t> m_gfx_rom;
+	optional_region_ptr<uint8_t> m_kanji_rom;
 
 	required_ioport m_extra;
 
@@ -289,7 +291,6 @@ MC6845_UPDATE_ROW(ssingles_state::ssingles_update_row)
 	}
 }
 
-// TODO: attr bit 7 really looks kanji ROM enable
 MC6845_UPDATE_ROW(ssingles_state::atamanot_update_row)
 {
 	for (int cx = 0; cx < x_count; ++cx)
@@ -298,18 +299,37 @@ MC6845_UPDATE_ROW(ssingles_state::atamanot_update_row)
 
 		uint16_t const cell = m_videoram[address] + (m_colorram[address] << 8);
 
-		uint32_t const tile_address = ((cell & 0x1ff) << 4) + ra;
-		uint16_t const palette = (cell >> 10) & 0x1c;
-
-		uint16_t const cxo = (cx & 1) ? 0x2000 : 0;
-		uint8_t b0 = m_gfx_rom[tile_address + 0x0000 + cxo];
-		uint8_t b1 = m_gfx_rom[tile_address + 0x4000 + cxo];
-
-		for (int x = 7; x >= 0; --x)
+		// attr bit 7 is kanji ROM enable
+		if (BIT(cell, 15))
 		{
-			bitmap.pix(y, (cx << 3) | x) = m_pens[palette + ((b0 & 1) | ((b1 & 1) << 1))];
-			b0 >>= 1;
-			b1 >>= 1;
+			// TODO: bank bits not understood
+			uint32_t const tile_address = ((cell & 0x7ff) << 4) + (BIT(cell, 8 + 3) << 3) + (ra & 7);
+			uint16_t const palette = 0;
+
+			uint16_t const cxo = (cx & 1) ? 0x8000 : 0;
+			uint8_t b0 = m_kanji_rom[tile_address + (BIT(ra, 3) ? 0x10000 : 0) + cxo];
+
+			for (int x = 7; x >= 0; --x)
+			{
+				bitmap.pix(y, (cx << 3) | x) = m_pens[palette + (b0 & 1)];
+				b0 >>= 1;
+			}
+		}
+		else
+		{
+			uint32_t const tile_address = ((cell & 0x1ff) << 4) + ra;
+			uint16_t const palette = (cell >> 10) & 0x1c;
+
+			uint16_t const cxo = (cx & 1) ? 0x2000 : 0;
+			uint8_t b0 = m_gfx_rom[tile_address + 0x0000 + cxo];
+			uint8_t b1 = m_gfx_rom[tile_address + 0x4000 + cxo];
+
+			for (int x = 7; x >= 0; --x)
+			{
+				bitmap.pix(y, (cx << 3) | x) = m_pens[palette + ((b0 & 1) | ((b1 & 1) << 1))];
+				b0 >>= 1;
+				b1 >>= 1;
+			}
 		}
 	}
 }
@@ -365,7 +385,10 @@ uint8_t ssingles_state::atamanot_prot_r(offs_t offset)
 			return prot_id[offset % 0x11];
 
 		case 0xc0:
-			return 2; // 2 goes to service mode, 1 in game? (that fails due of unemulated ROM bank)
+			// 2 goes to what it seems an analyzer, with "NOTE 2" as header
+			// 1 draws a "Sound" NOTE 1
+			// 0 draws a "System check, please wait"
+			return 2;
 	}
 
 	return 0;
@@ -383,10 +406,10 @@ void ssingles_state::atamanot_map(address_map &map)
 	map(0x0800, 0x08ff).lw8(NAME([this] (offs_t offset, u8 data) { m_colorram[offset] = data; }));
 	map(0x0000, 0x3fff).rom();
 	map(0x4000, 0x47ff).ram();
-	map(0x6000, 0x60ff).ram(); // kanji tilemap?
+	map(0x6000, 0x60ff).ram(); // ?
 //  map(0x6000, 0x7fff).rom();
+	map(0x8000, 0x9fff).rom().region("question", 0x10000);
 	map(0x8000, 0x83ff).r(FUNC(ssingles_state::atamanot_prot_r));
-//  map(0x8000, 0x9fff).rom().region("question", 0x10000);
 }
 
 void ssingles_state::ssingles_io_map(address_map &map)
