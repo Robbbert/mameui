@@ -10,13 +10,12 @@
 #include "cpu/tms320c2x/tms320c2x.h"
 
 
-#define WINRUN_MAX_POLY_PARAM (1+256*3)
-
-#define PTRAM_SIZE 0x20000
-
 class namcos21_dsp_device : public device_t
 {
 public:
+	static constexpr unsigned PTRAM_SIZE = 0x20000;
+	static constexpr unsigned WINRUN_MAX_POLY_PARAM = 1+256*3;
+
 	namcos21_dsp_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
 
 	// config
@@ -60,9 +59,6 @@ private:
 	int m_winrun_poly_index;
 	uint32_t m_winrun_pointrom_addr;
 	int m_winrun_dsp_alive;
-
-	int m_poly_frame_width;
-	int m_poly_frame_height;
 
 	void winrun_flush_poly();
 

@@ -7,7 +7,6 @@ used by Winning Run series, Driver's Eyes
 
 TODO:
 - handle protection properly and with callbacks
-- some of the list processing should probably be in the 3d device, split it out
 
 */
 
@@ -41,6 +40,7 @@ void namcos21_dsp_device::device_start()
 	m_winrun_dspcomram = make_unique_clear<uint16_t[]>(0x1000*2);
 	save_pointer(NAME(m_winrun_dspcomram), 0x1000*2);
 
+	assert((PTRAM_SIZE & (PTRAM_SIZE - 1)) == 0);
 	m_pointram = make_unique_clear<uint8_t[]>(PTRAM_SIZE);
 	save_pointer(NAME(m_pointram), PTRAM_SIZE);
 
@@ -61,8 +61,6 @@ TIMER_CALLBACK_MEMBER(namcos21_dsp_device::suspend_callback)
 
 void namcos21_dsp_device::device_reset()
 {
-	m_poly_frame_width = m_renderer->get_width();
-	m_poly_frame_height = m_renderer->get_height();
 	// can't suspend directly from here, needs to be on a timer?
 	m_suspend_timer->adjust(attotime::zero);
 }
@@ -112,42 +110,15 @@ void namcos21_dsp_device::winrun_flush_poly()
 	if (m_winrun_poly_index > 0)
 	{
 		const uint16_t *pSource = m_winrun_poly_buf;
-		uint16_t color;
-		int sx[4], sy[4], zcode[4];
-		int j;
-		color = *pSource++;
+		uint16_t color = *pSource++;
 		if (color & 0x8000)
 		{
 			// direct-draw
-			for (j = 0; j < 4; j++)
-			{
-				sx[j] = m_poly_frame_width/2 + (int16_t)*pSource++;
-				sy[j] = m_poly_frame_height/2 + (int16_t)*pSource++;
-				zcode[j] = *pSource++;
-			}
-			m_renderer->draw_quad(sx, sy, zcode, color & 0x7fff);
+			m_renderer->draw_direct_quad(pSource, color);
 		}
 		else
 		{
-			int quad_idx = color * 6;
-			for(;;)
-			{
-				uint8_t code = m_pointram[quad_idx++];
-				color = m_pointram[quad_idx++];
-				for (j = 0; j < 4; j++)
-				{
-					uint8_t vi = m_pointram[quad_idx++];
-					sx[j] = m_poly_frame_width/2 + (int16_t)pSource[vi * 3 + 0];
-					sy[j] = m_poly_frame_height/2 + (int16_t)pSource[vi * 3 + 1];
-					zcode[j] = pSource[vi * 3 + 2];
-				}
-				m_renderer->draw_quad(sx, sy, zcode, color & 0x7fff);
-				if (code & 0x80)
-				{
-					// end-of-quadlist marker
-					break;
-				}
-			}
+			m_renderer->draw_quads(pSource, m_pointram.get(), PTRAM_SIZE, color);
 		}
 		m_winrun_poly_index = 0;
 	}
@@ -299,7 +270,7 @@ void namcos21_dsp_device::pointram_data_w(offs_t offset, uint16_t data, uint16_t
 {
 	if (ACCESSING_BITS_0_7)
 	{
-		m_pointram[m_pointram_idx++] = data;
-		m_pointram_idx &= (PTRAM_SIZE - 1);
+		m_pointram[m_pointram_idx] = data;
+		m_pointram_idx = (m_pointram_idx + 1) & (PTRAM_SIZE - 1);
 	}
 }

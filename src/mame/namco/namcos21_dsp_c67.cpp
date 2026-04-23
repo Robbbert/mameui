@@ -11,12 +11,13 @@ TODO:
 - handle protection properly and with callbacks
 - handle splitting of workload across slaves
 - remove hacks!
-- some of the list processing should probably be in the 3d device, split it out
 
 */
 
 #include "emu.h"
 #include "namcos21_dsp_c67.h"
+
+#define ENABLE_LOGGING      0
 
 DEFINE_DEVICE_TYPE(NAMCOS21_DSP_C67, namcos21_dsp_c67_device, "namcos21_dsp_c67_device", "Namco System 21 DSP Setup (5x C67 type)")
 
@@ -37,6 +38,7 @@ void namcos21_dsp_c67_device::device_start()
 	m_dspram16 = make_unique_clear<uint16_t []>(0x10000/2); // 0x8000 16-bit words
 	save_pointer(NAME(m_dspram16), 0x10000/2);
 
+	assert((PTRAM_SIZE & (PTRAM_SIZE - 1)) == 0);
 	m_pointram = make_unique_clear<uint8_t[]>(PTRAM_SIZE);
 	save_pointer(NAME(m_pointram), PTRAM_SIZE);
 
@@ -68,9 +70,6 @@ void namcos21_dsp_c67_device::device_start()
 
 void namcos21_dsp_c67_device::device_reset()
 {
-	m_poly_frame_width = m_renderer->get_width();
-	m_poly_frame_height = m_renderer->get_height();
-
 	// Wipe the framebuffers
 	m_renderer->swap_and_clear_poly_framebuffer();
 	m_renderer->swap_and_clear_poly_framebuffer();
@@ -199,7 +198,7 @@ uint16_t namcos21_dsp_c67_device::dspcuskey_r()
 void namcos21_dsp_c67_device::transmit_word_to_slave(uint16_t data)
 {
 	unsigned offs = m_mpDspState->slaveInputStart+m_mpDspState->slaveBytesAvailable++;
-	m_mpDspState->slaveInputBuffer[offs%DSP_BUF_MAX] = data;
+	m_mpDspState->slaveInputBuffer[offs % DSP_BUF_MAX] = data;
 
 	if (ENABLE_LOGGING) logerror("+%04x(#%04x)\n", data, m_mpDspState->slaveBytesAvailable);
 
@@ -506,17 +505,10 @@ void namcos21_dsp_c67_device::dsp_portb_w(uint16_t data)
 	}
 	if (m_mpDspState->masterDirectDrawSize == 13)
 	{
-		int sx[4], sy[4], zcode[4];
-		int color  = m_mpDspState->masterDirectDrawBuffer[0];
-		for (int i = 0; i < 4; i++)
-		{
-			sx[i] = m_poly_frame_width/2 + (int16_t)m_mpDspState->masterDirectDrawBuffer[i * 3 + 1];
-			sy[i] = m_poly_frame_height/2 + (int16_t)m_mpDspState->masterDirectDrawBuffer[i * 3 + 2];
-			zcode[i] = m_mpDspState->masterDirectDrawBuffer[i * 3 + 3];
-		}
+		int color = m_mpDspState->masterDirectDrawBuffer[0];
 		if (color & 0x8000)
 		{
-			m_renderer->draw_quad(sx, sy, zcode, color);
+			m_renderer->draw_direct_quad(&m_mpDspState->masterDirectDrawBuffer[1], color);
 		}
 		else
 		{
@@ -591,52 +583,26 @@ void namcos21_dsp_c67_device::render_slave_output(uint16_t data)
 	// append word to slave output buffer
 	m_mpDspState->slaveOutputBuffer[m_mpDspState->slaveOutputSize++] = data;
 
+	// draw quads
+	uint16_t *pSource = m_mpDspState->slaveOutputBuffer;
+	uint16_t count = *pSource++;
+	if (count && m_mpDspState->slaveOutputSize > count)
 	{
-		uint16_t *pSource = m_mpDspState->slaveOutputBuffer;
-		uint16_t count = *pSource++;
-		if (count && m_mpDspState->slaveOutputSize > count)
+		uint16_t color = *pSource++;
+		if (color & 0x8000)
 		{
-			uint16_t color = *pSource++;
-			int sx[4], sy[4],zcode[4];
-			if (color & 0x8000)
-			{
-				if (count != 13) logerror("?!direct-draw(%d)\n", count);
-				for (int j = 0; j < 4; j++ )
-				{
-					sx[j] = m_poly_frame_width/2 + (int16_t)pSource[3 * j + 0];
-					sy[j] = m_poly_frame_height/2 + (int16_t)pSource[3 * j + 1];
-					zcode[j] = pSource[3 * j + 2];
-				}
-				m_renderer->draw_quad(sx, sy, zcode, color & 0x7fff);
-			}
-			else
-			{
-				int quad_idx = color * 6;
-				for(;;)
-				{
-					uint8_t code = m_pointram[quad_idx++];
-					color = m_pointram[quad_idx++]|(code << 8);
-					for (int j = 0; j < 4; j++)
-					{
-						uint8_t vi = m_pointram[quad_idx++];
-						sx[j] = m_poly_frame_width/2  + (int16_t)pSource[vi * 3 + 0];
-						sy[j] = m_poly_frame_height/2 + (int16_t)pSource[vi * 3 + 1];
-						zcode[j] = pSource[vi * 3 + 2];
-					}
-					m_renderer->draw_quad(sx, sy, zcode, color & 0x7fff);
-					if (code & 0x80)
-					{
-						// end-of-quadlist marker
-						break;
-					}
-				}
-			}
-			m_mpDspState->slaveOutputSize = 0;
+			if (count != 13) logerror("?!direct-draw(%d)\n", count);
+			m_renderer->draw_direct_quad(pSource, color);
 		}
-		else if (count == 0)
+		else
 		{
-			fatalerror("RenderSlaveOutput\n");
+			m_renderer->draw_quads(pSource, m_pointram.get(), PTRAM_SIZE, color);
 		}
+		m_mpDspState->slaveOutputSize = 0;
+	}
+	else if (count == 0)
+	{
+		fatalerror("RenderSlaveOutput\n");
 	}
 }
 
@@ -758,10 +724,10 @@ void namcos21_dsp_c67_device::pointram_data_w(offs_t offset, uint16_t data, uint
 {
 	if (ACCESSING_BITS_0_7)
 	{
-		//if((m_pointram_idx%6) == 0) logerror("\n");
+		//if ((m_pointram_idx%6) == 0) logerror("\n");
 		//logerror(" %02x", data);
-		m_pointram[m_pointram_idx++] = data;
-		m_pointram_idx &= (PTRAM_SIZE - 1);
+		m_pointram[m_pointram_idx] = data;
+		m_pointram_idx = (m_pointram_idx + 1) & (PTRAM_SIZE - 1);
 	}
 }
 

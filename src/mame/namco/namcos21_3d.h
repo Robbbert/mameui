@@ -22,13 +22,11 @@ public:
 		m_framebuffer_size_in_bytes = sizeof(uint16_t)*m_poly_frame_width*m_poly_frame_height;
 	}
 
-	int get_width() { return m_poly_frame_width; }
-	int get_height() { return m_poly_frame_height; }
-
 	void copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &clip, int zlo, int zhi);
 	void swap_and_clear_poly_framebuffer();
 
-	void draw_quad(int sx[4], int sy[4], int zcode[4], int color);
+	void draw_direct_quad(const uint16_t *source, uint16_t color);
+	void draw_quads(const uint16_t *source, const uint8_t *pointram, const uint32_t ptram_size, uint32_t quad_idx);
 
 protected:
 	// device-level overrides
@@ -49,6 +47,7 @@ private:
 
 	void renderscanline_flat(const edge *e1, const edge *e2, int sy, unsigned color, int depthcueenable);
 	void rendertri(const n21_vertex *v0, const n21_vertex *v1, const n21_vertex *v2, unsigned color, int depthcueenable);
+	void blit_single_quad(int sx[4], int sy[4], int zcode[4], uint16_t color);
 	void allocate_poly_framebuffer();
 
 	std::unique_ptr<uint16_t[]> m_mpPolyFrameBufferPens;
