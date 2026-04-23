@@ -8,11 +8,12 @@ Based off yachiyo/ssingles.cpp
 
  TODO:
  - Incredibly complex bank system;
- - Whatever is IC28 (code in l.bin?);
+ - Whatever is IC28 (code in l.bin?). Controls NVRAM, RNG answers, program flow vectors (at $4000);
  - vsync irq (NMI just like ssingles?)
+ - Inputs, key matrix based?
  - colors (missing PROM(s) ?)
 
-==================================================================
+===================================================================================================
 
 Computer Quiz Atama no Taisou
 (c)1983 Yachiyo Denki / Uni Enterprise
@@ -170,6 +171,7 @@ public:
 
 protected:
 	virtual void machine_start() override ATTR_COLD;
+	virtual void machine_reset() override ATTR_COLD;
 	virtual void video_start() override ATTR_COLD;
 
 private:
@@ -184,6 +186,7 @@ private:
 
 //	required_ioport m_extra;
 
+	bool m_nmi_enable;
 	pen_t m_pens[NUM_PENS];
 
 	void palette(palette_device &palette) const;
@@ -200,6 +203,7 @@ private:
 };
 
 // fake palette
+// TODO: copied from ssingles, most likely wrong (cfr. service mode color bars)
 static constexpr rgb_t atamanot_colors[NUM_PENS] =
 {
 	{ 0x00,0x00,0x00 }, { 0xff,0xff,0xff }, { 0xff,0x00,0x00 }, { 0xaa,0x00,0x00 },
@@ -237,7 +241,7 @@ MC6845_UPDATE_ROW(atamanot_state::atamanot_update_row)
 		// attr bit 7 is kanji ROM enable
 		if (BIT(cell, 15))
 		{
-			// TODO: bank bits not understood
+			// TODO: bank bits not understood, unknown 8x16 LR enable bit/semantics
 			uint32_t const tile_address = ((cell & 0x7ff) << 4) + (BIT(cell, 8 + 3) << 3) + (ra & 7);
 			uint16_t const palette = 0;
 
@@ -252,6 +256,7 @@ MC6845_UPDATE_ROW(atamanot_state::atamanot_update_row)
 		}
 		else
 		{
+			// TODO: c&p from yachiyo/ssingles.cpp, entirely unverified so far
 			uint32_t const tile_address = ((cell & 0x1ff) << 4) + ra;
 			uint16_t const palette = (cell >> 10) & 0x1c;
 
@@ -279,6 +284,9 @@ uint8_t atamanot_state::atamanot_prot_r(offs_t offset)
 
 void atamanot_state::atamanot_prot_w(uint8_t data)
 {
+	// TODO: maybe not all of it
+	// 0x60 in particular looks some kind of sync with the other device
+	// cfr. PC=13C8 loop where 13D7~8 are nop-ed
 	m_bank->set_bank(data);
 }
 
@@ -304,8 +312,14 @@ void atamanot_state::main_io_map(address_map &map)
 	map(0x0a, 0x0a).w("ay2", FUNC(ay8910_device::data_w));
 //	map(0x16, 0x16).portr("DSW0");
 	map(0x18, 0x18).w(FUNC(atamanot_state::atamanot_prot_w));
-//	map(0x1c, 0x1c).portr("INPUTS");
-//  map(0x1a, 0x1a).nopw(); // bit 0: memory_view for area $8000? Other bits used in tandem with I/O $1e
+	map(0x1c, 0x1c).nopw(); // noisy, key matrix select for $1e?
+	map(0x1a, 0x1a).lw8(NAME([this] (offs_t offset, u8 data) {
+		// unconfirmed
+		m_nmi_enable = !!BIT(data, 0);
+		// bit 1 looks always high, video enable?
+		if (data & 0xfc)
+			logerror("I/O $1e: %02x\n", data);
+	}));
 //	map(0x1e, 0x1e) unknown, read a lot with mask & 7
 	map(0x1e, 0x1e).portr("INPUTS");
 	map(0xfe, 0xfe).w("crtc", FUNC(mc6845_device::address_w));
@@ -314,19 +328,43 @@ void atamanot_state::main_io_map(address_map &map)
 
 void atamanot_state::bank_map(address_map &map)
 {
-	// Note counters maps here
+//	map(0x000000, 0x001fff).rom().region("question", 0x0e000);
+	// border in example question
+	map(0x002000, 0x003fff).rom().region("question", 0x14000);
+	// example question
+	map(0x004000, 0x005fff).rom().region("question", 0x0c000);
+//	map(0x006000, 0x007fff).rom().region("question", 0x0c000);
+//	map(0x008000, 0x009fff).rom().region("question", 0x06000);
+//	map(0x00a000, 0x00bfff).rom().region("question", 0x0e000);
+//	map(0x00c000, 0x00dfff).rom().region("question", 0x02000);
+//	map(0x00e000, 0x00ffff).rom().region("question", 0x00000);
+
+	// lower GFXs of example question
+	map(0x016000, 0x017fff).rom().region("question", 0x04000);
+
+//	map(0x07e000, 0x07ffff).rom().region("question", 0x0e000);
+
+	// Note counters and RNG answers maps here
 //	map(0x040000, 0x04ffff).lr8(NAME([this] (offs_t offset) { return machine().rand(); }));
 	map(0x040000, 0x04000f).r(FUNC(atamanot_state::atamanot_prot_r));
 	map(0x042110, 0x04211f).r(FUNC(atamanot_state::atamanot_prot_r));
 	map(0x044220, 0x04422f).r(FUNC(atamanot_state::atamanot_prot_r));
 	map(0x046330, 0x04633f).r(FUNC(atamanot_state::atamanot_prot_r));
 
+	map(0x0c0000, 0x0c1fff).rom().region("question", 0x16000);
+
 	// 2 goes to what it seems an analyzer, with "NOTE 2" as header
 	// 1 draws a "Sound" NOTE 1
 	// 0 draws a "System check, please wait"
+	// an example question can be checked with a '1' then fiddling with inputs and:
+	// bp 4000,1,{pc=c85;g}
 	map(0x180000, 0x180000).lr8(NAME([] () { return 2; }));
 }
 
+// cabinet (and non-JAMMA pinout) shows 4 + 3 buttons, arranged as:
+// genre   ~ buttons
+// 1-2-3-4 ~ A-B-C
+// layout looks matrix-ed
 static INPUT_PORTS_START( atamanot )
 	PORT_START("INPUTS")
 	PORT_DIPNAME( 0x01, 0x00, "SYSA" )
@@ -396,12 +434,21 @@ GFXDECODE_END
 
 void atamanot_state::machine_start()
 {
+	save_item(NAME(m_nmi_enable));
+}
+
+void atamanot_state::machine_reset()
+{
+	m_nmi_enable = false;
 }
 
 
 void atamanot_state::atamanot_irq(int state)
 {
-	// ...
+	if (m_nmi_enable)
+	{
+		m_maincpu->set_input_line(INPUT_LINE_NMI, state);
+	}
 }
 
 void atamanot_state::atamanot(machine_config &config)
@@ -443,17 +490,20 @@ ROM_START( atamanot )
 	ROM_LOAD( "tt2.3",    0x2000, 0x2000, CRC(7595ade8) SHA1(71f9d6d987407f88cdd3b28bd1e35e00ac17e1f5) )
 
 	ROM_REGION( 0x18000, "question", 0 ) // question ROMs?
-	ROM_LOAD( "ta.bin",   0x00000, 0x2000, CRC(5c61edaf) SHA1(ea56df6b320aa7e52828aaccbb5838cd0c756f24) )
-	ROM_LOAD( "tb.bin",   0x02000, 0x2000, CRC(07bd2e6f) SHA1(bf245d8208db447572e484057b9daa6276f03683) )
-	ROM_LOAD( "tc.bin",   0x04000, 0x2000, CRC(1e09ac09) SHA1(91ec1b2c5767b5bad8915f7c9984f423fcb399c9) )
-	ROM_LOAD( "td.bin",   0x06000, 0x2000, CRC(bd514d51) SHA1(1a1e95558b2608f0103ca1b42fe9e59ccb90487f) )
-	ROM_LOAD( "te.bin",   0x08000, 0x2000, CRC(825ed49f) SHA1(775044f6d53ecbfa0ab604947a21e368bad85ce0) )
-	ROM_LOAD( "tf.bin",   0x0a000, 0x2000, CRC(d92b5eb9) SHA1(311fdefdc1f1026cb7f7cc1e1adaffbdbe7a70d9) )
-	ROM_LOAD( "tg.bin",   0x0c000, 0x2000, CRC(eb25aa72) SHA1(de3a3d87a2eb540b96947f776c321dc9a7c21e78) )
-	ROM_LOAD( "th.bin",   0x0e000, 0x2000, CRC(13396cfb) SHA1(d98ea4ff2e2175aa7003e37001664b3fa898c071) )
+	// kanji GFXs
+	ROM_LOAD( "ta.bin",   0x0e000, 0x2000, CRC(5c61edaf) SHA1(ea56df6b320aa7e52828aaccbb5838cd0c756f24) )
+	ROM_LOAD( "tb.bin",   0x0c000, 0x2000, CRC(07bd2e6f) SHA1(bf245d8208db447572e484057b9daa6276f03683) )
+	ROM_LOAD( "tc.bin",   0x0a000, 0x2000, CRC(1e09ac09) SHA1(91ec1b2c5767b5bad8915f7c9984f423fcb399c9) )
+	ROM_LOAD( "td.bin",   0x08000, 0x2000, CRC(bd514d51) SHA1(1a1e95558b2608f0103ca1b42fe9e59ccb90487f) )
+	ROM_LOAD( "te.bin",   0x06000, 0x2000, CRC(825ed49f) SHA1(775044f6d53ecbfa0ab604947a21e368bad85ce0) )
+	ROM_LOAD( "tf.bin",   0x04000, 0x2000, CRC(d92b5eb9) SHA1(311fdefdc1f1026cb7f7cc1e1adaffbdbe7a70d9) )
+	ROM_LOAD( "tg.bin",   0x02000, 0x2000, CRC(eb25aa72) SHA1(de3a3d87a2eb540b96947f776c321dc9a7c21e78) )
+	ROM_LOAD( "th.bin",   0x00000, 0x2000, CRC(13396cfb) SHA1(d98ea4ff2e2175aa7003e37001664b3fa898c071) )
+	// regular GFXs
 	ROM_LOAD( "ti.bin",   0x10000, 0x2000, CRC(60193df3) SHA1(58840bde303a760a0458224983af0c0bbe939a2f) )
 	ROM_LOAD( "j.bin",    0x12000, 0x2000, CRC(cd16ddbf) SHA1(b418b5d73d3699697ebd42a6f4df598dcdcaf264) )
 	ROM_LOAD( "k.bin",    0x14000, 0x2000, CRC(c75c7a1e) SHA1(59b136626267fa3ba5a2e1709acb632142e1560e) )
+	// code?
 	ROM_LOAD( "l.bin",    0x16000, 0x2000, CRC(dbb4ed60) SHA1(b5054ba3ccd268594d22e1e67f70bb227095ca4c) )
 
 	ROM_REGION( 0x8000, "gfx", 0 )
@@ -485,4 +535,4 @@ ROM_END
 
 } // anonymous namespace
 
-GAME( 1983, atamanot, 0, atamanot, atamanot, atamanot_state, empty_init, ROT0,  "Yachiyo Denki / Uni Enterprise",                          "Computer Quiz Atama no Taisou (Japan)", MACHINE_SUPPORTS_SAVE | MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION )
+GAME( 1983, atamanot, 0, atamanot, atamanot, atamanot_state, empty_init, ROT0,  "Yachiyo Denki / Uni Enterprise",                          "Computer Quiz Atama no Taisou (Japan)", MACHINE_SUPPORTS_SAVE | MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_WRONG_COLORS )
