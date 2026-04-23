@@ -77,6 +77,7 @@ L.BIN        [dbb4ed60] /
 
 
 /////////////////////////////////////////
+
 DIPSW
 1: off
 2: off
@@ -126,8 +127,6 @@ GND(video)A28|B28 coin sw
 
 
 /////////////////////////////////////////
-
-
 
 --- Team Japump!!! ---
 Dumped by Chack'n
@@ -186,7 +185,7 @@ private:
 
 //	required_ioport m_extra;
 
-	bool m_nmi_enable;
+	bool m_nmi_enable = false;
 	pen_t m_pens[NUM_PENS];
 
 	void palette(palette_device &palette) const;
@@ -535,4 +534,4 @@ ROM_END
 
 } // anonymous namespace
 
-GAME( 1983, atamanot, 0, atamanot, atamanot, atamanot_state, empty_init, ROT0,  "Yachiyo Denki / Uni Enterprise",                          "Computer Quiz Atama no Taisou (Japan)", MACHINE_SUPPORTS_SAVE | MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_WRONG_COLORS )
+GAME( 1983, atamanot, 0, atamanot, atamanot, atamanot_state, empty_init, ROT0,  "Yachiyo Denki / Uni Enterprise", "Computer Quiz Atama no Taisou (Japan)", MACHINE_SUPPORTS_SAVE | MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_WRONG_COLORS )

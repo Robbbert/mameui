@@ -317,4 +317,4 @@ ROM_END
 } // anonymous namespace
 
 
-GAME( 1983, ssingles, 0, ssingles, ssingles, ssingles_state, empty_init, ROT90, "Yachiyo Denki (Entertainment Enterprises, Ltd. license)", "Swinging Singles (US)",                 MACHINE_SUPPORTS_SAVE | MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_SOUND | MACHINE_NO_COCKTAIL )
+GAME( 1983, ssingles, 0, ssingles, ssingles, ssingles_state, empty_init, ROT90, "Yachiyo Denki (Entertainment Enterprises, Ltd. license)", "Swinging Singles (US)", MACHINE_SUPPORTS_SAVE | MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_SOUND | MACHINE_NO_COCKTAIL )
