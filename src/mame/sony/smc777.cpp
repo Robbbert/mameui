@@ -142,7 +142,7 @@ private:
 	required_device<cpu_device> m_maincpu;
 	required_device<screen_device> m_screen;
 	required_device<mc6845_device> m_crtc;
-	required_device<mb8876_device> m_fdc;
+	required_device<mb8877_device> m_fdc;
 	required_device_array<floppy_connector, 2> m_floppy;
 	required_device<ls259_device> m_ioctrl;
 	required_device<beep_device> m_beeper;
@@ -448,12 +448,12 @@ void smc777_state::fbuf_w(offs_t offset, uint8_t data)
 
 uint8_t smc777_state::fdc_r(offs_t offset)
 {
-	return m_fdc->read(offset) ^ 0xff;
+	return m_fdc->read(offset);
 }
 
 void smc777_state::fdc_w(offs_t offset, uint8_t data)
 {
-	m_fdc->write(offset, data ^ 0xff);
+	m_fdc->write(offset, data);
 }
 
 uint8_t smc777_state::fdc1_fast_status_r()
@@ -1205,21 +1205,21 @@ void smc777_state::smc777(machine_config &config)
 	m_crtc->out_vsync_callback().set(FUNC(smc777_state::vsync_w));
 	m_crtc->out_de_callback().set([this] (int state) { m_de = state << 7; });
 
-	// TODO: MB8877A really
-	MB8876(config, m_fdc, MASTER_CLOCK / 32); // divider not confirmed
+	// Confirmed MB8877A
+	MB8877(config, m_fdc, MASTER_CLOCK / 32); // divider not confirmed
 	m_fdc->intrq_wr_callback().set(FUNC(smc777_state::fdc_intrq_w));
 	m_fdc->drq_wr_callback().set(FUNC(smc777_state::fdc_drq_w));
 
-	// does it really support 16 of them?
 	FLOPPY_CONNECTOR(config, m_floppy[0], smc777_floppies, "ssdd", floppy_image_device::default_mfm_floppy_formats);
-	FLOPPY_CONNECTOR(config, m_floppy[1], smc777_floppies, "ssdd", floppy_image_device::default_mfm_floppy_formats);
+	// by default it has no 2nd floppy
+	FLOPPY_CONNECTOR(config, m_floppy[1], smc777_floppies, nullptr, floppy_image_device::default_mfm_floppy_formats);
 
 	SOFTWARE_LIST(config, "flop_list").set_original("smc777");
 	QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(smc777_state::quickload_cb));
 
 	// No clue about bundled defaults but:
 	// - dragon expects joystick in port 1
-	// - comp2:SMCPAINT expects mouse in port 2
+	// - comp2:SMCPAINT/smcpaint expects mouse in port 2
 	MSX_GENERAL_PURPOSE_PORT(config, m_joystick_port[0], msx_general_purpose_port_devices, "joystick");
 	MSX_GENERAL_PURPOSE_PORT(config, m_joystick_port[1], msx_general_purpose_port_devices, "mouse");
 
