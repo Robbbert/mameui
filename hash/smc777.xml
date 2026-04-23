@@ -155,7 +155,8 @@ File viewer, useful for executing non autobootable disks in drive B:
 		<year>198?</year>
 		<publisher>&lt;unknown&gt;</publisher>
 		<notes><![CDATA[
-Unreadable graphics, should require [kanji] hookup
+[MC6845] uses 640x200x2bpp color mode
+Requires [kanji] hookup
 ]]></notes>
 
 		<part name="flop1" interface="floppy_3_5">
@@ -170,7 +171,8 @@ Unreadable graphics, should require [kanji] hookup
 		<year>198?</year>
 		<publisher>&lt;unknown&gt;</publisher>
 		<notes><![CDATA[
-Unreadable graphics, should require [kanji] hookup
+[MC6845] uses 640x200x2bpp color mode
+Requires [kanji] hookup
 ]]></notes>
 
 		<part name="flop1" interface="floppy_3_5">
@@ -442,7 +444,7 @@ Untested [floppy] saving
 		<year>1984</year>
 		<publisher>ブレーンメディア (Brain Media)</publisher>
 		<notes><![CDATA[
-Black screen
+Black screen, uses [MC6845] DE readback for something
 ]]></notes>
 		<info name="alt_title" value="ファイアドラゴン"/>
 
@@ -802,7 +804,8 @@ Unresponsive [keyboard]
 		<year>1983</year>
 		<publisher>光栄 (Koei)</publisher>
 		<notes><![CDATA[
-[MC6845] bad colors on graphic layer (similar to kanjicpm)
+[MC6845] uses 640x200x2bpp color mode
+Untested [FDC] saving
 ]]></notes>
 		<info name="alt_title" value="信長の野望"/>
 
@@ -1092,6 +1095,7 @@ Standalone version of MAHJONG.COM in compinv
 d88: Floppy disk has excess of heads for this drive that will be discarded (floppy heads=2, drive heads=1)
 ]]></notes>
 		<info name="alt_title" value="野球狂" />
+		<sharedfeat name="joystick2_default" value="joystick" />
 
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="70352">
@@ -1105,9 +1109,11 @@ d88: Floppy disk has excess of heads for this drive that will be discarded (flop
 		<year>1984</year>
 		<publisher>ハドソン (Hudson Soft)</publisher>
 		<notes><![CDATA[
-[MC6845] bad colors on graphic layer (same as nobunaga?)
+[MC6845] uses 640x200x2bpp color mode
+Player-2 inputs doesn't work
 ]]></notes>
 		<info name="alt_title" value="野球狂" />
+		<sharedfeat name="joystick2_default" value="joystick" />
 
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="322208">
