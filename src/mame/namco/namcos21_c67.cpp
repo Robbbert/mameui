@@ -18,9 +18,6 @@ TODO:
   and on pilot parachuting with a time over;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
 - aircomb: bad sprite colors on debriefing medal screen;
-- solvalou: black screen on service mode, is it due of the various hacks or it's in shared/namco_c355spr.cpp?
-  it writes the c355 sprite list to 0x14000 and the sprite table to 0x0, so it'll work if those are swapped
-  around in namco_c355spr.cpp;
 - solvalou: service mode polygon test is crashy when testing invalid polygons (the good old IDC overflow);
 - solvalou: sprite blend is wrong during water stages (look at the blaster/score panel), the palette
   bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
