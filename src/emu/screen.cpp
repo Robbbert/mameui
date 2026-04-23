@@ -1178,6 +1178,16 @@ bool screen_device::update_partial(int scanline)
 		return false;
 	}
 
+	// if we left off in the middle of a scanline, eg. with update_now(), finish that scanline first
+	if (m_partial_scan_hpos > 0)
+	{
+		update_partial(m_last_partial_scan + 1, 0);
+
+		// check again if scanline was already rendered
+		if (scanline < m_last_partial_scan)
+			return true;
+	}
+
 	// set the range of scanlines to render
 	rectangle clip(m_visarea);
 	clip.sety((std::max)(clip.top(), m_last_partial_scan), (std::min)(clip.bottom(), scanline));
@@ -1191,10 +1201,6 @@ bool screen_device::update_partial(int scanline)
 
 	// otherwise, render
 	LOG_PARTIAL_UPDATES(("updating %d-%d\n", clip.top(), clip.bottom()));
-
-	// if we left off in the middle of a scanline, eg. with update_now(), finish that scanline first
-	if (m_partial_scan_hpos > 0)
-		update_partial(m_last_partial_scan, 0);
 
 	u32 flags = 0;
 	{
