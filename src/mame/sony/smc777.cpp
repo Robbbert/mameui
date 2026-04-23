@@ -5,7 +5,6 @@
 SMC-777 (c) 1983 Sony
 
 TODO:
-- Implement GFX modes other than 160x100x4 (cfr. nobunaga and yakyukyoa)
 - convert video to a proper mc6845, consider this as a good base for new device rewrite;
 - cursor stuck in Bird Crash;
 - interlace (cfr. cpm22 in setup mode);
@@ -15,9 +14,9 @@ TODO:
 - Most often don't survive a soft reset;
 - Hookup Kanji ROM (have dump);
 - tape;
-- far too many floppy load failures;
+- far too many floppy load failures (fixed?);
 - .mfi floppy format throws a crash;
-- Downgrade for SMC-70 (if/when dump is available);
+- Downgrade for SMC-70 (if/when dump is available). Has extra GFX modes that 777 dropped;
 - Superimposing features (if/when SW dumps arises, cfr. SMC-70G promotional video)
 - Find better reference materials, available one lacks several pages;
 
@@ -210,7 +209,7 @@ void smc777_state::graphic_320x200x4(bitmap_ind16 &bitmap, const rectangle &clip
 			const int res_x = x * 4 + CRTC_MIN_X;
 			for(int yi = 0; yi < 8; yi++)
 			{
-				const u8 dot = m_gvram[base_address + x + yi * 0x1000];
+				const u8 dot = m_gvram[((base_address + x) & 0xfff) + yi * 0x1000];
 				u8 color = (dot & 0xf0) >> 4;
 				bitmap.pix(res_y + yi, res_x + 0) = m_palette->pen(color);
 				bitmap.pix(res_y + yi, res_x + 1) = m_palette->pen(color);
@@ -241,7 +240,7 @@ void smc777_state::graphic_640x200x2(bitmap_ind16 &bitmap, const rectangle &clip
 			const int res_x = x * 4 + CRTC_MIN_X;
 			for(int yi = 0; yi < 8; yi++)
 			{
-				const u8 dot = m_gvram[base_address + x + yi * 0x1000];
+				const u8 dot = m_gvram[((base_address + x) & 0xfff) + yi * 0x1000];
 				for (int xi = 0; xi < 4; xi++)
 				{
 					u8 color = (dot >> (6 - (xi * 2))) & 3;
@@ -265,7 +264,9 @@ uint32_t smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap
 		graphic_320x200x4(bitmap, cliprect);
 
 	// TODO: remove count usage
-	u16 count = 0x0000;
+	// - transitt: does horizontal scroll on ranking screen
+	// TODO: transitt itself has sync timing issues there
+	u16 count = mc6845_start_addr;
 
 	for(int y = 0; y < mc6845_v_display; y++)
 	{
@@ -344,6 +345,7 @@ uint32_t smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap
 			}
 
 			count += x_width + 1;
+			count &= 0x7ff;
 		}
 	}
 
