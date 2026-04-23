@@ -1296,10 +1296,10 @@ bool screen_device::update_partial(int vpos, int hpos)
 		return false;
 	}
 
-	// if beam position is the same, there's nothing to update
-	if (vpos == m_last_partial_scan && hpos == m_partial_scan_hpos)
+	// if beam position is the same or less, there's nothing to update
+	if (vpos == m_last_partial_scan && hpos <= m_partial_scan_hpos)
 	{
-		LOG_PARTIAL_UPDATES(("skipped because beam position is unchanged\n"));
+		LOG_PARTIAL_UPDATES(("skipped because beam position already passed\n"));
 		return false;
 	}
 
