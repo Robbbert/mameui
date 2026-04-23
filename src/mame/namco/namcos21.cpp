@@ -270,10 +270,10 @@ Filter Board
 #include "emu.h"
 
 #include "namco65.h"
-#include "namcos21_dsp.h"
 #include "namco_c139.h"
 #include "namco_c148.h"
 #include "namcos21_3d.h"
+#include "namcos21_dsp.h"
 
 #include "cpu/m68000/m68000.h"
 #include "cpu/m6805/m6805.h"
@@ -290,8 +290,6 @@ Filter Board
 
 
 namespace {
-
-#define ENABLE_LOGGING      0
 
 class namcos21_state : public driver_device
 {
@@ -399,7 +397,7 @@ uint16_t namcos21_state::gpu_color_r()
 
 void namcos21_state::gpu_color_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
-	COMBINE_DATA( &m_gpu_color );
+	COMBINE_DATA(&m_gpu_color);
 }
 
 uint16_t namcos21_state::gpu_register_r(offs_t offset)
@@ -410,7 +408,7 @@ uint16_t namcos21_state::gpu_register_r(offs_t offset)
 void namcos21_state::gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	m_screen->update_partial(m_screen->vpos());
-	COMBINE_DATA( &m_gpu_register[offset] );
+	COMBINE_DATA(&m_gpu_register[offset]);
 }
 
 void namcos21_state::gpu_videoram_w(offs_t offset, uint16_t data)
@@ -451,7 +449,7 @@ void namcos21_state::bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect
 		for (int sx = cliprect.left(); sx <= cliprect.right(); sx++)
 		{
 			int const pen = pSource[(sx + xscroll) & 0x1ff];
-			switch( pen )
+			switch (pen)
 			{
 			case 0xff:
 				break;
@@ -510,7 +508,7 @@ uint32_t namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 
 /***********************************************************/
 
-/* dual port ram memory handlers */
+// dual port ram memory handlers
 
 uint16_t namcos21_state::dpram_word_r(offs_t offset)
 {
@@ -519,10 +517,8 @@ uint16_t namcos21_state::dpram_word_r(offs_t offset)
 
 void namcos21_state::dpram_word_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
-	if( ACCESSING_BITS_0_7 )
-	{
-		m_dpram[offset] = data&0xff;
-	}
+	if (ACCESSING_BITS_0_7)
+		m_dpram[offset] = data & 0xff;
 }
 
 uint8_t namcos21_state::dpram_byte_r(offs_t offset)
@@ -540,13 +536,13 @@ void namcos21_state::dpram_byte_w(offs_t offset, uint8_t data)
 void namcos21_state::master_map(address_map &map)
 {
 	map(0x000000, 0x03ffff).rom();
-	map(0x100000, 0x10ffff).ram(); /* work RAM */
+	map(0x100000, 0x10ffff).ram(); // work RAM
 	map(0x180000, 0x183fff).rw(FUNC(namcos21_state::eeprom_r), FUNC(namcos21_state::eeprom_w)).umask16(0x00ff);
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
 
 	// DSP Related
 	map(0x250000, 0x25ffff).ram().share("namcos21dsp:winrun_polydata");
-	map(0x260000, 0x26ffff).ram(); /* unused? */
+	map(0x260000, 0x26ffff).ram(); // unused?
 	map(0x280000, 0x281fff).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_dspbios_w));
 	map(0x380000, 0x38000f).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_dspcomram_control_r), FUNC(namcos21_dsp_device::winrun_dspcomram_control_w));
 	map(0x3c0000, 0x3c1fff).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_68k_dspcomram_r), FUNC(namcos21_dsp_device::winrun_68k_dspcomram_w));
@@ -578,8 +574,8 @@ void namcos21_state::slave_map(address_map &map)
 void namcos21_state::gpu_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x100000, 0x100001).rw(FUNC(namcos21_state::gpu_color_r), FUNC(namcos21_state::gpu_color_w)); /* ? */
-	map(0x180000, 0x19ffff).ram(); /* work RAM */
+	map(0x100000, 0x100001).rw(FUNC(namcos21_state::gpu_color_r), FUNC(namcos21_state::gpu_color_w)); // ?
+	map(0x180000, 0x19ffff).ram(); // work RAM
 	map(0x1c0000, 0x1fffff).m(m_gpu_intc, FUNC(namco_c148_device::map));
 	map(0x200000, 0x20ffff).ram().share("gpu_comram");
 	map(0x400000, 0x40ffff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
@@ -597,17 +593,17 @@ void namcos21_state::gpu_map(address_map &map)
 
 void namcos21_state::sound_map(address_map &map)
 {
-	map(0x0000, 0x3fff).bankr("audiobank"); /* banked */
-	map(0x3000, 0x3003).nopw(); /* ? */
+	map(0x0000, 0x3fff).bankr("audiobank"); // banked
+	map(0x3000, 0x3003).nopw(); // ?
 	map(0x4000, 0x4001).rw("ymsnd", FUNC(ym2151_device::read), FUNC(ym2151_device::write));
 	map(0x5000, 0x51ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w));
 	map(0x6000, 0x61ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w)); // mirrored
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namcos21_state::dpram_byte_r), FUNC(namcos21_state::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
-	map(0xa000, 0xbfff).nopw(); /* amplifier enable on 1st write */
-	map(0xc000, 0xffff).nopw(); /* avoid debug log noise; games write frequently to 0xe000 */
+	map(0xa000, 0xbfff).nopw(); // amplifier enable on 1st write
+	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
 	map(0xc000, 0xc001).w(FUNC(namcos21_state::sound_bankselect_w));
-	map(0xd001, 0xd001).nopw(); /* watchdog */
+	map(0xd001, 0xd001).nopw(); // watchdog
 	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
 }
 
@@ -738,19 +734,19 @@ INPUT_PORTS_END
 
 void namcos21_state::sound_bankselect_w(uint8_t data)
 {
-	m_audiobank->set_entry(data>>4);
+	m_audiobank->set_entry(data >> 4);
 }
 
 void namcos21_state::sound_reset_w(uint8_t data)
 {
 	if (data & 0x01)
 	{
-		/* Resume execution */
+		// Resume execution
 		m_audiocpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
 	}
 	else
 	{
-		/* Suspend execution */
+		// Suspend execution
 		m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
 	}
 }
@@ -778,12 +774,12 @@ uint8_t namcos21_state::eeprom_r(offs_t offset)
 
 void namcos21_state::machine_reset()
 {
-	/* Initialise the bank select in the sound CPU */
-	m_audiobank->set_entry(0); /* Page in bank 0 */
+	// Initialise the bank select in the sound CPU
+	m_audiobank->set_entry(0); // Page in bank 0
 
 	m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE );
 
-	/* Place CPU2 & CPU3 into the reset condition */
+	// Place CPU2 & CPU3 into the reset condition
 	reset_all_subcpus(ASSERT_LINE);
 }
 
@@ -821,14 +817,14 @@ TIMER_DEVICE_CALLBACK_MEMBER(namcos21_state::screen_scanline)
 
 void namcos21_state::winrun(machine_config &config)
 {
-	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); /* Master */
+	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); // Master
 	m_maincpu->set_addrmap(AS_PROGRAM, &namcos21_state::master_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(namcos21_state::screen_scanline), "screen", 0, 1);
 
-	M68000(config, m_slave, 49.152_MHz_XTAL / 4); /* Slave */
+	M68000(config, m_slave, 49.152_MHz_XTAL / 4); // Slave
 	m_slave->set_addrmap(AS_PROGRAM, &namcos21_state::slave_map);
 
-	MC6809E(config, m_audiocpu, 49.152_MHz_XTAL / 24); /* Sound */
+	MC6809E(config, m_audiocpu, 49.152_MHz_XTAL / 24); // Sound
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_state::sound_map);
 	m_audiocpu->set_periodic_int(FUNC(namcos21_state::irq0_line_hold), attotime::from_hz(2*60));
 
@@ -837,7 +833,7 @@ void namcos21_state::winrun(machine_config &config)
 	NAMCOS21_DSP(config, m_namcos21_dsp, 0);
 	m_namcos21_dsp->set_renderer_tag("namcos21_3d");
 
-	m68000_device &gpu(M68000(config, "gpu", 49.152_MHz_XTAL / 4)); /* graphics coprocessor */
+	m68000_device &gpu(M68000(config, "gpu", 49.152_MHz_XTAL / 4)); // graphics coprocessor
 	gpu.set_addrmap(AS_PROGRAM, &namcos21_state::gpu_map);
 
 	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
@@ -851,7 +847,7 @@ void namcos21_state::winrun(machine_config &config)
 	NAMCO_C148(config, m_gpu_intc, 0, "gpu", false);
 	NAMCO_C139(config, m_sci, 0);
 
-	config.set_maximum_quantum(attotime::from_hz(6000)); /* 100 CPU slices per frame */
+	config.set_maximum_quantum(attotime::from_hz(6000)); // 100 CPU slices per frame
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 

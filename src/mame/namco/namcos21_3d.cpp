@@ -80,7 +80,7 @@ void namcos21_3d_device::copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, con
 		for (int sx = clip.left(); sx <= clip.right(); sx++)
 		{
 			int z = pZ[sx];
-			//if( pZ[sx]!=0x7fff )
+			//if (pZ[sx] != 0x7fff)
 			if (z >= zlo && z <= zhi)
 			{
 				dest[sx] = pPen[sx];
@@ -152,7 +152,7 @@ void namcos21_3d_device::rendertri(const n21_vertex *v0, const n21_vertex *v1, c
 {
 	int dy, ystart, yend, crop;
 
-	/* first, sort so that v0->y <= v1->y <= v2->y */
+	// first, sort so that v0->y <= v1->y <= v2->y
 	for (;;)
 	{
 		if (v0->y > v1->y)
@@ -175,8 +175,8 @@ void namcos21_3d_device::rendertri(const n21_vertex *v0, const n21_vertex *v1, c
 	if (dy)
 	{
 		int y;
-		edge e1; /* short edge (top and bottom) */
-		edge e2; /* long (common) edge */
+		edge e1; // short edge (top and bottom)
+		edge e2; // long (common) edge
 
 		double dx2dy = (v2->x - v0->x) / dy;
 		double dz2dy = (v2->z - v0->z) / dy;
@@ -262,12 +262,10 @@ void namcos21_3d_device::draw_quad(int sx[4], int sy[4], int zcode[4], int color
 {
 	n21_vertex a, b, c, d;
 	int depthcueenable = 1;
-	/*
-	    0x0000..0x1fff  sprite palettes (0x20 sets of 0x100 colors)
-	    0x2000..0x3fff  polygon palette bank0 (0x10 sets of 0x200 colors or 0x20 sets of 0x100 colors)
-	    0x4000..0x5fff  polygon palette bank1 (0x10 sets of 0x200 colors or 0x20 sets of 0x100 colors)
-	    0x6000..0x7fff  polygon palette bank2 (0x10 sets of 0x200 colors or 0x20 sets of 0x100 colors)
-	*/
+	// 0x0000..0x1fff  sprite palettes (0x20 sets of 0x100 colors)
+	// 0x2000..0x3fff  polygon palette bank0 (0x10 sets of 0x200 colors or 0x20 sets of 0x100 colors)
+	// 0x4000..0x5fff  polygon palette bank1 (0x10 sets of 0x200 colors or 0x20 sets of 0x100 colors)
+	// 0x6000..0x7fff  polygon palette bank2 (0x10 sets of 0x200 colors or 0x20 sets of 0x100 colors)
 
 	if (m_fixed_palbase != -1)
 	{

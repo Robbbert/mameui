@@ -49,8 +49,6 @@ TODO:
 #include "speaker.h"
 
 
-#define ENABLE_LOGGING      0
-
 DECLARE_DEVICE_TYPE(NAMCO_DE_PCB, namco_de_pcbstack_device)
 
 
@@ -148,14 +146,14 @@ namco_de_pcbstack_device::namco_de_pcbstack_device(const machine_config &mconfig
 
 void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 {
-	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); /* Master */
+	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); // Master
 	m_maincpu->set_addrmap(AS_PROGRAM, &namco_de_pcbstack_device::driveyes_master_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(namco_de_pcbstack_device::screen_scanline), "screen", 0, 1);
 
-	M68000(config, m_slave, 49.152_MHz_XTAL / 4); /* Slave */
+	M68000(config, m_slave, 49.152_MHz_XTAL / 4); // Slave
 	m_slave->set_addrmap(AS_PROGRAM, &namco_de_pcbstack_device::driveyes_slave_map);
 
-	MC6809E(config, m_audiocpu, 3072000); /* Sound */
+	MC6809E(config, m_audiocpu, 3072000); // Sound
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namco_de_pcbstack_device::sound_map);
 	m_audiocpu->set_periodic_int(FUNC(namco_de_pcbstack_device::irq0_line_hold), attotime::from_hz(2*60));
 
@@ -164,7 +162,7 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 	NAMCOS21_DSP(config, m_namcos21_dsp, 0);
 	m_namcos21_dsp->set_renderer_tag("namcos21_3d");
 
-	config.set_maximum_quantum(attotime::from_hz(6000)); /* 100 CPU slices per frame */
+	config.set_maximum_quantum(attotime::from_hz(6000)); // 100 CPU slices per frame
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
@@ -276,16 +274,14 @@ u16 namco_de_pcbstack_device::video_enable_r()
 
 void namco_de_pcbstack_device::video_enable_w(offs_t offset, u16 data, u16 mem_mask)
 {
-	COMBINE_DATA( &m_video_enable ); /* 0x40 = enable */
-	if (m_video_enable != 0 && m_video_enable != 0x40 )
-	{
+	COMBINE_DATA(&m_video_enable); // 0x40 = enable
+	if (m_video_enable & ~0x40)
 		logerror("%s: unexpected video_enable_w=0x%x\n", machine().describe_context(), m_video_enable);
-	}
 }
 
 /***********************************************************/
 
-/* dual port ram memory handlers */
+// dual port ram memory handlers
 
 u16 namco_de_pcbstack_device::dpram_word_r(offs_t offset)
 {
@@ -295,9 +291,7 @@ u16 namco_de_pcbstack_device::dpram_word_r(offs_t offset)
 void namco_de_pcbstack_device::dpram_word_w(offs_t offset, u16 data, u16 mem_mask)
 {
 	if (ACCESSING_BITS_0_7)
-	{
-		m_dpram[offset] = data&0xff;
-	}
+		m_dpram[offset] = data & 0xff;
 }
 
 u8 namco_de_pcbstack_device::dpram_byte_r(offs_t offset)
@@ -316,17 +310,17 @@ void namco_de_pcbstack_device::dpram_byte_w(offs_t offset, u8 data)
 
 void namco_de_pcbstack_device::sound_map(address_map &map)
 {
-	map(0x0000, 0x3fff).bankr("audiobank"); /* banked */
-	map(0x3000, 0x3003).nopw(); /* ? */
+	map(0x0000, 0x3fff).bankr("audiobank"); // banked
+	map(0x3000, 0x3003).nopw(); // ?
 	map(0x4000, 0x4001).rw("ymsnd", FUNC(ym2151_device::read), FUNC(ym2151_device::write));
 	map(0x5000, 0x51ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w));
 	map(0x6000, 0x61ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w)); // mirrored
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namco_de_pcbstack_device::dpram_byte_r), FUNC(namco_de_pcbstack_device::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
-	map(0xa000, 0xbfff).nopw(); /* amplifier enable on 1st write */
-	map(0xc000, 0xffff).nopw(); /* avoid debug log noise; games write frequently to 0xe000 */
+	map(0xa000, 0xbfff).nopw(); // amplifier enable on 1st write
+	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
 	map(0xc000, 0xc001).w(FUNC(namco_de_pcbstack_device::sound_bankselect_w));
-	map(0xd001, 0xd001).nopw(); /* watchdog */
+	map(0xd001, 0xd001).nopw(); // watchdog
 	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
 }
 
@@ -386,7 +380,7 @@ void namco_de_pcbstack_device::driveyes_master_map(address_map &map)
 {
 	driveyes_common_map(map);
 	map(0x000000, 0x03ffff).rom();
-	map(0x100000, 0x10ffff).ram(); /* private work RAM */
+	map(0x100000, 0x10ffff).ram(); // private work RAM
 	map(0x180000, 0x183fff).rw(FUNC(namco_de_pcbstack_device::eeprom_r), FUNC(namco_de_pcbstack_device::eeprom_w)).umask16(0x00ff);
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
 
@@ -403,25 +397,25 @@ void namco_de_pcbstack_device::driveyes_slave_map(address_map &map)
 {
 	driveyes_common_map(map);
 	map(0x000000, 0x03ffff).rom();
-	map(0x100000, 0x10ffff).ram(); /* private work RAM */
+	map(0x100000, 0x10ffff).ram(); // private work RAM
 	map(0x1c0000, 0x1fffff).m(m_slave_intc, FUNC(namco_c148_device::map));
 }
 
 void namco_de_pcbstack_device::sound_bankselect_w(u8 data)
 {
-	m_audiobank->set_entry(data>>4);
+	m_audiobank->set_entry(data >> 4);
 }
 
 void namco_de_pcbstack_device::sound_reset_w(u8 data)
 {
 	if (data & 0x01)
 	{
-		/* Resume execution */
+		// Resume execution
 		m_audiocpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
 	}
 	else
 	{
-		/* Suspend execution */
+		// Suspend execution
 		m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
 	}
 }
@@ -452,7 +446,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(namco_de_pcbstack_device::screen_scanline)
 {
 	int scanline = param;
 
-	if (scanline == 240*2)
+	if (scanline == 240 * 2)
 	{
 		m_master_intc->vblank_irq_trigger();
 		m_slave_intc->vblank_irq_trigger();
@@ -474,12 +468,12 @@ void namco_de_pcbstack_device::device_start()
 
 void namco_de_pcbstack_device::device_reset()
 {
-	/* Initialise the bank select in the sound CPU */
-	m_audiobank->set_entry(0); /* Page in bank 0 */
+	// Initialise the bank select in the sound CPU
+	m_audiobank->set_entry(0); // Page in bank 0
 
 	m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE );
 
-	/* Place CPU2 & CPU3 into the reset condition */
+	// Place CPU2 & CPU3 into the reset condition
 	reset_all_subcpus(ASSERT_LINE);
 }
 
@@ -523,8 +517,8 @@ static INPUT_PORTS_START( driveyes )
 	PORT_START("pcb_1:MCUB")
 	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("gearbox", FUNC(namcoio_gearbox_device::clutch_r))
 	PORT_BIT( 0x37, IP_ACTIVE_LOW, IPT_UNUSED )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNUSED ) /* ? */
-	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNUSED ) /* ? */
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_UNUSED ) // ?
+	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNUSED ) // ?
 
 	PORT_START("pcb_1:MCUH")
 	PORT_BIT( 0x01, IP_ACTIVE_LOW, IPT_UNUSED )
@@ -579,11 +573,11 @@ static INPUT_PORTS_START( driveyes )
 	PORT_BIT( 0x0f, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_CUSTOM_DEVICE_MEMBER("gearbox", FUNC(namcoio_gearbox_device::in_r))
 	PORT_BIT( 0xf0, IP_ACTIVE_LOW, IPT_UNUSED )
 
-	PORT_START("pcb_1:MCUDI1")     /* 63B05Z0 - $3001 */
+	PORT_START("pcb_1:MCUDI1")     // 63B05Z0 - $3001
 	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
-	PORT_START("pcb_1:MCUDI2")     /* 63B05Z0 - $3002 */
+	PORT_START("pcb_1:MCUDI2")     // 63B05Z0 - $3002
 	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
-	PORT_START("pcb_1:MCUDI3")     /* 63B05Z0 - $3003 */
+	PORT_START("pcb_1:MCUDI3")     // 63B05Z0 - $3003
 	PORT_BIT( 0xff, IP_ACTIVE_LOW, IPT_UNUSED )
 
 	// the side view screens do still read inputs, but it's more likely that the main screen should be transfering them
