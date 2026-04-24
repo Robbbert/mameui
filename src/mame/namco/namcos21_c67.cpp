@@ -375,8 +375,6 @@ private:
 	bool sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase, u16 src, int srcpri, int pri);
 	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
-	void configure_c68_namcos21(machine_config &config);
-
 	void common_map(address_map &map) ATTR_COLD;
 	void master_map(address_map &map) ATTR_COLD;
 	void slave_map(address_map &map) ATTR_COLD;
@@ -571,33 +569,6 @@ void namcos21_c67_state::c140_map(address_map &map)
 	map.global_mask(0x7fffff);
 	// TODO: LSB not used? verify from schematics/real hardware
 	map(0x000000, 0x7fffff).lr16([this](offs_t offset) { return m_c140_region[((offset & 0x300000) >> 1) | (offset & 0x7ffff)]; }, "c140_rom_r");
-}
-
-/*************************************************************/
-/* I/O HD63705 MCU Memory declarations                       */
-/*************************************************************/
-
-void namcos21_c67_state::configure_c68_namcos21(machine_config &config)
-{
-	NAMCOC68(config, m_c68, 8000000);
-	m_c68->in_pb_callback().set_ioport("MCUB");
-	m_c68->in_pc_callback().set_ioport("MCUC");
-	m_c68->in_ph_callback().set_ioport("MCUH");
-	m_c68->in_pdsw_callback().set_ioport("DSW");
-	m_c68->di0_in_cb().set_ioport("MCUDI0");
-	m_c68->di1_in_cb().set_ioport("MCUDI1");
-	m_c68->di2_in_cb().set_ioport("MCUDI2");
-	m_c68->di3_in_cb().set_ioport("MCUDI3");
-	m_c68->an0_in_cb().set_ioport("AN0");
-	m_c68->an1_in_cb().set_ioport("AN1");
-	m_c68->an2_in_cb().set_ioport("AN2");
-	m_c68->an3_in_cb().set_ioport("AN3");
-	m_c68->an4_in_cb().set_ioport("AN4");
-	m_c68->an5_in_cb().set_ioport("AN5");
-	m_c68->an6_in_cb().set_ioport("AN6");
-	m_c68->an7_in_cb().set_ioport("AN7");
-	m_c68->dp_in_callback().set(FUNC(namcos21_c67_state::dpram_byte_r));
-	m_c68->dp_out_callback().set(FUNC(namcos21_c67_state::dpram_byte_w));
 }
 
 
@@ -862,7 +833,25 @@ void namcos21_c67_state::namcos21(machine_config &config)
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_c67_state::sound_map);
 	m_audiocpu->set_periodic_int(FUNC(namcos21_c67_state::irq0_line_hold), attotime::from_hz(2*60));
 
-	configure_c68_namcos21(config);
+	NAMCOC68(config, m_c68, 8000000);
+	m_c68->in_pb_callback().set_ioport("MCUB");
+	m_c68->in_pc_callback().set_ioport("MCUC");
+	m_c68->in_ph_callback().set_ioport("MCUH");
+	m_c68->in_pdsw_callback().set_ioport("DSW");
+	m_c68->di0_in_cb().set_ioport("MCUDI0");
+	m_c68->di1_in_cb().set_ioport("MCUDI1");
+	m_c68->di2_in_cb().set_ioport("MCUDI2");
+	m_c68->di3_in_cb().set_ioport("MCUDI3");
+	m_c68->an0_in_cb().set_ioport("AN0");
+	m_c68->an1_in_cb().set_ioport("AN1");
+	m_c68->an2_in_cb().set_ioport("AN2");
+	m_c68->an3_in_cb().set_ioport("AN3");
+	m_c68->an4_in_cb().set_ioport("AN4");
+	m_c68->an5_in_cb().set_ioport("AN5");
+	m_c68->an6_in_cb().set_ioport("AN6");
+	m_c68->an7_in_cb().set_ioport("AN7");
+	m_c68->dp_in_callback().set(FUNC(namcos21_c67_state::dpram_byte_r));
+	m_c68->dp_out_callback().set(FUNC(namcos21_c67_state::dpram_byte_w));
 
 	NAMCOS21_DSP_C67(config, m_namcos21_dsp_c67, 0);
 	m_namcos21_dsp_c67->set_renderer_tag("namcos21_3d");

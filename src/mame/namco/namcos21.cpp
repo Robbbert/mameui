@@ -36,8 +36,12 @@ shade pixels according to their depth.
 
 TODO:
 - polygon glitches/flicker
-- is there a video_enable flag? or at least one for the bitmap layer
 - car engine sound is wrong
+- is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
+- winrungp: bitmap layer draws black rectangles on the congratulations screen after race win
+  (can easily test it with infinite time cheat)
+- winrungp: it doesn't show the text for the triangle curve in attract mode (it shows up on pcb
+  video, same ROM revision)
 
 reference videos:
 - https://youtu.be/ZNNveBLWevg
@@ -354,7 +358,7 @@ private:
 	void gpu_color_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	uint16_t gpu_register_r(offs_t offset);
 	void gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
-	void gpu_videoram_w(offs_t offset, uint16_t data);
+	void gpu_videoram_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	uint16_t gpu_videoram_r(offs_t offset);
 
 	void eeprom_w(offs_t offset, uint8_t data);
@@ -373,8 +377,6 @@ private:
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect);
-
-	void configure_c65_namcos21(machine_config &config);
 
 	void master_map(address_map &map) ATTR_COLD;
 	void slave_map(address_map &map) ATTR_COLD;
@@ -411,16 +413,17 @@ void namcos21_state::gpu_register_w(offs_t offset, uint16_t data, uint16_t mem_m
 	COMBINE_DATA(&m_gpu_register[offset]);
 }
 
-void namcos21_state::gpu_videoram_w(offs_t offset, uint16_t data)
+void namcos21_state::gpu_videoram_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
+	// it always does word access
+	m_gpu_videoram_mask = data & 0xff;
 	uint8_t color = data >> 8;
+
 	for (int i = 0; i < 8; i++)
 	{
-		if (BIT(data, i))
+		if (BIT(m_gpu_videoram_mask, i))
 			m_gpu_videoram[(offset + i) & 0x7ffff] = color;
 	}
-
-	m_gpu_videoram_mask = data & 0xff;
 }
 
 uint16_t namcos21_state::gpu_videoram_r(offs_t offset)
@@ -488,9 +491,8 @@ uint32_t namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitm
 	switch(pri)
 	{
 		case 5: // title screen for all games here
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0x7fc0, 0x7ffe);
 			bitmap_draw(bitmap,cliprect);
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7fbf);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
 			break;
 		case 0: // service mode
 			bitmap_draw(bitmap,cliprect);
@@ -574,7 +576,7 @@ void namcos21_state::slave_map(address_map &map)
 void namcos21_state::gpu_map(address_map &map)
 {
 	map(0x000000, 0x07ffff).rom();
-	map(0x100000, 0x100001).rw(FUNC(namcos21_state::gpu_color_r), FUNC(namcos21_state::gpu_color_w)); // ?
+	map(0x100000, 0x100001).rw(FUNC(namcos21_state::gpu_color_r), FUNC(namcos21_state::gpu_color_w));
 	map(0x180000, 0x19ffff).ram(); // work RAM
 	map(0x1c0000, 0x1fffff).m(m_gpu_intc, FUNC(namco_c148_device::map));
 	map(0x200000, 0x20ffff).ram().share("gpu_comram");
@@ -614,33 +616,6 @@ void namcos21_state::c140_map(address_map &map)
 	map(0x000000, 0x7fffff).lr16([this](offs_t offset) { return m_c140_region[((offset & 0x300000) >> 1) | (offset & 0x7ffff)]; }, "c140_rom_r");
 }
 
-
-/*************************************************************/
-/* I/O HD63705 MCU Memory declarations                       */
-/*************************************************************/
-
-void namcos21_state::configure_c65_namcos21(machine_config &config)
-{
-	NAMCOC65(config, m_c65, 2048000);
-	m_c65->in_pb_callback().set_ioport("MCUB");
-	m_c65->in_pc_callback().set_ioport("MCUC");
-	m_c65->in_ph_callback().set_ioport("MCUH");
-	m_c65->in_pdsw_callback().set_ioport("DSW");
-	m_c65->di0_in_cb().set_ioport("MCUDI0");
-	m_c65->di1_in_cb().set_ioport("MCUDI1");
-	m_c65->di2_in_cb().set_ioport("MCUDI2");
-	m_c65->di3_in_cb().set_ioport("MCUDI3");
-	m_c65->an0_in_cb().set_ioport("AN0");
-	m_c65->an1_in_cb().set_ioport("AN1");
-	m_c65->an2_in_cb().set_ioport("AN2");
-	m_c65->an3_in_cb().set_ioport("AN3");
-	m_c65->an4_in_cb().set_ioport("AN4");
-	m_c65->an5_in_cb().set_ioport("AN5");
-	m_c65->an6_in_cb().set_ioport("AN6");
-	m_c65->an7_in_cb().set_ioport("AN7");
-	m_c65->dp_in_callback().set(FUNC(namcos21_state::dpram_byte_r));
-	m_c65->dp_out_callback().set(FUNC(namcos21_state::dpram_byte_w));
-}
 
 /*************************************************************/
 /*                                                           */
@@ -828,7 +803,25 @@ void namcos21_state::winrun(machine_config &config)
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_state::sound_map);
 	m_audiocpu->set_periodic_int(FUNC(namcos21_state::irq0_line_hold), attotime::from_hz(2*60));
 
-	configure_c65_namcos21(config);
+	NAMCOC65(config, m_c65, 2048000);
+	m_c65->in_pb_callback().set_ioport("MCUB");
+	m_c65->in_pc_callback().set_ioport("MCUC");
+	m_c65->in_ph_callback().set_ioport("MCUH");
+	m_c65->in_pdsw_callback().set_ioport("DSW");
+	m_c65->di0_in_cb().set_ioport("MCUDI0");
+	m_c65->di1_in_cb().set_ioport("MCUDI1");
+	m_c65->di2_in_cb().set_ioport("MCUDI2");
+	m_c65->di3_in_cb().set_ioport("MCUDI3");
+	m_c65->an0_in_cb().set_ioport("AN0");
+	m_c65->an1_in_cb().set_ioport("AN1");
+	m_c65->an2_in_cb().set_ioport("AN2");
+	m_c65->an3_in_cb().set_ioport("AN3");
+	m_c65->an4_in_cb().set_ioport("AN4");
+	m_c65->an5_in_cb().set_ioport("AN5");
+	m_c65->an6_in_cb().set_ioport("AN6");
+	m_c65->an7_in_cb().set_ioport("AN7");
+	m_c65->dp_in_callback().set(FUNC(namcos21_state::dpram_byte_r));
+	m_c65->dp_out_callback().set(FUNC(namcos21_state::dpram_byte_w));
 
 	NAMCOS21_DSP(config, m_namcos21_dsp, 0);
 	m_namcos21_dsp->set_renderer_tag("namcos21_3d");

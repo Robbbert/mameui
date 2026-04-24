@@ -96,7 +96,7 @@ private:
 
 	required_device<cpu_device> m_hostcpu;              // reference to the host cpu
 	optional_device<namco_c148_device> m_linked_c148;   // reference to linked master/slave c148
-	bool        m_hostcpu_master;                       // define if host cpu is master
+	bool m_hostcpu_master;                              // define if host cpu is master
 
 	struct{
 		uint8_t cpu;
@@ -104,7 +104,7 @@ private:
 		uint8_t sci;
 		uint8_t pos;
 		uint8_t vblank;
-	}m_irqlevel;
+	} m_irqlevel;
 
 	uint8_t m_posirq_line;
 	uint8_t m_bus_reg;
