@@ -460,7 +460,7 @@ void namco_de_pcbstack_device::device_reset()
 	// Initialise the bank select in the sound CPU
 	m_audiobank->set_entry(0); // Page in bank 0
 
-	m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE );
+	m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
 
 	// Place CPU2 & CPU3 into the reset condition
 	reset_all_subcpus(ASSERT_LINE);

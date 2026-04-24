@@ -214,7 +214,8 @@ void namco_c148_device::bus_ctrl_w(uint8_t data)
 void namco_c148_device::cpu_irq_assert_w(uint16_t data)
 {
 	// TODO: Starblade relies on this for showing large polygons, is it the right place?
-	m_linked_c148->cpu_irq_trigger();
+	if (m_linked_c148)
+		m_linked_c148->cpu_irq_trigger();
 }
 
 //**************************************************************************
