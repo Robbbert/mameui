@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 693 -->
+<!-- Number of items in this list = 695 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -1012,16 +1012,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="cole9822ee24c72c">
-		<description>Cavit (2021)(Inufuto)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="9824">
-				<rom name="Cavit (2021)(Inufuto).rom" size="9824" crc="8d3e9de3" sha1="e9822ee24c72c24418288f15096a6e160e8a1a80"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="col9364f62967e27">
 		<description>ccjvq07</description>
 		<year>????</year>
@@ -1389,6 +1379,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Cure, The (2020)(Team Pixelboy).rom" size="131072" crc="78e07081" sha1="abd1c4dcde206ba58ca3553993288c3d3dcb6591"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col140c3267a19e7">
+		<description>Cye (2007)(Philipp Klaus Krause)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Cye (2007)(Philipp Klaus Krause).rom" size="32768" crc="483c85b1" sha1="140c3267a19e756024252c56b556c79886758206"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1799,6 +1799,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Dorodon SGM (1984-2017)(Opcode Games).rom" size="32768" crc="e3d61921" sha1="d682b25221ea79dec9c0573966bc76891c2c5ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cold802ed7686bc2">
+		<description>Double Breakout (2001-03) (Daniel Bienvenu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="31232">
+				<rom name="Double Breakout (2001-03) (Daniel Bienvenu).rom" size="31232" crc="92127c60" sha1="d802ed7686bc2f62ea2cff4d69c973fc8beb7d1e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3709,6 +3719,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Monster House SGM (2017)(CollectorVision).rom" size="32768" crc="50f02dc9" sha1="75f177d95c0c6adb2d1d81c6020dfdbcfb6cf090"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col2ec10e67eeac8">
+		<description>Monster Masher (2006)(Philipp Klaus Krause)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="30475">
+				<rom name="Monster Masher (2006)(Philipp Klaus Krause).rom" size="30475" crc="c212599a" sha1="2ec10e67eeac8a61ff4e1c78556da751e3f93af0"/>
 			</dataarea>
 		</part>
 	</software>

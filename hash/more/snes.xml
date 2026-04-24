@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4021 -->
+<!-- Number of items in this list = 4022 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -22209,6 +22209,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Reznor's Passfort (updated) (SMW1 Hack).sfc" size="1048576" crc="4da97fa3" sha1="dc7053fa6e91aa266d201062e459241932de63d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsabecd1b387d70">
+		<description>Rider's Spirits (W)(1994-2024)(NCS - Masaya)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rider's Spirits (W)(1994-2024)(NCS - Masaya).sfc" size="1048576" crc="e5d5fa92" sha1="abecd1b387d7063120d37107cb6c694f60f3c51c"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2069 -->
+<!-- Number of items in this list = 2070 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -20559,6 +20559,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="ZPF (2025)(Mega Cat Studios).bin" size="4194304" crc="cd657892" sha1="66dbefd21cadf79c7ad5a1591a4deb37b468c5ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3763faa6299ab">
+		<description>ZPF (Digital Edition) (2025-26)(Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="ZPF (Digital Edition) (2025-26)(Mega Cat Studios).bin" size="4194304" crc="8a19364a" sha1="3763faa6299abaabe5975fca004b2bca0ca50ba8"/>
 			</dataarea>
 		</part>
 	</software>

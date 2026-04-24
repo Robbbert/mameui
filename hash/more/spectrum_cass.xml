@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7833 -->
+<!-- Number of items in this list = 7835 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -6322,6 +6322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs00533a5675098">
+		<description>Arby and Friends v1.1 48K (2026)(David Programa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="20005">
+				<rom name="Arby and Friends v1.1 48K (2026)(David Programa).tap" size="20005" crc="a40c0874" sha1="00533a56750981825ea8036de68b5c2a84b00bb8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs05c89d1dbd11a">
 		<description>Arc Of Yesod, The (1985)(Odin Computer Graphics)(128k)</description>
 		<year>????</year>
@@ -7789,6 +7799,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44968">
 				<rom name="Baby-Man VS Terminatots PT1 v1.01 48K (2025)(PuttyCAD, Tin Soldiers).tap" size="44968" crc="4520df8c" sha1="8862d71f08fae3dff2b058b890dd526a46a71152"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8dbe387248fd9">
+		<description>Baby-Man Vs Terminatots PT2 - Game 48K (2ß26)(PuttyCAD, Tin Soldier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46230">
+				<rom name="Baby-Man Vs Terminatots PT2 - Game 48K (2ß26)(PuttyCAD, Tin Soldier).tap" size="46230" crc="db090c28" sha1="8dbe387248fd93cf2c64fb39fa94774fbeff4f44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d67a6677b315">
+		<description>Baby-Man Vs Terminatots PT2 - Intro 48K (2ß26)(PuttyCAD, Tin Soldier)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33040">
+				<rom name="Baby-Man Vs Terminatots PT2 - Intro 48K (2ß26)(PuttyCAD, Tin Soldier).tap" size="33040" crc="b0cac1f9" sha1="8d67a6677b315fe16e45fca17ec5a3903a3bdc5d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11429,6 +11459,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="30406">
 				<rom name="Boriel Runner v1.2 48K (2023)(briefer).tap" size="30406" crc="ddede219" sha1="b8acb21f8e197cd69e0d7f4fabe4dbf94c9bb8db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0789f9019b776">
+		<description>Boriel ZONE 48K (2023)(Briefer666)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33042">
+				<rom name="Boriel ZONE 48K (2023)(Briefer666).tap" size="33042" crc="3d949f77" sha1="0789f9019b77657f9f4df6ece2152c383442c56c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17902,26 +17942,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsc4d46e4719e7e">
-		<description>Danger Mouse in the Black Forest Chateau - Part 1 48K (1984)(Creative Sparks)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="34689">
-				<rom name="Danger Mouse in the Black Forest Chateau - Part 1 48K (1984)(Creative Sparks).tzx" size="34689" crc="831e507e" sha1="c4d46e4719e7e6a0a0b792a43f895b61f1c305cb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsbdb531bd0f676">
-		<description>Danger Mouse in the Black Forest Chateau - Part 2 48K (1984)(Creative Sparks)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="37069">
-				<rom name="Danger Mouse in the Black Forest Chateau - Part 2 48K (1984)(Creative Sparks).tzx" size="37069" crc="34f5d8c9" sha1="bdb531bd0f6766fc4b4734a2cca7ccfeba922b71"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs26dc4c251a79f">
 		<description>Dangerous Gardens (1984)(Your Computer)</description>
 		<year>????</year>
@@ -18482,6 +18502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa25fb1fe54bfd">
+		<description>Death Wish 3 48K-128K (1987)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54322">
+				<rom name="Death Wish 3 48K-128K (1987)(Gremlin Graphics).tzx" size="54322" crc="562a8373" sha1="a25fb1fe54bfd6af5dfb4f342b5f532a521fc990"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5fff6a18b4801">
 		<description>Death's Head Hole (1983)(Peaksoft)</description>
 		<year>????</year>
@@ -18663,12 +18693,12 @@
 		</part>
 	</software>
 	<software name="zxs14f43866c385b">
-		<description>Defcom 128K (1986)(Quicksilva)</description>
+		<description>Defcom 48K-128K (1986)(Quicksilva)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="55692">
-				<rom name="Defcom 128K (1986)(Quicksilva).tap" size="55692" crc="0f2a7a1b" sha1="14f43866c385b061b0dd729148fc0732e364116f"/>
+				<rom name="Defcom 48K-128K (1986)(Quicksilva).tap" size="55692" crc="0f2a7a1b" sha1="14f43866c385b061b0dd729148fc0732e364116f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18749,6 +18779,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="64451">
 				<rom name="Defenders Of The Earth (1990)(Enigma Variations)(128K).tap" size="64451" crc="16168c2e" sha1="b6f06d4f9c0fd61e3c7f2e6c322d7b14b8b11e7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf58f799455e8">
+		<description>Defenders of the Earth 48K-128K (1990)(Enigma Variations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="99070">
+				<rom name="Defenders of the Earth 48K-128K (1990)(Enigma Variations).tap" size="99070" crc="e9e91835" sha1="af58f799455e841795c45d4576dbcc7b04983228"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33802,16 +33842,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs9763d8fd22023">
-		<description>Judge Dredd 48K (1987)(Melbourne House)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47929">
-				<rom name="Judge Dredd 48K (1987)(Melbourne House).tzx" size="47929" crc="835fc84e" sha1="9763d8fd220236c0975c71a9543e91d4493ed1f7"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs3c573ac9712d2">
 		<description>Juggernaut (1985)(CRL Group)</description>
 		<year>????</year>
@@ -40652,16 +40682,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs39617c2450c9f">
-		<description>Mined Out 48K (1983)(Quicksilva)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="23253">
-				<rom name="Mined Out 48K (1983)(Quicksilva).tzx" size="23253" crc="3e577060" sha1="39617c2450c9f9618f47d90d2681a56067b22c60"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsbaf9542a79239">
 		<description>Minefield (1982)(J.K. Greye)</description>
 		<year>????</year>
@@ -45032,16 +45052,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs72c3f47368143">
-		<description>Orc Attack 48K (1984)(Creative Sparks)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="31150">
-				<rom name="Orc Attack 48K (1984)(Creative Sparks).tzx" size="31150" crc="0cdb8978" sha1="72c3f47368143e2bd3b386402eccc3008a67a068"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs41ec5b55c99e5">
 		<description>Orc Island (1984)(Double Play Adventures)</description>
 		<year>????</year>
@@ -47099,16 +47109,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="29989">
 				<rom name="Pipe Mania (demo) (1990)(Empire Software).tap" size="29989" crc="93b2b624" sha1="e4b4ddde31da7888943cbc9ef6df2d4f2c9fe362"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs48ed48670d645">
-		<description>Pipe Mania 48K-128K (1990)(Empire Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="33375">
-				<rom name="Pipe Mania 48K-128K (1990)(Empire Software).tzx" size="33375" crc="e642e3c7" sha1="48ed48670d645d0b86a839912161417ec1d45396"/>
 			</dataarea>
 		</part>
 	</software>
@@ -51219,6 +51219,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15846">
 				<rom name="Robon (1983)(Softek Software).tap" size="15846" crc="3e8c00ed" sha1="e03f542217667c14c1613df83eb610bb17c78e89"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs138f96b40b200">
+		<description>Robot 1 in The Ship of Doom 48K-128K (2017)(Mat Recardo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38631">
+				<rom name="Robot 1 in The Ship of Doom 48K-128K (2017)(Mat Recardo).tzx" size="38631" crc="0c544cf5" sha1="138f96b40b20086485b9352a4256aec9e02a1d28"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55482,16 +55492,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs6c9161ccdb0ae">
-		<description>Snodgits 48K (1985)(Creative Sparks)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="37856">
-				<rom name="Snodgits 48K (1985)(Creative Sparks).tzx" size="37856" crc="11504c62" sha1="6c9161ccdb0ae979928c7d7b4f1e01c63611bbdb"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs472fbface26f2">
 		<description>Snodgits! (1985)(Creative Sparks)</description>
 		<year>????</year>
@@ -57532,16 +57532,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs560072531ba41">
-		<description>Star Paws 48K-128K (1988)(Software Projects)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="55049">
-				<rom name="Star Paws 48K-128K (1988)(Software Projects).tzx" size="55049" crc="8d1a426c" sha1="560072531ba41ee4ca4f6c4fb75e557b019264fb"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs6fc817e1cb8f1">
 		<description>Star Pilot (1987)(Silverbird Software Ltd)(128K)</description>
 		<year>????</year>
@@ -59169,16 +59159,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="179549">
 				<rom name="Super Sports - The Olympic Challenge (19xx)(Gremlin Graphics).tap" size="179549" crc="1e9a50e8" sha1="01f2d9a1f8796995b49de62afb20ebc1f6ef52bd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsd8d98be166233">
-		<description>Super Sprint 48K (1987)(Electric Dreams)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="52544">
-				<rom name="Super Sprint 48K (1987)(Electric Dreams).tzx" size="52544" crc="f1912dc5" sha1="d8d98be166233c5694407b35f36aab683b3ac105"/>
 			</dataarea>
 		</part>
 	</software>
@@ -61919,6 +61899,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47225">
 				<rom name="Tornado ECR 48K (1991)(Codemasters).tap" size="47225" crc="7fe902cb" sha1="a666887dac5783008811ef32047369d2a294ef36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7d35050ac2c34">
+		<description>Torre de Ochate, A EN v1.3 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47331">
+				<rom name="Torre de Ochate, A EN v1.3 48K-128K (2026)(FlunkyRetro).tap" size="47331" crc="4200f902" sha1="7d35050ac2c34849390fdc50baf238995fb0a163"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb55b6c668ed4d">
+		<description>Torre de Ochate, A ES v1.3.1 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47587">
+				<rom name="Torre de Ochate, A ES v1.3.1 48K-128K (2026)(FlunkyRetro).tap" size="47587" crc="b1cbbc45" sha1="b55b6c668ed4dd9a8d224d8dd948f5c06a62b7c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3863796daa36d">
+		<description>Torre de Ochate, A PT v1.3.1 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47843">
+				<rom name="Torre de Ochate, A PT v1.3.1 48K-128K (2026)(FlunkyRetro).tap" size="47843" crc="ad31674f" sha1="3863796daa36df4f7f36c4d38c77142876b74a24"/>
 			</dataarea>
 		</part>
 	</software>
@@ -65569,6 +65579,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="224518">
 				<rom name="World Games (1987)(U.S. Gold).tap" size="224518" crc="ab9ccddb" sha1="2f6f77a5c76b6c59a7a2dbcd460279f403b567f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8e310e0636f6a">
+		<description>World of One Way, A v0.41 16K (2021)(Serdjuk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8402">
+				<rom name="World of One Way, A v0.41 16K (2021)(Serdjuk).tap" size="8402" crc="5f6bf019" sha1="8e310e0636f6afdf82ebb333921355236e19db78"/>
 			</dataarea>
 		</part>
 	</software>
