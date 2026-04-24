@@ -32,8 +32,8 @@ TODO:
 #include "machine/74259.h"
 #include "machine/timer.h"
 #include "machine/wd_fdc.h"
-#include "sound/beep.h"
 #include "sound/sn76496.h"
+#include "sound/spkrdev.h"
 #include "video/mc6845.h"
 
 #include "emupal.h"
@@ -72,7 +72,7 @@ public:
 		, m_fdc(*this, "fdc")
 		, m_floppy(*this, "fdc:%u", 0U)
 		, m_ioctrl(*this, "ioctrl")
-		, m_beeper(*this, "beeper")
+		, m_dac1bit(*this, "dac1bit")
 		, m_gfxdecode(*this, "gfxdecode")
 		, m_palette(*this, "palette")
 		// "JOY STICK#" dual DE-9 ports, on the right side of body chassis (near the volume knob)
@@ -144,7 +144,7 @@ private:
 	required_device<mb8877_device> m_fdc;
 	required_device_array<floppy_connector, 2> m_floppy;
 	required_device<ls259_device> m_ioctrl;
-	required_device<beep_device> m_beeper;
+	required_device<speaker_sound_device> m_dac1bit;
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
 	required_device_array<msx_general_purpose_port_device, 2> m_joystick_port;
@@ -612,7 +612,7 @@ void smc777_state::mt_on_w(int state)
 
 void smc777_state::sound_out_w(int state)
 {
-	m_beeper->set_state(state);
+	m_dac1bit->level_w(state);
 }
 
 void smc777_state::printer_strb_w(int state)
@@ -1083,7 +1083,7 @@ void smc777_state::machine_reset()
 	m_pal_mode = 0x10;
 	m_vsync_idf = false;
 
-	m_beeper->set_state(0);
+	m_dac1bit->level_w(0);
 }
 
 
@@ -1229,8 +1229,7 @@ void smc777_state::smc777(machine_config &config)
 
 	SN76489A(config, "sn1", MASTER_CLOCK / 8).add_route(ALL_OUTPUTS, "mono", 0.50); // unknown clock / divider
 
-	BEEP(config, m_beeper, 300); // TODO: correct frequency
-	m_beeper->add_route(ALL_OUTPUTS, "mono", 0.50);
+	SPEAKER_SOUND(config, m_dac1bit).add_route(ALL_OUTPUTS, "mono", 0.50);
 
 	TIMER(config, "keyboard_timer").configure_periodic(FUNC(smc777_state::keyboard_callback), attotime::from_hz(240/32));
 }

@@ -22,20 +22,13 @@ Magazine:
   Floppy Magazine 特別号
 
 SMCゲームパックI
-  法隆寺の謎 (houryuji?)
-  黄金の墓 (ougon?)
-  無人島脱出 (mujindas?)
-  ムー大陸の謎 (munazo?)
   チェスゲーム (royalchs?)
-  徳川風雲録 (tokugawa?)
-  妖花の謎 (younazo?)
 
 Home:
   ユーカラJJ - Yukar JJ
   グラフィックエディター(市販版) (one of these should be graphed)
   グラフィックエディター(777C添付版)
   ラッサピアターE - Rassapiator E
-
 
 Education:
   グラフィックスの世界(入門編) - (one of these should be graphw)
@@ -1140,7 +1133,7 @@ Player-2 inputs doesn't work
 		<year>1985</year>
 		<publisher>ツァイト (Zeit)</publisher>
 		<notes><![CDATA[
-Stuck [buzzer]
+Stuck [buzzer] (fixed)
 [FDC] Doesn't clear [MC6845] graphic layer properly
 ]]></notes>
 		<info name="alt_title" value="妖花の謎"/>
@@ -1604,12 +1597,13 @@ Doesn't have a BASIC compared to most bootable flopmag*, bad? Not really Floppy 
 		<publisher>ソニー・クリエイティブプロダクツ (Sony Creative Products)</publisher>
 		<notes><![CDATA[
 Disk A
-3. [FDC] "Error(161) in 1220: Bad disk sector"
-4. [FDC] "Error(161) in 1320: Bad disk sector"
+3. [FDC] "Error(161) in 1220: Bad disk sector" (fixed)
+3. not extensively tested
+4. [FDC] "Error(161) in 1320: Bad disk sector" (fixed)
 Disk B
 1. untested (language barrier)
 3. [keyboard] unresponsive
-5. [FDC] "Error(161) in 1400: Bad disk sector" when striking space key
+5. [FDC] "Error(161) in 1400: Bad disk sector" when striking space key (fixed)
 ]]></notes>
 		<info name="alt_title" value="フロッピーマガジン2"/>
 		<info name="developer" value="Rassel"/>
@@ -1676,7 +1670,10 @@ Disk A
 4. white screen
 5. untested
 Disk B
-[FDC] "Bad disk sector"
+[FDC] "Bad disk sector" (fixed)
+1. untested (language barrier)
+5. [keyboard] unresponsive
+6. untested (language barrier)
 ]]></notes>
 		<info name="alt_title" value="フロッピーマガジン4"/>
 		<info name="developer" value="Rassel"/>
@@ -2028,7 +2025,7 @@ STRIKER2: "Disk read error (Bad Sector)" (bad dump?)
 		<year>198?</year>
 		<publisher>&lt;unknown&gt;</publisher>
 		<notes><![CDATA[
-MAC: stuck [buzzer]
+MAC: [buzzer] "I'm your friend" is unintelligible (verify)
 [FDC] fails on several basic utilities
 Not extensively tested
 ]]></notes>
