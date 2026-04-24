@@ -27,8 +27,8 @@ public:
 	sensorboard_device &get() { return *m_board; }
 
 	// external read/write handlers
-	int magnet_r() { return (started() && m_piece_hand) ? 1 : 0; }
 	void magnet_w(int state);
+	int magnet_r();
 	void motor_w(offs_t offset, u8 data);
 	u8 quad_r(offs_t offset) { return m_motor_quad[offset & 1]; }
 
@@ -62,7 +62,7 @@ private:
 
 	u16 m_width;          // motor range
 	u16 m_height;         // "
-	u16 m_square;         // number of quarter rotations per square
+	u16 m_square;         // number of quarter rotation steps per square
 	u16 m_x_offset;       // unscaled offset relative to the bottom-left corner
 	u16 m_y_offset;       // "
 	attotime m_speed;     // time per square at full speed
@@ -76,6 +76,7 @@ private:
 	void get_scaled_pos(double *x, double *y);
 	void output_magnet_pos();
 	void realign_magnet_pos();
+	int check_board(bool magnet, bool sensor);
 
 	TIMER_CALLBACK_MEMBER(motor_count);
 };

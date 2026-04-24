@@ -6,8 +6,28 @@
 Milton Bradley (Electronic) Grand Master (stylized as Grand·Master) (model 4243)
 aka Phantom Chess Computer in the UK, and Milton in the rest of Europe
 
-TODO:
-- WIP
+It's a Chess computer with plotter style motor + magnet hidden underneath it. When
+it's the computer's turn, it will automatically do the move. Programmed by Intelligent
+Software, the chess engine is weaker than the one in SciSys Mark V. The hardware design
+and technology was sold to Fidelity a couple of years later (fphantom in MAME).
+
+At boot-up, the computer will do a self-test. Although the user can start playing
+immediately, it may be a big distracting. So, just fast forward MAME for a while
+(hold INS key on Windows) before starting a new game.
+
+After the user captures a piece, select the captured piece from the MAME sensorboard
+spawn block and place it anywhere on a free spot at the designated box at the edge
+of the chessboard.
+
+Hardware notes:
+- PCB label: ASSY 1274243001 PN 7924243001
+- SY6502A @ 1.79MHz (3.58MHz resonator)
+- 16KB ROM (2*2364), 2KB RAM (4*MM2114N-25)
+- 2 DC motors under chessboard, electromagnet for automatically moving chess pieces
+- piezo speaker, 16 LEDs, 12*8 chessboard buttons
+
+There's also a newer revision with mask ROM labels C19679 7830043002 and C19680
+7830043001, ROM contents is confirmed to be the same.
 
 *******************************************************************************/
 
@@ -24,7 +44,7 @@ TODO:
 #include "speaker.h"
 
 // internal artwork
-//#include "grandmaster.lh"
+#include "grandmaster.lh"
 
 
 namespace {
@@ -106,7 +126,7 @@ u8 grandmas_state::irq_clear_r(offs_t offset)
 u8 grandmas_state::status_r()
 {
 	// d0: magnet sensor
-	u8 data = m_board->magnet_r();
+	u8 data = m_board->magnet_r() ^ 1;
 
 	// d1,d3,d5: IRQ F/F Q
 	for (int i = 0; i < 3; i++)
@@ -138,22 +158,27 @@ void grandmas_state::control_w(u8 data)
 void grandmas_state::leds_w(u8 data)
 {
 	// d0-d3: 74145 A-D
-	// 74145 1-8: led data
-	// 74145 0-8: input mux
+	// 74145 0-8: input mux, led data
 	m_inp_mux = data & 0xf;
 
 	// d4,d5: led select
-	m_display->matrix(data >> 4 & 3, (1 << m_inp_mux) >> 1);
+	m_display->matrix(data >> 4 & 3, 1 << m_inp_mux);
 }
 
 u8 grandmas_state::input_r(offs_t offset)
 {
 	u16 data = 0;
 
-	if (m_inp_mux == 8)
+	// read chessboard
+	if (m_inp_mux < 8)
+		data = m_board->read_rank(m_inp_mux);
+
+	// read buttons
+	else if (m_inp_mux == 8)
 		data = m_inputs->read();
 
-	return ~data >> (offset * 6) | 0xc0;
+	data = bitswap<4>(data,10,11,8,9) << 8 | (data & 0xff);
+	return ~data >> ((offset ^ 1) * 6) | 0xc0;
 }
 
 
@@ -186,18 +211,18 @@ void grandmas_state::main_map(address_map &map)
 
 static INPUT_PORTS_START( grandmas )
 	PORT_START("IN.0")
-	PORT_BIT(0x001, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_1) // auto/problem
-	PORT_BIT(0x002, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_2)
-	PORT_BIT(0x004, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_3)
-	PORT_BIT(0x008, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_4)
-	PORT_BIT(0x010, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_5)
-	PORT_BIT(0x020, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_6)
-	PORT_BIT(0x040, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_7)
-	PORT_BIT(0x080, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_8)
-	PORT_BIT(0x100, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_Q)
-	PORT_BIT(0x200, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_W)
-	PORT_BIT(0x400, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_E)
-	PORT_BIT(0x800, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_R)
+	PORT_BIT(0x001, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_L) PORT_NAME("Level / Stop")
+	PORT_BIT(0x002, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_H) PORT_NAME("Hint / New")
+	PORT_BIT(0x004, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_C) PORT_NAME("Change / Replay")
+	PORT_BIT(0x008, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_F) PORT_NAME("Forward / Back")
+	PORT_BIT(0x010, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_V) PORT_NAME("Verify / Setup")
+	PORT_BIT(0x020, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_G) PORT_NAME("Game / Manual")
+	PORT_BIT(0x040, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_A) PORT_NAME("Auto / Problem")
+	PORT_BIT(0x080, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_O) PORT_NAME("Sound / Legal")
+	PORT_BIT(0x100, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_BIT(0x200, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_BIT(0x400, IP_ACTIVE_HIGH, IPT_UNUSED)
+	PORT_BIT(0x800, IP_ACTIVE_HIGH, IPT_KEYPAD) PORT_CODE(KEYCODE_S) PORT_NAME("Shift")
 INPUT_PORTS_END
 
 
@@ -229,9 +254,8 @@ void grandmas_state::grandmas(machine_config &config)
 	m_board->quad_cb<1>().set(m_irq_ff[2], FUNC(ttl7474_device::clock_w)).bit(1);
 
 	// video hardware
-	PWM_DISPLAY(config, m_display).set_size(2, 8);
-
-	//config.set_default_layout(layout_grandmaster);
+	PWM_DISPLAY(config, m_display).set_size(2, 9);
+	config.set_default_layout(layout_grandmaster);
 
 	// sound hardware
 	SPEAKER(config, "speaker").front_center();
@@ -246,8 +270,8 @@ void grandmas_state::grandmas(machine_config &config)
 
 ROM_START( grandmas )
 	ROM_REGION( 0x4000, "maincpu", 0 )
-	ROM_LOAD("c19679_7830043002.u3", 0x0000, 0x2000, CRC(c7a91b34) SHA1(43f9caf8a13ae1a3274851fbcc411bc50c21fe1d) )
-	ROM_LOAD("c19680_7830043001.u2", 0x2000, 0x2000, CRC(b47dda81) SHA1(02c946fa47db1c7edfb59e11ad3c802b92f4d3a1) )
+	ROM_LOAD("c19660_7834243004_reva.u3", 0x0000, 0x2000, CRC(c7a91b34) SHA1(43f9caf8a13ae1a3274851fbcc411bc50c21fe1d) )
+	ROM_LOAD("c19661_7834243003_reva.u2", 0x2000, 0x2000, CRC(b47dda81) SHA1(02c946fa47db1c7edfb59e11ad3c802b92f4d3a1) )
 ROM_END
 
 } // anonymous namespace
@@ -259,4 +283,4 @@ ROM_END
 *******************************************************************************/
 
 //    YEAR  NAME      PARENT  COMPAT  MACHINE   INPUT     CLASS           INIT        COMPANY, FULLNAME, FLAGS
-SYST( 1983, grandmas, 0,      0,      grandmas, grandmas, grandmas_state, empty_init, "Milton Bradley", "Grand Master", MACHINE_SUPPORTS_SAVE | MACHINE_NOT_WORKING )
+SYST( 1983, grandmas, 0,      0,      grandmas, grandmas, grandmas_state, empty_init, "Milton Bradley", "Grand Master (Milton Bradley)", MACHINE_SUPPORTS_SAVE | MACHINE_MECHANICAL | MACHINE_IMPERFECT_CONTROLS )

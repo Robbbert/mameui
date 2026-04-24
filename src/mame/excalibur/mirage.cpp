@@ -31,6 +31,13 @@ TODO:
 - it does a cold boot at every reset, so nvram won't work properly unless MAME
   adds some kind of auxillary autosave state feature at power-off
 
+BTANB:
+- Motors gradually drift, causing it to place/pick up pieces off-center. It
+  recalibrates itself once in a while but it's not enough. MAME's sensorboard
+  device can't deal with it, so there's a workaround (see gmboard_device
+  realign_magnet_pos). Ron Nelson anecdotally blamed it on the hardware engineer,
+  but it's mainly a software bug.
+
 *******************************************************************************/
 
 #include "emu.h"

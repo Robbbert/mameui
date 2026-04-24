@@ -15,28 +15,28 @@ Used in:
 
 Hardware notes:
 - electronic chessboard, with room on each side for captured pieces
-- X/Y plotter motors, electromagnet (optionally including a hall affect sensor)
+- X/Y plotter motors, electromagnet (optionally including a hall effect sensor)
 
 Concept/design by Milton Bradley, for use in the Grand Master. Fidelity licensed
 or bought the design, and applied it nearly unchanged to Fidelity Phantom. Years
-later, the ex chief engineer of by then defunct Fidelity used the same technology
+later, the ex chief engineer of Fidelity (by then defunct) used the same technology
 while working for Excalibur.
 
 TODO:
 - optionally change output finders to callbacks, currently not needed
 - sensorboard undo buffer goes out of control, probably not worth solving this issue
 
-BTANB:
-- Motors gradually drift in Mirage, causing it to place/pick up pieces off-center.
-  It recalibrates itself once in a while but it's not enough. MAME's sensorboard
-  device can't deal with it, so there's a workaround (see realign_magnet_pos).
-  The programmer anecdotally blamed it on the hardware engineer, but it's mainly
-  a software bug.
-
 */
 
 #include "emu.h"
 #include "gmboard.h"
+
+#define LOG_MAGNET (1 << 1U)
+#define LOG_DRIFT  (2 << 1U)
+
+//#define VERBOSE (LOG_DRIFT)
+//#define LOG_OUTPUT_FUNC osd_printf_info
+#include "logmacro.h"
 
 
 DEFINE_DEVICE_TYPE(MB_GMBOARD, gmboard_device, "mb_gmboard", "Milton Bradley Grand Master chessboard")
@@ -99,8 +99,6 @@ void gmboard_device::device_start()
 void gmboard_device::device_reset()
 {
 	memset(m_motor_drift, 0, sizeof(m_motor_drift));
-	m_magnet = 0;
-
 	output_magnet_pos();
 }
 
@@ -171,30 +169,138 @@ void gmboard_device::output_magnet_pos()
 
 void gmboard_device::realign_magnet_pos()
 {
-	// compensate for gradual drift, see BTANB
-	for (int i = 0; i < 2; )
+	// compensate for possible gradual drift, eg. emirage
+	for (int m = 0; m < 2; )
 	{
 		double pos[2];
 		get_scaled_pos(&pos[0], &pos[1]);
 
-		const double limit = 1.0 / (m_square / 16.0);
+		const double limit = 4.0 / (m_square / 4.0);
+		const int step = std::max(m_square / (4 * 8), 1);
 		int inc = 0;
 
-		if ((round(pos[i]) - pos[i]) > limit && m_motor_pos[i] < m_motor_max[i] - 4)
+		if ((round(pos[m]) - pos[m]) > limit && m_motor_pos[m] < m_motor_max[m] - step)
 			inc = 1;
-		else if ((round(pos[i]) - pos[i]) < -limit && m_motor_pos[i] > 4)
+		else if ((round(pos[m]) - pos[m]) < -limit && m_motor_pos[m] > step)
 			inc = -1;
 		else
-			i++;
+			m++;
 
 		if (inc != 0)
 		{
-			m_motor_pos[i] += inc * 4;
-			m_motor_drift[i] -= inc;
+			int prev = m_motor_pos[m];
+			m_motor_pos[m] += inc * step;
+			m_motor_drift[m] -= inc;
 
-			logerror("motor %c drift error (%d total)\n", 'X' + i, m_motor_drift[i]);
+			LOGMASKED(LOG_DRIFT, "motor %c drift error (%4d->%4d, %d total)\n", 'X' + m, prev, m_motor_pos[m], m_motor_drift[m]);
 		}
 	}
+}
+
+int gmboard_device::check_board(bool magnet, bool sensor)
+{
+	int piece_hand = m_piece_hand;
+
+	double dx, dy;
+	get_scaled_pos(&dx, &dy);
+
+	int mx = dx + 0.5;
+	int my = dy + 0.5;
+
+	// assume that sensor is 1 step above magnet
+	if (sensor && my > 0)
+		my--;
+
+	int gx = mx, gy = my;
+
+	// convert motors position into board coordinates
+	int x = mx / 4 - 2;
+	int y = m_board->height() - 1 - (my / 4);
+
+	if (x < 0)
+		x += m_board->width();
+
+	x = std::clamp(x, 0, m_board->width() - 1);
+	y = std::clamp(y, 0, m_board->height() - 1);
+
+	const bool valid_pos = (mx & 3) == 2 && (my & 3) == 2;
+
+	if (magnet || sensor)
+	{
+		if (valid_pos)
+		{
+			// pick up piece, unless it was picked up by the user
+			const int pos = (y << 4 & 0xf0) | (x & 0x0f);
+			if (pos != m_board->get_handpos())
+			{
+				piece_hand = m_board->read_piece(x, y);
+
+				if (piece_hand && !sensor)
+				{
+					m_board->write_piece(x, y, 0);
+					m_board->refresh();
+				}
+			}
+		}
+
+		if (!piece_hand)
+		{
+			int count = 0;
+
+			// check surrounding area for piece
+			for (int sy = my - 1; sy <= my + 1; sy++)
+				for (int sx = mx - 1; sx <= mx + 1; sx++)
+					if (sy >= 0 && sx >= 0 && m_pieces_map[sy][sx] != 0)
+					{
+						gx = sx; gy = sy;
+						piece_hand = m_pieces_map[sy][sx];
+						if (!sensor)
+							m_pieces_map[sy][sx] = 0;
+						count++;
+					}
+
+			// more than one piece found (shouldn't happen)
+			if (count > 1)
+				popmessage("Internal collision!");
+		}
+
+		if (sensor)
+			return piece_hand;
+	}
+
+	if (piece_hand)
+	{
+		LOGMASKED(LOG_MAGNET, "%s piece %2d @ %2d,%2d (%2d,%2d)\n", magnet ? "grab" : "drop", piece_hand, x, y, gx, gy);
+
+		// drop piece
+		if (!magnet)
+		{
+			if (valid_pos)
+			{
+				// collision with piece on board (user interference)
+				if (m_board->read_piece(x, y) != 0)
+					popmessage("Collision at %c%d!", x + 'A', y + 1);
+				else
+				{
+					m_board->write_piece(x, y, piece_hand);
+					m_board->refresh();
+				}
+			}
+			else
+			{
+				// collision with internal pieces map (shouldn't happen)
+				if (m_pieces_map[my][mx] != 0)
+					popmessage("Internal collision!");
+				else
+					m_pieces_map[my][mx] = piece_hand;
+			}
+
+			piece_hand = 0;
+		}
+	}
+
+	m_piece_hand = piece_hand;
+	return piece_hand;
 }
 
 void gmboard_device::magnet_w(int state)
@@ -205,74 +311,19 @@ void gmboard_device::magnet_w(int state)
 		return;
 	m_magnet = state;
 
-	if (m_piece_hand != 0)
+	if (m_piece_hand)
 		realign_magnet_pos();
 	output_magnet_pos();
 
-	double dx, dy;
-	get_scaled_pos(&dx, &dy);
+	check_board(state, false);
+}
 
-	int mx = dx + 0.5;
-	int my = dy + 0.5;
+int gmboard_device::magnet_r()
+{
+	if (m_piece_hand)
+		return 1;
 
-	// convert motors position into board coordinates
-	int x = mx / 4 - 2;
-	int y = 7 - (my / 4);
-
-	if (x < 0)
-		x += 12;
-
-	const bool valid_pos = (mx & 3) == 2 && (my & 3) == 2;
-
-	// sensorboard handling is almost the same as fidelity/phantom.cpp
-	if (state)
-	{
-		if (valid_pos)
-		{
-			// pick up piece, unless it was picked up by the user
-			const int pos = (y << 4 & 0xf0) | (x & 0x0f);
-			if (pos != m_board->get_handpos())
-			{
-				m_piece_hand = m_board->read_piece(x, y);
-
-				if (m_piece_hand != 0)
-				{
-					m_board->write_piece(x, y, 0);
-					m_board->refresh();
-				}
-			}
-		}
-		else
-		{
-			// pick up piece from internal pieces map
-			m_piece_hand = m_pieces_map[my][mx];
-			m_pieces_map[my][mx] = 0;
-		}
-	}
-	else if (m_piece_hand != 0)
-	{
-		if (valid_pos)
-		{
-			// collision with piece on board (user interference)
-			if (m_board->read_piece(x, y) != 0)
-				popmessage("Collision at %c%d!", x + 'A', y + 1);
-			else
-			{
-				m_board->write_piece(x, y, m_piece_hand);
-				m_board->refresh();
-			}
-		}
-		else
-		{
-			// collision with internal pieces map (shouldn't happen)
-			if (m_pieces_map[my][mx] != 0)
-				popmessage("Internal collision!");
-			else
-				m_pieces_map[my][mx] = m_piece_hand;
-		}
-
-		m_piece_hand = 0;
-	}
+	return check_board(m_magnet, true) ? 1 : 0;
 }
 
 TIMER_CALLBACK_MEMBER(gmboard_device::motor_count)
@@ -280,7 +331,7 @@ TIMER_CALLBACK_MEMBER(gmboard_device::motor_count)
 	const int m = param ? 1 : 0;
 	assert(m_motor_dir[m] & 3);
 
-	// 1 quarter rotation per period
+	// 1 quarter rotation step per period
 	int inc = 0;
 	if (m_motor_dir[m] & 2)
 	{
@@ -298,6 +349,12 @@ TIMER_CALLBACK_MEMBER(gmboard_device::motor_count)
 	m_motor_pos[m] += inc;
 	m_motor_timer[m]->adjust(m_motor_period, m);
 
+	if (m_motor_pos[m] == 0 || m_motor_pos[m] == m_motor_max[m])
+	{
+		m_motor_drift[m] = 0;
+		LOGMASKED(LOG_DRIFT, "motor %c calibrated\n", 'X' + m);
+	}
+
 	output_magnet_pos();
 
 	// update quadrature encoder
@@ -313,7 +370,7 @@ void gmboard_device::motor_w(offs_t offset, u8 data)
 	data &= 3;
 
 	for (int i = 0; i < 2; i++)
-		m_out_motor[offset * 2 + i] = BIT(data, i);
+		m_out_motor[m * 2 + i] = BIT(data, i);
 
 	// it's not moving when both directions are set
 	if (data == 3)
@@ -336,7 +393,7 @@ void gmboard_device::motor_w(offs_t offset, u8 data)
 	m_motor_dir[m] = data;
 
 	// (re)start the timer
-	if (data & 3)
+	if (data)
 		m_motor_timer[m]->adjust(m_motor_remain[m], m);
 }
 

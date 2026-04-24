@@ -110,7 +110,7 @@ RAM             RW      0e0000-0effff*        <               <
   bootleg version of rodlandj has one instruction patched out to do exactly
   the same thing that we are doing (ignoring the 6295 status).
 
-- Understand properly how irqs truly works, kazan / iganinju solution seems hacky
+- Understand properly how IRQs truly works, kazan / iganinju solution seems hacky
 
 - P47 intro effect is imperfect ( https://www.youtube.com/watch?v=eozZGcVspVw )
 
@@ -210,20 +210,20 @@ TIMER_DEVICE_CALLBACK_MEMBER(megasys1_state::megasys_base_scanline)
 {
 	int scanline = param;
 
-	// stdragon: irq 1 is raster irq ("press start" behaviour), happens at around scanline 90(-16), 2 vblank, 3 is RTE.
-	// p47: irq 2 valid, others RTE
-	// kickoff: irq 3 valid, others RTE
-	// tshingen: irq 3 RTE, irq 1 reads inputs, irq 2 sets vregs values (pending further investigation ...)
-	// kazan: irq 3 disables irq in SW then execute a routine, irq 2 just execute this routine, irq 1 RTR
-	// astyanax: irq 3 RTE, irq 1 sets "ffff0210" OR 2, irq 2 vblank
-	// hachoo: irq 2 vblank, irq 3 & 1 sets 0xf004e buffer with the level number
-	// jitsupro: irq 3 RTE, irq 2 sets palette and vregs, irq 1 reads inputs
-	// plusalph: irq 1 & 3 RTE, irq 2 valid
-	// rodland: irq 1 & 3 RTE, irq 2 valid (sets palette, vregs ...)
-	// soldam: irq 1 & 3 RTE, irq 2 valid
-	// edfp: irq 1?, 2 sets vregs etc, 3 RTE
+	// stdragon: IRQ 1 is raster IRQ ("press start" behaviour), happens at around scanline 90(-16), 2 vblank, 3 is RTE.
+	// p47: IRQ 2 valid, others RTE
+	// kickoff: IRQ 3 valid, others RTE
+	// tshingen: IRQ 3 RTE, IRQ 1 reads inputs, IRQ 2 sets vregs values (pending further investigation ...)
+	// kazan: IRQ 3 disables IRQ in SW then execute a routine, IRQ 2 just execute this routine, IRQ 1 RTR
+	// astyanax: IRQ 3 RTE, IRQ 1 sets "ffff0210" OR 2, IRQ 2 vblank
+	// hachoo: IRQ 2 vblank, IRQ 3 & 1 sets 0xf004e buffer with the level number
+	// jitsupro: IRQ 3 RTE, IRQ 2 sets palette and vregs, IRQ 1 reads inputs
+	// plusalph: IRQ 1 & 3 RTE, IRQ 2 valid
+	// rodland: IRQ 1 & 3 RTE, IRQ 2 valid (sets palette, vregs ...)
+	// soldam: IRQ 1 & 3 RTE, IRQ 2 valid
+	// edfp: IRQ 1?, 2 sets vregs etc, 3 RTE
 
-	if(scanline == 224+16) // vblank-out irq
+	if(scanline == 224+16) // vblank-out IRQ
 		m_maincpu->set_input_line(2, HOLD_LINE);
 
 	if(scanline == 80+16)
@@ -246,7 +246,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(megasys1_typea_state::megasys1A_iganinju_scanline)
 	if(m_ram[0] == 0)
 		return;
 
-	if(scanline == 240) // vblank-out irq
+	if(scanline == 240) // vblank-out IRQ
 		m_maincpu->set_input_line(2, HOLD_LINE);
 }
 
