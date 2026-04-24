@@ -22,8 +22,8 @@ class namco_c148_device : public device_t
 public:
 	// construction/destruction
 	template <typename T>
-	namco_c148_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock, T &&hostcpu, bool is_master)
-		: namco_c148_device(mconfig, tag, owner, clock)
+	namco_c148_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock, T &&hostcpu, bool is_master) :
+		namco_c148_device(mconfig, tag, owner, clock)
 	{
 		set_hostcpu(std::forward<T>(hostcpu), is_master);
 	}
@@ -84,7 +84,6 @@ public:
 	uint8_t get_posirq_line();
 
 protected:
-	void cpu_irq_trigger();
 	// device-level overrides
 	virtual void device_validity_check(validity_checker &valid) const override;
 	virtual void device_start() override ATTR_COLD;
@@ -108,7 +107,9 @@ private:
 
 	uint8_t m_posirq_line;
 	uint8_t m_bus_reg;
+
 	void flush_irq_acks();
+	void cpu_irq_trigger();
 };
 
 
