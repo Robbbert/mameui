@@ -38,10 +38,8 @@ TODO:
 - polygon glitches/flicker
 - car engine sound is wrong
 - is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
-- winrungp: bitmap layer draws black rectangles on the congratulations screen after race win
-  (can easily test it with infinite time cheat)
-- winrungp: it doesn't show the text for the triangle curve in attract mode (it shows up on pcb
-  video, same ROM revision)
+- winrungp: some missing bitmap layer gfx due to underdumps of program roms (see attract mode when
+  it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)
 
 reference videos:
 - https://youtu.be/ZNNveBLWevg
@@ -635,7 +633,7 @@ static INPUT_PORTS_START( winrun )
 	PORT_BIT( 0x0f, IP_ACTIVE_LOW, IPT_UNUSED )
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_COIN2 )
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_COIN1 )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SERVICE ) PORT_NAME("Service Button") PORT_CODE(KEYCODE_0) PORT_TOGGLE // alt test mode switch
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SERVICE2 ) PORT_NAME("Service Button") PORT_TOGGLE // alt test mode switch
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_SERVICE1 )
 
 	PORT_START("AN0")      /* 63B05Z0 - 8 CHANNEL ANALOG - CHANNEL 0 */
@@ -953,10 +951,10 @@ ROM_START( winrungp )
 	ROM_LOAD( "sys2c65c.bin", 0x000000, 0x008000, CRC(a5b2a4ff) SHA1(068bdfcc71a5e83706e8b23330691973c1c214dc) )
 
 	ROM_REGION( 0x80000, "gpu", 0 ) /* 68k code */
-	ROM_LOAD16_BYTE( "sg1-gp0-u.1j", 0x00000, 0x20000, CRC(475da78a) SHA1(6e69bcc6caf2e3cd28fed75796c8992e754f9323) )
-	ROM_LOAD16_BYTE( "sg1-gp0-l.3j", 0x00001, 0x20000, CRC(580479bf) SHA1(ba682190cba0d3cdc49aa4937c898ba7ed2a25f5) )
-	ROM_LOAD16_BYTE( "sg1-gp1-u.1l", 0x40000, 0x20000, CRC(f5f2e927) SHA1(ebf709f16f01f1a634de9121454537cda74e891b) )
-	ROM_LOAD16_BYTE( "sg1-gp1-l.3l", 0x40001, 0x20000, CRC(17ed90a5) SHA1(386bdcb11dcbe400f5be1fe4a7418158b46e50ef) )
+	ROM_LOAD16_BYTE( "sg1-gp0-u.1j", 0x00000, 0x20000, BAD_DUMP CRC(475da78a) SHA1(6e69bcc6caf2e3cd28fed75796c8992e754f9323) )
+	ROM_LOAD16_BYTE( "sg1-gp0-l.3j", 0x00001, 0x20000, BAD_DUMP CRC(580479bf) SHA1(ba682190cba0d3cdc49aa4937c898ba7ed2a25f5) )
+	ROM_LOAD16_BYTE( "sg1-gp1-u.1l", 0x40000, 0x20000, BAD_DUMP CRC(f5f2e927) SHA1(ebf709f16f01f1a634de9121454537cda74e891b) )
+	ROM_LOAD16_BYTE( "sg1-gp1-l.3l", 0x40001, 0x20000, BAD_DUMP CRC(17ed90a5) SHA1(386bdcb11dcbe400f5be1fe4a7418158b46e50ef) )
 
 	ROM_REGION16_BE( 0x80000, "data", 0 )
 	ROM_LOAD16_BYTE( "sg1-data0-u.3a", 0x00000, 0x20000, CRC(1dde2ac2) SHA1(2d20a434561c04e48b52a2137a8c9047e17c1013) )
