@@ -559,7 +559,7 @@ void namcos21_c67_state::sound_map(address_map &map)
 	map(0x8000, 0x9fff).ram();
 	map(0xa000, 0xbfff).nopw(); // amplifier enable on 1st write
 	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
-	map(0xc000, 0xc001).w(FUNC(namcos21_c67_state::sound_bankselect_w));
+	map(0xc001, 0xc001).w(FUNC(namcos21_c67_state::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); // watchdog
 	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
 }
