@@ -63,14 +63,17 @@ void namcos21_3d_device::swap_and_clear_poly_framebuffer()
 	m_mpPolyFrameBufferPens.swap(m_mpPolyFrameBufferPens2);
 
 	/* wipe work zbuffer */
-	for (int i = 0; i < m_poly_frame_width*m_poly_frame_height; i++)
+	for (int i = 0; i < m_poly_frame_width * m_poly_frame_height; i++)
 	{
 		m_mpPolyFrameBufferZ[i] = 0x7fff;
 	}
 }
 
-void namcos21_3d_device::copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &clip, int zlo, int zhi)
+void namcos21_3d_device::copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &cliprect, int zlo, int zhi)
 {
+	rectangle clip = { 0, m_poly_frame_width - 1, 0, m_poly_frame_height - 1 };
+	clip &= cliprect;
+
 	/* blit the visible framebuffer */
 	for (int sy = clip.top(); sy <= clip.bottom(); sy++)
 	{

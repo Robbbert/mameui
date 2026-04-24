@@ -22,7 +22,7 @@ public:
 		m_framebuffer_size_in_bytes = sizeof(uint16_t)*m_poly_frame_width*m_poly_frame_height;
 	}
 
-	void copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &clip, int zlo, int zhi);
+	void copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &cliprect, int zlo, int zhi);
 	void swap_and_clear_poly_framebuffer();
 
 	void draw_direct_quad(const uint16_t *source, uint16_t color);
