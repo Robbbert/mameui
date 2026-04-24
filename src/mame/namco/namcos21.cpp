@@ -301,17 +301,19 @@ public:
 		m_maincpu(*this, "maincpu"),
 		m_audiocpu(*this, "audiocpu"),
 		m_slave(*this, "slave"),
+		m_gpu(*this, "gpu"),
 		m_c65(*this, "c65mcu"),
 		m_sci(*this, "sci"),
 		m_master_intc(*this, "master_intc"),
 		m_slave_intc(*this, "slave_intc"),
+		m_gpu_intc(*this, "gpu_intc"),
+		m_nvram(*this, "nvram", 0x2000, ENDIANNESS_BIG),
 		m_c140(*this, "c140"),
 		m_palette(*this, "palette"),
 		m_screen(*this, "screen"),
 		m_audiobank(*this, "audiobank"),
 		m_c140_region(*this, "c140"),
 		m_dpram(*this, "dpram"),
-		m_gpu_intc(*this, "gpu_intc"),
 		m_namcos21_3d(*this, "namcos21_3d"),
 		m_namcos21_dsp(*this, "namcos21dsp")
 	{ }
@@ -327,17 +329,19 @@ private:
 	required_device<cpu_device> m_maincpu;
 	required_device<cpu_device> m_audiocpu;
 	required_device<cpu_device> m_slave;
+	required_device<cpu_device> m_gpu;
 	required_device<namcoc65_device> m_c65;
 	required_device<namco_c139_device> m_sci;
 	required_device<namco_c148_device> m_master_intc;
 	required_device<namco_c148_device> m_slave_intc;
+	required_device<namco_c148_device> m_gpu_intc;
+	memory_share_creator<uint8_t> m_nvram;
 	required_device<c140_device> m_c140;
 	required_device<palette_device> m_palette;
 	required_device<screen_device> m_screen;
 	required_memory_bank m_audiobank;
 	required_region_ptr<u16> m_c140_region;
 	required_shared_ptr<uint8_t> m_dpram;
-	required_device<namco_c148_device> m_gpu_intc;
 	required_device<namcos21_3d_device> m_namcos21_3d;
 	required_device<namcos21_dsp_device> m_namcos21_dsp;
 
@@ -359,16 +363,14 @@ private:
 	void gpu_videoram_w(offs_t offset, uint16_t data, uint16_t mem_mask = ~0);
 	uint16_t gpu_videoram_r(offs_t offset);
 
-	void eeprom_w(offs_t offset, uint8_t data);
-	uint8_t eeprom_r(offs_t offset);
+	void nvram_w(offs_t offset, uint8_t data) { m_nvram[offset] = data; }
+	uint8_t nvram_r(offs_t offset) { return m_nvram[offset]; }
 
 	void sound_bankselect_w(uint8_t data);
 
 	void sound_reset_w(uint8_t data);
 	void system_reset_w(uint8_t data);
 	void reset_all_subcpus(int state);
-
-	std::unique_ptr<uint8_t[]> m_eeprom;
 
 	TIMER_DEVICE_CALLBACK_MEMBER(screen_scanline);
 
@@ -537,7 +539,7 @@ void namcos21_state::master_map(address_map &map)
 {
 	map(0x000000, 0x03ffff).rom();
 	map(0x100000, 0x10ffff).ram(); // work RAM
-	map(0x180000, 0x183fff).rw(FUNC(namcos21_state::eeprom_r), FUNC(namcos21_state::eeprom_w)).umask16(0x00ff);
+	map(0x180000, 0x183fff).rw(FUNC(namcos21_state::nvram_r), FUNC(namcos21_state::nvram_w)).umask16(0x00ff);
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
 
 	// DSP Related
@@ -735,16 +737,6 @@ void namcos21_state::reset_all_subcpus(int state)
 	m_c65->ext_reset(state);
 }
 
-void namcos21_state::eeprom_w(offs_t offset, uint8_t data)
-{
-	m_eeprom[offset] = data;
-}
-
-uint8_t namcos21_state::eeprom_r(offs_t offset)
-{
-	return m_eeprom[offset];
-}
-
 void namcos21_state::machine_reset()
 {
 	// Initialise the bank select in the sound CPU
@@ -760,9 +752,6 @@ void namcos21_state::machine_reset()
 
 void namcos21_state::machine_start()
 {
-	m_eeprom = std::make_unique<uint8_t[]>(0x2000);
-	subdevice<nvram_device>("nvram")->set_base(m_eeprom.get(), 0x2000);
-
 	uint32_t max = memregion("audiocpu")->bytes() / 0x4000;
 	for (int i = 0; i < 0x10; i++)
 		m_audiobank->configure_entry(i, memregion("audiocpu")->base() + (i % max) * 0x4000);
@@ -824,8 +813,8 @@ void namcos21_state::winrun(machine_config &config)
 	NAMCOS21_DSP(config, m_namcos21_dsp, 0);
 	m_namcos21_dsp->set_renderer_tag("namcos21_3d");
 
-	m68000_device &gpu(M68000(config, "gpu", 49.152_MHz_XTAL / 4)); // graphics coprocessor
-	gpu.set_addrmap(AS_PROGRAM, &namcos21_state::gpu_map);
+	M68000(config, m_gpu, 49.152_MHz_XTAL / 4); // graphics coprocessor
+	m_gpu->set_addrmap(AS_PROGRAM, &namcos21_state::gpu_map);
 
 	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
 	m_master_intc->link_c148_device(m_slave_intc);
@@ -835,7 +824,7 @@ void namcos21_state::winrun(machine_config &config)
 	NAMCO_C148(config, m_slave_intc, 0, m_slave, false);
 	m_slave_intc->link_c148_device(m_master_intc);
 
-	NAMCO_C148(config, m_gpu_intc, 0, "gpu", false);
+	NAMCO_C148(config, m_gpu_intc, 0, m_gpu, false);
 	NAMCO_C139(config, m_sci, 0);
 
 	config.set_maximum_quantum(attotime::from_hz(6000)); // 100 CPU slices per frame

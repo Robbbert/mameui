@@ -307,6 +307,7 @@ public:
 		m_sci(*this, "sci"),
 		m_master_intc(*this, "master_intc"),
 		m_slave_intc(*this, "slave_intc"),
+		m_nvram(*this, "nvram", 0x2000, ENDIANNESS_BIG),
 		m_c140(*this, "c140"),
 		m_c355spr(*this, "c355spr"),
 		m_palette(*this, "palette"),
@@ -338,6 +339,7 @@ private:
 	required_device<namco_c139_device> m_sci;
 	required_device<namco_c148_device> m_master_intc;
 	required_device<namco_c148_device> m_slave_intc;
+	memory_share_creator<u8> m_nvram;
 	required_device<c140_device> m_c140;
 	required_device<namco_c355spr_device> m_c355spr;
 	required_device<palette_device> m_palette;
@@ -359,16 +361,14 @@ private:
 	u8 dpram_byte_r(offs_t offset);
 	void dpram_byte_w(offs_t offset, u8 data);
 
-	void eeprom_w(offs_t offset, u8 data);
-	u8 eeprom_r(offs_t offset);
+	void nvram_w(offs_t offset, u8 data) { m_nvram[offset] = data; }
+	u8 nvram_r(offs_t offset) { return m_nvram[offset]; }
 
 	void sound_bankselect_w(u8 data);
 
 	void sound_reset_w(u8 data);
 	void system_reset_w(u8 data);
 	void reset_all_subcpus(int state);
-
-	std::unique_ptr<u8[]> m_eeprom;
 
 	TIMER_DEVICE_CALLBACK_MEMBER(screen_scanline);
 
@@ -530,7 +530,7 @@ void namcos21_c67_state::master_map(address_map &map)
 	common_map(map);
 	map(0x000000, 0x0fffff).rom();
 	map(0x100000, 0x10ffff).ram(); // private work RAM
-	map(0x180000, 0x183fff).rw(FUNC(namcos21_c67_state::eeprom_r), FUNC(namcos21_c67_state::eeprom_w)).umask16(0x00ff);
+	map(0x180000, 0x183fff).rw(FUNC(namcos21_c67_state::nvram_r), FUNC(namcos21_c67_state::nvram_w)).umask16(0x00ff);
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
 	map(0x200000, 0x20ffff).rw(m_namcos21_dsp_c67, FUNC(namcos21_dsp_c67_device::dspram16_r), FUNC(namcos21_dsp_c67_device::dspram16_w));
 }
@@ -772,16 +772,6 @@ void namcos21_c67_state::reset_all_subcpus(int state)
 	m_namcos21_dsp_c67->reset_dsps(state);
 }
 
-void namcos21_c67_state::eeprom_w(offs_t offset, u8 data)
-{
-	m_eeprom[offset] = data;
-}
-
-u8 namcos21_c67_state::eeprom_r(offs_t offset)
-{
-	return m_eeprom[offset];
-}
-
 void namcos21_c67_state::machine_reset()
 {
 	// Initialise the bank select in the sound CPU
@@ -794,12 +784,8 @@ void namcos21_c67_state::machine_reset()
 }
 
 
-
 void namcos21_c67_state::machine_start()
 {
-	m_eeprom = std::make_unique<u8[]>(0x2000);
-	subdevice<nvram_device>("nvram")->set_base(m_eeprom.get(), 0x2000);
-
 	u32 max = memregion("audiocpu")->bytes() / 0x4000;
 	for (int i = 0; i < 0x10; i++)
 		m_audiobank->configure_entry(i, memregion("audiocpu")->base() + (i % max) * 0x4000);

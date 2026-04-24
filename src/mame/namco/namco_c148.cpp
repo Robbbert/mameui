@@ -46,6 +46,7 @@ Interrupt Controller C148          1C0000-1FFFFF  R/W  D00-D02
 #include "namco_c148.h"
 
 #define VERBOSE         0
+//#define LOG_OUTPUT_FUNC osd_printf_info
 #include "logmacro.h"
 
 
@@ -162,11 +163,11 @@ inline void namco_c148_device::flush_irq_acks()
 		m_hostcpu->set_input_line(i, CLEAR_LINE);
 }
 
-void namco_c148_device::pos_irq_level_w(uint8_t data)     { m_irqlevel.pos = data & 7;    flush_irq_acks(); if(data != 0) { LOG("%s: pos IRQ level = %02x\n",data); }   }
-void namco_c148_device::vblank_irq_level_w(uint8_t data)  { m_irqlevel.vblank = data & 7; flush_irq_acks(); LOG("%s: vblank IRQ level = %02x\n",data);  }
-void namco_c148_device::cpu_irq_level_w(uint8_t data)     { m_irqlevel.cpu = data & 7;    flush_irq_acks(); LOG("%s: cpu IRQ level = %02x\n",data); }
-void namco_c148_device::ex_irq_level_w(uint8_t data)      { m_irqlevel.ex = data & 7;     flush_irq_acks(); LOG("%s: ex IRQ level = %02x\n",data);  }
-void namco_c148_device::sci_irq_level_w(uint8_t data)     { m_irqlevel.sci = data & 7;    flush_irq_acks(); LOG("%s: sci IRQ level = %02x\n",data); }
+void namco_c148_device::pos_irq_level_w(uint8_t data)     { m_irqlevel.pos = data & 7;    flush_irq_acks(); if(data != 0) { LOG("%s: pos IRQ level = %02x\n", tag(), data); } }
+void namco_c148_device::vblank_irq_level_w(uint8_t data)  { m_irqlevel.vblank = data & 7; flush_irq_acks(); LOG("%s: vblank IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::cpu_irq_level_w(uint8_t data)     { m_irqlevel.cpu = data & 7;    flush_irq_acks(); LOG("%s: cpu IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::ex_irq_level_w(uint8_t data)      { m_irqlevel.ex = data & 7;     flush_irq_acks(); LOG("%s: ex IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::sci_irq_level_w(uint8_t data)     { m_irqlevel.sci = data & 7;    flush_irq_acks(); LOG("%s: sci IRQ level = %02x\n", tag(), data); }
 
 uint16_t namco_c148_device::vblank_irq_ack_r()    { m_hostcpu->set_input_line(m_irqlevel.vblank, CLEAR_LINE); return 0; }
 uint16_t namco_c148_device::pos_irq_ack_r()       { m_hostcpu->set_input_line(m_irqlevel.pos, CLEAR_LINE);    return 0; }
