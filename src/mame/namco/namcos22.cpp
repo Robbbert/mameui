@@ -3760,7 +3760,7 @@ void adillor_state::machine_start()
 
 void namcos22_state::namcos22(machine_config &config)
 {
-	/* basic machine hardware */
+	// basic machine hardware
 	M68020(config, m_maincpu, 49.152_MHz_XTAL/2); // MC68020RP25E
 	m_maincpu->set_addrmap(AS_PROGRAM, &namcos22_state::namcos22_am);
 	m_maincpu->set_vblank_int("screen", FUNC(namcos22_state::namcos22_interrupt));
@@ -3798,7 +3798,7 @@ void namcos22_state::namcos22(machine_config &config)
 
 	EEPROM_2864(config, "eeprom").write_time(attotime::zero);
 
-	/* video hardware */
+	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	m_screen->set_raw(PIXEL_CLOCK, HTOTAL, HBEND, HBSTART, VTOTAL, VBEND, VBSTART);
 	m_screen->set_screen_update(FUNC(namcos22_state::screen_update_namcos22));
@@ -3807,7 +3807,7 @@ void namcos22_state::namcos22(machine_config &config)
 	PALETTE(config, m_palette).set_entries(0x8000);
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_namcos22);
 
-	/* sound hardware */
+	// sound hardware
 	SPEAKER(config, "speaker", 2).front();
 
 	C352(config, m_c352, 49.152_MHz_XTAL/2, 288);
@@ -3832,7 +3832,7 @@ void namcos22s_state::namcos22s(machine_config &config)
 {
 	namcos22(config);
 
-	/* basic machine hardware */
+	// basic machine hardware
 	M68EC020(config.replace(), m_maincpu, 49.152_MHz_XTAL/2); // MC68EC020FG25
 	m_maincpu->set_addrmap(AS_PROGRAM, &namcos22s_state::namcos22s_am);
 	m_maincpu->set_vblank_int("screen", FUNC(namcos22s_state::namcos22s_interrupt));
@@ -3854,13 +3854,14 @@ void namcos22s_state::namcos22s(machine_config &config)
 
 	config.device_remove("iomcu");
 
-	MB87078(config, m_mb87078);
-	m_mb87078->gain_changed().set(FUNC(namcos22s_state::mb87078_gain_changed));
-
-	/* video hardware */
+	// video hardware
 	m_screen->set_screen_update(FUNC(namcos22s_state::screen_update_namcos22s));
 
 	GFXDECODE(config.replace(), m_gfxdecode, m_palette, gfx_super);
+
+	// sound hardware
+	MB87078(config, m_mb87078);
+	m_mb87078->gain_changed().set(FUNC(namcos22s_state::mb87078_gain_changed));
 }
 
 void namcos22s_state::airco22b(machine_config &config)

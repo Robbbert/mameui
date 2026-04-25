@@ -52,7 +52,7 @@
    * When reset, DATA is set to 0 dB (code 111111 100)
 
 
-  MB87078 pins and assigned interface variables/functions
+  MB87078 pins and assigned interface variables/functions:
 
                    /[ 1] D0        /TC [24]
                   | [ 2] D1        /WR [23]
@@ -67,10 +67,12 @@
                     [11] AIN1    AOUT2 [14]
                     [12] AOUT1    AIN2 [13]
 
+  MB87077 pin 8 is VSS, pin 17 is AGND, the rest is same as MB87078.
+
 *****************************************************************************/
 
 #include "emu.h"
-#include "mb87078.h"
+#include "mb87077.h"
 
 
 /*****************************************************************************

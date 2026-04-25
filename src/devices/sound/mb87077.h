@@ -6,8 +6,8 @@
 
 *****************************************************************************/
 
-#ifndef MAME_MACHINE_MB87078_H
-#define MAME_MACHINE_MB87078_H
+#ifndef MAME_SOUND_MB87077_H
+#define MAME_SOUND_MB87077_H
 
 #pragma once
 
@@ -48,4 +48,4 @@ private:
 
 DECLARE_DEVICE_TYPE(MB87078, mb87078_device)
 
-#endif // MAME_MACHINE_MB87078_H
+#endif // MAME_SOUND_MB87077_H
