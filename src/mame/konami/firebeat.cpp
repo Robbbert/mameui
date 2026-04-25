@@ -420,8 +420,6 @@ protected:
 
 	void firebeat(machine_config &config) ATTR_COLD;
 
-	uint32_t screen_update_firebeat_0(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
-
 	void init_firebeat() ATTR_COLD;
 
 	void firebeat_map(address_map &map) ATTR_COLD;
@@ -551,7 +549,7 @@ public:
 
 	void firebeat_ppp(machine_config &config);
 
-	void init_ppp_jp() ATR_COLD;
+	void init_ppp_jp() ATTR_COLD;
 	void init_ppp_overseas() ATTR_COLD;
 
 private:
@@ -601,8 +599,6 @@ public:
 
 private:
 	virtual void device_resolve_objects() override ATTR_COLD;
-
-	uint32_t screen_update_firebeat_1(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void firebeat_kbm_map(address_map &map) ATTR_COLD;
 
@@ -716,9 +712,6 @@ void firebeat_popn_state::device_resolve_objects()
 
 /*****************************************************************************/
 
-uint32_t firebeat_state::screen_update_firebeat_0(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect) { return m_gcu->draw(screen, bitmap, cliprect); }
-uint32_t firebeat_kbm_state::screen_update_firebeat_1(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect) { return m_gcu_sub->draw(screen, bitmap, cliprect); }
-
 void firebeat_state::machine_start()
 {
 	/* set conservative DRC options */
@@ -779,7 +772,7 @@ void firebeat_state::firebeat(machine_config &config)
 
 	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
 	screen.set_raw(25.175_MHz_XTAL, 800, 0, 640, 525, 0, 480);
-	screen.set_screen_update(FUNC(firebeat_state::screen_update_firebeat_0));
+	screen.set_screen_update(m_gcu, FUNC(k057714_device::draw));
 	screen.set_palette("palette");
 	screen.screen_vblank().set(m_gcu, FUNC(k057714_device::vblank_w));
 
@@ -1879,7 +1872,7 @@ void firebeat_kbm_state::firebeat_kbm(machine_config &config)
 
 	screen_device &lscreen(SCREEN(config, "lscreen", SCREEN_TYPE_RASTER));
 	lscreen.set_raw(25.175_MHz_XTAL, 800, 0, 640, 525, 0, 480);
-	lscreen.set_screen_update(FUNC(firebeat_kbm_state::screen_update_firebeat_0));
+	lscreen.set_screen_update(m_gcu, FUNC(k057714_device::draw));
 	lscreen.set_palette("palette");
 	lscreen.screen_vblank().set(m_gcu, FUNC(k057714_device::vblank_w));
 
@@ -1888,7 +1881,7 @@ void firebeat_kbm_state::firebeat_kbm(machine_config &config)
 
 	screen_device &rscreen(SCREEN(config, "rscreen", SCREEN_TYPE_RASTER));
 	rscreen.set_raw(25.175_MHz_XTAL, 800, 0, 640, 525, 0, 480);
-	rscreen.set_screen_update(FUNC(firebeat_kbm_state::screen_update_firebeat_1));
+	rscreen.set_screen_update(m_gcu_sub, FUNC(k057714_device::draw));
 	rscreen.set_palette("palette");
 
 	K057714(config, m_gcu_sub, 0).set_screen("rscreen");

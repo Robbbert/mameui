@@ -8,10 +8,10 @@
 #include "dirom.h"
 
  // TODO : Unknown address bits; maybe 27?
-class kaneko_rlespr_device : public device_t, public device_video_interface, public device_rom_interface<27>
+class kaneko_rle_sprites_device : public device_t, public device_video_interface, public device_rom_interface<27>
 {
 public:
-	kaneko_rlespr_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
+	kaneko_rle_sprites_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
 
 	// configurations
 	void set_sprite_kludge(int x, int y);
@@ -38,6 +38,6 @@ private:
 	int rle_decode(int romoffset, int size);
 };
 
-DECLARE_DEVICE_TYPE(KANEKO_RLESPR, kaneko_rlespr_device)
+DECLARE_DEVICE_TYPE(KANEKO_RLE_SPRITES, kaneko_rle_sprites_device)
 
 #endif // MAME_KANEKO_KANEKO_RLESPR_H

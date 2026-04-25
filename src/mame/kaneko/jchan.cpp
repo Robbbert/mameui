@@ -204,7 +204,7 @@ private:
 	required_device<cpu_device> m_maincpu;
 	required_device<cpu_device> m_subcpu;
 	required_device<palette_device> m_palette;
-	required_device_array<kaneko_rlespr_device, 2> m_spritegen;
+	required_device_array<kaneko_rle_sprites_device, 2> m_spritegen;
 	required_device<kaneko_view2_tilemap_device> m_view2;
 
 	required_shared_ptr_array<u16, 2> m_spriteram;
@@ -612,7 +612,7 @@ void jchan_state::jchan(machine_config &config)
 
 	for (auto &spritegen : m_spritegen)
 	{
-		KANEKO_RLESPR(config, spritegen, 0);
+		KANEKO_RLE_SPRITES(config, spritegen, 0);
 		spritegen->set_screen("screen");
 		spritegen->set_sprite_kludge(0, 0);
 	}

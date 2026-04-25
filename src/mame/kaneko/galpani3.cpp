@@ -106,7 +106,7 @@ private:
 	required_device<cpu_device> m_maincpu;
 	required_device_array<kaneko_grap2_device, 3> m_grap2;
 	required_device<palette_device> m_palette;
-	required_device<kaneko_rlespr_device> m_spritegen;
+	required_device<kaneko_rle_sprites_device> m_spritegen;
 
 	required_shared_ptr<u16> m_paletteram;
 	required_shared_ptr<u16> m_spriteram;
@@ -464,7 +464,7 @@ void galpani3_state::galpani3(machine_config &config)
 
 	PALETTE(config, m_palette).set_format(palette_device::xGRB_555, 0x4000);
 
-	KANEKO_RLESPR(config, m_spritegen, 0);
+	KANEKO_RLE_SPRITES(config, m_spritegen, 0);
 	m_spritegen->set_screen("screen");
 	m_spritegen->set_sprite_kludge(0, 0);
 

@@ -794,7 +794,7 @@ void skns_state::skns(machine_config &config)
 	PALETTE(config, m_palette).set_entries(32768);
 	GFXDECODE(config, m_gfxdecode, m_palette, skns_bg);
 
-	KANEKO_RLESPR(config, m_spritegen, 0);
+	KANEKO_RLE_SPRITES(config, m_spritegen, 0);
 	m_spritegen->set_screen(m_screen);
 
 	/* sound hardware */

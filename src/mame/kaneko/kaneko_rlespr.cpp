@@ -21,13 +21,15 @@
 
 #include "emu.h"
 #include "kaneko_rlespr.h"
+
 #include "screen.h"
 
-DEFINE_DEVICE_TYPE(KANEKO_RLESPR, kaneko_rlespr_device, "kaneko_rlespr", "Kaneko RLE Compressed Sprite Hardware")
+
+DEFINE_DEVICE_TYPE(KANEKO_RLE_SPRITES, kaneko_rle_sprites_device, "kaneko_rlespr", "Kaneko RLE Compressed Sprite Hardware")
 
 
-kaneko_rlespr_device::kaneko_rlespr_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock)
-	: device_t(mconfig, KANEKO_RLESPR, tag, owner, clock)
+kaneko_rle_sprites_device::kaneko_rle_sprites_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock)
+	: device_t(mconfig, KANEKO_RLE_SPRITES, tag, owner, clock)
 	, device_video_interface(mconfig, *this)
 	, device_rom_interface(mconfig, *this)
 	, m_sprite_kludge_x(0)
@@ -36,7 +38,7 @@ kaneko_rlespr_device::kaneko_rlespr_device(const machine_config &mconfig, const 
 {
 }
 
-void kaneko_rlespr_device::device_start()
+void kaneko_rle_sprites_device::device_start()
 {
 	m_decodebuffer = make_unique_clear<u8[]>(DECODE_BUFFER_SIZE);
 	for (int i = 0; i < 2; i++)
@@ -47,15 +49,15 @@ void kaneko_rlespr_device::device_start()
 
 	save_pointer(NAME(m_decodebuffer), DECODE_BUFFER_SIZE);
 	save_item(NAME(m_buffer));
-	//printf("kaneko_rlespr_device::device_start()\n");
+	//logerror("kaneko_rle_sprites_device::device_start()\n");
 }
 
-void kaneko_rlespr_device::device_reset()
+void kaneko_rle_sprites_device::device_reset()
 {
-	//printf("kaneko_rlespr_device::device_reset()\n");
+	//logerror("kaneko_rle_sprites_device::device_reset()\n");
 }
 
-int kaneko_rlespr_device::rle_decode(int romoffset, int size)
+int kaneko_rle_sprites_device::rle_decode(int romoffset, int size)
 {
 	int decodeoffset = 0;
 
@@ -84,7 +86,7 @@ int kaneko_rlespr_device::rle_decode(int romoffset, int size)
 	return romoffset & ROM_ADDRESS_MASK;
 }
 
-void kaneko_rlespr_device::set_sprite_kludge(int x, int y)
+void kaneko_rle_sprites_device::set_sprite_kludge(int x, int y)
 {
 	m_sprite_kludge_x = x << 6;
 	m_sprite_kludge_y = y << 6;
@@ -272,7 +274,7 @@ static void (*const blit_z[4])(bitmap_ind16 &bitmap, const rectangle &cliprect, 
 	blit_fxy_z,
 };
 
-void kaneko_rlespr_device::draw_sprites(const rectangle &cliprect, u32* spriteram_source, size_t spriteram_size, u32* sprite_regs)
+void kaneko_rle_sprites_device::draw_sprites(const rectangle &cliprect, u32* spriteram_source, size_t spriteram_size, u32* sprite_regs)
 {
 	m_buffer ^= 1;
 	rectangle clip = cliprect;
@@ -311,7 +313,7 @@ void kaneko_rlespr_device::draw_sprites(const rectangle &cliprect, u32* spritera
 
 	/* sprite ram start / end is not really fixed registers change it */
 
-	//printf ("addr %08x\n", (sprite_regs[0x14/4]));
+	//logerror("addr %08x\n", sprite_regs[0x14/4]);
 
 
 	u32 const *source = spriteram_source;
