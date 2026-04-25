@@ -12,6 +12,7 @@
     - hookup C116 device, @see mame/machine/namcoic.h
 
 =============================================================================
+
 Interrupt Controller C148          1C0000-1FFFFF  R/W  D00-D02
     Bus Controller?                1C0XXX
     ????????                       1C2XXX
@@ -45,6 +46,7 @@ Interrupt Controller C148          1C0000-1FFFFF  R/W  D00-D02
 #include "namco_c148.h"
 
 #define VERBOSE         0
+//#define LOG_OUTPUT_FUNC osd_printf_info
 #include "logmacro.h"
 
 
@@ -116,6 +118,8 @@ void namco_c148_device::device_validity_check(validity_checker &valid) const
 void namco_c148_device::device_start()
 {
 	// TODO: link to SCI, EX and the screen device controller devices
+	m_posirq_line = 0;
+	m_bus_reg = 0;
 
 	save_item(NAME(m_irqlevel.cpu));
 	save_item(NAME(m_irqlevel.ex));
@@ -155,15 +159,15 @@ inline void namco_c148_device::flush_irq_acks()
 	// If writing an IRQ priority register, clear any pending IRQs.
 	// Dirt Fox and Winning Run require this behaviour
 	// TODO: literal behaviour, Winning Run GPU doesn't seem to care about irq ack ports at all?
-	for(int i=0;i<8;i++)
-		m_hostcpu->set_input_line(i,CLEAR_LINE);
+	for (int i = 0; i < 8; i++)
+		m_hostcpu->set_input_line(i, CLEAR_LINE);
 }
 
-void namco_c148_device::pos_irq_level_w(uint8_t data)     { m_irqlevel.pos = data & 7;    flush_irq_acks(); if(data != 0) { LOG("%s: pos IRQ level = %02x\n",data); }   }
-void namco_c148_device::vblank_irq_level_w(uint8_t data)  { m_irqlevel.vblank = data & 7; flush_irq_acks(); LOG("%s: vblank IRQ level = %02x\n",data);  }
-void namco_c148_device::cpu_irq_level_w(uint8_t data)     { m_irqlevel.cpu = data & 7;    flush_irq_acks(); LOG("%s: cpu IRQ level = %02x\n",data); }
-void namco_c148_device::ex_irq_level_w(uint8_t data)      { m_irqlevel.ex = data & 7;     flush_irq_acks(); LOG("%s: ex IRQ level = %02x\n",data);  }
-void namco_c148_device::sci_irq_level_w(uint8_t data)     { m_irqlevel.sci = data & 7;    flush_irq_acks(); LOG("%s: sci IRQ level = %02x\n",data); }
+void namco_c148_device::pos_irq_level_w(uint8_t data)     { m_irqlevel.pos = data & 7;    flush_irq_acks(); if(data != 0) { LOG("%s: pos IRQ level = %02x\n", tag(), data); } }
+void namco_c148_device::vblank_irq_level_w(uint8_t data)  { m_irqlevel.vblank = data & 7; flush_irq_acks(); LOG("%s: vblank IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::cpu_irq_level_w(uint8_t data)     { m_irqlevel.cpu = data & 7;    flush_irq_acks(); LOG("%s: cpu IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::ex_irq_level_w(uint8_t data)      { m_irqlevel.ex = data & 7;     flush_irq_acks(); LOG("%s: ex IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::sci_irq_level_w(uint8_t data)     { m_irqlevel.sci = data & 7;    flush_irq_acks(); LOG("%s: sci IRQ level = %02x\n", tag(), data); }
 
 uint16_t namco_c148_device::vblank_irq_ack_r()    { m_hostcpu->set_input_line(m_irqlevel.vblank, CLEAR_LINE); return 0; }
 uint16_t namco_c148_device::pos_irq_ack_r()       { m_hostcpu->set_input_line(m_irqlevel.pos, CLEAR_LINE);    return 0; }
@@ -211,7 +215,8 @@ void namco_c148_device::bus_ctrl_w(uint8_t data)
 void namco_c148_device::cpu_irq_assert_w(uint16_t data)
 {
 	// TODO: Starblade relies on this for showing large polygons, is it the right place?
-	m_linked_c148->cpu_irq_trigger();
+	if (m_linked_c148)
+		m_linked_c148->cpu_irq_trigger();
 }
 
 //**************************************************************************
@@ -248,7 +253,7 @@ void namco_c148_device::sci_irq_trigger()
 uint8_t namco_c148_device::ext_posirq_line_r()
 {
 	// TODO: same as regular register? winrun91 reads here and subs with integer 0x39 for a new posirq that never gets triggered.
-	return (m_posirq_line) & 0xff;
+	return m_posirq_line;
 }
 
 void namco_c148_device::ext_posirq_line_w(uint8_t data)
@@ -260,4 +265,3 @@ uint8_t namco_c148_device::get_posirq_line()
 {
 	return m_posirq_line;
 }
-

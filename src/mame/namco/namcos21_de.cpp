@@ -73,6 +73,7 @@ private:
 	required_device<namco_c139_device> m_sci;
 	required_device<namco_c148_device> m_master_intc;
 	required_device<namco_c148_device> m_slave_intc;
+	memory_share_creator<u8> m_nvram;
 	required_device<c140_device> m_c140;
 	required_device<namco_c355spr_device> m_c355spr;
 	required_device<palette_device> m_palette;
@@ -93,8 +94,8 @@ private:
 	u8 dpram_byte_r(offs_t offset);
 	void dpram_byte_w(offs_t offset, u8 data);
 
-	void eeprom_w(offs_t offset, u8 data);
-	u8 eeprom_r(offs_t offset);
+	void nvram_w(offs_t offset, u8 data) { m_nvram[offset] = data; }
+	u8 nvram_r(offs_t offset) { return m_nvram[offset]; }
 
 	void sound_bankselect_w(u8 data);
 
@@ -102,14 +103,10 @@ private:
 	void system_reset_w(u8 data);
 	void reset_all_subcpus(int state);
 
-	std::unique_ptr<u8[]> m_eeprom;
-
 	TIMER_DEVICE_CALLBACK_MEMBER(screen_scanline);
 
 	bool sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase, u16 src, int srcpri, int pri);
 	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
-
-	void configure_c68_namcos21(machine_config &config);
 
 	void driveyes_common_map(address_map &map) ATTR_COLD;
 	void driveyes_master_map(address_map &map) ATTR_COLD;
@@ -132,6 +129,7 @@ namco_de_pcbstack_device::namco_de_pcbstack_device(const machine_config &mconfig
 	m_sci(*this, "sci"),
 	m_master_intc(*this, "master_intc"),
 	m_slave_intc(*this, "slave_intc"),
+	m_nvram(*this, "nvram", 0x2000, ENDIANNESS_BIG),
 	m_c140(*this, "c140"),
 	m_c355spr(*this, "c355spr"),
 	m_palette(*this, "palette"),
@@ -157,7 +155,25 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namco_de_pcbstack_device::sound_map);
 	m_audiocpu->set_periodic_int(FUNC(namco_de_pcbstack_device::irq0_line_hold), attotime::from_hz(2*60));
 
-	configure_c68_namcos21(config);
+	NAMCOC68(config, m_c68, 8000000);
+	m_c68->in_pb_callback().set_ioport("MCUB");
+	m_c68->in_pc_callback().set_ioport("MCUC");
+	m_c68->in_ph_callback().set_ioport("MCUH");
+	m_c68->in_pdsw_callback().set_ioport("DSW");
+	m_c68->di0_in_cb().set_ioport("MCUDI0");
+	m_c68->di1_in_cb().set_ioport("MCUDI1");
+	m_c68->di2_in_cb().set_ioport("MCUDI2");
+	m_c68->di3_in_cb().set_ioport("MCUDI3");
+	m_c68->an0_in_cb().set_ioport("AN0");
+	m_c68->an1_in_cb().set_ioport("AN1");
+	m_c68->an2_in_cb().set_ioport("AN2");
+	m_c68->an3_in_cb().set_ioport("AN3");
+	m_c68->an4_in_cb().set_ioport("AN4");
+	m_c68->an5_in_cb().set_ioport("AN5");
+	m_c68->an6_in_cb().set_ioport("AN6");
+	m_c68->an7_in_cb().set_ioport("AN7");
+	m_c68->dp_in_callback().set(FUNC(namco_de_pcbstack_device::dpram_byte_r));
+	m_c68->dp_out_callback().set(FUNC(namco_de_pcbstack_device::dpram_byte_w));
 
 	NAMCOS21_DSP(config, m_namcos21_dsp, 0);
 	m_namcos21_dsp->set_renderer_tag("namcos21_3d");
@@ -319,7 +335,7 @@ void namco_de_pcbstack_device::sound_map(address_map &map)
 	map(0x8000, 0x9fff).ram();
 	map(0xa000, 0xbfff).nopw(); // amplifier enable on 1st write
 	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
-	map(0xc000, 0xc001).w(FUNC(namco_de_pcbstack_device::sound_bankselect_w));
+	map(0xc001, 0xc001).w(FUNC(namco_de_pcbstack_device::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); // watchdog
 	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
 }
@@ -329,33 +345,6 @@ void namco_de_pcbstack_device::c140_map(address_map &map)
 	map.global_mask(0x7fffff);
 	// TODO: LSB not used? verify from schematics/real hardware
 	map(0x000000, 0x7fffff).lr16([this](offs_t offset) { return m_c140_region[((offset & 0x300000) >> 1) | (offset & 0x7ffff)]; }, "c140_rom_r");
-}
-
-/*************************************************************/
-/* I/O HD63705 MCU Memory declarations                       */
-/*************************************************************/
-
-void namco_de_pcbstack_device::configure_c68_namcos21(machine_config &config)
-{
-	NAMCOC68(config, m_c68, 8000000);
-	m_c68->in_pb_callback().set_ioport("MCUB");
-	m_c68->in_pc_callback().set_ioport("MCUC");
-	m_c68->in_ph_callback().set_ioport("MCUH");
-	m_c68->in_pdsw_callback().set_ioport("DSW");
-	m_c68->di0_in_cb().set_ioport("MCUDI0");
-	m_c68->di1_in_cb().set_ioport("MCUDI1");
-	m_c68->di2_in_cb().set_ioport("MCUDI2");
-	m_c68->di3_in_cb().set_ioport("MCUDI3");
-	m_c68->an0_in_cb().set_ioport("AN0");
-	m_c68->an1_in_cb().set_ioport("AN1");
-	m_c68->an2_in_cb().set_ioport("AN2");
-	m_c68->an3_in_cb().set_ioport("AN3");
-	m_c68->an4_in_cb().set_ioport("AN4");
-	m_c68->an5_in_cb().set_ioport("AN5");
-	m_c68->an6_in_cb().set_ioport("AN6");
-	m_c68->an7_in_cb().set_ioport("AN7");
-	m_c68->dp_in_callback().set(FUNC(namco_de_pcbstack_device::dpram_byte_r));
-	m_c68->dp_out_callback().set(FUNC(namco_de_pcbstack_device::dpram_byte_w));
 }
 
 /*************************************************************/
@@ -381,7 +370,7 @@ void namco_de_pcbstack_device::driveyes_master_map(address_map &map)
 	driveyes_common_map(map);
 	map(0x000000, 0x03ffff).rom();
 	map(0x100000, 0x10ffff).ram(); // private work RAM
-	map(0x180000, 0x183fff).rw(FUNC(namco_de_pcbstack_device::eeprom_r), FUNC(namco_de_pcbstack_device::eeprom_w)).umask16(0x00ff);
+	map(0x180000, 0x183fff).rw(FUNC(namco_de_pcbstack_device::nvram_r), FUNC(namco_de_pcbstack_device::nvram_w)).umask16(0x00ff);
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
 
 	// DSP related
@@ -431,16 +420,6 @@ void namco_de_pcbstack_device::reset_all_subcpus(int state)
 	m_c68->ext_reset(state);
 }
 
-void namco_de_pcbstack_device::eeprom_w(offs_t offset, u8 data)
-{
-	m_eeprom[offset] = data;
-}
-
-u8 namco_de_pcbstack_device::eeprom_r(offs_t offset)
-{
-	return m_eeprom[offset];
-}
-
 
 TIMER_DEVICE_CALLBACK_MEMBER(namco_de_pcbstack_device::screen_scanline)
 {
@@ -456,9 +435,6 @@ TIMER_DEVICE_CALLBACK_MEMBER(namco_de_pcbstack_device::screen_scanline)
 
 void namco_de_pcbstack_device::device_start()
 {
-	m_eeprom = std::make_unique<u8[]>(0x2000);
-	subdevice<nvram_device>("nvram")->set_base(m_eeprom.get(), 0x2000);
-
 	u32 max = memregion("audiocpu")->bytes() / 0x4000;
 	for (int i = 0; i < 0x10; i++)
 		m_audiobank->configure_entry(i, memregion("audiocpu")->base() + (i % max) * 0x4000);
@@ -471,7 +447,7 @@ void namco_de_pcbstack_device::device_reset()
 	// Initialise the bank select in the sound CPU
 	m_audiobank->set_entry(0); // Page in bank 0
 
-	m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE );
+	m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
 
 	// Place CPU2 & CPU3 into the reset condition
 	reset_all_subcpus(ASSERT_LINE);
@@ -511,7 +487,7 @@ static INPUT_PORTS_START( driveyes )
 	PORT_BIT( 0x0f, IP_ACTIVE_LOW, IPT_UNUSED )
 	PORT_BIT( 0x10, IP_ACTIVE_LOW, IPT_COIN2 )
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_COIN1 )
-	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SERVICE ) PORT_NAME("Service Button") PORT_CODE(KEYCODE_0) PORT_TOGGLE // alt test mode switch
+	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_SERVICE2 ) PORT_NAME("Service Button") PORT_TOGGLE // alt test mode switch
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_SERVICE1 )
 
 	PORT_START("pcb_1:MCUB")
