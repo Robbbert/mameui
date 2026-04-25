@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4022 -->
+<!-- Number of items in this list = 4023 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6489,6 +6489,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="cx4test (2010)(Overload).sfc" size="32768" crc="f56a03d0" sha1="7493f065818a155113e645597f62a889870e0a28"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscdd7572a61050">
+		<description>Cyber Citizen Shockman Zero (W) (1997-2024)(Extreme - Ratalaika)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Cyber Citizen Shockman Zero (W) (1997-2024)(Extreme - Ratalaika).sfc" size="1048576" crc="2b74f389" sha1="cdd7572a61050f1dd0f1f2a358dac555434e2b40"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13742,16 +13752,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns531d583e94fc8">
-		<description>Kaizo Mario 3 Demo 2 (SMW1 Hack) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Kaizo Mario 3 Demo 2 (SMW1 Hack) (2).sfc" size="2097152" crc="a75b9d22" sha1="531d583e94fc81d9364ba8da9a65c4c34f6c0751"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns532c9bb02c34d">
 		<description>Kaizo Mario 3 Demo 2 (SMW1 Hack)</description>
 		<year>????</year>
@@ -13759,6 +13759,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Kaizo Mario 3 Demo 2 (SMW1 Hack).sfc" size="1048576" crc="e2719de2" sha1="532c9bb02c34d14604ed444c10aa6c3e815dfd5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns531d583e94fc8">
+		<description>Kaizo Mario 3 Demo 2 (SMW1 Hack)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kaizo Mario 3 Demo 2 (SMW1 Hack)_1.sfc" size="2097152" crc="a75b9d22" sha1="531d583e94fc81d9364ba8da9a65c4c34f6c0751"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13842,16 +13852,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns9eaa237ca4afa">
-		<description>Kamek and the Shroobs (SMW1 hack) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="Kamek and the Shroobs (SMW1 hack) (2).sfc" size="3145728" crc="83027982" sha1="9eaa237ca4afa8465792946a8b9d472eefbd6c3c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns81b50adcf2ba0">
 		<description>Kamek and the Shroobs (SMW1 hack)</description>
 		<year>????</year>
@@ -13859,6 +13859,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3146240">
 				<rom name="Kamek and the Shroobs (SMW1 hack).sfc" size="3146240" crc="64c2930e" sha1="81b50adcf2ba0f728daedd5e4edbcb7332e4cd70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9eaa237ca4afa">
+		<description>Kamek and the Shroobs (SMW1 hack)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Kamek and the Shroobs (SMW1 hack)_1.sfc" size="3145728" crc="83027982" sha1="9eaa237ca4afa8465792946a8b9d472eefbd6c3c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13932,16 +13942,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snseac1c693fb936">
-		<description>Kenny's adventure (SMW1 hack) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097664">
-				<rom name="Kenny's adventure (SMW1 hack) (2).sfc" size="2097664" crc="af659481" sha1="eac1c693fb9368c91590925a055d61839162a467"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns4aa439d499bd8">
 		<description>Kenny's adventure (SMW1 Hack)</description>
 		<year>????</year>
@@ -13949,6 +13949,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Kenny's adventure (SMW1 Hack).sfc" size="2097152" crc="ce1f0bd5" sha1="4aa439d499bd842ba175fd6f6fb9717a5b50f69b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snseac1c693fb936">
+		<description>Kenny's adventure (SMW1 hack)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Kenny's adventure (SMW1 hack)_1.sfc" size="2097664" crc="af659481" sha1="eac1c693fb9368c91590925a055d61839162a467"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13972,16 +13982,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsfc1dfaa54da48">
-		<description>keyblade master's Lost and Found (SMW1 hack) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="4194304">
-				<rom name="keyblade master's Lost and Found (SMW1 hack) (2).sfc" size="4194304" crc="39f864ab" sha1="fc1dfaa54da48edccc7ac7f1a9234828cbe2566b"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsccadde4708cba">
 		<description>keyblade master's Lost and Found (SMW1 hack)</description>
 		<year>????</year>
@@ -13989,6 +13989,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194816">
 				<rom name="keyblade master's Lost and Found (SMW1 hack).sfc" size="4194816" crc="b0afbb5c" sha1="ccadde4708cbad6f57f7b00596b6d122859c230d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsfc1dfaa54da48">
+		<description>keyblade master's Lost and Found (SMW1 hack)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="keyblade master's Lost and Found (SMW1 hack)_1.sfc" size="4194304" crc="39f864ab" sha1="fc1dfaa54da48edccc7ac7f1a9234828cbe2566b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14022,16 +14032,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns80577a892a037">
-		<description>Kid Adventure 3 Eng ver (SMW1 hack) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097664">
-				<rom name="Kid Adventure 3 Eng ver (SMW1 hack) (2).sfc" size="2097664" crc="59d95966" sha1="80577a892a037f2f6eb564ace988f6e0c9afbe50"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns6036b0c8a9279">
 		<description>Kid Adventure 3 Eng ver (SMW1 hack)</description>
 		<year>????</year>
@@ -14039,6 +14039,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Kid Adventure 3 Eng ver (SMW1 hack).sfc" size="2097152" crc="e7fb7062" sha1="6036b0c8a9279a8ccd9e325d7863f175131e6b01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns80577a892a037">
+		<description>Kid Adventure 3 Eng ver (SMW1 hack)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Kid Adventure 3 Eng ver (SMW1 hack)_1.sfc" size="2097664" crc="59d95966" sha1="80577a892a037f2f6eb564ace988f6e0c9afbe50"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14632,16 +14642,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns8fb1782c55d30">
-		<description>Legend of Randorland 3 - Randor's Eternal Empire (SMW1 hack) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="3146240">
-				<rom name="Legend of Randorland 3 - Randor's Eternal Empire (SMW1 hack) (2).sfc" size="3146240" crc="881efbad" sha1="8fb1782c55d30ca2c95bf2d2814f0cad8d924437"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsb33cbe913497c">
 		<description>Legend of Randorland 3 - Randor's Eternal Empire (SMW1 hack)</description>
 		<year>????</year>
@@ -14649,6 +14649,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Legend of Randorland 3 - Randor's Eternal Empire (SMW1 hack).sfc" size="3145728" crc="c81ae58f" sha1="b33cbe913497c76360b6812f1b829080c7b3cf39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8fb1782c55d30">
+		<description>Legend of Randorland 3 - Randor's Eternal Empire (SMW1 hack)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3146240">
+				<rom name="Legend of Randorland 3 - Randor's Eternal Empire (SMW1 hack)_1.sfc" size="3146240" crc="881efbad" sha1="8fb1782c55d30ca2c95bf2d2814f0cad8d924437"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2070 -->
+<!-- Number of items in this list = 2073 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7262,6 +7262,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen452f3f2472982">
+		<description>Ghost Baseball (2026)(Infinite State Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Ghost Baseball (2026)(Infinite State Games).bin" size="262144" crc="ddf2fc4a" sha1="452f3f2472982a0fa9d0e1cd9a06e3932bcdcefd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7667738d79c75">
+		<description>Ghost Baseball (2026)(Infinite State Games)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Ghost Baseball (2026)(Infinite State Games)_1.bin" size="262144" crc="8171276a" sha1="7667738d79c7590518a8403ba329023fe76c75e9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genaafae5e3e764d">
 		<description>Ghostbusters (World) (v1.1)</description>
 		<year>????</year>
@@ -14142,13 +14162,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="genda422258b392d">
-		<description>Sacred Line - Aftermarket v1.1.9 (2015)(Sasha Darko)</description>
+	<software name="gen3d09c0ea4cdc0">
+		<description>Sacred Line Genesis (Watermelon) (2014)(Sasha Darko)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3534836">
-				<rom name="Sacred Line - Aftermarket v1.1.9 (2015)(Sasha Darko).md" size="3534836" crc="2e029ab4" sha1="da422258b392d40f7ed68103f87dc6815c20d075"/>
+			<dataarea name="rom" size="4194304">
+				<rom name="Sacred Line Genesis (Watermelon) (2014)(Sasha Darko).bin" size="4194304" crc="06b219c0" sha1="3d09c0ea4cdc03178f0dc18cb8c9af032fe56037"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14159,6 +14179,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4193280">
 				<rom name="Sacred Line Genesis (World) (Unl) (2).bin" size="4193280" crc="aff86301" sha1="6d08e0902ad9f616c98a7f2d810f0cbbdec3c2ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genda422258b392d">
+		<description>Sacred Line Genesis v1.1.9 Digital (2015)(Sasha Darko)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3534836">
+				<rom name="Sacred Line Genesis v1.1.9 Digital (2015)(Sasha Darko).bin" size="3534836" crc="2e029ab4" sha1="da422258b392d40f7ed68103f87dc6815c20d075"/>
 			</dataarea>
 		</part>
 	</software>

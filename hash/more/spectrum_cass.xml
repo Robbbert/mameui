@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7835 -->
+<!-- Number of items in this list = 7833 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -18499,16 +18499,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47061">
 				<rom name="Death Wake (1985)(Quicksilva).tap" size="47061" crc="04a78f52" sha1="cd3f548ad56e60b9da5e8585dba74a12cc30de0c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsa25fb1fe54bfd">
-		<description>Death Wish 3 48K-128K (1987)(Gremlin Graphics)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="54322">
-				<rom name="Death Wish 3 48K-128K (1987)(Gremlin Graphics).tzx" size="54322" crc="562a8373" sha1="a25fb1fe54bfd6af5dfb4f342b5f532a521fc990"/>
 			</dataarea>
 		</part>
 	</software>
@@ -51219,16 +51209,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15846">
 				<rom name="Robon (1983)(Softek Software).tap" size="15846" crc="3e8c00ed" sha1="e03f542217667c14c1613df83eb610bb17c78e89"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs138f96b40b200">
-		<description>Robot 1 in The Ship of Doom 48K-128K (2017)(Mat Recardo)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="38631">
-				<rom name="Robot 1 in The Ship of Doom 48K-128K (2017)(Mat Recardo).tzx" size="38631" crc="0c544cf5" sha1="138f96b40b20086485b9352a4256aec9e02a1d28"/>
 			</dataarea>
 		</part>
 	</software>

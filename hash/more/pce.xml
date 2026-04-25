@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 200 -->
+<!-- Number of items in this list = 202 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -949,6 +949,26 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Crest of Gaia (Gaia no Monshou) [tr En 1.0e Derrick Sobodash].pce" size="262144" crc="8d782f5d" sha1="98583505f00c1c08483c74b0574d62f063766416"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce156e114293005">
+		<description>Cyber Citizen Shockman (World)(1989-2024)(Extreme - Ratalaika)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Cyber Citizen Shockman (World)(1989-2024)(Extreme - Ratalaika).pce" size="524288" crc="5842f0ca" sha1="156e114293005fc9f8b1c4f4ff922996f926ca24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce0b4bca9f6e59b">
+		<description>Cyber Citizen Shockman 2 - A New Menace (World)(1991-2024)(NCS - Masaya)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Cyber Citizen Shockman 2 - A New Menace (World)(1991-2024)(NCS - Masaya).pce" size="1048576" crc="c1972779" sha1="0b4bca9f6e59b9bc9bcaa642c41e0a62488d1c0d"/>
 			</dataarea>
 		</part>
 	</software>
