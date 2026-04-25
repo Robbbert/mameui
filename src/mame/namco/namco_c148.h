@@ -45,27 +45,27 @@ public:
 	uint8_t vblank_irq_level_r();
 	void vblank_irq_level_w(uint8_t data);
 	uint16_t vblank_irq_ack_r();
-	void vblank_irq_ack_w(uint16_t data);
+	void vblank_irq_ack_w(uint16_t data = 0);
 
 	uint8_t pos_irq_level_r();
 	void pos_irq_level_w(uint8_t data);
 	uint16_t pos_irq_ack_r();
-	void pos_irq_ack_w(uint16_t data);
+	void pos_irq_ack_w(uint16_t data = 0);
 
 	uint8_t cpu_irq_level_r();
 	void cpu_irq_level_w(uint8_t data);
 	uint16_t cpu_irq_ack_r();
-	void cpu_irq_ack_w(uint16_t data);
+	void cpu_irq_ack_w(uint16_t data = 0);
 
 	uint8_t ex_irq_level_r();
 	void ex_irq_level_w(uint8_t data);
 	uint16_t ex_irq_ack_r();
-	void ex_irq_ack_w(uint16_t data);
+	void ex_irq_ack_w(uint16_t data = 0);
 
 	uint8_t sci_irq_level_r();
 	void sci_irq_level_w(uint8_t data);
 	uint16_t sci_irq_ack_r();
-	void sci_irq_ack_w(uint16_t data);
+	void sci_irq_ack_w(uint16_t data = 0);
 
 	uint8_t ext_posirq_line_r();
 	void ext_posirq_line_w(uint8_t data);
@@ -98,17 +98,16 @@ private:
 	bool m_hostcpu_master;                              // define if host cpu is master
 
 	struct{
-		uint8_t cpu;
-		uint8_t ex;
-		uint8_t sci;
-		uint8_t pos;
-		uint8_t vblank;
+		uint8_t cpu = 0;
+		uint8_t ex = 0;
+		uint8_t sci = 0;
+		uint8_t pos = 0;
+		uint8_t vblank = 0;
 	} m_irqlevel;
 
 	uint8_t m_posirq_line;
 	uint8_t m_bus_reg;
 
-	void flush_irq_acks();
 	void cpu_irq_trigger();
 };
 

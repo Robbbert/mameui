@@ -37,6 +37,7 @@ shade pixels according to their depth.
 TODO:
 - polygon glitches/flicker
 - car engine sound is wrong
+- pressing service mode while the game is running causes it to lock up (need to press F3)
 - is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
 - winrungp: some missing bitmap layer gfx due to underdumps of program roms (see attract mode when
   it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)

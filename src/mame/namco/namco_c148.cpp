@@ -99,7 +99,6 @@ void namco_c148_device::map(address_map &map)
 }
 
 
-
 //-------------------------------------------------
 //  device_validity_check - device-specific checks
 //-------------------------------------------------
@@ -137,49 +136,48 @@ void namco_c148_device::device_start()
 
 void namco_c148_device::device_reset()
 {
-	m_irqlevel.vblank = 0;
-	m_irqlevel.pos = 0;
-	m_irqlevel.sci = 0;
-	m_irqlevel.ex = 0;
-	m_irqlevel.cpu = 0;
+	vblank_irq_level_w(0);
+	pos_irq_level_w(0);
+	cpu_irq_level_w(0);
+	ex_irq_level_w(0);
+	sci_irq_level_w(0);
 }
+
 
 //**************************************************************************
 //  IRQ section
 //**************************************************************************
 
-uint8_t namco_c148_device::pos_irq_level_r()      { return m_irqlevel.pos & 7; }
-uint8_t namco_c148_device::vblank_irq_level_r()   { return m_irqlevel.vblank & 7; }
-uint8_t namco_c148_device::cpu_irq_level_r()      { return m_irqlevel.cpu & 7; }
-uint8_t namco_c148_device::ex_irq_level_r()       { return m_irqlevel.ex & 7; }
-uint8_t namco_c148_device::sci_irq_level_r()      { return m_irqlevel.sci & 7; }
+uint8_t namco_c148_device::pos_irq_level_r()    { return m_irqlevel.pos & 7; }
+uint8_t namco_c148_device::vblank_irq_level_r() { return m_irqlevel.vblank & 7; }
+uint8_t namco_c148_device::cpu_irq_level_r()    { return m_irqlevel.cpu & 7; }
+uint8_t namco_c148_device::ex_irq_level_r()     { return m_irqlevel.ex & 7; }
+uint8_t namco_c148_device::sci_irq_level_r()    { return m_irqlevel.sci & 7; }
 
-inline void namco_c148_device::flush_irq_acks()
-{
-	// If writing an IRQ priority register, clear any pending IRQs.
-	// Dirt Fox and Winning Run require this behaviour
-	// TODO: literal behaviour, Winning Run GPU doesn't seem to care about irq ack ports at all?
-	for (int i = 0; i < 8; i++)
-		m_hostcpu->set_input_line(i, CLEAR_LINE);
-}
+void namco_c148_device::vblank_irq_level_w(uint8_t data) { vblank_irq_ack_w(); m_irqlevel.vblank = data & 7; LOG("%s: vblank IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::pos_irq_level_w(uint8_t data)    { pos_irq_ack_w();    m_irqlevel.pos = data & 7;    if(data != 0) { LOG("%s: pos IRQ level = %02x\n", tag(), data); } }
+void namco_c148_device::cpu_irq_level_w(uint8_t data)    { cpu_irq_ack_w();    m_irqlevel.cpu = data & 7;    LOG("%s: cpu IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::ex_irq_level_w(uint8_t data)     { ex_irq_ack_w();     m_irqlevel.ex = data & 7;     LOG("%s: ex IRQ level = %02x\n", tag(), data); }
+void namco_c148_device::sci_irq_level_w(uint8_t data)    { sci_irq_ack_w();    m_irqlevel.sci = data & 7;    LOG("%s: sci IRQ level = %02x\n", tag(), data); }
 
-void namco_c148_device::pos_irq_level_w(uint8_t data)     { m_irqlevel.pos = data & 7;    flush_irq_acks(); if(data != 0) { LOG("%s: pos IRQ level = %02x\n", tag(), data); } }
-void namco_c148_device::vblank_irq_level_w(uint8_t data)  { m_irqlevel.vblank = data & 7; flush_irq_acks(); LOG("%s: vblank IRQ level = %02x\n", tag(), data); }
-void namco_c148_device::cpu_irq_level_w(uint8_t data)     { m_irqlevel.cpu = data & 7;    flush_irq_acks(); LOG("%s: cpu IRQ level = %02x\n", tag(), data); }
-void namco_c148_device::ex_irq_level_w(uint8_t data)      { m_irqlevel.ex = data & 7;     flush_irq_acks(); LOG("%s: ex IRQ level = %02x\n", tag(), data); }
-void namco_c148_device::sci_irq_level_w(uint8_t data)     { m_irqlevel.sci = data & 7;    flush_irq_acks(); LOG("%s: sci IRQ level = %02x\n", tag(), data); }
+uint16_t namco_c148_device::vblank_irq_ack_r() { if (!machine().side_effects_disabled()) m_hostcpu->set_input_line(m_irqlevel.vblank, CLEAR_LINE); return 0; }
+uint16_t namco_c148_device::pos_irq_ack_r()    { if (!machine().side_effects_disabled()) m_hostcpu->set_input_line(m_irqlevel.pos, CLEAR_LINE);    return 0; }
+uint16_t namco_c148_device::cpu_irq_ack_r()    { if (!machine().side_effects_disabled()) m_hostcpu->set_input_line(m_irqlevel.cpu, CLEAR_LINE);    return 0; }
+uint16_t namco_c148_device::ex_irq_ack_r()     { if (!machine().side_effects_disabled()) m_hostcpu->set_input_line(m_irqlevel.ex, CLEAR_LINE);     return 0; }
+uint16_t namco_c148_device::sci_irq_ack_r()    { if (!machine().side_effects_disabled()) m_hostcpu->set_input_line(m_irqlevel.sci, CLEAR_LINE);    return 0; }
 
-uint16_t namco_c148_device::vblank_irq_ack_r()    { m_hostcpu->set_input_line(m_irqlevel.vblank, CLEAR_LINE); return 0; }
-uint16_t namco_c148_device::pos_irq_ack_r()       { m_hostcpu->set_input_line(m_irqlevel.pos, CLEAR_LINE);    return 0; }
-uint16_t namco_c148_device::cpu_irq_ack_r()       { m_hostcpu->set_input_line(m_irqlevel.cpu, CLEAR_LINE);    return 0; }
-uint16_t namco_c148_device::ex_irq_ack_r()        { m_hostcpu->set_input_line(m_irqlevel.ex, CLEAR_LINE);     return 0; }
-uint16_t namco_c148_device::sci_irq_ack_r()       { m_hostcpu->set_input_line(m_irqlevel.sci, CLEAR_LINE);    return 0; }
+void namco_c148_device::vblank_irq_ack_w(uint16_t data) { m_hostcpu->set_input_line(m_irqlevel.vblank, CLEAR_LINE); }
+void namco_c148_device::pos_irq_ack_w(uint16_t data)    { m_hostcpu->set_input_line(m_irqlevel.pos, CLEAR_LINE); }
+void namco_c148_device::cpu_irq_ack_w(uint16_t data)    { m_hostcpu->set_input_line(m_irqlevel.cpu, CLEAR_LINE); }
+void namco_c148_device::ex_irq_ack_w(uint16_t data)     { m_hostcpu->set_input_line(m_irqlevel.ex, CLEAR_LINE); }
+void namco_c148_device::sci_irq_ack_w(uint16_t data)    { m_hostcpu->set_input_line(m_irqlevel.sci, CLEAR_LINE); }
 
-void namco_c148_device::vblank_irq_ack_w(uint16_t data)   { m_hostcpu->set_input_line(m_irqlevel.vblank, CLEAR_LINE); }
-void namco_c148_device::pos_irq_ack_w(uint16_t data)      { m_hostcpu->set_input_line(m_irqlevel.pos, CLEAR_LINE); }
-void namco_c148_device::cpu_irq_ack_w(uint16_t data)      { m_hostcpu->set_input_line(m_irqlevel.cpu, CLEAR_LINE); }
-void namco_c148_device::ex_irq_ack_w(uint16_t data)       { m_hostcpu->set_input_line(m_irqlevel.ex, CLEAR_LINE); }
-void namco_c148_device::sci_irq_ack_w(uint16_t data)      { m_hostcpu->set_input_line(m_irqlevel.sci, CLEAR_LINE); }
+void namco_c148_device::vblank_irq_trigger() { m_hostcpu->set_input_line(m_irqlevel.vblank, HOLD_LINE); } // TODO: Phelios doesn't ack the vblank irq at all!
+void namco_c148_device::pos_irq_trigger()    { m_hostcpu->set_input_line(m_irqlevel.pos, ASSERT_LINE); }
+void namco_c148_device::cpu_irq_trigger()    { m_hostcpu->set_input_line(m_irqlevel.cpu, ASSERT_LINE); }
+void namco_c148_device::ex_irq_trigger()     { m_hostcpu->set_input_line(m_irqlevel.ex, ASSERT_LINE); }
+void namco_c148_device::sci_irq_trigger()    { m_hostcpu->set_input_line(m_irqlevel.sci, ASSERT_LINE); }
+
 
 //**************************************************************************
 //  Comm ports
@@ -219,35 +217,10 @@ void namco_c148_device::cpu_irq_assert_w(uint16_t data)
 		m_linked_c148->cpu_irq_trigger();
 }
 
+
 //**************************************************************************
 //  GETTERS/SETTERS
 //**************************************************************************
-
-void namco_c148_device::vblank_irq_trigger()
-{
-	// TODO: Phelios doesn't ack the vblank irq at all!
-	m_hostcpu->set_input_line(m_irqlevel.vblank, HOLD_LINE);
-}
-
-void namco_c148_device::pos_irq_trigger()
-{
-	m_hostcpu->set_input_line(m_irqlevel.pos, ASSERT_LINE);
-}
-
-void namco_c148_device::cpu_irq_trigger()
-{
-	m_hostcpu->set_input_line(m_irqlevel.cpu, ASSERT_LINE);
-}
-
-void namco_c148_device::ex_irq_trigger()
-{
-	m_hostcpu->set_input_line(m_irqlevel.ex, ASSERT_LINE);
-}
-
-void namco_c148_device::sci_irq_trigger()
-{
-	m_hostcpu->set_input_line(m_irqlevel.sci, ASSERT_LINE);
-}
 
 // TODO: these doesn't belong here, needs C116 device
 uint8_t namco_c148_device::ext_posirq_line_r()
