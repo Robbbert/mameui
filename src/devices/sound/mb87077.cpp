@@ -2,7 +2,7 @@
 // copyright-holders:Fabio Priuli, Philip Bennett, hap
 /*****************************************************************************
 
-  Fujitsu MB87078 6-bit, 4-channel electronic volume controller emulator
+  Fujitsu MB87077 6-bit, 4-channel electronic volume controller emulator
 
   An excerpt from the datasheet about the chip functionality:
   "A digital signal input controls gain every 0.5 dB step from 0dB to -32dB.
@@ -52,22 +52,22 @@
    * When reset, DATA is set to 0 dB (code 111111 100)
 
 
-  MB87078 pins and assigned interface variables/functions:
+  MB87077 pins and assigned interface variables/functions:
 
-                   /[ 1] D0        /TC [24]
-                  | [ 2] D1        /WR [23]
-          data_w()| [ 3] D2        /CE [22]
-          data_r()| [ 4] D3       DSEL [21]-data_w()/data_r() (offset)
-          (data)  | [ 5] D4     /RESET [20]
-                   \[ 6] D5        /PD [19]
-                    [ 7] DGND      VDD [18]
-                    [ 8] AGND  1/2 VDD [17]
-                    [ 9] AIN0    AOUT3 [16]
-                    [10] AOUT0    AIN3 [15]
-                    [11] AIN1    AOUT2 [14]
-                    [12] AOUT1    AIN2 [13]
+                   /[ 1] D0       /TC [24]
+                  | [ 2] D1       /WR [23]
+          data_w()| [ 3] D2       /CE [22]
+          data_r()| [ 4] D3      DSEL [21]-data_w()/data_r() (offset)
+          (data)  | [ 5] D4    /RESET [20]
+                   \[ 6] D5       /PD [19]
+                    [ 7] DGND     VDD [18]
+                    [ 8] VSS     AGND [17]
+                    [ 9] AIN0   AOUT3 [16]
+                    [10] AOUT0   AIN3 [15]
+                    [11] AIN1   AOUT2 [14]
+                    [12] AOUT1   AIN2 [13]
 
-  MB87077 pin 8 is VSS, pin 17 is AGND, the rest is same as MB87078.
+  MB87078 pin 8 is AGND, pin 17 is 1/2 VDD, the rest is same as MB87077.
 
 *****************************************************************************/
 
@@ -79,19 +79,28 @@
     DEVICE INTERFACE
 *****************************************************************************/
 
+DEFINE_DEVICE_TYPE(MB87077, mb87077_device, "mb87077", "MB87077 Volume Controller")
 DEFINE_DEVICE_TYPE(MB87078, mb87078_device, "mb87078", "MB87078 Volume Controller")
 
-mb87078_device::mb87078_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, MB87078, tag, owner, clock),
+mb87077_device::mb87077_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock) :
+	device_t(mconfig, type, tag, owner, clock),
 	m_gain_changed_cb(*this)
-{
-}
+{ }
+
+mb87077_device::mb87077_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock) :
+	mb87077_device(mconfig, MB87077, tag, owner, clock)
+{ }
+
+mb87078_device::mb87078_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock) :
+	mb87077_device(mconfig, MB87078, tag, owner, clock)
+{ }
+
 
 //-------------------------------------------------
 //  device_start - device-specific startup
 //-------------------------------------------------
 
-void mb87078_device::device_start()
+void mb87077_device::device_start()
 {
 	m_data = 0;
 	m_control = 0;
@@ -113,11 +122,12 @@ void mb87078_device::device_start()
 	save_item(NAME(m_control));
 }
 
+
 //-------------------------------------------------
 //  device_reset - device-specific reset
 //-------------------------------------------------
 
-void mb87078_device::device_reset()
+void mb87077_device::device_reset()
 {
 	// all channels enabled, and set at 0dB
 	for (int i = 0; i < 4; i++)
@@ -131,7 +141,7 @@ void mb87078_device::device_reset()
     IMPLEMENTATION
 *****************************************************************************/
 
-void mb87078_device::gain_recalc()
+void mb87077_device::gain_recalc()
 {
 	for (int i = 0; i < 4; i++)
 	{
@@ -161,7 +171,7 @@ void mb87078_device::gain_recalc()
 	}
 }
 
-void mb87078_device::data_w(offs_t offset, u8 data)
+void mb87077_device::data_w(offs_t offset, u8 data)
 {
 	if (offset & 1)
 		m_control = data & 0x1f;
@@ -175,7 +185,7 @@ void mb87078_device::data_w(offs_t offset, u8 data)
 	}
 }
 
-u8 mb87078_device::data_r(offs_t offset)
+u8 mb87077_device::data_r(offs_t offset)
 {
 	return (offset & 1) ? m_control : m_data;
 }

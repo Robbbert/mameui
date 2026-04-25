@@ -555,7 +555,7 @@ if SOUNDS["K053260"] then
 	}
 end
 
-if MACHINES["K054321"] then
+if SOUNDS["K054321"] then
 	files {
 		MAME_DIR .. "src/devices/sound/k054321.cpp",
 		MAME_DIR .. "src/devices/sound/k054321.h",
@@ -634,7 +634,7 @@ end
 --@src/devices/sound/mb87077.h,SOUNDS["MB87077"] = true
 ---------------------------------------------------
 
-if MACHINES["MB87077"] then
+if SOUNDS["MB87077"] then
 	files {
 		MAME_DIR .. "src/devices/sound/mb87077.cpp",
 		MAME_DIR .. "src/devices/sound/mb87077.h",
