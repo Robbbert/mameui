@@ -11,7 +11,6 @@ TODO:
 - ROM/RAM bankswitch, it apparently happens after one instruction prefetching.
   Hacked around for now;
 - keyboard input is very sluggish, convert to device_matrix_interface;
-- Most often don't survive a soft reset;
 - Hookup Kanji ROM (have dump);
 - tape;
 - far too many floppy load failures (fixed?);
@@ -173,12 +172,24 @@ private:
 	bool m_vsync_idf = false;
 	bool m_vsync_ief = false;
 	uint8_t m_de;
+	int m_warm_reset = -1;
 };
 
 
 /* TODO: correct calculation thru mc6845 regs */
 #define CRTC_MIN_X 24*8
 #define CRTC_MIN_Y 4*8
+
+static const gfx_layout pcg_layout =
+{
+	8, 8,
+	0x800 / 8,
+	1,
+	{ 0 },
+	{ 0, 1, 2, 3, 4, 5, 6, 7 },
+	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
+	8*8
+};
 
 void smc777_state::video_start()
 {
@@ -192,6 +203,8 @@ void smc777_state::video_start()
 	save_pointer(NAME(m_gvram), 0x8000);
 	save_pointer(NAME(m_pcg), 0x800);
 	save_item(NAME(m_crtc_vreg));
+
+	m_gfxdecode->set_gfx(0, std::make_unique<gfx_element>(m_palette, pcg_layout, m_pcg.get(), 0, 8, 0));
 }
 
 // TODO: cleanup, move to device, honor cliprect
@@ -548,7 +561,7 @@ void smc777_state::border_col_w(uint8_t data)
 }
 
 /*
- * RES     x--- ---- Power On bit (1=reset switch)
+ * RES     x--- ---- Warm reset if '1'
  * HiZ     -x-- ---- [SMC-70] no drive (always '1'?)
  * LPH     --x- ---- [SMC-70] light pen H position
  * CP      ---x ---- [SMC-777] color board (active low)
@@ -560,7 +573,7 @@ uint8_t smc777_state::io_status_1c_r()
 {
 	logerror("System R\n");
 
-	return 0;
+	return m_warm_reset << 7;
 }
 
 /*
@@ -1054,25 +1067,15 @@ TIMER_DEVICE_CALLBACK_MEMBER(smc777_state::keyboard_callback)
 	}
 }
 
-static const gfx_layout smc777_charlayout =
-{
-	8, 8,
-	0x800 / 8,
-	1,
-	{ 0 },
-	{ 0, 1, 2, 3, 4, 5, 6, 7 },
-	{ 0*8, 1*8, 2*8, 3*8, 4*8, 5*8, 6*8, 7*8 },
-	8*8
-};
-
 void smc777_state::machine_start()
 {
 	m_ipl_rom = memregion("ipl")->base();
 	m_work_ram = make_unique_clear<uint8_t[]>(0x10000);
 
 	save_pointer(NAME(m_work_ram), 0x10000);
+	save_item(NAME(m_warm_reset));
 
-	m_gfxdecode->set_gfx(0, std::make_unique<gfx_element>(m_palette, smc777_charlayout, m_pcg.get(), 0, 8, 0));
+	m_warm_reset = -1;
 }
 
 void smc777_state::machine_reset()
@@ -1082,6 +1085,12 @@ void smc777_state::machine_reset()
 	m_raminh_prefetch = 0xff;
 	m_pal_mode = 0x10;
 	m_vsync_idf = false;
+
+	// warm reset is special, ties with a physical back button
+	// (avoids bad bootstraps by resetting with our F3 key)
+	m_warm_reset ++;
+	if (m_warm_reset >= 1)
+		m_warm_reset = 1;
 
 	m_dac1bit->level_w(0);
 }
