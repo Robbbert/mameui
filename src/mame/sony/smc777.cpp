@@ -76,6 +76,7 @@ public:
 		, m_palette(*this, "palette")
 		// "JOY STICK#" dual DE-9 ports, on the right side of body chassis (near the volume knob)
 		, m_joystick_port(*this, "joystick%u", 1U)
+		, m_kanji_rom(*this, "kanji")
 	{ }
 
 	void smc777(machine_config &config);
@@ -86,21 +87,23 @@ protected:
 	virtual void video_start() override ATTR_COLD;
 
 private:
-	void mc6845_w(offs_t offset, uint8_t data);
-	uint8_t vram_r(offs_t offset);
-	uint8_t attr_r(offs_t offset);
-	uint8_t pcg_r(offs_t offset);
-	void vram_w(offs_t offset, uint8_t data);
-	void attr_w(offs_t offset, uint8_t data);
-	void pcg_w(offs_t offset, uint8_t data);
-	uint8_t fbuf_r(offs_t offset);
-	void fbuf_w(offs_t offset, uint8_t data);
-	uint8_t key_r(offs_t offset);
-	void key_w(offs_t offset, uint8_t data);
-	void border_col_w(uint8_t data);
-	uint8_t io_status_1c_r();
-	uint8_t io_status_1d_r();
-	void io_control_w(uint8_t data);
+	void mc6845_w(offs_t offset, u8 data);
+	u8 vram_r(offs_t offset);
+	u8 attr_r(offs_t offset);
+	u8 pcg_r(offs_t offset);
+	void vram_w(offs_t offset, u8 data);
+	void attr_w(offs_t offset, u8 data);
+	void pcg_w(offs_t offset, u8 data);
+	u8 fbuf_r(offs_t offset);
+	void fbuf_w(offs_t offset, u8 data);
+	u8 kanji_r(offs_t offset);
+	void kanji_w(offs_t offset, u8 data);
+	u8 key_r(offs_t offset);
+	void key_w(offs_t offset, u8 data);
+	void border_col_w(u8 data);
+	u8 io_status_1c_r();
+	u8 io_status_1d_r();
+	void io_control_w(u8 data);
 	void raminh_w(int state);
 	void vsup_w(int state);
 	void screen_lines_w(int state);
@@ -109,26 +112,26 @@ private:
 	void sound_out_w(int state);
 	void printer_strb_w(int state);
 	void cas_out_w(int state);
-	void color_mode_w(offs_t offset, uint8_t data);
-	void ramdac_w(offs_t offset, uint8_t data);
-	uint8_t gcw_r();
-	void gcw_w(uint8_t data);
-	uint8_t main_map_r(offs_t offset);
-	void main_map_w(offs_t offset, uint8_t data);
-	uint8_t vsync_irq_status_r();
-	void vsync_irq_enable_w(uint8_t data);
+	void color_mode_w(offs_t offset, u8 data);
+	void ramdac_w(offs_t offset, u8 data);
+	u8 gcw_r();
+	void gcw_w(u8 data);
+	u8 main_map_r(offs_t offset);
+	void main_map_w(offs_t offset, u8 data);
+	u8 vsync_irq_status_r();
+	void vsync_irq_enable_w(u8 data);
 	void palette_init(palette_device &palette) const;
 	void vsync_w(int state);
 	TIMER_DEVICE_CALLBACK_MEMBER(keyboard_callback);
 
-	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
+	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 	void graphic_320x200x4(bitmap_ind16 &bitmap, const rectangle &cliprect);
 	void graphic_640x200x2(bitmap_ind16 &bitmap, const rectangle &cliprect);
 
-	uint8_t fdc_r(offs_t offset);
-	void fdc_w(offs_t offset, uint8_t data);
-	uint8_t fdc1_fast_status_r();
-	void fdc1_select_w(uint8_t data);
+	u8 fdc_r(offs_t offset);
+	void fdc_w(offs_t offset, u8 data);
+	u8 fdc1_fast_status_r();
+	void fdc1_select_w(u8 data);
 	void fdc_intrq_w(int state);
 	void fdc_drq_w(int state);
 
@@ -147,32 +150,34 @@ private:
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
 	required_device_array<msx_general_purpose_port_device, 2> m_joystick_port;
+	required_region_ptr<u8> m_kanji_rom;
 
-	uint8_t *m_ipl_rom = nullptr;
-	std::unique_ptr<uint8_t[]> m_work_ram;
-	std::unique_ptr<uint8_t[]> m_vram;
-	std::unique_ptr<uint8_t[]> m_attr;
-	std::unique_ptr<uint8_t[]> m_gvram;
-	std::unique_ptr<uint8_t[]> m_pcg;
+	u8 *m_ipl_rom = nullptr;
+	std::unique_ptr<u8[]> m_work_ram;
+	std::unique_ptr<u8[]> m_vram;
+	std::unique_ptr<u8[]> m_attr;
+	std::unique_ptr<u8[]> m_gvram;
+	std::unique_ptr<u8[]> m_pcg;
 
-	uint8_t m_keyb_press = 0;
-	uint8_t m_keyb_press_flag = 0;
-	uint8_t m_shift_press_flag = 0;
-	uint8_t m_backdrop_pen = 0;
-	uint8_t m_display_reg = 0;
-	uint8_t m_fdc_irq_flag = 0;
-	uint8_t m_fdc_drq_flag = 0;
-	struct { uint8_t r = 0, g = 0, b = 0; } m_pal;
-	uint8_t m_raminh = 0, m_raminh_pending_change = 0; //bankswitch
-	uint8_t m_raminh_prefetch = 0;
-	uint8_t m_pal_mode = 0;
-	uint8_t m_keyb_cmd = 0;
-	uint8_t m_crtc_vreg[0x20]{};
-	uint8_t m_crtc_addr = 0;
+	u8 m_keyb_press = 0;
+	u8 m_keyb_press_flag = 0;
+	u8 m_shift_press_flag = 0;
+	u8 m_backdrop_pen = 0;
+	u8 m_display_reg = 0;
+	u8 m_fdc_irq_flag = 0;
+	u8 m_fdc_drq_flag = 0;
+	struct { u8 r = 0, g = 0, b = 0; } m_pal;
+	u8 m_raminh = 0, m_raminh_pending_change = 0; //bankswitch
+	u8 m_raminh_prefetch = 0;
+	u8 m_pal_mode = 0;
+	u8 m_keyb_cmd = 0;
+	u8 m_crtc_vreg[0x20]{};
+	u8 m_crtc_addr = 0;
 	bool m_vsync_idf = false;
 	bool m_vsync_ief = false;
-	uint8_t m_de;
+	u8 m_de;
 	int m_warm_reset = -1;
+	u8 m_kanji_addr[2]{};
 };
 
 
@@ -193,10 +198,10 @@ static const gfx_layout pcg_layout =
 
 void smc777_state::video_start()
 {
-	m_vram = make_unique_clear<uint8_t[]>(0x800);
-	m_attr = make_unique_clear<uint8_t[]>(0x800);
-	m_gvram = make_unique_clear<uint8_t[]>(0x8000);
-	m_pcg = make_unique_clear<uint8_t[]>(0x800);
+	m_vram = make_unique_clear<u8[]>(0x800);
+	m_attr = make_unique_clear<u8[]>(0x800);
+	m_gvram = make_unique_clear<u8[]>(0x8000);
+	m_pcg = make_unique_clear<u8[]>(0x800);
 
 	save_pointer(NAME(m_vram), 0x800);
 	save_pointer(NAME(m_attr), 0x800);
@@ -265,7 +270,7 @@ void smc777_state::graphic_640x200x2(bitmap_ind16 &bitmap, const rectangle &clip
 	}
 }
 
-uint32_t smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
+u32 smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(m_palette->pen(m_backdrop_pen), cliprect);
 
@@ -365,7 +370,7 @@ uint32_t smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap
 	return 0;
 }
 
-void smc777_state::mc6845_w(offs_t offset, uint8_t data)
+void smc777_state::mc6845_w(offs_t offset, u8 data)
 {
 	if(offset == 0)
 	{
@@ -379,9 +384,9 @@ void smc777_state::mc6845_w(offs_t offset, uint8_t data)
 	}
 }
 
-uint8_t smc777_state::vram_r(offs_t offset)
+u8 smc777_state::vram_r(offs_t offset)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x0007) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -389,9 +394,9 @@ uint8_t smc777_state::vram_r(offs_t offset)
 	return m_vram[vram_index];
 }
 
-uint8_t smc777_state::attr_r(offs_t offset)
+u8 smc777_state::attr_r(offs_t offset)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x0007) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -399,9 +404,9 @@ uint8_t smc777_state::attr_r(offs_t offset)
 	return m_attr[vram_index];
 }
 
-uint8_t smc777_state::pcg_r(offs_t offset)
+u8 smc777_state::pcg_r(offs_t offset)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x0007) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -409,9 +414,9 @@ uint8_t smc777_state::pcg_r(offs_t offset)
 	return m_pcg[vram_index];
 }
 
-void smc777_state::vram_w(offs_t offset, uint8_t data)
+void smc777_state::vram_w(offs_t offset, u8 data)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x0007) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -419,9 +424,9 @@ void smc777_state::vram_w(offs_t offset, uint8_t data)
 	m_vram[vram_index] = data;
 }
 
-void smc777_state::attr_w(offs_t offset, uint8_t data)
+void smc777_state::attr_w(offs_t offset, u8 data)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x0007) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -429,9 +434,9 @@ void smc777_state::attr_w(offs_t offset, uint8_t data)
 	m_attr[vram_index] = data;
 }
 
-void smc777_state::pcg_w(offs_t offset, uint8_t data)
+void smc777_state::pcg_w(offs_t offset, u8 data)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x0007) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -441,9 +446,9 @@ void smc777_state::pcg_w(offs_t offset, uint8_t data)
 	m_gfxdecode->gfx(0)->mark_dirty(vram_index >> 3);
 }
 
-uint8_t smc777_state::fbuf_r(offs_t offset)
+u8 smc777_state::fbuf_r(offs_t offset)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x007f) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -451,9 +456,9 @@ uint8_t smc777_state::fbuf_r(offs_t offset)
 	return m_gvram[vram_index];
 }
 
-void smc777_state::fbuf_w(offs_t offset, uint8_t data)
+void smc777_state::fbuf_w(offs_t offset, u8 data)
 {
-	uint16_t vram_index;
+	u16 vram_index;
 
 	vram_index  = ((offset & 0x00ff) << 8);
 	vram_index |= ((offset & 0xff00) >> 8);
@@ -461,19 +466,45 @@ void smc777_state::fbuf_w(offs_t offset, uint8_t data)
 	m_gvram[vram_index] = data;
 }
 
-uint8_t smc777_state::fdc_r(offs_t offset)
+u8 smc777_state::kanji_r(offs_t offset)
+{
+	// TODO: $7f actually selects BASIC ROM for regular SMC-70
+	if (offset & 1)
+		return 0xff;
+
+	if (m_kanji_addr[0] < 0x21 || m_kanji_addr[1] < 0x20)
+	{
+		if (!machine().side_effects_disabled())
+			logerror("kanji_r: reading out of bounds %02x%02x\n", m_kanji_addr[0], m_kanji_addr[1]);
+		return 0xff;
+	}
+
+	// TODO: this is glue logic to adapt to the clearly inaccurate .dat file
+	// Also assuming that this system has undumped lv2 option.
+	u32 kanji_base = (((m_kanji_addr[0] - 0x21) * 0x60) + (m_kanji_addr[1] - 0x20)) << 5;
+	u32 kanji_index = (offset >> 8) & 0x1f;
+
+	return m_kanji_rom[kanji_base | kanji_index];
+}
+
+void smc777_state::kanji_w(offs_t offset, u8 data)
+{
+	m_kanji_addr[offset & 1] = data & 0x7f;
+}
+
+u8 smc777_state::fdc_r(offs_t offset)
 {
 	return m_fdc->read(offset);
 }
 
-void smc777_state::fdc_w(offs_t offset, uint8_t data)
+void smc777_state::fdc_w(offs_t offset, u8 data)
 {
 	m_fdc->write(offset, data);
 }
 
-uint8_t smc777_state::fdc1_fast_status_r()
+u8 smc777_state::fdc1_fast_status_r()
 {
-	uint8_t data = 0;
+	u8 data = 0;
 
 	// TODO: inverted wrt documentation?
 	data |= !m_fdc_drq_flag << 6;
@@ -482,7 +513,7 @@ uint8_t smc777_state::fdc1_fast_status_r()
 	return data;
 }
 
-void smc777_state::fdc1_select_w(uint8_t data)
+void smc777_state::fdc1_select_w(u8 data)
 {
 	floppy_image_device *floppy = nullptr;
 
@@ -511,7 +542,7 @@ void smc777_state::fdc_drq_w(int state)
 	m_fdc_drq_flag = state;
 }
 
-uint8_t smc777_state::key_r(offs_t offset)
+u8 smc777_state::key_r(offs_t offset)
 {
 	/*
 	-x-- ---- shift key
@@ -542,7 +573,7 @@ uint8_t smc777_state::key_r(offs_t offset)
 }
 
 // TODO: pinpoint interface type
-void smc777_state::key_w(offs_t offset, uint8_t data)
+void smc777_state::key_w(offs_t offset, u8 data)
 {
 	if(offset == 1) //keyboard command
 		m_keyb_cmd = data;
@@ -552,7 +583,7 @@ void smc777_state::key_w(offs_t offset, uint8_t data)
 	}
 }
 
-void smc777_state::border_col_w(uint8_t data)
+void smc777_state::border_col_w(u8 data)
 {
 	if(data & 0xf0)
 		logerror("Special border color enabled %02x\n",data);
@@ -569,9 +600,10 @@ void smc777_state::border_col_w(uint8_t data)
  * ID      ---- -x-- 0=SMC-777 1=SMC-70
  * MD      ---- --xx [SMC-70] boot mode (00=DISK; 10=ROM; 11=EXT)
  */
-uint8_t smc777_state::io_status_1c_r()
+u8 smc777_state::io_status_1c_r()
 {
-	logerror("System R\n");
+	if (!machine().side_effects_disabled())
+		logerror("System R\n");
 
 	return m_warm_reset << 7;
 }
@@ -585,12 +617,12 @@ uint8_t smc777_state::io_status_1c_r()
  * ID      ---- -x-- 0=SMC-777 1=SMC-70
  * MD      ---- --xx [SMC-70] boot mode (00=DISK; 10=ROM; 11=EXT)
  */
-uint8_t smc777_state::io_status_1d_r()
+u8 smc777_state::io_status_1d_r()
 {
 	return 0;
 }
 
-void smc777_state::io_control_w(uint8_t data)
+void smc777_state::io_control_w(u8 data)
 {
 	m_ioctrl->write_bit(data & 0x07, BIT(data, 4));
 }
@@ -599,7 +631,7 @@ void smc777_state::raminh_w(int state)
 {
 	// "ROM / RAM register change is done at the beginning of the next M1 cycle"
 	m_raminh_pending_change = state ^ 1;
-	m_raminh_prefetch = (uint8_t)(m_maincpu->state_int(Z80_R)) & 0x7f;
+	m_raminh_prefetch = (u8)(m_maincpu->state_int(Z80_R)) & 0x7f;
 }
 
 void smc777_state::vsup_w(int state)
@@ -645,7 +677,7 @@ void smc777_state::cas_out_w(int state)
  * ...
  * ---x -000 joy 2 out
  */
-void smc777_state::color_mode_w(offs_t offset, uint8_t data)
+void smc777_state::color_mode_w(offs_t offset, u8 data)
 {
 	switch(data & 0x07)
 	{
@@ -655,9 +687,9 @@ void smc777_state::color_mode_w(offs_t offset, uint8_t data)
 	}
 }
 
-void smc777_state::ramdac_w(offs_t offset, uint8_t data)
+void smc777_state::ramdac_w(offs_t offset, u8 data)
 {
-	uint8_t pal_index;
+	u8 pal_index;
 	pal_index = (offset & 0xf00) >> 8;
 
 	if(data & 0x0f)
@@ -672,7 +704,7 @@ void smc777_state::ramdac_w(offs_t offset, uint8_t data)
 	}
 }
 
-uint8_t smc777_state::gcw_r()
+u8 smc777_state::gcw_r()
 {
 	return m_display_reg;
 }
@@ -692,19 +724,19 @@ uint8_t smc777_state::gcw_r()
  * ---- 1--- 640x200x2 bpp
  * ---- 0--- 320x200x4 bpp
  */
-void smc777_state::gcw_w(uint8_t data)
+void smc777_state::gcw_w(u8 data)
 {
 	m_display_reg = data;
 }
 
-uint8_t smc777_state::main_map_r(offs_t offset)
+u8 smc777_state::main_map_r(offs_t offset)
 {
-	uint8_t z80_r;
+	u8 z80_r;
 
 	// TODO: do the bankswitch AFTER that the prefetch instruction is executed (hackish implementation)
 	if(m_raminh_prefetch != 0xff && !machine().side_effects_disabled())
 	{
-		z80_r = (uint8_t)m_maincpu->state_int(Z80_R);
+		z80_r = (u8)m_maincpu->state_int(Z80_R);
 
 		if(z80_r == ((m_raminh_prefetch+1) & 0x7f))
 		{
@@ -719,12 +751,12 @@ uint8_t smc777_state::main_map_r(offs_t offset)
 	return m_work_ram[offset];
 }
 
-void smc777_state::main_map_w(offs_t offset, uint8_t data)
+void smc777_state::main_map_w(offs_t offset, u8 data)
 {
 	m_work_ram[offset] = data;
 }
 
-uint8_t smc777_state::vsync_irq_status_r()
+u8 smc777_state::vsync_irq_status_r()
 {
 	if (m_vsync_idf == true)
 	{
@@ -735,7 +767,7 @@ uint8_t smc777_state::vsync_irq_status_r()
 	return 0;
 }
 
-void smc777_state::vsync_irq_enable_w(uint8_t data)
+void smc777_state::vsync_irq_enable_w(u8 data)
 {
 	if(data & 0xfe)
 		logerror("Irq mask = %02x\n",data & 0xfe);
@@ -803,7 +835,7 @@ void smc777_state::io_map(address_map &map)
 //  map(0x70, 0x70) auto-start ROM (ext-ROM)
 //  map(0x74, 0x74) ieee-488 GPIB ROM port
 //  map(0x75, 0x75) vrt controller ROM
-//  map(0x7e, 0x7f) kanji ROM
+	map(0x7e, 0x7f).select(0xff00).rw(FUNC(smc777_state::kanji_r), FUNC(smc777_state::kanji_w));
 	map(0x80, 0xff).select(0xff00).rw(FUNC(smc777_state::fbuf_r), FUNC(smc777_state::fbuf_w));
 }
 
@@ -1010,7 +1042,7 @@ INPUT_PORTS_END
     "M" row 3 / / ? = 0x2f / 0x3f
 */
 
-static const uint8_t smc777_keytable[2][0xa0] =
+static const u8 smc777_keytable[2][0xa0] =
 {
 	/* normal*/
 	{
@@ -1046,8 +1078,8 @@ TIMER_DEVICE_CALLBACK_MEMBER(smc777_state::keyboard_callback)
 {
 	static const char *const portnames[11] = { "key0","key1","key2","key3","key4","key5","key6","key7", "key8", "key9", "keya" };
 	int i, port_i, scancode;
-	uint8_t shift_mod = ioport("key_mod")->read() & 1;
-	uint8_t kana_mod = ioport("key_mod")->read() & 0x10;
+	u8 shift_mod = ioport("key_mod")->read() & 1;
+	u8 kana_mod = ioport("key_mod")->read() & 0x10;
 	scancode = 0;
 
 	for(port_i = 0; port_i < 11; port_i++)
@@ -1070,7 +1102,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(smc777_state::keyboard_callback)
 void smc777_state::machine_start()
 {
 	m_ipl_rom = memregion("ipl")->base();
-	m_work_ram = make_unique_clear<uint8_t[]>(0x10000);
+	m_work_ram = make_unique_clear<u8[]>(0x10000);
 
 	save_pointer(NAME(m_work_ram), 0x10000);
 	save_item(NAME(m_warm_reset));
@@ -1101,9 +1133,9 @@ void smc777_state::palette_init(palette_device &palette) const
 	// set-up SMC-70 mode colors
 	for(int i = 0x10; i < 0x18; i++)
 	{
-		uint8_t const r = BIT(i, 2);
-		uint8_t const g = BIT(i, 1);
-		uint8_t const b = BIT(i, 0);
+		u8 const r = BIT(i, 2);
+		u8 const g = BIT(i, 1);
+		u8 const b = BIT(i, 0);
 
 		palette.set_pen_color(i, pal1bit(r), pal1bit(g), pal1bit(b));
 		palette.set_pen_color(i+8, rgb_t::black());
@@ -1148,10 +1180,10 @@ QUICKLOAD_LOAD_MEMBER(smc777_state::quickload_cb)
 		return std::make_pair(image_error::UNSPECIFIED, "Insufficient memory available");
 
 	// Load image to the TPA (Transient Program Area)
-	uint16_t quickload_size = image.length();
-	for (uint16_t i = 0; i < quickload_size; i++)
+	u16 quickload_size = image.length();
+	for (u16 i = 0; i < quickload_size; i++)
 	{
-		uint8_t data;
+		u8 data;
 		if (image.fread(&data, 1) != 1)
 			return std::make_pair(image_error::UNSPECIFIED, "Problem reading the image at offset " + std::to_string(i));
 		prog_space.write_byte(i + 0x100, data);
@@ -1250,6 +1282,11 @@ ROM_START( smc777 )
 	ROMX_LOAD( "smcrom.dat", 0x0000, 0x4000, CRC(b2520d31) SHA1(3c24b742c38bbaac85c0409652ba36e20f4687a1), ROM_BIOS(0))
 	ROM_SYSTEM_BIOS(1, "2nd", "2nd rev.")
 	ROMX_LOAD( "smcrom.v2",  0x0000, 0x4000, CRC(c1494b8f) SHA1(a7396f5c292f11639ffbf0b909e8473c5aa63518), ROM_BIOS(1))
+
+	// should be binary extracted rather than chip level dump(s)
+	// also cfr. negative math in kanji_r
+	ROM_REGION( 0x48000, "kanji", ROMREGION_ERASEFF )
+	ROM_LOAD( "kanjirom.dat", 0, 0x23400, BAD_DUMP CRC(414096cb) SHA1(65175c8357bcfc043d312d19cf84ec4cae7369dc) )
 
 	ROM_REGION( 0x400, "mcu", ROMREGION_ERASEFF )
 	ROM_LOAD( "m5l8041a-077p.bin", 0x000, 0x400, NO_DUMP ) // 8041 keyboard mcu, needs decapping
