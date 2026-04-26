@@ -18,6 +18,8 @@ TODO:
   and on pilot parachuting with a time over;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
 - aircomb: bad sprite colors on debriefing medal screen;
+- cybsled: sprite priority issues with explosions, and eg. missile pick-ups, is it related to unemulated
+  z-sorted polygons, and/or from m_layer0_pivot?;
 - solvalou: service mode polygon test is crashy when testing invalid polygons (the good old IDC overflow);
 - solvalou: sprite blend is wrong during water stages (look at the blaster/score panel), the palette
   bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
@@ -27,8 +29,8 @@ BTANB:
 - aircomb: intro cockpit closure is one pixel off on left edge;
 - solvalou: sprites on top of foreground polygons (eg. explosions, water splash)
 
-Reversed AD Stick Y control in starblad/solvalou is correct (just like aircomb). It may seem backwards when
-playing it on an MAME (eg. with mouse), in that case just change the analog reverse setting in the UI.
+Reversed AD Stick Y control in solvalou is correct (just like aircomb). It may seem backwards when
+playing it on an MAME (eg. with mouse), in that case just flip the analog reverse setting in the UI.
 
 ---------------------------------------------------------------------------
 
@@ -957,7 +959,7 @@ ROM_START( starblad )
 	ROM_LOAD16_BYTE("st1-voi3.bin", 0x300000, 0x80000,CRC(8b5aa45f) SHA1(e1214e639200758ad2045bde0368a2d500c1b84a) )
 
 	ROM_REGION( 0x2000, "nvram", 0) /* default settings, including calibration */
-	ROM_LOAD( "starblad.nv", 0x0000, 0x2000, CRC(31c4d4fd) SHA1(489a540e4164019c4b34f79c2dd0406c9a464951) )
+	ROM_LOAD( "starblad.nv", 0x0000, 0x2000, CRC(1532b04c) SHA1(b71e0940129ff028dae82a4dba7502870b656000) )
 ROM_END
 
 ROM_START( starbladj )
@@ -1002,7 +1004,7 @@ ROM_START( starbladj )
 	ROM_LOAD16_BYTE("st1-voi3.bin", 0x300000, 0x80000,CRC(8b5aa45f) SHA1(e1214e639200758ad2045bde0368a2d500c1b84a) )
 
 	ROM_REGION( 0x2000, "nvram", 0) /* default settings, including calibration */
-	ROM_LOAD( "starblad.nv", 0x0000, 0x2000, CRC(31c4d4fd) SHA1(489a540e4164019c4b34f79c2dd0406c9a464951) )
+	ROM_LOAD( "starblad.nv", 0x0000, 0x2000, CRC(1532b04c) SHA1(b71e0940129ff028dae82a4dba7502870b656000) )
 ROM_END
 
 ROM_START( solvalou )
