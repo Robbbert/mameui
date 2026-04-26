@@ -310,7 +310,7 @@ public:
 		m_gpu_intc(*this, "gpu_intc"),
 		m_nvram(*this, "nvram", 0x2000, ENDIANNESS_BIG),
 		m_c140(*this, "c140"),
-		m_ymsnd(*this, "ymsnd"),
+		m_ym2151(*this, "ym2151"),
 		m_mb87077(*this, "mb87077_%u", 0),
 		m_mixer(*this, "mixer%u", 0),
 		m_palette(*this, "palette"),
@@ -341,7 +341,7 @@ private:
 	required_device<namco_c148_device> m_gpu_intc;
 	memory_share_creator<u8> m_nvram;
 	required_device<c140_device> m_c140;
-	required_device<ym2151_device> m_ymsnd;
+	required_device<ym2151_device> m_ym2151;
 	required_device_array<mb87077_device, 2> m_mb87077;
 	required_device_array<mixer_device, 8> m_mixer;
 	required_device<palette_device> m_palette;
@@ -604,7 +604,7 @@ void namcos21_state::gpu_map(address_map &map)
 void namcos21_state::sound_map(address_map &map)
 {
 	map(0x0000, 0x3fff).bankr("audiobank"); // banked
-	map(0x4000, 0x4001).rw(m_ymsnd, FUNC(ym2151_device::read), FUNC(ym2151_device::write));
+	map(0x4000, 0x4001).rw(m_ym2151, FUNC(ym2151_device::read), FUNC(ym2151_device::write));
 	map(0x5000, 0x51ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w));
 	map(0x6000, 0x6001).w(m_mb87077[0], FUNC(mb87077_device::data_w));
 	map(0x6800, 0x6801).w(m_mb87077[1], FUNC(mb87077_device::data_w));
@@ -870,12 +870,12 @@ void namcos21_state::winrun(machine_config &config)
 	m_c140->set_addrmap(0, &namcos21_state::c140_map);
 	m_c140->int1_callback().set_inputline(m_audiocpu, M6809_FIRQ_LINE);
 
-	YM2151(config, m_ymsnd, 3.579545_MHz_XTAL);
+	YM2151(config, m_ym2151, 3.579545_MHz_XTAL);
 
 	for (int i = 0; i < 4; i++)
 	{
 		m_c140->add_route(i & 1, m_mixer[i], 0.50);
-		m_ymsnd->add_route(i & 1, m_mixer[i | 4], 0.30);
+		m_ym2151->add_route(i & 1, m_mixer[i | 4], 0.30);
 	}
 
 	for (int i = 0; i < 8; i++)

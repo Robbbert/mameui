@@ -309,7 +309,7 @@ public:
 		m_slave_intc(*this, "slave_intc"),
 		m_nvram(*this, "nvram", 0x2000, ENDIANNESS_BIG),
 		m_c140(*this, "c140"),
-		m_ymsnd(*this, "ymsnd"),
+		m_ym2151(*this, "ym2151"),
 		m_c355spr(*this, "c355spr"),
 		m_palette(*this, "palette"),
 		m_screen(*this, "screen"),
@@ -342,7 +342,7 @@ private:
 	required_device<namco_c148_device> m_slave_intc;
 	memory_share_creator<u8> m_nvram;
 	required_device<c140_device> m_c140;
-	required_device<ym2151_device> m_ymsnd;
+	required_device<ym2151_device> m_ym2151;
 	required_device<namco_c355spr_device> m_c355spr;
 	required_device<palette_device> m_palette;
 	required_device<screen_device> m_screen;
@@ -553,7 +553,7 @@ void namcos21_c67_state::slave_map(address_map &map)
 void namcos21_c67_state::sound_map(address_map &map)
 {
 	map(0x0000, 0x3fff).bankr("audiobank"); // banked
-	map(0x4000, 0x4001).rw(m_ymsnd, FUNC(ym2151_device::read), FUNC(ym2151_device::write));
+	map(0x4000, 0x4001).rw(m_ym2151, FUNC(ym2151_device::read), FUNC(ym2151_device::write));
 	map(0x5000, 0x51ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w));
 	map(0x6000, 0x6fff).nopw(); // unused MB87077?
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namcos21_c67_state::dpram_byte_r), FUNC(namcos21_c67_state::dpram_byte_w)).share("dpram");
@@ -870,9 +870,9 @@ void namcos21_c67_state::namcos21(machine_config &config)
 	m_c140->add_route(0, "speaker", 0.50, 0);
 	m_c140->add_route(1, "speaker", 0.50, 1);
 
-	YM2151(config, m_ymsnd, 3.579545_MHz_XTAL);
-	m_ymsnd->add_route(0, "speaker", 0.30, 0);
-	m_ymsnd->add_route(1, "speaker", 0.30, 1);
+	YM2151(config, m_ym2151, 3.579545_MHz_XTAL);
+	m_ym2151->add_route(0, "speaker", 0.30, 0);
+	m_ym2151->add_route(1, "speaker", 0.30, 1);
 }
 
 void namcos21_c67_state::aircomb(machine_config &config)
@@ -891,6 +891,17 @@ void namcos21_c67_state::cybsled(machine_config &config)
 {
 	namcos21(config);
 	m_namcos21_dsp_c67->set_gametype(namcos21_dsp_c67_device::NAMCOS21_CYBERSLED);
+
+	// speaker placement is front/back instead of left/right
+	SPEAKER(config.replace(), "speaker", 2).front_center(0).rear_center(1);
+
+	m_c140->reset_routes();
+	m_c140->add_route(0, "speaker", 0.25, 1);
+	m_c140->add_route(1, "speaker", 0.25, 0);
+
+	m_ym2151->reset_routes();
+	m_ym2151->add_route(0, "speaker", 0.15, 1);
+	m_ym2151->add_route(1, "speaker", 0.15, 0);
 }
 
 void namcos21_c67_state::solvalou(machine_config &config)

@@ -3819,11 +3819,9 @@ void namcos22_state::cybrcomm(machine_config &config)
 {
 	namcos22(config);
 
-	SPEAKER(config, "rear_left").rear_left();
-	SPEAKER(config, "rear_right").rear_right();
-
-	m_c352->add_route(2, "rear_left", 1.0);
-	m_c352->add_route(3, "rear_right", 1.0);
+	SPEAKER(config, "rear", 2).rear();
+	m_c352->add_route(2, "rear", 1.0, 0);
+	m_c352->add_route(3, "rear", 1.0, 1);
 }
 
 // System Super22
