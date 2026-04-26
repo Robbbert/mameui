@@ -802,7 +802,6 @@ void namcos21_state::winrun(machine_config &config)
 
 	MC6809E(config, m_audiocpu, 49.152_MHz_XTAL / 24); // Sound
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_state::sound_map);
-	m_audiocpu->set_periodic_int(FUNC(namcos21_state::irq0_line_hold), attotime::from_hz(2*60));
 
 	NAMCOC65(config, m_c65, 2048000);
 	m_c65->in_pb_callback().set_ioport("MCUB");

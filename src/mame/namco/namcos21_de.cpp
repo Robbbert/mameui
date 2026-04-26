@@ -164,7 +164,6 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 
 	MC6809E(config, m_audiocpu, 3072000); // Sound
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namco_de_pcbstack_device::sound_map);
-	m_audiocpu->set_periodic_int(FUNC(namco_de_pcbstack_device::irq0_line_hold), attotime::from_hz(2*60));
 
 	NAMCOC68(config, m_c68, 8000000);
 	m_c68->in_pb_callback().set_ioport("MCUB");
