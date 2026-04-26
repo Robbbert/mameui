@@ -1,4 +1,4 @@
-// license:LGPL-2.1+
+// license:BSD-3-Clause
 // copyright-holders:Angelo Salese
 /**************************************************************************************************
 
@@ -18,6 +18,7 @@ TODO:
 - Downgrade for SMC-70 (if/when dump is available). Has extra GFX modes that 777 dropped;
 - Superimposing features (if/when SW dumps arises, cfr. SMC-70G promotional video)
 - Find better reference materials, available one lacks several pages;
+- Hookup expansion bus (needs pinout/specifications)
 
 **************************************************************************************************/
 
@@ -798,10 +799,10 @@ void smc777_state::io_map(address_map &map)
 	map(0x21, 0x21).mirror(0xff00).rw(FUNC(smc777_state::vsync_irq_status_r), FUNC(smc777_state::vsync_irq_enable_w));
 //  map(0x22, 0x22) printer output data
 	map(0x23, 0x23).mirror(0xff00).w(FUNC(smc777_state::border_col_w));
-//  map(0x24, 0x24) rtc write address (M5M58321RS)
+//  map(0x24, 0x24) rtc write address (MSM58321RS)
 //  map(0x25, 0x25) rtc read
 //  map(0x26, 0x26) rs232 #1
-//  map(0x28, 0x2c) fdc #2 (8")
+//  map(0x28, 0x2c) fdc #2 (8", SMI-7016)
 //  map(0x2d, 0x2f) rs232 #2
 	map(0x30, 0x33).mirror(0xff00).rw(FUNC(smc777_state::fdc_r), FUNC(smc777_state::fdc_w));
 	map(0x34, 0x34).mirror(0xff00).rw(FUNC(smc777_state::fdc1_fast_status_r), FUNC(smc777_state::fdc1_select_w));
@@ -811,10 +812,10 @@ void smc777_state::io_map(address_map &map)
 	// 0x39 (W) track register
 	// 0x3a (W) sector register
 	// 0x3b (RW) data port
-//  map(0x3c, 0x3d) rgb superimposer / genlock control
-//  map(0x40, 0x47) ieee-488 / TMS9914A I/F
+//  map(0x3c, 0x3d) SMI-7074 NTSC superimposer / genlock control
+//  map(0x40, 0x47) SMI-7032 ieee-488 / TMS9914A I/F
 	map(0x44, 0x44).mirror(0xff00).portr("GPDSW"); // normally unmapped in GPIB interface
-//  map(0x48, 0x49) hdd (winchester)
+//  map(0x48, 0x49) hdd (winchester, thru UPI41?)
 	// joystick read (all active low)
 	// x--- ---- /BL, in blanking
 	// -x-- ---- /CS, joystick 2 present
@@ -831,10 +832,12 @@ void smc777_state::io_map(address_map &map)
 	map(0x52, 0x52).select(0xff00).w(FUNC(smc777_state::ramdac_w));
 	map(0x53, 0x53).mirror(0xff00).w("sn1", FUNC(sn76489a_device::write));
 //  map(0x54, 0x59) vrt controller
-//  map(0x5a, 0x5b) ram banking
+//  map(0x5a, 0x5b) IPL-ROM banking (?)
 //  map(0x70, 0x70) auto-start ROM (ext-ROM)
-//  map(0x74, 0x74) ieee-488 GPIB ROM port
+//  map(0x74, 0x74) SMI-7032 ieee-488 GPIB ROM port
 //  map(0x75, 0x75) vrt controller ROM
+//  map(0x78, 0x7b) I/O 1984.8.P202 light pen
+//  map(0x7c, 0x7d) Oh!HITBIT Vol.6 MIDI I/F thru I8251
 	map(0x7e, 0x7f).select(0xff00).rw(FUNC(smc777_state::kanji_r), FUNC(smc777_state::kanji_w));
 	map(0x80, 0xff).select(0xff00).rw(FUNC(smc777_state::fbuf_r), FUNC(smc777_state::fbuf_w));
 }
