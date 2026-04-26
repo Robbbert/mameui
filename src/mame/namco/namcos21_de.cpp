@@ -80,7 +80,7 @@ private:
 	required_device<c140_device> m_c140;
 	required_device<ym2151_device> m_ym2151;
 	required_device_array<mb87077_device, 2> m_mb87077;
-	required_device_array<mixer_device, 8> m_mixer;
+	required_device_array<mixer_device, 2> m_mixer;
 	required_device<namco_c355spr_device> m_c355spr;
 	required_device<palette_device> m_palette;
 	required_device<screen_device> m_screen;
@@ -240,12 +240,15 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 
 	for (int i = 0; i < 4; i++)
 	{
-		m_c140->add_route(i & 1, m_mixer[i], 0.50);
-		m_ym2151->add_route(i & 1, m_mixer[i | 4], 0.30);
+		m_c140->add_route(i & 1, m_mixer[0], 0.50, i);
+		m_ym2151->add_route(i & 1, m_mixer[1], 0.30, i);
 	}
 
+	MIXER(config, m_mixer[0]);
+	MIXER(config, m_mixer[1]);
+
 	for (int i = 0; i < 8; i++)
-		MIXER(config, m_mixer[i]).add_route(0, "speaker", 0.50, i & 3);
+		m_mixer[i / 4]->add_route(i & 3, "speaker", 0.50, i & 3);
 }
 
 
@@ -422,7 +425,7 @@ template<int N>
 void namco_de_pcbstack_device::mb87077_gain_changed(offs_t offset, u8 data)
 {
 	// 0=FR, 1=RR, 2=FL, 3=RL
-	m_mixer[N << 2 | bitswap<2>(offset ^ 2, 0, 1)]->set_output_gain(0, m_mb87077[N]->gain_factor_r(offset));
+	m_mixer[N]->set_output_gain(bitswap<2>(offset ^ 2, 0, 1), m_mb87077[N]->gain_factor_r(offset));
 }
 
 void namco_de_pcbstack_device::sound_reset_w(u8 data)
