@@ -25,8 +25,8 @@ public:
 	   Returned value represents channel gain expressed in percents of maximum volume.
 	   Range from 100 to 0. (100 = 0dB; 50 = -6dB; 0 = -infinity)
 	   This function is designed for use with MAME mixer_xxx() functions. */
-	u8 gain_percent_r(offs_t offset) { return gain_factor_r(offset) * 100.0 + 0.5; } // range 100 .. 0
-	double gain_factor_r(offs_t offset) { return m_gains[m_gain_index[offset & 3]]; } // range 1.0 .. 0.0
+	u8 gain_percent_r(offs_t offset) { return gain_factor_r(offset) * 100.0 + 0.5f; } // range 100 .. 0
+	float gain_factor_r(offs_t offset) { return m_gains[m_gain_index[offset & 3]]; } // range 1.0 .. 0.0
 
 protected:
 	mb87077_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock);
@@ -37,7 +37,7 @@ protected:
 
 private:
 	void gain_recalc();
-	double m_gains[64+3];
+	float m_gains[64+3];
 
 	// internal state
 	u8 m_gain_index[4]; // per-channel current index to m_gains
