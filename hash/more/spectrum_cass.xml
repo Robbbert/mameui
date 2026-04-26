@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7833 -->
+<!-- Number of items in this list = 7848 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -12912,6 +12912,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0f0b5d7f89a74">
+		<description>Cafetonic Strikes Back! - HARD 48K-128K (2026)(Claus Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37036">
+				<rom name="Cafetonic Strikes Back! - HARD 48K-128K (2026)(Claus Games).tap" size="37036" crc="0e3b815c" sha1="0f0b5d7f89a740da087cd8bc0ceca81f36fcdd2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1065ca9a97a7e">
+		<description>Cafetonic Strikes Back! v1.1 - NORMAL 48K-128K (2026)(Claus Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36780">
+				<rom name="Cafetonic Strikes Back! v1.1 - NORMAL 48K-128K (2026)(Claus Games).tap" size="36780" crc="01853d05" sha1="1065ca9a97a7e46e5cdbb2c96b4ef020968fca77"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs09bae7cdc847e">
 		<description>Cafetonic v1.1 48K-128K (2026)(Claus Games)</description>
 		<year>????</year>
@@ -21822,6 +21842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2be555fd806e9">
+		<description>Edd the Duck 48K (1990)(Impulze)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44167">
+				<rom name="Edd the Duck 48K (1990)(Impulze).tzx" size="44167" crc="dfc4785e" sha1="2be555fd806e9c9b47c20d099376ea0051428f57"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscf68c4c0eaf60">
 		<description>Eddie Kidd Jump Challenge (1984)(Martech Games)</description>
 		<year>????</year>
@@ -22043,12 +22073,12 @@
 		</part>
 	</software>
 	<software name="zxs4288d5f20602c">
-		<description>Elecciones Generales (1986)(Hobbypress)(Sp)[Part 1-2 of 2]</description>
+		<description>Elecciones Generales ES 48K (1986)(Hobbypress)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="98472">
-				<rom name="Elecciones Generales (1986)(Hobbypress)(Sp)[Part 1-2 of 2].tap" size="98472" crc="209b2822" sha1="4288d5f20602c29b1154a403a16bde46245713cb"/>
+				<rom name="Elecciones Generales ES 48K (1986)(Hobbypress).tap" size="98472" crc="209b2822" sha1="4288d5f20602c29b1154a403a16bde46245713cb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38162,6 +38192,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc059f2c5e71f8">
+		<description>Manager de Futebol 2025 EN 128K (2026)(SofTiMar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86594">
+				<rom name="Manager de Futebol 2025 EN 128K (2026)(SofTiMar).tap" size="86594" crc="905ac201" sha1="c059f2c5e71f8f214e63d0514aea9c0267022303"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb185ee11c962c">
+		<description>Manager de Futebol 2025 PT 128K (2026)(SofTiMar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="86862">
+				<rom name="Manager de Futebol 2025 PT 128K (2026)(SofTiMar).tap" size="86862" crc="2ab04dd8" sha1="b185ee11c962ceba720c21b4fb6d55d2d53c92e1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5d73ee1bf2865">
 		<description>Manager, The (1990)(GTI Software)</description>
 		<year>????</year>
@@ -43359,6 +43409,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="86648">
 				<rom name="NeverEnding Story, The 48K-128K (1985)(Ocean).tap" size="86648" crc="ccc97acd" sha1="32fa5711c29f46c272e484fed427a69a48f0da0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68bcac9cfda14">
+		<description>Nevermore EN v5 48K (2020)(EJVG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46242">
+				<rom name="Nevermore EN v5 48K (2020)(EJVG).tzx" size="46242" crc="d3ef5f8d" sha1="68bcac9cfda14e2accde09c144dc9881ec6af115"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd4cdd3b2a3282">
+		<description>Nevermore ES v5 48K (2020)(EJVG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46093">
+				<rom name="Nevermore ES v5 48K (2020)(EJVG).tzx" size="46093" crc="83024407" sha1="d4cdd3b2a328219cba76a456bdb07ac5048d1c44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c630303208d8">
+		<description>Nevermore PT v5 48K (2020)(EJVG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46149">
+				<rom name="Nevermore PT v5 48K (2020)(EJVG).tzx" size="46149" crc="d62d73a4" sha1="3c630303208d89d979bcfb3671488c928b2060f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -59572,6 +59652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa7fb5665e5253">
+		<description>Sword Work 48K-AY (2026)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16384">
+				<rom name="Sword Work 48K-AY (2026)(Inufuto).tzx" size="16384" crc="3f805434" sha1="a7fb5665e52535ea3690c7162eeef00a65f6816c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbdba8ef792795">
 		<description>Swords Of Bane (1986)(CCS)</description>
 		<year>????</year>
@@ -61892,6 +61982,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs21a9658bd8b43">
+		<description>Torre de Ochate, A EN v1.4 - EASY 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47075">
+				<rom name="Torre de Ochate, A EN v1.4 - EASY 48K-128K (2026)(FlunkyRetro).tap" size="47075" crc="c922e889" sha1="21a9658bd8b4316600960cb19ea2c7d80bd2a777"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3166c26f65fb8">
+		<description>Torre de Ochate, A EN v1.4 - HARD 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47331">
+				<rom name="Torre de Ochate, A EN v1.4 - HARD 48K-128K (2026)(FlunkyRetro).tap" size="47331" crc="ded0ac36" sha1="3166c26f65fb84d509d301e0390d0298b4ecd86e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb55b6c668ed4d">
 		<description>Torre de Ochate, A ES v1.3.1 48K-128K (2026)(FlunkyRetro)</description>
 		<year>????</year>
@@ -61902,6 +62012,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2204ae091f17c">
+		<description>Torre de Ochate, A ES v1.4 - EASY 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47331">
+				<rom name="Torre de Ochate, A ES v1.4 - EASY 48K-128K (2026)(FlunkyRetro).tap" size="47331" crc="afd82a3a" sha1="2204ae091f17ca37e73d3cc8d6d9a5eae52da7ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs53ff95bfed812">
+		<description>Torre de Ochate, A ES v1.4 - HARD 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47331">
+				<rom name="Torre de Ochate, A ES v1.4 - HARD 48K-128K (2026)(FlunkyRetro).tap" size="47331" crc="6a0330ee" sha1="53ff95bfed81284adacf6116bbae891cee20d684"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3863796daa36d">
 		<description>Torre de Ochate, A PT v1.3.1 48K-128K (2026)(FlunkyRetro)</description>
 		<year>????</year>
@@ -61909,6 +62039,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47843">
 				<rom name="Torre de Ochate, A PT v1.3.1 48K-128K (2026)(FlunkyRetro).tap" size="47843" crc="ad31674f" sha1="3863796daa36df4f7f36c4d38c77142876b74a24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3029952a1513b">
+		<description>Torre de Ochate, A PT v1.4 - EASY 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47587">
+				<rom name="Torre de Ochate, A PT v1.4 - EASY 48K-128K (2026)(FlunkyRetro).tap" size="47587" crc="c4413265" sha1="3029952a1513b095c8091329427a62af213c584e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbe1d5335da6db">
+		<description>Torre de Ochate, A PT v1.4 - HARD 48K-128K (2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47587">
+				<rom name="Torre de Ochate, A PT v1.4 - HARD 48K-128K (2026)(FlunkyRetro).tap" size="47587" crc="f714980a" sha1="be1d5335da6dbe201f30b42c64bbd8897ab2a021"/>
 			</dataarea>
 		</part>
 	</software>

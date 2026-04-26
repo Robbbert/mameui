@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 571 -->
+<!-- Number of items in this list = 572 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -5009,6 +5009,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Svellas (2025)(Inufuto).sms" size="16384" crc="b94bd12f" sha1="ea794b898e254a30ad272695b46006c05cfa8b9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms88a00255d8a35">
+		<description>SwordWork (2026)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="SwordWork (2026)(Inufuto).sms" size="16384" crc="3936e21c" sha1="88a00255d8a35d8552ca1536afd0a03efd937b7f"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2073 -->
+<!-- Number of items in this list = 2077 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7422,6 +7422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gend94e3c98c1446">
+		<description>Golden Axe - Arcade Colors v1.3 (2026)(SCD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="590842">
+				<rom name="Golden Axe - Arcade Colors v1.3 (2026)(SCD).bin" size="590842" crc="0f0f9154" sha1="d94e3c98c1446be66a5fe5ec92172fdf8269d717"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3f207967a4ab5">
 		<description>Golden Axe 2 (JUE) [T+Fre_arkames]</description>
 		<year>????</year>
@@ -14192,6 +14202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8d290a705dbb1">
+		<description>Sacred Line II - A Distant Light (2024)(Sasha Darko)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1147448">
+				<rom name="Sacred Line II - A Distant Light (2024)(Sasha Darko).bin" size="1147448" crc="8e84c7bd" sha1="8d290a705dbb1fe68a6101bf08af01f5a356d3ea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend37fed3ac4083">
 		<description>Sacred Line II v1.02 (2024)(Mega Cat Studios)</description>
 		<year>????</year>
@@ -14199,6 +14219,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3979616">
 				<rom name="Sacred Line II v1.02 (2024)(Mega Cat Studios).bin" size="3979616" crc="2121d724" sha1="d37fed3ac4083b09fa9b3decb228b7538d8e3ad1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencec537f28d341">
+		<description>Sacred Line III v1.04 (2025)(Sasha Darko)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2897824">
+				<rom name="Sacred Line III v1.04 (2025)(Sasha Darko).bin" size="2897824" crc="bd4e551e" sha1="cec537f28d341142858ae83b7834a59a18439c15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3b239edee7b2c">
+		<description>Sacred Line Zero v2 (Proto)(2015-18)(Sasha Darko)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2171696">
+				<rom name="Sacred Line Zero v2 (Proto)(2015-18)(Sasha Darko).bin" size="2171696" crc="d8a662af" sha1="3b239edee7b2c9a5bc2db462b3f101eee8cb1117"/>
 			</dataarea>
 		</part>
 	</software>
