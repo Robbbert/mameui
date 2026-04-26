@@ -8,7 +8,7 @@ TODO:
 - lamp/vibration outputs, from MCU? (particularly starblad);
 - verify DSP clocks, they should be 40MHz, currently underclocked on purpose on MAME, otherwise polygons
   may disappear on some frames (try playing starblad until after the asteroids), tightening quantum by
-  a factor of 40/24 does not fix it;
+  a factor of 40/24 does not fix it, actually it also happens when underclocked, but less;
 - verify video timing, pixel clock is from 38.76922?;
 - verify audiocpu irq frequency;
 - is m_layer0_pivot software-controlled and if so, where? (solvalou sprite layer 0 is further back than

@@ -842,4 +842,4 @@ ROM_END
 /*    YEAR  NAME       PARENT    MACHINE   INPUT       CLASS           INIT           MONITOR  COMPANY  FULLNAME                                 FLAGS */
 
 // 3 PCB stacks in a single cage (3x 4 PCBs) linked for 3 screen panorama, boards look similar to original Namco System 21 (not 21B) including TMS320C25 DSP, but use C68 I/O MCU and sprite chip instead of "68000 'GPU'" ?
-GAME( 1992, driveyes,  0,        driveyes, driveyes,   namcos21_de_state, empty_init, ROT0,    "Namco", "Driver's Eyes (Japan) (1992/01/10, Main Ver 2.1, Sub Ver 1.1)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND | MACHINE_NODEVICE_LAN | MACHINE_SUPPORTS_SAVE )
+GAME( 1992, driveyes,  0,        driveyes, driveyes,   namcos21_de_state, empty_init, ROT0,    "Namco", "Driver's Eyes (Japan) (1992/01/10, Main Ver 2.1, Sub Ver 1.1)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_NODEVICE_LAN | MACHINE_SUPPORTS_SAVE )
