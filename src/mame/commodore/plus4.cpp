@@ -812,17 +812,6 @@ void plus4_state::machine_start()
 
 void plus4_state::machine_reset()
 {
-	m_maincpu->reset();
-
-	m_iec->reset();
-
-	if (m_acia)
-	{
-		m_acia->reset();
-	}
-
-	m_exp->reset();
-
 	if (m_user)
 	{
 		m_user->write_3(0);
@@ -849,7 +838,6 @@ void plus4_state::plus4(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &plus4_state::plus4_mem);
 	m_maincpu->read_callback().set(FUNC(plus4_state::cpu_r));
 	m_maincpu->write_callback().set(FUNC(plus4_state::cpu_w));
-	m_maincpu->set_pulls(0x00, 0xc0);
 	config.set_perfect_quantum(m_maincpu);
 
 	INPUT_MERGER_ANY_HIGH(config, "mainirq").output_handler().set_inputline(m_maincpu, m7501_device::IRQ_LINE);
@@ -986,7 +974,6 @@ void c16_state::c16n(machine_config &config)
 	plus4n(config);
 	m_maincpu->read_callback().set(FUNC(c16_state::cpu_r));
 	m_maincpu->write_callback().set(FUNC(plus4_state::cpu_w));
-	m_maincpu->set_pulls(0x00, 0xc0);
 
 	config.device_remove(MOS6551_TAG);
 	config.device_remove(MOS6529_USER_TAG);
@@ -1007,7 +994,6 @@ void c16_state::c16p(machine_config &config)
 	plus4p(config);
 	m_maincpu->read_callback().set(FUNC(c16_state::cpu_r));
 	m_maincpu->write_callback().set(FUNC(plus4_state::cpu_w));
-	m_maincpu->set_pulls(0x00, 0xc0);
 
 	config.device_remove(MOS6551_TAG);
 	config.device_remove(MOS6529_USER_TAG);
