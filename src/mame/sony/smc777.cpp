@@ -4,6 +4,9 @@
 
 SMC-777 (c) 1983 Sony
 
+References:
+- http://www.x1center.org/smc777/smc70_777_IOMAP_20210923.txt
+
 TODO:
 - convert video to a proper mc6845, consider this as a good base for new device rewrite;
 - cursor stuck in Bird Crash;
@@ -35,6 +38,8 @@ TODO:
 #include "sound/sn76496.h"
 #include "sound/spkrdev.h"
 #include "video/mc6845.h"
+
+#include "smc777_kbd.h"
 
 #include "emupal.h"
 #include "screen.h"
@@ -75,6 +80,7 @@ public:
 		, m_dac1bit(*this, "dac1bit")
 		, m_gfxdecode(*this, "gfxdecode")
 		, m_palette(*this, "palette")
+		, m_kbd(*this, "kbd")
 		// "JOY STICK#" dual DE-9 ports, on the right side of body chassis (near the volume knob)
 		, m_joystick_port(*this, "joystick%u", 1U)
 		, m_kanji_rom(*this, "kanji")
@@ -99,8 +105,6 @@ private:
 	void fbuf_w(offs_t offset, u8 data);
 	u8 kanji_r(offs_t offset);
 	void kanji_w(offs_t offset, u8 data);
-	u8 key_r(offs_t offset);
-	void key_w(offs_t offset, u8 data);
 	void border_col_w(u8 data);
 	u8 io_status_1c_r();
 	u8 io_status_1d_r();
@@ -123,7 +127,6 @@ private:
 	void vsync_irq_enable_w(u8 data);
 	void palette_init(palette_device &palette) const;
 	void vsync_w(int state);
-	TIMER_DEVICE_CALLBACK_MEMBER(keyboard_callback);
 
 	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 	void graphic_320x200x4(bitmap_ind16 &bitmap, const rectangle &cliprect);
@@ -150,6 +153,7 @@ private:
 	required_device<speaker_sound_device> m_dac1bit;
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
+	required_device<smc777_kbd_device> m_kbd;
 	required_device_array<msx_general_purpose_port_device, 2> m_joystick_port;
 	required_region_ptr<u8> m_kanji_rom;
 
@@ -160,9 +164,6 @@ private:
 	std::unique_ptr<u8[]> m_gvram;
 	std::unique_ptr<u8[]> m_pcg;
 
-	u8 m_keyb_press = 0;
-	u8 m_keyb_press_flag = 0;
-	u8 m_shift_press_flag = 0;
 	u8 m_backdrop_pen = 0;
 	u8 m_display_reg = 0;
 	u8 m_fdc_irq_flag = 0;
@@ -171,7 +172,6 @@ private:
 	u8 m_raminh = 0, m_raminh_pending_change = 0; //bankswitch
 	u8 m_raminh_prefetch = 0;
 	u8 m_pal_mode = 0;
-	u8 m_keyb_cmd = 0;
 	u8 m_crtc_vreg[0x20]{};
 	u8 m_crtc_addr = 0;
 	bool m_vsync_idf = false;
@@ -543,47 +543,6 @@ void smc777_state::fdc_drq_w(int state)
 	m_fdc_drq_flag = state;
 }
 
-u8 smc777_state::key_r(offs_t offset)
-{
-	/*
-	-x-- ---- shift key
-	---- -x-- MCU data ready
-	---- ---x handshake bit?
-	*/
-
-	switch(m_keyb_cmd)
-	{
-		case 0x00: //poll keyboard input
-		{
-			if(offset == 0)
-				m_keyb_press_flag = 0;
-
-			return (offset == 0) ? m_keyb_press : ((m_shift_press_flag << 6) | (m_keyb_press_flag << 2) | (m_keyb_press_flag));
-		}
-		default:
-		{
-			//if(offset == 1)
-			//  logerror("Unknown keyboard command %02x read-back\n",m_keyb_cmd);
-
-			return (offset == 0) ? 0x00 : (machine().rand() & 0x5);
-		}
-	}
-
-	// never executed
-	//return 0x00;
-}
-
-// TODO: pinpoint interface type
-void smc777_state::key_w(offs_t offset, u8 data)
-{
-	if(offset == 1) //keyboard command
-		m_keyb_cmd = data;
-	else
-	{
-		// keyboard command param
-	}
-}
-
 void smc777_state::border_col_w(u8 data)
 {
 	if(data & 0xf0)
@@ -791,7 +750,8 @@ void smc777_state::io_map(address_map &map)
 	map(0x08, 0x0f).select(0xff00).rw(FUNC(smc777_state::attr_r), FUNC(smc777_state::attr_w));
 	map(0x10, 0x17).select(0xff00).rw(FUNC(smc777_state::pcg_r), FUNC(smc777_state::pcg_w));
 	map(0x18, 0x19).mirror(0xff00).w(FUNC(smc777_state::mc6845_w));
-	map(0x1a, 0x1b).mirror(0xff00).rw(FUNC(smc777_state::key_r), FUNC(smc777_state::key_w));
+	map(0x1a, 0x1a).mirror(0xff00).rw(m_kbd, FUNC(smc777_kbd_device::data_r), FUNC(smc777_kbd_device::data_w));
+	map(0x1b, 0x1b).mirror(0xff00).rw(m_kbd, FUNC(smc777_kbd_device::status_r), FUNC(smc777_kbd_device::control_w));
 	map(0x1c, 0x1c).mirror(0xff00).rw(FUNC(smc777_state::io_status_1c_r), FUNC(smc777_state::io_control_w));
 	map(0x1d, 0x1d).mirror(0xff00).rw(FUNC(smc777_state::io_status_1d_r), FUNC(smc777_state::io_control_w));
 //  map(0x1e, 0x1f) rs232 irq control
@@ -844,128 +804,6 @@ void smc777_state::io_map(address_map &map)
 
 
 static INPUT_PORTS_START( smc777 )
-	PORT_START("key0") //0x00-0x07
-	PORT_BIT (0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_0_PAD)      PORT_CHAR(UCHAR_MAMEKEY(0_PAD))
-	PORT_BIT (0x02, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_1_PAD)      PORT_CHAR(UCHAR_MAMEKEY(1_PAD))
-	PORT_BIT (0x04, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_2_PAD)      PORT_CHAR(UCHAR_MAMEKEY(2_PAD))
-	PORT_BIT (0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_3_PAD)      PORT_CHAR(UCHAR_MAMEKEY(3_PAD))
-	PORT_BIT (0x10, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_4_PAD)      PORT_CHAR(UCHAR_MAMEKEY(4_PAD))
-	PORT_BIT (0x20, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_5_PAD)      PORT_CHAR(UCHAR_MAMEKEY(5_PAD))
-	PORT_BIT (0x40, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_6_PAD)      PORT_CHAR(UCHAR_MAMEKEY(6_PAD))
-	PORT_BIT (0x80, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_7_PAD)      PORT_CHAR(UCHAR_MAMEKEY(7_PAD))
-
-	PORT_START("key1") //0x08-0x0f
-	PORT_BIT (0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_8_PAD)      PORT_CHAR(UCHAR_MAMEKEY(8_PAD))
-	PORT_BIT (0x02, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_9_PAD)      PORT_CHAR(UCHAR_MAMEKEY(9_PAD))
-	PORT_BIT (0x04, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("/ PAD") PORT_CODE(KEYCODE_SLASH_PAD)
-	PORT_BIT (0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("* PAD") PORT_CODE(KEYCODE_ASTERISK)
-	PORT_BIT (0x10, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("- PAD") PORT_CODE(KEYCODE_MINUS_PAD)
-	PORT_BIT (0x20, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("+ PAD") PORT_CODE(KEYCODE_PLUS_PAD)
-	PORT_BIT (0x40, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("ENTER PAD") PORT_CODE(KEYCODE_ENTER_PAD) PORT_CHAR(13)
-	PORT_BIT (0x80, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME(". PAD") PORT_CODE(KEYCODE_DEL_PAD)
-
-	PORT_START("key2") //0x10-0x17
-	PORT_BIT (0x01, IP_ACTIVE_HIGH,IPT_UNUSED) // PORT_NAME("@") PORT_CODE(KEYCODE_OPENBRACE) PORT_CHAR('@')
-	PORT_BIT (0x02, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("A") PORT_CODE(KEYCODE_A) PORT_CHAR('A')
-	PORT_BIT (0x04, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("B") PORT_CODE(KEYCODE_B) PORT_CHAR('B')
-	PORT_BIT (0x08, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("C") PORT_CODE(KEYCODE_C) PORT_CHAR('C')
-	PORT_BIT (0x10, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("D") PORT_CODE(KEYCODE_D) PORT_CHAR('D')
-	PORT_BIT (0x20, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("E") PORT_CODE(KEYCODE_E) PORT_CHAR('E')
-	PORT_BIT (0x40, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("F") PORT_CODE(KEYCODE_F) PORT_CHAR('F')
-	PORT_BIT (0x80, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("G") PORT_CODE(KEYCODE_G) PORT_CHAR('G')
-
-	PORT_START("key3") //0x18-0x1f
-	PORT_BIT (0x01, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("H") PORT_CODE(KEYCODE_H) PORT_CHAR('H')
-	PORT_BIT (0x02, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("I") PORT_CODE(KEYCODE_I) PORT_CHAR('I')
-	PORT_BIT (0x04, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("J") PORT_CODE(KEYCODE_J) PORT_CHAR('J')
-	PORT_BIT (0x08, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("K") PORT_CODE(KEYCODE_K) PORT_CHAR('K')
-	PORT_BIT (0x10, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("L") PORT_CODE(KEYCODE_L) PORT_CHAR('L')
-	PORT_BIT (0x20, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("M") PORT_CODE(KEYCODE_M) PORT_CHAR('M')
-	PORT_BIT (0x40, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("N") PORT_CODE(KEYCODE_N) PORT_CHAR('N')
-	PORT_BIT (0x80, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("O") PORT_CODE(KEYCODE_O) PORT_CHAR('O')
-
-	PORT_START("key4") //0x20-0x27
-	PORT_BIT (0x01, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("P") PORT_CODE(KEYCODE_P) PORT_CHAR('P')
-	PORT_BIT (0x02, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("Q") PORT_CODE(KEYCODE_Q) PORT_CHAR('Q')
-	PORT_BIT (0x04, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("R") PORT_CODE(KEYCODE_R) PORT_CHAR('R')
-	PORT_BIT (0x08, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("S") PORT_CODE(KEYCODE_S) PORT_CHAR('S')
-	PORT_BIT (0x10, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("T") PORT_CODE(KEYCODE_T) PORT_CHAR('T')
-	PORT_BIT (0x20, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("U") PORT_CODE(KEYCODE_U) PORT_CHAR('U')
-	PORT_BIT (0x40, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("V") PORT_CODE(KEYCODE_V) PORT_CHAR('V')
-	PORT_BIT (0x80, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("W") PORT_CODE(KEYCODE_W) PORT_CHAR('W')
-
-	PORT_START("key5") //0x28-0x2f
-	PORT_BIT(0x01,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("X") PORT_CODE(KEYCODE_X) PORT_CHAR('X')
-	PORT_BIT(0x02,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("Y") PORT_CODE(KEYCODE_Y) PORT_CHAR('Y')
-	PORT_BIT(0x04,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("Z") PORT_CODE(KEYCODE_Z) PORT_CHAR('Z')
-	PORT_BIT(0x08,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("0-1") /* TODO: labels */
-	PORT_BIT(0x10,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("0-2")
-	PORT_BIT(0x20,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("1-1")
-	PORT_BIT(0x40,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("1-2")
-
-	PORT_START("key6") //0x30-0x37
-	PORT_BIT(0x01,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("0") PORT_CODE(KEYCODE_0) PORT_CHAR('0')
-	PORT_BIT(0x02,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("1") PORT_CODE(KEYCODE_1) PORT_CHAR('1')
-	PORT_BIT(0x04,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("2") PORT_CODE(KEYCODE_2) PORT_CHAR('2')
-	PORT_BIT(0x08,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("3") PORT_CODE(KEYCODE_3) PORT_CHAR('3')
-	PORT_BIT(0x10,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("4") PORT_CODE(KEYCODE_4) PORT_CHAR('4')
-	PORT_BIT(0x20,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("5") PORT_CODE(KEYCODE_5) PORT_CHAR('5')
-	PORT_BIT(0x40,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("6") PORT_CODE(KEYCODE_6) PORT_CHAR('6')
-	PORT_BIT(0x80,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("7") PORT_CODE(KEYCODE_7) PORT_CHAR('7')
-
-	PORT_START("key7") //0x38-0x3f
-	PORT_BIT(0x01,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("8") PORT_CODE(KEYCODE_8) PORT_CHAR('8')
-	PORT_BIT(0x02,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("9") PORT_CODE(KEYCODE_9) PORT_CHAR('9')
-	PORT_BIT(0x04,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("2-1") /* TODO: labels */
-	PORT_BIT(0x08,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("2-3")
-	PORT_BIT(0x10,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("3-1")
-	PORT_BIT(0x20,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("3-2")
-	PORT_BIT(0x40,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("3-3")
-
-	PORT_START("key8") //0x40-0x47
-	PORT_BIT(0x01,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("RETURN") PORT_CODE(KEYCODE_ENTER) PORT_CHAR(27)
-	PORT_BIT(0x02,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("SPACE") PORT_CODE(KEYCODE_SPACE) PORT_CHAR(' ')
-	PORT_BIT(0x04,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("BACKSPACE") PORT_CODE(KEYCODE_BACKSPACE) PORT_CHAR(8)
-	PORT_BIT(0x08,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("TAB") PORT_CODE(KEYCODE_TAB) PORT_CHAR(9)
-	PORT_BIT(0x10,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("ESC") PORT_CHAR(27)
-	PORT_BIT(0x20, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("INS") PORT_CODE(KEYCODE_INSERT)
-	PORT_BIT(0x40, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("DEL") PORT_CODE(KEYCODE_DEL)
-	/* TODO: control inputs */
-
-	PORT_START("key9") //0x40-0x47
-	/* TODO: cursor inputs */
-	PORT_BIT(0x01, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("CURSOR UP") PORT_CODE(KEYCODE_UP)
-	PORT_BIT(0x02, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("CURSOR DOWN") PORT_CODE(KEYCODE_DOWN)
-	PORT_BIT(0x04, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("CURSOR LEFT") PORT_CODE(KEYCODE_LEFT)
-	PORT_BIT(0x08, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("CURSOR RIGHT") PORT_CODE(KEYCODE_RIGHT)
-	PORT_BIT(0x10, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("HOME") PORT_CODE(KEYCODE_HOME)
-	PORT_BIT(0x20, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("END") PORT_CODE(KEYCODE_END)
-	PORT_BIT(0x40, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("PGUP") PORT_CODE(KEYCODE_PGUP)
-	PORT_BIT(0x80, IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("PGDOWN") PORT_CODE(KEYCODE_PGDN)
-
-	PORT_START("keya") //0x48-0x4f
-	PORT_BIT(0x01,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("F1") PORT_CODE(KEYCODE_F1)
-	PORT_BIT(0x02,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("F2") PORT_CODE(KEYCODE_F2)
-	PORT_BIT(0x04,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("F3") PORT_CODE(KEYCODE_F3)
-	PORT_BIT(0x08,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("F4") PORT_CODE(KEYCODE_F4)
-	PORT_BIT(0x10,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("F5") PORT_CODE(KEYCODE_F5)
-
-	PORT_START("key_mod")
-	PORT_BIT (0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_LSHIFT) PORT_CODE(KEYCODE_RSHIFT) PORT_CHAR(UCHAR_SHIFT_1)
-	PORT_BIT (0x10, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("KANA SHIFT") PORT_CODE(KEYCODE_LALT)
-
-
-	#if 0
-	PORT_BIT(0x00002000,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("-") PORT_CODE(KEYCODE_MINUS) PORT_CHAR('-')
-
-	PORT_BIT(0x04000000,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME(":") PORT_CODE(KEYCODE_QUOTE) PORT_CHAR(':')
-	PORT_BIT(0x08000000,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME(";") PORT_CODE(KEYCODE_COLON) PORT_CHAR(';')
-	PORT_BIT(0x08000000,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("[") PORT_CODE(KEYCODE_CLOSEBRACE) PORT_CHAR('[')
-	PORT_BIT(0x20000000,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("]") PORT_CODE(KEYCODE_BACKSLASH) PORT_CHAR(']')
-	PORT_BIT(0x40000000,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("^") PORT_CODE(KEYCODE_EQUALS) PORT_CHAR('^')
-	PORT_BIT(0x80000000,IP_ACTIVE_HIGH,IPT_KEYBOARD) PORT_NAME("_")
-	#endif
-
 	PORT_START("GPDSW")
 	PORT_DIPNAME( 0x01, 0x00, "GPDSW" )
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
@@ -992,115 +830,6 @@ static INPUT_PORTS_START( smc777 )
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x80, DEF_STR( On ) )
 INPUT_PORTS_END
-
-/*
-    Keyboard data:
-    kana lock |= 0x80
-    numpad 0 to 9 = 0x30 - 0x39
-    / pad = 0x2f
-    * pad = 0x2a
-    - pad = 0x2d
-    + pad = 0x2b
-    ENTER pad = 0x0d
-    . pad = 0x2e
-    enter = 0x0d
-    space = 0x20
-    backspace = 0x08
-    CTRL (TAB?) = 0x09
-    cursor up = 0x17
-    cursor down = 0x1c
-    cursor left = 0x16
-    cursor right = 0x19
-    0 to 9 -> 0x30 to 0x39
-    S + 0 = 0x29
-    S + 1 = 0x21
-    S + 2 = 0x40
-    S + 3 = 0x23
-    S + 4 = 0x24
-    S + 5 = 0x25
-    S + 6 = 0x5e
-    S + 7 = 0x26
-    S + 8 = 0x2a
-    S + 9 = 0x28
-    F1 = 0x01 / 0x15
-    F2 = 0x02 / 0x18
-    F3 = 0x04 / 0x12
-    F4 = 0x06 / 0x05
-    F5 = 0x0b / 0x03
-    ESC = 0x1b
-    INS = 0x0f
-    DEL = 0x11
-    PG UP = 0x12
-    PG DOWN = 0x03
-    HOME = 0x14
-    END = 0x0e
-    ' = 0x2d / 0x5f
-    "P" row 1 ] = 0x5d / 0x7d
-    "P" row 2 ' / ~ = 0x60 / 0x7e
-    "L" row 1 ; / : = 0x3b / 0x3a
-    "L" row 2 = (unused)
-    "L" row 3 Yen / | = 0x5c / 0x7c
-    "M" row 1 , / < = 0x2c / 0x3c
-    "M" row 2 . / > = 0x2e / 0x3e
-    "M" row 3 / / ? = 0x2f / 0x3f
-*/
-
-static const u8 smc777_keytable[2][0xa0] =
-{
-	/* normal*/
-	{
-		0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, /* numpad */
-		0x38, 0x39, 0x2f, 0x2a, 0x2d, 0x2b, 0x0d, 0x2e,
-		0xff, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66, 0x67, /* A - G */
-		0x68, 0x69, 0x6a, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, /* H - O */
-		0x70, 0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, /* P - W */
-		0x78, 0x79, 0x7a, 0x2d, 0x5d, 0x60, 0xff, 0xff, /* X - Z */
-		0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, /* 0 - 7*/
-		0x38, 0x39, 0x3b, 0x5c, 0x2c, 0x2e, 0x2f, 0xff, /* 8 - 9 */
-		0x0d, 0x20, 0x08, 0x09, 0x1b, 0x0f, 0x11, 0xff,
-		0x17, 0x1c, 0x16, 0x19, 0x14, 0x0e, 0x12, 0x03,
-		0x01, 0x02, 0x04, 0x06, 0x0b, 0xff, 0xff, 0xff
-	},
-	/* shift */
-	{
-		0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, /* numpad */
-		0x38, 0x39, 0x2f, 0x2a, 0x2d, 0x2b, 0x0d, 0x2e,
-		0xff, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47,
-		0x48, 0x49, 0x4a, 0x4b, 0x4c, 0x4d, 0x4e, 0x4f, /* H - O */
-		0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57, /* P - W */
-		0x58, 0x59, 0x5a, 0x5f, 0x7d, 0x7e, 0xff, 0xff, /* X - Z */
-		0x29, 0x21, 0x40, 0x23, 0x24, 0x25, 0x5e, 0x26,
-		0x2a, 0x28, 0x3a, 0x7c, 0x3c, 0x3e, 0x3f, 0xff,
-		0x0d, 0x20, 0x08, 0x09, 0x1b, 0x0f, 0x11, 0xff,
-		0x17, 0x1c, 0x16, 0x19, 0x14, 0x0e, 0x12, 0x03,
-		0x15, 0x18, 0x12, 0x05, 0x03, 0xff, 0xff, 0xff /* F1 - F5 */
-	}
-};
-
-TIMER_DEVICE_CALLBACK_MEMBER(smc777_state::keyboard_callback)
-{
-	static const char *const portnames[11] = { "key0","key1","key2","key3","key4","key5","key6","key7", "key8", "key9", "keya" };
-	int i, port_i, scancode;
-	u8 shift_mod = ioport("key_mod")->read() & 1;
-	u8 kana_mod = ioport("key_mod")->read() & 0x10;
-	scancode = 0;
-
-	for(port_i = 0; port_i < 11; port_i++)
-	{
-		for(i=0;i<8;i++)
-		{
-			if((ioport(portnames[port_i])->read()>>i) & 1)
-			{
-				m_keyb_press = smc777_keytable[shift_mod & 1][scancode];
-				if(kana_mod) { m_keyb_press|=0x80; }
-				m_keyb_press_flag = 1;
-				m_shift_press_flag = shift_mod & 1;
-				return;
-			}
-			scancode++;
-		}
-	}
-}
 
 void smc777_state::machine_start()
 {
@@ -1263,6 +992,8 @@ void smc777_state::smc777(machine_config &config)
 	SOFTWARE_LIST(config, "flop_list").set_original("smc777");
 	QUICKLOAD(config, "quickload", "com,cpm", attotime::from_seconds(3)).set_load_callback(FUNC(smc777_state::quickload_cb));
 
+	SMC777_KBD(config, m_kbd, 0);
+
 	// No clue about bundled defaults but:
 	// - dragon expects joystick in port 1
 	// - comp2:SMCPAINT/smcpaint expects mouse in port 2
@@ -1274,8 +1005,6 @@ void smc777_state::smc777(machine_config &config)
 	SN76489A(config, "sn1", MASTER_CLOCK / 8).add_route(ALL_OUTPUTS, "mono", 0.50); // unknown clock / divider
 
 	SPEAKER_SOUND(config, m_dac1bit).add_route(ALL_OUTPUTS, "mono", 0.50);
-
-	TIMER(config, "keyboard_timer").configure_periodic(FUNC(smc777_state::keyboard_callback), attotime::from_hz(240/32));
 }
 
 ROM_START( smc777 )
