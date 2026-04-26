@@ -2326,18 +2326,6 @@ end
 
 ---------------------------------------------------
 --
---@src/devices/machine/mb87078.h,MACHINES["MB87078"] = true
----------------------------------------------------
-
-if MACHINES["MB87078"] then
-	files {
-		MAME_DIR .. "src/devices/machine/mb87078.cpp",
-		MAME_DIR .. "src/devices/machine/mb87078.h",
-	}
-end
-
----------------------------------------------------
---
 --@src/devices/machine/mb8795.h,MACHINES["MB8795"] = true
 ---------------------------------------------------
 
@@ -4878,17 +4866,6 @@ if MACHINES["INPUT_MERGER"] then
 	files {
 		MAME_DIR .. "src/devices/machine/input_merger.cpp",
 		MAME_DIR .. "src/devices/machine/input_merger.h",
-	}
-end
-
----------------------------------------------------
---
---@src/devices/machine/k054321.h,MACHINES["K054321"] = true
----------------------------------------------------
-if MACHINES["K054321"] then
-	files {
-		MAME_DIR .. "src/devices/machine/k054321.cpp",
-		MAME_DIR .. "src/devices/machine/k054321.h",
 	}
 end
 

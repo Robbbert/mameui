@@ -29,8 +29,8 @@ A collection of slave DSPs transforms, projects, and clips each primitive's vert
 a stream of quad descriptors.
 
 Each quad has a reference color (shared across vertices), and for each vertex the tuple: (screenx,screeny,z-code).
-The z-code scalar accounts for depth bias.  A zbuffer is used while rendering quads, and depth cueing is used to
-shade pixels according to their depth.
+The z-code scalar accounts for depth bias.  Quads are sorted by z-code before rendering quads, and depth cueing
+is used to shade pixels according to their depth.
 
 -------------------
 
@@ -39,8 +39,8 @@ TODO:
 - car engine sound is wrong
 - pressing service mode while the game is running causes it to lock up (need to press F3)
 - is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
-- winrungp: some missing bitmap layer gfx due to underdumps of program roms (see attract mode when
-  it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)
+- winrungp: some missing bitmap layer gfx due to underdumps of the gpu program roms (see attract mode
+  when it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)
 
 reference videos:
 - https://youtu.be/ZNNveBLWevg
@@ -266,8 +266,6 @@ Filter Board
 |-------|60-PIN FLAT CABLE|------|
         |-------CONN------|
 
-****************************
-
 */
 
 #include "emu.h"
@@ -285,6 +283,8 @@ Filter Board
 #include "machine/nvram.h"
 #include "machine/timer.h"
 #include "sound/c140.h"
+#include "sound/mb87077.h"
+#include "sound/mixer.h"
 #include "sound/ymopm.h"
 
 #include "emupal.h"
@@ -310,6 +310,9 @@ public:
 		m_gpu_intc(*this, "gpu_intc"),
 		m_nvram(*this, "nvram", 0x2000, ENDIANNESS_BIG),
 		m_c140(*this, "c140"),
+		m_ym2151(*this, "ym2151"),
+		m_mb87077(*this, "mb87077_%u", 0),
+		m_mixer(*this, "mixer%u", 0),
 		m_palette(*this, "palette"),
 		m_screen(*this, "screen"),
 		m_audiobank(*this, "audiobank"),
@@ -338,6 +341,9 @@ private:
 	required_device<namco_c148_device> m_gpu_intc;
 	memory_share_creator<u8> m_nvram;
 	required_device<c140_device> m_c140;
+	required_device<ym2151_device> m_ym2151;
+	required_device_array<mb87077_device, 2> m_mb87077;
+	required_device_array<mixer_device, 8> m_mixer;
 	required_device<palette_device> m_palette;
 	required_device<screen_device> m_screen;
 	required_memory_bank m_audiobank;
@@ -368,6 +374,7 @@ private:
 	u8 nvram_r(offs_t offset) { return m_nvram[offset]; }
 
 	void sound_bankselect_w(u8 data);
+	template<int N> void mb87077_gain_changed(offs_t offset, u8 data);
 
 	void sound_reset_w(u8 data);
 	void system_reset_w(u8 data);
@@ -410,7 +417,7 @@ u16 namcos21_state::gpu_register_r(offs_t offset)
 
 void namcos21_state::gpu_register_w(offs_t offset, u16 data, u16 mem_mask)
 {
-	m_screen->update_partial(m_screen->vpos());
+	m_screen->update_partial(m_screen->vpos() - 1);
 	COMBINE_DATA(&m_gpu_register[offset]);
 }
 
@@ -597,13 +604,13 @@ void namcos21_state::gpu_map(address_map &map)
 void namcos21_state::sound_map(address_map &map)
 {
 	map(0x0000, 0x3fff).bankr("audiobank"); // banked
-	map(0x3000, 0x3003).nopw(); // ?
-	map(0x4000, 0x4001).rw("ymsnd", FUNC(ym2151_device::read), FUNC(ym2151_device::write));
+	map(0x4000, 0x4001).rw(m_ym2151, FUNC(ym2151_device::read), FUNC(ym2151_device::write));
 	map(0x5000, 0x51ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w));
-	map(0x6000, 0x61ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w)); // mirrored
+	map(0x6000, 0x6001).w(m_mb87077[0], FUNC(mb87077_device::data_w));
+	map(0x6800, 0x6801).w(m_mb87077[1], FUNC(mb87077_device::data_w));
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namcos21_state::dpram_byte_r), FUNC(namcos21_state::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
-	map(0xa000, 0xbfff).nopw(); // amplifier enable on 1st write
+	map(0xa000, 0xbfff).noprw(); // amplifier enable on 1st write
 	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
 	map(0xc001, 0xc001).w(FUNC(namcos21_state::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); // watchdog
@@ -713,6 +720,13 @@ void namcos21_state::sound_bankselect_w(u8 data)
 	m_audiobank->set_entry(data >> 4);
 }
 
+template<int N>
+void namcos21_state::mb87077_gain_changed(offs_t offset, u8 data)
+{
+	// 0=FR, 1=RR, 2=FL, 3=RL
+	m_mixer[N << 2 | bitswap<2>(offset ^ 2, 0, 1)]->set_output_gain(0, m_mb87077[N]->gain_factor_r(offset));
+}
+
 void namcos21_state::sound_reset_w(u8 data)
 {
 	if (data & 0x01)
@@ -778,6 +792,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(namcos21_state::screen_scanline)
 
 void namcos21_state::winrun(machine_config &config)
 {
+	// basic machine hardware
 	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); // Master
 	m_maincpu->set_addrmap(AS_PROGRAM, &namcos21_state::master_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(namcos21_state::screen_scanline), "screen", 0, 1);
@@ -830,6 +845,7 @@ void namcos21_state::winrun(machine_config &config)
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_1);
 
+	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	// TODO: basic parameters to get 60.606060 Hz, x2 is for interlace
 	m_screen->set_raw(49.152_MHz_XTAL / 4 * 2, 768, 0, 496, 264*2, 0, 480);
@@ -844,15 +860,26 @@ void namcos21_state::winrun(machine_config &config)
 	m_namcos21_3d->set_depth_reverse(true);
 	m_namcos21_3d->set_framebuffer_size(496, 480);
 
-	SPEAKER(config, "speaker", 2).front();
+	// sound hardware
+	SPEAKER(config, "speaker", 4).corners();
+
+	MB87077(config, m_mb87077[0]).gain_changed().set(FUNC(namcos21_state::mb87077_gain_changed<0>));
+	MB87077(config, m_mb87077[1]).gain_changed().set(FUNC(namcos21_state::mb87077_gain_changed<1>));
 
 	C140(config, m_c140, 49.152_MHz_XTAL / 384 / 6);
 	m_c140->set_addrmap(0, &namcos21_state::c140_map);
 	m_c140->int1_callback().set_inputline(m_audiocpu, M6809_FIRQ_LINE);
-	m_c140->add_route(0, "speaker", 0.50, 0);
-	m_c140->add_route(1, "speaker", 0.50, 1);
 
-	YM2151(config, "ymsnd", 3.579545_MHz_XTAL).add_route(0, "speaker", 0.30, 0).add_route(1, "speaker", 0.30, 1);
+	YM2151(config, m_ym2151, 3.579545_MHz_XTAL);
+
+	for (int i = 0; i < 4; i++)
+	{
+		m_c140->add_route(i & 1, m_mixer[i], 0.50);
+		m_ym2151->add_route(i & 1, m_mixer[i | 4], 0.30);
+	}
+
+	for (int i = 0; i < 8; i++)
+		MIXER(config, m_mixer[i]).add_route(0, "speaker", 0.50, i & 3);
 }
 
 

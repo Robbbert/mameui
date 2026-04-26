@@ -60,15 +60,15 @@ private:
 			std::fill(std::begin(masterDirectDrawBuffer), std::end(masterDirectDrawBuffer), 0);
 		}
 
-		unsigned masterSourceAddr = 0;
+		u32 masterSourceAddr = 0;
 		u16 slaveInputBuffer[DSP_BUF_MAX];
-		unsigned slaveBytesAvailable = 0;
-		unsigned slaveBytesAdvertised = 0;
-		unsigned slaveInputStart = 0;
+		u32 slaveBytesAvailable = 0;
+		u32 slaveBytesAdvertised = 0;
+		u32 slaveInputStart = 0;
 		u16 slaveOutputBuffer[DSP_BUF_MAX];
-		unsigned slaveOutputSize = 0;
+		u32 slaveOutputSize = 0;
 		u16 masterDirectDrawBuffer[256];
-		unsigned masterDirectDrawSize = 0;
+		u32 masterDirectDrawSize = 0;
 		int masterFinished = 0;
 		int slaveActive = 0;
 	};
@@ -94,7 +94,7 @@ private:
 	int m_irq_enable;
 	int m_mbNeedsKickstart;
 
-	s32 read_pointrom_data(unsigned offset);
+	s32 read_pointrom_data(u32 offset);
 	void transmit_word_to_slave(u16 data);
 	void transfer_dsp_data(bool first);
 	u16 read_word_from_slave_input();
