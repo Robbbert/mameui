@@ -197,7 +197,7 @@ u16 namcos21_dsp_c67_device::dspcuskey_r()
 
 void namcos21_dsp_c67_device::transmit_word_to_slave(u16 data)
 {
-	unsigned offs = m_mpDspState->slaveInputStart+m_mpDspState->slaveBytesAvailable++;
+	u32 offs = m_mpDspState->slaveInputStart+m_mpDspState->slaveBytesAvailable++;
 	m_mpDspState->slaveInputBuffer[offs % DSP_BUF_MAX] = data;
 
 	if (ENABLE_LOGGING) logerror("+%04x(#%04x)\n", data, m_mpDspState->slaveBytesAvailable);
@@ -385,7 +385,7 @@ void namcos21_dsp_c67_device::dspram16_w(offs_t offset, u16 data, u16 mem_mask)
 
 /***********************************************************/
 
-s32 namcos21_dsp_c67_device::read_pointrom_data(unsigned offset)
+s32 namcos21_dsp_c67_device::read_pointrom_data(u32 offset)
 {
 	return m_ptrom24[offset & 0xfffff];
 }

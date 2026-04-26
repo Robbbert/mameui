@@ -102,18 +102,18 @@ mb87078_device::mb87078_device(const machine_config &mconfig, const char *tag, d
 
 void mb87077_device::device_start()
 {
-	m_data = 0;
-	m_control = 0;
-
 	// invalidate gain index
 	for (int i = 0; i < 4; i++)
 		m_gain_index[i] = 66;
 
 	// output volume table, 0dB to -32dB in steps of -0.5dB
 	for (int i = 0; i < (64+1); i++)
-		m_lut_gains[i] = pow(10.0, (-0.5 * i) / 20.0);
-	m_lut_gains[65] = 0.0; // -infinity
-	m_lut_gains[66] = m_lut_gains[0];
+		m_gains[i] = pow(10.0, (-0.5 * i) / 20.0);
+	m_gains[65] = 0.0; // -infinity
+	m_gains[66] = m_gains[0];
+
+	m_data = 0;
+	m_control = 0;
 
 	// register for savestates
 	save_item(NAME(m_gain_index));
@@ -145,7 +145,7 @@ void mb87077_device::gain_recalc()
 {
 	for (int i = 0; i < 4; i++)
 	{
-		int gain_index;
+		u8 gain_index;
 
 		// EN = 0: -infinity dB
 		if (~m_channel_latch[i] & 0x40)

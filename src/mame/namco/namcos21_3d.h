@@ -19,7 +19,7 @@ public:
 	{
 		m_poly_frame_width = width;
 		m_poly_frame_height = height;
-		m_framebuffer_size_in_bytes = sizeof(u16)*m_poly_frame_width*m_poly_frame_height;
+		m_framebuffer_size_in_bytes = sizeof(u16) * m_poly_frame_width * m_poly_frame_height;
 	}
 
 	void copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &cliprect, int zlo, int zhi);
@@ -45,8 +45,8 @@ private:
 		double z;
 	};
 
-	void renderscanline_flat(const edge *e1, const edge *e2, int sy, unsigned color, int depthcueenable);
-	void rendertri(const n21_vertex *v0, const n21_vertex *v1, const n21_vertex *v2, unsigned color, int depthcueenable);
+	void renderscanline_flat(const edge *e1, const edge *e2, int sy, u16 color, int depthcueenable);
+	void rendertri(const n21_vertex *v0, const n21_vertex *v1, const n21_vertex *v2, u16 color, int depthcueenable);
 	void blit_single_quad(int sx[4], int sy[4], int zcode[4], u16 color);
 	void allocate_poly_framebuffer();
 

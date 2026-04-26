@@ -21,6 +21,7 @@ NOTES:
 
 TODO:
 - add communications for Left and Right screen (linked C139 or something else?)
+- are the left and right PCB sound outputs N/C?
 
 */
 
@@ -42,6 +43,8 @@ TODO:
 #include "machine/nvram.h"
 #include "machine/timer.h"
 #include "sound/c140.h"
+#include "sound/mb87077.h"
+#include "sound/mixer.h"
 #include "sound/ymopm.h"
 
 #include "emupal.h"
@@ -75,6 +78,9 @@ private:
 	required_device<namco_c148_device> m_slave_intc;
 	memory_share_creator<u8> m_nvram;
 	required_device<c140_device> m_c140;
+	required_device<ym2151_device> m_ymsnd;
+	required_device_array<mb87077_device, 2> m_mb87077;
+	required_device_array<mixer_device, 8> m_mixer;
 	required_device<namco_c355spr_device> m_c355spr;
 	required_device<palette_device> m_palette;
 	required_device<screen_device> m_screen;
@@ -98,6 +104,7 @@ private:
 	u8 nvram_r(offs_t offset) { return m_nvram[offset]; }
 
 	void sound_bankselect_w(u8 data);
+	template<int N> void mb87077_gain_changed(offs_t offset, u8 data);
 
 	void sound_reset_w(u8 data);
 	void system_reset_w(u8 data);
@@ -131,6 +138,9 @@ namco_de_pcbstack_device::namco_de_pcbstack_device(const machine_config &mconfig
 	m_slave_intc(*this, "slave_intc"),
 	m_nvram(*this, "nvram", 0x2000, ENDIANNESS_BIG),
 	m_c140(*this, "c140"),
+	m_ymsnd(*this, "ymsnd"),
+	m_mb87077(*this, "mb87077_%u", 0),
+	m_mixer(*this, "mixer%u", 0),
 	m_c355spr(*this, "c355spr"),
 	m_palette(*this, "palette"),
 	m_screen(*this, "screen"),
@@ -144,6 +154,7 @@ namco_de_pcbstack_device::namco_de_pcbstack_device(const machine_config &mconfig
 
 void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 {
+	// basic machine hardware
 	M68000(config, m_maincpu, 49.152_MHz_XTAL / 4); // Master
 	m_maincpu->set_addrmap(AS_PROGRAM, &namco_de_pcbstack_device::driveyes_master_map);
 	TIMER(config, "scantimer").configure_scanline(FUNC(namco_de_pcbstack_device::screen_scanline), "screen", 0, 1);
@@ -192,6 +203,7 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 
 	NAMCO_C139(config, m_sci, 0);
 
+	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
 	// TODO: basic parameters to get 60.606060 Hz, x2 is for interlace
 	m_screen->set_raw(49.152_MHz_XTAL / 4 * 2, 768, 0, 496, 264*2, 0, 480);
@@ -214,15 +226,26 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 	m_c355spr->set_color_base(0x1000);
 	m_c355spr->set_external_prifill(true);
 
-	SPEAKER(config, "speaker", 2).front();
+	// sound hardware
+	SPEAKER(config, "speaker", 4).corners();
+
+	MB87077(config, m_mb87077[0]).gain_changed().set(FUNC(namco_de_pcbstack_device::mb87077_gain_changed<0>));
+	MB87077(config, m_mb87077[1]).gain_changed().set(FUNC(namco_de_pcbstack_device::mb87077_gain_changed<1>));
 
 	C140(config, m_c140, 49.152_MHz_XTAL / 384 / 6);
 	m_c140->set_addrmap(0, &namco_de_pcbstack_device::c140_map);
 	m_c140->int1_callback().set_inputline(m_audiocpu, M6809_FIRQ_LINE);
-	m_c140->add_route(0, "speaker", 0.50, 0);
-	m_c140->add_route(1, "speaker", 0.50, 1);
 
-	YM2151(config, "ymsnd", 3.579545_MHz_XTAL).add_route(0, "speaker", 0.30, 0).add_route(1, "speaker", 0.30, 1);
+	YM2151(config, m_ymsnd, 3.579545_MHz_XTAL);
+
+	for (int i = 0; i < 4; i++)
+	{
+		m_c140->add_route(i & 1, m_mixer[i], 0.50);
+		m_ymsnd->add_route(i & 1, m_mixer[i | 4], 0.30);
+	}
+
+	for (int i = 0; i < 8; i++)
+		MIXER(config, m_mixer[i]).add_route(0, "speaker", 0.50, i & 3);
 }
 
 
@@ -327,13 +350,13 @@ void namco_de_pcbstack_device::dpram_byte_w(offs_t offset, u8 data)
 void namco_de_pcbstack_device::sound_map(address_map &map)
 {
 	map(0x0000, 0x3fff).bankr("audiobank"); // banked
-	map(0x3000, 0x3003).nopw(); // ?
-	map(0x4000, 0x4001).rw("ymsnd", FUNC(ym2151_device::read), FUNC(ym2151_device::write));
+	map(0x4000, 0x4001).rw(m_ymsnd, FUNC(ym2151_device::read), FUNC(ym2151_device::write));
 	map(0x5000, 0x51ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w));
-	map(0x6000, 0x61ff).mirror(0x0e00).rw(m_c140, FUNC(c140_device::c140_r), FUNC(c140_device::c140_w)); // mirrored
+	map(0x6000, 0x6001).w(m_mb87077[0], FUNC(mb87077_device::data_w));
+	map(0x6800, 0x6801).w(m_mb87077[1], FUNC(mb87077_device::data_w));
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namco_de_pcbstack_device::dpram_byte_r), FUNC(namco_de_pcbstack_device::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
-	map(0xa000, 0xbfff).nopw(); // amplifier enable on 1st write
+	map(0xa000, 0xbfff).noprw(); // amplifier enable on 1st write
 	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
 	map(0xc001, 0xc001).w(FUNC(namco_de_pcbstack_device::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); // watchdog
@@ -393,6 +416,13 @@ void namco_de_pcbstack_device::driveyes_slave_map(address_map &map)
 void namco_de_pcbstack_device::sound_bankselect_w(u8 data)
 {
 	m_audiobank->set_entry(data >> 4);
+}
+
+template<int N>
+void namco_de_pcbstack_device::mb87077_gain_changed(offs_t offset, u8 data)
+{
+	// 0=FR, 1=RR, 2=FL, 3=RL
+	m_mixer[N << 2 | bitswap<2>(offset ^ 2, 0, 1)]->set_output_gain(0, m_mb87077[N]->gain_factor_r(offset));
 }
 
 void namco_de_pcbstack_device::sound_reset_w(u8 data)
