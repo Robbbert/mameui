@@ -38,11 +38,6 @@ TODO:
     Suzuka 8 Hours II
     - some sprite cropping issues
 
-    Valkyrie no Densetsu
-    - gives ADSMISS error on startup
-       Does a checksum on area 0x181000 - 0x183fff, in 0x20 bytes block chunks. Game doesn't init it properly so you either have to go into service menu and do
-       an "all data clear" or play once to get rid of the message.
-
     Metal Hawk
     - ROZ wraparound isn't implemented (see large battleship in 2nd stage)
 
@@ -5006,6 +5001,9 @@ ROM_START( valkyrie )
 	ROM_REGION16_BE( 0x200000, "c140", ROMREGION_ERASE00 )    /* Sound voices */
 	NAMCOS2_DATA_LOAD_E_256K( "wd1voi1.bin",  0x000000, CRC(f1ace193) SHA1(dd13bdf4b99c6bf4e356d623ff2e3da72db331dd) )
 	NAMCOS2_DATA_LOAD_E_128K( "wd1voi2.bin",  0x100000, CRC(e95c5cf3) SHA1(4bfc7303bde23bcf6739c7877dd87671c33135bc) )
+
+	ROM_REGION( 0x2000, "nvram", 0 ) /* game doesn't auto initialize nvram properly */
+	ROM_LOAD( "valkyrie.nv",  0x000000, 0x2000, CRC(d5ce4069) SHA1(ce01ebbbd8d4e03a7b8e0fa50296d6cc1a978800) )
 ROM_END
 
 /* KYUUKAI DOUCHUUKI */
