@@ -862,6 +862,7 @@ void plus4_state::plus4(machine_config &config)
 	SPEAKER(config, "mono").front_center();
 
 	MOS7360(config, m_ted, 0);
+	m_ted->set_cpu_tag(m_maincpu);
 	m_ted->set_addrmap(0, &plus4_state::ted_videoram_map);
 	m_ted->set_screen(SCREEN_TAG);
 	m_ted->write_irq_callback().set("mainirq", FUNC(input_merger_device::in_w<0>));
@@ -943,7 +944,7 @@ void c16_state::plus4p(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(17'734'470)/20);
-	m_ted->set_clock(XTAL(17'734'470)/5);
+	m_ted->set_clock(XTAL(17'734'470)/5/4);
 
 	// software list
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
@@ -962,7 +963,7 @@ void c16_state::plus4n(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(14'318'181)/16);
-	m_ted->set_clock(XTAL(14'318'181)/4);
+	m_ted->set_clock(XTAL(14'318'181)/4/4);
 
 	// software list
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
