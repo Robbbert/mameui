@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 263 -->
+<!-- Number of items in this list = 264 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -69,6 +69,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="321052">
 				<rom name="(demo)Contra SP V20050416 by Shock The Dark Mage (PD).gba" size="321052" crc="3a8b0d97" sha1="90c83629f9f88880b07b41d19822a5e1a6712fea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa9f099a0d9a51">
+		<description>(demo)dma_shadow_test_allchannels</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="(demo)dma_shadow_test_allchannels.gba" size="32768" crc="41f86070" sha1="a9f099a0d9a5161b7a335c5e6677cc638bd0a625"/>
 			</dataarea>
 		</part>
 	</software>

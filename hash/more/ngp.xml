@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 90 -->
+<!-- Number of items in this list = 113 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -102,6 +102,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp6de546df94ed8">
+		<description>Aerial Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Aerial Mini (2025)(Inufuto).ngp" size="524288" crc="3fc9f157" sha1="6de546df94ed8c7c7a84e32f8e3dbe671652b521"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp14ded962ff138">
+		<description>AntiAir Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="AntiAir Mini (2025)(Inufuto).ngp" size="524288" crc="5b006870" sha1="14ded962ff138fd1babc89ae1fe046bd0e5a9f76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp53c77dd5a3ee3">
+		<description>Ascend Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Ascend Mini (2025)(Inufuto).ngp" size="524288" crc="c827c339" sha1="53c77dd5a3ee3d78f4a5a6afb302ad1aa1e0e359"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp12bf215b18df9">
+		<description>Awass Micro (2026)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Awass Micro (2026)(Inufuto).ngp" size="524288" crc="0304dbca" sha1="12bf215b18df95d2fb90efa29539949e328dffb0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpc19b992a91b10">
 		<description>Baccarat [Prototype]</description>
 		<year>????</year>
@@ -109,6 +149,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Baccarat [Prototype].ngc" size="1048576" crc="2a63b5a5" sha1="c19b992a91b1020e8f3b6c24fac97ec9d73f52b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp3e870e0361d32">
+		<description>Battlot Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Battlot Mini (2025)(Inufuto).ngp" size="524288" crc="694eed46" sha1="3e870e0361d328c8e8ae36da26bfe5dcb8c61783"/>
 			</dataarea>
 		</part>
 	</software>
@@ -142,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp6f41c00e23d3b">
+		<description>Bootskell Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Bootskell Mini (2025)(Inufuto).ngp" size="524288" crc="3aa89e2e" sha1="6f41c00e23d3b80583c9470021038be3d6b79a1b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpfdef7891c5d5b">
 		<description>Bust A Move [Prototype]</description>
 		<year>????</year>
@@ -149,6 +209,26 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Bust A Move [Prototype].ngc" size="1048576" crc="4c2160bc" sha1="fdef7891c5d5b211b6f7a4da4830c42d86d98d74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp18a8e2be5c939">
+		<description>Cacorm Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Cacorm Mini (2025)(Inufuto).ngp" size="524288" crc="473d7943" sha1="18a8e2be5c9395b64280c0c324a2e702fa56beb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp604c5baad2891">
+		<description>Cavit Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Cavit Mini (2025)(Inufuto).ngp" size="524288" crc="3b10d453" sha1="604c5baad28913823ce39c45c39888c86ff811f3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -179,6 +259,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="CPU Test by Judge_ (PD).ngp" size="2097152" crc="c9551049" sha1="a77237078fdfb7356a131b7500dd640800224538"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp90ade99f04b40">
+		<description>Cracky Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Cracky Mini (2025)(Inufuto).ngp" size="524288" crc="7cb9fe1f" sha1="90ade99f04b402dd31fa130c8ab17feeac83e0dd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -262,6 +352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpbee600fb248d4">
+		<description>Guntus Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Guntus Mini (2025)(Inufuto).ngp" size="524288" crc="66e24bdb" sha1="bee600fb248d4691798c7e7a9cd3ce1658e99d58"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp081b8d2aa7daa">
 		<description>Hardware Test (PD)</description>
 		<year>????</year>
@@ -282,6 +382,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpf1514945412c9">
+		<description>Hopman Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Hopman Mini (2025)(Inufuto).ngp" size="524288" crc="4c8a4bf2" sha1="f1514945412c9088b963e8bed6a9bd579011c071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp6885e0e1b3ca4">
+		<description>Impetus Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Impetus Mini (2025)(Inufuto).ngp" size="524288" crc="0bef4816" sha1="6885e0e1b3ca47c3242c340d188910a6bd5e3313"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp7ea7dbee3cab7">
+		<description>Impetus+ Micro (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Impetus+ Micro (2025)(Inufuto).ngp" size="524288" crc="ce7a627c" sha1="7ea7dbee3cab7b62305a720b882e7e319363526e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpe1330bf8931d2">
 		<description>Jumpy! by Monkey Heeded Software (PD)</description>
 		<year>????</year>
@@ -299,6 +429,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Juno First (PD)(no sound).ngc" size="32768" crc="3ddb25ae" sha1="ec188f3fcbbad354ab47bdb9a0a0634a88d5d52e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp6f18a86b1ea85">
+		<description>Jurl (2025)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Jurl (2025)(Tonsomo Entertainment).ngp" size="524288" crc="af434981" sha1="6f18a86b1ea853fe9a64fc4aa83008189f0729d8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -329,6 +469,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="King of Fighters R-2 (JUE) [!].ngc" size="2097152" crc="17f8e61e" sha1="c2f7231acdf5d214162d2c82bb7cdda7ec5dce5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp422a113b9f31b">
+		<description>Lift Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Lift Mini (2025)(Inufuto).ngp" size="524288" crc="09ef36ea" sha1="422a113b9f31bd38a97d0e71a9cda1f871d9e01c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -402,6 +552,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp1947192b83733">
+		<description>Mazy 2 Micro (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mazy 2 Micro (2025)(Inufuto).ngp" size="524288" crc="f98b615a" sha1="1947192b837337b6ec9013b009e9b4615a9c9f8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp7fe95a6ec34bc">
+		<description>Mazy Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mazy Mini (2025)(Inufuto).ngp" size="524288" crc="f7180631" sha1="7fe95a6ec34bcbb75f50c51bcaabe4a06f4753af"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp1dab3cafc49d4">
 		<description>Melon Chan's Growth Diary (J) [M]</description>
 		<year>????</year>
@@ -439,6 +609,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mezase! Kanji Ou (J).ngc" size="2097152" crc="c3c9992e" sha1="2e6c314a7915ed2f0e2471814790f257b470a499"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp0fa8ecd9b2d3b">
+		<description>Mieyen Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mieyen Mini (2025)(Inufuto).ngp" size="524288" crc="17cd1b2d" sha1="0fa8ecd9b2d3b4f45b682f2728735e2983b15448"/>
 			</dataarea>
 		</part>
 	</software>
@@ -562,6 +742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpbebb7f6691a7d">
+		<description>Neuras Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Neuras Mini (2025)(Inufuto).ngp" size="524288" crc="f03b93fe" sha1="bebb7f6691a7dcf899272aa211911aa3a9d5856b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpd79a6d9ba9828">
 		<description>NGPC Game Pack (Spacies &amp; Asteroids) (PD)</description>
 		<year>????</year>
@@ -589,6 +779,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Oekaki Puzzle (J).ngc" size="524288" crc="0c4dafe8" sha1="fcd780fcbce5e914ef4addbcc048580c052e943b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp204819d62c38c">
+		<description>Osotos Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Osotos Mini (2025)(Inufuto).ngp" size="524288" crc="deb63720" sha1="204819d62c38cb45574b9786ecafe7fa668f5e8d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -709,6 +909,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Rockman - Battle &amp; Fighters (Japan) [T-En by marc_max v0.9] [i].ngc" size="2097152" crc="65985356" sha1="2c93c45b5aeda0eba1ba66b0a56cba86e8f675b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpaeacc5696dec5">
+		<description>Ruptus Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Ruptus Mini (2025)(Inufuto).ngp" size="524288" crc="09f1b098" sha1="aeacc5696dec5f607db8377c27f0ce8b8a459dfb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -872,6 +1082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpca280fdc1ed1b">
+		<description>Svellas Micro (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Svellas Micro (2025)(Inufuto).ngp" size="524288" crc="c10d5ff6" sha1="ca280fdc1ed1ba17ca6ef724c03c93578c662dfb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpcc21b9da3306d">
 		<description>Thieves V1.0 By Ivan Mackintosh (PD)</description>
 		<year>????</year>
@@ -899,6 +1119,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Unnamed Jumpy Platform Game by Roger Bacon (06-06-2001) (PD).ngc" size="32768" crc="1bdd37a9" sha1="b5ee592ad45ffbeccd404ed06e5a37185b8d0d4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpa23baf77e2588">
+		<description>Yewdow Mini (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Yewdow Mini (2025)(Inufuto).ngp" size="524288" crc="2b56cec9" sha1="a23baf77e2588186059b97fbce0baec2a8474e38"/>
 			</dataarea>
 		</part>
 	</software>

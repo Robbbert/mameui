@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 696 -->
+<!-- Number of items in this list = 698 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -329,6 +329,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Astrododge (2012) (Revival Studios).rom" size="32768" crc="1a29dfd1" sha1="8a9ec107cfef2df9e5509ea853674c262767e207"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col92ec3bc0d5cdf">
+		<description>Awass (2026)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9341">
+				<rom name="Awass (2026)(Inufuto).rom" size="9341" crc="c38cdf41" sha1="92ec3bc0d5cdfe9df5f70321cc2e94a3ad1b2533"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2869,6 +2879,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Illusions (USA)(1984)(Nice Ideas).rom" size="16384" crc="2787516d" sha1="314be140b495de538ffdf01c9faee4aeef1ecb83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colf5914903d15f2">
+		<description>Impetus+ (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="17919">
+				<rom name="Impetus+ (2025)(Inufuto).rom" size="17919" crc="08e88ad2" sha1="f5914903d15f2ab15369b7ca3378f87dd23a8e3f"/>
 			</dataarea>
 		</part>
 	</software>

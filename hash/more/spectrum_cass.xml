@@ -21842,16 +21842,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs2be555fd806e9">
-		<description>Edd the Duck 48K (1990)(Impulze)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="44167">
-				<rom name="Edd the Duck 48K (1990)(Impulze).tzx" size="44167" crc="dfc4785e" sha1="2be555fd806e9c9b47c20d099376ea0051428f57"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxscf68c4c0eaf60">
 		<description>Eddie Kidd Jump Challenge (1984)(Martech Games)</description>
 		<year>????</year>
@@ -31799,6 +31789,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16231">
 				<rom name="Impetus (2021)(Inufuto).tap" size="16231" crc="059b3699" sha1="cf27e678b6519a5346963fbe394bed0527566643"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs482501aa59975">
+		<description>Impetus+ 48K-AY (2025)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15492">
+				<rom name="Impetus+ 48K-AY (2025)(Inufuto).tzx" size="15492" crc="998812f7" sha1="482501aa59975d5f2be610388c4d2996c78d6c03"/>
 			</dataarea>
 		</part>
 	</software>
