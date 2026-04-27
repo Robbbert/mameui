@@ -272,14 +272,14 @@ Not extensively tested, may be incomplete?
 	</software>
 
 	<software name="amazon" supported="no">
-		<description>Hikyou Amazon no Okuchi ni Kogane Densetsu o Mita</description>
+		<description>Hikyou Amazon no Okuchi ni Kogane Densetsu o Mita!</description>
 		<year>198?</year>
 		<publisher>データウエスト (Data West)</publisher>
 		<notes><![CDATA[
 [keyboard] tends to stuck
 Not extensively tested
 ]]></notes>
-		<info name="alt_title" value="魔境アマゾンの奥地に黄金伝説を見た"/>
+		<info name="alt_title" value="魔境アマゾンの奥地に黄金伝説を見た！"/>
 
 		<part name="flop1" interface="floppy_3_5">
 			<feature name="part_id" value="Disk 1"/>
@@ -328,13 +328,13 @@ Unresponsive [keyboard]
 	</software>
 
 	<software name="baidew">
-		<description>Baikin-kun's Dental Walk</description>
+		<description>Baikin-kun no Dental War</description>
 		<year>1985</year>
 		<publisher>ソニー・クリエイティブプロダクツ (Sony Creative Products)</publisher>
 		<notes><![CDATA[
 Uneven [MC6845] display during gameplay
 ]]></notes>
-		<info name="alt_title" value="バイキン君のデンタルウオー"/>
+		<info name="alt_title" value="バイキン君のデンタルウォー"/>
 
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="362992">
@@ -395,7 +395,7 @@ Untested [floppy] saving
 		<description>Choplifter!</description>
 		<year>1984?</year>
 		<publisher>ソニー (Sony)</publisher>
-		<info name="alt_title" value="チョップリフター!"/>
+		<info name="alt_title" value="チョップリフター！"/>
 		<info name="serial" value="SMW-G708D"/>
 		<!-- 43-7914-30 -->
 
@@ -944,11 +944,10 @@ GAME&TYP.BAS: same as TYPE.BAS with no graphic layer
 	</software>
 
 	<software name="smcigo1">
-		<!-- TODO: complete title -->
-		<description>SMC Jissen Igo (I)</description>
+		<description>SMC Jissen Igo Series (I) Fujisawa Hideyuki Kihon Tesuji</description>
 		<year>1984</year>
 		<publisher>ソニー (Sony)</publisher>
-		<info name="alt_title" value="SMC実践囲碁"/>
+		<info name="alt_title" value="SMC実践囲碁シリーズ(I) 藤沢秀行基本手筋"/>
 
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
