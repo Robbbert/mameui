@@ -117,7 +117,6 @@ void namco_c148_device::device_validity_check(validity_checker &valid) const
 void namco_c148_device::device_start()
 {
 	// TODO: link to SCI, EX and the screen device controller devices
-	m_posirq_line = 0;
 	m_bus_reg = 0;
 
 	save_item(NAME(m_irqlevel.cpu));
@@ -125,7 +124,6 @@ void namco_c148_device::device_start()
 	save_item(NAME(m_irqlevel.sci));
 	save_item(NAME(m_irqlevel.pos));
 	save_item(NAME(m_irqlevel.vblank));
-	save_item(NAME(m_posirq_line));
 	save_item(NAME(m_bus_reg));
 }
 
@@ -215,26 +213,4 @@ void namco_c148_device::cpu_irq_assert_w(uint16_t data)
 	// TODO: Starblade relies on this for showing large polygons, is it the right place?
 	if (m_linked_c148)
 		m_linked_c148->cpu_irq_trigger();
-}
-
-
-//**************************************************************************
-//  GETTERS/SETTERS
-//**************************************************************************
-
-// TODO: these doesn't belong here, needs C116 device
-uint8_t namco_c148_device::ext_posirq_line_r()
-{
-	// TODO: same as regular register? winrun91 reads here and subs with integer 0x39 for a new posirq that never gets triggered.
-	return m_posirq_line;
-}
-
-void namco_c148_device::ext_posirq_line_w(uint8_t data)
-{
-	m_posirq_line = data;
-}
-
-uint8_t namco_c148_device::get_posirq_line()
-{
-	return m_posirq_line;
 }

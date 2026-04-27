@@ -356,6 +356,7 @@ private:
 	u8 m_gpu_videoram_mask = 0;
 	u16 m_gpu_color = 0;
 	u16 m_gpu_register[0x10/2] = { };
+	u8 m_posirq_line = 0;
 
 	u16 dpram_word_r(offs_t offset);
 	void dpram_word_w(offs_t offset, u16 data, u16 mem_mask = ~0);
@@ -366,6 +367,8 @@ private:
 	void gpu_color_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 	u16 gpu_register_r(offs_t offset);
 	void gpu_register_w(offs_t offset, u16 data, u16 mem_mask = ~0);
+	u8 gpu_posirq_r();
+	void gpu_posirq_w(u8 data);
 	void gpu_videoram_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 	u16 gpu_videoram_r(offs_t offset);
 
@@ -385,6 +388,7 @@ private:
 
 	void bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect);
 
+	void common_map(address_map &map) ATTR_COLD;
 	void master_map(address_map &map) ATTR_COLD;
 	void slave_map(address_map &map) ATTR_COLD;
 	void gpu_map(address_map &map) ATTR_COLD;
@@ -397,6 +401,11 @@ void namcos21_state::video_start()
 {
 	m_gpu_videoram = make_unique_clear<u8[]>(0x80000);
 	save_pointer(NAME(m_gpu_videoram), 0x80000);
+
+	save_item(NAME(m_gpu_videoram_mask));
+	save_item(NAME(m_gpu_color));
+	save_item(NAME(m_gpu_register));
+	save_item(NAME(m_posirq_line));
 }
 
 u16 namcos21_state::gpu_color_r()
@@ -418,6 +427,16 @@ void namcos21_state::gpu_register_w(offs_t offset, u16 data, u16 mem_mask)
 {
 	m_screen->update_partial(m_screen->vpos() - 1);
 	COMBINE_DATA(&m_gpu_register[offset]);
+}
+
+u8 namcos21_state::gpu_posirq_r()
+{
+	return m_posirq_line;
+}
+
+void namcos21_state::gpu_posirq_w(u8 data)
+{
+	m_posirq_line = data;
 }
 
 void namcos21_state::gpu_videoram_w(offs_t offset, u16 data, u16 mem_mask)
@@ -442,7 +461,7 @@ void namcos21_state::bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect
 {
 	// show gpu registers & related
 #if 0
-	printf("%3d %3d (%3d %3d) - ", cliprect.top(), cliprect.bottom(), m_screen->vpos(), m_gpu_intc->get_posirq_line());
+	printf("%3d %3d (%3d %3d) - ", cliprect.top(), cliprect.bottom(), m_screen->vpos(), m_posirq_line);
 	for (int i = 0; i < 8; i++)
 		printf("%04x ", m_gpu_register[i]);
 	printf("| %04x\n", m_gpu_color);
@@ -542,8 +561,19 @@ void namcos21_state::dpram_byte_w(offs_t offset, u8 data)
 
 /******************************************************************************/
 
+void namcos21_state::common_map(address_map &map)
+{
+	map(0x600000, 0x60ffff).ram().share("gpu_comram");
+	map(0x800000, 0x87ffff).rom().region("data", 0);
+	map(0x900000, 0x90ffff).ram().share("sharedram");
+	map(0xa00000, 0xa00fff).rw(FUNC(namcos21_state::dpram_word_r), FUNC(namcos21_state::dpram_word_w));
+	map(0xb00000, 0xb03fff).rw(m_sci, FUNC(namco_c139_device::ram_r), FUNC(namco_c139_device::ram_w));
+	map(0xb80000, 0xb8000f).m(m_sci, FUNC(namco_c139_device::regs_map));
+}
+
 void namcos21_state::master_map(address_map &map)
 {
+	common_map(map);
 	map(0x000000, 0x03ffff).rom();
 	map(0x100000, 0x10ffff).ram(); // work RAM
 	map(0x180000, 0x183fff).rw(FUNC(namcos21_state::nvram_r), FUNC(namcos21_state::nvram_w)).umask16(0x00ff);
@@ -557,28 +587,15 @@ void namcos21_state::master_map(address_map &map)
 	map(0x3c0000, 0x3c1fff).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_68k_dspcomram_r), FUNC(namcos21_dsp_device::winrun_68k_dspcomram_w));
 	map(0x400000, 0x400001).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::pointram_control_w));
 	map(0x440000, 0x440001).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::pointram_data_r), FUNC(namcos21_dsp_device::pointram_data_w));
-
-	map(0x600000, 0x60ffff).ram().share("gpu_comram");
-	map(0x800000, 0x87ffff).rom().region("data", 0);
-	map(0x900000, 0x90ffff).ram().share("sharedram");
-	map(0xa00000, 0xa00fff).rw(FUNC(namcos21_state::dpram_word_r), FUNC(namcos21_state::dpram_word_w));
-	map(0xb00000, 0xb03fff).rw(m_sci, FUNC(namco_c139_device::ram_r), FUNC(namco_c139_device::ram_w));
-	map(0xb80000, 0xb8000f).m(m_sci, FUNC(namco_c139_device::regs_map));
 }
 
 void namcos21_state::slave_map(address_map &map)
 {
+	common_map(map);
 	map(0x000000, 0x03ffff).rom();
 	map(0x100000, 0x13ffff).ram();
 	map(0x1c0000, 0x1fffff).m(m_slave_intc, FUNC(namco_c148_device::map));
-	map(0x600000, 0x60ffff).ram().share("gpu_comram");
-	map(0x800000, 0x87ffff).rom().region("data", 0);
-	map(0x900000, 0x90ffff).ram().share("sharedram");
-	map(0xa00000, 0xa00fff).rw(FUNC(namcos21_state::dpram_word_r), FUNC(namcos21_state::dpram_word_w));
-	map(0xb00000, 0xb03fff).rw(m_sci, FUNC(namco_c139_device::ram_r), FUNC(namco_c139_device::ram_w));
-	map(0xb80000, 0xb8000f).m(m_sci, FUNC(namco_c139_device::regs_map));
 }
-
 
 void namcos21_state::gpu_map(address_map &map)
 {
@@ -592,7 +609,7 @@ void namcos21_state::gpu_map(address_map &map)
 	map(0x600000, 0x6fffff).rom().region("gdata", 0);
 	map(0xc00000, 0xcfffff).rw(FUNC(namcos21_state::gpu_videoram_r), FUNC(namcos21_state::gpu_videoram_w));
 	map(0xd00000, 0xd0000f).rw(FUNC(namcos21_state::gpu_register_r), FUNC(namcos21_state::gpu_register_w));
-	map(0xe0000d, 0xe0000d).rw(m_gpu_intc, FUNC(namco_c148_device::ext_posirq_line_r), FUNC(namco_c148_device::ext_posirq_line_w));
+	map(0xe0000d, 0xe0000d).rw(FUNC(namcos21_state::gpu_posirq_r), FUNC(namcos21_state::gpu_posirq_w));
 }
 
 
@@ -748,6 +765,7 @@ void namcos21_state::system_reset_w(u8 data)
 void namcos21_state::reset_all_subcpus(int state)
 {
 	m_slave->set_input_line(INPUT_LINE_RESET, state);
+	m_gpu->set_input_line(INPUT_LINE_RESET, state);
 	m_c65->ext_reset(state);
 }
 
@@ -767,10 +785,6 @@ void namcos21_state::machine_start()
 	u32 max = memregion("audiocpu")->bytes() / 0x4000;
 	for (int i = 0; i < 0x10; i++)
 		m_audiobank->configure_entry(i, memregion("audiocpu")->base() + (i % max) * 0x4000);
-
-	save_item(NAME(m_gpu_videoram_mask));
-	save_item(NAME(m_gpu_color));
-	save_item(NAME(m_gpu_register));
 }
 
 TIMER_DEVICE_CALLBACK_MEMBER(namcos21_state::screen_scanline)
@@ -785,7 +799,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(namcos21_state::screen_scanline)
 		m_c65->ext_interrupt(HOLD_LINE);
 	}
 
-	if (scanline == (0xff - m_gpu_intc->get_posirq_line()) * 2)
+	if (scanline == (m_posirq_line ^ 0xff) * 2)
 		m_gpu_intc->pos_irq_trigger();
 }
 
