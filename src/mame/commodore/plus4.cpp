@@ -78,6 +78,8 @@ public:
 	{ }
 
 	void plus4(machine_config &config);
+	void plus4p(machine_config &config);
+	void plus4n(machine_config &config);
 
 	void cpu_w(uint8_t data);
 
@@ -126,7 +128,7 @@ protected:
 	void write_kb6(int state) { if (state) m_kb |= 64; else m_kb &= ~64; }
 	void write_kb7(int state) { if (state) m_kb |= 128; else m_kb &= ~128; }
 
-	DECLARE_QUICKLOAD_LOAD_MEMBER(quickload_c16);
+	DECLARE_QUICKLOAD_LOAD_MEMBER(quickload) { return general_cbm_loadsnap(image, m_maincpu->space(AS_PROGRAM), 0, cbm_quick_sethiaddress); }
 
 	enum
 	{
@@ -166,8 +168,6 @@ public:
 	void c16n(machine_config &config);
 	void c16p(machine_config &config);
 	void c232(machine_config &config);
-	void plus4p(machine_config &config);
-	void plus4n(machine_config &config);
 
 private:
 	uint8_t cpu_r();
@@ -192,12 +192,6 @@ private:
 #define BA5 BIT(offset, 5)
 #define BA4 BIT(offset, 4)
 
-
-
-QUICKLOAD_LOAD_MEMBER(plus4_state::quickload_c16)
-{
-	return general_cbm_loadsnap(image, m_maincpu->space(AS_PROGRAM), 0, cbm_quick_sethiaddress);
-}
 
 //**************************************************************************
 //  MEMORY MANAGEMENT
@@ -929,11 +923,10 @@ void plus4_state::plus4(machine_config &config)
 	m_exp->cd_wr_callback().set(FUNC(plus4_state::write));
 	m_exp->aec_wr_callback().set_inputline(m_maincpu, INPUT_LINE_HALT);
 
-	//QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY).set_load_callback(FUNC(plus4_state::quickload_c16));
-	quickload_image_device &snapshot(QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY));
-	snapshot.set_load_callback(FUNC(plus4_state::quickload_c16));
-	snapshot.set_interface("c16_quik");
-	SOFTWARE_LIST(config, "c16_quik").set_original("c16_quik");
+	quickload_image_device &quickload(QUICKLOAD(config, "quickload", "p00,prg", attotime::from_msec(100)));
+	quickload.set_load_callback(FUNC(plus4_state::quickload));
+	quickload.set_interface("cbm_quik");
+	SOFTWARE_LIST(config, "cbm_quik").set_original("plus4_quik");
 
 	// internal ram
 	RAM(config, m_ram).set_default_size("64K");
@@ -944,38 +937,42 @@ void plus4_state::plus4(machine_config &config)
 //  machine_config( plus4p )
 //-------------------------------------------------
 
-void c16_state::plus4p(machine_config &config)
+void plus4_state::plus4p(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(17'734'470)/20);
-	m_ted->set_clock(XTAL(17'734'470)/5/4);
+	m_ted->set_clock(XTAL(17'734'470));
 
 	// software list
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
 	SOFTWARE_LIST(config, "cass_list").set_original("plus4_cass");
 	SOFTWARE_LIST(config, "flop_list").set_original("plus4_flop");
+	SOFTWARE_LIST(config, "quik_list").set_original("plus4_quik");
 	subdevice<software_list_device>("cart_list")->set_filter("PAL");
 	subdevice<software_list_device>("cass_list")->set_filter("PAL");
 	subdevice<software_list_device>("flop_list")->set_filter("PAL");
+	subdevice<software_list_device>("quik_list")->set_filter("PAL");
 }
 
 //-------------------------------------------------
 //  machine_config( plus4n )
 //-------------------------------------------------
 
-void c16_state::plus4n(machine_config &config)
+void plus4_state::plus4n(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(14'318'181)/16);
-	m_ted->set_clock(XTAL(14'318'181)/4/4);
+	m_ted->set_clock(XTAL(14'318'181));
 
 	// software list
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
 	SOFTWARE_LIST(config, "cass_list").set_original("plus4_cass");
 	SOFTWARE_LIST(config, "flop_list").set_original("plus4_flop");
+	SOFTWARE_LIST(config, "quik_list").set_original("plus4_quik");
 	subdevice<software_list_device>("cart_list")->set_filter("NTSC");
 	subdevice<software_list_device>("cass_list")->set_filter("NTSC");
 	subdevice<software_list_device>("flop_list")->set_filter("NTSC");
+	subdevice<software_list_device>("quik_list")->set_filter("NTSC");
 }
 
 
@@ -1112,6 +1109,8 @@ ROM_START( plus4 )
 	ROMX_LOAD( "318005-05.u24", 0x4000, 0x4000, CRC(70295038) SHA1(a3d9e5be091b98de39a046ab167fb7632d053682), ROM_BIOS(1) )
 	ROM_SYSTEM_BIOS( 2, "jiffydos", "JiffyDOS v6.01" )
 	ROMX_LOAD( "jiffydos plus4.u24", 0x0000, 0x8000, CRC(818d3f45) SHA1(9bc1b1c3da9ca642deae717905f990d8e36e6c3b), ROM_BIOS(2) ) // first half contains R5 kernal
+	ROM_SYSTEM_BIOS( 3, "diag264", "Diag264 v0.97" )
+	ROMX_LOAD( "diag264_097_ntsc_kernal.u24", 0x4000, 0x4000, CRC(6423deaa) SHA1(6a3f63f6cb3cee2a0dd153fe3fb60968a834dd6c), ROM_BIOS(3) )
 
 	ROM_LOAD( "318006-01.u23", 0x0000, 0x4000, CRC(74eaae87) SHA1(161c96b4ad20f3a4f2321808e37a5ded26a135dd) )
 
@@ -1139,6 +1138,8 @@ ROM_START( plus4p )
 	ROMX_LOAD( "318004-04.u24", 0x4000, 0x4000, CRC(be54ed79) SHA1(514ad3c29d01a2c0a3b143d9c1d4143b1912b793), ROM_BIOS(1) )
 	ROM_SYSTEM_BIOS( 2, "r5", "Revision 5" )
 	ROMX_LOAD( "318004-05.u24", 0x4000, 0x4000, CRC(71c07bd4) SHA1(7c7e07f016391174a557e790c4ef1cbe33512cdb), ROM_BIOS(2) )
+	ROM_SYSTEM_BIOS( 3, "diag264", "Diag264 v0.97" )
+	ROMX_LOAD( "diag264_097_pal_kernal.u24", 0x4000, 0x4000, CRC(bf0b3657) SHA1(47c731739f6c1bd1c8446b2cacfe1eaddb5df966), ROM_BIOS(3) )
 
 	ROM_REGION( 0x8000, "function", 0 )
 	ROM_LOAD( "317053-01.u25", 0x0000, 0x4000, CRC(4fd1d8cb) SHA1(3b69f6e7cb4c18bb08e203fb18b7dabfa853390f) )
@@ -1237,13 +1238,13 @@ ROM_END
 //  SYSTEM DRIVERS
 //**************************************************************************
 
-//    YEAR  NAME    PARENT  COMPAT  MACHINE  INPUT  CLASS      INIT        COMPANY                        FULLNAME                      FLAGS
-COMP( 1984, c264,   0,      0,      plus4n,  plus4, c16_state, empty_init, "Commodore Business Machines", "Commodore 264 (Prototype)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c232,   c264,   0,      c232,    plus4, c16_state, empty_init, "Commodore Business Machines", "Commodore 232 (Prototype)",  MACHINE_SUPPORTS_SAVE )
-COMP( 1984, v364,   c264,   0,      v364,    plus4, c16_state, empty_init, "Commodore Business Machines", "Commodore V364 (Prototype)", MACHINE_SUPPORTS_SAVE )
-COMP( 1984, plus4,  c264,   0,      plus4n,  plus4, c16_state, empty_init, "Commodore Business Machines", "Plus/4 (NTSC)",              MACHINE_SUPPORTS_SAVE )
-COMP( 1984, plus4p, c264,   0,      plus4p,  plus4, c16_state, empty_init, "Commodore Business Machines", "Plus/4 (PAL)",               MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c16,    c264,   0,      c16n,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 16 (NTSC)",        MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c16p,   c264,   0,      c16p,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 16 (PAL)",         MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c16_hu, c264,   0,      c16p,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 16 (Hungary)",     MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c116,   c264,   0,      c16p,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 116",              MACHINE_SUPPORTS_SAVE )
+//    YEAR  NAME    PARENT  COMPAT  MACHINE  INPUT  CLASS        INIT        COMPANY                        FULLNAME                      FLAGS
+COMP( 1984, c264,   0,      0,      plus4n,  plus4, plus4_state, empty_init, "Commodore Business Machines", "Commodore 264 (Prototype)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c232,   c264,   0,      c232,    plus4, c16_state,   empty_init, "Commodore Business Machines", "Commodore 232 (Prototype)",  MACHINE_SUPPORTS_SAVE )
+COMP( 1984, v364,   c264,   0,      v364,    plus4, c16_state,   empty_init, "Commodore Business Machines", "Commodore V364 (Prototype)", MACHINE_SUPPORTS_SAVE )
+COMP( 1984, plus4,  c264,   0,      plus4n,  plus4, plus4_state, empty_init, "Commodore Business Machines", "Plus/4 (NTSC)",              MACHINE_SUPPORTS_SAVE )
+COMP( 1984, plus4p, c264,   0,      plus4p,  plus4, plus4_state, empty_init, "Commodore Business Machines", "Plus/4 (PAL)",               MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c16,    c264,   0,      c16n,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 16 (NTSC)",        MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c16p,   c264,   0,      c16p,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 16 (PAL)",         MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c16_hu, c264,   0,      c16p,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 16 (Hungary)",     MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c116,   c264,   0,      c16p,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 116",              MACHINE_SUPPORTS_SAVE )

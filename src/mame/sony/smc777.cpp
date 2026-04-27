@@ -6,6 +6,7 @@ SMC-777 (c) 1983 Sony
 
 References:
 - http://www.x1center.org/smc777/smc70_777_IOMAP_20210923.txt
+- https://web.archive.org/web/20230207074451/https://monochromeeffect.org/JVCC/2021/11/23/sony-smc-777c/
 
 TODO:
 - convert video to a proper mc6845, consider this as a good base for new device rewrite;
@@ -1001,6 +1002,7 @@ void smc777_state::smc777(machine_config &config)
 	// No clue about bundled defaults but:
 	// - dragon expects joystick in port 1
 	// - comp2:SMCPAINT/smcpaint expects mouse in port 2
+	// - penjamin pukes if a mouse is in port 2
 	MSX_GENERAL_PURPOSE_PORT(config, m_joystick_port[0], msx_general_purpose_port_devices, "joystick");
 	MSX_GENERAL_PURPOSE_PORT(config, m_joystick_port[1], msx_general_purpose_port_devices, "mouse");
 
