@@ -79,8 +79,8 @@
     DEVICE INTERFACE
 *****************************************************************************/
 
-DEFINE_DEVICE_TYPE(MB87077, mb87077_device, "mb87077", "MB87077 Volume Controller")
-DEFINE_DEVICE_TYPE(MB87078, mb87078_device, "mb87078", "MB87078 Volume Controller")
+DEFINE_DEVICE_TYPE(MB87077, mb87077_device, "mb87077", "Fujitsu MB87077 Volume Controller")
+DEFINE_DEVICE_TYPE(MB87078, mb87078_device, "mb87078", "Fujitsu MB87078 Volume Controller")
 
 mb87077_device::mb87077_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, u32 clock) :
 	device_t(mconfig, type, tag, owner, clock),
@@ -108,8 +108,8 @@ void mb87077_device::device_start()
 
 	// output volume table, 0dB to -32dB in steps of -0.5dB
 	for (int i = 0; i < (64+1); i++)
-		m_gains[i] = pow(10.0, (-0.5 * i) / 20.0);
-	m_gains[65] = 0.0; // -infinity
+		m_gains[i] = powf(10.0f, (-0.5f * i) / 20.0f);
+	m_gains[65] = 0.0f; // -infinity
 	m_gains[66] = m_gains[0];
 
 	m_data = 0;
@@ -166,7 +166,7 @@ void mb87077_device::gain_recalc()
 		if (gain_index != m_gain_index[i])
 		{
 			m_gain_index[i] = gain_index;
-			m_gain_changed_cb((offs_t)i, gain_percent_r(i));
+			m_gain_changed_cb(i, gain_percent_r(i));
 		}
 	}
 }

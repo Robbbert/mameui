@@ -2628,7 +2628,7 @@ TIMER_DEVICE_CALLBACK_MEMBER(namcos22s_state::mcu_irq)
 
 void namcos22s_state::mb87078_gain_changed(offs_t offset, u8 data)
 {
-	m_c352->set_output_gain(offset ^ 3, data / 100.0);
+	m_c352->set_output_gain(offset ^ 3, m_mb87078->gain_factor_r(offset));
 }
 
 /*

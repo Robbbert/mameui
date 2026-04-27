@@ -8,7 +8,7 @@ TODO:
 - lamp/vibration outputs, from MCU? (particularly starblad);
 - verify DSP clocks, they should be 40MHz, currently underclocked on purpose on MAME, otherwise polygons
   may disappear on some frames (try playing starblad until after the asteroids), tightening quantum by
-  a factor of 40/24 does not fix it;
+  a factor of 40/24 does not fix it, actually it also happens when underclocked, but less;
 - verify video timing, pixel clock is from 38.76922?;
 - verify audiocpu irq frequency;
 - is m_layer0_pivot software-controlled and if so, where? (solvalou sprite layer 0 is further back than
@@ -802,7 +802,6 @@ void namcos21_c67_state::namcos21(machine_config &config)
 
 	MC6809E(config, m_audiocpu, 49.152_MHz_XTAL / 24); // Sound
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_c67_state::sound_map);
-	m_audiocpu->set_periodic_int(FUNC(namcos21_c67_state::irq0_line_hold), attotime::from_hz(2*60));
 
 	NAMCOC68(config, m_c68, 8000000);
 	m_c68->in_pb_callback().set_ioport("MCUB");
