@@ -22,8 +22,12 @@ public:
 		m_framebuffer_size_in_bytes = sizeof(u16) * m_poly_frame_width * m_poly_frame_height;
 	}
 
+	int width() { return m_poly_frame_width; }
+	int height() { return m_poly_frame_height; }
+
 	void copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &cliprect, int zlo, int zhi);
 	void swap_and_clear_poly_framebuffer();
+	u16 *get_visible_zbuffer() { return m_mpPolyFrameBufferZ2.get(); }
 
 	void draw_direct_quad(const u16 *source, u16 color);
 	void draw_quads(const u16 *source, const u8 *pointram, const u32 ptram_size, u32 quad_idx);

@@ -127,12 +127,12 @@ void namcos21_3d_device::renderscanline_flat(const edge *e1, const edge *e2, int
 					int depth = 0;
 					if (m_depth_reverse)
 					{
-						depth = (zz >> m_zz_shift)*m_zzmult;
+						depth = (zz >> m_zz_shift) * m_zzmult;
 						pen += depth;
 					}
 					else
 					{
-						depth = (zz >> m_zz_shift)*m_zzmult;
+						depth = (zz >> m_zz_shift) * m_zzmult;
 						pen -= depth;
 					}
 				}
@@ -267,26 +267,17 @@ void namcos21_3d_device::blit_single_quad(int sx[4], int sy[4], int zcode[4], u1
 		color = base | (color & 0xff);
 	}
 
-	n21_vertex a, b, c, d;
+	n21_vertex v[4];
 
-	a.x = sx[0];
-	a.y = sy[0];
-	a.z = zcode[0];
+	for (int i = 0; i < 4; i++)
+	{
+		v[i].x = sx[i];
+		v[i].y = sy[i];
+		v[i].z = zcode[i] & 0x7fff;
+	}
 
-	b.x = sx[1];
-	b.y = sy[1];
-	b.z = zcode[1];
-
-	c.x = sx[2];
-	c.y = sy[2];
-	c.z = zcode[2];
-
-	d.x = sx[3];
-	d.y = sy[3];
-	d.z = zcode[3];
-
-	rendertri(&a, &b, &c, color, depthcueenable);
-	rendertri(&c, &d, &a, color, depthcueenable);
+	rendertri(&v[0], &v[1], &v[2], color, depthcueenable);
+	rendertri(&v[2], &v[3], &v[0], color, depthcueenable);
 }
 
 void namcos21_3d_device::draw_direct_quad(const u16 *source, u16 color)
