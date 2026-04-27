@@ -128,6 +128,7 @@ protected:
 	TIMER_CALLBACK_MEMBER(raster_interrupt_gen);
 	int cs0_r(offs_t offset);
 	int cs1_r(offs_t offset);
+	void set_clocks();
 
 	const address_space_config      m_videoram_space_config;
 

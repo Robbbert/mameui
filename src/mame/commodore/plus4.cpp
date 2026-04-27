@@ -940,7 +940,7 @@ void plus4_state::plus4p(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(17'734'470)/20);
-	m_ted->set_clock(XTAL(17'734'470)/5/4);
+	m_ted->set_clock(XTAL(17'734'470));
 
 	// software list
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
@@ -961,7 +961,7 @@ void plus4_state::plus4n(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(14'318'181)/16);
-	m_ted->set_clock(XTAL(14'318'181)/4/4);
+	m_ted->set_clock(XTAL(14'318'181));
 
 	// software list
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
@@ -1108,6 +1108,8 @@ ROM_START( plus4 )
 	ROMX_LOAD( "318005-05.u24", 0x4000, 0x4000, CRC(70295038) SHA1(a3d9e5be091b98de39a046ab167fb7632d053682), ROM_BIOS(1) )
 	ROM_SYSTEM_BIOS( 2, "jiffydos", "JiffyDOS v6.01" )
 	ROMX_LOAD( "jiffydos plus4.u24", 0x0000, 0x8000, CRC(818d3f45) SHA1(9bc1b1c3da9ca642deae717905f990d8e36e6c3b), ROM_BIOS(2) ) // first half contains R5 kernal
+	ROM_SYSTEM_BIOS( 3, "diag264", "Diag264 v0.97" )
+	ROMX_LOAD( "diag264_097_ntsc_kernal.u24", 0x4000, 0x4000, CRC(6423deaa) SHA1(6a3f63f6cb3cee2a0dd153fe3fb60968a834dd6c), ROM_BIOS(3) )
 
 	ROM_LOAD( "318006-01.u23", 0x0000, 0x4000, CRC(74eaae87) SHA1(161c96b4ad20f3a4f2321808e37a5ded26a135dd) )
 
@@ -1135,6 +1137,8 @@ ROM_START( plus4p )
 	ROMX_LOAD( "318004-04.u24", 0x4000, 0x4000, CRC(be54ed79) SHA1(514ad3c29d01a2c0a3b143d9c1d4143b1912b793), ROM_BIOS(1) )
 	ROM_SYSTEM_BIOS( 2, "r5", "Revision 5" )
 	ROMX_LOAD( "318004-05.u24", 0x4000, 0x4000, CRC(71c07bd4) SHA1(7c7e07f016391174a557e790c4ef1cbe33512cdb), ROM_BIOS(2) )
+	ROM_SYSTEM_BIOS( 3, "diag264", "Diag264 v0.97" )
+	ROMX_LOAD( "diag264_097_pal_kernal.u24", 0x4000, 0x4000, CRC(bf0b3657) SHA1(47c731739f6c1bd1c8446b2cacfe1eaddb5df966), ROM_BIOS(3) )
 
 	ROM_REGION( 0x8000, "function", 0 )
 	ROM_LOAD( "317053-01.u25", 0x0000, 0x4000, CRC(4fd1d8cb) SHA1(3b69f6e7cb4c18bb08e203fb18b7dabfa853390f) )

@@ -956,6 +956,7 @@ void mos7360_device::write(offs_t offset, uint8_t data, int &cs0, int &cs1)
 				m_y_end = m_y_begin + 192;
 			}
 			m_chargenaddr = CHARGENADDR;
+			set_clocks();
 		}
 		break;
 	case 0xff07:
@@ -975,6 +976,7 @@ void mos7360_device::write(offs_t offset, uint8_t data, int &cs0, int &cs1)
 			}
 			DBG_LOG(3, "port_w", ("%s %s\n", data & 0x40 ? "ntsc" : "pal", data & 0x20 ? "hori freeze" : ""));
 			m_chargenaddr = CHARGENADDR;
+			set_clocks();
 		}
 		break;
 	case 0xff08:
@@ -1036,10 +1038,6 @@ void mos7360_device::write(offs_t offset, uint8_t data, int &cs0, int &cs1)
 			m_reg[offset & 0x1f] = data;
 			m_chargenaddr = CHARGENADDR;
 			DBG_LOG(3, "port_w", ("chargen %.4x %s %d\n", CHARGENADDR, data & 2 ? "" : "doubleclock", data & 1));
-			if (BIT(data, 1))
-				m_cpu->set_clock(clock());
-			else
-				m_cpu->set_clock(clock() * 2);
 		}
 		break;
 	case 0xff14:
@@ -1186,4 +1184,13 @@ int mos7360_device::cs1_r(offs_t offset)
 	}
 
 	return 1;
+}
+
+void mos7360_device::set_clocks()
+{
+	bool ntsc = BIT(m_reg[0x07], 6);
+	set_clock_scale(1.0 / ((5 - ntsc) * 4));
+
+	bool doubleclock = !BIT(m_reg[0x06], 4);
+	m_cpu->set_clock(clock() << doubleclock);
 }
