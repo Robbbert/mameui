@@ -78,6 +78,8 @@ public:
 	{ }
 
 	void plus4(machine_config &config);
+	void plus4p(machine_config &config);
+	void plus4n(machine_config &config);
 
 	void cpu_w(uint8_t data);
 
@@ -126,7 +128,7 @@ protected:
 	void write_kb6(int state) { if (state) m_kb |= 64; else m_kb &= ~64; }
 	void write_kb7(int state) { if (state) m_kb |= 128; else m_kb &= ~128; }
 
-	DECLARE_QUICKLOAD_LOAD_MEMBER(quickload_c16);
+	DECLARE_QUICKLOAD_LOAD_MEMBER(quickload) { return general_cbm_loadsnap(image, m_maincpu->space(AS_PROGRAM), 0, cbm_quick_sethiaddress); }
 
 	enum
 	{
@@ -166,8 +168,6 @@ public:
 	void c16n(machine_config &config);
 	void c16p(machine_config &config);
 	void c232(machine_config &config);
-	void plus4p(machine_config &config);
-	void plus4n(machine_config &config);
 
 private:
 	uint8_t cpu_r();
@@ -192,12 +192,6 @@ private:
 #define BA5 BIT(offset, 5)
 #define BA4 BIT(offset, 4)
 
-
-
-QUICKLOAD_LOAD_MEMBER(plus4_state::quickload_c16)
-{
-	return general_cbm_loadsnap(image, m_maincpu->space(AS_PROGRAM), 0, cbm_quick_sethiaddress);
-}
 
 //**************************************************************************
 //  MEMORY MANAGEMENT
@@ -929,7 +923,9 @@ void plus4_state::plus4(machine_config &config)
 	m_exp->cd_wr_callback().set(FUNC(plus4_state::write));
 	m_exp->aec_wr_callback().set_inputline(m_maincpu, INPUT_LINE_HALT);
 
-	QUICKLOAD(config, "quickload", "p00,prg", CBM_QUICKLOAD_DELAY).set_load_callback(FUNC(plus4_state::quickload_c16));
+	quickload_image_device &quickload(QUICKLOAD(config, "quickload", "p00,prg", attotime::from_msec(100)));
+	quickload.set_load_callback(FUNC(plus4_state::quickload));
+	quickload.set_interface("cbm_quik");
 
 	// internal ram
 	RAM(config, m_ram).set_default_size("64K");
@@ -940,7 +936,7 @@ void plus4_state::plus4(machine_config &config)
 //  machine_config( plus4p )
 //-------------------------------------------------
 
-void c16_state::plus4p(machine_config &config)
+void plus4_state::plus4p(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(17'734'470)/20);
@@ -950,16 +946,18 @@ void c16_state::plus4p(machine_config &config)
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
 	SOFTWARE_LIST(config, "cass_list").set_original("plus4_cass");
 	SOFTWARE_LIST(config, "flop_list").set_original("plus4_flop");
+	SOFTWARE_LIST(config, "quik_list").set_original("plus4_quik");
 	subdevice<software_list_device>("cart_list")->set_filter("PAL");
 	subdevice<software_list_device>("cass_list")->set_filter("PAL");
 	subdevice<software_list_device>("flop_list")->set_filter("PAL");
+	subdevice<software_list_device>("quik_list")->set_filter("PAL");
 }
 
 //-------------------------------------------------
 //  machine_config( plus4n )
 //-------------------------------------------------
 
-void c16_state::plus4n(machine_config &config)
+void plus4_state::plus4n(machine_config &config)
 {
 	plus4(config);
 	m_maincpu->set_clock(XTAL(14'318'181)/16);
@@ -969,9 +967,11 @@ void c16_state::plus4n(machine_config &config)
 	SOFTWARE_LIST(config, "cart_list").set_original("plus4_cart");
 	SOFTWARE_LIST(config, "cass_list").set_original("plus4_cass");
 	SOFTWARE_LIST(config, "flop_list").set_original("plus4_flop");
+	SOFTWARE_LIST(config, "quik_list").set_original("plus4_quik");
 	subdevice<software_list_device>("cart_list")->set_filter("NTSC");
 	subdevice<software_list_device>("cass_list")->set_filter("NTSC");
 	subdevice<software_list_device>("flop_list")->set_filter("NTSC");
+	subdevice<software_list_device>("quik_list")->set_filter("NTSC");
 }
 
 
@@ -1233,13 +1233,13 @@ ROM_END
 //  SYSTEM DRIVERS
 //**************************************************************************
 
-//    YEAR  NAME    PARENT  COMPAT  MACHINE  INPUT  CLASS      INIT        COMPANY                        FULLNAME                      FLAGS
-COMP( 1984, c264,   0,      0,      plus4n,  plus4, c16_state, empty_init, "Commodore Business Machines", "Commodore 264 (Prototype)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c232,   c264,   0,      c232,    plus4, c16_state, empty_init, "Commodore Business Machines", "Commodore 232 (Prototype)",  MACHINE_SUPPORTS_SAVE )
-COMP( 1984, v364,   c264,   0,      v364,    plus4, c16_state, empty_init, "Commodore Business Machines", "Commodore V364 (Prototype)", MACHINE_SUPPORTS_SAVE )
-COMP( 1984, plus4,  c264,   0,      plus4n,  plus4, c16_state, empty_init, "Commodore Business Machines", "Plus/4 (NTSC)",              MACHINE_SUPPORTS_SAVE )
-COMP( 1984, plus4p, c264,   0,      plus4p,  plus4, c16_state, empty_init, "Commodore Business Machines", "Plus/4 (PAL)",               MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c16,    c264,   0,      c16n,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 16 (NTSC)",        MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c16p,   c264,   0,      c16p,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 16 (PAL)",         MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c16_hu, c264,   0,      c16p,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 16 (Hungary)",     MACHINE_SUPPORTS_SAVE )
-COMP( 1984, c116,   c264,   0,      c16p,    c16,   c16_state, empty_init, "Commodore Business Machines", "Commodore 116",              MACHINE_SUPPORTS_SAVE )
+//    YEAR  NAME    PARENT  COMPAT  MACHINE  INPUT  CLASS        INIT        COMPANY                        FULLNAME                      FLAGS
+COMP( 1984, c264,   0,      0,      plus4n,  plus4, plus4_state, empty_init, "Commodore Business Machines", "Commodore 264 (Prototype)",  MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c232,   c264,   0,      c232,    plus4, c16_state,   empty_init, "Commodore Business Machines", "Commodore 232 (Prototype)",  MACHINE_SUPPORTS_SAVE )
+COMP( 1984, v364,   c264,   0,      v364,    plus4, c16_state,   empty_init, "Commodore Business Machines", "Commodore V364 (Prototype)", MACHINE_SUPPORTS_SAVE )
+COMP( 1984, plus4,  c264,   0,      plus4n,  plus4, plus4_state, empty_init, "Commodore Business Machines", "Plus/4 (NTSC)",              MACHINE_SUPPORTS_SAVE )
+COMP( 1984, plus4p, c264,   0,      plus4p,  plus4, plus4_state, empty_init, "Commodore Business Machines", "Plus/4 (PAL)",               MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c16,    c264,   0,      c16n,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 16 (NTSC)",        MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c16p,   c264,   0,      c16p,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 16 (PAL)",         MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c16_hu, c264,   0,      c16p,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 16 (Hungary)",     MACHINE_SUPPORTS_SAVE )
+COMP( 1984, c116,   c264,   0,      c16p,    c16,   c16_state,   empty_init, "Commodore Business Machines", "Commodore 116",              MACHINE_SUPPORTS_SAVE )
