@@ -441,7 +441,7 @@ void namcos21_c67_state::mix_layer0_sprites(screen_device &screen, bitmap_ind16 
 	copybitmap(m_mix_layer0_bitmap, bitmap, 0, 0, 0, 0, cliprect);
 	m_c355spr->draw(screen, m_mix_layer0_bitmap, cliprect, 0);
 
-	assert(cliprect.bottom < m_namcos21_3d->height() && cliprect.right() < m_namcos21_3d->width());
+	assert(cliprect.bottom() < m_namcos21_3d->height() && cliprect.right() < m_namcos21_3d->width());
 
 	// create priority table, this is not accurate
 	u16 pri[0x10];
