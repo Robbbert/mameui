@@ -14,10 +14,7 @@ TODO:
 - interlace (cfr. cpm22 in setup mode);
 - ROM/RAM bankswitch, it apparently happens after one instruction prefetching.
   Hacked around for now;
-- keyboard input is very sluggish, convert to device_matrix_interface;
-- Hookup Kanji ROM (have dump);
 - tape;
-- far too many floppy load failures (fixed?);
 - .mfi floppy format throws a crash;
 - Downgrade for SMC-70 (if/when dump is available). Has extra GFX modes that 777 dropped;
 - Superimposing features (if/when SW dumps arises, cfr. SMC-70G promotional video)
@@ -93,6 +90,7 @@ protected:
 	virtual void machine_start() override ATTR_COLD;
 	virtual void machine_reset() override ATTR_COLD;
 	virtual void video_start() override ATTR_COLD;
+	virtual void video_reset() override ATTR_COLD;
 
 private:
 	void mc6845_w(offs_t offset, u8 data);
@@ -172,7 +170,8 @@ private:
 	struct { u8 r = 0, g = 0, b = 0; } m_pal;
 	u8 m_raminh = 0, m_raminh_pending_change = 0; //bankswitch
 	u8 m_raminh_prefetch = 0;
-	u8 m_pal_mode = 0;
+	u8 m_text_pal_bank = 0;
+	u8 m_gfx_pal_bank = 0;
 	u8 m_crtc_vreg[0x20]{};
 	u8 m_crtc_addr = 0;
 	bool m_vsync_idf = false;
@@ -210,14 +209,27 @@ void smc777_state::video_start()
 	save_pointer(NAME(m_gvram), 0x8000);
 	save_pointer(NAME(m_pcg), 0x800);
 	save_item(NAME(m_crtc_vreg));
+	save_item(NAME(m_text_pal_bank));
+	save_item(NAME(m_gfx_pal_bank));
+	save_item(STRUCT_MEMBER(m_pal, r));
+	save_item(STRUCT_MEMBER(m_pal, g));
+	save_item(STRUCT_MEMBER(m_pal, b));
 
 	m_gfxdecode->set_gfx(0, std::make_unique<gfx_element>(m_palette, pcg_layout, m_pcg.get(), 0, 8, 0));
+}
+
+void smc777_state::video_reset()
+{
+	m_text_pal_bank = 0x00;
+	m_gfx_pal_bank = 0x00;
 }
 
 // TODO: cleanup, move to device, honor cliprect
 void smc777_state::graphic_320x200x4(bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 	const u16 bitmap_pitch = mc6845_h_display * 2;
+
+	const u8 color_bank = m_gfx_pal_bank;
 
 	for(int y = 0; y < mc6845_v_display; y++)
 	{
@@ -231,10 +243,12 @@ void smc777_state::graphic_320x200x4(bitmap_ind16 &bitmap, const rectangle &clip
 			{
 				const u8 dot = m_gvram[((base_address + x) & 0xfff) + yi * 0x1000];
 				u8 color = (dot & 0xf0) >> 4;
+				color |= color_bank;
 				bitmap.pix(res_y + yi, res_x + 0) = m_palette->pen(color);
 				bitmap.pix(res_y + yi, res_x + 1) = m_palette->pen(color);
 
 				color = (dot & 0x0f) >> 0;
+				color |= color_bank;
 				bitmap.pix(res_y + yi, res_x + 2) = m_palette->pen(color);
 				bitmap.pix(res_y + yi, res_x + 3) = m_palette->pen(color);
 			}
@@ -247,7 +261,7 @@ void smc777_state::graphic_640x200x2(bitmap_ind16 &bitmap, const rectangle &clip
 	const u8 color_table[8] = { 0x00, 0x04, 0x02, 0x01, 0x00, 0x04, 0x02, 0x07 };
 	const u16 bitmap_pitch = mc6845_h_display * 2;
 
-	const u8 color_bank = BIT(m_display_reg, 5) << 2;
+	const u8 color_bank = (BIT(m_display_reg, 5) << 2);
 
 	for(int y = 0; y < mc6845_v_display; y++)
 	{
@@ -265,7 +279,8 @@ void smc777_state::graphic_640x200x2(bitmap_ind16 &bitmap, const rectangle &clip
 				{
 					u8 color = (dot >> (6 - (xi * 2))) & 3;
 					color |= color_bank;
-					bitmap.pix(res_y + yi, res_x + xi) = m_palette->pen(color_table[color]);
+					// TODO: unconfirmed if 2bpp can select the palette board
+					bitmap.pix(res_y + yi, res_x + xi) = m_palette->pen(color_table[color] | m_gfx_pal_bank);
 				}
 			}
 		}
@@ -274,7 +289,8 @@ void smc777_state::graphic_640x200x2(bitmap_ind16 &bitmap, const rectangle &clip
 
 u32 smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	bitmap.fill(m_palette->pen(m_backdrop_pen), cliprect);
+	// - strizbh seems more logical with gfx pal bank hooked
+	bitmap.fill(m_palette->pen(m_backdrop_pen | m_gfx_pal_bank), cliprect);
 
 	int x_width = BIT(m_display_reg, 7);
 
@@ -288,38 +304,56 @@ u32 smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, con
 	// TODO: transitt itself has sync timing issues there
 	u16 count = mc6845_start_addr;
 
+	const u16 frame_number = m_screen->frame_number();
+
 	for(int y = 0; y < mc6845_v_display; y++)
 	{
 		for(int x = 0; x < mc6845_h_display / (x_width + 1); x++)
 		{
 			/*
-			-x-- ---- blink
-			--xx x--- bg color (00 transparent, 01 white, 10 black, 11 complementary to fg color
-			---- -xxx fg color
-			*/
-			int tile = m_vram[count];
-			int color = m_attr[count] & 7;
-			int bk_color = (m_attr[count] & 0x18) >> 3;
-			int blink = m_attr[count] & 0x40;
+			 * x--- ---- FRC force CCOL = 7, BCOL/REV/BRNK = 0
+			 * -x-- ---- BRNK blink
+			 * --x- ---- REV reverse pattern
+			 * ---x x--- BCOL bg color (00 transparent, 01 white, 10 black, 11 complementary to fg color
+			 * ---- -xxx CCOL fg color
+			 */
+			u8 attr = m_attr[count];
+			// TODO: blind faith, no known use cases
+			if (BIT(attr, 7))
+				attr = 0x07;
+			const u8 tile = m_vram[count];
+			u8 color = (attr & 7);
+			const u8 bk_color = (attr & 0x18) >> 3;
+			const u8 reverse = BIT(attr, 5);
+			const u8 blink = BIT(attr, 6);
 			//int bk_struct[4] = { -1, 0x10, 0x11, (color & 7) ^ 8 };
 
 			int bk_pen = -1;
 			switch(bk_color & 3)
 			{
-				case 0: bk_pen = -1; break; //transparent
-				case 1: bk_pen = 0x17; break; //white
-				case 2: bk_pen = 0x10; break; //black
-				case 3: bk_pen = (color ^ 0xf); break; //complementary
+				// transparent
+				case 0: bk_pen = -1; break;
+				// white
+				case 1: bk_pen = 0x07; break;
+				// black
+				case 2: bk_pen = 0x10; break;
+				// complementary
+				case 3: bk_pen = (color ^ 0xf); break;
 			}
 
-			if(blink && m_screen->frame_number() & 0x10) //blinking, used by Dragon's Alphabet
+			// handle blink (dragon)
+			if(blink && frame_number & 0x10)
 				color = bk_pen;
 
 			for(int yi = 0; yi < 8; yi++)
 			{
+				u8 pattern = m_pcg[tile * 8 + yi];
+				// amazon on # disk drives
+				if (reverse)
+					pattern ^= 0xff;
 				for(int xi = 0; xi < 8; xi++)
 				{
-					int pen = ((m_pcg[tile * 8 + yi] >> (7 - xi)) & 1) ? (color + m_pal_mode) : bk_pen;
+					int pen = BIT(pattern, 7 - xi) ? (color + m_text_pal_bank) : bk_pen;
 
 					if (pen != -1)
 					{
@@ -342,23 +376,29 @@ u32 smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, con
 				{
 					case 0x00: cursor_on = 1; break; //always on
 					case 0x20: cursor_on = 0; break; //always off
-					case 0x40: if(m_screen->frame_number() & 0x10) { cursor_on = 1; } break; // fast blink
-					case 0x60: if(m_screen->frame_number() & 0x20) { cursor_on = 1; } break; // slow blink
+					case 0x40: if(frame_number & 0x10) { cursor_on = 1; } break; // fast blink
+					case 0x60: if(frame_number & 0x20) { cursor_on = 1; } break; // slow blink
 				}
 
 				if(cursor_on)
 				{
-					for(int yc = 0; yc < (8 - (mc6845_cursor_y_start & 7)); yc++)
+					const int y_start = mc6845_cursor_y_start & 0x1f;
+					const int y_end = mc6845_cursor_y_end & 0x1f;
+					for(int yc = y_start; yc < y_end; yc++)
 					{
+						// sys12j:BIRD and transitt (at very least) disables cursor by pushing it
+						// outside the visible range rather than just setting R10[6:5] properly
+						if (yc >= mc6845_tile_height)
+							continue;
 						for(int xc = 0; xc < 8; xc++)
 						{
 							if(x_width)
 							{
-								bitmap.pix(y * 8 + CRTC_MIN_Y - yc + 7, (x * 8 + xc) * 2 + 0 + CRTC_MIN_X) = m_palette->pen(0x7);
-								bitmap.pix(y * 8 + CRTC_MIN_Y - yc + 7, (x * 8 + xc) * 2 + 1 + CRTC_MIN_X) = m_palette->pen(0x7);
+								bitmap.pix(y * 8 + yc + CRTC_MIN_Y, (x * 8 + xc) * 2 + 0 + CRTC_MIN_X) = m_palette->pen(0x7);
+								bitmap.pix(y * 8 + yc + CRTC_MIN_Y, (x * 8 + xc) * 2 + 1 + CRTC_MIN_X) = m_palette->pen(0x7);
 							}
 							else
-								bitmap.pix(y*8+CRTC_MIN_Y-yc+7, x*8+CRTC_MIN_X+xc) = m_palette->pen(0x7);
+								bitmap.pix(y * 8 + yc + CRTC_MIN_Y, x * 8 + CRTC_MIN_X + xc) = m_palette->pen(0x7);
 						}
 					}
 				}
@@ -566,7 +606,7 @@ u8 smc777_state::io_status_1c_r()
 	if (!machine().side_effects_disabled())
 		logerror("System R\n");
 
-	return m_warm_reset << 7;
+	return (m_warm_reset << 7);
 }
 
 /*
@@ -634,25 +674,35 @@ void smc777_state::cas_out_w(int state)
 /*
  * ---x -111 gfx palette select
  * ---x -110 text palette select
- * ---x -101 joy 2 out
- * ...
- * ---x -000 joy 2 out
+ * ---x -101 joy 2 out /CS
+ * ---x -100 joy 2 out U
+ * ---x -011 joy 2 out T
+ * ---x -010 joy 2 out R
+ * ---x -001 joy 2 out L
+ * ---x -000 joy 2 out B
  */
 void smc777_state::color_mode_w(offs_t offset, u8 data)
 {
+//	printf("%d %d %02x\n", data & 7, BIT(data, 4), data);
+	// - transitt at PC=150: reads if color board is present, reads DE-9 port 2,
+	//   ands with 0x3f then pulls bit 7 high. Pretty creative way for a btanb.
+	if (data & 0xe8)
+		logerror("color_mode_w: warning setup %02x\n", data);
 	switch(data & 0x07)
 	{
 		case 0x05: m_joystick_port[!BIT(offset, 8)]->pin_8_w(BIT(data, 4)); break;
-		case 0x06: m_pal_mode = (data & 0x10) ^ 0x10; break;
-		default: logerror("Color FF %02x\n",data); break;
+		case 0x06: m_text_pal_bank = (data & 0x10); break;
+		// demofd4 main menu
+		case 0x07: m_gfx_pal_bank = (data & 0x10);  break;
+		default: logerror("Unhandled color FF %02x\n",data); break;
 	}
 }
 
 void smc777_state::ramdac_w(offs_t offset, u8 data)
 {
-	u8 pal_index;
-	pal_index = (offset & 0xf00) >> 8;
+	const u8 pal_index = ((offset & 0xf00) >> 8) | 0x10;
 
+	// TODO: is this really unused like IOMAP claims?
 	if(data & 0x0f)
 		logerror("RAMdac used with data bits 0-3 set (%02x)\n",data);
 
@@ -848,7 +898,6 @@ void smc777_state::machine_reset()
 	m_raminh = 1;
 	m_raminh_pending_change = 1;
 	m_raminh_prefetch = 0xff;
-	m_pal_mode = 0x10;
 	m_vsync_idf = false;
 
 	// warm reset is special, ties with a physical back button
@@ -863,15 +912,19 @@ void smc777_state::machine_reset()
 
 void smc777_state::palette_init(palette_device &palette) const
 {
-	// set-up SMC-70 mode colors
-	for(int i = 0x10; i < 0x18; i++)
+	// setup internal color generator (fixed part)
+	// - cpm22/sys12j selects this for background pen to work properly.
+	const u16 default_palette[0x10] = {
+		0x000, 0x00f, 0x0f0, 0x0ff, 0xf00, 0xf0f, 0xff0, 0xfff,
+		0x141, 0x172, 0xd52, 0xe92, 0x158, 0x19e, 0xf79, 0x888
+	};
+	for(int i = 0x00; i < 0x10; i++)
 	{
-		u8 const r = BIT(i, 2);
-		u8 const g = BIT(i, 1);
-		u8 const b = BIT(i, 0);
+		u8 const r = (default_palette[i] >> 8) & 0xf;
+		u8 const g = (default_palette[i] >> 4) & 0xf;
+		u8 const b = (default_palette[i] >> 0) & 0xf;
 
-		palette.set_pen_color(i, pal1bit(r), pal1bit(g), pal1bit(b));
-		palette.set_pen_color(i+8, rgb_t::black());
+		palette.set_pen_color(i, pal4bit(r), pal4bit(g), pal4bit(b));
 	}
 }
 
@@ -935,7 +988,8 @@ QUICKLOAD_LOAD_MEMBER(smc777_state::quickload_cb)
 
 static void smc777_floppies(device_slot_interface &device)
 {
-	device.option_add("ssdd", FLOPPY_35_SSDD);
+	device.option_add("35ssdd", FLOPPY_35_SSDD);
+	// TODO: 5'25" and 8" options
 }
 
 void smc777_state::smc777(machine_config &config)
@@ -959,11 +1013,7 @@ void smc777_state::smc777(machine_config &config)
 	m_ioctrl->q_out_cb<7>().set(FUNC(smc777_state::cas_out_w));
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	// TODO: retrieve defaults from 6845
-	m_screen->set_refresh_hz(60);
-	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(2500)); /* not accurate */
-	m_screen->set_size(0x400, 400);
-	m_screen->set_visarea(0, 660-1, 0, 220-1); //normal 640 x 200 + 20 pixels for border color
+	m_screen->set_raw(MASTER_CLOCK / 2, 1024, 0, 640, 262, 0, 200);
 	m_screen->set_screen_update(FUNC(smc777_state::screen_update));
 	m_screen->set_palette(m_palette);
 	// TODO: 6845 CCLK width is likely supposed to handle this (currently draws 1023x261)
@@ -986,8 +1036,8 @@ void smc777_state::smc777(machine_config &config)
 	m_fdc->intrq_wr_callback().set(FUNC(smc777_state::fdc_intrq_w));
 	m_fdc->drq_wr_callback().set(FUNC(smc777_state::fdc_drq_w));
 
-	FLOPPY_CONNECTOR(config, m_floppy[0], smc777_floppies, "ssdd", floppy_image_device::default_mfm_floppy_formats);
-	// by default it has no 2nd floppy
+	FLOPPY_CONNECTOR(config, m_floppy[0], smc777_floppies, "35ssdd", floppy_image_device::default_mfm_floppy_formats);
+	// by default it has no 2nd floppy drive (has connector on the back panel)
 	FLOPPY_CONNECTOR(config, m_floppy[1], smc777_floppies, nullptr, floppy_image_device::default_mfm_floppy_formats);
 
 	SOFTWARE_LIST(config, "flop_list").set_original("smc777");
@@ -1029,4 +1079,4 @@ ROM_END
 } // anonymous namespace
 
 
-COMP( 1983, smc777, 0,      0,      smc777,  smc777, smc777_state, empty_init, "Sony",  "SMC-777", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND)
+COMP( 1983, smc777, 0,      0,      smc777,  smc777, smc777_state, empty_init, "Sony",  "SMC-777", MACHINE_IMPERFECT_GRAPHICS )
