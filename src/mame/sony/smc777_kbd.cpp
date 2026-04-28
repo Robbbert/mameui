@@ -34,8 +34,13 @@ smc777_kbd_device::smc777_kbd_device(const machine_config &mconfig, const char *
 
 void smc777_kbd_device::device_start()
 {
+	m_aux_timer = timer_alloc(FUNC(smc777_kbd_device::aux_ready), this);
+	m_aux_timer->adjust(attotime::never);
+	m_aux_hs = 4;
+
 	save_item(NAME(m_command));
 	save_item(NAME(m_status));
+	save_item(NAME(m_aux_hs));
 	save_item(NAME(m_scan_code));
 	save_item(NAME(m_repeat_interval));
 	save_item(NAME(m_repeat_start));
@@ -52,6 +57,7 @@ void smc777_kbd_device::device_reset()
 	reset_key_state();
 	start_processing(attotime::from_hz(1'200));
 	typematic_stop();
+	// don't reset aux timer: we do that separatedly
 
 	m_command = 0;
 	m_status = 0;
@@ -300,16 +306,22 @@ void smc777_kbd_device::key_make(uint8_t row, uint8_t column)
 {
 	m_scan_code = translate(row, column);
 	m_status |= 5;
+	//printf("%d %d\n", row, column);
 	// take count of multipresses like this (testable in games like ldrun/cloderun)
 	m_held_keys ++;
 }
 
 void smc777_kbd_device::key_break(uint8_t row, uint8_t column)
 {
-//	m_scan_code = 0;
 	m_held_keys --;
 	if (m_held_keys <= 0)
+	{
+		// clear code for safety
+		// (would cause drift in stuff like hudson1~5, where pressing enter at MAME startup
+		//  will get stuck from POST up to game selection)
+		m_scan_code = 0;
 		m_status &= ~4;
+	}
 }
 
 void smc777_kbd_device::key_repeat(uint8_t row, uint8_t column)
@@ -337,7 +349,9 @@ void smc777_kbd_device::scan_mode(u8 data)
 	}
 	// IEF: enable interrupt
 	if (BIT(data, 0))
-		LOG("Enable ief_key (tbd)\n");
+	{
+		LOG("Enable ief_key (TBD)\n");
+	}
 }
 
 u8 smc777_kbd_device::data_r(offs_t offset)
@@ -405,7 +419,9 @@ u8 smc777_kbd_device::status_r(offs_t offset)
 		res|= (m_key_mod->read() & 3) << 6;
 	}
 	else
-		res = 4 | (m_command == 0x80);
+	{
+		res = m_aux_hs | (m_command == 0x80);
+	}
 
 	return res;
 }
@@ -457,5 +473,14 @@ void smc777_kbd_device::control_w(offs_t offset, u8 data)
 				LOG("Initialize key\n");
 				break;
 		}
+		m_aux_hs &= ~4;
+		// TODO: timing
+		m_aux_timer->adjust(attotime::from_usec(250));
 	}
+}
+
+// - bugatk expects BUSY to go low otherwise space key won't work during gameplay
+TIMER_CALLBACK_MEMBER(smc777_kbd_device::aux_ready)
+{
+	m_aux_hs |= 4;
 }
