@@ -2063,28 +2063,28 @@ void namcos22_state::point_address_w(u16 data)
 
 void namcos22_state::point_loword_iw(u16 data)
 {
-	m_point_data |= data;
+	m_point_data = (m_point_data & ~0xffff) | data;
 	point_write(m_point_address++, m_point_data);
 }
 
 void namcos22_state::point_hiword_w(u16 data)
 {
-	m_point_data = data << 16;
+	m_point_data = (m_point_data & 0xffff) | data << 16;
 }
 
-u16 namcos22_state::point_loword_r()
+u16 namcos22_state::point_loword_ir()
 {
-	return point_read(m_point_address) & 0xffff;
-}
-
-u16 namcos22_state::point_hiword_ir()
-{
-	// high bit is unknown busy signal (ridgerac, ridgera2, raverace, cybrcomm)
-	const u16 ret = 0x8000 | (point_read(m_point_address) >> 16 & 0x00ff);
+	m_point_data = point_read(m_point_address);
 	if (!machine().side_effects_disabled())
 		m_point_address++;
 
-	return ret;
+	return m_point_data & 0xffff;
+}
+
+u16 namcos22_state::point_hiword_r()
+{
+	// high bit is unknown busy signal (ridgerac, ridgera2, raverace, cybrcomm)
+	return 0x8000 | (m_point_data >> 16 & 0xff);
 }
 
 
@@ -2456,8 +2456,8 @@ void namcos22_state::master_dsp_data(address_map &map)
 
 void namcos22_state::master_dsp_io(address_map &map)
 {
-	map(0x0, 0x0).rw(FUNC(namcos22_state::point_loword_r), FUNC(namcos22_state::point_loword_iw));
-	map(0x1, 0x1).rw(FUNC(namcos22_state::point_hiword_ir), FUNC(namcos22_state::point_hiword_w));
+	map(0x0, 0x0).rw(FUNC(namcos22_state::point_loword_ir), FUNC(namcos22_state::point_loword_iw));
+	map(0x1, 0x1).rw(FUNC(namcos22_state::point_hiword_r), FUNC(namcos22_state::point_hiword_w));
 	map(0x2, 0x2).rw(FUNC(namcos22_state::pdp_begin_r), FUNC(namcos22_state::dsp_unk2_w));
 	map(0x3, 0x3).rw(FUNC(namcos22_state::dsp_unk_port3_r), FUNC(namcos22_state::point_address_w));
 	map(0x4, 0x4).nopw(); /* unknown */

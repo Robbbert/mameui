@@ -88,11 +88,10 @@ private:
 	int m_pointram_idx;
 	u16 m_pointram_control;
 	u32 m_pointrom_idx;
-	u8 m_mPointRomMSB;
-	int m_mbPointRomDataAvailable;
+	u32 m_point_data;
+	int m_point_data_available;
 	u8 m_depthcue[2][0x400];
-	int m_irq_enable;
-	int m_mbNeedsKickstart;
+	bool m_need_kickstart;
 
 	s32 read_pointrom_data(u32 offset);
 	void transmit_word_to_slave(u16 data);
