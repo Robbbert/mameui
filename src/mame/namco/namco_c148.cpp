@@ -14,9 +14,9 @@
 =============================================================================
 
 Interrupt Controller C148          1C0000-1FFFFF  R/W  D00-D02
-    Bus Controller?                1C0XXX
+    ????????                       1C0XXX
     ????????                       1C2XXX
-    ????????                       1C4XXX
+    Bus Controller?                1C4XXX              D00-D02
     -x- master priority bit?
     Master/Slave IRQ level         1C6XXX              D00-D02
     EXIRQ level                    1C8XXX              D00-D02
@@ -24,9 +24,9 @@ Interrupt Controller C148          1C0000-1FFFFF  R/W  D00-D02
     SCIRQ level                    1CCXXX              D00-D02
     VBLANK IRQ level               1CEXXX              D00-D02
     xxx irq level for specific irq.
-    ????????                       1D0XXX
-    ????????                       1D4000 trigger master/slave INT?
 
+    ????????                       1D0XXX
+    Acknowledge Bus?               1D4XXX
     Acknowlegde Master/Slave IRQ   1D6XXX ack master/slave INT
     Acknowledge EXIRQ              1D8XXX
     Acknowledge POSIRQ             1DAXXX
@@ -87,6 +87,7 @@ void namco_c148_device::map(address_map &map)
 	map(0x0e000, 0x0ffff).rw(FUNC(namco_c148_device::vblank_irq_level_r), FUNC(namco_c148_device::vblank_irq_level_w)).umask16(0x00ff); // VBlank IRQ lv
 
 	map(0x10000, 0x11fff).w(FUNC(namco_c148_device::cpu_irq_assert_w));
+	map(0x14000, 0x15fff).noprw(); // busack
 	map(0x16000, 0x17fff).rw(FUNC(namco_c148_device::cpu_irq_ack_r), FUNC(namco_c148_device::cpu_irq_ack_w)); // CPUIRQ ack
 	map(0x18000, 0x19fff).rw(FUNC(namco_c148_device::ex_irq_ack_r), FUNC(namco_c148_device::ex_irq_ack_w)); // EXIRQ ack
 	map(0x1a000, 0x1bfff).rw(FUNC(namco_c148_device::pos_irq_ack_r), FUNC(namco_c148_device::pos_irq_ack_w)); // POSIRQ ack
