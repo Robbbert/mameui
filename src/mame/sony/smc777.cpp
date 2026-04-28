@@ -384,7 +384,8 @@ u32 smc777_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, con
 				{
 					const int y_start = mc6845_cursor_y_start & 0x1f;
 					const int y_end = mc6845_cursor_y_end & 0x1f;
-					for(int yc = y_start; yc < y_end; yc++)
+					// range is inclusive (kanjicpm underscore cursor)
+					for(int yc = y_start; yc <= y_end; yc++)
 					{
 						// sys12j:BIRD and transitt (at very least) disables cursor by pushing it
 						// outside the visible range rather than just setting R10[6:5] properly
@@ -683,7 +684,7 @@ void smc777_state::cas_out_w(int state)
  */
 void smc777_state::color_mode_w(offs_t offset, u8 data)
 {
-//	printf("%d %d %02x\n", data & 7, BIT(data, 4), data);
+//  printf("%d %d %02x\n", data & 7, BIT(data, 4), data);
 	// - transitt at PC=150: reads if color board is present, reads DE-9 port 2,
 	//   ands with 0x3f then pulls bit 7 high. Pretty creative way for a btanb.
 	if (data & 0xe8)

@@ -196,7 +196,9 @@ static INPUT_PORTS_START( smc777_kbd )
 	PORT_START("KEY_MOD")
 	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_CODE(KEYCODE_LSHIFT) PORT_CODE(KEYCODE_RSHIFT) PORT_CHAR(UCHAR_SHIFT_1)
 	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("CTRL") PORT_CODE(KEYCODE_LCONTROL) PORT_CHAR(UCHAR_SHIFT_2)
-	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("KANA SHIFT") PORT_CODE(KEYCODE_LALT)
+	// printed without the 'S'
+	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("CAP LOCK") PORT_CODE(KEYCODE_CAPSLOCK) PORT_CHAR(UCHAR_MAMEKEY(CAPSLOCK)) PORT_TOGGLE
+	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_KEYBOARD) PORT_NAME("KANA LOCK") PORT_CODE(KEYCODE_LALT) PORT_TOGGLE
 INPUT_PORTS_END
 
 ioport_constructor smc777_kbd_device::device_input_ports() const
@@ -212,7 +214,7 @@ uint8_t smc777_kbd_device::translate(uint8_t row, uint8_t column)
 {
 	// Ignore numpad for now
 	// F-keys handled dynamically therefore ignored in this static table
-	const u8 keytable[3][0x50] =
+	const u8 keytable[5][0x50] =
 	{
 		/* normal */
 		{
@@ -260,6 +262,52 @@ uint8_t smc777_kbd_device::translate(uint8_t row, uint8_t column)
 //          INS,    CLR,    ------, F1,     F2,     F3,     F4,     F5
 			0x0f,   0x0e,   0xff,   0xff,   0xff,   0xff,   0xff,   0xff
 		},
+		/* kana */
+		{
+//          ------, TEN_DN, RETURN, >,      TEN_UP, SPACE,  E,      ESC
+			0xff,   0xff,   0x0d,   0xa6,   0xff,   0x20,   0xb8,   0x1b,
+//          LF,     ------, ------, ?,      <,      N,      V,      X
+			0x0a,   0xff,   0xff,   0xff,   0xd6,   0xd4,   0xc3,   0xc1,
+//          CUR_DN, HELP,   \,      ------, M,      B,      C,      Z
+			0x1c,   0xff,   0xdd,   0xff,   0xd5,   0xc4,   0xc2,   0xc0,
+//          CUR_UP, CUR_LT, ------, :,      K,      H,      F,      S
+			0x17,   0x16,   0xff,   0xd1,   0xd1,   0xcf,   0xbe,   0xbc,
+//          CUR_RT, ~,      ",      L,      J,      G,      D,      A
+			0x19,   0xdf,   0xde,   0xd2,   0xd0,   0xbf,   0xbd,   0xbb,
+//          BS,     },      {,      O,      U,      T,      ------, Q
+			0x08,   0xdb,   0xda,   0xcd,   0xcb,   0xba,   0xff,   0xb6,
+//          ------, RUBOUT, P,      I,      Y,      R,      W,      TAB
+			0xff,   0xd9,   0xce,   0xcc,   0xca,   0xb9,   0xb7,   0x09,
+//          HOME,   +,      TEN_LT, 9,      7,      5,      3,      1
+			0x14,   0xd8,   0xff,   0xc8,   0xc6,   0xb5,   0xb3,   0xb1,
+//          DEL,    TEN_RT, -,      0,      8,      6,      4,      2
+			0x11,   0xff,   0xd7,   0xc9,   0xc7,   0xc5,   0xb4,   0xb2,
+//          INS,    CLR,    ------, F1,     F2,     F3,     F4,     F5
+			0x0f,   0x0e,   0xff,   0xff,   0xff,   0xff,   0xff,   0xff
+		},
+		/* kana shift */
+		{
+//          ------, TEN_DN, RETURN, >,      TEN_UP, SPACE,  E,      ESC
+			0xff,   0xff,   0x0d,   0xa1,   0xff,   0x20,   0xb8,   0x1b,
+//          LF,     ------, ------, ?,      <,      N,      V,      X
+			0x0a,   0xff,   0xff,   0xff,   0xae,   0xac,   0xc3,   0xc1,
+//          CUR_DN, HELP,   \,      ------, M,      B,      C,      Z
+			0x1c,   0xff,   0xa5,   0xff,   0xad,   0xc4,   0xaf,   0xc0,
+//          CUR_UP, CUR_LT, ------, :,      K,      H,      F,      S
+			0x17,   0x16,   0xff,   0xd1,   0xd1,   0xcf,   0xbe,   0xbc,
+//          CUR_RT, ~,      ",      L,      J,      G,      D,      A
+			0x19,   0xa3,   0xa2,   0xd2,   0xd0,   0xbf,   0xbd,   0xbb,
+//          BS,     },      {,      O,      U,      T,      ------, Q
+			0x08,   0xb0,   0xda,   0xcd,   0xcb,   0xba,   0xff,   0xb6,
+//          ------, RUBOUT, P,      I,      Y,      R,      W,      TAB
+			0xff,   0xd9,   0xce,   0xcc,   0xca,   0xb9,   0xb7,   0x09,
+//          HOME,   +,      TEN_LT, 9,      7,      5,      3,      1
+			0x14,   0xd8,   0xff,   0xc8,   0xc6,   0xab,   0xa9,   0xa7,
+//          DEL,    TEN_RT, -,      0,      8,      6,      4,      2
+			0x11,   0xff,   0xd7,   0xc9,   0xc7,   0xc5,   0xaa,   0xa8,
+//          INS,    CLR,    ------, F1,     F2,     F3,     F4,     F5
+			0x0f,   0x0e,   0xff,   0xff,   0xff,   0xff,   0xff,   0xff
+		},
 		/* ctrl */
 		{
 //          ------, TEN_DN, RETURN, >,      TEN_UP, SPACE,  E,      ESC
@@ -285,10 +333,33 @@ uint8_t smc777_kbd_device::translate(uint8_t row, uint8_t column)
 		}
 	};
 
-	// TODO: CAPS LOCK modifier, not all keys supports kana modifier
-	const u8 shift = BIT(m_key_mod->read(), 0);
-	const u8 ctrl = BIT(m_key_mod->read(), 1);
-	const u8 modifier = ctrl ? 2 : shift ? 1 : 0;
+	const u8 caps_modifier[0x50] = {
+//      ------, TEN_DN, RETURN, >,      TEN_UP, SPACE,  E,      ESC
+		0,      0,      0,      0,      0,      0,      1,      0,
+//      LF,     ------, ------, ?,      <,      N,      V,      X
+		0,      0,      0,      0,      0,      1,      1,      1,
+//      CUR_DN, HELP,   \,      ------, M,      B,      C,      Z
+		0,      0,      0,      0,      1,      1,      1,      1,
+//      CUR_UP, CUR_LT, ------, :,      K,      H,      F,      S
+		0,      0,      0,      0,      1,      1,      1,      1,
+//      CUR_RT, ~,      ",      L,      J,      G,      D,      A
+		0,      0,      0,      1,      1,      1,      1,      1,
+//      BS,     },      {,      O,      U,      T,      ------, Q
+		0,      0,      0,      1,      1,      1,      0,      1,
+//      ------, RUBOUT, P,      I,      Y,      R,      W,      TAB
+		0,      0,      1,      1,      1,      1,      1,      0,
+//      HOME,   +,      TEN_LT, 9,      7,      5,      3,      1
+		0,      0,      0,      0,      0,      0,      0,      0,
+//      DEL,    TEN_RT, -,      0,      8,      6,      4,      2
+		0,      0,      0,      0,      0,      0,      0,      0,
+//      INS,    CLR,    ------, F1,     F2,     F3,     F4,     F5
+		0,      0,      0,      0,      0,      0,      0,      0
+	};
+
+	const u8 key_mod = m_key_mod->read();
+	const u8 shift = BIT(key_mod, 0);
+	const u8 ctrl = BIT(key_mod, 1);
+	u8 modifier = ctrl ? 4 : shift ? 1 : 0;
 
 	// HELP key
 	if (row == 2 && column == 1)
@@ -298,7 +369,24 @@ uint8_t smc777_kbd_device::translate(uint8_t row, uint8_t column)
 	if (row == 9 && column >= 3)
 		return m_fkey_table[modifier][column - 3];
 
-	return keytable[modifier][row * 8 + column] | (BIT(m_key_mod->read(), 4) << 7);
+	const u8 key_select = row * 8 + column;
+
+	// check for locks if CTRL not pressed
+	if ((modifier & 0xfc) == 0)
+	{
+		// KANA LOCK
+		if (BIT(key_mod, 3))
+		{
+			modifier |= 2;
+		}
+		// CAP(S) LOCK, applies to A-Z keys only
+		else if (BIT(key_mod, 2) && caps_modifier[key_select] == 1)
+		{
+			modifier ^= 1;
+		}
+	}
+
+	return keytable[modifier][key_select];
 }
 
 
