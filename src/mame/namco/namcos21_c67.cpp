@@ -8,18 +8,15 @@ TODO:
 - lamp/vibration outputs, from MCU? (particularly starblad);
 - verify DSP clocks, they should be 40MHz, currently underclocked on purpose on MAME, otherwise polygons
   may disappear on some frames (try playing starblad until after the asteroids), tightening quantum by
-  a factor of 40/24 does not fix it, actually it also happens when underclocked, but less;
+  a factor of 40/24 does not fix it (actually it also happens when underclocked, but less);
 - verify video timing, pixel clock is from 38.76922?;
-- verify audiocpu irq frequency;
-- is m_layer0_pivot software-controlled and if so, where? (solvalou sprite layer 0 is further back than
-  starblad and cybsled);
+- mix_layer0_sprites can be improved when namcos21_3d_device removes the z-buffer, there are currently
+  glitches in cybsled, eg. missile pickups behind pillars;
 - wrong global sprite layer offsets in service mode for all games except aircomb, it's fine in-game though;
 - aircomb: z-fighting issue on attract mode with the plane renders (after the first title screen),
   and on pilot parachuting with a time over;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
 - aircomb: bad sprite colors on debriefing medal screen;
-- cybsled: sprite priority issues with explosions, and eg. missile pick-ups, is it related to unemulated
-  z-sorted polygons, and/or from m_layer0_pivot?;
 - solvalou: service mode polygon test is crashy when testing invalid polygons (the good old IDC overflow);
 - solvalou: sprite blend is wrong during water stages (look at the blaster/score panel), the palette
   bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
@@ -52,29 +49,32 @@ The memory map below reflects DSP RAM as seen by the 68000 CPUs.
     0x2000a0: B-M:
     0x2000b0: P-M:
     0x2000c0: S-M:
-    0x200100    status: 2=upload needed, 4=error (abort)
-    0x200102    status
-    0x200104    0x0002
-    0x200106    addr written by main cpu
-    0x20010a    point rom checksum (starblade expects 0xed53)
-    0x20010c    point rom checksum (starblade expects 0xd5df)
-    0x20010e    1: upload-code-to-dsp request trigger
-    0x200110    status
-    0x200112    status
-    0x200114    master dsp code size
-    0x200116    slave dsp code size
-    0x200120    upload source1 addr hi
-    0x200122    upload source1 addr lo
-    0x200124    upload source2 addr hi
-    0x200126    upload source2 addr lo
-    0x200200    enable
-    0x200202    status
-    0x200206    work page select
-    0x200208   0xa2c2 (air combat)
-    0x208000..0x2080ff  camera attributes for page#0
-    0x208200..0x208fff  3d object attribute display list for page#0
-    0x20c000..0x20c0ff  camera attributes for page#1
-    0x20c200..0x20cfff  3d object attribute display list for page#1
+
+    0x200100: status: 2=upload needed, 4=error (abort)
+    0x200102: status
+    0x200104: 0x0002
+    0x200106: addr written by main cpu
+    0x20010a: point rom checksum (starblade expects 0xed53)
+    0x20010c: point rom checksum (starblade expects 0xd5df)
+    0x20010e: 1: upload-code-to-dsp request trigger
+    0x200110: status
+    0x200112: status
+    0x200114: master dsp code size
+    0x200116: slave dsp code size
+    0x200120: upload source1 addr hi
+    0x200122: upload source1 addr lo
+    0x200124: upload source2 addr hi
+    0x200126: upload source2 addr lo
+
+    0x200200: enable
+    0x200202: status
+    0x200206: work page select
+    0x200208: 0xa2c2 (air combat)
+
+    0x208000..0x2080ff: camera attributes for page#0
+    0x208200..0x208fff: 3d object attribute display list for page#0
+    0x20c000..0x20c0ff: camera attributes for page#1
+    0x20c200..0x20cfff: 3d object attribute display list for page#1
 
        Starblade Cybersled AirCombat22 Solvalou
 [400]:= 00 0000   00 0000   00 0000    00 0000
@@ -331,6 +331,7 @@ public:
 	void init_solvalou();
 
 protected:
+	virtual void video_start() override ATTR_COLD;
 	virtual void machine_start() override ATTR_COLD;
 	virtual void machine_reset() override ATTR_COLD;
 
@@ -354,8 +355,8 @@ private:
 	required_device<namcos21_3d_device> m_namcos21_3d;
 	required_device<namcos21_dsp_c67_device> m_namcos21_dsp_c67;
 
-	u16 m_layer0_pivot = 0x800;
 	u16 m_video_enable = 0;
+	bitmap_ind16 m_mix_layer0_bitmap;
 
 	u16 video_enable_r();
 	void video_enable_w(offs_t offset, u16 data, u16 mem_mask = ~0);
@@ -377,6 +378,7 @@ private:
 	TIMER_DEVICE_CALLBACK_MEMBER(screen_scanline);
 
 	bool sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase, u16 src, int srcpri, int pri);
+	void mix_layer0_sprites(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 	u32 screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
 	void common_map(address_map &map) ATTR_COLD;
@@ -387,6 +389,13 @@ private:
 	void c140_map(address_map &map) ATTR_COLD;
 };
 
+
+void namcos21_c67_state::video_start()
+{
+	m_screen->register_screen_bitmap(m_mix_layer0_bitmap);
+
+	save_item(NAME(m_video_enable));
+}
 
 bool namcos21_c67_state::sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase, u16 src, int srcpri, int pri)
 {
@@ -427,6 +436,34 @@ bool namcos21_c67_state::sprite_mix_callback(u16 &dest, u8 &destpri, u16 colbase
 	return false;
 }
 
+void namcos21_c67_state::mix_layer0_sprites(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
+{
+	copybitmap(m_mix_layer0_bitmap, bitmap, 0, 0, 0, 0, cliprect);
+	m_c355spr->draw(screen, m_mix_layer0_bitmap, cliprect, 0);
+
+	assert(cliprect.bottom() < m_namcos21_3d->height() && cliprect.right() < m_namcos21_3d->width());
+
+	// create priority table, this is not accurate
+	u16 pri[0x10];
+	for (int i = 0; i < 0x10; i++)
+		pri[i] = (i == 0) ? 0x7fc0 : pri[i - 1] / 1.25;
+
+	// mix layer 0 sprites with polygons
+	for (int y = cliprect.top(); y <= cliprect.bottom(); y++)
+	{
+		const u16 *z = m_namcos21_3d->get_visible_zbuffer() + m_namcos21_3d->width() * y;
+		const u16 *src = &m_mix_layer0_bitmap.pix(y);
+		u16 *dest = &bitmap.pix(y);
+
+		for (int x = cliprect.left(); x <= cliprect.right(); x++)
+		{
+			// priority is from sprite high palette bits
+			if ((src[x] & 0x5000 && pri[src[x] >> 8 & 0xf] <= z[x]) || src[x] < 0x1000)
+				dest[x] = src[x];
+		}
+	}
+}
+
 u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 	bitmap.fill(0xff, cliprect);
@@ -452,9 +489,8 @@ u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitma
 			break;
 		case 4: // default gameplay for all games, aircomb attract mode
 		default:
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, m_layer0_pivot, 0x7ffe);
-			m_c355spr->draw(screen, bitmap, cliprect, 0);
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, m_layer0_pivot - 1);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
+			mix_layer0_sprites(screen, bitmap, cliprect);
 			break;
 	}
 
@@ -773,8 +809,6 @@ void namcos21_c67_state::machine_start()
 	u32 max = memregion("audiocpu")->bytes() / 0x4000;
 	for (int i = 0; i < 0x10; i++)
 		m_audiobank->configure_entry(i, memregion("audiocpu")->base() + (i % max) * 0x4000);
-
-	save_item(NAME(m_video_enable));
 }
 
 TIMER_DEVICE_CALLBACK_MEMBER(namcos21_c67_state::screen_scanline)
@@ -912,7 +946,6 @@ void namcos21_c67_state::solvalou(machine_config &config)
 
 	m_namcos21_3d->set_fixed_palbase(0x3f00);
 	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
-	m_layer0_pivot = 0x7fc0;
 }
 
 
