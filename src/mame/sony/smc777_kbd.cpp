@@ -396,12 +396,12 @@ void smc777_kbd_device::key_make(uint8_t row, uint8_t column)
 	m_status |= 5;
 	//printf("%d %d\n", row, column);
 	// take count of multipresses like this (testable in games like ldrun/cloderun)
-	m_held_keys ++;
+	m_held_keys++;
 }
 
 void smc777_kbd_device::key_break(uint8_t row, uint8_t column)
 {
-	m_held_keys --;
+	m_held_keys--;
 	if (m_held_keys <= 0)
 	{
 		// clear code for safety
@@ -459,7 +459,7 @@ u8 smc777_kbd_device::data_r(offs_t offset)
 		u8 res = m_fkey_table[m_fkey_index][m_fkey_target];
 		if (!machine().side_effects_disabled())
 		{
-			m_fkey_index ++;
+			m_fkey_index++;
 			if (m_fkey_index >= 3)
 				m_command = 0xff;
 		}
@@ -479,7 +479,7 @@ void smc777_kbd_device::data_w(offs_t offset, u8 data)
 		if (m_fkey_target == 0xf)
 			return;
 		m_fkey_table[m_fkey_index][m_fkey_target] = data;
-		m_fkey_index ++;
+		m_fkey_index++;
 		if (m_fkey_index >= 3)
 			m_command = 0xff;
 	}
@@ -551,7 +551,7 @@ void smc777_kbd_device::control_w(offs_t offset, u8 data)
 				// clamp to natural table, otherwise mark it as invalid
 				// (is the MCU really handling f-keys starting from bit 1?)
 				if (m_fkey_target == std::clamp<u8>(m_fkey_target, 1, 6))
-					m_fkey_target --;
+					m_fkey_target--;
 				else
 					m_fkey_target = 0xf;
 				break;

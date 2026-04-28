@@ -25,6 +25,8 @@ TODO:
 
 #include "emu.h"
 
+#include "smc777_kbd.h"
+
 #include "bus/msx/ctrl/ctrl.h"
 #include "cpu/mcs48/mcs48.h"
 #include "cpu/z80/z80.h"
@@ -36,8 +38,6 @@ TODO:
 #include "sound/sn76496.h"
 #include "sound/spkrdev.h"
 #include "video/mc6845.h"
-
-#include "smc777_kbd.h"
 
 #include "emupal.h"
 #include "screen.h"
@@ -903,7 +903,7 @@ void smc777_state::machine_reset()
 
 	// warm reset is special, ties with a physical back button
 	// (avoids bad bootstraps by resetting with our F3 key)
-	m_warm_reset ++;
+	m_warm_reset++;
 	if (m_warm_reset >= 1)
 		m_warm_reset = 1;
 

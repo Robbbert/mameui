@@ -2254,6 +2254,43 @@ ROM_START( bloodstm220 )
 	ROM_LOAD16_BYTE( "bssrom2.bin",  0x300000, 0x40000, CRC(8aee1e77) SHA1(f949fa89ee7d59f457ce89c72d461cecd0cface3) )
 ROM_END
 
+ROM_START( bloodstm216 )
+	ROM_REGION16_BE( 0x80000, "maindata", 0 )
+	ROM_LOAD16_BYTE( "bld00_v21.u83", 0x00000, 0x40000, CRC(9b078fd9) SHA1(87c567b81e0c9979e256ff6b10f0b237ba3c9ad5) ) // Labeled BLD00 V2.1 (U83)
+	ROM_LOAD16_BYTE( "bld01_v21.u88", 0x00001, 0x40000, CRC(50b83434) SHA1(185d908ff1917c5dc79c42786d5ae8d9f5d894df) ) // Labeled BLD01 V2.1 (U88)
+
+	ROM_REGION( 0x28000, "soundcpu", 0 )
+	ROM_LOAD( "bldsnd_v10.u17", 0x10000, 0x18000, CRC(dddeedbb) SHA1(f8ea786836630fc44bba968845fd2cb42cd81592) ) // Labeled BLDSND V1.0 (U17)
+	ROM_CONTINUE(               0x08000, 0x08000 )
+
+	ROM_REGION( 0x880000, "grom", 0 )
+	ROM_LOAD32_BYTE( "bsgrom0.bin",  0x000000, 0x080000, CRC(4e10b8c1) SHA1(b80f7dbf32faa97829c735da6dc0ee424dc9ecec) )
+	ROM_LOAD32_BYTE( "bsgrom5.bin",  0x000001, 0x080000, CRC(6333b6ce) SHA1(53b884e09d198f8f53449bd011ba743c28b2c934) )
+	ROM_LOAD32_BYTE( "bsgrom10.bin", 0x000002, 0x080000, CRC(a972a65c) SHA1(7772c2e0aaa0b3183c6287125b95fd1cd0c3775a) )
+	ROM_LOAD32_BYTE( "bsgrom15.bin", 0x000003, 0x080000, CRC(9a8f54aa) SHA1(3a2f99c28324ba1fcfb652bdc596d94c90637b72) )
+	ROM_LOAD32_BYTE( "bsgrom1.bin",  0x200000, 0x080000, CRC(10abf660) SHA1(e5b28ee12972abbcd883d702f496feae62d19e07) )
+	ROM_LOAD32_BYTE( "bsgrom6.bin",  0x200001, 0x080000, CRC(06a260d5) SHA1(f506b799bbb5d4465a4ab564cfd276877b8a52e9) )
+	ROM_LOAD32_BYTE( "bsgrom11.bin", 0x200002, 0x080000, CRC(f2cab3c7) SHA1(eecb1f2f8a3f3b1663a51c343e28e1b2078da5f4) )
+	ROM_LOAD32_BYTE( "bsgrom16.bin", 0x200003, 0x080000, CRC(403aef7b) SHA1(0a2a61480cddd020bfbad01c6c328dfa6760bddd) )
+	ROM_LOAD32_BYTE( "bsgrom2.bin",  0x400000, 0x080000, CRC(488200b1) SHA1(ae25bb5e9a836ae362d88de4e392ff46ff93c636) )
+	ROM_LOAD32_BYTE( "bsgrom7.bin",  0x400001, 0x080000, CRC(5bb19727) SHA1(fd8aa73ff0606ac86f054794f6abc42f99b4f856) )
+	ROM_LOAD32_BYTE( "bsgrom12.bin", 0x400002, 0x080000, CRC(b10d674f) SHA1(f5c713480deac44b86173ca9ac3aeea8a4d2ac85) )
+	ROM_LOAD32_BYTE( "bsgrom17.bin", 0x400003, 0x080000, CRC(7119df7e) SHA1(67acb0525f21d5cd174528fb0fa72c7101deb5eb) )
+	ROM_LOAD32_BYTE( "bsgrom3.bin",  0x600000, 0x080000, CRC(2378792e) SHA1(8cf1040a86ce7b6be3f56d144d4a17b7a888a648) )
+	ROM_LOAD32_BYTE( "bsgrom8.bin",  0x600001, 0x080000, CRC(3640ca2e) SHA1(1fbc8306c7310ab23d40887c16f80e2dc3d730f8) )
+	ROM_LOAD32_BYTE( "bsgrom13.bin", 0x600002, 0x080000, CRC(bd4a071d) SHA1(f25483591659d7424a4c62d0093fa56e5d337bf3) )
+	ROM_LOAD32_BYTE( "bsgrom18.bin", 0x600003, 0x080000, CRC(12959bb8) SHA1(f74d407004ccbf461f749672e4e57a5f0b6b549f) )
+	ROM_FILL(                        0x800000, 0x080000, 0xff )
+
+	ROM_REGION16_BE( 0x400000, "ensoniq.0", ROMREGION_ERASE00 )
+	ROM_LOAD16_BYTE( "ensoniq.2m", 0x000000, 0x200000, CRC(9fdc4825) SHA1(71e5255c66d9010be7e6f27916b605441fc53839) ) // Ensoniq 2m 1350901601
+
+	ROM_REGION16_BE( 0x400000, "ensoniq.2", ROMREGION_ERASE00 )
+	ROM_LOAD16_BYTE( "bssrom0.bin",  0x000000, 0x80000, CRC(ee4570c8) SHA1(73dd292224bf182770b3cc2d90eb52b7d7b24378) )
+	ROM_LOAD16_BYTE( "bssrom1.bin",  0x100000, 0x80000, CRC(b0f32ec5) SHA1(666f904b31cdef12cbf1dbb43a7d3ff7c2903260) )
+	ROM_LOAD16_BYTE( "bssrom2.bin",  0x300000, 0x40000, CRC(8aee1e77) SHA1(f949fa89ee7d59f457ce89c72d461cecd0cface3) )
+ROM_END
+
 ROM_START( bloodstm210 )
 	ROM_REGION16_BE( 0x80000, "maindata", 0 )
 	ROM_LOAD16_BYTE( "bld00_v21.u83", 0x00000, 0x40000, CRC(71215c8e) SHA1(ee0f94c3a2619d7e3cc1ba5e1888a97b0c75a3ae) ) // Labeled BLD00 V2.1 (U83)
@@ -5172,6 +5209,7 @@ GAME( 1993, hardyard10,   hardyard, bloodstm, hardyard, itech32_state,  init_har
 GAME( 1994, bloodstm,     0,        bloodstm, bloodstm, itech32_state,  init_bloodstm, ROT0, "Strata / Incredible Technologies",                        "Blood Storm (v2.22)", MACHINE_SUPPORTS_SAVE )
 GAME( 1994, bloodstm221,  bloodstm, bloodstm, bloodstm, itech32_state,  init_bloodstm, ROT0, "Strata / Incredible Technologies",                        "Blood Storm (v2.21)", MACHINE_SUPPORTS_SAVE )
 GAME( 1994, bloodstm220,  bloodstm, bloodstm, bloodstm, itech32_state,  init_bloodstm, ROT0, "Strata / Incredible Technologies",                        "Blood Storm (v2.20)", MACHINE_SUPPORTS_SAVE )
+GAME( 1994, bloodstm216,  bloodstm, bloodstm, bloodstm, itech32_state,  init_bloodstm, ROT0, "Strata / Incredible Technologies",                        "Blood Storm (v2.16)", MACHINE_SUPPORTS_SAVE )
 GAME( 1994, bloodstm210,  bloodstm, bloodstm, bloodstm, itech32_state,  init_bloodstm, ROT0, "Strata / Incredible Technologies",                        "Blood Storm (v2.10)", MACHINE_SUPPORTS_SAVE )
 GAME( 1994, bloodstm110,  bloodstm, bloodstm, bloodstm, itech32_state,  init_bloodstm, ROT0, "Strata / Incredible Technologies",                        "Blood Storm (v1.10)", MACHINE_SUPPORTS_SAVE )
 GAME( 1994, bloodstm104,  bloodstm, bloodstm, bloodstm, itech32_state,  init_bloodstm, ROT0, "Strata / Incredible Technologies",                        "Blood Storm (v1.04)", MACHINE_SUPPORTS_SAVE )
@@ -5301,4 +5339,3 @@ GAME( 2001, gtclasscs, gtclassc, sftm,   s_ver, itech32_state, init_s_ver,     R
 
 GAME( 199?, shoottv,  0,         shoottv, shoottv, shoottv_state, empty_init,  ROT0, "Incredible Technologies", "Must Shoot TV (prototype)" , MACHINE_SUPPORTS_SAVE )
 GAME( 1996, pubball,  0,         pubball, pubball, itech32_state, init_pubball,ROT0, "Midway / Incredible Technologies", "Power Up Baseball (prototype)" , MACHINE_SUPPORTS_SAVE )
-
