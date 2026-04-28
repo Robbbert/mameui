@@ -293,11 +293,14 @@ bool namco_de_pcbstack_device::sprite_mix_callback(u16 &dest, u8 &destpri, u16 c
 
 u32 namco_de_pcbstack_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
+	if (!BIT(m_video_enable, 6))
+	{
+		bitmap.fill(m_palette->black_pen(), cliprect);
+		return 0;
+	}
+
 	bitmap.fill(0xff, cliprect);
 	screen.priority().fill(0, cliprect);
-
-	if (!BIT(m_video_enable, 6))
-		return 0;
 
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 

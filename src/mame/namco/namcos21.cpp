@@ -36,10 +36,10 @@ is used to shade pixels according to their depth.
 
 TODO:
 - polygon glitches/flicker
-- pressing service mode while the game is running causes it to lock up (need to press F3)
 - is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
 - winrungp: some missing bitmap layer gfx due to underdumps of the gpu program roms (see attract mode
   when it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)
+- winrungp: pressing service mode is glitchy when posirq is active (need to press F3)
 
 reference videos:
 - https://youtu.be/ZNNveBLWevg
