@@ -866,10 +866,10 @@ void namcos2_base_state::sound_default_am(address_map &map)
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namcos2_base_state::dpram_byte_r), FUNC(namcos2_base_state::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
 	map(0xa000, 0xbfff).nopw(); /* Amplifier enable on 1st write */
+	map(0xc000, 0xffff).rom().region("audiocpu", 0);
 	map(0xc000, 0xc001).w(FUNC(namcos2_base_state::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); /* Watchdog */
 	map(0xe000, 0xe000).nopw();
-	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
 }
 
 void namcos2_base_state::c140_default_am(address_map &map)
