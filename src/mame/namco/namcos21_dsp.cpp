@@ -18,9 +18,9 @@ DEFINE_DEVICE_TYPE(NAMCOS21_DSP, namcos21_dsp_device, "namcos21_dsp_device", "Na
 namcos21_dsp_device::namcos21_dsp_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock) :
 	device_t(mconfig, NAMCOS21_DSP, tag, owner, clock),
 	m_dsp(*this, "dsp"),
-	m_winrun_dspbios(*this,"winrun_dspbios"),
-	m_winrun_polydata(*this,"winrun_polydata"),
-	m_ptrom16(*this,"point16"),
+	m_dspbios(*this, "dspbios"),
+	m_polydata(*this, "polydata"),
+	m_ptrom16(*this, "point16"),
 	m_renderer(*this, finder_base::DUMMY_TAG)
 {
 }
@@ -31,14 +31,14 @@ void namcos21_dsp_device::device_start()
 
 	m_pointram_idx = 0;
 	m_pointram_control = 0;
-	m_winrun_poly_index = 0;
-	m_winrun_pointrom_addr = 0;
+	m_poly_index = 0;
+	m_pointrom_addr = 0;
 	m_dsp_complete = 0;
 
-	std::fill(std::begin(m_winrun_dspcomram_control), std::end(m_winrun_dspcomram_control), 0);
+	std::fill(std::begin(m_dspcomram_control), std::end(m_dspcomram_control), 0);
 
-	m_winrun_dspcomram = make_unique_clear<u16[]>(0x1000*2);
-	save_pointer(NAME(m_winrun_dspcomram), 0x1000*2);
+	m_dspcomram = make_unique_clear<u16[]>(0x1000*2);
+	save_pointer(NAME(m_dspcomram), 0x1000*2);
 
 	assert((PTRAM_SIZE & (PTRAM_SIZE - 1)) == 0);
 	m_pointram = make_unique_clear<u8[]>(PTRAM_SIZE);
@@ -47,10 +47,10 @@ void namcos21_dsp_device::device_start()
 	save_item(NAME(m_pointram_idx));
 	save_item(NAME(m_pointram_control));
 
-	save_item(NAME(m_winrun_dspcomram_control));
-	save_item(NAME(m_winrun_poly_buf));
-	save_item(NAME(m_winrun_poly_index));
-	save_item(NAME(m_winrun_pointrom_addr));
+	save_item(NAME(m_dspcomram_control));
+	save_item(NAME(m_poly_buf));
+	save_item(NAME(m_poly_index));
+	save_item(NAME(m_pointrom_addr));
 	save_item(NAME(m_dsp_complete));
 }
 
@@ -66,21 +66,21 @@ void namcos21_dsp_device::device_reset()
 }
 
 
-u16 namcos21_dsp_device::winrun_dspcomram_r(offs_t offset)
+u16 namcos21_dsp_device::dspcomram_r(offs_t offset)
 {
-	int bank = 1 - (m_winrun_dspcomram_control[0x4/2] & 1);
-	u16 *mem = &m_winrun_dspcomram[0x1000 * bank];
+	int bank = 1 - (m_dspcomram_control[0x4/2] & 1);
+	u16 *mem = &m_dspcomram[0x1000 * bank];
 	return mem[offset];
 }
 
-void namcos21_dsp_device::winrun_dspcomram_w(offs_t offset, u16 data, u16 mem_mask)
+void namcos21_dsp_device::dspcomram_w(offs_t offset, u16 data, u16 mem_mask)
 {
-	int bank = 1 - (m_winrun_dspcomram_control[0x4/2] & 1);
-	u16 *mem = &m_winrun_dspcomram[0x1000 * bank];
+	int bank = 1 - (m_dspcomram_control[0x4/2] & 1);
+	u16 *mem = &m_dspcomram[0x1000 * bank];
 	COMBINE_DATA(&mem[offset]);
 }
 
-u16 namcos21_dsp_device::winrun_cuskey_r()
+u16 namcos21_dsp_device::cuskey_r()
 {
 	int pc = m_dsp->pc();
 	switch (pc)
@@ -101,15 +101,15 @@ u16 namcos21_dsp_device::winrun_cuskey_r()
 	return 0;
 }
 
-void namcos21_dsp_device::winrun_cuskey_w(u16 data)
+void namcos21_dsp_device::cuskey_w(u16 data)
 {
 }
 
-void namcos21_dsp_device::winrun_flush_poly()
+void namcos21_dsp_device::flush_poly()
 {
-	if (m_winrun_poly_index > 0)
+	if (m_poly_index > 0)
 	{
-		const u16 *pSource = m_winrun_poly_buf;
+		const u16 *pSource = m_poly_buf;
 		u16 color = *pSource++;
 		if (color & 0x8000)
 		{
@@ -120,59 +120,59 @@ void namcos21_dsp_device::winrun_flush_poly()
 		{
 			m_renderer->draw_quads(pSource, m_pointram.get(), PTRAM_SIZE, color);
 		}
-		m_winrun_poly_index = 0;
+		m_poly_index = 0;
 	}
 }
 
-u16 namcos21_dsp_device::winrun_poly_reset_r()
+u16 namcos21_dsp_device::poly_reset_r()
 {
 	if (!machine().side_effects_disabled())
-		winrun_flush_poly();
+		flush_poly();
 
 	return 0;
 }
 
-void namcos21_dsp_device::winrun_dsp_render_w(u16 data)
+void namcos21_dsp_device::dsp_render_w(u16 data)
 {
-	if (m_winrun_poly_index < WINRUN_MAX_POLY_PARAM)
+	if (m_poly_index < MAX_POLY_PARAM)
 	{
-		m_winrun_poly_buf[m_winrun_poly_index++] = data;
+		m_poly_buf[m_poly_index++] = data;
 	}
 	else
 	{
-		logerror("WINRUN_POLY_OVERFLOW\n");
+		logerror("POLY_OVERFLOW\n");
 	}
 }
 
-void namcos21_dsp_device::winrun_dsp_pointrom_addr_w(offs_t offset, u16 data)
+void namcos21_dsp_device::dsp_pointrom_addr_w(offs_t offset, u16 data)
 {
 	if (offset == 0)
 	{
 		// port 8
-		m_winrun_pointrom_addr = data;
+		m_pointrom_addr = data;
 	}
 	else
 	{
 		// port 9
-		m_winrun_pointrom_addr |= (data << 16);
+		m_pointrom_addr |= (data << 16);
 	}
 }
 
-u16 namcos21_dsp_device::winrun_dsp_pointrom_data_r()
+u16 namcos21_dsp_device::dsp_pointrom_data_r()
 {
-	u16 data = m_ptrom16[m_winrun_pointrom_addr];
+	u16 data = m_ptrom16[m_pointrom_addr];
 
 	if (!machine().side_effects_disabled())
-		m_winrun_pointrom_addr++;
+		m_pointrom_addr++;
 
 	return data;
 }
 
-void namcos21_dsp_device::winrun_dsp_complete_w(u16 data)
+void namcos21_dsp_device::dsp_complete_w(u16 data)
 {
 	if (~m_dsp_complete & data & 1)
 	{
-		winrun_flush_poly();
+		flush_poly();
 		m_dsp->pulse_input_line(INPUT_LINE_RESET, attotime::zero);
 		m_renderer->swap_and_clear_poly_framebuffer();
 	}
@@ -180,14 +180,14 @@ void namcos21_dsp_device::winrun_dsp_complete_w(u16 data)
 	m_dsp_complete = data;
 }
 
-u16 namcos21_dsp_device::winrun_table_r(offs_t offset)
+u16 namcos21_dsp_device::table_r(offs_t offset)
 {
-	return m_winrun_polydata[offset];
+	return m_polydata[offset];
 }
 
-void namcos21_dsp_device::winrun_dspbios_w(offs_t offset, u16 data, u16 mem_mask)
+void namcos21_dsp_device::dspbios_w(offs_t offset, u16 data, u16 mem_mask)
 {
-	COMBINE_DATA(&m_winrun_dspbios[offset]);
+	COMBINE_DATA(&m_dspbios[offset]);
 
 	if (offset == 0xfff) // is this the real trigger?
 		m_dsp->resume(SUSPEND_REASON_HALT);
@@ -198,60 +198,60 @@ void namcos21_dsp_device::winrun_dspbios_w(offs_t offset, u16 data, u16 mem_mask
 // 380004: dspcomram bank, as seen by 68k
 // 380008: read : state?
 
-u16 namcos21_dsp_device::winrun_68k_dspcomram_r(offs_t offset)
+u16 namcos21_dsp_device::m68k_dspcomram_r(offs_t offset)
 {
-	int bank = m_winrun_dspcomram_control[0x4/2] & 1;
-	u16 *mem = &m_winrun_dspcomram[0x1000 * bank];
+	int bank = m_dspcomram_control[0x4/2] & 1;
+	u16 *mem = &m_dspcomram[0x1000 * bank];
 	return mem[offset];
 }
 
-void namcos21_dsp_device::winrun_68k_dspcomram_w(offs_t offset, u16 data, u16 mem_mask)
+void namcos21_dsp_device::m68k_dspcomram_w(offs_t offset, u16 data, u16 mem_mask)
 {
-	int bank = m_winrun_dspcomram_control[0x4/2] & 1;
-	u16 *mem = &m_winrun_dspcomram[0x1000 * bank];
+	int bank = m_dspcomram_control[0x4/2] & 1;
+	u16 *mem = &m_dspcomram[0x1000 * bank];
 	COMBINE_DATA(&mem[offset]);
 }
 
-u16 namcos21_dsp_device::winrun_dspcomram_control_r(offs_t offset)
+u16 namcos21_dsp_device::dspcomram_control_r(offs_t offset)
 {
-	return m_winrun_dspcomram_control[offset];
+	return m_dspcomram_control[offset];
 }
 
-void namcos21_dsp_device::winrun_dspcomram_control_w(offs_t offset, u16 data, u16 mem_mask)
+void namcos21_dsp_device::dspcomram_control_w(offs_t offset, u16 data, u16 mem_mask)
 {
-	COMBINE_DATA(&m_winrun_dspcomram_control[offset]);
+	COMBINE_DATA(&m_dspcomram_control[offset]);
 }
 
 
-void namcos21_dsp_device::winrun_dsp_program(address_map &map)
+void namcos21_dsp_device::dsp_program(address_map &map)
 {
 	// MCU is used in external program mode, program is uploaded to shared RAM by the 68k
-	map(0x0000, 0x0fff).ram().share("winrun_dspbios");
+	map(0x0000, 0x0fff).ram().share("dspbios");
 }
 
-void namcos21_dsp_device::winrun_dsp_data(address_map &map)
+void namcos21_dsp_device::dsp_data(address_map &map)
 {
-	map(0x2000, 0x200f).rw(FUNC(namcos21_dsp_device::winrun_cuskey_r), FUNC(namcos21_dsp_device::winrun_cuskey_w));
-	map(0x4000, 0x4fff).rw(FUNC(namcos21_dsp_device::winrun_dspcomram_r), FUNC(namcos21_dsp_device::winrun_dspcomram_w));
-	map(0x8000, 0xffff).r(FUNC(namcos21_dsp_device::winrun_table_r));
+	map(0x2000, 0x200f).rw(FUNC(namcos21_dsp_device::cuskey_r), FUNC(namcos21_dsp_device::cuskey_w));
+	map(0x4000, 0x4fff).rw(FUNC(namcos21_dsp_device::dspcomram_r), FUNC(namcos21_dsp_device::dspcomram_w));
+	map(0x8000, 0xffff).r(FUNC(namcos21_dsp_device::table_r));
 }
 
-void namcos21_dsp_device::winrun_dsp_io(address_map &map)
+void namcos21_dsp_device::dsp_io(address_map &map)
 {
-	map(0x08, 0x09).rw(FUNC(namcos21_dsp_device::winrun_dsp_pointrom_data_r), FUNC(namcos21_dsp_device::winrun_dsp_pointrom_addr_w));
-	map(0x0a, 0x0a).w(FUNC(namcos21_dsp_device::winrun_dsp_render_w));
+	map(0x08, 0x09).rw(FUNC(namcos21_dsp_device::dsp_pointrom_data_r), FUNC(namcos21_dsp_device::dsp_pointrom_addr_w));
+	map(0x0a, 0x0a).w(FUNC(namcos21_dsp_device::dsp_render_w));
 	map(0x0b, 0x0b).nopw();
-	map(0x0c, 0x0c).w(FUNC(namcos21_dsp_device::winrun_dsp_complete_w));
+	map(0x0c, 0x0c).w(FUNC(namcos21_dsp_device::dsp_complete_w));
 }
 
 
 void namcos21_dsp_device::device_add_mconfig(machine_config &config)
 {
 	tms320c25_device& dsp(TMS320C25(config, m_dsp, 40_MHz_XTAL)); // 40 MHz oscillator on DSP board
-	dsp.set_addrmap(AS_PROGRAM, &namcos21_dsp_device::winrun_dsp_program);
-	dsp.set_addrmap(AS_DATA, &namcos21_dsp_device::winrun_dsp_data);
-	dsp.set_addrmap(AS_IO, &namcos21_dsp_device::winrun_dsp_io);
-	dsp.bio_in_cb().set(FUNC(namcos21_dsp_device::winrun_poly_reset_r));
+	dsp.set_addrmap(AS_PROGRAM, &namcos21_dsp_device::dsp_program);
+	dsp.set_addrmap(AS_DATA, &namcos21_dsp_device::dsp_data);
+	dsp.set_addrmap(AS_IO, &namcos21_dsp_device::dsp_io);
+	dsp.bio_in_cb().set(FUNC(namcos21_dsp_device::poly_reset_r));
 	dsp.xf_out_cb().set_nop();
 }
 

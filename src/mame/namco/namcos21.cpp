@@ -579,11 +579,11 @@ void namcos21_state::master_map(address_map &map)
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
 
 	// DSP Related
-	map(0x250000, 0x25ffff).ram().share("namcos21dsp:winrun_polydata");
+	map(0x250000, 0x25ffff).ram().share("namcos21dsp:polydata");
 	map(0x260000, 0x26ffff).ram(); // unused?
-	map(0x280000, 0x281fff).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_dspbios_w));
-	map(0x380000, 0x38000f).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_dspcomram_control_r), FUNC(namcos21_dsp_device::winrun_dspcomram_control_w));
-	map(0x3c0000, 0x3c1fff).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_68k_dspcomram_r), FUNC(namcos21_dsp_device::winrun_68k_dspcomram_w));
+	map(0x280000, 0x281fff).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::dspbios_w));
+	map(0x380000, 0x38000f).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::dspcomram_control_r), FUNC(namcos21_dsp_device::dspcomram_control_w));
+	map(0x3c0000, 0x3c1fff).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::m68k_dspcomram_r), FUNC(namcos21_dsp_device::m68k_dspcomram_w));
 	map(0x400000, 0x400001).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::pointram_control_w));
 	map(0x440000, 0x440001).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::pointram_data_r), FUNC(namcos21_dsp_device::pointram_data_w));
 }
