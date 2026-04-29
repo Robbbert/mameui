@@ -17,10 +17,9 @@ NOTES:
   About projection angles of left and right screen, the angle is correct on "DRIVER'S EYES" title screen,
   however in the tracks of demo mode it doesn't seem correct. (probably wants angle sent by main board?)
 
-- On demo screen, should fog effects be turned off?
-
 TODO:
 - add communications for Left and Right screen (linked C139 or something else?)
+- same flickering polygon glitches as namcos21.cpp
 - are the left and right PCB sound outputs N/C?
 
 */
@@ -452,6 +451,9 @@ void namco_de_pcbstack_device::reset_all_subcpus(int state)
 {
 	m_slave->set_input_line(INPUT_LINE_RESET, state);
 	m_c68->ext_reset(state);
+
+	if (state)
+		m_slave_intc->reset();
 }
 
 

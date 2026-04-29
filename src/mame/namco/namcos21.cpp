@@ -39,7 +39,6 @@ TODO:
 - is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
 - winrungp: some missing bitmap layer gfx due to underdumps of the gpu program roms (see attract mode
   when it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)
-- winrungp: pressing service mode is glitchy when posirq is active (need to press F3)
 
 reference videos:
 - https://youtu.be/ZNNveBLWevg
@@ -767,6 +766,12 @@ void namcos21_state::reset_all_subcpus(int state)
 	m_slave->set_input_line(INPUT_LINE_RESET, state);
 	m_gpu->set_input_line(INPUT_LINE_RESET, state);
 	m_c65->ext_reset(state);
+
+	if (state)
+	{
+		m_slave_intc->reset();
+		m_gpu_intc->reset();
+	}
 }
 
 void namcos21_state::machine_reset()
