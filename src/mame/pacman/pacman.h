@@ -221,7 +221,7 @@ public:
 	void crush4(machine_config &config);
 	void bigbucks(machine_config &config);
 	void porky(machine_config &config);
-	void pacman(machine_config &config, bool latch = true);
+	void pacman(machine_config &config);
 	void _8bpm(machine_config &config);
 	void crush2(machine_config &config);
 	void korosuke(machine_config &config);

@@ -355,26 +355,6 @@ Boards:
 
 /*************************************
  *
- *  Constants
- *
- *************************************/
-
-#define MASTER_CLOCK        (XTAL(18'432'000))
-
-#define PIXEL_CLOCK         (MASTER_CLOCK/3)
-
-/* H counts from 128->511, HBLANK starts at 144 and ends at 240 */
-#define HTOTAL              (384)
-#define HBEND               (0)     /*(96+16)*/
-#define HBSTART             (288)   /*(16)*/
-
-#define VTOTAL              (264)
-#define VBEND               (0)     /*(16)*/
-#define VBSTART             (224)   /*(224+16)*/
-
-
-/*************************************
- *
  *  Interrupts
  *
  *************************************/
@@ -630,7 +610,7 @@ uint8_t pacman_state::maketrax_special_port2_r(offs_t offset)
 		0x00, 0xc0, 0x00, 0x40, 0x00, 0xc0, 0x00, 0x40, 0xc0, 0x40, 0x00, 0xc0, 0x00, 0x40
 	};
 
-	uint8_t data = ioport("DSW1")->read() & 0x3f;
+	uint8_t data = m_dsw[0]->read() & 0x3f;
 
 	if (m_maketrax_disable_protection == 0)
 		return protdata[m_maketrax_offset] | data;
@@ -676,7 +656,7 @@ uint8_t pacman_state::maketrax_special_port3_r(offs_t offset)
 
 uint8_t pacman_state::mbrush_prot_r(offs_t offset)
 {
-	uint8_t data = ioport("DSW1")->read() & 0x3f;
+	uint8_t data = m_dsw[0]->read() & 0x3f;
 
 	switch (offset)
 	{
@@ -3123,7 +3103,6 @@ static INPUT_PORTS_START( nmouse )
 
 	PORT_START("DSW2")
 	PORT_BIT( 0xff, IP_ACTIVE_HIGH, IPT_UNUSED )
-
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( woodpek )
@@ -3723,28 +3702,25 @@ GFXDECODE_END
  *
  *************************************/
 
-void pacman_state::pacman(machine_config &config, bool latch)
+void pacman_state::pacman(machine_config &config)
 {
 	// Basic machine hardware
-	Z80(config, m_maincpu, MASTER_CLOCK/6);
+	Z80(config, m_maincpu, 18.432_MHz_XTAL / 6);
 	m_maincpu->set_addrmap(AS_PROGRAM, &pacman_state::pacman_map);
 	m_maincpu->set_addrmap(AS_IO, &pacman_state::writeport);
 	m_maincpu->set_irq_acknowledge_callback(FUNC(pacman_state::interrupt_vector_r));
 
-	if (latch)
-	{
-		LS259(config, m_mainlatch); // 74LS259 at 8K or 4099 at 7K
-		m_mainlatch->q_out_cb<0>().set(FUNC(pacman_state::irq_mask_w));
-		m_mainlatch->q_out_cb<1>().set("namco", FUNC(namco_wsg_device::sound_enable_w));
-		m_mainlatch->q_out_cb<3>().set(FUNC(pacman_state::flipscreen_w));
-		m_mainlatch->q_out_cb<7>().set(FUNC(pacman_state::coin_counter_w));
+	LS259(config, m_mainlatch); // 74LS259 at 8K or 4099 at 7K
+	m_mainlatch->q_out_cb<0>().set(FUNC(pacman_state::irq_mask_w));
+	m_mainlatch->q_out_cb<1>().set("namco", FUNC(namco_wsg_device::sound_enable_w));
+	m_mainlatch->q_out_cb<3>().set(FUNC(pacman_state::flipscreen_w));
+	m_mainlatch->q_out_cb<7>().set(FUNC(pacman_state::coin_counter_w));
 
-		// NOTE(dwidel): The Pacman code uses $5004 and $5005 for LEDs and $5007 for coin lockout.  This hardware does not
-		// exist on any Pacman or Puckman board I have seen.
-		//m_mainlatch->q_out_cb<4>().set_output("led0");
-		//m_mainlatch->q_out_cb<5>().set_output("led1");
-		//m_mainlatch->q_out_cb<6>().set(FUNC(pacman_state::coin_lockout_global_w));
-	}
+	// NOTE(dwidel): The Pacman code uses $5004 and $5005 for LEDs and $5007 for coin lockout.  This hardware does not
+	// exist on any Pacman or Puckman board I have seen.
+	//m_mainlatch->q_out_cb<4>().set_output("led0");
+	//m_mainlatch->q_out_cb<5>().set_output("led1");
+	//m_mainlatch->q_out_cb<6>().set(FUNC(pacman_state::coin_lockout_global_w));
 
 	WATCHDOG_TIMER(config, m_watchdog);
 	m_watchdog->set_vblank_count("screen", 16);
@@ -3752,12 +3728,13 @@ void pacman_state::pacman(machine_config &config, bool latch)
 	// Video hardware
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_pacman);
 
-	PALETTE(config, m_palette, FUNC(pacman_state::pacman_palette), 128*4, 32);
+	PALETTE(config, m_palette, FUNC(pacman_state::pacman_palette), 128 * 4, 32);
 
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_raw(PIXEL_CLOCK, HTOTAL, HBEND, HBSTART, VTOTAL, VBEND, VBSTART);
+	// H counts from 128->511, HBLANK starts at 144 and ends at 240
+	m_screen->set_raw(18.432_MHz_XTAL / 3, 384, 0, 288, 264, 0 /* +16 */, 224 /* +16 */);
 	m_screen->set_screen_update(FUNC(pacman_state::screen_update_pacman));
-	m_screen->set_palette("palette");
+	m_screen->set_palette(m_palette);
 	m_screen->screen_vblank().set(FUNC(pacman_state::vblank_irq));
 
 	MCFG_VIDEO_START_OVERRIDE(pacman_state,pacman)
@@ -3765,7 +3742,7 @@ void pacman_state::pacman(machine_config &config, bool latch)
 	// Sound hardware
 	SPEAKER(config, "mono").front_center();
 
-	NAMCO_WSG(config, m_namco_sound, MASTER_CLOCK/6/32);
+	NAMCO_WSG(config, m_namco_sound, 18.432_MHz_XTAL / 6 / 32);
 	m_namco_sound->add_route(ALL_OUTPUTS, "mono", 1.0);
 }
 
@@ -3798,8 +3775,9 @@ void pacman_state::birdiy(machine_config &config)
 	pacman(config);
 
 	// Basic machine hardware
-	Z80(config.replace(), m_maincpu, MASTER_CLOCK/6);
 	m_maincpu->set_addrmap(AS_PROGRAM, &pacman_state::birdiy_map);
+	m_maincpu->set_addrmap(AS_IO, address_map_constructor());
+	m_maincpu->remove_irq_acknowledge_callback();
 
 	m_mainlatch->q_out_cb<0>().set_nop();
 	m_mainlatch->q_out_cb<1>().set(FUNC(pacman_state::irq_mask_w));
@@ -3897,10 +3875,12 @@ void pacman_state::numcrash(machine_config &config)
 
 void alibaba_state::alibaba(machine_config &config)
 {
-	pacman(config, false);
+	pacman(config);
 
 	// Basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &alibaba_state::alibaba_map);
+
+	config.device_remove("mainlatch");
 
 	ls259_device &latch1(LS259(config, "latch1"));
 	latch1.q_out_cb<4>().set_output("led0");
@@ -4025,7 +4005,7 @@ void pacman_state::s2650games(machine_config &config)
 	pacman(config);
 
 	// Basic machine hardware
-	s2650_device &maincpu(S2650(config.replace(), m_maincpu, MASTER_CLOCK/6/2));    /* 2H */
+	s2650_device &maincpu(S2650(config.replace(), m_maincpu, 18.432_MHz_XTAL / 6 / 2)); /* 2H */
 	maincpu.set_addrmap(AS_PROGRAM, &pacman_state::s2650games_map);
 	maincpu.set_addrmap(AS_DATA, &pacman_state::s2650games_dataport);
 	maincpu.sense_handler().set("screen", FUNC(screen_device::vblank)).invert();
@@ -4052,7 +4032,7 @@ void pacman_state::s2650games(machine_config &config)
 
 	// Sound hardware
 	config.device_remove("namco");
-	SN76496(config, "sn1", MASTER_CLOCK/6).add_route(ALL_OUTPUTS, "mono", 0.75);    /* 1H */
+	SN76496(config, "sn1", 18.432_MHz_XTAL / 6).add_route(ALL_OUTPUTS, "mono", 0.75); /* 1H */
 }
 
 
