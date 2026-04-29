@@ -9,6 +9,7 @@
 #include "machine/gen_latch.h"
 #include "machine/watchdog.h"
 #include "sound/namco.h"
+
 #include "emupal.h"
 #include "screen.h"
 #include "tilemap.h"
@@ -52,7 +53,6 @@ protected:
 	void dremshpr_portmap(address_map &map) ATTR_COLD;
 	void drivfrcp_portmap(address_map &map) ATTR_COLD;
 	void mspacii_portmap(address_map &map) ATTR_COLD;
-	void crush4_map(address_map &map) ATTR_COLD;
 	void mspacman_map(address_map &map) ATTR_COLD;
 	void nmouse_portmap(address_map &map) ATTR_COLD;
 	void numcrash_map(address_map &map) ATTR_COLD;
@@ -183,7 +183,6 @@ protected:
 	void pacman_rbg_palette(palette_device &palette) const;
 	DECLARE_VIDEO_START(birdiy);
 	DECLARE_VIDEO_START(s2650games);
-	DECLARE_MACHINE_RESET(crush4);
 	DECLARE_MACHINE_RESET(superabc);
 	DECLARE_MACHINE_RESET(maketrax);
 	DECLARE_VIDEO_START(pengo);
@@ -353,10 +352,9 @@ public:
 
 	void mschamp(machine_config &config);
 
-	void init_mschamp();
-
 protected:
-	DECLARE_MACHINE_RESET(mschamp);
+	virtual void machine_start() override ATTR_COLD;
+	virtual void machine_reset() override ATTR_COLD;
 
 	void mschamp_map(address_map &map) ATTR_COLD;
 	void mschamp_portmap(address_map &map) ATTR_COLD;
@@ -367,7 +365,7 @@ private:
 
 	required_ioport m_timer;
 
-	uint8_t m_mux = 0;
+	uint8_t m_mux = 1;
 	uint8_t m_mux_data = 0xff;
 };
 
