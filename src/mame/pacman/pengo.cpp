@@ -354,6 +354,7 @@ void pengo_state::pengo(machine_config &config)
 	// basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &pengo_state::pengo_map);
 	m_maincpu->set_addrmap(AS_OPCODES, &pengo_state::decrypted_opcodes_map);
+	m_maincpu->remove_addrmap(AS_IO);
 	m_maincpu->remove_irq_acknowledge_callback();
 
 	m_mainlatch->q_out_cb<2>().set(FUNC(pengo_state::pengo_palettebank_w));
@@ -371,7 +372,8 @@ void pengo_state::pengo(machine_config &config)
 void pengo_state::pengou(machine_config &config)
 {
 	pengo(config);
-	m_maincpu->set_addrmap(AS_OPCODES, address_map_constructor());
+
+	m_maincpu->remove_addrmap(AS_OPCODES);
 }
 
 void pengo_state::pengoe(machine_config &config)
@@ -387,11 +389,10 @@ void pengo_state::pengoe(machine_config &config)
 
 void pengo_state::jrpacmbl(machine_config &config)
 {
-	pengo(config);
+	pengou(config);
 
 	// basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &pengo_state::jrpacmbl_map);
-	m_maincpu->set_addrmap(AS_OPCODES, address_map_constructor());
 
 	m_mainlatch->q_out_cb<4>().set(FUNC(pengo_state::jrpacman_bgpriority_w));
 	m_mainlatch->q_out_cb<5>().set(FUNC(pengo_state::jrpacman_spritebank_w));

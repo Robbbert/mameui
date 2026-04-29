@@ -3776,7 +3776,7 @@ void pacman_state::birdiy(machine_config &config)
 
 	// Basic machine hardware
 	m_maincpu->set_addrmap(AS_PROGRAM, &pacman_state::birdiy_map);
-	m_maincpu->set_addrmap(AS_IO, address_map_constructor());
+	m_maincpu->remove_addrmap(AS_IO);
 	m_maincpu->remove_irq_acknowledge_callback();
 
 	m_mainlatch->q_out_cb<0>().set_nop();
