@@ -729,10 +729,9 @@ void mschamp_state::machine_reset()
 {
 	pacman_state::machine_reset();
 
-	int whichbank = ioport("GAME")->read() & 1;
-
-	membank("bank1")->set_entry(whichbank);
-	membank("bank2")->set_entry(whichbank);
+	const int bank = BIT(m_dsw[1]->read(), 3);
+	membank("bank1")->set_entry(bank);
+	membank("bank2")->set_entry(bank);
 }
 
 uint8_t mschamp_state::mux_r()
@@ -740,7 +739,7 @@ uint8_t mschamp_state::mux_r()
 	if (m_mux)
 		return m_mux_data;
 	else
-		return 0x40 | (m_timer->read() & 0x03);
+		return m_dsw[1]->read() & 0x07;
 }
 
 void mschamp_state::mux_w(offs_t offset, uint8_t data)
@@ -1342,7 +1341,7 @@ void pacman_state::s2650games_map(address_map &map)
 	map(0x15c7, 0x15c7).mirror(0x6000).w(FUNC(pacman_state::porky_banking_w));
 	map(0x1500, 0x1500).mirror(0x6000).portr("IN0");
 	map(0x1540, 0x1540).mirror(0x6000).portr("IN1");
-	map(0x1580, 0x1580).mirror(0x6000).portr("DSW0");
+	map(0x1580, 0x1580).mirror(0x6000).portr("DSW1");
 	map(0x1800, 0x1bff).mirror(0x6000).w(FUNC(pacman_state::s2650games_videoram_w)).share("videoram");
 	map(0x1c00, 0x1fef).mirror(0x6000).ram();
 	map(0x1ff0, 0x1fff).mirror(0x6000).writeonly().share("spriteram");
@@ -1413,7 +1412,7 @@ void mschamp_state::mschamp_map(address_map &map)
 	map(0x5000, 0x5000).mirror(0xaf3f).portr("IN0");
 	map(0x5040, 0x5040).mirror(0xaf3f).portr("IN1");
 	map(0x5080, 0x5080).mirror(0xaf3f).portr("DSW1");
-	map(0x50c0, 0x50c0).mirror(0xaf3f).portr("DSW2");
+	map(0x50c0, 0x50c0).mirror(0xaf3f).nopr();
 	map(0x8000, 0xbfff).bankr("bank2");
 }
 
@@ -1763,26 +1762,18 @@ static INPUT_PORTS_START( mschamp )
 	PORT_MODIFY("IN1")
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT ) PORT_4WAY PORT_COCKTAIL PORT_NAME("P2 Left / Turbo")
 
-	PORT_START("GAME")
-	PORT_DIPNAME( 0x01, 0x01, "Game" )
-	PORT_DIPSETTING(    0x01, "Champion Edition" )
-	PORT_DIPSETTING(    0x00, "Super Zola Pac Gal" )
-	PORT_DIPNAME( 0x02, 0x00, DEF_STR( Unknown ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x02, DEF_STR( On ) )
-	PORT_DIPNAME( 0x04, 0x00, DEF_STR( Unknown ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x04, DEF_STR( On ) )
-	PORT_DIPNAME( 0x08, 0x00, DEF_STR( Unknown ) )
-	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
-	PORT_DIPSETTING(    0x08, DEF_STR( On ) )
-
-	PORT_START("TIMER")
+	PORT_MODIFY("DSW2")
 	PORT_DIPNAME( 0x03, 0x01, "Timer" )
 	PORT_DIPSETTING(    0x03, "0:30" )
 	PORT_DIPSETTING(    0x02, "0:45" )
 	PORT_DIPSETTING(    0x01, "1:00" )
 	PORT_DIPSETTING(    0x00, "1:30" )
+	PORT_DIPNAME( 0x04, 0x00, "Speed" )
+	PORT_DIPSETTING(    0x04, "Slow" )
+	PORT_DIPSETTING(    0x00, "Fast" )
+	PORT_DIPNAME( 0x08, 0x08, "Game" )
+	PORT_DIPSETTING(    0x08, "Champion Edition" )
+	PORT_DIPSETTING(    0x00, "Super Zola Pac Gal" )
 INPUT_PORTS_END
 
 /* Pacman Club inputs are similar to Ms. Pac-Man, except:
@@ -3306,7 +3297,7 @@ static INPUT_PORTS_START( drivfrcp )
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON2 )
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
-	PORT_START("DSW0")
+	PORT_START("DSW1")
 	PORT_DIPNAME( 0x01, 0x00, DEF_STR( Unknown ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x01, DEF_STR( On ) )
@@ -3355,7 +3346,7 @@ static INPUT_PORTS_START( 8bpm )
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_BUTTON2 ) PORT_NAME("Start 2 / P1 Button 1")
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
-	PORT_START("DSW0")
+	PORT_START("DSW1")
 	PORT_DIPNAME( 0x01, 0x00, DEF_STR( Cabinet ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( Upright ) )
 	PORT_DIPSETTING(    0x01, DEF_STR( Cocktail ) )
@@ -3404,7 +3395,7 @@ static INPUT_PORTS_START( porky )
 	PORT_BIT( 0x40, IP_ACTIVE_LOW, IPT_START2 )
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
-	PORT_START("DSW0")
+	PORT_START("DSW1")
 	PORT_DIPNAME( 0x01, 0x00, DEF_STR( Cabinet ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( Upright ) )
 	PORT_DIPSETTING(    0x01, DEF_STR( Cocktail ) )

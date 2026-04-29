@@ -39,6 +39,7 @@ public:
 		, m_gfxdecode(*this, "gfxdecode")
 		, m_palette(*this, "palette")
 		, m_screen(*this, "screen")
+		, m_dsw(*this, "DSW%u", 1)
 	{ }
 
 protected:
@@ -82,6 +83,7 @@ protected:
 	required_device<gfxdecode_device> m_gfxdecode;
 	required_device<palette_device> m_palette;
 	required_device<screen_device> m_screen;
+	optional_ioport_array<2> m_dsw;
 
 	uint8_t m_cannonb_bit_to_read = 0;
 	uint8_t m_counter = 0;
@@ -347,7 +349,6 @@ class mschamp_state : public pacman_state
 public:
 	mschamp_state(const machine_config &mconfig, device_type type, const char *tag)
 		: pacman_state(mconfig, type, tag)
-		, m_timer(*this, "TIMER")
 	{ }
 
 	void mschamp(machine_config &config);
@@ -362,8 +363,6 @@ protected:
 private:
 	uint8_t mux_r();
 	void mux_w(offs_t offset, uint8_t data);
-
-	required_ioport m_timer;
 
 	uint8_t m_mux = 1;
 	uint8_t m_mux_data = 0xff;
