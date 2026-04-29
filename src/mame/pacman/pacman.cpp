@@ -377,7 +377,19 @@ Boards:
  *
  *************************************/
 
-MACHINE_RESET_MEMBER(pacman_state,mschamp)
+MACHINE_RESET_MEMBER(mschamp_state,mschamp)
+{
+	uint8_t *rom = memregion("maincpu")->base() + 0x10000;
+	int whichbank = ioport("GAME")->read() & 1;
+
+	membank("bank1")->configure_entries(0, 2, &rom[0x0000], 0x8000);
+	membank("bank2")->configure_entries(0, 2, &rom[0x4000], 0x8000);
+
+	membank("bank1")->set_entry(whichbank);
+	membank("bank2")->set_entry(whichbank);
+}
+
+MACHINE_RESET_MEMBER(pacman_state,crush4)
 {
 	uint8_t *rom = memregion("maincpu")->base() + 0x10000;
 	int whichbank = ioport("GAME")->read() & 1;
@@ -730,13 +742,22 @@ uint8_t pacman_state::mbrush_prot_r(offs_t offset)
 
 /*************************************
  *
- *  Zola kludge
+ *  Zola custom hardware
  *
  *************************************/
 
-uint8_t pacman_state::mschamp_kludge_r()
+uint8_t mschamp_state::mux_r()
 {
-	return m_counter++;
+	if (m_mux)
+		return m_mux_data;
+	else
+		return 0x40 | (m_timer->read() & 0x03);
+}
+
+void mschamp_state::mux_w(offs_t offset, uint8_t data)
+{
+	m_mux = offset & 1;
+	m_mux_data = data;
 }
 
 
@@ -1381,7 +1402,28 @@ void pacman_state::bigbucks_map(address_map &map)
 }
 
 
-void pacman_state::mschamp_map(address_map &map)
+void mschamp_state::mschamp_map(address_map &map)
+{
+	map(0x0000, 0x3fff).bankr("bank1");
+	map(0x4000, 0x43ff).mirror(0xa000).ram().w(FUNC(mschamp_state::pacman_videoram_w)).share("videoram");
+	map(0x4400, 0x47ff).mirror(0xa000).ram().w(FUNC(mschamp_state::pacman_colorram_w)).share("colorram");
+	map(0x4800, 0x4bff).mirror(0xa000).r(FUNC(mschamp_state::pacman_read_nop)).nopw();
+	map(0x4c00, 0x4fef).mirror(0xa000).ram();
+	map(0x4ff0, 0x4fff).mirror(0xa000).ram().share("spriteram");
+	map(0x5000, 0x5007).mirror(0xaf38).w(m_mainlatch, FUNC(ls259_device::write_d0));
+	map(0x5040, 0x505f).mirror(0xaf00).w(m_namco_sound, FUNC(namco_wsg_device::pacman_sound_w));
+	map(0x5060, 0x506f).mirror(0xaf00).writeonly().share("spriteram2");
+	map(0x5070, 0x507f).mirror(0xaf00).nopw();
+	map(0x5080, 0x5080).mirror(0xaf3f).nopw();
+	map(0x50c0, 0x50c0).mirror(0xaf3f).w(m_watchdog, FUNC(watchdog_timer_device::reset_w));
+	map(0x5000, 0x5000).mirror(0xaf3f).portr("IN0");
+	map(0x5040, 0x5040).mirror(0xaf3f).portr("IN1");
+	map(0x5080, 0x5080).mirror(0xaf3f).portr("DSW1");
+	map(0x50c0, 0x50c0).mirror(0xaf3f).portr("DSW2");
+	map(0x8000, 0xbfff).bankr("bank2");
+}
+
+void pacman_state::crush4_map(address_map &map)
 {
 	map(0x0000, 0x3fff).bankr("bank1");
 	map(0x4000, 0x43ff).mirror(0xa000).ram().w(FUNC(pacman_state::pacman_videoram_w)).share("videoram");
@@ -1401,7 +1443,6 @@ void pacman_state::mschamp_map(address_map &map)
 	map(0x50c0, 0x50c0).mirror(0xaf3f).portr("DSW2");
 	map(0x8000, 0xbfff).bankr("bank2");
 }
-
 
 void pacman_state::superabc_map(address_map &map)
 {
@@ -1522,10 +1563,11 @@ void pacman_state::mspacii_portmap(address_map &map)
 	map(0x00, 0x00).mirror(0xff).w(FUNC(pacman_state::mspacii_interrupt_vector_w));
 }
 
-void pacman_state::mschamp_portmap(address_map &map)
+void mschamp_state::mschamp_portmap(address_map &map)
 {
 	writeport(map);
-	map(0x00, 0x00).r(FUNC(pacman_state::mschamp_kludge_r));
+	map(0x00, 0x00).r(FUNC(mschamp_state::mux_r));
+	map(0x10, 0x11).w(FUNC(mschamp_state::mux_w));
 }
 
 void pacman_state::bigbucks_portmap(address_map &map)
@@ -1744,6 +1786,10 @@ INPUT_PORTS_END
 static INPUT_PORTS_START( mschamp )
 	PORT_INCLUDE( mspacman )
 
+	/* Super Zola Pac Gal uses the cocktail P2 Left line as Turbo. */
+	PORT_MODIFY("IN1")
+	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_JOYSTICK_LEFT ) PORT_4WAY PORT_COCKTAIL PORT_NAME("P2 Left / Turbo")
+
 	PORT_START("GAME")
 	PORT_DIPNAME( 0x01, 0x01, "Game" )
 	PORT_DIPSETTING(    0x01, "Champion Edition" )
@@ -1757,6 +1803,13 @@ static INPUT_PORTS_START( mschamp )
 	PORT_DIPNAME( 0x08, 0x00, DEF_STR( Unknown ) )
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x08, DEF_STR( On ) )
+
+	PORT_START("TIMER")
+	PORT_DIPNAME( 0x03, 0x01, "Timer" )
+	PORT_DIPSETTING(    0x00, "1:30" )
+	PORT_DIPSETTING(    0x01, "1:00" )
+	PORT_DIPSETTING(    0x02, "0:45" )
+	PORT_DIPSETTING(    0x03, "0:30" )
 INPUT_PORTS_END
 
 /* Pacman Club inputs are similar to Ms. Pac-Man, except:
@@ -4093,15 +4146,15 @@ void pacman_state::mspacii(machine_config &config)
 }
 
 
-void pacman_state::mschamp(machine_config &config)
+void mschamp_state::mschamp(machine_config &config)
 {
 	pacman(config);
 
 	// Basic machine hardware
-	m_maincpu->set_addrmap(AS_PROGRAM, &pacman_state::mschamp_map);
-	m_maincpu->set_addrmap(AS_IO, &pacman_state::mschamp_portmap);
+	m_maincpu->set_addrmap(AS_PROGRAM, &mschamp_state::mschamp_map);
+	m_maincpu->set_addrmap(AS_IO, &mschamp_state::mschamp_portmap);
 
-	MCFG_MACHINE_RESET_OVERRIDE(pacman_state,mschamp)
+	MCFG_MACHINE_RESET_OVERRIDE(mschamp_state,mschamp)
 }
 
 
@@ -4123,9 +4176,13 @@ void pacman_state::superabc(machine_config &config)
 
 void pacman_state::crush4(machine_config &config)
 {
-	mschamp(config);
+	pacman(config);
 
 	// Basic machine hardware
+	m_maincpu->set_addrmap(AS_PROGRAM, &pacman_state::crush4_map);
+
+	MCFG_MACHINE_RESET_OVERRIDE(pacman_state,crush4)
+
 	m_gfxdecode->set_info(gfx_crush4);
 
 	m_mainlatch->q_out_cb<7>().set_nop(); // coin counter is not hooked up here
@@ -8685,10 +8742,10 @@ void pacman_state::init_mspacman()
 	membank("bank1")->set_entry(1);
 }
 
-void pacman_state::init_mschamp()
+void mschamp_state::init_mschamp()
 {
-	save_item(NAME(m_counter));
-	m_counter = 0;
+	save_item(NAME(m_mux));
+	save_item(NAME(m_mux_data));
 }
 
 void pacman_state::init_woodpek()
@@ -9047,8 +9104,8 @@ GAME( 1981, mspacii,     mspacman, mspacii,  mspacman, pacman_state,  init_mspac
 GAME( 1981, mspacii2,    mspacman, mspacii,  mspacman, pacman_state,  init_mspacii,   ROT90,  "bootleg (Orca)",                        "Ms. Pac-Man II (Orca bootleg, set 2)",             MACHINE_SUPPORTS_SAVE )
 GAME( 1981, pacgal,      mspacman, woodpek,  mspacman, pacman_state,  empty_init,     ROT90,  "hack",                                  "Pac-Gal (set 1)",                                  MACHINE_SUPPORTS_SAVE )
 GAME( 1981, mspacpls,    mspacman, woodpek,  mspacman, pacman_state,  empty_init,     ROT90,  "hack",                                  "Ms. Pac-Man Plus",                                 MACHINE_SUPPORTS_SAVE )
-GAME( 1992, mschamp,     mspacman, mschamp,  mschamp,  pacman_state,  init_mschamp,   ROT90,  "hack",                                  "Ms. Pacman Champion Edition / Zola-Puc Gal",       MACHINE_SUPPORTS_SAVE ) // Rayglo version
-GAME( 1995, mschamps,    mspacman, mschamp,  mschamp,  pacman_state,  init_mschamp,   ROT90,  "hack",                                  "Ms. Pacman Champion Edition / Super Zola-Puc Gal", MACHINE_SUPPORTS_SAVE )
+GAME( 1992, mschamp,     mspacman, mschamp,  mschamp,  mschamp_state, init_mschamp,   ROT90,  "hack",                                  "Ms. Pacman Champion Edition / Zola-Puc Gal",       MACHINE_SUPPORTS_SAVE ) // Rayglo version
+GAME( 1995, mschamps,    mspacman, mschamp,  mschamp,  mschamp_state, init_mschamp,   ROT90,  "hack",                                  "Ms. Pacman Champion Edition / Super Zola-Puc Gal", MACHINE_SUPPORTS_SAVE )
 GAME( 1981, mspackpls,   mspacman, woodpek,  mspacman, pacman_state,  init_mspackpls, ROT90,  "hack",                                  "Miss Packman Plus",                                MACHINE_SUPPORTS_SAVE )
 GAME( 1986, mspacmanhnc, mspacman, woodpek,  mspacman, pacman_state,  empty_init,     ROT90,  "hack",                                  "Super Ms. Pac-Man (turbo hack, NVC284/NVC285 hardware)", MACHINE_SUPPORTS_SAVE )
 
