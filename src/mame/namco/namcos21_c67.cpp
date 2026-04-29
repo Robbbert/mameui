@@ -19,7 +19,7 @@ TODO:
 - solvalou: sprite blend is wrong during water stages (look at the blaster/score panel), the palette
   bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
 - starblad: service mode has heavy sprite glitches if entered from live gameplay (verify);
-- starblad: large polygons flicker somtimes (eg. large spaceships after asteroid vield)
+- starblad: some models occasionally flicker (eg. large spaceships after asteroid field)
 
 BTANB:
 - aircomb: intro cockpit closure is one pixel off on left edge;
