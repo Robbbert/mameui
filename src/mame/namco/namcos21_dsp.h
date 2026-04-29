@@ -58,7 +58,7 @@ private:
 	u16 m_winrun_poly_buf[WINRUN_MAX_POLY_PARAM]{};
 	int m_winrun_poly_index;
 	u32 m_winrun_pointrom_addr;
-	int m_winrun_dsp_alive;
+	u16 m_dsp_complete;
 
 	void winrun_flush_poly();
 

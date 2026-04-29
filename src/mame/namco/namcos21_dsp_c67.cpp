@@ -45,6 +45,7 @@ void namcos21_dsp_c67_device::device_start()
 
 	m_mpDspState = std::make_unique<dsp_state>();
 
+	save_item(NAME(m_mpDspState->master_port_data));
 	save_item(NAME(m_mpDspState->masterSourceAddr));
 	save_item(NAME(m_mpDspState->slaveInputBuffer));
 	save_item(NAME(m_mpDspState->slaveBytesAvailable));
@@ -105,7 +106,6 @@ void namcos21_dsp_c67_device::reset_dsps(int state)
 
 void namcos21_dsp_c67_device::reset_kickstart()
 {
-	//printf("dspkick=0x%x\n", data);
 	if (!m_need_kickstart)
 		return;
 	m_need_kickstart = false;
@@ -138,11 +138,6 @@ void namcos21_dsp_c67_device::device_add_mconfig(machine_config &config)
 		else
 			m_c67slave[i]->set_clock(m_c67slave[i]->clock() * 4);
 	}
-
-	// underclocked for now (see TODO note in namcos21_c67 driver)
-	m_c67master->set_clock_scale(0.6);
-	for (int i = 0; i < 4; i++)
-		m_c67slave[i]->set_clock_scale(0.6);
 }
 
 
@@ -460,14 +455,14 @@ u16 namcos21_dsp_c67_device::dsp_port8_r()
 	return 1;
 }
 
-
 void namcos21_dsp_c67_device::dsp_port8_w(u16 data)
 {
 	if (ENABLE_LOGGING) logerror("port8_w(%d)\n", data);
-	if (data)
-	{
+
+	if (~m_mpDspState->master_port_data[8] & data & 1)
 		m_mpDspState->masterFinished = 1;
-	}
+
+	m_mpDspState->master_port_data[8] = data;
 }
 
 u16 namcos21_dsp_c67_device::dsp_port9_r()
@@ -500,28 +495,30 @@ u16 namcos21_dsp_c67_device::dsp_portb_r()
 
 void namcos21_dsp_c67_device::dsp_portb_w(u16 data)
 {
-	if (data == 0)
+	// only 0->1 transition triggers
+	if (~m_mpDspState->master_port_data[0xb] & data & 1)
 	{
-		// only 0->1 transition triggers
-		return;
-	}
-	if (m_mpDspState->masterDirectDrawSize == 13)
-	{
-		int color = m_mpDspState->masterDirectDrawBuffer[0];
-		if (color & 0x8000)
+		if (m_mpDspState->masterDirectDrawSize == 13)
 		{
-			m_renderer->draw_direct_quad(&m_mpDspState->masterDirectDrawBuffer[1], color);
+			int color = m_mpDspState->masterDirectDrawBuffer[0];
+			if (color & 0x8000)
+			{
+				m_renderer->draw_direct_quad(&m_mpDspState->masterDirectDrawBuffer[1], color);
+			}
+			else
+			{
+				logerror("indirection used w/ direct draw?\n");
+			}
 		}
-		else
+		else if (m_mpDspState->masterDirectDrawSize)
 		{
-			logerror("indirection used w/ direct draw?\n");
+			logerror("unexpected masterDirectDrawSize=%d!\n",m_mpDspState->masterDirectDrawSize);
 		}
+
+		m_mpDspState->masterDirectDrawSize = 0;
 	}
-	else if (m_mpDspState->masterDirectDrawSize)
-	{
-		logerror("unexpected masterDirectDrawSize=%d!\n",m_mpDspState->masterDirectDrawSize);
-	}
-	m_mpDspState->masterDirectDrawSize = 0;
+
+	m_mpDspState->master_port_data[0xb] = data;
 }
 
 void namcos21_dsp_c67_device::dsp_portc_w(u16 data)

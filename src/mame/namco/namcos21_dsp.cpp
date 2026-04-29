@@ -33,7 +33,7 @@ void namcos21_dsp_device::device_start()
 	m_pointram_control = 0;
 	m_winrun_poly_index = 0;
 	m_winrun_pointrom_addr = 0;
-	m_winrun_dsp_alive = 0;
+	m_dsp_complete = 0;
 
 	std::fill(std::begin(m_winrun_dspcomram_control), std::end(m_winrun_dspcomram_control), 0);
 
@@ -51,7 +51,7 @@ void namcos21_dsp_device::device_start()
 	save_item(NAME(m_winrun_poly_buf));
 	save_item(NAME(m_winrun_poly_index));
 	save_item(NAME(m_winrun_pointrom_addr));
-	save_item(NAME(m_winrun_dsp_alive));
+	save_item(NAME(m_dsp_complete));
 }
 
 TIMER_CALLBACK_MEMBER(namcos21_dsp_device::suspend_callback)
@@ -170,12 +170,14 @@ u16 namcos21_dsp_device::winrun_dsp_pointrom_data_r()
 
 void namcos21_dsp_device::winrun_dsp_complete_w(u16 data)
 {
-	if (data)
+	if (~m_dsp_complete & data & 1)
 	{
 		winrun_flush_poly();
 		m_dsp->pulse_input_line(INPUT_LINE_RESET, attotime::zero);
 		m_renderer->swap_and_clear_poly_framebuffer();
 	}
+
+	m_dsp_complete = data;
 }
 
 u16 namcos21_dsp_device::winrun_table_r(offs_t offset)
@@ -186,11 +188,9 @@ u16 namcos21_dsp_device::winrun_table_r(offs_t offset)
 void namcos21_dsp_device::winrun_dspbios_w(offs_t offset, u16 data, u16 mem_mask)
 {
 	COMBINE_DATA(&m_winrun_dspbios[offset]);
+
 	if (offset == 0xfff) // is this the real trigger?
-	{
-		m_winrun_dsp_alive = 1;
 		m_dsp->resume(SUSPEND_REASON_HALT);
-	}
 }
 
 // 380000: read : dsp status? 1 = busy

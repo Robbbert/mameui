@@ -55,11 +55,13 @@ private:
 	{
 		dsp_state()
 		{
+			std::fill(std::begin(master_port_data), std::end(master_port_data), 0);
 			std::fill(std::begin(slaveInputBuffer), std::end(slaveInputBuffer), 0);
 			std::fill(std::begin(slaveOutputBuffer), std::end(slaveOutputBuffer), 0);
 			std::fill(std::begin(masterDirectDrawBuffer), std::end(masterDirectDrawBuffer), 0);
 		}
 
+		u16 master_port_data[0x10];
 		u32 masterSourceAddr = 0;
 		u16 slaveInputBuffer[DSP_BUF_MAX];
 		u32 slaveBytesAvailable = 0;
