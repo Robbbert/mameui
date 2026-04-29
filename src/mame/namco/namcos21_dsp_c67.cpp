@@ -28,8 +28,7 @@ namcos21_dsp_c67_device::namcos21_dsp_c67_device(const machine_config &mconfig, 
 	m_c67slave(*this, "dspslave%u", 0U),
 	m_ptrom24(*this, "point24"),
 	m_master_dsp_ram(*this, "master_dsp_ram"),
-	m_gametype(0),
-	m_irq_enable(0)
+	m_gametype(0)
 {
 }
 
@@ -61,11 +60,10 @@ void namcos21_dsp_c67_device::device_start()
 	save_item(NAME(m_pointram_idx));
 	save_item(NAME(m_pointram_control));
 	save_item(NAME(m_pointrom_idx));
-	save_item(NAME(m_mPointRomMSB));
-	save_item(NAME(m_mbPointRomDataAvailable));
+	save_item(NAME(m_point_data));
+	save_item(NAME(m_point_data_available));
 	save_item(NAME(m_depthcue));
-	save_item(NAME(m_irq_enable));
-	save_item(NAME(m_mbNeedsKickstart));
+	save_item(NAME(m_need_kickstart));
 }
 
 void namcos21_dsp_c67_device::device_reset()
@@ -86,10 +84,9 @@ void namcos21_dsp_c67_device::device_reset()
 	m_pointram_idx = 0;
 	m_pointram_control = 0;
 	m_pointrom_idx = 0;
-	m_mPointRomMSB = 0;
-	m_mbPointRomDataAvailable = 0;
-	m_irq_enable = 0;
-	m_mbNeedsKickstart = 1;
+	m_point_data = 0;
+	m_point_data_available = 0;
+	m_need_kickstart = true;
 }
 
 void namcos21_dsp_c67_device::reset_dsps(int state)
@@ -109,9 +106,9 @@ void namcos21_dsp_c67_device::reset_dsps(int state)
 void namcos21_dsp_c67_device::reset_kickstart()
 {
 	//printf("dspkick=0x%x\n", data);
-	if (m_mbNeedsKickstart == 0)
+	if (!m_need_kickstart)
 		return;
-	m_mbNeedsKickstart = 0;
+	m_need_kickstart = false;
 
 	namcos21_kickstart();
 }
@@ -393,10 +390,14 @@ s32 namcos21_dsp_c67_device::read_pointrom_data(u32 offset)
 
 u16 namcos21_dsp_c67_device::dsp_port0_r()
 {
-	s32 data = read_pointrom_data(m_pointrom_idx++);
-	m_mPointRomMSB = (u8)(data >> 16);
-	m_mbPointRomDataAvailable = 1;
-	return (u16)data;
+	m_point_data = read_pointrom_data(m_pointrom_idx);
+	if (!machine().side_effects_disabled())
+	{
+		m_pointrom_idx++;
+		m_point_data_available = 1;
+	}
+
+	return m_point_data & 0xffff;
 }
 
 void namcos21_dsp_c67_device::dsp_port0_w(u16 data)
@@ -407,11 +408,13 @@ void namcos21_dsp_c67_device::dsp_port0_w(u16 data)
 
 u16 namcos21_dsp_c67_device::dsp_port1_r()
 {
-	if (m_mbPointRomDataAvailable)
+	if (m_point_data_available)
 	{
-		m_mbPointRomDataAvailable = 0;
-		return m_mPointRomMSB;
+		if (!machine().side_effects_disabled())
+			m_point_data_available = 0;
+		return m_point_data >> 16 & 0xff;
 	}
+
 	return 0x8000; // IDC ack?
 }
 
@@ -465,7 +468,6 @@ void namcos21_dsp_c67_device::dsp_port8_w(u16 data)
 	{
 		m_mpDspState->masterFinished = 1;
 	}
-	m_irq_enable = data;
 }
 
 u16 namcos21_dsp_c67_device::dsp_port9_r()

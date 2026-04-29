@@ -293,11 +293,14 @@ bool namco_de_pcbstack_device::sprite_mix_callback(u16 &dest, u8 &destpri, u16 c
 
 u32 namco_de_pcbstack_device::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
+	if (!BIT(m_video_enable, 6))
+	{
+		bitmap.fill(m_palette->black_pen(), cliprect);
+		return 0;
+	}
+
 	bitmap.fill(0xff, cliprect);
 	screen.priority().fill(0, cliprect);
-
-	if (!BIT(m_video_enable, 6))
-		return 0;
 
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 
@@ -359,10 +362,10 @@ void namco_de_pcbstack_device::sound_map(address_map &map)
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namco_de_pcbstack_device::dpram_byte_r), FUNC(namco_de_pcbstack_device::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
 	map(0xa000, 0xbfff).noprw(); // amplifier enable on 1st write
-	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
+	map(0xc000, 0xffff).rom().region("audiocpu", 0);
 	map(0xc001, 0xc001).w(FUNC(namco_de_pcbstack_device::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); // watchdog
-	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
+	map(0xe000, 0xe000).nopw();
 }
 
 void namco_de_pcbstack_device::c140_map(address_map &map)

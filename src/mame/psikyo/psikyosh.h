@@ -15,8 +15,6 @@
 
 /* Psikyo PS6406B */
 
-
-
 class psikyosh_state : public driver_device
 {
 public:
@@ -133,6 +131,10 @@ private:
 	void drawgfxzoom(bitmap_rgb32 &dest_bmp, const rectangle &clip, gfx_element *gfx,
 	u32 const code, u16 const color, u8 const flipx, u8 const flipy, s32 const offsx, s32 const offsy,
 	s16 const alpha, u32 const zoomx, u32 const zoomy, u8 const wide, u8 const high, u16 const z);
+
+	void io_map(address_map &map) ATTR_COLD;
+	void video_map(address_map &map) ATTR_COLD;
+
 	void ps3v1_map(address_map &map) ATTR_COLD;
 	void ps5_map(address_map &map) ATTR_COLD;
 	void ps5_mahjong_map(address_map &map) ATTR_COLD;

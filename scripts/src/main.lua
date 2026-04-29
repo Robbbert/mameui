@@ -159,7 +159,6 @@ end
 	links {
 		"utils",
 		ext_lib("expat"),
-		"softfloat",
 		"softfloat3",
 		"wdlfft",
 		"ymfm",

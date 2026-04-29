@@ -36,10 +36,10 @@ is used to shade pixels according to their depth.
 
 TODO:
 - polygon glitches/flicker
-- pressing service mode while the game is running causes it to lock up (need to press F3)
 - is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
 - winrungp: some missing bitmap layer gfx due to underdumps of the gpu program roms (see attract mode
   when it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)
+- winrungp: pressing service mode is glitchy when posirq is active (need to press F3)
 
 reference videos:
 - https://youtu.be/ZNNveBLWevg
@@ -627,10 +627,10 @@ void namcos21_state::sound_map(address_map &map)
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namcos21_state::dpram_byte_r), FUNC(namcos21_state::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
 	map(0xa000, 0xbfff).noprw(); // amplifier enable on 1st write
-	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
+	map(0xc000, 0xffff).rom().region("audiocpu", 0);
 	map(0xc001, 0xc001).w(FUNC(namcos21_state::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); // watchdog
-	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
+	map(0xe000, 0xe000).nopw();
 }
 
 void namcos21_state::c140_map(address_map &map)

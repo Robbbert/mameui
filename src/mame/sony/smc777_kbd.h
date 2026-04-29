@@ -34,7 +34,7 @@ private:
 
 	void scan_mode(u8 data);
 	u8 m_command;
-	u8 m_status;
+	u8 m_status, m_aux_hs;
 	u8 m_scan_code;
 	u16 m_repeat_interval;
 	u16 m_repeat_start;
@@ -43,6 +43,9 @@ private:
 	bool m_fkey_dir;
 	u8 m_fkey_target;
 	u8 m_fkey_index;
+
+	emu_timer *m_aux_timer;
+	TIMER_CALLBACK_MEMBER(aux_ready);
 };
 
 DECLARE_DEVICE_TYPE(SMC777_KBD, smc777_kbd_device)

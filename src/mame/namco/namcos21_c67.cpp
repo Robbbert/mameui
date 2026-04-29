@@ -446,7 +446,7 @@ void namcos21_c67_state::mix_layer0_sprites(screen_device &screen, bitmap_ind16 
 	// create priority table, this is not accurate
 	u16 pri[0x10];
 	for (int i = 0; i < 0x10; i++)
-		pri[i] = (i == 0) ? 0x7fc0 : pri[i - 1] / 1.25;
+		pri[i] = (i == 0) ? 0x7fc0 : pri[i - 1] / 1.24;
 
 	// mix layer 0 sprites with polygons
 	for (int y = cliprect.top(); y <= cliprect.bottom(); y++)
@@ -466,12 +466,15 @@ void namcos21_c67_state::mix_layer0_sprites(screen_device &screen, bitmap_ind16 
 
 u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
-	bitmap.fill(0xff, cliprect);
-	screen.priority().fill(0, cliprect);
-
 	// solvalou after POST, definitely blanks screen
 	if (!BIT(m_video_enable, 6))
+	{
+		bitmap.fill(m_palette->black_pen(), cliprect);
 		return 0;
+	}
+
+	bitmap.fill(0xff, cliprect);
+	screen.priority().fill(0, cliprect);
 
 	// draw low priority 2d sprites
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
@@ -597,10 +600,10 @@ void namcos21_c67_state::sound_map(address_map &map)
 	map(0x7000, 0x77ff).mirror(0x0800).rw(FUNC(namcos21_c67_state::dpram_byte_r), FUNC(namcos21_c67_state::dpram_byte_w)).share("dpram");
 	map(0x8000, 0x9fff).ram();
 	map(0xa000, 0xbfff).noprw(); // amplifier enable on 1st write
-	map(0xc000, 0xffff).nopw(); // avoid debug log noise; games write frequently to 0xe000
+	map(0xc000, 0xffff).rom().region("audiocpu", 0);
 	map(0xc001, 0xc001).w(FUNC(namcos21_c67_state::sound_bankselect_w));
 	map(0xd001, 0xd001).nopw(); // watchdog
-	map(0xd000, 0xffff).rom().region("audiocpu", 0x01000);
+	map(0xe000, 0xe000).nopw();
 }
 
 void namcos21_c67_state::c140_map(address_map &map)
