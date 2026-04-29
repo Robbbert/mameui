@@ -43,20 +43,21 @@ void namcos21_dsp_c67_device::device_start()
 
 	memset(m_depthcue, 0, sizeof(m_depthcue));
 
-	m_mpDspState = std::make_unique<dsp_state>();
+	m_dsp_state = std::make_unique<dsp_state>();
 
-	save_item(NAME(m_mpDspState->master_port_data));
-	save_item(NAME(m_mpDspState->masterSourceAddr));
-	save_item(NAME(m_mpDspState->slaveInputBuffer));
-	save_item(NAME(m_mpDspState->slaveBytesAvailable));
-	save_item(NAME(m_mpDspState->slaveBytesAdvertised));
-	save_item(NAME(m_mpDspState->slaveInputStart));
-	save_item(NAME(m_mpDspState->slaveOutputBuffer));
-	save_item(NAME(m_mpDspState->slaveOutputSize));
-	save_item(NAME(m_mpDspState->masterDirectDrawBuffer));
-	save_item(NAME(m_mpDspState->masterDirectDrawSize));
-	save_item(NAME(m_mpDspState->masterFinished));
-	save_item(NAME(m_mpDspState->slaveActive));
+	save_item(NAME(m_dsp_state->master_port_data));
+	save_item(NAME(m_dsp_state->master_source_address));
+	save_item(NAME(m_dsp_state->master_ddraw_buffer));
+	save_item(NAME(m_dsp_state->master_ddraw_size));
+	save_item(NAME(m_dsp_state->master_finished));
+
+	save_item(NAME(m_dsp_state->slave_input_buffer));
+	save_item(NAME(m_dsp_state->slave_bytes_available));
+	save_item(NAME(m_dsp_state->slave_bytes_advertised));
+	save_item(NAME(m_dsp_state->slave_input_start));
+	save_item(NAME(m_dsp_state->slave_output_buffer));
+	save_item(NAME(m_dsp_state->slave_output_size));
+	save_item(NAME(m_dsp_state->slave_active));
 
 	save_item(NAME(m_pointram_idx));
 	save_item(NAME(m_pointram_control));
@@ -73,14 +74,14 @@ void namcos21_dsp_c67_device::device_reset()
 	m_renderer->swap_and_clear_poly_framebuffer();
 	m_renderer->swap_and_clear_poly_framebuffer();
 
-	m_mpDspState->masterSourceAddr = 0;
-	m_mpDspState->slaveBytesAvailable = 0;
-	m_mpDspState->slaveBytesAdvertised = 0;
-	m_mpDspState->slaveInputStart = 0;
-	m_mpDspState->slaveOutputSize = 0;
-	m_mpDspState->masterDirectDrawSize = 0;
-	m_mpDspState->masterFinished = 0;
-	m_mpDspState->slaveActive = 0;
+	m_dsp_state->master_source_address = 0;
+	m_dsp_state->slave_bytes_available = 0;
+	m_dsp_state->slave_bytes_advertised = 0;
+	m_dsp_state->slave_input_start = 0;
+	m_dsp_state->slave_output_size = 0;
+	m_dsp_state->master_ddraw_size = 0;
+	m_dsp_state->master_finished = 0;
+	m_dsp_state->slave_active = 0;
 
 	m_pointram_idx = 0;
 	m_pointram_control = 0;
@@ -189,13 +190,13 @@ u16 namcos21_dsp_c67_device::dspcuskey_r()
 
 void namcos21_dsp_c67_device::transmit_word_to_slave(u16 data)
 {
-	u32 offs = m_mpDspState->slaveInputStart+m_mpDspState->slaveBytesAvailable++;
-	m_mpDspState->slaveInputBuffer[offs % DSP_BUF_MAX] = data;
+	u32 offs = m_dsp_state->slave_input_start+m_dsp_state->slave_bytes_available++;
+	m_dsp_state->slave_input_buffer[offs % DSP_BUF_MAX] = data;
 
-	if (ENABLE_LOGGING) logerror("+%04x(#%04x)\n", data, m_mpDspState->slaveBytesAvailable);
+	if (ENABLE_LOGGING) logerror("+%04x(#%04x)\n", data, m_dsp_state->slave_bytes_available);
 
-	m_mpDspState->slaveActive = 1;
-	if (m_mpDspState->slaveBytesAvailable >= DSP_BUF_MAX)
+	m_dsp_state->slave_active = 1;
+	if (m_dsp_state->slave_bytes_available >= DSP_BUF_MAX)
 	{
 		fatalerror("IDC overflow\n");
 	}
@@ -203,7 +204,7 @@ void namcos21_dsp_c67_device::transmit_word_to_slave(u16 data)
 
 void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 {
-	u16 addr = m_mpDspState->masterSourceAddr;
+	u16 addr = m_dsp_state->master_source_address;
 	bool const mode = BIT(addr, 15);
 	addr &= 0x7fff;
 
@@ -219,7 +220,7 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 			{
 				if (code == 0xffff)
 				{
-					m_mpDspState->masterSourceAddr = 0;
+					m_dsp_state->master_source_address = 0;
 					return;
 				}
 
@@ -236,7 +237,7 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 			else if (code == 0xffff)
 			{
 				addr = m_dspram16[addr];
-				m_mpDspState->masterSourceAddr = addr;
+				m_dsp_state->master_source_address = addr;
 				if (ENABLE_LOGGING) logerror("GOTO:0x%04x\n", addr);
 				addr &= 0x7fff;
 
@@ -273,8 +274,8 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 					}
 					else
 					{
-						int const primWords = (u16)read_pointrom_data(subAddr++);
-						if (primWords > 2)
+						int const primwords = (u16)read_pointrom_data(subAddr++);
+						if (primwords > 2)
 						{
 							transmit_word_to_slave(0); // pad1
 							transmit_word_to_slave(len + 1);
@@ -283,8 +284,8 @@ void namcos21_dsp_c67_device::transfer_dsp_data(bool first)
 								transmit_word_to_slave(m_dspram16[(addr + i) & 0x7fff]);
 							}
 							transmit_word_to_slave(0); // pad2
-							transmit_word_to_slave(primWords + 1);
-							for (int i = 0; i < primWords; i++)
+							transmit_word_to_slave(primwords + 1);
+							for (int i = 0; i < primwords; i++)
 							{
 								transmit_word_to_slave((u16)read_pointrom_data(subAddr + i));
 							}
@@ -309,10 +310,10 @@ void namcos21_dsp_c67_device::namcos21_kickstart()
 {
 	m_renderer->swap_and_clear_poly_framebuffer();
 
-	m_mpDspState->masterSourceAddr = 0;
-	m_mpDspState->slaveOutputSize = 0;
-	m_mpDspState->masterFinished = 0;
-	m_mpDspState->slaveActive = 0;
+	m_dsp_state->master_source_address = 0;
+	m_dsp_state->slave_output_size = 0;
+	m_dsp_state->master_finished = 0;
+	m_dsp_state->slave_active = 0;
 
 	m_c67master->set_input_line(0, HOLD_LINE);
 	m_c67slave[0]->pulse_input_line(INPUT_LINE_RESET, attotime::zero);
@@ -322,20 +323,20 @@ u16 namcos21_dsp_c67_device::read_word_from_slave_input()
 {
 	u16 data = 0;
 
-	if (m_mpDspState->slaveBytesAvailable > 0)
+	if (m_dsp_state->slave_bytes_available > 0)
 	{
-		data = m_mpDspState->slaveInputBuffer[m_mpDspState->slaveInputStart];
+		data = m_dsp_state->slave_input_buffer[m_dsp_state->slave_input_start];
 
 		if (!machine().side_effects_disabled())
 		{
-			m_mpDspState->slaveInputStart++;
-			m_mpDspState->slaveInputStart %= DSP_BUF_MAX;
-			m_mpDspState->slaveBytesAvailable--;
-			if (m_mpDspState->slaveBytesAdvertised > 0)
+			m_dsp_state->slave_input_start++;
+			m_dsp_state->slave_input_start %= DSP_BUF_MAX;
+			m_dsp_state->slave_bytes_available--;
+			if (m_dsp_state->slave_bytes_advertised > 0)
 			{
-				m_mpDspState->slaveBytesAdvertised--;
+				m_dsp_state->slave_bytes_advertised--;
 			}
-			if (ENABLE_LOGGING) logerror("%s:-%04x(0x%04x)\n", machine().describe_context(), data, m_mpDspState->slaveBytesAvailable);
+			if (ENABLE_LOGGING) logerror("%s:-%04x(0x%04x)\n", machine().describe_context(), data, m_dsp_state->slave_bytes_available);
 		}
 	}
 
@@ -346,17 +347,17 @@ u16 namcos21_dsp_c67_device::get_input_bytes_advertised_for_slave()
 {
 	if (!machine().side_effects_disabled())
 	{
-		if (m_mpDspState->slaveBytesAdvertised < m_mpDspState->slaveBytesAvailable)
+		if (m_dsp_state->slave_bytes_advertised < m_dsp_state->slave_bytes_available)
 		{
-			m_mpDspState->slaveBytesAdvertised++;
+			m_dsp_state->slave_bytes_advertised++;
 		}
-		else if (m_mpDspState->slaveActive && m_mpDspState->masterFinished && m_mpDspState->masterSourceAddr)
+		else if (m_dsp_state->slave_active && m_dsp_state->master_finished && m_dsp_state->master_source_address)
 		{
 			namcos21_kickstart();
 		}
 	}
 
-	return m_mpDspState->slaveBytesAdvertised;
+	return m_dsp_state->slave_bytes_advertised;
 }
 
 u16 namcos21_dsp_c67_device::dspram16_r(offs_t offset)
@@ -368,7 +369,7 @@ void namcos21_dsp_c67_device::dspram16_w(offs_t offset, u16 data, u16 mem_mask)
 {
 	COMBINE_DATA(&m_dspram16[offset]);
 
-	if (m_mpDspState->masterSourceAddr && offset == 1 + (m_mpDspState->masterSourceAddr & 0x7fff))
+	if (m_dsp_state->master_source_address && offset == 1 + (m_dsp_state->master_source_address & 0x7fff))
 	{
 		if (ENABLE_LOGGING) logerror("IDC-CONTINUE\n");
 		transfer_dsp_data(false);
@@ -428,7 +429,7 @@ u16 namcos21_dsp_c67_device::dsp_port2_r()
 void namcos21_dsp_c67_device::dsp_port2_w(u16 data)
 {
 	if (ENABLE_LOGGING) logerror("IDC ADDR INIT(0x%04x)\n", data);
-	m_mpDspState->masterSourceAddr = data;
+	m_dsp_state->master_source_address = data;
 	transfer_dsp_data(true);
 }
 
@@ -459,10 +460,10 @@ void namcos21_dsp_c67_device::dsp_port8_w(u16 data)
 {
 	if (ENABLE_LOGGING) logerror("port8_w(%d)\n", data);
 
-	if (~m_mpDspState->master_port_data[8] & data & 1)
-		m_mpDspState->masterFinished = 1;
+	if (~m_dsp_state->master_port_data[8] & data & 1)
+		m_dsp_state->master_finished = 1;
 
-	m_mpDspState->master_port_data[8] = data;
+	m_dsp_state->master_port_data[8] = data;
 }
 
 u16 namcos21_dsp_c67_device::dsp_port9_r()
@@ -496,36 +497,36 @@ u16 namcos21_dsp_c67_device::dsp_portb_r()
 void namcos21_dsp_c67_device::dsp_portb_w(u16 data)
 {
 	// only 0->1 transition triggers
-	if (~m_mpDspState->master_port_data[0xb] & data & 1)
+	if (~m_dsp_state->master_port_data[0xb] & data & 1)
 	{
-		if (m_mpDspState->masterDirectDrawSize == 13)
+		if (m_dsp_state->master_ddraw_size == 13)
 		{
-			int color = m_mpDspState->masterDirectDrawBuffer[0];
+			int color = m_dsp_state->master_ddraw_buffer[0];
 			if (color & 0x8000)
 			{
-				m_renderer->draw_direct_quad(&m_mpDspState->masterDirectDrawBuffer[1], color);
+				m_renderer->draw_direct_quad(&m_dsp_state->master_ddraw_buffer[1], color);
 			}
 			else
 			{
 				logerror("indirection used w/ direct draw?\n");
 			}
 		}
-		else if (m_mpDspState->masterDirectDrawSize)
+		else if (m_dsp_state->master_ddraw_size)
 		{
-			logerror("unexpected masterDirectDrawSize=%d!\n",m_mpDspState->masterDirectDrawSize);
+			logerror("unexpected master_ddraw_size=%d!\n",m_dsp_state->master_ddraw_size);
 		}
 
-		m_mpDspState->masterDirectDrawSize = 0;
+		m_dsp_state->master_ddraw_size = 0;
 	}
 
-	m_mpDspState->master_port_data[0xb] = data;
+	m_dsp_state->master_port_data[0xb] = data;
 }
 
 void namcos21_dsp_c67_device::dsp_portc_w(u16 data)
 {
-	if (m_mpDspState->masterDirectDrawSize < DSP_BUF_MAX)
+	if (m_dsp_state->master_ddraw_size < DSP_BUF_MAX)
 	{
-		m_mpDspState->masterDirectDrawBuffer[m_mpDspState->masterDirectDrawSize++] = data;
+		m_dsp_state->master_ddraw_buffer[m_dsp_state->master_ddraw_size++] = data;
 	}
 	else
 	{
@@ -574,34 +575,34 @@ void namcos21_dsp_c67_device::master_dsp_io(address_map &map)
 
 void namcos21_dsp_c67_device::render_slave_output(u16 data)
 {
-	if (m_mpDspState->slaveOutputSize >= 4096)
+	if (m_dsp_state->slave_output_size >= 4096)
 	{
-		fatalerror("SLAVE OVERFLOW (0x%x)\n", m_mpDspState->slaveOutputBuffer[0]);
+		fatalerror("SLAVE OVERFLOW (0x%x)\n", m_dsp_state->slave_output_buffer[0]);
 	}
 
 	// append word to slave output buffer
-	m_mpDspState->slaveOutputBuffer[m_mpDspState->slaveOutputSize++] = data;
+	m_dsp_state->slave_output_buffer[m_dsp_state->slave_output_size++] = data;
 
 	// draw quads
-	u16 *pSource = m_mpDspState->slaveOutputBuffer;
-	u16 count = *pSource++;
-	if (count && m_mpDspState->slaveOutputSize > count)
+	u16 *source = m_dsp_state->slave_output_buffer;
+	u16 count = *source++;
+	if (count && m_dsp_state->slave_output_size > count)
 	{
-		u16 color = *pSource++;
+		u16 color = *source++;
 		if (color & 0x8000)
 		{
 			if (count != 13) logerror("?!direct-draw(%d)\n", count);
-			m_renderer->draw_direct_quad(pSource, color);
+			m_renderer->draw_direct_quad(source, color);
 		}
 		else
 		{
-			m_renderer->draw_quads(pSource, m_pointram.get(), PTRAM_SIZE, color);
+			m_renderer->draw_quads(source, m_pointram.get(), PTRAM_SIZE, color);
 		}
-		m_mpDspState->slaveOutputSize = 0;
+		m_dsp_state->slave_output_size = 0;
 	}
 	else if (count == 0)
 	{
-		fatalerror("RenderSlaveOutput\n");
+		fatalerror("render_slave_output\n");
 	}
 }
 

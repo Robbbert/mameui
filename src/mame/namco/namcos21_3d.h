@@ -31,7 +31,7 @@ public:
 
 	void copy_visible_poly_framebuffer(bitmap_ind16 &bitmap, const rectangle &cliprect);
 	void swap_and_clear_poly_framebuffer();
-	u16 *get_visible_zbuffer() { return m_mpPolyFrameBufferZ2.get(); }
+	u16 *get_visible_zbuffer() { return m_poly_framebuffer_z2.get(); }
 
 	void draw_direct_quad(const u16 *source, u16 color);
 	void draw_quads(const u16 *source, const u8 *pointram, const u32 ptram_size, u32 quad_idx);
@@ -58,10 +58,10 @@ private:
 	void blit_single_quad(int sx[4], int sy[4], int zcode[4], u16 color);
 	void allocate_poly_framebuffer();
 
-	std::unique_ptr<u16[]> m_mpPolyFrameBufferPens;
-	std::unique_ptr<u16[]> m_mpPolyFrameBufferZ;
-	std::unique_ptr<u16[]> m_mpPolyFrameBufferPens2;
-	std::unique_ptr<u16[]> m_mpPolyFrameBufferZ2;
+	std::unique_ptr<u16[]> m_poly_framebuffer_pens;
+	std::unique_ptr<u16[]> m_poly_framebuffer_z;
+	std::unique_ptr<u16[]> m_poly_framebuffer_pens2;
+	std::unique_ptr<u16[]> m_poly_framebuffer_z2;
 
 	int m_num_palettes;
 	int m_penmask;

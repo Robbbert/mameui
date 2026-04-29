@@ -13,9 +13,6 @@
 class namcos21_dsp_device : public device_t
 {
 public:
-	static constexpr unsigned PTRAM_SIZE = 0x20000;
-	static constexpr unsigned MAX_POLY_PARAM = 1+256*3;
-
 	namcos21_dsp_device(const machine_config &mconfig, const char *tag, device_t *owner, u32 clock);
 
 	// config
@@ -43,6 +40,9 @@ protected:
 	void dsp_program(address_map &map) ATTR_COLD;
 
 private:
+	static constexpr unsigned PTRAM_SIZE = 0x20000;
+	static constexpr unsigned MAX_POLY_PARAM = 1+256*3;
+
 	required_device<cpu_device> m_dsp;
 	required_shared_ptr<u16> m_dspbios;
 	required_shared_ptr<u16> m_polydata;

@@ -109,16 +109,16 @@ void namcos21_dsp_device::flush_poly()
 {
 	if (m_poly_index > 0)
 	{
-		const u16 *pSource = m_poly_buf;
-		u16 color = *pSource++;
+		const u16 *source = m_poly_buf;
+		u16 color = *source++;
 		if (color & 0x8000)
 		{
 			// direct-draw
-			m_renderer->draw_direct_quad(pSource, color);
+			m_renderer->draw_direct_quad(source, color);
 		}
 		else
 		{
-			m_renderer->draw_quads(pSource, m_pointram.get(), PTRAM_SIZE, color);
+			m_renderer->draw_quads(source, m_pointram.get(), PTRAM_SIZE, color);
 		}
 		m_poly_index = 0;
 	}
