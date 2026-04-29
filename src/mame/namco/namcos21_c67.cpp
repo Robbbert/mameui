@@ -17,6 +17,7 @@ TODO:
   and on pilot parachuting with a time over;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
 - aircomb: bad sprite colors on debriefing medal screen;
+- aircomb: are the depthcue banks actually used? it looks fine with the depth cue embedded in palette;
 - solvalou: service mode polygon test is crashy when testing invalid polygons (the good old IDC overflow);
 - solvalou: sprite blend is wrong during water stages (look at the blaster/score panel), the palette
   bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
@@ -487,12 +488,12 @@ u32 namcos21_c67_state::screen_update(screen_device &screen, bitmap_ind16 &bitma
 	{
 		case 0: // aircomb mission select & gameplay
 		case 2: // starblad/solvalou when going in service mode
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect);
 			m_c355spr->draw(screen, bitmap, cliprect, 0);
 			break;
 		case 4: // default gameplay for all games, aircomb attract mode
 		default:
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect);
 			mix_layer0_sprites(screen, bitmap, cliprect);
 			break;
 	}
@@ -875,9 +876,9 @@ void namcos21_c67_state::namcos21(machine_config &config)
 	m_screen->set_palette(m_palette);
 
 	NAMCOS21_3D(config, m_namcos21_3d, 0);
-	m_namcos21_3d->set_zz_shift_mult(11, 0x200);
-	m_namcos21_3d->set_depth_reverse(false);
 	m_namcos21_3d->set_framebuffer_size(496, 480);
+	m_namcos21_3d->set_num_palettes(0x10);
+	m_namcos21_3d->set_depth_reverse(false);
 
 	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
 	m_master_intc->link_c148_device(m_slave_intc);
@@ -947,8 +948,7 @@ void namcos21_c67_state::solvalou(machine_config &config)
 	namcos21(config);
 	m_namcos21_dsp_c67->set_gametype(namcos21_dsp_c67_device::NAMCOS21_SOLVALOU);
 
-	m_namcos21_3d->set_fixed_palbase(0x3f00);
-	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
+	m_namcos21_3d->set_num_palettes(0x20);
 }
 
 

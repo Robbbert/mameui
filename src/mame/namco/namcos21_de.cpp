@@ -212,10 +212,9 @@ void namco_de_pcbstack_device::device_add_mconfig(machine_config &config)
 	PALETTE(config, m_palette).set_format(palette_device::xBRG_888, 0x10000/2);
 
 	NAMCOS21_3D(config, m_namcos21_3d, 0);
-	m_namcos21_3d->set_fixed_palbase(0x3f00);
-	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
-	m_namcos21_3d->set_depth_reverse(false);
 	m_namcos21_3d->set_framebuffer_size(496, 480);
+	m_namcos21_3d->set_num_palettes(0x20);
+	m_namcos21_3d->set_depth_reverse(false);
 
 	NAMCO_C355SPR(config, m_c355spr, 0);
 	m_c355spr->set_screen(m_screen);
@@ -305,7 +304,7 @@ u32 namco_de_pcbstack_device::screen_update(screen_device &screen, bitmap_ind16 
 	m_c355spr->build_sprite_list_and_render_sprites(cliprect); // TODO : buffered?
 
 	m_c355spr->draw(screen, bitmap, cliprect, 14);
-	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
+	m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect);
 	m_c355spr->draw(screen, bitmap, cliprect, 15);
 
 	return 0;
