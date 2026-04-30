@@ -34,6 +34,8 @@ namcos21_dsp_c67_device::namcos21_dsp_c67_device(const machine_config &mconfig, 
 
 void namcos21_dsp_c67_device::device_start()
 {
+	assert(m_ptrom24.length() == 0x100000);
+
 	m_dspram16 = make_unique_clear<u16 []>(0x10000/2); // 0x8000 16-bit words
 	save_pointer(NAME(m_dspram16), 0x10000/2);
 
@@ -130,7 +132,7 @@ void namcos21_dsp_c67_device::device_add_mconfig(machine_config &config)
 		m_c67slave[i]->set_addrmap(AS_IO, &namcos21_dsp_c67_device::slave_dsp_io);
 		m_c67slave[i]->hold_in_cb().set_constant(0);
 		m_c67slave[i]->hold_ack_out_cb().set_nop();
-		m_c67slave[i]->xf_out_cb().set(FUNC(namcos21_dsp_c67_device::slave_XF_output_w));
+		m_c67slave[i]->xf_out_cb().set(FUNC(namcos21_dsp_c67_device::slave_xf_output_w));
 
 		// instead of the master splitting the workload across the 4 slaves, the emulation
 		// currently only uses one slave DSP clocked at 4x the normal rate
@@ -633,9 +635,9 @@ void namcos21_dsp_c67_device::slave_port3_w(u16 data)
 	// 0=busy, 1=ready?
 }
 
-void namcos21_dsp_c67_device::slave_XF_output_w(u16 data)
+void namcos21_dsp_c67_device::slave_xf_output_w(u16 data)
 {
-	if (ENABLE_LOGGING) logerror("%s :slaveXF(%d)\n", machine().describe_context(), data);
+	if (ENABLE_LOGGING) logerror("%s :slave_xf(%d)\n", machine().describe_context(), data);
 }
 
 u16 namcos21_dsp_c67_device::slave_portf_r()

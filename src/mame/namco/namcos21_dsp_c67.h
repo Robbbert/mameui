@@ -131,7 +131,7 @@ private:
 	u16 slave_port2_r();
 	u16 slave_port3_r();
 	void slave_port3_w(u16 data);
-	void slave_XF_output_w(u16 data);
+	void slave_xf_output_w(u16 data);
 	u16 slave_portf_r();
 
 	void master_dsp_data(address_map &map) ATTR_COLD;

@@ -43,7 +43,7 @@ private:
 	static constexpr unsigned PTRAM_SIZE = 0x20000;
 	static constexpr unsigned MAX_POLY_PARAM = 1+256*3;
 
-	required_device<cpu_device> m_dsp;
+	required_device<tms320c25_device> m_dsp;
 	required_shared_ptr<u16> m_dspbios;
 	required_shared_ptr<u16> m_polydata;
 	required_region_ptr<u16> m_ptrom16;
@@ -58,6 +58,7 @@ private:
 	u16 m_poly_buf[MAX_POLY_PARAM]{};
 	int m_poly_index;
 	u32 m_pointrom_addr;
+	u32 m_pointrom_mask;
 	u16 m_dsp_complete;
 
 	void flush_poly();
