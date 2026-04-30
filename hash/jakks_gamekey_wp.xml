@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!--
+license:CC0-1.0
+-->
+<softwarelist name="jakks_gamekey_wp" description="JAKKS Pacific 'WP' Game Keys">
+
+	<!-- This list is for the 'WP' coded Game Keys, for Winnie the Pooh -->
+
+	<!-- from a GameKey with Italian packaging, but plays in English -->
+	<software name="pooh">
+		<description>Winnie the Pooh - Piglet's Special Day (3 Bonus Games)</description>
+		<year>2005</year>
+		<publisher>JAKKS Pacific / Backbone Entertainment</publisher>
+		<part name="cart" interface="jakks_gamekey">
+			<dataarea name="rom" size="0x800000">
+				<rom name="wpgamekey.bin" size="0x200000" crc="7700ed88" sha1="b6b1570b2634fb652b6be7fe758afc5a19d738de" offset="0" />
+			</dataarea>
+		</part>
+	</software>
+
+</softwarelist>

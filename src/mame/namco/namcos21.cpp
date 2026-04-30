@@ -39,7 +39,6 @@ TODO:
 - is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
 - winrungp: some missing bitmap layer gfx due to underdumps of the gpu program roms (see attract mode
   when it's supposed to show "TRIANGLE" curve text, and the congratulations screen after winning)
-- winrungp: pressing service mode is glitchy when posirq is active (need to press F3)
 
 reference videos:
 - https://youtu.be/ZNNveBLWevg
@@ -518,14 +517,14 @@ u32 namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, c
 	{
 		case 5: // title screen for all games here
 			bitmap_draw(bitmap,cliprect);
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect);
 			break;
 		case 0: // service mode
 			bitmap_draw(bitmap,cliprect);
 			break;
 		case 2: // gameplay
 		default:
-			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect, 0, 0x7ffe);
+			m_namcos21_3d->copy_visible_poly_framebuffer(bitmap, cliprect);
 			bitmap_draw(bitmap,cliprect);
 			break;
 	}
@@ -580,11 +579,11 @@ void namcos21_state::master_map(address_map &map)
 	map(0x1c0000, 0x1fffff).m(m_master_intc, FUNC(namco_c148_device::map));
 
 	// DSP Related
-	map(0x250000, 0x25ffff).ram().share("namcos21dsp:winrun_polydata");
+	map(0x250000, 0x25ffff).ram().share("namcos21dsp:polydata");
 	map(0x260000, 0x26ffff).ram(); // unused?
-	map(0x280000, 0x281fff).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_dspbios_w));
-	map(0x380000, 0x38000f).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_dspcomram_control_r), FUNC(namcos21_dsp_device::winrun_dspcomram_control_w));
-	map(0x3c0000, 0x3c1fff).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::winrun_68k_dspcomram_r), FUNC(namcos21_dsp_device::winrun_68k_dspcomram_w));
+	map(0x280000, 0x281fff).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::dspbios_w));
+	map(0x380000, 0x38000f).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::dspcomram_control_r), FUNC(namcos21_dsp_device::dspcomram_control_w));
+	map(0x3c0000, 0x3c1fff).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::m68k_dspcomram_r), FUNC(namcos21_dsp_device::m68k_dspcomram_w));
 	map(0x400000, 0x400001).w(m_namcos21_dsp, FUNC(namcos21_dsp_device::pointram_control_w));
 	map(0x440000, 0x440001).rw(m_namcos21_dsp, FUNC(namcos21_dsp_device::pointram_data_r), FUNC(namcos21_dsp_device::pointram_data_w));
 }
@@ -767,6 +766,12 @@ void namcos21_state::reset_all_subcpus(int state)
 	m_slave->set_input_line(INPUT_LINE_RESET, state);
 	m_gpu->set_input_line(INPUT_LINE_RESET, state);
 	m_c65->ext_reset(state);
+
+	if (state)
+	{
+		m_slave_intc->reset();
+		m_gpu_intc->reset();
+	}
 }
 
 void namcos21_state::machine_reset()
@@ -867,10 +872,9 @@ void namcos21_state::winrun(machine_config &config)
 	PALETTE(config, m_palette).set_format(palette_device::xBRG_888, 0x10000/2);
 
 	NAMCOS21_3D(config, m_namcos21_3d, 0);
-	m_namcos21_3d->set_fixed_palbase(0x2000);
-	m_namcos21_3d->set_zz_shift_mult(10, 0x100);
-	m_namcos21_3d->set_depth_reverse(true);
 	m_namcos21_3d->set_framebuffer_size(496, 480);
+	m_namcos21_3d->set_num_palettes(0x20);
+	m_namcos21_3d->set_depth_reverse(true);
 
 	// sound hardware
 	SPEAKER(config, "speaker", 4).corners();

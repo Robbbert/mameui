@@ -127,6 +127,8 @@ TODO:
 - daichukaa: setting of time to next inspection doesn't stick, even without resetting, so the game is always
   stuck with the 'inspection needed' message
 
+- rselect: needs correct inputs and DIP definitions
+
 Notes:
 
 - all games using black as default palette is trusted from a real rongrong PCB;
@@ -297,6 +299,7 @@ public:
 	void mjmywrldt(machine_config &config) ATTR_COLD;
 	void dtoyoken(machine_config &config) ATTR_COLD;
 	void hgokou(machine_config &config) ATTR_COLD;
+	void rselect(machine_config &config) ATTR_COLD;
 	void seljan2(machine_config &config) ATTR_COLD;
 	void jongoh(machine_config &config) ATTR_COLD;
 	void daichuka(machine_config &config) ATTR_COLD;
@@ -407,8 +410,8 @@ private:
 	uint8_t mjmyster_keyb_r();
 	uint8_t mjmyster_dsw_r();
 	void mjmyster_coincounter_w(uint8_t data);
-	void hginga_rombank_w(uint8_t data);
-	uint8_t hginga_protection_r();
+	template <uint8_t Mask> void hginga_rombank_w(uint8_t data);
+	template <uint8_t Mask> uint8_t hginga_protection_r();
 	void hginga_input_w(uint8_t data);
 	uint8_t hginga_coins_r();
 	void hginga_80_w(uint8_t data);
@@ -512,6 +515,7 @@ private:
 	void quizchq_portmap(address_map &map) ATTR_COLD;
 	void rongrong_map(address_map &map) ATTR_COLD;
 	void rongrong_portmap(address_map &map) ATTR_COLD;
+	void rselect_map(address_map &map) ATTR_COLD;
 	void seljan2_map(address_map &map) ATTR_COLD;
 	void seljan2_portmap(address_map &map) ATTR_COLD;
 	void sryudens_map(address_map &map) ATTR_COLD;
@@ -3477,20 +3481,22 @@ void ddenlovr_state::mjmyster_portmap(address_map &map)
                             Hanafuda Hana Ginga
 ***************************************************************************/
 
+template <uint8_t Mask>
 void ddenlovr_state::hginga_rombank_w(uint8_t data)
 {
-	membank("bank1")->set_entry(data & 0x7);
+	membank("bank1")->set_entry(data & Mask);
 	m_hginga_rombank = data;
 }
 
 // similar to rongrong
+template <uint8_t Mask>
 uint8_t ddenlovr_state::hginga_protection_r()
 {
 	uint8_t *rom = memregion("maincpu")->base();
 
 	if (m_hginga_rombank & 0x10)
 		return hanakanz_rand_r();
-	return rom[0x10000 + 0x8000 * (m_hginga_rombank & 0x7) + 0xf601 - 0x8000];
+	return rom[0x10000 + 0x8000 * (m_hginga_rombank & Mask) + 0xf601 - 0x8000];
 }
 
 void ddenlovr_state::hginga_map(address_map &map)
@@ -3499,9 +3505,16 @@ void ddenlovr_state::hginga_map(address_map &map)
 	map(0x6000, 0x6fff).ram();                     // RAM
 	map(0x7000, 0x7fff).bankrw("bank2");           // RAM (Banked)
 	map(0x8000, 0xffff).bankr("bank1");            // ROM/RAM (Banked)
-	map(0xf601, 0xf601).r(FUNC(ddenlovr_state::hginga_protection_r));
+	map(0xf601, 0xf601).r(FUNC(ddenlovr_state::hginga_protection_r<0x07>));
 	map(0xf000, 0xf1ff).w(FUNC(ddenlovr_state::ddenlovr_palette_w));   // RAM enabled by bit 4 of rombank
 	map(0xf700, 0xf706).nopw();
+}
+
+void ddenlovr_state::rselect_map(address_map &map)
+{
+	hginga_map(map);
+
+	map(0xf601, 0xf601).r(FUNC(ddenlovr_state::hginga_protection_r<0x0f>));
 }
 
 uint8_t ddenlovr_state::hginga_dsw_r()
@@ -7725,6 +7738,7 @@ static INPUT_PORTS_START( hgokou )
 	PORT_DIPSETTING(    0x02, "Hanafuda Amusement" )                                                // 当社華札アミューズメントパネルシール  (numbers, doesn't use take/w-up/big/small)
 INPUT_PORTS_END
 
+
 static INPUT_PORTS_START( mjmyornt )
 	// The manual provides three sets of standard settings:
 	//       標準設定　シングル向け                        標準設定　メダル コーナー向け                 標準設定　アミューズ　コーナー向け
@@ -10029,7 +10043,7 @@ void ddenlovr_state::hginga(machine_config &config)
 	maincpu.set_addrmap(AS_IO, &ddenlovr_state::hginga_portmap);
 	maincpu.in_pa_callback().set_constant(0);
 	maincpu.out_pa_callback().set(FUNC(ddenlovr_state::mjmyster_rambank_w));
-	maincpu.out_pb_callback().set(FUNC(ddenlovr_state::hginga_rombank_w));
+	maincpu.out_pb_callback().set(FUNC(ddenlovr_state::hginga_rombank_w<0x07>));
 
 	MAHJONG_PANEL_CONNECTOR(config, m_key_matrix[0], hginga_panels, "hf", false);
 	MAHJONG_PANEL_CONNECTOR(config, m_key_matrix[1], mahjong_panel_connector_device::medal_panels, "hf", false);
@@ -10061,7 +10075,7 @@ void ddenlovr_state::hgokou(machine_config &config)
 	maincpu.set_addrmap(AS_IO, &ddenlovr_state::hgokou_portmap);
 	maincpu.in_pa_callback().set_constant(0);
 	maincpu.out_pa_callback().set(FUNC(ddenlovr_state::mjmyster_rambank_w));
-	maincpu.out_pb_callback().set(FUNC(ddenlovr_state::hginga_rombank_w));
+	maincpu.out_pb_callback().set(FUNC(ddenlovr_state::hginga_rombank_w<0x07>));
 
 	m_screen->screen_vblank().set("maincpu", FUNC(tmpz84c015_device::trg0));
 
@@ -10089,6 +10103,17 @@ void ddenlovr_state::hgokbang(machine_config &config)
 	subdevice<tmpz84c015_device>("maincpu")->set_addrmap(AS_IO, &ddenlovr_state::hgokbang_portmap);
 }
 
+void ddenlovr_state::rselect(machine_config &config)
+{
+	hgokou(config);
+
+	// basic machine hardware
+	subdevice<tmpz84c015_device>("maincpu")->set_addrmap(AS_PROGRAM, &ddenlovr_state::rselect_map);
+	subdevice<tmpz84c015_device>("maincpu")->out_pb_callback().set(FUNC(ddenlovr_state::hginga_rombank_w<0x0f>));
+
+	MCFG_MACHINE_START_OVERRIDE(ddenlovr_state,mjflove)
+}
+
 void ddenlovr_state::mjmywrld(machine_config &config)
 {
 	mjmyster(config);
@@ -10098,7 +10123,7 @@ void ddenlovr_state::mjmywrld(machine_config &config)
 	maincpu.set_addrmap(AS_PROGRAM, &ddenlovr_state::hginga_map);
 	maincpu.set_addrmap(AS_IO, &ddenlovr_state::mjmywrld_portmap);
 	maincpu.out_pa_callback().set(FUNC(ddenlovr_state::mjmyster_rambank_w));
-	maincpu.out_pb_callback().set(FUNC(ddenlovr_state::hginga_rombank_w));
+	maincpu.out_pb_callback().set(FUNC(ddenlovr_state::hginga_rombank_w<0x07>));
 }
 
 void ddenlovr_state::mjmyuniv(machine_config &config)
@@ -12655,6 +12680,21 @@ ROM_START( hgokou )
 	ROM_LOAD( "1081.2d",  0x00000, 0x40000, CRC(74dede40) SHA1(d148f9ab9223b4c0b2f457a6f0e7fa3d173ab12b) )
 ROM_END
 
+// /DYNA D8306158L1 (almost identical to hgokou's N83061581L1)
+ROM_START( rselect )
+	ROM_REGION( 0x90000+8*0x1000, "maincpu", 0 )   // Z80 Code
+	ROM_LOAD( "8302.2b", 0x00000, 0x80000, CRC(941df21e) SHA1(50dadbea5989176e77c2eddb63753d65411fb061) )
+	ROM_RELOAD(          0x10000, 0x80000 )
+
+	ROM_REGION( 0x200000, "blitter", 0 )
+	ROM_LOAD( "8303.9a",  0x000000, 0x100000, CRC(5e22b02f) SHA1(58d0ddfeca878532d227e001264bfe26307b3b08) )
+	ROM_LOAD( "8304.10a", 0x100000, 0x080000, CRC(39b9dc72) SHA1(fb614c3f76f1e5c35aac2f979b60c4c8c46a7229) )
+	// 11a, 12a and 14a not populated
+
+	ROM_REGION( 0x40000, "oki", 0 )  // samples
+	ROM_LOAD( "8301.2d", 0x00000, 0x40000, CRC(428e3c15) SHA1(d3ac2eb00b01d72322722501eda5ecef1e8ec994) )
+ROM_END
+
 /***************************************************************************
 
 Hanafuda Hana Gokou Bangaihen
@@ -13377,6 +13417,8 @@ GAME( 1994, rongrongj,   rongrong, rongrong,  rongrong,   ddenlovr_state, init_r
 GAME( 1994, rongrongg,   rongrong, rongrong,  rongrong,   ddenlovr_state, init_rongrong, ROT0, "Nakanihon (Activision license)",              "Puzzle Game Rong Rong (Germany)",                                MACHINE_NO_COCKTAIL  | MACHINE_IMPERFECT_COLORS )
 
 GAME( 1994, hparadis,    0,        hparadis,  hparadis,   ddenlovr_state, empty_init,    ROT0, "Dynax",                                       "Super Hana Paradise (Japan)",                                    MACHINE_NO_COCKTAIL  )
+
+GAME( 1994, rselect,     0,        rselect,   hgokou,     ddenlovr_state, empty_init,    ROT0, "Dynax",                                       "Royal Selection (Japan, ver. 1.01)",                             MACHINE_NO_COCKTAIL  | MACHINE_NOT_WORKING ) // needs correct inputs and DIP definitions
 
 GAME( 1995, hgokou,      0,        hgokou,    hgokou,     ddenlovr_state, empty_init,    ROT0, "Dynax (Alba license)",                        "Hanafuda Hana Gokou (Japan, ver. B)",                            MACHINE_NO_COCKTAIL  | MACHINE_NOT_WORKING )
 GAME( 1995, hgokoua,     hgokou,   hgokbang,  hgokou,     ddenlovr_state, empty_init,    ROT0, "Dynax (Alba license)",                        "Hanafuda Hana Gokou (Japan, ver. A)",                            MACHINE_NO_COCKTAIL  | MACHINE_NOT_WORKING )

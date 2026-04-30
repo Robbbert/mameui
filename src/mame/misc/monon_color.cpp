@@ -159,12 +159,6 @@ private:
 			return 0xff;
 	}
 
-	void spidir_w(int state)
-	{
-		if (memregion("cartslot:rom"))
-			m_cart->dir_w(state);
-	}
-
 	void spibuf_w(uint8_t data)
 	{
 		if (memregion("cartslot:rom"))
@@ -950,7 +944,6 @@ void monon_color_state::monon_color(machine_config &config)
 	m_maincpu->port_out_cb<4>().set(FUNC(monon_color_state::out4_w));
 	m_maincpu->spi_in_cb().set(FUNC(monon_color_state::spibuf_r));
 	m_maincpu->spi_out_cb().set(FUNC(monon_color_state::spibuf_w));
-	m_maincpu->spi_out_dir_cb().set(FUNC(monon_color_state::spidir_w));
 	m_maincpu->dac_out_cb<0>().set(FUNC(monon_color_state::dacout0_w));
 	m_maincpu->dac_out_cb<1>().set(FUNC(monon_color_state::dacout1_w));
 
