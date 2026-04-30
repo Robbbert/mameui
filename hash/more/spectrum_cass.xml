@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7856 -->
+<!-- Number of items in this list = 7853 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -57252,16 +57252,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs53d77707738fe">
-		<description>Spooky Castle 48K (1990)(Atlantis Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="24907">
-				<rom name="Spooky Castle 48K (1990)(Atlantis Software).tzx" size="24907" crc="a991eb04" sha1="53d77707738fe67d687aa5d4bfc2ea2c64b5674c"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs3c14e1d37e491">
 		<description>Spooky Castle</description>
 		<year>????</year>
@@ -62929,16 +62919,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="5443">
 				<rom name="Tube War (1983)(J.Bull).tap" size="5443" crc="2a0563f4" sha1="112a5cc18949bd2a9e3152846c5b97d70df994c3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs99c42a8374966">
-		<description>Tube, The 48K-128K (1987)(Quicksilva)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="50892">
-				<rom name="Tube, The 48K-128K (1987)(Quicksilva).tzx" size="50892" crc="ababf317" sha1="99c42a8374966a4687f0d5391e2146eeb3e6fff0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -76499,16 +76479,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="33452">
 				<rom name="_Snowman, The (1983)(Quicksilva).tap" size="33452" crc="9b7527ed" sha1="f4ff5f8c2467f21b25c7435658f6f243a09b2b9f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsdf3cfc2847fc7">
-		<description>_Snowman, The 48K (1983)(Quicksilva)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="33510">
-				<rom name="_Snowman, The 48K (1983)(Quicksilva).tzx" size="33510" crc="def506c0" sha1="df3cfc2847fc7f8458be7f7b1455b8cc2e5505b2"/>
 			</dataarea>
 		</part>
 	</software>

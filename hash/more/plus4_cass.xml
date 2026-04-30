@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="plus4_cass" description="plus4_cass loose roms">
+	<software name="c16c28c15ad4364c">
+		<description>the_incredible_hulk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="630008">
+				<rom name="the_incredible_hulk.tap" size="630008" crc="c10438ec" sha1="c28c15ad4364ce4477f16b175ec173c5e5d15a51"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
