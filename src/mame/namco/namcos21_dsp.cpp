@@ -7,6 +7,8 @@ used by Winning Run series, Driver's Eyes
 
 TODO:
 - handle protection properly and with callbacks
+- poly_reset_r (the DSP BIO pin) can't be for flushing polys, it's most likely
+  a busy signal from the renderer
 
 */
 
@@ -28,6 +30,9 @@ namcos21_dsp_device::namcos21_dsp_device(const machine_config &mconfig, const ch
 void namcos21_dsp_device::device_start()
 {
 	m_suspend_timer = timer_alloc(FUNC(namcos21_dsp_device::suspend_callback), this);
+
+	m_pointrom_mask = m_ptrom16.length() - 1;
+	assert((m_pointrom_mask & (m_pointrom_mask + 1)) == 0);
 
 	m_pointram_idx = 0;
 	m_pointram_control = 0;
@@ -149,18 +154,18 @@ void namcos21_dsp_device::dsp_pointrom_addr_w(offs_t offset, u16 data)
 	if (offset == 0)
 	{
 		// port 8
-		m_pointrom_addr = data;
+		m_pointrom_addr = (m_pointrom_addr & ~0xffff) | data;
 	}
 	else
 	{
 		// port 9
-		m_pointrom_addr |= (data << 16);
+		m_pointrom_addr = (m_pointrom_addr & 0xffff) | (data << 16);
 	}
 }
 
 u16 namcos21_dsp_device::dsp_pointrom_data_r()
 {
-	u16 data = m_ptrom16[m_pointrom_addr];
+	u16 data = m_ptrom16[m_pointrom_addr & m_pointrom_mask];
 
 	if (!machine().side_effects_disabled())
 		m_pointrom_addr++;
@@ -247,12 +252,12 @@ void namcos21_dsp_device::dsp_io(address_map &map)
 
 void namcos21_dsp_device::device_add_mconfig(machine_config &config)
 {
-	tms320c25_device& dsp(TMS320C25(config, m_dsp, 40_MHz_XTAL)); // 40 MHz oscillator on DSP board
-	dsp.set_addrmap(AS_PROGRAM, &namcos21_dsp_device::dsp_program);
-	dsp.set_addrmap(AS_DATA, &namcos21_dsp_device::dsp_data);
-	dsp.set_addrmap(AS_IO, &namcos21_dsp_device::dsp_io);
-	dsp.bio_in_cb().set(FUNC(namcos21_dsp_device::poly_reset_r));
-	dsp.xf_out_cb().set_nop();
+	TMS320C25(config, m_dsp, 40_MHz_XTAL); // 40 MHz oscillator on DSP board
+	m_dsp->set_addrmap(AS_PROGRAM, &namcos21_dsp_device::dsp_program);
+	m_dsp->set_addrmap(AS_DATA, &namcos21_dsp_device::dsp_data);
+	m_dsp->set_addrmap(AS_IO, &namcos21_dsp_device::dsp_io);
+	m_dsp->bio_in_cb().set(FUNC(namcos21_dsp_device::poly_reset_r));
+	m_dsp->xf_out_cb().set_nop();
 }
 
 void namcos21_dsp_device::pointram_control_w(offs_t offset, u16 data, u16 mem_mask)
