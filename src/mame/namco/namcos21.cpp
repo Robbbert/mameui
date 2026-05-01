@@ -31,7 +31,7 @@ a stream of quad descriptors.
 
 Each quad has a reference color (shared across vertices), and for each vertex the tuple: (screenx,screeny,z-code).
 The z-code scalar accounts for depth bias.  Quads are sorted by z-code before rendering quads, and depth cueing
-is used to shade pixels according to their depth.
+is used to shade quads according to their depth.
 
 -------------------
 
@@ -828,6 +828,9 @@ void namcos21_state::winrun(machine_config &config)
 	M68000(config, m_slave, 49.152_MHz_XTAL / 4); // Slave
 	m_slave->set_addrmap(AS_PROGRAM, &namcos21_state::slave_map);
 
+	M68000(config, m_gpu, 49.152_MHz_XTAL / 4); // Graphics coprocessor
+	m_gpu->set_addrmap(AS_PROGRAM, &namcos21_state::gpu_map);
+
 	MC6809E(config, m_audiocpu, 49.152_MHz_XTAL / 24); // Sound
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_state::sound_map);
 
@@ -853,9 +856,6 @@ void namcos21_state::winrun(machine_config &config)
 
 	NAMCOS21_DSP(config, m_namcos21_dsp, 0);
 	m_namcos21_dsp->set_renderer_tag("namcos21_3d");
-
-	M68000(config, m_gpu, 49.152_MHz_XTAL / 4); // graphics coprocessor
-	m_gpu->set_addrmap(AS_PROGRAM, &namcos21_state::gpu_map);
 
 	NAMCO_C148(config, m_master_intc, 0, m_maincpu, true);
 	m_master_intc->link_c148_device(m_slave_intc);
