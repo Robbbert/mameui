@@ -44,6 +44,7 @@ TODO:
 #include "softlist_dev.h"
 #include "speaker.h"
 
+#include "smc777.lh"
 
 namespace {
 
@@ -82,6 +83,8 @@ public:
 		// "JOY STICK#" dual DE-9 ports, on the right side of body chassis (near the volume knob)
 		, m_joystick_port(*this, "joystick%u", 1U)
 		, m_kanji_rom(*this, "kanji")
+		, m_caplock_led(*this, "caplock_led")
+		, m_kanalock_led(*this, "kanalock_led")
 	{ }
 
 	void smc777(machine_config &config);
@@ -155,6 +158,8 @@ private:
 	required_device<smc777_kbd_device> m_kbd;
 	required_device_array<msx_general_purpose_port_device, 2> m_joystick_port;
 	required_region_ptr<u8> m_kanji_rom;
+	output_finder<> m_caplock_led;
+	output_finder<> m_kanalock_led;
 
 	u8 *m_ipl_rom = nullptr;
 	std::unique_ptr<u8[]> m_work_ram;
@@ -892,6 +897,9 @@ void smc777_state::machine_start()
 	save_item(NAME(m_warm_reset));
 
 	m_warm_reset = -1;
+
+	m_caplock_led.resolve();
+	m_kanalock_led.resolve();
 }
 
 void smc777_state::machine_reset()
@@ -1048,7 +1056,11 @@ void smc777_state::smc777(machine_config &config)
 	snapshot.set_interface("smc777_quik");
 	SOFTWARE_LIST(config, "smc777_quik").set_original("smc777_quik");
 
+	config.set_default_layout(layout_smc777);
+
 	SMC777_KBD(config, m_kbd, 0);
+	m_kbd->caplock_callback().set([this] (int state) { m_caplock_led = state; });
+	m_kbd->kanalock_callback().set([this] (int state) { m_kanalock_led = state; });
 
 	// No clue about bundled defaults but:
 	// - dragon expects joystick in port 1
