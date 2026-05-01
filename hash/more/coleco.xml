@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 698 -->
+<!-- Number of items in this list = 702 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -373,12 +373,12 @@
 		</part>
 	</software>
 	<software name="col8eb9ddb7c418c">
-		<description>Bankruptcy Builder (2013)(Good Deal Games)</description>
+		<description>Bankruptcy Builder (2013)(Philipp Klaus Krause)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Bankruptcy Builder (2013)(Good Deal Games).rom" size="32768" crc="b153c849" sha1="8eb9ddb7c418ce4884ea3ba1e4c82ceae6049e9a"/>
+				<rom name="Bankruptcy Builder (2013)(Philipp Klaus Krause).rom" size="32768" crc="b153c849" sha1="8eb9ddb7c418ce4884ea3ba1e4c82ceae6049e9a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1133,12 +1133,12 @@
 		</part>
 	</software>
 	<software name="colb9eebd5984f54">
-		<description>Cix (2013)(Good Deal Games)</description>
+		<description>Cix (2013)(Philipp Klaus Krause)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Cix (2013)(Good Deal Games).rom" size="32768" crc="fea0da6d" sha1="b9eebd5984f543a714ab5845e10052f5b94d635c"/>
+				<rom name="Cix (2013)(Philipp Klaus Krause).rom" size="32768" crc="fea0da6d" sha1="b9eebd5984f543a714ab5845e10052f5b94d635c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1449,6 +1449,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="31822">
 				<rom name="Cye demo.1.2.rom" size="31822" crc="c2023ca7" sha1="54cd8b8c0f00ec2a9de9e86df6fe99de8586cf78"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col60692740493e1">
+		<description>Cye v1.1 (2007)(Philipp Klaus Krause)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="31351">
+				<rom name="Cye v1.1 (2007)(Philipp Klaus Krause).rom" size="31351" crc="0eaec351" sha1="60692740493e16080decb7fb996931264b963340"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3752,6 +3762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colf5bbb578ba2b2">
+		<description>Monster Masher (2006)(Philipp Klaus Krause)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="30542">
+				<rom name="Monster Masher (2006)(Philipp Klaus Krause)_1.rom" size="30542" crc="c9647af5" sha1="f5bbb578ba2b2abe50df33e4a4d588a01bcedd13"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col44862334e171b">
 		<description>Montezuma's Revenge (USA)(1984)(Parker Brothers)</description>
 		<year>????</year>
@@ -4972,6 +4992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cole62aebd27df0c">
+		<description>Search for the Stolen Crown Jewels (2006)(Philipp Klaus Krause)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32721">
+				<rom name="Search for the Stolen Crown Jewels (2006)(Philipp Klaus Krause)_1.rom" size="32721" crc="4ad21572" sha1="e62aebd27df0ce079be971f3d31be4ce4139bcbc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col209663db69182">
 		<description>Search for the Stolen Crown Jewels 2 (2007)(Philipp Klaus Krause)</description>
 		<year>????</year>
@@ -5079,6 +5109,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Sewer Sam (USA)(1984)(Interphase).rom" size="24576" crc="4591f393" sha1="407c2a1bef81522dfd88ace7abd7d80c0f7de357"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col1454309217267">
+		<description>Shunting Puzzle (2009)(Philipp Klaus Krause)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32115">
+				<rom name="Shunting Puzzle (2009)(Philipp Klaus Krause).rom" size="32115" crc="2b85fbbc" sha1="14543092172672c79812e84ed0a78eb85472d6c8"/>
 			</dataarea>
 		</part>
 	</software>

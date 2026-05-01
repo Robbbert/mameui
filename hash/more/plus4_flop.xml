@@ -1,7 +1,127 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 13 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
+	<software name="c16479ad51c1ee08">
+		<description>076A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="076A.D64" size="174848" crc="8f00c6d7" sha1="479ad51c1ee08678b2e790fc3082f8c20ddec900"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bcba19cfafbd8">
+		<description>14B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="14B.D64" size="175531" crc="cc9b32e9" sha1="bcba19cfafbd89d39daa21a0171255adf0c66a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16529fe11cb6608">
+		<description>183B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="183B.D64" size="174848" crc="2f666442" sha1="529fe11cb66081e44b297dee3a6139868923d637"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1609019c1912ee2">
+		<description>3dchess</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="3dchess.d64" size="174848" crc="ba6f2666" sha1="09019c1912ee2f8e37ba3c26b855529e8f9c91e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161d24d40f0414c">
+		<description>A1RL0CK (2023-07-23)(Innocenti, Marco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="A1RL0CK (2023-07-23)(Innocenti, Marco).d64" size="174848" crc="54773aae" sha1="1d24d40f0414c18107260efe7d21daf0186916f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162693e70bf064a">
+		<description>ADV64</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="ADV64.D64" size="175531" crc="256f6e39" sha1="2693e70bf064a063338513918884b1453b350304"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1645bdd2d93187b">
+		<description>alfred</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="alfred.d64" size="174848" crc="8ca54ce2" sha1="45bdd2d93187b97b096b69304fda5ce159dd0d4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1669edeaa3a7657">
+		<description>ALIEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ALIEN.D64" size="174848" crc="6d76fd05" sha1="69edeaa3a765706c6c6522dbdccc8424a1a9210f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16578052b927f1d">
+		<description>APPLEMAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="APPLEMAN.D64" size="174848" crc="76e84682" sha1="578052b927f1d8b598bf905912d471943cc360fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16397aafb94f2ed">
+		<description>arthur_noid_ii</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="arthur_noid_ii.d64" size="174848" crc="ed140c63" sha1="397aafb94f2edd9e57a1c6d35e07419c07b707e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166837371389fea">
+		<description>A_Nagy_Kaland</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="A_Nagy_Kaland.d64" size="174848" crc="86a66d40" sha1="6837371389fea9b533c42f7ffa45ce9a32b9dc60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1608c92686383c7">
+		<description>Burg</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="Burg.D64" size="175531" crc="ce523a78" sha1="08c92686383c7e8ccffcbfa8241bcd07b74cffc2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c16f26fa5a184a17">
 		<description>Toop (2020-01-23)(Haplo)(AU)</description>
 		<year>????</year>
