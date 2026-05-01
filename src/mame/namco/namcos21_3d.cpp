@@ -274,12 +274,13 @@ void namcos21_3d_device::draw_direct_quad(const u16 *source, u16 color)
 	blit_single_quad(sx, sy, zcode, color);
 }
 
-void namcos21_3d_device::draw_quads(const u16 *source, const u8 *pointram, const u32 ptram_size, u32 quad_idx)
+int namcos21_3d_device::draw_quads(const u16 *source, const u8 *pointram, const u32 ptram_size, u32 quad_idx)
 {
 	const u32 ptram_mask = ptram_size - 1;
 	quad_idx = (quad_idx * 6) & ptram_mask;
 
 	int sx[4], sy[4], zcode[4];
+	int max_vi = -1; // for debug
 
 	for (int count = 0; count < ptram_size / 6; count++)
 	{
@@ -297,6 +298,9 @@ void namcos21_3d_device::draw_quads(const u16 *source, const u8 *pointram, const
 			sx[i] = m_poly_frame_width / 2 + (s16)source[vi * 3 + 0];
 			sy[i] = m_poly_frame_height / 2 + (s16)source[vi * 3 + 1];
 			zcode[i] = source[vi * 3 + 2];
+
+			if (vi > max_vi)
+				max_vi = vi;
 		}
 
 		blit_single_quad(sx, sy, zcode, color & 0x7fff);
@@ -307,4 +311,6 @@ void namcos21_3d_device::draw_quads(const u16 *source, const u8 *pointram, const
 			break;
 		}
 	}
+
+	return (max_vi + 1) * 3;
 }

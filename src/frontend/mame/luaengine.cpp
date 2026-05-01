@@ -811,11 +811,6 @@ void lua_engine::initialize()
  * emu.keypost(keys) - post keys to natural keyboard
  *
  * emu.register_prestart(callback) - register callback before reset
- * emu.register_start(callback) - register callback after reset
- * emu.register_stop(callback) - register callback after stopping
- * emu.register_pause(callback) - register callback at pause
- * emu.register_resume(callback) - register callback at resume
- * emu.register_frame(callback) - register callback at end of frame
  * emu.register_frame_done(callback) - register callback after frame is drawn to screen (for overlays)
  * emu.register_sound_update(callback) - register callback after sound update has generated new samples
  * emu.register_periodic(callback) - register periodic callback while program is running
@@ -933,11 +928,6 @@ void lua_engine::initialize()
 			machine().resume();
 		};
 	emu["register_prestart"] = [this] (sol::function func) { register_function(func, "LUA_ON_PRESTART"); };
-	emu["register_start"] = [this] (sol::function func) { osd_printf_warning("[LUA] emu.register_start is deprecated - please use emu.add_machine_reset_notifier\n"); register_function(func, "LUA_ON_START"); };
-	emu["register_stop"] = [this] (sol::function func) { osd_printf_warning("[LUA] emu.register_stop is deprecated - please use emu.add_machine_stop_notifier\n"); register_function(func, "LUA_ON_STOP"); };
-	emu["register_pause"] = [this] (sol::function func) { osd_printf_warning("[LUA] emu.register_pause is deprecated - please use emu.add_machine_pause_notifier\n"); register_function(func, "LUA_ON_PAUSE"); };
-	emu["register_resume"] = [this] (sol::function func) { osd_printf_warning("[LUA] emu.register_resume is deprecated - please use emu.add_machine_resume_notifier\n"); register_function(func, "LUA_ON_RESUME"); };
-	emu["register_frame"] = [this] (sol::function func) { osd_printf_warning("[LUA] emu.register_frame is deprecated - please use emu.add_machine_frame_notifier\n"); register_function(func, "LUA_ON_FRAME"); };
 	emu["register_frame_done"] = [this] (sol::function func) { register_function(func, "LUA_ON_FRAME_DONE"); };
 	emu["register_sound_update"] = [this] (sol::function func) { register_function(func, "LUA_ON_SOUND_UPDATE"); };
 	emu["register_periodic"] = [this] (sol::function func) { register_function(func, "LUA_ON_PERIODIC"); };

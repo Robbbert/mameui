@@ -34,7 +34,7 @@ public:
 	u16 *get_visible_zbuffer() { return m_poly_framebuffer_z2.get(); }
 
 	void draw_direct_quad(const u16 *source, u16 color);
-	void draw_quads(const u16 *source, const u8 *pointram, const u32 ptram_size, u32 quad_idx);
+	int draw_quads(const u16 *source, const u8 *pointram, const u32 ptram_size, u32 quad_idx);
 
 protected:
 	// device-level overrides

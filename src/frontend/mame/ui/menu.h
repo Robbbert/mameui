@@ -106,11 +106,14 @@ public:
 	// pop a menu from the stack
 	static void stack_pop(mame_ui_manager &ui) { get_global_state(ui).stack_pop(); }
 
+	// test whether there are any menus in the stack
+	static bool stack_empty(mame_ui_manager &ui) { return !get_global_state(ui).topmost_menu<menu>(); }
+
 	// test if one of the menus in the stack requires hide disable
 	static bool stack_has_special_main_menu(mame_ui_manager &ui) { return get_global_state(ui).stack_has_special_main_menu(); }
 
 	// master handler
-	static delegate<uint32_t (render_container &)> get_ui_handler(mame_ui_manager &mui);
+	static delegate<uint32_t ()> get_ui_handler(mame_ui_manager &mui);
 
 	// Used by sliders
 	void validate_selection(int scandir);
@@ -440,7 +443,7 @@ private:
 
 		void hide_menu() { m_hide = true; }
 
-		uint32_t ui_handler(render_container &container);
+		uint32_t ui_handler();
 
 		bool have_pointer() const noexcept
 		{

@@ -12,8 +12,6 @@
 #include "ui/menu.h"
 
 #include "ui/ui.h"
-#include "ui/mainmenu.h"
-#include "ui/miscmenu.h"
 
 #include "cheat.h"
 #include "mame.h"
@@ -217,12 +215,8 @@ bool menu::global_state::stack_has_special_main_menu() const
 }
 
 
-uint32_t menu::global_state::ui_handler(render_container &container)
+uint32_t menu::global_state::ui_handler()
 {
-	// if we have no menus stacked up, start with the main menu
-	if (!m_stack)
-		stack_push(std::make_unique<menu_main>(m_ui, container));
-
 	while (true)
 	{
 		// ensure topmost menu is active - need a loop because it could push another menu
@@ -2097,10 +2091,10 @@ bool menu::do_handle()
 //  and calls the menu handler
 //-------------------------------------------------
 
-delegate<uint32_t (render_container &)> menu::get_ui_handler(mame_ui_manager &mui)
+delegate<uint32_t ()> menu::get_ui_handler(mame_ui_manager &mui)
 {
 	global_state &state(get_global_state(mui));
-	return delegate<uint32_t (render_container &)>(&global_state::ui_handler, &state);
+	return delegate<uint32_t ()>(&global_state::ui_handler, &state);
 }
 
 /***************************************************************************

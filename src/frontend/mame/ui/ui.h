@@ -284,7 +284,7 @@ private:
 	struct active_pointer;
 	class pointer_options;
 
-	using handler_callback_func = delegate<uint32_t (render_container &)>;
+	using handler_callback_func = delegate<uint32_t ()>;
 	using device_feature_set = std::set<std::pair<std::string, std::string> >;
 	using session_data_map = std::unordered_map<std::type_index, std::any>;
 	using active_pointer_vector = std::vector<active_pointer>;
@@ -332,7 +332,7 @@ private:
 	static std::vector<ui::menu_item> slider_list;
 
 	// UI handlers
-	uint32_t handler_ingame(render_container &container);
+	uint32_t handler_ingame();
 
 	// private methods
 	void set_handler(ui_callback_type callback_type, handler_callback_func &&callback);

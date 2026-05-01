@@ -58,7 +58,7 @@ private:
 			std::fill(std::begin(master_port_data), std::end(master_port_data), 0);
 			std::fill(std::begin(master_ddraw_buffer), std::end(master_ddraw_buffer), 0);
 			std::fill(std::begin(slave_input_buffer), std::end(slave_input_buffer), 0);
-			std::fill(std::begin(slave_output_buffer), std::end(slave_output_buffer), 0);
+			std::fill(std::begin(slave_output_buffer), std::end(slave_output_buffer), 0xffff);
 		}
 
 		u16 master_port_data[0x10];

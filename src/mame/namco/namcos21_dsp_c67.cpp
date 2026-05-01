@@ -8,6 +8,7 @@ Namco programming (marked C67) in a 1x Master, 4x Slave configuration
 used by Star Blade, Solvalou, Cybersled, Air Combat
 
 TODO:
+- add DSP idle loop speedup hacks?
 - handle protection properly and with callbacks
 - handle splitting of workload across slaves
 - remove hacks!
@@ -192,7 +193,7 @@ u16 namcos21_dsp_c67_device::dspcuskey_r()
 
 void namcos21_dsp_c67_device::transmit_word_to_slave(u16 data)
 {
-	u32 offs = m_dsp_state->slave_input_start+m_dsp_state->slave_bytes_available++;
+	u32 offs = m_dsp_state->slave_input_start + m_dsp_state->slave_bytes_available++;
 	m_dsp_state->slave_input_buffer[offs % DSP_BUF_MAX] = data;
 
 	if (ENABLE_LOGGING) logerror("+%04x(#%04x)\n", data, m_dsp_state->slave_bytes_available);
@@ -515,7 +516,7 @@ void namcos21_dsp_c67_device::dsp_portb_w(u16 data)
 		}
 		else if (m_dsp_state->master_ddraw_size)
 		{
-			logerror("unexpected master_ddraw_size=%d!\n",m_dsp_state->master_ddraw_size);
+			logerror("unexpected master_ddraw_size=%d!\n", m_dsp_state->master_ddraw_size);
 		}
 
 		m_dsp_state->master_ddraw_size = 0;
@@ -588,18 +589,26 @@ void namcos21_dsp_c67_device::render_slave_output(u16 data)
 	// draw quads
 	u16 *source = m_dsp_state->slave_output_buffer;
 	u16 count = *source++;
+
 	if (count && m_dsp_state->slave_output_size > count)
 	{
 		u16 color = *source++;
+		int size = 0;
+
 		if (color & 0x8000)
 		{
-			if (count != 13) logerror("?!direct-draw(%d)\n", count);
 			m_renderer->draw_direct_quad(source, color);
+			size = 12;
 		}
 		else
 		{
-			m_renderer->draw_quads(source, m_pointram.get(), PTRAM_SIZE, color);
+			size = m_renderer->draw_quads(source, m_pointram.get(), PTRAM_SIZE, color);
 		}
+
+		if (count != size + 1)
+			logerror("render_slave_output size mismatch (%d, expected %d)\n", size + 1, count);
+
+		std::fill_n(m_dsp_state->slave_output_buffer, m_dsp_state->slave_output_size, 0xffff);
 		m_dsp_state->slave_output_size = 0;
 	}
 	else if (count == 0)

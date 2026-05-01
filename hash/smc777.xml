@@ -737,6 +737,7 @@ Not extensively tested (language barrier)
 		<publisher>マジカルズゥ (MagicalZoo)</publisher>
 		<notes><![CDATA[
 [keyboard] needs CAPS LOCK
+Not extensively tested (language barrier)
 ]]></notes>
 		<info name="alt_title" value="ムー大陸の謎"/>
 
@@ -1328,13 +1329,13 @@ Not extensively tested
 
 <!-- !Educational SMC-E7* -->
 
-	<software name="crossint" supported="no">
+	<software name="crossint">
 		<description>Introductory Crosswords</description>
 		<year>1984</year>
 		<!-- CATENA Corporation / Oxford University Press (Tokyo) -->
 		<publisher>ソニー (Sony)</publisher>
 		<notes><![CDATA[
-[keyboard] needs CAPS LOCK, kinda playable by holding shift
+[keyboard] needs CAPS LOCK
 ]]></notes>
 		<info name="alt_title" value="クロスワード(入門)"/>
 		<info name="serial" value="SMW-E704D"/>
@@ -1346,12 +1347,12 @@ Not extensively tested
 		</part>
 	</software>
 
-	<software name="crossjnr" supported="no">
+	<software name="crossjnr">
 		<description>Elementary Crosswords</description>
 		<year>1984</year>
 		<publisher>ソニー (Sony)</publisher>
 		<notes><![CDATA[
-[keyboard] needs CAPS LOCK, kinda playable by holding shift
+[keyboard] needs CAPS LOCK
 ]]></notes>
 		<!-- CATENA Corporation / Oxford University Press (Tokyo) -->
 		<info name="alt_title" value="クロスワード(初級)"/>
@@ -1765,7 +1766,7 @@ Disk B
 		</part>
 	</software>
 
-	<software name="flopmag8" supported="no">
+	<software name="flopmag8">
 		<description>Floppy Magazine #8</description>
 		<year>1985</year>
 		<publisher>ソニー・クリエイティブプロダクツ (Sony Creative Products)</publisher>

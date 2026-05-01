@@ -9,7 +9,7 @@ module also includes 8KB NVRAM, but that part is emulated in the driver.
 *******************************************************************************/
 
 #include "emu.h"
-#include "mmdisplay2.h"
+#include "mdisplay2.h"
 
 #include "screen.h"
 #include "speaker.h"

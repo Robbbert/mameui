@@ -6,7 +6,7 @@ Namco System 21 (later hardware with 5 TMS320C25 DSPs)
 
 TODO:
 - lamp/vibration outputs, from MCU? (particularly starblad);
-- verify video timing, pixel clock is from 38.76922?;
+- verify video timing, it's assumed to be the same as namcos21 with a different XTAL;
 - mix_layer0_sprites can be improved when namcos21_3d_device removes the z-buffer, there are currently
   glitches in cybsled, eg. missile pickups behind pillars;
 - wrong global sprite layer offsets in service mode for all games except aircomb, it's fine in-game though;
@@ -14,7 +14,10 @@ TODO:
   and on pilot parachuting with a time over;
 - aircomb: missing background on attract mode ranking screen (masking? cfr. shared/namco_c355spr.cpp);
 - aircomb: bad sprite colors on debriefing medal screen;
+- aircomb: may show glitches when pressing start at the intro sequence, it forgot to turn off video_enable?
+  namcos21_dsp_c67_device::render_slave_output size mismatch also triggers here (not a regression);
 - aircomb: are the depthcue banks actually used? it looks fine with the depth cue embedded in palette;
+- solvalou: remove the ROM hack;
 - solvalou: service mode polygon test is crashy when testing invalid polygons (the good old IDC overflow);
 - solvalou: sprite blend is wrong during water stages (look at the blaster/score panel), the palette
   bank for the water is at 0x2200, but the blend palette is at 0x6000 instead of 0x6200?;
@@ -841,7 +844,7 @@ void namcos21_c67_state::namcos21(machine_config &config)
 	MC6809E(config, m_audiocpu, 49.152_MHz_XTAL / 24); // Sound
 	m_audiocpu->set_addrmap(AS_PROGRAM, &namcos21_c67_state::sound_map);
 
-	NAMCOC68(config, m_c68, 8000000);
+	NAMCOC68(config, m_c68, 49.152_MHz_XTAL / 6);
 	m_c68->in_pb_callback().set_ioport("MCUB");
 	m_c68->in_pc_callback().set_ioport("MCUC");
 	m_c68->in_ph_callback().set_ioport("MCUH");
@@ -864,14 +867,13 @@ void namcos21_c67_state::namcos21(machine_config &config)
 	NAMCOS21_DSP_C67(config, m_namcos21_dsp_c67, 0);
 	m_namcos21_dsp_c67->set_renderer_tag("namcos21_3d");
 
-	config.set_maximum_quantum(attotime::from_hz(12000));
+	config.set_maximum_quantum(attotime::from_hz(20000));
 
 	NVRAM(config, "nvram", nvram_device::DEFAULT_ALL_0);
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	// TODO: basic parameters to get 60.606060 Hz, x2 is for interlace
-	m_screen->set_raw(49.152_MHz_XTAL / 4 * 2, 768, 0, 496, 264*2, 0, 480);
+	m_screen->set_raw(38.76922_MHz_XTAL / 4 * 2, 616, 0, 496, 262 + 263, 0, 480); // x2 is for interlace
 	m_screen->set_screen_update(FUNC(namcos21_c67_state::screen_update));
 	m_screen->set_palette(m_palette);
 

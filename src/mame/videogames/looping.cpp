@@ -8,6 +8,9 @@ Looping / Sky Bumper
 TODO:
 - get sound working
 - map and test any remaining input ports
+- fix skybump random resets (MT09453)
+- fix loopinguc random resets, same bug?
+- is the COP420 internal ROM the same for all sets? (ref: "NJD" label)
 
 ---------------------------------------------------------------
 
@@ -514,7 +517,7 @@ uint8_t looping_state::protection_r()
 	// cop write randomly fc (unfortunately) but 61,67,b7,bf,db,e1,f3,fd,ff too and only these values
 
 	// missing something
-	if(m_cop_port_l != 0xfc) return m_cop_port_l;
+	if (m_cop_port_l != 0xfc) return m_cop_port_l;
 	return 0xff;
 }
 
@@ -840,7 +843,7 @@ ROM_START( loopingub ) // all labels handwritten unless otherwise specified
 	ROM_LOAD( "11a",           0x2800, 0x1000, CRC(61c74c79) SHA1(9f34d18a919446dd76857b851cea23fc1526f3c2) ) // blank label
 
 	ROM_REGION( 0x0400, "mcu", 0 ) // COP420 microcontroller code
-	ROM_LOAD( "cop.bin",       0x0000, 0x0400, CRC(d47fecec) SHA1(7eeedcb40f4cd50e1e259c6b01744a3fc97b60aa) )
+	ROM_LOAD( "cop420-njd_n",  0x0000, 0x0400, CRC(d47fecec) SHA1(7eeedcb40f4cd50e1e259c6b01744a3fc97b60aa) ) // taken from the other sets
 
 	ROM_REGION( 0x1000, "gfx", 0 )
 	ROM_LOAD( "8a",            0x0000, 0x0800, CRC(ef3284ac) SHA1(8719c9df8c972a56c306b3c707aaa53092ffa2d6) ) // no label
@@ -848,6 +851,37 @@ ROM_START( loopingub ) // all labels handwritten unless otherwise specified
 
 	ROM_REGION( 0x0020, "proms", 0 ) // color prom
 	ROM_LOAD( "tbp18s030.11b", 0x0000, 0x0020, CRC(6a0c7d87) SHA1(140335d85c67c75b65689d4e76d29863c209cf32) )
+ROM_END
+
+// I/O BOARD 1250 + NR. 1110-X + NR. 1150-B REV 4 + 1150A-REV2
+// resets after a while due to timing problems. Is it caused by the imperfect comms? program ROM dumps seem good.
+ROM_START( loopinguc )
+	ROM_REGION( 0x8000, "maincpu", 0 ) // TMS9995 code
+	ROM_LOAD( "lo401.a2",      0x0000, 0x1000, CRC(55106ad6) SHA1(503d0a3ab215952c1d07898c78cf8046e5d8e2c7) )
+	ROM_LOAD( "lo402.a4",      0x1000, 0x1000, CRC(f257b6da) SHA1(cb8c5926c1160fc0619e54fc57a98cb84b966fd5) )
+	ROM_LOAD( "lo403.a5",      0x2000, 0x1000, CRC(984cfdd7) SHA1(2b25d773efd17531f3e695edb81b785a1216b644) )
+	ROM_LOAD( "lo404.a7",      0x3000, 0x1000, CRC(5c88d100) SHA1(49742658006cbdfefe8631745421bb1a1af5dc92) )
+	ROM_LOAD( "lo405.a8",      0x4000, 0x1000, CRC(cf091131) SHA1(838eba6f28f42a309bc9b99548bc211273e5e177) )
+	ROM_LOAD( "lo406.a9",      0x5000, 0x1000, CRC(601708bd) SHA1(b90c62d8fc4aae0049c0a2f07b877d9621ec42ff) )
+	ROM_LOAD( "lo407.a10",     0x6000, 0x1000, CRC(587f2320) SHA1(4ba3803a43e46bf5d15ca04b71b828156a059915) ) // 11xxxxxxxxxx = 0xFF
+
+	ROM_REGION( 0x3800, "audiocpu", 0 ) // TMS9980 code
+	ROM_LOAD( "lo40a.c13",     0x0000, 0x1000, CRC(ff9ac4ec) SHA1(9f8df94cd79d86fe4c384df1d5d729b58a7ca7a8) )
+	ROM_LOAD( "lo40a.a13",     0x0800, 0x1000, CRC(1de29f25) SHA1(535acb132266d6137b0610ee9a9b946459ae44af) )
+	ROM_LOAD( "lo40a.a11",     0x2800, 0x1000, CRC(61c74c79) SHA1(9f34d18a919446dd76857b851cea23fc1526f3c2) ) // speech
+
+	ROM_REGION( 0x0400, "mcu", 0 ) // COP420 microcontroller code
+	ROM_LOAD( "cop420-njd_n",  0x0000, 0x0400, CRC(d47fecec) SHA1(7eeedcb40f4cd50e1e259c6b01744a3fc97b60aa) ) // taken from the other sets
+
+	ROM_REGION( 0x1000, "gfx", 0 )
+	ROM_LOAD( "video.a8",      0x0000, 0x0800, CRC(ef3284ac) SHA1(8719c9df8c972a56c306b3c707aaa53092ffa2d6) )
+	ROM_LOAD( "video.a6",      0x0800, 0x0800, CRC(c434c14c) SHA1(3669aaf7adc6b250378bcf62eb8e7058f55476ef) )
+
+	ROM_REGION( 0x0020, "proms", 0 ) // color prom
+	ROM_LOAD( "tbp18s030.b11", 0x0000, 0x0020, CRC(6a0c7d87) SHA1(140335d85c67c75b65689d4e76d29863c209cf32) )
+
+	ROM_REGION( 0x0104, "plds", 0 )
+	ROM_LOAD( "looping.b6",    0x0000, 0x0104, CRC(4de2c8b2) SHA1(49700438743e1293c16d4528cc52bb0cfdf44357) )
 ROM_END
 
 ROM_START( skybump )
@@ -905,5 +939,6 @@ GAME( 1982, looping,   0,        looping, looping, looping_state, init_looping, 
 GAME( 1982, loopingu,  looping,  looping, looping, looping_state, init_looping, ROT90, "Video Games GmbH (Venture Line license)", "Looping (US, set 1)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1982, loopingua, looping,  looping, looping, looping_state, init_looping, ROT90, "Video Games GmbH (Venture Line license)", "Looping (US, set 2)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 GAME( 1982, loopingub, looping,  looping, looping, looping_state, init_looping, ROT90, "Video Games GmbH (Venture Line license)", "Looping (US, set 3)", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
+GAME( 1982, loopinguc, looping,  looping, looping, looping_state, init_looping, ROT90, "Video Games GmbH (Venture Line license)", "Looping (US, set 4)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
 
 GAME( 1982, skybump,   0,        looping, skybump, looping_state, init_looping, ROT90, "Venture Line", "Sky Bumper", MACHINE_IMPERFECT_SOUND | MACHINE_SUPPORTS_SAVE )
