@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 99 -->
+<!-- Number of items in this list = 100 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -749,6 +749,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Princess Gardening (2022)(Habit Soft).gg" size="262144" crc="8129b269" sha1="4fa8addc05b7518b5a046eecc117a45c1f41821b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggce851f25e70093">
+		<description>Ring Dash GG (2025)(Brig78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Ring Dash GG (2025)(Brig78).gg" size="131072" crc="471c09b7" sha1="ce851f25e70093e7c2cc6d14f95918a8d1f31360"/>
 			</dataarea>
 		</part>
 	</software>

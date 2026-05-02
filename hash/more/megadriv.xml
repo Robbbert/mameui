@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2078 -->
+<!-- Number of items in this list = 2086 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3802,6 +3802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf2456aa5da579">
+		<description>Astrorobo Sasa (2026)(Ultrakupra Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Astrorobo Sasa (2026)(Ultrakupra Games).bin" size="524288" crc="7323ae8e" sha1="f2456aa5da579e30186fe6236cbef2794dea57b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb0b3b9735bb46">
 		<description>Atomic Robo-Kid (USA)</description>
 		<year>????</year>
@@ -4079,6 +4089,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3337808">
 				<rom name="Bare Knuckle III (Japan) - The Game of Death II (HACK).bin" size="3337808" crc="1886a7b4" sha1="c30bd298d19386e6f44331bf746e50b0bc273946"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen36d375d57689f">
+		<description>Bare Knuckle III (Japan)(1994)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3146096">
+				<rom name="Bare Knuckle III (Japan)(1994)(Sega).bin" size="3146096" crc="16b323ae" sha1="36d375d57689fd8828dfea46b86555ec504b574d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4739,6 +4759,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Break An Egg.bin" size="262144" crc="f293655f" sha1="19106ee4378db00d9b308496581716e09a3dc66d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9953b3c648e6f">
+		<description>Bubble Gum Toad (2026)(Martin Asteasuain)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Bubble Gum Toad (2026)(Martin Asteasuain).bin" size="393216" crc="b642c418" sha1="9953b3c648e6f15de4f300a6c55f86429856c9f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7022,6 +7052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen31c66bd13abf4">
+		<description>Game no Kanzume Otokuyou (Sega Channel, Japan)(1995)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Game no Kanzume Otokuyou (Sega Channel, Japan)(1995)(Sega).bin" size="3145728" crc="cdad7e6b" sha1="31c66bd13abf4ae8271c09ec5286a0ee0289dbbc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen84b53f8639750">
 		<description>game to chinese 02</description>
 		<year>????</year>
@@ -7532,6 +7572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen471464e89f6e6">
+		<description>Golden Axe III - Enhanced Colors v3.0 (2026)(Dolsilwa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Golden Axe III - Enhanced Colors v3.0 (2026)(Dolsilwa).bin" size="1572864" crc="f6a0971d" sha1="471464e89f6e63e9e6d96fbcae7945661df4b6e8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen758b61298fb90">
 		<description>Golden Axe III T-Spa v2.0 (2022)(Wave)</description>
 		<year>????</year>
@@ -7609,6 +7659,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Golfanalia (World) (v1.1.1) (Aftermarket) (Unl).md" size="1572864" crc="49218c27" sha1="8c1cfb517168bb8b11556ecfe40ac5fd598b009f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb008d0ce8e0cf">
+		<description>Gouketsuji Ichizoku - Enhanced Colors v3.0 (2026)(Dolsilwa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Gouketsuji Ichizoku - Enhanced Colors v3.0 (2026)(Dolsilwa).bin" size="3145728" crc="451bf44c" sha1="b008d0ce8e0cf036aa1f360ce6cbf22db2ec1abf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7699,6 +7759,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="grind stormer (Hack, Spanish).bin" size="1048576" crc="bd764c90" sha1="a8cf395c97572ef1fbbfb8a8accc76c25c3b3eb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc7c90d14c1016">
+		<description>Grind Stormer - Enhanced Colors v2.1 (2026)(Dolsilwa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Grind Stormer - Enhanced Colors v2.1 (2026)(Dolsilwa).bin" size="1048576" crc="838e134d" sha1="c7c90d14c1016b5fde03d59de32784113fdd6439"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19489,6 +19559,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Turbo OutRun (Japan, Europe).bin" size="524288" crc="5ee9ce5b" sha1="c039decb8892723d896ec0052c895300f4eeda90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9960bb5cf6d5d">
+		<description>Turbo OutRun - Enhanced Colors v3.0 (2026)(Dolsilwa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Turbo OutRun - Enhanced Colors v3.0 (2026)(Dolsilwa).bin" size="524288" crc="f28d0c1c" sha1="9960bb5cf6d5d717af5d00a70f348cdc72cf0281"/>
 			</dataarea>
 		</part>
 	</software>

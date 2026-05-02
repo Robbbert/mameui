@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 13 -->
+<!-- Number of items in this list = 23 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c16479ad51c1ee08">
 		<description>076A</description>
@@ -109,6 +109,106 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="A_Nagy_Kaland.d64" size="174848" crc="86a66d40" sha1="6837371389fea9b533c42f7ffa45ce9a32b9dc60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e8d4f27eb8327">
+		<description>BA1551</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="BA1551.D64" size="174848" crc="2be85f87" sha1="e8d4f27eb83270a5cf825deed69162561d386235"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f66fbbd2d8142">
+		<description>Battery</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Battery.d64" size="174848" crc="89d9e84d" sha1="f66fbbd2d81428ebbed284d2d445416bd80e0250"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1663960864ae362">
+		<description>BERKS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="BERKS.D64" size="174848" crc="417c0758" sha1="63960864ae362e64533e13bb53f42c39bb7a4941"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d943918fde466">
+		<description>BETORES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="BETORES.D64" size="174848" crc="97cdcd0c" sha1="d943918fde466a996fbac0e304ca34a7afbe6480"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164f634812d7223">
+		<description>bigquest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="bigquest.d64" size="174848" crc="80eeaaa2" sha1="4f634812d7223ea8ee831bd98cbd64850e4f4a7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168751daa01f3ec">
+		<description>Blagger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Blagger.d64" size="174848" crc="83470ddf" sha1="8751daa01f3ecf00029c578428c7c67fe8236afa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1614f867746cea0">
+		<description>Blorp! (2023-07-23)(Sijnstra, Shawn)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Blorp! (2023-07-23)(Sijnstra, Shawn).d64" size="174848" crc="02ba0371" sha1="14f867746cea074473473407daf089d9870fe6c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1626f6bcadaac61">
+		<description>BLUEANGL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="BLUEANGL.D64" size="174848" crc="20723d92" sha1="26f6bcadaac61e6491ae04dec751c09527e0203f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ad9a5c8fa1c98">
+		<description>BP2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="BP2.D64" size="175531" crc="eecc9017" sha1="ad9a5c8fa1c9810fb07580bd21e0829d5be65395"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169ea123bebfede">
+		<description>Bridgehead_Prerelease</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Bridgehead_Prerelease.D64" size="174848" crc="3da6bb54" sha1="9ea123bebfede9e812a9ba200ac8f5ec2015c4c3"/>
 			</dataarea>
 		</part>
 	</software>

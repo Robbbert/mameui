@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 702 -->
+<!-- Number of items in this list = 704 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -3962,6 +3962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col7a27a2f014c81">
+		<description>Mr. Do! Arcade (2026)(Scott Moschella)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32695">
+				<rom name="Mr. Do! Arcade (2026)(Scott Moschella).rom" size="32695" crc="a06edcb1" sha1="7a27a2f014c813bd6005a38b0ab24ee18d76c0e2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col8373e190be090">
 		<description>Mr. Do! Run Run SGM (2022)(CollectorVision)</description>
 		<year>????</year>
@@ -4949,6 +4959,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="23894">
 				<rom name="Sasa SGM (2015)(CollectorVision).rom" size="23894" crc="9c48816c" sha1="4fa9e81ca295bddbd333f0d09e01e744a7e37352"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col8a0168d72cd53">
+		<description>Schlange CV (2003-06)(Philipp Klaus Krause)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Schlange CV (2003-06)(Philipp Klaus Krause).rom" size="32768" crc="0ecdd112" sha1="8a0168d72cd53edb16d33c9208d24ae99e5ce18e"/>
 			</dataarea>
 		</part>
 	</software>
