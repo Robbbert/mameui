@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 23 -->
+<!-- Number of items in this list = 40 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c16479ad51c1ee08">
 		<description>076A</description>
@@ -219,6 +219,176 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="175531">
 				<rom name="Burg.D64" size="175531" crc="ce523a78" sha1="08c92686383c7e8ccffcbfa8241bcd07b74cffc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161c26b4daef0c9">
+		<description>c16games</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="c16games.d64" size="174848" crc="80386979" sha1="1c26b4daef0c9fc5ccbc581cd8c6f1f5ecf79908"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165875a62bfb7cb">
+		<description>C16SHIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="C16SHIT.D64" size="174848" crc="d110aa77" sha1="5875a62bfb7cb1f20063f80829aa02bd01606d9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b0378e468c5c7">
+		<description>Cave Battle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Cave Battle.D64" size="174848" crc="daf579d5" sha1="b0378e468c5c72639e4a18c881d869bf2f139879"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ad5c4e4784d54">
+		<description>champ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="champ.d64" size="174848" crc="5d480128" sha1="ad5c4e4784d54efa6e0eb4ee1ed37c94eff999a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1627d7596372f8b">
+		<description>ChessMaster2000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ChessMaster2000.d64" size="174848" crc="3e923a0a" sha1="27d7596372f8b6e5f2ac0310dc2d9ad40c5c5c59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1665fb86cc7ce54">
+		<description>chm2k-51</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="chm2k-51.d64" size="174848" crc="58239145" sha1="65fb86cc7ce54e3cf641c0ad5f886114537c5db9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16852f63c44ad31">
+		<description>CHS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="CHS.D64" size="175531" crc="cd6e7bb6" sha1="852f63c44ad3161e3b8672c6b3fa0ca6914207d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e80a66869cb30">
+		<description>Clean Getaway, A (2023-07-23)(Bub, Michael)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Clean Getaway, A (2023-07-23)(Bub, Michael).d64" size="174848" crc="3bcd3e74" sha1="e80a66869cb3061ce55e09c683753ec47bcb2b64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165dac61cefbd5a">
+		<description>Cloud Kingdom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Cloud Kingdom.D64" size="174848" crc="b9778904" sha1="5dac61cefbd5ab53450f444faeb0d71cb718abb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bc11b411da897">
+		<description>Crash_16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Crash_16.d64" size="174848" crc="f909eccf" sha1="bc11b411da897c8703561fef83c8ac7480bca362"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ddaabdea4a393">
+		<description>Crazy Blocks</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Crazy Blocks.D64" size="174848" crc="21d56dd5" sha1="ddaabdea4a393f9586f59e69a622f9ba2c4cd5de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164ff1b4b3e4b29">
+		<description>creature_castle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="creature_castle.d64" size="174848" crc="3e46e158" sha1="4ff1b4b3e4b2955e0636a9d9af055ef003f8dd20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1669e3be67ef781">
+		<description>crossk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="crossk.d64" size="174848" crc="27f227bf" sha1="69e3be67ef781da2453e05b91124a22cb0f30c84"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e53c9795aa2f2">
+		<description>cutthroats</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="cutthroats.d64" size="174848" crc="dc6165b0" sha1="e53c9795aa2f20d219010463fed2ef40b75a76d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1686ef32f69005c">
+		<description>CW1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="CW1.D64" size="174848" crc="b099019a" sha1="86ef32f69005c033d9caff20c845d148943d35a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16be660b28e39ae">
+		<description>CW2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="CW2.D64" size="174848" crc="a65562b3" sha1="be660b28e39aeef761861babfa88ba67e7eff23c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169b51d101ce14b">
+		<description>Cyberdroids</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Cyberdroids.d64" size="174848" crc="a3010781" sha1="9b51d101ce14b2b1760e7e2eed6b7aa307bf9c6b"/>
 			</dataarea>
 		</part>
 	</software>

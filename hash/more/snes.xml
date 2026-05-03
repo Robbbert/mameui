@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4023 -->
+<!-- Number of items in this list = 4028 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -10062,6 +10062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0fe54e2e7017d">
+		<description>Fire Emblem - Genealogy of the Holy War PT-BR v1.13 (2025)(Escribas da Espada)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6926955">
+				<rom name="Fire Emblem - Genealogy of the Holy War PT-BR v1.13 (2025)(Escribas da Espada).sfc" size="6926955" crc="328f3d50" sha1="0fe54e2e7017d6d91419d9a290b253e8c4690a76"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3f6ff1e07c25a">
 		<description>Fire Emblem - Genealogy of the Holy War T-Eng v1.01 (2025)(Miacis)</description>
 		<year>????</year>
@@ -13472,6 +13482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns4a48ba8b281d7">
+		<description>Joe &amp; Mac 2 - Lost in the Tropics PT-BR (2015)(DarkLink, Denim)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Joe &amp; Mac 2 - Lost in the Tropics PT-BR (2015)(DarkLink, Denim).sfc" size="1048576" crc="2831dd78" sha1="4a48ba8b281d7ef74ad96e23a02f591956088a82"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd9a60a7d4edbc">
 		<description>Joe &amp; Mac 3 - Lost in the Tropics (Europe) (En,Fr,De) (Beta)</description>
 		<year>????</year>
@@ -16242,6 +16262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3f79db4c7bec4">
+		<description>Magic Knight Rayearth PT-BR (2013)(Monkey's Traducoes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Magic Knight Rayearth PT-BR (2013)(Monkey's Traducoes).sfc" size="1572864" crc="79767b74" sha1="3f79db4c7bec4ae940397fbbad5b54c05d364c83"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns4eb16e50ce46c">
 		<description>Magic Knight Rayearth T-Eng v1.02 (2022)(mteam)</description>
 		<year>????</year>
@@ -18379,6 +18409,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Mega Man X SA1 (2020)(Bosn).sfc" size="1572864" crc="b0eea801" sha1="03d76b7f596ceae00016dc2b02c991518adfa5e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1bd15b20f4aa1">
+		<description>Mega Man X3 PT-BR (2019)(Solid One)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mega Man X3 PT-BR (2019)(Solid One).sfc" size="4194304" crc="51c4afcf" sha1="1bd15b20f4aa18be5f09f8e712ea5dee647bab83"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36299,6 +36339,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3178496">
 				<rom name="Super Metroid Precision Easy (hack).sfc" size="3178496" crc="133205f6" sha1="eab2522cead2a9082106055ebcea4e318cf2826f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snscd3790a7d58dd">
+		<description>Super Metroid PT-BR (2013)(Denim, Spyblack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Super Metroid PT-BR (2013)(Denim, Spyblack).sfc" size="3145728" crc="f064cc3d" sha1="cd3790a7d58dd050cb01ebd9e763f9e6a52dfad8"/>
 			</dataarea>
 		</part>
 	</software>

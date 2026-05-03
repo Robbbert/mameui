@@ -59,10 +59,10 @@ struct _mess_image_type
 typedef struct _device_entry device_entry;
 struct _device_entry
 {
-	int dline;
-	string dev_type;
-	INT resource;
-	const char *dlgname;
+	int dline;                   // corresponding line in g_icondata in layout.cpp
+	string dev_type;             // 4-char device name
+	INT resource;                // windows resource number
+	const char *dlgname;         // wording for file-open dialog box
 };
 
 
@@ -89,26 +89,26 @@ static std::map<string,int> mvmap;  // store indicator if Media View Unmount sho
 
 static const device_entry s_devices[] =
 {
-	{ 0,  "unkn",  IDI_WIN_UNKNOWN, "Unknown" },
-	{ 1,  "rom",   IDI_WIN_ROMS,    "Cartridge images" },
-	{ 2,  "prom",  IDI_WIN_ROMS,    "Cartridge images" },
-	{ 3,  "cart",  IDI_WIN_CART,    "Cartridge images" },
-	{ 4,  "flop",  IDI_WIN_FLOP,    "Floppy disk images" },
-	{ 5,  "disk",  IDI_WIN_FLOP,    "Floppy disk images" },
-	{ 6,  "hard",  IDI_WIN_HARD,    "Hard disk images" },
-	{ 7,  "cyln",  IDI_WIN_CYLN,    "Cylinders" },
-	{ 8,  "cass",  IDI_WIN_CASS,    "Cassette images" },
-	{ 9,  "card",  IDI_WIN_PCRD,    "Punchcard images" },
-	{ 10, "ptap",  IDI_WIN_PTAP,    "Punchtape images" },
-	{ 11, "prin",  IDI_WIN_PRIN,    "Printer Output" },
-	{ 12, "serl",  IDI_WIN_SERL,    "Serial Output" },
-	{ 13, "dump",  IDI_WIN_SNAP,    "Snapshots" },
-	{ 14, "quik",  IDI_WIN_SNAP,    "Quickloads" },
-	{ 15, "memc",  IDI_WIN_MEMC,    "Memory cards" },
-	{ 16, "cdrm",  IDI_WIN_CDRM,    "CD-ROM images" },
-	{ 17, "mtap",  IDI_WIN_MTAP,    "Magnetic tapes" },
-	{ 18, "min",   IDI_WIN_MIDI,    "MIDI input" },
-	{ 19, "mout",  IDI_WIN_MIDI,    "MIDI output" }
+	{ 2,  "unkn",  IDI_WIN_UNKNOWN, "Unknown" },
+	{ 21, "rom",   IDI_WIN_ROMS,    "Cartridge images" },
+	{ 21, "prom",  IDI_WIN_ROMS,    "Cartridge images" },
+	{ 21, "cart",  IDI_WIN_CART,    "Cartridge images" },
+	{ 8,  "flop",  IDI_WIN_FLOP,    "Floppy disk images" },
+	{ 8,  "disk",  IDI_WIN_FLOP,    "Floppy disk images" },
+	{ 13, "hard",  IDI_WIN_HARD,    "Hard disk images" },
+	{ 15, "cyln",  IDI_WIN_CYLN,    "Cylinders" },
+	{ 9,  "cass",  IDI_WIN_CASS,    "Cassette images" },
+	{ 16, "card",  IDI_WIN_PCRD,    "Punchcard images" },
+	{ 16, "ptap",  IDI_WIN_PTAP,    "Punchtape images" },
+	{ 12, "prin",  IDI_WIN_PRIN,    "Printer Output" },
+	{ 10, "serl",  IDI_WIN_SERL,    "Serial Output" },
+	{ 11, "dump",  IDI_WIN_SNAP,    "Snapshots" },
+	{ 11, "quik",  IDI_WIN_SNAP,    "Quickloads" },
+	{ 18, "memc",  IDI_WIN_MEMC,    "Memory cards" },
+	{ 19, "cdrm",  IDI_WIN_CDRM,    "CD-ROM images" },
+	{ 20, "mtap",  IDI_WIN_MTAP,    "Magnetic tapes" },
+	{ 14, "min",   IDI_WIN_MIDI,    "MIDI input" },
+	{ 14, "mout",  IDI_WIN_MIDI,    "MIDI output" }
 };
 
 
@@ -364,7 +364,7 @@ BOOL CreateMessIcons()
 {
 	// create the icon index, if we haven't already
 	if (!mess_icon_index)
-		mess_icon_index = make_unique_clear<int[]>(driver_list::total() * std::size(s_devices));
+		mess_icon_index = make_unique_clear<int[]>(std::size(s_devices));
 
 	// Associate the image lists with the list view control.
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SWLIST);
@@ -381,20 +381,20 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 	if (nSoftwareType.empty())
 		return 0;
 
-	int the_index = 0;
-	int nIconPos = 0;
+	int the_index = lookupdevice(nSoftwareType)->dline;
+	int nIconPos = mess_icon_index[the_index];
+
+#if 0
+	// This seems to allow custom icons per driver, but it didn't work when tested.
+	// It's also the reason it takes so long to populate the loose software list.
 	HICON hIcon = 0;
 	const game_driver *drv;
 	char buffer[256];
 	const char *iconname;
 
-	//if ((nSoftwareType >= 0) && (nSoftwareType < std::size(s_devices)))
+	if ((nSoftwareType >= 0) && (nSoftwareType < std::size(s_devices)))
 	{
 		iconname = nSoftwareType.c_str();
-		int t = lookupdevice(nSoftwareType)->dline;
-		the_index = (drvindex * std::size(s_devices)) + t;
-
-		nIconPos = mess_icon_index[the_index];
 		if (nIconPos >= 0)
 		{
 			drv = &driver_list::driver(drvindex);
@@ -418,6 +418,7 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 			}
 		}
 	}
+#endif
 	return nIconPos;
 }
 
@@ -1513,10 +1514,7 @@ static int SoftwarePicker_GetItemImage(HWND hwndPicker, int nItem)
 			nIcon = FindIconIndex(IDI_WIN_REDX);
 		else
 		{
-			//const char *icon_name = lookupdevice(nType)->icon_name;
 			INT resource = lookupdevice(nType)->resource;
-			//if (!icon_name)
-				//icon_name = nType.c_str();
 			nIcon = FindIconIndex(resource);
 			if (nIcon < 0)
 				nIcon = FindIconIndex(IDI_WIN_UNKNOWN);
@@ -1579,7 +1577,7 @@ static void SoftwarePicker_EnteringItem(HWND hwndSoftwarePicker, int nItem)
 
 static int SoftwareList_GetItemImage(HWND hwndPicker, int nItem)
 {
-//#if 0
+#if 0
 	HWND hwndGamePicker = GetDlgItem(GetMainWindow(), IDC_LIST);
 	HWND hwndSoftwareList = GetDlgItem(GetMainWindow(), IDC_SOFTLIST);
 	int drvindex = Picker_GetSelectedItem(hwndGamePicker);
@@ -1603,8 +1601,8 @@ static int SoftwareList_GetItemImage(HWND hwndPicker, int nItem)
 	}
 	printf("SoftwareList_GetItemImage: Icon = %d\n",nIcon);
 	return nIcon;
-//#endif
-//	return 0;
+#endif
+	return 0;
 }
 
 
