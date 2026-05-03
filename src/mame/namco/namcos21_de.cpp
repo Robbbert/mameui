@@ -435,21 +435,12 @@ void namco_de_pcbstack_device::mb87077_gain_changed(offs_t offset, u8 data)
 
 void namco_de_pcbstack_device::sound_reset_w(u8 data)
 {
-	if (data & 0x01)
-	{
-		// Resume execution
-		m_audiocpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
-	}
-	else
-	{
-		// Suspend execution
-		m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
-	}
+	m_audiocpu->set_input_line(INPUT_LINE_RESET, BIT(data, 0) ? CLEAR_LINE : ASSERT_LINE);
 }
 
 void namco_de_pcbstack_device::system_reset_w(u8 data)
 {
-	reset_all_subcpus(data & 1 ? CLEAR_LINE : ASSERT_LINE);
+	reset_all_subcpus(BIT(data, 0) ? CLEAR_LINE : ASSERT_LINE);
 }
 
 void namco_de_pcbstack_device::reset_all_subcpus(int state)

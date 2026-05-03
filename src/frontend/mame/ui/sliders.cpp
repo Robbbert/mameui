@@ -19,8 +19,8 @@
 
 namespace ui {
 
-menu_sliders::menu_sliders(mame_ui_manager &mui, render_container &container, bool menuless_mode)
-	: menu(mui, container)
+menu_sliders::menu_sliders(mame_ui_manager &mui, render_target &target, bool menuless_mode)
+	: menu(mui, target)
 	, m_menuless_mode(menuless_mode)
 	, m_hidden(menuless_mode)
 {
@@ -297,7 +297,7 @@ void menu_sliders::custom_render(uint32_t flags, void *selectedref, float top, f
 
 		// determine the text height
 		ui().draw_text_full(
-				container(),
+				target(),
 				tempstring,
 				0, 0, x2 - x1 - 2.0f * lr_border(),
 				text_layout::text_justify::CENTER, text_layout::word_wrapping::TRUNCATE,

@@ -36,7 +36,8 @@ is used to shade quads according to their depth.
 -------------------
 
 TODO:
-- is there a video_enable flag? or at least one for the bitmap layer (see screen transitions)
+- posirq is iffy, see winrun/winrungp after confirming selection screen, where it's probably supposed
+  to do multiple posirq to draw blank strips
 - some z-fighting issues, eg. signs and car rearwing (the problem is in namcos21_3d_device)
 - verify video timing, PCB videos do suggest exactly 60Hz
 - winrungp: some missing bitmap layer gfx due to underdumps of the gpu program roms (see attract mode
@@ -358,6 +359,7 @@ private:
 	u16 m_gpu_color = 0;
 	u16 m_gpu_register[0x10/2] = { };
 	u8 m_posirq_line = 0;
+	u8 m_video_enable = 0;
 
 	u16 dpram_word_r(offs_t offset);
 	void dpram_word_w(offs_t offset, u16 data, u16 mem_mask = ~0);
@@ -372,6 +374,7 @@ private:
 	void gpu_posirq_w(u8 data);
 	void gpu_videoram_w(offs_t offset, u16 data, u16 mem_mask = ~0);
 	u16 gpu_videoram_r(offs_t offset);
+	void gpu_enable_w(u8 data);
 
 	void nvram_w(offs_t offset, u8 data) { m_nvram[offset] = data; }
 	u8 nvram_r(offs_t offset) { return m_nvram[offset]; }
@@ -407,6 +410,7 @@ void namcos21_state::video_start()
 	save_item(NAME(m_gpu_color));
 	save_item(NAME(m_gpu_register));
 	save_item(NAME(m_posirq_line));
+	save_item(NAME(m_video_enable));
 }
 
 u16 namcos21_state::gpu_color_r()
@@ -466,6 +470,11 @@ u16 namcos21_state::gpu_videoram_r(offs_t offset)
 	return (m_gpu_videoram[offset] << 8) | m_gpu_videoram_mask;
 }
 
+void namcos21_state::gpu_enable_w(u8 data)
+{
+	m_video_enable = BIT(data, 1);
+}
+
 void namcos21_state::bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
 	// show GPU registers & related
@@ -518,6 +527,12 @@ void namcos21_state::bitmap_draw(bitmap_ind16 &bitmap, const rectangle &cliprect
 
 u32 namcos21_state::screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect)
 {
+	if (!m_video_enable)
+	{
+		bitmap.fill(m_palette->black_pen(), cliprect);
+		return 0;
+	}
+
 	bitmap.fill((m_gpu_color << 8 & 0xf00) | 0xff, cliprect);
 
 	// entries 0 and 1 unused parts controls priority mixing
@@ -754,21 +769,12 @@ void namcos21_state::mb87077_gain_changed(offs_t offset, u8 data)
 
 void namcos21_state::sound_reset_w(u8 data)
 {
-	if (data & 0x01)
-	{
-		// Resume execution
-		m_audiocpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
-	}
-	else
-	{
-		// Suspend execution
-		m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
-	}
+	m_audiocpu->set_input_line(INPUT_LINE_RESET, BIT(data, 0) ? CLEAR_LINE : ASSERT_LINE);
 }
 
 void namcos21_state::system_reset_w(u8 data)
 {
-	reset_all_subcpus(data & 1 ? CLEAR_LINE : ASSERT_LINE);
+	reset_all_subcpus(BIT(data, 0) ? CLEAR_LINE : ASSERT_LINE);
 }
 
 void namcos21_state::reset_all_subcpus(int state)
@@ -867,6 +873,7 @@ void namcos21_state::winrun(machine_config &config)
 
 	NAMCO_C148(config, m_gpu_intc, 0, m_gpu, false);
 	m_gpu_intc->in_ext_callback().set([this](){ return m_screen->frame_number() & 1; });
+	m_gpu_intc->out_ext1_callback().set(FUNC(namcos21_state::gpu_enable_w));
 
 	NAMCO_C139(config, m_sci, 0);
 

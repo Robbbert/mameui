@@ -650,7 +650,7 @@ std::string machine_info::get_screen_desc(screen_device &screen) const
   menu_game_info - handle the game information menu
 -------------------------------------------------*/
 
-menu_game_info::menu_game_info(mame_ui_manager &mui, render_container &container) : menu_textbox(mui, container)
+menu_game_info::menu_game_info(mame_ui_manager &mui, render_target &target) : menu_textbox(mui, target)
 {
 	set_process_flags(PROCESS_CUSTOM_NAV);
 }
@@ -686,7 +686,7 @@ void menu_game_info::populate()
   menu_warn_info - handle the emulation warnings menu
 -------------------------------------------------*/
 
-menu_warn_info::menu_warn_info(mame_ui_manager &mui, render_container &container) : menu_textbox(mui, container)
+menu_warn_info::menu_warn_info(mame_ui_manager &mui, render_target &target) : menu_textbox(mui, target)
 {
 	set_process_flags(PROCESS_CUSTOM_NAV);
 }
@@ -745,7 +745,7 @@ void menu_warn_info::populate()
   menu_image_info - handle the image information menu
 -------------------------------------------------*/
 
-menu_image_info::menu_image_info(mame_ui_manager &mui, render_container &container) : menu(mui, container)
+menu_image_info::menu_image_info(mame_ui_manager &mui, render_target &target) : menu(mui, target)
 {
 	set_heading(_("Media Image Information"));
 }

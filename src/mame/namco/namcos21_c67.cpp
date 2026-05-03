@@ -767,26 +767,15 @@ void namcos21_c67_state::sound_bankselect_w(u8 data)
 
 void namcos21_c67_state::sound_reset_w(u8 data)
 {
-	if (data & 0x01)
-	{
-		// Resume execution
-		m_audiocpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
-	}
-	else
-	{
-		// Suspend execution
-		m_audiocpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
-	}
+	m_audiocpu->set_input_line(INPUT_LINE_RESET, BIT(data, 0) ? CLEAR_LINE : ASSERT_LINE);
 
-	if (data & 0x04)
-	{
+	if (BIT(data, 2))
 		m_namcos21_dsp_c67->reset_kickstart();
-	}
 }
 
 void namcos21_c67_state::system_reset_w(u8 data)
 {
-	reset_all_subcpus(data & 1 ? CLEAR_LINE : ASSERT_LINE);
+	reset_all_subcpus(BIT(data, 0) ? CLEAR_LINE : ASSERT_LINE);
 }
 
 void namcos21_c67_state::reset_all_subcpus(int state)
