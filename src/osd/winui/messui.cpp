@@ -59,7 +59,6 @@ struct _mess_image_type
 typedef struct _device_entry device_entry;
 struct _device_entry
 {
-	int dline;                   // corresponding line in g_icondata in layout.cpp
 	string dev_type;             // 4-char device name
 	INT resource;                // windows resource number
 	const char *dlgname;         // wording for file-open dialog box
@@ -89,26 +88,26 @@ static std::map<string,int> mvmap;  // store indicator if Media View Unmount sho
 
 static const device_entry s_devices[] =
 {
-	{ 2,  "unkn",  IDI_WIN_UNKNOWN, "Unknown" },
-	{ 21, "rom",   IDI_WIN_ROMS,    "Cartridge images" },
-	{ 21, "prom",  IDI_WIN_ROMS,    "Cartridge images" },
-	{ 21, "cart",  IDI_WIN_CART,    "Cartridge images" },
-	{ 8,  "flop",  IDI_WIN_FLOP,    "Floppy disk images" },
-	{ 8,  "disk",  IDI_WIN_FLOP,    "Floppy disk images" },
-	{ 13, "hard",  IDI_WIN_HARD,    "Hard disk images" },
-	{ 15, "cyln",  IDI_WIN_CYLN,    "Cylinders" },
-	{ 9,  "cass",  IDI_WIN_CASS,    "Cassette images" },
-	{ 16, "card",  IDI_WIN_PCRD,    "Punchcard images" },
-	{ 16, "ptap",  IDI_WIN_PTAP,    "Punchtape images" },
-	{ 12, "prin",  IDI_WIN_PRIN,    "Printer Output" },
-	{ 10, "serl",  IDI_WIN_SERL,    "Serial Output" },
-	{ 11, "dump",  IDI_WIN_SNAP,    "Snapshots" },
-	{ 11, "quik",  IDI_WIN_SNAP,    "Quickloads" },
-	{ 18, "memc",  IDI_WIN_MEMC,    "Memory cards" },
-	{ 19, "cdrm",  IDI_WIN_CDRM,    "CD-ROM images" },
-	{ 20, "mtap",  IDI_WIN_MTAP,    "Magnetic tapes" },
-	{ 14, "min",   IDI_WIN_MIDI,    "MIDI input" },
-	{ 14, "mout",  IDI_WIN_MIDI,    "MIDI output" }
+	{ "unkn",  IDI_WIN_UNKNOWN, "Unknown" },
+	{ "rom",   IDI_WIN_ROMS,    "Cartridge images" },
+	{ "prom",  IDI_WIN_ROMS,    "Cartridge images" },
+	{ "cart",  IDI_WIN_CART,    "Cartridge images" },
+	{ "flop",  IDI_WIN_FLOP,    "Floppy disk images" },
+	{ "disk",  IDI_WIN_FLOP,    "Floppy disk images" },
+	{ "hard",  IDI_WIN_HARD,    "Hard disk images" },
+	{ "cyln",  IDI_WIN_CYLN,    "Cylinders" },
+	{ "cass",  IDI_WIN_CASS,    "Cassette images" },
+	{ "card",  IDI_WIN_PCRD,    "Punchcard images" },
+	{ "ptap",  IDI_WIN_PTAP,    "Punchtape images" },
+	{ "prin",  IDI_WIN_PRIN,    "Printer Output" },
+	{ "serl",  IDI_WIN_SERL,    "Serial Output" },
+	{ "dump",  IDI_WIN_SNAP,    "Snapshots" },
+	{ "quik",  IDI_WIN_SNAP,    "Quickloads" },
+	{ "memc",  IDI_WIN_MEMC,    "Memory cards" },
+	{ "cdrm",  IDI_WIN_CDRM,    "CD-ROM images" },
+	{ "mtap",  IDI_WIN_MTAP,    "Magnetic tapes" },
+	{ "min",   IDI_WIN_MIDI,    "MIDI input" },
+	{ "mout",  IDI_WIN_MIDI,    "MIDI output" }
 };
 
 
@@ -381,8 +380,8 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 	if (nSoftwareType.empty())
 		return 0;
 
-	int the_index = lookupdevice(nSoftwareType)->dline;
-	int nIconPos = mess_icon_index[the_index];
+	int the_index = lookupdevice(nSoftwareType)->resource;
+	int nIconPos = FindIconIndex(the_index);
 
 #if 0
 	// This seems to allow custom icons per driver, but it didn't work when tested.

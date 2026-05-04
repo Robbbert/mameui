@@ -385,6 +385,7 @@ IDI_WIN_UNKNOWN         ICON                    "res\\win_unkn.ico"
 IDI_WIN_CLONE           ICON                    "res\\win_clone.ico"
 IDI_WIN_REDX            ICON                    "res\\win_redx.ico"
 IDI_WIN_IMPERFECT       ICON                    "res\\win_imp.ico"
+IDI_WIN_NW              ICON                    "res\\win_nw.ico"
 // Tree folders
 IDI_FOLDER              ICON                    "res\\folder.ico"
 IDI_FOLDER_ALLGAMES     ICON                    "res\\allgames.ico"
@@ -488,7 +489,7 @@ IDI_ICON_SNAP           ICON                    "res\\win_snap.ico"
 //
 
 #ifdef RCMESS
-IDD_ABOUT DIALOG 0, 0, 296, 129
+IDD_ABOUT DIALOG 0, 0, 326, 129
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About MESSUI"
 FONT 8, "Tahoma"
@@ -496,25 +497,25 @@ BEGIN
     DEFPUSHBUTTON   "&OK",IDOK,200,109,50,14,WS_GROUP
     CTEXT           "Multi Emulator Super System",IDC_STATIC,147,7,142,11,NOT WS_GROUP
     CTEXT           "Version 0",IDC_VERSION,147,18,142,11,NOT WS_GROUP
-    CTEXT           "Copyright (C) 1997-2026 MAME Contributors",IDC_STATIC,147,29,142,10,NOT WS_GROUP
+    CTEXT           "Copyright (C) 1997-2026 MAME Contributors",IDC_STATIC,147,29,172,10,NOT WS_GROUP
     CTEXT           "MESSUI based on MAMEUI version by",IDC_STATIC,147,51,142,10,NOT WS_GROUP
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,147,44,142,1
-    CTEXT           "Christopher Kirmse and the former MAMEUI team",IDC_STATIC,147,62,142,9,NOT WS_GROUP
-    CTEXT           "Additional code by",IDC_STATIC,147,74,142,9
-    CTEXT           "Mike Haaland, Andrew Kirmse, Jeff Miller",IDC_STATIC,147,85,142,9
-    CTEXT           "John Hardy IV and Michael Soderstrom",IDC_STATIC,147,96,142,9
+    CTEXT           "Christopher Kirmse and the former MAMEUI",IDC_STATIC,147,62,142,9,NOT WS_GROUP
+    CTEXT           "team. Extract of MAMEUI containing",IDC_STATIC,147,74,142,9
+    CTEXT           "working non-arcade systems.",IDC_STATIC,147,85,142,9
+    CTEXT           "Maintained by Robbbert.",IDC_STATIC,147,96,142,9
     CONTROL         "",IDC_ABOUT,"Static",SS_BITMAP | SS_SUNKEN,7,7,16,14
 END
 #else
 IDD_ABOUT DIALOG 0, 0, 356, 129
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About MAMEUI Classic"
+CAPTION "About MAMEUI"
 FONT 8, "Tahoma"
 BEGIN
     DEFPUSHBUTTON   "&OK",IDOK,260,109,50,14,WS_GROUP
     CTEXT           "MAME Version 0",IDC_VERSION,147,7,200,11,NOT WS_GROUP
     CTEXT           "Copyright (C) 1997-2026 MAME Contributors",IDC_STATIC,147,18,200,10,NOT WS_GROUP
-    CTEXT           "MAMEUI Classic developed by",IDC_STATIC,147,42,200,10,NOT WS_GROUP
+    CTEXT           "MAMEUI developed by",IDC_STATIC,147,42,200,10,NOT WS_GROUP
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,147,35,200,1
     CTEXT           "Christopher Kirmse and the former MAMEUI team",IDC_STATIC,147,51,200,9,NOT WS_GROUP
     CTEXT           "Additional code by",IDC_STATIC,147,62,200,9
@@ -1207,7 +1208,7 @@ BEGIN
     CONTROL         "Allow selection by &joystick (requires restart)",IDC_JOY_GUI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,30,180,10,0,HIDC_JOY_GUI
     CONTROL         "Allow selection by custom &key sequences",IDC_KEY_GUI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,44,176,10
     CONTROL         "Skip Game Warnings",IDC_UI_SKIP_WARNINGS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,58,176,10
-    CONTROL         "Override Not Working icon with driver icon",IDC_OVERRIDE_REDX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,72,168,10
+    CONTROL         "Override Not Working icon with driver icon",IDC_OVERRIDE_REDX,"Button",BS_AUTO3STATE | WS_TABSTOP,14,72,168,10
 //  this doesn't work in windows 10, so removed from user visibility 2025-04-12
 //    CONTROL         "Hide &mouse cursor (requires restart)",IDC_HIDE_MOUSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,86,136,10,0,HIDC_HIDE_MOUSE
     CONTROL         "Inheritable Filters",IDC_FILTER_INHERIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,100,68,10

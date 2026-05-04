@@ -347,10 +347,10 @@ INT_PTR CALLBACK InterfaceDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM 
 				UpdateScreenShot();
 			}
 
-			checked = Button_GetCheck(GetDlgItem(hDlg,IDC_OVERRIDE_REDX));
-			if (checked != GetOverrideRedX())
+			uint8_t checked3 = Button_GetCheck(GetDlgItem(hDlg,IDC_OVERRIDE_REDX));
+			if (checked3 != GetOverrideRedX())
 			{
-				SetOverrideRedX(checked);
+				SetOverrideRedX(checked3);
 				// LineUpIcons does just a ResetListView(), which is what we want here
 				PostMessage(GetMainWindow(),WM_COMMAND, MAKEWPARAM(ID_VIEW_LINEUPICONS, false),(LPARAM)NULL);
 			}

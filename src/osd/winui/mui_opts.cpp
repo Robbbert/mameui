@@ -349,14 +349,16 @@ UINT GetSavedFolderID()
 	return (UINT) settings.int_value(MUIOPTION_DEFAULT_FOLDER_ID);
 }
 
-void SetOverrideRedX(BOOL val)
+void SetOverrideRedX(uint8_t val)
 {
+	if (val > 2)
+		val = 0;
 	settings.setter(MUIOPTION_OVERRIDE_REDX, val);
 }
 
-BOOL GetOverrideRedX()
+uint8_t GetOverrideRedX()
 {
-	return settings.bool_value(MUIOPTION_OVERRIDE_REDX);
+	return settings.int_value(MUIOPTION_OVERRIDE_REDX);
 }
 
 static LPBITS GetShowFolderFlags(LPBITS bits)
