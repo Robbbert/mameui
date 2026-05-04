@@ -52,11 +52,11 @@ public:
 			m_machine.render().texture_free(m_texture);
 	}
 
-	uint32_t handle(mame_ui_manager &mui, render_target &target, bool uistate)
+	uint32_t handle(mame_ui_manager &mui, render_target &target)
 	{
 		// implicitly cancel if there's nothing to display
 		if (!is_relevant())
-			return cancel(uistate);
+			return cancel();
 
 		// let the OSD do its thing
 		mui.machine().osd().check_osd_inputs();
@@ -145,19 +145,19 @@ public:
 			{
 			case view::PALETTE:
 				if (m_palette.interface())
-					return handle_palette(mui, target, uistate);
+					return handle_palette(mui, target);
 				m_mode = view::GFXSET;
 				break;
 
 			case view::GFXSET:
 				if (m_gfxset.has_gfx())
-					return handle_gfxset(mui, target, uistate);
+					return handle_gfxset(mui, target);
 				m_mode = view::TILEMAP;
 				break;
 
 			case view::TILEMAP:
 				if (m_machine.tilemap().count())
-					return handle_tilemap(mui, target, uistate);
+					return handle_tilemap(mui, target);
 				m_mode = view::PALETTE;
 				break;
 			}
@@ -581,7 +581,7 @@ private:
 		return m_palette.interface() || m_gfxset.has_gfx() || m_machine.tilemap().count();
 	}
 
-	uint32_t handle_general_keys(bool uistate)
+	uint32_t handle_general_keys()
 	{
 		auto &input = m_machine.ui_input();
 
@@ -610,15 +610,13 @@ private:
 
 		// cancel or graphics viewer dismisses the viewer
 		if (input.pressed(IPT_UI_BACK) || input.pressed(IPT_UI_SHOW_GFX))
-			return cancel(uistate);
+			return cancel();
 
-		return uistate;
+		return 0;
 	}
 
-	uint32_t cancel(bool uistate)
+	uint32_t cancel()
 	{
-		if (!uistate)
-			m_machine.resume();
 		m_machine.ui_input().reset();
 		m_current_pointer = -1;
 		m_pointer_type = ui_event::pointer::UNKNOWN;
@@ -630,9 +628,9 @@ private:
 		return mame_ui_manager::HANDLER_CANCEL;
 	}
 
-	uint32_t handle_palette(mame_ui_manager &mui, render_target &target, bool uistate);
-	uint32_t handle_gfxset(mame_ui_manager &mui, render_target &target, bool uistate);
-	uint32_t handle_tilemap(mame_ui_manager &mui, render_target &target, bool uistate);
+	uint32_t handle_palette(mame_ui_manager &mui, render_target &target);
+	uint32_t handle_gfxset(mame_ui_manager &mui, render_target &target);
+	uint32_t handle_tilemap(mame_ui_manager &mui, render_target &target);
 
 	void update_gfxset_bitmap(int xcells, int ycells, gfx_element &gfx);
 	void update_tilemap_bitmap(int width, int height);
@@ -986,7 +984,7 @@ bool gfx_viewer::tilemap::handle_keys(running_machine &machine, float pixelscale
 }
 
 
-uint32_t gfx_viewer::handle_palette(mame_ui_manager &mui, render_target &target, bool uistate)
+uint32_t gfx_viewer::handle_palette(mame_ui_manager &mui, render_target &target)
 {
 	device_palette_interface &palette = *m_palette.interface();
 	palette_device *const paldev = dynamic_cast<palette_device *>(&palette.device());
@@ -1138,11 +1136,11 @@ uint32_t gfx_viewer::handle_palette(mame_ui_manager &mui, render_target &target,
 
 	// handle keys
 	m_palette.handle_keys(m_machine);
-	return handle_general_keys(uistate);
+	return handle_general_keys();
 }
 
 
-uint32_t gfx_viewer::handle_gfxset(mame_ui_manager &mui, render_target &target, bool uistate)
+uint32_t gfx_viewer::handle_gfxset(mame_ui_manager &mui, render_target &target)
 {
 	// get graphics info
 	auto &info = m_gfxset.m_devices[m_gfxset.m_device];
@@ -1340,11 +1338,11 @@ uint32_t gfx_viewer::handle_gfxset(mame_ui_manager &mui, render_target &target, 
 	// handle keyboard navigation before drawing
 	if (m_gfxset.handle_keys(m_machine, xcells, ycells))
 		m_bitmap_dirty = true;
-	return handle_general_keys(uistate);
+	return handle_general_keys();
 }
 
 
-uint32_t gfx_viewer::handle_tilemap(mame_ui_manager &mui, render_target &target, bool uistate)
+uint32_t gfx_viewer::handle_tilemap(mame_ui_manager &mui, render_target &target)
 {
 	// get some UI metrics
 	render_font *const ui_font = mui.get_font();
@@ -1480,7 +1478,7 @@ uint32_t gfx_viewer::handle_tilemap(mame_ui_manager &mui, render_target &target,
 	// handle keyboard input
 	if (m_tilemap.handle_keys(m_machine, pixelscale))
 		m_bitmap_dirty = true;
-	return handle_general_keys(uistate);
+	return handle_general_keys();
 }
 
 
@@ -1616,7 +1614,7 @@ void gfx_viewer::gfxset_draw_item(gfx_element &gfx, int index, int dstx, int dst
 //  create or modify gfx sets in VIDEO_START
 //-------------------------------------------------
 
-uint32_t ui_gfx_ui_handler(render_target &target, mame_ui_manager &mui, bool uistate)
+uint32_t ui_gfx_ui_handler(render_target &target, mame_ui_manager &mui)
 {
-	return mui.get_session_data<gfx_viewer, gfx_viewer>(mui.machine()).handle(mui, target, uistate);
+	return mui.get_session_data<gfx_viewer, gfx_viewer>(mui.machine()).handle(mui, target);
 }

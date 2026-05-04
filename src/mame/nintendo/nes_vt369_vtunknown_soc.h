@@ -56,6 +56,11 @@ protected:
 
 	u8 vt369_418a_r();
 
+	u8 vt369_4199_uart_status_r();
+	void vt369_419d_uart_data_w(u8 data);
+
+	u8 vt369_4326_sd_status_r();
+
 	u8 vt369_6000_r(offs_t offset);
 	void vt369_6000_w(offs_t offset, u8 data);
 

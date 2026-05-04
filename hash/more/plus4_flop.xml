@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 40 -->
+<!-- Number of items in this list = 47 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c16479ad51c1ee08">
 		<description>076A</description>
@@ -389,6 +389,76 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Cyberdroids.d64" size="174848" crc="a3010781" sha1="9b51d101ce14b2b1760e7e2eed6b7aa307bf9c6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168be8f72553728">
+		<description>Death_Or_Glory</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Death_Or_Glory.d64" size="174848" crc="21a4721d" sha1="8be8f725537282134f4a8fd54468da93792dbe86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f3ea84dd7a946">
+		<description>Death_Planet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Death_Planet.d64" size="174848" crc="5690d95d" sha1="f3ea84dd7a9465f6882ddfc58a070902f19e441d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16fac94ac67f873">
+		<description>Delta_16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Delta_16.d64" size="174848" crc="2af77ecb" sha1="fac94ac67f873efca8ec0172cc3b19bc06a54d90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b99130201d862">
+		<description>dermagie</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="dermagie.d64" size="174848" crc="5e323d03" sha1="b99130201d862cee4f66c72a108db4876649d614"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16eafb7525ef316">
+		<description>diamond_hunter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="diamond_hunter.d64" size="174848" crc="a6a58ce0" sha1="eafb7525ef316c4c5ab22730ff5299a7e794548e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166920613ad27de">
+		<description>DTSE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="DTSE.D64" size="174848" crc="6ecb03d5" sha1="6920613ad27de980d154cf3bf446c60e77ecfd31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1625aaf305e8c6a">
+		<description>Dyania</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Dyania.d64" size="174848" crc="93c80bd5" sha1="25aaf305e8c6a5e4cd408b9ce60c87936485360a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 168 -->
+<!-- Number of items in this list = 170 -->
 <softwarelist name="sorcerer_cass" description="sorcerer_cass loose roms">
 	<software name="sor4aece2ef3bf76">
 		<description>2_milen_sideb_300_baud</description>
@@ -329,6 +329,26 @@
 		<part name="cass" interface="sorcerer_cass">
 			<dataarea name="cass" size="52014124">
 				<rom name="Defense-command-(1982)(B.Houge)(Big-Five-Software)-Sorcerer-300baud.wav" size="52014124" crc="bcb885d1" sha1="1486d5759e30c3f9d61bee264ff3523850806798"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sor8b3822946806e">
+		<description>Demo7-Presidents Quiz-(J. and L. Stayley)-BASIC-Sorcerer-1200baud</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sorcerer_cass">
+			<dataarea name="cass" size="12068442">
+				<rom name="Demo7-Presidents Quiz-(J. and L. Stayley)-BASIC-Sorcerer-1200baud.wav" size="12068442" crc="134d0c48" sha1="8b3822946806e5234bea89af0bacc0e6d59546be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sord09105cf702d2">
+		<description>Demo7-Presidents Quiz-(J. and L. Stayley)-BASIC-Sorcerer-300baud</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="sorcerer_cass">
+			<dataarea name="cass" size="45642598">
+				<rom name="Demo7-Presidents Quiz-(J. and L. Stayley)-BASIC-Sorcerer-300baud.wav" size="45642598" crc="68a9b446" sha1="d09105cf702d2b8442db6093d7df7d208d94bc92"/>
 			</dataarea>
 		</part>
 	</software>

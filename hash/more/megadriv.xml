@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2086 -->
+<!-- Number of items in this list = 2087 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7329,6 +7329,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Ghost Baseball v1.3 (2026)(Infinite State Games).bin" size="262144" crc="2b95120a" sha1="95f23c1b65d0e0eaf2e5b216d1f7603d58c8fb7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen636031eb05d62">
+		<description>Ghost Baseball v2.0 (2026)(Infinite State Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Ghost Baseball v2.0 (2026)(Infinite State Games).bin" size="524288" crc="02d25abd" sha1="636031eb05d627825f1d2c3d6be20f707965d870"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 704 -->
+<!-- Number of items in this list = 706 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -929,6 +929,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="22589">
 				<rom name="Camelot Knights (2024)(Nanochess).rom" size="22589" crc="b551402c" sha1="7c5b08d1572fec23f1bb091fb88f5adfd43b6b86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col28371d8c1668c">
+		<description>Camelot Knights (Proto) (1988-2024)(Nanochess)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="10197">
+				<rom name="Camelot Knights (Proto) (1988-2024)(Nanochess).rom" size="10197" crc="445046d6" sha1="28371d8c1668c9c2efa8d9baf18d4d544cae31a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3393,12 +3403,12 @@
 		</part>
 	</software>
 	<software name="col245b09e2c2ea2">
-		<description>Magical Tree (1984-2004)(Opcode Games)</description>
+		<description>Magical Tree (Proto) (1984-2004)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Magical Tree (1984-2004)(Opcode Games).rom" size="32768" crc="9f53f9cc" sha1="245b09e2c2ea2067e80e9a0e0e8ee0e029a30268"/>
+				<rom name="Magical Tree (Proto) (1984-2004)(Opcode Games).rom" size="32768" crc="9f53f9cc" sha1="245b09e2c2ea2067e80e9a0e0e8ee0e029a30268"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5763,12 +5773,22 @@
 		</part>
 	</software>
 	<software name="col3ff76dc292238">
-		<description>Star Ocean (2015 Chris Derrig)</description>
+		<description>Star Ocean - The Missed Hope (2015)(Kiwi)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="31869">
-				<rom name="Star Ocean (2015 Chris Derrig).rom" size="31869" crc="08e7df91" sha1="3ff76dc2922389bdae031f26e071cdc7cc92ba45"/>
+				<rom name="Star Ocean - The Missed Hope (2015)(Kiwi).rom" size="31869" crc="08e7df91" sha1="3ff76dc2922389bdae031f26e071cdc7cc92ba45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col35c4923064d15">
+		<description>Star Ocean - The Missed Hope (Alt)(2015)(Kiwi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="31873">
+				<rom name="Star Ocean - The Missed Hope (Alt)(2015)(Kiwi).rom" size="31873" crc="d3f3d2a1" sha1="35c4923064d156cfc923e90fac8ed7d2dabf7891"/>
 			</dataarea>
 		</part>
 	</software>

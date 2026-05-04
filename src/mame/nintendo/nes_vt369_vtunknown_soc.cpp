@@ -299,6 +299,10 @@ void vt3xx_soc_base_device::vt369_map(address_map &map)
 
 	map(0x418a, 0x418a).r(FUNC(vt3xx_soc_base_device::vt369_418a_r));
 
+	// UART block similar to VT268 (used by gb50_150 for diagnostic output when accessing the SD card)
+	map(0x4199, 0x4199).r(FUNC(vt3xx_soc_base_device::vt369_4199_uart_status_r));
+	map(0x419d, 0x419d).w(FUNC(vt3xx_soc_base_device::vt369_419d_uart_data_w));
+
 	map(0x41b0, 0x41bf).r(FUNC(vt3xx_soc_base_device::vt369_41bx_r)).w(FUNC(vt3xx_soc_base_device::vt369_41bx_w));
 
 	map(0x41e6, 0x41e6).w(FUNC(vt3xx_soc_base_device::extra_io_41e6_w)); // banking on red5mam
@@ -306,6 +310,16 @@ void vt3xx_soc_base_device::vt369_map(address_map &map)
 	map(0x4201, 0x4201).w(FUNC(vt3xx_soc_base_device::highres_sprite_dma_w));
 
 	// 4304
+
+	// 4310-4315 SD Card data out
+	// 4318-431b SD Card data in
+	// 431f
+	// 4322
+	// 4324
+	// 4325
+	map(0x4326, 0x4326).r(FUNC(vt3xx_soc_base_device::vt369_4326_sd_status_r));
+	// 4327
+	// 4328
 
 	map(0x4800, 0x4fff).ram().share("soundram"); // sound program for 2nd CPU is uploaded here, but some sets aren't uploading anything, do they rely on an internal ROM? other DMA? possibility to map ROM?
 
@@ -864,6 +878,24 @@ u8 vt3xx_soc_base_device::vt369_418a_r()
 {
 	logerror("%s: vt369_418a_r (unknown)\n", machine().describe_context());
 	return machine().rand();
+}
+
+u8 vt3xx_soc_base_device::vt369_4199_uart_status_r()
+{
+	return 0x02;
+}
+
+void vt3xx_soc_base_device::vt369_419d_uart_data_w(u8 data)
+{
+	if (data >= 0x20 && data < 0x7f)
+		logerror("%s: vt369_419d_uart_data_w '%c'\n", machine().describe_context(), data);
+	else
+		logerror("%s: vt369_419d_uart_data_w %02x\n", machine().describe_context(), data);
+}
+
+u8 vt3xx_soc_base_device::vt369_4326_sd_status_r()
+{
+	return 0x01;
 }
 
 u8 vt3xx_soc_base_device::read_onespace_bus_with_relative_offset(offs_t offset)
