@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2087 -->
+<!-- Number of items in this list = 2086 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7049,16 +7049,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="galaxy force II (Hack, Spanish).bin" size="1048576" crc="21cdf3cd" sha1="5477d2f5e297db5031c2e29071e4698681560a65"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen31c66bd13abf4">
-		<description>Game no Kanzume Otokuyou (Sega Channel, Japan)(1995)(Sega)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3145728">
-				<rom name="Game no Kanzume Otokuyou (Sega Channel, Japan)(1995)(Sega).bin" size="3145728" crc="cdad7e6b" sha1="31c66bd13abf4ae8271c09ec5286a0ee0289dbbc"/>
 			</dataarea>
 		</part>
 	</software>

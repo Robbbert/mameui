@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 47 -->
+<!-- Number of items in this list = 51 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c16479ad51c1ee08">
 		<description>076A</description>
@@ -459,6 +459,46 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Dyania.d64" size="174848" crc="93c80bd5" sha1="25aaf305e8c6a5e4cd408b9ce60c87936485360a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c167612802b1ba41">
+		<description>Egon II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Egon II.D64" size="174848" crc="a5e58b5a" sha1="7612802b1ba41a117f5f18804afc0ee98bd27bbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161979c174a7829">
+		<description>EOROID</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="EOROID.D64" size="174848" crc="8a468b72" sha1="1979c174a78299579f9731f8122cc7ac349d61b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d72bf5e73f13a">
+		<description>epsilon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="epsilon.d64" size="174848" crc="1796569f" sha1="d72bf5e73f13a665926525d60447b79b28ecb077"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163b8140a95cf23">
+		<description>EURGAMES</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="EURGAMES.D64" size="174848" crc="f4256357" sha1="3b8140a95cf237024431aa5cea79adde4c6d30e3"/>
 			</dataarea>
 		</part>
 	</software>
