@@ -429,9 +429,10 @@ void looping_state::int_update(int state)
 }
 
 
+
 /*************************************
  *
- *  Custom DAC handling
+ *  Sound controls
  *
  *************************************/
 
@@ -451,13 +452,6 @@ void looping_state::sound_sw(uint8_t data)
 	m_dac->write(((BIT(~data, 2) << 1) + BIT(~data, 3)) * BIT(~data, 7));
 }
 
-
-
-/*************************************
- *
- *  Sound controls
- *
- *************************************/
 
 void looping_state::ay_enable_w(int state)
 {

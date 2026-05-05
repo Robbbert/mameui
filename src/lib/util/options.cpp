@@ -14,13 +14,10 @@
 #include "corestr.h"
 #include "osdcore.h"
 
-#include <locale>
-#include <string>
-
 #include <cassert>
 #include <cctype>
-#include <cstdarg>
 #include <cstdlib>
+#include <locale>
 #include <sstream>
 
 
@@ -1306,13 +1303,13 @@ void core_options::do_set_value(entry &curentry, std::string_view data, int prio
 	{
 		curentry.set_value(std::string(data), priority, false, perform_substitutions);
 	}
-	catch (options_warning_exception &ex)
+	catch (options_warning_exception const &ex)
 	{
 		// we want to aggregate option exceptions
 		error_stream << ex.message();
 		condition = std::max(condition, condition_type::WARN);
 	}
-	catch (options_error_exception &ex)
+	catch (options_error_exception const &ex)
 	{
 		// we want to aggregate option exceptions
 		error_stream << ex.message();

@@ -98,8 +98,8 @@ Disk Basic
 
 <!-- !Operating Systems -->
 
-	<software name="cpmnater">
-		<description>CPM Nater</description>
+	<software name="cpmnater" supported="no">
+		<description>CP/M Nater</description>
 		<year>1987?</year>
 		<publisher>&lt;unknown&gt;</publisher>
 		<notes><![CDATA[
@@ -115,8 +115,8 @@ Disk Basic
 <!-- !Applications -->
 
 	<software name="bis" supported="no">
-		<description>BIS (English)</description>
-		<year>198?</year>
+		<description>BIS Terminal Program (English)</description>
+		<year>1981</year>
 		<publisher>Philips</publisher>
 		<notes><![CDATA[
 Requires [SLOT2] I/O module (dual RS-232)
@@ -179,7 +179,7 @@ Likely requires a [SLOT2] cart
 
 	<software name="familie4" supported="no">
 		<description>Familiegeheugen (v4.L)</description>
-		<year>198?</year>
+		<year>1987</year>
 		<publisher>Philips</publisher>
 		<notes><![CDATA[
 Seems to require a [cassette]
@@ -194,7 +194,7 @@ Pressing '?' on [keyboard] doesn't bring information screen
 
 	<software name="familie3" cloneof="familie4" supported="no">
 		<description>familiegeheugen (v3.L)</description>
-		<year>198?</year>
+		<year>1986</year>
 		<publisher>Philips</publisher>
 		<notes><![CDATA[
 (same as parent)
@@ -208,7 +208,7 @@ Pressing '?' on [keyboard] doesn't bring information screen
 
 	<software name="familie2" cloneof="familie4" supported="no">
 		<description>Familiegeheugen (v2.0)</description>
-		<year>198?</year>
+		<year>1984</year>
 		<publisher>Philips</publisher>
 		<notes><![CDATA[
 (same as parent)
@@ -239,7 +239,7 @@ Not extensively tested
 	</software>
 
 	<software name="flexbasea" cloneof="flexbase" supported="no">
-		<description>flexbase (Release 1.6)</description>
+		<description>Flexbase (Release 1.6)</description>
 		<year>198?</year>
 		<publisher>&lt;unknown&gt;</publisher>
 		<notes><![CDATA[
@@ -256,8 +256,8 @@ Not extensively tested
 
 	<software name="nebocalc" supported="no">
 		<description>NeboCalc</description>
-		<year>198?</year>
-		<publisher>&lt;unknown&gt;</publisher>
+		<year>1980?</year>
+		<publisher>Regents of the University of California</publisher>
 		<notes><![CDATA[
 "LOAD ERROR"
 ]]></notes>
@@ -325,7 +325,7 @@ Not extensively tested
 		</part>
 	</software>
 
-	<software name="wordpr2" cloneof="text2de">
+	<software name="wordpr2" cloneof="text2de" supported="no">
 		<description>WordProcessor (v2.0, Dutch?)</description>
 		<year>198?</year>
 		<publisher>&lt;unknown&gt;</publisher>
@@ -388,7 +388,7 @@ Not extensively tested
 		</part>
 	</software>
 
-	<software name="asm56" cloneof="asm56" supported="no">
+	<software name="asm56" cloneof="asm59" supported="no">
 		<description>P2000 Assembler (v5.6)</description>
 		<year>198?</year>
 		<!-- Ron Eijnthoven -->
@@ -423,8 +423,8 @@ Not extensively tested
 
 	<software name="ucsdpas" supported="no">
 		<description>UCSD Pascal</description>
-		<year>198?</year>
-		<publisher>&lt;unknown&gt;</publisher>
+		<year>1980?</year>
+		<publisher>Regents of the University of California</publisher>
 		<notes><![CDATA[
 "Pascal Load Error"
 ]]></notes>
@@ -469,7 +469,7 @@ Various unsupported features
 		</part>
 	</software>
 
-	<software name="main1" cloneof="main2">
+	<software name="main1" cloneof="main2" supported="no">
 		<description>Maintenance (Release 1)</description>
 		<year>198?</year>
 		<publisher>Philips</publisher>
@@ -483,7 +483,7 @@ Various unsupported features
 		</part>
 	</software>
 
-	<software name="main1a" cloneof="main1">
+	<software name="main1a" cloneof="main2" supported="no">
 		<description>Maintenance (Release 1, alt)</description>
 		<year>198?</year>
 		<publisher>Philips</publisher>
