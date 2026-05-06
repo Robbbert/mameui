@@ -995,7 +995,7 @@ apple2gsr3p
 apple3
 
 @source:apple/imacg3.cpp
-//imac                        //crash after start sound
+//imac                        //crash after start sound MT09028
 
 @source:apple/iphone2g.cpp
 iphone2g
@@ -20673,7 +20673,7 @@ tpad760xd
 tpad770z
 
 @source:ibm/thinkpad8xx.cpp
-tpad850                   //no screen, giant error log
+tpad850
 
 @source:ice/calchase.cpp
 calchase
@@ -24883,7 +24883,7 @@ circusce
 
 @source:konami/cobra.cpp
 bujutsu
-//racjamdx    crashes
+//racjamdx    crashes MT09119
 
 @source:konami/combatsc.cpp
 bootcamp
@@ -35002,7 +35002,7 @@ ncd19c
 ncdmcx
 
 @source:ncd/ncdmips.cpp
-//hmxpro                    //freeze after a while
+//hmxpro                    //freeze after a while MT09013
 
 @source:ncd/ncdppc.cpp
 explorapro
@@ -37885,10 +37885,10 @@ paclandp
 
 @source:philips/cdi.cpp
 cdi490a
-//cdi910
+cdi910
 cdibios
 cdimono1
-//cdimono2
+cdimono2
 gpi1200
 quizard
 quizard_10
@@ -45336,8 +45336,8 @@ sun3_80
 sun3_460
 
 @source:sun/sun4.cpp
-//sun_s10                     //crash at start
-//sun_s20                     //crash at start
+//sun_s10                     //crash at start MT09256
+//sun_s20                     //crash at start MT09256
 sun4_20
 sun4_25
 sun4_110
