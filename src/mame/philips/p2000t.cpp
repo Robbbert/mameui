@@ -5,19 +5,21 @@
 Philips P2000T/P2000M
 
 TODO:
-- Floppy drive (unknown type);
+- Floppy drive (uPD765, from expansion slot);
 - Second cart slot (no ROM, auxiliary I/O map for first cart slot);
-- Hookup p2000_cass, p2000_flop and p2000_quik SW lists;
+- Hookup p2000_flop and p2000_quik SW lists;
 - CTC;
-- Fix RAM hookup (can crash at lower sizes);
+- NMI (tied to reset button?)
+- Ejecting a MDCR cassette while program is loading causes a MAME crash;
 - Joystick (cfr. brkwall)
-- p2000t: GFX offset when no SW is in;
+- 80 char width mode;
+- p2000t: GFX offset when no SW is in (goofy scroll default rather than 80 char width?);
 - p2000m: fix screen size;
 - QA testing;
 
 ===================================================================================================
 
-Philips P2000 1 Memory map
+Philips P2000T Memory map
 
     CPU: Z80
         0000-0fff   ROM
@@ -81,12 +83,13 @@ class p2000t_state : public driver_device
 public:
 	p2000t_state(const machine_config &mconfig, device_type type, const char *tag)
 		: driver_device(mconfig, type, tag)
-		, m_videoram(*this, "videoram")
 		, m_maincpu(*this, "maincpu")
 		, m_speaker(*this, "speaker")
 		, m_mdcr(*this, "mdcr")
 		, m_ram(*this, RAM_TAG)
 		, m_bank(*this, "bank")
+		, m_videoram(*this, "videoram")
+		, m_screen(*this, "screen")
 		, m_keyboard(*this, "KEY.%u", 0)
 	{
 	}
@@ -95,6 +98,7 @@ public:
 
 protected:
 	virtual void machine_start() override ATTR_COLD;
+	virtual void machine_reset() override ATTR_COLD;
 
 	uint8_t p2000t_port_000f_r(offs_t offset);
 	uint8_t p2000t_port_202f_r();
@@ -110,13 +114,14 @@ protected:
 	void p2000t_mem(address_map &map) ATTR_COLD;
 	void p2000t_io(address_map &map) ATTR_COLD;
 
-	required_shared_ptr<uint8_t> m_videoram;
-
 	required_device<cpu_device> m_maincpu;
 	required_device<speaker_sound_device> m_speaker;
 	required_device<mdcr_device> m_mdcr;
 	required_device<ram_device> m_ram;
 	required_memory_bank m_bank;
+
+	required_shared_ptr<uint8_t> m_videoram;
+	required_device<screen_device> m_screen;
 
 private:
 	required_ioport_array<10> m_keyboard;
@@ -158,6 +163,8 @@ private:
 
 void p2000m_state::video_start()
 {
+	// TODO: what this variable is supposed to do?
+	// below doesn't seem right, it causes Cass`e`tte blinking in basicnl at best.
 	m_frame_count = 0;
 }
 
@@ -331,9 +338,14 @@ void p2000t_state::p2000t_port_707f_w(uint8_t data) { m_port_707f = data; }
 
 void p2000t_state::p2000t_port_9494_w(uint8_t data) {
 	//  The memory region E000-FFFF (8k) is bank switched
-	int available_banks = (m_ram->size() - 0xe000) / 0x2000;
-	if (data < available_banks)
-		m_bank->set_entry(data);
+	const u32 ram_size = m_ram->size();
+
+	if (ram_size > 0x8000)
+	{
+		const u8 max_entries = (ram_size - 0x8000) / 0x2000;
+		if (data < max_entries)
+			m_bank->set_entry(data);
+	}
 }
 
 void p2000t_state::p2000t_mem(address_map &map)
@@ -359,10 +371,12 @@ void p2000t_state::p2000t_io(address_map &map)
 {
 	map.global_mask(0xff);
 	map(0x00, 0x0f).r(FUNC(p2000t_state::p2000t_port_000f_r));
+//	map(0x00, 0x0f).w bit 0: enables 80 width mode
 	map(0x10, 0x1f).w(FUNC(p2000t_state::p2000t_port_101f_w));
 	map(0x20, 0x2f).r(FUNC(p2000t_state::p2000t_port_202f_r));
 	map(0x30, 0x3f).w(FUNC(p2000t_state::p2000t_port_303f_w));
 	map(0x50, 0x5f).w(FUNC(p2000t_state::p2000t_port_505f_w));
+//	map(0x70, 0x7f).r read back 80 width setting, P2000T only
 	map(0x70, 0x7f).w(FUNC(p2000t_state::p2000t_port_707f_w));
 //  map(0x88, 0x8b) CTC
 //  map(0x8c, 0x90) FDC
@@ -523,29 +537,41 @@ void p2000t_state::machine_start()
 		default: // more.. (48kb, 64kb, 102kb)
 			// In this case we have a set of 8kb memory banks.
 			uint8_t *ram = m_ram->pointer();
-			auto available_banks = (ramsize - 0xe000) / 0x2000;
+			auto available_banks = (ramsize - 0x8000) / 0x2000;
 			for(int i = 0; i < available_banks; i++)
 				m_bank->configure_entry(i, ram + (i * 0x2000));
 			break;
 	}
+
+	save_item(NAME(m_port_303f));
+}
+
+void p2000t_state::machine_reset()
+{
+	m_port_303f = 0;
 }
 
 // TODO: vblank can't be keyboard source
+// - p2000t: "keyboard irq generated every 20 ms"
+// - p2000m: "signal R2425 Row 24/25"
 INTERRUPT_GEN_MEMBER(p2000t_state::p2000_interrupt)
 {
 	if (m_keyboard_int_enable)
 		m_maincpu->set_input_line(0, HOLD_LINE);
 }
 
+// TODO: can't scroll with 80 char width
 uint8_t p2000t_state::videoram_r(offs_t offset)
 {
-	return m_videoram[offset];
+	if (BIT(m_port_303f, 7))
+		return 0;
+
+	return m_videoram[(offset + m_port_303f) & 0x0fff];
 }
 
 
 
 /* Machine definition */
-// TODO: merge defs
 void p2000t_state::p2000t(machine_config &config)
 {
 	/* basic machine hardware */
@@ -555,12 +581,12 @@ void p2000t_state::p2000t(machine_config &config)
 	m_maincpu->set_vblank_int("screen", FUNC(p2000t_state::p2000_interrupt));
 
 	/* video hardware */
-	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_refresh_hz(50);
-	screen.set_vblank_time(ATTOSECONDS_IN_USEC(2500));
-	screen.set_size(40 * 12, 24 * 20);
-	screen.set_visarea(0, 40 * 12 - 1, 0, 24 * 20 - 1);
-	screen.set_screen_update("saa5050", FUNC(saa5050_device::screen_update));
+	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
+	m_screen->set_refresh_hz(50);
+	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(2500));
+	m_screen->set_size(40 * 12, 24 * 20);
+	m_screen->set_visarea(0, 40 * 12 - 1, 0, 24 * 20 - 1);
+	m_screen->set_screen_update("saa5050", FUNC(saa5050_device::screen_update));
 
 	saa5050_device &saa5050(SAA5050(config, "saa5050", 6000000));
 	saa5050.d_cb().set(FUNC(p2000t_state::videoram_r));
@@ -575,6 +601,7 @@ void p2000t_state::p2000t(machine_config &config)
 	GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "p2000_cart", "bin,rom");
 
 	SOFTWARE_LIST(config, "cart_list").set_original("p2000_cart");
+	SOFTWARE_LIST(config, "cass_list").set_original("p2000_cass");
 
 	/* sound hardware */
 	SPEAKER(config, "mono").front_center();
@@ -585,39 +612,20 @@ void p2000t_state::p2000t(machine_config &config)
 /* Machine definition */
 void p2000m_state::p2000m(machine_config &config)
 {
-	/* basic machine hardware */
-	Z80(config, m_maincpu, 2500000);
-	m_maincpu->set_addrmap(AS_PROGRAM, &p2000m_state::p2000m_mem);
-	m_maincpu->set_addrmap(AS_IO, &p2000m_state::p2000t_io);
-	m_maincpu->set_vblank_int("screen", FUNC(p2000m_state::p2000_interrupt));
-	config.set_maximum_quantum(attotime::from_hz(60));
+	p2000t_state::p2000t(config);
 
-	/* video hardware */
-	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
-	screen.set_refresh_hz(50);
-	screen.set_vblank_time(ATTOSECONDS_IN_USEC(2500)); /* not accurate */
-	screen.set_size(80 * 12, 24 * 20);
-	screen.set_visarea(0, 80 * 12 - 1, 0, 24 * 20 - 1);
-	screen.set_screen_update(FUNC(p2000m_state::screen_update_p2000m));
-	screen.set_palette(m_palette);
+	m_maincpu->set_addrmap(AS_PROGRAM, &p2000m_state::p2000m_mem);
+
+	// TODO: really dynamically modified by width setting
+	m_screen->set_size(80 * 12, 24 * 20);
+	m_screen->set_visarea(0, 80 * 12 - 1, 0, 24 * 20 - 1);
+	m_screen->set_screen_update(FUNC(p2000m_state::screen_update_p2000m));
+	m_screen->set_palette(m_palette);
+
+	config.device_remove("saa5050");
 
 	GFXDECODE(config, m_gfxdecode, m_palette, gfx_p2000m);
 	PALETTE(config, m_palette, FUNC(p2000m_state::p2000m_palette), 4);
-
-	/* the mini cassette driver */
-	MDCR(config, m_mdcr, 0);
-
-	/* internal ram */
-	RAM(config, m_ram).set_default_size("16K").set_extra_options("16K,32K,48K,64K,80K,102K");
-
-	GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "p2000_cart", "bin,rom");
-
-	SOFTWARE_LIST(config, "cart_list").set_original("p2000_cart");
-	SOFTWARE_LIST(config, "cass_list").set_original("p2000_cass");   // MESSUI
-
-	/* sound hardware */
-	SPEAKER(config, "mono").front_center();
-	SPEAKER_SOUND(config, m_speaker).add_route(ALL_OUTPUTS, "mono", 0.25);
 }
 
 } // anonymous namespace

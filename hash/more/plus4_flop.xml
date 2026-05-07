@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 61 -->
+<!-- Number of items in this list = 68 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c16479ad51c1ee08">
 		<description>076A</description>
@@ -599,6 +599,76 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Future Shock.D64" size="174848" crc="45fac94b" sha1="f645fc471d41e809412137195dcaabad9e6faf96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161bc557aa5f211">
+		<description>GG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="GG.D64" size="174848" crc="522417a7" sha1="1bc557aa5f211da0c93473c201158c5ed65f3453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f6df6fd862004">
+		<description>Ghost Castle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Ghost Castle.D64" size="174848" crc="72f5b547" sha1="f6df6fd862004344eef7ce2452891d0dfc889a80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16df6c880207a41">
+		<description>Go for a box adventure</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Go for a box adventure.D64" size="174848" crc="ba3cea09" sha1="df6c880207a4103c45594685cd02b0c05ebe4ab8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164827640f04260">
+		<description>Grand Master</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Grand Master.D64" size="174848" crc="f377e07e" sha1="4827640f0426093cf53211c2043c1e3e288bf4dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1604532e878cab6">
+		<description>Grand Prix Circuit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Grand Prix Circuit.D64" size="174848" crc="ce0bca4d" sha1="04532e878cab6995ff162c54fc9c9c9eae269b93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b8a0329080c30">
+		<description>Green_Beret</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Green_Beret.d64" size="174848" crc="085ef04e" sha1="b8a0329080c301ddc73e57eb1281943b6cf770b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a93184e651401">
+		<description>GRIDTRAP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="GRIDTRAP.D64" size="174848" crc="db0a3f4e" sha1="a93184e65140133830d762ad495e058f8de90a4e"/>
 			</dataarea>
 		</part>
 	</software>

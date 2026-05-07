@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 79 -->
+<!-- Number of items in this list = 75 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -29,16 +29,6 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="3840">
 				<rom name="3D figuren.cas" size="3840" crc="43d9b177" sha1="a24ea1f85d72b5790ef1c02f40eb90949ea28620"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k2e16444ed25e1">
-		<description>4 x 4</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="3840">
-				<rom name="4 x 4.cas" size="3840" crc="2e76b755" sha1="2e16444ed25e1c710e613bd447846bc30e4011c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -92,26 +82,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p2k420cfa138199e">
-		<description>Alggrot</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="2560">
-				<rom name="Alggrot.cas" size="2560" crc="5924e52a" sha1="420cfa138199e21e86dadd4e571063e9fde3fd13"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k8f33c6c5cc715">
-		<description>Alice's wonderland</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="23040">
-				<rom name="Alice's wonderland.cas" size="23040" crc="10de5417" sha1="8f33c6c5cc71519dce74560d5644a3230a6a6811"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p2kae42cce50ed83">
 		<description>Analoge klok</description>
 		<year>????</year>
@@ -129,16 +99,6 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="33280">
 				<rom name="Ancalagon.cas" size="33280" crc="60b2f08e" sha1="0e1bf6c7d3b839bdbdcbc567873ee489f727c375"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2kb782342120dd2">
-		<description>Androiden Nim</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="14080">
-				<rom name="Androiden Nim.cas" size="14080" crc="1bfca74e" sha1="b782342120dd2f4154fc81c3197006dec506bc6a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -182,26 +142,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p2k41670db017745">
-		<description>Azuda</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="15360">
-				<rom name="Azuda.cas" size="15360" crc="22a77e1b" sha1="41670db017745acc5e3ce3432780cc0e15697453"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k2e350660f5273">
-		<description>BABA</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="1280">
-				<rom name="BABA.cas" size="1280" crc="83c4ff97" sha1="2e350660f5273cfba50ff2ef0b7c549fc0798d86"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p2k49da11ffb13da">
 		<description>Basic Demo cassette (kant A)</description>
 		<year>????</year>
@@ -229,16 +169,6 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="16640">
 				<rom name="Basis subroutines.cas" size="16640" crc="f77c80bd" sha1="b604add38968a9e1ff8b7e6f8ec54b85614928dd"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k46d2ffe571333">
-		<description>Battlestar (info)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="6400">
-				<rom name="Battlestar (info).cas" size="6400" crc="d24f6d18" sha1="46d2ffe571333df90f081997f558588552e1294c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -282,46 +212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p2kcacf048b3dc52">
-		<description>Beursspel</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="7680">
-				<rom name="Beursspel.cas" size="7680" crc="829f36b8" sha1="cacf048b3dc527d11bbad1e79b89ffaa811901dc"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k3c773e93efb0f">
-		<description>Bingo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="7680">
-				<rom name="Bingo.cas" size="7680" crc="95c25c88" sha1="3c773e93efb0fd3630d3c2a687468de4bd67ad2f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k7b039aff42b48">
-		<description>Black Jack</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="10240">
-				<rom name="Black Jack.cas" size="10240" crc="d9e98a4f" sha1="7b039aff42b485366aa926a9b8c216fe863a0da3"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k6aa453ef0d0c0">
-		<description>Bommenwerpers</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="5120">
-				<rom name="Bommenwerpers.cas" size="5120" crc="bdd95543" sha1="6aa453ef0d0c068a09b7bac22adc62433f3d6e81"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="p2kb40f140a4d555">
 		<description>Boom van Pythagoras</description>
 		<year>????</year>
@@ -339,16 +229,6 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="7680">
 				<rom name="Bord van Galton.cas" size="7680" crc="0694b5b5" sha1="e4517d946f4ff71797148bb3e3b8df28c9e5c1d0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k332e36ad5dcc5">
-		<description>Boter-kaas-en-eieren</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="2560">
-				<rom name="Boter-kaas-en-eieren.cas" size="2560" crc="68ca5ca2" sha1="332e36ad5dcc5df9d3a4b77d3af06e0e54a4cc3a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -372,23 +252,63 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="p2k7f7e7372a4a99">
-		<description>Brick-Wall</description>
+	<software name="p2k66f1dbc8606aa">
+		<description>Cassette 2 Disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Cassette 2 Disk.cas" size="1280" crc="63eda4e6" sha1="66f1dbc8606aa812532f6727fc09fb2194cb2e09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k3f87612145b70">
+		<description>Cassette Dumper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Cassette Dumper.cas" size="1280" crc="bd76a77f" sha1="3f87612145b70c6045cc2eeef2c735e9d28e1325"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k2a845b225c7fb">
+		<description>Cassette Kopieer Programma</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="2560">
+				<rom name="Cassette Kopieer Programma.cas" size="2560" crc="ab697372" sha1="2a845b225c7fbea86ffbbcbb2cc69284eb461ccc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k512440cb78250">
+		<description>Cassette-Hulp</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="17920">
-				<rom name="Brick-Wall.cas" size="17920" crc="d68c25e9" sha1="7f7e7372a4a999257183920bc4a690d0c35eac38"/>
+				<rom name="Cassette-Hulp.cas" size="17920" crc="32ec300a" sha1="512440cb78250f0346ea389a5ebe3d7a97182e2a"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="p2k2074dce8ff5ec">
-		<description>Bugs From Space</description>
+	<software name="p2k53ad60e588363">
+		<description>Cassettehulp Plus</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="10240">
-				<rom name="Bugs From Space.cas" size="10240" crc="1b45e0c5" sha1="2074dce8ff5ec6999e23b2ae93fcd4c1679eb1b2"/>
+			<dataarea name="cass" size="5120">
+				<rom name="Cassettehulp Plus.cas" size="5120" crc="86f5f9ee" sha1="53ad60e5883630832123a186f3db9bdab35078db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k69a06f7a1f746">
+		<description>Chriet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="2560">
+				<rom name="Chriet.CAS" size="2560" crc="9323eabf" sha1="69a06f7a1f74671e65bc5940f12c7cde1c295dc5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -399,6 +319,46 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="12800">
 				<rom name="Componist (1987)(A. Dobber)(nl).cas" size="12800" crc="aadd88b3" sha1="72ba868d38b822e011b5145c95f0509529fa275e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k6ac70d1ed4a67">
+		<description>Componist</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="12800">
+				<rom name="Componist.cas" size="12800" crc="870ca359" sha1="6ac70d1ed4a67612697a2b8a9b416e3c35f18125"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kbd9b07bcc3c6e">
+		<description>CompSound</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="35840">
+				<rom name="CompSound.cas" size="35840" crc="27255a01" sha1="bd9b07bcc3c6e29bbc8c212195244dd08b6d15af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kf3fa72f96099e">
+		<description>Conv t 2 d</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Conv t 2 d.cas" size="1280" crc="dee92685" sha1="f3fa72f96099edf2ca19938034fa8d47901dcc17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kfd7c4416c9f8e">
+		<description>Coupurestaat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="8960">
+				<rom name="Coupurestaat.cas" size="8960" crc="0391e669" sha1="fd7c4416c9f8efaae7681ca69b7e0bbcc8db79ad"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7855 -->
+<!-- Number of items in this list = 7861 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10779,6 +10779,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="102729">
 				<rom name="Blood Valley M3 48K-128K (1987)(Gremlin Graphics).tap" size="102729" crc="03e60931" sha1="8e358f322ca2019d4ea1dec469e250cfcb071df1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa192d3d937dfa">
+		<description>Bloodstone 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72367">
+				<rom name="Bloodstone 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72367" crc="06f41aae" sha1="a192d3d937dfa5866bf6d969a3dc2016d683a67a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27579,6 +27589,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="75843">
 				<rom name="Gilligans Mine v1.0.1 128K (2025)(Clebin Games).tap" size="75843" crc="3438ff18" sha1="a71bcf0424f72c4968777d631cfd000ef9ca0fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf15a77d4c693a">
+		<description>Gimmick! Yumetaro Odyssey EN 128K (2018)(GreenWebSevilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="106506">
+				<rom name="Gimmick! Yumetaro Odyssey EN 128K (2018)(GreenWebSevilla).tap" size="106506" crc="e56cdc44" sha1="f15a77d4c693ac62f287219a5edd4907dd06942c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs977df3c9feffa">
+		<description>Gimmick! Yumetaro Odyssey ES 128K (2018)(GreenWebSevilla)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="106441">
+				<rom name="Gimmick! Yumetaro Odyssey ES 128K (2018)(GreenWebSevilla).tap" size="106441" crc="e0cdd1c4" sha1="977df3c9feffa2b567cb07be65de9ca9951d1b65"/>
 			</dataarea>
 		</part>
 	</software>
@@ -49462,6 +49492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5542a0b96be2f">
+		<description>R.B.I. 2 Baseball 128K (1991)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="104922">
+				<rom name="R.B.I. 2 Baseball 128K (1991)(Domark).tap" size="104922" crc="c697cf4a" sha1="5542a0b96be2fcf6fbf2e8815f28fc0ffec36214"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsacb83e7707d24">
 		<description>Race Ace (1983)(Micro Gold)</description>
 		<year>????</year>
@@ -53892,6 +53932,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs49c4c64074c4d">
+		<description>Shadow Fields 128K (2026)(Gandulf)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="92232">
+				<rom name="Shadow Fields 128K (2026)(Gandulf).tap" size="92232" crc="8d7a66a1" sha1="49c4c64074c4d57b6601de5c3156f726b91f65ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1a37d90a7fa50">
 		<description>Shadow Of The Beast</description>
 		<year>????</year>
@@ -54799,6 +54849,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40614">
 				<rom name="Sire Fire IT 48K (1987)(G.B. Aicardi).tzx" size="40614" crc="7e799f0e" sha1="740e7a22ad22157ca89cf98312ea5ada965cc50c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3e89d6a940f5e">
+		<description>Sirius Runner v1.1 48K (2026)(Path0 Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="13788">
+				<rom name="Sirius Runner v1.1 48K (2026)(Path0 Games).tap" size="13788" crc="dab1e304" sha1="3e89d6a940f5e005bc76d8acb77bc089b4c52409"/>
 			</dataarea>
 		</part>
 	</software>
