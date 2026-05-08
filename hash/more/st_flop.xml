@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 95 -->
+<!-- Number of items in this list = 97 -->
 <softwarelist name="st_flop" description="st_flop loose roms">
 	<software name="st244dbc65ffd388">
 		<description>(demo)Omega Boot (2024-07)(Omega)</description>
@@ -919,6 +919,26 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="746496">
 				<rom name="Tea Party Demo, The (1990-12-23)(Double Dutch Crew).st" size="746496" crc="40ec715e" sha1="4062153ec6a79c40edaff0b1ca028eae52d387ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="stde38e20a5a6dfe">
+		<description>Tenebra-lores</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="Tenebra-lores.st" size="737280" crc="b2066522" sha1="de38e20a5a6dfe8c90e7bce7c6c0e96ad89cab01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="stdaa3ab32435368">
+		<description>TOS104FR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="368640">
+				<rom name="TOS104FR.ST" size="368640" crc="cef67a6c" sha1="daa3ab324353682dedba232e475833747e7a98be"/>
 			</dataarea>
 		</part>
 	</software>

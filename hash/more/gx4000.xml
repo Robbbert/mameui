@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 18 -->
+<!-- Number of items in this list = 19 -->
 <softwarelist name="gx4000" description="gx4000 loose roms">
 	<software name="gx4a29573d8d7cee">
 		<description>Abduction of Oscar Z, The (2020)(Dreamin' Bits)</description>
@@ -169,6 +169,16 @@
 		<part name="cart" interface="gx4000_cart">
 			<dataarea name="rom" size="131148">
 				<rom name="Robocop 2 (Europe).cpr" size="131148" crc="3b364c1f" sha1="cde9a92af3c6b8e219188395d6fdcba43ff5a449"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gx4e3dcfd5583d84">
+		<description>tenebra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gx4000_cart">
+			<dataarea name="rom" size="524556">
+				<rom name="tenebra.cpr" size="524556" crc="fd870e3b" sha1="e3dcfd5583d8489ac8bc56d1fa9868f0a1dbe0ac"/>
 			</dataarea>
 		</part>
 	</software>

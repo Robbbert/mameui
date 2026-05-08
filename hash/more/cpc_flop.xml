@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7823 -->
+<!-- Number of items in this list = 7824 -->
 <softwarelist name="cpc_flop" description="cpc_flop loose roms">
 	<software name="cpcface7544b408a">
 		<description>-Ao</description>
@@ -70439,6 +70439,16 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Ten-Pin Challenge (1987)(Atlantis Software).dsk" size="194816" crc="305b15e8" sha1="f21de27075159f321ed7efeb980cbf7738632e57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc01e0365a8cc25">
+		<description>tenebra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="tenebra.dsk" size="194816" crc="16fc318f" sha1="01e0365a8cc2528497f0f25087581232c395df0a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 733 -->
+<!-- Number of items in this list = 734 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -6049,6 +6049,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Tenebra Extended (2023)(Hablo).rom" size="16384" crc="9c59bd5a" sha1="e920bce6e3196a9daf89f7e4a742cae055f0e072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1883cc92b97d6">
+		<description>tenebra-msx</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="tenebra-msx.rom" size="16384" crc="5534d59b" sha1="1883cc92b97d6a3acbcb8acbc962a574e3e3db22"/>
 			</dataarea>
 		</part>
 	</software>

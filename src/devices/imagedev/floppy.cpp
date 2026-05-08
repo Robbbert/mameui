@@ -744,7 +744,7 @@ void floppy_image_device::call_unload()
 		mon_w(1);
 	}
 
-	if (m_make_sound) m_sound_out->unload();
+	if (m_make_sound && m_sound_out) m_sound_out->unload();   // MESSUI 2026-05-08 fix crash if sw item not found
 
 	set_ready(true);
 }

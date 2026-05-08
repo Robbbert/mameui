@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 75 -->
+<!-- Number of items in this list = 102 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -579,6 +579,276 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="11520">
 				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio)[light].cas" size="11520" crc="a093d044" sha1="b4610e0f77084a7e0a53d83a2c76e65445758539"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k37826baaba5e0">
+		<description>Dataman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="16640">
+				<rom name="Dataman.cas" size="16640" crc="cfe21c73" sha1="37826baaba5e039ca7528f8a6a7807fca022c924"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k26e27301e788d">
+		<description>De Nederlandse Spaarbanken (kant A)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="37120">
+				<rom name="De Nederlandse Spaarbanken (kant A).cas" size="37120" crc="18492a4e" sha1="26e27301e788dc909f33f78ada3392188a6dc3fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k76923e6e6864a">
+		<description>De Nederlandse Spaarbanken (kant B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="40960">
+				<rom name="De Nederlandse Spaarbanken (kant B).cas" size="40960" crc="e934c314" sha1="76923e6e6864a4281cfee8b16fb87cb6e96486a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k655def4851a47">
+		<description>Determinant</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Determinant.cas" size="5120" crc="73b6dca3" sha1="655def4851a4769c9af6e4ebfb98ff0da39c39ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kd65fde4025fca">
+		<description>Diag-Computrol(cassdump)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="55040">
+				<rom name="Diag-Computrol(cassdump).cas" size="55040" crc="da9be5a6" sha1="d65fde4025fcac933834acb7bc69642e6fdfe68c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k6bfe4f29f80c6">
+		<description>Diag-Computrol(data-cassdump)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="35840">
+				<rom name="Diag-Computrol(data-cassdump).cas" size="35840" crc="732bddc7" sha1="6bfe4f29f80c6d541ae3bf3c4ae2b3d70341305d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k5ab9d3ba69e39">
+		<description>Diag-Computrol</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="23040">
+				<rom name="Diag-Computrol.cas" size="23040" crc="1473bca3" sha1="5ab9d3ba69e3918b7a394ef8fa292d5a983e949a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kb9766e50aab7d">
+		<description>Digitale frequentiemeter</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="Digitale frequentiemeter.cas" size="14080" crc="d7db694e" sha1="b9766e50aab7d97ff12a239a465715d7bbd029b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k993c82c9f3b90">
+		<description>Dir collector</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Dir collector.cas" size="1280" crc="ab977350" sha1="993c82c9f3b90a959d2a333c100180e5d612d730"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k56f5d8ba61b17">
+		<description>Dir-compare</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Dir-compare.cas" size="1280" crc="b04301d6" sha1="56f5d8ba61b17e4ffa8fc721afc8af79f877a93a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k9d1502614ff26">
+		<description>Dir-cracker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Dir-cracker.cas" size="1280" crc="f7809e4b" sha1="9d1502614ff260435f296ef73da180b66761452c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kbfa4501a3b88d">
+		<description>Dir-locker 2.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Dir-locker 2.1.cas" size="1280" crc="0882657f" sha1="bfa4501a3b88da8ceb6ea73b465b14c471875b9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k22416a5bfc529">
+		<description>Dir-unlocker 2.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Dir-unlocker 2.1.cas" size="1280" crc="8c8ba7bd" sha1="22416a5bfc529b9cb606096e7ffbf69384df4e64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kfb2d226d39944">
+		<description>Disk 2 Cassette</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="3840">
+				<rom name="Disk 2 Cassette.cas" size="3840" crc="418a9dae" sha1="fb2d226d39944cc0c8a7b88b7120eaba4eaf836d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ke16dbcca9c994">
+		<description>Disk Inhoud Spec</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Disk Inhoud Spec.cas" size="5120" crc="baf5d259" sha1="e16dbcca9c9941204143ee50400027dc4221e439"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kfe1ca8d210fe9">
+		<description>Disk recover</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Disk recover.cas" size="1280" crc="824aacd2" sha1="fe1ca8d210fe9d1065aba265c19f91ae09ae966d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kd2e15ce73f2db">
+		<description>Disk Util 3 in 1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="6400">
+				<rom name="Disk Util 3 in 1.cas" size="6400" crc="53d99c1e" sha1="d2e15ce73f2db4929ee6c6b9242794446ee9e74f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k05d4d7868f3d4">
+		<description>Disk wisser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="2560">
+				<rom name="Disk wisser.cas" size="2560" crc="c89f4c58" sha1="05d4d7868f3d4fe0e28763e32f5c0caf4e20ce2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ke2da8ac3a954a">
+		<description>Disk-duplicator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Disk-duplicator.cas" size="5120" crc="9ce41d4c" sha1="e2da8ac3a954a8e8a04342e29a99c3cdcb67ed7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k37d2c13be070e">
+		<description>Disk-examinator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Disk-examinator.cas" size="1280" crc="c9983719" sha1="37d2c13be070e327a5b53ad1acb3b536d100f82f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k64ec94889696d">
+		<description>Disk-index label</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Disk-index label.cas" size="1280" crc="5e6faefa" sha1="64ec94889696d360f2bc75eef2f2635278d54724"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ke8606581beae6">
+		<description>Disk-print M2200</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="3840">
+				<rom name="Disk-print M2200.cas" size="3840" crc="cbc2f8ae" sha1="e8606581beae6816b1af378a84b6963c75d2435c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kd1c357c2a004e">
+		<description>Disk-print</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Disk-print.cas" size="1280" crc="b6dfb76f" sha1="d1c357c2a004e6ebe786df8ae61666e38769fbeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k894639f28009f">
+		<description>Disk-report 2.1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="3840">
+				<rom name="Disk-report 2.1.cas" size="3840" crc="9e45cbce" sha1="894639f28009f449680ea7e5f274b92a9e246a61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k6b79ee3fae881">
+		<description>Diskzoeker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Diskzoeker.cas" size="1280" crc="0cbf0550" sha1="6b79ee3fae881a125cd6f543032680e35aa92e4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k1745f024cb624">
+		<description>Drosophila</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Drosophila.cas" size="7680" crc="bfbe0593" sha1="1745f024cb624beb45498169a74b80329fc0a48b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kfefd7884a2e5d">
+		<description>Dump variabelen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="11520">
+				<rom name="Dump variabelen.cas" size="11520" crc="a6b000d9" sha1="fefd7884a2e5d51d0acdc26b9e3d62ddc69d35d3"/>
 			</dataarea>
 		</part>
 	</software>

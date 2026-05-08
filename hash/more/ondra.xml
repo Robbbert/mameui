@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7 -->
+<!-- Number of items in this list = 8 -->
 <softwarelist name="ondra" description="ondra loose roms">
+	<software name="ond803741505c6c3">
+		<description>B_K_P</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="ondra_cass">
+			<dataarea name="cass" size="9147689">
+				<rom name="B_K_P.wav" size="9147689" crc="a06f85dc" sha1="803741505c6c3978f26c15b78e794f601524e313"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ond8dd476c10e6ae">
 		<description>COPYFILE</description>
 		<year>????</year>
