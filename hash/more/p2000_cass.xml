@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 102 -->
+<!-- Number of items in this list = 108 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -99,16 +99,6 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="33280">
 				<rom name="Ancalagon.cas" size="33280" crc="60b2f08e" sha1="0e1bf6c7d3b839bdbdcbc567873ee489f727c375"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2k9f42dcb51b9e7">
-		<description>Art_gallery</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="16640">
-				<rom name="Art_gallery.cas" size="16640" crc="509e7f21" sha1="9f42dcb51b9e71e7686d9f13523c40586da617bc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -852,6 +842,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2k5cb0da55019ef">
+		<description>Edit 40</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="11520">
+				<rom name="Edit 40.cas" size="11520" crc="e61bfc8d" sha1="5cb0da55019efa1bf1e41572c6793e9940e91b8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kb09c701c2bb91">
+		<description>Edit 80 uitleg</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="17920">
+				<rom name="Edit 80 uitleg.cas" size="17920" crc="f92ed3e7" sha1="b09c701c2bb91c1ac26dc863eb888d02ed582a57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k0a6a0b22fbc70">
+		<description>Elektronisch Gastenbord</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="17920">
+				<rom name="Elektronisch Gastenbord.cas" size="17920" crc="be83b521" sha1="0a6a0b22fbc70961aa8767acbae2c8e14b781f01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kcc3351d25ab53">
+		<description>Elementair programeren II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Elementair programeren II.cas" size="7680" crc="46dd23f8" sha1="cc3351d25ab53e82aa7c1dfcb8b5d155cc2c3bd3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2k3dc8257bff551">
 		<description>Elevator Humpie (19xx)(-)(nl) (4)</description>
 		<year>????</year>
@@ -872,6 +902,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2k9b1e7ccba0ca5">
+		<description>ErrorSoft</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="25600">
+				<rom name="ErrorSoft.cas" size="25600" crc="1bf13fe4" sha1="9b1e7ccba0ca5b0544d05a5ee76dc413869ae955"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kfa90b94de98e9">
+		<description>Europa</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Europa.cas" size="7680" crc="db27f96e" sha1="fa90b94de98e9bc707dec1ca30e219f12b8ba7a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k780939d20d28c">
+		<description>Expert</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Expert.cas" size="7680" crc="30c2005c" sha1="780939d20d28c43223c88db06a85b50a0b0b1810"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k9dbb1bdedeb00">
+		<description>Extended Dir 1.3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Extended Dir 1.3.cas" size="1280" crc="fc2336e4" sha1="9dbb1bdedeb00a41711a0c45925d617ca2dbe749"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2kc6421914a709e">
 		<description>Ghost Hunter (19xx)(Errorsoft)(nl) &amp; Racen v2.0 (19xx)(Errorsoft)(nl) (4)</description>
 		<year>????</year>
@@ -889,16 +959,6 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="10240">
 				<rom name="H-Tron.cas" size="10240" crc="67abfad8" sha1="f869681326a8ec6eae3616f2b531ec788aafd172"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="p2kf75ea81dd6c35">
-		<description>Kleurendemonstratie v3.9 (1983)(Klaas H.J. Roberts)[b]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="p2000_cass">
-			<dataarea name="cass" size="15360">
-				<rom name="Kleurendemonstratie v3.9 (1983)(Klaas H.J. Roberts)[b].cas" size="15360" crc="45dd7e0f" sha1="f75ea81dd6c355c4ed0fd7a1b32374a5f2c00661"/>
 			</dataarea>
 		</part>
 	</software>

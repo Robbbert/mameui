@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2070 -->
+<!-- Number of items in this list = 2074 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3572,6 +3572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen50e6b47ba68ad">
+		<description>Altered Beast PT-BR (2026)(CEGA Traducoes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Altered Beast PT-BR (2026)(CEGA Traducoes).bin" size="524288" crc="2676ef61" sha1="50e6b47ba68ad69a8b2accf02324d0bfc964e442"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen21d9a51ad55ac">
 		<description>Amshay (2022)(BankBank)</description>
 		<year>????</year>
@@ -3923,42 +3933,52 @@
 		</part>
 	</software>
 	<software name="genf13f06362cfdc">
-		<description>Barbarian AMIGA (2017)(F.L)</description>
+		<description>Barbarian - The Ultimate Warrior - Amiga (2015)(F.L)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1031574">
-				<rom name="Barbarian AMIGA (2017)(F.L).bin" size="1031574" crc="4fc515f5" sha1="f13f06362cfdc1809f92986a752141c40b22a319"/>
+				<rom name="Barbarian - The Ultimate Warrior - Amiga (2015)(F.L).bin" size="1031574" crc="4fc515f5" sha1="f13f06362cfdc1809f92986a752141c40b22a319"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="genc082fcdb99abb">
-		<description>Barbarian Amstrad CPC (2014)(F.L)</description>
+		<description>Barbarian - The Ultimate Warrior - Amstrad CPC (2014)(F.L)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2296122">
-				<rom name="Barbarian Amstrad CPC (2014)(F.L).bin" size="2296122" crc="d63f8446" sha1="c082fcdb99abbcdb996d6270c30557347224cb78"/>
+				<rom name="Barbarian - The Ultimate Warrior - Amstrad CPC (2014)(F.L).bin" size="2296122" crc="d63f8446" sha1="c082fcdb99abbcdb996d6270c30557347224cb78"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gen60e22157713fa">
-		<description>Barbarian Atari ST (2014)(F.L)</description>
+		<description>Barbarian - The Ultimate Warrior - Atari ST (2014)(F.L)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2487416">
-				<rom name="Barbarian Atari ST (2014)(F.L).bin" size="2487416" crc="fec97705" sha1="60e22157713fa2582d788d7d77558ea48e848ebe"/>
+				<rom name="Barbarian - The Ultimate Warrior - Atari ST (2014)(F.L).bin" size="2487416" crc="fec97705" sha1="60e22157713fa2582d788d7d77558ea48e848ebe"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gen6dacce873f444">
-		<description>Barbarian C64 (2014)(F.L)</description>
+		<description>Barbarian - The Ultimate Warrior - C64 (2014)(F.L)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3028428">
-				<rom name="Barbarian C64 (2014)(F.L).bin" size="3028428" crc="d37f9af0" sha1="6dacce873f444d0708a006322411ce52303cd875"/>
+				<rom name="Barbarian - The Ultimate Warrior - C64 (2014)(F.L).bin" size="3028428" crc="d37f9af0" sha1="6dacce873f444d0708a006322411ce52303cd875"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen04d71f2845675">
+		<description>Barbarian - The Ultimate Warrior - ZX Spectrum (2015)(F.L)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1432448">
+				<rom name="Barbarian - The Ultimate Warrior - ZX Spectrum (2015)(F.L).bin" size="1432448" crc="5360129d" sha1="04d71f2845675536067b850a9bb07b8454a5d8df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3969,16 +3989,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Barbarian remake (2019)(Z-Team).bin" size="2621440" crc="a887d287" sha1="2aea0d18491d9ada43b00d3a1e28f55f717f5777"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen04d71f2845675">
-		<description>Barbarian ZX Spectrum (2015)(F.L)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1432448">
-				<rom name="Barbarian ZX Spectrum (2015)(F.L).bin" size="1432448" crc="5360129d" sha1="04d71f2845675536067b850a9bb07b8454a5d8df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5643,22 +5653,22 @@
 		</part>
 	</software>
 	<software name="gen46c735c1a6dc4">
-		<description>Death Sword Apple II (2014)(F.L)</description>
+		<description>Death Sword - Apple II (2014)(F.L)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="425616">
-				<rom name="Death Sword Apple II (2014)(F.L).bin" size="425616" crc="12a01f70" sha1="46c735c1a6dc422e954d06b287c8d9347d523e82"/>
+				<rom name="Death Sword - Apple II (2014)(F.L).bin" size="425616" crc="12a01f70" sha1="46c735c1a6dc422e954d06b287c8d9347d523e82"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="gend278015699f62">
-		<description>Death Sword PC CGA (2014)(F.L)</description>
+		<description>Death Sword - PC CGA (2014)(F.L)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="446380">
-				<rom name="Death Sword PC CGA (2014)(F.L).bin" size="446380" crc="aaeaeb87" sha1="d278015699f622765599883f20a26140e6e8b48f"/>
+				<rom name="Death Sword - PC CGA (2014)(F.L).bin" size="446380" crc="aaeaeb87" sha1="d278015699f622765599883f20a26140e6e8b48f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6939,6 +6949,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="G-LOC Air Battle (World).bin" size="1048576" crc="dc326396" sha1="270b8fd6be369fa0396bb72c25a3bdbc0a344d79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5f84e1a523f25">
+		<description>G-ZERO (2025)(gasega68k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="G-ZERO (2025)(gasega68k).bin" size="524288" crc="e9d0c3f3" sha1="5f84e1a523f256dd795960c6c2bf598e3c23a904"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11309,6 +11329,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="Mega Xmas 89' (PD).bin" size="393216" crc="50348291" sha1="4fc1bdeeb346a804b147848caae193f0a5799d11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1a455923ef008">
+		<description>MegaMeatBoy_v0.31</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="917504">
+				<rom name="MegaMeatBoy_v0.31.bin" size="917504" crc="88620f2d" sha1="1a455923ef00890a9d5c4193e35673dcdf636109"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen821311c0ece9b">
+		<description>MegaPang_v0.3_beta</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="MegaPang_v0.3_beta.bin" size="1572864" crc="edc09063" sha1="821311c0ece9ba759c56e69d4d216537f452a574"/>
 			</dataarea>
 		</part>
 	</software>

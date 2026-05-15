@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 100 -->
+<!-- Number of items in this list = 103 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -319,6 +319,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Fantasy Zone Gear (USA, Europe) (Alt).gg" size="131072" crc="365b92cf" sha1="002de139e9e330f2811cf56401b9e3cc7f233b91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggcf8da1d33dc1d9">
+		<description>Fray - Shugyou Hen T-Eng (2026)(BacklogOddy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Fray - Shugyou Hen T-Eng (2026)(BacklogOddy).gg" size="262144" crc="3ac4575b" sha1="cf8da1d33dc1d956f78e350fb2623b977c3dcee5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -752,6 +762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ggee533ef7e7cb1b">
+		<description>Psychic World (Euro, USA, Brazil)(1991)(Sega)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Psychic World (Euro, USA, Brazil)(1991)(Sega).gg" size="131072" crc="e8cf96ad" sha1="ee533ef7e7cb1be5706c7d61649e674896ccf325"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ggce851f25e70093">
 		<description>Ring Dash GG (2025)(Brig78)</description>
 		<year>????</year>
@@ -919,6 +939,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Sword of Stone, The v2.4 (2024-25)(2Minds - Cireza).gg" size="524288" crc="3a92a9ed" sha1="5710f324167238dd400882448af3477e3a45df8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg3c67bb30463310">
+		<description>Tarzan - Lord of the Jungle T-Por v1.03 (2026)(Antigeno)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Tarzan - Lord of the Jungle T-Por v1.03 (2026)(Antigeno).gg" size="262144" crc="88e1a294" sha1="3c67bb304633100abfbd92746a9c2dd380cfb382"/>
 			</dataarea>
 		</part>
 	</software>

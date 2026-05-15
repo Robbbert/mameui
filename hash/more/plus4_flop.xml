@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 68 -->
+<!-- Number of items in this list = 75 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c16479ad51c1ee08">
 		<description>076A</description>
@@ -669,6 +669,76 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="GRIDTRAP.D64" size="174848" crc="db0a3f4e" sha1="a93184e65140133830d762ad495e058f8de90a4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16648e97382bcc4">
+		<description>HELIUM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="HELIUM.D64" size="175531" crc="e1f96679" sha1="648e97382bcc4890d09fb3bbc60a690d6b534b2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16155c49db0962e">
+		<description>Hinterhalt</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Hinterhalt.D64" size="174848" crc="67f5ff63" sha1="155c49db0962ed96428a701c964e853080ff03ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e583dbde7dbb7">
+		<description>Hitchhiker's Guide to the Galaxy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Hitchhiker's Guide to the Galaxy.D64" size="174848" crc="9871b79f" sha1="e583dbde7dbb768744ec8bf04c567ffdecbcd59f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1619130c021647d">
+		<description>Hollywood_Poker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Hollywood_Poker.d64" size="174848" crc="2ab58193" sha1="19130c021647db6de23cddbf434df8f863bc180a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ded4c307081cb">
+		<description>Horse_Racing</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Horse_Racing.d64" size="174848" crc="340a3ec2" sha1="ded4c307081cbd8a2fe8ae017041740c30d261f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1664382a6e118d6">
+		<description>HULK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="HULK.D64" size="174848" crc="ff3d9f81" sha1="64382a6e118d66b9d9bd87c90f4308b45c7dd1b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164a0c3846cbae8">
+		<description>Hypersnake</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Hypersnake.D64" size="174848" crc="08546004" sha1="4a0c3846cbae8b1a4e77b77a9096edcb2c93e18f"/>
 			</dataarea>
 		</part>
 	</software>

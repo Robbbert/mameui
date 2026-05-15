@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7861 -->
+<!-- Number of items in this list = 7862 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10789,6 +10789,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="72367">
 				<rom name="Bloodstone 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72367" crc="06f41aae" sha1="a192d3d937dfa5866bf6d969a3dc2016d683a67a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscbb1469f910bc">
+		<description>Bloodstone v1.2 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72373">
+				<rom name="Bloodstone v1.2 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72373" crc="31b09210" sha1="cbb1469f910bc1315e0a79dda2b6ee37b31fa4ce"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 79 -->
+<!-- Number of items in this list = 80 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -339,6 +339,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="24576">
 				<rom name="Impetus+ (2025)(Inufuto).sg" size="24576" crc="57f3ceec" sha1="10ec5b6d4e003b77e41f7b04785b8b8f46860921"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg145c8b86132e93">
+		<description>Jardim do Amor T-Por v2.0 (2016-26)(Patryckpo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Jardim do Amor T-Por v2.0 (2016-26)(Patryckpo).sg" size="32768" crc="149ef6b1" sha1="45c8b86132e9392d98b6d5c428368fc7c0445b1b"/>
 			</dataarea>
 		</part>
 	</software>

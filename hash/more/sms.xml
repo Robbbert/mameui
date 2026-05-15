@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 573 -->
+<!-- Number of items in this list = 577 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1369,6 +1369,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Draconic Throne MSX2SMS Hack.sms" size="49152" crc="aac67ba4" sha1="d1135add06d1296e36096cec3ab408a69abaad14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3146bfa987a56">
+		<description>Dragon's Descent (2026)(Revontuli124)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Dragon's Descent (2026)(Revontuli124).sms" size="49152" crc="2afa9c93" sha1="3146bfa987a56f453024a72329b776928a59ff87"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3222,6 +3232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms52d3491b47c89">
+		<description>Multicolour Mars v1.2 (2026)(joe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Multicolour Mars v1.2 (2026)(joe).sms" size="32768" crc="14348fb2" sha1="52d3491b47c890fe9cf5bf74760911a90ec7b91b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms8876e8f16b09b">
 		<description>Music Station (V.1.6)</description>
 		<year>????</year>
@@ -4172,6 +4192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsf2801a72bb928">
+		<description>Ring Dash SMS (2025)(Brig78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Ring Dash SMS (2025)(Brig78).sms" size="131072" crc="a1e883fc" sha1="f2801a72bb92865803a41e52286f62451c7ce2c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms554b42b09980f">
 		<description>Rise Out from Dungeons MSX2SMS Hack</description>
 		<year>????</year>
@@ -4419,6 +4449,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="81920">
 				<rom name="shinobi_SE (demo).sms" size="81920" crc="41295d5d" sha1="c1b1e9aaa118c5ba4af497a9963bb93518d6055e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms7b555d05bf76d">
+		<description>Ship Schematic Demo (2026)(BadComputer, LovePenguin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Ship Schematic Demo (2026)(BadComputer, LovePenguin).sms" size="65536" crc="bad541e1" sha1="7b555d05bf76d68ed57b3f98d76aacfb24cdcad8"/>
 			</dataarea>
 		</part>
 	</software>
