@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 75 -->
+<!-- Number of items in this list = 82 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
+	<software name="c1655a6acb4cce13">
+		<description>(demo)Jaws3D</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="(demo)Jaws3D.D64" size="175531" crc="dd2f96ca" sha1="55a6acb4cce13312e9de460560c8e70774f727ae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c16479ad51c1ee08">
 		<description>076A</description>
 		<year>????</year>
@@ -739,6 +749,66 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Hypersnake.D64" size="174848" crc="08546004" sha1="4a0c3846cbae8b1a4e77b77a9096edcb2c93e18f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169a791ff8747c2">
+		<description>Indiana Jones II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="Indiana Jones II.D64" size="175531" crc="e94982df" sha1="9a791ff8747c2966da50121319349d2481d68a66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c55d09264adcf">
+		<description>INKA</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="INKA.D64" size="174848" crc="9dab2afa" sha1="c55d09264adcf52396ae80d4ef9199f28a54c7ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a5dfbb5b2e8fd">
+		<description>International Karate</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="International Karate.D64" size="174848" crc="d163635b" sha1="a5dfbb5b2e8fd49c87e5895813ff413455b37799"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1633a24e29308a6">
+		<description>Jerry's Quest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Jerry's Quest.D64" size="174848" crc="b58e2bc7" sha1="33a24e29308a640c745d24c20dec1376231996cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16be5225a9a7167">
+		<description>JONIGK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="JONIGK.D64" size="174848" crc="2ff33f7d" sha1="be5225a9a716769b8d0d619ef8d3c00539b64a22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16443a8072604bc">
+		<description>Jumpi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Jumpi.d64" size="174848" crc="55cc28b5" sha1="443a8072604bc60c61956d5acf264c92aff232e4"/>
 			</dataarea>
 		</part>
 	</software>
