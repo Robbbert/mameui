@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 202 -->
+<!-- Number of items in this list = 203 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1009,6 +1009,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Die Hard T-Eng (2011)(Spinner 8 &amp; friends).pce" size="524288" crc="91be0dec" sha1="ae01c948903cca1c849d77f68bffb3e533efcf50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce6a2c7e3f9eee0">
+		<description>Die Hard T-Por (2018)(Patryckpo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Die Hard T-Por (2018)(Patryckpo).pce" size="524288" crc="6634dc79" sha1="6a2c7e3f9eee051bf6f929493b66e1c3d9bfae82"/>
 			</dataarea>
 		</part>
 	</software>

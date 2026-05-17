@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7862 -->
+<!-- Number of items in this list = 7872 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10442,6 +10442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc68ece070833d">
+		<description>Blindwalker 48K-128K (2026)(Poe Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35510">
+				<rom name="Blindwalker 48K-128K (2026)(Poe Games).tap" size="35510" crc="4bf023bf" sha1="c68ece070833de8f5d2176d1a0a628ba5f9b7603"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs44762ca220bb1">
 		<description>Blinky's Scary School (1991)(Zeppelin Games)</description>
 		<year>????</year>
@@ -10789,6 +10799,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="72367">
 				<rom name="Bloodstone 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72367" crc="06f41aae" sha1="a192d3d937dfa5866bf6d969a3dc2016d683a67a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92e3904de0e40">
+		<description>Bloodstone EN v1.4 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72379">
+				<rom name="Bloodstone EN v1.4 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72379" crc="3b36644c" sha1="92e3904de0e40b44a6ff4c327307d31261278be1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs997536c78db83">
+		<description>Bloodstone RU v1.2 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72640">
+				<rom name="Bloodstone RU v1.2 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72640" crc="9ec27d60" sha1="997536c78db83009d91fc0b2be7c9250680e3725"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14859,6 +14889,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43903">
 				<rom name="Chromanoids v1.1 128K (2023)(Ariel Endaraues).tap" size="43903" crc="1999bbdd" sha1="79e5e9bbe0663d3b1c8b9b5ded4071228ce4b9ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse378db115ed12">
+		<description>Chromatixx 128K (2026)(Miguetelo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42883">
+				<rom name="Chromatixx 128K (2026)(Miguetelo).tap" size="42883" crc="4c978e09" sha1="e378db115ed12a6a50a03a489a215ad46f95957f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -24532,6 +24572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8f31ebd80deb8">
+		<description>FIRE 48K-128K (1988)(Fuxoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44960">
+				<rom name="FIRE 48K-128K (1988)(Fuxoft).tap" size="44960" crc="c11531d0" sha1="8f31ebd80deb8566a8e3b74e7797707df3115035"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5022cec08bc21">
 		<description>Fire Copy v1.0 (1985)(Juric Zeljko)</description>
 		<year>????</year>
@@ -26039,6 +26089,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35612">
 				<rom name="Fudbal Menadzer - Football Manager (1982)(Addictive Games)(Yu).tap" size="35612" crc="44edc2ba" sha1="aabf20599b063e1e6e5a7af53299f1a68fc88baa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscb280030aa42e">
+		<description>Full Spectrum Defense 48K-128K (2026)(Bitmap Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51933">
+				<rom name="Full Spectrum Defense 48K-128K (2026)(Bitmap Soft).tap" size="51933" crc="0cb68375" sha1="cb280030aa42ee5c244d7b094466ffa5e9871ef9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32179,6 +32239,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="19484">
 				<rom name="Ines 64 v1.1 (1985)(Ultrasoft).tap" size="19484" crc="f87ed487" sha1="4d93f8d9a76299f4b8b3921cc35ad3a713fc6ee5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf5b05ae413a27">
+		<description>Infection 48K-128K (1989)(Virgin Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53064">
+				<rom name="Infection 48K-128K (1989)(Virgin Mastertronic).tzx" size="53064" crc="c53e6145" sha1="f5b05ae413a27271421b34590e828af6b125f8b6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44492,6 +44562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs089762a55a092">
+		<description>Octan 48K (1988)(Silverbird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48566">
+				<rom name="Octan 48K (1988)(Silverbird Software).tzx" size="48566" crc="981fc462" sha1="089762a55a092185ca4756adac77bd95bea9a092"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscda9fe6731213">
 		<description>Octopussy (1992)(Bytepack)(Cz)</description>
 		<year>????</year>
@@ -46659,6 +46739,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46345">
 				<rom name="Peter Pack Rat (1989)(Silverbird).tap" size="46345" crc="5efe84ca" sha1="0f6ddc822942df1e85db0053a1b0bebff06a07cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs55eb5fb56e480">
+		<description>Peter Pack Rat 48K-128K (1989)(Silverbird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53285">
+				<rom name="Peter Pack Rat 48K-128K (1989)(Silverbird Software).tap" size="53285" crc="5d318fcd" sha1="55eb5fb56e480703dadf813eb65ef09e40582f02"/>
 			</dataarea>
 		</part>
 	</software>
@@ -63079,6 +63169,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="36697">
 				<rom name="Turbo Boat Simulator (1988)(Silverbird Software Ltd).tap" size="36697" crc="d7df8d1e" sha1="d01483fd537d468926542dba482e4b70e28150ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1e172cb1a94b">
+		<description>Turbo Boat Simulator 48K-128K (1988)(Silverbird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36761">
+				<rom name="Turbo Boat Simulator 48K-128K (1988)(Silverbird Software).tzx" size="36761" crc="3627ba55" sha1="a1e172cb1a94b08dbf12b399d08abcd66c18859e"/>
 			</dataarea>
 		</part>
 	</software>

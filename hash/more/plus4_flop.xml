@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 82 -->
+<!-- Number of items in this list = 88 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c1655a6acb4cce13">
 		<description>(demo)Jaws3D</description>
@@ -792,6 +792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c16c2a660eafa349">
+		<description>Jet Set Willy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Jet Set Willy.D64" size="174848" crc="1be95fa4" sha1="c2a660eafa349b13da86c1b8cf9c72969c439edf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c16be5225a9a7167">
 		<description>JONIGK</description>
 		<year>????</year>
@@ -809,6 +819,56 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Jumpi.d64" size="174848" crc="55cc28b5" sha1="443a8072604bc60c61956d5acf264c92aff232e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1698a399d6fe5d7">
+		<description>Lucid Night (2023-07-23)(Cooke, Dee)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Lucid Night (2023-07-23)(Cooke, Dee).d64" size="174848" crc="8d8592d1" sha1="98a399d6fe5d799690db5397cef1f36a0555fe9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c1bd88e5fdcc4">
+		<description>raetsel</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="333744">
+				<rom name="raetsel.g64" size="333744" crc="6b903a15" sha1="c1bd88e5fdcc4d07e927420981ab86264965a2dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d62540ea578d6">
+		<description>Submarine Sabotage (2023-07-23)(Francis, Garry)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Submarine Sabotage (2023-07-23)(Francis, Garry).d64" size="174848" crc="989cbee5" sha1="d62540ea578d6ec7794561352b8759b242141ed6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16972b64f7255a8">
+		<description>Tenebra (2022-05-31)(Haplo)(AU)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Tenebra (2022-05-31)(Haplo)(AU).d64" size="174848" crc="b57620e6" sha1="972b64f7255a879170fa34744f5a2b765071ac40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1638f329b0dcf92">
+		<description>Tenebra 2 (2022-10-28)(Haplo)(AU)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Tenebra 2 (2022-10-28)(Haplo)(AU).d64" size="174848" crc="1d792f8c" sha1="38f329b0dcf92fcd0ab64d573bd7c37162c85da6"/>
 			</dataarea>
 		</part>
 	</software>

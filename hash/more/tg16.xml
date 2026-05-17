@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 29 -->
 <softwarelist name="tg16" description="tg16 loose roms">
 	<software name="tg1a65dca7ff88eb">
 		<description>(tg16)Bloody Wolf (U)</description>
@@ -59,6 +59,16 @@
 		<part name="cart" interface="tg16_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="(tg16)Keith Courage in Alpha Zones (U) [T+Fre-beta].pce" size="262144" crc="62552444" sha1="78a91737c0cf71b3956b52e8db4fb079e715565e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1dd42d5cd3f9fe">
+		<description>(tg16)Legendary Axe, The T-Por (2018)(Patryckpo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="(tg16)Legendary Axe, The T-Por (2018)(Patryckpo).pce" size="262144" crc="3682e4e1" sha1="dd42d5cd3f9fe72f39d0bf150ac995e91a76e10b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -229,6 +239,16 @@
 		<part name="cart" interface="tg16_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="(tg16)ShockMan (U) [T+Spa_lukas].PCE" size="524288" crc="8bd9abe9" sha1="cdcabed858fdb85561cb751f9faba988cff5ef8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tg1d3843d5ccf25e">
+		<description>(tg16)Shockman T-Por v0.95 (2017)(Maverick Blue Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tg16_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="(tg16)Shockman T-Por v0.95 (2017)(Maverick Blue Warrior).pce" size="524288" crc="6059ae18" sha1="d3843d5ccf25e4f7714c19c8f2bb7c38bfd34038"/>
 			</dataarea>
 		</part>
 	</software>

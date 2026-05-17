@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 118 -->
+<!-- Number of items in this list = 129 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -1042,6 +1042,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2k8ebc452de8bef">
+		<description>Geheugentest 16K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Geheugentest 16K.cas" size="5120" crc="21699440" sha1="8ebc452de8befefb7d5a40c9c4ddf5252b2ae8c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k74f464fa061ee">
+		<description>Gereedschapskist [info]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="21760">
+				<rom name="Gereedschapskist [info].cas" size="21760" crc="d30bf3e1" sha1="74f464fa061ee19ba21f0556a661f7fbd4d3d844"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k561cbcdafe899">
+		<description>Gereedschapskist</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="Gereedschapskist.cas" size="14080" crc="c317c016" sha1="561cbcdafe8999b1db272a23e686e4cb412b1f85"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2kc6421914a709e">
 		<description>Ghost Hunter (19xx)(Errorsoft)(nl) &amp; Racen v2.0 (19xx)(Errorsoft)(nl) (4)</description>
 		<year>????</year>
@@ -1052,6 +1082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2k772eacc7ac115">
+		<description>Grafieken van functies</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="12800">
+				<rom name="Grafieken van functies.cas" size="12800" crc="653c36ad" sha1="772eacc7ac115702efb28d17505b50fd5227dcae"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2kf869681326a8e">
 		<description>H-Tron</description>
 		<year>????</year>
@@ -1059,6 +1099,76 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="10240">
 				<rom name="H-Tron.cas" size="10240" crc="67abfad8" sha1="f869681326a8ec6eae3616f2b531ec788aafd172"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k365822f064a09">
+		<description>Hobbyscoop Basicode</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Hobbyscoop Basicode.cas" size="7680" crc="68fd8686" sha1="365822f064a09c13515625141762f96a6da3bb90"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k9b6e867a5aa5f">
+		<description>Hoppie's Extended Basic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="8960">
+				<rom name="Hoppie's Extended Basic.cas" size="8960" crc="3fbec504" sha1="9b6e867a5aa5ff1434c7f8bb6b328556941ab39a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kc1c8cf8f52762">
+		<description>Huishoudboekje (info)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="16640">
+				<rom name="Huishoudboekje (info).cas" size="16640" crc="422b6dfa" sha1="c1c8cf8f5276268899bd28f96abd223500bc546f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k66e69139a4b66">
+		<description>Huishoudboekje</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="Huishoudboekje.cas" size="14080" crc="72189b99" sha1="66e69139a4b6676aa26bebf68c048e45ff19808b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k52913f0ec105f">
+		<description>Huurkoop berekening</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Huurkoop berekening.cas" size="1280" crc="6381dd2d" sha1="52913f0ec105f1776bc1e971cb6a723a3b5b5c2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k1e9663cb4062d">
+		<description>HWU Uitgaven</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="HWU Uitgaven.cas" size="14080" crc="928f2d00" sha1="1e9663cb4062d2a8b072787d6d1189781ef6d4bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ke6e02d4e224d7">
+		<description>Hypotheek berekenen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Hypotheek berekenen.cas" size="5120" crc="08f34944" sha1="e6e02d4e224d71ec52c689ddb2d8ef417347ae95"/>
 			</dataarea>
 		</part>
 	</software>
