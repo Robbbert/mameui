@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 577 -->
+<!-- Number of items in this list = 579 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -619,6 +619,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Bitlogic MSX2SMS (2023)(OXiAB Studio).sms" size="65536" crc="7145271f" sha1="1e0155474b2c3c7eeb4dc16a21408ec09d893099"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2a67eb12c9adb">
+		<description>Black Castle 20240523 (2023-24)(toxa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Black Castle 20240523 (2023-24)(toxa).sms" size="65536" crc="aac28a8d" sha1="2a67eb12c9adb4d4da3e8f8b55639ddcbbde354d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2962,16 +2972,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms6aa4b40e2ba02">
-		<description>Maze3d</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Maze3d.sms" size="524288" crc="dd940cdf" sha1="6aa4b40e2ba02c25951b35519a7eb50a8643e2e1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sms0e1632b4ac51a">
 		<description>Mazy (2022)(Inufuto)</description>
 		<year>????</year>
@@ -3179,6 +3179,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="81920">
 				<rom name="Monaco Master v2.9.2 (2023)(Louis The SEGA Nerd).sms" size="81920" crc="355330b6" sha1="4af5c6b9bbbe9c053a75efe3368693ed964fd917"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsa4a606708aac3">
+		<description>Monaco Master v2.9.3 (2023)(Louis The SEGA Nerd)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="81920">
+				<rom name="Monaco Master v2.9.3 (2023)(Louis The SEGA Nerd).sms" size="81920" crc="694f1fdc" sha1="a4a606708aac3d245f323fbc3bb49cb205338cb4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5343,12 +5353,12 @@
 		</part>
 	</software>
 	<software name="smsde0059bbd7b11">
-		<description>VexedSMS</description>
+		<description>Vexed v1.15 (2021-24)(Under4Mhz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="VexedSMS.sms" size="32768" crc="47c39bac" sha1="de0059bbd7b11bb29ca690a1e9e5ed9e0fc89943"/>
+				<rom name="Vexed v1.15 (2021-24)(Under4Mhz).sms" size="32768" crc="47c39bac" sha1="de0059bbd7b11bb29ca690a1e9e5ed9e0fc89943"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5479,6 +5489,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Witches MSX2SMS Hack.sms" size="49152" crc="81de874e" sha1="214095206ac77023e9b941cd9418a685b6016c97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6aa4b40e2ba02">
+		<description>Wolfenstein v1.16 (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wolfenstein v1.16 (2023)(Under4Mhz).sms" size="524288" crc="dd940cdf" sha1="6aa4b40e2ba02c25951b35519a7eb50a8643e2e1"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 103 -->
+<!-- Number of items in this list = 105 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -129,6 +129,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Bishoujo senshi sailor moon s (t-eng1.1).gg" size="1048576" crc="a9a6f271" sha1="e1218a1772091a898a7075a92c1a085efc6360a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg0903d9831a9539">
+		<description>Black Castle 20240523 (2023-24)(toxa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Black Castle 20240523 (2023-24)(toxa).gg" size="65536" crc="ee80f563" sha1="0903d9831a953932c2ba7a281041b4f635c35ad7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -562,16 +572,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gg1e4a995cd5d996">
-		<description>Maze3d</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gamegear_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="Maze3d.gg" size="524288" crc="c2760884" sha1="1e4a995cd5d9968662d26906d7c2b3072ffd8b2a"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gg021205b9ab828f">
 		<description>Mazy 2 Micro (2025)(Inufuto)</description>
 		<year>????</year>
@@ -942,6 +942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gge906ceb87a5cfd">
+		<description>SwordWork Micro (2026)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="SwordWork Micro (2026)(Inufuto).gg" size="16384" crc="b45207a9" sha1="e906ceb87a5cfdd1069e7f5f56c27129b8a270f6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gg3c67bb30463310">
 		<description>Tarzan - Lord of the Jungle T-Por v1.03 (2026)(Antigeno)</description>
 		<year>????</year>
@@ -973,12 +983,12 @@
 		</part>
 	</software>
 	<software name="ggdaebc23f09d1f6">
-		<description>VexedGG</description>
+		<description>Vexed v1.15 (2023-24)(Under4Mhz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="VexedGG.gg" size="32768" crc="3c456bbf" sha1="daebc23f09d1f6bf1a2e3620e3247c58e48b102c"/>
+				<rom name="Vexed v1.15 (2023-24)(Under4Mhz).gg" size="32768" crc="3c456bbf" sha1="daebc23f09d1f6bf1a2e3620e3247c58e48b102c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -999,6 +1009,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Wing Warriors (PD).gg" size="131072" crc="db029d58" sha1="5bb0b8f9d33e624615b6c00089e06ad8de2cd444"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg1e4a995cd5d996">
+		<description>Wolfenstein v1.16 (2023)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Wolfenstein v1.16 (2023)(Under4Mhz).gg" size="524288" crc="c2760884" sha1="1e4a995cd5d9968662d26906d7c2b3072ffd8b2a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7872 -->
+<!-- Number of items in this list = 7869 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -32242,16 +32242,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsf5b05ae413a27">
-		<description>Infection 48K-128K (1989)(Virgin Mastertronic)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="53064">
-				<rom name="Infection 48K-128K (1989)(Virgin Mastertronic).tzx" size="53064" crc="c53e6145" sha1="f5b05ae413a27271421b34590e828af6b125f8b6"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsbcce8213e176e">
 		<description>Inferno</description>
 		<year>????</year>
@@ -44559,16 +44549,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48640">
 				<rom name="Octan (1987)(Silverbird Software Ltd)[a].tap" size="48640" crc="be30af2f" sha1="3ff0c658323e9140c5a78666ec8c05322742a66f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs089762a55a092">
-		<description>Octan 48K (1988)(Silverbird Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48566">
-				<rom name="Octan 48K (1988)(Silverbird Software).tzx" size="48566" crc="981fc462" sha1="089762a55a092185ca4756adac77bd95bea9a092"/>
 			</dataarea>
 		</part>
 	</software>
@@ -63169,16 +63149,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="36697">
 				<rom name="Turbo Boat Simulator (1988)(Silverbird Software Ltd).tap" size="36697" crc="d7df8d1e" sha1="d01483fd537d468926542dba482e4b70e28150ff"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsa1e172cb1a94b">
-		<description>Turbo Boat Simulator 48K-128K (1988)(Silverbird Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="36761">
-				<rom name="Turbo Boat Simulator 48K-128K (1988)(Silverbird Software).tzx" size="36761" crc="3627ba55" sha1="a1e172cb1a94b08dbf12b399d08abcd66c18859e"/>
 			</dataarea>
 		</part>
 	</software>

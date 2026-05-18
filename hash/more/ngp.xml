@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 113 -->
+<!-- Number of items in this list = 118 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -149,6 +149,26 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Baccarat [Prototype].ngc" size="1048576" crc="2a63b5a5" sha1="c19b992a91b1020e8f3b6c24fac97ec9d73f52b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp0994d097de6be">
+		<description>Barbarian - The Ultimate Warrior v1.1 (200x)(Julien Loic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Barbarian - The Ultimate Warrior v1.1 (200x)(Julien Loic).ngp" size="524288" crc="32a50499" sha1="0994d097de6be7d5e3646ed3664c01dc709d1e6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpcf373d60d50b8">
+		<description>Barbarian Invaders - Filled Up v1.01 (200x)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Barbarian Invaders - Filled Up v1.01 (200x)(Chris Ahchay).ngp" size="524288" crc="85dc10f7" sha1="cf373d60d50b809ebc924efd670185c9f263f058"/>
 			</dataarea>
 		</part>
 	</software>
@@ -313,12 +333,12 @@
 		</part>
 	</software>
 	<software name="ngp76f82acc6e5df">
-		<description>Diamond Run by Ivan Mackintosh (PD)</description>
+		<description>Diamond Run (200x)(Mackintosh)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Diamond Run by Ivan Mackintosh (PD).ngc" size="32768" crc="97c58fd0" sha1="76f82acc6e5df9c4980a56361966058653cd32f6"/>
+				<rom name="Diamond Run (200x)(Mackintosh).ngp" size="32768" crc="97c58fd0" sha1="76f82acc6e5df9c4980a56361966058653cd32f6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -339,6 +359,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Don't Die, Mr. Robot! (2025)(Infinite State Games).ngp" size="2097152" crc="d3f986b2" sha1="0301fa0b9375205a4c495d905f441f55901aa612"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp95b9b0d3a4e2a">
+		<description>Fantasy World Dizzy (HB, v0.02) (2004)(Soft'n Fuzzy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Fantasy World Dizzy (HB, v0.02) (2004)(Soft'n Fuzzy).ngp" size="524288" crc="5912804e" sha1="95b9b0d3a4e2a2814dcf9e2407e851cda215ac0a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -623,12 +653,12 @@
 		</part>
 	</software>
 	<software name="ngp7aa07c67a6aa8">
-		<description>Mines V1.0 by Ivan Mackintosh (PD)</description>
+		<description>Mine (2000)(Ivan Mackintosh)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Mines V1.0 by Ivan Mackintosh (PD).ngc" size="32768" crc="4b687e99" sha1="7aa07c67a6aa8d398370bceea7124f9e2e5b03f8"/>
+				<rom name="Mine (2000)(Ivan Mackintosh).ngp" size="32768" crc="4b687e99" sha1="7aa07c67a6aa8d398370bceea7124f9e2e5b03f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -639,6 +669,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mizuki Shigeru no Youkai Shashinkan (Japan) [T-En by WyndCrosser v0.01] [i].ngc" size="2097152" crc="7fe6d50e" sha1="21e07e17866f65ed826041c667149068c1fc8d60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp34f19e2727935">
+		<description>Mr. Do! (200x)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mr. Do! (200x)(Chris Ahchay).ngp" size="524288" crc="43c2e978" sha1="34f19e27279359e36ccce4adad64e9b990482f02"/>
 			</dataarea>
 		</part>
 	</software>
@@ -963,22 +1003,22 @@
 		</part>
 	</software>
 	<software name="ngp2ca5b0e26dbb6">
-		<description>Snake (V1.2) by Ivan Mackintosh (PD) [a1]</description>
+		<description>Snake v1.2 (2000)(Ivan Mackintosh)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Snake (V1.2) by Ivan Mackintosh (PD) [a1].npc" size="524288" crc="82510aa9" sha1="2ca5b0e26dbb6f399ff89183de17603ea78e87a7"/>
+				<rom name="Snake v1.2 (2000)(Ivan Mackintosh).ngp" size="524288" crc="82510aa9" sha1="2ca5b0e26dbb6f399ff89183de17603ea78e87a7"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="ngpbeebaa38f0e01">
-		<description>Snake V1.2 by Ivan Mackintosh (PD)</description>
+		<description>Snake v1.2 (Alt) (2000)(Ivan Mackintosh)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Snake V1.2 by Ivan Mackintosh (PD).ngc" size="524288" crc="da7890ca" sha1="beebaa38f0e011d39745cb81f2b3062126996b90"/>
+				<rom name="Snake v1.2 (Alt) (2000)(Ivan Mackintosh).ngp" size="524288" crc="da7890ca" sha1="beebaa38f0e011d39745cb81f2b3062126996b90"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1043,22 +1083,22 @@
 		</part>
 	</software>
 	<software name="ngpa17b1ffb66fba">
-		<description>Solitaire V1.0 By Ivan Mackintosh (PD)</description>
+		<description>Solitaire (2000)(Ivan Mackintosh)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Solitaire V1.0 By Ivan Mackintosh (PD).ngc" size="32768" crc="412be1aa" sha1="a17b1ffb66fbadea3b0c70456b86318a3c8d2984"/>
+				<rom name="Solitaire (2000)(Ivan Mackintosh).ngp" size="32768" crc="412be1aa" sha1="a17b1ffb66fbadea3b0c70456b86318a3c8d2984"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="ngpc9250809a3b63">
-		<description>Spacies (Newer Version) by Jim Bagley (PD)</description>
+		<description>Space Invaders (200x)(Jim Bagley)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Spacies (Newer Version) by Jim Bagley (PD).ngc" size="524288" crc="22ac8a4a" sha1="c9250809a3b63be39ceee1a72d3d216faf847b8c"/>
+				<rom name="Space Invaders (200x)(Jim Bagley).ngp" size="524288" crc="22ac8a4a" sha1="c9250809a3b63be39ceee1a72d3d216faf847b8c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1092,13 +1132,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="ngpcc21b9da3306d">
-		<description>Thieves V1.0 By Ivan Mackintosh (PD)</description>
+	<software name="ngp667dd5dcc592e">
+		<description>SwordWork Micro (2026)(Inufuto)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
-				<rom name="Thieves V1.0 By Ivan Mackintosh (PD).ngc" size="524288" crc="68242322" sha1="cc21b9da3306d3237e710a2d9400ee5c3a27bc29"/>
+				<rom name="SwordWork Micro (2026)(Inufuto).ngp" size="524288" crc="d7130cdf" sha1="667dd5dcc592e10845fb32f1aff41ec730cb86dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpcc21b9da3306d">
+		<description>Thieves (2000)(Ivan Mackintosh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Thieves (2000)(Ivan Mackintosh).ngp" size="524288" crc="68242322" sha1="cc21b9da3306d3237e710a2d9400ee5c3a27bc29"/>
 			</dataarea>
 		</part>
 	</software>

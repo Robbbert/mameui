@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 88 -->
+<!-- Number of items in this list = 98 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c1655a6acb4cce13">
 		<description>(demo)Jaws3D</description>
@@ -182,6 +182,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c16de8e3fdd09d6d">
+		<description>bloodsea_boot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="bloodsea_boot.d64" size="174848" crc="2881f48d" sha1="de8e3fdd09d6d27239add738eafbfe2e5b1d22bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161e5e63dee24ac">
+		<description>bloodsea_story</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="bloodsea_story.d64" size="174848" crc="ed29074d" sha1="1e5e63dee24ac46a974fc3c42dad7ef010bfcb64"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c1614f867746cea0">
 		<description>Blorp! (2023-07-23)(Sijnstra, Shawn)</description>
 		<year>????</year>
@@ -319,6 +339,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Cloud Kingdom.D64" size="174848" crc="b9778904" sha1="5dac61cefbd5ab53450f444faeb0d71cb718abb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1636e1c4967df55">
+		<description>coilshate_boot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="coilshate_boot.d64" size="174848" crc="f431cf43" sha1="36e1c4967df55c97c267521b40026b23834c9b17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166d265411597f9">
+		<description>coilshate_story</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="coilshate_story.d64" size="174848" crc="4a818f81" sha1="6d265411597f9cd92e32a016a4c713bf2948e624"/>
 			</dataarea>
 		</part>
 	</software>
@@ -662,6 +702,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c16bf3741c01138e">
+		<description>greenblood_boot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="greenblood_boot.d64" size="174848" crc="0b211d00" sha1="bf3741c01138e9927928313ff83ba0099fbcd583"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169c0d059c0c6af">
+		<description>greenblood_story</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="greenblood_story.d64" size="174848" crc="d1c4147e" sha1="9c0d059c0c6af8598cbf63397576889c506aba8e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c16b8a0329080c30">
 		<description>Green_Beret</description>
 		<year>????</year>
@@ -842,6 +902,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c169c66f74b53dab">
+		<description>Sail with Pirates</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Sail with Pirates.d64" size="174848" crc="5724aae2" sha1="9c66f74b53dabaa7d80f5429c16b43b767c1ac60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1643304c6a6f0f1">
+		<description>Secret of the Knights</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Secret of the Knights.d64" size="174848" crc="62ba570f" sha1="43304c6a6f0f1d28a119b6ceddad6babffdc89e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c16d62540ea578d6">
 		<description>Submarine Sabotage (2023-07-23)(Francis, Garry)</description>
 		<year>????</year>
@@ -879,6 +959,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Toop (2020-01-23)(Haplo)(AU).d64" size="174848" crc="2c5eeb2d" sha1="f26fa5a184a17a3971fc64948497c5e686d6174a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1673a86affd3d62">
+		<description>wartorn_boot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wartorn_boot.d64" size="174848" crc="2938a600" sha1="73a86affd3d62c6831800ce1c65f2beec8d6ac79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163708ec73226a9">
+		<description>wartorn_story</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wartorn_story.d64" size="174848" crc="be8329f2" sha1="3708ec73226a95d1d32c973ef3425bb0db3d02d5"/>
 			</dataarea>
 		</part>
 	</software>
