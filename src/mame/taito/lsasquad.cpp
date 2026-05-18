@@ -146,6 +146,8 @@ Notes:
 
 #include "emu.h"
 
+#include "taito68705.h"
+
 #include "cpu/m6805/m6805.h"
 #include "cpu/z80/z80.h"
 #include "machine/gen_latch.h"
@@ -153,19 +155,22 @@ Notes:
 #include "sound/ay8910.h"
 #include "sound/ymopn.h"
 
-#include "taito68705.h"
-
 #include "emupal.h"
 #include "screen.h"
 #include "speaker.h"
+#include "tilemap.h"
+
+//#define VERBOSE 1
+#include "logmacro.h"
+
 
 namespace {
 
 class lsasquad_state : public driver_device
 {
 public:
-	lsasquad_state(const machine_config &mconfig, device_type type, const char *tag)
-		: driver_device(mconfig, type, tag),
+	lsasquad_state(const machine_config &mconfig, device_type type, const char *tag) :
+		driver_device(mconfig, type, tag),
 		m_videoram(*this, "videoram"),
 		m_scrollram(*this, "scrollram"),
 		m_spriteram(*this, "spriteram"),
@@ -179,13 +184,16 @@ public:
 		m_bmcu(*this, "bmcu"),
 		m_gfxdecode(*this, "gfxdecode"),
 		m_palette(*this, "palette"),
-		m_bmcu_port(*this, "MCU") { }
+		m_bmcu_port(*this, "MCU")
+	{
+	}
 
-	void lsasquad(machine_config &config);
-	void storming(machine_config &config);
+	void lsasquad(machine_config &config) ATTR_COLD;
+	void storming(machine_config &config) ATTR_COLD;
 
 protected:
 	virtual void machine_start() override ATTR_COLD;
+	virtual void video_start() override ATTR_COLD;
 
 	virtual uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 
@@ -215,11 +223,16 @@ protected:
 
 	optional_ioport m_bmcu_port;
 
+	tilemap_t *m_tilemap = nullptr;
+	TILE_GET_INFO_MEMBER(get_tile_info);
+	void vram_w(offs_t offset, uint8_t data);
+
 private:
 	uint8_t lsasquad_sound_status_r();
 
 	uint8_t lsasquad_mcu_status_r();
-	void draw_layer(bitmap_ind16 &bitmap, const rectangle &cliprect, uint8_t *scrollram);
+	void draw_layer(bitmap_ind16 &bitmap, const rectangle &cliprect, const uint8_t *scrollram);
+
 	void lsasquad_map(address_map &map) ATTR_COLD;
 	void lsasquad_sound_map(address_map &map) ATTR_COLD;
 	void storming_map(address_map &map) ATTR_COLD;
@@ -229,11 +242,12 @@ private:
 class daikaiju_state : public lsasquad_state
 {
 public:
-	daikaiju_state(const machine_config &mconfig, device_type type, const char *tag)
-		: lsasquad_state(mconfig, type, tag)
-		{}
+	daikaiju_state(const machine_config &mconfig, device_type type, const char *tag) :
+		lsasquad_state(mconfig, type, tag)
+	{
+	}
 
-	void daikaiju(machine_config &config);
+	void daikaiju(machine_config &config) ATTR_COLD;
 
 protected:
 	virtual uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect) override;
@@ -249,13 +263,33 @@ private:
 	uint8_t daikaiju_mcu_status_r();
 };
 
+void lsasquad_state::vram_w(offs_t offset, uint8_t data)
+{
+	m_videoram[offset] = data;
+	m_tilemap->mark_tile_dirty(offset >> 1);
+}
+
+TILE_GET_INFO_MEMBER(lsasquad_state::get_tile_info)
+{
+	int attr = m_videoram[(tile_index * 2 + 1) & 0x1fff];
+	int code = m_videoram[(tile_index * 2) & 0x1fff] + ((attr & 0x0f) << 8);
+	u8 color = attr >> 4;
+
+	tileinfo.set(0, code, color, 0);
+}
+
+void lsasquad_state::video_start()
+{
+	m_tilemap = &machine().tilemap().create(*m_gfxdecode, tilemap_get_info_delegate(*this, FUNC(lsasquad_state::get_tile_info)), TILEMAP_SCAN_COLS, 8, 8, 128, 32);
+}
+
 /***************************************************************************
 
  lsasquad video
 
 ***************************************************************************/
 
-void lsasquad_state::draw_layer(bitmap_ind16 &bitmap, const rectangle &cliprect, uint8_t *scrollram)
+void lsasquad_state::draw_layer(bitmap_ind16 &bitmap, const rectangle &cliprect, const uint8_t *scrollram)
 {
 	int scrollx = scrollram[3];
 	int scrolly = -scrollram[0];
@@ -286,11 +320,13 @@ void lsasquad_state::draw_layer(bitmap_ind16 &bitmap, const rectangle &cliprect,
 					flip_screen(), flip_screen(),
 					sx, sy, 15);
 			if (sx > 248)   // wraparound
+			{
 				m_gfxdecode->gfx(0)->transpen(bitmap, cliprect,
 						code,
 						color,
 						flip_screen(), flip_screen(),
 						sx - 256, sy, 15);
+			}
 		}
 	}
 }
@@ -421,11 +457,13 @@ int daikaiju_state::draw_layer_daikaiju(bitmap_ind16 &bitmap, const rectangle &c
 					flip_screen(), flip_screen(),
 					sx, sy, 15);
 				if (sx > 248)   // wraparound
+				{
 					m_gfxdecode->gfx(0)->transpen(bitmap, cliprect,
 						code,
 						color,
 						flip_screen(), flip_screen(),
 						sx - 256, sy, 15);
+				}
 			}
 		}
 	}
@@ -479,26 +517,27 @@ void lsasquad_state::sh_nmi_enable_w(uint8_t data)
 
 uint8_t lsasquad_state::lsasquad_sound_status_r()
 {
-	// bit 0: message pending for sound cpu
-	// bit 1: message pending for main cpu
-	return (m_soundlatch->pending_r() ? 1 : 0) | (m_soundlatch2->pending_r() ? 2 : 0);
+	// bit 0: message pending for sound CPU
+	// bit 1: message pending for main CPU
+	return (m_soundlatch->pending_r() ? 0x01 : 0x00) | (m_soundlatch2->pending_r() ? 0x02 : 0x00);
 }
 
 
 uint8_t daikaiju_state::daikaiju_sound_status_r()
 {
-	// bit 0: message pending for sound cpu
-	// bit 1: message pending for main cpu
-	return (m_soundlatch->pending_r() ? 2 : 1);
+	// FIXME: the comment is definitely wrong (there is no sound-to-main latch) - should bit 1 always be high?
+	// bit 0: message pending for sound CPU
+	// bit 1: message pending for main CPU
+	return (m_soundlatch->pending_r() ? 0x02 : 0x01);
 }
 
 uint8_t lsasquad_state::lsasquad_mcu_status_r()
 {
 	int res = m_bmcu_port->read();
 
-	// bit 0 = when 1, mcu is ready to receive data from main cpu
-	// bit 1 = when 0, mcu has sent data to the main cpu
-	//logerror("%04x: mcu_status_r\n", m_maincpu->pc());
+	// bit 0 = when 1, MCU is ready to receive data from main CPU
+	// bit 1 = when 0, MCU has sent data to the main CPU
+	LOG("%s: mcu_status_r\n", machine().describe_context());
 	if (m_bmcu)
 	{
 		if (CLEAR_LINE == m_bmcu->host_semaphore_r())
@@ -514,9 +553,9 @@ uint8_t daikaiju_state::daikaiju_mcu_status_r()
 {
 	int res = m_bmcu_port->read();
 
-	// bit 0 = when 1, mcu is ready to receive data from main cpu
-	// bit 1 = when 0, mcu has sent data to the main cpu
-	//logerror("%04x: mcu_status_r\n", m_maincpu->pc());
+	// bit 0 = when 1, MCU is ready to receive data from main CPU
+	// bit 1 = when 0, MCU has sent data to the main CPU
+	LOG("%s: mcu_status_r\n", machine().describe_context());
 	if (m_bmcu)
 	{
 		if (CLEAR_LINE == m_bmcu->host_semaphore_r())
@@ -525,7 +564,8 @@ uint8_t daikaiju_state::daikaiju_mcu_status_r()
 			res |= 0x02;
 	}
 
-	res |= ((m_soundlatch->pending_r() & 0x02) ^ 2) << 3; //inverted flag
+	// FIXME: this is definitely wrong - (m_soundlatch->pending_r() & 0x02) is always zero
+	res |= ((m_soundlatch->pending_r() & 0x02) ^ 2) << 3; // inverted flag
 	return res;
 }
 
@@ -537,7 +577,7 @@ void lsasquad_state::bankswitch_w(uint8_t data)
 	// bit 3 is zeroed on startup, maybe reset sound CPU
 
 	// bit 4 flips screen
-	flip_screen_set(data & 0x10);
+	flip_screen_set(BIT(data, 4));
 
 	// other bits unknown
 }
@@ -553,7 +593,7 @@ void lsasquad_state::lsasquad_map(address_map &map)
 	map(0x0000, 0x7fff).rom();
 	map(0x8000, 0x9fff).bankr(m_mainbank);
 	map(0xa000, 0xbfff).ram(); // SRAM
-	map(0xc000, 0xdfff).ram().share(m_videoram);    // SCREEN RAM
+	map(0xc000, 0xdfff).ram().w(FUNC(lsasquad_state::vram_w)).share(m_videoram);    // SCREEN RAM
 	map(0xe000, 0xe3ff).ram().share(m_scrollram);   // SCROLL RAM
 	map(0xe400, 0xe5ff).ram().share(m_spriteram);   // OBJECT RAM
 	map(0xe800, 0xe800).portr("DSWA");
@@ -596,7 +636,7 @@ void lsasquad_state::storming_map(address_map &map)
 	map(0x0000, 0x7fff).rom();
 	map(0x8000, 0x9fff).bankr(m_mainbank);
 	map(0xa000, 0xbfff).ram(); // SRAM
-	map(0xc000, 0xdfff).ram().share(m_videoram);    // SCREEN RAM
+	map(0xc000, 0xdfff).ram().w(FUNC(lsasquad_state::vram_w)).share(m_videoram);    // SCREEN RAM
 	map(0xe000, 0xe3ff).ram().share(m_scrollram);   // SCROLL RAM
 	map(0xe400, 0xe5ff).ram().share(m_spriteram);   // OBJECT RAM
 	map(0xe800, 0xe800).portr("DSWA");
@@ -624,7 +664,7 @@ void daikaiju_state::daikaiju_map(address_map &map)
 	map(0x0000, 0x7fff).rom();
 	map(0x8000, 0x9fff).bankr(m_mainbank);
 	map(0xa000, 0xbfff).ram(); // SRAM
-	map(0xc000, 0xdfff).ram().share(m_videoram);    // SCREEN RAM
+	map(0xc000, 0xdfff).ram().w(FUNC(daikaiju_state::vram_w)).share(m_videoram);    // SCREEN RAM
 	map(0xe000, 0xe3ff).ram().share(m_scrollram);   // SCROLL RAM
 	map(0xe400, 0xe7ff).ram().share(m_spriteram);   // OBJECT RAM
 	map(0xe800, 0xe800).portr("DSWA");
