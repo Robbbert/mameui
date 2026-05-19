@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 98 -->
+<!-- Number of items in this list = 112 -->
 <softwarelist name="plus4_flop" description="plus4_flop loose roms">
 	<software name="c1655a6acb4cce13">
 		<description>(demo)Jaws3D</description>
@@ -192,6 +192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c1691d9a6b20c9a5">
+		<description>bloodsea_boot_d8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="bloodsea_boot_d8.d64" size="174848" crc="97dc385e" sha1="91d9a6b20c9a58cdc4199aa8786d2c4115760cb0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c161e5e63dee24ac">
 		<description>bloodsea_story</description>
 		<year>????</year>
@@ -199,6 +209,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="bloodsea_story.d64" size="174848" crc="ed29074d" sha1="1e5e63dee24ac46a974fc3c42dad7ef010bfcb64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b215e5174c219">
+		<description>bloodsea_story_d9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="bloodsea_story_d9.d64" size="174848" crc="12eb4907" sha1="b215e5174c2195093f18c20f651cdef943de4d3b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -352,6 +372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c165297f2fe8dad0">
+		<description>coilshate_boot_d8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="coilshate_boot_d8.d64" size="174848" crc="caf44fae" sha1="5297f2fe8dad0df31c93c63bf5bb123c31fceb72"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c166d265411597f9">
 		<description>coilshate_story</description>
 		<year>????</year>
@@ -359,6 +389,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="coilshate_story.d64" size="174848" crc="4a818f81" sha1="6d265411597f9cd92e32a016a4c713bf2948e624"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f7ce94b5b6a85">
+		<description>coilshate_story_d9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="coilshate_story_d9.d64" size="174848" crc="77b91601" sha1="f7ce94b5b6a8545a9f7e37d3046e2e9952c31886"/>
 			</dataarea>
 		</part>
 	</software>
@@ -439,6 +479,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="Cyberdroids.d64" size="174848" crc="a3010781" sha1="9b51d101ce14b2b1760e7e2eed6b7aa307bf9c6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1668f2fd3a15e24">
+		<description>deadmen_boot_d8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="deadmen_boot_d8.d64" size="174848" crc="43ea46ec" sha1="68f2fd3a15e24a01a33a17d4b20658309790be6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ddec040a0b3c8">
+		<description>deadmen_story_d9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="deadmen_story_d9.d64" size="174848" crc="342df447" sha1="ddec040a0b3c8ce6b5ff5eb492f669edfd5e1921"/>
 			</dataarea>
 		</part>
 	</software>
@@ -712,6 +772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c16d15c0472374e9">
+		<description>greenblood_boot_d8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="greenblood_boot_d8.d64" size="174848" crc="d36385a1" sha1="d15c0472374e9086cf2e78fe01882716b1cfba0d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c169c0d059c0c6af">
 		<description>greenblood_story</description>
 		<year>????</year>
@@ -719,6 +789,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="greenblood_story.d64" size="174848" crc="d1c4147e" sha1="9c0d059c0c6af8598cbf63397576889c506aba8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1661ada635cdd8e">
+		<description>greenblood_story_d9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="greenblood_story_d9.d64" size="174848" crc="efff7335" sha1="61ada635cdd8e428c0c4e90d1d22b98ded7b8e47"/>
 			</dataarea>
 		</part>
 	</software>
@@ -739,6 +819,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="GRIDTRAP.D64" size="174848" crc="db0a3f4e" sha1="a93184e65140133830d762ad495e058f8de90a4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f50aefd697d95">
+		<description>heartice_boot_d8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="heartice_boot_d8.d64" size="174848" crc="3df484d7" sha1="f50aefd697d95b2799fcfe0d330a6d0fb9ea4d4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c162a8451122c0a3">
+		<description>heartice_story_d9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="heartice_story_d9.d64" size="174848" crc="fd2c5158" sha1="2a8451122c0a3eb26a682ef7cae97d8ee1fdeefc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -892,6 +992,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c16285b7fde9f143">
+		<description>necklace_boot_d8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="necklace_boot_d8.d64" size="174848" crc="a15b1971" sha1="285b7fde9f143fdff50e0a69261d9f7d71917fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16db742f4e09ca5">
+		<description>necklace_story_d9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="necklace_story_d9.d64" size="174848" crc="e5dd8247" sha1="db742f4e09ca57291215d2fa14100ff4f35a0d13"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c16c1bd88e5fdcc4">
 		<description>raetsel</description>
 		<year>????</year>
@@ -972,6 +1092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="c16dbbcc2e889055">
+		<description>wartorn_boot_d8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wartorn_boot_d8.d64" size="174848" crc="811b023d" sha1="dbbcc2e88905599d6c9cce0e1c63e42bda6c3dd3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c163708ec73226a9">
 		<description>wartorn_story</description>
 		<year>????</year>
@@ -979,6 +1109,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="wartorn_story.d64" size="174848" crc="be8329f2" sha1="3708ec73226a95d1d32c973ef3425bb0db3d02d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1675663dbd95d77">
+		<description>wartorn_story_d9</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wartorn_story_d9.d64" size="174848" crc="412eaa36" sha1="75663dbd95d77f6ba2e40d128f1feabda88742be"/>
 			</dataarea>
 		</part>
 	</software>

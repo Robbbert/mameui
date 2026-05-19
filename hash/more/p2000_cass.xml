@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 148 -->
+<!-- Number of items in this list = 162 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -1372,6 +1372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2ke9d89a0ebfd84">
+		<description>M2009 - Viewdata terminal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="M2009 - Viewdata terminal.cas" size="5120" crc="d7d47551" sha1="e9d89a0ebfd8441e9e4bf1be5245ac70ce3f8845"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2k373430fa7e0a0">
 		<description>Macho Man v2.1 (1986)(J. Nieuwenhuizen)[b]</description>
 		<year>????</year>
@@ -1379,6 +1389,16 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="11520">
 				<rom name="Macho Man v2.1 (1986)(J. Nieuwenhuizen)[b].cas" size="11520" crc="1b2646fe" sha1="373430fa7e0a08dcd3483681c22d3c57c78bebe6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kabdab50f69161">
+		<description>MARMON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="19200">
+				<rom name="MARMON.cas" size="19200" crc="6ec336ca" sha1="abdab50f69161162e8961c9162dab6b82d338a43"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1392,6 +1412,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2k5a6c829ed71ba">
+		<description>MIN-SOMM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="MIN-SOMM.CAS" size="1280" crc="4c596c5c" sha1="5a6c829ed71baebc4ed015f42d1b6dc73920dc5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kcd64660fdc78d">
+		<description>Minitext (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="10240">
+				<rom name="Minitext (2).cas" size="10240" crc="7619feb1" sha1="cd64660fdc78df4a44b436637ab0d07427fb68a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kbede168f1dda8">
+		<description>MiniText</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="12800">
+				<rom name="MiniText.cas" size="12800" crc="56456891" sha1="bede168f1dda8cd9ee76a7d7391493c4204ec664"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ke61456d2a34ff">
+		<description>Monitor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="12800">
+				<rom name="Monitor.cas" size="12800" crc="cdcb6c0a" sha1="e61456d2a34ffabe21aa8b4a0a22d36229ab7d4e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2kb7ae2607d6399">
 		<description>Monkey Kong v1.0 Deel II (19xx)(-)(nl)</description>
 		<year>????</year>
@@ -1399,6 +1459,86 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="11520">
 				<rom name="Monkey Kong v1.0 Deel II (19xx)(-)(nl).cas" size="11520" crc="9a919e58" sha1="b7ae2607d6399d8fbb487dd61c7b382c10c2d1c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kd0c4723b14e23">
+		<description>Mr_Bean</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="3840">
+				<rom name="Mr_Bean.CAS" size="3840" crc="8bd4cc71" sha1="d0c4723b14e23ee92beb159aea531be1c6580a99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kfaf984d50cf7b">
+		<description>Multi-file copy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Multi-file copy.cas" size="1280" crc="3b485006" sha1="faf984d50cf7b6f30d8fb553ab0ba3eec28bb177"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k32466e9a1f740">
+		<description>Muziek Array [info]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Muziek Array [info].cas" size="7680" crc="d24b2b6a" sha1="32466e9a1f7408a77beb5738e35a6defa655a77c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k2aa6a8e2f186e">
+		<description>Muziek Array</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Muziek Array.cas" size="5120" crc="ff642ad8" sha1="2aa6a8e2f186e145da12170203af4d73e41ce713"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ke9d78e752794d">
+		<description>Muziekprogramma</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="Muziekprogramma.cas" size="14080" crc="74a8bf5f" sha1="e9d78e752794d35412f3c15141efa6789a97b840"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k63556d7ee438d">
+		<description>Op reis met de atlas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="17920">
+				<rom name="Op reis met de atlas.cas" size="17920" crc="36f4843a" sha1="63556d7ee438d51c44054cf6b7b5c41837e6fedd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k85666b43b2573">
+		<description>OPTELLEN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="OPTELLEN.CAS" size="1280" crc="ac9318dd" sha1="85666b43b2573f71e40ea8fb16d402ac42ef85f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k740ab46cfb657">
+		<description>Overhoren</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="8960">
+				<rom name="Overhoren.cas" size="8960" crc="690b6c68" sha1="740ab46cfb657618f2788b152bbf5823bd421b51"/>
 			</dataarea>
 		</part>
 	</software>
