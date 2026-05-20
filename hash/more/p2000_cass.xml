@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 162 -->
+<!-- Number of items in this list = 186 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -1539,6 +1539,246 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="8960">
 				<rom name="Overhoren.cas" size="8960" crc="690b6c68" sha1="740ab46cfb657618f2788b152bbf5823bd421b51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k62f474646e7ff">
+		<description>P2000 PM - dec 1984</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="6400">
+				<rom name="P2000 PM - dec 1984.cas" size="6400" crc="5bd7ec6a" sha1="62f474646e7ffbbc930a685f4f81129e34153cf9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k3689715d784a1">
+		<description>P2000 PM - feb 1984</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="6400">
+				<rom name="P2000 PM - feb 1984.cas" size="6400" crc="a2f168cf" sha1="3689715d784a1e8e47a4ba1c477e8ec83e4cfe63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k2634d7b633908">
+		<description>P2000 PM - mei 1984</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="P2000 PM - mei 1984.cas" size="7680" crc="87d345e8" sha1="2634d7b6339085eafafea6b4c468181400d208fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ka74edc5132483">
+		<description>P2000T Fenny</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="3840">
+				<rom name="P2000T Fenny.cas" size="3840" crc="19c416b9" sha1="a74edc5132483d04f5ad9d65a7a47cfe2bb3d707"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ke8aeac703301f">
+		<description>pc2p2000t v0.3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="2560">
+				<rom name="pc2p2000t v0.3.cas" size="2560" crc="07efb360" sha1="e8aeac703301f6ca4cee0c6b8ccb4b58c227ffae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k338619fee02e8">
+		<description>pc2p2000t v0.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="pc2p2000t v0.4.cas" size="1280" crc="63896f91" sha1="338619fee02e8f989b069248f5b168149bf2b67a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kafadbcbe532d3">
+		<description>Peter's Fido Hulp Program</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="15360">
+				<rom name="Peter's Fido Hulp Program.cas" size="15360" crc="7d111d21" sha1="afadbcbe532d32ff796fafa72e8d33a5ce848be0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k8b8476e5d3645">
+		<description>Peter's Montage Program</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="10240">
+				<rom name="Peter's Montage Program.cas" size="10240" crc="1dd0c62f" sha1="8b8476e5d3645531efc266a22f8b391a544aa31c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k5e3e279342491">
+		<description>Peter's Plaatjes Progam (PPP)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="20480">
+				<rom name="Peter's Plaatjes Progam (PPP).cas" size="20480" crc="b0e80a09" sha1="5e3e27934249178856e9a84aec2249fa4bbc376f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k2bd948645f31a">
+		<description>Peter's Telesoftware Program</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="11520">
+				<rom name="Peter's Telesoftware Program.cas" size="11520" crc="74c1edea" sha1="2bd948645f31a9b5dab9119ecb182da5fb243b44"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k290534c817692">
+		<description>Philips Onderwijs Projecten</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="21760">
+				<rom name="Philips Onderwijs Projecten.cas" size="21760" crc="86c417c4" sha1="290534c817692299e10c544465c27de956c0736d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k64b720925d95a">
+		<description>Picture-Duplicater</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Picture-Duplicater.cas" size="1280" crc="c79a1d2b" sha1="64b720925d95ac5471f5895e79b44019e1a9676e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k8dbc42e7c8f9c">
+		<description>Plotroutines beeldscherm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="17920">
+				<rom name="Plotroutines beeldscherm.cas" size="17920" crc="45052977" sha1="8dbc42e7c8f9cf24b613bbf70588b75f3c80e984"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k746c07e0ed304">
+		<description>Postcode</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="15360">
+				<rom name="Postcode.cas" size="15360" crc="848fd754" sha1="746c07e0ed304820228847913b1542b8f41f1fcb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k58ffc90163abf">
+		<description>PPP deel 1 (info)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="15360">
+				<rom name="PPP deel 1 (info).cas" size="15360" crc="3748f4dd" sha1="58ffc90163abf7ec071e329c5077bc54f94b4a64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k64d4d25e5c4b4">
+		<description>PPP deel 2 (info)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="11520">
+				<rom name="PPP deel 2 (info).cas" size="11520" crc="2f7f98a5" sha1="64d4d25e5c4b4d8f76c857cce053ae3d7eb0a92b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kec3a49bcdb039">
+		<description>Print - FAM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="3840">
+				<rom name="Print - FAM.cas" size="3840" crc="08d05406" sha1="ec3a49bcdb03926538da38e0b6286280e9b7103f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ka82283f5e3b89">
+		<description>Print 2000 [info]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="Print 2000 [info].cas" size="14080" crc="db5c31b8" sha1="a82283f5e3b89b05f0fb11fa74cd570e3e33726b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kb9d433daff2d7">
+		<description>Print 2000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="16640">
+				<rom name="Print 2000.cas" size="16640" crc="c4a29a3b" sha1="b9d433daff2d7c965b68ba7d3535d4920e1121d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kdd3149e2f5d8e">
+		<description>Printerbuffer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Printerbuffer.cas" size="1280" crc="14d22435" sha1="dd3149e2f5d8e3e9d511400bf62bb0158f1724bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k1062e629f9aee">
+		<description>Printstar [info]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="6400">
+				<rom name="Printstar [info].cas" size="6400" crc="ffd933a4" sha1="1062e629f9aee3e052c0e0f8a24d7e1ea7bb753b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k09dc0d9e7f052">
+		<description>Printstar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Printstar.cas" size="1280" crc="776d3e75" sha1="09dc0d9e7f052e79c4780a154a4310ff8f2c71c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kf168804c2fc9c">
+		<description>Programmeerhulp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Programmeerhulp.cas" size="7680" crc="3f907ef9" sha1="f168804c2fc9c42f26a5ec6f16baad1306573126"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kd0dd9f2452cc6">
+		<description>Provincies en hoofdsteden</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="10240">
+				<rom name="Provincies en hoofdsteden.cas" size="10240" crc="8a6e7034" sha1="d0dd9f2452cc603faf770d5b161375567fbc1a96"/>
 			</dataarea>
 		</part>
 	</software>

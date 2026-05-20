@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2074 -->
+<!-- Number of items in this list = 2075 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -17709,6 +17709,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Spot Goes to Hollywood (R).bin" size="4194304" crc="66254cab" sha1="24d27506f9e4d8de8833f33d8f8e4dd8fbc1bf25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="geneec87fcf9f475">
+		<description>Square Brothers (SMD) (Comercial)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Square Brothers (SMD) (Comercial).md" size="1048576" crc="3e866383" sha1="eec87fcf9f47583feacbf56388b37ea9fe21c18a"/>
 			</dataarea>
 		</part>
 	</software>

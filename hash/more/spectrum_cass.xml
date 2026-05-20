@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7869 -->
+<!-- Number of items in this list = 7871 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -49639,6 +49639,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46109">
 				<rom name="Racetrack Riches 48K (2025)(bedroom-coders).tap" size="46109" crc="1fe06ca6" sha1="690eda04692d30fefa256f73bef2428256e8bfa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5d1dfb9a20e24">
+		<description>Radioactive Ralph 128K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48543">
+				<rom name="Radioactive Ralph 128K.tap" size="48543" crc="33e198c7" sha1="5d1dfb9a20e241fe872b50221ef56be3a127ab66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7a3ce30f4a664">
+		<description>Radioactive Ralph 48K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43787">
+				<rom name="Radioactive Ralph 48K.tap" size="43787" crc="88e08623" sha1="7a3ce30f4a6642a629da457f5c5bae4d7ca12e0f"/>
 			</dataarea>
 		</part>
 	</software>

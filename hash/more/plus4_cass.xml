@@ -1,7 +1,107 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 11 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
+	<software name="c1694b8c06b88f82">
+		<description>3d_time_trek</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="131812">
+				<rom name="3d_time_trek.tap" size="131812" crc="d926bcd8" sha1="94b8c06b88f82d7fe0a2b36e920a7f0bac1e5c18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169e12351e3bbcd">
+		<description>ace_c16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="665531">
+				<rom name="ace_c16.tap" size="665531" crc="7dfede9a" sha1="9e12351e3bbcd2028040c8eae129a4e3a19d43a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161f1ab92c3d13b">
+		<description>airwolf_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="584435">
+				<rom name="airwolf_1.tap" size="584435" crc="e43676ed" sha1="1f1ab92c3d13ba15349d001ee1e4acb65df2b8ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1631f0241170394">
+		<description>alien_attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155307">
+				<rom name="alien_attack.tap" size="155307" crc="bd4b07c1" sha1="31f02411703943b2acddfcdad56767faac53afd9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163763dd6c5be90">
+		<description>arthur_noid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155330">
+				<rom name="arthur_noid.tap" size="155330" crc="b85b4697" sha1="3763dd6c5be90bce99ca4ab76c10484ee42e4dc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16beda7511085b5">
+		<description>atlantis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="163169">
+				<rom name="atlantis.tap" size="163169" crc="8a827370" sha1="beda7511085b5092dac352b3fa05fed399c9d478"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c3214aa4ca5df">
+		<description>auf_wiedersehen_monty</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="171788">
+				<rom name="auf_wiedersehen_monty.tap" size="171788" crc="c62d6773" sha1="c3214aa4ca5dfc926c475308fd8c13601e3febfe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c169a9833559c1ab">
+		<description>Aurega_Seite_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="578211">
+				<rom name="Aurega_Seite_A.tap" size="578211" crc="71e818d8" sha1="9a9833559c1ab1fb4bda52e81da8be5a5c9d7c8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ce5998c066ccf">
+		<description>Aurega_Seite_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="578203">
+				<rom name="Aurega_Seite_B.tap" size="578203" crc="708d7b4d" sha1="ce5998c066ccfc9d7b961687e7fda20b54096762"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168ae8d67b641cf">
+		<description>autobahn_c16_only</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="566020">
+				<rom name="autobahn_c16_only.tap" size="566020" crc="2d5f5740" sha1="8ae8d67b641cf859d0a7ced9858da7f4135fe668"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c16c28c15ad4364c">
 		<description>the_incredible_hulk</description>
 		<year>????</year>
