@@ -220,6 +220,9 @@ uint8_t shine_state::via1_pb_r()
 
 void shine_state::via1_pb_w(uint8_t data)
 {
+	m_cass->change_state(
+		(BIT(data,6)) ? CASSETTE_MOTOR_DISABLED : CASSETTE_MOTOR_ENABLED, CASSETTE_MASK_MOTOR);
+
 	m_cass->output(BIT(data, 7) ? -1.0 : +1.0);
 }
 
@@ -301,7 +304,7 @@ void shine_state::shine(machine_config &config)
 	FLOPPY_CONNECTOR(config, m_floppy[1], "525qd", FLOPPY_525_QD, false, floppy_image_device::default_mfm_floppy_formats).enable_sound(true);
 
 	CASSETTE(config, m_cass);
-	m_cass->set_default_state(CASSETTE_STOPPED | CASSETTE_MOTOR_ENABLED | CASSETTE_SPEAKER_ENABLED);
+	m_cass->set_default_state(CASSETTE_PLAY | CASSETTE_MOTOR_ENABLED | CASSETTE_SPEAKER_ENABLED);
 	m_cass->add_route(ALL_OUTPUTS, "mono", 0.05);
 }
 
