@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 11 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
 	<software name="c1694b8c06b88f82">
 		<description>3d_time_trek</description>
@@ -99,6 +99,106 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="566020">
 				<rom name="autobahn_c16_only.tap" size="566020" crc="2d5f5740" sha1="8ae8d67b641cf859d0a7ced9858da7f4135fe668"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16dd63824d457d4">
+		<description>battle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155306">
+				<rom name="battle.tap" size="155306" crc="cef7e47b" sha1="dd63824d457d4d5edf9678d4899707b60aa396c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b590eda1e0ac2">
+		<description>battle_star</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="586463">
+				<rom name="battle_star.tap" size="586463" crc="e1e1b6df" sha1="b590eda1e0ac24008dfb9971f247b73d916bf79e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168e6825d407347">
+		<description>blockbusters_c16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="331728">
+				<rom name="blockbusters_c16.tap" size="331728" crc="02a8e9fe" sha1="8e6825d4073477b8e28d2c66e542d1adbed32804"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16faa4ac29c5155">
+		<description>blockbusters_extra_question_database_c16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="972498">
+				<rom name="blockbusters_extra_question_database_c16.tap" size="972498" crc="cece3bbb" sha1="faa4ac29c51558d8891d6034a45098eccd1c3513"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f2dbede124f73">
+		<description>blockbusters_extra_question_database_plus4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="754426">
+				<rom name="blockbusters_extra_question_database_plus4.tap" size="754426" crc="61cb42b5" sha1="f2dbede124f73f2eb249308085757fb906678749"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164addd5fbe33c2">
+		<description>blockbusters_gold_run_c16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="340735">
+				<rom name="blockbusters_gold_run_c16.tap" size="340735" crc="b965a2cf" sha1="4addd5fbe33c239854e8ee726a1ebd0c133e38c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e0a082aa1568e">
+		<description>blockbusters_gold_run_plus4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="309602">
+				<rom name="blockbusters_gold_run_plus4.tap" size="309602" crc="cc6c1ec9" sha1="e0a082aa1568e38687f2b06935f88fb7a652414a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bc8270e69dd3b">
+		<description>blockbusters_plus4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="289270">
+				<rom name="blockbusters_plus4.tap" size="289270" crc="20e256a8" sha1="bc8270e69dd3b961c03fa2d4200d22823f4e95f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1682d0530f06142">
+		<description>booty</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="153253">
+				<rom name="booty.tap" size="153253" crc="8ba8838b" sha1="82d0530f061426f214ab3385d2b90c806a3ea6e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16692f3266c3cc0">
+		<description>buckaroo_banzai</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155272">
+				<rom name="buckaroo_banzai.tap" size="155272" crc="ca91fe14" sha1="692f3266c3cc032533137a03de2f11797fddf504"/>
 			</dataarea>
 		</part>
 	</software>

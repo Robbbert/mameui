@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 80 -->
+<!-- Number of items in this list = 82 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -462,6 +462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sg19030065c62f56">
+		<description>Operation Hibernation Plus 02-15-26 (2025-26)(Jess Creations - ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="49152">
+				<rom name="Operation Hibernation Plus 02-15-26 (2025-26)(Jess Creations - ArugulaZ).sg" size="49152" crc="abc33998" sha1="9030065c62f56b8ea69a3930d7483603566f7ad9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sg1f98bf6e3ef5f6">
 		<description>Operation Hibernation Plus Rev.2 (2025)(Jess Creations - ArugulaZ)</description>
 		<year>????</year>
@@ -599,6 +609,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="40960">
 				<rom name="Solar Fox II (2025)(Jess Creations).sg" size="40960" crc="2ce5cf6f" sha1="3d705d4ee51fe3a38ef3f021d076ee47e92beb27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1b0d36806ae2e9">
+		<description>Solar Fox II 21-10-25 (2025)(Jess Creations - ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="40960">
+				<rom name="Solar Fox II 21-10-25 (2025)(Jess Creations - ArugulaZ).sg" size="40960" crc="7886d024" sha1="b0d36806ae2e902723a82c1a394f80b3fd7ba976"/>
 			</dataarea>
 		</part>
 	</software>

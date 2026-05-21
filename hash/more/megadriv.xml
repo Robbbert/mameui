@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2075 -->
+<!-- Number of items in this list = 2077 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -7472,6 +7472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen7e82dbf779fbe">
+		<description>Golden Axe - Arcade Colors v1.4 (2026)(SCD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="590842">
+				<rom name="Golden Axe - Arcade Colors v1.4 (2026)(SCD).bin" size="590842" crc="e19b97c4" sha1="7e82dbf779fbe607d9ed465f2abc348e537eb2bc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3f207967a4ab5">
 		<description>Golden Axe 2 (JUE) [T+Fre_arkames]</description>
 		<year>????</year>
@@ -11979,6 +11989,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mortal Kombat Arcade Edition Enhanced v2.2 (2025)(Rael G.C.).bin" size="4194304" crc="e0b10bf3" sha1="09b4750cd2ab66943ff1fae2c4c8c06e80f392cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genbf460dd42c5fd">
+		<description>Mortal Kombat Arcade Edition Enhanced v2.4 (2026)(Rael G.C.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat Arcade Edition Enhanced v2.4 (2026)(Rael G.C.).bin" size="4194304" crc="20e1378c" sha1="bf460dd42c5fda33b25e938466c00781c444f2d7"/>
 			</dataarea>
 		</part>
 	</software>

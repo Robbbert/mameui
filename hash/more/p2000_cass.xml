@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 186 -->
+<!-- Number of items in this list = 194 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -1779,6 +1779,86 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="10240">
 				<rom name="Provincies en hoofdsteden.cas" size="10240" crc="8a6e7034" sha1="d0dd9f2452cc603faf770d5b161375567fbc1a96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k6da041040b5ec">
+		<description>Rambank</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="8960">
+				<rom name="Rambank.cas" size="8960" crc="23724d38" sha1="6da041040b5ec121aa9d2a6ab1aceb2c4bd16166"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k283bf163ea41c">
+		<description>Ramdisk 2 Disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Ramdisk 2 Disk.cas" size="1280" crc="ba99156c" sha1="283bf163ea41c7ee89092f66fa9e37fc68ab24e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k0065935d1a99e">
+		<description>RDOS 3.1.sysgen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="RDOS 3.1.sysgen.cas" size="5120" crc="238c3e01" sha1="0065935d1a99e2d4f99cd7f6975a1b01cf0003b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k35b01c6b37472">
+		<description>Reactie-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="10240">
+				<rom name="Reactie-2.cas" size="10240" crc="d42acf57" sha1="35b01c6b37472a3e93326d8cc7b762a13e784bbc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k909f504873a3b">
+		<description>Road Dodge Splash Screen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="2560">
+				<rom name="Road Dodge Splash Screen.CAS" size="2560" crc="9c4ab016" sha1="909f504873a3b530f357cc220091cf82df2bd536"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k439a297cedd59">
+		<description>Rom Dumper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Rom Dumper.cas" size="1280" crc="5a745340" sha1="439a297cedd5926d2a3a311bce39d1458c22175a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k97a59a8737c61">
+		<description>RS232 load &amp; save</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="RS232 load &amp; save.cas" size="1280" crc="16ecf296" sha1="97a59a8737c619a52c5976f6b1274122892ae298"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k553fbd7ba5085">
+		<description>RTTY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="12800">
+				<rom name="RTTY.CAS" size="12800" crc="0c8ee262" sha1="553fbd7ba5085d0fc0c14ff8f8a663684d3712ed"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 706 -->
+<!-- Number of items in this list = 708 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -4272,6 +4272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col69ce010c36a06">
+		<description>Operation Hibernation 10-11-25 (2025)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Operation Hibernation 10-11-25 (2025)(Jess Creations).rom" size="32768" crc="39ed33ed" sha1="69ce010c36a063d03aa4a0605f1ad78849a87449"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col8c21a95358241">
 		<description>Operation Hibernation beta</description>
 		<year>????</year>
@@ -5419,6 +5429,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Solar Fox II - Final (2025)(Jess Creations).rom" size="32768" crc="e1ada331" sha1="ac2f96f4057ea884b9a5fa7f89df6687282de83f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cola091a921a7069">
+		<description>Solar Fox II 10-2-25 (2025)(CollectorVision - Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Solar Fox II 10-2-25 (2025)(CollectorVision - Jess Creations).rom" size="32768" crc="d679e739" sha1="a091a921a70699192883231b13866d224484644a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 28 -->
 <softwarelist name="bbcm_flop" description="bbcm_flop loose roms">
 	<software name="aco5f502b669b83d">
 		<description>240 farmcash</description>
@@ -269,6 +269,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="23296">
 				<rom name="TeleTekno (2023-12)(Slipstream).ssd" size="23296" crc="32b036f9" sha1="d6deb5f21e488e44e5c67c1cbfaf9cd81fc959d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco399a2eb8c77ba">
+		<description>Tenebra</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="17664">
+				<rom name="Tenebra.ssd" size="17664" crc="6621cbb3" sha1="399a2eb8c77ba51ae66d572b982442918965e166"/>
 			</dataarea>
 		</part>
 	</software>
