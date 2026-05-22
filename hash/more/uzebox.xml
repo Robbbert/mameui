@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 98 -->
+<!-- Number of items in this list = 104 -->
 <softwarelist name="uzebox" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -109,6 +109,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="24816">
 				<rom name="Bomber(Alex81NZP).uze" size="24816" crc="349841f8" sha1="3444c3ab6a25a044aec967b9440f337f866e2af2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzeebe2dc2cd96b9">
+		<description>BoneShakers</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="22102">
+				<rom name="BoneShakers.uze" size="22102" crc="5c80301a" sha1="ebe2dc2cd96b93c6b6105c075c2196c6885d7f15"/>
 			</dataarea>
 		</part>
 	</software>
@@ -412,6 +422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze65daada17d72a">
+		<description>HollowSeeker</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="19372">
+				<rom name="HollowSeeker.uze" size="19372" crc="64224567" sha1="65daada17d72a76ed980623c0e25e113044233b3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze602c649b52dc7">
 		<description>joyrider</description>
 		<year>????</year>
@@ -562,6 +582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze251258f0c88b1">
+		<description>MicroTD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="27132">
+				<rom name="MicroTD.uze" size="27132" crc="82f0ac86" sha1="251258f0c88b17da619ff9f8960ae72c7dacba9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze6aca14999f663">
+		<description>MiniGolf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="34488">
+				<rom name="MiniGolf.uze" size="34488" crc="fa19117e" sha1="6aca14999f66380fd378c0e1e17e90f60a0c9c39"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze8e66995136b24">
 		<description>moon-patrol-wip</description>
 		<year>????</year>
@@ -649,6 +689,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="56816">
 				<rom name="Reels of Fortune (Dominik Kristen)(2019).uze" size="56816" crc="25eb092a" sha1="58290a44b0259ff07307502945114db74e0b0846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzef0752ff250488">
+		<description>Rift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="31066">
+				<rom name="Rift.uze" size="31066" crc="f35d911c" sha1="f0752ff250488e0adf0e42b58fa90d3e902d8b12"/>
 			</dataarea>
 		</part>
 	</software>
@@ -939,6 +989,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="49698">
 				<rom name="Windows 8 for Uzebox (Hartmut Wendt).uze" size="49698" crc="c599f21b" sha1="15fde84c49c0704c384bb38c11910c3c3e9aa942"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzeeadbd733f9ce7">
+		<description>Wolfenduino</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="61830">
+				<rom name="Wolfenduino.uze" size="61830" crc="db984a74" sha1="eadbd733f9ce78e185fdd3acb35d96c38f229239"/>
 			</dataarea>
 		</part>
 	</software>

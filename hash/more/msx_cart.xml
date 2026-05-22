@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 734 -->
+<!-- Number of items in this list = 735 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1949,6 +1949,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Emilio Sanchez Vicario Grand Slam (1989)(Zigurat).rom" size="65536" crc="6ea88602" sha1="e54971fe4e3af187dac9802ab1ace16bf1fb4878"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8ca85e23e810a">
+		<description>Endurance (2020)(Fabio Ritter)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49120">
+				<rom name="Endurance (2020)(Fabio Ritter).rom" size="49120" crc="13caaac6" sha1="8ca85e23e810ad0b42e322ef5fc52db9809ef464"/>
 			</dataarea>
 		</part>
 	</software>

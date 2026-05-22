@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 194 -->
+<!-- Number of items in this list = 217 -->
 <softwarelist name="p2000_cass" description="p2000_cass loose roms">
 	<software name="p2kdac19a73ca12e">
 		<description>(demo)BTTF_demo</description>
@@ -1862,6 +1862,136 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2k2f575c911c992">
+		<description>Schaap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="15360">
+				<rom name="Schaap.cas" size="15360" crc="bc739c12" sha1="2f575c911c9929ed630ad13c556932689daac93a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k7d4fe1d1750b0">
+		<description>Schaapjes tellen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="Schaapjes tellen.cas" size="14080" crc="b6329329" sha1="7d4fe1d1750b0f51786196b0b05291cc9b715b31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kaec8c4fd1dc9d">
+		<description>Schaduwdirectory</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="3840">
+				<rom name="Schaduwdirectory.cas" size="3840" crc="97d868c3" sha1="aec8c4fd1dc9dafbf13df0c32119ac1e87ede438"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k2f895997b8756">
+		<description>Schermscroll</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Schermscroll.cas" size="7680" crc="d3f471a8" sha1="2f895997b8756b125d62d859fb0ce1e9a4a92560"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k2658a48a8c92e">
+		<description>Schoolvragenlijst versie A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="8960">
+				<rom name="Schoolvragenlijst versie A.cas" size="8960" crc="358e3f5e" sha1="2658a48a8c92e374e0dc9033ac19a8f1d0736a14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k93aebbb8729ad">
+		<description>Schoolvragenlijst versie B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="8960">
+				<rom name="Schoolvragenlijst versie B.cas" size="8960" crc="0a9d8969" sha1="93aebbb8729ad0364dc67259bff6785a966bf7f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2ka8a6f378dcea3">
+		<description>Screen Editor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="2560">
+				<rom name="Screen Editor.cas" size="2560" crc="8d2c8fd0" sha1="a8a6f378dcea3f108104f62df1ee5b2f91a83a66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kb5e9fb442bcc9">
+		<description>Shining1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="6400">
+				<rom name="Shining1.CAS" size="6400" crc="979e56ed" sha1="b5e9fb442bcc91fdbc74f34b0d8d72dec0e1c404"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k2d75701df9e43">
+		<description>Shining2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Shining2.CAS" size="5120" crc="cae66ea8" sha1="2d75701df9e434dc0af66fefc4a76605b6428453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k7bcdd26f86661">
+		<description>Shuffle</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Shuffle.cas" size="1280" crc="a1039d86" sha1="7bcdd26f8666149d1132e456f1e47ab62d118374"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k367cfe3c700be">
+		<description>Single Double-kill</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="1280">
+				<rom name="Single Double-kill.cas" size="1280" crc="5a81fc05" sha1="367cfe3c700be0c917ba69dec7f6cfa79cee5bec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k278e6329aa19f">
+		<description>Single Step Basic</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="6400">
+				<rom name="Single Step Basic.cas" size="6400" crc="100bc0b8" sha1="278e6329aa19f991045d6f03aaefd8e1b6a37c6a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k0abe1af312feb">
+		<description>Snackbar t Zuid</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="16640">
+				<rom name="Snackbar t Zuid.cas" size="16640" crc="3f06fd47" sha1="0abe1af312feb2e25222328271452fc511d8b422"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2k2f6f0c55cb4db">
 		<description>Snakeygame (19xx)(NOS - Thomas Hofmeister)</description>
 		<year>????</year>
@@ -1869,6 +1999,36 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="7680">
 				<rom name="Snakeygame (19xx)(NOS - Thomas Hofmeister).cas" size="7680" crc="3288dca2" sha1="2f6f0c55cb4dbd9f5dcb4ec8af41c8b3db0aaff8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kac56d3bbf94c7">
+		<description>Snelheid computer</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="19200">
+				<rom name="Snelheid computer.cas" size="19200" crc="a3ea5e3d" sha1="ac56d3bbf94c7136d57b3bd92ee876363d3e98d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k4930d04195998">
+		<description>Snelzoekboek</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Snelzoekboek.cas" size="7680" crc="05568a5a" sha1="4930d0419599867c089e3efd8cbb835f82fe7c86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k537f45a28dbac">
+		<description>Source [] disk</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="2560">
+				<rom name="Source [] disk.cas" size="2560" crc="754f6dce" sha1="537f45a28dbacf9f158a5935393d9922e1cb30a5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1922,6 +2082,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p2k645f7eda0d66c">
+		<description>Spellingspelletje</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="11520">
+				<rom name="Spellingspelletje.cas" size="11520" crc="35ee66db" sha1="645f7eda0d66cd71e781b9d04f3ca68b1ef93013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k99128a6ae9601">
+		<description>Spreadsheet [info]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="14080">
+				<rom name="Spreadsheet [info].cas" size="14080" crc="8c3a7e0e" sha1="99128a6ae9601c8fda1b0f0629893c3519ea7a71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kc8b0fba43c312">
+		<description>Spreadsheet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="17920">
+				<rom name="Spreadsheet.cas" size="17920" crc="9e51c3c1" sha1="c8b0fba43c312a1cb158af3e15d1bb852bc3e5d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2kd52a3bb887ef6">
+		<description>Staafdiagrammen II</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Staafdiagrammen II.cas" size="5120" crc="6386a1bc" sha1="d52a3bb887ef6896be22d52dfb8492aebb7fc9ca"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p2k7caf5c6f3d4dd">
 		<description>Startrek (19xx)(-)(nl)</description>
 		<year>????</year>
@@ -1929,6 +2129,36 @@
 		<part name="cass" interface="p2000_cass">
 			<dataarea name="cass" size="17920">
 				<rom name="Startrek (19xx)(-)(nl).cas" size="17920" crc="8480161f" sha1="7caf5c6f3d4dd3afdf2bb300b3253bc7a8b87351"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k44dcad6de4172">
+		<description>StringSave</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="StringSave.cas" size="7680" crc="4014ab22" sha1="44dcad6de41727a325a52b99f5da26fc2f8bcd67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k1588dc8796b7e">
+		<description>Super-file dupl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="5120">
+				<rom name="Super-file dupl.cas" size="5120" crc="bd97193d" sha1="1588dc8796b7e7f842d3b2d1b0f388bb4c3c1082"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p2k1179a828f2bec">
+		<description>Supersnelzoekboek</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="p2000_cass">
+			<dataarea name="cass" size="7680">
+				<rom name="Supersnelzoekboek.cas" size="7680" crc="45756bf5" sha1="1179a828f2bec9b775ffa262e95c436eebc9ba42"/>
 			</dataarea>
 		</part>
 	</software>

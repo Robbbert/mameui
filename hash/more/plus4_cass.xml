@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 21 -->
+<!-- Number of items in this list = 25 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
 	<software name="c1694b8c06b88f82">
 		<description>3d_time_trek</description>
@@ -199,6 +199,46 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="155272">
 				<rom name="buckaroo_banzai.tap" size="155272" crc="ca91fe14" sha1="692f3266c3cc032533137a03de2f11797fddf504"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1678e47779d6cad">
+		<description>can_of_worms_side1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="568612">
+				<rom name="can_of_worms_side1.tap" size="568612" crc="d52b3c1b" sha1="78e47779d6cada72f23367ae2d04a68984b06c76"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1613485f6bca1f6">
+		<description>can_of_worms_side2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="590284">
+				<rom name="can_of_worms_side2.tap" size="590284" crc="583f67e3" sha1="13485f6bca1f6afbb9a768bea25c8760bb5aaa6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d5b8ba8d8878e">
+		<description>crazy_golf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155310">
+				<rom name="crazy_golf.tap" size="155310" crc="285d8389" sha1="d5b8ba8d8878eb9c0deea938990cb0299d47f46a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f4408405e06f1">
+		<description>cruncher</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155307">
+				<rom name="cruncher.tap" size="155307" crc="a710e11a" sha1="f4408405e06f113d97399b5f4591736b80b75be1"/>
 			</dataarea>
 		</part>
 	</software>
