@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 25 -->
+<!-- Number of items in this list = 35 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
 	<software name="c1694b8c06b88f82">
 		<description>3d_time_trek</description>
@@ -239,6 +239,106 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="155307">
 				<rom name="cruncher.tap" size="155307" crc="a710e11a" sha1="f4408405e06f113d97399b5f4591736b80b75be1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16e0d6b7bac73bb">
+		<description>danger_zone</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155313">
+				<rom name="danger_zone.tap" size="155313" crc="79ead8d4" sha1="e0d6b7bac73bb71dde881923ffd2c8eb324cf243"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f1aabe5f78496">
+		<description>death_race_16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155310">
+				<rom name="death_race_16.tap" size="155310" crc="3b39360b" sha1="f1aabe5f784967ee8006dcf9d4af8f5d44565bb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16db15942a2e1e8">
+		<description>death_river</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="542048">
+				<rom name="death_river.tap" size="542048" crc="69f0aff3" sha1="db15942a2e1e84d5337f2472dbdbf22c3ce85d2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1630e0be88071f0">
+		<description>diagon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="534021">
+				<rom name="diagon.tap" size="534021" crc="854c2f46" sha1="30e0be88071f0e537165097b5b8d184bfb37271c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16679ecb6d62971">
+		<description>dingbat</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155325">
+				<rom name="dingbat.tap" size="155325" crc="af3bc810" sha1="679ecb6d62971d020e27d117c553cca89cfab6a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1646cfa2ab541eb">
+		<description>dirty_den</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="171763">
+				<rom name="dirty_den.tap" size="171763" crc="c067c3bf" sha1="46cfa2ab541eb13edd1e0c67d18a19f39a664a3e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163bfb1971d4edc">
+		<description>disasterblaster</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155294">
+				<rom name="disasterblaster.tap" size="155294" crc="4152af24" sha1="3bfb1971d4edc8a746867ef9c2b38015fe95402c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16499a855025d8c">
+		<description>Dizzy_Dice_Seite_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="536224">
+				<rom name="Dizzy_Dice_Seite_A.tap" size="536224" crc="00b9e4ac" sha1="499a855025d8c724e08c531cedf97975f82e0226"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166d88e980499fd">
+		<description>Dizzy_Dice_Seite_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="534036">
+				<rom name="Dizzy_Dice_Seite_B.tap" size="534036" crc="7161770c" sha1="6d88e980499fd98b6b8dd83d8420d04e612387f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1661e0cba93c204">
+		<description>dorks_dilemma</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155309">
+				<rom name="dorks_dilemma.tap" size="155309" crc="c0c860c1" sha1="61e0cba93c20419d7349fec85da40fcb316c296d"/>
 			</dataarea>
 		</part>
 	</software>
