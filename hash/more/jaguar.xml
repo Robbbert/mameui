@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 166 -->
+<!-- Number of items in this list = 176 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag162de3abfc73d">
 		<description>(demo)96Kb Demo (19xx)(Mr Spock)(PD)[$8000]</description>
@@ -902,6 +902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag4a2244cbeebd5">
+		<description>fountain</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="fountain.j64" size="32768" crc="dbe10b0d" sha1="4a2244cbeebd5c5ad0103fe5b34a05ffe6b126a5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag13d13f23706d2">
 		<description>Frog Feast DEMO (2006)</description>
 		<year>????</year>
@@ -1032,6 +1042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jag0e9fa26e2cce3">
+		<description>golucky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="golucky.j64" size="4194304" crc="f915284a" sha1="0e9fa26e2cce32eb6b822c475a7477751b72eedb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jage99ff0add256b">
 		<description>High Voltage C Maze (USA) (Demo)</description>
 		<year>????</year>
@@ -1149,6 +1169,46 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Jaguar Tetris (1995).j64" size="262144" crc="410226c8" sha1="b9b40780ce7bdca8568729b14193cf4a8be328f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag9210143ff59a5">
+		<description>jog-refurbishedhallmark25-modv0.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="jog-refurbishedhallmark25-modv0.0.j64" size="1048576" crc="f8bb9cb6" sha1="9210143ff59a53a0e4f81f965a2b3a39f200b3c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagb1651b896563a">
+		<description>jog-refurbishedhallmark25-oggv0.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="jog-refurbishedhallmark25-oggv0.0.j64" size="2097152" crc="865473cd" sha1="b1651b896563ac22d9f78fb87b3c8b32a58b9ef1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag0e6261c590d57">
+		<description>jog-refurbishedhallmark25mfpga-modv0.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="jog-refurbishedhallmark25mfpga-modv0.0.j64" size="1048576" crc="82a13703" sha1="0e6261c590d576a7d01ede3758f24cba57724652"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag55c2285857190">
+		<description>jog-refurbishedhallmark25mfpga-wavv0.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="jog-refurbishedhallmark25mfpga-wavv0.0.j64" size="2097152" crc="663a975e" sha1="55c22858571903f6f859337ef718f6cfb1bde44f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1339,6 +1399,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="nyanjag_stereo_jiffi.j64" size="2097152" crc="8175e75d" sha1="7502d4db5bca126b0f077ab908e83e0a5497ef8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jaga112a8fb5fb23">
+		<description>Oggy-v-1-functional</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Oggy-v-1-functional.j64" size="2097152" crc="9fa50833" sha1="a112a8fb5fb232e7d436f33810f87a6418ca80a4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1612,6 +1682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jagf98b3f086800b">
+		<description>SV2K25WE_INV</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="SV2K25WE_INV.j64" size="2097152" crc="cafccb31" sha1="f98b3f086800b75baa91f7d3820090fef492e0c5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag0a4ee5a0fa18f">
 		<description>Tetris (1995)</description>
 		<year>????</year>
@@ -1649,6 +1729,26 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Virtual VCS (USA) (Proto).j64" size="1048576" crc="59a8863f" sha1="2ab78090e8afd985ca4fe54da8daef7e125550fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagebedc5461566b">
+		<description>zini_k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="zini_k.j64" size="32768" crc="e0880b5d" sha1="ebedc5461566b164be568f88c44b0e59b593b4df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jagd429a0e3cc665">
+		<description>zini_m</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="zini_m.j64" size="32768" crc="8e2f14ff" sha1="d429a0e3cc6654f0480d2d9955742145396c346e"/>
 			</dataarea>
 		</part>
 	</software>

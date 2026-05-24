@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7878 -->
+<!-- Number of items in this list = 7875 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -17699,26 +17699,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52639">
 				<rom name="D.N.A. Warrior 128K (1989)(Cascade Games).tap" size="52639" crc="86a9a591" sha1="facfbac1011f666b893465d33aa4feac5550989b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs6107b51d9d044">
-		<description>D.N.A. Warrior 128K (1989)(Cascade Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="52700">
-				<rom name="D.N.A. Warrior 128K (1989)(Cascade Games).tzx" size="52700" crc="efc5c184" sha1="6107b51d9d04425886de46f23259c57da9f387c4"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsf86a80251f334">
-		<description>D.N.A. Warrior 48K (1989)(Cascade Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="52699">
-				<rom name="D.N.A. Warrior 48K (1989)(Cascade Games).tzx" size="52699" crc="6931991f" sha1="f86a80251f3342546ac769c2003b7a7ef3a51cb1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -51169,16 +51149,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="55785">
 				<rom name="Ring Wars (1989)(Cascade Games Ltd).tap" size="55785" crc="2c445434" sha1="82fb321caf97dadccb8504d6012bc34196521c4b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxscbc5dd2cec4b0">
-		<description>Ring Wars 48K (1988)(Cascade Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="56066">
-				<rom name="Ring Wars 48K (1988)(Cascade Games).tzx" size="56066" crc="5dd8a7e8" sha1="cbc5dd2cec4b0bd1c744fe440e529c46e9ac4264"/>
 			</dataarea>
 		</part>
 	</software>

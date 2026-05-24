@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1 -->
+<!-- Number of items in this list = 31 -->
 <softwarelist name="c64_flop_misc" description="c64_flop_misc loose roms">
 	<software name="c64cf803ee729879">
 		<description>3d reversi (de)(y)(-)</description>
@@ -9,6 +9,306 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="3d reversi (de)(y)(-).d64" size="174848" crc="e59455b0" sha1="cf803ee729879bc74c67bf1bbd8738f1b56b2ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644a5231304f854">
+		<description>ZOIDS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZOIDS.D64" size="174848" crc="728604cf" sha1="4a5231304f8546750b226ef786cb83e62dfb3760"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649470416f559d6">
+		<description>ZOLO</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZOLO.D64" size="174848" crc="73120d8f" sha1="9470416f559d61ade9fb359b06290f1955ba0c96"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640f152880dfb8c">
+		<description>ZOLYX_~1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZOLYX_~1.D64" size="174848" crc="f2143f96" sha1="0f152880dfb8c5dc802eedebe3cf0e1f27a435fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64cc732e199d79d">
+		<description>Zompy Stomp</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zompy Stomp.D64" size="174848" crc="6683741f" sha1="cc732e199d79d4623f77dede3dc694e9ff14d7ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c8adc777e6877">
+		<description>Zone 7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zone 7.d64" size="174848" crc="41a99a81" sha1="c8adc777e6877be273a7e1898c0c58aa482a5d29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642214292be9070">
+		<description>ZONE7_Part2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZONE7_Part2.D64" size="174848" crc="ab403a2a" sha1="2214292be907003d07d1e02ec6996ffaf4ca5188"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641decc7f0fa19a">
+		<description>zone_trooper</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="zone_trooper.d64" size="174848" crc="63bb028c" sha1="1decc7f0fa19aa7792244ef13185ba7e2de5c790"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6435aefcc6ecd51">
+		<description>Zoomball</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zoomball.d64" size="174848" crc="da02fe2d" sha1="35aefcc6ecd5106537ab70a22496282a82b332f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640718e6cd971fd">
+		<description>Zoom_info</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zoom_info.d64" size="174848" crc="40dd44a2" sha1="0718e6cd971fdac487f665637fc7feb46ae8d0fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642328df2ea89a4">
+		<description>Zork I - The Great Underground Empire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zork I - The Great Underground Empire.d64" size="174848" crc="f7291243" sha1="2328df2ea89a485aca00d01e7270653628032b97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644bd6808ea57b6">
+		<description>Zork II - The Wizard of Frobozz</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zork II - The Wizard of Frobozz.d64" size="174848" crc="70545ac2" sha1="4bd6808ea57b615fbd3277b9620822e83f64383b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c648303a7a20a65c">
+		<description>Zork III - The Dungeon Master</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zork III - The Dungeon Master.d64" size="174848" crc="9977c9b0" sha1="8303a7a20a65c91a0b1b58f0d9a89d2954afaf5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c645c78d0ba2822a">
+		<description>Zork the Undiscovered Underground d1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zork the Undiscovered Underground d1.D64" size="174848" crc="ccb6a67a" sha1="5c78d0ba2822a506389c16d736783a6d9c341ac6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644bad0786ea098">
+		<description>Zork the Undiscovered Underground d2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zork the Undiscovered Underground d2.D64" size="174848" crc="017017c8" sha1="4bad0786ea0983371daa4b62f9288ba79a141072"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6485611399cdbdd">
+		<description>ZORK-1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZORK-1.D64" size="174848" crc="7132dcdf" sha1="85611399cdbdd5d5ba20718ef83fc8aeae44140d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643960d7ec216c3">
+		<description>ZORK-2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZORK-2.D64" size="174848" crc="439ee6da" sha1="3960d7ec216c3b4a752bda97b3deec2566923e27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c966671dc6c71">
+		<description>ZORK-3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZORK-3.D64" size="174848" crc="5dc1e9b2" sha1="c966671dc6c711255b8a3b58b0b68650ff6a8bb5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646273befd69b37">
+		<description>zork1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="zork1.d64" size="174848" crc="d4f169f7" sha1="6273befd69b376ec1b090873db5ebef0ca086e65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a4d512520afe7">
+		<description>ZORK2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZORK2.D64" size="174848" crc="1f26fef2" sha1="a4d512520afe75088bce565cf3cbd2e10c436c69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6411da92265f8c1">
+		<description>ZORK3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZORK3.D64" size="174848" crc="21ac07e6" sha1="11da92265f8c1d8e30fbf2840507a3b8cf6f60da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64daba02b1d8a51">
+		<description>ZorkQuest1_d1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZorkQuest1_d1.D64" size="174848" crc="53610f30" sha1="daba02b1d8a51fd500ffe98ceceb158093626c74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64dcad5a482bad5">
+		<description>ZorkQuest1_d2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZorkQuest1_d2.D64" size="174848" crc="31c50ea7" sha1="dcad5a482bad5c10b00abb87d0ca2f900d0da0ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641d5787f45d7ba">
+		<description>ZorkQuest2_d1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZorkQuest2_d1.D64" size="174848" crc="afe95e05" sha1="1d5787f45d7ba4030e4f02f39a5784a49c3d5e09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6442a97a86396af">
+		<description>ZorkQuest2_d2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZorkQuest2_d2.D64" size="174848" crc="2d684a99" sha1="42a97a86396af7667fde56979f882d7be0e7c670"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6456bb754c4a54c">
+		<description>Zybex</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zybex.d64" size="174848" crc="92217768" sha1="56bb754c4a54c7d5df7ae3f04c49d7b22950f1cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6486728e3e739af">
+		<description>zybexd</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="zybexd.d64" size="174848" crc="46a788f4" sha1="86728e3e739af9eafc31f0f0edb4928d8625b91a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6408a7d125910e8">
+		<description>Zybex_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zybex_2.D64" size="174848" crc="1c578f30" sha1="08a7d125910e8b3d399b613596cb9aa80d1ee13d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644c164b746baae">
+		<description>Zynaps</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zynaps.d64" size="174848" crc="cb504542" sha1="4c164b746baae911184116437ed7bd75a47a01a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646b1607cfff7c2">
+		<description>ZYNAPS_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZYNAPS_1.D64" size="174848" crc="a930f37c" sha1="6b1607cfff7c2430d59d4a6d0e0cedd1d75e17e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64df0474f07b6d8">
+		<description>ZZZZZ</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZZZZZ.D64" size="174848" crc="c67c4aca" sha1="df0474f07b6d8903ee972552edda76115d8155f6"/>
 			</dataarea>
 		</part>
 	</software>

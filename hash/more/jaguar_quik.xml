@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 141 -->
+<!-- Number of items in this list = 142 -->
 <softwarelist name="jaguar_quik" description="jaguar_quik loose roms">
 	<software name="jag8891da48d64e1">
 		<description>(demo)FIRE (Symmetry of TNG 2003)</description>
@@ -419,6 +419,16 @@
 		<part name="quik" interface="jaguar_quik">
 			<dataarea name="quik" size="65032">
 				<rom name="bexa64n.cof" size="65032" crc="336604be" sha1="98c272cff478b4a42722cbca5ffd0aa834f887ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag52c5c394d99b2">
+		<description>blackhole</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jaguar_quik">
+			<dataarea name="quik" size="1559144">
+				<rom name="blackhole.abs" size="1559144" crc="3502e5c3" sha1="52c5c394d99b28c7cf2c169982d854416580fefa"/>
 			</dataarea>
 		</part>
 	</software>

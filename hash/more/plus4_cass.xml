@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 35 -->
+<!-- Number of items in this list = 49 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
 	<software name="c1694b8c06b88f82">
 		<description>3d_time_trek</description>
@@ -339,6 +339,146 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="155309">
 				<rom name="dorks_dilemma.tap" size="155309" crc="c0c860c1" sha1="61e0cba93c20419d7349fec85da40fcb316c296d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163e59e4501418b">
+		<description>escape_from_pulsar_7</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="582124">
+				<rom name="escape_from_pulsar_7.tap" size="582124" crc="a5fac33a" sha1="3e59e4501418bcafca673a20a6689374f2930579"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16bbe7dff8875ee">
+		<description>exorcist</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155286">
+				<rom name="exorcist.tap" size="155286" crc="8008a00b" sha1="bbe7dff8875ee8f8b3e78c016b0efe0b884f43d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16c616af102ff2f">
+		<description>feasibility_experiment</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="582130">
+				<rom name="feasibility_experiment.tap" size="582130" crc="0a5ddebb" sha1="c616af102ff2f56cd842c2b879c9fc89b7be5bff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1684e40086bbd95">
+		<description>fingers_malone</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="180307">
+				<rom name="fingers_malone.tap" size="180307" crc="93746b13" sha1="84e40086bbd959f5df9605348ee93eb42b814ba4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163ea5c7eeb1c1b">
+		<description>fire_ant</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155142">
+				<rom name="fire_ant.tap" size="155142" crc="65aff136" sha1="3ea5c7eeb1c1ba180e16dbfbb2dccfe89b07b575"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c164bd2bc8a56d2f">
+		<description>flight_path_737</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="147681">
+				<rom name="flight_path_737.tap" size="147681" crc="622d2bf1" sha1="4bd2bc8a56d2f30bd8eb0e02765682c82c0f57d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166323d9d820ef3">
+		<description>flight_zero-one-five</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="321327">
+				<rom name="flight_zero-one-five.tap" size="321327" crc="5675daad" sha1="6323d9d820ef3ca7014009ca42c20c4d6083380a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16a3df4ca8cfdc4">
+		<description>footballer_of_the_year_+4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="352685">
+				<rom name="footballer_of_the_year_+4.tap" size="352685" crc="49c02517" sha1="a3df4ca8cfdc4d355c1a16f47dcb35029b2cbaee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16afa786f38492b">
+		<description>football_manager</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="551975">
+				<rom name="football_manager.tap" size="551975" crc="b3d76906" sha1="afa786f38492b4b479301439539270da8a660031"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1647c6ad0e056b4">
+		<description>formula1_simulator</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="153266">
+				<rom name="formula1_simulator.tap" size="153266" crc="093a39e9" sha1="47c6ad0e056b4b49bdf6463b0345e3be258b37db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ac5ba61b4e901">
+		<description>foty_c16</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155308">
+				<rom name="foty_c16.tap" size="155308" crc="493c7c62" sha1="ac5ba61b4e901d78749b8cd4ad86f1881caedf21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c163e36b566b8ad1">
+		<description>frenesis</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155330">
+				<rom name="frenesis.tap" size="155330" crc="b2b5fa6f" sha1="3e36b566b8ad10a89ebddb7bb3e639306ec6d981"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c166990a19609543">
+		<description>fury</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="103906">
+				<rom name="fury.tap" size="103906" crc="d9cc2fcf" sha1="6990a196095430179343b9f7f5c03889816a8ae9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f4f0fe5c39802">
+		<description>future_knight</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="166209">
+				<rom name="future_knight.tap" size="166209" crc="57dbd0a4" sha1="f4f0fe5c398028fcf9f47ba670067b60b3d5107b"/>
 			</dataarea>
 		</part>
 	</software>
