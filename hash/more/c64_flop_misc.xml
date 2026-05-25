@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 31 -->
+<!-- Number of items in this list = 47 -->
 <softwarelist name="c64_flop_misc" description="c64_flop_misc loose roms">
 	<software name="c64cf803ee729879">
 		<description>3d reversi (de)(y)(-)</description>
@@ -9,6 +9,166 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="3d reversi (de)(y)(-).d64" size="174848" crc="e59455b0" sha1="cf803ee729879bc74c67bf1bbd8738f1b56b2ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6417a259e54fd62">
+		<description>Xpiose (Magic Disk 64 - 1993-04 - Side 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Xpiose (Magic Disk 64 - 1993-04 - Side 2).d64" size="174848" crc="b0a0cc06" sha1="17a259e54fd62a479704fd0ce94afa09d2d480c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643cc4fb7f57134">
+		<description>XTCY!ECL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="XTCY!ECL.D64" size="174848" crc="11db777f" sha1="3cc4fb7f57134ce3ea2be94b08cd4b5f2111fa7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b81dc94689b00">
+		<description>XTRS!M8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="XTRS!M8.D64" size="174848" crc="e6237ef8" sha1="b81dc94689b00cd982a5b5103bb878e96d736886"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64c0ce1e7f2dc3c">
+		<description>YieAr Kung-Fu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="YieAr Kung-Fu.d64" size="174848" crc="3c22ef21" sha1="c0ce1e7f2dc3cec79a3e5a13abf1bc77d176b315"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64be5c416f9b14c">
+		<description>Yiearkungfu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Yiearkungfu.d64" size="174848" crc="5ba671fa" sha1="be5c416f9b14c15572ed62e593072c227acc1169"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d822f37325961">
+		<description>YOTE!RR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="YOTE!RR.D64" size="174848" crc="482049c1" sha1="d822f37325961e915f9e94712e92619e573ca2d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6491d57b9ab409a">
+		<description>Young Ones</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Young Ones.D64" size="174848" crc="6d8bc22d" sha1="91d57b9ab409a838ed1873bda0a7b115b453466f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649e18789e8568f">
+		<description>Zaga</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zaga.d64" size="174848" crc="2beb9301" sha1="9e18789e8568f4081c2c3978a55425c6bc6dc9b7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c649a5fd317c5ed8">
+		<description>zaga_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="zaga_1.d64" size="174848" crc="c4d79ecc" sha1="9a5fd317c5ed8c066ee9bb9f3e65818e9445b038"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a42ddce3dda82">
+		<description>ZAUBWALD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZAUBWALD.D64" size="174848" crc="fa5b6921" sha1="a42ddce3dda82ad6f1c22feed944e73546e1ab05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e39ac748c08e8">
+		<description>ZAXXON</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZAXXON.D64" size="174848" crc="0a2133cc" sha1="e39ac748c08e886f666aeec7e684f68171feecd5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64d701debbd3a3b">
+		<description>Zero Gravity</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Zero Gravity.d64" size="174848" crc="6d6eb645" sha1="d701debbd3a3b817c4b19aeca5992f8558a99ff7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6477fe0ac3a87b3">
+		<description>ZIGZAG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZIGZAG.D64" size="174848" crc="645fa1e3" sha1="77fe0ac3a87b3dd2155b1d9b98eae35894b0fdc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642030e9fc190e9">
+		<description>ZigZag_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZigZag_1.D64" size="174848" crc="8dc9fff2" sha1="2030e9fc190e931c85a7a8a6a62ec262352862ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c644d1e51abd51ee">
+		<description>ZipAdv1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZipAdv1.d64" size="174848" crc="c6dd9206" sha1="4d1e51abd51eef444c803a5c3fd829be84d9d9af"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64786d4a640f7ea">
+		<description>ZipAdv2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="ZipAdv2.d64" size="174848" crc="f9798cd3" sha1="786d4a640f7ea7acd2c72401cb676c527b8ab791"/>
 			</dataarea>
 		</part>
 	</software>

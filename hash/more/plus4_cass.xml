@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 49 -->
+<!-- Number of items in this list = 61 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
 	<software name="c1694b8c06b88f82">
 		<description>3d_time_trek</description>
@@ -479,6 +479,126 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="166209">
 				<rom name="future_knight.tap" size="166209" crc="57dbd0a4" sha1="f4f0fe5c398028fcf9f47ba670067b60b3d5107b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168dabfcdc51223">
+		<description>galaxy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="147671">
+				<rom name="galaxy.tap" size="147671" crc="cf587a3d" sha1="8dabfcdc51223199d9c96c8877c789abd37e1db4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1675e9484f45d52">
+		<description>ghost_town</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="147711">
+				<rom name="ghost_town.tap" size="147711" crc="a19aa5b7" sha1="75e9484f45d52e1d5765b530bb658e14b00df838"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b62c48a77bb4c">
+		<description>golden_baton</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="582144">
+				<rom name="golden_baton.tap" size="582144" crc="7b073282" sha1="b62c48a77bb4cbe7545a246c95b04b60decdcdfa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c168b01951128bd5">
+		<description>golf_16k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="533908">
+				<rom name="golf_16k.tap" size="533908" crc="b5f08f84" sha1="8b01951128bd57a66218acc0ffa49c4a68ad3a51"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1631710419c5233">
+		<description>green_beret_side1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="266724">
+				<rom name="green_beret_side1.tap" size="266724" crc="09610a60" sha1="31710419c52334370604f40b3341ca98fb1f7181"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c1662cc6308b8ec7">
+		<description>green_beret_side2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="266765">
+				<rom name="green_beret_side2.tap" size="266765" crc="ddaca7e9" sha1="62cc6308b8ec71cafb50ea49e2f472e183705f48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16825f3e7ba1478">
+		<description>gullwing_falcon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155290">
+				<rom name="gullwing_falcon.tap" size="155290" crc="4764b2a2" sha1="825f3e7ba1478534c78cedfb70f70ae2f755fbe9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161785f09d9fece">
+		<description>gunslinger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="578022">
+				<rom name="gunslinger.tap" size="578022" crc="388c6136" sha1="1785f09d9fecea904ee23cce9db716b20c4eadc7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160ffb9ec431bff">
+		<description>gun_law</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155309">
+				<rom name="gun_law.tap" size="155309" crc="b6b54ed0" sha1="0ffb9ec431bff5f91c10acae0cec208ae638c32d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165131036af008c">
+		<description>Guzzler_Seite_A</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="578226">
+				<rom name="Guzzler_Seite_A.tap" size="578226" crc="4cc53fe8" sha1="5131036af008cc9915aa1cc8cf85255d8d0f371a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c160cbe2a444c122">
+		<description>Guzzler_Seite_B</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="578220">
+				<rom name="Guzzler_Seite_B.tap" size="578220" crc="917d1052" sha1="0cbe2a444c1228ac5eb6c03ea0e1be3d32ea5d02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ea634f3adf502">
+		<description>gwnn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155326">
+				<rom name="gwnn.tap" size="155326" crc="335090c9" sha1="ea634f3adf50229621c59f60aa778bb09a46c63d"/>
 			</dataarea>
 		</part>
 	</software>
