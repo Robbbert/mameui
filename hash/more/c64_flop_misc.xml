@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 47 -->
+<!-- Number of items in this list = 56 -->
 <softwarelist name="c64_flop_misc" description="c64_flop_misc loose roms">
 	<software name="c64cf803ee729879">
 		<description>3d reversi (de)(y)(-)</description>
@@ -9,6 +9,96 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="3d reversi (de)(y)(-).d64" size="174848" crc="e59455b0" sha1="cf803ee729879bc74c67bf1bbd8738f1b56b2ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64af9b5d44e886d">
+		<description>Xenodron (1988)(CP Verlag)[cr Genesis Project][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Xenodron (1988)(CP Verlag)[cr Genesis Project][a].d64" size="174848" crc="6e2969ab" sha1="af9b5d44e886d777e73c9c4ff16cb676dcb90755"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64829f8953048d8">
+		<description>Xenon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Xenon.d64" size="174848" crc="abc7b225" sha1="829f8953048d81acb19a4c3ad3010c7d80e76d39"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a06c4abd19bf1">
+		<description>xenon_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="xenon_1.d64" size="174848" crc="59804372" sha1="a06c4abd19bf125e97785745e5f06c9eb9ab4f8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6410bee722bcd66">
+		<description>Xerons</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Xerons.d64" size="174848" crc="35797a53" sha1="10bee722bcd66ee2be399ea78dffd4ddb6d5b2d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6412c8a8f20a5e9">
+		<description>Xevious</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Xevious.d64" size="174848" crc="886d8a56" sha1="12c8a8f20a5e99c317fa54a2c38a418e2637ef0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64ec1f945e918ca">
+		<description>Xion</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Xion.D64" size="174848" crc="af15048c" sha1="ec1f945e918ca136f554acc00db3350438a1b520"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64abc340c1e1cd8">
+		<description>Xipose</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Xipose.d64" size="174848" crc="a29e1f68" sha1="abc340c1e1cd8fbea99cc970a5268b37a5e4c852"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646dddbd48ee9c7">
+		<description>XIT2!HIT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="XIT2!HIT.D64" size="174848" crc="5e95b9bc" sha1="6dddbd48ee9c74d3a6cdfbeb3af30d607b3a01fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c640c63fb03ded26">
+		<description>xor</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="xor.d64" size="174848" crc="7b5ff2e0" sha1="0c63fb03ded26767f297408db03c735ca07aa4b6"/>
 			</dataarea>
 		</part>
 	</software>

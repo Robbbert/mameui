@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 61 -->
+<!-- Number of items in this list = 66 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
 	<software name="c1694b8c06b88f82">
 		<description>3d_time_trek</description>
@@ -599,6 +599,56 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="155326">
 				<rom name="gwnn.tap" size="155326" crc="335090c9" sha1="ea634f3adf50229621c59f60aa778bb09a46c63d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ccc998a0d96dc">
+		<description>harbour_attack</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155126">
+				<rom name="harbour_attack.tap" size="155126" crc="5b3c2544" sha1="ccc998a0d96dcd5f302868bf642088156caf2960"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f6c52332dd7fe">
+		<description>harvey_headbanger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="155158">
+				<rom name="harvey_headbanger.tap" size="155158" crc="5da04daa" sha1="f6c52332dd7fe13f50e2e60ac90e6ccaa7b9f014"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c161d6df9a11979a">
+		<description>hoppit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="557245">
+				<rom name="hoppit.tap" size="557245" crc="88742c8d" sha1="1d6df9a11979abdf7ed33f61f63203d56e0974d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16ff023788f248a">
+		<description>hustler_novaload</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="153254">
+				<rom name="hustler_novaload.tap" size="153254" crc="0ff53301" sha1="ff023788f248a83dd98745c6b7ee52c3db57c874"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16b1c13dde6b816">
+		<description>hyperforce</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="156594">
+				<rom name="hyperforce.tap" size="156594" crc="a9263996" sha1="b1c13dde6b81668bb743a75c43bd925841a449aa"/>
 			</dataarea>
 		</part>
 	</software>
