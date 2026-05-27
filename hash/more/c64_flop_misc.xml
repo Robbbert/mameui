@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 56 -->
+<!-- Number of items in this list = 67 -->
 <softwarelist name="c64_flop_misc" description="c64_flop_misc loose roms">
+	<software name="c64c7d0cd46201ca">
+		<description>(demo)X-95 Partydemo (1995)(Aphenfluhk - Wegpluear Tiem)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="(demo)X-95 Partydemo (1995)(Aphenfluhk - Wegpluear Tiem)[a].d64" size="174848" crc="02b60202" sha1="c7d0cd46201ca8890ba6544d6d4db634d1316744"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="c64cf803ee729879">
 		<description>3d reversi (de)(y)(-)</description>
 		<year>????</year>
@@ -9,6 +19,106 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="3d reversi (de)(y)(-).d64" size="174848" crc="e59455b0" sha1="cf803ee729879bc74c67bf1bbd8738f1b56b2ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64571ad1a1e8430">
+		<description>Wu Lung</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="175531">
+				<rom name="Wu Lung.d64" size="175531" crc="d7df2ac6" sha1="571ad1a1e843007b4f842f5a6b89b15b784748a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64aa4e20bc69132">
+		<description>WWF Wrestlemania Challenge</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WWF Wrestlemania Challenge.d64" size="174848" crc="f9901400" sha1="aa4e20bc6913238eef8e35717b8b9d79023b1c97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6403337d2e60d0a">
+		<description>Wwf</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Wwf.d64" size="174848" crc="b5be75c9" sha1="03337d2e60d0aac97344215761046c4201e519bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c642f81abdc1fdfe">
+		<description>WWF1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WWF1.D64" size="174848" crc="0f1dc789" sha1="2f81abdc1fdfe05109d7035274e4b24e5448840e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64bc7f241a69880">
+		<description>WWF2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WWF2.D64" size="174848" crc="10e490b7" sha1="bc7f241a6988023f211f1e569bd9e5e7e3c15896"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64183e222e633d5">
+		<description>WWF3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WWF3.D64" size="174848" crc="798efd6d" sha1="183e222e633d509e1348ed6e755cdddeb0c5713c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c647477ed24674d8">
+		<description>Wwf4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Wwf4.d64" size="174848" crc="6f266375" sha1="7477ed24674d8da8edf29294a2bd71b58dab0108"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c641f4f92cd8dc6b">
+		<description>WWFWREST</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WWFWREST.D64" size="174848" crc="398877b5" sha1="1f4f92cd8dc6b2f2aabe5fdc15ef531b6fa37ce0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64dccdf21316f8d">
+		<description>X-Force</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="X-Force.d64" size="174848" crc="f4909162" sha1="dccdf21316f8d12534539dfaf4d7c36be9cff2d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64caecf94f5274e">
+		<description>X-OUT</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="X-OUT.D64" size="174848" crc="54b5d8be" sha1="caecf94f5274e52d8f157a7be72b412d5ad87d0c"/>
 			</dataarea>
 		</part>
 	</software>
