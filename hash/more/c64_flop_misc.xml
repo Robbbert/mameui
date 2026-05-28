@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 67 -->
+<!-- Number of items in this list = 75 -->
 <softwarelist name="c64_flop_misc" description="c64_flop_misc loose roms">
 	<software name="c64c7d0cd46201ca">
 		<description>(demo)X-95 Partydemo (1995)(Aphenfluhk - Wegpluear Tiem)[a]</description>
@@ -19,6 +19,86 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="3d reversi (de)(y)(-).d64" size="174848" crc="e59455b0" sha1="cf803ee729879bc74c67bf1bbd8738f1b56b2ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f3f0989261e9f">
+		<description>Word Challenge</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Word Challenge.d64" size="174848" crc="57dfa439" sha1="f3f0989261e9fcfad290b30ef365e02d36a1f933"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64b000c0e2ddb74">
+		<description>Word Spinner</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Word Spinner.d64" size="174848" crc="2c12f075" sha1="b000c0e2ddb74ab913ae2410fb34c46b7fded5e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64dce5868ea1985">
+		<description>Worm! (1991)(Antti Nylen)[cr TF][a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Worm! (1991)(Antti Nylen)[cr TF][a].d64" size="174848" crc="7b6daed7" sha1="dce5868ea19857372cbf1096b60461a9d3e4f8c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64393fd374403ca">
+		<description>worms</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="worms.d64" size="174848" crc="bcdbdf34" sha1="393fd374403ca79a89bb32fdabdd256556d2b82d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f4bf6bf49925c">
+		<description>Wrath of the Demon_d1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Wrath of the Demon_d1.D64" size="174848" crc="fa4c5418" sha1="f4bf6bf49925ce588ea363215911098e5c6e88c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64a8c4a721d417b">
+		<description>Wrath of the Demon_d2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Wrath of the Demon_d2.D64" size="174848" crc="09508899" sha1="a8c4a721d417b5282ff1b4c00dd6ddaa4b1c7700"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c646946b54b4c6bf">
+		<description>wss92a</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wss92a.d64" size="174848" crc="1532dbac" sha1="6946b54b4c6bf5e9b63b068d05dd66a6943f6780"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6444d100014cac1">
+		<description>wss92b</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wss92b.d64" size="174848" crc="f2ce034f" sha1="44d100014cac1f13f163ff139a5285207177fb1f"/>
 			</dataarea>
 		</part>
 	</software>

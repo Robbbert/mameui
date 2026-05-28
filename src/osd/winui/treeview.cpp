@@ -304,13 +304,15 @@ BOOL GameFiltered(int nGame, DWORD dwMask)
 	LPTREEFOLDER lpParent = NULL;
 
 	//Filter out the Bioses on all Folders, except for the Bios Folder
-	if( lpFolder->m_nFolderId != FOLDER_BIOS )
+	if(lpFolder && lpFolder->m_nFolderId != FOLDER_BIOS)
 	{
-//      if( !( (driver_list::driver(nGame).flags & MACHINE_IS_BIOS_ROOT ) == 0) )
-//          return true;
-		if( driver_list::driver(nGame).name[0] == '_' )
+		if(DriverIsBios(nGame))
 			return true;
 	}
+
+	if(driver_list::driver(nGame).name[0] == '_')
+		return true;
+
 	// Filter games--return true if the game should be HIDDEN in this view
 	if( GetFilterInherit() )
 	{
@@ -2108,7 +2110,7 @@ static int InitExtraFolders()
 	struct _finddata_t files;
 	int             i, count = 0;
 	char *          ext;
-	char            buf[512];
+	char            buf[64];
 	char            curdir[MAX_PATH];
 	const std::string    t = dir_get_value(24);
 	const std::string  emu_path = GetEmuPath();
@@ -2149,7 +2151,7 @@ static int InitExtraFolders()
 				{
 					int icon[2] = { 0, 0 };
 					char *p, *name;
-					while (fgets(buf, 511, fp))
+					while (fgets(buf, 64, fp))
 					{
 						if (buf[0] == '[')
 						{
@@ -2161,7 +2163,7 @@ static int InitExtraFolders()
 							name = &buf[1];
 							if (!strcmp(name, "FOLDER_SETTINGS"))
 							{
-								while (fgets(buf, 511, fp))
+								while (fgets(buf, 64, fp))
 								{
 									name = strtok(buf, " =\r\n");
 									if (name == NULL)
@@ -2198,7 +2200,7 @@ static int InitExtraFolders()
 
 							memset(m_ExtraFolderData[count], 0, m_folderBytes);
 
-							strncpy(m_ExtraFolderData[count]->m_szTitle, buf, 63);
+							strncpy(m_ExtraFolderData[count]->m_szTitle, buf, 64);
 							m_ExtraFolderData[count]->m_nFolderId   = m_next_folder_id++;
 							m_ExtraFolderData[count]->m_nParent     = -1;
 							m_ExtraFolderData[count]->m_dwFlags     = F_CUSTOM;

@@ -24,8 +24,6 @@
  *             are ignored)
  *      - Software comes first, followed by Game then Source.
 ***************************************************************************/
-// license:BSD-3-Clause
-// copyright-holders:Chris Kirmse, Mike Haaland, René Single, Mamesick, Robbbert
 
 #include <windows.h>
 #include <fstream>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 71 -->
+<!-- Number of items in this list = 74 -->
 <softwarelist name="plus4_cass" description="plus4_cass loose roms">
 	<software name="c1694b8c06b88f82">
 		<description>3d_time_trek</description>
@@ -699,6 +699,36 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="155294">
 				<rom name="invasion_2000ad.tap" size="155294" crc="488e32a5" sha1="87af68772ba71438b2d41396865bf9430e2ff8d9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16f5377685aaa6e">
+		<description>Jet_Set_Willy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="565584">
+				<rom name="Jet_Set_Willy.tap" size="565584" crc="93044909" sha1="f5377685aaa6e3e74fb5607649dc39f078fa2d01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c16d102e213bef82">
+		<description>Joe_blade2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="493073">
+				<rom name="Joe_blade2.tap" size="493073" crc="2ff98315" sha1="d102e213bef8261b82949c3c0bc24e084a6b32ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c165b7cda0517a7d">
+		<description>junior_maths</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="515472">
+				<rom name="junior_maths.tap" size="515472" crc="d895138d" sha1="5b7cda0517a7d2c1f7f1efc6141328d34ddfbeae"/>
 			</dataarea>
 		</part>
 	</software>
