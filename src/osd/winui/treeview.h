@@ -17,7 +17,8 @@ typedef struct
 	const char *m_lpTitle; // Folder Title
 	const char *short_name;  // for saving in the .ini
 	UINT        m_nFolderId; // ID
-	UINT        m_nIconId; // if >= 0, resource id of icon (IDI_xxx), otherwise index in image list
+	UINT        m_nIconId; // icon for parent folder. if >= 0, IDI_xxx, otherwise index in image list
+	UINT        m_nIconId2; // icon for subfolders
 	DWORD       m_dwUnset; // Excluded filters
 	DWORD       m_dwSet;   // Implied filters
 	BOOL        m_process;      // 1 = process only if rebuilding the cache
@@ -65,67 +66,67 @@ void CreateDumpingFolders(int parent_index);
 enum
 {
 	FOLDER_NONE = 0,
-	FOLDER_ALLGAMES,
-	FOLDER_AVAILABLE,
+	FOLDER_ALL,
+	FOLDER_AVAIL,
 	FOLDER_ARCADE,
 	FOLDER_BIOS,
 	FOLDER_CLONES,
 	FOLDER_CPU,
-	FOLDER_DEFICIENCY,
-	FOLDER_DUMPING,
+	FOLDER_IMP,
+	FOLDER_DUMP,
 	FOLDER_FPS,
 	FOLDER_HARDDISK,
-	FOLDER_HORIZONTAL,
+	FOLDER_HORI,
 	FOLDER_LIGHTGUN,
-	FOLDER_MANUFACTURER,
-	FOLDER_MECHANICAL,
+	FOLDER_MANU,
+	FOLDER_MECH,
 	FOLDER_MODIFIED,
 	FOLDER_MOUSE,
-	FOLDER_NONMECHANICAL,
-	FOLDER_NONWORKING,
-	FOLDER_ORIGINAL,
+	FOLDER_NONMECH,
+	FOLDER_NW,
+	FOLDER_PARENTS,
 	FOLDER_RASTER,
-	FOLDER_RESOLUTION,
+	FOLDER_RESOL,
 	FOLDER_SAMPLES,
 	FOLDER_SAVESTATE,
 	FOLDER_SCREENS,
-	FOLDER_SND,
+	FOLDER_SOUND,
 	FOLDER_SOURCE,
 	FOLDER_STEREO,
 	FOLDER_TRACKBALL,
-	FOLDER_UNAVAILABLE,
+	FOLDER_UNAVAIL,
 	FOLDER_VECTOR,
-	FOLDER_VERTICAL,
-	FOLDER_WORKING,
+	FOLDER_VERT,
+	FOLDER_W,
 	FOLDER_YEAR,
 	MAX_FOLDERS,
 };
 
 typedef enum
 {
-	F_CLONES        = 0x00000001,
-	F_NONWORKING    = 0x00000002,
-	F_UNAVAILABLE   = 0x00000004,
-	F_VECTOR        = 0x00000008,
-	F_RASTER        = 0x00000010,
-	F_ORIGINALS     = 0x00000020,
-	F_WORKING       = 0x00000040,
-	F_AVAILABLE     = 0x00000080,
-	F_HORIZONTAL    = 0x00000100,
-	F_VERTICAL      = 0x00000200,
-	F_MECHANICAL    = 0x00000400,
-	F_ARCADE        = 0x00000800,
-	F_MESS          = 0x00001000,
-	F_MODIFIED      = 0x00008000,
-	F_MASK          = 0x0000FFFF,
-	F_INIEDIT       = 0x00010000, // There is an .ini that can be edited. MSH 20070811
-	F_CUSTOM        = 0x01000000  // for current .ini custom folders
+	FI_CLONES        = 0x00000001,
+	FI_NW            = 0x00000002,
+	FI_UNAVAIL       = 0x00000004,
+	FI_VECTOR        = 0x00000008,
+	FI_RASTER        = 0x00000010,
+	FI_PARENTS       = 0x00000020,
+	FI_W             = 0x00000040,
+	FI_AVAIL         = 0x00000080,
+	FI_HORI          = 0x00000100,
+	FI_VERT          = 0x00000200,
+	FI_MECH          = 0x00000400,
+	FI_ARCADE        = 0x00000800,
+	FI_MESS          = 0x00001000,
+	FI_MODIFIED      = 0x00008000,
+	FI_MASK          = 0x0000FFFF,
+	FI_INIEDIT       = 0x00010000, // There is an .ini that can be edited. MSH 20070811
+	FI_CUSTOM        = 0x01000000  // for current .ini custom folders
 } FOLDERFLAG;
 
 typedef struct
 {
-	LPSTR m_lpTitle;              // String contains the folder name
-	LPTSTR m_lptTitle;            // String contains the folder name as TCHAR*
+	LPSTR       m_lpTitle;        // String contains the folder name
+	LPTSTR      m_lptTitle;       // String contains the folder name as TCHAR*
 	UINT        m_nFolderId;      // Index / Folder ID number
 	int         m_nParent;        // Parent folder index in treeFolders[]
 	int         m_nIconId;        // negative icon index into the ImageList, or IDI_xxx resource id

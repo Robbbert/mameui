@@ -176,7 +176,6 @@ static DWORD            GetShellLargeIconSize();
 static DWORD            GetShellSmallIconSize();
 static void             CreateIcons();
 static int              GetIconForDriver(int nItem);
-static void             AddDriverIcon(int nItem,int default_icon_index);
 
 // Context Menu handlers
 static void             UpdateMenu(HMENU hMenu);
@@ -3139,7 +3138,7 @@ static BOOL TreeViewNotify(LPNMHDR nm)
 			TV_DISPINFO *ptvdi = (TV_DISPINFO *)nm;
 			LPTREEFOLDER folder = (LPTREEFOLDER)ptvdi->item.lParam;
 
-			if (folder->m_dwFlags & F_CUSTOM)
+			if (folder->m_dwFlags & FI_CUSTOM)
 			{
 				// user can edit custom folder names
 				g_in_treeview_edit = true;
@@ -4148,7 +4147,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			folder = GetSelectedFolder();
 			if( folder )
 			{
-				if (folder->m_nFolderId == FOLDER_AVAILABLE )
+				if (folder->m_nFolderId == FOLDER_AVAIL )
 					ResetListView();
 			}
 		}
@@ -4164,7 +4163,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		{
 			folder = GetSelectedFolder();
 			if (folder)
-				if (folder->m_dwFlags & F_INIEDIT)
+				if (folder->m_dwFlags & FI_INIEDIT)
 				{
 					LPCFOLDERDATA data = FindFilter(folder->m_nFolderId);
 					if (data)
@@ -4844,41 +4843,6 @@ static void InitListView()
 }
 
 
-static void AddDriverIcon(int nItem,int default_icon_index)
-{
-	HICON hIcon = 0;
-	int nParentIndex = -1;
-
-	/* if already set to rom or clone icon, we've been here before */
-	if (icon_index[nItem] == 1 || icon_index[nItem] == 3)
-		return;
-
-	hIcon = LoadIconFromFile((char *)driver_list::driver(nItem).name);
-	if (hIcon == NULL)
-	{
-		nParentIndex = GetParentIndex(&driver_list::driver(nItem));
-		if( nParentIndex >= 0)
-		{
-			hIcon = LoadIconFromFile((char *)driver_list::driver(nParentIndex).name);
-			nParentIndex = GetParentIndex(&driver_list::driver(nParentIndex));
-			if (hIcon == NULL && nParentIndex >= 0)
-				hIcon = LoadIconFromFile((char *)driver_list::driver(nParentIndex).name);
-		}
-	}
-
-	if (hIcon)
-	{
-		int nIconPos = ImageList_AddIcon(hSmall, hIcon);
-		ImageList_AddIcon(hLarge, hIcon);
-		if (nIconPos != -1)
-			icon_index[nItem] = nIconPos;
-		DestroyIcon(hIcon);
-	}
-	if (icon_index[nItem] == 0)
-		icon_index[nItem] = default_icon_index;
-}
-
-
 static void DestroyIcons()
 {
 	if (hSmall)
@@ -5000,7 +4964,6 @@ static void CreateIcons()
 {
 	DWORD dwSmallIconSize = GetShellSmallIconSize();
 	DWORD dwLargeIconSize = GetShellLargeIconSize();
-	HICON hIcon;
 	int icon_count = 0;
 	int grow = 5000;
 
@@ -5046,14 +5009,14 @@ static void CreateIcons()
 	CreateMessIcons(); // messui.cpp
 
 	// Now set up header specific stuff
-	hHeaderImages = ImageList_Create(8,8,ILC_COLORDDB | ILC_MASK,2,2);
-	hIcon = LoadIcon(hInst,MAKEINTRESOURCE(IDI_HEADER_UP));
-	ImageList_AddIcon(hHeaderImages,hIcon);
-	hIcon = LoadIcon(hInst,MAKEINTRESOURCE(IDI_HEADER_DOWN));
-	ImageList_AddIcon(hHeaderImages,hIcon);
+	//hHeaderImages = ImageList_Create(8,8,ILC_COLORDDB | ILC_MASK,2,2);
+	//HICON hIcon = LoadIcon(hInst,MAKEINTRESOURCE(IDI_HEADER_UP));
+	//ImageList_AddIcon(hHeaderImages,hIcon);
+	//hIcon = LoadIcon(hInst,MAKEINTRESOURCE(IDI_HEADER_DOWN));
+	//ImageList_AddIcon(hHeaderImages,hIcon);
 
-	for (int i = 0; i < sizeof(s_nPickers) / sizeof(s_nPickers[0]); i++)
-		Picker_SetHeaderImageList(GetDlgItem(hMain, s_nPickers[i]), hHeaderImages);
+	//for (int i = 0; i < sizeof(s_nPickers) / sizeof(s_nPickers[0]); i++)
+		//Picker_SetHeaderImageList(GetDlgItem(hMain, s_nPickers[i]), hHeaderImages);
 }
 
 
@@ -5728,58 +5691,73 @@ int FindIconIndexByName(const char *icon_name)
 
 static int GetIconForDriver(int nItem)
 {
-	int iconRoms = 1;
+	int iconRoms = 0;
 
 	if (DriverUsesRoms(nItem))
 	{
 		int audit_result = GetRomAuditResults(nItem);
 		if (audit_result == -1)
-			return 2;
+			iconRoms = FindIconIndex(IDI_LV_RU);  // not yet audited
 		else
-		if (IsAuditResultYes(audit_result))
-			iconRoms = 1;
+		if (IsAuditResultNo(audit_result))
+			iconRoms = FindIconIndex(IDI_LV_RN);  // roms missing
 		else
-			iconRoms = 0;
+		if (DriverIsBios(nItem))
+			iconRoms = FindIconIndex(IDI_LV_BIOS);  // bios, any status
 	}
 
-	// iconRoms is now either 0 (no roms), 1 (roms), or 2 (unknown)
-
-	// these are indices into icon_names, which maps into our image list
-	// also must match IDI_WIN_NOROMS + iconRoms
-
-	if (iconRoms == 1)  // roms are present
+	if (iconRoms == 0)
 	{
-		// Working bios
-		if (DriverIsBios(nItem))
-			iconRoms = FindIconIndex(IDI_BIOS);
+		iconRoms =  FindIconIndex(IDI_LV_PW);  // start assuming it's a working parent
 
-		// flagged as NOT WORKING
+		// see order of icons in layout.cpp g_iconData
+		// Show red if NOT WORKING
 		if (DriverIsBroken(nItem))
 		{
 			if (GetOverrideRedX()==0)
-				iconRoms = FindIconIndex(IDI_WIN_NW);  // iconRoms now = 6
+				iconRoms = FindIconIndex(IDI_LV_PN); // red chip
 			else
-				iconRoms = FindIconIndex(IDI_WIN_REDX);  // iconRoms now = 4. If driver icons chosen but not found, get RedX
+				iconRoms = FindIconIndex(IDI_LV_PX); // red X. If driver icons chosen but not found, use this.
 		}
 		else
-		// Show imperfect if flagged as imperfect
+		// Show yellow if imperfect
 		if (DriverIsImperfect(nItem))
-			iconRoms = FindIconIndex(IDI_WIN_IMPERFECT); // iconRoms now = 5
-		else
-		// show clone icon for working clones
+			iconRoms = FindIconIndex(IDI_LV_PI);
+
+		// show faded if clone
 		if (DriverIsClone(nItem))
-			iconRoms = FindIconIndex(IDI_WIN_CLONE); // iconRoms now = 3
+			iconRoms--; // use clone icon instead of parent one
+
+		// Look for a custom per-game icon to override
+		BOOL redx = (GetOverrideRedX()==1) & DriverIsBroken(nItem);
+		if (iconRoms > 4 || redx)
+		{
+			HICON hIcon = LoadIconFromFile((char *)driver_list::driver(nItem).name);
+			if (hIcon == NULL)
+			{
+				int nParentIndex = GetParentIndex(&driver_list::driver(nItem));
+				if( nParentIndex >= 0)
+				{
+					hIcon = LoadIconFromFile((char *)driver_list::driver(nParentIndex).name);
+					nParentIndex = GetParentIndex(&driver_list::driver(nParentIndex));
+					if (hIcon == NULL && nParentIndex >= 0)
+						hIcon = LoadIconFromFile((char *)driver_list::driver(nParentIndex).name);
+				}
+			}
+
+			if (hIcon)  // a driver icon was found
+			{
+				int nIconPos = ImageList_AddIcon(hSmall, hIcon);
+				ImageList_AddIcon(hLarge, hIcon);
+				if (nIconPos != -1)
+					iconRoms = nIconPos;
+				DestroyIcon(hIcon);
+			}
+		}
 	}
 
-	// if we have the roms, then look for a custom per-game icon to override
-	// not 2, because this indicates F5 must be done; not 0, because this indicates roms are missing; only use 4 if user chooses it
-	BOOL redx = (GetOverrideRedX()==1) & DriverIsBroken(nItem);
-	if (iconRoms == 1 || iconRoms == 3 || iconRoms == 5 || redx )
-	{
-		if (icon_index[nItem] == 0)
-			AddDriverIcon(nItem,iconRoms);
-		iconRoms = icon_index[nItem];
-	}
+	// finally, into the listview
+	icon_index[nItem] = iconRoms;
 
 	return iconRoms;
 }
@@ -5900,7 +5878,7 @@ static void UpdateMenu(HMENU hMenu)
 		EnableMenuItem(hMenu, ID_CONTEXT_SELECT_RANDOM, MF_GRAYED);
 	}
 
-	if (lpFolder->m_dwFlags & F_CUSTOM)
+	if (lpFolder->m_dwFlags & FI_CUSTOM)
 	{
 		EnableMenuItem(hMenu,ID_CONTEXT_REMOVE_CUSTOM,MF_ENABLED);
 		EnableMenuItem(hMenu,ID_CONTEXT_RENAME_CUSTOM,MF_ENABLED);
@@ -5912,7 +5890,7 @@ static void UpdateMenu(HMENU hMenu)
 	}
 	//const char* pParent = GetFolderNameByID(lpFolder->m_nParent+1);
 
-	if (lpFolder->m_dwFlags & F_INIEDIT)
+	if (lpFolder->m_dwFlags & FI_INIEDIT)
 		EnableMenuItem(hMenu,ID_FOLDER_PROPERTIES,MF_ENABLED);
 	else
 		EnableMenuItem(hMenu,ID_FOLDER_PROPERTIES,MF_GRAYED);
@@ -6263,7 +6241,7 @@ static void RemoveGameCustomFolder(int driver_index)
 
 	for (int i=0;i<num_folders;i++)
 	{
-		if (folders[i]->m_dwFlags & F_CUSTOM && folders[i]->m_nFolderId == GetCurrentFolderID())
+		if (folders[i]->m_dwFlags & FI_CUSTOM && folders[i]->m_nFolderId == GetCurrentFolderID())
 		{
 			int current_pick_index;
 
@@ -6404,7 +6382,7 @@ static void ButtonUpListViewDrag(POINTS p)
 			return;
 
 		folder = GetCurrentFolder();
-		if (folder->m_dwFlags & F_CUSTOM)
+		if (folder->m_dwFlags & FI_CUSTOM)
 		{
 			/* dragged out of a custom folder, so let's remove it */
 			RemoveCurrentGameCustomFolder();

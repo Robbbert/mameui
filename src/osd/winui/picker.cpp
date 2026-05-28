@@ -1422,13 +1422,12 @@ const LPCTSTR *Picker_GetColumnNames(HWND hwndPicker)
 }
 
 
-
-void Picker_SetHeaderImageList(HWND hwndPicker, HIMAGELIST hHeaderImages)
-{
-	HWND hwndHeader;
-	hwndHeader = ListView_GetHeader(hwndPicker);
-	SendMessage(hwndHeader, HDM_SETIMAGELIST, 0, (LPARAM) (void *) hHeaderImages);
-}
+// Not used?
+//void Picker_SetHeaderImageList(HWND hwndPicker, HIMAGELIST hHeaderImages)
+//{
+//	HWND hwndHeader = ListView_GetHeader(hwndPicker);
+//	SendMessage(hwndHeader, HDM_SETIMAGELIST, 0, (LPARAM) (void *) hHeaderImages);
+//}
 
 
 

@@ -88,26 +88,26 @@ static std::map<string,int> mvmap;  // store indicator if Media View Unmount sho
 
 static const device_entry s_devices[] =
 {
-	{ "unkn",  IDI_WIN_UNKNOWN, "Unknown" },
-	{ "rom",   IDI_WIN_ROMS,    "Cartridge images" },
-	{ "prom",  IDI_WIN_ROMS,    "Cartridge images" },
-	{ "cart",  IDI_WIN_CART,    "Cartridge images" },
-	{ "flop",  IDI_WIN_FLOP,    "Floppy disk images" },
-	{ "disk",  IDI_WIN_FLOP,    "Floppy disk images" },
-	{ "hard",  IDI_WIN_HARD,    "Hard disk images" },
-	{ "cyln",  IDI_WIN_CYLN,    "Cylinders" },
-	{ "cass",  IDI_WIN_CASS,    "Cassette images" },
-	{ "card",  IDI_WIN_PCRD,    "Punchcard images" },
-	{ "ptap",  IDI_WIN_PTAP,    "Punchtape images" },
-	{ "prin",  IDI_WIN_PRIN,    "Printer Output" },
-	{ "serl",  IDI_WIN_SERL,    "Serial Output" },
-	{ "dump",  IDI_WIN_SNAP,    "Snapshots" },
-	{ "quik",  IDI_WIN_SNAP,    "Quickloads" },
-	{ "memc",  IDI_WIN_MEMC,    "Memory cards" },
-	{ "cdrm",  IDI_WIN_CDRM,    "CD-ROM images" },
-	{ "mtap",  IDI_WIN_MTAP,    "Magnetic tapes" },
-	{ "min",   IDI_WIN_MIDI,    "MIDI input" },
-	{ "mout",  IDI_WIN_MIDI,    "MIDI output" }
+	{ "unkn",  IDI_SO_UNKNOWN, "Unknown" },
+	{ "rom",   IDI_SO_ROMS,    "ROM images" },
+	{ "prom",  IDI_SO_ROMS,    "PROM images" },
+	{ "cart",  IDI_SO_CART,    "Cartridge images" },
+	{ "flop",  IDI_SO_FLOP,    "Floppy disk images" },
+	{ "disk",  IDI_SO_FLOP,    "Floppy disk images" },
+	{ "hard",  IDI_SO_HARD,    "Hard disk images" },
+	{ "cyln",  IDI_SO_CYLN,    "Cylinders" },
+	{ "cass",  IDI_SO_CASS,    "Cassette images" },
+	{ "card",  IDI_SO_PCRD,    "Punchcard images" },
+	{ "ptap",  IDI_SO_PTAP,    "Punchtape images" },
+	{ "prin",  IDI_SO_PRIN,    "Printer Output" },
+	{ "serl",  IDI_SO_SERL,    "Serial Output" },
+	{ "dump",  IDI_SO_SNAP,    "Snapshots" },
+	{ "quik",  IDI_SO_SNAP,    "Quickloads" },
+	{ "memc",  IDI_SO_MEMC,    "Memory cards" },
+	{ "cdrm",  IDI_SO_CDRM,    "CD-ROM images" },
+	{ "mtap",  IDI_SO_MTAP,    "Magnetic tapes" },
+	{ "min",   IDI_SO_MIDI,    "MIDI input" },
+	{ "mout",  IDI_SO_MIDI,    "MIDI output" }
 };
 
 
@@ -1510,13 +1510,13 @@ static int SoftwarePicker_GetItemImage(HWND hwndPicker, int nItem)
 	if (!nIcon)
 	{
 		if (nType == "unkn")
-			nIcon = FindIconIndex(IDI_WIN_REDX);
+			nIcon = FindIconIndex(IDI_SO_REDX);
 		else
 		{
 			INT resource = lookupdevice(nType)->resource;
 			nIcon = FindIconIndex(resource);
 			if (nIcon < 0)
-				nIcon = FindIconIndex(IDI_WIN_UNKNOWN);
+				nIcon = FindIconIndex(IDI_SO_UNKNOWN);
 		}
 	}
 	return nIcon;
@@ -1589,13 +1589,13 @@ static int SoftwareList_GetItemImage(HWND hwndPicker, int nItem)
 	if (!nIcon)
 	{
 		if (nType == "unkn")
-			nIcon = FindIconIndex(IDI_WIN_REDX);
+			nIcon = FindIconIndex(IDI_SO_REDX);
 		else
 		{
 			INT resource = lookupdevice(nType)->resource;
 			nIcon = FindIconIndex(resource);
 			if (nIcon < 0)
-				nIcon = FindIconIndex(IDI_WIN_UNKNOWN);
+				nIcon = FindIconIndex(IDI_SO_UNKNOWN);
 		}
 	}
 	printf("SoftwareList_GetItemImage: Icon = %d\n",nIcon);
