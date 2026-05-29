@@ -106,6 +106,8 @@ void gpl_chx_device::cha_ctrl_w(u16 data)
 	}
 
 	m_cha_ctrl = data;
+
+	//check_cha_fifo_empty();
 }
 
 // P_CHA_Data
@@ -134,7 +136,6 @@ void gpl_chx_device::cha_data_w(u16 data)
 	{
 		// trying to overflow the FIFO
 	}
-
 }
 
 // P_CHA_FIFO
@@ -219,6 +220,8 @@ void gpl_chx_device::chb_ctrl_w(u16 data)
 	}
 
 	m_chb_ctrl = data;
+
+	//check_chb_fifo_empty();
 }
 
 // P_CHB_Data
@@ -272,6 +275,20 @@ void gpl_chx_device::chb_fifo_w(u16 data)
 	}
 }
 
+void gpl_chx_device::check_cha_fifo_empty()
+{
+	u8 emptyamount = (m_cha_fifo_reg & 0x00f0) >> 4;
+
+	if (m_cha_fifo_entries <= emptyamount)
+	{
+		if (m_cha_ctrl & 0x4000)
+		{
+			m_cha_ctrl |= 0x8000;
+			m_updateirqs_cb(1);
+		}
+	}
+}
+
 void gpl_chx_device::process_cha_fifo()
 {
 	if (!(m_cha_ctrl & 0x2000))
@@ -292,13 +309,18 @@ void gpl_chx_device::process_cha_fifo()
 		// trying to underflow the FIFO?
 	}
 
-	u8 emptyamount = (m_cha_fifo_reg & 0x00f0) >> 4;
+	check_cha_fifo_empty();
+}
 
-	if (m_cha_fifo_entries <= emptyamount)
+void gpl_chx_device::check_chb_fifo_empty()
+{
+	u8 emptyamount = (m_chb_fifo_reg & 0x00f0) >> 4;
+
+	if (m_chb_fifo_entries <= emptyamount)
 	{
-		if (m_cha_ctrl & 0x4000)
+		if (m_chb_ctrl & 0x4000)
 		{
-			m_cha_ctrl |= 0x8000;
+			m_chb_ctrl |= 0x8000;
 			m_updateirqs_cb(1);
 		}
 	}
@@ -324,18 +346,5 @@ void gpl_chx_device::process_chb_fifo()
 		// trying to underflow the FIFO?
 	}
 
-	u8 emptyamount = (m_chb_fifo_reg & 0x00f0) >> 4;
-
-	if (m_chb_fifo_entries <= emptyamount)
-	{
-		if (m_chb_ctrl & 0x4000)
-		{
-			m_chb_ctrl |= 0x8000;
-			m_updateirqs_cb(1);
-		}
-	}
-}
-
-void gpl_chx_device::device_add_mconfig(machine_config &config)
-{
+	check_chb_fifo_empty();
 }
