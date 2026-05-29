@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8126 -->
+<!-- Number of items in this list = 8125 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -74899,16 +74899,6 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Tarzan_hack_8_8_6_wc_WIP.a26" size="4096" crc="38dcc7f5" sha1="c464e0926ab25abc24b0c6195b339ec8adfbb887"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a26a6d9a3375f9ca">
-		<description>Tarzan_Original</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Tarzan_Original.bin" size="16384" crc="15e22f06" sha1="a6d9a3375f9ca62123353760d0c78d05717de7d2"/>
 			</dataarea>
 		</part>
 	</software>

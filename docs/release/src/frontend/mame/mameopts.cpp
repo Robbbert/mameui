@@ -36,9 +36,33 @@
 
 void mame_options::parse_standard_inis(emu_options &options, std::ostream &error_stream, const game_driver *driver)
 {
+#if 0
 	// parse the INI file defined by the platform (e.g., "mame.ini")
 	// we do this twice so that the first file can change the INI path
 	parse_one_ini(options, emulator_info::get_configname(), OPTION_PRIORITY_SUBCMD);
+#endif
+#if 1
+	// parse exactly one of the main INI file to pick up and apply inipath and [no]readconfig
+	{
+		emu_file file(options.ini_path(), OPEN_FLAG_READ);
+		osd_printf_verbose("Attempting load of %s.ini\n", emulator_info::get_configname());
+		std::error_condition const filerr = file.open(std::string(emulator_info::get_configname()) + ".ini");
+		if (!filerr)
+		{
+			osd_printf_verbose("Parsing %s\n", file.fullpath());
+			try
+			{
+				options.parse_ini_file(static_cast<util::core_file &>(file), OPTION_PRIORITY_MAME_INI, true, false);
+			}
+			catch (options_exception const &ex)
+			{
+				util::stream_format(error_stream, "While parsing %s:\n%s\n", file.fullpath(), ex.message());
+			}
+		}
+	}
+
+	// now parse the main INI file following the potentially updated search path
+#endif
 	parse_one_ini(options, emulator_info::get_configname(), OPTION_PRIORITY_MAME_INI, &error_stream);
 
 	// debug mode: parse "debug.ini" as well
@@ -125,6 +149,7 @@ void mame_options::parse_one_ini(emu_options &options, const char *basename, int
 		return;
 
 	// open the file; if we fail, that's ok
+#if 1
 	std::string pp = options.ini_path(), bn = std::string(basename) + ".ini";
 	if (priority == OPTION_PRIORITY_SUBCMD) // MAMEUI force first read of mame.ini to be at emulator root
 	{
@@ -142,15 +167,32 @@ void mame_options::parse_one_ini(emu_options &options, const char *basename, int
 	osd_printf_verbose("Parsing %s\n", pp);
 	try
 	{
-		options.parse_ini_file((util::core_file&)file, priority, priority < OPTION_PRIORITY_DRIVER_INI, false);
+		options.parse_ini_file(static_cast<util::core_file &>(file), priority, priority < OPTION_PRIORITY_DRIVER_INI, false);
 	}
-	catch (options_exception &ex)
+	catch (options_exception const &ex)
 	{
 		if (error_stream)
 			util::stream_format(*error_stream, "While parsing %s:\n%s\n", file.fullpath(), ex.message());
-		return;
 	}
-
+#endif
+#if 0
+	emu_file file(options.ini_path(), OPEN_FLAG_READ);
+	osd_printf_verbose("Attempting load of %s.ini\n", basename);
+	for (std::error_condition filerr = file.open(std::string(basename) + ".ini"); !filerr; filerr = file.open_next())
+	{
+		// parse the file
+		osd_printf_verbose("Parsing %s\n", file.fullpath());
+		try
+		{
+			options.parse_ini_file(static_cast<util::core_file &>(file), priority, priority < OPTION_PRIORITY_DRIVER_INI, false);
+		}
+		catch (options_exception const &ex)
+		{
+			if (error_stream)
+				util::stream_format(*error_stream, "While parsing %s:\n%s\n", file.fullpath(), ex.message());
+		}
+	}
+#endif
 }
 
 

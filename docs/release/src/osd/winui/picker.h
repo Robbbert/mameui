@@ -69,7 +69,7 @@ int Picker_GetNumColumns(HWND hWnd);
 void Picker_ClearIdle(HWND hwndPicker);
 void Picker_ResetIdle(HWND hwndPicker);
 BOOL Picker_IsIdling(HWND hwndPicker);
-void Picker_SetHeaderImageList(HWND hwndPicker, HIMAGELIST hHeaderImages);
+//void Picker_SetHeaderImageList(HWND hwndPicker, HIMAGELIST hHeaderImages);
 int Picker_InsertItemSorted(HWND hwndPicker, int nParam);
 BOOL Picker_SaveColumnWidths(HWND hwndPicker);
 

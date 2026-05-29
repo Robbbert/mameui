@@ -379,108 +379,97 @@ IDI_MAMEUI              ICON                    "res\\messui.ico"
 IDI_MAMEUI              ICON                    "res\\mameui.ico"
 #endif
 // Game status
-IDI_WIN_ROMS            ICON                    "res\\win_roms.ico"
-IDI_WIN_NOROMS          ICON                    "res\\win_noro.ico"
-IDI_WIN_UNKNOWN         ICON                    "res\\win_unkn.ico"
-IDI_WIN_CLONE           ICON                    "res\\win_clone.ico"
-IDI_WIN_REDX            ICON                    "res\\win_redx.ico"
-IDI_WIN_IMPERFECT       ICON                    "res\\win_imp.ico"
-// Tree folders
-IDI_FOLDER              ICON                    "res\\folder.ico"
-IDI_FOLDER_ALLGAMES     ICON                    "res\\allgames.ico"
-IDI_FOLDER_AVAILABLE    ICON                    "res\\foldavail.ico"
-IDI_FOLDER_BIOS         ICON                    "res\\foldbios.ico"
-IDI_FOLDER_CLONES       ICON                    "res\\foldclone.ico"
-IDI_FOLDER_CPU          ICON                    "res\\foldcsb.ico"
-IDI_FOLDER_DUMP         ICON                    "res\\foldcsb.ico"
-IDI_FOLDER_FPS          ICON                    "res\\foldfps.ico"
-IDI_FOLDER_HARDDISK     ICON                    "res\\harddisk.ico"
-IDI_FOLDER_HORIZONTAL   ICON                    "res\\horz.ico"
-IDI_FOLDER_IMPERFECT    ICON                    "res\\foldimp.ico"
-IDI_FOLDER_LIGHTGUN     ICON                    "res\\foldgun.ico"
-IDI_FOLDER_MANUFACTURER ICON                    "res\\foldmanu.ico"
-IDI_FOLDER_MECHANICAL   ICON                    "res\\mechanical.ico"
-IDI_FOLDER_MONITOR      ICON                    "res\\multimon.ico"
-IDI_FOLDER_NONWORKING   ICON                    "res\\nonwork.ico"
-IDI_FOLDER_ORIGINALS    ICON                    "res\\foldorig.ico"
-IDI_FOLDER_RASTER       ICON                    "res\\foldrast.ico"
-IDI_FOLDER_RESOL        ICON                    "res\\foldres.ico"
-IDI_FOLDER_SAMPLES      ICON                    "res\\foldsamp.ico"
-IDI_FOLDER_SAVESTATE    ICON                    "res\\savestate.ico"
-IDI_FOLDER_SOUND        ICON                    "res\\foldcsb.ico"
-IDI_FOLDER_SOURCE       ICON                    "res\\foldsrc.ico"
-IDI_FOLDER_TRACKBALL    ICON                    "res\\foldball.ico"
-IDI_FOLDER_UNAVAILABLE  ICON                    "res\\foldunav.ico"
-IDI_FOLDER_VERTICAL     ICON                    "res\\vert.ico"
-IDI_FOLDER_VECTOR       ICON                    "res\\foldvec.ico"
-IDI_FOLDER_YEAR         ICON                    "res\\foldyear.ico"
-IDI_FOLDER_WORKING      ICON                    "res\\working.ico"
-IDI_BIOS                ICON                    "res\\bios.ico"
-IDI_CHIP                ICON                    "res\\chip.ico"
-IDI_CPU                 ICON                    "res\\cpu.ico"
-IDI_FOLDER_OPEN         ICON                    "res\\foldopen.ico"
-IDI_KEYBOARD            ICON                    "res\\keyboard.ico"
-IDI_MANUFACTURER        ICON                    "res\\manufact.ico"
-IDI_MONITOR             ICON                    "res\\monitor.ico"
-IDI_SOURCE              ICON                    "res\\source.ico"
-IDI_YEAR                ICON                    "res\\year.ico"
-// Property pages
-IDI_ADVANCED            ICON                    "res\\advanced.ico"
-IDI_CHECKMARK           ICON                    "res\\checkmark.ico"
-//IDI_DEBUG               ICON                    "res\\debug.ico"
-IDI_DISPLAY             ICON                    "res\\display.ico"
-IDI_JOYSTICK            ICON                    "res\\joystick.ico"
-IDI_MISC                ICON                    "res\\misc.ico"
-IDI_OPENGL              ICON                    "res\\opengl.ico"
-IDI_SCREEN              ICON                    "res\\screen.ico"
-IDI_SHADER              ICON                    "res\\shader.ico"
-IDI_SNAPSHOT            ICON                    "res\\snapshot.ico"
-IDI_SOUND               ICON                    "res\\sound.ico"
-//IDI_SYSTRAY             ICON                    "res\\mameui.ico"
-IDI_VECTOR              ICON                    "res\\vector.ico"
-// Property sheet
-//IDI_DISPLAYSHEET        ICON                    "res\\display.ico"
-//IDI_ADVANCEDSHEET       ICON                    "res\\advanced.ico"
-//IDI_SCREENSHEET         ICON                    "res\\screen.ico"
-//IDI_OPENGLSHEET         ICON                    "res\\opengl.ico"
-//IDI_SHADERSHEET         ICON                    "res\\shader.ico"
-//IDI_VECTORSHEET         ICON                    "res\\vector.ico"
-//IDI_SOUNDSHEET          ICON                    "res\\sound.ico"
-//IDI_INPUTSHEET          ICON                    "res\\keyboard.ico"
-//IDI_CONTROLSHEET        ICON                    "res\\joystick.ico"
-//IDI_MISCSHEET           ICON                    "res\\misc.ico"
-//IDI_LUASHEET            ICON                    "res\\debug.ico"
-//IDI_SNAPSHEET           ICON                    "res\\snapshot.ico"
-// Winui
-IDI_HEADER_UP           ICON                    "res\\header_up.ico"
-IDI_HEADER_DOWN         ICON                    "res\\header_down.ico"
-// Audit
-//IDI_AUDIT_FAIL          ICON                    "res\\audit_fail.ico"
-//IDI_AUDIT_PASS          ICON                    "res\\audit_pass.ico"
+IDI_LV_BIOS             ICON                    "res\\lv-bios.ico"
+IDI_LV_CI               ICON                    "res\\lv-ci.ico"
+IDI_LV_CN               ICON                    "res\\lv-cn.ico"
+IDI_LV_CW               ICON                    "res\\lv-cw.ico"
+IDI_LV_CX               ICON                    "res\\lv-cx.ico"
+IDI_LV_PI               ICON                    "res\\lv-pi.ico"
+IDI_LV_PN               ICON                    "res\\lv-pn.ico"
+IDI_LV_PW               ICON                    "res\\lv-pw.ico"
+IDI_LV_PX               ICON                    "res\\lv-px.ico"
+IDI_LV_RN               ICON                    "res\\lv-rn.ico"
+IDI_LV_RU               ICON                    "res\\lv-ru.ico"
 // Software
-IDI_WIN_NOROMSNEEDED    ICON                    "res\\win_nrnd.ico"
-IDI_WIN_MISSINGOPTROM   ICON                    "res\\win_noor.ico"
-IDI_WIN_FLOP            ICON                    "res\\win_flop.ico"
-IDI_WIN_CASS            ICON                    "res\\win_cass.ico"
-IDI_WIN_SERL            ICON                    "res\\win_serl.ico"
-IDI_WIN_SNAP            ICON                    "res\\win_snap.ico"
-IDI_WIN_PRIN            ICON                    "res\\win_prin.ico"
-IDI_WIN_HARD            ICON                    "res\\win_hard.ico"
-IDI_WIN_CYLN            ICON                    "res\\win_cyln.ico"
-IDI_WIN_PTAP            ICON                    "res\\win_ptap.ico"
-IDI_WIN_PCRD            ICON                    "res\\win_pcrd.ico"
-IDI_WIN_MEMC            ICON                    "res\\win_memc.ico"
-IDI_WIN_MIDI            ICON                    "res\\win_midi.ico"
-IDI_WIN_CDRM            ICON                    "res\\win_cdrm.ico"
-IDI_WIN_MTAP            ICON                    "res\\win_mtap.ico"
-IDI_WIN_CART            ICON                    "res\\win_cart.ico"
-IDI_ICON_CART           ICON                    "res\\cpu.ico"
-IDI_ICON_HARD           ICON                    "res\\harddisk.ico"
-IDI_ICON_CASS           ICON                    "res\\win_cass.ico"
-IDI_ICON_FLOP           ICON                    "res\\win_flop.ico"
-IDI_ICON_PRIN           ICON                    "res\\win_prin.ico"
-IDI_ICON_SERL           ICON                    "res\\win_serl.ico"
-IDI_ICON_SNAP           ICON                    "res\\win_snap.ico"
+IDI_SO_CART             ICON                    "res\\so-cart.ico"
+IDI_SO_CASS             ICON                    "res\\so-cass.ico"
+IDI_SO_CDRM             ICON                    "res\\so-cdrm.ico"
+IDI_SO_CYLN             ICON                    "res\\so-cyln.ico"
+IDI_SO_FLOP             ICON                    "res\\so-flop.ico"
+IDI_SO_HARD             ICON                    "res\\so-hard.ico"
+IDI_SO_MEMC             ICON                    "res\\so-memc.ico"
+IDI_SO_MIDI             ICON                    "res\\so-midi.ico"
+IDI_SO_MTAP             ICON                    "res\\so-mtap.ico"
+IDI_SO_PCRD             ICON                    "res\\so-pcrd.ico"
+IDI_SO_PRIN             ICON                    "res\\so-prin.ico"
+IDI_SO_PTAP             ICON                    "res\\so-ptap.ico"
+IDI_SO_REDX             ICON                    "res\\so-redx.ico"
+IDI_SO_ROMS             ICON                    "res\\so-roms.ico"
+IDI_SO_SERL             ICON                    "res\\so-serl.ico"
+IDI_SO_SNAP             ICON                    "res\\so-snap.ico"
+IDI_SO_UNKNOWN          ICON                    "res\\so-unkn.ico"
+// Property pages
+IDI_PR_ADVANCED         ICON                    "res\\pr-advan.ico"
+IDI_PR_AUDIT            ICON                    "res\\pr-audit.ico"
+IDI_PR_CONFIG           ICON                    "res\\pr-config.ico"
+IDI_PR_CONTROLLER       ICON                    "res\\pr-cont.ico"
+IDI_PR_DISPLAY          ICON                    "res\\pr-disp.ico"
+IDI_PR_JOYSTICK         ICON                    "res\\pr-joy.ico"
+IDI_PR_LOOSE            ICON                    "res\\pr-softw.ico"
+IDI_PR_LUA              ICON                    "res\\pr-lua.ico"
+IDI_PR_MISC             ICON                    "res\\pr-misc.ico"
+IDI_PR_OPENGL           ICON                    "res\\pr-opengl.ico"
+IDI_PR_SCREEN           ICON                    "res\\pr-screen.ico"
+IDI_PR_SHADER           ICON                    "res\\pr-shader.ico"
+IDI_PR_SNAPSHOT         ICON                    "res\\pr-snap.ico"
+IDI_PR_SOUND            ICON                    "res\\pr-sound.ico"
+IDI_PR_VECTOR           ICON                    "res\\pr-vector.ico"
+// Tree folder parents
+IDI_FP_ALL              ICON                    "res\\fp-all.ico"
+IDI_FP_AVAIL            ICON                    "res\\fp-avail.ico"
+IDI_FP_ARCADE           ICON                    "res\\fp-arcade.ico"
+IDI_FP_BIOS             ICON                    "res\\fp-bios.ico"
+IDI_FP_CLONES           ICON                    "res\\fp-clone.ico"
+IDI_FP_CPU              ICON                    "res\\fp-cpu.ico"
+IDI_FP_CUSTOM           ICON                    "res\\custom.ico"
+IDI_FP_DEF              ICON                    "res\\fp-closed.ico"
+IDI_FP_DUMP             ICON                    "res\\fp-dump.ico"
+IDI_FP_FPS              ICON                    "res\\fp-fps.ico"
+IDI_FP_HARDDISK         ICON                    "res\\fp-hard.ico"
+IDI_FP_HORI             ICON                    "res\\fp-hori.ico"
+IDI_FP_IMP              ICON                    "res\\fp-imp.ico"
+IDI_FP_LIGHTGUN         ICON                    "res\\fp-lgun.ico"
+IDI_FP_MANU             ICON                    "res\\fp-manu.ico"
+IDI_FP_MECH             ICON                    "res\\fp-mech.ico"
+IDI_FP_MODIFIED         ICON                    "res\\fp-modi.ico"
+IDI_FP_MONITOR          ICON                    "res\\fp-monit.ico"
+IDI_FP_MOUSE            ICON                    "res\\fp-mouse.ico"
+IDI_FP_NONMECH          ICON                    "res\\fp-nmech.ico"
+IDI_FP_NW               ICON                    "res\\fp-nw.ico"
+IDI_FP_OPEN             ICON                    "res\\fp-open.ico"
+IDI_FP_PARENTS          ICON                    "res\\fp-parent.ico"
+IDI_FP_RASTER           ICON                    "res\\fp-raster.ico"
+IDI_FP_RESOL            ICON                    "res\\fp-resol.ico"
+IDI_FP_SAMPLES          ICON                    "res\\fp-sample.ico"
+IDI_FP_SAVESTATE        ICON                    "res\\fp-savest.ico"
+IDI_FP_SOUND            ICON                    "res\\fp-sound.ico"
+IDI_FP_SOURCE           ICON                    "res\\fp-source.ico"
+IDI_FP_STEREO           ICON                    "res\\fp-stereo.ico"
+IDI_FP_TRACKBALL        ICON                    "res\\fp-track.ico"
+IDI_FP_UNAVAIL          ICON                    "res\\fp-unav.ico"
+IDI_FP_VERT             ICON                    "res\\fp-vert.ico"
+IDI_FP_VECTOR           ICON                    "res\\fp-vector.ico"
+IDI_FP_YEAR             ICON                    "res\\fp-year.ico"
+IDI_FP_W                ICON                    "res\\fp-w.ico"
+// Tree folder children
+IDI_FC_BIOS             ICON                    "res\\fc-bios.ico"
+IDI_FC_CHIP             ICON                    "res\\fc-chip.ico"
+IDI_FC_CPU              ICON                    "res\\fc-cpu.ico"
+IDI_FC_MANU             ICON                    "res\\fc-manu.ico"
+IDI_FC_MONITOR          ICON                    "res\\fc-monit.ico"
+IDI_FC_SOUND            ICON                    "res\\fc-sound.ico"
+IDI_FC_SOURCE           ICON                    "res\\fc-source.ico"
+IDI_FC_YEAR             ICON                    "res\\fc-year.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -488,7 +477,7 @@ IDI_ICON_SNAP           ICON                    "res\\win_snap.ico"
 //
 
 #ifdef RCMESS
-IDD_ABOUT DIALOG 0, 0, 296, 129
+IDD_ABOUT DIALOG 0, 0, 326, 129
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About MESSUI"
 FONT 8, "Tahoma"
@@ -496,25 +485,25 @@ BEGIN
     DEFPUSHBUTTON   "&OK",IDOK,200,109,50,14,WS_GROUP
     CTEXT           "Multi Emulator Super System",IDC_STATIC,147,7,142,11,NOT WS_GROUP
     CTEXT           "Version 0",IDC_VERSION,147,18,142,11,NOT WS_GROUP
-    CTEXT           "Copyright (C) 1997-2026 MAME Contributors",IDC_STATIC,147,29,142,10,NOT WS_GROUP
+    CTEXT           "Copyright (C) 1997-2026 MAME Contributors",IDC_STATIC,147,29,172,10,NOT WS_GROUP
     CTEXT           "MESSUI based on MAMEUI version by",IDC_STATIC,147,51,142,10,NOT WS_GROUP
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,147,44,142,1
-    CTEXT           "Christopher Kirmse and the former MAMEUI team",IDC_STATIC,147,62,142,9,NOT WS_GROUP
-    CTEXT           "Additional code by",IDC_STATIC,147,74,142,9
-    CTEXT           "Mike Haaland, Andrew Kirmse, Jeff Miller",IDC_STATIC,147,85,142,9
-    CTEXT           "John Hardy IV and Michael Soderstrom",IDC_STATIC,147,96,142,9
+    CTEXT           "Christopher Kirmse and the former MAMEUI",IDC_STATIC,147,62,142,9,NOT WS_GROUP
+    CTEXT           "team. Extract of MAMEUI containing",IDC_STATIC,147,74,142,9
+    CTEXT           "working non-arcade systems.",IDC_STATIC,147,85,142,9
+    CTEXT           "Maintained by Robbbert.",IDC_STATIC,147,96,142,9
     CONTROL         "",IDC_ABOUT,"Static",SS_BITMAP | SS_SUNKEN,7,7,16,14
 END
 #else
 IDD_ABOUT DIALOG 0, 0, 356, 129
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About MAMEUI Classic"
+CAPTION "About MAMEUI"
 FONT 8, "Tahoma"
 BEGIN
     DEFPUSHBUTTON   "&OK",IDOK,260,109,50,14,WS_GROUP
     CTEXT           "MAME Version 0",IDC_VERSION,147,7,200,11,NOT WS_GROUP
     CTEXT           "Copyright (C) 1997-2026 MAME Contributors",IDC_STATIC,147,18,200,10,NOT WS_GROUP
-    CTEXT           "MAMEUI Classic developed by",IDC_STATIC,147,42,200,10,NOT WS_GROUP
+    CTEXT           "MAMEUI developed by",IDC_STATIC,147,42,200,10,NOT WS_GROUP
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,147,35,200,1
     CTEXT           "Christopher Kirmse and the former MAMEUI team",IDC_STATIC,147,51,200,9,NOT WS_GROUP
     CTEXT           "Additional code by",IDC_STATIC,147,62,200,9
@@ -1207,7 +1196,7 @@ BEGIN
     CONTROL         "Allow selection by &joystick (requires restart)",IDC_JOY_GUI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,30,180,10,0,HIDC_JOY_GUI
     CONTROL         "Allow selection by custom &key sequences",IDC_KEY_GUI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,44,176,10
     CONTROL         "Skip Game Warnings",IDC_UI_SKIP_WARNINGS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,58,176,10
-    CONTROL         "Override Not Working icon with driver icon",IDC_OVERRIDE_REDX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,72,168,10
+    CONTROL         "Override Not Working icon with driver icon",IDC_OVERRIDE_REDX,"Button",BS_AUTO3STATE | WS_TABSTOP,14,72,168,10
 //  this doesn't work in windows 10, so removed from user visibility 2025-04-12
 //    CONTROL         "Hide &mouse cursor (requires restart)",IDC_HIDE_MOUSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,86,136,10,0,HIDC_HIDE_MOUSE
     CONTROL         "Inheritable Filters",IDC_FILTER_INHERIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,100,68,10
@@ -1322,65 +1311,8 @@ IDB_ABOUT               BITMAP                    "res\\about.bmp"
 #endif
 IDB_TOOLBAR             BITMAP                    "res\\toolbar.bmp"
 IDB_SPLASH              BITMAP                    "res\\splash.bmp"
-#if 0
-IDB_SNAPSHOT            BITMAP                    "res\\snapshot.bmp"
-IDB_ABOUTMENU           BITMAP                    "res\\aboutmenu.bmp"
-IDB_CUSTOM              BITMAP                    "res\\custom.bmp"
-IDB_DIRECTORIES         BITMAP                    "res\\directories.bmp"
-IDB_EXIT                BITMAP                    "res\\exit.bmp"
-IDB_FULLSCREEN          BITMAP                    "res\\fullscreen.bmp"
-IDB_INTERFACE           BITMAP                    "res\\interface.bmp"
-IDB_HELP                BITMAP                    "res\\help.bmp"
-IDB_MAMEHOME            BITMAP                    "res\\mamehome.bmp"
-IDB_PLAY                BITMAP                    "res\\play.bmp"
-IDB_PLAYM1              BITMAP                    "res\\playm1.bmp"
-IDB_OPTIONS             BITMAP                    "res\\options.bmp"
-IDB_REFRESH             BITMAP                    "res\\refresh.bmp"
-IDB_ZIP                 BITMAP                    "res\\zip.bmp"
-IDB_MANUAL              BITMAP                    "res\\pdf.bmp"
-IDB_NOTEPAD             BITMAP                    "res\\notepad.bmp"
-IDB_SAVELIST            BITMAP                    "res\\savelist.bmp"
-IDB_SAVEROMS            BITMAP                    "res\\saveroms.bmp"
-IDB_PLAYBACK            BITMAP                    "res\\playback.bmp"
-IDB_PROPERTIES          BITMAP                    "res\\properties.bmp"
-IDB_AUDIT               BITMAP                    "res\\audit.bmp"
-IDB_VIDEO               BITMAP                    "res\\video.bmp"
-IDB_FONTS               BITMAP                    "res\\fonts.bmp"
-IDB_FOLDERS             BITMAP                    "res\\folders.bmp"
-IDB_SORT                BITMAP                    "res\\sort.bmp"
-IDB_DRIVER              BITMAP                    "res\\driver.bmp"
-IDB_FAQ                 BITMAP                    "res\\faq.bmp"
-IDB_TABS                BITMAP                    "res\\tabs.bmp"
-IDB_TROUBLE             BITMAP                    "res\\trouble.bmp"
-IDB_COUNT               BITMAP                    "res\\count.bmp"
-IDB_RELEASE             BITMAP                    "res\\release.bmp"
-IDB_TIME                BITMAP                    "res\\time.bmp"
-IDB_DESCRIPTION         BITMAP                    "res\\description.bmp"
-IDB_ROM                 BITMAP                    "res\\rom.bmp"
-IDB_SOURCE              BITMAP                    "res\\source.bmp"
-IDB_MANUFACTURER        BITMAP                    "res\\manufacturer.bmp"
-IDB_YEAR                BITMAP                    "res\\year.bmp"
-IDB_PLAYWAV             BITMAP                    "res\\playwav.bmp"
-IDB_FONT1               BITMAP                    "res\\font1.bmp"
-IDB_FONT2               BITMAP                    "res\\font2.bmp"
-IDB_INFOBACK            BITMAP                    "res\\infoback.bmp"
-IDB_LISTBACK            BITMAP                    "res\\listback.bmp"
-IDB_TREEBACK            BITMAP                    "res\\treeback.bmp"
-IDB_ASCENDING           BITMAP                    "res\\ascending.bmp"
-IDB_FIELDS              BITMAP                    "res\\fields.bmp"
-IDB_RECAVI              BITMAP                    "res\\recavi.bmp"
-IDB_RECINPUT            BITMAP                    "res\\recinput.bmp"
-IDB_RECWAV              BITMAP                    "res\\recwav.bmp"
-IDB_PLAYMNG             BITMAP                    "res\\playmng.bmp"
-IDB_RANDOM              BITMAP                    "res\\random.bmp"
-IDB_RECMNG              BITMAP                    "res\\recmng.bmp"
-IDB_SAVESTATE           BITMAP                    "res\\savestate.bmp"
-IDB_FILTERS             BITMAP                    "res\\filters.bmp"
-IDB_REMOVE              BITMAP                    "res\\remove.bmp"
-IDB_RENAME              BITMAP                    "res\\rename.bmp"
-IDB_RESET               BITMAP                    "res\\reset.bmp"
+IDB_WEB_PAGE            BITMAP                    "res\\webpage.bmp"
 
-#endif
 /////////////////////////////////////////////////////////////////////////////
 //
 // DESIGNINFO
