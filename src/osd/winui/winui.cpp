@@ -3261,7 +3261,7 @@ static void check_for_GUI_action()
 			case ID_GAME_PROPERTIES:
 			case ID_CONTEXT_FILTERS:
 			case ID_UI_START:
-				KeyboardStateClear(); /* because we won't receive KeyUp mesage when we lose focus */
+				KeyboardStateClear(); // because we won't receive KeyUp message when we lose focus
 				break;
 			default:
 				break;
@@ -5691,7 +5691,7 @@ int FindIconIndexByName(const char *icon_name)
 
 static int GetIconForDriver(int nItem)
 {
-	int iconRoms = 0;
+	int iconRoms = -1;
 
 	if (DriverUsesRoms(nItem))
 	{
@@ -5706,7 +5706,7 @@ static int GetIconForDriver(int nItem)
 			iconRoms = FindIconIndex(IDI_LV_BIOS);  // bios, any status
 	}
 
-	if (iconRoms == 0)
+	if (iconRoms == -1)
 	{
 		iconRoms =  FindIconIndex(IDI_LV_PW);  // start assuming it's a working parent
 
