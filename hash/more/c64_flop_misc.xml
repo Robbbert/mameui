@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 88 -->
+<!-- Number of items in this list = 91 -->
 <softwarelist name="c64_flop_misc" description="c64_flop_misc loose roms">
 	<software name="c64c7d0cd46201ca">
 		<description>(demo)X-95 Partydemo (1995)(Aphenfluhk - Wegpluear Tiem)[a]</description>
@@ -19,6 +19,36 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="3d reversi (de)(y)(-).d64" size="174848" crc="e59455b0" sha1="cf803ee729879bc74c67bf1bbd8738f1b56b2ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64065228e19e412">
+		<description>WOLFMAN</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WOLFMAN.D64" size="174848" crc="ed8702ce" sha1="065228e19e41259bca5308374d101080655cfa7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c6443c027c213aed">
+		<description>wonderb</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wonderb.d64" size="174848" crc="3e75549a" sha1="43c027c213aedf05204d209e1875c9317c26e351"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64998f2fb0d5f58">
+		<description>WONDERBM</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WONDERBM.D64" size="174848" crc="328b7331" sha1="998f2fb0d5f58980f47bd27e052da146c475b76a"/>
 			</dataarea>
 		</part>
 	</software>

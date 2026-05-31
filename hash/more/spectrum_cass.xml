@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7883 -->
+<!-- Number of items in this list = 7882 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -56129,16 +56129,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="36643">
 				<rom name="Solar Invasion (1989)(Mastertronic Ltd).tap" size="36643" crc="05c00901" sha1="07c78d224e0bdba228480ad8449cac58ca2c8747"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs9d532d1276a4f">
-		<description>SolarGun 48K (2016)(Jari Komppa)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="11313">
-				<rom name="SolarGun 48K (2016)(Jari Komppa).tap" size="11313" crc="6c0866e0" sha1="9d532d1276a4fc1b9fcf4b5ec43ed0be31cb49a9"/>
 			</dataarea>
 		</part>
 	</software>
