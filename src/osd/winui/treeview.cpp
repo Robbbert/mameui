@@ -128,7 +128,6 @@ extern BOOL InitFolders();
 static BOOL CreateTreeIcons();
 static void TreeCtrlOnPaint(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 static const char *ParseManufacturer(const char *s, int *pParsedChars );
-static const char *TrimManufacturer(const char *s);
 static BOOL AddFolder(LPTREEFOLDER lpFolder);
 static LPTREEFOLDER NewFolder(const char *lpTitle, UINT nFolderId, int nParent, UINT nIconId, DWORD dwFlags);
 static void DeleteFolder(LPTREEFOLDER lpFolder);
@@ -422,6 +421,28 @@ LPCFILTER_ITEM GetFilterList()
     private functions
  ***************************************************************************/
 
+void CreateSaveStateFolders(int parent_index)
+{
+	LPTREEFOLDER lpFolder = m_treeFolders[parent_index];
+	LPTREEFOLDER lpSupported, lpUnsupported;
+
+	// no games in top level folder
+	SetAllBits(lpFolder->m_lpGameBits,false);
+	// create our two subfolders
+	lpSupported = NewFolder("Supported", m_next_folder_id++, parent_index, IDI_FP_SAVESTATE, GetFolderFlags(m_numFolders));
+	lpUnsupported = NewFolder("Unsupported", m_next_folder_id++, parent_index, IDI_FP_SAVESTATE, GetFolderFlags(m_numFolders));
+	AddFolder(lpSupported);
+	AddFolder(lpUnsupported);
+
+	for (int jj = 0; jj < driver_list::total(); jj++)
+	{
+		if (DriverSupportsSaveState(jj))
+			AddGame(lpSupported, jj);
+		else
+			AddGame(lpUnsupported, jj);
+	}
+}
+
 void CreateSourceFolders(int parent_index)
 {
 	printf("creating source folders\n");fflush(stdout);
@@ -551,7 +572,10 @@ void CreateManufacturerFolders(int parent_index)
 
 	for (int jj = 0; jj < nGames; jj++)
 	{
-		const char *manufacturer = driver_list::driver(jj).manufacturer;
+		string t = driver_list::driver(jj).manufacturer;
+		const char ch = '.';
+		t.erase(remove(t.begin(), t.end(), ch), t.end());    // remove all periods
+		const char *manufacturer = t.c_str();
 		int iChars = 0;
 		while( manufacturer != NULL && manufacturer[0] != '\0' )
 		{
@@ -560,11 +584,10 @@ void CreateManufacturerFolders(int parent_index)
 			//shift to next start char
 			if( s != NULL && *s != 0 )
 			{
-				const char *t = TrimManufacturer(s);
 				for (i=m_numFolders-1;i>=start_folder;i--)
 				{
 					//RS Made it case insensitive
-					if (ci_strncmp(m_treeFolders[i]->m_lpTitle,t,20) == 0 )
+					if (ci_strncmp(m_treeFolders[i]->m_lpTitle,s,20) == 0 )
 					{
 						AddGame(m_treeFolders[i],jj);
 						break;
@@ -574,7 +597,7 @@ void CreateManufacturerFolders(int parent_index)
 				if (i == start_folder-1)
 				{
 					// nope, it's a manufacturer we haven't seen before, make it.
-					LPTREEFOLDER lpTemp = NewFolder(t, m_next_folder_id, parent_index, IDI_FC_MANU, GetFolderFlags(m_numFolders));
+					LPTREEFOLDER lpTemp = NewFolder(s, m_next_folder_id, parent_index, IDI_FC_MANU, GetFolderFlags(m_numFolders));
 					if (!lpTemp)
 						continue;
 					m_ExtraFolderData[m_next_folder_id] = (EXFOLDERDATA*)malloc(m_folderBytes);
@@ -723,208 +746,9 @@ static const char *ParseManufacturer(const char *s, int *pParsedChars )
 	return tmp;
 }
 
-/* Analyze Manufacturer Names for typical patterns, that don't distinguish between companies (e.g. Co., Ltd., Inc., etc. */
-#ifdef __GNUC__
-#pragma GCC diagnostic ignored "-Wstringop-truncation"
-#endif
-static const char *TrimManufacturer(const char *s)
-{
-	//Also remove Country specific suffixes (e.g. Japan, Italy, America, USA, ...)
-	char strTemp[256];
-	static char strTemp2[256];
-	int j, k ,l;
-	memset(strTemp, '\0', 256 );
-	memset(strTemp2, '\0', 256 );
-	//start analyzing from the back, as these are usually suffixes
-	for(int i = strlen(s)-1; i>=0; i-- )
-	{
-		l = strlen(strTemp);
-		for(k=l; k>=0; k--)
-			strTemp[k+1] = strTemp[k];
-		strTemp[0] = s[i];
-		strTemp[++l] = '\0';
-		switch (l)
-		{
-			case 2:
-				if( ci_strncmp(strTemp, "co", 2) == 0 )
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 3:
-				if( ci_strncmp(strTemp, "co.", 3) == 0 || ci_strncmp(strTemp, "ltd", 3) == 0 || ci_strncmp(strTemp, "inc", 3) == 0  || ci_strncmp(strTemp, "SRL", 3) == 0 || ci_strncmp(strTemp, "USA", 3) == 0)
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 4:
-				if( ci_strncmp(strTemp, "inc.", 4) == 0 || ci_strncmp(strTemp, "ltd.", 4) == 0 || ci_strncmp(strTemp, "corp", 4) == 0 || ci_strncmp(strTemp, "game", 4) == 0)
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 5:
-				if( ci_strncmp(strTemp, "corp.", 5) == 0 || ci_strncmp(strTemp, "Games", 5) == 0 || ci_strncmp(strTemp, "Italy", 5) == 0 || ci_strncmp(strTemp, "Japan", 5) == 0)
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 6:
-				if( ci_strncmp(strTemp, "co-ltd", 6) == 0 || ci_strncmp(strTemp, "S.R.L.", 6) == 0)
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 7:
-				if( ci_strncmp(strTemp, "co. ltd", 7) == 0  || ci_strncmp(strTemp, "America", 7) == 0)
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 8:
-				if( ci_strncmp(strTemp, "co. ltd.", 8) == 0  )
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 9:
-				if( ci_strncmp(strTemp, "co., ltd.", 9) == 0 || ci_strncmp(strTemp, "gmbh & co", 9) == 0 )
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 10:
-				if( ci_strncmp(strTemp, "corp, ltd.", 10) == 0  || ci_strncmp(strTemp, "industries", 10) == 0  || ci_strncmp(strTemp, "of America", 10) == 0)
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 11:
-				if( ci_strncmp(strTemp, "corporation", 11) == 0 || ci_strncmp(strTemp, "enterprises", 11) == 0 )
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			case 16:
-				if( ci_strncmp(strTemp, "industries japan", 16) == 0 )
-				{
-					j=l;
-					while( s[strlen(s)-j-1] == ' ' || s[strlen(s)-j-1] == ',' )
-					{
-						j++;
-					}
-					if( j!=l)
-					{
-						memset(strTemp2, '\0', 256 );
-						strncpy(strTemp2, s, strlen(s)-j );
-					}
-				}
-				break;
-			default:
-				break;
-		}
-	}
-	if( *strTemp2 == 0 )
-		return s;
-	return strTemp2;
-}
-#ifdef __GNUC__
-#pragma GCC diagnostic warning "-Wstringop-truncation"
-#endif
 
 // A Bios folder contains the games that use that bios.
-// MESSUI has no games that need a bios, but left here in case it happens one day.
-// All Bioses use software lists instead.
+// MESSUI only: has no games that need a bios, all Bioses use software lists instead.
 void CreateBIOSFolders(int parent_index)
 {
 	printf("creating bios folders\n");fflush(stdout);
@@ -1570,7 +1394,7 @@ void CreateFPSFolders(int parent_index)
 }
 
 
-#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+//#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 
 // adds these folders to the treeview
 void ResetTreeViewFolders()
@@ -1578,10 +1402,10 @@ void ResetTreeViewFolders()
 	HWND hTreeView = GetTreeView();
 
 	// currently "cached" parent
-	HTREEITEM shti, hti_parent = NULL;
+	HTREEITEM hti_parent = NULL;
 	int index_parent = -1;
 
-	BOOL res = TreeView_DeleteAllItems(hTreeView);
+	(void)TreeView_DeleteAllItems(hTreeView);
 
 	//printf("Adding folders to tree ui indices %i to %i\n",start_index,end_index);
 
@@ -1628,7 +1452,7 @@ void ResetTreeViewFolders()
 
 				tvi.hItem = hti_parent;
 				tvi.mask = TVIF_PARAM;
-				res = TreeView_GetItem(hTreeView,&tvi);
+				(void)TreeView_GetItem(hTreeView,&tvi);
 				if (((LPTREEFOLDER)tvi.lParam) == m_treeFolders[m_treeFolders[i]->m_nParent])
 					break;
 
@@ -1651,10 +1475,10 @@ void ResetTreeViewFolders()
 		tvs.item = tvi;
 
 		// Add it to this tree branch
-		shti = TreeView_InsertItem(hTreeView, &tvs); // for current child branches
+		(void)TreeView_InsertItem(hTreeView, &tvs); // for current child branches
 	}
 }
-#pragma GCC diagnostic error "-Wunused-but-set-variable"
+//#pragma GCC diagnostic error "-Wunused-but-set-variable"
 
 void SelectTreeViewFolder(int folder_id)
 {
@@ -2622,13 +2446,14 @@ BOOL TrySaveExtraFolder(LPTREEFOLDER lpFolder)
 		fprintf(fp,"[FOLDER_SETTINGS]\n");
 		// negative values for icons means it's custom, so save 'em
 		if (extra_folder->m_nIconId < 0)
-		{
 			fprintf(fp, "RootFolderIcon = %s\n", m_ExtraFolderIcons[(-extra_folder->m_nIconId) - ICON_MAX]);
-		}
+		else
+			fprintf(fp, "RootFolderIcon = custom\n");
+
 		if (extra_folder->m_nSubIconId < 0)
-		{
 			fprintf(fp,"SubFolderIcon = %s\n", m_ExtraFolderIcons[(-extra_folder->m_nSubIconId) - ICON_MAX]);
-		}
+		else
+			fprintf(fp, "SubFolderIcon = custom\n");
 
 		/* need to loop over all our TREEFOLDERs--first the root one, then each child. Start with the root */
 

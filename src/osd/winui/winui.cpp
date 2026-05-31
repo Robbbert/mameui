@@ -6734,8 +6734,13 @@ static void SaveGameListToFile(char *szFile)
 		return;
 	}
 
+	// Populate the file
+	fprintf(f, "[FOLDER_SETTINGS]\n");
+	fprintf(f, "RootFolderIcon = custom\n");
+	fprintf(f, "SubFolderIcon = custom\n");
+
 	// Header
-	fprintf(f, "[ROOT_FOLDER]\n");
+	fprintf(f, "\n[ROOT_FOLDER]\n");
 
 	// Games
 	for (int nIndex = 0; nIndex < nListCount; nIndex++)

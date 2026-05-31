@@ -56,6 +56,7 @@ void CreateSoundFolders(int parent_index);
 void CreateOrientationFolders(int parent_index);
 void CreateDeficiencyFolders(int parent_index);
 void CreateDumpingFolders(int parent_index);
+void CreateSaveStateFolders(int parent_index);
 
 /***************************************************************************/
 
