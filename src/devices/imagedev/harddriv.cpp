@@ -193,7 +193,8 @@ void harddisk_image_device::call_unload()
 
 static std::error_condition open_disk_diff(emu_options &options, const char *name, chd_file &source, chd_file &diff_chd)
 {
-	std::string fname = std::string(name).append(".dif");
+	std::string const fname = std::string(options.system()->name).append(PATH_SEPARATOR).append(name).append(".dif");
+	//std::string fname = std::string(name).append(".dif");
 
 	/* try to open the diff */
 	//printf("Opening differencing image file: %s\n", fname.c_str());

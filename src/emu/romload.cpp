@@ -1116,7 +1116,8 @@ std::error_condition rom_load_manager::open_disk_diff(
 		chd_file &diff_chd)
 {
 	// TODO: use system name and/or software list name in the path - the current setup doesn't scale
-	std::string fname = romp->name() + ".dif";
+	std::string const fname = std::string(options.system()->name).append(PATH_SEPARATOR).append(romp->name()).append(".dif");
+	//std::string fname = romp->name() + ".dif";
 
 	// try to open the diff
 	LOG("Opening differencing image file: %s\n", fname.c_str());
