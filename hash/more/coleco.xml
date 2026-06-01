@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 708 -->
+<!-- Number of items in this list = 709 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -389,6 +389,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="18758">
 				<rom name="Bankruptcy Builder 2008-05-18.rom" size="18758" crc="2c1ac5a4" sha1="b749d24bad5afd41b864d57735039aea58c57e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colb82dc14285a29">
+		<description>Barbarricade 05-30-26 (2026)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Barbarricade 05-30-26 (2026)(Jess Creations).rom" size="32768" crc="8a9c157b" sha1="b82dc14285a295bf3838418c85d04d793371cafb"/>
 			</dataarea>
 		</part>
 	</software>

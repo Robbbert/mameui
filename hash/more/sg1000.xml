@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 82 -->
+<!-- Number of items in this list = 83 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -79,6 +79,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="16384">
 				<rom name="Awass (2026)(Inufuto).sg" size="16384" crc="bbff7ebf" sha1="0366856f6efc8b84beef78c80630882d5f07638d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg1e8e0c3972ab44">
+		<description>Barbarricade 05-30-26 (2026)(Jess Creations, ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="40960">
+				<rom name="Barbarricade 05-30-26 (2026)(Jess Creations, ArugulaZ).sg" size="40960" crc="9adbeec7" sha1="e8e0c3972ab44085815c7ce78198a06778b077c5"/>
 			</dataarea>
 		</part>
 	</software>

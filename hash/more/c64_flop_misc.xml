@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 91 -->
+<!-- Number of items in this list = 97 -->
 <softwarelist name="c64_flop_misc" description="c64_flop_misc loose roms">
 	<software name="c64c7d0cd46201ca">
 		<description>(demo)X-95 Partydemo (1995)(Aphenfluhk - Wegpluear Tiem)[a]</description>
@@ -19,6 +19,66 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="174848">
 				<rom name="3d reversi (de)(y)(-).d64" size="174848" crc="e59455b0" sha1="cf803ee729879bc74c67bf1bbd8738f1b56b2ead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64602ba3e42cf14">
+		<description>wizcastl</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="wizcastl.d64" size="174848" crc="f663e844" sha1="602ba3e42cf148273df99af86139d3b5d9a85a0a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64213707ab9a2e7">
+		<description>Wizland+2FIX.SCS+TRC</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="Wizland+2FIX.SCS+TRC.d64" size="174848" crc="3c95c6d7" sha1="213707ab9a2e7d79bcc88cbe93c909fa8fc742e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c643239be60dac1c">
+		<description>WIZRDADV</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WIZRDADV.D64" size="174848" crc="b30db691" sha1="3239be60dac1c7b8f87cf0bc7a8bd2e99e8e69d1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64e94c552f2a9bb">
+		<description>WIZWARZ_help</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WIZWARZ_help.D64" size="174848" crc="af430f33" sha1="e94c552f2a9bb1d06b0d6c8ac343abc066435207"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64adcf00e4cc523">
+		<description>WNDRBOY</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WNDRBOY.D64" size="174848" crc="c7fef7c4" sha1="adcf00e4cc523989aff1ac679b960405d4baed11"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="c64f7f33834b98e3">
+		<description>WOBBLER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174848">
+				<rom name="WOBBLER.D64" size="174848" crc="81da55e6" sha1="f7f33834b98e3161723b2c171662d4ad35084f7f"/>
 			</dataarea>
 		</part>
 	</software>

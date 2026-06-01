@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2077 -->
+<!-- Number of items in this list = 2078 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -11059,6 +11059,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Mai Nurse v1.02 (2024-25)(lunoka).bin" size="262144" crc="fc7c2995" sha1="d89c75ccaea48cc89d724f4e0184b5d248e83c0e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc2b76bd41fbbf">
+		<description>Maldita Castilla - Requiem Demo v1.0 (2026)(PlayOnRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2780014">
+				<rom name="Maldita Castilla - Requiem Demo v1.0 (2026)(PlayOnRetro).bin" size="2780014" crc="5a33b0c0" sha1="c2b76bd41fbbf2bdeff8fd98698fc06d0fea59b0"/>
 			</dataarea>
 		</part>
 	</software>
