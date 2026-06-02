@@ -137,8 +137,8 @@ static void FreeExtraFolders();
 static void SetExtraIcons(char *name, int *id);
 static BOOL TryAddExtraFolderAndChildren(int parent_index);
 static BOOL TrySaveExtraFolder(LPTREEFOLDER lpFolder);
-static bool LoadExternalFolders(int parent_index, int id);
-static void SaveExternalFolders(int parent_index, const char *fname);
+static bool LoadCacheFolder(int parent_index, int id);
+static void SaveCacheFolder(int parent_index, const char *fname);
 
 /***************************************************************************
     public functions
@@ -497,8 +497,6 @@ void CreateSourceFolders(int parent_index)
 		}
 	}
 	SetNumOptionFolders(k-1);
-	const char *fname = "source";
-	SaveExternalFolders(parent_index, fname);
 }
 
 void CreateScreenFolders(int parent_index)
@@ -554,8 +552,6 @@ void CreateScreenFolders(int parent_index)
 		}
 	}
 	SetNumOptionFolders(k-1);
-	const char *fname = "screens";
-	SaveExternalFolders(parent_index, fname);
 }
 
 
@@ -617,8 +613,6 @@ void CreateManufacturerFolders(int parent_index)
 			}
 		}
 	}
-	const char *fname = "manufacturer";
-	SaveExternalFolders(parent_index, fname);
 }
 
 /* Make a reasonable name out of the one found in the driver array */
@@ -796,8 +790,6 @@ void CreateBIOSFolders(int parent_index)
 			}
 		}
 	}
-	//const char *fname = "bios";
-	//SaveExternalFolders(parent_index, fname);
 }
 
 void CreateCPUFolders(int parent_index)
@@ -864,8 +856,6 @@ void CreateCPUFolders(int parent_index)
 			}
 		}
 	}
-	const char *fname = "cpu";
-	SaveExternalFolders(parent_index, fname);
 }
 
 void CreateSoundFolders(int parent_index)
@@ -934,8 +924,6 @@ void CreateSoundFolders(int parent_index)
 			}
 		}
 	}
-	const char *fname = "sound";
-	SaveExternalFolders(parent_index, fname);
 }
 
 void CreateDeficiencyFolders(int parent_index)
@@ -1185,8 +1173,6 @@ void CreateDumpingFolders(int parent_index)
 		if (bNoDump)
 			AddGame(lpNo,jj);
 	}
-	const char *fname = "dumping";
-	SaveExternalFolders(parent_index, fname);
 }
 
 
@@ -1244,8 +1230,6 @@ void CreateYearFolders(int parent_index)
 			AddGame(lpTemp, jj);
 		}
 	}
-	const char *fname = "year";
-	SaveExternalFolders(parent_index, fname);
 }
 
 void CreateResolutionFolders(int parent_index)
@@ -1318,8 +1302,6 @@ void CreateResolutionFolders(int parent_index)
 			}
 		}
 	}
-	const char *fname = "resolution";
-	SaveExternalFolders(parent_index, fname);
 }
 
 void CreateFPSFolders(int parent_index)
@@ -1389,8 +1371,6 @@ void CreateFPSFolders(int parent_index)
 			}
 		}
 	}
-	const char *fname = "fps";
-	SaveExternalFolders(parent_index, fname);
 }
 
 
@@ -1711,19 +1691,25 @@ BOOL InitFolders()
 			if (lpFolderData->m_pfnCreateFolders)
 			{
 				if (RequiredDriverCache() && lpFolderData->m_process) // rebuild cache
-					lpFolderData->m_pfnCreateFolders(i);
+				{
+					lpFolderData->m_pfnCreateFolders(i);  // create
+					SaveCacheFolder(i, m_lpFolderData[i].short_name);  // save
+				}
 				else
 				if (!RequiredDriverCache() && lpFolderData->m_process) // reload cache
 				{
 					UINT ico2 = lpFolderData->m_nIconId2;
 					if (ico2 == 0)
 						ico2 = lpFolderData->m_nIconId;
-					if (!LoadExternalFolders(i, ico2))   // load cache file
+					if (!LoadCacheFolder(i, ico2))   // load cache file
+					{
 						lpFolderData->m_pfnCreateFolders(i);  // if it was missing, make a new one
+						SaveCacheFolder(i, m_lpFolderData[i].short_name);  // and save it
+					}
 				}
 				else
 				if (!lpFolderData->m_process) // build every time (CreateDeficiencyFolders)
-					lpFolderData->m_pfnCreateFolders(i);
+					lpFolderData->m_pfnCreateFolders(i);  // create but do not save
 			}
 		}
 		else
@@ -2519,7 +2505,7 @@ int GetTreeViewIconIndex(int icon_id)
 	return -1;
 }
 
-static bool LoadExternalFolders(int parent_index, int id)
+static bool LoadCacheFolder(int parent_index, int id)
 {
 	const char* fname = NULL;
 	LPTREEFOLDER lpFolder = m_treeFolders[parent_index];
@@ -2602,7 +2588,7 @@ static bool LoadExternalFolders(int parent_index, int id)
 	return true;
 }
 
-static void SaveExternalFolders(int parent_index, const char *fname)
+static void SaveCacheFolder(int parent_index, const char *fname)
 {
 	string val = dir_get_value(24);
 	char s[val.size()+1];
@@ -2617,7 +2603,7 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	{
 		if (GetLastError() == ERROR_PATH_NOT_FOUND)
 		{
-			printf("SaveExternalFolders: Unable to create the directory \"%s\".\n",fdir);
+			printf("SaveCacheFolder: Unable to create the directory \"%s\".\n",fdir);
 			return;
 		}
 	}
@@ -2627,7 +2613,7 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	FILE *f = fopen(filename.c_str(), "w");
 	if (f == NULL)
 	{
-		printf("SaveExternalFolders: Unable to open file %s for writing.\n",filename.c_str());
+		printf("SaveCacheFolder: Unable to open file %s for writing.\n",filename.c_str());
 		return;
 	}
 
@@ -2667,6 +2653,6 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 	}
 
 	fclose(f);
-	printf("SaveExternalFolders: Saved file %s.\n",filename.c_str());
+	printf("SaveCacheFolder: Saved file %s.\n",filename.c_str());
 }
 

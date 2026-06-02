@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7882 -->
+<!-- Number of items in this list = 7884 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10822,6 +10822,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs611ff05ca4494">
+		<description>Bloodstone EN v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72055">
+				<rom name="Bloodstone EN v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72055" crc="2c4340f3" sha1="611ff05ca4494d36f358d2875fbcd1c9b7bdc984"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7614c407620ff">
+		<description>Bloodstone ES v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72100">
+				<rom name="Bloodstone ES v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72100" crc="4f8132fd" sha1="7614c407620ff2a845ea90f8238b763f5d152661"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs997536c78db83">
 		<description>Bloodstone RU v1.2 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
 		<year>????</year>
@@ -10829,6 +10849,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="72640">
 				<rom name="Bloodstone RU v1.2 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72640" crc="9ec27d60" sha1="997536c78db83009d91fc0b2be7c9250680e3725"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c1f6794396ec">
+		<description>Bloodstone RU v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72710">
+				<rom name="Bloodstone RU v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72710" crc="5458ef6a" sha1="3c1f6794396ec1f8c551ac558fa100756fc4de9a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18699,16 +18729,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44084">
 				<rom name="Deep Strike (1986)(Durell)[a2].tap" size="44084" crc="ea985557" sha1="fb40b78b11bcf680099d0d5b406798c90ffb5617"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsa113457cba47e">
-		<description>Deep Strike 48K (1986)(Durell)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="44339">
-				<rom name="Deep Strike 48K (1986)(Durell).tzx" size="44339" crc="69f64a77" sha1="a113457cba47e338bddfd521fc6109492c52e64f"/>
 			</dataarea>
 		</part>
 	</software>
