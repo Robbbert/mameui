@@ -31,6 +31,7 @@
 #include <algorithm>
 #include <bit>
 #include <cctype>
+#include <cstdio>
 #include <ctime>
 #include <sstream>
 #include <type_traits>
