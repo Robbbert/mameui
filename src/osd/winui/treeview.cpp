@@ -137,7 +137,7 @@ static void FreeExtraFolders();
 static void SetExtraIcons(char *name, int *id);
 static BOOL TryAddExtraFolderAndChildren(int parent_index);
 static BOOL TrySaveExtraFolder(LPTREEFOLDER lpFolder);
-static void LoadExternalFolders(int parent_index, int id);
+static bool LoadExternalFolders(int parent_index, int id);
 static void SaveExternalFolders(int parent_index, const char *fname);
 
 /***************************************************************************
@@ -1718,7 +1718,8 @@ BOOL InitFolders()
 					UINT ico2 = lpFolderData->m_nIconId2;
 					if (ico2 == 0)
 						ico2 = lpFolderData->m_nIconId;
-					LoadExternalFolders(i, ico2);
+					if (!LoadExternalFolders(i, ico2))   // load cache file
+						lpFolderData->m_pfnCreateFolders(i);  // if it was missing, make a new one
 				}
 				else
 				if (!lpFolderData->m_process) // build every time (CreateDeficiencyFolders)
@@ -2518,7 +2519,7 @@ int GetTreeViewIconIndex(int icon_id)
 	return -1;
 }
 
-static void LoadExternalFolders(int parent_index, int id)
+static bool LoadExternalFolders(int parent_index, int id)
 {
 	const char* fname = NULL;
 	LPTREEFOLDER lpFolder = m_treeFolders[parent_index];
@@ -2528,7 +2529,7 @@ static void LoadExternalFolders(int parent_index, int id)
 			fname = m_lpFolderData[j].short_name;
 
 	if (fname == NULL)
-		return;
+		return false;
 
 	string val = dir_get_value(24);
 	char s[val.size()+1];
@@ -2540,7 +2541,7 @@ static void LoadExternalFolders(int parent_index, int id)
 	FILE *f = fopen(filename, "r");
 
 	if (f == NULL)
-		return;
+		return false;
 
 	char readbuf[256];
 	char *name = NULL;
@@ -2598,6 +2599,7 @@ static void LoadExternalFolders(int parent_index, int id)
 	}
 
 	fclose(f);
+	return true;
 }
 
 static void SaveExternalFolders(int parent_index, const char *fname)

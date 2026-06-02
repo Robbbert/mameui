@@ -147,7 +147,7 @@ int elf2_state::wait_r()
 		m_text[m_status&7] = 0;
 		m_text[data&7] = 1;
 		m_status = data;
-		output().set_value("led1", BIT(data, 3));
+		m_led1 = BIT(data, 3);
 	}
 
 	return !LOAD;
@@ -185,7 +185,6 @@ void elf2_state::da_w(int state)
 
 void elf2_state::machine_start()
 {
-	m_text.resolve();
 	address_space &program = m_maincpu->space(AS_PROGRAM);
 
 	/* setup memory banking */

@@ -38,6 +38,7 @@ public:
 		, m_adr_l(*this, "adr_l")
 		, m_adr_h(*this, "adr_h")
 		, m_text(*this, "text%u", 0U)
+		, m_led1(*this, "led1")
 	{ }
 
 	void elf2(machine_config &config);
@@ -72,6 +73,7 @@ private:
 	required_device<dm9368_device> m_adr_l;
 	required_device<dm9368_device> m_adr_h;
 	output_finder<8> m_text;
+	output_finder<> m_led1;
 
 	// internal state
 	uint8_t m_data = 0;
