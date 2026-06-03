@@ -909,6 +909,7 @@ void epc_state::epc(machine_config &config)
 		}
 	});
 
+	// FIXME: determine ISA bus clock
 	ISA8_SLOT(config, "isa1", 0, m_isabus, epc_isa8_cards, "epc_mda", false);
 	ISA8_SLOT(config, "isa2", 0, m_isabus, epc_isa8_cards, nullptr, false);
 	ISA8_SLOT(config, "isa3", 0, m_isabus, epc_isa8_cards, nullptr, false);

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 709 -->
+<!-- Number of items in this list = 714 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -399,6 +399,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Barbarricade 05-30-26 (2026)(Jess Creations).rom" size="32768" crc="8a9c157b" sha1="b82dc14285a295bf3838418c85d04d793371cafb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col33e561f20d2b1">
+		<description>Barbarricade 05-31-26 (2026)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Barbarricade 05-31-26 (2026)(Jess Creations).rom" size="32768" crc="804c27ae" sha1="33e561f20d2b17760737e45928411ba9027b66e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1152,6 +1162,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colec87ef86274ad">
+		<description>Circus (2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32767">
+				<rom name="Circus (2023)(CollectorVision).rom" size="32767" crc="1d353f30" sha1="ec87ef86274ad5d06d37efcd2f73f653bb3db8f7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb9eebd5984f54">
 		<description>Cix (2013)(Philipp Klaus Krause)</description>
 		<year>????</year>
@@ -1389,6 +1409,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Crazy Chicky Junior (2023)(8 bit Milli Games).rom" size="32768" crc="1bdca585" sha1="98c89139b3417815afcf23e9bc801c0a707d512e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col33fe4037d283d">
+		<description>Crazy Chicky Junior - New Cluck City (2024)(8 bit Milli Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Crazy Chicky Junior - New Cluck City (2024)(8 bit Milli Games).rom" size="32768" crc="e29d280e" sha1="33fe4037d283d825775d0249fd43d328473b8911"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3703,12 +3733,12 @@
 		</part>
 	</software>
 	<software name="cola72c681702649">
-		<description>MinesweeperCOL</description>
+		<description>Minesweeper v1.03 (2023)(Under4Mhz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="MinesweeperCOL.col" size="16384" crc="d92adc95" sha1="a72c68170264966105cb7d309e72173fa8dcb695"/>
+				<rom name="Minesweeper v1.03 (2023)(Under4Mhz).rom" size="16384" crc="d92adc95" sha1="a72c68170264966105cb7d309e72173fa8dcb695"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4119,16 +4149,6 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Nether Dungeon (2018)(CollectorVision).rom" size="131072" crc="4657bb8c" sha1="f78a9b9477f4b02556351e6574e0a297fd20a7d1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="col33fe4037d283d">
-		<description>New Cluck City - Egg On The Town</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="coleco_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="New Cluck City - Egg On The Town.col" size="32768" crc="e29d280e" sha1="33fe4037d283d825775d0249fd43d328473b8911"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5139,6 +5159,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="20480">
 				<rom name="Sector Alpha (USA)(1983)(Spectravideo).rom" size="20480" crc="0ec63a5c" sha1="990967a4ef5795733a29efbacddb23e4d4dd3c15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colecab637cefe24">
+		<description>Sega-Galaga (Proto)(1981-83)(Sega - Namco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Sega-Galaga (Proto)(1981-83)(Sega - Namco).rom" size="32768" crc="6139aec7" sha1="ecab637cefe24a5aad09fcd43bc1a4e17b77ed94"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6822,6 +6852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col61eb94624fd44">
+		<description>Way of the Dung (2024)(8 bit Milli Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Way of the Dung (2024)(8 bit Milli Games).rom" size="32768" crc="1599b78f" sha1="61eb94624fd44eed2c710822c8f29c25e421e8df"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col83a1cbe39a67d">
 		<description>Way of the Exploding Foot (CollectorVision)(2011)</description>
 		<year>????</year>
@@ -6919,6 +6959,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Wordle v1.7 (2022)(CollectorVision).rom" size="32768" crc="35db2611" sha1="d3912fb57f220aa5afcfa8c9fd7b089938f4a165"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col28b31f5e371d8">
+		<description>Wormhole (2023)(8 bit Milli Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Wormhole (2023)(8 bit Milli Games).rom" size="32768" crc="b2b5f955" sha1="28b31f5e371d8d84bd7ac084f46a0e050eab4e41"/>
 			</dataarea>
 		</part>
 	</software>

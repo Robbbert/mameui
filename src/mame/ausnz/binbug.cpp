@@ -265,7 +265,7 @@ void binbug_state::binbug(machine_config &config)
 	quik.set_interface("binbug_quik");
 	SOFTWARE_LIST(config, "quik_list").set_original("binbug");
 
-	S100_BUS(config, m_s100, 0);
+	S100_BUS(config, m_s100);
 	S100_SLOT(config, "s100:1", binbug_s100_devices, "dg640");
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2078 -->
+<!-- Number of items in this list = 2083 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3442,6 +3442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen5ad28c0931933">
+		<description>Alien Cat 2 (Alt) (2020)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Alien Cat 2 (Alt) (2020)(PSCD Games).bin" size="1310720" crc="159b1da2" sha1="5ad28c09319338ccf644ea0019763be77cfd2ea3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3ee5cb6760263">
 		<description>alien soldier (italian translation)</description>
 		<year>????</year>
@@ -6869,6 +6879,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="566368">
 				<rom name="Flying Sonic in Sonic 1 by Bobesh8.bin" size="566368" crc="2b137a00" sha1="ccd33e02cf894e20fd8422883c5620c1a87f155f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5e79b1cd2bd15">
+		<description>Foxy Land (Alt) (2020)(PSCD-Bug Studio).bin</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3014656">
+				<rom name="Foxy Land (Alt) (2020)(PSCD-Bug Studio).bin.bin" size="3014656" crc="0ba40013" sha1="5e79b1cd2bd1515bdec1ad210b5d7783866004c6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11072,6 +11092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen6fbcb6522c3cf">
+		<description>Maldita Castilla - Requiem Demo v1.2 (2026)(PlayOnRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2779849">
+				<rom name="Maldita Castilla - Requiem Demo v1.2 (2026)(PlayOnRetro).bin" size="2779849" crc="0f65836e" sha1="6fbcb6522c3cfe16d9286b7e46732d08bf3ebe39"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genaee3ff64691a2">
 		<description>Mallet Legend</description>
 		<year>????</year>
@@ -11459,6 +11489,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Metal Gear v1.1 (2025)(h0ffman).bin" size="1572864" crc="724fe7b3" sha1="89b32e57e2dee000b5a4a6502b70e568637d4fda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene2df7acc864bc">
+		<description>Metal Gear v1.2 (2025)(h0ffman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Metal Gear v1.2 (2025)(h0ffman).bin" size="2097152" crc="68ec8c19" sha1="e2df7acc864bcf27bdb983559dd658120a11b624"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19069,6 +19109,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Thunder Fox (USA).bin" size="1048576" crc="e0eb74e6" sha1="c535bd615d3757f1e0a3fb4ff0363f7aaee6dc50"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen16803782aca5a">
+		<description>Thunder Paw (Alt) (2021)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3014656">
+				<rom name="Thunder Paw (Alt) (2021)(PSCD Games).bin" size="3014656" crc="3455d75c" sha1="16803782aca5a8a8bd71af506deeef6288aa6f2d"/>
 			</dataarea>
 		</part>
 	</software>
