@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 714 -->
+<!-- Number of items in this list = 719 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -409,6 +409,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Barbarricade 05-31-26 (2026)(Jess Creations).rom" size="32768" crc="804c27ae" sha1="33e561f20d2b17760737e45928411ba9027b66e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col4c181004228c2">
+		<description>Barbarricade 06-02-26 (2026)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Barbarricade 06-02-26 (2026)(Jess Creations).rom" size="32768" crc="0327148b" sha1="4c181004228c2d75294ab87ff0a30f2e1ba4f380"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2502,6 +2512,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colb5ea39ad81b5f">
+		<description>Fruit Panic (2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Fruit Panic (2023)(CollectorVision).rom" size="65536" crc="a554fdd3" sha1="b5ea39ad81b5faf71db081502d02d552becbb71b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col7564cb4ccd006">
 		<description>Galaxian (1983)(Atari)</description>
 		<year>????</year>
@@ -2609,6 +2629,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="12288">
 				<rom name="Gateway to Apshai (USA, Euro)(1984)(Epyx).rom" size="12288" crc="fdb75be6" sha1="837a192ee27ab78c4ab914b45b9ba55e5847cf37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cola36cb84d0e68d">
+		<description>Gerbils (2021)(Under4Mhz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Gerbils (2021)(Under4Mhz).rom" size="32768" crc="53441bc3" sha1="a36cb84d0e68d5328ce357bc0d64b7771ca5d333"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3323,12 +3353,12 @@
 		</part>
 	</software>
 	<software name="col1d4ed31131f64">
-		<description>Learning with FuzzyWOMP</description>
+		<description>Learning with FuzzyWOMP (2022)(CollectorVision)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Learning with FuzzyWOMP.rom" size="32768" crc="697f56da" sha1="1d4ed31131f64e116038709b52b6d33a341e2fee"/>
+				<rom name="Learning with FuzzyWOMP (2022)(CollectorVision).rom" size="32768" crc="697f56da" sha1="1d4ed31131f64e116038709b52b6d33a341e2fee"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3339,6 +3369,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Learning with Leeper (USA)(1983)(Sierra On-Line).rom" size="16384" crc="1641044f" sha1="0ce165b3c2a9e60964d33f37e8aec7cbf9e9d00f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col61dc202f74374">
+		<description>Legacy of the Wizard SGM (2024)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Legacy of the Wizard SGM (2024)(CollectorVision).rom" size="262144" crc="6ed07ac1" sha1="61dc202f7437438a580dff7023cbb358e8b30cf6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4919,6 +4959,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="20218">
 				<rom name="Runaway Train SGM (2023)(8 bit Milli Games).rom" size="20218" crc="08fef448" sha1="8348f138922e0057e7c5e92295fdfbdb11313abb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col973c9efbb9195">
+		<description>S.A.M. The Software Automatic Mouth (Demo) (2025)(Digital Fluff)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="S.A.M. The Software Automatic Mouth (Demo) (2025)(Digital Fluff).rom" size="32768" crc="a6c4db2a" sha1="973c9efbb9195e83ae6900e4b152899aa37ea915"/>
 			</dataarea>
 		</part>
 	</software>

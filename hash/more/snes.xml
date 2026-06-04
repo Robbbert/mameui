@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4048 -->
+<!-- Number of items in this list = 4050 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -18372,6 +18372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5aaf52842d3da">
+		<description>Mega Man &amp; Bass PT-BR (2014)(Trans-Center, Monkey's Traducoes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mega Man &amp; Bass PT-BR (2014)(Trans-Center, Monkey's Traducoes).sfc" size="4194304" crc="3a52b550" sha1="5aaf52842d3dae9505005abac26d272fffc2c36e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7ade242db5898">
 		<description>Mega Man &amp; Bass T-Eng v1.1 (2002-2023)(Aeon Genesis, Blade133bo)</description>
 		<year>????</year>
@@ -18419,6 +18429,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mega Man V (World) (NES Conversion) (REV-C) (Aftermarket) (Unl).sfc" size="4194304" crc="2131e2b7" sha1="9992f8c24161a194b6faf1f490132b1ca96af3d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns23a6dfc52ebe6">
+		<description>Mega Man VII PT-BR (2015)(Trans-Center, Monkey's Traducoes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mega Man VII PT-BR (2015)(Trans-Center, Monkey's Traducoes).sfc" size="4194304" crc="fa0da7cd" sha1="23a6dfc52ebe6b1727911a61c95be33850affc06"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7884 -->
+<!-- Number of items in this list = 7888 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -29682,6 +29682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0c073e34de608">
+		<description>Head On 48K (2026)(Indigobeetle)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28632">
+				<rom name="Head On 48K (2026)(Indigobeetle).tap" size="28632" crc="a4d9d5f6" sha1="0c073e34de6088dfae5de63555360a921eeab98c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf82bd54513054">
 		<description>Head Over Heels (1987)(Ocean Software)</description>
 		<year>????</year>
@@ -57882,6 +57892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs97ff523dace54">
+		<description>Star Defence Operation 48K (2026)(Xevimet4l)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39275">
+				<rom name="Star Defence Operation 48K (2026)(Xevimet4l).tap" size="39275" crc="764f6b69" sha1="97ff523dace54167384eadb06aba4273eb1f5a84"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs67f376db2ab46">
 		<description>Star Dragon (1990)(Proxima Software)</description>
 		<year>????</year>
@@ -61112,6 +61132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0196d70fe73ea">
+		<description>Tharkys the Knight 128K (2026)(JayDroid)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="125428">
+				<rom name="Tharkys the Knight 128K (2026)(JayDroid).tap" size="125428" crc="52340a44" sha1="0196d70fe73ead30263d331d4219e438302493ad"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0668221da8bf4">
 		<description>That Sinking Feeling(2017)(Sunteam)</description>
 		<year>????</year>
@@ -64239,6 +64269,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16523">
 				<rom name="Venture (1983)(Protek Computing Ltd).tap" size="16523" crc="b2734788" sha1="8a7945102400d250294a1e7008187daf39e8727c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsef582f494a17a">
+		<description>VENTURE 48 (2026)(jason-indie)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43148">
+				<rom name="VENTURE 48 (2026)(jason-indie).tap" size="43148" crc="75cf5e5c" sha1="ef582f494a17a53c03b8788771c4aad57116e51e"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 735 -->
+<!-- Number of items in this list = 737 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -4492,6 +4492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx42db3acdd7d67">
+		<description>Obake 2 (2026)(Andrs Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Obake 2 (2026)(Andrs Soft).rom" size="16384" crc="b1899bee" sha1="42db3acdd7d676410afd4bb6191d9d63a1e74696"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx5ccc7d2a90c8f">
 		<description>Obake-Chan (2025)(Meichnpp)</description>
 		<year>????</year>
@@ -5679,6 +5689,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="star blazer (japan) (alt 2).rom" size="16384" crc="a242fe0d" sha1="a1e1bffe4b4ea6d67c973fa483c4d6273f68de3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx6d1742be6308b">
+		<description>Star Defence Operation (2026)(Xevimet4l)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Star Defence Operation (2026)(Xevimet4l).rom" size="65536" crc="f46b2a95" sha1="6d1742be6308be92c9c2cd0cd6037f83e9d605e3"/>
 			</dataarea>
 		</part>
 	</software>
