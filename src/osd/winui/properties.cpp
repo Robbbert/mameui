@@ -2448,7 +2448,6 @@ static void BuildDataMap(void)
 	datamap_add(properties_datamap, IDC_PROV_JOYSTICK,			DM_STRING,	OSD_JOYSTICKINPUT_PROVIDER);
 	datamap_add(properties_datamap, IDC_PROV_LIGHTGUN,			DM_STRING,	OSD_LIGHTGUNINPUT_PROVIDER);
 	datamap_add(properties_datamap, IDC_PROV_MONITOR,			DM_STRING,	OSD_MONITOR_PROVIDER);
-	datamap_add(properties_datamap, IDC_PROV_OUTPUT,			DM_STRING,	OSD_OUTPUT_PROVIDER);
 
 	// core debugging options
 	datamap_add(properties_datamap, IDC_LOG,					DM_BOOL,	OPTION_LOG);
@@ -2899,7 +2898,7 @@ static void InitializeProviderMappingUI(HWND hwnd)
 	HWND hCtrl3  = GetDlgItem(hwnd,IDC_PROV_JOYSTICK);
 	HWND hCtrl4  = GetDlgItem(hwnd,IDC_PROV_LIGHTGUN);
 	HWND hCtrl5  = GetDlgItem(hwnd,IDC_PROV_MONITOR);
-	HWND hCtrl6  = GetDlgItem(hwnd,IDC_PROV_OUTPUT);
+	HWND hCtrl6  = 0;
 
 	if (hCtrl)
 		for (i = 0; i < NUMPROVUIFONT; i++)

@@ -27,7 +27,7 @@
 #include "winutf8.h"
 #include "modules/lib/osdobj_common.h"
 #include "path.h"
-
+#include "input.h"
 
 
 // These are called from src/osd/windows/windows.c and
