@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7893 -->
+<!-- Number of items in this list = 7914 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -39522,6 +39522,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd711a1af08473">
+		<description>Max Stone Dos en el castillo del Conde - easy ES 128K (2026)(Flopping)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="77508">
+				<rom name="Max Stone Dos en el castillo del Conde - easy ES 128K (2026)(Flopping).tap" size="77508" crc="afde4591" sha1="d711a1af084733edb066701661ee5af481a1180b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs824bf81f8f2ed">
+		<description>Max Stone Dos en el castillo del Conde - hard ES 128K (2026)(Flopping)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="77423">
+				<rom name="Max Stone Dos en el castillo del Conde - hard ES 128K (2026)(Flopping).tap" size="77423" crc="bfdde644" sha1="824bf81f8f2edf68fd3ba8e61a6f0861a916cb90"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb4d0ca7c6d709">
 		<description>Max Stone Edicion MH 128K (2025)(Flopping, MicroHobby)</description>
 		<year>????</year>
@@ -39759,6 +39779,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15728">
 				<rom name="Mazeract 48K (2017)(Jari Komppa).tap" size="15728" crc="55bfddd5" sha1="7dc42a844bc47b00798c30ff3f4e6db4a650042e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff840a421f409">
+		<description>Mazinger Z - Koji al rescate de la Superaleacion Z ES 128K (2025)(Clanbyte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72751">
+				<rom name="Mazinger Z - Koji al rescate de la Superaleacion Z ES 128K (2025)(Clanbyte).tap" size="72751" crc="34be1efc" sha1="ff840a421f409a07f57da8d11fb4d319cc4d50b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1a55248a8a96b">
+		<description>Mazinger Z - Koji to the rescue of Superalloy Z EN 128K (2025)(Clanbyte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72571">
+				<rom name="Mazinger Z - Koji to the rescue of Superalloy Z EN 128K (2025)(Clanbyte).tap" size="72571" crc="c135a8ff" sha1="1a55248a8a96b00badef0cd442652bd854e8116a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs35eafe37cb5a2">
+		<description>Mazinger Z - Ryo in soccorso della Superlega Z IT 128K (2025)(Clanbyte)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="72672">
+				<rom name="Mazinger Z - Ryo in soccorso della Superlega Z IT 128K (2025)(Clanbyte).tap" size="72672" crc="13f9f2b4" sha1="35eafe37cb5a2d1bf73bef14769dbfe4a7d3e04d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43802,6 +43852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf8874cef9eb9c">
+		<description>Nick 48K (2026)(David Programa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="17579">
+				<rom name="Nick 48K (2026)(David Programa).tap" size="17579" crc="54ad4574" sha1="f8874cef9eb9c2820f801db2e03ad4fd8c3b57bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb1e4738f67846">
 		<description>Nicotine Nightmare (1985)(Atlantis Software)</description>
 		<year>????</year>
@@ -44139,6 +44199,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="58403">
 				<rom name="Ninja Secret Agent Chapter 1 128K (2025)(Itho Games).tap" size="58403" crc="5c22d5e6" sha1="a1c6e391cd22058c969c681d93cff2bd026a5da5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs679f25a7fd447">
+		<description>Ninja Secret Agent Chapter 2 128K (2025)(Itho Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="70753">
+				<rom name="Ninja Secret Agent Chapter 2 128K (2025)(Itho Games).tap" size="70753" crc="c09d704c" sha1="679f25a7fd447d2a6d0c5908e33be4b3136c5c95"/>
 			</dataarea>
 		</part>
 	</software>
@@ -44953,12 +45023,12 @@
 		</part>
 	</software>
 	<software name="zxs390184098c982">
-		<description>Omelettes for Breakfast 128K (2017)(Gabriele Amore)</description>
+		<description>Omelettes for Breakfast 48K-128K (2017)(Gabriele Amore)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35499">
-				<rom name="Omelettes for Breakfast 128K (2017)(Gabriele Amore).tap" size="35499" crc="d1706d0b" sha1="390184098c982e0e323c648bf6ff42a0d11a2e90"/>
+				<rom name="Omelettes for Breakfast 48K-128K (2017)(Gabriele Amore).tap" size="35499" crc="d1706d0b" sha1="390184098c982e0e323c648bf6ff42a0d11a2e90"/>
 			</dataarea>
 		</part>
 	</software>
@@ -48859,6 +48929,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48676">
 				<rom name="Prowler (1988)(Mastertronic Ltd).tap" size="48676" crc="4724c374" sha1="0bc6961d7581be5163e5445927720fed4e33022e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaa6db14afcd87">
+		<description>Proyecto Starwash ES v1.0.5-beta.1 48K (1989-2025)(Ricardo Villalba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39758">
+				<rom name="Proyecto Starwash ES v1.0.5-beta.1 48K (1989-2025)(Ricardo Villalba).tap" size="39758" crc="cc700089" sha1="aa6db14afcd87a8724a5bd689a12b23aeb099c8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaddfc0768f761">
+		<description>Proyecto Starwash ES v1.0.6-beta.1 128K (1989-2025)(Ricardo Villalba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="120730">
+				<rom name="Proyecto Starwash ES v1.0.6-beta.1 128K (1989-2025)(Ricardo Villalba).tap" size="120730" crc="256bc4b9" sha1="addfc0768f76164ea1b4d78f70eb6b0a7d4479fa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54012,6 +54102,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs373a5d641df84">
+		<description>Sewer Escape 48K (2026)(MGR Designs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35433">
+				<rom name="Sewer Escape 48K (2026)(MGR Designs).tap" size="35433" crc="f7fc0443" sha1="373a5d641df84f184898764412fb617a802a469a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0fb05759fe07b">
 		<description>Sex Demo, The (19xx)(Chew n Gum)</description>
 		<year>????</year>
@@ -56322,6 +56422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2f1568ecfb2c1">
+		<description>Solseed 48K (2026)(Milos Marinovic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43831">
+				<rom name="Solseed 48K (2026)(Milos Marinovic).tap" size="43831" crc="c3f7204e" sha1="2f1568ecfb2c1612ba7d3a4d886c77c14e001ca4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse6007cc4dcce7">
 		<description>Solvadol X (1992)(The Guild)(128K)</description>
 		<year>????</year>
@@ -58319,6 +58429,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31392">
 				<rom name="Starwash (1991)(Ricardo Villalba Martinez)(Unk-Lang).tap" size="31392" crc="8e79e43d" sha1="0b438aa8d15075f12779e933b987b93edd7b1111"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf4a6df8f10c0b">
+		<description>Starwash - la mision final ES v1.0.4-beta.1 128K (2025)(Ricardo Villalba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="57423">
+				<rom name="Starwash - la mision final ES v1.0.4-beta.1 128K (2025)(Ricardo Villalba).tap" size="57423" crc="e86909ec" sha1="f4a6df8f10c0b6bd0b06af34c12d982d13c76888"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf9c186fecaf45">
+		<description>Starwash - la mision final ES v1.0.4-beta.1 48K (2025)(Ricardo Villalba)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33183">
+				<rom name="Starwash - la mision final ES v1.0.4-beta.1 48K (2025)(Ricardo Villalba).tap" size="33183" crc="1c600d7f" sha1="f9c186fecaf45188e871fba74690662a9b2309af"/>
 			</dataarea>
 		</part>
 	</software>
@@ -61932,6 +62062,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs86653d0996408">
+		<description>Tiny Crate EN 48K-128K (2022)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39862">
+				<rom name="Tiny Crate EN 48K-128K (2022)(PC NONO Games).tap" size="39862" crc="c1f7ff6b" sha1="86653d099640819fd6730a19b993ebee2b078967"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5cf3bbdb7f879">
+		<description>Tiny Crate ES 48K-128K (2022)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39862">
+				<rom name="Tiny Crate ES 48K-128K (2022)(PC NONO Games).tap" size="39862" crc="dcab09bc" sha1="5cf3bbdb7f879599e8be2cf5ddc8c8cfd4e10512"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs92ab0f42167ac">
 		<description>Tiny Nightmares 48K ENG (2023)(EJVG)</description>
 		<year>????</year>
@@ -62059,6 +62209,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46442">
 				<rom name="Titanic Blinky 48K (1991)(Zeppelin Games).tap" size="46442" crc="dff53244" sha1="f520e58388d6e598a35cac10587f5b64df229792"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsae8238c447415">
+		<description>Titanus Battle 48K (2026)(LAWLORD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34280">
+				<rom name="Titanus Battle 48K (2026)(LAWLORD).tap" size="34280" crc="4b9efaa5" sha1="ae8238c447415a2c142f70cf0fe3741570339b71"/>
 			</dataarea>
 		</part>
 	</software>
@@ -66162,6 +66322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6bb1fe11c4f93">
+		<description>World of Spells - Santa Claus 48K-AY (2025)(JTKrakow)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43557">
+				<rom name="World of Spells - Santa Claus 48K-AY (2025)(JTKrakow).tap" size="43557" crc="ae9ae272" sha1="6bb1fe11c4f93cc432a6e0f9e80b6597eb89c7e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsde03582bdc70e">
 		<description>World of Spells 48K-AY (2025)(JTKrakow)</description>
 		<year>????</year>
@@ -67582,6 +67752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4f3e9bbe3e6b3">
+		<description>ZX Parachute 16K (2020)(Carles Oriol)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11867">
+				<rom name="ZX Parachute 16K (2020)(Carles Oriol)_1.tap" size="11867" crc="70ba46de" sha1="4f3e9bbe3e6b3a375ae4c5d74a019eeab9d9d351"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8cb66f858cd57">
 		<description>ZX Robots 48K (2023)(Skult)</description>
 		<year>????</year>
@@ -67999,6 +68179,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="7696">
 				<rom name="_AIR_RAID.TAP" size="7696" crc="91200b1c" sha1="750b448ec65679abe8d482cb6e23a3362456e246"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs66b828e4eb6f7">
+		<description>_Alicia en el Pais de las Maravillas ES 48K (1987)(DaniSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44324">
+				<rom name="_Alicia en el Pais de las Maravillas ES 48K (1987)(DaniSoft).tzx" size="44324" crc="c667fbcc" sha1="66b828e4eb6f72f196b517d9becd1a742ebabfc5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69029,6 +69219,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50816">
 				<rom name="_Castle Master (1990)(Domark).tap" size="50816" crc="63e17cd0" sha1="d1cce587c75dda034eeed6970c1951f259cd9cd2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs40b37cccb4308">
+		<description>_Castle of Terror 48K (1985)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48654">
+				<rom name="_Castle of Terror 48K (1985)(Melbourne House).tzx" size="48654" crc="93dbea26" sha1="40b37cccb4308b11167489a19affdd861d72bda2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -78069,6 +78269,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="161593">
 				<rom name="_Times Of Lore (1988)(Origin Software).tap" size="161593" crc="4b900638" sha1="3eefec9116df5fe560ec81ec0ab207a78321afa3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7afef197d7770">
+		<description>_Tinnitus ES 48K-128K (2026)(Spectrum Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80842">
+				<rom name="_Tinnitus ES 48K-128K (2026)(Spectrum Games).tap" size="80842" crc="3b40f24d" sha1="7afef197d77706073cbbe1a035dcc3c96061e394"/>
 			</dataarea>
 		</part>
 	</software>

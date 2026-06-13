@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 464 -->
+<!-- Number of items in this list = 467 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -229,6 +229,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="40286">
 				<rom name="Aknadach EN 48K (2011)(Softhouse).z80" size="40286" crc="f369810f" sha1="036f9f995a8bf689fb4c02cc2f903d4cf9e66ae1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9b83d3033d36d">
+		<description>Alicia ES 48K (1985)(Luis E.Juan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="31607">
+				<rom name="Alicia ES 48K (1985)(Luis E.Juan).z80" size="31607" crc="45f96467" sha1="9b83d3033d36de5e9f48da3e7b99d12bbb5fd222"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4049,6 +4059,26 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="18052">
 				<rom name="SuperDiskus.z80" size="18052" crc="58b40ab3" sha1="750391d38a428ad8ca1a502c05edc4c242543fb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b224aa31a5ff">
+		<description>Superlopez - El senor de los chupetes - Parte 1 ES 48K (1989)(Rino-Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="41310">
+				<rom name="Superlopez - El senor de los chupetes - Parte 1 ES 48K (1989)(Rino-Soft).z80" size="41310" crc="9d404540" sha1="0b224aa31a5ff8dbac4a2c4c107f96d00051070c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs781554282cf80">
+		<description>Superlopez - El senor de los chupetes - Parte 2 ES 48K (1989)(Rino-Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40794">
+				<rom name="Superlopez - El senor de los chupetes - Parte 2 ES 48K (1989)(Rino-Soft).z80" size="40794" crc="8b409053" sha1="781554282cf802fe0c2686ba53f9169e19c7c0ab"/>
 			</dataarea>
 		</part>
 	</software>
