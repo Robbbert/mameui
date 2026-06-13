@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7888 -->
+<!-- Number of items in this list = 7893 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -219,6 +219,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="1165">
 				<rom name="(demo)TOXI.TAP" size="1165" crc="9b33cc3e" sha1="62d6d4a4f61402b33375649125dea85fb25a8a08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7fc8c9b941aa1">
+		<description>--=O O=-- 48K-AY (2025)(Briefer666)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39393">
+				<rom name="--=O O=-- 48K-AY (2025)(Briefer666).tap" size="39393" crc="18ea4db2" sha1="7fc8c9b941aa1b49d7b13e2f417beb17ddc6562e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4882,6 +4892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsaeef3c770a09c">
+		<description>Alicia a traves del espejo ES 128K (2022)(Jose Luis Cebrian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="87813">
+				<rom name="Alicia a traves del espejo ES 128K (2022)(Jose Luis Cebrian).tap" size="87813" crc="78605781" sha1="aeef3c770a09cb71c35c660ecd9a4e7bd2a2ec73"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd81e6d8cff366">
 		<description>Alien (1982)(Chin)</description>
 		<year>????</year>
@@ -8952,6 +8972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7a02888d4ff83">
+		<description>Bazooka Bill 48K (1986)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46262">
+				<rom name="Bazooka Bill 48K (1986)(Melbourne House).tzx" size="46262" crc="37f035d1" sha1="7a02888d4ff8349ff304d29bca5650de0a42ea53"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscc74da8b2a5b0">
 		<description>Bazooka Bill</description>
 		<year>????</year>
@@ -9399,6 +9429,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="127418">
 				<rom name="Beltalowda - Parte 2 ES 128K (2025)(Molisoft).tap" size="127418" crc="10ca636f" sha1="3417522c24ffb8f0488407e9aa935ee114369381"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2a73bd08babf3">
+		<description>Beltalowda_ENG_Part1_v1.5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122306">
+				<rom name="Beltalowda_ENG_Part1_v1.5.TAP" size="122306" crc="b885f0bb" sha1="2a73bd08babf33c6ddbef9d0e217bac4dc669a7a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10093,32 +10133,32 @@
 		</part>
 	</software>
 	<software name="zxs8bd909a69e408">
-		<description>BIT 101 saves Christmas EN 128K (2026)(Isaias Diaz)</description>
+		<description>BIT 101 saves Christmas EN 48K-128K (2026)(Isaias Diaz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="58261">
-				<rom name="BIT 101 saves Christmas EN 128K (2026)(Isaias Diaz).tap" size="58261" crc="e5189aff" sha1="8bd909a69e4082f46cc3a25b81c7bac47aab0427"/>
+				<rom name="BIT 101 saves Christmas EN 48K-128K (2026)(Isaias Diaz).tap" size="58261" crc="e5189aff" sha1="8bd909a69e4082f46cc3a25b81c7bac47aab0427"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxsaa4ba1f6e84d5">
-		<description>BIT 101 saves Christmas ES 128K (2026)(Isaias Diaz)</description>
+		<description>BIT 101 saves Christmas ES 48K-128K (2026)(Isaias Diaz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="58264">
-				<rom name="BIT 101 saves Christmas ES 128K (2026)(Isaias Diaz).tap" size="58264" crc="c8e18c62" sha1="aa4ba1f6e84d5daabd66f635cfb8d1c715bf7c9d"/>
+				<rom name="BIT 101 saves Christmas ES 48K-128K (2026)(Isaias Diaz).tap" size="58264" crc="c8e18c62" sha1="aa4ba1f6e84d5daabd66f635cfb8d1c715bf7c9d"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxsfc867fe6ed218">
-		<description>BIT 101 saves Christmas PT 128K (2026)(Isaias Diaz)</description>
+		<description>BIT 101 saves Christmas PT 48K-128K (2026)(Isaias Diaz)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="58347">
-				<rom name="BIT 101 saves Christmas PT 128K (2026)(Isaias Diaz).tap" size="58347" crc="179aadb9" sha1="fc867fe6ed2186684c0f95a44c8f313ea0b2b4eb"/>
+				<rom name="BIT 101 saves Christmas PT 48K-128K (2026)(Isaias Diaz).tap" size="58347" crc="179aadb9" sha1="fc867fe6ed2186684c0f95a44c8f313ea0b2b4eb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20552,16 +20592,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsf883df3c1b36e">
-		<description>Double Dragon II - The Revenge (1989)(Virgin Mastertronic)(128k)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="185935">
-				<rom name="Double Dragon II - The Revenge (1989)(Virgin Mastertronic)(128k).tap" size="185935" crc="af872e35" sha1="f883df3c1b36e4221e587d45394c01fb9d0737e8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsa3e4c2ba8e8d6">
 		<description>Double Dragon II - The Revenge (1989)(Virgin Mastertronic)(Sp)</description>
 		<year>????</year>
@@ -20569,6 +20599,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="178780">
 				<rom name="Double Dragon II - The Revenge (1989)(Virgin Mastertronic)(Sp).tap" size="178780" crc="b6fe760a" sha1="a3e4c2ba8e8d69e84a9c69d732408c3709c2d83a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf883df3c1b36e">
+		<description>Double Dragon II - The Revenge 48K-128K (1989)(Virgin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="185935">
+				<rom name="Double Dragon II - The Revenge 48K-128K (1989)(Virgin Games).tap" size="185935" crc="af872e35" sha1="f883df3c1b36e4221e587d45394c01fb9d0737e8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -24799,6 +24839,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="17587">
 				<rom name="Fisherman's Friend v1.305 (1996)(Joseph Aron).tap" size="17587" crc="5eb560d5" sha1="b5c28169b54db2e3014b1c2a99e03bc77abd3278"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse6dc9ea4d19bb">
+		<description>Fist II - The Legend Continues - Combat Game 48K (1986)(Melbourne House)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48680">
+				<rom name="Fist II - The Legend Continues - Combat Game 48K (1986)(Melbourne House).tzx" size="48680" crc="2b45476c" sha1="e6dc9ea4d19bb249500f58d10b343561214781a6"/>
 			</dataarea>
 		</part>
 	</software>

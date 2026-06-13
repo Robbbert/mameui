@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 719 -->
+<!-- Number of items in this list = 724 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -419,6 +419,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Barbarricade 06-02-26 (2026)(Jess Creations).rom" size="32768" crc="0327148b" sha1="4c181004228c2d75294ab87ff0a30f2e1ba4f380"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col8d080d1d8abac">
+		<description>Barbarricade 06-03-26 (2026)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Barbarricade 06-03-26 (2026)(Jess Creations).rom" size="32768" crc="bf40aaf7" sha1="8d080d1d8abac609cfa2c6368f0b72860dcdfb77"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2862,6 +2872,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="colf0e9044739fb8">
+		<description>Hard Hat (2022)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Hard Hat (2022)(CollectorVision).rom" size="32768" crc="221fbcfa" sha1="f0e9044739fb895a4647392ff190ce9b33a762d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col78e867f29fe9d">
 		<description>Hard Hat Mack SGM (1983-2023)(CollectorVision)</description>
 		<year>????</year>
@@ -2899,6 +2919,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24520">
 				<rom name="Hole in One SGM (2017)(CollectorVision).rom" size="24520" crc="7270ae16" sha1="e8d46ef058782d83b886e82f64a28c7d66cf1434"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colc2957e5ce4bb9">
+		<description>Hustle (2023)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Hustle (2023)(CollectorVision).rom" size="16384" crc="c8f7d8c5" sha1="c2957e5ce4bb9425279e6533ccc554087542b8ee"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3519,6 +3549,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="3562">
 				<rom name="Maid of the Mist.rom" size="3562" crc="a7c54759" sha1="ccd06c8f8056baa3917811cfd36ed89dcfa6a46a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col10dd18c20fb17">
+		<description>Manhole v0.6b (2024)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="11288">
+				<rom name="Manhole v0.6b (2024)(Electric Dreams).rom" size="11288" crc="068bfdbe" sha1="10dd18c20fb17e3c3c3f6bcd51e83096ce33d150"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6419,6 +6459,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="24576">
 				<rom name="Tarzan from out of the Jungle (USA, Euro)(1982)(Coleco).rom" size="24576" crc="7cd7a702" sha1="59cb8dec033c3b1df476c7c93109aba9562ba3d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col0d6901a970534">
+		<description>Taz v0.97f (2026)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Taz v0.97f (2026)(Electric Dreams).rom" size="32768" crc="af106afb" sha1="0d6901a970534fc49d2d710ea6270ad2f15869c0"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4050 -->
+<!-- Number of items in this list = 4053 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -8349,6 +8349,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Earthworm Jim PT-BR v2.0 (2026)(juliano_did).sfc" size="3145728" crc="5e4fe99e" sha1="1f2d57263cc3641ae7a485b2b84898171e0093d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns247683e852c67">
+		<description>Earthworm Jim PT-BR v3.0 (2026)(juliano_did)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Earthworm Jim PT-BR v3.0 (2026)(juliano_did).sfc" size="3145728" crc="ca75179f" sha1="247683e852c67da53f06faaf2e3cdeb7ee134476"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22902,6 +22912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns20450fd25b7e4">
+		<description>Rushing Beat Shura - The Eternal Conflict T-Eng v1.2 (2026)(DackR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Rushing Beat Shura - The Eternal Conflict T-Eng v1.2 (2026)(DackR).sfc" size="4194304" crc="634eda5c" sha1="20450fd25b7e40712f0f352faecae698334d8be8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb499b534ba56f">
 		<description>Rushing Beat T-Eng (2016)(FlashPV)</description>
 		<year>????</year>
@@ -32729,6 +32749,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Ghouls'n Ghosts Restoration Hack (2023-25)(SCD).sfc" size="2097152" crc="d983a882" sha1="bf2efd4eaeb1b863d498fcb37e59bc0bdcb95582"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns955bae1fc0be9">
+		<description>Super Guitar - Rock the SNES! (2026)(RheoGamer)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Guitar - Rock the SNES! (2026)(RheoGamer).sfc" size="262144" crc="e4b3c892" sha1="955bae1fc0be9276a1cd4b950e4299d61d9b99a0"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2083 -->
+<!-- Number of items in this list = 2086 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3442,16 +3442,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen5ad28c0931933">
-		<description>Alien Cat 2 (Alt) (2020)(PSCD Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1310720">
-				<rom name="Alien Cat 2 (Alt) (2020)(PSCD Games).bin" size="1310720" crc="159b1da2" sha1="5ad28c09319338ccf644ea0019763be77cfd2ea3"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen3ee5cb6760263">
 		<description>alien soldier (italian translation)</description>
 		<year>????</year>
@@ -4982,6 +4972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gencee436e9d3104">
+		<description>Castlevania - Circle of the Moon (Demo) (2026)(Andor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3932160">
+				<rom name="Castlevania - Circle of the Moon (Demo) (2026)(Andor).bin" size="3932160" crc="6d9ece0f" sha1="cee436e9d3104d71602194a670ace0c2ad5348c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2572d121758ce">
 		<description>Castlevania_Bloodlines(S)</description>
 		<year>????</year>
@@ -5249,6 +5249,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3809298">
 				<rom name="Citadel of Chaos, The v2.23 (2021)(Studio Vetea).bin" size="3809298" crc="fac49e30" sha1="e459ff92f601477b60a28e220be3e853784a87a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen677d907833dfd">
+		<description>Citadel of Chaos, The v3.0 (2021-25)(Studio Vetea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4095552">
+				<rom name="Citadel of Chaos, The v3.0 (2021-25)(Studio Vetea).bin" size="4095552" crc="aef2ea1f" sha1="677d907833dfd91067c156c341c53ad123358097"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6879,16 +6889,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="566368">
 				<rom name="Flying Sonic in Sonic 1 by Bobesh8.bin" size="566368" crc="2b137a00" sha1="ccd33e02cf894e20fd8422883c5620c1a87f155f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen5e79b1cd2bd15">
-		<description>Foxy Land (Alt) (2020)(PSCD-Bug Studio).bin</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3014656">
-				<rom name="Foxy Land (Alt) (2020)(PSCD-Bug Studio).bin.bin" size="3014656" crc="0ba40013" sha1="5e79b1cd2bd1515bdec1ad210b5d7783866004c6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11102,6 +11102,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gene9c66f9689330">
+		<description>Maldita Castilla - Requiem Demo v1.3 (2026)(PlayOnRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2780135">
+				<rom name="Maldita Castilla - Requiem Demo v1.3 (2026)(PlayOnRetro).bin" size="2780135" crc="662d3b1d" sha1="e9c66f9689330b285f3fe563e64f47434ba93e9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6c3b976dbf7f2">
+		<description>Maldita Castilla - Requiem Demo v1.4 (2026)(PlayOnRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2779803">
+				<rom name="Maldita Castilla - Requiem Demo v1.4 (2026)(PlayOnRetro).bin" size="2779803" crc="6e43f5e1" sha1="6c3b976dbf7f2d367d4cfe4c2ef07a3ac6f202ff"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genaee3ff64691a2">
 		<description>Mallet Legend</description>
 		<year>????</year>
@@ -13579,6 +13599,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2228224">
 				<rom name="Retro Games Hunters (World) (v0.17b) (Demo) (Aftermarket) (Unl).md" size="2228224" crc="73cc29c9" sha1="bc90aef530a15ece8b776067e4c5b62521a1ae8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genee1ec659d80fb">
+		<description>Retro Replay - Pixel Panic v0.50 (2026)(Retro-Replay.com)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Retro Replay - Pixel Panic v0.50 (2026)(Retro-Replay.com).bin" size="786432" crc="85a6b582" sha1="ee1ec659d80fbc69035ce118eb21329261365041"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19112,16 +19142,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen16803782aca5a">
-		<description>Thunder Paw (Alt) (2021)(PSCD Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="3014656">
-				<rom name="Thunder Paw (Alt) (2021)(PSCD Games).bin" size="3014656" crc="3455d75c" sha1="16803782aca5a8a8bd71af506deeef6288aa6f2d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen9aa48c5ab66fa">
 		<description>Thunder Pro Wrestling Story T-Eng (Japan)</description>
 		<year>????</year>
@@ -20693,12 +20713,22 @@
 		</part>
 	</software>
 	<software name="gen3763faa6299ab">
-		<description>ZPF (Digital Edition) (2025-26)(Mega Cat Studios)</description>
+		<description>ZPF (Censored - Digital Edition) (2025-26)(Mega Cat Studios)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="ZPF (Digital Edition) (2025-26)(Mega Cat Studios).bin" size="4194304" crc="8a19364a" sha1="3763faa6299abaabe5975fca004b2bca0ca50ba8"/>
+				<rom name="ZPF (Censored - Digital Edition) (2025-26)(Mega Cat Studios).bin" size="4194304" crc="8a19364a" sha1="3763faa6299abaabe5975fca004b2bca0ca50ba8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen0802596ab648f">
+		<description>ZPF (Uncensored - Digital Edition) (2025-26)(Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="ZPF (Uncensored - Digital Edition) (2025-26)(Mega Cat Studios).bin" size="4194304" crc="8508ebfc" sha1="0802596ab648faf53e4b5c66870fb647a3da19c2"/>
 			</dataarea>
 		</part>
 	</software>

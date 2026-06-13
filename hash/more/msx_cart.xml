@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 737 -->
+<!-- Number of items in this list = 738 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -3759,6 +3759,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Mandarin 2, The - Limoncello's Revenge (2024)(Mananuk).rom" size="49152" crc="7b2419a5" sha1="1f76460a1050c622a1cf6601511450c63e4230fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2e6f9230c4f3b">
+		<description>Manhole v0.6b (2024)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Manhole v0.6b (2024)(Electric Dreams).rom" size="16384" crc="64e525ef" sha1="2e6f9230c4f3b6193c60c1448435ab99f1e8d268"/>
 			</dataarea>
 		</part>
 	</software>
