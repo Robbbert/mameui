@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2086 -->
+<!-- Number of items in this list = 2087 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -20469,6 +20469,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="XDR - X-Dazedly-Ray (Japan)(S).bin" size="524288" crc="d93a9a0d" sha1="63346a27058f1c8d9718f9d8a82036f27b188b1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena3107b58b75b8">
+		<description>xevious_md-alpha-0.02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="xevious_md-alpha-0.02.bin" size="1048576" crc="c18f33f2" sha1="a3107b58b75b84622adec97edcd36a57b60af059"/>
 			</dataarea>
 		</part>
 	</software>
