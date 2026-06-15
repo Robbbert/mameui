@@ -1932,7 +1932,6 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 	MINMAXINFO *mminfo;
 	int i = 0;
 	TCHAR szClass[128];
-	BOOL res = 0;
 
 	switch (message)
 	{
@@ -2233,16 +2232,14 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 
 			i = ListView_FindItem(hwndList, -1, &lvfi);
 			if (i != -1)
-			{
-				res = ListView_RedrawItems(hwndList, i, i);
-			}
+				(void)ListView_RedrawItems(hwndList, i, i);
 		}
 		break;
 
 	default:
 		break;
 	}
-	res++;
+
 	return DefWindowProc(hWnd, message, wParam, lParam);
 }
 
@@ -2311,7 +2308,6 @@ static BOOL FolderCheck()
 	int i=0;
 	LV_FINDINFO lvfi;
 	int nCount = ListView_GetItemCount(hwndList);
-	BOOL res = 0;
 	MSG msg;
 
 	for(i=0; i<nCount;i++)
@@ -2320,7 +2316,7 @@ static BOOL FolderCheck()
 		lvi.iItem = i;
 		lvi.iSubItem = 0;
 		lvi.mask = LVIF_PARAM;
-		res = ListView_GetItem(hwndList, &lvi);
+		(void)ListView_GetItem(hwndList, &lvi);
 		nGameIndex  = lvi.lParam;
 		SetRomAuditResults(nGameIndex, UNKNOWN);
 	}
@@ -2346,7 +2342,7 @@ static BOOL FolderCheck()
 		lvi.iItem = i;
 		lvi.iSubItem = 0;
 		lvi.mask = LVIF_PARAM;
-		res = ListView_GetItem(hwndList, &lvi);
+		(void)ListView_GetItem(hwndList, &lvi);
 		nGameIndex  = lvi.lParam;
 		if (GetRomAuditResults(nGameIndex) == UNKNOWN)
 		{
@@ -2366,7 +2362,7 @@ static BOOL FolderCheck()
 		i = ListView_FindItem(hwndList, -1, &lvfi);
 		if (changed && i != -1)
 		{
-			res = ListView_RedrawItems(hwndList, i, i);
+			(void)ListView_RedrawItems(hwndList, i, i);
 			while( PeekMessage( &msg, hwndList, 0, 0, PM_REMOVE ) != 0)
 			{
 				TranslateMessage(&msg);
@@ -2384,7 +2380,7 @@ static BOOL FolderCheck()
 	else pDescription = "No Selection";
 	SetStatusBarText(0, pDescription);
 	UpdateStatusBar();
-	res++;
+
 	return true;
 }
 
@@ -2422,15 +2418,14 @@ static BOOL GameCheck()
 
 	int i = ListView_FindItem(hwndList, -1, &lvfi);
 
-	BOOL res = 0;
 	if (changed && i != -1)
-		res = ListView_RedrawItems(hwndList, i, i);
+		(void)ListView_RedrawItems(hwndList, i, i);
 
 	if ((game_index % progBarStep) == 0)
 		ProgressBarStep();
 
 	game_index++;
-	res++;
+
 	return changed;
 }
 
@@ -3571,8 +3566,7 @@ static void ResetListView()
 
 	SetWindowRedraw(hwndList,false);
 
-	BOOL res = ListView_DeleteAllItems(hwndList);
-	res++;
+	(void)ListView_DeleteAllItems(hwndList);
 
 	// hint to have it allocate it all at once
 	ListView_SetItemCount(hwndList,driver_list::total());
@@ -3599,7 +3593,7 @@ static void ResetListView()
 				if ((GetParentFound(i) || !GetOffsetClones()) && DriverIsClone(i))
 					lvi.iIndent = 1;
 
-			res = ListView_InsertItem(hwndList, &lvi);
+			(void)ListView_InsertItem(hwndList, &lvi);
 		}
 	} while (i != -1);
 
@@ -3717,8 +3711,6 @@ static void PickFont()
 	CHOOSEFONT cf;
 	TCHAR szClass[128];
 	HWND hWnd;
-	HRESULT res = 0;
-	BOOL b_res = 0;
 
 	GetListFont(&font);
 	font.lfQuality = DEFAULT_QUALITY;
@@ -3751,18 +3743,16 @@ static void PickFont()
 			if (GetClassName(hWnd, szClass, sizeof(szClass) / sizeof(szClass[0])))
 			{
 				if (!_tcscmp(szClass, TEXT("SysListView32")))
-					b_res = ListView_SetTextColor(hWnd, textColor);
+					(void)ListView_SetTextColor(hWnd, textColor);
 				else
 				if (!_tcscmp(szClass, TEXT("SysTreeView32")))
-					res = TreeView_SetTextColor(hTreeView, textColor);
+					(void)TreeView_SetTextColor(hTreeView, textColor);
 			}
 			hWnd = GetWindow(hWnd, GW_HWNDNEXT);
 		}
 		SetListFontColor(cf.rgbColors);
 		ResetListView();
 	}
-	res++;
-	b_res++;
 }
 
 
@@ -3805,7 +3795,6 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 	int i = 0;
 	LPTREEFOLDER folder;
 	char* utf8_szFile;
-	BOOL res = 0;
 	int drvindex = Picker_GetSelectedItem(hwndList);
 
 	switch (id)
@@ -4474,7 +4463,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			/* enter key */
 			if (g_in_treeview_edit)
 			{
-				res = TreeView_EndEditLabelNow(hTreeView, false);
+				(void)TreeView_EndEditLabelNow(hTreeView, false);
 				return true;
 			}
 			else
@@ -4485,7 +4474,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 
 	case IDCANCEL : /* esc key */
 		if (g_in_treeview_edit)
-			res = TreeView_EndEditLabelNow(hTreeView, true);
+			(void)TreeView_EndEditLabelNow(hTreeView, true);
 		break;
 
 	case IDC_PLAY_GAME :
@@ -4562,7 +4551,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 			break;
 		ResetPlayTime(drvindex);
 		ResetPlayCount(drvindex);
-		res = ListView_RedrawItems(hwndList, GetSelectedPick(), GetSelectedPick());
+		(void)ListView_RedrawItems(hwndList, GetSelectedPick(), GetSelectedPick());
 		break;
 
 	case ID_CONTEXT_RENAME_CUSTOM :
@@ -4601,7 +4590,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 		}
 		return MessCommand(hwnd, id, hwndCtl, codeNotify); // messui.cpp: Open Other Software menu choice
 	}
-	res++;
+
 	return false;
 }
 
@@ -4781,7 +4770,6 @@ static void InitListView()
 	LVBKIMAGE bki;
 	//TCHAR path[MAX_PATH];
 	TCHAR* t_bgdir;
-	BOOL res = 0;
 
 	static const struct PickerCallbacks s_gameListCallbacks =
 	{
@@ -4821,8 +4809,8 @@ static void InitListView()
 	opts.ppszColumnNames = column_names;
 	SetupPicker(hwndList, &opts);
 
-	res = ListView_SetTextBkColor(hwndList, CLR_NONE);
-	res = ListView_SetBkColor(hwndList, CLR_NONE);
+	(void)ListView_SetTextBkColor(hwndList, CLR_NONE);
+	(void)ListView_SetBkColor(hwndList, CLR_NONE);
 	t_bgdir = ui_wstring_from_utf8(GetBgDir().c_str());
 	if( !t_bgdir )
 		return;
@@ -4830,7 +4818,7 @@ static void InitListView()
 	bki.ulFlags = LVBKIF_SOURCE_URL | LVBKIF_STYLE_TILE;
 	bki.pszImage = t_bgdir;
 	if( hBackground )
-		res = ListView_SetBkImage(hwndList, &bki);
+		(void)ListView_SetBkImage(hwndList, &bki);
 
 	CreateIcons();
 
@@ -4838,7 +4826,6 @@ static void InitListView()
 
 	// Allow selection to change the default saved game
 	bListReady = true;
-	res++;
 	free(t_bgdir);
 }
 
@@ -5304,8 +5291,7 @@ static void MamePlayGameWithOptions(int nGame, const play_options *playopts)
 	if (dwExitCode == 0)
 	{
 		IncrementPlayCount(nGame);
-		BOOL res = ListView_RedrawItems(hwndList, GetSelectedPick(), GetSelectedPick());
-		res++;
+		(void)ListView_RedrawItems(hwndList, GetSelectedPick(), GetSelectedPick());
 	}
 	else
 	{
@@ -5630,16 +5616,14 @@ static void AdjustMetrics()
 		{
 			if (!_tcscmp(szClass, TEXT("SysListView32")))
 			{
-				BOOL res = ListView_SetBkColor(hWnd, GetSysColor(COLOR_WINDOW));
-				res = ListView_SetTextColor(hWnd, textColor);
-				res++;
+				(void)ListView_SetBkColor(hWnd, GetSysColor(COLOR_WINDOW));
+				(void)ListView_SetTextColor(hWnd, textColor);
 			}
 			else
 			if (!_tcscmp(szClass, TEXT("SysTreeView32")))
 			{
-				HRESULT hres = TreeView_SetBkColor(hTreeView, GetSysColor(COLOR_WINDOW));
-				hres = TreeView_SetTextColor(hTreeView, textColor);
-				hres++;
+				(void)TreeView_SetBkColor(hTreeView, GetSysColor(COLOR_WINDOW));
+				(void)TreeView_SetTextColor(hTreeView, textColor);
 			}
 		}
 		hWnd = GetWindow(hWnd, GW_HWNDNEXT);
@@ -5767,7 +5751,6 @@ static BOOL HandleTreeContextMenu(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
 	TVHITTESTINFO hti;
 	POINT pt;
-	BOOL res = 0;
 
 	if ((HWND)wParam != GetDlgItem(hWnd, IDC_TREE))
 		return false;
@@ -5782,7 +5765,7 @@ static BOOL HandleTreeContextMenu(HWND hWnd, WPARAM wParam, LPARAM lParam)
 	ScreenToClient(hTreeView,&hti.pt);
 	(void)TreeView_HitTest(hTreeView,&hti);
 	if ((hti.flags & TVHT_ONITEM) != 0)
-		res = TreeView_SelectItem(hTreeView,hti.hItem);
+		(void)TreeView_SelectItem(hTreeView,hti.hItem);
 
 	HMENU hTreeMenu = LoadMenu(hInst,MAKEINTRESOURCE(IDR_CONTEXT_TREE));
 
@@ -5795,7 +5778,7 @@ static BOOL HandleTreeContextMenu(HWND hWnd, WPARAM wParam, LPARAM lParam)
 	TrackPopupMenu(hMenu,TPM_LEFTALIGN | TPM_RIGHTBUTTON,pt.x,pt.y,0,hWnd,NULL);
 
 	DestroyMenu(hTreeMenu);
-	res++;
+
 	return true;
 }
 
@@ -6271,11 +6254,10 @@ static void BeginListViewDrag(NM_LISTVIEW *pnmv)
 {
 	LV_ITEM lvi;
 	POINT pt;
-	BOOL res = 0;
 
 	lvi.iItem = pnmv->iItem;
 	lvi.mask = LVIF_PARAM;
-	res = ListView_GetItem(hwndList, &lvi);
+	(void)ListView_GetItem(hwndList, &lvi);
 
 	game_dragged = lvi.lParam;
 
@@ -6298,7 +6280,6 @@ static void BeginListViewDrag(NM_LISTVIEW *pnmv)
 	prev_drag_drop_target = NULL;
 
 	g_listview_dragging = true;
-	res++;
 }
 
 
@@ -6306,7 +6287,6 @@ static void MouseMoveListViewDrag(POINTS p)
 {
 	HTREEITEM htiTarget;
 	TV_HITTESTINFO tvht;
-	BOOL res;
 
 	POINT pt;
 	pt.x = p.x;
@@ -6325,14 +6305,13 @@ static void MouseMoveListViewDrag(POINTS p)
 	{
 		ImageList_DragShowNolock(false);
 		if (htiTarget != NULL)
-			res = TreeView_SelectDropTarget(hTreeView,htiTarget);
+			(void)TreeView_SelectDropTarget(hTreeView,htiTarget);
 		else
-			res = TreeView_SelectDropTarget(hTreeView,NULL);
+			(void)TreeView_SelectDropTarget(hTreeView,NULL);
 		ImageList_DragShowNolock(true);
 
 		prev_drag_drop_target = htiTarget;
 	}
-	res++;
 }
 
 
@@ -6342,7 +6321,6 @@ static void ButtonUpListViewDrag(POINTS p)
 	HTREEITEM htiTarget;
 	TV_HITTESTINFO tvht;
 	TVITEM tvi;
-	BOOL res = 0;
 
 	ReleaseCapture();
 
@@ -6350,7 +6328,7 @@ static void ButtonUpListViewDrag(POINTS p)
 	ImageList_EndDrag();
 	ImageList_Destroy(himl_drag);
 
-	res = TreeView_SelectDropTarget(hTreeView,NULL);
+	(void)TreeView_SelectDropTarget(hTreeView,NULL);
 
 	g_listview_dragging = false;
 
@@ -6399,7 +6377,6 @@ static void ButtonUpListViewDrag(POINTS p)
 		LPTREEFOLDER folder = (LPTREEFOLDER)tvi.lParam;
 		AddToCustomFolder(folder,game_dragged);
 	}
-	res++;
 }
 
 

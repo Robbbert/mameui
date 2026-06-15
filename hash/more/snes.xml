@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4053 -->
+<!-- Number of items in this list = 4055 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -20762,6 +20762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsc1bd9a25ec93e">
+		<description>Ogre Battle - The March of the Black Queen T-Eng v1.2 (2018)(FinS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Ogre Battle - The March of the Black Queen T-Eng v1.2 (2018)(FinS).sfc" size="2097152" crc="7514efdf" sha1="c1bd9a25ec93e5f5127fbdc9706062f43f1a436d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb5a4632ec0f3e">
 		<description>Ogre Battle - The March of the Black Queen v1.02 by red_bird (2)</description>
 		<year>????</year>
@@ -36129,6 +36139,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Super Metroid - Darkholme Hospital (hack).sfc" size="3145728" crc="4e0b5daa" sha1="2f352e322a5a467ea140c96fafa4f9fb2f50f138"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8d20c01f5a321">
+		<description>Super Metroid - Fix Collection Patch v1.1 (2026)(Furo_19)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Super Metroid - Fix Collection Patch v1.1 (2026)(Furo_19).sfc" size="3145728" crc="3f8f3eaa" sha1="8d20c01f5a3213a1d796a6504016059a3a7e4f44"/>
 			</dataarea>
 		</part>
 	</software>

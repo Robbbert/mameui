@@ -3524,8 +3524,7 @@ static void AppendList(HWND hList, LPCTSTR lpItem, int nItem)
 	Item.mask = LVIF_TEXT;
 	Item.pszText = (LPTSTR) lpItem;
 	Item.iItem = nItem;
-	HRESULT res = ListView_InsertItem(hList, &Item);
-	res++;
+	(void)ListView_InsertItem(hList, &Item);
 }
 
 static BOOL DirListReadControl(datamap *map, HWND dialog, HWND control, windows_options *o, const char *option_name)
@@ -3534,7 +3533,6 @@ static BOOL DirListReadControl(datamap *map, HWND dialog, HWND control, windows_
 	LV_ITEM lvi;
 	TCHAR buffer[2048];
 	int pos = 0;
-	BOOL res;
 
 	// determine the directory count; note that one item is the "<    >" entry
 	directory_count = ListView_GetItemCount(control);
@@ -3555,7 +3553,7 @@ static BOOL DirListReadControl(datamap *map, HWND dialog, HWND control, windows_
 		lvi.iItem = i;
 		lvi.pszText = &buffer[pos];
 		lvi.cchTextMax = std::size(buffer) - pos;
-		res = ListView_GetItem(control, &lvi);
+		(void)ListView_GetItem(control, &lvi);
 
 		// advance the position
 		pos += _tcslen(&buffer[pos]);
@@ -3564,7 +3562,6 @@ static BOOL DirListReadControl(datamap *map, HWND dialog, HWND control, windows_
 	char* paths = ui_utf8_from_wstring(buffer);
 	emu_set_value(o, OPTION_SWPATH, paths);
 
-	res++;
 	return true;
 }
 
@@ -3588,7 +3585,7 @@ static BOOL DirListPopulateControl(datamap *map, HWND dialog, HWND control, wind
 	}
 
 	// delete all items in the list control
-	BOOL b_res = ListView_DeleteAllItems(control);
+	(void)ListView_DeleteAllItems(control);
 
 	// add the column
 	RECT r;
@@ -3597,7 +3594,7 @@ static BOOL DirListPopulateControl(datamap *map, HWND dialog, HWND control, wind
 	memset(&lvc, 0, sizeof(LVCOLUMN));
 	lvc.mask = LVCF_WIDTH;
 	lvc.cx = r.right - r.left - GetSystemMetrics(SM_CXHSCROLL);
-	HRESULT res = ListView_InsertColumn(control, 0, &lvc);
+	(void)ListView_InsertColumn(control, 0, &lvc);
 
 	// add each of the directories
 	int pos = 0;
@@ -3629,8 +3626,6 @@ static BOOL DirListPopulateControl(datamap *map, HWND dialog, HWND control, wind
 	AppendList(control, TEXT(DIRLIST_NEWENTRYTEXT), current_item);
 	ListView_SetItemState(control, 0, LVIS_SELECTED, LVIS_SELECTED);
 	free(t_dir_list);
-	res++;
-	b_res++;
 	return true;
 }
 
@@ -3648,7 +3643,6 @@ static BOOL SoftwareDirectories_OnInsertBrowse(HWND hDlg, BOOL bBrowse, LPCTSTR 
 	TCHAR inbuf[MAX_PATH];
 	TCHAR outbuf[MAX_PATH];
 	LPTSTR lpIn;
-	BOOL res = false;
 
 	g_bModifiedSoftwarePaths = true;
 
@@ -3680,9 +3674,8 @@ static BOOL SoftwareDirectories_OnInsertBrowse(HWND hDlg, BOOL bBrowse, LPCTSTR 
 
 	AppendList(hList, lpItem, nItem);
 	if (bBrowse)
-		res = ListView_DeleteItem(hList, nItem+1);
+		(void)ListView_DeleteItem(hList, nItem+1);
 	MarkChanged(hDlg);
-	res++;
 	return true;
 }
 
@@ -3704,7 +3697,7 @@ static BOOL SoftwareDirectories_OnDelete(HWND hDlg)
 	if (nItem == ListView_GetItemCount(hList) - 1)
 		return false;
 
-	BOOL res = ListView_DeleteItem(hList, nItem);
+	(void)ListView_DeleteItem(hList, nItem);
 
 	int nCount = ListView_GetItemCount(hList);
 	if (nCount <= 1)
@@ -3718,7 +3711,6 @@ static BOOL SoftwareDirectories_OnDelete(HWND hDlg)
 
 	ListView_SetItemState(hList, nSelect, LVIS_FOCUSED | LVIS_SELECTED, LVIS_FOCUSED | LVIS_SELECTED);
 	MarkChanged(hDlg);
-	res++;
 	return true;
 }
 

@@ -1462,7 +1462,6 @@ void ResetTreeViewFolders()
 
 void SelectTreeViewFolder(int folder_id)
 {
-	BOOL res = false;
 	HWND hTreeView = GetTreeView();
 	HTREEITEM hti;
 	TVITEM tvi;
@@ -1476,11 +1475,11 @@ void SelectTreeViewFolder(int folder_id)
 
 		tvi.hItem = hti;
 		tvi.mask = TVIF_PARAM;
-		res = TreeView_GetItem(hTreeView,&tvi);
+		(void)TreeView_GetItem(hTreeView,&tvi);
 
 		if (((LPTREEFOLDER)tvi.lParam)->m_nFolderId == folder_id)
 		{
-			res = TreeView_SelectItem(hTreeView,tvi.hItem);
+			(void)TreeView_SelectItem(hTreeView,tvi.hItem);
 			SetCurrentFolder((LPTREEFOLDER)tvi.lParam);
 			return;
 		}
@@ -1503,10 +1502,9 @@ void SelectTreeViewFolder(int folder_id)
 	// make sure we select something
 	tvi.hItem = TreeView_GetRoot(hTreeView);
 	tvi.mask = TVIF_PARAM;
-	res = TreeView_GetItem(hTreeView,&tvi);
-	res = TreeView_SelectItem(hTreeView,tvi.hItem);
+	(void)TreeView_GetItem(hTreeView,&tvi);
+	(void)TreeView_SelectItem(hTreeView,tvi.hItem);
 	SetCurrentFolder((LPTREEFOLDER)tvi.lParam);
-	res++;
 }
 
 /*

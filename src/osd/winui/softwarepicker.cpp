@@ -613,12 +613,9 @@ static void SoftwarePicker_InternalClear(software_picker_info *pPickerInfo)
 void SoftwarePicker_Clear(HWND hwndPicker)
 {
 	software_picker_info *pPickerInfo;
-	BOOL res;
-
 	pPickerInfo = GetSoftwarePickerInfo(hwndPicker);
 	SoftwarePicker_InternalClear(pPickerInfo);
-	res = ListView_DeleteAllItems(hwndPicker);
-	res++;
+	(void)ListView_DeleteAllItems(hwndPicker);
 }
 
 

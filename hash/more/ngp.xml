@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 118 -->
+<!-- Number of items in this list = 120 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -419,6 +419,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Hopman Mini (2025)(Inufuto).ngp" size="524288" crc="4c8a4bf2" sha1="f1514945412c9088b963e8bed6a9bd579011c071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp8621b6e88acfa">
+		<description>Horatio Goes Snowboarding (2026)(Chris Ahchay - Infinite State Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Horatio Goes Snowboarding (2026)(Chris Ahchay - Infinite State Games).ngp" size="2097152" crc="c959fe3c" sha1="8621b6e88acfa21eebc54293e93de8a4db943e71"/>
 			</dataarea>
 		</part>
 	</software>
@@ -949,6 +959,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Rockman - Battle &amp; Fighters (Japan) [T-En by marc_max v0.9] [i].ngc" size="2097152" crc="65985356" sha1="2c93c45b5aeda0eba1ba66b0a56cba86e8f675b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp1a3a3add1a408">
+		<description>Rockman - Battle &amp; Fighters T-Eng v1.0 (2018-22)(marc_max &amp; RyuHayabusa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Rockman - Battle &amp; Fighters T-Eng v1.0 (2018-22)(marc_max &amp; RyuHayabusa).ngp" size="2097152" crc="9322629e" sha1="1a3a3add1a408af8d6da3bf6a66571320f3b8dc9"/>
 			</dataarea>
 		</part>
 	</software>
