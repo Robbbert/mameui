@@ -523,8 +523,7 @@ static BOOL PickerHitTest(HWND hWnd)
 	POINTS p = MAKEPOINTS(res);
 	htInfo.pt.x = p.x - rect.left;
 	htInfo.pt.y = p.y - rect.top;
-	HRESULT result = ListView_HitTest(hWnd, &htInfo);
-	result++;
+	(void)ListView_HitTest(hWnd, &htInfo);
 	return (! (htInfo.flags & LVHT_NOWHERE));
 }
 
