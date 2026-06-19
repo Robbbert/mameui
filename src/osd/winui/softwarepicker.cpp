@@ -746,7 +746,7 @@ LPCTSTR SoftwarePicker_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCH
 	const file_info *pFileInfo;
 	LPCTSTR s = NULL;
 	//const char *pszUtf8 = NULL;
-	unsigned int nHashFunction = 0;
+	//unsigned int nHashFunction = 0;
 	//char szBuffer[256];
 	TCHAR* t_buf;
 
@@ -824,7 +824,6 @@ LPCTSTR SoftwarePicker_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCH
 			break;
 */
 	}
-	nHashFunction++;
 	return s;
 }
 

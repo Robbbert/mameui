@@ -1009,7 +1009,7 @@ void GetRealColumnOrder(int order[])
 	int nColumnMax = Picker_GetNumColumns(hwndList);
 
 	/* Get the Column Order and save it */
-	ListView_GetColumnOrderArray(hwndList, nColumnMax, tmpOrder);
+	(void)ListView_GetColumnOrderArray(hwndList, nColumnMax, tmpOrder);
 
 	for (int i = 0; i < nColumnMax; i++)
 		order[i] = Picker_GetRealColumnFromViewColumn(hwndList, tmpOrder[i]);
@@ -5116,7 +5116,7 @@ static HICON GetSelectedPickItemIcon()
 	lvi.iItem = GetSelectedPick();
 	lvi.iSubItem = 0;
 	lvi.mask = LVIF_IMAGE;
-	ListView_GetItem(hwndList, &lvi);
+	(void)ListView_GetItem(hwndList, &lvi);
 	return ImageList_GetIcon(hLarge, lvi.iImage, ILD_TRANSPARENT);
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 582 -->
+<!-- Number of items in this list = 584 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2902,6 +2902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sms164d9aa181cb9">
+		<description>Master Barbarricade RC2 (2026)(Jess Creations - ArugulaZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Master Barbarricade RC2 (2026)(Jess Creations - ArugulaZ).sms" size="49152" crc="12ab8665" sha1="164d9aa181cb9b4eebfd1038d0a74f87c52041aa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sms45dec6ddb2417">
 		<description>Master of Darkness (2016)(T-Ita v1.2)(Michele Di Somma)</description>
 		<year>????</year>
@@ -5019,6 +5029,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Super Mario Bros. v0.11 (2026)(Lack of Track).sms" size="262144" crc="f0cac76b" sha1="4a94e18673a792d7ede10363cddcdd60799fed4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms94e88d107aaeb">
+		<description>Super Mario Bros. v0.12 (2026)(Lack of Track)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Mario Bros. v0.12 (2026)(Lack of Track).sms" size="262144" crc="b1928f81" sha1="94e88d107aaeb5a3d78a2824ac087bde348e2adb"/>
 			</dataarea>
 		</part>
 	</software>
