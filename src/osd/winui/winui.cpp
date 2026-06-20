@@ -2433,16 +2433,14 @@ static BOOL GameCheck()
 static BOOL OnIdle(HWND hWnd)
 {
 	static int bFirstTime = true;
-	static int bResetList = true;
 
 	if (bFirstTime)
 	{
-		bResetList = false;
 		bFirstTime = false;
 	}
 	if (bDoGameCheck)
 	{
-		bResetList |= GameCheck();
+		(void)GameCheck();
 		return idle_work;
 	}
 	// NPW 17-Jun-2003 - Commenting this out because it is redundant

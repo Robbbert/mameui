@@ -1,6 +1,6 @@
 What is MAMEUI?
 ===============
-MAMEUI has an inbuilt front-end allowing you to run a game from a list. It requires Windows 7 SP 1 or later.
+MAMEUI has an inbuilt front-end allowing you to run a game from a list. It requires Windows 10 build 1607, 64-bit or later.
 
 
 How to compile?
