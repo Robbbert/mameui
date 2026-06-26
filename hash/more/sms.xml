@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 584 -->
+<!-- Number of items in this list = 585 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -5039,6 +5039,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Super Mario Bros. v0.12 (2026)(Lack of Track).sms" size="262144" crc="b1928f81" sha1="94e88d107aaeb5a3d78a2824ac087bde348e2adb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms619d8a8d7a0e4">
+		<description>Super Mario Bros. v0.12.e83b808 (2026)(Lack of Track)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Super Mario Bros. v0.12.e83b808 (2026)(Lack of Track).sms" size="262144" crc="b209d7a8" sha1="619d8a8d7a0e4d6fce73c11eef061f338739456b"/>
 			</dataarea>
 		</part>
 	</software>

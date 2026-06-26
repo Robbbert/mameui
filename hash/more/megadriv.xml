@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2087 -->
+<!-- Number of items in this list = 2090 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -3139,6 +3139,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="240pSuite-1.30_emu.bin" size="262144" crc="81777e15" sha1="2648a05d6a44192360a28b5837f921c802f589e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc5d0c46c90bdc">
+		<description>240pSuite-1.32</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="240pSuite-1.32.bin" size="262144" crc="8b750665" sha1="c5d0c46c90bdca6187609cfdd69a45f60343bf71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6044155c854e0">
+		<description>240pSuite-1.32_emu</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="240pSuite-1.32_emu.bin" size="262144" crc="adccc9c5" sha1="6044155c854e0d10da1e189d913f39b55237d6a0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7759,6 +7779,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2359296">
 				<rom name="Griel's Quest for the Holy Porron (PD) (v1.0).bin" size="2359296" crc="e1c3e75c" sha1="7da3c0f543f6deb80c7baef0864c7763b94449e9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9f8f4dec385b0">
+		<description>Grime 68000 (2026)(ChibiAkumas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="7444">
+				<rom name="Grime 68000 (2026)(ChibiAkumas).bin" size="7444" crc="43721fef" sha1="9f8f4dec385b0159c2193212550cc9df7020a6dd"/>
 			</dataarea>
 		</part>
 	</software>

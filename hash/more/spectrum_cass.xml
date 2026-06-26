@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7920 -->
+<!-- Number of items in this list = 7921 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -17299,6 +17299,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31014">
 				<rom name="Crystals (1984)(Yodasoft).tap" size="31014" crc="a6ee90bd" sha1="c5e70eca51805208a70dbef7c9e419103d917c05"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs92da1fecd13f2">
+		<description>Cuatro Vientos 48K (2026)(Midtown Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36672">
+				<rom name="Cuatro Vientos 48K (2026)(Midtown Games).tap" size="36672" crc="b5d4e265" sha1="92da1fecd13f2360a00bc7c519dd69ca62423ace"/>
 			</dataarea>
 		</part>
 	</software>

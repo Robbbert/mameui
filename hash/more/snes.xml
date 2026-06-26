@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4055 -->
+<!-- Number of items in this list = 4088 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1992,6 +1992,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb62889da2f47c">
+		<description>240pSuite110-PAL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="240pSuite110-PAL.sfc" size="786432" crc="9fa90428" sha1="b62889da2f47c9ae986c5ec41d6e2c8bf7c3530a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd5660f8bf21bd">
+		<description>240pSuite110</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="240pSuite110.sfc" size="786432" crc="1b7747c4" sha1="d5660f8bf21bd0092db355f72cbf772b80993ecc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7cacfa3a5ca8a">
 		<description>2nd Annual SMWC Level Design Challenge! Curse of the Golden Mushroom (SMW1 Hack)</description>
 		<year>????</year>
@@ -2452,6 +2472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf73824649fd70">
+		<description>7th Saga, The PT-BR (2002)(Wanzeler)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="7th Saga, The PT-BR (2002)(Wanzeler).sfc" size="1572864" crc="29bde67c" sha1="f73824649fd70823b71748626be71fe1aabe57db"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snscbadaea532bb2">
 		<description>8 Trials Await (SMW1 hack)</description>
 		<year>????</year>
@@ -2632,6 +2662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns194ad863cb953">
+		<description>Aaahh!!! Real Monsters PT-BR (2011)(Ruhan7)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Aaahh!!! Real Monsters PT-BR (2011)(Ruhan7).sfc" size="2097152" crc="13acbc83" sha1="194ad863cb953b464e0854d8c3a86ff02ca12357"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns26ac301ffc1a7">
 		<description>Accele Brid T-Eng (2016)(Aeon Genesis)</description>
 		<year>????</year>
@@ -2649,6 +2689,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Acmlm's The New Strange Mario Bros (SNES remake) By spel werdz rite (buggy version) (SMA Hack).smc" size="2097152" crc="8f524605" sha1="d72b4d92d394b80380c85a4e47f46baa97a04c33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns41d177bd632d2">
+		<description>ActRaiser PT-BR (2017)(BlackThorne)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="ActRaiser PT-BR (2017)(BlackThorne).sfc" size="2097152" crc="8a2060cc" sha1="41d177bd632d2e1405ca1364744364cc11c79933"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2689,6 +2739,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Addams Family, The - Pugsley's Scavenger Hunt (U) [T+Por_JCN].sfc" size="1048576" crc="4a5e65bb" sha1="18812fe49f217f773773089c5ecdfe9f0c29e879"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns7367c3eba02d2">
+		<description>Addams Family, The - Pugsley's Scavenger Hunt PT-BR (2002)(JCN Traducoes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Addams Family, The - Pugsley's Scavenger Hunt PT-BR (2002)(JCN Traducoes).sfc" size="1048576" crc="3b2a1aa3" sha1="7367c3eba02d2fbc9205965f991820abfd7ab579"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3129,6 +3189,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="AmbianceOW (SMW1 Hack).sfc" size="1048576" crc="66ee407a" sha1="ebe0334a8774d3bdb0ebbf6661ec6db4f2974963"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns37bd1e0dbe2da">
+		<description>Animaniacs PT-BR (1999)(Venom Total)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Animaniacs PT-BR (1999)(Venom Total).sfc" size="1049088" crc="bf417363" sha1="37bd1e0dbe2da03d8c6d3a26a14bfd2951029416"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3939,6 +4009,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="BighackvPhantasm (SMW1 Hack).sfc" size="4194304" crc="3f72c7a3" sha1="666a8861eb1dac202b8b776a23839ad0496c9f7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4f90548287ebc">
+		<description>Biker Mice from Mars PT-BR (2001)(FBI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1180160">
+				<rom name="Biker Mice from Mars PT-BR (2001)(FBI).sfc" size="1180160" crc="c67ceff2" sha1="4f90548287ebc88e09408135a4610b62ccf0644f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5172,6 +5252,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns768b1aebdefc0">
+		<description>Bubsy II PT-BR (2017)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bubsy II PT-BR (2017)(Ripman).sfc" size="2097152" crc="d2647609" sha1="768b1aebdefc0fa3f39c88bb70c00fd8bf12fd86"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd9ae87779638e">
+		<description>Bubsy in Claws Encounters of the Furred Kind PT-BR (2017)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bubsy in Claws Encounters of the Furred Kind PT-BR (2017)(Ripman).sfc" size="2097152" crc="98f0ddc5" sha1="d9ae87779638ea1b13ba9a6873db64494de3b93e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsd991fdc000841">
 		<description>Buck Rogers - TAG Beta (+headerfix, for PowerPak etc.)</description>
 		<year>????</year>
@@ -5199,6 +5299,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Bugs Bunny - Rabbit Rampage (U)(1993)(Sunsoft).sfc" size="1572864" crc="832c0cb6" sha1="2e6d9f60dc50ef86f4f01c8825f01ffa0273b44f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns13f7f8c16b772">
+		<description>Bugs Bunny - Rabbit Rampage PT-BR v.Beta 2.0 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Bugs Bunny - Rabbit Rampage PT-BR v.Beta 2.0 (2018)(Ripman).sfc" size="1572864" crc="fd2724cb" sha1="13f7f8c16b7723eb2c1ba7969d4ef65cd895d02c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5912,6 +6022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsbb470d42f1a22">
+		<description>Chrono Trigger PT-BR v1.05 (2004)(Lynx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Chrono Trigger PT-BR v1.05 (2004)(Lynx).sfc" size="4194304" crc="d1a61235" sha1="bb470d42f1a228a18b1d59556dd28c979f61818f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb260de95bde99">
 		<description>Chrono Trigger T-Ita v1.2 (1998)(SadNES cITy)</description>
 		<year>????</year>
@@ -6142,6 +6262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns6f23c7e420d65">
+		<description>Congo's Caper PT-BR (2026)(juliano_did)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Congo's Caper PT-BR (2026)(juliano_did).sfc" size="524288" crc="ace9b6b4" sha1="6f23c7e420d65220fe19a06e728eedb3720e9bbc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsbedcfbf510aac">
 		<description>contest (SMW1 Hack)</description>
 		<year>????</year>
@@ -6222,6 +6352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns4c7860e0040c2">
+		<description>Contra III - The Alien Wars PT-BR (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Contra III - The Alien Wars PT-BR (2018)(Ripman).sfc" size="1048576" crc="adbb4688" sha1="4c7860e0040c28ddc6f7984a5df8ae04c9ab89b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns2c4e74cf7e6b5">
 		<description>Cool or Cruel Demo (SMW1 Hack)</description>
 		<year>????</year>
@@ -6229,6 +6369,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Cool or Cruel Demo (SMW1 Hack).sfc" size="2097152" crc="05e6d343" sha1="2c4e74cf7e6b5279b6d687f04ab63485ca995ee2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa7ce694fc6fbe">
+		<description>Cool Spot PT-BR (2010)(Rangel Oblivion)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Cool Spot PT-BR (2010)(Rangel Oblivion).sfc" size="1048576" crc="39ebaa38" sha1="a7ce694fc6fbeec2cf7760d215be9b483f357250"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6352,6 +6502,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns679d48c9d7fcb">
+		<description>Crash Bandicoot and the Retro Dimension 2 - The Crystal Hunt EN v1.01 (2026)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot and the Retro Dimension 2 - The Crystal Hunt EN v1.01 (2026)(Bandicoot).sfc" size="4194304" crc="a5ff4437" sha1="679d48c9d7fcb5db6aa577f407c2c307f8d36324"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns36bcb563fede7">
+		<description>Crash Bandicoot and the Retro Dimension Enhanced EN v1.23 (2026)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot and the Retro Dimension Enhanced EN v1.23 (2026)(Bandicoot).sfc" size="4194304" crc="601eb065" sha1="36bcb563fede733d4f8d45fba043a67216cf59c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1e96ea9df8629">
 		<description>Crash Bandicoot e a Dimensao Retro (Portuguese)(2025)(Bandicoot)</description>
 		<year>????</year>
@@ -6359,6 +6529,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Crash Bandicoot e a Dimensao Retro (Portuguese)(2025)(Bandicoot).sfc" size="4194304" crc="49118dcf" sha1="1e96ea9df8629b4d63623ab12ce85ade8d0891e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns95a3fcb078fdc">
+		<description>Crash Bandicoot e a Dimensao Retro 2 - A Busca pelos Cristais PT v1.01 (2026)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot e a Dimensao Retro 2 - A Busca pelos Cristais PT v1.01 (2026)(Bandicoot).sfc" size="4194304" crc="64549c57" sha1="95a3fcb078fdcceff2fdde930576509637e5339d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb1d08d10e440c">
+		<description>Crash Bandicoot e a Dimensao Retro Enhanced PT v1.23 (2026)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot e a Dimensao Retro Enhanced PT v1.23 (2026)(Bandicoot).sfc" size="4194304" crc="2dd84a5c" sha1="b1d08d10e440ce6c9d0286d4d12e6194edb183fb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6589,6 +6779,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1049088">
 				<rom name="Daffy Duck - The Marvin Missions (E) [T+Fre_Generation IX].smc" size="1049088" crc="579c6bbc" sha1="27c1ce8afaba940e502ab9d9e7020ec605b9d0a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb39dc8fcfab17">
+		<description>Daffy Duck - The Marvin Missions PT-BR (2000)(Venom Total)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Daffy Duck - The Marvin Missions PT-BR (2000)(Venom Total).sfc" size="1048576" crc="77ff056e" sha1="b39dc8fcfab1719aad54f60acdd63a9d484eda81"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7272,6 +7472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsd4d7cd0613b1e">
+		<description>Diddy's Kong Quest (DKC2) - Clapper's Quest (2026)(KFin45)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Diddy's Kong Quest (DKC2) - Clapper's Quest (2026)(KFin45).sfc" size="4194304" crc="a1885834" sha1="d4d7cd0613b1edbc4555180327587dd2acc13753"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb6af15c347d58">
 		<description>Diddy's Kong Quest - Rambis Revenge (2025)(KFin45)</description>
 		<year>????</year>
@@ -7389,6 +7599,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Disney's Aladdin PT-BR (2021)(PO.B.R.E.).sfc" size="1572864" crc="050904c6" sha1="d6a6df42caec14ab85e5abe906182605a93de8f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsdfc31f7a13d94">
+		<description>Disney's Bonkers PT-BR v.Beta 1.0 (2017)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Disney's Bonkers PT-BR v.Beta 1.0 (2017)(Ripman).sfc" size="1048576" crc="cb7558f2" sha1="dfc31f7a13d94d2b957502c10336efcf00456055"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7532,6 +7752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns6b26c4af9b95c">
+		<description>Donkey Kong Country 2 - Diddy's Kong Quest PT-BR (2017)(FURT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Donkey Kong Country 2 - Diddy's Kong Quest PT-BR (2017)(FURT).sfc" size="6291456" crc="470b884c" sha1="6b26c4af9b95c5738765cf7859f1a110c06cec5d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns23adf04abfa86">
 		<description>Donkey Kong Country 2 - Squitter's Spider Quest v1.1 (2022)(Saetta06)</description>
 		<year>????</year>
@@ -7549,6 +7779,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="6291456">
 				<rom name="Donkey Kong Country 2 - The Project 4 Kongs (2024)(The Kong's Team).sfc" size="6291456" crc="19742050" sha1="0d346583137780c13a553709bb9550a18547dd70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd0fbea5ade248">
+		<description>Donkey Kong Country 3 - Dixie Kong's Double Trouble! PT-BR (2020)(FTR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Donkey Kong Country 3 - Dixie Kong's Double Trouble! PT-BR (2020)(FTR).sfc" size="4194304" crc="6804934c" sha1="d0fbea5ade248324a3bf519e476e73b1f459b68f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6a15f6dff9cdd">
+		<description>Donkey Kong Country PT-BR (2004)(Fox Roms)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Donkey Kong Country PT-BR (2004)(Fox Roms).sfc" size="4194816" crc="3435b7b3" sha1="6a15f6dff9cdd9783c2fa02a5633cd63f274927f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8302,6 +8552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns724e6923cc3c6">
+		<description>EarthBound PT-BR (2015)(EarthBound Brasil)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="EarthBound PT-BR (2015)(EarthBound Brasil).sfc" size="4194304" crc="a19f1c1c" sha1="724e6923cc3c68f145169a7272ee2ab4a4d2837c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns6305dd176e0ab">
 		<description>Earthworm Jim (Aug 19, 1994 prototype)</description>
 		<year>????</year>
@@ -8329,6 +8589,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Earthworm Jim (U)(1994)(Playmates).sfc" size="3145728" crc="3a4a47eb" sha1="3b666f44ea7574caafb9d64cd4d4c74dd3f81a61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf81369c8e816d">
+		<description>Earthworm Jim 2 PT-BR (2017)(ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Earthworm Jim 2 PT-BR (2017)(ripman).sfc" size="3145728" crc="96fec634" sha1="f81369c8e816d2d0f7eed890f80aec72d7662b1f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10969,6 +11239,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="flashing fest (SMW1 Hack).sfc" size="4194304" crc="b7de77ee" sha1="e9245b5b2389e304727b2ed4ffa401b6fadc9f83"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6a56cd73f9125">
+		<description>Flintstones, Os PT-BR (2026)(juliano_did)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Flintstones, Os PT-BR (2026)(juliano_did).sfc" size="2621440" crc="54b43c19" sha1="6a56cd73f9125c3c28d593a23526941504651be7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15102,6 +15382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsd0d09ed41f9c3">
+		<description>Lenda de Zelda, A - Um Elo com o Passado PT-BR v.Beta 1.0 (2014)(spyblack, Denim)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Lenda de Zelda, A - Um Elo com o Passado PT-BR v.Beta 1.0 (2014)(spyblack, Denim).sfc" size="2097152" crc="e6d69a29" sha1="d0d09ed41f9c373fe6afdccafbf0da8c88d3d90d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns651c19f21b5d4">
 		<description>Lennus II - Fuuin no Shito (J) [T+Eng1.02_Magic Destiny, Stealth Translations]</description>
 		<year>????</year>
@@ -18302,6 +18592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns227a45bc61068">
+		<description>Mask, The PT-BR v1.0.1 (2017)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mask, The PT-BR v1.0.1 (2017)(Ripman).sfc" size="2097152" crc="7f3678b6" sha1="227a45bc61068287349c8e52c4e399cb1f4e280f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns218aa46525e8e">
 		<description>Mask</description>
 		<year>????</year>
@@ -18532,6 +18832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf6f61c4dd4dde">
+		<description>Mega Man X PT-BR (2000)(BR Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Mega Man X PT-BR (2000)(BR Games).sfc" size="1572864" crc="fc776d3c" sha1="f6f61c4dd4dde56ddea549949f439ffc1406edf0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns03d76b7f596ce">
 		<description>Mega Man X SA1 (2020)(Bosn)</description>
 		<year>????</year>
@@ -18539,6 +18849,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Mega Man X SA1 (2020)(Bosn).sfc" size="1572864" crc="b0eea801" sha1="03d76b7f596ceae00016dc2b02c991518adfa5e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns156c89f1bc7fa">
+		<description>Mega Man X2 PT-BR (2001)(Tradu-Roms)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Mega Man X2 PT-BR (2001)(Tradu-Roms).sfc" size="1572864" crc="bd71da6b" sha1="156c89f1bc7fab609e569df094d8039f2f65da25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40159,6 +40479,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="X-Men - Mutant Apocalypse (U) [T+Por_Cyber].sfc" size="2097152" crc="84e98f45" sha1="0633d830db54fa6175d844f7e2f82191a63b8a33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns0bc99a289de78">
+		<description>X-Men - Mutant Apocalypse PT-BR (2000)(BR Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="X-Men - Mutant Apocalypse PT-BR (2000)(BR Games).sfc" size="2097152" crc="8d49650a" sha1="0bc99a289de78f6617539c564698b796f1f0b0ff"/>
 			</dataarea>
 		</part>
 	</software>
