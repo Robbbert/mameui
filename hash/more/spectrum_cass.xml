@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7921 -->
+<!-- Number of items in this list = 7923 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -57599,6 +57599,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="30505">
 				<rom name="Spi Droid (1989)(Vinsoft).tap" size="30505" crc="aa7daff1" sha1="218f709a2ab43480c0f81ddc332cb5b83c37a52c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4ef0075e6b6f9">
+		<description>Spider Blast EN 48K-128K (2026)(Wizbit Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44915">
+				<rom name="Spider Blast EN 48K-128K (2026)(Wizbit Games).tap" size="44915" crc="d6d49818" sha1="4ef0075e6b6f936707665dbbbe3fa443a1cb0637"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd91f099761d91">
+		<description>Spider Blast ES (48K-128K) (2026)(Wizbit Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44915">
+				<rom name="Spider Blast ES (48K-128K) (2026)(Wizbit Games).tap" size="44915" crc="a509a830" sha1="d91f099761d912b01a0653218552b1fb03464243"/>
 			</dataarea>
 		</part>
 	</software>

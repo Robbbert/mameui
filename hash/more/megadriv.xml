@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2090 -->
+<!-- Number of items in this list = 2091 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -12639,6 +12639,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="221952">
 				<rom name="Pacman.bin" size="221952" crc="82f64a0e" sha1="312ecec77970196e94526e847b9e4371fff187c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb3d6d7d5a8de5">
+		<description>Panda Jump (2026)(abadede919302)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Panda Jump (2026)(abadede919302).bin" size="262144" crc="164e8dfa" sha1="b3d6d7d5a8de55484fc85381c8707ab42d5cd5be"/>
 			</dataarea>
 		</part>
 	</software>

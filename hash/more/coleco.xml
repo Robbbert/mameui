@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 725 -->
+<!-- Number of items in this list = 727 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -439,6 +439,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Barbarricade 06-17-26 (2026)(Jess Creations).rom" size="32768" crc="ad6630ce" sha1="00eddaf3cf55183b123f0c44d0b567e2fe980687"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col7f41fcf374f67">
+		<description>Barbarricade 06-25-26 (2026)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Barbarricade 06-25-26 (2026)(Jess Creations).rom" size="32768" crc="e5d8753d" sha1="7f41fcf374f6748f703c92cc217921e491146466"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1429,6 +1439,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="21376">
 				<rom name="Cosmo Trainer (1997 Marcel de Kogel).rom" size="21376" crc="7ba2f186" sha1="4033ef529fd847627e9928db70365322d0de89da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col15e4120a808d3">
+		<description>CrackPots (2026)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="CrackPots (2026)(Electric Dreams).rom" size="131072" crc="91e0fa0f" sha1="15e4120a808d3c146a1adfda024fa2a84437b55c"/>
 			</dataarea>
 		</part>
 	</software>
