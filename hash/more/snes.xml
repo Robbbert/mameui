@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4090 -->
+<!-- Number of items in this list = 4108 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -7122,6 +7122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsd23604308fe56">
+		<description>Death and Return of Superman, The PT-BR v.Beta 1 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Death and Return of Superman, The PT-BR v.Beta 1 (2018)(Ripman).sfc" size="2097152" crc="2ed18e0a" sha1="d23604308fe56cf4cef641fe8026051d09adafc7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns35744f69b542e">
 		<description>death muncher's valley (SMW1 Hack)</description>
 		<year>????</year>
@@ -7249,6 +7259,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="demo2 (SMW1 Hack).sfc" size="2097152" crc="319e9eb9" sha1="c8cce235e8d74ec58027530f9a13e0022db4ffd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3b30096e168dd">
+		<description>Demolition Man PT-BR (2010)(Makinadomal94)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Demolition Man PT-BR (2010)(Makinadomal94).sfc" size="2097152" crc="60e53ff4" sha1="3b30096e168dd3a7d4a8295049b796ab23207a6d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7639,6 +7659,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Disney's Goof Troop T-Ita (2022)(Raviolo).sfc" size="1048576" crc="ccaa5e67" sha1="d00c08332f93f17c8b3bdebd18f11fc67509b4b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbdb950248cfcc">
+		<description>Disney's Pinocchio PT-BR v1.1 (2020)(ByFTR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Disney's Pinocchio PT-BR v1.1 (2020)(ByFTR).sfc" size="3145728" crc="8dac2233" sha1="bdb950248cfccbccba9801274cadbf2357cc5aae"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12212,6 +12242,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsb6c32d6339e71">
+		<description>GP-1 - Part II PT-BR (2009)(Jamis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="GP-1 - Part II PT-BR (2009)(Jamis).sfc" size="1572864" crc="b6d5ad5e" sha1="b6c32d6339e71bdc59f954657c1dc567652f43ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsad4daa6402eab">
+		<description>Gradius III PT-BR (2005)(smartcelo3)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Gradius III PT-BR (2005)(smartcelo3).sfc" size="524288" crc="7a009de5" sha1="ad4daa6402eab284b0f45c3d3a26a4084395441d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5a1b82333ea73">
 		<description>Grande Aventura de Mickey na Disneylandia de Toquio, A PT-BR v1.4 (2022)(Svambo, Maverick B. Warrior)</description>
 		<year>????</year>
@@ -13562,6 +13612,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns43614356d8d6c">
+		<description>ISSD - World Cup 2026 - Narracao Galvao Bueno RC1 (2026)(Equipe Falcon Brasil)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="ISSD - World Cup 2026 - Narracao Galvao Bueno RC1 (2026)(Equipe Falcon Brasil).sfc" size="2097152" crc="499b7866" sha1="43614356d8d6cd37314459ba4ddd1c30f3c7a2ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsdbb61be82ffe6">
+		<description>ISSD - World Cup 2026 RC1 (2026)(Equipe Falcon Brasil)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="ISSD - World Cup 2026 RC1 (2026)(Equipe Falcon Brasil).sfc" size="2097152" crc="b658f941" sha1="dbb61be82ffe68741594b3dafa90a6a6f039caec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns05edc272e2005">
 		<description>IT by Supertails (SMW1 Hack)</description>
 		<year>????</year>
@@ -13689,6 +13759,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Jester (2023)(CollectorVision).sfc" size="1048576" crc="3cae6b7b" sha1="b178e09d58c7cdab096deb9bcf47df095b68af8d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse145798ff553e">
+		<description>Jetsons, The - Invasion of the Planet Pirates PT-BR v.Beta 2 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Jetsons, The - Invasion of the Planet Pirates PT-BR v.Beta 2 (2018)(Ripman).sfc" size="1048576" crc="5f053cde" sha1="e145798ff553e2fa6bdffea614830fb5bba179ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15979,6 +16059,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="long time ago bowser ruined however - - - - - (SMW1 Hack).sfc" size="4194304" crc="fd31d850" sha1="d69003f4a6b66dbd427b21530e08302c60e807ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8a0a42297809c">
+		<description>Looney Tunes B-Ball PT-BR v.Beta 1 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Looney Tunes B-Ball PT-BR v.Beta 1 (2018)(Ripman).sfc" size="2097152" crc="37ef9766" sha1="8a0a42297809cc5c1ddfa8b49c0a67688d8d9706"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22042,6 +22132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3bdf75ec1afb1">
+		<description>Popeye - Tale of Teasing Witch Sea Hag PT-BR v.Beta 1 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Popeye - Tale of Teasing Witch Sea Hag PT-BR v.Beta 1 (2018)(Ripman).sfc" size="1572864" crc="1602e6c2" sha1="3bdf75ec1afb15410a5860a49a1426c8bfe99df3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns2821ad1b9af31">
 		<description>Populous II - Trials of the Olympian Gods (J)(1993)(Imagineer)</description>
 		<year>????</year>
@@ -22909,6 +23009,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Rock N' Roll Racing (E) (BR).sfc" size="1048576" crc="989abb5f" sha1="4b1bf6be051a68c11b08b3700f9e2cbeec410322"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2617d3e78de40">
+		<description>Rock N' Roll Racing (Por)(2018)(Brazilian Warriors)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rock N' Roll Racing (Por)(2018)(Brazilian Warriors).sfc" size="1048576" crc="197d1b12" sha1="2617d3e78de40b59c8b023d61f4ea701648448e3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -23962,6 +24072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns33cc18bc56397">
+		<description>Shadow, The PT-BR v.Beta 1 (Proto)(2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shadow, The PT-BR v.Beta 1 (Proto)(2018)(Ripman).sfc" size="2097152" crc="255a4097" sha1="33cc18bc563975cd1783c7dcd086fc6585b51d22"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3fb3efd748cc8">
 		<description>Shadowrun T-Ita v0.98 (2022)(Wolfgare)</description>
 		<year>????</year>
@@ -24169,6 +24289,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Side Hack By DP PS and Meirdent for The Blue Yoshi and Meirdent to play (SMW1 Hack).sfc" size="2097152" crc="be85c2ac" sha1="3da544a18fcdebbe98d544284f252fb2d25be390"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns59e17ceb017c8">
+		<description>Side Pocket PT-BR v1.0.2 (2017)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Side Pocket PT-BR v1.0.2 (2017)(Ripman).sfc" size="1048576" crc="8090cd0d" sha1="59e17ceb017c8e2ffab60f231e90d55f6af30a6d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32182,6 +32312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns205da07fec991">
+		<description>Stargate PT-BR v.77b rev.30 (2025)(Neodash)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Stargate PT-BR v.77b rev.30 (2025)(Neodash).sfc" size="2097152" crc="74598268" sha1="205da07fec991bcc4dad6eb4ec6a4de4e1afcd89"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snscbb62f1e040b1">
 		<description>Steel Talons - Fastrom fix (2023)(ANONYMOUS)</description>
 		<year>????</year>
@@ -34263,12 +34403,12 @@
 		</part>
 	</software>
 	<software name="sns4ec534b33885c">
-		<description>Super Mario RPG - Legend of the Seven Stars (U) [T+Por_Brgames]</description>
+		<description>Super Mario RPG - A Lenda das Sete Estrelas PT-BR (2004)(BR Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
-				<rom name="Super Mario RPG - Legend of the Seven Stars (U) [T+Por_Brgames].sfc" size="4194304" crc="b7680288" sha1="4ec534b33885c96284c1d2df637b0549f591ef63"/>
+				<rom name="Super Mario RPG - A Lenda das Sete Estrelas PT-BR (2004)(BR Games).sfc" size="4194304" crc="b7680288" sha1="4ec534b33885c96284c1d2df637b0549f591ef63"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38422,6 +38562,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns0967d21df4f30">
+		<description>Teenage Mutant Ninja Turtles - Tournament Fighters PT-BR v.Beta 1 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Teenage Mutant Ninja Turtles - Tournament Fighters PT-BR v.Beta 1 (2018)(Ripman).sfc" size="2097152" crc="16e423a6" sha1="0967d21df4f30636738b32c4d744874566aff2cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsee31f375f4cb8">
 		<description>Teenage Mutant Ninja Turtles IV - Turtles in Time (USA) (Beta 2)</description>
 		<year>????</year>
@@ -38429,6 +38579,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Teenage Mutant Ninja Turtles IV - Turtles in Time (USA) (Beta 2).sfc" size="1048576" crc="805f6a1a" sha1="ee31f375f4cb8d8be5bbece349abb8e09de1b302"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf2dfb2b13d893">
+		<description>Teenage Mutant Ninja Turtles IV - Turtles in Time PT-BR v1.0.2 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Teenage Mutant Ninja Turtles IV - Turtles in Time PT-BR v1.0.2 (2018)(Ripman).sfc" size="1048576" crc="ecb42f55" sha1="f2dfb2b13d8930d541583cc4a1fe8f5a0d3c8a6c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39029,6 +39189,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Top Gear 2 (U) [T+Por_RomhackBR].sfc" size="1048576" crc="cb5b8960" sha1="30743099cc39bba1b4ac94f0399eca341ddf5fed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2f84f7f072449">
+		<description>Top Gear 3000 PT-BR v1.0.1 (2018)(Ripman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Top Gear 3000 PT-BR v1.0.1 (2018)(Ripman).sfc" size="1048576" crc="b6ed9f85" sha1="2f84f7f07244902be003249d04b110eddac73450"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns75c6b94ebcc02">
+		<description>Top Gear PT-BR (2018)(BlackThorne)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Top Gear PT-BR (2018)(BlackThorne).sfc" size="1048576" crc="b2195a16" sha1="75c6b94ebcc020b1a6eb26f8987b260c808f4f21"/>
 			</dataarea>
 		</part>
 	</software>
