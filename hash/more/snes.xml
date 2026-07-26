@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4133 -->
+<!-- Number of items in this list = 4135 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -1849,6 +1849,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="(E)Super Mario All-Stars + Super Mario World (E)(1993)(Nintendo).sfc" size="2621440" crc="303205d8" sha1="be560f0a8de05e432b34be768198ef3defb13cb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns09402ff319d45">
+		<description>(E)Super Mario World 2 - Yoshi's Island (E, Rev 2)(1995)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="(E)Super Mario World 2 - Yoshi's Island (E, Rev 2)(1995)(Nintendo).sfc" size="2097152" crc="e71b3e72" sha1="09402ff319d4517409f961b4012e5eeb1b89ac5c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -23322,16 +23332,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns0d3423a9d7e31">
-		<description>Romancing Sa-Ga 2 (J)(1993)(Squaresoft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Romancing Sa-Ga 2 (J)(1993)(Squaresoft).sfc" size="2097152" crc="54a585bc" sha1="0d3423a9d7e315a15ff8a3be588c65bd110e3d65"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsc83cc595852c6">
 		<description>Romancing Sa-Ga 2 (Japan) [En v0.05c by Gilhide] (Incomplete)</description>
 		<year>????</year>
@@ -24362,16 +24362,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsce6dbf3b38f89">
-		<description>Shodai Nekketsu Kouha Kunio-kun (J) [T+Eng_agtp]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1179648">
-				<rom name="Shodai Nekketsu Kouha Kunio-kun (J) [T+Eng_agtp].sfc" size="1179648" crc="293279af" sha1="ce6dbf3b38f897e1916e53ff5db8ec423a20cea7"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns7f125f9c76e6e">
 		<description>Shodai Nekketsu Kouha Kunio-kun (J) [T+Rus_shedevr]</description>
 		<year>????</year>
@@ -24379,6 +24369,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1179648">
 				<rom name="Shodai Nekketsu Kouha Kunio-kun (J) [T+Rus_shedevr].sfc" size="1179648" crc="75ca85f4" sha1="7f125f9c76e6e31708f596c1ad8c995ec5cc92ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsce6dbf3b38f89">
+		<description>Shodai Nekketsu Kouha Kunio-kun T-Eng v1.00 (2007)(Aeon Genesis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1179648">
+				<rom name="Shodai Nekketsu Kouha Kunio-kun T-Eng v1.00 (2007)(Aeon Genesis).smc" size="1179648" crc="293279af" sha1="ce6dbf3b38f897e1916e53ff5db8ec423a20cea7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32442,6 +32442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns578df9cc66154">
+		<description>Star Fox 2 (J)(2017)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Star Fox 2 (J)(2017)(Nintendo).sfc" size="1048576" crc="3753682f" sha1="578df9cc661548f278faa1fb4b9b2e9701bde92e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns12de5ce6d07bb">
 		<description>Star Fox 2 (Japan) (Proto2) [En+Enhancement Hack v1.0 by Aeon Genesis] [Fix by ManuLoewe] (Final Version)</description>
 		<year>????</year>
@@ -32453,12 +32463,12 @@
 		</part>
 	</software>
 	<software name="sns1135a2a6cb786">
-		<description>Star Fox 2 (USA) (Snes Mini Extraction)</description>
+		<description>Star Fox 2 (U, E)(2017)(Nintendo)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Star Fox 2 (USA) (Snes Mini Extraction).sfc" size="1048576" crc="87653732" sha1="1135a2a6cb786ac7523e81dd553dc81aaa266f51"/>
+				<rom name="Star Fox 2 (U, E)(2017)(Nintendo).sfc" size="1048576" crc="87653732" sha1="1135a2a6cb786ac7523e81dd553dc81aaa266f51"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35779,6 +35789,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Super Mario World 2 - Yoshi's Island - The Definitive Edition v0.5 (2026)(T-Bone).sfc" size="2097152" crc="0c46bc60" sha1="4e5ee4f6d0fe1cb3cbec8a78ed25043b04eb9fdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf825fb5a7f7e2">
+		<description>Super Mario World 2 - Yoshi's Island T-Cht (2026)(NOKOH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Mario World 2 - Yoshi's Island T-Cht (2026)(NOKOH).sfc" size="2097152" crc="4b79ef63" sha1="f825fb5a7f7e21f00d635a8d48a02986f053bcad"/>
 			</dataarea>
 		</part>
 	</software>
