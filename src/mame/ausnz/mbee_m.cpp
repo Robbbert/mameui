@@ -468,6 +468,8 @@ void mbee_state::machine_start()
 	if (BIT(m_features, 0))
 	{
 		m_cram = make_unique_clear<u8[]>(0x0800);
+		for (int i = 0; i < 0x800; i++)
+			m_cram[i] = 2;     // need green in the 0x400-0x7FF range
 		save_pointer(NAME(m_cram), 0x0800);
 	}
 
