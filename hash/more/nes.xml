@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10968 -->
+<!-- Number of items in this list = 10973 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -9522,6 +9522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes6d9bce218e503">
+		<description>Batman Dark Edition - Ver. 21-07-26 (2026)(DarthVaderX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Batman Dark Edition - Ver. 21-07-26 (2026)(DarthVaderX).nes" size="262160" crc="6d02f9eb" sha1="6d9bce218e50328fa94d2dd5db2ec9a819316a85"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes70327ac07fb36">
 		<description>Batman Easy Mode by deespence2929 (Batman Hack)</description>
 		<year>????</year>
@@ -9569,6 +9579,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Batman Return of the Joker Black Edition - Ver. Ultima (2025)(DarthVaderX).nes" size="393232" crc="d5e0d8f9" sha1="9148e3af03a32dded530d9a6040194114a48704c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2d0a748a4b3ef">
+		<description>Batman Return of the Joker Dark Edition - Ver. 21-07-26 (2026)(DarthVaderX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Batman Return of the Joker Dark Edition - Ver. 21-07-26 (2026)(DarthVaderX).nes" size="393232" crc="75136fac" sha1="2d0a748a4b3ef41aff058ef9901ce3eaa7548722"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9719,6 +9739,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Batman Returns Black Edition v1.0b (2024)(darthvaderx).nes" size="393232" crc="5e4e4fb3" sha1="f870eae56123ab2e983717c6cfa537e6faeaad41"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc2542d107454f">
+		<description>Batman Returns Dark Edition - Ver. 21-07-26(2026)(DarthVaderX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Batman Returns Dark Edition - Ver. 21-07-26(2026)(DarthVaderX).nes" size="393232" crc="8ac8a211" sha1="c2542d107454fb49486f53414f4707daf1bb871c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -73179,6 +73209,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262165">
 				<rom name="Proto Man (basic patch) (megaman II hack).nes" size="262165" crc="9afe7b7f" sha1="a44197b28a37f7570f7420c36b62c0e5d16d68dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8d2bbf9403fa9">
+		<description>Pteropus (World) (v2.3) (NTSC) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Pteropus (World) (v2.3) (NTSC) (Aftermarket) (Unl).nes" size="524304" crc="88a79595" sha1="8d2bbf9403fa9ca70e78b433019189c276279b2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4942f42fc2e1a">
+		<description>Pteropus (World) (v2.3) (PAL) (Aftermarket) (Unl)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Pteropus (World) (v2.3) (PAL) (Aftermarket) (Unl).nes" size="524304" crc="f9488c5b" sha1="4942f42fc2e1a746a7ea3e9c8822e11af72f3649"/>
 			</dataarea>
 		</part>
 	</software>

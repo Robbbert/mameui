@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 727 -->
+<!-- Number of items in this list = 729 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -4129,6 +4129,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32695">
 				<rom name="Mr. Do! Arcade (2026)(Scott Moschella).rom" size="32695" crc="a06edcb1" sha1="7a27a2f014c813bd6005a38b0ab24ee18d76c0e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col95f6a12b2c6a2">
+		<description>Mr. Do! Arcade (2026)(Scott Moschella)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mr. Do! Arcade (2026)(Scott Moschella)_1.rom" size="32768" crc="51dc96d1" sha1="95f6a12b2c6a273f4fb35382fccc46f76e73d993"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coledee6d75bb967">
+		<description>Mr. Do! Arcade - Red Nose (2026)(Scott Moschella)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mr. Do! Arcade - Red Nose (2026)(Scott Moschella).rom" size="32768" crc="90f4e6e3" sha1="edee6d75bb967df84d61463e298e10099a038709"/>
 			</dataarea>
 		</part>
 	</software>

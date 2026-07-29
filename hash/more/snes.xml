@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4135 -->
+<!-- Number of items in this list = 4139 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -16052,6 +16052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsbec147d3b2c19">
+		<description>Live A Live PT-BR v2.3 (2024)(Jotesc0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Live A Live PT-BR v2.3 (2024)(Jotesc0).sfc" size="2621440" crc="3020dbaa" sha1="bec147d3b2c19f0cba42dd674e13df5c1cac4a1e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa8f691c52841b">
 		<description>Live A Live T-Spa v1.6 (2022)(Max1323)</description>
 		<year>????</year>
@@ -20459,6 +20469,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mysterious Dungeon 2 - Shiren the Wanderer T-Eng (2006)(Aeon Genesis).sfc" size="4194304" crc="f9789079" sha1="c342288e97498741ef7438ab9ee4846234a2e3a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf2a33558f2c95">
+		<description>Mysterious Dungeon 2 - Shiren the Wanderer T-Eng v1.02 (2006-2026)(Aeon Genesis, iggypoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mysterious Dungeon 2 - Shiren the Wanderer T-Eng v1.02 (2006-2026)(Aeon Genesis, iggypoop).sfc" size="4194304" crc="ab38bde3" sha1="f2a33558f2c958b8fd28d90bc0359ce1be99c2a5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40952,6 +40972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsba7adf950c696">
+		<description>X-Men - Mutant Apocalypse - Rebalanced (2026)(BlastoBR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="X-Men - Mutant Apocalypse - Rebalanced (2026)(BlastoBR).sfc" size="2097152" crc="5836480c" sha1="ba7adf950c696494cce4b861bfb21cd84be4db62"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns0bc99a289de78">
 		<description>X-Men - Mutant Apocalypse PT-BR (2000)(BR Games)</description>
 		<year>????</year>
@@ -40972,16 +41002,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sns86023883acbbf">
-		<description>X-Zone (U) [T+Fre_Generation IX] (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="X-Zone (U) [T+Fre_Generation IX] (2).sfc" size="524288" crc="2ab55140" sha1="86023883acbbf95ab4fbdb83e441b0cbac0b7937"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="sns58d86a0fc2f5a">
 		<description>X-Zone (U) [T+Fre_Generation IX]</description>
 		<year>????</year>
@@ -40989,6 +41009,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="X-Zone (U) [T+Fre_Generation IX].sfc" size="524800" crc="229eabc6" sha1="58d86a0fc2f5a4a923ac7ecdd07bacbed7472c5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns86023883acbbf">
+		<description>X-Zone (U) [T+Fre_Generation IX]_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="X-Zone (U) [T+Fre_Generation IX]_1.sfc" size="524288" crc="2ab55140" sha1="86023883acbbf95ab4fbdb83e441b0cbac0b7937"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41299,6 +41329,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Yu Yu Hakusho 2 - The Fighting Chapter PT-BR v1.0 (2024)(Hextinkers).sfc" size="2097152" crc="52ac1195" sha1="e424ec29289a8edab0867705ffa372e004ee73cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns982b49c796e90">
+		<description>Yu Yu Hakusho 2 - The Fighting Chapter PT-BR v1.2 (2024-26)(Hextinkers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Yu Yu Hakusho 2 - The Fighting Chapter PT-BR v1.2 (2024-26)(Hextinkers).sfc" size="2097152" crc="38769d36" sha1="982b49c796e908eca0aa2aaff0749a8ff5ca0764"/>
 			</dataarea>
 		</part>
 	</software>
