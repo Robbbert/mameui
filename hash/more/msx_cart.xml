@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 738 -->
+<!-- Number of items in this list = 739 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -5799,6 +5799,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="753664">
 				<rom name="StormRescue (2022)(Renato Murta).rom" size="753664" crc="ddc22cfc" sha1="2907661d34a865031f5d11b03eb0dd111caf7425"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx6b7274c753b7c">
+		<description>Structris (2026)(unhuman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Structris (2026)(unhuman).rom" size="24576" crc="c56d3672" sha1="6b7274c753b7c5d020a96c5a7b0323f37a6cd17e"/>
 			</dataarea>
 		</part>
 	</software>

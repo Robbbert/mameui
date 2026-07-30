@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 729 -->
+<!-- Number of items in this list = 730 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -6109,6 +6109,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Strike It! (Euro)(1983)(Bit Corporation).rom" size="16384" crc="d247a1c8" sha1="a455e93e5ce6e562092d2c0b06070a746296395b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col2aa48776443f8">
+		<description>Structris (2026)(unhuman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Structris (2026)(unhuman).rom" size="24576" crc="dbe7dd23" sha1="2aa48776443f82a4a73630a2d47820f0cb1fc2be"/>
 			</dataarea>
 		</part>
 	</software>

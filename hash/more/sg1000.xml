@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 86 -->
+<!-- Number of items in this list = 87 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -659,6 +659,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="40960">
 				<rom name="Solar Fox II 21-10-25 (2025)(Jess Creations - ArugulaZ).sg" size="40960" crc="7886d024" sha1="b0d36806ae2e902723a82c1a394f80b3fd7ba976"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg184c4ec4952326">
+		<description>Structris (2026)(unhuman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Structris (2026)(unhuman).sg" size="32768" crc="58a27c68" sha1="84c4ec49523262e131a4347367a1f161f07fc210"/>
 			</dataarea>
 		</part>
 	</software>

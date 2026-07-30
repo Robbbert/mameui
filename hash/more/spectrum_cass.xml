@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7937 -->
+<!-- Number of items in this list = 7947 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -20862,6 +20862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs81b1fc098e006">
+		<description>Down the Pipe 2 - Lost in Space 48K-128K (2026)(DF Design)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="71827">
+				<rom name="Down the Pipe 2 - Lost in Space 48K-128K (2026)(DF Design).tap" size="71827" crc="06cbdad9" sha1="81b1fc098e006e8ed6dace2bb0be5b7fd494e8c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs35aeef262c7c0">
 		<description>Down the pipe Reflushed (2023)(DF Design)(Crash covertape)</description>
 		<year>????</year>
@@ -23112,16 +23122,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs218c7b7e1cb7d">
-		<description>Escape From Alderon 48K (1986)(Troggerz Inc.)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="22008">
-				<rom name="Escape From Alderon 48K (1986)(Troggerz Inc.).tap" size="22008" crc="0cc57bee" sha1="218c7b7e1cb7df90ba34f621a236047d39704dbb"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs67cbbf9079fce">
 		<description>Escape From Arkaron 1 - Prisoner (1984)(Penguin Books)</description>
 		<year>????</year>
@@ -23173,12 +23173,32 @@
 		</part>
 	</software>
 	<software name="zxsba91c71ad76ed">
-		<description>Escape from Colony 8</description>
+		<description>Escape from Colony 8 48K (2014)(usebox.net)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="33045">
-				<rom name="Escape from Colony 8.tap" size="33045" crc="b55aad43" sha1="ba91c71ad76eddc5ca14074701734398bf86cd40"/>
+				<rom name="Escape from Colony 8 48K (2014)(usebox.net).tap" size="33045" crc="b55aad43" sha1="ba91c71ad76eddc5ca14074701734398bf86cd40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs24ef8c1bdbfdc">
+		<description>Escape from Corpocity EN v1.1 48K (2026)(Juanma2k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47547">
+				<rom name="Escape from Corpocity EN v1.1 48K (2026)(Juanma2k).tap" size="47547" crc="226a67e1" sha1="24ef8c1bdbfdc65cc5cf48c72d8d507c02a2922d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs104fcd15d6362">
+		<description>Escape from Corpocity ES v1.1 48K (2026)(Juanma2k)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47793">
+				<rom name="Escape from Corpocity ES v1.1 48K (2026)(Juanma2k).tap" size="47793" crc="b9b5c217" sha1="104fcd15d636262e385db082c72cba78c95a1e35"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40552,6 +40572,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsdb685287e3e8e">
+		<description>Mickey Mouse - The Computer Game 48K (1988)(Gremlin Graphics)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="81822">
+				<rom name="Mickey Mouse - The Computer Game 48K (1988)(Gremlin Graphics).tap" size="81822" crc="caa35e2f" sha1="db685287e3e8e61851594e532de2472df12a938b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc2dd3bdad1add">
 		<description>Micro Chess (1983)(Artic Computing)</description>
 		<year>????</year>
@@ -40573,12 +40603,12 @@
 		</part>
 	</software>
 	<software name="zxs81211e6949269">
-		<description>Micro Mouse Goes De-bugging 128K (1989)(Mastertronic)</description>
+		<description>Micro Mouse Goes De-bugging 48K-128K (1989)(Virgin Mastertronic)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47636">
-				<rom name="Micro Mouse Goes De-bugging 128K (1989)(Mastertronic).tap" size="47636" crc="6a8a8635" sha1="81211e6949269393212d0cb0a009e500aa6c547b"/>
+				<rom name="Micro Mouse Goes De-bugging 48K-128K (1989)(Virgin Mastertronic).tap" size="47636" crc="6a8a8635" sha1="81211e6949269393212d0cb0a009e500aa6c547b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -48452,6 +48482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsfd2cec5494a57">
+		<description>Porklike v1.06 48K-AY (2026)(Hairy Viking).tap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38513">
+				<rom name="Porklike v1.06 48K-AY (2026)(Hairy Viking).tap.tap" size="38513" crc="8a8d7f30" sha1="fd2cec5494a577e879580adcba4adfae9ae15517"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9bdc07759083b">
 		<description>Poseidon - Planet Eleven</description>
 		<year>????</year>
@@ -48832,13 +48872,33 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsab67034a02003">
+		<description>Pro Golf - Pebble Beach 48K (1986)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49088">
+				<rom name="Pro Golf - Pebble Beach 48K (1986)(Atlantis Software).tap" size="49088" crc="d36dc84f" sha1="ab67034a02003a3c5d2f8424370b839c2d1627eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs098911c2b4174">
+		<description>Pro Golf - Sunningdale 48K (1986)(Atlantis Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49088">
+				<rom name="Pro Golf - Sunningdale 48K (1986)(Atlantis Software).tap" size="49088" crc="e201426b" sha1="098911c2b4174338ce8b04cdfa1a482ac1788c82"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsefa29e35ef308">
-		<description>Pro Golf Simulator (1990)(Codemasters)(128k)</description>
+		<description>Pro Golf Simulator 48K-128K (1990)(Codemasters)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48603">
-				<rom name="Pro Golf Simulator (1990)(Codemasters)(128k).tap" size="48603" crc="6e5bed28" sha1="efa29e35ef308dc60070b58b6755a25bdca4680f"/>
+				<rom name="Pro Golf Simulator 48K-128K (1990)(Codemasters).tap" size="48603" crc="6e5bed28" sha1="efa29e35ef308dc60070b58b6755a25bdca4680f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55509,6 +55569,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49399">
 				<rom name="Skateball (1988)(Ubi Soft Ltd).tap" size="49399" crc="e816c833" sha1="ccf36349855a84ca236eaab5f1b0828638cf679b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxseb128b60e72d8">
+		<description>Skateball 48K (1988)(Ubi Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49454">
+				<rom name="Skateball 48K (1988)(Ubi Soft).tzx" size="49454" crc="3d078071" sha1="eb128b60e72d85f7fa4365f2511396dc5285005a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -68012,6 +68082,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5d1148517067d">
+		<description>ZXGolf Japan 128K (2026)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="130584">
+				<rom name="ZXGolf Japan 128K (2026)(Menyiques).tap" size="130584" crc="66d13731" sha1="5d1148517067d3ffbc4d86ee2365bbe8ade9d514"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs427375d948c8b">
+		<description>ZXGolf USA 128K (2026)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128792">
+				<rom name="ZXGolf USA 128K (2026)(Menyiques).tap" size="128792" crc="2ef7e677" sha1="427375d948c8bf6dab4b287434006d4a361ddeb0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd0ca1408d389d">
 		<description>Zybex (1989)(Zeppelin Games Ltd)</description>
 		<year>????</year>
@@ -71359,6 +71449,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8191">
 				<rom name="_Escape (1982)(New Generation Software).tap" size="8191" crc="19b2a51c" sha1="6893a8735f1654dd4987371892ccb2781fee7c63"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs218c7b7e1cb7d">
+		<description>_Escape from Alderon 48K (1986)(Troggerz Inc.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22008">
+				<rom name="_Escape from Alderon 48K (1986)(Troggerz Inc.).tap" size="22008" crc="0cc57bee" sha1="218c7b7e1cb7df90ba34f621a236047d39704dbb"/>
 			</dataarea>
 		</part>
 	</software>

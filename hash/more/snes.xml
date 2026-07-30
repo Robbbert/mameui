@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4139 -->
+<!-- Number of items in this list = 4142 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -2899,6 +2899,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Aero Fighters (U)(1993)(Mc O'River).sfc" size="1310720" crc="f194d00a" sha1="aeedb733c7bcd5fb933eb998d9fb3c960335bb4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9e0c6f69a2f6f">
+		<description>Aero Fighters PT-BR (2022)(Vila Oculta do Romhacking)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Aero Fighters PT-BR (2022)(Vila Oculta do Romhacking).sfc" size="1572864" crc="79a01296" sha1="9e0c6f69a2f6f73c58b073fa97811ea332a47e72"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22402,6 +22412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns5100ede923867">
+		<description>Prince of Persia PT-BR v1.01 (2010)(Mattos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Prince of Persia PT-BR v1.01 (2010)(Mattos).sfc" size="1048576" crc="7cef5430" sha1="5100ede923867b71b65d8f168b960fc6932629e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns8e8c51199db39">
 		<description>Prince of Persia Restoration (2017)(SCD)</description>
 		<year>????</year>
@@ -34699,6 +34719,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097664">
 				<rom name="Super Mario SCORPION's Wrath V2.0 (Part 1).sfc" size="2097664" crc="d2a03a45" sha1="a119be0cd1a58de4d2c87f386664b73f60d73173"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd2e7bf1eb9918">
+		<description>Super Mario So Estrelas + Super Mundo Mario PT-BR v1.12 (2022)(bMatSantos)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Super Mario So Estrelas + Super Mundo Mario PT-BR v1.12 (2022)(bMatSantos).sfc" size="2621440" crc="9ad38083" sha1="d2e7bf1eb9918bd8e09b151fb6446947bc8fe402"/>
 			</dataarea>
 		</part>
 	</software>
