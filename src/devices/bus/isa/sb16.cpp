@@ -21,6 +21,24 @@
 
 DEFINE_DEVICE_TYPE(ISA16_SB16, sb16_lle_device, "sb16", "SoundBlaster 16 Audio Adapter LLE")
 
+sb16_lle_device::sb16_lle_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
+	device_t(mconfig, ISA16_SB16, tag, owner, clock),
+	device_isa16_card_interface(mconfig, *this),
+	m_opl3(*this, "opl3"),
+	m_dsp(*this, "dsp"),
+	m_mixer(*this, "mixer"),
+	m_ldac(*this, "ldac"),
+	m_rdac(*this, "rdac"),
+	m_irqs(*this, "irqs"),
+	m_joy(*this, "pc_joy"),
+	m_mpu_byte(0),
+	m_irq8(false),
+	m_irq16(false),
+	m_irq_midi(false)
+{
+}
+
+
 void sb16_lle_device::host_io(address_map &map)
 {
 	map(0x00, 0x03).rw(m_opl3, FUNC(ymf262_device::read), FUNC(ymf262_device::write));
@@ -43,6 +61,12 @@ void sb16_lle_device::device_add_mconfig(machine_config &config)
 	m_mixer->set_rdac_tag(m_rdac);
 	m_mixer->add_route(0, "speaker", 1.0, 0);
 	m_mixer->add_route(1, "speaker", 1.0, 1);
+	m_mixer->irq_select_read_cb().set([this] () {
+		return m_irq_sel;
+	});
+	m_mixer->dma_select_read_cb().set([this] () {
+		return m_dma_sel;
+	});
 	m_mixer->irq_status_cb().set([this] () {
 		return (m_irq8 << 0) | (m_irq16 << 1) | (m_irq_midi << 2) | (0x8 << 4);
 	});
@@ -146,29 +170,26 @@ void sb16_lle_device::mpu401_w(offs_t offset, uint8_t data)
 				break;
 		}
 	}
-
-}
-
-sb16_lle_device::sb16_lle_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, ISA16_SB16, tag, owner, clock),
-	device_isa16_card_interface(mconfig, *this),
-	m_opl3(*this, "opl3"),
-	m_dsp(*this, "dsp"),
-	m_mixer(*this, "mixer"),
-	m_ldac(*this, "ldac"),
-	m_rdac(*this, "rdac"),
-	m_irqs(*this, "irqs"),
-	m_joy(*this, "pc_joy"),
-	m_mpu_byte(0),
-	m_irq8(false),
-	m_irq16(false),
-	m_irq_midi(false)
-{
 }
 
 void sb16_lle_device::device_start()
 {
 	set_isa_device();
+
+	// TODO: hardcoded for now
+	// ---x ---- ?
+	// ---- 1000 IRQ10
+	// ---- 0100 IRQ7
+	// ---- 0010 IRQ5
+	// ---- 0001 IRQ2
+	m_irq_sel = 0x12;
+	// 100- ---- High DMA7
+	// 010- ---- High DMA6
+	// 001- ---- High DMA5
+	// ---- 1-00 DMA3
+	// ---- 0-10 DMA1
+	// ---- 0-01 DMA0
+	m_dma_sel = 0x22;
 
 	m_isa->set_dma_channel(1, this, false);
 	m_isa->set_dma_channel(5, this, false);
@@ -177,6 +198,9 @@ void sb16_lle_device::device_start()
 	save_item(NAME(m_irq16));
 	save_item(NAME(m_irq_midi));
 	save_item(NAME(m_mpu_byte));
+
+	save_item(NAME(m_irq_sel));
+	save_item(NAME(m_dma_sel));
 }
 
 

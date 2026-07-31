@@ -28,6 +28,8 @@
 #include "modules/lib/osdobj_common.h"
 #include "path.h"
 #include "input.h"
+#include "sound.h"
+#include "video.h"
 
 
 // These are called from src/osd/windows/windows.c and
