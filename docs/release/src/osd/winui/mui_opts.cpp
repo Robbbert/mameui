@@ -1546,7 +1546,7 @@ void LoadFolderFlags()
 static void AddFolderFlags()
 {
 	LPTREEFOLDER lpFolder;
-	int num_entries = 0, numFolders = GetNumFolders();
+	int numFolders = GetNumFolders();
 
 	for (int i = 0; i < numFolders; i++)
 	{
@@ -1570,9 +1570,6 @@ static void AddFolderFlags()
 
 			// store entry
 			settings.setter(option_name.c_str(), lpFolder->m_dwFlags & FI_MASK);
-
-			// increment counter
-			num_entries++;
 		}
 	}
 }

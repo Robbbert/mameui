@@ -1848,7 +1848,6 @@ void ShowHideSoftwareArea()
 static void SoftwareTabView_OnMoveSize()
 {
 	RECT rMain, rSoftwareTabView, rClient, rTab;
-	BOOL res = 0;
 
 	HWND hwndSoftwareTabView = GetDlgItem(GetMainWindow(), IDC_SWTAB);
 	HWND hwndSoftwarePicker = GetDlgItem(GetMainWindow(), IDC_SWLIST);
@@ -1870,7 +1869,7 @@ static void SoftwareTabView_OnMoveSize()
 	// not being covered up
 	if (GetWindowLong(hwndSoftwareTabView, GWL_STYLE) & WS_VISIBLE)
 	{
-		res = TabCtrl_GetItemRect(hwndSoftwareTabView, 0, &rTab);
+		(void)TabCtrl_GetItemRect(hwndSoftwareTabView, 0, &rTab);
 		rClient.top += rTab.bottom - rTab.top + 2;
 	}
 
@@ -1878,7 +1877,6 @@ static void SoftwareTabView_OnMoveSize()
 	MoveWindow(hwndSoftwarePicker, rClient.left, rClient.top, rClient.right - rClient.left, rClient.bottom - rClient.top, true);
 	MoveWindow(hwndSoftwareMView, rClient.left + 3, rClient.top + 2, rClient.right - rClient.left - 6, rClient.bottom - rClient.top -4, true);
 	MoveWindow(hwndSoftwareList, rClient.left, rClient.top, rClient.right - rClient.left, rClient.bottom - rClient.top, true);
-	res++;
 }
 
 

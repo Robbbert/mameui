@@ -613,12 +613,9 @@ static void SoftwarePicker_InternalClear(software_picker_info *pPickerInfo)
 void SoftwarePicker_Clear(HWND hwndPicker)
 {
 	software_picker_info *pPickerInfo;
-	BOOL res;
-
 	pPickerInfo = GetSoftwarePickerInfo(hwndPicker);
 	SoftwarePicker_InternalClear(pPickerInfo);
-	res = ListView_DeleteAllItems(hwndPicker);
-	res++;
+	(void)ListView_DeleteAllItems(hwndPicker);
 }
 
 
@@ -749,7 +746,7 @@ LPCTSTR SoftwarePicker_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCH
 	const file_info *pFileInfo;
 	LPCTSTR s = NULL;
 	//const char *pszUtf8 = NULL;
-	unsigned int nHashFunction = 0;
+	//unsigned int nHashFunction = 0;
 	//char szBuffer[256];
 	TCHAR* t_buf;
 
@@ -827,7 +824,6 @@ LPCTSTR SoftwarePicker_GetItemString(HWND hwndPicker, int nRow, int nColumn, TCH
 			break;
 */
 	}
-	nHashFunction++;
 	return s;
 }
 

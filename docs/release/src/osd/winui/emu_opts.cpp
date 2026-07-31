@@ -528,7 +528,7 @@ const string GetLanguageUI()
 {
 	return emu_global.value(OPTION_LANGUAGE);
 }
-
+#if 0
 bool GetEnablePlugins()
 {
 	return emu_global.bool_value(OPTION_PLUGINS);
@@ -538,7 +538,7 @@ const string GetPlugins()
 {
 	return emu_global.value(OPTION_PLUGIN);
 }
-
+#endif
 bool GetSkipWarnings()
 {
 	return emu_ui.bool_value(OPTION_SKIP_WARNINGS);

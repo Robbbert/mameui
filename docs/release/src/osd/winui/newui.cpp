@@ -2587,8 +2587,7 @@ static void set_command_state(HMENU menu_bar, UINT command, UINT state)
 	mii.cbSize = sizeof(mii);
 	mii.fMask = MIIM_STATE;
 	mii.fState = state;
-	BOOL result = SetMenuItemInfo(menu_bar, command, false, &mii);
-	result++;
+	(void)SetMenuItemInfo(menu_bar, command, false, &mii);
 }
 
 

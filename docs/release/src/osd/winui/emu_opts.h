@@ -54,10 +54,10 @@ std::string GetEmuPath();
 const char* GetSnapName();
 void SetSnapName(const char*);
 const std::string GetLanguageUI();
-bool GetEnablePlugins();
+//bool GetEnablePlugins();  // not used any more 2026-07-01
 bool GetSkipWarnings();
 void SetSkipWarnings(BOOL);
-const std::string GetPlugins();
+//const std::string GetPlugins();  // not used any more 2026-07-01
 void SetSelectedSoftware(int driver_index, std::string opt_name, const char *software);
 void global_save_ini();
 BOOL DriverHasSoftware(int drvindex);

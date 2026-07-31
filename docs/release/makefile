@@ -6,7 +6,7 @@
 #
 ###########################################################################
 
-BARE_VERS := 0.288
+BARE_VERS := 0.289
 LONG_VERS := $(BARE_VERS).0
 
 ###########################################################################
@@ -29,6 +29,7 @@ LONG_VERS := $(BARE_VERS).0
 # NO_OPENGL = 0
 # USE_DISPATCH_GL = 0
 # USE_SDL = 1
+# USE_SDL3 = 1
 # SDL_INI_PATH = .;$HOME/.mame/;ini;
 # SDL2_MULTIAPI = 1
 # NO_USE_MIDI = 1
@@ -469,7 +470,7 @@ OSD := sdl
 else ifeq ($(TARGETOS),macosx)
 OSD := sdl3
 else ifeq ($(TARGETOS),asmjs)
-OSD := sdl
+OSD := sdl3
 endif # TARGETOS
 
 endif # OSD
@@ -749,6 +750,10 @@ endif
 
 ifdef USE_SDL
 PARAMS += --USE_SDL='$(USE_SDL)'
+endif
+
+ifdef USE_SDL3
+PARAMS += --USE_SDL3='$(USE_SDL3)'
 endif
 
 ifdef SDL_INI_PATH
@@ -1544,16 +1549,6 @@ ifdef IGNORE_BAD_LOCALISATION
 else
 	$(SILENT)$(PYTHON) scripts/build/msgfmt.py --output-file $@ $<
 endif
-
-#-------------------------------------------------
-# Regression tests
-#-------------------------------------------------
-
-#include regtests/regtests.mak
-
-#.PHONY: tests
-
-#tests: $(REGTESTS)
 
 #-------------------------------------------------
 # Source cleanup

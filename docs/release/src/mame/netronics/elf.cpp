@@ -147,7 +147,7 @@ int elf2_state::wait_r()
 		m_text[m_status&7] = 0;
 		m_text[data&7] = 1;
 		m_status = data;
-		output().set_value("led1", BIT(data, 3));
+		m_led1 = BIT(data, 3);
 	}
 
 	return !LOAD;
@@ -185,7 +185,6 @@ void elf2_state::da_w(int state)
 
 void elf2_state::machine_start()
 {
-	m_text.resolve();
 	address_space &program = m_maincpu->space(AS_PROGRAM);
 
 	/* setup memory banking */
@@ -239,7 +238,7 @@ void elf2_state::elf2(machine_config &config)
 	SCREEN(config, SCREEN_TAG, SCREEN_TYPE_RASTER);
 
 	/* devices */
-	MM74C923(config, m_kb, 0);
+	MM74C923(config, m_kb);
 	m_kb->set_cap_osc(CAP_U(0.15));
 	m_kb->set_cap_debounce(CAP_U(1));
 	m_kb->da_wr_callback().set(FUNC(elf2_state::da_w));

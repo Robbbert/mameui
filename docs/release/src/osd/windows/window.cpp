@@ -17,7 +17,6 @@
 
 // MAME headers
 #include "emu.h"
-#include "uiinput.h"
 #include "ui/uimain.h"
 
 // MAMEOS headers
@@ -1256,13 +1255,13 @@ LRESULT CALLBACK win_window_info::video_window_proc(HWND wnd, UINT message, WPAR
 				if (window->m_last_surrogate)
 				{
 					char32_t const uch = 0x10000 + ((ch & 0x03ff) | ((window->m_last_surrogate & 0x03ff) << 10));
-					window->machine().ui_input().push_char_event(window->target(), uch);
+					window->target()->push_char_event(uch);
 				}
 				window->m_last_surrogate = 0;
 			}
 			else
 			{
-				window->machine().ui_input().push_char_event(window->target(), char32_t(ch));
+				window->target()->push_char_event(char32_t(ch));
 				window->m_last_surrogate = 0;
 			}
 		}
@@ -1272,7 +1271,7 @@ LRESULT CALLBACK win_window_info::video_window_proc(HWND wnd, UINT message, WPAR
 		if (UNICODE_NOCHAR == wparam)
 			return TRUE;
 		else
-			window->machine().ui_input().push_char_event(window->target(), char32_t(wparam));
+			window->target()->push_char_event(char32_t(wparam));
 		break;
 
 	// legacy mouse events
@@ -1310,7 +1309,7 @@ LRESULT CALLBACK win_window_info::video_window_proc(HWND wnd, UINT message, WPAR
 			ScreenToClient(wnd, &where);
 			UINT ucNumLines = 3; // default
 			SystemParametersInfo(SPI_GETWHEELSCROLLLINES, 0, &ucNumLines, 0);
-			window->machine().ui_input().push_mouse_wheel_event(window->target(), where.x, where.y, GET_WHEEL_DELTA_WPARAM(wparam), ucNumLines);
+			window->target()->push_mouse_wheel_event(where.x, where.y, GET_WHEEL_DELTA_WPARAM(wparam), ucNumLines);
 		}
 		break;
 
@@ -1370,7 +1369,7 @@ LRESULT CALLBACK win_window_info::video_window_proc(HWND wnd, UINT message, WPAR
 	// sizing: constrain to the aspect ratio unless control key is held down
 	case WM_SIZING:
 		{
-			RECT *rect = (RECT *)lparam;
+			auto const rect = reinterpret_cast<RECT *>(lparam);
 			if (window->keepaspect() && (window->target()->scale_mode() == SCALE_FRACTIONAL) && !(GetAsyncKeyState(VK_CONTROL) & 0x8000))
 			{
 				osd_rect r = window->constrain_to_aspect_ratio(RECT_to_osd_rect(*rect), wparam);
@@ -1383,10 +1382,23 @@ LRESULT CALLBACK win_window_info::video_window_proc(HWND wnd, UINT message, WPAR
 		}
 		break;
 
+	// effective resolution/scaling changed
+	case WM_DPICHANGED:
+		{
+			auto const suggested = reinterpret_cast<RECT const *>(lparam);
+			SetWindowPos(
+					window->platform_window(),
+					nullptr,
+					suggested->left, suggested->top,
+					suggested->right - suggested->left, suggested->bottom - suggested->top,
+					SWP_NOZORDER | SWP_NOACTIVATE);
+		}
+		break;
+
 	// syscommands: catch win_start_maximized
 	case WM_SYSCOMMAND:
 		{
-			uint16_t cmd = wparam & 0xfff0;
+			uint16_t const cmd = wparam & 0xfff0;
 
 			// prevent screensaver or monitor power events
 			if (cmd == SC_MONITORPOWER || cmd == SC_SCREENSAVE)
@@ -1426,9 +1438,9 @@ LRESULT CALLBACK win_window_info::video_window_proc(HWND wnd, UINT message, WPAR
 			}
 
 			if ((wparam == WA_ACTIVE) || (wparam == WA_CLICKACTIVE))
-				window->machine().ui_input().push_window_focus_event(window->target());
+				window->target()->push_window_focus_event();
 			else if (wparam == WA_INACTIVE)
-				window->machine().ui_input().push_window_defocus_event(window->target());
+				window->target()->push_window_defocus_event();
 		}
 		return DefWindowProc(wnd, message, wparam, lparam);
 
@@ -1940,17 +1952,16 @@ void win_window_info::set_fullscreen(int fullscreen)
 		SetWindowPos(platform_window(), HWND_BOTTOM, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 		SetWindowPos(platform_window(), HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 
-		// if we have previous non-fullscreen bounds, use those
 		if (m_non_fullscreen_bounds.right != m_non_fullscreen_bounds.left)
 		{
+			// if we have previous non-fullscreen bounds, use those
 			SetWindowPos(platform_window(), HWND_TOP, m_non_fullscreen_bounds.left, m_non_fullscreen_bounds.top,
 						rect_width(&m_non_fullscreen_bounds), rect_height(&m_non_fullscreen_bounds),
 						SWP_NOZORDER);
 		}
-
-		// otherwise, set a small size and maximize from there
 		else
 		{
+			// otherwise, set a small size and maximize from there
 			SetWindowPos(platform_window(), HWND_TOP, 0, 0, MIN_WINDOW_DIMX, MIN_WINDOW_DIMY, SWP_NOZORDER);
 			maximize_window();
 		}
@@ -2036,8 +2047,7 @@ void win_window_info::pointer_entered(WPARAM wparam, LPARAM lparam)
 		ScreenToClient(platform_window(), &where);
 		info->x = where.x;
 		info->y = where.y;
-		machine().ui_input().push_pointer_update(
-				target(),
+		target()->push_pointer_update(
 				convert_pointer_type(info->type),
 				info->index,
 				info->device,
@@ -2081,8 +2091,7 @@ void win_window_info::pointer_capture_changed(WPARAM wparam, LPARAM lparam)
 			info->clickcnt = -info->clickcnt;
 
 		// push to UI manager and dump pointer data
-		machine().ui_input().push_pointer_abort(
-				target(),
+		target()->push_pointer_abort(
 				convert_pointer_type(info->type),
 				info->index,
 				info->device,
@@ -2211,8 +2220,7 @@ void win_window_info::expire_pointer(std::vector<win_pointer_info>::iterator inf
 	// push to UI manager and dump pointer data
 	if (!canceled)
 	{
-		machine().ui_input().push_pointer_leave(
-				target(),
+		target()->push_pointer_leave(
 				convert_pointer_type(info->type),
 				info->index,
 				info->device,
@@ -2221,8 +2229,7 @@ void win_window_info::expire_pointer(std::vector<win_pointer_info>::iterator inf
 	}
 	else
 	{
-		machine().ui_input().push_pointer_abort(
-				target(),
+		target()->push_pointer_abort(
 				convert_pointer_type(info->type),
 				info->index,
 				info->device,
@@ -2266,8 +2273,7 @@ void win_window_info::update_pointer(win_pointer_info &info, POINT const &where,
 	info.buttons = buttons;
 	if (!canceled)
 	{
-		machine().ui_input().push_pointer_update(
-				target(),
+		target()->push_pointer_update(
 				convert_pointer_type(info.type),
 				info.index,
 				info.device,
@@ -2276,8 +2282,7 @@ void win_window_info::update_pointer(win_pointer_info &info, POINT const &where,
 	}
 	else
 	{
-		machine().ui_input().push_pointer_abort(
-				target(),
+		target()->push_pointer_abort(
 				convert_pointer_type(info.type),
 				info.index,
 				info.device,
