@@ -287,10 +287,10 @@ void microtouch_device::device_start()
 void microtouch_device::rcv_complete()
 {
 	receive_register_extract();
+	if (m_rx_buffer_ptr >= 16)
+		return;
 	m_rx_buffer[m_rx_buffer_ptr] = get_received_char();
 	m_rx_buffer_ptr++;
-	if (m_rx_buffer_ptr == 16)
-		return;
 
 	if (m_rx_buffer_ptr > 0 && m_rx_buffer[m_rx_buffer_ptr-1] == 0x0d)
 	{
