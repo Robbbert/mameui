@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 425 -->
+<!-- Number of items in this list = 437 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee6f0998aab2ec8">
 		<description>(ic)(demo)beemaze</description>
@@ -652,6 +652,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee6d9ead1f0503c">
+		<description>(ic)Echo Memory Game</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="559526">
+				<rom name="(ic)Echo Memory Game.wav" size="559526" crc="d17f27b9" sha1="6d9ead1f0503c4aa4b6933b1809a211ac7bbb148"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6cc6d586bf97e">
+		<description>(ic)Emu Joust</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2767136">
+				<rom name="(ic)Emu Joust.wav" size="2767136" crc="393a8f46" sha1="6cc6d586bf97e916ee54a63338b040376197d21c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee20a7307cc5975">
+		<description>(ic)Escape</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="6012020">
+				<rom name="(ic)Escape.wav" size="6012020" crc="4767f7e3" sha1="20a7307cc5975493daa7b8133e48803222e0d093"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beecce6ba50473a8">
+		<description>(ic)Eureka</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="871202">
+				<rom name="(ic)Eureka.wav" size="871202" crc="b5f532cb" sha1="cce6ba50473a821af22cb9e10cd176b500770907"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee2e3d6084b016f">
 		<description>(ic)Fill the Gap</description>
 		<year>????</year>
@@ -659,6 +699,66 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="5292248">
 				<rom name="(ic)Fill the Gap.wav" size="5292248" crc="5e3c6c7d" sha1="2e3d6084b016f7f7ff34088c6deb0dfd358ace33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed90a179115020">
+		<description>(ic)fish</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1130934">
+				<rom name="(ic)fish.wav" size="1130934" crc="b6188290" sha1="d90a179115020e077f1acb9697b3756e83cafd14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea22c46738b2ee">
+		<description>(ic)Five Ws</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="897074">
+				<rom name="(ic)Five Ws.wav" size="897074" crc="d6183ee6" sha1="a22c46738b2ee3292258354728ea135540c3f9de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee9794934a54ce6">
+		<description>(ic)flying_fox_fractions</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2869276">
+				<rom name="(ic)flying_fox_fractions.wav" size="2869276" crc="19208f92" sha1="9794934a54ce67a196d0a464e5179697f90e0fa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5284e4c2461f4">
+		<description>(ic)Four In A Row</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="949020">
+				<rom name="(ic)Four In A Row.wav" size="949020" crc="da5f3e52" sha1="5284e4c2461f4dd733472eb96225bc20fe085f2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee162985763fe17">
+		<description>(ic)Frog Hop</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2039890">
+				<rom name="(ic)Frog Hop.wav" size="2039890" crc="c68add9d" sha1="162985763fe17581a446656fa8ab1ba05bc9c101"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee93e771b9b08d5">
+		<description>(ic)Frogger</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2845156">
+				<rom name="(ic)Frogger.wav" size="2845156" crc="3d2f6d0c" sha1="93e771b9b08d5c2b0743cd971b6fac46f991f4ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -682,6 +782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee8aac2c2a994c8">
+		<description>(ic)Magic Forest</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2117910">
+				<rom name="(ic)Magic Forest.wav" size="2117910" crc="e5705347" sha1="8aac2c2a994c81efd2b0fba1477f45d36643dc0d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee317aad024126e">
 		<description>(ic)Microspace Invaders</description>
 		<year>????</year>
@@ -699,6 +809,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="403688">
 				<rom name="(ic)ubugLogo.wav" size="403688" crc="774ba6ff" sha1="d08d17c234c3909f19db348254070af55950e5e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beea238f18be180e">
+		<description>(ic)Welcome to Earth</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="767310">
+				<rom name="(ic)Welcome to Earth.wav" size="767310" crc="d0b7971e" sha1="a238f18be180e13af7ba4d6324c30e39c51a31c2"/>
 			</dataarea>
 		</part>
 	</software>
