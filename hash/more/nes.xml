@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10973 -->
+<!-- Number of items in this list = 10974 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -24159,6 +24159,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Digger Tom V Poiskah Drevnego Goroda (R)[!].nes" size="131088" crc="e97e2823" sha1="a9c8822df81eb31a6d914129ca11c424b5a3db6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes99761e6ccc7b4">
+		<description>Diggy Diggy Mole</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="98320">
+				<rom name="Diggy Diggy Mole.nes" size="98320" crc="aa4951b1" sha1="99761e6ccc7b47247d848d3815d801963898535f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -99392,6 +99402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes7d75f89263dcb">
+		<description>Tetris (Retro-Bit Go Retro! Portable) (v1.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Tetris (Retro-Bit Go Retro! Portable) (v1.0).nes" size="393232" crc="92591b5c" sha1="7d75f89263dcb6bde7f83dd9929f040702eb9538"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes34113a102ccff">
 		<description>Tetris (Tengen) (USA)</description>
 		<year>????</year>
@@ -99419,16 +99439,6 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="49168">
 				<rom name="Tetris (Unl) [T+Rus_Cool-Spot].nes" size="49168" crc="d8aeaea2" sha1="3ab45bcd50fa8683034369860e72fe0ecc32dfd9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes7d75f89263dcb">
-		<description>Tetris (Unl)(1985-2018)(Tetris Holding)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="393232">
-				<rom name="Tetris (Unl)(1985-2018)(Tetris Holding).nes" size="393232" crc="92591b5c" sha1="7d75f89263dcb6bde7f83dd9929f040702eb9538"/>
 			</dataarea>
 		</part>
 	</software>

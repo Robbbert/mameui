@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2100 -->
+<!-- Number of items in this list = 2101 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -19139,6 +19139,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Tetris (World) (Genesis Mini).md" size="524288" crc="c8dd8841" sha1="1079fee1fd044f16caf641d6b96f84143a6ceceb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen9cf89ebd8dafa">
+		<description>Tetris Redux</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Tetris Redux.md" size="262144" crc="b2d5bdb2" sha1="9cf89ebd8dafa79b2485ee8d9d993ef784497fe6"/>
 			</dataarea>
 		</part>
 	</software>

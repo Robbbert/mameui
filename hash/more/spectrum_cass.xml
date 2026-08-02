@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7947 -->
+<!-- Number of items in this list = 7946 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -55569,16 +55569,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49399">
 				<rom name="Skateball (1988)(Ubi Soft Ltd).tap" size="49399" crc="e816c833" sha1="ccf36349855a84ca236eaab5f1b0828638cf679b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxseb128b60e72d8">
-		<description>Skateball 48K (1988)(Ubi Soft)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49454">
-				<rom name="Skateball 48K (1988)(Ubi Soft).tzx" size="49454" crc="3d078071" sha1="eb128b60e72d85f7fa4365f2511396dc5285005a"/>
 			</dataarea>
 		</part>
 	</software>

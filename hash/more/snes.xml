@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4142 -->
+<!-- Number of items in this list = 4146 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -6552,6 +6552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsffcfc495958b2">
+		<description>Crash Bandicoot and the Retro Dimension 2 - The Crystal Hunt EN v1.04 (2026)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot and the Retro Dimension 2 - The Crystal Hunt EN v1.04 (2026)(Bandicoot).sfc" size="4194304" crc="e228b3b1" sha1="ffcfc495958b249aa0e7f8ef4737cae8cd6ae994"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns957e8978e28b1">
 		<description>Crash Bandicoot and the Retro Dimension Enhanced EN v1.23 (2025-26)(Bandicoot)</description>
 		<year>????</year>
@@ -6569,6 +6579,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Crash Bandicoot and the Retro Dimension Enhanced EN v1.23 (2026)(Bandicoot).sfc" size="4194304" crc="601eb065" sha1="36bcb563fede733d4f8d45fba043a67216cf59c7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns50c178383417a">
+		<description>Crash Bandicoot and the Retro Dimension Enhanced EN v1.24 (2025-26)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot and the Retro Dimension Enhanced EN v1.24 (2025-26)(Bandicoot).sfc" size="4194304" crc="3f65ee6c" sha1="50c178383417aab98bcc7d73506f86bc25be8a1a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6612,6 +6632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsebcba23f7f899">
+		<description>Crash Bandicoot e a Dimensao Retro 2 - A Busca pelos Cristais PT v1.04 (2026)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot e a Dimensao Retro 2 - A Busca pelos Cristais PT v1.04 (2026)(Bandicoot).sfc" size="4194304" crc="57d583d0" sha1="ebcba23f7f8990afd01ca14500dc5797a4e9f583"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsb1d08d10e440c">
 		<description>Crash Bandicoot e a Dimensao Retro Enhanced PT v1.23 (2026)(Bandicoot)</description>
 		<year>????</year>
@@ -6629,6 +6659,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Crash Bandicoot e a Dimensao Retro Versao Melhorada PT v1.23 (2025-26)(Bandicoot).sfc" size="4194304" crc="ccff27c5" sha1="a372fd5f166b60c7ca39797baa9c76949d61744d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns24e3c6d8fa537">
+		<description>Crash Bandicoot e a Dimensao Retro Versao Melhorada PT v1.24 (2025-26)(Bandicoot)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crash Bandicoot e a Dimensao Retro Versao Melhorada PT v1.24 (2025-26)(Bandicoot).sfc" size="4194304" crc="acb3773d" sha1="24e3c6d8fa5375a8036121aab1a996ae78345ca4"/>
 			</dataarea>
 		</part>
 	</software>
