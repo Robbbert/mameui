@@ -474,7 +474,7 @@ GFXDECODE_END
 void phoenix_state::phoenix_base(machine_config &config)
 {
 	// video hardware
-	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
+	screen_device &screen(SCREEN(config, "screen"));
 	screen.set_raw(PIXEL_CLOCK, HTOTAL, HBEND, HBSTART, VTOTAL, VBEND, VBSTART);
 	screen.set_screen_update(FUNC(phoenix_state::screen_update_phoenix));
 	screen.set_palette(m_palette);
@@ -572,7 +572,7 @@ void phoenix_state::survival(machine_config &config)
 	/* schematics fairly identical to phoenix, however the interesting
 	 * page is missing
 	 */
-	screen_device &screen(SCREEN(config, "screen", SCREEN_TYPE_RASTER));
+	screen_device &screen(SCREEN(config, "screen"));
 	screen.set_raw(PIXEL_CLOCK, HTOTAL, HBEND, HBSTART, VTOTAL, VBEND, VBSTART);
 	screen.set_screen_update(FUNC(phoenix_state::screen_update_phoenix));
 	screen.set_palette(m_palette);

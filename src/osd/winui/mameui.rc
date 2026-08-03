@@ -699,12 +699,12 @@ BEGIN
     LTEXT           "Static\nStatic\nStatic\nStatic\nStatic",IDC_PROP_SOUND,75,135,139,45
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,18,181,178,1
     LTEXT           "Screen:",IDC_STATIC,18,186,47,8
-    LTEXT           "Static\nStatic\nStatic",IDC_PROP_SCREEN,75,186,139,27
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,19,218,177,1
-    LTEXT           "Source:",IDC_STATIC,16,223,47,8
-    LTEXT           "Static",IDC_PROP_SOURCE,73,223,139,8
-    LTEXT           "Clone of:",IDC_PROP_CLONEOF_TEXT,16,233,50,8
-    LTEXT           "Static",IDC_PROP_CLONEOF,74,233,130,33
+    LTEXT           "Static\nStatic\nStatic",IDC_PROP_SCREEN,75,186,139,47
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,19,253,177,1
+    LTEXT           "Source:",IDC_STATIC,16,258,47,8
+    LTEXT           "Static",IDC_PROP_SOURCE,73,258,139,8
+    LTEXT           "Clone of:",IDC_PROP_CLONEOF_TEXT,16,268,50,8
+    LTEXT           "Static",IDC_PROP_CLONEOF,74,268,130,33
 END
 
 IDD_PROP_AUDIT DIALOG 0, 0, 220, 240
