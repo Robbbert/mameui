@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2101 -->
+<!-- Number of items in this list = 2106 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4409,6 +4409,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1055726">
 				<rom name="bcd-verifier.bin" size="1055726" crc="cf403c9c" sha1="936c4f99170e7b2d623ccf86a9bdf4c0e7c32725"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen20a230d1bd70d">
+		<description>Beach Volley Alpha (2020)(Z-Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Beach Volley Alpha (2020)(Z-Team).bin" size="786432" crc="06218ee7" sha1="20a230d1bd70d57954adba90a4ccf77ab6a91ec4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13242,6 +13252,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf1493d3810051">
+		<description>Pitfall 2600 Remastered v0.0.1 (2026)(SirVH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pitfall 2600 Remastered v0.0.1 (2026)(SirVH).bin" size="131072" crc="8d835c62" sha1="f1493d38100514f297c25233356161804ae2aecd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen93b54b71510d1">
+		<description>Pitfall 2600 v0.0.1 (2026)(SirVH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pitfall 2600 v0.0.1 (2026)(SirVH).bin" size="131072" crc="4bc9756e" sha1="93b54b71510d143b9a555da8d82ced601870bb91"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genee2f58ec2cfdc">
 		<description>PONG!RAM</description>
 		<year>????</year>
@@ -13579,6 +13609,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="Quackshot.bin" size="1310720" crc="1801098b" sha1="7b1bd16fb817cc5e2af238cebe8521aaca8f6195"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen76c63ced56e32">
+		<description>Queen’s Reversi v1.01 (2026)(NK-Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1703936">
+				<rom name="Queen’s Reversi v1.01 (2026)(NK-Soft).bin" size="1703936" crc="00c79e37" sha1="76c63ced56e32effd41319a5b9ec80cad126bc17"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13989,6 +14029,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Robocop 3 T-Spa (2017)(Wave).bin" size="524288" crc="eecbff56" sha1="33c4b8bb0816ed277a7b665bf6c83f7b625f8592"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend676274e45938">
+		<description>Robocop MD v0.1.0 demo.1 (2026)(Bocalini)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1179648">
+				<rom name="Robocop MD v0.1.0 demo.1 (2026)(Bocalini).bin" size="1179648" crc="373bc851" sha1="d676274e45938f35809af87cbf5202bf4a9e377d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19143,12 +19193,12 @@
 		</part>
 	</software>
 	<software name="gen9cf89ebd8dafa">
-		<description>Tetris Redux</description>
+		<description>Tetris Redux (2026)(BillyTime! Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
-				<rom name="Tetris Redux.md" size="262144" crc="b2d5bdb2" sha1="9cf89ebd8dafa79b2485ee8d9d993ef784497fe6"/>
+				<rom name="Tetris Redux (2026)(BillyTime! Games).bin" size="262144" crc="b2d5bdb2" sha1="9cf89ebd8dafa79b2485ee8d9d993ef784497fe6"/>
 			</dataarea>
 		</part>
 	</software>

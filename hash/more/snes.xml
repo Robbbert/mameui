@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4146 -->
+<!-- Number of items in this list = 4153 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -8092,6 +8092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns7c20d487b17ad">
+		<description>Dottie Dreads Nought T-Por (2022)(Kuroi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Dottie Dreads Nought T-Por (2022)(Kuroi).sfc" size="1048576" crc="46b81681" sha1="7c20d487b17ad1b907a26d805b0a71b05d673142"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7896b2eb89eb3">
 		<description>Dottie Flowers (2023)(Goldlocke)</description>
 		<year>????</year>
@@ -9522,6 +9532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns3ab9febe39724">
+		<description>Final Fantasy - Aventura mistica T-Por (2022)(ajkmetiuk)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Final Fantasy - Aventura mistica T-Por (2022)(ajkmetiuk).sfc" size="1048576" crc="e70be3a8" sha1="3ab9febe3972492bae1cc2da8e26fdc93d6a61f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns5a7c0efb71b89">
 		<description>Final Fantasy 2 (BR)</description>
 		<year>????</year>
@@ -9709,6 +9729,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Final Fantasy II T-Ita v0.99 (2005)(Brisma).sfc" size="1048576" crc="ff77c4a6" sha1="b53e968b6a13668489dc40414fc80c03c91680f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9e2aba184ef6f">
+		<description>Final Fantasy II T-Por (2002)(Hexagon)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Final Fantasy II T-Por (2002)(Hexagon).sfc" size="1049088" crc="2ff5c8ab" sha1="9e2aba184ef6fc9c716499a4aac69e0743b373f1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10189,6 +10219,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Final Fantasy V T-Eng v1.10 (1998)(RPGe).sfc" size="2621440" crc="17444605" sha1="8d5a83770c3d6f2b29b7825b5a17434616ec1c60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc84c8648413cf">
+		<description>Final Fantasy V T-Por v1.3 (1999)(Hyllian)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2621952">
+				<rom name="Final Fantasy V T-Por v1.3 (1999)(Hyllian).sfc" size="2621952" crc="8a25a84a" sha1="c84c8648413cffc6f21abe328291cde606b2855e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11399,6 +11439,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Flashback - The Quest for Identity T-Ita (2009)(Vivi 86).sfc" size="2097152" crc="8c703e71" sha1="35745a7e5d733ef3aa5c2b156f8085938d6a9485"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsd74fdbf2425ea">
+		<description>Flashback - The Quest for Identity T-Por (1999)(CBT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Flashback - The Quest for Identity T-Por (1999)(CBT).sfc" size="2097664" crc="86896281" sha1="d74fdbf2425ea248b3811faf5f756c0ae2ff92f2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16283,12 +16333,12 @@
 		</part>
 	</software>
 	<software name="snsa20c5260e9eed">
-		<description>Lost Vikings II</description>
+		<description>Lost Vikings II, The T-Por (2004)(TOM)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
-				<rom name="Lost Vikings II.sfc" size="1048576" crc="1c493864" sha1="a20c5260e9eed884b6f4381c9b8912de6454bcf3"/>
+				<rom name="Lost Vikings II, The T-Por (2004)(TOM).sfc" size="1048576" crc="1c493864" sha1="a20c5260e9eed884b6f4381c9b8912de6454bcf3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16309,6 +16359,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Lost Vikings, The - Ragnarok Edition (2025)(Ragnarok).sfc" size="2097152" crc="10adc197" sha1="b18c0c5f9c82b0a892c57980223f912277126ecd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snseb219ffa13fbb">
+		<description>Lost Vikings, The T-Por v1.1 (2004)(TOM)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1049088">
+				<rom name="Lost Vikings, The T-Por v1.1 (2004)(TOM).sfc" size="1049088" crc="5a2e0ba1" sha1="eb219ffa13fbbfc3961ff757237895b4375d8a0a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21359,6 +21419,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Ogre Battle - The March of the Black Queen T-Eng v1.2 (2018)(FinS).sfc" size="2097152" crc="7514efdf" sha1="c1bd9a25ec93e5f5127fbdc9706062f43f1a436d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4ed8931b1d9e8">
+		<description>Ogre Battle - The March of the Black Queen T-Por (2015)(Kamppello)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Ogre Battle - The March of the Black Queen T-Por (2015)(Kamppello).sfc" size="1572864" crc="d84594cd" sha1="4ed8931b1d9e858233a98bf181ed76084630919e"/>
 			</dataarea>
 		</part>
 	</software>
