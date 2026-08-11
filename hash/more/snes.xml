@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4153 -->
+<!-- Number of items in this list = 4161 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -8332,6 +8332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsbe6078cb56bac">
+		<description>Dragon Quest I &amp; II T-Por (2004)(Evil team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097664">
+				<rom name="Dragon Quest I &amp; II T-Por (2004)(Evil team).sfc" size="2097664" crc="c732f399" sha1="be6078cb56bacd4602dad1e435cfc88188d98d73"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc510e79203905">
 		<description>Dragon Quest I &amp; II T-Spa v1.2a (2023)(Rod Merida)</description>
 		<year>????</year>
@@ -10012,6 +10022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns95af2169d8b78">
+		<description>Final Fantasy III T-Por (2000)(Emuroms)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194816">
+				<rom name="Final Fantasy III T-Por (2000)(Emuroms).sfc" size="4194816" crc="5ffdec6e" sha1="95af2169d8b78fdac36f3a90687ee082ba8376cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse58339f844273">
 		<description>Final Fantasy III v1.0 (U) [Final Fantasy III AI script mover]</description>
 		<year>????</year>
@@ -11689,6 +11709,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Front Mission - Gun Hazard (CHT_Ver_1.01).smc" size="4194304" crc="be34fe7a" sha1="489a81c44853fbf0f425d297efbde563a5b24356"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8d28d90d69fc7">
+		<description>Front Mission - Gun Hazard PT-BR (2026)(Dindo, aGuGu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Front Mission - Gun Hazard PT-BR (2026)(Dindo, aGuGu).sfc" size="4194304" crc="26f73dd2" sha1="8d28d90d69fc7e6dfeec7616b4b4c6cede24af16"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14492,6 +14522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns711030eaf5168">
+		<description>kamaitachi_sfc_english_v1.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="kamaitachi_sfc_english_v1.0.sfc" size="3145728" crc="ba25366f" sha1="711030eaf5168109fbb1471b33af1e6ddf7d57bd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns81b50adcf2ba0">
 		<description>Kamek and the Shroobs (SMW1 hack)</description>
 		<year>????</year>
@@ -16479,6 +16519,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Lufia II - Rise of the Sinistrals (USA) [Text Hack v1.0 by Relnqshd] (Artea Name Fix).sfc" size="2621440" crc="94ec12ba" sha1="29712176fc1c0a363af3c1e7d01dfd1905c8e4e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns1fc82efd014e1">
+		<description>Lufia II - Rise of the Sinistrals PT-BR (2026)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lufia II - Rise of the Sinistrals PT-BR (2026)(Dindo).sfc" size="4194304" crc="401d9b8e" sha1="1fc82efd014e1b8f9a7c78f5f5910ad182ea21fc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20592,6 +20642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns798a673c9fcf7">
+		<description>Mysterious Dungeon 2 - Shiren the Wanderer T-Eng v1.03 (2006-2026)(Aeon Genesis, iggypoop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mysterious Dungeon 2 - Shiren the Wanderer T-Eng v1.03 (2006-2026)(Aeon Genesis, iggypoop).sfc" size="4194304" crc="f8806790" sha1="798a673c9fcf71a149a8d511abc47b3e46f68b83"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns59787793e47df">
 		<description>Mysterious Dungeon 2 - Shiren the Wanderer</description>
 		<year>????</year>
@@ -22519,6 +22579,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1049088">
 				<rom name="Prince of Persia (U) [T+Por_Portuguese-It].sfc" size="1049088" crc="8ac2c466" sha1="31f934d0edd6f71832a985aa2c933a3fa5c0e1b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns48bd82e304ca3">
+		<description>Prince of Persia 2 T-Por (2001)(Jumpman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Prince of Persia 2 T-Por (2001)(Jumpman).sfc" size="2097152" crc="3f4952f2" sha1="48bd82e304ca3b875204b5bda988fca1568ea46b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33419,6 +33489,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Super Famista 5 (Japan) (Rev 0A).sfc" size="2621440" crc="27aa431c" sha1="276991c3b74e92ff13352025520ad504e644b4aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse13a351e90dab">
+		<description>Super Fanger (2026)(Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Fanger (2026)(Mega Cat Studios).sfc" size="1048576" crc="892a308e" sha1="e13a351e90dab2380df47e3c0a47a3ab40a0fcb1"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10974 -->
+<!-- Number of items in this list = 10979 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -10979,6 +10979,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Billiard (Side Pocket)(R)[new!].nes" size="131088" crc="237acb87" sha1="31c18fc5a2ab640968732b43f531cd36d5868932"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes26a7c6b899591">
+		<description>Billionaire Banshee (2021)(PSC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Billionaire Banshee (2021)(PSC).nes" size="262160" crc="694c4860" sha1="26a7c6b8995916e09c0643ccdee4a59298cdb4f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28629,6 +28639,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Easy Adventures of Lolo (Lolo1 Hack).nes" size="65552" crc="a5e4f418" sha1="9b796d5a3c6e715edbf5b45a0af7f52654ced1b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes8fb9aed07478e">
+		<description>Echoes of the Unread (2024)(Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Echoes of the Unread (2024)(Mega Cat Studios).nes" size="131088" crc="6fea1bb3" sha1="8fb9aed07478efde38167a6a50e381cbe351da25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -50722,6 +50742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nescf46f70b1132e">
+		<description>Li'l Ashibe and the Great Nepalese Adventure T-Eng v1.0.1 (2026)(BlackPaladin)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Li'l Ashibe and the Great Nepalese Adventure T-Eng v1.0.1 (2026)(BlackPaladin).nes" size="262160" crc="87c8c9bf" sha1="cf46f70b1132e816c9618e1d117982a2398b7602"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes9b19d1f5b6f7a">
 		<description>Liang Shan Ying Xiong (NJ023) (Ch) [!]</description>
 		<year>????</year>
@@ -52002,16 +52032,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nesafac4a56c2cf5">
-		<description>M.C. Kids (U) (Proto) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="M.C. Kids (U) (Proto) (2).nes" size="262160" crc="84eeffed" sha1="afac4a56c2cf511e3cf983e16890adbf2f896bfd"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nesa5532fc581219">
 		<description>M.C. Kids (U) (Proto)</description>
 		<year>????</year>
@@ -52022,13 +52042,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes5d7d370be2063">
-		<description>M.C. Kids (USA) (2)</description>
+	<software name="nesafac4a56c2cf5">
+		<description>M.C. Kids (U) (Proto)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="M.C. Kids (USA) (2).nes" size="262160" crc="458dc2b0" sha1="5d7d370be20635be495c394f929a9ce37b10cd78"/>
+				<rom name="M.C. Kids (U) (Proto)_1.nes" size="262160" crc="84eeffed" sha1="afac4a56c2cf511e3cf983e16890adbf2f896bfd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52052,6 +52072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes5d7d370be2063">
+		<description>M.C. Kids (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="M.C. Kids (USA)_1.nes" size="262160" crc="458dc2b0" sha1="5d7d370be20635be495c394f929a9ce37b10cd78"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesbb97ee0582655">
 		<description>M.C. Mario (M.C. Kids hack) [p1]</description>
 		<year>????</year>
@@ -52062,16 +52092,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes049708fd915e8">
-		<description>M.U.L.E. (USA) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="131088">
-				<rom name="M.U.L.E. (USA) (2).nes" size="131088" crc="40372757" sha1="049708fd915e8647c77378cdf3a920904e15eba5"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes4b297bb82cd8d">
 		<description>M.U.L.E. (USA)</description>
 		<year>????</year>
@@ -52079,6 +52099,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="M.U.L.E. (USA).nes" size="131088" crc="dbf91186" sha1="4b297bb82cd8d7793459dc20536cc3457bd92011"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes049708fd915e8">
+		<description>M.U.L.E. (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="M.U.L.E. (USA)_1.nes" size="131088" crc="40372757" sha1="049708fd915e8647c77378cdf3a920904e15eba5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52132,26 +52162,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes4606b56ec955c">
-		<description>Mad City (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Mad City (Japan) (2).nes" size="262160" crc="05272cd0" sha1="4606b56ec955c0e9113300b2042702ed39635630"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes0efea3183f9f3">
-		<description>Mad City (Japan) (Beta) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Mad City (Japan) (Beta) (2).nes" size="262160" crc="25d8f079" sha1="0efea3183f9f3755bc0b42fe4b5dd1757895c109"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nesdf98519b02fd2">
 		<description>Mad City (Japan) (Beta)</description>
 		<year>????</year>
@@ -52159,6 +52169,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Mad City (Japan) (Beta).nes" size="262160" crc="65e97b88" sha1="df98519b02fd2002da693b8cdc409bfd3bc9c51d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes0efea3183f9f3">
+		<description>Mad City (Japan) (Beta)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Mad City (Japan) (Beta)_1.nes" size="262160" crc="25d8f079" sha1="0efea3183f9f3755bc0b42fe4b5dd1757895c109"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52182,6 +52202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes4606b56ec955c">
+		<description>Mad City (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Mad City (Japan)_1.nes" size="262160" crc="05272cd0" sha1="4606b56ec955c0e9113300b2042702ed39635630"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesff5599da2d8e0">
 		<description>Mad City (T-Chi, v2)</description>
 		<year>????</year>
@@ -52202,16 +52232,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes24fb27bbe3b41">
-		<description>Mad Max (USA) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Mad Max (USA) (2).nes" size="262160" crc="f70870ae" sha1="24fb27bbe3b41c2ff1300cd3d7afbb5ac5539957"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nesd7bc3dc0f95c9">
 		<description>Mad Max (USA)</description>
 		<year>????</year>
@@ -52219,6 +52239,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Mad Max (USA).nes" size="262160" crc="28fd4957" sha1="d7bc3dc0f95c9294c9d98bed070e942fe4246f2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes24fb27bbe3b41">
+		<description>Mad Max (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Mad Max (USA)_1.nes" size="262160" crc="f70870ae" sha1="24fb27bbe3b41c2ff1300cd3d7afbb5ac5539957"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52272,16 +52302,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes017ec035ddacd">
-		<description>Mafat Conspiracy, The (USA) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Mafat Conspiracy, The (USA) (2).nes" size="262160" crc="7f620dbd" sha1="017ec035ddacdda008b46a441d771fc6e95e2a44"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes5a8f0a99dc1da">
 		<description>Mafat Conspiracy, The (USA)</description>
 		<year>????</year>
@@ -52289,6 +52309,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Mafat Conspiracy, The (USA).nes" size="262160" crc="a0973444" sha1="5a8f0a99dc1dab26909bd08b949d849c108c25e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes017ec035ddacd">
+		<description>Mafat Conspiracy, The (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Mafat Conspiracy, The (USA)_1.nes" size="262160" crc="7f620dbd" sha1="017ec035ddacdda008b46a441d771fc6e95e2a44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52332,16 +52362,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes61dd058a0d804">
-		<description>Magic Candle, The (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="393232">
-				<rom name="Magic Candle, The (Japan) (2).nes" size="393232" crc="a1f35d47" sha1="61dd058a0d804681e04ea8fff151e4e951f60539"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes25d4084bc527d">
 		<description>Magic Candle, The (Japan)</description>
 		<year>????</year>
@@ -52349,6 +52369,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Magic Candle, The (Japan).nes" size="393232" crc="41a4e69f" sha1="25d4084bc527dbe94294cd555a57b7bc6392d18c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes61dd058a0d804">
+		<description>Magic Candle, The (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Magic Candle, The (Japan)_1.nes" size="393232" crc="a1f35d47" sha1="61dd058a0d804681e04ea8fff151e4e951f60539"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52402,16 +52432,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nesf22c66b299cc9">
-		<description>Magic Darts (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Magic Darts (Japan) (2).nes" size="262160" crc="52672b7b" sha1="f22c66b299cc9a676f7d9dfd15c6931dacc88088"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes77935c6f277dd">
 		<description>Magic Darts (Japan)</description>
 		<year>????</year>
@@ -52422,13 +52442,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes197ebc615ef30">
-		<description>Magic Darts (USA) (2)</description>
+	<software name="nesf22c66b299cc9">
+		<description>Magic Darts (Japan)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Magic Darts (USA) (2).nes" size="262160" crc="ecfeffd0" sha1="197ebc615ef30e6972699667042f72d7f6f99db1"/>
+				<rom name="Magic Darts (Japan)_1.nes" size="262160" crc="52672b7b" sha1="f22c66b299cc9a676f7d9dfd15c6931dacc88088"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52439,6 +52459,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Magic Darts (USA).nes" size="262160" crc="330bc629" sha1="11a75f5cd785ec8643200a705d91508295b06368"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes197ebc615ef30">
+		<description>Magic Darts (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Magic Darts (USA)_1.nes" size="262160" crc="ecfeffd0" sha1="197ebc615ef30e6972699667042f72d7f6f99db1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52472,16 +52502,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes1020c54d22515">
-		<description>Magic John (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Magic John (Japan) (2).nes" size="262160" crc="784cb17f" sha1="1020c54d225153ebe9144104d73fefade65c4a40"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes9a912e39eea70">
 		<description>Magic John (Japan)</description>
 		<year>????</year>
@@ -52489,6 +52509,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Magic John (Japan).nes" size="262160" crc="a7b98886" sha1="9a912e39eea7089ebe4a8cadcd645bf5fdf36343"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes1020c54d22515">
+		<description>Magic John (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Magic John (Japan)_1.nes" size="262160" crc="784cb17f" sha1="1020c54d225153ebe9144104d73fefade65c4a40"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52512,16 +52542,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes3dc59555fdbf5">
-		<description>Magic Johnson's Fast Break (USA) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="196624">
-				<rom name="Magic Johnson's Fast Break (USA) (2).nes" size="196624" crc="1e86d1bf" sha1="3dc59555fdbf536656dfce5310cb868db7c4791f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes8aacb58a54986">
 		<description>Magic Johnson's Fast Break (USA)</description>
 		<year>????</year>
@@ -52529,6 +52549,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="196624">
 				<rom name="Magic Johnson's Fast Break (USA).nes" size="196624" crc="4d42a98c" sha1="8aacb58a54986df80d93c8263ae88d5ee13771f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3dc59555fdbf5">
+		<description>Magic Johnson's Fast Break (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="196624">
+				<rom name="Magic Johnson's Fast Break (USA)_1.nes" size="196624" crc="1e86d1bf" sha1="3dc59555fdbf536656dfce5310cb868db7c4791f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52552,16 +52582,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes6a03340c4ff21">
-		<description>Magic of Scheherazade, The (USA) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Magic of Scheherazade, The (USA) (2).nes" size="262160" crc="205f69a4" sha1="6a03340c4ff21900fd902a2096c8d9b2b2d659bf"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nesb7360934fe87c">
 		<description>Magic of Scheherazade, The (USA)</description>
 		<year>????</year>
@@ -52572,13 +52592,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nesf46c65c21104c">
-		<description>Magical Kid's Doropie (Japan) (2)</description>
+	<software name="nes6a03340c4ff21">
+		<description>Magic of Scheherazade, The (USA)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Magical Kid's Doropie (Japan) (2).nes" size="262160" crc="5455ffc9" sha1="f46c65c21104cd25fa04ad28e18cc24c9c4a356e"/>
+				<rom name="Magic of Scheherazade, The (USA)_1.nes" size="262160" crc="205f69a4" sha1="6a03340c4ff21900fd902a2096c8d9b2b2d659bf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52599,6 +52619,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Magical Kid's Doropie (Japan).nes" size="262160" crc="25d6096f" sha1="04816d25ff177f19e2a2791116f3aab8e3e03284"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesf46c65c21104c">
+		<description>Magical Kid's Doropie (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Magical Kid's Doropie (Japan)_1.nes" size="262160" crc="5455ffc9" sha1="f46c65c21104cd25fa04ad28e18cc24c9c4a356e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52662,16 +52692,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes7be4d2e25dd96">
-		<description>Magical Taruruuto-kun 2 - Mahou Daibouken (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Magical Taruruuto-kun 2 - Mahou Daibouken (Japan) (2).nes" size="262160" crc="441a0605" sha1="7be4d2e25dd96511ce0a739a3590d7e7a79d257d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes05b1257d48e0c">
 		<description>Magical Taruruuto-kun 2 - Mahou Daibouken (Japan)</description>
 		<year>????</year>
@@ -52682,13 +52702,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes5522cc98f89bc">
-		<description>Magician (USA) (2)</description>
+	<software name="nes7be4d2e25dd96">
+		<description>Magical Taruruuto-kun 2 - Mahou Daibouken (Japan)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Magician (USA) (2).nes" size="262160" crc="a433050d" sha1="5522cc98f89bc06500e9e4ca006aae73cf7db52f"/>
+				<rom name="Magical Taruruuto-kun 2 - Mahou Daibouken (Japan)_1.nes" size="262160" crc="441a0605" sha1="7be4d2e25dd96511ce0a739a3590d7e7a79d257d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52762,6 +52782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes5522cc98f89bc">
+		<description>Magician (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Magician (USA)_1.nes" size="262160" crc="a433050d" sha1="5522cc98f89bc06500e9e4ca006aae73cf7db52f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes603091de99831">
 		<description>MAGICIAN</description>
 		<year>????</year>
@@ -52832,16 +52862,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes5ae2e0dfbf56d">
-		<description>Maharaja (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Maharaja (Japan) (2).nes" size="262160" crc="d8dffe7f" sha1="5ae2e0dfbf56d6c39e17e7b95c5d4202edd9ad84"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes00b4b2b76856a">
 		<description>Maharaja (Japan)</description>
 		<year>????</year>
@@ -52849,6 +52869,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Maharaja (Japan).nes" size="262160" crc="b9083fde" sha1="00b4b2b76856a62772cc5d502a5594004cc406fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes5ae2e0dfbf56d">
+		<description>Maharaja (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Maharaja (Japan)_1.nes" size="262160" crc="d8dffe7f" sha1="5ae2e0dfbf56d6c39e17e7b95c5d4202edd9ad84"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52862,16 +52892,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nesfb14376e85181">
-		<description>Mahjan Samit Kabukicho Hen (Asia) (Unl) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="131088">
-				<rom name="Mahjan Samit Kabukicho Hen (Asia) (Unl) (2).nes" size="131088" crc="1739f425" sha1="fb14376e85181fe3540c5adcf26e82c8f1a168b8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes08a712a57ffc3">
 		<description>Mahjan Samit Kabukicho Hen (Asia) (Unl)</description>
 		<year>????</year>
@@ -52879,6 +52899,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Mahjan Samit Kabukicho Hen (Asia) (Unl).nes" size="131088" crc="7929ee90" sha1="08a712a57ffc3355fc26de8b0a9137ffd6054453"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesfb14376e85181">
+		<description>Mahjan Samit Kabukicho Hen (Asia) (Unl)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Mahjan Samit Kabukicho Hen (Asia) (Unl)_1.nes" size="131088" crc="1739f425" sha1="fb14376e85181fe3540c5adcf26e82c8f1a168b8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52929,6 +52959,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Mahjang Companion (Asia) (Ja) (Sachen) (Unl).nes" size="131088" crc="c2b211cb" sha1="0ae3808e084668fd22cf34cf5545369b11adb071"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes21cb8d58ccc30">
+		<description>Mahjaventure - Warring Tiles T-Eng (2026)(SnowyAria)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Mahjaventure - Warring Tiles T-Eng (2026)(SnowyAria).nes" size="262160" crc="df135675" sha1="21cb8d58ccc3062fd3e339d29c615c5d7a16b3b1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53062,16 +53102,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes6865b74fe2da5">
-		<description>Mahjong Taikai (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="131088">
-				<rom name="Mahjong Taikai (Japan) (2).nes" size="131088" crc="3e5df438" sha1="6865b74fe2da53c6ecf1aee334a09a5d7062b268"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes98806fbd302c5">
 		<description>Mahjong Taikai (Japan)</description>
 		<year>????</year>
@@ -53082,13 +53112,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nesc2aefa1bfbeaa">
-		<description>Mahjong Taisen (Japan) (2)</description>
+	<software name="nes6865b74fe2da5">
+		<description>Mahjong Taikai (Japan)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="393232">
-				<rom name="Mahjong Taisen (Japan) (2).nes" size="393232" crc="b1f57ed4" sha1="c2aefa1bfbeaaec49369426d3e9f2ea29514d84a"/>
+			<dataarea name="rom" size="131088">
+				<rom name="Mahjong Taikai (Japan)_1.nes" size="131088" crc="3e5df438" sha1="6865b74fe2da53c6ecf1aee334a09a5d7062b268"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53099,6 +53129,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Mahjong Taisen (Japan).nes" size="393232" crc="51a2c50c" sha1="a6da2ef1288d28b5183e342cc5991cc10a80ebcf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc2aefa1bfbeaa">
+		<description>Mahjong Taisen (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Mahjong Taisen (Japan)_1.nes" size="393232" crc="b1f57ed4" sha1="c2aefa1bfbeaaec49369426d3e9f2ea29514d84a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53202,26 +53242,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes2ff530b77a517">
-		<description>Mahou no Princess Minky Momo - Remember Dream (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Mahou no Princess Minky Momo - Remember Dream (Japan) (2).nes" size="262160" crc="311f4630" sha1="2ff530b77a5177cb94f95649974c9e5a7d5477cb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes3e2c584210a58">
-		<description>Mahou no Princess Minky Momo - Remember Dream (Japan) (3)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Mahou no Princess Minky Momo - Remember Dream (Japan) (3).nes" size="262160" crc="d1b65a3e" sha1="3e2c584210a5859c3d94163d47210fc880ea3bb8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nesf04c2cb30adf9">
 		<description>Mahou no Princess Minky Momo - Remember Dream (Japan)</description>
 		<year>????</year>
@@ -53229,6 +53249,26 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Mahou no Princess Minky Momo - Remember Dream (Japan).nes" size="262160" crc="409cb096" sha1="f04c2cb30adf93ce04df63f88143e0c19fea77ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2ff530b77a517">
+		<description>Mahou no Princess Minky Momo - Remember Dream (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Mahou no Princess Minky Momo - Remember Dream (Japan)_1.nes" size="262160" crc="311f4630" sha1="2ff530b77a5177cb94f95649974c9e5a7d5477cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes3e2c584210a58">
+		<description>Mahou no Princess Minky Momo - Remember Dream (Japan)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Mahou no Princess Minky Momo - Remember Dream (Japan)_2.nes" size="262160" crc="d1b65a3e" sha1="3e2c584210a5859c3d94163d47210fc880ea3bb8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53252,16 +53292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes034cad5962bc2">
-		<description>Maison Ikkoku (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Maison Ikkoku (Japan) (2).nes" size="262160" crc="966495ae" sha1="034cad5962bc2100460072268b7b607439784979"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="neseb83fb361c80e">
 		<description>Maison Ikkoku (Japan)</description>
 		<year>????</year>
@@ -53272,33 +53302,33 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes000bca633c521">
-		<description>Majaventure - Mahjong Senki (Japan) (2)</description>
+	<software name="nes034cad5962bc2">
+		<description>Maison Ikkoku (Japan)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Majaventure - Mahjong Senki (Japan) (2).nes" size="262160" crc="a94be1e2" sha1="000bca633c521324b93efc962473f58c9f617992"/>
+				<rom name="Maison Ikkoku (Japan)_1.nes" size="262160" crc="966495ae" sha1="034cad5962bc2100460072268b7b607439784979"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="nes1a6a3f17dd76c">
+		<description>Majaventure - Mahjong Senki (Japan)(1990)(Tokuma Shoten)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Majaventure - Mahjong Senki (Japan)(1990)(Tokuma Shoten).nes" size="262160" crc="e882e048" sha1="1a6a3f17dd76c78c48aec2916e448d0a56180c3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes000bca633c521">
 		<description>Majaventure - Mahjong Senki (Japan)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Majaventure - Mahjong Senki (Japan).nes" size="262160" crc="e882e048" sha1="1a6a3f17dd76c78c48aec2916e448d0a56180c3a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes446862c7b25b7">
-		<description>Major League (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Major League (Japan) (2).nes" size="262160" crc="11309674" sha1="446862c7b25b7c99b89ba307412ed1251f952742"/>
+				<rom name="Majaventure - Mahjong Senki (Japan).nes" size="262160" crc="a94be1e2" sha1="000bca633c521324b93efc962473f58c9f617992"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53312,13 +53342,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes688715e2060c1">
-		<description>Major League Baseball (USA) (2)</description>
+	<software name="nes446862c7b25b7">
+		<description>Major League (Japan)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="65552">
-				<rom name="Major League Baseball (USA) (2).nes" size="65552" crc="1802e87a" sha1="688715e2060c13ed64e21393ef0fb9067fd21a01"/>
+			<dataarea name="rom" size="262160">
+				<rom name="Major League (Japan)_1.nes" size="262160" crc="11309674" sha1="446862c7b25b7c99b89ba307412ed1251f952742"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53352,6 +53382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes688715e2060c1">
+		<description>Major League Baseball (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Major League Baseball (USA)_1.nes" size="65552" crc="1802e87a" sha1="688715e2060c13ed64e21393ef0fb9067fd21a01"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesdea62a7430b30">
 		<description>Majou Densetsu 2 - Daimashikyou Galious (J) [T+Eng_Manipulate]</description>
 		<year>????</year>
@@ -53362,16 +53402,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes909a567d76202">
-		<description>Majou Densetsu II - Daimashikyou Galious (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="131088">
-				<rom name="Majou Densetsu II - Daimashikyou Galious (Japan) (2).nes" size="131088" crc="05579d3a" sha1="909a567d76202b132fb1687d5ebcc8285155b1d1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nese05cc4c6f2870">
 		<description>Majou Densetsu II - Daimashikyou Galious (Japan)</description>
 		<year>????</year>
@@ -53379,6 +53409,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Majou Densetsu II - Daimashikyou Galious (Japan).nes" size="131088" crc="763f2d28" sha1="e05cc4c6f28700472651464ecf7859bcbeb2d054"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes909a567d76202">
+		<description>Majou Densetsu II - Daimashikyou Galious (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Majou Densetsu II - Daimashikyou Galious (Japan)_1.nes" size="131088" crc="05579d3a" sha1="909a567d76202b132fb1687d5ebcc8285155b1d1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53462,16 +53502,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes22c99336ab8b9">
-		<description>Makaimura (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="131088">
-				<rom name="Makaimura (Japan) (2).nes" size="131088" crc="8c3fe6fb" sha1="22c99336ab8b9d3c1fa57e981766bc38cdb8fd6e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes4bfa0ca6d4458">
 		<description>Makaimura (Japan)</description>
 		<year>????</year>
@@ -53479,6 +53509,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Makaimura (Japan).nes" size="131088" crc="cea68e9d" sha1="4bfa0ca6d4458e0a5e9573063d969c8589c968e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes22c99336ab8b9">
+		<description>Makaimura (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Makaimura (Japan)_1.nes" size="131088" crc="8c3fe6fb" sha1="22c99336ab8b9d3c1fa57e981766bc38cdb8fd6e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -76109,6 +76149,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Reigen Doushi (Japan).nes" size="262160" crc="51c8aa05" sha1="b00813ed6a0b4602b1384d6f7418052dc496dead"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesa1913864ae1a5">
+		<description>Reknum - Souls Adventure (Alt)(2021)(NAPE Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Reknum - Souls Adventure (Alt)(2021)(NAPE Games).nes" size="524304" crc="28b07f84" sha1="a1913864ae1a56790486f20380727b269880778a"/>
 			</dataarea>
 		</part>
 	</software>

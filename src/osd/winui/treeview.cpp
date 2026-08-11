@@ -1335,7 +1335,7 @@ void CreateFPSFolders(int parent_index)
 			{
 				for (screen_device &screen : screen_device_enumerator(config.root_device()))
 				{
-					sprintf(Screen,"%f Hz", ATTOSECONDS_TO_HZ(screen.refresh_attoseconds()));
+					sprintf(Screen,"%f Hz", screen.frame_period().as_hz());
 
 					// look for an existant screen treefolder for this game
 					// (likely to be the previous one, so start at the end)

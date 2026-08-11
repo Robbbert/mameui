@@ -352,7 +352,9 @@ void macbug_state::macbug(machine_config &config)
 	m_crtc->input_callback().set(FUNC(macbug_state::videoram_r));
 	// not using any graphic modes
 
-	SCREEN(config, "screen");
+	screen_device &screen(SCREEN(config, "screen"));
+	screen.set_raw(XTAL(3'579'545), 380, 0, 372, 312, 0, 243);  // guess
+	screen.set_screen_update(m_crtc, FUNC(mc6847_base_device::screen_update));
 
 	// sound hardware
 	SPEAKER(config, "mono").front_center();

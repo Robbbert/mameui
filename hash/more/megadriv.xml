@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2106 -->
+<!-- Number of items in this list = 2116 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6902,6 +6902,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genea24705ac52ef">
+		<description>Fliki's Escape (ES)(2026)(Retroplaying BCN)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Fliki's Escape (ES)(2026)(Retroplaying BCN).bin" size="786432" crc="b3116d82" sha1="ea24705ac52efc5004e2c9e9a71aa8987adcda02"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf886e9ff443dd">
 		<description>flintstones (Hack, Spanish)</description>
 		<year>????</year>
@@ -7099,6 +7109,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Galaxian (Rev 1)(2023)(My Arcade).bin" size="65536" crc="1608a3a9" sha1="71cdfbe77f4727da74f64625339df49d62ac4f13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8114be8ee57a4">
+		<description>Galaxian 20260803-1314 (2026)(Nameless Algorithm)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="151468">
+				<rom name="Galaxian 20260803-1314 (2026)(Nameless Algorithm).bin" size="151468" crc="1214a3ca" sha1="8114be8ee57a4cd19ab7e0377169ca9bb4d243cc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9459,6 +9479,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2883584">
 				<rom name="IK+ deluxe (2019)(Z-Team).bin" size="2883584" crc="bf949018" sha1="bed1af087c146f627869b2b0ff1989c6a40a872e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen500814176a4de">
+		<description>Imminence (2026)(Augmented Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Imminence (2026)(Augmented Studios).bin" size="4063232" crc="ecc52285" sha1="500814176a4de083e0879f78921baa6f8e7b5b7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen21fbaa53e9b08">
+		<description>imminence</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="imminence.bin" size="4063232" crc="fbd45c81" sha1="21fbaa53e9b081c64e948de1300599c91b288ea6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12172,6 +12212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen9aea6e52747a6">
+		<description>Mortal Kombat Arcade Edition Enhanced v2.7 (2026)(Rael G.C.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat Arcade Edition Enhanced v2.7 (2026)(Rael G.C.).bin" size="4194304" crc="b9fa989e" sha1="9aea6e52747a6369eb8c63902089fefec0f9a6cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genfb7d47faafc23">
 		<description>Mortal Kombat Arcade Edition v1.0d (2026)(Master Linkuei)</description>
 		<year>????</year>
@@ -13222,6 +13272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen9bc34b27f9d4f">
+		<description>Phantom Gear v0.94 Demo (2026)(Bits Rule Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2380236">
+				<rom name="Phantom Gear v0.94 Demo (2026)(Bits Rule Games).bin" size="2380236" crc="3a771364" sha1="9bc34b27f9d4f790b55e42e691fbe64fd462c773"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genbfc47a561f385">
 		<description>phelios (Hack, Spanish)</description>
 		<year>????</year>
@@ -13742,6 +13802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen55cd91de70efe">
+		<description>Rescue Dog v0.2 (2026)(Nameless Algorithm)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="12896">
+				<rom name="Rescue Dog v0.2 (2026)(Nameless Algorithm).bin" size="12896" crc="6d7e3327" sha1="55cd91de70efeea4863f8f2d704df9bb42276d0d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genbc90aef530a15">
 		<description>Retro Games Hunters (World) (v0.17b) (Demo) (Aftermarket) (Unl)</description>
 		<year>????</year>
@@ -13749,6 +13819,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2228224">
 				<rom name="Retro Games Hunters (World) (v0.17b) (Demo) (Aftermarket) (Unl).md" size="2228224" crc="73cc29c9" sha1="bc90aef530a15ece8b776067e4c5b62521a1ae8e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genfd7421aebc0a5">
+		<description>Retro Games Hunters v0.90 Demo (2026)(Sevilha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3670016">
+				<rom name="Retro Games Hunters v0.90 Demo (2026)(Sevilha).bin" size="3670016" crc="3b150b0d" sha1="fd7421aebc0a5d959406b2b7b10798dedc5af45f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18752,6 +18832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen5774b0f305d2e">
+		<description>Surging Aura T-Eng,Kor v0.90 (2026)(retrogamelog)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Surging Aura T-Eng,Kor v0.90 (2026)(retrogamelog).bin" size="4194304" crc="78b4ac90" sha1="5774b0f305d2e5df22d8c70054f09971b32e4c4c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gend1e45ac78846c">
 		<description>Swamp Thing (USA) (Proto)</description>
 		<year>????</year>
@@ -20119,6 +20209,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="vapor trail (hack, spanish).bin" size="1048576" crc="8cb8c8fd" sha1="45c38f58a4e7a6e4985611290307d5189187a359"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf028af08f4143">
+		<description>VARG Summer '26 Demo (2026)(Schwefelholger)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="VARG Summer '26 Demo (2026)(Schwefelholger).bin" size="524288" crc="4bca0133" sha1="f028af08f4143c6db96e8bb153f342d752b11221"/>
 			</dataarea>
 		</part>
 	</software>
