@@ -692,14 +692,16 @@ static char *GameInfoSound(int nIndex)
 	sound_interface_enumerator sounditer(config.root_device());
 	std::unordered_set<std::string> soundtags;
 	static char buffer[1024];
+	bool has_sound = false;
 
 	memset(&buffer, 0, sizeof(buffer));
 
 	for (device_sound_interface &sound : sounditer)
 	{
 		if (!soundtags.insert(sound.device().tag()).second)
-				continue;
+			continue;
 
+		has_sound = true;
 		char temp[300];
 		int count = 1;
 		int clock = sound.device().clock();
@@ -732,6 +734,8 @@ static char *GameInfoSound(int nIndex)
 
 		strcat(buffer, "\r\n");
 	}
+	if (!has_sound)
+		strcat(buffer, "No Sound");
 
 	return buffer;
 }
