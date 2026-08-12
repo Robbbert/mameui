@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 264 -->
+<!-- Number of items in this list = 309 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -422,6 +422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaa1841441a43cf">
+		<description>Alice Sisters (2024)(OrionSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Alice Sisters (2024)(OrionSoft).gba" size="16777216" crc="1ebddded" sha1="a1841441a43cfc233c54c23b37fc6c60407da795"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbad99db02c1ed57">
 		<description>Anarchaeologist (2022-09-12)(ControlledChaos)</description>
 		<year>????</year>
@@ -552,6 +562,126 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba741eb2874c526">
+		<description>Classic NES Series - Bomberman (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Bomberman (U, E)(2004)(Nintendo).gba" size="1048576" crc="c9ebc17d" sha1="741eb2874c526cc014bf3e642b4ee37f18312735"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba47a60315ed407">
+		<description>Classic NES Series - Castlevania (U)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Castlevania (U)(2004)(Nintendo).gba" size="1048576" crc="23e4082c" sha1="47a60315ed4074a8c986723b95b3c90513d3b35c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8e3b203630f10">
+		<description>Classic NES Series - Donkey Kong (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Donkey Kong (U, E)(2004)(Nintendo).gba" size="1048576" crc="f53d8b56" sha1="8e3b203630f10c32aa7896afe9b7fbed7e1c8d30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbafc396f0eae55c">
+		<description>Classic NES Series - Dr. Mario (U)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Dr. Mario (U)(2004)(Nintendo).gba" size="1048576" crc="934e1f1d" sha1="fc396f0eae55cf19e573aa322f525427e03d3854"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaab7f8ac5d6588">
+		<description>Classic NES Series - Excitebike (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Excitebike (U, E)(2004)(Nintendo).gba" size="1048576" crc="67d9a2a6" sha1="ab7f8ac5d6588c13f143e13d66c513c822ba4771"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba64e965d61b2d1">
+		<description>Classic NES Series - Ice Climber (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Ice Climber (U, E)(2004)(Nintendo).gba" size="1048576" crc="b265538d" sha1="64e965d61b2d1be5dfadb0236fed83fea5995724"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba838da11f879e2">
+		<description>Classic NES Series - Metroid (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Metroid (U, E)(2004)(Nintendo).gba" size="1048576" crc="9a243b9b" sha1="838da11f879e2fa3ffdef95e1c6d5a54246c1846"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba843d853ed28a1">
+		<description>Classic NES Series - Pac-Man (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Pac-Man (U, E)(2004)(Nintendo).gba" size="1048576" crc="c28df82f" sha1="843d853ed28a116c85a5357f9a94e9179f36a6d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8ca35864ae33c">
+		<description>Classic NES Series - Super Mario Bros. (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Super Mario Bros. (U, E)(2004)(Nintendo).gba" size="1048576" crc="f7129225" sha1="8ca35864ae33c9462dd66ceff1fac5a79e2e0a6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba28aac26365bf4">
+		<description>Classic NES Series - The Legend of Zelda (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - The Legend of Zelda (U, E)(2004)(Nintendo).gba" size="1048576" crc="6d49cabf" sha1="28aac26365bf41ba84e67f97e98d15c4678cb99d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab208858280848">
+		<description>Classic NES Series - Xevious (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Xevious (U, E)(2004)(Nintendo).gba" size="1048576" crc="9cd2d5dd" sha1="b2088582808480e0d70c63a777b046409d4e15c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba22ea42ad9a99a">
+		<description>Classic NES Series - Zelda II - The Adventure of Link (U, E)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Classic NES Series - Zelda II - The Adventure of Link (U, E)(2004)(Nintendo).gba" size="1048576" crc="0b6ca48a" sha1="22ea42ad9a99a6bc0fcba8721cf8f484f68c3bf7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba5ebd9697ec104">
 		<description>Cleangame Advance 0.1</description>
 		<year>????</year>
@@ -609,6 +739,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="11800016">
 				<rom name="DoAGBA.gba" size="11800016" crc="b13962d0" sha1="e6ba49e4528c4b2357db06c861551815bad0f907"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba086faa75d812d">
+		<description>Don't Die Mr. Robot Advance (2026)(Infinite State Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Don't Die Mr. Robot Advance (2026)(Infinite State Games).gba" size="4194304" crc="780f5f3e" sha1="086faa75d812da355434cc7040796a5615ebd8f0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -732,6 +872,266 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba8fa03b1e23e7d">
+		<description>Famicom Mini - Dai-2-ji Super Robot Taisen (J, Promo)(2004)(Banpresto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini - Dai-2-ji Super Robot Taisen (J, Promo)(2004)(Banpresto).gba" size="1048576" crc="3ebb082a" sha1="8fa03b1e23e7dea0dbc841d23046d03d246a1cdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab4c1a3582f596">
+		<description>Famicom Mini - Kidou Senshi Z Gundam - Hot Scramble (J, Promo)(2004)(Bandai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini - Kidou Senshi Z Gundam - Hot Scramble (J, Promo)(2004)(Bandai).gba" size="1048576" crc="07a73d0a" sha1="b4c1a3582f596d3912a1a7ea2d1eb6681b769448"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaf08b1f60e41fc">
+		<description>Famicom Mini Vol.01 - Super Mario Bros. (J, Rev 1)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.01 - Super Mario Bros. (J, Rev 1)(2004)(Nintendo).gba" size="1048576" crc="cd2604dd" sha1="f08b1f60e41fc2080c50c65ea2b2af912661ed99"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab5afc36a8203c">
+		<description>Famicom Mini Vol.02 - Donkey Kong (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.02 - Donkey Kong (J)(2004)(Nintendo).gba" size="1048576" crc="071c3f2b" sha1="b5afc36a8203c2c485344819d069300ecafd9657"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbac64a586144dd3">
+		<description>Famicom Mini Vol.03 - Ice Climber (Japan)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.03 - Ice Climber (Japan)(2004)(Nintendo).gba" size="1048576" crc="d0aef472" sha1="c64a586144dd33d4e30d02801519cbf0b93a0f09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaad9a633c793fd">
+		<description>Famicom Mini Vol.04 - Excitebike (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.04 - Excitebike (J)(2004)(Nintendo).gba" size="1048576" crc="32604c95" sha1="ad9a633c793fda6a0ec71ab7dfcd0d89b7440afc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8e398563478b0">
+		<description>Famicom Mini Vol.05 - Zelda no Densetsu 1 - The Hyrule Fantasy (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.05 - Zelda no Densetsu 1 - The Hyrule Fantasy (J)(2004)(Nintendo).gba" size="1048576" crc="712d76e8" sha1="8e398563478b079f5e6f34366c5d3fa5dfb5c594"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9316699ed1943">
+		<description>Famicom Mini Vol.06 - Pac-Man (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.06 - Pac-Man (J)(2004)(Nintendo).gba" size="1048576" crc="91acf642" sha1="9316699ed1943cee6ee5cd5f0b40f76b3fcef159"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba718e25b35b603">
+		<description>Famicom Mini Vol.07 - Xevious (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.07 - Xevious (J)(2004)(Nintendo).gba" size="1048576" crc="f54eeb0e" sha1="718e25b35b60341442c5098e03071a63cd332a97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba72ae0ef34e402">
+		<description>Famicom Mini Vol.08 - Mappy (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.08 - Mappy (J)(2004)(Nintendo).gba" size="1048576" crc="c29e4a08" sha1="72ae0ef34e40210ca8cdead5d9e145e28190ded5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3ee5eb19ac006">
+		<description>Famicom Mini Vol.09 - Bomberman (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.09 - Bomberman (J)(2004)(Nintendo).gba" size="1048576" crc="c1116e40" sha1="3ee5eb19ac00660e1c83c449c6a5b2a22c9f73eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaf740cb1c5e668">
+		<description>Famicom Mini Vol.10 - Star Soldier (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.10 - Star Soldier (J)(2004)(Nintendo).gba" size="1048576" crc="1e23bad4" sha1="f740cb1c5e66886aab560bfdd958d4ec447085c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba32a336383b2de">
+		<description>Famicom Mini Vol.11 - Mario Bros. (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.11 - Mario Bros. (J)(2004)(Nintendo).gba" size="1048576" crc="42a027ab" sha1="32a336383b2de86e4023c338e5d082f8be462b4d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2f47308ef84f0">
+		<description>Famicom Mini Vol.12 - Clu Clu Land (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.12 - Clu Clu Land (J)(2004)(Nintendo).gba" size="1048576" crc="8b3219fe" sha1="2f47308ef84f0d4a895a2e02616268d9a43db348"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbabb663b7570cbb">
+		<description>Famicom Mini Vol.13 - Balloon Fight (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.13 - Balloon Fight (J)(2004)(Nintendo).gba" size="1048576" crc="a01f014a" sha1="bb663b7570cbb4071b17884c5589e074a7db7617"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5606f9effd2d3">
+		<description>Famicom Mini Vol.14 - Wrecking Crew (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.14 - Wrecking Crew (J)(2004)(Nintendo).gba" size="1048576" crc="adac99bd" sha1="5606f9effd2d39efaca739bd2b8f736d529191a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba4fb22ff059833">
+		<description>Famicom Mini Vol.15 - Dr. Mario (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.15 - Dr. Mario (J)(2004)(Nintendo).gba" size="1048576" crc="c836f2e2" sha1="4fb22ff059833d5206421277409ece0cdd5d5b46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba0b46e4cabd1f5">
+		<description>Famicom Mini Vol.16 - Dig Dug (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.16 - Dig Dug (J)(2004)(Nintendo).gba" size="1048576" crc="ee4c3504" sha1="0b46e4cabd1f5f624d8391658d9c888dbd29a6ff"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae61f8ac149016">
+		<description>Famicom Mini Vol.17 - Takahashi Meijin no Bouken-jima (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.17 - Takahashi Meijin no Bouken-jima (J)(2004)(Nintendo).gba" size="1048576" crc="53286f51" sha1="e61f8ac1490163c49668efbc42b3549cb9aa881c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba4283b0a9dafc2">
+		<description>Famicom Mini Vol.18 - Makaimura (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.18 - Makaimura (J)(2004)(Nintendo).gba" size="1048576" crc="8a7964ca" sha1="4283b0a9dafc29c80a2e1c1120b4aab00dfed1dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae07a403bd9587">
+		<description>Famicom Mini Vol.19 - Twin Bee (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.19 - Twin Bee (J)(2004)(Nintendo).gba" size="1048576" crc="2f390212" sha1="e07a403bd9587e018f2213847f68b57794bd8b13"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2ec7d875ed0c8">
+		<description>Famicom Mini Vol.20 - Ganbare Goemon! - Karakuri Douchuu (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.20 - Ganbare Goemon! - Karakuri Douchuu (J)(2004)(Nintendo).gba" size="1048576" crc="33196b58" sha1="2ec7d875ed0c8ce94ca3fe13495dad2538dbd820"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba017c7e0cb41a8">
+		<description>Famicom Mini Vol.21 - Super Mario Bros. 2 (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.21 - Super Mario Bros. 2 (J)(2004)(Nintendo).gba" size="1048576" crc="ef18f7b2" sha1="017c7e0cb41a8d323d9d81f363a7cf51606808e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1684686077712">
+		<description>Famicom Mini Vol.29 - Akumajou Dracula (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.29 - Akumajou Dracula (J)(2004)(Nintendo).gba" size="1048576" crc="11419d8b" sha1="1684686077712875ba9d785642bba21e8cb8f5ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba69e3fd59a0b4a">
+		<description>Famicom Mini Vol.30 - SD Gundam World - Gachapon Senshi Scramble Wars (J)(2004)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Famicom Mini Vol.30 - SD Gundam World - Gachapon Senshi Scramble Wars (J)(2004)(Nintendo).gba" size="1048576" crc="ba78d1ee" sha1="69e3fd59a0b4a02a3052d3428648c81e8d50a94d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9936be3f5a3b9">
+		<description>Fire Emblem - Sheng Xie De Yi Zhi (C)(2006)(ChinaFE &amp; Wolf Group)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Fire Emblem - Sheng Xie De Yi Zhi (C)(2006)(ChinaFE &amp; Wolf Group).gba" size="16777216" crc="9cbb923e" sha1="9936be3f5a3b94a0bdeb07ead1b82adda6ae26ff"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaf613a7366dca5">
 		<description>Flipoon Advance (2023-05-16)(HusYada)(proto)</description>
 		<year>????</year>
@@ -779,6 +1179,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="6950644">
 				<rom name="GBADoom(badgfx).gba" size="6950644" crc="d687bd98" sha1="24686fab61461430286858a9954feb6a0e995006"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbadf5473dbb0058">
+		<description>Goodboy Galaxy v1.3 (2023-24)(Goodboy Galaxy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Goodboy Galaxy v1.3 (2023-24)(Goodboy Galaxy).gba" size="33554432" crc="159ff629" sha1="df5473dbb005816293238095076e8f8c75484f93"/>
 			</dataarea>
 		</part>
 	</software>
@@ -859,6 +1269,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="52428800">
 				<rom name="i-ninja (unlabeled prototype) (gameboy advance, unreleased).gba" size="52428800" crc="e0cf48d9" sha1="431f9cd0c2b5976bd3362844369e6377dfda77a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae1ae15165431c">
+		<description>Inky and the Alien Aquarium (2023)(Pocket Pulp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Inky and the Alien Aquarium (2023)(Pocket Pulp).gba" size="4194304" crc="402d4ce6" sha1="e1ae15165431c950a1d5fbf3051cfc60a7529bb7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1039,6 +1459,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Monster Gate (Japan) (Rev 1).gba" size="8388608" crc="7960926c" sha1="592688731ef71246b12e775a33250b28f17028c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaedb13624b3714">
+		<description>Mooncat's Trio (2026)(Megakode)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1125940">
+				<rom name="Mooncat's Trio (2026)(Megakode).gba" size="1125940" crc="5c15b82f" sha1="edb13624b3714580d439f8b1e11eed83a5d5ae00"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2502,6 +2932,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbabbc1441063979">
+		<description>Super Street Fighter II Turbo - Revival (E, Rev 1)(2001)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Super Street Fighter II Turbo - Revival (E, Rev 1)(2001)(Capcom).gba" size="8388608" crc="459600a9" sha1="bbc144106397937344689b22f3c5b978ca31d691"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaf6d523a073c21">
 		<description>Sushi the cat</description>
 		<year>????</year>
@@ -2519,6 +2959,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Tetris Advance.bin" size="4194304" crc="501ea6cd" sha1="62f417d538061353b1dfc4c7c08d6c26a37f398c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8d9b0c1a666a9">
+		<description>Tollrunner - Community Version (2026)(Jenka Lab)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5746808">
+				<rom name="Tollrunner - Community Version (2026)(Jenka Lab).gba" size="5746808" crc="635efe32" sha1="8d9b0c1a666a937701d259858bf37503079cddf4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2593,12 +3043,12 @@
 		</part>
 	</software>
 	<software name="gba9bbdc81383d22">
-		<description>Xeno Crisis</description>
+		<description>Xeno Crisis (2024)(Bitmap Bureau)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
-				<rom name="Xeno Crisis.gba" size="33554432" crc="9693aabd" sha1="9bbdc81383d22770bf01a0fd174ff0febc6198c0"/>
+				<rom name="Xeno Crisis (2024)(Bitmap Bureau).gba" size="33554432" crc="9693aabd" sha1="9bbdc81383d22770bf01a0fd174ff0febc6198c0"/>
 			</dataarea>
 		</part>
 	</software>

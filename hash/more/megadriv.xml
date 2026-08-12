@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2116 -->
+<!-- Number of items in this list = 2117 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -6759,6 +6759,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Final Fight MD v0.92b (2025)(MXRetroDev - CFX).bin" size="4194304" crc="ae245026" sha1="a1531b7e231b1c76c7688b1a9835b194ee07d10c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen65dbd247128f5">
+		<description>Final Fight MD v0.94b+ (2026)(MXRetroDev - CFX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fight MD v0.94b+ (2026)(MXRetroDev - CFX).bin" size="4194304" crc="16512148" sha1="65dbd247128f5adf5f84a8ad3c7d299c9c0b94af"/>
 			</dataarea>
 		</part>
 	</software>

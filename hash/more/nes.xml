@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10979 -->
+<!-- Number of items in this list = 10983 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -82922,6 +82922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesbd8f9a0c5a194">
+		<description>Shounen Ashibe - Nepal Daibouken no Maki (J) [o1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786464">
+				<rom name="Shounen Ashibe - Nepal Daibouken no Maki (J) [o1].nes" size="786464" crc="19632104" sha1="bd8f9a0c5a1944712bceeaeb87efc0f2568cc645"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese79f1f842d11d">
 		<description>Shounen Ashibe - Nepal Daibouken no Maki (Japan) (2)</description>
 		<year>????</year>
@@ -82929,6 +82939,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Shounen Ashibe - Nepal Daibouken no Maki (Japan) (2).nes" size="262160" crc="356f8f89" sha1="e79f1f842d11ddc5d1979ca2cdadff923a9c74f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9822635820362">
+		<description>Shounen Ashibe - Nepal Daibouken no Maki (Japan)(1991)(Takara)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Shounen Ashibe - Nepal Daibouken no Maki (Japan)(1991)(Takara).nes" size="262160" crc="4ac9932c" sha1="9822635820362e7d4d2f5e52659b65261a125491"/>
 			</dataarea>
 		</part>
 	</software>
@@ -83562,23 +83582,33 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes0478b35502dc6">
-		<description>Silver Surfer (USA) (2)</description>
+	<software name="nes71fa0ce2d4987">
+		<description>Silver Surfer (USA)(1990)(Arcadia)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
-				<rom name="Silver Surfer (USA) (2).nes" size="393232" crc="ebd4af67" sha1="0478b35502dc685eb17cb320329e692107c2b7e0"/>
+				<rom name="Silver Surfer (USA)(1990)(Arcadia).nes" size="393232" crc="9a83817c" sha1="71fa0ce2d49870c3d64130d572854ebb5f25c54c"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes71fa0ce2d4987">
+	<software name="nes0478b35502dc6">
 		<description>Silver Surfer (USA)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
-				<rom name="Silver Surfer (USA).nes" size="393232" crc="9a83817c" sha1="71fa0ce2d49870c3d64130d572854ebb5f25c54c"/>
+				<rom name="Silver Surfer (USA).nes" size="393232" crc="ebd4af67" sha1="0478b35502dc685eb17cb320329e692107c2b7e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb0c1c1cb72bb6">
+		<description>Silver Surfer Redux (2026)(Billytime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Silver Surfer Redux (2026)(Billytime! Games).nes" size="393232" crc="e411a3cb" sha1="b0c1c1cb72bb65a340a69d0602dca522654cb18e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87062,16 +87092,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes48d1fc8bbeaea">
-		<description>Star Wars (Europe) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Star Wars (Europe) (2).nes" size="262160" crc="53635d73" sha1="48d1fc8bbeaeafd9247a0d2476d261ff2cc8b8de"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes74bcb011756e5">
 		<description>Star Wars (Europe)</description>
 		<year>????</year>
@@ -87079,6 +87099,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Star Wars (Europe).nes" size="262160" crc="d6447a79" sha1="74bcb011756e5cc1e2d933f115cf1e5ca67edea2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes48d1fc8bbeaea">
+		<description>Star Wars (Europe)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Star Wars (Europe)_1.nes" size="262160" crc="53635d73" sha1="48d1fc8bbeaeafd9247a0d2476d261ff2cc8b8de"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87132,16 +87162,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes17888e3448185">
-		<description>Star Wars (Japan) (Namco) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Star Wars (Japan) (Namco) (2).nes" size="262160" crc="b8bc23b0" sha1="17888e34481856c8f5f5f3636ca6d2d4d14e899e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nesd5047da05e3f1">
 		<description>Star Wars (Japan) (Namco)</description>
 		<year>????</year>
@@ -87152,13 +87172,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nesd1cae1863c408">
-		<description>Star Wars (Japan) (Victor) (2)</description>
+	<software name="nes17888e3448185">
+		<description>Star Wars (Japan) (Namco)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Star Wars (Japan) (Victor) (2).nes" size="262160" crc="8f028179" sha1="d1cae1863c408b094b33bf5cbf8ed77ab7fbb628"/>
+				<rom name="Star Wars (Japan) (Namco)_1.nes" size="262160" crc="b8bc23b0" sha1="17888e34481856c8f5f5f3636ca6d2d4d14e899e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87169,6 +87189,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Star Wars (Japan) (Victor).nes" size="262160" crc="90406485" sha1="e131dd02cb1ab4d71da31e74576c1cceedd557ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd1cae1863c408">
+		<description>Star Wars (Japan) (Victor)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Star Wars (Japan) (Victor)_1.nes" size="262160" crc="8f028179" sha1="d1cae1863c408b094b33bf5cbf8ed77ab7fbb628"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87192,26 +87222,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes120e4b012037f">
-		<description>Star Wars (USA) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Star Wars (USA) (2).nes" size="262160" crc="c56b41f1" sha1="120e4b012037f20a0e6cc0f613729d5a7ff2909e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nesd9ba34f2ea9fc">
-		<description>Star Wars (USA) (Beta) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Star Wars (USA) (Beta) (2).nes" size="262160" crc="b7adbb3b" sha1="d9ba34f2ea9fcbeef56f1f0c1a6c58841ce3d9f1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nesc68b6d32a5bb9">
 		<description>Star Wars (USA) (Beta)</description>
 		<year>????</year>
@@ -87222,6 +87232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesd9ba34f2ea9fc">
+		<description>Star Wars (USA) (Beta)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Star Wars (USA) (Beta)_1.nes" size="262160" crc="b7adbb3b" sha1="d9ba34f2ea9fcbeef56f1f0c1a6c58841ce3d9f1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes372cbd8991c8a">
 		<description>Star Wars (USA)</description>
 		<year>????</year>
@@ -87229,6 +87249,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Star Wars (USA).nes" size="262160" crc="eb506bf9" sha1="372cbd8991c8a1d5ed15189b47d5990fba5d4485"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes120e4b012037f">
+		<description>Star Wars (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Star Wars (USA)_1.nes" size="262160" crc="c56b41f1" sha1="120e4b012037f20a0e6cc0f613729d5a7ff2909e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87353,22 +87383,12 @@
 		</part>
 	</software>
 	<software name="nesd61aa0a8cca19">
-		<description>Starlight_Mario_Underworld</description>
+		<description>Starlight Mario Underworld (2022)(TPWC Hacks)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
-				<rom name="Starlight_Mario_Underworld.nes" size="65552" crc="a7a313b5" sha1="d61aa0a8cca1954345b97960b5e8452ad0d489f5"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nese88b06fa98e1c">
-		<description>Starship Hector (USA) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="131088">
-				<rom name="Starship Hector (USA) (2).nes" size="131088" crc="c7a69df1" sha1="e88b06fa98e1c92bb45f153797f3ef7450ba94f7"/>
+				<rom name="Starlight Mario Underworld (2022)(TPWC Hacks).nes" size="65552" crc="a7a313b5" sha1="d61aa0a8cca1954345b97960b5e8452ad0d489f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87382,6 +87402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese88b06fa98e1c">
+		<description>Starship Hector (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Starship Hector (USA)_1.nes" size="131088" crc="c7a69df1" sha1="e88b06fa98e1c92bb45f153797f3ef7450ba94f7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesa6287d9fef7cc">
 		<description>StarSoldierFCProto</description>
 		<year>????</year>
@@ -87389,26 +87419,6 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="49168">
 				<rom name="StarSoldierFCProto.nes" size="49168" crc="8d741cc7" sha1="a6287d9fef7ccb29b0f7668adf3d4cea09cff608"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes9459b9c0da705">
-		<description>StarTropics (Europe) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="524304">
-				<rom name="StarTropics (Europe) (2).nes" size="524304" crc="a3c74c57" sha1="9459b9c0da7052528688bbae61fec43cc51502eb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes7f78375d7ecf0">
-		<description>Startropics (Europe) (3)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="524304">
-				<rom name="Startropics (Europe) (3).nes" size="524304" crc="3fc29044" sha1="7f78375d7ecf05e9c177b33e36e34addd3daed44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87432,23 +87442,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes3f7360936bd98">
-		<description>StarTropics (USA) (2)</description>
+	<software name="nes9459b9c0da705">
+		<description>StarTropics (Europe)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
-				<rom name="StarTropics (USA) (2).nes" size="524304" crc="4f3e8821" sha1="3f7360936bd98230194a86e496ce9cbf6d2d08a4"/>
+				<rom name="StarTropics (Europe)_1.nes" size="524304" crc="a3c74c57" sha1="9459b9c0da7052528688bbae61fec43cc51502eb"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes6b4da29d73c2d">
-		<description>StarTropics (USA) (3)</description>
+	<software name="nes7f78375d7ecf0">
+		<description>Startropics (Europe)_2</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
-				<rom name="StarTropics (USA) (3).nes" size="524304" crc="88504279" sha1="6b4da29d73c2df6796a9424810b22fca6b79c976"/>
+				<rom name="Startropics (Europe)_2.nes" size="524304" crc="3fc29044" sha1="7f78375d7ecf05e9c177b33e36e34addd3daed44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87472,6 +87482,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes3f7360936bd98">
+		<description>StarTropics (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="StarTropics (USA)_1.nes" size="524304" crc="4f3e8821" sha1="3f7360936bd98230194a86e496ce9cbf6d2d08a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6b4da29d73c2d">
+		<description>StarTropics (USA)_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="StarTropics (USA)_2.nes" size="524304" crc="88504279" sha1="6b4da29d73c2df6796a9424810b22fca6b79c976"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes72f7137e3a43f">
 		<description>Startropics II - Zoda's Revenge (USA)</description>
 		<year>????</year>
@@ -87492,16 +87522,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes06a9770d7da65">
-		<description>Stealth ATF (Europe) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Stealth ATF (Europe) (2).nes" size="262160" crc="a279b198" sha1="06a9770d7da654a45ef9ed8dd10d5752e48f3bd1"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes33cff3f4ece61">
 		<description>Stealth ATF (Europe)</description>
 		<year>????</year>
@@ -87512,13 +87532,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes597b3856b7e3a">
-		<description>Stealth ATF (USA) (2)</description>
+	<software name="nes06a9770d7da65">
+		<description>Stealth ATF (Europe)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Stealth ATF (USA) (2).nes" size="262160" crc="45e2a94a" sha1="597b3856b7e3a0f47acfdfebc9dd50e73bc6acd6"/>
+				<rom name="Stealth ATF (Europe)_1.nes" size="262160" crc="a279b198" sha1="06a9770d7da654a45ef9ed8dd10d5752e48f3bd1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87532,6 +87552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes597b3856b7e3a">
+		<description>Stealth ATF (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Stealth ATF (USA)_1.nes" size="262160" crc="45e2a94a" sha1="597b3856b7e3a0f47acfdfebc9dd50e73bc6acd6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes387aac16451f5">
 		<description>Sted - Iseki Wakusei no Yabou (easy edition by Ded302)</description>
 		<year>????</year>
@@ -87539,16 +87569,6 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Sted - Iseki Wakusei no Yabou (easy edition by Ded302).nes" size="262160" crc="ab44e1fa" sha1="387aac16451f5cecdec12eda4a0fc71d40e2706b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes6708e6ec6163f">
-		<description>Sted - Iseki Wakusei no Yabou (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Sted - Iseki Wakusei no Yabou (Japan) (2).nes" size="262160" crc="836bd57d" sha1="6708e6ec6163fa8e4888a2a4e710f5b560da27a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87569,6 +87589,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Sted - Iseki Wakusei no Yabou (Japan).nes" size="262160" crc="a86fb17a" sha1="3b2364f2cf804d2b114c4382c14a99bcb990227f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6708e6ec6163f">
+		<description>Sted - Iseki Wakusei no Yabou (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Sted - Iseki Wakusei no Yabou (Japan)_1.nes" size="262160" crc="836bd57d" sha1="6708e6ec6163fa8e4888a2a4e710f5b560da27a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87622,16 +87652,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes0016b3d784699">
-		<description>Stick Hunter - Exciting Ice Hockey (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="131088">
-				<rom name="Stick Hunter - Exciting Ice Hockey (Japan) (2).nes" size="131088" crc="25d03a4e" sha1="0016b3d78469998baad140aaf82922f8a61ec27e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes4c1e0e4079355">
 		<description>Stick Hunter - Exciting Ice Hockey (Japan)</description>
 		<year>????</year>
@@ -87642,13 +87662,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes07e35962ec3b5">
-		<description>Stinger (USA) (2)</description>
+	<software name="nes0016b3d784699">
+		<description>Stick Hunter - Exciting Ice Hockey (Japan)_1</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
-				<rom name="Stinger (USA) (2).nes" size="131088" crc="9d5509ce" sha1="07e35962ec3b5c210d97ff0e9d2ba8a9db15fac1"/>
+				<rom name="Stick Hunter - Exciting Ice Hockey (Japan)_1.nes" size="131088" crc="25d03a4e" sha1="0016b3d78469998baad140aaf82922f8a61ec27e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -87669,6 +87689,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Stinger (USA).nes" size="131088" crc="f6b9629f" sha1="70d8088dce879710ee2c685cb7f5bc98edd5e5da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes07e35962ec3b5">
+		<description>Stinger (USA)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Stinger (USA)_1.nes" size="131088" crc="9d5509ce" sha1="07e35962ec3b5c210d97ff0e9d2ba8a9db15fac1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -91162,6 +91192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes95487032fc18d">
+		<description>Super Mario Bros. DX - Anniversary Edition v4.4 (2023)(flamepanther)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="40976">
+				<rom name="Super Mario Bros. DX - Anniversary Edition v4.4 (2023)(flamepanther).nes" size="40976" crc="448bd601" sha1="95487032fc18db5e24d9304185bd3ef03949b4c0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes3f31e19bae27a">
 		<description>Super Mario Bros. Mali Boss (Unl)[!]</description>
 		<year>????</year>
@@ -91213,12 +91253,12 @@
 		</part>
 	</software>
 	<software name="nes368c5849ff6ff">
-		<description>Super Mario Bros. Special X1 (Hack)</description>
+		<description>Super Mario Bros. Special X1 Hack (2017)(Messatu)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="98320">
-				<rom name="Super Mario Bros. Special X1 (Hack).nes" size="98320" crc="5a44876f" sha1="368c5849ff6ff55ee7c491d54d94c50be9ab99a8"/>
+				<rom name="Super Mario Bros. Special X1 Hack (2017)(Messatu).nes" size="98320" crc="5a44876f" sha1="368c5849ff6ff55ee7c491d54d94c50be9ab99a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -91282,16 +91322,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes4374f22673f01">
-		<description>Super Mario USA (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="262160">
-				<rom name="Super Mario USA (Japan) (2).nes" size="262160" crc="c6e79b8c" sha1="4374f22673f015069f03e83aa3ede4ca6cf7f62e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes86fe8d23b36eb">
 		<description>Super Mario USA (Japan)</description>
 		<year>????</year>
@@ -91299,6 +91329,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Super Mario USA (Japan).nes" size="262160" crc="aa6876f9" sha1="86fe8d23b36eb38494c07b894bdec4e2117ff629"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes4374f22673f01">
+		<description>Super Mario USA (Japan)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Super Mario USA (Japan)_1.nes" size="262160" crc="c6e79b8c" sha1="4374f22673f015069f03e83aa3ede4ca6cf7f62e"/>
 			</dataarea>
 		</part>
 	</software>
