@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2117 -->
+<!-- Number of items in this list = 2119 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -9332,6 +9332,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf76c0bd8bc2cb">
+		<description>Haruna's Big Snow Cleanup (2026)(NK Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2883584">
+				<rom name="Haruna's Big Snow Cleanup (2026)(NK Soft).bin" size="2883584" crc="dbe5dc80" sha1="f76c0bd8bc2cb4e10ef75f01b3990804d174c824"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen358afb4242b3e">
 		<description>haunting starring polterguy (Hack, Spanish)</description>
 		<year>????</year>
@@ -13559,6 +13569,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Punisher NG.bin" size="2097152" crc="497a07fe" sha1="3da4cb7f63bc863ca6d5067846c0d596bb727e77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genff25a666d6ae7">
+		<description>Punisher, The - Gun Version (2026)(Everything is fun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Punisher, The - Gun Version (2026)(Everything is fun).bin" size="2097152" crc="e4f97405" sha1="ff25a666d6ae7bd421d7a57e48dfe75c3c127ae6"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 120 -->
+<!-- Number of items in this list = 121 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -1179,6 +1179,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="TPaint (PD).ngc" size="524288" crc="9f3f5261" sha1="52ff0cb2e2537042a45a1f5e07f8d6a6aa358392"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp18c9e8bcf279a">
+		<description>Triple Defence (2026)(Zhamul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Triple Defence (2026)(Zhamul).ngp" size="32768" crc="0a700b77" sha1="18c9e8bcf279a66f6c6a314749ddfa3aa8bad71d"/>
 			</dataarea>
 		</part>
 	</software>

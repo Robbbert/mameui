@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 309 -->
+<!-- Number of items in this list = 313 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -502,6 +502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaab637c0bdf377">
+		<description>Booster Bot (2025)(TheTomasPat)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1008408">
+				<rom name="Booster Bot (2025)(TheTomasPat).gba" size="1008408" crc="0b147d52" sha1="ab637c0bdf377077cbf5c2c82b97965203c9b60f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba06f8cef944241">
 		<description>Cardcaptor Sakura - Sakura Card Hen - Sakura to Card to Otomodachi (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -699,6 +709,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3353604">
 				<rom name="Crouching Tiger, Hidden Dragon (2002-02-20)(Ubi Soft)(US)(proto).bin" size="3353604" crc="a1d2d006" sha1="3d554e4e33563211865b9c5481444b0b8b4e6127"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6b08d517aa814">
+		<description>Crypt Sweeper (2025)(Pocket Pulp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Crypt Sweeper (2025)(Pocket Pulp).gba" size="4194304" crc="c6208b59" sha1="6b08d517aa814dbb547d99e2d245ae5f425e63ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1502,6 +1522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaa0898962a881c">
+		<description>Pocket Phoenix (2026)(Oscar Braindead Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="176428">
+				<rom name="Pocket Phoenix (2026)(Oscar Braindead Games).gba" size="176428" crc="abeb2841" sha1="a0898962a881cfafdc310cf0c9f25fe73eeaab58"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba4c743011d7f9a">
 		<description>Pokemon Emerald</description>
 		<year>????</year>
@@ -2249,6 +2279,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8378312">
 				<rom name="Rayman 3 (2002-11-29)(Ubi Soft)(US)(M3)(proto).bin" size="8378312" crc="4549f9b3" sha1="b5d299663bf1ac4a50ced1a572dcef5d31d807f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2639413e2b30c">
+		<description>Rhino Express (2025)(Vulcalien)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Rhino Express (2025)(Vulcalien).gba" size="1048576" crc="6f7bc08b" sha1="2639413e2b30c847befc98ff64cc0ff2ff376ad6"/>
 			</dataarea>
 		</part>
 	</software>
