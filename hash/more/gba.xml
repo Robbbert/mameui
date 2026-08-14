@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 313 -->
+<!-- Number of items in this list = 315 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -452,6 +452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba41d39a0c34f72">
+		<description>Another World (2005)(Foxy, Eric Chahi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2010358">
+				<rom name="Another World (2005)(Foxy, Eric Chahi).gba" size="2010358" crc="86c4f772" sha1="41d39a0c34f72469dd3fbcc90190605b8ada93e6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba903faafff0b9e">
 		<description>Another_world</description>
 		<year>????</year>
@@ -539,6 +549,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16417068">
 				<rom name="ChexQuestGBA-v.09a(badgfx).gba" size="16417068" crc="355eb8de" sha1="727221826e5c963a2fe2c6757a9955d5c10bd41d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba48af4bdd7a831">
+		<description>Chip's Challenge 220412 (2022)(Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5497328">
+				<rom name="Chip's Challenge 220412 (2022)(Alekmaul).gba" size="5497328" crc="103359bd" sha1="48af4bdd7a831d47b50689cb4e0aeb92d2d454a6"/>
 			</dataarea>
 		</part>
 	</software>
