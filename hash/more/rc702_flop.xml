@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 5 -->
+<softwarelist name="rc702_flop" description="rc702_flop loose roms">
+	<software name="rc74fb20d1d559f9">
+		<description>[5]ADV</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="244508">
+				<rom name="[5]ADV.IMD" size="244508" crc="d9f88a6e" sha1="4fb20d1d559f9953e47f92b7a9c22e05e24377cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rc710a8e6597b966">
+		<description>[5]CPM56K</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="252750">
+				<rom name="[5]CPM56K.IMD" size="252750" crc="dae821dd" sha1="10a8e6597b9662916770ede48a18791a31dd1583"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rc7b96ab75179b17">
+		<description>[5]GAMES2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="243488">
+				<rom name="[5]GAMES2.IMD" size="243488" crc="0a01d1bf" sha1="b96ab75179b173e27e9d62b089836d2e4bb93165"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rc733c7a26493a12">
+		<description>[8]RC700_Comal</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="36206">
+				<rom name="[8]RC700_Comal.imd" size="36206" crc="1ed8e626" sha1="33c7a26493a12496b1a59c7a32d0f875bca1b4f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rc7f6f17e0d93493">
+		<description>[8]SW1711-I8</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="171907">
+				<rom name="[8]SW1711-I8.imd" size="171907" crc="8d8de30d" sha1="f6f17e0d93493e07845f04cae2214b884f59408b"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

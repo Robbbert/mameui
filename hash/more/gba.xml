@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 315 -->
+<!-- Number of items in this list = 324 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -532,6 +532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaafc76aaab9f07">
+		<description>Catacomb 3D (2026)(MSDOS2GBA)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Catacomb 3D (2026)(MSDOS2GBA).gba" size="2097152" crc="6fef0ec6" sha1="afc76aaab9f07a8a4137411eacff67095024a64d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba324f0375e3f4f">
 		<description>cccp</description>
 		<year>????</year>
@@ -772,6 +782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba92682b2404be3">
+		<description>Deflektor v1.1 (2003-07)(Foxy's Softs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="386508">
+				<rom name="Deflektor v1.1 (2003-07)(Foxy's Softs).gba" size="386508" crc="5ec91001" sha1="92682b2404be3b2fd48f96cad0c51f51d07c8159"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbae6ba49e4528c4">
 		<description>DoAGBA</description>
 		<year>????</year>
@@ -789,6 +809,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Don't Die Mr. Robot Advance (2026)(Infinite State Games).gba" size="4194304" crc="780f5f3e" sha1="086faa75d812da355434cc7040796a5615ebd8f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba58b6e7debe09e">
+		<description>Doom - PC Total Conversion v1.7 (2021)(Kippykip)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="14111436">
+				<rom name="Doom - PC Total Conversion v1.7 (2021)(Kippykip).gba" size="14111436" crc="1f9f7248" sha1="58b6e7debe09eda00a58d8913a829350147386c5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1272,6 +1302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbad987b1163eec0">
+		<description>Heartwrench Advance (2025)(Michael Chase)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3990892">
+				<rom name="Heartwrench Advance (2025)(Michael Chase).gba" size="3990892" crc="47f714e0" sha1="d987b1163eec0029b0a1f0113cc8dbdd4fe92375"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbac19ab3d92aab4">
 		<description>Herg's Solitaire</description>
 		<year>????</year>
@@ -1342,6 +1382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba3cf07cd95e5a8">
+		<description>Kien (2024)(Incube8 Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8350032">
+				<rom name="Kien (2024)(Incube8 Games).gba" size="8350032" crc="5a64b473" sha1="3cf07cd95e5a83b65c773111051a50d9bef367eb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaa3d14cfde55ec">
 		<description>Kirby's Nightmare in Dreamland</description>
 		<year>????</year>
@@ -1402,6 +1452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba84c9b2d50c8af">
+		<description>Luggage Retrieval Officer (2021)(Jono Shields)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3336260">
+				<rom name="Luggage Retrieval Officer (2021)(Jono Shields).gba" size="3336260" crc="5aa30d90" sha1="84c9b2d50c8af74b8b04f88af367d9fac1a24ef6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba1d97018500eaf">
 		<description>Magic Floor (2)</description>
 		<year>????</year>
@@ -1439,6 +1499,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="2749568">
 				<rom name="Mario.gba" size="2749568" crc="739cbac1" sha1="4deb7527c1d6a3153bbeb2ae823de5d0d1ade0a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba4517fbb7c44e9">
+		<description>MazezaM v1.1 (2013)(PortableDev - Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="569944">
+				<rom name="MazezaM v1.1 (2013)(PortableDev - Alekmaul).gba" size="569944" crc="f7bc9db0" sha1="4517fbb7c44e9e93b0f5e89661e5cf979c624658"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1609,6 +1679,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1900688">
 				<rom name="powder102.gba" size="1900688" crc="2f7fb8cf" sha1="fb0b693bd21a7f20caf16290ac98fbe20addddc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaaf5e459df42d5">
+		<description>Powerpig (2013)(Genecyst)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2308528">
+				<rom name="Powerpig (2013)(Genecyst).gba" size="2308528" crc="318f1504" sha1="af5e459df42d5317ce552bdb3062fcff53a9da8e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3069,6 +3149,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="171324">
 				<rom name="VOTHELLO.GBA" size="171324" crc="69ae9165" sha1="f01e4b4be193428e33c37eb2e7f2a4352447bb18"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9004ba1198507">
+		<description>Vulkano - The Last Space Knight (2025)(manu2097)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2285392">
+				<rom name="Vulkano - The Last Space Knight (2025)(manu2097).gba" size="2285392" crc="4ecc587c" sha1="9004ba1198507a31179e5c58d8e23b1824baf8f0"/>
 			</dataarea>
 		</part>
 	</software>
