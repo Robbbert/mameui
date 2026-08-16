@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 288 -->
+<!-- Number of items in this list = 292 -->
 <softwarelist name="apple2gs_flop_misc" description="apple2gs_flop_misc loose roms">
 	<software name="appd3bb3c875e1be">
 		<description>(demo)Modulae</description>
@@ -1032,6 +1032,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app4410922992a15">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="143360">
+				<rom name="awass.dsk" size="143360" crc="16cd8a2a" sha1="4410922992a15dacfc27b9f56e637c09acfd8b56"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app6d334c932d92c">
 		<description>Bard's Tale II - The Destiny Knight, The (1988)(Electronic Arts)(Disk 1 of 2)[a2]</description>
 		<year>????</year>
@@ -2002,6 +2012,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="app5f3ec03ca1b94">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="143360">
+				<rom name="mazy2.dsk" size="143360" crc="4a8bc545" sha1="5f3ec03ca1b9485b88654acccf6233a8b28e8c75"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="appdebb0214fc6bf">
 		<description>mieyen</description>
 		<year>????</year>
@@ -2472,6 +2492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="appc6bf59790d606">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="143360">
+				<rom name="svellas.dsk" size="143360" crc="fe0c8b12" sha1="c6bf59790d6065894aebcaf09112cf9728d34dcb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="app24f981a6e9f06">
 		<description>Sword of Sodan (1989)(Visionware)</description>
 		<year>????</year>
@@ -2479,6 +2509,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819264">
 				<rom name="Sword of Sodan (1989)(Visionware).2mg" size="819264" crc="c0745ba9" sha1="24f981a6e9f068571f23b13c0b18d53b0de7bbdd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="app0c6ab74e59575">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="143360">
+				<rom name="sword.dsk" size="143360" crc="6d2ad69c" sha1="0c6ab74e59575586b2a0603a328559d66749d133"/>
 			</dataarea>
 		</part>
 	</software>

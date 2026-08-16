@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 587 -->
+<!-- Number of items in this list = 588 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -5249,6 +5249,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Terminator, The T-Por v1.09 (2024)(Antigeno).sms" size="262144" crc="e829e26e" sha1="c9a811386f36c6722b991791678f97bf63362c43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsff0d590117a19">
+		<description>Tetris (System E) v1.5 (2026)(Master Linkuei)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Tetris (System E) v1.5 (2026)(Master Linkuei).sms" size="131072" crc="08ab88b7" sha1="ff0d590117a19bd6f102a6328f8c36e8096baf56"/>
 			</dataarea>
 		</part>
 	</software>

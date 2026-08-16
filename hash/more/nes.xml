@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10983 -->
+<!-- Number of items in this list = 10984 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -41529,6 +41529,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="65552">
 				<rom name="Hokuto no Ken PT-BR (2009)(Trans-Center).nes" size="65552" crc="8eef5d74" sha1="6e108398c8904e744721494a7bd7bc72bb48dbba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes15cd9bf1e2dab">
+		<description>Hold the Light (2025)(TSBF Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Hold the Light (2025)(TSBF Studio).nes" size="524304" crc="013aee36" sha1="15cd9bf1e2dab9d67750e9c227d185f269fba142"/>
 			</dataarea>
 		</part>
 	</software>

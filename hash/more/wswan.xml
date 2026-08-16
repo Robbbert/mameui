@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 50 -->
+<!-- Number of items in this list = 54 -->
 <softwarelist name="wswan" description="wswan loose roms">
 	<software name="wsa98a210fce5762">
 		<description>Aerial</description>
@@ -39,6 +39,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Ascend.ws" size="65536" crc="b38a3274" sha1="ea93b045de18506962f1c6248b75dc5b2c058d6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsed9a109bc4ff3c">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="awass.ws" size="65536" crc="a2d7d104" sha1="ed9a109bc4ff3c82d74b999c257bb88032860c3d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -272,6 +282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsfc83989b3b45c3">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="mazy2.ws" size="65536" crc="473f211c" sha1="fc83989b3b45c3869a5a0dfcf540aceaf4fb6519"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ws38e0a889f287fd">
 		<description>Megaman &amp; Bass - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n]</description>
 		<year>????</year>
@@ -372,6 +392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ws1f880791bc7229">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="svellas.ws" size="65536" crc="d89803ec" sha1="1f880791bc72291285005217b9eef0b979821a12"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ws697efd081cd22e">
 		<description>Swan Driving(WS-ONLY)</description>
 		<year>????</year>
@@ -459,6 +489,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="swj-yke001.bin" size="524288" crc="b159c30d" sha1="d70fbc6be9a9a0f12cea8a9f7c98aa415e41aafd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsee62eafdbd0542">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="sword.ws" size="65536" crc="7c627606" sha1="ee62eafdbd0542a6260a2d6d76d751b8ff5b01d3"/>
 			</dataarea>
 		</part>
 	</software>

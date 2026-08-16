@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 73 -->
+<!-- Number of items in this list = 77 -->
 <softwarelist name="wscolor" description="wscolor loose roms">
 	<software name="wscf1ccdb96d67a8">
 		<description>(demo)finally.emu</description>
@@ -69,6 +69,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Ascend.wsc" size="65536" crc="c8c85ce9" sha1="60a1948214b3fd31944f64f752151c988d20a012"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsc924fe5a3f853e">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="awass.wsc" size="65536" crc="e30243b6" sha1="924fe5a3f853e614f07ba6ba5e38b21c9ce5d137"/>
 			</dataarea>
 		</part>
 	</software>
@@ -482,6 +492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc5605601f3f63b">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="mazy2.wsc" size="65536" crc="c9241b5f" sha1="5605601f3f63bda00b444065710082de6126ecc0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wsc79f7821791d99">
 		<description>Mega Man Battle Network WS (Japan) [T-En by Boco &amp; Greiga Master &amp; Megarockexe v1.0] [n]</description>
 		<year>????</year>
@@ -562,6 +582,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="wsc4eeec1399296f">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="svellas.wsc" size="65536" crc="10fd73c4" sha1="4eeec1399296fd74c8937daffcdb11c8e2a21e67"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="wscf0f08b95c7de6">
 		<description>Swan Driving(WSC-ONLY)</description>
 		<year>????</year>
@@ -569,6 +599,16 @@
 		<part name="cart" interface="wswan_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Swan Driving(WSC-ONLY).wsc" size="65536" crc="491d7faa" sha1="f0f08b95c7de6aa0616cfcf2cf266e85e25a3783"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="wsca689cbce48171">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="wswan_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="sword.wsc" size="65536" crc="86e19881" sha1="a689cbce48171da6ac224219c5c096edcdd2942d"/>
 			</dataarea>
 		</part>
 	</software>
