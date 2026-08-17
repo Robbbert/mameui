@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 808 -->
+<!-- Number of items in this list = 816 -->
 <softwarelist name="mc10" description="mc10 loose roms">
 	<software name="mc1e0150629f92ff">
 		<description>(demo)dypp[cloadm]</description>
@@ -1169,6 +1169,26 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="4548">
 				<rom name="AWARI.C10" size="4548" crc="05aa2056" sha1="0300cfe5d6055370ee466b5a7f18061d5e9a8616"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc11d6d92e838733">
+		<description>Awass[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9261">
+				<rom name="Awass[cloadm].c10" size="9261" crc="7c439649" sha1="1d6d92e83873329e604bef9da07d33af0ed6b4fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc145ac7aa65029a">
+		<description>Awass[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2285856">
+				<rom name="Awass[cloadm].wav" size="2285856" crc="776ba58c" sha1="45ac7aa65029ad66ffc37ffea1cd27c55dcdff76"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4762,6 +4782,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc16868abc74fa7b">
+		<description>Mazy2[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9771">
+				<rom name="Mazy2[cloadm].c10" size="9771" crc="eed28771" sha1="6868abc74fa7b8e18e19f21e156adbb30bc735a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc116b7ebf934138">
+		<description>Mazy2[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2422968">
+				<rom name="Mazy2[cloadm].wav" size="2422968" crc="0693fc86" sha1="16b7ebf934138a82f4d02a14fe1a87920a39da1d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc160076b760f6c9">
 		<description>Mazy[cloadm]</description>
 		<year>????</year>
@@ -7192,6 +7232,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mc149f8c99024699">
+		<description>Svellas[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="9251">
+				<rom name="Svellas[cloadm].c10" size="9251" crc="c7571195" sha1="49f8c990246997b0e8e50473f3865b3d710bf5cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc194b90ee0eb894">
+		<description>Svellas[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2303796">
+				<rom name="Svellas[cloadm].wav" size="2303796" crc="4c7fc42b" sha1="94b90ee0eb8940afd970f248e2ebbf428a2783cf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mc1c9c4a744efbcb">
 		<description>SWARMS</description>
 		<year>????</year>
@@ -7239,6 +7299,26 @@
 		<part name="cass1" interface="mc10_cass">
 			<dataarea name="cass" size="5729">
 				<rom name="Swordsman.C10" size="5729" crc="92285982" sha1="2adf883bc4f74e9e8b15dde56bce7345e1cdb6c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1a6aa9ae223549">
+		<description>SwordWork[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="8330">
+				<rom name="SwordWork[cloadm].c10" size="8330" crc="705c9bb4" sha1="a6aa9ae223549cd11a5a81c616000f6dfff9c95e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mc1713d76a54add7">
+		<description>SwordWork[cloadm]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mc10_cass">
+			<dataarea name="cass" size="2124492">
+				<rom name="SwordWork[cloadm].wav" size="2124492" crc="d4dc44fa" sha1="713d76a54add7bce20f26675702e5ad9fb2bc08c"/>
 			</dataarea>
 		</part>
 	</software>

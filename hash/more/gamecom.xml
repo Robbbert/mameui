@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 61 -->
+<!-- Number of items in this list = 69 -->
 <softwarelist name="gamecom" description="gamecom loose roms">
 	<software name="gam6b5b43862bdb8">
 		<description>aerial</description>
@@ -59,6 +59,26 @@
 		<part name="cart" interface="gamecom_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="ascend_256k.bin" size="262144" crc="bf0475ec" sha1="de214bec974c84c2149a01b68bd697ab99d6f075"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gamcbf809f049865">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="awass.bin" size="32768" crc="23ef971d" sha1="cbf809f0498658b56e20ff8ec9d37ca3e4ec8df0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gama00dc25c3b9e9">
+		<description>awass_256k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="awass_256k.bin" size="262144" crc="6a093f5e" sha1="a00dc25c3b9e9a7fa6d844500f15e25135a5d29a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -352,6 +372,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gamafb5702f98ad9">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="mazy2.bin" size="32768" crc="6ff5b81b" sha1="afb5702f98ad9577bb7e35064b578eb0b0b4ef4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gam235f62928e99b">
+		<description>mazy2_256k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="mazy2_256k.bin" size="262144" crc="eb85ec18" sha1="235f62928e99b7ff656ea754d91d797ff396e1dd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gamf4435afc35bdb">
 		<description>mazy_256k</description>
 		<year>????</year>
@@ -509,6 +549,46 @@
 		<part name="cart" interface="gamecom_cart">
 			<dataarea name="rom" size="1835008">
 				<rom name="Sonic Jam (1998) (71-734) [b1].tgc" size="1835008" crc="8c165064" sha1="80c693f3ae285bd84ba1fc4762bdee2676493096"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gam663f4d30c8374">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="svellas.bin" size="32768" crc="0b3a3271" sha1="663f4d30c8374eeada96549915f954bc762731c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gamfa5f80109b40d">
+		<description>svellas_256k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="svellas_256k.bin" size="262144" crc="622243e7" sha1="fa5f80109b40dccb6272e76214daa42ceb1ffc42"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gamddc38a7bb6d5c">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="sword.bin" size="32768" crc="bb9cc102" sha1="ddc38a7bb6d5c19c7741ef11545a3053644b87ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gama4162870e0dd3">
+		<description>sword_256k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamecom_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="sword_256k.bin" size="262144" crc="9c302d57" sha1="a4162870e0dd34923e0cd73c21b75d1e0e27b6f3"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 36 -->
+<!-- Number of items in this list = 44 -->
 <softwarelist name="trsm100_cass" description="trsm100_cass loose roms">
 	<software name="trs56cba5ccbe1a7">
 		<description>Aerial(1of2)</description>
@@ -59,6 +59,26 @@
 		<part name="cass" interface="trsm100_cass">
 			<dataarea name="cass" size="4747684">
 				<rom name="Ascend(2of2).wav" size="4747684" crc="44549814" sha1="d50633fbe62a607d516b3a6d10e4f787f6d5f1aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs57c8ee06e7ca7">
+		<description>Awass(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="552804">
+				<rom name="Awass(1of2).wav" size="552804" crc="854d57a1" sha1="57c8ee06e7ca7692be84d673d1c4b4cae0e2c829"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs2d94d6620cf08">
+		<description>Awass(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="5431124">
+				<rom name="Awass(2of2).wav" size="5431124" crc="a49aa60a" sha1="2d94d6620cf0840a10904a5bfdf914d73031be43"/>
 			</dataarea>
 		</part>
 	</software>
@@ -262,6 +282,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="trs0e0f64b72f115">
+		<description>Mazy2(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="552764">
+				<rom name="Mazy2(1of2).wav" size="552764" crc="01b648d5" sha1="0e0f64b72f115cf65edc7a57e3964787da9e6b15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs3c1a6a9a25e51">
+		<description>Mazy2(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="5822444">
+				<rom name="Mazy2(2of2).wav" size="5822444" crc="16073cf5" sha1="3c1a6a9a25e51cd07f089cec940983528aedd0aa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="trsac795b97217d3">
 		<description>mieyen(1of2)</description>
 		<year>????</year>
@@ -339,6 +379,46 @@
 		<part name="cass" interface="trsm100_cass">
 			<dataarea name="cass" size="6776884">
 				<rom name="Ruptus(2of 2).wav" size="6776884" crc="b97fbb9a" sha1="27264ed4079623d99a4780e2a331dd24e17ce29d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs20a33a764cdac">
+		<description>Svellas(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="552804">
+				<rom name="Svellas(1of2).wav" size="552804" crc="bbfecda3" sha1="20a33a764cdac26caffae45d53df1780006c589e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trse26ad8bb98552">
+		<description>Svellas(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="5196564">
+				<rom name="Svellas(2of2).wav" size="5196564" crc="7545123b" sha1="e26ad8bb98552d3617587c2ac79de01620fc7c12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trsd92d029e1c979">
+		<description>SwordWork(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="552684">
+				<rom name="SwordWork(1of2).wav" size="552684" crc="10df9afc" sha1="d92d029e1c979acb6feb614b2d825976410475a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="trs4d1b93dd67bce">
+		<description>SwordWork(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="trsm100_cass">
+			<dataarea name="cass" size="5036484">
+				<rom name="SwordWork(2of2).wav" size="5036484" crc="7bb44f7d" sha1="4d1b93dd67bce916e80907c7145cade370e7400b"/>
 			</dataarea>
 		</part>
 	</software>

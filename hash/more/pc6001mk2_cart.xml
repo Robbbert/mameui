@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 4 -->
+<softwarelist name="pc6001mk2_cart" description="pc6001mk2_cart loose roms">
+	<software name="p60860ae15cf35b8">
+		<description>Deepspace_PC6001Mk2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pc6001_cart">
+			<dataarea name="rom" size="9483">
+				<rom name="Deepspace_PC6001Mk2.bin" size="9483" crc="cc81f232" sha1="860ae15cf35b89f8b1779411ce6d4dfc3a2bf734"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p6022b88e32eec93">
+		<description>Elite Planet Browser_pc6001Mk2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pc6001_cart">
+			<dataarea name="rom" size="13717">
+				<rom name="Elite Planet Browser_pc6001Mk2.bin" size="13717" crc="92eda385" sha1="22b88e32eec9390b7db8823185e8955b3145acf6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p600489c6dc94d76">
+		<description>Htron_pc6001Mk2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pc6001_cart">
+			<dataarea name="rom" size="8785">
+				<rom name="Htron_pc6001Mk2.bin" size="8785" crc="cb99c225" sha1="0489c6dc94d76f7f676b2b8b600d548456fd04a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60385b38ff42d95">
+		<description>MasterMind_pc6001Mk2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pc6001_cart">
+			<dataarea name="rom" size="8361">
+				<rom name="MasterMind_pc6001Mk2.bin" size="8361" crc="ac27b64f" sha1="385b38ff42d95352b14a5d5e8a5c590b2c0b333a"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

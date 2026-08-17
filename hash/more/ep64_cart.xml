@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 19 -->
+<!-- Number of items in this list = 23 -->
 <softwarelist name="ep64_cart" description="ep64_cart loose roms">
 	<software name="ep810a6957ab58f4">
 		<description>Aerial</description>
@@ -29,6 +29,16 @@
 		<part name="cart" interface="ep64_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Ascend.rom" size="16384" crc="32528f9d" sha1="55d584ae1f17265d5300758f4aca6b56b90c2142"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ep3bd69bc2f1d0e7">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ep64_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="awass.rom" size="16384" crc="cc80db6b" sha1="3bd69bc2f1d0e7cf0c1ce8149cf60f62d9b088c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -142,6 +152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ep6781962da23677">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ep64_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mazy2.rom" size="16384" crc="741a72e5" sha1="6781962da236773094f618aaa1d1e51a9b793787"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ep453aa071733129">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -179,6 +199,26 @@
 		<part name="cart" interface="ep64_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Ruptus.rom" size="16384" crc="a1bf7b35" sha1="17396358f26e5b2545fbf9c6ab5c972a28ce4563"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ep7e50facba0f037">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ep64_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="svellas.rom" size="16384" crc="7ff029fe" sha1="7e50facba0f037ac19a1f5c985121af76ed83bb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ep377a6b0004c8f2">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ep64_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="sword.rom" size="16384" crc="df1108c3" sha1="377a6b0004c8f2908e00bc5ad6668069e2905417"/>
 			</dataarea>
 		</part>
 	</software>

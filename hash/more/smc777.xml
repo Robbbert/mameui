@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 41 -->
+<!-- Number of items in this list = 45 -->
 <softwarelist name="smc777" description="smc777 loose roms">
 	<software name="smcbfff6411e92d0">
 		<description>777 ORIGINAL DISK (19xx)(Sony)</description>
@@ -18,7 +18,7 @@
 		<publisher>unknown</publisher>
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
-				<rom name="777 ORIGINAL DISK .1DD" size="305328" crc="158501c1" sha1="21e36fc87a691bf6a02525c4765eb9f6547c78d2"/>
+				<rom name="777 ORIGINAL DISK.1DD" size="305328" crc="158501c1" sha1="21e36fc87a691bf6a02525c4765eb9f6547c78d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -49,6 +49,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="Ascend.1dd" size="305328" crc="60461c35" sha1="8197efe7e88c89c58ce957834d1501b1b5716fb0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc713aad9f3d263">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="awass.1dd" size="305328" crc="ec3f83bb" sha1="713aad9f3d26399e3bf9b57610fd4de4f52e21d6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -272,6 +282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smc402ced9f570d9">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="mazy2.1dd" size="305328" crc="7d1a4eed" sha1="402ced9f570d918f951085c4b371d911158d469b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smc5cd3cd7d9df3b">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -379,6 +399,26 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="305328">
 				<rom name="striz b h.1DD" size="305328" crc="f3ac77b6" sha1="9e47caf96ef2bbe4df59f0dbe172e6ec4832a972"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smc75e7309d25eed">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="svellas.1dd" size="305328" crc="cb9f8783" sha1="75e7309d25eeddcb91a9bb9fafe4c0e61c27c1e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smcb77fdc2bd84c3">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="305328">
+				<rom name="sword.1dd" size="305328" crc="78899030" sha1="b77fdc2bd84c32135eb88a93efb714184f8dd0f6"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 41 -->
+<!-- Number of items in this list = 62 -->
 <softwarelist name="pasopia7_cass" description="pasopia7_cass loose roms">
+	<software name="pa73e2592e8c8707">
+		<description>aerial001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213840">
+				<rom name="aerial001.wav" size="213840" crc="6f503efe" sha1="3e2592e8c8707ec0559f2838498d59d196cace9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa773c066f5cc93d">
+		<description>aerial002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3660258">
+				<rom name="aerial002.wav" size="3660258" crc="6bbeb21d" sha1="73c066f5cc93d2f9535b07924cc1d3fe683872be"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pa7cdff3a610ce40">
 		<description>antiair01</description>
 		<year>????</year>
@@ -19,6 +39,16 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="2434101">
 				<rom name="antiair02.wav" size="2434101" crc="00cb6ab8" sha1="1482cd2365533ee223676452d8f75058138af294"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7d3491d0afbc16">
+		<description>ascend002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3031680">
+				<rom name="ascend002.wav" size="3031680" crc="a274f03d" sha1="d3491d0afbc1665cd34ee0720d5894b000dbea05"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42,6 +72,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pa7bb379305acfbe">
+		<description>battlot001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213915">
+				<rom name="battlot001.wav" size="213915" crc="a1462f0d" sha1="bb379305acfbe95dfb373bfa3f4a5bb6a6fdb093"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7b1fdbd9d7593f">
+		<description>battlot002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3671558">
+				<rom name="battlot002.wav" size="3671558" crc="847cb04e" sha1="b1fdbd9d7593ff997f3fcfd1b1b0f713480e9483"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pa7a005cdf32d603">
 		<description>BATTLOT01</description>
 		<year>????</year>
@@ -59,6 +109,26 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="3642209">
 				<rom name="BATTLOT02.wav" size="3642209" crc="b4c42685" sha1="cc06efbefb75a29c5b89118c3da18057ac7557e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7a1e863f58a018">
+		<description>bootskell001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213967">
+				<rom name="bootskell001.wav" size="213967" crc="2f5d3c3f" sha1="a1e863f58a01810e904a5941a87c1e024d43eb8c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa74ba0b195ea0cb">
+		<description>bootskell002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3726478">
+				<rom name="bootskell002.wav" size="3726478" crc="3a77ef7f" sha1="4ba0b195ea0cb70fe5a72d12f201564a583e9555"/>
 			</dataarea>
 		</part>
 	</software>
@@ -99,6 +169,26 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="3013580">
 				<rom name="cacorm02.wav" size="3013580" crc="e0f8929c" sha1="a19c64be2dc64de2abd41afbdd381ca0720de45d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa72e9e8f296182f">
+		<description>cavit001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213920">
+				<rom name="cavit001.wav" size="213920" crc="d6f7ec34" sha1="2e9e8f296182f4222b8331e53df22e3dac8e0ccb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa772edf3da4071b">
+		<description>cavit002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="4058544">
+				<rom name="cavit002.wav" size="4058544" crc="d475d777" sha1="72edf3da4071b1221dec7c7f35aea75b7cba93fb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -222,6 +312,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pa7ee323f27214b0">
+		<description>impetus001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213921">
+				<rom name="impetus001.wav" size="213921" crc="d925509c" sha1="ee323f27214b00cd1f56f1172afdf45cab3f8b5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7dcee04ac8a4ef">
+		<description>impetus002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="5021075">
+				<rom name="impetus002.wav" size="5021075" crc="560a4756" sha1="dcee04ac8a4efca7d0a4a4a15a161d38aafe1fa2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pa788bbdaa4d6792">
 		<description>impetus01</description>
 		<year>????</year>
@@ -252,6 +362,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pa7260bfd3f532b2">
+		<description>lift001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213800">
+				<rom name="lift001.wav" size="213800" crc="67281692" sha1="260bfd3f532b2bec98a6afffad989076dc3c8cb7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7709de77426bad">
+		<description>lift002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3002570">
+				<rom name="lift002.wav" size="3002570" crc="e6e2153e" sha1="709de77426bad1af3db09a8081028f0dabdcfe04"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pa70776cab45e3fd">
 		<description>lift01</description>
 		<year>????</year>
@@ -272,6 +402,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pa7abec309db90ab">
+		<description>mazy001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213847">
+				<rom name="mazy001.wav" size="213847" crc="fb5b046e" sha1="abec309db90ab469ef93264dc363a7ae15be32b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa707a451e2c1945">
+		<description>mazy002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3119439">
+				<rom name="mazy002.wav" size="3119439" crc="569b0554" sha1="07a451e2c19452121aba62ab14dd651e2fc1cff0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pa7017f8f240f790">
 		<description>mieyen01</description>
 		<year>????</year>
@@ -289,6 +439,26 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="3032650">
 				<rom name="mieyen02.wav" size="3032650" crc="dea76ba0" sha1="805b929cc0c438683f0efde97b7558c5f47bd535"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7f51a8dab94287">
+		<description>neuras001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213920">
+				<rom name="neuras001.wav" size="213920" crc="b541e597" sha1="f51a8dab94287924489835ceac46b590e0543160"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa75a442d2209722">
+		<description>neuras002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3003980">
+				<rom name="neuras002.wav" size="3003980" crc="b239fd5c" sha1="5a442d22097220c289d07670d3abdb600be9f024"/>
 			</dataarea>
 		</part>
 	</software>
@@ -342,6 +512,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pa7c0474b87487b8">
+		<description>ruptus001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213886">
+				<rom name="ruptus001.wav" size="213886" crc="4953fa87" sha1="c0474b87487b873118ffb48ef76e158ca65aebc0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa788788ac35ed2b">
+		<description>ruptus002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="4179687">
+				<rom name="ruptus002.wav" size="4179687" crc="d9036248" sha1="88788ac35ed2b6e34a1760b2e6154370044f36e9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pa711683a647b077">
 		<description>RUPTUS01</description>
 		<year>????</year>
@@ -379,6 +569,26 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="20684844">
 				<rom name="SPY-0011.wav" size="20684844" crc="44c2f432" sha1="bd6a29130af17c7da2cb0bb417a46b8ab1669894"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa719e868b5b9e20">
+		<description>svellas001</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="213927">
+				<rom name="svellas001.wav" size="213927" crc="32041677" sha1="19e868b5b9e20f1813fe20fb8245b369132c9814"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7e0beb4f59ecef">
+		<description>svellas002</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="3140300">
+				<rom name="svellas002.wav" size="3140300" crc="d0f590e8" sha1="e0beb4f59ecef83f4b5f30733596af7de48d686d"/>
 			</dataarea>
 		</part>
 	</software>

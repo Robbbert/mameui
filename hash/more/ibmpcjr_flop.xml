@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 31 -->
+<!-- Number of items in this list = 39 -->
 <softwarelist name="ibmpcjr_flop" description="ibmpcjr_flop loose roms">
 	<software name="ibm3788ed7f9e1cf">
 		<description>aerial</description>
@@ -59,6 +59,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="368640">
 				<rom name="ascend.img" size="368640" crc="3cd7b46c" sha1="abc4ee09069c9c1c72440d6c6269559ed232a404"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmb4cbe399fa807">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="awass.d88" size="380848" crc="b7fd22ea" sha1="b4cbe399fa8071a23a35fbc9daf0e47570a11ea5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmc7996dc0ee1b9">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="awass.img" size="368640" crc="dfe70e83" sha1="c7996dc0ee1b92706f54f1f50ac8fae279c7a284"/>
 			</dataarea>
 		</part>
 	</software>
@@ -222,6 +242,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ibme211cef4ff568">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="mazy2.d88" size="380848" crc="5e1aad49" sha1="e211cef4ff5686943f47828d34795eb69c33f9f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmb7881db848342">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="mazy2.img" size="368640" crc="7a2f9adf" sha1="b7881db848342081eb6031b4893400316603a382"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ibm34e4318719eb1">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -289,6 +329,46 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="368640">
 				<rom name="ruptus.img" size="368640" crc="289d33ba" sha1="18270a0173f1e36f21e1b8e263b825b42f7943d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmfe53a46c035e6">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="svellas.d88" size="380848" crc="7523fa4b" sha1="fe53a46c035e6678e7ec316616556b3c0371663d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibmb788b1c5d7dca">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="svellas.img" size="368640" crc="77cf9897" sha1="b788b1c5d7dca03606c1a7605027ff51eabe84d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibm9d0215ef7470c">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="380848">
+				<rom name="sword.d88" size="380848" crc="97a84877" sha1="9d0215ef7470cec73fbd5702298d85a49e9c5151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ibme8c5bcb8c72f5">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="368640">
+				<rom name="sword.img" size="368640" crc="783db43b" sha1="e8c5bcb8c72f504bb264eb38108b461a521a7bd4"/>
 			</dataarea>
 		</part>
 	</software>

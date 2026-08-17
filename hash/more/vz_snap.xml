@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 238 -->
+<!-- Number of items in this list = 242 -->
 <softwarelist name="vz_snap" description="vz_snap loose roms">
 	<software name="vt1dbb8f6a5ec6f6">
 		<description>3D Pyramids (19xx)(-)</description>
@@ -209,6 +209,16 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="227">
 				<rom name="Auto Lissajouse (19xx)(-).vz" size="227" crc="50b8f527" sha1="0f2cda0918335784c39fb136b43fffe74b8a8e15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1a57028759e1ea">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8040">
+				<rom name="awass.vz" size="8040" crc="b749be08" sha1="a57028759e1eadf5eecf6a73b6d08b1f0554820b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1652,6 +1662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="vt1bb41bb61b0a3a">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="8346">
+				<rom name="mazy2.vz" size="8346" crc="8fbb6275" sha1="bb41bb61b0a3a449dc33fe535de579bf37aaac0f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="vt1dd886ef097e03">
 		<description>memory</description>
 		<year>????</year>
@@ -2139,6 +2159,26 @@
 		<part name="snap" interface="vzsnap">
 			<dataarea name="snap" size="528">
 				<rom name="SUZANAH.VZ" size="528" crc="fbfe96b8" sha1="0f5bb006a9699410c837bcf6e7212cda7614ca81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1f1223877d1c1e">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7825">
+				<rom name="svellas.vz" size="7825" crc="aba57c11" sha1="f1223877d1c1ed758f325ad398030305956571ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt1427c66729d9c5">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="vzsnap">
+			<dataarea name="snap" size="7351">
+				<rom name="sword.vz" size="7351" crc="c5e03a62" sha1="427c66729d9c51db36a62954c288ad849fa478f2"/>
 			</dataarea>
 		</part>
 	</software>

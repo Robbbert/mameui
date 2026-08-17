@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1041 -->
+<!-- Number of items in this list = 1046 -->
 <softwarelist name="a7800" description="a7800 loose roms">
 	<software name="a78e019c21c536b0">
 		<description>(demo)10 Print Maze Demo (20170826)</description>
@@ -1949,6 +1949,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="32896">
 				<rom name="Atlas 7800 (20111023).a78" size="32896" crc="0112e82c" sha1="14f9e796fb4d06f4b21326affe0e6daeb002dd04"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78bb08a6977f014">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="awass.a78" size="32896" crc="da4dbe5c" sha1="bb08a6977f0144adf49175bccfde91bb70c40135"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6072,6 +6082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a78afe6f87b3d86a">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="mazy2.a78" size="32896" crc="ec999da8" sha1="afe6f87b3d86a4a6559038dc348219c539c5f58f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a785a3de17714b24">
 		<description>Mean 18 Ultimate Golf (1989)(Atari)(NTSC)</description>
 		<year>????</year>
@@ -6199,6 +6219,16 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="131200">
 				<rom name="Midnight Mutants (PAL) (Atari) (1990).a78" size="131200" crc="d290db0e" sha1="91c126d26cfc4b206f5c3b078f9d3110a70a82c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78f25b93f39196b">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="mieyen.a78" size="32896" crc="86e46b03" sha1="f25b93f39196b74d8af80e08a55730a79dd6182a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9639,6 +9669,26 @@
 		<part name="cart" interface="a7800_cart">
 			<dataarea name="rom" size="65664">
 				<rom name="Super Stunt Cycle (5-26-89).a78" size="65664" crc="867c2107" sha1="2f772b44d26369d2ff626dbd43a48707a0653ca7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78819df3598eb98">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="svellas.a78" size="32896" crc="80367bed" sha1="819df3598eb988835e59153e68a249f0d48d262a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a78dd4171802fdaf">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a7800_cart">
+			<dataarea name="rom" size="32896">
+				<rom name="sword.a78" size="32896" crc="57363870" sha1="dd4171802fdaf9235dea2dc628f5a429eb758624"/>
 			</dataarea>
 		</part>
 	</software>

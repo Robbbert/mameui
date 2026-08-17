@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 174 -->
+<!-- Number of items in this list = 178 -->
 <softwarelist name="a5200" description="a5200 loose roms">
 	<software name="a522071e69941a10">
 		<description>(demo)PAM SALT V1.02 (1982) (Atari) [o1]</description>
@@ -239,6 +239,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Asteroids_VE_Revision_2__Atari_5200_.a52" size="16384" crc="dd5ecbaa" sha1="ea261def6ee2644e328f55add4ef4b80beaeeaa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52009191a922855">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="awass.rom" size="16384" crc="12d29b64" sha1="009191a9228556b931a80cf90732078f48a736e4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1032,6 +1042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a52fc2104d6aef09">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mazy2.rom" size="16384" crc="fc28939d" sha1="fc2104d6aef0970c30fc82c6f0c318117d646056"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a52c809dccec64e1">
 		<description>menu</description>
 		<year>????</year>
@@ -1639,6 +1659,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Super_Pac_Man__Adj.Bluetime__32k_.bin" size="32768" crc="7c25c550" sha1="a2db9cdda19bc78cdfd58cd9a197014236e18d8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a5217e2c968192fc">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="svellas.rom" size="16384" crc="4a8f2125" sha1="17e2c968192fcb5d1d69f800af65d854fc791135"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a52cd399bc0f92a1">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="sword.rom" size="16384" crc="96a363d4" sha1="cd399bc0f92a15079e809a96d7e3c02d389e894e"/>
 			</dataarea>
 		</part>
 	</software>

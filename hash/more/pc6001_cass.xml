@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 156 -->
+<!-- Number of items in this list = 161 -->
 <softwarelist name="pc6001_cass" description="pc6001_cass loose roms">
 	<software name="p6022c612051ec75">
 		<description>1000en</description>
@@ -99,6 +99,16 @@
 		<part name="snap" interface="pc6001_snap">
 			<dataarea name="snap" size="440">
 				<rom name="Ascent {m1p2}.p6" size="440" crc="9b979bc1" sha1="cb1a499089ba33b3c941e5f8dcf88b301b3d69fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60851a92e0921ec">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="pc6001_snap">
+			<dataarea name="snap" size="9207">
+				<rom name="awass.p6" size="9207" crc="6d62897a" sha1="851a92e0921ec95d3360d03294ae4395dc1d0316"/>
 			</dataarea>
 		</part>
 	</software>
@@ -752,6 +762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p608aae90238ed91">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="pc6001_snap">
+			<dataarea name="snap" size="9586">
+				<rom name="mazy2.p6" size="9586" crc="750125ad" sha1="8aae90238ed91e4a37080c4d81fcee53ed5bb15b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p60906b62d790b32">
 		<description>Mirror Point {m1p2}</description>
 		<year>????</year>
@@ -1122,6 +1142,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="p607c648cd101738">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="pc6001_snap">
+			<dataarea name="snap" size="9072">
+				<rom name="svellas.p6" size="9072" crc="314a65cd" sha1="7c648cd1017383b5bfac048d017ec954790c11f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p60ab5f5de2c7898">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="pc6001_snap">
+			<dataarea name="snap" size="8502">
+				<rom name="sword.p6" size="8502" crc="c6820474" sha1="ab5f5de2c7898261dc79effa82696f2a5926e4c5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="p60a201e6c758add">
 		<description>Tacom Island (2006 ver.) {m1p1}</description>
 		<year>????</year>
@@ -1289,6 +1329,16 @@
 		<part name="snap" interface="pc6001_snap">
 			<dataarea name="snap" size="6386">
 				<rom name="Tsumemugyu {m2p2}.p6" size="6386" crc="d1696983" sha1="6b6ca8666587a7cbc57f933170c60d970ae74009"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p602c1d50f9dc55b">
+		<description>uchotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="pc6001_snap">
+			<dataarea name="snap" size="7732">
+				<rom name="uchotos.p6" size="7732" crc="f48c73d7" sha1="2c1d50f9dc55be009bcfd509a50a46e21da36f62"/>
 			</dataarea>
 		</part>
 	</software>

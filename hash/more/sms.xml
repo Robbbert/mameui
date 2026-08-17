@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 588 -->
+<!-- Number of items in this list = 589 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -4639,6 +4639,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Smurfs, Os T-Por (2024)(SatY Traducoes).sms" size="262144" crc="2261a06c" sha1="62ed982844b4ad25edb94dab46fcc941f30ae737"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms97208150de4a7">
+		<description>Snake Pit (2026)(Popixel Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Snake Pit (2026)(Popixel Games).sms" size="524288" crc="8c9de8bc" sha1="97208150de4a725409f8d74b7bdabfe7836def95"/>
 			</dataarea>
 		</part>
 	</software>

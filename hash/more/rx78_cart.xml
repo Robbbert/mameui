@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 16 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="rx78_cart" description="rx78_cart loose roms">
 	<software name="rx7a2248efe65cf5">
 		<description>Antiair</description>
@@ -9,6 +9,16 @@
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Antiair.rom" size="8192" crc="126b98f9" sha1="a2248efe65cf50b25ca9a550d858c1623b5fd022"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx7110981959a72e">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="awass.rom" size="16384" crc="9cc41883" sha1="110981959a72e6ae62080bd6be2989d0d37a1068"/>
 			</dataarea>
 		</part>
 	</software>
@@ -122,6 +132,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="rx7524c72b2398ca">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mazy2.rom" size="16384" crc="9b7265fd" sha1="524c72b2398ca2228595c25aa584f4358ff040a6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="rx707e4e607ad1a1">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -149,6 +169,26 @@
 		<part name="cart" interface="rx78_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="rx78rengokantai.bin" size="32768" crc="d6d8c760" sha1="65ef396e6e09960dbf8181a9a508df9074763b5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx7189c52247c8e5">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="svellas.rom" size="16384" crc="a1b321e2" sha1="189c52247c8e55e66db26476b28994917d6c8ded"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="rx707c3d0c420b0b">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="rx78_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="sword.rom" size="16384" crc="df056b0f" sha1="07c3d0c420b0b50d900c9e35b432d29dd6f5ae13"/>
 			</dataarea>
 		</part>
 	</software>

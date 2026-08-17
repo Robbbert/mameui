@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 466 -->
+<!-- Number of items in this list = 471 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -39,6 +39,16 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="4037">
 				<rom name="Acrobate[fr].tap" size="4037" crc="0c952e0e" sha1="7e1d2cbd8fd887e01de1691e26aa4440097d6848"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori3e10255407efe">
+		<description>Adventure Quest (1983)(Level 9 Computing)(GB)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="30995">
+				<rom name="Adventure Quest (1983)(Level 9 Computing)(GB).tap" size="30995" crc="82fc8b85" sha1="3e10255407efee6907a1bfa31aa0b51f1b169eed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -329,6 +339,16 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="15144">
 				<rom name="Auto-Ecole (F) (1984).tap" size="15144" crc="e0bf8db2" sha1="680434e24be3a497122713e23a99de94dcf90f43"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6f756b36c8922">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="13309">
+				<rom name="awass.tap" size="13309" crc="e4da86da" sha1="6f756b36c89226ab042129ce96e2fc6616299c4a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2342,6 +2362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ori30759a8b8c9a3">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="13687">
+				<rom name="mazy2.tap" size="13687" crc="ebd4e2f8" sha1="30759a8b8c9a3e279d6e8cfb5ad2c655d8703d9d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ori691e9332c8f1a">
 		<description>Memoric Mag Type-in 1 (F) (19xx)</description>
 		<year>????</year>
@@ -4249,6 +4279,26 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="2434">
 				<rom name="Surfaces &amp; Gauches 2 (F) (19xx).tap" size="2434" crc="7e44f736" sha1="d9271b4d981deb3ced54c40a7d45949eb8de74ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ori6ca18cc575141">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="13347">
+				<rom name="svellas.tap" size="13347" crc="78abc3a5" sha1="6ca18cc575141d3150e4d9542390b98a15671a92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="oridda2a8d095585">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="oric1_cass">
+			<dataarea name="cass" size="12350">
+				<rom name="sword.tap" size="12350" crc="fc1e85c6" sha1="dda2a8d0955853fef0b4542995a510e58b093956"/>
 			</dataarea>
 		</part>
 	</software>

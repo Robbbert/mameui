@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 327 -->
+<!-- Number of items in this list = 339 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -352,16 +352,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gbaba919966ca577">
-		<description>240pee_mb (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="50760">
-				<rom name="240pee_mb (2).gba" size="50760" crc="5925ac98" sha1="ba919966ca577aa8b2a75bdc3defad6644d808cb"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gba3ad9aac52cf5a">
 		<description>240pee_mb</description>
 		<year>????</year>
@@ -382,6 +372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaba919966ca577">
+		<description>240pee_mb_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="50760">
+				<rom name="240pee_mb_2.gba" size="50760" crc="5925ac98" sha1="ba919966ca577aa8b2a75bdc3defad6644d808cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba1e52e2483d9f5">
 		<description>3D Terrain (2001)(Skyworks Technologies)</description>
 		<year>????</year>
@@ -389,6 +389,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="3D Terrain (2001)(Skyworks Technologies).gba" size="33554432" crc="7bbe7cd7" sha1="1e52e2483d9f57838ec925edf7d3bbdce504a017"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8a7faa5b7184e">
+		<description>Advance Wars Returns v3.3 (2021)(Vivi The Blossom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Advance Wars Returns v3.3 (2021)(Vivi The Blossom).gba" size="8388608" crc="c42363a9" sha1="8a7faa5b7184e9adafb67eade9dd7fd522c32f40"/>
 			</dataarea>
 		</part>
 	</software>
@@ -443,12 +453,12 @@
 		</part>
 	</software>
 	<software name="gbae351bc6a9046e">
-		<description>Anguna (PD)</description>
+		<description>Anguna - Warriors of Virtue v0.95 (2008)(Bite the Chili)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1775856">
-				<rom name="Anguna (PD).gba" size="1775856" crc="41ea5b0b" sha1="e351bc6a9046ec002fc2dfdee061047908bd4350"/>
+				<rom name="Anguna - Warriors of Virtue v0.95 (2008)(Bite the Chili).gba" size="1775856" crc="41ea5b0b" sha1="e351bc6a9046ec002fc2dfdee061047908bd4350"/>
 			</dataarea>
 		</part>
 	</software>
@@ -499,6 +509,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1459660">
 				<rom name="Battle Airforce (2025)(Suzuki Plan).gba" size="1459660" crc="c3a57a26" sha1="125d3318b46e03afc9a20d4cf8fe6f973154372d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbacf94548d46deb">
+		<description>Blackthorne - Palette Restoration (2017)(marc_max)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Blackthorne - Palette Restoration (2017)(marc_max).gba" size="4194304" crc="4024e886" sha1="cf94548d46debcb5a86b1f45c001b65dc0ce31be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -592,16 +612,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gba5469b5d01d82d">
-		<description>ChuckieEgg(2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="353880">
-				<rom name="ChuckieEgg(2).gba" size="353880" crc="a8dab249" sha1="5469b5d01d82d5fd83c064a17c85f8393d86f30f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gbad5a905ca2ced1">
 		<description>ChuckieEgg</description>
 		<year>????</year>
@@ -609,6 +619,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="744152">
 				<rom name="ChuckieEgg.gba" size="744152" crc="e59fcd63" sha1="d5a905ca2ced111539d412c0261e6387238266c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5469b5d01d82d">
+		<description>ChuckieEgg_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="353880">
+				<rom name="ChuckieEgg_1.gba" size="353880" crc="a8dab249" sha1="5469b5d01d82d5fd83c064a17c85f8393d86f30f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -739,6 +759,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="174396">
 				<rom name="Cleangame Advance 0.1.gba" size="174396" crc="ed256331" sha1="5ebd9697ec104381ebb94256a0d82c00a93d95ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba7ae75f3c36015">
+		<description>Clock Tower Advance (2025)(BobSchneeder45)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Clock Tower Advance (2025)(BobSchneeder45).gba" size="16777216" crc="0e6bc237" sha1="7ae75f3c36015ddb7a30591ec6b4df7f2e3a20ba"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1222,6 +1252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba16d772195bd3b">
+		<description>Fire Emblem - Vision Quest v3 (2022)(Pushwall)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="28947180">
+				<rom name="Fire Emblem - Vision Quest v3 (2022)(Pushwall).gba" size="28947180" crc="2bcfec83" sha1="16d772195bd3b6a561595ecb71be7bef1185e7ea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaf613a7366dca5">
 		<description>Flipoon Advance (2023-05-16)(HusYada)(proto)</description>
 		<year>????</year>
@@ -1279,6 +1319,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Goodboy Galaxy v1.3 (2023-24)(Goodboy Galaxy).gba" size="33554432" crc="159ff629" sha1="df5473dbb005816293238095076e8f8c75484f93"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3ec020f0a4cac">
+		<description>GORF (2025)(Jess Creations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4740332">
+				<rom name="GORF (2025)(Jess Creations).gba" size="4740332" crc="c246ac9a" sha1="3ec020f0a4cac9b2f54e9f697e0fbf4436d16e01"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1372,6 +1422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba2430c6c078491">
+		<description>Inheritors of the Oubliette v1.2 (2021)(Mahou Shoujo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10592124">
+				<rom name="Inheritors of the Oubliette v1.2 (2021)(Mahou Shoujo).gba" size="10592124" crc="a9014760" sha1="2430c6c0784912ad2f0b51e633bf577f087f189f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbae1ae15165431c">
 		<description>Inky and the Alien Aquarium (2023)(Pocket Pulp)</description>
 		<year>????</year>
@@ -1389,6 +1449,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3901312">
 				<rom name="Junction Jive (2024-05)(Solar).gba" size="3901312" crc="0cfcad33" sha1="634e3735ad68686dcac6048e8a2508d9e23c88d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6887a8be7a826">
+		<description>Jurl v1.0c (2025)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="964484">
+				<rom name="Jurl v1.0c (2025)(Tonsomo Entertainment).gba" size="964484" crc="1dffb414" sha1="6887a8be7a826d6200196307a4706d9bc9e68519"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1472,6 +1542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba9fd9d5ec8ec86">
+		<description>Lost Vikings, The - Palette Restoration (2017)(marc_max)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lost Vikings, The - Palette Restoration (2017)(marc_max).gba" size="4194304" crc="15901947" sha1="9fd9d5ec8ec86e0eb80f2350700b36325a6fdf15"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba84c9b2d50c8af">
 		<description>Luggage Retrieval Officer (2021)(Jono Shields)</description>
 		<year>????</year>
@@ -1482,13 +1562,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gba1d97018500eaf">
-		<description>Magic Floor (2)</description>
+	<software name="gbaf4a06ed89948e">
+		<description>Luma GBA (2022)(PmProg)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="5660">
-				<rom name="Magic Floor (2).GBA" size="5660" crc="dfbd4abf" sha1="1d97018500eaf7a8c90177e89ab419fb16238844"/>
+			<dataarea name="rom" size="473596">
+				<rom name="Luma GBA (2022)(PmProg).gba" size="473596" crc="cdc54313" sha1="f4a06ed89948e1a3e31728bd61fb2b4a4c7ad335"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1499,6 +1579,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3412">
 				<rom name="Magic Floor.GBA" size="3412" crc="6ddd3a65" sha1="566e0f28a11b3c1b1cd2eabbc9fb3f86ec102647"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1d97018500eaf">
+		<description>Magic Floor_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5660">
+				<rom name="Magic Floor_1.GBA" size="5660" crc="dfbd4abf" sha1="1d97018500eaf7a8c90177e89ab419fb16238844"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1609,6 +1699,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="544608">
 				<rom name="Nebulus.gba" size="544608" crc="0ebe8312" sha1="d8981eaf1da29b6969de8d62680f050b0bfd0a02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba408521936aeaa">
+		<description>Necropolis (2021)(ehoz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="908700">
+				<rom name="Necropolis (2021)(ehoz).gba" size="908700" crc="9ab229b1" sha1="408521936aeaa47dfadfae5d0a20afc1bea2552f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2422,6 +2522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba2ca4861deca89">
+		<description>Rock 'N Roll Racing - Palette Restoration (2012)(ioev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Rock 'N Roll Racing - Palette Restoration (2012)(ioev).gba" size="4194304" crc="d48acbe4" sha1="2ca4861deca897d109b0180479548576c1888179"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbad842602253714">
 		<description>roguespear_v23</description>
 		<year>????</year>
@@ -2462,16 +2572,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gba13ba1ab9af37f">
-		<description>Shantae Advance - Risky Revolution (World) (Limited Run Games) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="16777216">
-				<rom name="Shantae Advance - Risky Revolution (World) (Limited Run Games) (2).gba" size="16777216" crc="31265c5d" sha1="13ba1ab9af37fe874bb8a7c34c7597fa8554a241"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gba750a5db8a7d96">
 		<description>Shantae Advance - Risky Revolution (World) (Limited Run Games)</description>
 		<year>????</year>
@@ -2479,6 +2579,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Shantae Advance - Risky Revolution (World) (Limited Run Games).gba" size="33554432" crc="3ef54827" sha1="750a5db8a7d9608f647f377d4095e14240275803"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba13ba1ab9af37f">
+		<description>Shantae Advance - Risky Revolution (World) (Limited Run Games)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Shantae Advance - Risky Revolution (World) (Limited Run Games)_1.gba" size="16777216" crc="31265c5d" sha1="13ba1ab9af37fe874bb8a7c34c7597fa8554a241"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3149,6 +3259,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="271032">
 				<rom name="Transience (2021-08-16)(Pineberry Fox).gba" size="271032" crc="e607dc48" sha1="fef8a2f6483303f32c2ceeae689a5c01ebf7bafe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa1888680aec32">
+		<description>Trun (2025)(VG Source Game Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Trun (2025)(VG Source Game Studio).gba" size="4194304" crc="19aedb57" sha1="a1888680aec32f33868dda1232613f43b7b156e3"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 27 -->
+<!-- Number of items in this list = 31 -->
 <softwarelist name="tutor" description="tutor loose roms">
 	<software name="tut520aa0b12259f">
 		<description>Aerial</description>
@@ -29,6 +29,16 @@
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="16160">
 				<rom name="Ascend.bin" size="16160" crc="d6437b54" sha1="5c861e32bc7fa734ee3bfe39cae30d3af1fe1f81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut7c7090ba2fb0a">
+		<description>Awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Awass.bin" size="16384" crc="56da9a3c" sha1="7c7090ba2fb0a613fdafa1de7043ff6defd794d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -182,13 +192,23 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="tut0915345b273bd">
+		<description>Mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mazy2.bin" size="16384" crc="628a096f" sha1="0915345b273bd8b93324dbfed16aa4c02c56ef47"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="tut8d380be841791">
-		<description>mieyen</description>
+		<description>Mieyen</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="12304">
-				<rom name="mieyen.bin" size="12304" crc="f36cda71" sha1="8d380be841791cc29d9a12cb009575715105b6f1"/>
+				<rom name="Mieyen.bin" size="12304" crc="f36cda71" sha1="8d380be841791cc29d9a12cb009575715105b6f1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -239,6 +259,26 @@
 		<part name="cart" interface="tutor_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Scramble (199x)(TM).bin" size="8192" crc="3c23d24f" sha1="cf025d180cec5bafbbae9623cd5b6177481478a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tut281f1df1dee66">
+		<description>Svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Svellas.bin" size="16384" crc="54fe44c3" sha1="281f1df1dee66820a815ef571274b53e35703bab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="tute58244116dfa0">
+		<description>Sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="tutor_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Sword.bin" size="16384" crc="38096a4d" sha1="e58244116dfa0f12a7c8e69ce8454dc0c31e191c"/>
 			</dataarea>
 		</part>
 	</software>

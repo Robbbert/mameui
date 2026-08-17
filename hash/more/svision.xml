@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 31 -->
+<!-- Number of items in this list = 35 -->
 <softwarelist name="svision" description="svision loose roms">
 	<software name="sv95ffb4eeaee381">
 		<description>Aerial</description>
@@ -29,6 +29,16 @@
 		<part name="cart" interface="svision_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Ascend.bin" size="16384" crc="a41eb764" sha1="32c2fcf1a6dd6ee3b0e17a89c2e21bbb39c63a27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sv5359852e08cac8">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="awass.bin" size="32768" crc="961b7fab" sha1="5359852e08cac85a51a41aeb322991bc06201529"/>
 			</dataarea>
 		</part>
 	</software>
@@ -232,6 +242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sva7fe0bb608c9e2">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="mazy2.bin" size="32768" crc="d54466ca" sha1="a7fe0bb608c9e27cb06b722a0dbadf91f1925212"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sv864821fd9fd11f">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -289,6 +309,26 @@
 		<part name="cart" interface="svision_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Super Block (1992) (Bon Treasure) [o1].sv" size="65536" crc="d46ab5e0" sha1="e16c13f1fe3a5bde2fa3a4d4c10d28514328b7c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sv14af62ade88c2e">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="svellas.bin" size="32768" crc="5ea0f58c" sha1="14af62ade88c2ec45a7ed27aa4418b2980ae7d08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sv30456f5b358482">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svision_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="sword.bin" size="32768" crc="427e67bf" sha1="30456f5b358482074bec6ecdfaf6f02d44a20b6a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 159 -->
+<!-- Number of items in this list = 191 -->
 <softwarelist name="cpc_cass" description="cpc_cass loose roms">
 	<software name="cpc7310f187b8440">
 		<description>aerial</description>
@@ -19,6 +19,26 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="3954551">
 				<rom name="aerial.wav" size="3954551" crc="2432b715" sha1="49088cbe3df5266b955a8a42734d0809538515b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc896c8c6615447">
+		<description>aerial_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="14079">
+				<rom name="aerial_4.cdt" size="14079" crc="cc0dea3d" sha1="896c8c66154470572365d9b69ac9933791c5bc29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcd56839079ad84">
+		<description>aerial_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3947927">
+				<rom name="aerial_4.wav" size="3947927" crc="fd2bd1f7" sha1="d56839079ad84d2a3b113e22af41b8ee1b5e05b4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1122,6 +1142,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpcdd3aa78a3bdba">
+		<description>ascend_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="10927">
+				<rom name="ascend_4.cdt" size="10927" crc="a3135c9b" sha1="dd3aa78a3bdba6c4d1d510162245ffe3e55cd010"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpccdb06c1965372">
+		<description>ascend_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3220442">
+				<rom name="ascend_4.wav" size="3220442" crc="1b0b7d07" sha1="cdb06c1965372786b3d099f39111bac979a58b31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcb75a6605027a8">
+		<description>awass_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="13047">
+				<rom name="awass_1.cdt" size="13047" crc="262f707f" sha1="b75a6605027a8aaee0bffaafcb2a92a4107b840a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2a5d879a999e0">
+		<description>awass_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3781207">
+				<rom name="awass_1.wav" size="3781207" crc="7a1c2986" sha1="2a5d879a999e0c94938cf8b41adf8424b59548d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc08b8d5ecf25e7">
 		<description>battlot</description>
 		<year>????</year>
@@ -1139,6 +1199,26 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="3930423">
 				<rom name="battlot.wav" size="3930423" crc="a635ffed" sha1="6cd8ea66efaa241233d31ceda0b062e757c3295e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcfe48e4eb2999e">
+		<description>battlot_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="13821">
+				<rom name="battlot_5.cdt" size="13821" crc="e4e27f22" sha1="fe48e4eb2999ee8b37522b59f28eaf5cdbfaa962"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc6e99892a72c9f">
+		<description>battlot_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3893175">
+				<rom name="battlot_5.wav" size="3893175" crc="0f2d70a0" sha1="6e99892a72c9f84c9423272fa224b2a47b3bea3d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1172,6 +1252,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc34b17c6281bb5">
+		<description>bootskell_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="12475">
+				<rom name="bootskell_5.cdt" size="12475" crc="e94fa3f7" sha1="34b17c6281bb55169962d220e943f889be4df6db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc6986d1ba606ae">
+		<description>bootskell_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3471866">
+				<rom name="bootskell_5.wav" size="3471866" crc="f834b03d" sha1="6986d1ba606aee7d0b71b9529172a0222b23a375"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc278820c192df5">
 		<description>Brick Rick</description>
 		<year>????</year>
@@ -1202,6 +1302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc88694aa19b51b">
+		<description>cacorm_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="10927">
+				<rom name="cacorm_5.cdt" size="10927" crc="448770ec" sha1="88694aa19b51bb16a22d63a972852f44068d12d1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcd1722e76db478">
 		<description>cavit</description>
 		<year>????</year>
@@ -1219,6 +1329,26 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="4063703">
 				<rom name="cavit.wav" size="4063703" crc="995bbc81" sha1="0c5eacb633af4c217822da658abba8ae95cd8998"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc02be07ad33976">
+		<description>cavit_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="14853">
+				<rom name="cavit_5.cdt" size="14853" crc="c5f64a70" sha1="02be07ad33976c0e61901e1c95dfe841a43fb90a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcfdfc45c3c99f6">
+		<description>cavit_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="4061559">
+				<rom name="cavit_5.wav" size="4061559" crc="1fcb800a" sha1="fdfc45c3c99f6e92dc1ad041e7cb2a4211795cfc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1322,6 +1452,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc03a1cd3441ea0">
+		<description>guntus_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="15941">
+				<rom name="guntus_4.cdt" size="15941" crc="9df9b093" sha1="03a1cd3441ea07617812e2b7cffc257d11b9f0d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcdd11e4481a87e">
+		<description>guntus_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="4435988">
+				<rom name="guntus_4.wav" size="4435988" crc="acd4156c" sha1="dd11e4481a87e6dac21a451cc88024857aa2b2cf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc16ef82266f941">
 		<description>Heart of Salamanderland</description>
 		<year>????</year>
@@ -1372,6 +1522,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc0a4b9b87dc87b">
+		<description>impetus_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="20181">
+				<rom name="impetus_4.cdt" size="20181" crc="b25441c1" sha1="0a4b9b87dc87bd504c668055fc8594239d0aba5f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5ea5767c8b0bb">
+		<description>impetus_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="5486318">
+				<rom name="impetus_4.wav" size="5486318" crc="9d8ee364" sha1="5ea5767c8b0bbbd5a6292cac605118d94a0ec62c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpce0f46cd65c6e9">
 		<description>Justin</description>
 		<year>????</year>
@@ -1412,6 +1582,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc8c44b40e45cd6">
+		<description>lift_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="11443">
+				<rom name="lift_5.cdt" size="11443" crc="09aac74e" sha1="8c44b40e45cd67bf8ca624ba89819752958eaf60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpccf236b4cf7091">
+		<description>lift_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3277242">
+				<rom name="lift_5.wav" size="3277242" crc="068fd27d" sha1="cf236b4cf70918afe937140a069194a016a8a8bc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc5c9f6986156ab">
 		<description>Magica</description>
 		<year>????</year>
@@ -1442,6 +1632,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc7f9cfa14c4587">
+		<description>mazy2_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="12475">
+				<rom name="mazy2_1.cdt" size="12475" crc="73ce0921" sha1="7f9cfa14c45876e9ea7b0d65478c15a0f20e64d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc2d46ca7aa5429">
+		<description>mazy2_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3461978">
+				<rom name="mazy2_1.wav" size="3461978" crc="32f91047" sha1="2d46ca7aa542905da297f086530ed46943ed3a5e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc7aba1ab6e3349">
+		<description>mazy_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="9065">
+				<rom name="mazy_4.cdt" size="9065" crc="6616d8b1" sha1="7aba1ab6e3349763eea14da6dba756a2825f5e58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpccd4971509a1e1">
+		<description>mazy_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="2675229">
+				<rom name="mazy_4.wav" size="2675229" crc="bbfa4c1a" sha1="cd4971509a1e18f78fe596dd6f1d81a693dbdae6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc522fe317ea3d1">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -1462,6 +1692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc6a1adf1759bc3">
+		<description>mieyen_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3179674">
+				<rom name="mieyen_5.wav" size="3179674" crc="0e7352c5" sha1="6a1adf1759bc3186c1aa8bf5f80495427e0cee6f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpcd84586d0b6b05">
 		<description>neuras</description>
 		<year>????</year>
@@ -1479,6 +1719,26 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="3375674">
 				<rom name="neuras.wav" size="3375674" crc="161f44ff" sha1="8c1fbbf744cf697cb1886bb720d2dac99f3d0e6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc0f626bd5d2f3b">
+		<description>neuras_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="11701">
+				<rom name="neuras_5.cdt" size="11701" crc="1e0626e6" sha1="0f626bd5d2f3b31bc5ac2d2fa9990e17fa63b707"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc301126b1b349d">
+		<description>neuras_5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3377882">
+				<rom name="neuras_5.wav" size="3377882" crc="86532f89" sha1="301126b1b349d04a7b87f8faf03a823fbced233c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1522,6 +1782,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="cpc1d42c8f01e9b8">
+		<description>Ruptus_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="16199">
+				<rom name="Ruptus_4.cdt" size="16199" crc="0c28689c" sha1="1d42c8f01e9b803447dffe9ebb08a365d3502da5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc5030efcebabb5">
+		<description>Ruptus_4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="4523316">
+				<rom name="Ruptus_4.wav" size="4523316" crc="fe993085" sha1="5030efcebabb579400c6a8bbe993c730133e8d63"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cpc5f7552926263c">
 		<description>Snake v1.0 (2021-02-06)(Berge, Edouard)</description>
 		<year>????</year>
@@ -1549,6 +1829,46 @@
 		<part name="cass" interface="cpc_cass">
 			<dataarea name="cass" size="30037">
 				<rom name="Space Pest Control.cdt" size="30037" crc="e42d5f4a" sha1="4d17941da46bf571dbb46c80115b74c6fdc9fd8f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpccc6d5998436c7">
+		<description>svellas_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="11185">
+				<rom name="svellas_1.cdt" size="11185" crc="b1159471" sha1="cc6d5998436c7bba7701c1507994e16285659fd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc9cfc64e12887d">
+		<description>svellas_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3273978">
+				<rom name="svellas_1.wav" size="3273978" crc="b31a4610" sha1="9cfc64e12887d230bc0f88a6701f27d29545009c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpc00eb36ea5a693">
+		<description>sword_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="11959">
+				<rom name="sword_1.cdt" size="11959" crc="d8981e4e" sha1="00eb36ea5a6936eab8da3d637844b398a0068a0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cpcfd1631903933e">
+		<description>sword_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="cpc_cass">
+			<dataarea name="cass" size="3364570">
+				<rom name="sword_1.wav" size="3364570" crc="cf78c548" sha1="fd1631903933e6dcc52f76aeead0a91d9e08e8cc"/>
 			</dataarea>
 		</part>
 	</software>

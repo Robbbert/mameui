@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 17 -->
+<!-- Number of items in this list = 18 -->
 <softwarelist name="m5_cass" description="m5_cass loose roms">
 	<software name="m5135f0adb05fd27">
 		<description>3dsquash [BASIC-I CHAIN]</description>
@@ -49,6 +49,16 @@
 		<part name="cass1" interface="m5_cass">
 			<dataarea name="cass" size="2987006">
 				<rom name="baseball_orig [BASIC-I TAPE].wav" size="2987006" crc="1721d510" sha1="d6f849cbc5a861d465cf8d3e9df6267a69161f19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5a5bd05aa110879">
+		<description>music tone [BASICG OLD RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="m5_cass">
+			<dataarea name="cass" size="3423">
+				<rom name="music tone [BASICG OLD RUN].cas" size="3423" crc="296671e0" sha1="a5bd05aa110879317e19566936264de21ec34195"/>
 			</dataarea>
 		</part>
 	</software>

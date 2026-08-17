@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 46 -->
+<!-- Number of items in this list = 53 -->
 <softwarelist name="m5_cart" description="m5_cart loose roms">
 	<software name="m51017b98d9a193f">
 		<description>Aerial</description>
@@ -29,6 +29,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="9245">
 				<rom name="Ascend.rom" size="9245" crc="f608887b" sha1="ca2e4d5f51b5b31b4a23d9d725a2386741dfe1bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m55412bd9bc8ed3a">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9294">
+				<rom name="awass.rom" size="9294" crc="0429c3be" sha1="5412bd9bc8ed3a094ff71a11474e160edbb1e606"/>
 			</dataarea>
 		</part>
 	</software>
@@ -222,6 +232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m5e5d328fa276553">
+		<description>guttang gottong (1981)(konami)(jp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="guttang gottong (1981)(konami)(jp).bin" size="8192" crc="04f842ea" sha1="e5d328fa2765530849422eb3ae33628d2adf4ca9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m5ad77e589ee17eb">
 		<description>H-Tron</description>
 		<year>????</year>
@@ -322,6 +342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m5151ec4d339d361">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9564">
+				<rom name="mazy2.rom" size="9564" crc="f116a640" sha1="151ec4d339d36148224d5d403e67544cd9eea7f5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m53e2296b2bf9663">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -412,6 +442,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m5446dc385428215">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="9212">
+				<rom name="svellas.rom" size="9212" crc="3b6e2601" sha1="446dc3854282158541961d7113072e0c35fcfb19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5aea8f10a3cd56a">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8590">
+				<rom name="sword.rom" size="8590" crc="1fef8fde" sha1="aea8f10a3cd56a725044a70f6d50f038aeefc50a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m55867090fbe2584">
 		<description>tank battalion (1980)(namco)(jp)(put into cart2,require em_5 in cart1)</description>
 		<year>????</year>
@@ -432,6 +482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="m5139ab0c63c8253">
+		<description>up up balloon (1983)(takara - monkey punch)(jp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="up up balloon (1983)(takara - monkey punch)(jp).bin" size="8192" crc="1fce24c8" sha1="139ab0c63c82538bc032d2cb9d9eaf858d7c969d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="m5cd836f7b9d1114">
 		<description>VexedM5_115</description>
 		<year>????</year>
@@ -449,6 +509,16 @@
 		<part name="cart" interface="m5_cart">
 			<dataarea name="rom" size="8320">
 				<rom name="wonder hole (1982)(irem)(jp)(put into cart2,require em_5 in cart1).bin" size="8320" crc="aba2cece" sha1="bcb7442c6d320eb166e224c3ac0f50514906ad4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m5dd0e732f121b90">
+		<description>wonder hole (1982)(irem)(jp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="m5_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="wonder hole (1982)(irem)(jp).bin" size="8192" crc="4a7613e6" sha1="dd0e732f121b904bc12a6a5a30e3f9fd40d03afd"/>
 			</dataarea>
 		</part>
 	</software>

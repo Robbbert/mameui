@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 52 -->
+<!-- Number of items in this list = 56 -->
 <softwarelist name="a800" description="a800 loose roms">
 	<software name="a8080e50c7fcb2e8">
 		<description>(demo)400-800 salt diagnostic cartridge v1.00</description>
@@ -159,6 +159,16 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Atlantis.rom" size="8192" crc="6a9a1405" sha1="e3cb735692e39ebf42f87a58031a0411ee65eb5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a807507b028c7515">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="awass.rom" size="16384" crc="bf27a5a9" sha1="7507b028c751562cfa69225f41efde5229ae6f26"/>
 			</dataarea>
 		</part>
 	</software>
@@ -412,6 +422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a807138e6247f3e2">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="mazy2.rom" size="16384" crc="757625f7" sha1="7138e6247f3e215c3b9642eaa8f4be260b19651d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a80f349adca7525b">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -489,6 +509,26 @@
 		<part name="cart" interface="a8bit_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Super breakout.rom" size="8192" crc="17348643" sha1="a3e27fd8fccaf84e0a017d4c3e83339a8f07d21e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a8053a81c2eaa6d8">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="svellas.rom" size="16384" crc="3b6b093f" sha1="53a81c2eaa6d8cafb629acfe2cde6d5b770946d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a808742393961bf0">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a8bit_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="sword.rom" size="16384" crc="17383c7b" sha1="8742393961bf0de3890d9a6fe0a6790a63713831"/>
 			</dataarea>
 		</part>
 	</software>

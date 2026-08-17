@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 203 -->
+<!-- Number of items in this list = 207 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -619,6 +619,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524800">
 				<rom name="Atlantean (Unl) Aetherbyte.pce" size="524800" crc="ef596649" sha1="d76f867256c3ff192b0cde8a1c685d558c2066c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce3ade953db8317">
+		<description>Awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Awass.pce" size="32768" crc="6309fa22" sha1="3ade953db83177ab417ca98225c7f2b11bfb0801"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1542,6 +1552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pce90be2020ebff4">
+		<description>Mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Mazy2.pce" size="32768" crc="07d1534f" sha1="90be2020ebff4812be7d1b7ac0d8f3e82acb45e5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pcef17108a7438d1">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -1879,6 +1899,26 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Super Star Soldier.pce" size="1048576" crc="bb2a0b14" sha1="5380d25b4d5bb3e0048ed857fd36a8206e81a234"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce5da8f0c7b4fe1">
+		<description>Svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Svellas.pce" size="32768" crc="8fb7d8e7" sha1="5da8f0c7b4fe1dac3819f9138cc7ac07d0e98b79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce08758b71ea1dd">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="SwordWork.pce" size="32768" crc="aa06df9a" sha1="08758b71ea1dd01039f7c309dc932c9c31f4b755"/>
 			</dataarea>
 		</part>
 	</software>

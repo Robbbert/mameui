@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 14 -->
+<!-- Number of items in this list = 21 -->
 <softwarelist name="atom_cass" description="atom_cass loose roms">
 	<software name="atm50f6d9ffd7df2">
 		<description>Aerial</description>
@@ -19,6 +19,46 @@
 		<part name="cass1" interface="atom_cass">
 			<dataarea name="cass" size="27742764">
 				<rom name="Antiair.wav" size="27742764" crc="1c69f01b" sha1="059f6a32e98250251d6903fcd08c88de831f49c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm16945a67ae6bf">
+		<description>atom</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="atom_cass">
+			<dataarea name="cass" size="2055106">
+				<rom name="atom.wav" size="2055106" crc="15312bf0" sha1="16945a67ae6bf37254440e97a9eb2516755cd4eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmd17869d5143bb">
+		<description>atom1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="atom_cass">
+			<dataarea name="cass" size="1356560">
+				<rom name="atom1.wav" size="1356560" crc="81ca8bd8" sha1="d17869d5143bb293a71ccf641d56131460a9c9d4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm10674b0940424">
+		<description>atom2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="atom_cass">
+			<dataarea name="cass" size="2309120">
+				<rom name="atom2.wav" size="2309120" crc="d9e49384" sha1="10674b09404248ccc6d44c13a78b216a570b83bc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atm8e69f11b68885">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="atom_cass">
+			<dataarea name="cass" size="36030624">
+				<rom name="awass.wav" size="36030624" crc="61ec79dd" sha1="8e69f11b688854f6e7a4073ca80cde6176b1f6a8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -102,6 +142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="atma4420fa883ffa">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="atom_cass">
+			<dataarea name="cass" size="38947104">
+				<rom name="mazy2.wav" size="38947104" crc="965bcdcd" sha1="a4420fa883ffa4da6636628839d08cfbc5fa1009"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="atm4f3bdd7eb8cad">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -129,6 +179,26 @@
 		<part name="cass1" interface="atom_cass">
 			<dataarea name="cass" size="38309124">
 				<rom name="Osotos.wav" size="38309124" crc="7cd3fc24" sha1="50e042d4629ea60b2180ec33fc67cdf490f90dee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmeea7a7d4c85e1">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="atom_cass">
+			<dataarea name="cass" size="36739164">
+				<rom name="svellas.wav" size="36739164" crc="950577f4" sha1="eea7a7d4c85e1d995c9339cdddaa186e91f816a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="atmf68878db690d6">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="atom_cass">
+			<dataarea name="cass" size="32149824">
+				<rom name="sword.wav" size="32149824" crc="1d885c35" sha1="f68878db690d6ed6624381fe122677d333fef2a9"/>
 			</dataarea>
 		</part>
 	</software>

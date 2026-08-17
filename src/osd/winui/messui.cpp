@@ -89,7 +89,7 @@ static std::map<string,int> mvmap;  // store indicator if Media View Unmount sho
 static const device_entry s_devices[] =
 {
 	{ "unkn",  IDI_SO_UNKNOWN, "Unknown" },
-	{ "rom",   IDI_SO_ROMS,    "ROM images" },
+	{ "rom",   IDI_SO_MEMC,    "ROM images" },
 	{ "prom",  IDI_SO_ROMS,    "PROM images" },
 	{ "cart",  IDI_SO_CART,    "Cartridge images" },
 	{ "flop",  IDI_SO_FLOP,    "Floppy disk images" },

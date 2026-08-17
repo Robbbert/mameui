@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1066 -->
+<!-- Number of items in this list = 1074 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx13e7d1225a731f">
 		<description>10</description>
@@ -1069,6 +1069,26 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="8221">
 				<rom name="AWARI.P" size="8221" crc="0c6a777d" sha1="3fb954cc75c0981ccbbbd862ba83cbd91342cc26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1c71402c6a3b69">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8143">
+				<rom name="awass.p" size="8143" crc="cf6ccb63" sha1="c71402c6a3b69b9c1d84f67f8fce26ba28b6de03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx166f5c594a585d">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4501105">
+				<rom name="awass.wav" size="4501105" crc="b6616c13" sha1="66f5c594a585d21376ed7b7b75e03d832b990021"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5872,6 +5892,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx14350d1f305ac0">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8778">
+				<rom name="mazy2.p" size="8778" crc="034b6f66" sha1="4350d1f305ac0b78477155234e455ac754644d67"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d555feebabb2d">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4787290">
+				<rom name="mazy2.wav" size="4787290" crc="19b56701" sha1="d555feebabb2d8bc0f06a53bf438a5eb19fd3b44"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx11d6b6d53ae713">
 		<description>MC-DRAW</description>
 		<year>????</year>
@@ -9302,6 +9342,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zx1bcd7f1e5123f4">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7972">
+				<rom name="svellas.p" size="7972" crc="842d518b" sha1="bcd7f1e5123f4c6bef01958ad61f3ed7fbb83a7e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx13aba2ff1910a3">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4387042">
+				<rom name="svellas.wav" size="4387042" crc="7f91e752" sha1="3aba2ff1910a3225abde10778aa350a25d062f51"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zx1c719f23b86a37">
 		<description>SWAMP (3)</description>
 		<year>????</year>
@@ -9342,23 +9402,43 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zx1a5080352ca889">
-		<description>SWORD (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="8532">
-				<rom name="SWORD (2).P" size="8532" crc="17ceaac7" sha1="a5080352ca889d7938dafd1e0c527d75ff8502bb"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zx1f9867a01027c4">
-		<description>SWORD</description>
+		<description>Sword of Peace</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="8581">
-				<rom name="SWORD.P" size="8581" crc="9848c4b1" sha1="f9867a01027c4af7aae7a938db0205b43ed0f093"/>
+				<rom name="Sword of Peace.P" size="8581" crc="9848c4b1" sha1="f9867a01027c4af7aae7a938db0205b43ed0f093"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1a5080352ca889">
+		<description>Sword of Peace_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="8532">
+				<rom name="Sword of Peace_1.P" size="8532" crc="17ceaac7" sha1="a5080352ca889d7938dafd1e0c527d75ff8502bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx1d530fc7ec75fc">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="7466">
+				<rom name="SwordWork.p" size="7466" crc="86243952" sha1="d530fc7ec75fc26f557ecb68b7234194b4baa450"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zx133e7a02dd2368">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="zx81_cass">
+			<dataarea name="cass" size="4065736">
+				<rom name="SwordWork.wav" size="4065736" crc="1658cd18" sha1="33e7a02dd23687266f8593c655864dcf1d8111fd"/>
 			</dataarea>
 		</part>
 	</software>

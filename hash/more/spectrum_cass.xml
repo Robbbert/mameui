@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7946 -->
+<!-- Number of items in this list = 7953 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -7639,6 +7639,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="11355">
 				<rom name="awass.tzx" size="11355" crc="211c14bf" sha1="73d1a75e9f59a550d5463d2db359955fb41a1e48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse960ebe03b52d">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3607417">
+				<rom name="awass.wav" size="3607417" crc="ff506c13" sha1="e960ebe03b52d6ef6c9d3eb9ff5ce60cceab1580"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39942,6 +39952,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd1e52c573eb30">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10363">
+				<rom name="mazy2.tzx" size="10363" crc="91bc9d72" sha1="d1e52c573eb30ac6889b1dfbfef17eee20653146"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1c4cc8f5c82b0">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3345881">
+				<rom name="mazy2.wav" size="3345881" crc="6c1b1f13" sha1="1c4cc8f5c82b0521c4f4e2e112163dcaa6582c8e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsece8af0a381c0">
 		<description>Mc Wash (1983)(Bensoft)(Cz)</description>
 		<year>????</year>
@@ -60272,6 +60302,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2cd15cba52bae">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9841">
+				<rom name="svellas.tzx" size="9841" crc="79465b6e" sha1="2cd15cba52baec462ed863ff6f8410b6e632652f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs492b2c77fcb43">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3219249">
+				<rom name="svellas.wav" size="3219249" crc="634b5d57" sha1="492b2c77fcb436f563e9d3db9c358f0a4bb147a8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa2f01e740d7ab">
 		<description>Swamp, The (1984)(Double Play Adventures)</description>
 		<year>????</year>
@@ -60439,6 +60489,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16384">
 				<rom name="Sword Work 48K-AY (2026)(Inufuto).tzx" size="16384" crc="3f805434" sha1="a7fb5665e52535ea3690c7162eeef00a65f6816c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs44abf5c73404a">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10503">
+				<rom name="sword.tzx" size="10503" crc="b9f1084c" sha1="44abf5c73404a6ddc10619835ba29a0380b9b6f9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc770ef3926a54">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="3362777">
+				<rom name="sword.wav" size="3362777" crc="a79be12b" sha1="c770ef3926a546959be6de459c8a61a65f66e729"/>
 			</dataarea>
 		</part>
 	</software>

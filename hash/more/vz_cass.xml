@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 37 -->
+<!-- Number of items in this list = 41 -->
 <softwarelist name="vz_cass" description="vz_cass loose roms">
 	<software name="vt1cb8e8fc30fea4">
 		<description>(demo)2018AD</description>
@@ -39,6 +39,16 @@
 		<part name="cass1" interface="vtech1_cass">
 			<dataarea name="cass" size="2298992">
 				<rom name="Ascend.wav" size="2298992" crc="e7ead835" sha1="8a67f86a906aae3fb88019936b8cb4656c802ee9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt163c849f268927">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="vtech1_cass">
+			<dataarea name="cass" size="2564080">
+				<rom name="awass.wav" size="2564080" crc="19f7e0fd" sha1="63c849f268927b5828cf16ce7a156a848ac8538c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -242,6 +252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="vt14742689354abb">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="vtech1_cass">
+			<dataarea name="cass" size="2657104">
+				<rom name="mazy2.wav" size="2657104" crc="bf9e92f6" sha1="4742689354abb2e3eb8448cd049c236628627d3d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="vt1b8fb63a7adeea">
 		<description>mieyen</description>
 		<year>????</year>
@@ -319,6 +339,26 @@
 		<part name="cass1" interface="vtech1_cass">
 			<dataarea name="cass" size="3327120">
 				<rom name="Star Blaster.WAV" size="3327120" crc="837c6fb2" sha1="48e93bcc011b3547914b295f679c2da4958a6dbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt174cfb2fd93ba7">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="vtech1_cass">
+			<dataarea name="cass" size="2499328">
+				<rom name="svellas.wav" size="2499328" crc="8a833aa8" sha1="74cfb2fd93ba7774ebfc87dd5b0f8e3593cfdf6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vt180dbcf00437cb">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="vtech1_cass">
+			<dataarea name="cass" size="2354624">
+				<rom name="sword.wav" size="2354624" crc="f0e81384" sha1="80dbcf00437cb192a6550acdc1d916622087bf2a"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 731 -->
+<!-- Number of items in this list = 736 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -923,12 +923,12 @@
 		</part>
 	</software>
 	<software name="col8b74ae549da24">
-		<description>Cabbage Patch Kids (1983-2017)(Opcode Games)</description>
+		<description>Cabbage Patch Kids (2017)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="65536">
-				<rom name="Cabbage Patch Kids (1983-2017)(Opcode Games).rom" size="65536" crc="741cf863" sha1="8b74ae549da24d3db4dfea750f51476e6c23b450"/>
+				<rom name="Cabbage Patch Kids (2017)(Opcode Games).rom" size="65536" crc="741cf863" sha1="8b74ae549da24d3db4dfea750f51476e6c23b450"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1813,12 +1813,12 @@
 		</part>
 	</software>
 	<software name="col413a683bbb219">
-		<description>Dig Dug SGM (1982-2017)(Opcode Games)</description>
+		<description>Dig Dug SGM (2017)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Dig Dug SGM (1982-2017)(Opcode Games).rom" size="32768" crc="59d08879" sha1="413a683bbb219cdb4c675e18b79c8ec36e405332"/>
+				<rom name="Dig Dug SGM (2017)(Opcode Games).rom" size="32768" crc="59d08879" sha1="413a683bbb219cdb4c675e18b79c8ec36e405332"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1913,12 +1913,12 @@
 		</part>
 	</software>
 	<software name="cold682b25221ea7">
-		<description>Dorodon SGM (1984-2017)(Opcode Games)</description>
+		<description>Dorodon SGM (2017)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Dorodon SGM (1984-2017)(Opcode Games).rom" size="32768" crc="e3d61921" sha1="d682b25221ea79dec9c0573966bc76891c2c5ead"/>
+				<rom name="Dorodon SGM (2017)(Opcode Games).rom" size="32768" crc="e3d61921" sha1="d682b25221ea79dec9c0573966bc76891c2c5ead"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2523,12 +2523,12 @@
 		</part>
 	</software>
 	<software name="col9d1b7d67d0e9b">
-		<description>Front Line SGM (1984-2019)(Opcode Games)</description>
+		<description>Front Line SGM (2019)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="65536">
-				<rom name="Front Line SGM (1984-2019)(Opcode Games).rom" size="65536" crc="e544a5f9" sha1="9d1b7d67d0e9b75c22c2a06ee8a4f56b8c02156a"/>
+				<rom name="Front Line SGM (2019)(Opcode Games).rom" size="65536" crc="e544a5f9" sha1="9d1b7d67d0e9b75c22c2a06ee8a4f56b8c02156a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2759,6 +2759,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Girl's Garden (2010)(Team Pixelboy).rom" size="32768" crc="305b74c0" sha1="7288d30266ad3431087cd9d4181fcc4ecd770f64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colf8a5cef2de46e">
+		<description>Goonies, The SGM (2012)(Team Pixelboy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Goonies, The SGM (2012)(Team Pixelboy).rom" size="131072" crc="01581fa8" sha1="f8a5cef2de46e22e282551911f7aa00b30717f9e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3543,22 +3553,32 @@
 		</part>
 	</software>
 	<software name="col79341c126ad2b">
-		<description>Magical Kid WIZ (2018)(Opcode Games)</description>
+		<description>Magical Kid WIZ SGM (2018)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
-				<rom name="Magical Kid WIZ (2018)(Opcode Games).rom" size="131072" crc="aeefdb96" sha1="79341c126ad2bb905c63e5faaecd75e77f099a35"/>
+				<rom name="Magical Kid WIZ SGM (2018)(Opcode Games).rom" size="131072" crc="aeefdb96" sha1="79341c126ad2bb905c63e5faaecd75e77f099a35"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="col245b09e2c2ea2">
-		<description>Magical Tree (Proto) (1984-2004)(Opcode Games)</description>
+	<software name="col3d219493ee395">
+		<description>Magical Tree (2006)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Magical Tree (Proto) (1984-2004)(Opcode Games).rom" size="32768" crc="9f53f9cc" sha1="245b09e2c2ea2067e80e9a0e0e8ee0e029a30268"/>
+				<rom name="Magical Tree (2006)(Opcode Games).rom" size="32768" crc="f4314bb1" sha1="3d219493ee395673243d52195832f4094804b3cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col245b09e2c2ea2">
+		<description>Magical Tree (Proto)(2004)(Opcode Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Magical Tree (Proto)(2004)(Opcode Games).rom" size="32768" crc="9f53f9cc" sha1="245b09e2c2ea2067e80e9a0e0e8ee0e029a30268"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3729,6 +3749,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32767">
 				<rom name="Mazezam Challenge.rom" size="32767" crc="6f556b44" sha1="ede4e925757b89f7a40ed77de2ae6fd85f0d62ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col78478b2bcb56b">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9595">
+				<rom name="mazy2.rom" size="9595" crc="5d9d95dc" sha1="78478b2bcb56bb2c52a0d910ccbee658425c0bbb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4043,12 +4073,12 @@
 		</part>
 	</software>
 	<software name="col63a1d2562ec8f">
-		<description>Mouser - SGM (1983-2017)(Opcode Games)</description>
+		<description>Mouser SGM (2017)(Opcode Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Mouser - SGM (1983-2017)(Opcode Games).rom" size="32768" crc="b9a8d81e" sha1="63a1d2562ec8fc5a0e94f9f9e0ae2aeba41135c3"/>
+				<rom name="Mouser SGM (2017)(Opcode Games).rom" size="32768" crc="b9a8d81e" sha1="63a1d2562ec8fc5a0e94f9f9e0ae2aeba41135c3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5073,12 +5103,12 @@
 		</part>
 	</software>
 	<software name="col3a817f2f63b2c">
-		<description>Safari Race (1988-2022)(Mystery Man)</description>
+		<description>Safari Race (2022)(Mystery Man)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
-				<rom name="Safari Race (1988-2022)(Mystery Man).rom" size="32768" crc="53dc76f4" sha1="3a817f2f63b2c9ed150b60f46fdc404bbb226b1a"/>
+				<rom name="Safari Race (2022)(Mystery Man).rom" size="32768" crc="53dc76f4" sha1="3a817f2f63b2c9ed150b60f46fdc404bbb226b1a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6392,6 +6422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col366dbc7552fd0">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9259">
+				<rom name="svellas.rom" size="9259" crc="3244546f" sha1="366dbc7552fd0a9e13b88a95b74141e81e0114ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col60d30936791ef">
 		<description>Sweet Acorn SGM (2019)(Opcode Games)</description>
 		<year>????</year>
@@ -7249,6 +7289,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Zenji (USA)(1984)(Activision).rom" size="16384" crc="6e523e50" sha1="9119f3a485eb4215e7d41c7cf0e412d903458647"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col8e5602f0c3b54">
+		<description>Zippy Race (2009)(Dvik &amp; Joyrex)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Zippy Race (2009)(Dvik &amp; Joyrex).rom" size="32768" crc="44e6948c" sha1="8e5602f0c3b54254819120b0c32652ad7ef5f0b0"/>
 			</dataarea>
 		</part>
 	</software>
