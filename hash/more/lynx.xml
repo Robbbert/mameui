@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 363 -->
+<!-- Number of items in this list = 372 -->
 <softwarelist name="lynx" description="lynx loose roms">
 	<software name="lnx2a1c742ad70b9">
 		<description>(demo)3Days (2024-02)(42Bastian)</description>
@@ -949,6 +949,16 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="262208">
 				<rom name="Daemonsgate (1991)[prototype].lnx" size="262208" crc="db339a17" sha1="3db7dbf520245b3c824b536e6528084e5d417acb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx1e529493866d6">
+		<description>Desert Strike - Return to the Gulf (1993)(Telegames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Desert Strike - Return to the Gulf (1993)(Telegames).lnx" size="262208" crc="2eaae973" sha1="1e529493866d6485074233458b40c4e7b0f032ef"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2392,6 +2402,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="lnx1f1695acbecf3">
+		<description>Pinball Jam (1992)(Atari Corp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Pinball Jam (1992)(Atari Corp).lnx" size="262208" crc="8863c28d" sha1="1f1695acbecf39cf6fd7afa71ce5f5e0ec80934d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx0aa5838b3ab6e">
+		<description>Pinball Jam (UE)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Pinball Jam (UE).lnx" size="262208" crc="13ca6977" sha1="0aa5838b3ab6ebef6370a207e5aa765ba3fafaf2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="lnxd87b768ec219b">
 		<description>Pit Fighter - The Ultimate Competition (1992)</description>
 		<year>????</year>
@@ -2559,6 +2589,66 @@
 		<part name="cart" interface="lynx_cart">
 			<dataarea name="rom" size="131136">
 				<rom name="Qix (UE).lnx" size="131136" crc="a98b123f" sha1="52dae119b0969bac28a18328d9f56884ba184060"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx3b0048d6b3ab5">
+		<description>Raiden (1997)(Atari Corp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Raiden (1997)(Atari Corp).lnx" size="262208" crc="df1741bb" sha1="3b0048d6b3ab5af0812c470217cfede5bb1bf791"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnxe02593514a5a0">
+		<description>Raiden (1997)(Atari Corp)[a2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Raiden (1997)(Atari Corp)[a2].lnx" size="262208" crc="51d8c2e8" sha1="e02593514a5a081a9dceeebeb2972917a7939ede"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx752a58e02787a">
+		<description>Raiden (1997)(Atari Corp)[a]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Raiden (1997)(Atari Corp)[a].lnx" size="262208" crc="2702ba4f" sha1="752a58e02787afc145f5245aec3577ad4bff954e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx4ff928b190f68">
+		<description>Raiden (U) (v3.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Raiden (U) (v3.0).lnx" size="262208" crc="43dd121e" sha1="4ff928b190f6806cde5f706ced721c492077b29a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx469aa2d72959d">
+		<description>Raiden (USA) (v3.0)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Raiden (USA) (v3.0).lnx" size="262208" crc="d62fe6bf" sha1="469aa2d72959de155466e84cc284a06609389a2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="lnx52a0bf6aa79be">
+		<description>Rampage (1991)(Atari Corp)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="lynx_cart">
+			<dataarea name="rom" size="262208">
+				<rom name="Rampage (1991)(Atari Corp).lnx" size="262208" crc="490033c9" sha1="52a0bf6aa79be75c7f97e4f2998469fb8f1c1596"/>
 			</dataarea>
 		</part>
 	</software>

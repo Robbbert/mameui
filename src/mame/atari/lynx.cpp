@@ -100,14 +100,12 @@ void lynx_state::lynx(machine_config &config)
 	m_sound->add_route(ALL_OUTPUTS, "mono", 0.50);
 
 	/* devices */
-	//QUICKLOAD(config, "quickload", "o").set_load_callback(FUNC(lynx_state::quickload_cb));
-	quickload_image_device &quik(QUICKLOAD(config, "quickload", "o", attotime::from_seconds(1)));
-	quik.set_load_callback(FUNC(lynx_state::quickload_cb));
-	quik.set_interface("lynx_quik");
+	quickload_image_device &quickload(QUICKLOAD(config, "quickload", "o", attotime::from_seconds(1)));
+	quickload.set_load_callback(FUNC(lynx_state::quickload_cb));
+	quickload.set_interface("lynx_quik");
 	SOFTWARE_LIST(config, "quik_list").set_original("lynx_quik");
 
 	generic_cartslot_device &cartslot(GENERIC_CARTSLOT(config, "cartslot", generic_plain_slot, "lynx_cart", "lnx,lyx"));
-	cartslot.set_must_be_loaded(true);
 	cartslot.set_device_load(FUNC(lynx_state::cart_load));
 
 	/* Software lists */
@@ -181,7 +179,7 @@ QUICKLOAD_LOAD_MEMBER(lynx_state::quickload_cb)
 	space.write_byte(0x1fc, start & 0xff);
 	space.write_byte(0x1fd, start >> 8);
 
-	m_maincpu->set_pc(start);
+	m_maincpu->set_state_int(M6502_PC, start);  //m_maincpu->set_pc(start);
 
 	return std::make_pair(std::error_condition(), std::string());
 }
