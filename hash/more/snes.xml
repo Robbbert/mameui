@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4161 -->
+<!-- Number of items in this list = 4166 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -16529,6 +16529,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Lufia II - Rise of the Sinistrals PT-BR (2026)(Dindo).sfc" size="4194304" crc="401d9b8e" sha1="1fc82efd014e1b8f9a7c78f5f5910ad182ea21fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4fcec9518a9f8">
+		<description>Lufia II - Rise of the Sinistrals PT-BR v1.01 (2026)(Dindo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lufia II - Rise of the Sinistrals PT-BR v1.01 (2026)(Dindo).sfc" size="4194304" crc="55e30995" sha1="4fcec9518a9f85f95cf41178ebab1531eb90974a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39839,6 +39849,46 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="6291456">
 				<rom name="Trials of Mana (USA) (Switch Extraction).smc" size="6291456" crc="9743dc0e" sha1="462580125693a73da90da08d415023a885d84d1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns128d966ecf656">
+		<description>Trials of Mana (W, English, Rev 1)(1995-2019)(Square Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Trials of Mana (W, English, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="173e6097" sha1="128d966ecf656957b9b9b39128817d1c6a9cbd21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns241d5eea760fb">
+		<description>Trials of Mana (W, French, Rev 1)(1995-2019)(Square Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Trials of Mana (W, French, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="3d09832a" sha1="241d5eea760fbdcffcfafd1064d68f18ec38fb94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5c2088cdc86c4">
+		<description>Trials of Mana (W, German, Rev 1)(1995-2019)(Square Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Trials of Mana (W, German, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="534df838" sha1="5c2088cdc86c4792aeeffdfbe19004a32d3396c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns6908bc9191e42">
+		<description>Trials of Mana (W, Spanish, Rev 1)(1995-2019)(Square Enix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Trials of Mana (W, Spanish, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="593cd548" sha1="6908bc9191e4271f9cbb28420db793f7cabd3bd6"/>
 			</dataarea>
 		</part>
 	</software>

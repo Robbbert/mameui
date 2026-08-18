@@ -67,6 +67,8 @@ TODO:
 #include "speaker.h"
 #include "softlist_dev.h"
 
+#include "softlist_dev.h"
+
 #include "multibyte.h"
 #include "utf8.h"
 
@@ -407,6 +409,7 @@ void jr100_state::jr100(machine_config &config)
 	m_cassette->set_default_state(CASSETTE_STOPPED | CASSETTE_SPEAKER_ENABLED | CASSETTE_MOTOR_ENABLED);
 	m_cassette->add_route(ALL_OUTPUTS, "mono", 0.05);
 	m_cassette->set_interface("jr100_cass");
+
 	SOFTWARE_LIST(config, "cass_list").set_original("jr100_cass");
 
 	/* quickload */

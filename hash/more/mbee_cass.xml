@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 561 -->
+<!-- Number of items in this list = 575 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee5f77b519a2abb">
 		<description>(NE)digitalker_300b</description>
@@ -59,6 +59,26 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="1754286">
 				<rom name="(x)addstar.wav" size="1754286" crc="f7603b16" sha1="444496fcbe2e2233b6fc7405d6d4b813b7cf6cc3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee16bdedfaa8d8">
+		<description>(x)adstar</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4507440">
+				<rom name="(x)adstar.wav" size="4507440" crc="86fd975c" sha1="e16bdedfaa8d885db01fc3058a3842f5f8909db0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee08387fb2f4b19">
+		<description>(x)Alpha Bee 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="6157226">
+				<rom name="(x)Alpha Bee 2.wav" size="6157226" crc="78e7a395" sha1="08387fb2f4b191a61a03a7338dbd1858413b0e18"/>
 			</dataarea>
 		</part>
 	</software>
@@ -262,6 +282,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee9374208509d99">
+		<description>(x)bee_n_talk_16k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4989766">
+				<rom name="(x)bee_n_talk_16k.wav" size="4989766" crc="563c9ab9" sha1="9374208509d997ce30c8c99388abf98551e4b07b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beefcdc8e6ab4d47">
+		<description>(x)bee_n_talk_32k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4957820">
+				<rom name="(x)bee_n_talk_32k.wav" size="4957820" crc="52f2985a" sha1="fcdc8e6ab4d4785892a1690d8b631caed08c1c4c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beee2e3f3a2046ea">
 		<description>(x)blok3d</description>
 		<year>????</year>
@@ -349,6 +389,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="1000968">
 				<rom name="(x)BrickBall.wav" size="1000968" crc="92426e9c" sha1="359d47a1cab8eb7764bfa5e923d44208efedd3be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee86c8b1c645d10">
+		<description>(x)bsed32[exec]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="555052">
+				<rom name="(x)bsed32[exec].wav" size="555052" crc="eca67d24" sha1="86c8b1c645d1009a2adf92be615dbd9a3f114627"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1062,6 +1112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee7e5b13574b958">
+		<description>(x)Loader96k1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3142903">
+				<rom name="(x)Loader96k1.wav" size="3142903" crc="fc6de962" sha1="7e5b13574b958a563402b9af78f6cd4a6fe036dd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beec8f503b728179">
 		<description>(x)Logic Dice</description>
 		<year>????</year>
@@ -1162,6 +1222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee03bf3bbd823c8">
+		<description>(x)mc1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2080677">
+				<rom name="(x)mc1.wav" size="2080677" crc="cb599699" sha1="03bf3bbd823c8199753e99633806ac3e26382fc1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beecda94f5465637">
 		<description>(x)mc1_4</description>
 		<year>????</year>
@@ -1169,6 +1239,36 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="20205752">
 				<rom name="(x)mc1_4.wav" size="20205752" crc="ddd793ea" sha1="cda94f5465637b59b385021f93d97276d04c0f27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beec6c3f971d0d18">
+		<description>(x)mc2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="2077700">
+				<rom name="(x)mc2.wav" size="2077700" crc="3f7611ab" sha1="c6c3f971d0d18ddc977718de2ed85e20c2b38cbf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beead600c7a29c90">
+		<description>(x)mc3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1904360">
+				<rom name="(x)mc3.wav" size="1904360" crc="9aea9678" sha1="ad600c7a29c901bd144162bbc02787aaf464421d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0920a6132d2c8">
+		<description>(x)mc4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="1886376">
+				<rom name="(x)mc4.wav" size="1886376" crc="34fe6d88" sha1="0920a6132d2c82e50660d2dd8c1666744f604678"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1362,6 +1462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee52ebb2da78d72">
+		<description>(x)Munch</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="3171394">
+				<rom name="(x)Munch.wav" size="3171394" crc="14a341e4" sha1="52ebb2da78d72185aaff4155d2d9bb4ebddddb54"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beee29d20497f813">
 		<description>(x)mytek_debug</description>
 		<year>????</year>
@@ -1369,6 +1479,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="836014">
 				<rom name="(x)mytek_debug.wav" size="836014" crc="81a00cf5" sha1="e29d20497f81381a130f8d763a3e0d2f2314a8a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee5c8b5b765c90c">
+		<description>(x)mytek_monitor_16k</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="839876">
+				<rom name="(x)mytek_monitor_16k.wav" size="839876" crc="4d88b149" sha1="5c8b5b765c90cd953d338a08f1fbaf406d90eeb2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1399,6 +1519,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="611472">
 				<rom name="(x)Number Pick.wav" size="611472" crc="5ab160e9" sha1="285ce5262cbb01479debcfcf8598b040fff3d784"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee6c29bbe3915d8">
+		<description>(x)Othello</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="704028">
+				<rom name="(x)Othello.wav" size="704028" crc="04e6a061" sha1="6c29bbe3915d817e0d1eee9b486c914b19573c35"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1569,6 +1699,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="6213250">
 				<rom name="(x)robotman96k1(exec).wav" size="6213250" crc="81db0b0a" sha1="1eb6378130c40d9bd750961d7ca208e58f57a150"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7ae896a8de071">
+		<description>(x)Robotman96k2(exec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="5369190">
+				<rom name="(x)Robotman96k2(exec).wav" size="5369190" crc="6c644dcc" sha1="7ae896a8de07171edd918eb23687e84241a5439e"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 339 -->
+<!-- Number of items in this list = 349 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -352,6 +352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba758db9c197595">
+		<description>2048 v1.3.1 (2024-26)(Basil Termini)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="2048 v1.3.1 (2024-26)(Basil Termini).gba" size="262144" crc="1c4b5dcf" sha1="758db9c19759510703b63743794b37630bf81bd5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba3ad9aac52cf5a">
 		<description>240pee_mb</description>
 		<year>????</year>
@@ -399,6 +409,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Advance Wars Returns v3.3 (2021)(Vivi The Blossom).gba" size="8388608" crc="c42363a9" sha1="8a7faa5b7184e9adafb67eade9dd7fd522c32f40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8ecdcf6a42ce9">
+		<description>Aereven Advance (2024)(Dreamnoid)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5564940">
+				<rom name="Aereven Advance (2024)(Dreamnoid).gba" size="5564940" crc="cd3d8f80" sha1="8ecdcf6a42ce9bf480f9a3ef00fbdafbbe12734d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -609,6 +629,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4276412">
 				<rom name="Chips Challenge Advance(F).gba" size="4276412" crc="bc074353" sha1="eab1be79f303e65e3d7869086c1e43b72f9da999"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba91eefda1bc9e0">
+		<description>Chronavi, The (2026)(2Barrel Arts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="11920752">
+				<rom name="Chronavi, The (2026)(2Barrel Arts).gba" size="11920752" crc="49781ac8" sha1="91eefda1bc9e07da54df7310f2427bbddaf74d60"/>
 			</dataarea>
 		</part>
 	</software>
@@ -979,6 +1009,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="169408">
 				<rom name="Enchanted Place (2022-11-01)(VideoGameStoryTime)[GBA Jam 2022].gba" size="169408" crc="c9a385d0" sha1="a66c602c93ef04b1d1a30ed66cf9e347127c417a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba962f357de0237">
+		<description>F-Zero - Vintage Velocity Zero v3.0 (2026)(PowerPanda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="F-Zero - Vintage Velocity Zero v3.0 (2026)(PowerPanda).gba" size="8388608" crc="cf2a6240" sha1="962f357de0237c54aba3acdd0bda70fe274314d6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1412,6 +1452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba26ad879162b11">
+		<description>Howgarts Tris (2023)(VG Source Game Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="209884">
+				<rom name="Howgarts Tris (2023)(VG Source Game Studio).gba" size="209884" crc="53daf7a8" sha1="26ad879162b1150c1665d5331b8bc8c0febe9649"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba431f9cd0c2b59">
 		<description>i-ninja (unlabeled prototype) (gameboy advance, unreleased)</description>
 		<year>????</year>
@@ -1459,6 +1509,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="964484">
 				<rom name="Jurl v1.0c (2025)(Tonsomo Entertainment).gba" size="964484" crc="1dffb414" sha1="6887a8be7a826d6200196307a4706d9bc9e68519"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba85f68b8afe769">
+		<description>Jurl v1.2a (2025)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="964716">
+				<rom name="Jurl v1.2a (2025)(Tonsomo Entertainment).gba" size="964716" crc="67d03d52" sha1="85f68b8afe769c668e77de0cba9dc283b6480d17"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2562,6 +2622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaff6d58b33e491">
+		<description>Sekhmet's Playground (2024)(PyroPyro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="6053920">
+				<rom name="Sekhmet's Playground (2024)(PyroPyro).gba" size="6053920" crc="d7046500" sha1="ff6d58b33e491bdd29e05b165dba3f9bd1ec98ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba3a8a0491d914e">
 		<description>Shantae 2 - Risky Revolution (USA) (Beta)</description>
 		<year>????</year>
@@ -2599,6 +2669,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Shin Sangoku Musou Advance (Japan) (Rev 1).gba" size="16777216" crc="7ceded10" sha1="be2bfa709478dc482e80fb476c1ee846b703bcbb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbacf99dd8670a3a">
+		<description>Shoot for the Moon (2023)(lunarApocalypse)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="7374924">
+				<rom name="Shoot for the Moon (2023)(lunarApocalypse).gba" size="7374924" crc="f3bd4f90" sha1="cf99dd8670a3af704b6994898fa521667aba09a6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3332,6 +3412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba9ca79690b7da7">
+		<description>Wario Land 4 - Parallel World v1.03 (2021)(beco)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Wario Land 4 - Parallel World v1.03 (2021)(beco).gba" size="16777216" crc="84d389fd" sha1="9ca79690b7da789ad5ddb2a5e0bbb99050d8b658"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba0f395a384b9db">
 		<description>Winning Post for Game Boy Advance (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -3389,6 +3479,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="32507120">
 				<rom name="Zero One SP (Japan) [T-En by Tracey Trace] [i].gba" size="32507120" crc="626b4658" sha1="dcc2bef53c577c19ae46784922f1c7b2b74b590c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8ef671cf45d12">
+		<description>Zipline Zapper (2024)(3DSage)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1934808">
+				<rom name="Zipline Zapper (2024)(3DSage).gba" size="1934808" crc="297d664b" sha1="8ef671cf45d12232cc8e8292c4689082d794b468"/>
 			</dataarea>
 		</part>
 	</software>
