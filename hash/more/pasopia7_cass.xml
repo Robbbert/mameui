@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 62 -->
+<!-- Number of items in this list = 52 -->
 <softwarelist name="pasopia7_cass" description="pasopia7_cass loose roms">
 	<software name="pa73e2592e8c8707">
 		<description>aerial001</description>
@@ -212,16 +212,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pa7d4fd798a2e68f">
-		<description>Chuuichiyou Suugaku (1984-12)(Oota, Hidek)(JP)[Micom BASIC]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="1797861">
-				<rom name="Chuuichiyou Suugaku (1984-12)(Oota, Hidek)(JP)[Micom BASIC].wav" size="1797861" crc="9521b181" sha1="d4fd798a2e68f83fdf01b5ac997cb84099a08988"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pa78cc9c2d094849">
 		<description>cracky01</description>
 		<year>????</year>
@@ -239,56 +229,6 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="2807631">
 				<rom name="cracky02.wav" size="2807631" crc="f30bbe5f" sha1="55d1ab66b507672977e0c0c7d5f7bf0686072d3f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pa7881de0a1cfabe">
-		<description>Door Door</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="18288684">
-				<rom name="Door Door.wav" size="18288684" crc="5d33ec19" sha1="881de0a1cfabe59ffb744671422e93de2def52f1"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pa7b4fe5ccf76b2c">
-		<description>Fighting Heri (1984-12)(Keroyon Soft)(JP)[f][Micom BASIC]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="1406227">
-				<rom name="Fighting Heri (1984-12)(Keroyon Soft)(JP)[f][Micom BASIC].wav" size="1406227" crc="9b95dff7" sha1="b4fe5ccf76b2c9ef4d21af910b846f0d7e062a76"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pa7b2c5a15a3555e">
-		<description>Fighting Heri (1984-12)(Keroyon Soft)(JP)[Micom BASIC]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="1408078">
-				<rom name="Fighting Heri (1984-12)(Keroyon Soft)(JP)[Micom BASIC].wav" size="1408078" crc="9745bed6" sha1="b2c5a15a3555e7528acb369a4e0482e24152d6be"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pa701f6c9cbc5043">
-		<description>Fruits_Paradise</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="9560330">
-				<rom name="Fruits_Paradise.wav" size="9560330" crc="c7adb73d" sha1="01f6c9cbc504390b3d4a11d3a00aeeab1523baa0"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pa756ee3f3a2d8b7">
-		<description>Golf Game</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="11171372">
-				<rom name="Golf Game.wav" size="11171372" crc="9d2df0e9" sha1="56ee3f3a2d8b769583f2a5469de8900c8bd51732"/>
 			</dataarea>
 		</part>
 	</software>
@@ -349,16 +289,6 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="5052615">
 				<rom name="impetus02.wav" size="5052615" crc="6ab83688" sha1="fbc329166229843a51ffc365997b758146d4ac23"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pa7e845625ef2fd2">
-		<description>Jan-kyou</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="15097900">
-				<rom name="Jan-kyou.wav" size="15097900" crc="8e6a6258" sha1="e845625ef2fd224cac0942a9de64a99338723129"/>
 			</dataarea>
 		</part>
 	</software>
@@ -482,16 +412,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pa726ddd2b3998c0">
-		<description>Osaka no Jin</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="21613612">
-				<rom name="Osaka no Jin.wav" size="21613612" crc="1d43c60c" sha1="26ddd2b3998c0452c3277e94941a0de8fbf8d979"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pa7edb2ebe311286">
 		<description>osotos01</description>
 		<year>????</year>
@@ -562,16 +482,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="pa7bd6a29130af17">
-		<description>SPY-0011</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="20684844">
-				<rom name="SPY-0011.wav" size="20684844" crc="44c2f432" sha1="bd6a29130af17c7da2cb0bb417a46b8ab1669894"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="pa719e868b5b9e20">
 		<description>svellas001</description>
 		<year>????</year>
@@ -589,16 +499,6 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="3140300">
 				<rom name="svellas002.wav" size="3140300" crc="d0f590e8" sha1="e0beb4f59ecef83f4b5f30733596af7de48d686d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="pa79f7d4024b1177">
-		<description>Tsume Shogi</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="pasopia7_cass">
-			<dataarea name="cass" size="9388588">
-				<rom name="Tsume Shogi.wav" size="9388588" crc="3457cc26" sha1="9f7d4024b1177c5185529e529360a25edde68ef7"/>
 			</dataarea>
 		</part>
 	</software>

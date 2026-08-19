@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1074 -->
+<!-- Number of items in this list = 1072 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx13e7d1225a731f">
 		<description>10</description>
@@ -5892,16 +5892,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zx14350d1f305ac0">
-		<description>mazy2</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="8778">
-				<rom name="mazy2.p" size="8778" crc="034b6f66" sha1="4350d1f305ac0b78477155234e455ac754644d67"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zx1d555feebabb2d">
 		<description>mazy2</description>
 		<year>????</year>
@@ -9339,16 +9329,6 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="2252">
 				<rom name="suprmind.p" size="2252" crc="286fccd1" sha1="54af9cd9fdc58b44c12018d8194da1eac6436942"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx1bcd7f1e5123f4">
-		<description>svellas</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="7972">
-				<rom name="svellas.p" size="7972" crc="842d518b" sha1="bcd7f1e5123f4c6bef01958ad61f3ed7fbb83a7e"/>
 			</dataarea>
 		</part>
 	</software>

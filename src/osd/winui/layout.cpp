@@ -186,7 +186,6 @@ extern const PROPERTYSHEETINFO g_propSheets[] =
 	{ TRUE,  NULL,                   IDD_PROP_SNAP,          GameOptionsProc },
 #ifdef MESS
 	{ FALSE, DriverHasSoftware,      IDD_PROP_SOFTWARE,      GameMessOptionsProc },
-	{ FALSE, DriverHasRam,           IDD_PROP_CONFIGURATION, GameMessOptionsProc }, // PropSheetFilter_Config not needed
 #endif
 	{ TRUE,  DriverIsVector,         IDD_PROP_VECTOR,        GameOptionsProc },     // PropSheetFilter_Vector not needed
 	{ FALSE }
@@ -220,6 +219,7 @@ extern const ICONDATA g_iconData[] =
 	{ IDI_SO_PCRD,           "pcrd" },
 	{ IDI_SO_PRIN,           "prin" },
 	{ IDI_SO_PTAP,           "ptap" },
+	{ IDI_SO_ROMS,           "rom" },
 	{ IDI_SO_SERL,           "serl" },
 	{ IDI_SO_SNAP,           "snap" },
 #endif

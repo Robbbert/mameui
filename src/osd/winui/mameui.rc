@@ -411,7 +411,6 @@ IDI_SO_UNKNOWN          ICON                    "res\\so-unkn.ico"
 // Property pages
 IDI_PR_ADVANCED         ICON                    "res\\pr-advan.ico"
 IDI_PR_AUDIT            ICON                    "res\\pr-audit.ico"
-IDI_PR_CONFIG           ICON                    "res\\pr-config.ico"
 IDI_PR_CONTROLLER       ICON                    "res\\pr-cont.ico"
 IDI_PR_DISPLAY          ICON                    "res\\pr-disp.ico"
 IDI_PR_JOYSTICK         ICON                    "res\\pr-joy.ico"
@@ -1250,19 +1249,6 @@ BEGIN
     PUSHBUTTON      "Browse...",IDC_DIR_BROWSE,7,180,50,14
     PUSHBUTTON      "Insert",IDC_DIR_INSERT,85,180,50,14
     PUSHBUTTON      "Delete",IDC_DIR_DELETE,163,180,50,14
-END
-
-
-IDD_PROP_CONFIGURATION DIALOGEX 0, 0, 220, 220
-STYLE WS_CHILD | WS_CAPTION
-CAPTION "Configuration"
-FONT 8, "Tahoma"
-BEGIN
-    ICON            IDI_PR_CONFIG,IDC_STATIC,20,10,20,20
-    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25, SS_NOPREFIX
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
-    LTEXT           "RAM size",IDC_RAM_CAPTION,20,50,50,10
-    COMBOBOX        IDC_RAM_COMBOBOX,70,50,100,76,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
 END
 
 

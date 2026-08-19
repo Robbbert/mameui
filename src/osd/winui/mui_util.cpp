@@ -27,7 +27,6 @@
 #include "mui_opts.h"
 #include "emu_opts.h"
 #include "drivenum.h"
-#include "machine/ram.h"
 #include <shlwapi.h>
 #include "corestr.h"
 #include "path.h"
@@ -59,7 +58,6 @@ struct DriversInfo
 	bool usesMouse;
 	bool supportsSaveState;
 	bool isVertical;
-	bool hasRam;
 };
 
 static std::vector<DriversInfo> drivers_info;
@@ -79,7 +77,6 @@ enum
 	DRIVER_CACHE_LIGHTGUN   = 0x0800,
 	DRIVER_CACHE_VECTOR     = 0x1000,
 	DRIVER_CACHE_MOUSE      = 0x2000,
-	DRIVER_CACHE_RAM        = 0x4000,
 };
 
 /***************************************************************************
@@ -461,9 +458,6 @@ static void SetDriversInfo()
 		if (gameinfo->usesMouse)
 			cache += DRIVER_CACHE_MOUSE;
 
-		if (gameinfo->hasRam)
-			cache += DRIVER_CACHE_RAM;
-
 		SetDriverCache(ndriver, cache);
 	}
 }
@@ -491,9 +485,6 @@ static void InitDriversInfo()
 		gameinfo->supportsSaveState = BIT(cache, 7);  //MACHINE_SUPPORTS_SAVE
 		gameinfo->isHarddisk = false;
 		gameinfo->isVertical = BIT(cache, 2);  //ORIENTATION_SWAP_XY
-
-		ram_device_enumerator iter1(config.root_device());
-		gameinfo->hasRam = (iter1.first() );
 
 		for (device_t &device : device_enumerator(config.root_device()))
 			for (region = rom_first_region(device); region; region = rom_next_region(region))
@@ -594,7 +585,6 @@ static int InitDriversCache()
 		gameinfo->usesTrackball     = ((cache_upper & DRIVER_CACHE_TRACKBALL) != 0);
 		gameinfo->usesLightGun      = ((cache_upper & DRIVER_CACHE_LIGHTGUN)  != 0);
 		gameinfo->usesMouse         = ((cache_upper & DRIVER_CACHE_MOUSE)     != 0);
-		gameinfo->hasRam            = ((cache_upper & DRIVER_CACHE_RAM)       != 0);
 	}
 
 	printf("InitDriversCache: Finished\n");fflush(stdout);
@@ -609,7 +599,7 @@ static struct DriversInfo* GetDriversInfo(int drvindex)
 
 		drivers_info.clear();
 		drivers_info.resize(driver_list::total());
-		std::fill(drivers_info.begin(), drivers_info.end(), DriversInfo{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
+		std::fill(drivers_info.begin(), drivers_info.end(), DriversInfo{ });
 		printf("DriversInfo: B\n");fflush(stdout);
 		InitDriversCache();
 	}
@@ -751,14 +741,6 @@ BOOL DriverIsVertical(int drvindex)
 		return 0;
 	else
 		return GetDriversInfo(drvindex)->isVertical;
-}
-
-BOOL DriverHasRam(int drvindex)
-{
-	if (drvindex < 0)
-		return 0;
-	else
-		return GetDriversInfo(drvindex)->hasRam;
 }
 
 void FlushFileCaches()

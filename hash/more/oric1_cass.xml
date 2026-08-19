@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 471 -->
+<!-- Number of items in this list = 470 -->
 <softwarelist name="oric1_cass" description="oric1_cass loose roms">
 	<software name="ori49cf3b9fc434c">
 		<description>3D Editor by Loriciel (F) (1984)</description>
@@ -339,16 +339,6 @@
 		<part name="cass" interface="oric1_cass">
 			<dataarea name="cass" size="15144">
 				<rom name="Auto-Ecole (F) (1984).tap" size="15144" crc="e0bf8db2" sha1="680434e24be3a497122713e23a99de94dcf90f43"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="ori6f756b36c8922">
-		<description>awass</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="oric1_cass">
-			<dataarea name="cass" size="13309">
-				<rom name="awass.tap" size="13309" crc="e4da86da" sha1="6f756b36c89226ab042129ce96e2fc6616299c4a"/>
 			</dataarea>
 		</part>
 	</software>
