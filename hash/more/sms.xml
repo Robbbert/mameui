@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 589 -->
+<!-- Number of items in this list = 591 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1949,6 +1949,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="98304">
 				<rom name="Goodzilla v1.1 (2025)(Zhamul, Kronk, borbware, Keith).sms" size="98304" crc="6c6c5ad8" sha1="675b5a82999353ca8c73a114094446ca4d193784"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsd27c7353519b1">
+		<description>Goomba Invaders (2026)(BriG78)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Goomba Invaders (2026)(BriG78).sms" size="32768" crc="6dbfeb1a" sha1="d27c7353519b165a37cc68e3c8ac5c1315943a2d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5389,6 +5399,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="U.F.O. [Aaronix] (TW).sms" size="49152" crc="cd23e52a" sha1="9eb93d7269951d4aa3416ba3a6a9bd8fe5da9720"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms2af090758e615">
+		<description>Uchotos (2026)(Inufuto)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Uchotos (2026)(Inufuto).sms" size="16384" crc="d31930dc" sha1="2af090758e61575d91231acc5e7da7b450942005"/>
 			</dataarea>
 		</part>
 	</software>

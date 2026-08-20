@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 732 -->
+<!-- Number of items in this list = 734 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -1559,6 +1559,26 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="31351">
 				<rom name="Cye v1.1 (2007)(Philipp Klaus Krause).rom" size="31351" crc="0eaec351" sha1="60692740493e16080decb7fb996931264b963340"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col39945ff1940c9">
+		<description>Dacman (Alt)(2000)(Daniel Bienvenu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Dacman (Alt)(2000)(Daniel Bienvenu).rom" size="32768" crc="3c0bba92" sha1="39945ff1940c943ca8425af1ae4fd7dab1336aab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col6b48d7ab3a720">
+		<description>Dacman II (2026)(Amy Bienvenu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16106">
+				<rom name="Dacman II (2026)(Amy Bienvenu).rom" size="16106" crc="dfeccda0" sha1="6b48d7ab3a7209c3d4757e42485ab1c132a64e74"/>
 			</dataarea>
 		</part>
 	</software>

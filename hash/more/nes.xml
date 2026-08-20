@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10984 -->
+<!-- Number of items in this list = 10987 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -60912,6 +60912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes169516ea4422e">
+		<description>Necro Nancy - Nightmare Mode Demo (2025)(Grimware Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Necro Nancy - Nightmare Mode Demo (2025)(Grimware Games).nes" size="524304" crc="03f13855" sha1="169516ea4422e81bb93c4f10b8709ee10b8df5ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesac9a2c39e4633">
 		<description>Nekketsu Kakutou Densetsu (J) [T+Ara_glow]</description>
 		<year>????</year>
@@ -84582,6 +84592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nese461c2f545acf">
+		<description>Soccer (2026)(Foko Games)(badgfx)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="90128">
+				<rom name="Soccer (2026)(Foko Games)(badgfx).nes" size="90128" crc="7c812702" sha1="e461c2f545acf3d694293b20186cf738f2ab83cc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes2025c0b407fd2">
 		<description>Soccer League - Winner's Cup (Japan) (2)</description>
 		<year>????</year>
@@ -88629,6 +88649,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Sunman (Europe) (Proto).nes" size="262160" crc="dc558e1a" sha1="e4977787311c57350b5593a352bb736648a82a9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes590c7c07c1bb9">
+		<description>Sunset Land (2026)(Rivet Gun Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Sunset Land (2026)(Rivet Gun Games).nes" size="524304" crc="69b85bde" sha1="590c7c07c1bb99d47445e663013355d67c20e4ec"/>
 			</dataarea>
 		</part>
 	</software>

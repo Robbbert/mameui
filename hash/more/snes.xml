@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4166 -->
+<!-- Number of items in this list = 4167 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3209,6 +3209,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="AmbianceOW (SMW1 Hack).sfc" size="1048576" crc="66ee407a" sha1="ebe0334a8774d3bdb0ebbf6661ec6db4f2974963"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsb05669896ac20">
+		<description>Angelsong v1.5 (2025-26)(Team Disposable &amp; Haller.Z)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Angelsong v1.5 (2025-26)(Team Disposable &amp; Haller.Z).sfc" size="262144" crc="daae6bdc" sha1="b05669896ac207522e6e10b5d6e37090f90fcceb"/>
 			</dataarea>
 		</part>
 	</software>
