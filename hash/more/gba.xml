@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 372 -->
+<!-- Number of items in this list = 376 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -1392,6 +1392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba1e81a3b40072e">
+		<description>Fill2Grid (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="57136">
+				<rom name="Fill2Grid (2026)(Enarkz).gba" size="57136" crc="2a0c384f" sha1="1e81a3b40072efd9c85747731051903519fc8194"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba808759976fb9f">
 		<description>Final Fight One - Redux Edition v3.0 (2023)(SCD)</description>
 		<year>????</year>
@@ -1422,6 +1432,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba55f611567e7ac">
+		<description>Flappy Bird (2014)(Jay Van Hutten)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="575204">
+				<rom name="Flappy Bird (2014)(Jay Van Hutten).gba" size="575204" crc="4d099541" sha1="55f611567e7ac2ad8f96529f4d7eac70ad283601"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaf613a7366dca5">
 		<description>Flipoon Advance (2023-05-16)(HusYada)(proto)</description>
 		<year>????</year>
@@ -1439,6 +1459,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4124984">
 				<rom name="Fuzz &amp; Rocket (2005-01-18)(HalfBrick Studios)(proto).bin" size="4124984" crc="fd239437" sha1="e6dab28aa3e9a5b1417bbf3929c45ff7260803b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba65d898e76be78">
+		<description>Galacard Advance (2025)(Bipedal Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3751705">
+				<rom name="Galacard Advance (2025)(Bipedal Studios).gba" size="3751705" crc="6dedf53e" sha1="65d898e76be784a0bc0d56b87aed758abbfa7281"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1939,6 +1969,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="2793156">
 				<rom name="NEONnoir (2025)(Mass).gba" size="2793156" crc="34220044" sha1="79ecb462336f0dbb85c517481abf5c414d82cc02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad42e0c01b428d">
+		<description>Paragon Breakout (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="43104">
+				<rom name="Paragon Breakout (2026)(Enarkz).gba" size="43104" crc="21609c4c" sha1="d42e0c01b428d3b7687dd499a21781fb8a7c5c9d"/>
 			</dataarea>
 		</part>
 	</software>
