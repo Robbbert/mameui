@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 376 -->
+<!-- Number of items in this list = 391 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -552,6 +552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba5958fea615bd1">
+		<description>Beer Belly Bill 2 - Morning Shift (2005)(Metalvotze)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="124368">
+				<rom name="Beer Belly Bill 2 - Morning Shift (2005)(Metalvotze).gba" size="124368" crc="f0f7fd72" sha1="5958fea615bd147c2ed142fb4854d6d0eb7ac8ac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbacf94548d46deb">
 		<description>Blackthorne - Palette Restoration (2017)(marc_max)</description>
 		<year>????</year>
@@ -612,6 +622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba8b56a6a138b85">
+		<description>Breakoid (2026)(CeL)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3889132">
+				<rom name="Breakoid (2026)(CeL).gba" size="3889132" crc="51d3cc78" sha1="8b56a6a138b8558f9a89fb788dc41e9a4a1d24db"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba36efe397badf1">
 		<description>Butano Fighter (2020)(GValiente)</description>
 		<year>????</year>
@@ -629,6 +649,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Cardcaptor Sakura - Sakura Card Hen - Sakura to Card to Otomodachi (Japan) (Rev 1).gba" size="16777216" crc="2c8488b2" sha1="06f8cef944241ab73a062972cc7eb4a744dc1b6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbabf78a4efde3b5">
+		<description>Castle Master (2004)(Quirky)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="259192">
+				<rom name="Castle Master (2004)(Quirky).gba" size="259192" crc="307f7d77" sha1="bf78a4efde3b5c3bab65bd7156c69907fb86b512"/>
 			</dataarea>
 		</part>
 	</software>
@@ -729,6 +759,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="353880">
 				<rom name="ChuckieEgg_1.gba" size="353880" crc="a8dab249" sha1="5469b5d01d82d5fd83c064a17c85f8393d86f30f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae1c6d46521310">
+		<description>City Connection v1.7 (2004)(PocketCasio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1924768">
+				<rom name="City Connection v1.7 (2004)(PocketCasio).gba" size="1924768" crc="234a42a5" sha1="e1c6d46521310d96fedf46a39982ad1372cdc42c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -922,6 +962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba160dd0612419c">
+		<description>Damage Report (2026)(Tapir Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="21741328">
+				<rom name="Damage Report (2026)(Tapir Games).gba" size="21741328" crc="b7e46653" sha1="160dd0612419c06acde59e93f3112fc0a014d561"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbad6a4b572d3f6c">
 		<description>Deadpool Advance (PD)</description>
 		<year>????</year>
@@ -999,6 +1049,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Dora the Explorer Double Pack (USA) (Beta).gba" size="8388608" crc="185f34f5" sha1="5418a9f4be35df3b26b448042755af69ed7f2305"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba7946ffd029983">
+		<description>Double Maze (2026)(gary_bbgames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="111048">
+				<rom name="Double Maze (2026)(gary_bbgames).gba" size="111048" crc="d85bc06e" sha1="7946ffd02998300a05892756e7e94705ac709825"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1099,6 +1159,36 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Duel Masters 3 (Japan) (Rev 1).gba" size="8388608" crc="d2b9cfb6" sha1="05ad843564c663a050e137ae0ec07d09f585c714"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3e5598cd920cd">
+		<description>Dungeon Tactics Advance (2024)(Tapir Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8867571">
+				<rom name="Dungeon Tactics Advance (2024)(Tapir Games).gba" size="8867571" crc="c8385702" sha1="3e5598cd920cdd6681b1b9ba86b1572ab3c2b05a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad3e6c12e6475f">
+		<description>Elite - The New Kind v1.7.1 (2005)(FluBBa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="546392">
+				<rom name="Elite - The New Kind v1.7.1 (2005)(FluBBa).gba" size="546392" crc="5f9b4211" sha1="d3e6c12e6475ffb21617e3be7158d60ac535e74b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba803095500e477">
+		<description>Elite AGB v1.4.1 (2007)(Quirky)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="960088">
+				<rom name="Elite AGB v1.4.1 (2007)(Quirky).gba" size="960088" crc="28985872" sha1="803095500e47772452433144f2cd7630d515a41b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1452,6 +1542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba60f0b37c42e3a">
+		<description>Fungus Forest (2025)(MOONbit, Anorak Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1543104">
+				<rom name="Fungus Forest (2025)(MOONbit, Anorak Studio).gba" size="1543104" crc="6db13c60" sha1="60f0b37c42e3a6109a9e35263b9dde1eccbf68e1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbae6dab28aa3e9a">
 		<description>Fuzz &amp; Rocket (2005-01-18)(HalfBrick Studios)(proto)</description>
 		<year>????</year>
@@ -1499,6 +1599,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="6950644">
 				<rom name="GBADoom(badgfx).gba" size="6950644" crc="d687bd98" sha1="24686fab61461430286858a9954feb6a0e995006"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbad1886668327f4">
+		<description>Getting Around It with Pheasant Birdy (2024)(Hell Labs)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4770080">
+				<rom name="Getting Around It with Pheasant Birdy (2024)(Hell Labs).gba" size="4770080" crc="cd007dbd" sha1="d1886668327f4f691fb7bc935d1b2b43adba61f6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2049,6 +2159,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Pokemon Zero Negative (2023-02-18)(Elvies)[h Pokemon Fire Red].gba" size="16777216" crc="3a4a7475" sha1="9f7dc4cc51ce77d0b18424f89a22d971d172b959"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba68f7337bbe65c">
+		<description>Poomania (2009)(Metalvotze)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="652512">
+				<rom name="Poomania (2009)(Metalvotze).gba" size="652512" crc="78482a70" sha1="68f7337bbe65c5b6a43d27526802b6fb6be3cb9c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2779,6 +2899,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8378312">
 				<rom name="Rayman 3 (2002-11-29)(Ubi Soft)(US)(M3)(proto).bin" size="8378312" crc="4549f9b3" sha1="b5d299663bf1ac4a50ced1a572dcef5d31d807f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba73be8a8b77bed">
+		<description>Reaxion (2007)(Cosine)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="280560">
+				<rom name="Reaxion (2007)(Cosine).gba" size="280560" crc="960ee137" sha1="73be8a8b77bedf2170d50aada6bb59f503c88450"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3572,6 +3702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba9793c56f6c7fd">
+		<description>SysCrusher (2026)(Kyle Delaney)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4351084">
+				<rom name="SysCrusher (2026)(Kyle Delaney).gba" size="4351084" crc="d9601b01" sha1="9793c56f6c7fdcfa9923dd5d8eb02a55113213ca"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba62f417d538061">
 		<description>Tetris Advance</description>
 		<year>????</year>
@@ -3589,6 +3729,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="5746808">
 				<rom name="Tollrunner - Community Version (2026)(Jenka Lab).gba" size="5746808" crc="635efe32" sha1="8d9b0c1a666a937701d259858bf37503079cddf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba230242fd84daf">
+		<description>Tortoises (2024)(FG Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Tortoises (2024)(FG Software).gba" size="262144" crc="e8f9eb14" sha1="230242fd84daff53d99fdf5d04e53fe9ca73f6ab"/>
 			</dataarea>
 		</part>
 	</software>

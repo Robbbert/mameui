@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2119 -->
+<!-- Number of items in this list = 2120 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -9359,6 +9359,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Hayato's Journey v1_0.bin" size="4194304" crc="7f54be40" sha1="4d2acae834e81e8d873c133e1e021b4417ca7c30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen85bb70318eb23">
+		<description>Heavy Recoil (2026)(Wide Pixel Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Heavy Recoil (2026)(Wide Pixel Games).bin" size="4194304" crc="49e9564b" sha1="85bb70318eb231050d15fa403cd8be36c388380c"/>
 			</dataarea>
 		</part>
 	</software>

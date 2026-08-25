@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 126 -->
+<!-- Number of items in this list = 134 -->
 <softwarelist name="uzebox" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -562,16 +562,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="uze7bacd7ece2679">
-		<description>GameOfLife (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="uzebox">
-			<dataarea name="rom" size="25694">
-				<rom name="GameOfLife (2).uze" size="25694" crc="ac1287c8" sha1="7bacd7ece26790e6fb228aad6753980e97393165"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="uze8270555d15ba8">
 		<description>gameoflife</description>
 		<year>????</year>
@@ -579,6 +569,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="26074">
 				<rom name="gameoflife.uze" size="26074" crc="fbf7fef7" sha1="8270555d15ba8cd4f63c01e171af0196e4d8463d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze7bacd7ece2679">
+		<description>GameOfLife_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="25694">
+				<rom name="GameOfLife_1.uze" size="25694" crc="ac1287c8" sha1="7bacd7ece26790e6fb228aad6753980e97393165"/>
 			</dataarea>
 		</part>
 	</software>
@@ -652,16 +652,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="uze353a51e273101">
-		<description>Kismet (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="uzebox">
-			<dataarea name="rom" size="36544">
-				<rom name="Kismet (2).uze" size="36544" crc="6072d101" sha1="353a51e27310166a0818bfdb8b12b10610b742d7"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="uze8232f4383f6b4">
 		<description>kismet</description>
 		<year>????</year>
@@ -669,6 +659,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="36544">
 				<rom name="kismet.uze" size="36544" crc="d1a2dd99" sha1="8232f4383f6b47c0220ad518eb6282b9feeff499"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze353a51e273101">
+		<description>Kismet_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="36544">
+				<rom name="Kismet_1.uze" size="36544" crc="6072d101" sha1="353a51e27310166a0818bfdb8b12b10610b742d7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -742,6 +742,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze8dc6ef4b4610e">
+		<description>MB-SandMan</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="53346">
+				<rom name="MB-SandMan.uze" size="53346" crc="0cfc295f" sha1="8dc6ef4b4610ea37d7526957008e560d256d4aa3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze22c89da6d7999">
+		<description>MB0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="55188">
+				<rom name="MB0.uze" size="55188" crc="6687879d" sha1="22c89da6d7999abcbc8ea1b49082106fdc4762be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzea88bf1d282b4a">
+		<description>MB2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="55938">
+				<rom name="MB2.uze" size="55938" crc="a6e3a5ba" sha1="a88bf1d282b4abf474f1ed409d0470da37128830"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze174501c34d5d8">
+		<description>MB3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="56122">
+				<rom name="MB3.uze" size="56122" crc="033271b7" sha1="174501c34d5d8ea7db128c9905ebdca121de44a2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uzea69f71516c143">
 		<description>mega-bomber-wip</description>
 		<year>????</year>
@@ -759,6 +799,26 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="53348">
 				<rom name="mega-sokoban.uze" size="53348" crc="1ee05045" sha1="4008a83332723b0ee5a114b00f0912b3dc8874b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzefc3fe75211b4b">
+		<description>MegaSokoban</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="53030">
+				<rom name="MegaSokoban.uze" size="53030" crc="980304dc" sha1="fc3fe75211b4bab81d3b053bc96c4d4b389096fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze74971496fafd6">
+		<description>Megatris (2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="59296">
+				<rom name="Megatris (2).uze" size="59296" crc="57b9284c" sha1="74971496fafd62139df3969c9c26c2331c18f993"/>
 			</dataarea>
 		</part>
 	</software>
@@ -783,12 +843,12 @@
 		</part>
 	</software>
 	<software name="uzee786cdb85b249">
-		<description>mellis-retro-land</description>
+		<description>Mellis_Retro_Land</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="54248">
-				<rom name="mellis-retro-land.uze" size="54248" crc="ca5e722b" sha1="e786cdb85b249993f3f07804d34da9f07bbc2b18"/>
+				<rom name="Mellis_Retro_Land.uze" size="54248" crc="ca5e722b" sha1="e786cdb85b249993f3f07804d34da9f07bbc2b18"/>
 			</dataarea>
 		</part>
 	</software>
@@ -839,6 +899,26 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="42160">
 				<rom name="music-demo.uze" size="42160" crc="ea50fc35" sha1="6a1d42a74862fce9efc70b15373603864d86f65e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze5c6d5bf82b527">
+		<description>MusicDemo</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="35414">
+				<rom name="MusicDemo.uze" size="35414" crc="02bc92a4" sha1="5c6d5bf82b52796ef04b8b190b76bff7625ecb08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze9d21b80ff5307">
+		<description>Njbeatdn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="41632">
+				<rom name="Njbeatdn.uze" size="41632" crc="6f1af9f4" sha1="9d21b80ff5307f0544c642c56578a5e73c766c79"/>
 			</dataarea>
 		</part>
 	</software>

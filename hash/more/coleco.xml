@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 734 -->
+<!-- Number of items in this list = 735 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -1339,6 +1339,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="10860">
 				<rom name="Colored gravity.rom" size="10860" crc="785409e6" sha1="b59a00a0cd449cffd4912175e182ca4bdfe44f52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col975f233026bc7">
+		<description>Comic Bakery (2010)(Opcode Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="31745">
+				<rom name="Comic Bakery (2010)(Opcode Games).rom" size="31745" crc="220cdd5e" sha1="975f233026bc75b76ba3dedfee509ba52ea9cc83"/>
 			</dataarea>
 		</part>
 	</software>

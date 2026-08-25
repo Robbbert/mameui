@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10987 -->
+<!-- Number of items in this list = 10988 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -99419,6 +99419,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Tetrastar - The Fighter (Japan).nes" size="524304" crc="9880e334" sha1="2dbdaf4ff550697e13122fb7aa0fea1bce867283"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesbf5587915b501">
+		<description>Tetris (2010)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="65552">
+				<rom name="Tetris (2010).nes" size="65552" crc="feae6527" sha1="bf5587915b501dc2c4ad047f6afe5f296871f6be"/>
 			</dataarea>
 		</part>
 	</software>

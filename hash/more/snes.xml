@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4167 -->
+<!-- Number of items in this list = 4178 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -15172,6 +15172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns72fb43ed2cd5c">
+		<description>Lady Stalker - The Apocalypse Engine T-Eng (2026)(Retch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Lady Stalker - The Apocalypse Engine T-Eng (2026)(Retch).sfc" size="4194304" crc="3a59468a" sha1="72fb43ed2cd5c8416f1475b3c4279949a3f4e542"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsc526105e2f21e">
 		<description>Lagoon T-Spa v1.1 (2023)(semco)</description>
 		<year>????</year>
@@ -19779,6 +19789,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mini demo (2 Niveaux) (SMW1 Hack).sfc" size="2097152" crc="2e712775" sha1="eeec8b681661e207325f1c9dabe6d98d81648a3c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsa115252273f13">
+		<description>Minicraft 3D v0.2 (2026)(GameOfTobi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Minicraft 3D v0.2 (2026)(GameOfTobi).sfc" size="65536" crc="a1bac09c" sha1="a115252273f13d136f26cbeb21dfc799acca975a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32862,6 +32882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf1da200f9dd01">
+		<description>Street Fighter Alpha 2 (Lightweight Freeze Fix) (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Street Fighter Alpha 2 (Lightweight Freeze Fix) (Hack).sfc" size="4194304" crc="7ea8cf67" sha1="f1da200f9dd01ce2dc93088e291ba25446623372"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns7ddcb96e0d9fe">
 		<description>Street Fighter II (U)(1992)(Capcom)</description>
 		<year>????</year>
@@ -33172,6 +33202,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns43015375d1795">
+		<description>Super Bomberman - Panic Bomber W (W)(2026)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Bomberman - Panic Bomber W (W)(2026)(Hudson Soft).sfc" size="2097152" crc="46b5c2bf" sha1="43015375d179524dc59af6821a4b928ff175aa3d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snscf2d907848a46">
 		<description>Super Bomberman 3 (J)(1995)(Hudson Soft)</description>
 		<year>????</year>
@@ -33179,6 +33219,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Super Bomberman 3 (J)(1995)(Hudson Soft).sfc" size="1572864" crc="9ecb0fe6" sha1="cf2d907848a4619b4aea0ef61526a4c44a82f905"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns53468092ddae3">
+		<description>Super Bomberman 3 (U)(2026)(Hudson Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Bomberman 3 (U)(2026)(Hudson Soft).sfc" size="2097152" crc="9f40aaa3" sha1="53468092ddae3cdc922f89906ef6dd438a149e1f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns417d5ace7e51b">
+		<description>Super Bomberman 5 (USA)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Bomberman 5 (USA).sfc" size="4194304" crc="c25ab56a" sha1="417d5ace7e51baafb69d20ce15ff0894d91c70c5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38012,6 +38072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsf86764fd9f4f2">
+		<description>Super Robot Wars 4 T-Eng (2026)(Aeon Genesis)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Super Robot Wars 4 T-Eng (2026)(Aeon Genesis).sfc" size="4194304" crc="72bbacca" sha1="f86764fd9f4f2de5cdba33b58ec62b17241f5404"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns25782d34f622c">
 		<description>Super Robot Wars EX T-Eng (2018)(Aeon Genesis)</description>
 		<year>????</year>
@@ -40042,6 +40112,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns98722afc42b35">
+		<description>Umihara Kawase Christmas Community Challenge (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Umihara Kawase Christmas Community Challenge (Hack).sfc" size="2097152" crc="36dd21b2" sha1="98722afc42b35e6ab2fef499a6924240da11854b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns500ef0abaa91c">
+		<description>Umihara Kawase Emiko's Dream (Hack, v1.2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Umihara Kawase Emiko's Dream (Hack, v1.2).sfc" size="1048576" crc="f21edb6a" sha1="500ef0abaa91c7f6cad2d8b6b67b648fd23b5c25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snse2ad6fc778dd4">
+		<description>Umihara Kawase Nagori (Hack)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Umihara Kawase Nagori (Hack).sfc" size="2097152" crc="bba4c1fe" sha1="e2ad6fc778dd445b1a8260fc9b0cdbe09d2417fc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns3bac8fd2ace14">
 		<description>Umihara Kawase T-Eng (2021)(satsu, Green Jerry)</description>
 		<year>????</year>
@@ -40049,6 +40149,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Umihara Kawase T-Eng (2021)(satsu, Green Jerry).sfc" size="1048576" crc="18b07992" sha1="3bac8fd2ace1417e83b4d9cdc97249efe130413a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf0454fc447f87">
+		<description>Umihara Kawase T-Eng v0.90 (2007)(satsu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Umihara Kawase T-Eng v0.90 (2007)(satsu).sfc" size="1048576" crc="a72905c4" sha1="f0454fc447f87251b8c0d1ce1f9d58747dde64f7"/>
 			</dataarea>
 		</part>
 	</software>
