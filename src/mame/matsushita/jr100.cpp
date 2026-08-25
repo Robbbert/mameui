@@ -64,10 +64,14 @@ TODO:
 
 #include "emupal.h"
 #include "screen.h"
+<<<<<<< HEAD
 #include "speaker.h"
 #include "softlist_dev.h"
 
+=======
+>>>>>>> upstream/master
 #include "softlist_dev.h"
+#include "speaker.h"
 
 #include "multibyte.h"
 #include "utf8.h"
