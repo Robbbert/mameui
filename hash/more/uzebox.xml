@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 134 -->
+<!-- Number of items in this list = 140 -->
 <softwarelist name="uzebox" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -812,16 +812,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="uze74971496fafd6">
-		<description>Megatris (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="uzebox">
-			<dataarea name="rom" size="59296">
-				<rom name="Megatris (2).uze" size="59296" crc="57b9284c" sha1="74971496fafd62139df3969c9c26c2331c18f993"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="uze705b88651e63a">
 		<description>Megatris (Greg Mapes)(2014)</description>
 		<year>????</year>
@@ -839,6 +829,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="61826">
 				<rom name="megatris.uze" size="61826" crc="5b99b6bd" sha1="f9516f993cbc61fe47fed00ee6acbd810c01855f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze74971496fafd6">
+		<description>Megatris_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="59296">
+				<rom name="Megatris_1.uze" size="59296" crc="57b9284c" sha1="74971496fafd62139df3969c9c26c2331c18f993"/>
 			</dataarea>
 		</part>
 	</software>
@@ -922,6 +922,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze5043aae2a3185">
+		<description>outpost</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="61952">
+				<rom name="outpost.uze" size="61952" crc="854835c6" sha1="5043aae2a31850e8508c8c36d9effe5ece0eeebf"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze42160de090a2c">
 		<description>pacman-lite</description>
 		<year>????</year>
@@ -929,6 +939,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="57070">
 				<rom name="pacman-lite.uze" size="57070" crc="714761cf" sha1="42160de090a2c91825b032c7e13ef218dcbe2205"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze3b6f634ea80cb">
+		<description>patchtool</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="26724">
+				<rom name="patchtool.uze" size="26724" crc="581dcd3e" sha1="3b6f634ea80cb0cccafbca4a446c1efb076944fa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -943,12 +963,12 @@
 		</part>
 	</software>
 	<software name="uze015f640d9a6ba">
-		<description>pengo</description>
+		<description>PengoUze</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="60614">
-				<rom name="pengo.uze" size="60614" crc="782864ce" sha1="015f640d9a6ba1c97061cab4803067f043259fe4"/>
+				<rom name="PengoUze.uze" size="60614" crc="782864ce" sha1="015f640d9a6ba1c97061cab4803067f043259fe4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -959,6 +979,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="42358">
 				<rom name="pentago.uze" size="42358" crc="2d785102" sha1="7b59edd69b9c8803264ec74ffe4491ac09941106"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze5cbbd42a86c7a">
+		<description>pentago_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="46698">
+				<rom name="pentago_1.uze" size="46698" crc="5cc031b9" sha1="5cbbd42a86c7abe759b8d38de4e803c2abde1510"/>
 			</dataarea>
 		</part>
 	</software>
@@ -973,12 +1003,32 @@
 		</part>
 	</software>
 	<software name="uze3c2e03ed068cf">
-		<description>pong</description>
+		<description>Pong</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="20400">
-				<rom name="pong.uze" size="20400" crc="e3002a39" sha1="3c2e03ed068cfd3d9410b90184d7de81a38ad30c"/>
+				<rom name="Pong.uze" size="20400" crc="e3002a39" sha1="3c2e03ed068cfd3d9410b90184d7de81a38ad30c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzecc0a82fbab489">
+		<description>Quadrax</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="26972">
+				<rom name="Quadrax.uze" size="26972" crc="25e881eb" sha1="cc0a82fbab48999b26c8557a02e6f09430cd83a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze1c38df2a41e49">
+		<description>Redbull</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="61952">
+				<rom name="Redbull.uze" size="61952" crc="74768f0c" sha1="1c38df2a41e49e8b30c6745338f91d70fe63fbdc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1009,6 +1059,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="62240">
 				<rom name="ruby-crush.uze" size="62240" crc="70d90751" sha1="befecbe6d852bdb57a6c47eb2afb90f1b109264f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzee003bafcc63ff">
+		<description>rubycrush</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="52992">
+				<rom name="rubycrush.uze" size="52992" crc="b93b1969" sha1="e003bafcc63ff5a447b1ac853d73dd442a3f3067"/>
 			</dataarea>
 		</part>
 	</software>
