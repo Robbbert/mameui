@@ -588,6 +588,88 @@ std::error_condition chd_file::set_parent_sha1(util::sha1_t parent) noexcept
 }
 
 /**
+ * @fn  std::error_condition chd_file::create(util::random_read_write &file, uint64_t logicalbytes, uint32_t hunkbytes, uint32_t unitbytes, const chd_codec_type (&compression)[4])
+ *
+ * @brief   -------------------------------------------------
+ *            create - create a new file with no parent using an existing opened file handle
+ *          -------------------------------------------------.
+ *
+ * @param [in,out]  file    The file.
+ * @param   logicalbytes    The logicalbytes.
+ * @param   hunkbytes       The hunkbytes.
+ * @param   unitbytes       The unitbytes.
+ * @param   compression     The compression.
+ *
+ * @return  A std::error_condition.
+ */
+
+std::error_condition chd_file::create(
+		util::random_read_write &file,
+		uint64_t logicalbytes,
+		uint32_t hunkbytes,
+		uint32_t unitbytes,
+		const chd_codec_type (&compression)[4])
+{
+	// make sure we don't already have a file open
+	if (UNEXPECTED(m_file))
+		return error::ALREADY_OPEN;
+
+	assert(!m_owned_file);
+
+	// set the header parameters
+	m_logicalbytes = logicalbytes;
+	m_hunkbytes = hunkbytes;
+	m_unitbytes = unitbytes;
+	memcpy(m_compression, compression, sizeof(m_compression));
+	m_parent.reset();
+
+	// don't take ownership of the file
+	m_file = &file;
+	return create_common();
+}
+
+/**
+ * @fn  std::error_condition chd_file::create(util::random_read_write &file, uint64_t logicalbytes, uint32_t hunkbytes, const chd_codec_type (&compression)[4], chd_file &parent)
+ *
+ * @brief   -------------------------------------------------
+ *            create - create a new file with a parent using an existing opened file handle
+ *          -------------------------------------------------.
+ *
+ * @param [in,out]  file    The file.
+ * @param   logicalbytes    The logicalbytes.
+ * @param   hunkbytes       The hunkbytes.
+ * @param   compression     The compression.
+ * @param [in,out]  parent  The parent.
+ *
+ * @return  A std::error_condition.
+ */
+
+std::error_condition chd_file::create(
+		util::random_read_write &file,
+		uint64_t logicalbytes,
+		uint32_t hunkbytes,
+		const chd_codec_type (&compression)[4],
+		chd_file &parent)
+{
+	// make sure we don't already have a file open
+	if (UNEXPECTED(m_file))
+		return error::ALREADY_OPEN;
+
+	assert(!m_owned_file);
+
+	// set the header parameters
+	m_logicalbytes = logicalbytes;
+	m_hunkbytes = hunkbytes;
+	m_unitbytes = parent.unit_bytes();
+	memcpy(m_compression, compression, sizeof(m_compression));
+	m_parent = std::shared_ptr<chd_file>(std::shared_ptr<chd_file>(), &parent); // don't take ownership of parent
+
+	// don't take ownership of the file
+	m_file = &file;
+	return create_common();
+}
+
+/**
  * @fn  std::error_condition chd_file::create(util::random_read_write::ptr &&file, uint64_t logicalbytes, uint32_t hunkbytes, uint32_t unitbytes, const chd_codec_type (&compression)[4])
  *
  * @brief   -------------------------------------------------
@@ -624,7 +706,8 @@ std::error_condition chd_file::create(
 	m_parent.reset();
 
 	// take ownership of the file
-	m_file = std::move(file);
+	m_owned_file = std::move(file);
+	m_file = m_owned_file.get();
 	return create_common();
 }
 
@@ -662,10 +745,11 @@ std::error_condition chd_file::create(
 	m_hunkbytes = hunkbytes;
 	m_unitbytes = parent.unit_bytes();
 	memcpy(m_compression, compression, sizeof(m_compression));
-	m_parent = std::shared_ptr<chd_file>(std::shared_ptr<chd_file>(), &parent);
+	m_parent = std::shared_ptr<chd_file>(std::shared_ptr<chd_file>(), &parent); // don't take ownership of parent
 
 	// take ownership of the file
-	m_file = std::move(file);
+	m_owned_file = std::move(file);
+	m_file = m_owned_file.get();
 	return create_common();
 }
 
@@ -795,6 +879,39 @@ std::error_condition chd_file::open(
 }
 
 /**
+ * @fn  std::error_condition chd_file::open(util::random_read_write &file, bool writeable, chd_file *parent)
+ *
+ * @brief   -------------------------------------------------
+ *            open - open an existing file for read or read/write
+ *          -------------------------------------------------.
+ *
+ * @param [in,out]  file    The file.
+ * @param   writeable       true if writeable.
+ * @param [in,out]  parent  If non-null, the parent.
+ *
+ * @return  A std::error_condition.
+ */
+
+std::error_condition chd_file::open(
+		util::random_read_write &file,
+		bool writeable,
+		chd_file *parent,
+		const open_parent_func &open_parent)
+{
+	// make sure we don't already have a file open
+	if (UNEXPECTED(m_file))
+		return error::ALREADY_OPEN;
+
+	assert(!m_owned_file);
+
+	// open the file
+	m_file = &file;
+	m_parent = std::shared_ptr<chd_file>(std::shared_ptr<chd_file>(), parent); // don't take ownership of parent
+	m_cachehunk = ~0;
+	return open_common(writeable, open_parent);
+}
+
+/**
  * @fn  std::error_condition chd_file::open(util::random_read_write::ptr &&file, bool writeable, chd_file *parent)
  *
  * @brief   -------------------------------------------------
@@ -821,8 +938,9 @@ std::error_condition chd_file::open(
 		return std::errc::invalid_argument;
 
 	// open the file
-	m_file = std::move(file);
-	m_parent = std::shared_ptr<chd_file>(std::shared_ptr<chd_file>(), parent);
+	m_owned_file = std::move(file);
+	m_file = m_owned_file.get();
+	m_parent = std::shared_ptr<chd_file>(std::shared_ptr<chd_file>(), parent); // don't take ownership of parent
 	m_cachehunk = ~0;
 	return open_common(writeable, open_parent);
 }
@@ -838,7 +956,8 @@ std::error_condition chd_file::open(
 void chd_file::close()
 {
 	// reset file characteristics
-	m_file.reset();
+	m_owned_file.reset();
+	m_file = nullptr;
 	m_allow_reads = false;
 	m_allow_writes = false;
 
