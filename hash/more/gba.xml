@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 391 -->
+<!-- Number of items in this list = 403 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -522,6 +522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba10dab0af8096a">
+		<description>Astro Smash GBA (2026)(BraindeaD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="125868">
+				<rom name="Astro Smash GBA (2026)(BraindeaD Games).gba" size="125868" crc="380cff53" sha1="10dab0af8096aaa3773bb7fa7bfded3aedec41a7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba96d04c65fa767">
 		<description>Balloons</description>
 		<year>????</year>
@@ -549,6 +559,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1459660">
 				<rom name="Battle Airforce (2025)(Suzuki Plan).gba" size="1459660" crc="c3a57a26" sha1="125d3318b46e03afc9a20d4cf8fe6f973154372d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa8ef429de0497">
+		<description>Beat Beast (2024)(Afska, LaChia, Synthenia)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33506864">
+				<rom name="Beat Beast (2024)(Afska, LaChia, Synthenia).gba" size="33506864" crc="1821da49" sha1="a8ef429de0497d36e50791d5d2641abd90307ac0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1542,6 +1562,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba7dc8bfa23c6d4">
+		<description>FullMetal Alchemist - Sonata of Memories T-Eng (2021)(Iredc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9127040">
+				<rom name="FullMetal Alchemist - Sonata of Memories T-Eng (2021)(Iredc).gba" size="9127040" crc="08be6ed0" sha1="7dc8bfa23c6d4ca5ade2b8eefec928e671a8c543"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba0e53d1b7c6a41">
+		<description>FullMetal Alchemist - Stray Rondo T-Eng v0.02 (2017)(mz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="FullMetal Alchemist - Stray Rondo T-Eng v0.02 (2017)(mz).gba" size="16777216" crc="bc3f79b5" sha1="0e53d1b7c6a413f18e13f0b87e302b7838f8dbe1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba60f0b37c42e3a">
 		<description>Fungus Forest (2025)(MOONbit, Anorak Studio)</description>
 		<year>????</year>
@@ -1843,12 +1883,32 @@
 		</part>
 	</software>
 	<software name="gba566d9249f707d">
-		<description>Kururin Paradise (Japan) [T-En by Dimedime v1.1.1]</description>
+		<description>Kururin Paradise T-Eng v1.1.1 (2023)(Dimedime-d)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
-				<rom name="Kururin Paradise (Japan) [T-En by Dimedime v1.1.1].gba" size="8388608" crc="79023342" sha1="566d9249f707dd0de1ce8ba99c8d37e15fde7e48"/>
+				<rom name="Kururin Paradise T-Eng v1.1.1 (2023)(Dimedime-d).gba" size="8388608" crc="79023342" sha1="566d9249f707dd0de1ce8ba99c8d37e15fde7e48"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6b2e8f7a63e5d">
+		<description>Legendary Starfy, The T-Eng v1.1 - new names (2023)(Megahog2015)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Legendary Starfy, The T-Eng v1.1 - new names (2023)(Megahog2015).gba" size="8388608" crc="e324050c" sha1="6b2e8f7a63e5db86dff2a68e5996197a3d76cef8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2e1d1ae854dca">
+		<description>Legendary Starfy, The T-Eng v1.1 - original names (2023)(Megahog2015)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Legendary Starfy, The T-Eng v1.1 - original names (2023)(Megahog2015).gba" size="8388608" crc="a047b091" sha1="2e1d1ae854dca23a2135f29945afacea2f8bb70c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1982,6 +2042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba16e4acd06bade">
+		<description>Metalgun Slinger T-Eng v1.1 (2025)(RaeDawnChonglingBay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Metalgun Slinger T-Eng v1.1 (2025)(RaeDawnChonglingBay).gba" size="8388608" crc="17313719" sha1="16e4acd06bade714e74bd6509904f1a9e8010cb9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba7fe080bf9cc11">
 		<description>Minicraft v1.3 (2024-02-09)(Vulcalien)(GPLv3)</description>
 		<year>????</year>
@@ -2079,6 +2149,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="2793156">
 				<rom name="NEONnoir (2025)(Mass).gba" size="2793156" crc="34220044" sha1="79ecb462336f0dbb85c517481abf5c414d82cc02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba95c4e8b78d7e6">
+		<description>Oriental Blue - Ao no Tengai T-Eng (2013)(Kingcom, Tom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Oriental Blue - Ao no Tengai T-Eng (2013)(Kingcom, Tom).gba" size="16777216" crc="8a850da7" sha1="95c4e8b78d7e66e28451e4f6780d3f0fd9e687d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3032,6 +3112,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbacf588ec3a435e">
+		<description>Shin Chan - Adventures in Cinema-Land T-Eng (2019)(LeonarthCG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="17359992">
+				<rom name="Shin Chan - Adventures in Cinema-Land T-Eng (2019)(LeonarthCG).gba" size="17359992" crc="4c5ffba8" sha1="cf588ec3a435eafc28fcb86c59ad39d3b5d59fa8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6942225755bba">
+		<description>Shin Megami Tensei T-Eng v1.3b (2021)(Shawnxz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Shin Megami Tensei T-Eng v1.3b (2021)(Shawnxz).gba" size="16777216" crc="f74db49f" sha1="6942225755bba4c0b9d3c42b5a8ec699697cee5e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbabe2bfa709478d">
 		<description>Shin Sangoku Musou Advance (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -3642,6 +3742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba843a860338cc7">
+		<description>Stack a Tower (2026)(Laluigi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="45772">
+				<rom name="Stack a Tower (2026)(Laluigi).gba" size="45772" crc="7a420f95" sha1="843a860338cc74b078c0f4630079a99572e1054a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaa7e3ebaa91aec">
 		<description>Star Wars 3 (Unl)</description>
 		<year>????</year>
@@ -3729,6 +3839,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="5746808">
 				<rom name="Tollrunner - Community Version (2026)(Jenka Lab).gba" size="5746808" crc="635efe32" sha1="8d9b0c1a666a937701d259858bf37503079cddf4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba8c0866db299da">
+		<description>Tomato Adventure T-Eng v.1.1.1 (2023)(Unknown W. Brackets)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Tomato Adventure T-Eng v.1.1.1 (2023)(Unknown W. Brackets).gba" size="8388608" crc="a9bb7cd7" sha1="8c0866db299daf6787b63cbebb50d537e5a70821"/>
 			</dataarea>
 		</part>
 	</software>

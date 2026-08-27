@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 735 -->
+<!-- Number of items in this list = 736 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -879,6 +879,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Burgertime.rom" size="16384" crc="91346341" sha1="6ebf0d23f2d7cf60897ba6fe13b2293421c0a589"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col115c0668d698d">
+		<description>Bust-A-Bobble (2026)(unhuman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Bust-A-Bobble (2026)(unhuman).rom" size="24576" crc="30aa8d12" sha1="115c0668d698dec309b13c10e3ee31f42959054a"/>
 			</dataarea>
 		</part>
 	</software>

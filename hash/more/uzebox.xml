@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 140 -->
+<!-- Number of items in this list = 141 -->
 <softwarelist name="uzebox" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -1092,6 +1092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze3439dbc29a93e">
+		<description>smokeyAndTheBandit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="59218">
+				<rom name="smokeyAndTheBandit.uze" size="59218" crc="cf7626f5" sha1="3439dbc29a93e8f963e75cb54bc8261cc715adc3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uzea3c2f1c184295">
 		<description>snakes</description>
 		<year>????</year>
@@ -1122,16 +1132,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="uzec374f1ead2545">
-		<description>space-age</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="uzebox">
-			<dataarea name="rom" size="57606">
-				<rom name="space-age.uze" size="57606" crc="d13436bb" sha1="c374f1ead254583d6cbb2617253e854c0e47b144"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="uze28be1566b0ec7">
 		<description>space-invaders</description>
 		<year>????</year>
@@ -1139,6 +1139,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="41138">
 				<rom name="space-invaders.uze" size="41138" crc="0d7e4b4a" sha1="28be1566b0ec77979217ac9a99a6bdb5d3f2c140"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzec374f1ead2545">
+		<description>SpaceAge</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="57606">
+				<rom name="SpaceAge.uze" size="57606" crc="d13436bb" sha1="c374f1ead254583d6cbb2617253e854c0e47b144"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1182,6 +1192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uzea84bf294001b0">
+		<description>Tetris</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="60920">
+				<rom name="Tetris.uze" size="60920" crc="f8793419" sha1="a84bf294001b07957bf4a41cf5e3ea3a37b6f2ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uzeafe726d34d5f7">
 		<description>Tron Legacy Music Demo (Daft Punk)</description>
 		<year>????</year>
@@ -1189,16 +1209,6 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="40120">
 				<rom name="Tron Legacy Music Demo (Daft Punk).uze" size="40120" crc="f4833f9b" sha1="afe726d34d5f7aa1d31ab7ab051edb9b3a6d07aa"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="uze294b070ffa7ac">
-		<description>tron</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="uzebox">
-			<dataarea name="rom" size="18836">
-				<rom name="tron.uze" size="18836" crc="6827df50" sha1="294b070ffa7ac524b5e7401e4e046a36bd5edf5d"/>
 			</dataarea>
 		</part>
 	</software>
