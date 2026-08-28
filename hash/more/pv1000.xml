@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 25 -->
+<!-- Number of items in this list = 29 -->
 <softwarelist name="pv1000" description="pv1000 loose roms">
 	<software name="pv142f711db7c6b1">
 		<description>aerial</description>
@@ -29,6 +29,16 @@
 		<part name="cart" interface="pv1000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="ascend.bin" size="16384" crc="59ed8967" sha1="061fb5e3ca0f81ddde4412b08bf1d78b07ab4635"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv130cb0f69447cc">
+		<description>Awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Awass.bin" size="16384" crc="1157c2d6" sha1="30cb0f69447cc91b6eb88c798366e306967d6560"/>
 			</dataarea>
 		</part>
 	</software>
@@ -133,12 +143,12 @@
 		</part>
 	</software>
 	<software name="pv1ce71379f93f95">
-		<description>Elite Plant Browser</description>
+		<description>Elite Planet Browser</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="pv1000_cart">
 			<dataarea name="rom" size="16384">
-				<rom name="Elite Plant Browser.bin" size="16384" crc="b6dbb402" sha1="ce71379f93f95f0a4c5aad790083de74a9b1063d"/>
+				<rom name="Elite Planet Browser.bin" size="16384" crc="b6dbb402" sha1="ce71379f93f95f0a4c5aad790083de74a9b1063d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -202,6 +212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pv11160652fc1eb8">
+		<description>Mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mazy2.bin" size="16384" crc="add5fed8" sha1="1160652fc1eb8a602544822b4a955ac613f39f88"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv10f8484494835a">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -239,6 +259,26 @@
 		<part name="cart" interface="pv1000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="ruptus.bin" size="16384" crc="3445a5bc" sha1="7f4a62f4bd7776c086a892217d2187c98b9a747c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv147c72038d1e55">
+		<description>Svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Svellas.bin" size="16384" crc="b9c7ca60" sha1="47c72038d1e5569e58cbd741b182a1aedfe62bb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv12ad1cc2f059e7">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv1000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="SwordWork.bin" size="16384" crc="55a4b12d" sha1="2ad1cc2f059e70b265c070fc774b5de4a16c1784"/>
 			</dataarea>
 		</part>
 	</software>

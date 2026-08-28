@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 141 -->
+<!-- Number of items in this list = 146 -->
 <softwarelist name="uzebox" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -1082,16 +1082,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="uze8b975121d155b">
-		<description>simon</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="uzebox">
-			<dataarea name="rom" size="40974">
-				<rom name="simon.uze" size="40974" crc="5d50b15d" sha1="8b975121d155b23da38418fe8cf2db7cceebdfad"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="uze3439dbc29a93e">
 		<description>smokeyAndTheBandit</description>
 		<year>????</year>
@@ -1212,6 +1202,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uzeff4c89e288f63">
+		<description>UfoRace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="18582">
+				<rom name="UfoRace.uze" size="18582" crc="628cbd7c" sha1="ff4c89e288f638566e0abfd7fdfea4ae12a70d08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze190f79993dadf">
+		<description>utype-wip</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="55620">
+				<rom name="utype-wip.uze" size="55620" crc="52412622" sha1="190f79993dadf8a98af7c1875b4e35a01be05907"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze080bb11626dc2">
 		<description>Uze Wars (Jon Thomasson)</description>
 		<year>????</year>
@@ -1252,6 +1262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze97cda8afdb084">
+		<description>UZEAMOVE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="61170">
+				<rom name="UZEAMOVE.UZE" size="61170" crc="bbdb749d" sha1="97cda8afdb084b1c783b3ac5b22d3b1951d8b429"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze4cd84db19c33c">
 		<description>Uzebox Tactics (Dominik Kristen)(2019)</description>
 		<year>????</year>
@@ -1259,6 +1279,26 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="47140">
 				<rom name="Uzebox Tactics (Dominik Kristen)(2019).uze" size="47140" crc="80b193dd" sha1="4cd84db19c33c5dbb7d37328b56eefdc8842a345"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze0334a1ad8abe0">
+		<description>Uzeburn</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="61952">
+				<rom name="Uzeburn.uze" size="61952" crc="9941d6d3" sha1="0334a1ad8abe0e6ddb843c1760001e577de3056c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze3c6176fe51254">
+		<description>uzefeud</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="57698">
+				<rom name="uzefeud.uze" size="57698" crc="745b6ddb" sha1="3c6176fe512541e17603de51621cb36b0a64a998"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1302,6 +1342,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze8b975121d155b">
+		<description>UzeSimon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="40974">
+				<rom name="UzeSimon.uze" size="40974" crc="5d50b15d" sha1="8b975121d155b23da38418fe8cf2db7cceebdfad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze77446f4388d0f">
+		<description>UzeSnakes</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="48660">
+				<rom name="UzeSnakes.uze" size="48660" crc="59cdb7db" sha1="77446f4388d0fc48daa25dccff2274778c5e0154"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze9eef824919412">
 		<description>uzesweeper</description>
 		<year>????</year>
@@ -1309,16 +1369,6 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="47434">
 				<rom name="uzesweeper.uze" size="47434" crc="1d11e5e4" sha1="9eef8249194129385c8d90b9b279768288483a91"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="uze97cda8afdb084">
-		<description>U_TYPE</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="uzebox">
-			<dataarea name="rom" size="61170">
-				<rom name="U_TYPE.UZE" size="61170" crc="bbdb749d" sha1="97cda8afdb084b1c783b3ac5b22d3b1951d8b429"/>
 			</dataarea>
 		</part>
 	</software>

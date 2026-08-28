@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 28 -->
+<!-- Number of items in this list = 32 -->
 <softwarelist name="pv2000" description="pv2000 loose roms">
 	<software name="pv2381f7efd9582d">
 		<description>aerial</description>
@@ -29,6 +29,16 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="ascend.rom" size="16384" crc="174db04c" sha1="8f47f12c8e28152460ef021c499cbe8d9b99782b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2d754ee21104b2">
+		<description>Awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Awass.rom" size="16384" crc="7b45d119" sha1="d754ee21104b26d81aeb7f50524533e99bdebab8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -222,6 +232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pv26edfe9f1ce2e3">
+		<description>Mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Mazy2.rom" size="16384" crc="32358d49" sha1="6edfe9f1ce2e3e249343caf0e54cf2936077033e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pv2e2e595453844e">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -269,6 +289,26 @@
 		<part name="cart" interface="pv2000_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="ruptus.rom" size="16384" crc="e35a4a1e" sha1="081faaceef6c57ede06dfb0ab649ab7bc21bdf77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2dc08d70640ec3">
+		<description>Svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Svellas.rom" size="16384" crc="724e12d7" sha1="dc08d70640ec362a8eccf4c34e3de82c664ae4b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pv2e3763ce786233">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pv2000_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="SwordWork.rom" size="16384" crc="d75a66f1" sha1="e3763ce786233872e33de499c28e0e7f2d7263dd"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 52 -->
+<!-- Number of items in this list = 54 -->
 <softwarelist name="pasopia7_cass" description="pasopia7_cass loose roms">
 	<software name="pa73e2592e8c8707">
 		<description>aerial001</description>
@@ -479,6 +479,26 @@
 		<part name="cass" interface="pasopia7_cass">
 			<dataarea name="cass" size="8912940">
 				<rom name="Shogi tape by Apollo Technica for Pasopia 7 (side 1).wav" size="8912940" crc="b941a70e" sha1="701924ad44305f4c29d3ddc218124f238993df31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa7a8dd0b37a7c23">
+		<description>Space_Ship_Atlas_(B&amp;M)(Technopolis_198502)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="1249578">
+				<rom name="Space_Ship_Atlas_(B&amp;M)(Technopolis_198502).wav" size="1249578" crc="1fd847d0" sha1="a8dd0b37a7c233403cb2ea5ea37bc9dde3559375"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pa779d7e531eca5f">
+		<description>SPEED_(B&amp;M)(PiO_198604)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia7_cass">
+			<dataarea name="cass" size="1931342">
+				<rom name="SPEED_(B&amp;M)(PiO_198604).wav" size="1931342" crc="68d172fd" sha1="79d7e531eca5f0bfae2a63213b3ce7ec36b3d863"/>
 			</dataarea>
 		</part>
 	</software>

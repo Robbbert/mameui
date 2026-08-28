@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 38 -->
+<!-- Number of items in this list = 42 -->
 <softwarelist name="pasopia_cass" description="pasopia_cass loose roms">
 	<software name="pasb607e44e3caea">
 		<description>antiair01</description>
@@ -242,6 +242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pas4c8a3fc1ce940">
+		<description>MEGA_ROCK_(B&amp;M)(PiO_198502)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="766452">
+				<rom name="MEGA_ROCK_(B&amp;M)(PiO_198502).wav" size="766452" crc="3e67767e" sha1="4c8a3fc1ce940ac27445e047995071af557a73bb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pasea010f23b9c9e">
 		<description>mieyen01</description>
 		<year>????</year>
@@ -302,6 +312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="pas467f9de1d4ec3">
+		<description>NICE_CATCH_(B&amp;M)(PiO_198408)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="1288474">
+				<rom name="NICE_CATCH_(B&amp;M)(PiO_198408).wav" size="1288474" crc="eb24658b" sha1="467f9de1d4ec39866738cc60ae12ed7a0d5a97e7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="pasd1a819b1ae807">
 		<description>osotos01</description>
 		<year>????</year>
@@ -319,6 +339,26 @@
 		<part name="cass" interface="pasopia_cass">
 			<dataarea name="cass" size="3199495">
 				<rom name="osotos02.wav" size="3199495" crc="05486ed6" sha1="aa3fb9a09086065110dd9081df7d452f2141374a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pasfaaa39c641b26">
+		<description>RENGA_KUZUSHI_(B&amp;M)(IO_198211_198212_deBUG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="2448384">
+				<rom name="RENGA_KUZUSHI_(B&amp;M)(IO_198211_198212_deBUG).wav" size="2448384" crc="21fbe3b1" sha1="faaa39c641b26beb154f8bdbc7af40498d97582e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pas706b1447fd8e4">
+		<description>SPACE_SHOOTER_(B&amp;M)(IO_198301)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pasopia_cass">
+			<dataarea name="cass" size="1686928">
+				<rom name="SPACE_SHOOTER_(B&amp;M)(IO_198301).wav" size="1686928" crc="35a071e5" sha1="706b1447fd8e40f2f5520c802c63271c4de952e1"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 403 -->
+<!-- Number of items in this list = 404 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -3789,6 +3789,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="14071872">
 				<rom name="Super Block Jump - Game Boy Advance Edition.gba" size="14071872" crc="4533a48a" sha1="a9a90b3e6b3d1df74fd1c4331acc972568ce669b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa3f302da663eb">
+		<description>Super Robot Wars J T-Eng (2010)(Kingcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Super Robot Wars J T-Eng (2010)(Kingcom).gba" size="16777216" crc="89b628e3" sha1="a3f302da663ebb62926cf2e6c708692cbd720b14"/>
 			</dataarea>
 		</part>
 	</software>
