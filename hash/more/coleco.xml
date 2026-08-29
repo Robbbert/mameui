@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 737 -->
+<!-- Number of items in this list = 738 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -509,6 +509,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="BC's Quest.ROM" size="16384" crc="d07d5e97" sha1="96a24aacd2de6fd3e5553509d341389091830c2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colcedad091473fe">
+		<description>Beach Head v1.00 (2025-26)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Beach Head v1.00 (2025-26)(Electric Dreams).rom" size="131072" crc="7d698996" sha1="cedad091473fe85aa87d2d607b30d1a784ae2580"/>
 			</dataarea>
 		</part>
 	</software>

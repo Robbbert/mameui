@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4178 -->
+<!-- Number of items in this list = 4182 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5929,6 +5929,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Chou Mahou Tairiku WOZZ (J) [T+Eng_TransCorp].sfc" size="4194304" crc="9e1cf43f" sha1="7e661b7a769b84782523ad5e4000a2b9ebf11d29"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns19aec02262866">
+		<description>Chou Makaimura - Knight Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chou Makaimura - Knight Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="86bd3499" sha1="19aec0226286614d0f0cb0042a8d82d0daadea4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns800debdae62da">
+		<description>Chou Makaimura - Maiden Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Chou Makaimura - Maiden Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="4fa2d787" sha1="800debdae62da81c825d93ae0207fd098c5b528e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33692,6 +33712,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsac81a92a91fb2">
+		<description>Super Ghouls 'n Ghosts (U, Proto)(1991)(Capcom)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Ghouls 'n Ghosts (U, Proto)(1991)(Capcom).sfc" size="2097152" crc="f1073bb3" sha1="ac81a92a91fb2908d3532f7b2ef3c6bc92015842"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf48cacb5008c9">
+		<description>Super Ghouls 'N Ghosts - Knight Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Ghouls 'N Ghosts - Knight Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="7967c502" sha1="f48cacb5008c92c24832722a9c828162d7b346fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns393be4e7b4ec0">
+		<description>Super Ghouls 'N Ghosts - Maiden Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Ghouls 'N Ghosts - Maiden Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="f9e91182" sha1="393be4e7b4ec0cd556c4cffb662c2206d909046d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns9639f4564ef3f">
+		<description>Super Ghouls 'n Ghosts Enhanced Hack (2026)(Tiken)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Ghouls 'n Ghosts Enhanced Hack (2026)(Tiken).sfc" size="1048576" crc="ebb9c790" sha1="9639f4564ef3f4a8f42a1c8690e4989d392060c8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsa22aabecf7b1b">
 		<description>Super Ghouls 'n Ghosts Restoration Hack (2023)(SCD)</description>
 		<year>????</year>
@@ -33702,33 +33762,13 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="snsac81a92a91fb2">
-		<description>Super Ghouls'n Ghosts (U, Proto)(1991)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Super Ghouls'n Ghosts (U, Proto)(1991)(Capcom).sfc" size="2097152" crc="f1073bb3" sha1="ac81a92a91fb2908d3532f7b2ef3c6bc92015842"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns9639f4564ef3f">
-		<description>Super Ghouls'n Ghosts Enhanced Hack (2026)(Tiken)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Super Ghouls'n Ghosts Enhanced Hack (2026)(Tiken).sfc" size="1048576" crc="ebb9c790" sha1="9639f4564ef3f4a8f42a1c8690e4989d392060c8"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="snsbf2efd4eaeb1b">
-		<description>Super Ghouls'n Ghosts Restoration Hack (2023-25)(SCD)</description>
+		<description>Super Ghouls 'n Ghosts Restoration Hack (2023-25)(SCD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Super Ghouls'n Ghosts Restoration Hack (2023-25)(SCD).sfc" size="2097152" crc="d983a882" sha1="bf2efd4eaeb1b863d498fcb37e59bc0bdcb95582"/>
+				<rom name="Super Ghouls 'n Ghosts Restoration Hack (2023-25)(SCD).sfc" size="2097152" crc="d983a882" sha1="bf2efd4eaeb1b863d498fcb37e59bc0bdcb95582"/>
 			</dataarea>
 		</part>
 	</software>

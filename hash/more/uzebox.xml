@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 146 -->
+<!-- Number of items in this list = 154 -->
 <softwarelist name="uzebox" description="uzebox loose roms">
 	<software name="uzef78f8bd532e02">
 		<description>2048 (Harty123)</description>
@@ -1372,6 +1372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze3156763afb72c">
+		<description>Vectgame</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="27282">
+				<rom name="Vectgame.uze" size="27282" crc="31f1f59e" sha1="3156763afb72c1f5eefe96f3e7c8da0f13336190"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze660037f535021">
 		<description>vector-demo</description>
 		<year>????</year>
@@ -1389,6 +1399,26 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="43726">
 				<rom name="videopoker.uze" size="43726" crc="e23468b0" sha1="c942b78ed449c26a0f255e34119d3e4f2ec367c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze6e968bcd3d5bf">
+		<description>VideoPoker_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="43764">
+				<rom name="VideoPoker_1.uze" size="43764" crc="48c94c3c" sha1="6e968bcd3d5bf5379a26aa0165c0980b2838ec02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze65cf78f8c6bdd">
+		<description>Wallstreet</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="55394">
+				<rom name="Wallstreet.uze" size="55394" crc="52df41ba" sha1="65cf78f8c6bdd3285cb6aa91de0c343751cdb255"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1422,6 +1452,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze226b326b9b6f2">
+		<description>Wolfenduino_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="61744">
+				<rom name="Wolfenduino_1.uze" size="61744" crc="6033f48d" sha1="226b326b9b6f21859f1b5f5eaa6f926cf9f50925"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze85400f6915d61">
+		<description>Wolfenduino_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="61898">
+				<rom name="Wolfenduino_2.uze" size="61898" crc="33c3d9c5" sha1="85400f6915d61c84fb5912bb0278b5867738bba0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uzece38220ee326e">
+		<description>wuergertime-2.0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="58018">
+				<rom name="wuergertime-2.0.uze" size="58018" crc="e6b19ba3" sha1="ce38220ee326e86a279a54014b35f0683dc580f3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze736afa9bcef7a">
 		<description>wurgertime-wip</description>
 		<year>????</year>
@@ -1442,6 +1502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="uze72863a51d277d">
+		<description>zelda2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="38430">
+				<rom name="zelda2.uze" size="38430" crc="5b2fea67" sha1="72863a51d277d4ef2849912269cf63a00abf5dce"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="uze4d997b0d3bd0f">
 		<description>ZeldaLinksAwakening</description>
 		<year>????</year>
@@ -1459,6 +1529,16 @@
 		<part name="cart" interface="uzebox">
 			<dataarea name="rom" size="52064">
 				<rom name="zombienator.uze" size="52064" crc="9e66d1ec" sha1="3e33c30f25766cf4f8eee46b2fdea332866296e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="uze05d70e6650f39">
+		<description>Zombienator_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="uzebox">
+			<dataarea name="rom" size="49134">
+				<rom name="Zombienator_2.uze" size="49134" crc="ae3dcee7" sha1="05d70e6650f395ea07354be8cf67458e709e3718"/>
 			</dataarea>
 		</part>
 	</software>

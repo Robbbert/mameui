@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 404 -->
+<!-- Number of items in this list = 408 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -1639,6 +1639,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="6950644">
 				<rom name="GBADoom(badgfx).gba" size="6950644" crc="d687bd98" sha1="24686fab61461430286858a9954feb6a0e995006"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbace4a344d16b7f">
+		<description>GBAtris (2019)(Mutant Stargoat Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2343292">
+				<rom name="GBAtris (2019)(Mutant Stargoat Games).gba" size="2343292" crc="95ec96d8" sha1="ce4a344d16b7f56593a3046af5a0011f7c33dee3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3802,6 +3812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba0ef65670fec4f">
+		<description>Super Robot Wars J T-Eng (2010)(Kingcom)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Super Robot Wars J T-Eng (2010)(Kingcom)_1.gba" size="16777216" crc="3b3cd715" sha1="0ef65670fec4f655536d15b7a954a1deda192855"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbabbc1441063979">
 		<description>Super Street Fighter II Turbo - Revival (E, Rev 1)(2001)(Capcom)</description>
 		<year>????</year>
@@ -3839,6 +3859,26 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Tetris Advance.bin" size="4194304" crc="501ea6cd" sha1="62f417d538061353b1dfc4c7c08d6c26a37f398c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba1e408262d71e6">
+		<description>TGMA (Tetris The Grandmaster 1 and 2) Tate v1.0.2 (2025)(Yakkers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1250500">
+				<rom name="TGMA (Tetris The Grandmaster 1 and 2) Tate v1.0.2 (2025)(Yakkers).gba" size="1250500" crc="ccb62009" sha1="1e408262d71e6b46ae1704a892409af2130d2fa4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba155e5fdce3987">
+		<description>TGMA (Tetris The Grandmaster 1 and 2) v1.0.2 (2025)(Yakkers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1250344">
+				<rom name="TGMA (Tetris The Grandmaster 1 and 2) v1.0.2 (2025)(Yakkers).gba" size="1250344" crc="6cb4d699" sha1="155e5fdce398726cd39c5573067eb27a2acaa4dd"/>
 			</dataarea>
 		</part>
 	</software>
