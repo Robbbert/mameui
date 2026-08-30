@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 408 -->
+<!-- Number of items in this list = 411 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -649,6 +649,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3889132">
 				<rom name="Breakoid (2026)(CeL).gba" size="3889132" crc="51d3cc78" sha1="8b56a6a138b8558f9a89fb788dc41e9a4a1d24db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba566cdf6475f12">
+		<description>Breath of Fire II T-Por (2015)(Nintendo BR)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Breath of Fire II T-Por (2015)(Nintendo BR).gba" size="4194304" crc="cedfc97c" sha1="566cdf6475f122aea2fdfb58ed21b08326f780d7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1872,16 +1882,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gba3702182ed8090">
-		<description>Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)(1)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="33554432">
-				<rom name="Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)(1).gba" size="33554432" crc="85356bf1" sha1="3702182ed8090d790660c189cea1ca2ca73b9969"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gba8dc0a293a3ded">
 		<description>Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)</description>
 		<year>????</year>
@@ -1889,6 +1889,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Klonoa Heroes - Densetsu no Star Medal (Japan) (patched).gba" size="33554432" crc="05e23b9b" sha1="8dc0a293a3ded24f5a07e504d9b35e11c9a73ad3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3702182ed8090">
+		<description>Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)_1.gba" size="33554432" crc="85356bf1" sha1="3702182ed8090d790660c189cea1ca2ca73b9969"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2059,6 +2069,26 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Metalgun Slinger T-Eng v1.1 (2025)(RaeDawnChonglingBay).gba" size="8388608" crc="17313719" sha1="16e4acd06bade714e74bd6509904f1a9e8010cb9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba75ef3bcdbd8ab">
+		<description>Metroid - Zero Mission T-Por (2008)(Trans-Center)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Metroid - Zero Mission T-Por (2008)(Trans-Center).gba" size="8388608" crc="c6e6abac" sha1="75ef3bcdbd8aba5fc35ba0fd67e98a6db8b95924"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba0512285d2d656">
+		<description>Metroid Fusion T-Por v1.2 (2008)(Tradu-Roms, Trans-Center, PO.B.R.E.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Metroid Fusion T-Por v1.2 (2008)(Tradu-Roms, Trans-Center, PO.B.R.E.).gba" size="8388608" crc="6172097d" sha1="0512285d2d6560d89e8e33f1a580cd640d9ad557"/>
 			</dataarea>
 		</part>
 	</software>
