@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 5 -->
+<softwarelist name="pc8201_cass" description="pc8201_cass loose roms">
+	<software name="p82f85f4cc54544e">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pc8201_cass">
+			<dataarea name="cass" size="7986800">
+				<rom name="awass.wav" size="7986800" crc="1eafbb2b" sha1="f85f4cc54544e097568fc1c3a2d6493a5ec79cc4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p827a79541217748">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pc8201_cass">
+			<dataarea name="cass" size="8593080">
+				<rom name="mazy2.wav" size="8593080" crc="0d8651aa" sha1="7a79541217748abfbbece9ce2ecb8d271a86e7f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p82aa9ba6b8d1083">
+		<description>PYUN!, THE (1984-12)(Kanda, Hiroshi)(JP)[Micom BASIC]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pc8201_cass">
+			<dataarea name="cass" size="1533216">
+				<rom name="PYUN!, THE (1984-12)(Kanda, Hiroshi)(JP)[Micom BASIC].wav" size="1533216" crc="7cf8fe17" sha1="aa9ba6b8d10836ed5610e79f4b89fe83151d65a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p821c375caaa9ff0">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pc8201_cass">
+			<dataarea name="cass" size="7630400">
+				<rom name="svellas.wav" size="7630400" crc="d9e5b54c" sha1="1c375caaa9ff09540aebc1f751dd725e7a23faf3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p822dadd7d82720b">
+		<description>sword</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="pc8201_cass">
+			<dataarea name="cass" size="7340840">
+				<rom name="sword.wav" size="7340840" crc="9f6d27f7" sha1="2dadd7d82720b59d861d1d58af855c76b07783f2"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

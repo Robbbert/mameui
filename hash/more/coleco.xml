@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 738 -->
+<!-- Number of items in this list = 739 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -5809,6 +5809,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Space Panic (USA, Euro)(1983)(Coleco).rom" size="16384" crc="5bdf2997" sha1="530870501f322f1d72e820a722790d300f43a6de"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colf5dc46b132c9a">
+		<description>Space Taxi v0.36 (2026)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Space Taxi v0.36 (2026)(Electric Dreams).rom" size="131072" crc="708c9e10" sha1="f5dc46b132c9a7de1359578b5b8d11d6dee600d1"/>
 			</dataarea>
 		</part>
 	</software>

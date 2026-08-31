@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2120 -->
+<!-- Number of items in this list = 2121 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -13999,6 +13999,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Ristar (USA, Europe) (September 1994).bin" size="2097152" crc="adaf912c" sha1="7a27f5aa98d7834ff9a2fe8efa0960c79364560f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend138f95984a3c">
+		<description>River Raid 2600 v0.0.3 (2026)(SirVH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="River Raid 2600 v0.0.3 (2026)(SirVH).bin" size="262144" crc="3ababf84" sha1="d138f95984a3cd4a37b63a9cba96eb688680a56d"/>
 			</dataarea>
 		</part>
 	</software>

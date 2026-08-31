@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 140 -->
+<!-- Number of items in this list = 152 -->
 <softwarelist name="pc8801_flop" description="pc8801_flop loose roms">
 	<software name="p88c02eef27c37f7">
 		<description>100 Yen Disk No. 1 [Set 1]</description>
@@ -1399,6 +1399,126 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="348848">
 				<rom name="Archon.d88" size="348848" crc="56a613a8" sha1="af6a7c7ee4df7f3b72e6421ab0acbf8cdc10e243"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p881c8e969f055a9">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="yewdow.d88" size="348848" crc="2129f678" sha1="1c8e969f055a985fb188d43f97bc9432dc12ff82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p8859644743cfcb7">
+		<description>Zarth [Set 1]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 1].d88" size="348928" crc="3d75e7eb" sha1="59644743cfcb7dbea8892984c7f9f8a6ef041dfc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p88a0050c92b4eff">
+		<description>Zarth [Set 2]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 2].d88" size="348928" crc="7265ca8c" sha1="a0050c92b4effa75edc5d38def3e1abfd6207a25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p88ddbb70480ca52">
+		<description>Zarth [Set 3]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 3].d88" size="348928" crc="a41dc83c" sha1="ddbb70480ca52fbe9a198f8fe3dd1ea7145207ea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p88ad524d4ea251b">
+		<description>Zarth [Set 4]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 4].d88" size="348928" crc="51f2d4b4" sha1="ad524d4ea251b7a66fc65a8a2cfeb54b0a3b5c71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p88af52f3dfaa951">
+		<description>Zarth [Set 5]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 5].d88" size="348928" crc="bad028cf" sha1="af52f3dfaa9515d07e9eeb418f9c05b1535464f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p880365aa350aeed">
+		<description>Zarth [Set 6]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 6].d88" size="348928" crc="54f21eed" sha1="0365aa350aeedca139a61102a8092fe98bf0f6c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p887e3d08b125f9b">
+		<description>Zarth [Set 7]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 7].d88" size="348928" crc="1be85c6a" sha1="7e3d08b125f9b0677bbed53d2ab5a37b65ec1135"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p88b24a4ff715431">
+		<description>Zarth [Set 8]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth [Set 8].d88" size="348928" crc="4c241d58" sha1="b24a4ff7154315e9a6199ea5140e0603dd7b3615"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p88f7e9de54f242e">
+		<description>Zarth [Set 9]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348384">
+				<rom name="Zarth [Set 9].d88" size="348384" crc="a4f169d4" sha1="f7e9de54f242e26e0b028577ffdea5267c20eff3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p88f3f17ed20f42c">
+		<description>Zarth</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348928">
+				<rom name="Zarth.d88" size="348928" crc="617e79f0" sha1="f3f17ed20f42c111f50d36928d899d38b004e500"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="p8829f47eac21558">
+		<description>Zoom in Space {V1 mode}</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="66240">
+				<rom name="Zoom in Space {V1 mode}.d88" size="66240" crc="4b3b74c6" sha1="29f47eac21558c3e955b95ed19681c5deda74189"/>
 			</dataarea>
 		</part>
 	</software>
