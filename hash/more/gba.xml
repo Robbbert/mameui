@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 411 -->
+<!-- Number of items in this list = 418 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -522,6 +522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba0aa602c573eac">
+		<description>Ashen Relics (2026)(Mikebloke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="12156152">
+				<rom name="Ashen Relics (2026)(Mikebloke).gba" size="12156152" crc="2d007a3d" sha1="0aa602c573eac8ab42d8c760092352c23be1c39d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba10dab0af8096a">
 		<description>Astro Smash GBA (2026)(BraindeaD Games)</description>
 		<year>????</year>
@@ -669,6 +679,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3482456">
 				<rom name="Butano Fighter (2020)(GValiente).gba" size="3482456" crc="3c31501c" sha1="36efe397badf199c0339222dc825013c06b86423"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba30b493ca56f60">
+		<description>Button Dash (2026)(Mikebloke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="113860">
+				<rom name="Button Dash (2026)(Mikebloke).gba" size="113860" crc="a83a39e8" sha1="30b493ca56f603b0b28fca7b1d4e4247bcec3fdc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1032,6 +1052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaa1c554306e646">
+		<description>Detective Monroe - Murder at Sea (2024)(eragnarok, HummusHustler)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1546448">
+				<rom name="Detective Monroe - Murder at Sea (2024)(eragnarok, HummusHustler).gba" size="1546448" crc="bf7f144d" sha1="a1c554306e646fdba9b51e0e56fe75e3d57b9c32"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbac0b61d210e53e">
 		<description>Discrete Orange (2025)(Incube8 Games)</description>
 		<year>????</year>
@@ -1239,6 +1269,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Escape 2042 - The Truth Defenders (2024)(OrionSoft).gba" size="16777216" crc="d8dbb64c" sha1="53b9e366e5873f1ac71880f906fd9a43ebb86f6e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5383e7d08d00c">
+		<description>Exploder (2026)(Mikebloke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="18656">
+				<rom name="Exploder (2026)(Mikebloke).gba" size="18656" crc="a2ace720" sha1="5383e7d08d00cfe29ca32406151e5d5e7dc704d8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1659,6 +1699,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="2343292">
 				<rom name="GBAtris (2019)(Mutant Stargoat Games).gba" size="2343292" crc="95ec96d8" sha1="ce4a344d16b7f56593a3046af5a0011f7c33dee3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba804fca8ea4c19">
+		<description>Geekdash (2026)(Mikebloke)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="11384">
+				<rom name="Geekdash (2026)(Mikebloke).gba" size="11384" crc="7896aa6f" sha1="804fca8ea4c19b4a39e15ffd4d943f1647453f13"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2219,6 +2269,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="petz vet (usa).bin" size="8388608" crc="1dbf4d3d" sha1="5c4d99f9d8589a2d49bfb01c77395fb4ffb1eb5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba68030653ff955">
+		<description>Pixel Pup v1.0.4 (2026)(objet DISCRET, RetroDotCards)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="10652984">
+				<rom name="Pixel Pup v1.0.4 (2026)(objet DISCRET, RetroDotCards).gba" size="10652984" crc="0a0bbf01" sha1="68030653ff955db79d48483ce6fd269f36727d2b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4099,6 +4159,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="32507120">
 				<rom name="Zero One SP (Japan) [T-En by Tracey Trace] [i].gba" size="32507120" crc="626b4658" sha1="dcc2bef53c577c19ae46784922f1c7b2b74b590c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba53e3aed816562">
+		<description>Zion - Advanced Mission v1.1 (J)(2026)(Habit Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Zion - Advanced Mission v1.1 (J)(2026)(Habit Soft).gba" size="33554432" crc="3e397fc0" sha1="53e3aed816562ef9d19784c2935333f8c3e85f54"/>
 			</dataarea>
 		</part>
 	</software>

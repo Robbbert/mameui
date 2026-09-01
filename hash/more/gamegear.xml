@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 105 -->
+<!-- Number of items in this list = 106 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -969,6 +969,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="65536">
 				<rom name="Tetris4GG (0.9 - SMSPower Competition 2022 Entry).gg" size="65536" crc="e0654d27" sha1="b0a0bf66b1106b39e027574b8215bc658695bb4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ggc5332d6e8a4b17">
+		<description>Tetris4GG (2026)(Armix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Tetris4GG (2026)(Armix).gg" size="131072" crc="8ada9c7c" sha1="c5332d6e8a4b17c4e79e488f9f8f1eba06511172"/>
 			</dataarea>
 		</part>
 	</software>
