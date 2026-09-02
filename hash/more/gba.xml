@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 418 -->
+<!-- Number of items in this list = 420 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -432,6 +432,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbacfcd61e0bc1f7">
+		<description>Air Hockey with Sound by Ben Stark (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Air Hockey with Sound by Ben Stark (PD).gba" size="524288" crc="12f49031" sha1="cfcd61e0bc1f75232dbe8443ed20462858a52517"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba50c772f91fa43">
 		<description>Airball v1.3 (2004)(Foxy's Softs)</description>
 		<year>????</year>
@@ -449,16 +459,6 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1351892">
 				<rom name="Airball.gba" size="1351892" crc="e67f4abc" sha1="c7bc9a1f227487309222b07463ebd20d3e311974"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbacfcd61e0bc1f7">
-		<description>airhockey</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="524288">
-				<rom name="airhockey.gba" size="524288" crc="12f49031" sha1="cfcd61e0bc1f75232dbe8443ed20462858a52517"/>
 			</dataarea>
 		</part>
 	</software>
@@ -602,6 +602,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba0ed6ac0a4ede5">
+		<description>Blast Arena Advance (Mathew Carr)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1242192">
+				<rom name="Blast Arena Advance (Mathew Carr).gba" size="1242192" crc="e04e0569" sha1="0ed6ac0a4ede5766c5e307dff64817b430896823"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba38f38fb5644ae">
 		<description>Blast Arena Advance (PD)</description>
 		<year>????</year>
@@ -609,16 +619,6 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1286072">
 				<rom name="Blast Arena Advance (PD).gba" size="1286072" crc="bc8cf4a8" sha1="38f38fb5644ae74e6cfa2c6c421cee3c37321382"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gba0ed6ac0a4ede5">
-		<description>Blast Arena Advance</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="1242192">
-				<rom name="Blast Arena Advance.gba" size="1242192" crc="e04e0569" sha1="0ed6ac0a4ede5766c5e307dff64817b430896823"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2072,6 +2072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba8d6f8e080e88a">
+		<description>Manolo &amp; Benito (2025)(VG Source Game Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Manolo &amp; Benito (2025)(VG Source Game Studio).gba" size="524288" crc="52957c3a" sha1="8d6f8e080e88a0ab5cf0603d6ad09551c1fdcb0e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba4deb7527c1d6a">
 		<description>Mario</description>
 		<year>????</year>
@@ -3179,6 +3189,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="6053920">
 				<rom name="Sekhmet's Playground (2024)(PyroPyro).gba" size="6053920" crc="d7046500" sha1="ff6d58b33e491bdd29e05b165dba3f9bd1ec98ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba3800c552e8243">
+		<description>Shantae - GBC2GBA (2025)(WayForward)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4270208">
+				<rom name="Shantae - GBC2GBA (2025)(WayForward).gba" size="4270208" crc="137b5a1c" sha1="3800c552e824345e23fcc0f0ed3f5ef5a22877b8"/>
 			</dataarea>
 		</part>
 	</software>

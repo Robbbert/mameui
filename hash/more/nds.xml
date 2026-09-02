@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 36 -->
+<!-- Number of items in this list = 47 -->
 <softwarelist name="nds" description="nds loose roms">
 	<software name="ndsa8b44b3ee3b55">
 		<description>3917 - Ico Soccer (Europe) (En,Fr,De,Es,It)</description>
@@ -242,6 +242,56 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ndsd07fc05cd1762">
+		<description>audile.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="885564">
+				<rom name="audile.nds.gba" size="885564" crc="8c8bf323" sha1="d07fc05cd176252a276820162879a6b1405db4c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds3e72029300127">
+		<description>birds.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="60416">
+				<rom name="birds.nds.gba" size="60416" crc="bc9db742" sha1="3e72029300127fea4a86bc2a156219d06cbb553e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds33ef24e0e1a52">
+		<description>BoggleDS.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1375808">
+				<rom name="BoggleDS.ds.gba" size="1375808" crc="95ea754d" sha1="33ef24e0e1a52318b7ecf457d77e542b4dd898e1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds5d08a50fc1d3c">
+		<description>breakout.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="792064">
+				<rom name="breakout.ds.gba" size="792064" crc="17527231" sha1="5d08a50fc1d3ccd9c4e7670bdc47877f77642ac5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds29c889b3c25b8">
+		<description>Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="10498128">
+				<rom name="Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).nds.gba" size="10498128" crc="586c4345" sha1="29c889b3c25b851f590685dea03400110e98fabd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nds83dd43381a72f">
 		<description>ChuckieEgg.nds</description>
 		<year>????</year>
@@ -259,6 +309,16 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="54437704">
 				<rom name="Death Note - Kira Game (Japan) [T-En by Anime Game Translations Team v1.3].nds" size="54437704" crc="6d77d840" sha1="99397cf887c6e640895ada4549c8eadd400693fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds31ecf4c1539ef">
+		<description>Fruits Mura no Doubutsu-tachi (Japan) (Rev 1).nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Fruits Mura no Doubutsu-tachi (Japan) (Rev 1).nds.gba" size="8388608" crc="aa14b198" sha1="31ecf4c1539ef7460706b17bb4404d4254c6265a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -349,6 +409,56 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="30779400">
 				<rom name="Naruto - Path of the Avenger (Japan) [T-En by Anime Game Translations Team v1.0] [japanese voices] [n].nds" size="30779400" crc="9a3e63cc" sha1="a7b803b728751a37c608909ef3c973ab7498d412"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsecee28ef98dda">
+		<description>Nonacorn (2023-02-06)(Adams, Hugo).nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="81896">
+				<rom name="Nonacorn (2023-02-06)(Adams, Hugo).nds.gba" size="81896" crc="dc11fc59" sha1="ecee28ef98ddadc14542b98b9adb74e299d22e2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds08f367d2d30b6">
+		<description>Nonacorn v1.11 (2024-01-01)(Adams, Hugo).nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="86228">
+				<rom name="Nonacorn v1.11 (2024-01-01)(Adams, Hugo).nds.gba" size="86228" crc="0a8050f3" sha1="08f367d2d30b64cd3b74c5db517144ee5dbd875c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds17398d0d8ee7b">
+		<description>opdemo.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1436320">
+				<rom name="opdemo.nds.gba" size="1436320" crc="0fc66271" sha1="17398d0d8ee7b630c1f3411fbb1c97c449cd3b24"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsf397df8d7d52a">
+		<description>rumblepong.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="81992">
+				<rom name="rumblepong.nds.gba" size="81992" crc="1d3e6b7d" sha1="f397df8d7d52a25cb552073903ec7627eb97a1c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds18f9f8a25207a">
+		<description>Sennen Kazoku (Japan) (Rev 1).nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Sennen Kazoku (Japan) (Rev 1).nds.gba" size="16777216" crc="dcaae075" sha1="18f9f8a25207aaecd3eba55a358cfaf11abd4897"/>
 			</dataarea>
 		</part>
 	</software>
