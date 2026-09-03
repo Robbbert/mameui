@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4186 -->
+<!-- Number of items in this list = 4183 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5929,16 +5929,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Chou Mahou Tairiku WOZZ (J) [T+Eng_TransCorp].sfc" size="4194304" crc="9e1cf43f" sha1="7e661b7a769b84782523ad5e4000a2b9ebf11d29"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns35025845c2d54">
-		<description>Chou Makaimura (J)(1991)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Chou Makaimura (J)(1991)(Capcom).sfc" size="1048576" crc="cf8a8dba" sha1="35025845c2d54d262218ebe50161705b207c7f3d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33719,26 +33709,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194816">
 				<rom name="Super Ghetto World (SMW1 hack).sfc" size="4194816" crc="18bafdf2" sha1="ac0b4dcc69da4c180deb5f8c26fb2690f2bfa012"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns353b3651db044">
-		<description>Super Ghouls 'n Ghosts (E)(1991)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Super Ghouls 'n Ghosts (E)(1991)(Capcom).sfc" size="1048576" crc="a00bc05e" sha1="353b3651db0447d5fcfa46d705ef61bbbd6afaf8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsf12280b13eea8">
-		<description>Super Ghouls 'n Ghosts (U)(1991)(Capcom)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Super Ghouls 'n Ghosts (U)(1991)(Capcom).sfc" size="1048576" crc="6aaba901" sha1="f12280b13eea88ca03d700b75cf3c13a0e13f3bc"/>
 			</dataarea>
 		</part>
 	</software>

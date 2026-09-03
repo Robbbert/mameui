@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 420 -->
+<!-- Number of items in this list = 433 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -712,6 +712,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbad8f6718753660">
+		<description>Castlevania - Aria of Sorrow Definitive Edition (2024)(sspmog)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Castlevania - Aria of Sorrow Definitive Edition (2024)(sspmog).gba" size="8388608" crc="265a8dfd" sha1="d8f67187536603ee8fab8a013e13c940c6333683"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaafc76aaab9f07">
 		<description>Catacomb 3D (2026)(MSDOS2GBA)</description>
 		<year>????</year>
@@ -1089,6 +1099,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Don't Die Mr. Robot Advance (2026)(Infinite State Games).gba" size="4194304" crc="780f5f3e" sha1="086faa75d812da355434cc7040796a5615ebd8f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba005b5571e169c">
+		<description>Donkey Kong Country - Palette Restoration v1.1 (2018)(marc_max)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Donkey Kong Country - Palette Restoration v1.1 (2018)(marc_max).gba" size="8388608" crc="c05c1406" sha1="005b5571e169c45a0649fdb2cc52729f9d6b4116"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1662,6 +1682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbad43a35e651c0b">
+		<description>Galaxy Wall (2015)(Choi Kyun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="441552">
+				<rom name="Galaxy Wall (2015)(Choi Kyun).gba" size="441552" crc="62662275" sha1="d43a35e651c0b1565b4207af3d4672b1fd4cd291"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba53354866d87c7">
 		<description>GBA Jam 24 Invitro (2024-05)(exelotl)</description>
 		<year>????</year>
@@ -1669,16 +1699,6 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3934516">
 				<rom name="GBA Jam 24 Invitro (2024-05)(exelotl).gba" size="3934516" crc="382dd09a" sha1="53354866d87c7bf718950bd9a6839a3619877143"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gbabf0a3c40380a7">
-		<description>gbacc</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gba_cart">
-			<dataarea name="rom" size="124204">
-				<rom name="gbacc.gba" size="124204" crc="ab7ddb40" sha1="bf0a3c40380a73d2b757ec840766395a05dafaa0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1793,12 +1813,12 @@
 		</part>
 	</software>
 	<software name="gbac19ab3d92aab4">
-		<description>Herg's Solitaire</description>
+		<description>Herg's Solitaire V1.0 by Harold Toler (PD)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="236752">
-				<rom name="Herg's Solitaire.gba" size="236752" crc="e0db7265" sha1="c19ab3d92aab4a318bf1a9482316f17fd252cc4a"/>
+				<rom name="Herg's Solitaire V1.0 by Harold Toler (PD).gba" size="236752" crc="e0db7265" sha1="c19ab3d92aab4a318bf1a9482316f17fd252cc4a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1983,12 +2003,22 @@
 		</part>
 	</software>
 	<software name="gba09c4e46c827fe">
-		<description>Lemmings(cannot hscroll)</description>
+		<description>Lemmings</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="722332">
-				<rom name="Lemmings(cannot hscroll).gba" size="722332" crc="d97aa70f" sha1="09c4e46c827fef43e4edd770b70df0090233c856"/>
+				<rom name="Lemmings.gba" size="722332" crc="d97aa70f" sha1="09c4e46c827fef43e4edd770b70df0090233c856"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba91a2452875a40">
+		<description>Light Cycle GBA (2015)(Choi Kyun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="717428">
+				<rom name="Light Cycle GBA (2015)(Choi Kyun).gba" size="717428" crc="ed3ae715" sha1="91a2452875a407c12000c179a07685e80afbde7b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2202,6 +2232,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaccf158f48c5a6">
+		<description>Moon Defender (2017)(Choe Gyun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="889960">
+				<rom name="Moon Defender (2017)(Choe Gyun).gba" size="889960" crc="7f5a50e0" sha1="ccf158f48c5a681993b4da0499d736894f7971ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba039f1611a52eb">
+		<description>Moon Rider (2019)(Choi Gyun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1003160">
+				<rom name="Moon Rider (2019)(Choi Gyun).gba" size="1003160" crc="f8f76a53" sha1="039f1611a52eb0269830b5fffc6e508f14dde470"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaedb13624b3714">
 		<description>Mooncat's Trio (2026)(Megakode)</description>
 		<year>????</year>
@@ -2309,6 +2359,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="176428">
 				<rom name="Pocket Phoenix (2026)(Oscar Braindead Games).gba" size="176428" crc="abeb2841" sha1="a0898962a881cfafdc310cf0c9f25fe73eeaab58"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba20dfaea1d5317">
+		<description>Pokemon - Ghost Grey Version v1.0.1 (2026)(Joey Zeed)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Pokemon - Ghost Grey Version v1.0.1 (2026)(Joey Zeed).gba" size="33554432" crc="be0375e2" sha1="20dfaea1d5317cf95fe0b493208edce7d50b865f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2429,6 +2489,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="400960">
 				<rom name="ProfessorSinister_3.gba" size="400960" crc="7899d38e" sha1="17b1ee1a44289fe5a333a872e42b6d4faced709c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaccc7140a8b4c9">
+		<description>Qix - Space Qix v1.3 (2015)(Choi Kyun)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2043248">
+				<rom name="Qix - Space Qix v1.3 (2015)(Choi Kyun).gba" size="2043248" crc="ba37db65" sha1="ccc7140a8b4c93560a9fdc847aeb502b26efe2b7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3842,6 +3912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbab696b7125a02b">
+		<description>Sonic Advance 2 SP v1.02 (2026)(TrackerTD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="17366340">
+				<rom name="Sonic Advance 2 SP v1.02 (2026)(TrackerTD).gba" size="17366340" crc="e87c51dd" sha1="b696b7125a02bb91de02f2d14e42f847556b3409"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba9c3f18112c126">
 		<description>Sonic Advance 3 (demo-playable) (2004-04-28)(Sega)(JP)[kiosk demo]</description>
 		<year>????</year>
@@ -3849,6 +3929,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Sonic Advance 3 (demo-playable) (2004-04-28)(Sega)(JP)[kiosk demo].bin" size="16777216" crc="0594d496" sha1="9c3f18112c126ca08403408a844a3a83967eb4dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba74c3b6b356ab1">
+		<description>Sonic Advance 3 SP v1.03 (2026)(TrackerTD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="17284532">
+				<rom name="Sonic Advance 3 SP v1.03 (2026)(TrackerTD).gba" size="17284532" crc="b4ee8ea9" sha1="74c3b6b356ab16e56c716cb136867f484334f1bb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3909,6 +3999,26 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="14071872">
 				<rom name="Super Block Jump - Game Boy Advance Edition.gba" size="14071872" crc="4533a48a" sha1="a9a90b3e6b3d1df74fd1c4331acc972568ce669b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba364347fdbf31c">
+		<description>Super Mario Advance 4 - Super Mario Bros. 3 (SNES Palette Hack) (M5) (2021)(djedditt)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Super Mario Advance 4 - Super Mario Bros. 3 (SNES Palette Hack) (M5) (2021)(djedditt).gba" size="8388608" crc="60e63e19" sha1="364347fdbf31ca9dd07c347b9d980ac70952e15e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba00667ce3da4bf">
+		<description>Super Mario Advance 4 - Super Mario Bros. 3 (VC) (E, M5, Rev 1) (2003)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="Super Mario Advance 4 - Super Mario Bros. 3 (VC) (E, M5, Rev 1) (2003)(Nintendo).gba" size="8388608" crc="d4f45b01" sha1="00667ce3da4bfee3182c4445ac2f5483870be97c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4132,6 +4242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba30ced4e5bf501">
+		<description>Wolfenstein 3D Enhanced (2026)(Bazooka_Face)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Wolfenstein 3D Enhanced (2026)(Bazooka_Face).gba" size="33554432" crc="e2886318" sha1="30ced4e5bf5019b2c1c50f95e3fb5b990148e5ec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba9bbdc81383d22">
 		<description>Xeno Crisis (2024)(Bitmap Bureau)</description>
 		<year>????</year>
@@ -4139,6 +4259,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Xeno Crisis (2024)(Bitmap Bureau).gba" size="33554432" crc="9693aabd" sha1="9bbdc81383d22770bf01a0fd174ff0febc6198c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbabf0a3c40380a7">
+		<description>Xiangqi</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="124204">
+				<rom name="Xiangqi.gba" size="124204" crc="ab7ddb40" sha1="bf0a3c40380a73d2b757ec840766395a05dafaa0"/>
 			</dataarea>
 		</part>
 	</software>

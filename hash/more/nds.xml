@@ -1,7 +1,57 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 47 -->
+<!-- Number of items in this list = 88 -->
 <softwarelist name="nds" description="nds loose roms">
+	<software name="nds7f7c50671a61f">
+		<description>(demo)Color.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="249344">
+				<rom name="(demo)Color.ds.gba" size="249344" crc="328a874a" sha1="7f7c50671a61f6125fcfd0531f7f10a6ef841fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndse624752af2190">
+		<description>(nw1)magic_lines</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="66112">
+				<rom name="(nw1)magic_lines.nds" size="66112" crc="fc15048a" sha1="e624752af21905b151237f7dfb6cc4cdee32972f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds345a5fcc1c117">
+		<description>(nw6)Metroid Prime Hunters -  First Hunt (U)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="(nw6)Metroid Prime Hunters -  First Hunt (U).nds" size="16777216" crc="c2fb5233" sha1="345a5fcc1c1174506a61c34ddf313b90c95c6496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsfd169ea7a6cdc">
+		<description>(nw7)Mezase!! Tsuri Master DS (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="(nw7)Mezase!! Tsuri Master DS (Japan).nds" size="67108864" crc="aaa01c08" sha1="fd169ea7a6cdcd1a63cd687928259bf303196636"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsb59b7a826d00a">
+		<description>(nw7)Witch Tale - Minarai Majo to 7-nin no Hime (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="134217728">
+				<rom name="(nw7)Witch Tale - Minarai Majo to 7-nin no Hime (Japan).nds" size="134217728" crc="27d473a8" sha1="b59b7a826d00a9650c08d8c16055ce9d56c27eb8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ndsa8b44b3ee3b55">
 		<description>3917 - Ico Soccer (Europe) (En,Fr,De,Es,It)</description>
 		<year>????</year>
@@ -282,6 +332,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds7c9133e478a93">
+		<description>carre_rouge.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="236940">
+				<rom name="carre_rouge.ds.gba" size="236940" crc="e35470af" sha1="7c9133e478a939c6850339d70d6c05134b72327b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds7ae5fb218578d">
+		<description>cassebrique.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="557772">
+				<rom name="cassebrique.ds.gba" size="557772" crc="4bdac163" sha1="7ae5fb218578daae5a2ece4328fb32accac4bf3b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nds29c889b3c25b8">
 		<description>Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).nds</description>
 		<year>????</year>
@@ -289,6 +359,16 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="10498128">
 				<rom name="Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).nds.gba" size="10498128" crc="586c4345" sha1="29c889b3c25b851f590685dea03400110e98fabd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds18cea93515c83">
+		<description>ChuckieEgg</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1612800">
+				<rom name="ChuckieEgg.nds" size="1612800" crc="ad5b9cf9" sha1="18cea93515c83a8170a2cef9be18a4f784ab7eb9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -312,6 +392,66 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds3c7a6c3ea2b63">
+		<description>Doki Majo Plus (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="268435456">
+				<rom name="Doki Majo Plus (Japan).nds" size="268435456" crc="c3cf280c" sha1="3c7a6c3ea2b63adce9bab80a38669b705f1e240b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsa85a5fb193b4f">
+		<description>Dragon Ball Z - Supersonic Warriors 2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Dragon Ball Z - Supersonic Warriors 2.nds" size="67108864" crc="d79ec5c5" sha1="a85a5fb193b4ff293a99248e7dc986b62f71a332"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds3d4f2cb02e786">
+		<description>duckhunt.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="290888">
+				<rom name="duckhunt.ds.gba" size="290888" crc="40bb60db" sha1="3d4f2cb02e786b33fbc35212772f3431e3f201fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds02e7aff121719">
+		<description>Duck_hunt_sound.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="620664">
+				<rom name="Duck_hunt_sound.ds.gba" size="620664" crc="77369af5" sha1="02e7aff12171910382997d2e62497494497d3cef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds989d94b39b7d4">
+		<description>famicom_wars_ds_demo_jap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="991432">
+				<rom name="famicom_wars_ds_demo_jap.nds" size="991432" crc="1e129f18" sha1="989d94b39b7d4e4a8b9756b7520e82b1ece787df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds423c48ef4c09b">
+		<description>Follarium.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="229208">
+				<rom name="Follarium.ds.gba" size="229208" crc="0bfebe3e" sha1="423c48ef4c09b6969da45c4fdcde1663041a2c03"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nds31ecf4c1539ef">
 		<description>Fruits Mura no Doubutsu-tachi (Japan) (Rev 1).nds</description>
 		<year>????</year>
@@ -332,6 +472,86 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds9af85b5387288">
+		<description>ganbare_goemon_demo_jap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="2565832">
+				<rom name="ganbare_goemon_demo_jap.nds" size="2565832" crc="e0222ae4" sha1="9af85b5387288bbf18c2779509e88e462fe8b42f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds0545dd4bf3fad">
+		<description>Gardening Mama (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Gardening Mama (Japan).nds" size="33554432" crc="e9030de4" sha1="0545dd4bf3fad856b1c8a681c9437bcce9b9ef6f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds0470e9f6066aa">
+		<description>Giant tetris.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="151040">
+				<rom name="Giant tetris.ds.gba" size="151040" crc="35a68e36" sha1="0470e9f6066aa1bc6aeb032b3a44a3e4a3786552"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds16ab692db558e">
+		<description>Golgo 13 - File G13 o Oe (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Golgo 13 - File G13 o Oe (Japan).nds" size="67108864" crc="b43d152d" sha1="16ab692db558e89503008cf9b8e3311a6ef595b4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds46e5ddaac6ada">
+		<description>GridChallenge.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="2813513">
+				<rom name="GridChallenge.ds.gba" size="2813513" crc="2b94047e" sha1="46e5ddaac6adaff121418b2120412a309e79297b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds96e8a3180b566">
+		<description>GridlockDS.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="501248">
+				<rom name="GridlockDS.ds.gba" size="501248" crc="9f242829" sha1="96e8a3180b566ae07c3c468b3d77fb7f0bce2670"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds90bca1e8cf91d">
+		<description>Hisshou Pachinko Pachi-Slot Kouryaku Series DS Vol. 4 - CR Shinseiki Evangelion - Saigo no Shisha (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="268435456">
+				<rom name="Hisshou Pachinko Pachi-Slot Kouryaku Series DS Vol. 4 - CR Shinseiki Evangelion - Saigo no Shisha (Japan).nds" size="268435456" crc="dfd2b469" sha1="90bca1e8cf91d3603f673415cad83e6f64f7cd7c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds79d0fc9a235b9">
+		<description>Iro.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="705536">
+				<rom name="Iro.ds.gba" size="705536" crc="4e9f38e7" sha1="79d0fc9a235b9550f28e656a0cd48650dea78393"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nds3f06a90cd12d6">
 		<description>JONAS (2009-10-29)(Disney Interactive Studios)(US)(proto)</description>
 		<year>????</year>
@@ -342,6 +562,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds3867c3c1337c9">
+		<description>JWPoolDS.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="588288">
+				<rom name="JWPoolDS.ds.gba" size="588288" crc="10edbf84" sha1="3867c3c1337c94c62461ea5fe796933d4ce9f824"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsa4c3adba03142">
+		<description>Kageyama Hideo no Hanpuku Ondoku - DS Eigo - Shougaku Eigo Hisshuu Drill (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Kageyama Hideo no Hanpuku Ondoku - DS Eigo - Shougaku Eigo Hisshuu Drill (Japan).nds" size="67108864" crc="b2d0ade4" sha1="a4c3adba03142551ac6a5db66e1dc139e67a436c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsb5d606b66b95f">
+		<description>Kayou Generation, The (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Kayou Generation, The (Japan).nds" size="67108864" crc="d09ee1df" sha1="b5d606b66b95f75cf8968c44ad9ec890adde246e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds970a99c3c73df">
+		<description>Koukou Yakyuu-dou DS (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Koukou Yakyuu-dou DS (Japan).nds" size="67108864" crc="7408cd77" sha1="970a99c3c73dfced056bf51091105fd056935cb3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nds39a419f171054">
 		<description>Kuroshitsuji - Phantom &amp; Ghost (Japan) [T-En by Phantom &amp; Ghost Team v1.1]</description>
 		<year>????</year>
@@ -349,6 +609,16 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="61102152">
 				<rom name="Kuroshitsuji - Phantom &amp; Ghost (Japan) [T-En by Phantom &amp; Ghost Team v1.1].nds" size="61102152" crc="93175d1a" sha1="39a419f1710545de155a1331eb0420efb41546db"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsed7821bbddc39">
+		<description>Let's Play Shops (Europe) (En,Fr,De,Es,It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="16777216">
+				<rom name="Let's Play Shops (Europe) (En,Fr,De,Es,It).nds" size="16777216" crc="04414831" sha1="ed7821bbddc393cbf261de32155c1fc7840e1d5d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -392,6 +662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds4290a63a18a2f">
+		<description>magic_lines.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67904">
+				<rom name="magic_lines.nds.gba" size="67904" crc="1f42590e" sha1="4290a63a18a2fb58634ed88ff25be41381cb6b44"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ndse80b3bf8606ac">
 		<description>Naruto - Path of the Avenger (Japan) [T-En by Anime Game Translations Team v1.0] [english voices] [n]</description>
 		<year>????</year>
@@ -409,6 +689,26 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="30779400">
 				<rom name="Naruto - Path of the Avenger (Japan) [T-En by Anime Game Translations Team v1.0] [japanese voices] [n].nds" size="30779400" crc="9a3e63cc" sha1="a7b803b728751a37c608909ef3c973ab7498d412"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds0b6df43da4676">
+		<description>Naruto Shippuu Den - Shinobi Retsuden III (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="134217728">
+				<rom name="Naruto Shippuu Den - Shinobi Retsuden III (Japan).nds" size="134217728" crc="7d951452" sha1="0b6df43da4676397c33a65c777706b51cfe20baa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds4b3ce63a6b53c">
+		<description>New Shikakui Atama o Maruku Suru. DS - Kanzen Seiha Ketteiban (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="New Shikakui Atama o Maruku Suru. DS - Kanzen Seiha Ketteiban (Japan).nds" size="33554432" crc="4273b54e" sha1="4b3ce63a6b53c8f4f08385180103ef6bdc36d662"/>
 			</dataarea>
 		</part>
 	</software>
@@ -459,6 +759,116 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Sennen Kazoku (Japan) (Rev 1).nds.gba" size="16777216" crc="dcaae075" sha1="18f9f8a25207aaecd3eba55a358cfaf11abd4897"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsdb64d1d2a84f4">
+		<description>Sonshi no Heihou DS (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="134217728">
+				<rom name="Sonshi no Heihou DS (Japan).nds" size="134217728" crc="edf0449f" sha1="db64d1d2a84f4f732a3b1ee666dfd0f560bedf7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds7165b37aba713">
+		<description>sponge.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="219648">
+				<rom name="sponge.nds.gba" size="219648" crc="6ddbaafb" sha1="7165b37aba713c1b8c3f3bbe94e0fa31b0554b14"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsed2e7d48d5751">
+		<description>table_hockey_tech_demo_e3_2005</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="859336">
+				<rom name="table_hockey_tech_demo_e3_2005.nds" size="859336" crc="3c1b618a" sha1="ed2e7d48d5751bb38e6e87e294accc7ffd064257"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsaf31aff8493e0">
+		<description>Tacticslayer - Retainer Guard Senki (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Tacticslayer - Retainer Guard Senki (Japan).nds" size="67108864" crc="a4b018ad" sha1="af31aff8493e082ec7a28fda9051e88662182ec7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds0db3951a05944">
+		<description>Teenage_Queen.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1973833">
+				<rom name="Teenage_Queen.ds.gba" size="1973833" crc="66f8d2dc" sha1="0db3951a05944c2db1dbb92333b43a072024ea56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsb378a8edf90f0">
+		<description>Teenage_Queen.ds_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1875529">
+				<rom name="Teenage_Queen.ds_1.gba" size="1875529" crc="2f5a2be1" sha1="b378a8edf90f0010443ec35a6c08ccf9f23a5925"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsc75aa12c31ffc">
+		<description>Tokuten Ryoku Gakushuu DS - Chuugaku Jitsugi 4 Kyouka (Japan) (CX4J)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="Tokuten Ryoku Gakushuu DS - Chuugaku Jitsugi 4 Kyouka (Japan) (CX4J).nds" size="67108864" crc="f1dcf133" sha1="c75aa12c31ffcae7fdb04f05fccfa9857cc4f881"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds4d01ffa9a2ed8">
+		<description>trauma_center_under_the_knife_demo_jap</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="2527432">
+				<rom name="trauma_center_under_the_knife_demo_jap.nds" size="2527432" crc="1445f696" sha1="4d01ffa9a2ed8f6b88afda5592826a88bb8aae19"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds2a60eecc2de3e">
+		<description>Yatsuhaka Mura (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="Yatsuhaka Mura (Japan).nds" size="33554432" crc="7c404a49" sha1="2a60eecc2de3e497cab26555fa71ec898d2102dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsf60c6e1d136b9">
+		<description>YatzyDOS.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="462921">
+				<rom name="YatzyDOS.nds.gba" size="462921" crc="b90f0158" sha1="f60c6e1d136b9d2da49abdb3445be96c6039e013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds88d614aaa0855">
+		<description>zelda_gallery_e3_2005</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1863368">
+				<rom name="zelda_gallery_e3_2005.nds" size="1863368" crc="1340695c" sha1="88d614aaa08559d56ce6b82e3b1829195d125e46"/>
 			</dataarea>
 		</part>
 	</software>
