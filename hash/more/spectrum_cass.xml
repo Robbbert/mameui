@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7956 -->
+<!-- Number of items in this list = 7960 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -4832,6 +4832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs916710d2307c8">
+		<description>Alchemist 48K (1983)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47321">
+				<rom name="Alchemist 48K (1983)(Imagine Software).tzx" size="47321" crc="03e190d7" sha1="916710d2307c840ab84a389697001e7c4fdcbeb2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs6632af990d6b7">
 		<description>Alerta Ovni (1989)(Ricardo Villalba Martinez)(Sp)</description>
 		<year>????</year>
@@ -8009,6 +8019,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43951">
 				<rom name="Backpackers Guide To The Universe - The Guide (1984)(Fantasy Software).tap" size="43951" crc="2fdd83bd" sha1="315937e77aa38011b480f52e6ddb0962614c3f92"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs721558f26ddf4">
+		<description>Backrooms ZX EN 128K (2026)(AmikoSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="81568">
+				<rom name="Backrooms ZX EN 128K (2026)(AmikoSoft).tap" size="81568" crc="097f35d6" sha1="721558f26ddf478c9bf617ef89678c2e09500477"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8f7ef7159f3d2">
+		<description>Backrooms ZX ES 128K (2026)(AmikoSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="82158">
+				<rom name="Backrooms ZX ES 128K (2026)(AmikoSoft).tap" size="82158" crc="5a4de3db" sha1="8f7ef7159f3d22ccd0e63fbf8b463c28a05f9a71"/>
 			</dataarea>
 		</part>
 	</software>
@@ -49729,6 +49759,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41348">
 				<rom name="Quann Tulla (1985)(8th Day Software)[Old Version].tap" size="41348" crc="05c9e8b1" sha1="11c379ed9d7a5262d8cff408d25247b74ca23e8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf63f1906d9979">
+		<description>Quantum Hop 48K-128K (2026)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41178">
+				<rom name="Quantum Hop 48K-128K (2026)(Tonsomo Entertainment).tzx" size="41178" crc="ac0c49c6" sha1="f63f1906d9979f991be4c11b728debec8c9581c5"/>
 			</dataarea>
 		</part>
 	</software>

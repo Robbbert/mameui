@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 88 -->
+<!-- Number of items in this list = 103 -->
 <softwarelist name="nds" description="nds loose roms">
 	<software name="nds7f7c50671a61f">
 		<description>(demo)Color.ds</description>
@@ -9,6 +9,16 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="249344">
 				<rom name="(demo)Color.ds.gba" size="249344" crc="328a874a" sha1="7f7c50671a61f6125fcfd0531f7f10a6ef841fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds0b8266c78a0c5">
+		<description>(demo)neoflash.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="328704">
+				<rom name="(demo)neoflash.nds.gba" size="328704" crc="6e35d8c1" sha1="0b8266c78a0c5b6d099c8dbc1c1fd367ff6df3d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22,6 +32,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds64043ba9bf569">
+		<description>(nw5)Maji de Manabu - LEC de Ukaru - DS Hisho Kentei 2-kyuu - 3-kyuu (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(nw5)Maji de Manabu - LEC de Ukaru - DS Hisho Kentei 2-kyuu - 3-kyuu (Japan).nds" size="33554432" crc="4c520d7b" sha1="64043ba9bf569e4482ec2d6f4199c89a709c9c22"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds75beeb2af8f1e">
+		<description>(nw5)nibbles.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="21336">
+				<rom name="(nw5)nibbles.ds.gba" size="21336" crc="f283a7bb" sha1="75beeb2af8f1e5901ce6d3fd1cbee86bd4eb381a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsf07447cbe5a5c">
+		<description>(nw5)nibbles.ds_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="177664">
+				<rom name="(nw5)nibbles.ds_1.gba" size="177664" crc="ddcafce7" sha1="f07447cbe5a5c9220bef0e64efe90b709b492605"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds459031975b5eb">
+		<description>(nw5)StupidGolfDS.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="258121">
+				<rom name="(nw5)StupidGolfDS.ds.gba" size="258121" crc="e89f1973" sha1="459031975b5eb2efd3ae833cbd2befdee327af2e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nds345a5fcc1c117">
 		<description>(nw6)Metroid Prime Hunters -  First Hunt (U)</description>
 		<year>????</year>
@@ -29,6 +79,26 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="(nw6)Metroid Prime Hunters -  First Hunt (U).nds" size="16777216" crc="c2fb5233" sha1="345a5fcc1c1174506a61c34ddf313b90c95c6496"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds3ef06e5a2b3c6">
+		<description>(nw6)Pokemon Dash</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="33554432">
+				<rom name="(nw6)Pokemon Dash.nds" size="33554432" crc="59641a93" sha1="3ef06e5a2b3c6080b1901fc49bd69ef4aee2bcd1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds208967a45f964">
+		<description>(nw7)Majo ni Naru (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="(nw7)Majo ni Naru (Japan).nds" size="67108864" crc="b0410486" sha1="208967a45f9641a9cbc28e5c60ecd035e7dea7df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -49,6 +119,26 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="134217728">
 				<rom name="(nw7)Witch Tale - Minarai Majo to 7-nin no Hime (Japan).nds" size="134217728" crc="27d473a8" sha1="b59b7a826d00a9650c08d8c16055ce9d56c27eb8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsafb455a85e979">
+		<description>(nw8)Nihon Golfer's Kentei DS (Japan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="(nw8)Nihon Golfer's Kentei DS (Japan).nds" size="67108864" crc="50cebec1" sha1="afb455a85e9799e9fe4fec9ac170bc0e4bfdda45"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndscde474ba99e08">
+		<description>(nw8)submarine_tech_demo_e3_2005</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1684168">
+				<rom name="(nw8)submarine_tech_demo_e3_2005.nds" size="1684168" crc="e997661c" sha1="cde474ba99e08b324315f3302a7e77494c832bfd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -392,6 +482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ndse67d5f58afea6">
+		<description>demo.nds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="299008">
+				<rom name="demo.nds.gba" size="299008" crc="10cd677a" sha1="e67d5f58afea69601bb37b0cc5a326061c35e100"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nds3c7a6c3ea2b63">
 		<description>Doki Majo Plus (Japan)</description>
 		<year>????</year>
@@ -672,6 +772,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds7043e44819e1e">
+		<description>meteos_demo_e3_2005</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1046216">
+				<rom name="meteos_demo_e3_2005.nds" size="1046216" crc="610fbce9" sha1="7043e44819e1ec24b42c65a50e93c6fcecff62f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ndsa9b6f63df2f1d">
+		<description>mUSk.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="892788">
+				<rom name="mUSk.ds.gba" size="892788" crc="03475f48" sha1="a9b6f63df2f1d66bdabb29d3c6aae74607b601f8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ndse80b3bf8606ac">
 		<description>Naruto - Path of the Avenger (Japan) [T-En by Anime Game Translations Team v1.0] [english voices] [n]</description>
 		<year>????</year>
@@ -742,6 +862,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nds814a3183cdc29">
+		<description>picross.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1300553">
+				<rom name="picross.ds.gba" size="1300553" crc="c57d5d24" sha1="814a3183cdc295963af821d7344b3eac60a7b0e5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds602b90df30b6a">
+		<description>rPaint.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="333073">
+				<rom name="rPaint.ds.gba" size="333073" crc="39fd2849" sha1="602b90df30b6ac25bf66a9fa22bdc5155e430440"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ndsf397df8d7d52a">
 		<description>rumblepong.nds</description>
 		<year>????</year>
@@ -749,6 +889,16 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="81992">
 				<rom name="rumblepong.nds.gba" size="81992" crc="1d3e6b7d" sha1="f397df8d7d52a25cb552073903ec7627eb97a1c9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds5cd6a840a3fa8">
+		<description>santavsmartians.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="460352">
+				<rom name="santavsmartians.ds.gba" size="460352" crc="290e22a4" sha1="5cd6a840a3fa871d934e39dc14cdfbc2c7824738"/>
 			</dataarea>
 		</part>
 	</software>
