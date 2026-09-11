@@ -965,10 +965,12 @@ void plus4_state::plus4p(machine_config &config)
 	SOFTWARE_LIST(config, "cass_list").set_original("plus4_cass");
 	SOFTWARE_LIST(config, "flop_list").set_original("plus4_flop");
 	SOFTWARE_LIST(config, "quik_list").set_original("plus4_quik");
+	SOFTWARE_LIST(config, "sdcard_list").set_original("cbm_sd");
 	subdevice<software_list_device>("cart_list")->set_filter("PAL");
 	subdevice<software_list_device>("cass_list")->set_filter("PAL");
 	subdevice<software_list_device>("flop_list")->set_filter("PAL");
 	subdevice<software_list_device>("quik_list")->set_filter("PAL");
+	subdevice<software_list_device>("sdcard_list")->set_filter("PAL");
 }
 
 //-------------------------------------------------
@@ -986,10 +988,12 @@ void plus4_state::plus4n(machine_config &config)
 	SOFTWARE_LIST(config, "cass_list").set_original("plus4_cass");
 	SOFTWARE_LIST(config, "flop_list").set_original("plus4_flop");
 	SOFTWARE_LIST(config, "quik_list").set_original("plus4_quik");
+	SOFTWARE_LIST(config, "sdcard_list").set_original("cbm_sd");
 	subdevice<software_list_device>("cart_list")->set_filter("NTSC");
 	subdevice<software_list_device>("cass_list")->set_filter("NTSC");
 	subdevice<software_list_device>("flop_list")->set_filter("NTSC");
 	subdevice<software_list_device>("quik_list")->set_filter("NTSC");
+	subdevice<software_list_device>("sdcard_list")->set_filter("NTSC");
 }
 
 

@@ -16,6 +16,9 @@
 
 // standard C headers
 #include <tchar.h>
+#include <iostream>
+#include <fstream>
+#include <locale>
 
 // MAME/MAMEUI headers
 #include "emu.h"
@@ -164,7 +167,7 @@ string GetIniDir()
 	if (global_ini.empty())
 		return GetEmuPath() + PATH_SEPARATOR + "ini";
 
-	char dir0[global_ini.length()+2] = { };
+	char dir0[global_ini.length()+2]{};
 	strcpy(dir0, global_ini.c_str());
 	char* t0 = strtok(dir0, ";");
 	osd::directory::ptr b = osd::directory::open(t0);
@@ -235,22 +238,18 @@ static void LoadSettingsFile(windows_options &opts, const char *filename)
 // This saves changes to <game>.INI or MAME.INI only
 static void SaveSettingsFile(windows_options &opts, const char *filename, bool diff)
 {
-	util::core_file::ptr file;
-
-	std::error_condition filerr = util::core_file::open(filename, OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
-
-	if (!filerr)
-	{
-		string inistring;
 		// MAME crashes when slot/media options encountered when using the DIFF option, so currently not used
 //		if (diff)
 //			inistring = opts.output_ini(&emu_global);
 //		else
-			inistring = opts.output_ini();
-		// printf("=====%s=====\n%s\n",filename,inistring.c_str());  // for debugging
-		file->puts(inistring.c_str());
-		file.reset();
-	}
+	std::ofstream file;
+	file.imbue(std::locale::classic());
+	file.open(filename);
+	if (!file.is_open() || file.bad() || file.fail())
+		printf("%s: Unable to open for writing\n",filename);
+	else
+		opts.output_ini(file);
+	file.close();
 }
 
 /*  get options, based on passed in game number. */
@@ -454,29 +453,46 @@ string dir_get_value(int dir_index)
 // This saves changes to UI.INI only
 static void SaveSettingsFile(ui_options &opts)
 {
-	util::core_file::ptr file;
+//	util::core_file::ptr file;
 
 	// Save .\ui.ini
 	string filename = GetUiPath();
-	std::error_condition filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
+//	std::error_condition filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
 
-	if (!filerr)
-	{
-		string inistring = opts.output_ini();
-		file->puts(inistring.c_str());
-		file.reset();
-	}
+//	if (!filerr)
+//	{
+//		string inistring = opts.output_ini();
+//		file->puts(inistring.c_str());
+//		file.reset();
+//	}
 
 	// Save backup to ini\ui.ini
-	filename = GetIniDir() + PATH_SEPARATOR + "ui.ini";
-	filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
+//	filename = GetIniDir() + PATH_SEPARATOR + "ui.ini";
+//	filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
 
-	if (!filerr)
-	{
-		string inistring = opts.output_ini();
-		file->puts(inistring.c_str());
-		file.reset();
-	}
+//	if (!filerr)
+//	{
+//		string inistring = opts.output_ini();
+//		file->puts(inistring.c_str());
+//		file.reset();
+//	}
+
+	std::ofstream file;
+	file.imbue(std::locale::classic());
+	file.open(filename);
+	if (!file.is_open() || file.bad() || file.fail())
+		printf("%s: Unable to open for writing\n",filename.c_str());
+	else
+		opts.output_ini(file);
+	file.close();
+
+	filename = GetIniDir() + PATH_SEPARATOR + "ui.ini";
+	file.open(filename);
+	if (!file.is_open() || file.bad() || file.fail())
+		printf("%s: Unable to open for writing\n",filename.c_str());
+	else
+		opts.output_ini(file);
+	file.close();
 }
 
 // called from winui.cpp

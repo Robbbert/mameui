@@ -51,7 +51,10 @@
 #include "../osd/modules/lib/osdlib.h"
 #include "../osd/modules/lib/osdobj_common.h"
 
+#include "ioprocsstream.h"
+
 #include <functional>
+#include <locale>
 #include <type_traits>
 
 
@@ -658,12 +661,12 @@ static void output_joined_collection(const TColl &collection, TEmitMemberFunc em
 //  various startup screens
 //-------------------------------------------------
 
-void mame_ui_manager::display_startup_screens(bool first_time)
+void mame_ui_manager::display_startup_screens(bool first_time, bool warnings_enabled)
 {
 	const int maxstate = 3;
 	int const str = machine().options().seconds_to_run();
 	bool show_gameinfo = !machine().options().skip_gameinfo();
-	bool show_warnings = true;
+	bool show_warnings = warnings_enabled;
 	bool video_none = strcmp(downcast<osd_options &>(machine().options()).video(), OSDOPTVAL_NONE) == 0;
 
 	// disable everything if we are using -str for 300 or fewer seconds, or if we're the empty driver,
@@ -2741,7 +2744,13 @@ void mame_ui_manager::save_ui_options()
 	if (!file.open("ui.ini"))
 	{
 		// generate the updated INI
-		file.puts(options().output_ini());
+		{
+			util::owritestream str(file);
+			str.imbue(std::locale::classic());
+
+			options().output_ini(str);
+			str << std::flush;
+		}
 		file.close();
 	}
 	else
@@ -2799,7 +2808,13 @@ void mame_ui_manager::save_main_option()
 		if (!file.open(std::string(emulator_info::get_configname()) + ".ini"))
 		{
 			// generate the updated INI
-			file.puts(options.output_ini());
+			{
+				util::owritestream str(file);
+				str.imbue(std::locale::classic());
+
+				options.output_ini(str);
+				str << std::flush;
+			}
 			file.close();
 		}
 		else

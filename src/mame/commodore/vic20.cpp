@@ -918,6 +918,7 @@ void vic20_state::vic20(machine_config &config, const char* softlist_filter)
 	SOFTWARE_LIST(config, "cass_list").set_original("vic1001_cass").set_filter(softlist_filter);
 	SOFTWARE_LIST(config, "flop_list").set_original("vic1001_flop").set_filter(softlist_filter);
 	SOFTWARE_LIST(config, "quik_list").set_original("vic1001_quik");
+	SOFTWARE_LIST(config, "sdcard_list").set_original("cbm_sd").set_filter(softlist_filter);
 
 	RAM(config, m_ram);
 	m_ram->set_default_size("5K");
