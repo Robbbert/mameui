@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 106 -->
+<!-- Number of items in this list = 107 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -439,6 +439,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Head Buster (J) [t+Eng0.99_Chirs Covell].gg" size="131072" crc="8ed94c2b" sha1="2d8d587f6a5341d6665de5d9ee1906889344d1ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg5757acdd7590c2">
+		<description>Hong Kong '97 v0.0.1 (2026)(SirVH)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Hong Kong '97 v0.0.1 (2026)(SirVH).gg" size="524288" crc="d2f8b283" sha1="5757acdd7590c240ea05bb765a36e36cf674a16e"/>
 			</dataarea>
 		</part>
 	</software>

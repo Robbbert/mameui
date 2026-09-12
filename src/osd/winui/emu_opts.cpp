@@ -453,30 +453,8 @@ string dir_get_value(int dir_index)
 // This saves changes to UI.INI only
 static void SaveSettingsFile(ui_options &opts)
 {
-//	util::core_file::ptr file;
-
 	// Save .\ui.ini
 	string filename = GetUiPath();
-//	std::error_condition filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
-
-//	if (!filerr)
-//	{
-//		string inistring = opts.output_ini();
-//		file->puts(inistring.c_str());
-//		file.reset();
-//	}
-
-	// Save backup to ini\ui.ini
-//	filename = GetIniDir() + PATH_SEPARATOR + "ui.ini";
-//	filerr = util::core_file::open(filename.c_str(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS, file);
-
-//	if (!filerr)
-//	{
-//		string inistring = opts.output_ini();
-//		file->puts(inistring.c_str());
-//		file.reset();
-//	}
-
 	std::ofstream file;
 	file.imbue(std::locale::classic());
 	file.open(filename);

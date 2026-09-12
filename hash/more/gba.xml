@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 433 -->
+<!-- Number of items in this list = 466 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -472,6 +472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba2c56a227ce4c4">
+		<description>Alleyway - GB2GBA (1989)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Alleyway - GB2GBA (1989)(Nintendo).gba" size="108700" crc="61d2ce4d" sha1="2c56a227ce4c4640ae3d26b3d5a5fa834a93ef2f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbad99db02c1ed57">
 		<description>Anarchaeologist (2022-09-12)(ControlledChaos)</description>
 		<year>????</year>
@@ -489,6 +499,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1775856">
 				<rom name="Anguna - Warriors of Virtue v0.95 (2008)(Bite the Chili).gba" size="1775856" crc="41ea5b0b" sha1="e351bc6a9046ec002fc2dfdee061047908bd4350"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba7aeeefa1cbb10">
+		<description>Anguna - Warriors of Virtue v1.1 (2008)(Bite the Chili)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1729404">
+				<rom name="Anguna - Warriors of Virtue v1.1 (2008)(Bite the Chili).gba" size="1729404" crc="eb989c9d" sha1="7aeeefa1cbb1060f195bbaacb5218c7b81a9b067"/>
 			</dataarea>
 		</part>
 	</software>
@@ -559,6 +579,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Barnyard (USA) (En,Fr,De,Es,It,Nl) (Beta).gba" size="8388608" crc="178cae0d" sha1="f5b6e4da35f904a2b290d9852babb9b2346d63b1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaaa15e0530d679">
+		<description>Baseball - GB2GBA (1989)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="141468">
+				<rom name="Baseball - GB2GBA (1989)(Nintendo).gba" size="141468" crc="99595aac" sha1="aa15e0530d67970c60e7c45efa56aaa34e149069"/>
 			</dataarea>
 		</part>
 	</software>
@@ -652,6 +682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbac27a4c3541b44">
+		<description>Boulder Crash (2024)(BriG)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="543552">
+				<rom name="Boulder Crash (2024)(BriG).gba" size="543552" crc="4431021a" sha1="c27a4c3541b445d2d840c947f2af968b067a72d8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba8b56a6a138b85">
 		<description>Breakoid (2026)(CeL)</description>
 		<year>????</year>
@@ -669,6 +709,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Breath of Fire II T-Por (2015)(Nintendo BR).gba" size="4194304" crc="cedfc97c" sha1="566cdf6475f122aea2fdfb58ed21b08326f780d7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba91b5bb8919e53">
+		<description>Bugtris (2022)(NotImpLife)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="422596">
+				<rom name="Bugtris (2022)(NotImpLife).gba" size="422596" crc="408e6ac5" sha1="91b5bb8919e533cb1e91e890d2020a9ecfc19774"/>
 			</dataarea>
 		</part>
 	</software>
@@ -692,6 +742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba87658f9ac8307">
+		<description>Bygone Snow (2025)(Creatalsoftware Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16377484">
+				<rom name="Bygone Snow (2025)(Creatalsoftware Games).gba" size="16377484" crc="7ae83acf" sha1="87658f9ac830701db747e4878289610b3c5fd551"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba06f8cef944241">
 		<description>Cardcaptor Sakura - Sakura Card Hen - Sakura to Card to Otomodachi (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -699,6 +759,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Cardcaptor Sakura - Sakura Card Hen - Sakura to Card to Otomodachi (Japan) (Rev 1).gba" size="16777216" crc="2c8488b2" sha1="06f8cef944241ab73a062972cc7eb4a744dc1b6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae145269ae2acd">
+		<description>Cards Football (2023)(VG Source Game Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="510772">
+				<rom name="Cards Football (2023)(VG Source Game Studio).gba" size="510772" crc="448cb3e6" sha1="e145269ae2acd090deb978b8250d41ccac7f8582"/>
 			</dataarea>
 		</part>
 	</software>
@@ -759,6 +829,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="5418424">
 				<rom name="Celeste Classic v1.2 (2021)(JeffRuLz).gba" size="5418424" crc="ff0e8ada" sha1="08512605e5c02e81a72e24c2c8d4959d8e84e1f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6756fed3fe391">
+		<description>Chase H.Q. Game Boy Collection - GBC2GBA (1990-99)(Taito)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1463452">
+				<rom name="Chase H.Q. Game Boy Collection - GBC2GBA (1990-99)(Taito).gba" size="1463452" crc="14a937f5" sha1="6756fed3fe391b6c50755807ffed9b7b8b8b085a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -972,6 +1052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbafbc6a366f7732">
+		<description>Codename Hacker (2007)(Alekmaul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4058684">
+				<rom name="Codename Hacker (2007)(Alekmaul).gba" size="4058684" crc="1ccfbe29" sha1="fbc6a366f773204b031b589aab4125e15a70dc9b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba52a17491d7c6b">
 		<description>Collie Defense (2024)(Yann Vaillant)</description>
 		<year>????</year>
@@ -1032,6 +1122,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba911105b5ce276">
+		<description>Dare To Doku (2026)(DeDefourkes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2136888">
+				<rom name="Dare To Doku (2026)(DeDefourkes).gba" size="2136888" crc="88f7027e" sha1="911105b5ce276c1266a601aac3681bb06add4a95"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba633963656e46a">
+		<description>Dare To Square Demo (2026)(DeDefourkes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="3151136">
+				<rom name="Dare To Square Demo (2026)(DeDefourkes).gba" size="3151136" crc="291350e7" sha1="633963656e46ae17b1fd03a681a45195fcec090d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbad6a4b572d3f6c">
 		<description>Deadpool Advance (PD)</description>
 		<year>????</year>
@@ -1059,6 +1169,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="386508">
 				<rom name="Deflektor v1.1 (2003-07)(Foxy's Softs).gba" size="386508" crc="5ec91001" sha1="92682b2404be3b2fd48f96cad0c51f51d07c8159"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba6e18b29ed5112">
+		<description>Deimos Defender (2026)(BraindeaD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="141744">
+				<rom name="Deimos Defender (2026)(BraindeaD Games).gba" size="141744" crc="5d69858b" sha1="6e18b29ed5112bde5cc5fbdd5ca797bfe9f2a7b5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1109,6 +1229,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Donkey Kong Country - Palette Restoration v1.1 (2018)(marc_max).gba" size="8388608" crc="c05c1406" sha1="005b5571e169c45a0649fdb2cc52729f9d6b4116"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba751675b0d77c3">
+		<description>Donsol (2022)(Hundred Rabbits)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="52520">
+				<rom name="Donsol (2022)(Hundred Rabbits).gba" size="52520" crc="aec144b3" sha1="751675b0d77c341f2265b0edd38858b0dbdb7b50"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1249,6 +1379,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8867571">
 				<rom name="Dungeon Tactics Advance (2024)(Tapir Games).gba" size="8867571" crc="c8385702" sha1="3e5598cd920cdd6681b1b9ba86b1572ab3c2b05a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba76b0297b3deda">
+		<description>Ebobo (2025)(VG Source Game Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ebobo (2025)(VG Source Game Studio).gba" size="4194304" crc="ada914c3" sha1="76b0297b3deda6c481ba0474643724ae1670c520"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1582,6 +1722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba2ea5d660c3c43">
+		<description>Final Fight One - All Unlocks (2026)(KleberDicas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Final Fight One - All Unlocks (2026)(KleberDicas).gba" size="4194304" crc="37345cec" sha1="2ea5d660c3c43bb97f5279a62fd9c031cb31dafc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba808759976fb9f">
 		<description>Final Fight One - Redux Edition v3.0 (2023)(SCD)</description>
 		<year>????</year>
@@ -1712,6 +1862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba045fc4e654002">
+		<description>GBalatro! v0.2.2 (2025)(Various)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5061324">
+				<rom name="GBalatro! v0.2.2 (2025)(Various).gba" size="5061324" crc="008d8f50" sha1="045fc4e654002ea2b45609480d6f4a0a8afee787"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbace4a344d16b7f">
 		<description>GBAtris (2019)(Mutant Stargoat Games)</description>
 		<year>????</year>
@@ -1739,6 +1899,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4770080">
 				<rom name="Getting Around It with Pheasant Birdy (2024)(Hell Labs).gba" size="4770080" crc="cd007dbd" sha1="d1886668327f4f691fb7bc935d1b2b43adba61f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba637cdc5f815e4">
+		<description>Glory Hunters - GB2GBA v2.0.1 (2025)(2think Design Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4270324">
+				<rom name="Glory Hunters - GB2GBA v2.0.1 (2025)(2think Design Studio).gba" size="4270324" crc="6bf1e84e" sha1="637cdc5f815e400845604e354ce35d92a269d7b2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1809,6 +1979,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="3990892">
 				<rom name="Heartwrench Advance (2025)(Michael Chase).gba" size="3990892" crc="47f714e0" sha1="d987b1163eec0029b0a1f0113cc8dbdd4fe92375"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba370396af63673">
+		<description>Heiankyo Alien - GB2GBA (1989)(Meldac)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Heiankyo Alien - GB2GBA (1989)(Meldac).gba" size="108700" crc="6d848de7" sha1="370396af63673a48ff53defb23d0d0e4254b1569"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1969,6 +2149,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="33554432">
 				<rom name="Klonoa Heroes - Densetsu no Star Medal (Japan) (patched)_1.gba" size="33554432" crc="85356bf1" sha1="3702182ed8090d790660c189cea1ca2ca73b9969"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2f97963467ea1">
+		<description>Koro Dice - GB2GBA (1990)(King Records)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Koro Dice - GB2GBA (1990)(King Records).gba" size="108700" crc="795da416" sha1="2f97963467ea1f8368883b05f686da7d316b3c27"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2182,6 +2372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba4a3e8f7c76e56">
+		<description>Mini Mines v1.1 (2024)(Lazuli Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Mini Mines v1.1 (2024)(Lazuli Software).gba" size="1048576" crc="2b6f3c3a" sha1="4a3e8f7c76e56f576b4c95f91a7ba82f57b908cd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba7fe080bf9cc11">
 		<description>Minicraft v1.3 (2024-02-09)(Vulcalien)(GPLv3)</description>
 		<year>????</year>
@@ -2262,6 +2462,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba7ed4d44741e34">
+		<description>Motocross Maniacs Game Boy Collection - GBC2GBA (1990-92)(Sammy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1266844">
+				<rom name="Motocross Maniacs Game Boy Collection - GBC2GBA (1990-92)(Sammy).gba" size="1266844" crc="7c40a0f8" sha1="7ed4d44741e34f17afba1e3b4dc4be2ec6f27b10"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba086f7d7e86cfb">
 		<description>Nebulus v1.2 (2004)(Foxy's Softs)</description>
 		<year>????</year>
@@ -2332,6 +2542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba73186a1a657b8">
+		<description>Pitman - GB2GBA (J) (1990)(Ask Kodansha)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Pitman - GB2GBA (J) (1990)(Ask Kodansha).gba" size="108700" crc="4c32e350" sha1="73186a1a657b86df712df9faccd20d95a22ecd2a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba68030653ff955">
 		<description>Pixel Pup v1.0.4 (2026)(objet DISCRET, RetroDotCards)</description>
 		<year>????</year>
@@ -2339,6 +2559,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="10652984">
 				<rom name="Pixel Pup v1.0.4 (2026)(objet DISCRET, RetroDotCards).gba" size="10652984" crc="0a0bbf01" sha1="68030653ff955db79d48483ce6fd269f36727d2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba65f8566eb10ed">
+		<description>Pixel Pup v1.1.5 (2026)(objet DISCRET, RetroDotCards)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="12061064">
+				<rom name="Pixel Pup v1.1.5 (2026)(objet DISCRET, RetroDotCards).gba" size="12061064" crc="77970c29" sha1="65f8566eb10edb033b86e204ecb28c47c8f5f321"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2489,6 +2719,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="400960">
 				<rom name="ProfessorSinister_3.gba" size="400960" crc="7899d38e" sha1="17b1ee1a44289fe5a333a872e42b6d4faced709c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba5861a46a9e864">
+		<description>Qix - GB2GBA (1990)(Taito)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108708">
+				<rom name="Qix - GB2GBA (1990)(Taito).gba" size="108708" crc="57bb3162" sha1="5861a46a9e86489b2c9f324477d00d294313cd5c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3172,6 +3412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbae9f72b3e7e0f1">
+		<description>Retrokid (2025)(VG Source Game Studio)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Retrokid (2025)(VG Source Game Studio).gba" size="524288" crc="d0aea213" sha1="e9f72b3e7e0f1773b319da8c635101c7e13f080e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba2639413e2b30c">
 		<description>Rhino Express (2025)(Vulcalien)</description>
 		<year>????</year>
@@ -3232,6 +3482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba9b73908206094">
+		<description>Rolan's Curse Game Boy Collection - GB2GBA (1990-92)(Sammy)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="349340">
+				<rom name="Rolan's Curse Game Boy Collection - GB2GBA (1990-92)(Sammy).gba" size="349340" crc="a2fa8afd" sha1="9b73908206094cde4ae7d18b0b38aecc817ba1d4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba2c0ecc0fe283d">
 		<description>Samsara Naga 1x2 (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -3259,6 +3519,26 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="6053920">
 				<rom name="Sekhmet's Playground (2024)(PyroPyro).gba" size="6053920" crc="d7046500" sha1="ff6d58b33e491bdd29e05b165dba3f9bd1ec98ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2b0da9f8a16cf">
+		<description>Serpent - GB2GBA (1990)(Naxat Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Serpent - GB2GBA (1990)(Naxat Soft).gba" size="108700" crc="619e2e89" sha1="2b0da9f8a16cf83987018fe3dca978983ee81dd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba98b636b57ad4e">
+		<description>Shantae (GBA Enhanced) - GBC2GBA (2021)(Limited Run Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="4270236">
+				<rom name="Shantae (GBA Enhanced) - GBC2GBA (2021)(Limited Run Games).gba" size="4270236" crc="41a280fb" sha1="98b636b57ad4ec5e40c17131bc0f673ee68a8735"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3962,6 +4242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba4acf5457483f3">
+		<description>Stack a Tower v1.1 (2026)(Laluigi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="56032">
+				<rom name="Stack a Tower v1.1 (2026)(Laluigi).gba" size="56032" crc="a1c57753" sha1="4acf5457483f3b423f8ebb726427970d9b382d00"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaa7e3ebaa91aec">
 		<description>Star Wars 3 (Unl)</description>
 		<year>????</year>
@@ -4022,6 +4312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba2a426aeb4bb0f">
+		<description>Super Mario Land &amp; Wario Land Game Boy Collection - GBC2GBA (1989-2000)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5461148">
+				<rom name="Super Mario Land &amp; Wario Land Game Boy Collection - GBC2GBA (1989-2000)(Nintendo).gba" size="5461148" crc="71f4c009" sha1="2a426aeb4bb0fdc8edbc961540d2646bcbcab53f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaa3f302da663eb">
 		<description>Super Robot Wars J T-Eng (2010)(Kingcom)</description>
 		<year>????</year>
@@ -4072,6 +4372,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbac5d6c17ddbc8a">
+		<description>Tennis - GB2GBA (1989)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Tennis - GB2GBA (1989)(Nintendo).gba" size="108700" crc="beaf2056" sha1="c5d6c17ddbc8a4114cdedc493af74cabe7afbfec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba62f417d538061">
 		<description>Tetris Advance</description>
 		<year>????</year>
@@ -4079,6 +4389,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Tetris Advance.bin" size="4194304" crc="501ea6cd" sha1="62f417d538061353b1dfc4c7c08d6c26a37f398c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba54aa3d88b7b62">
+		<description>Tetris Game Boy Collection - GBC2GBA (1989-98)(Nintendo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1758364">
+				<rom name="Tetris Game Boy Collection - GBC2GBA (1989-98)(Nintendo).gba" size="1758364" crc="d45a3788" sha1="54aa3d88b7b62cfaff1c18dca1e8a1a672431a62"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4139,6 +4459,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="271032">
 				<rom name="Transience (2021-08-16)(Pineberry Fox).gba" size="271032" crc="e607dc48" sha1="fef8a2f6483303f32c2ceeae689a5c01ebf7bafe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbab09b600bfc222">
+		<description>Tremblay Island v1.10 (2021)(Cinemint Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="16239516">
+				<rom name="Tremblay Island v1.10 (2021)(Cinemint Games).gba" size="16239516" crc="ce85ba07" sha1="b09b600bfc222c2d92829d8883feab700b013953"/>
 			</dataarea>
 		</part>
 	</software>

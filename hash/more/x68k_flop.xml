@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 776 -->
+<!-- Number of items in this list = 778 -->
 <softwarelist name="x68k_flop" description="x68k_flop loose roms">
 	<software name="x685a7d0c42c3907">
 		<description>060turbo Driver Disk</description>
@@ -289,6 +289,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261824">
 				<rom name="Battle Unit II (User Disk).dim" size="1261824" crc="1741fff4" sha1="b70cef8b03de0e5432273489205ee6e97af6f9e2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x68f91e371b23528">
+		<description>blank</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="blank.xdf" size="1261568" crc="6734f575" sha1="f91e371b2352818c777642f63274a93fb0df0183"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4699,6 +4709,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="1261568">
 				<rom name="Gradius 2 MSX Hack (1994)[xdf].xdf" size="1261568" crc="0a832a68" sha1="4f23725c8a9935a64feebc0aaceb330bb819c29b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x6804bd443675917">
+		<description>Grime68000</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="1261568">
+				<rom name="Grime68000.xdf" size="1261568" crc="9c51c3d1" sha1="04bd443675917ff432b8f0b9433af2864551fe54"/>
 			</dataarea>
 		</part>
 	</software>

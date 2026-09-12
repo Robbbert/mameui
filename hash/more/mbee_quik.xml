@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1298 -->
+<!-- Number of items in this list = 1311 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="beec670f30303e3a">
 		<description>[-](demo)3d</description>
@@ -7932,6 +7932,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beee76cf20b72020">
+		<description>[-]PACMAN32</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="9101">
+				<rom name="[-]PACMAN32.BEE" size="9101" crc="1095c218" sha1="e76cf20b72020763c45e5863abbb99744876e722"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee52efcd59daec0">
 		<description>[-]pakman</description>
 		<year>????</year>
@@ -9822,6 +9832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beeac55af3b9a8cf">
+		<description>[-]snake_2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="3072">
+				<rom name="[-]snake_2.mwb" size="3072" crc="bff1fbe9" sha1="ac55af3b9a8cff29fbeef4933a33104ba03d370b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beee528a60b860ed">
 		<description>[-]snap</description>
 		<year>????</year>
@@ -9869,6 +9889,26 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="7552">
 				<rom name="[-]snoopy(printer).mwb" size="7552" crc="e6cd006a" sha1="51b866a7782d68b000fe181e429ab57fa4b9b2ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beeeb5fdd6d941bb">
+		<description>[-]sokoban</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="15488">
+				<rom name="[-]sokoban.mwb" size="15488" crc="0cbbdd5f" sha1="eb5fdd6d941bbed1f57cfe0c056c2eb039cab9ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beed993027c5539e">
+		<description>[-]sokobee</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="16000">
+				<rom name="[-]sokobee.mwb" size="16000" crc="9780fcc7" sha1="d993027c5539eba4bd0a157163feceb8991f1f56"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10749,6 +10789,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="3072">
 				<rom name="[-]testz80_2.mwb" size="3072" crc="a766cbdb" sha1="ce1ef01cafd731366db0556d4e45390e33618384"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee92ad09e3e4c9d">
+		<description>[-]tetris</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5120">
+				<rom name="[-]tetris.mwb" size="5120" crc="93893a06" sha1="92ad09e3e4c9dc2d004a615979537d7c8f764f0f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12782,6 +12832,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee4534011a2305e">
+		<description>[ppc]BoulderV5</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="16879">
+				<rom name="[ppc]BoulderV5.BEE" size="16879" crc="a9e75c10" sha1="4534011a2305e9f257bc1bfe3752289882fed011"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee7cbb4374d4d95">
+		<description>[ppc]BoulderV5V2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="16935">
+				<rom name="[ppc]BoulderV5V2.BEE" size="16935" crc="e976f67a" sha1="7cbb4374d4d9571b5ce7c4d3284d5ed12b49661e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee9d498f76eedf4">
 		<description>[ppc]car</description>
 		<year>????</year>
@@ -12902,6 +12972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee4d8ebb7b8960c">
+		<description>[ppc]MMPCG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="2132">
+				<rom name="[ppc]MMPCG.BEE" size="2132" crc="7a9d6649" sha1="4d8ebb7b8960cc13ad77c5f15259c53096cc4bb6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee1c420903d5989">
 		<description>[ppc]mount</description>
 		<year>????</year>
@@ -12932,6 +13012,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee7ad788bd84b76">
+		<description>[ppc]PACMAN32</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="9007">
+				<rom name="[ppc]PACMAN32.BEE" size="9007" crc="8e2ae4ac" sha1="7ad788bd84b76a051c0e4b0c512d788d0fcf9f05"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="beee4b5a799e870d">
 		<description>[ppc]peek258</description>
 		<year>????</year>
@@ -12939,6 +13029,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="384">
 				<rom name="[ppc]peek258.mwb" size="384" crc="60dbef58" sha1="e4b5a799e870dbce895f1a0c2608a848b2074ee0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0fec28eb7de6d">
+		<description>[ppc]SokobanPCG</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="23187">
+				<rom name="[ppc]SokobanPCG.BEE" size="23187" crc="99d926ae" sha1="0fec28eb7de6db9b0230425f8807c3a41375b385"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12962,6 +13062,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="bee0c00f8f73255f">
+		<description>[ppc]TETRIS2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="5694">
+				<rom name="[ppc]TETRIS2.BEE" size="5694" crc="1f9e54aa" sha1="0c00f8f73255f11bd854f38c7c15c157ccd84df3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee46fb990806439">
+		<description>[ppc]TREASURE</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="17037">
+				<rom name="[ppc]TREASURE.BEE" size="17037" crc="ce0b66a1" sha1="46fb990806439b36492939e54d8ad4a16c9259b3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee5394c48ee08fb">
 		<description>[ppc]usa</description>
 		<year>????</year>
@@ -12979,6 +13099,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="15232">
 				<rom name="[ppc]world.mwb" size="15232" crc="bf4e0025" sha1="e673477e3e1e77955b3c216e5a14b5bb024608ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="beee2637ba07f04a">
+		<description>[ppc]wormr</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="4736">
+				<rom name="[ppc]wormr.mwb" size="4736" crc="698ac87e" sha1="e2637ba07f04a0096e0f99d60d3c4c4a6eca968e"/>
 			</dataarea>
 		</part>
 	</software>

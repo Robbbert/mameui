@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 121 -->
+<!-- Number of items in this list = 125 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -262,6 +262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp8f4070dce7003">
+		<description>Columns (2007)(Thor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Columns (2007)(Thor).ngp" size="524288" crc="20df1126" sha1="8f4070dce7003fbbcdb5d795875a26d7acfa155f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp1b82899da5084">
 		<description>Cool Cool Jam (Japan) [T-En by WyndCrosser v0.01] [i]</description>
 		<year>????</year>
@@ -342,6 +352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp3cfb9da55251d">
+		<description>Dodger (2007)(Ivan Mackintosh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Dodger (2007)(Ivan Mackintosh).ngp" size="524288" crc="fc13a65b" sha1="3cfb9da55251dd49979b1dfd46d3920840ef93e8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp46c5ba8f9e97b">
 		<description>Dodger (PD)</description>
 		<year>????</year>
@@ -379,6 +399,26 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Fruity Pals' Revenge v1.2 (2025)(Infinite State Games).ngp" size="2097152" crc="f92db309" sha1="0784e58ddf280c82d5b39f763e35b5ea3cfb5b71"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpc17ec29ec7f9f">
+		<description>Gardenia (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia (2026)(Chris Ahchay).ngp" size="2097152" crc="ede2861a" sha1="c17ec29ec7f9f806094179ade2766402d637542c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp958787383be7b">
+		<description>Gardenia Tutorial (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia Tutorial (2026)(Chris Ahchay).ngp" size="2097152" crc="0ae9466a" sha1="958787383be7bc9cdfe69d9aff95516e5213fa13"/>
 			</dataarea>
 		</part>
 	</software>

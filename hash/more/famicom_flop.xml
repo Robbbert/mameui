@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 527 -->
+<!-- Number of items in this list = 528 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -929,6 +929,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
 				<rom name="Bishoujo Shashinkan - Studio Cut (UNL).fds" size="131000" crc="a223effa" sha1="20f75e4a46c1e6ae2ec89a634f911b27ce7ba00a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fds90f93e609e03b">
+		<description>blaster-master-areas-1-4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="262016">
+				<rom name="blaster-master-areas-1-4.fds" size="262016" crc="b609e203" sha1="90f93e609e03b4fbc4fb2e8288bcba8be8409fe5"/>
 			</dataarea>
 		</part>
 	</software>

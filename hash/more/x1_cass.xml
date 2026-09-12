@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 53 -->
+<!-- Number of items in this list = 67 -->
 <softwarelist name="x1_cass" description="x1_cass loose roms">
 	<software name="x1f8854ea363a35e">
 		<description>aerial</description>
@@ -9,6 +9,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="2284508">
 				<rom name="aerial.wav" size="2284508" crc="ca16079a" sha1="f8854ea363a35e6b6d080ddcc660467a007829ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1ad51f481f1f0a2">
+		<description>aerial_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2284796">
+				<rom name="aerial_1.wav" size="2284796" crc="6b188b6a" sha1="ad51f481f1f0a26463f9bdea1cd37dd3c49a4fbd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -32,6 +42,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x114360c4c0e0334">
+		<description>ascend_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1946504">
+				<rom name="ascend_1.wav" size="1946504" crc="8d2df094" sha1="14360c4c0e033484ccc4fc20f18c8d44587e331c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1e6509dcd675824">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2286308">
+				<rom name="awass.wav" size="2286308" crc="2bd3a039" sha1="e6509dcd67582439304d7d2618e6561eddb4dbd9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1ae211a847dac5b">
 		<description>Battlot</description>
 		<year>????</year>
@@ -39,6 +69,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="2253092">
 				<rom name="Battlot.wav" size="2253092" crc="cf4aec7c" sha1="ae211a847dac5bfe7eeacd140d454853ed7684c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1dbc7e45e494988">
+		<description>battlot_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2253668">
+				<rom name="battlot_1.wav" size="2253668" crc="058d6e97" sha1="dbc7e45e494988851b078d02fbd41a448ebd633a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -102,6 +142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x19e699873ba073d">
+		<description>bootskell_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2312960">
+				<rom name="bootskell_1.wav" size="2312960" crc="8164ef14" sha1="9e699873ba073d1f92c1bb3625afbc5f28581c02"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1964fd62d19ab46">
 		<description>Bousou Tokkyuu SOS (1983)(Hudson Soft)(Fumihiko Itagaki)</description>
 		<year>????</year>
@@ -159,6 +209,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="2435072">
 				<rom name="cavit.wav" size="2435072" crc="d185358a" sha1="3637de3770cc2abbb6cd48a753ffcdeacfe5da6d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1d3c06fe65b45c7">
+		<description>cavit_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2442512">
+				<rom name="cavit_1.wav" size="2442512" crc="3cad7a3d" sha1="d3c06fe65b45c7691d1cb619b192c1e32b066afd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -262,6 +322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x1f35a90f37254b3">
+		<description>impetus_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="3548864">
+				<rom name="impetus_1.wav" size="3548864" crc="7ca54306" sha1="f35a90f37254b3bbc36f275f512b01353b88aa40"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1068917c32f4376">
 		<description>Itasandrias (1983)(Hudson Soft)(Fumihiko Itagaki)</description>
 		<year>????</year>
@@ -292,6 +362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x1ab3f2eb54f23ac">
+		<description>lift_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1858364">
+				<rom name="lift_1.wav" size="1858364" crc="336d5757" sha1="ab3f2eb54f23acace54e6e9834f46e1da6e8a30d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1712f778288934d">
 		<description>mazy</description>
 		<year>????</year>
@@ -299,6 +379,26 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="6152116">
 				<rom name="mazy.wav" size="6152116" crc="42f0abae" sha1="712f778288934d29997d4799f15eeb401bfedc12"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1164dcd51e236f8">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2116148">
+				<rom name="mazy2.wav" size="2116148" crc="a104fb10" sha1="164dcd51e236f8935f87342720166d609a6a3291"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x127811e5094371f">
+		<description>mazy_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1918952">
+				<rom name="mazy_1.wav" size="1918952" crc="d27636ce" sha1="27811e5094371f53ced9b8bd228cb3efc183c646"/>
 			</dataarea>
 		</part>
 	</software>
@@ -332,6 +432,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x1ec3ad7da0be5ed">
+		<description>neuras_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2188892">
+				<rom name="neuras_1.wav" size="2188892" crc="977d4927" sha1="ec3ad7da0be5edfdab52a8fa7de47b48695035a6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1acc4c944f861f9">
 		<description>osotos</description>
 		<year>????</year>
@@ -359,6 +469,16 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="3004232">
 				<rom name="Ruptus.wav" size="3004232" crc="80150051" sha1="1aca835fef6afe72665e4c07e1b1905bf6903ca7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x143f551493e55d4">
+		<description>ruptus_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2928980">
+				<rom name="ruptus_1.wav" size="2928980" crc="c55d94cd" sha1="43f551493e55d4771ee59be9309c7b554455bb0d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -489,6 +609,26 @@
 		<part name="cass" interface="x1_cass">
 			<dataarea name="side1" size="333066">
 				<rom name="Super Phobos (1982)(DB-Soft).tap" size="333066" crc="9f00e8d4" sha1="0eef12ce5d4911f2e0c1234978fe5823f3b6e19e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1da1d7888c8ff10">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="1903352">
+				<rom name="svellas.wav" size="1903352" crc="8a21eecb" sha1="da1d7888c8ff1056e823ced29b394c72174e0b61"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1af60839fad5a3d">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="x1_cass">
+			<dataarea name="side1" size="2132468">
+				<rom name="SwordWork.wav" size="2132468" crc="bcd3f2a1" sha1="af60839fad5a3d68b88adeb65da25d462ac43be7"/>
 			</dataarea>
 		</part>
 	</software>

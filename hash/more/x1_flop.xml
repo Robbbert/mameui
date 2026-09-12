@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 25 -->
+<!-- Number of items in this list = 47 -->
 <softwarelist name="x1_flop" description="x1_flop loose roms">
 	<software name="x1710364a6e7a71a">
 		<description>(X1Turbo)Sorcerian</description>
@@ -9,6 +9,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="426240">
 				<rom name="(X1Turbo)Sorcerian.D88" size="426240" crc="7b87f95d" sha1="710364a6e7a71a1e1fce18f623c299c73fa5224b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x10721a88858dc56">
+		<description>aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="aerial.d88" size="348848" crc="0c1ad90e" sha1="0721a88858dc56dc113166242f50e64dabb80e0a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -22,6 +32,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x16a29b9a5de996b">
+		<description>antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="antiair.d88" size="348848" crc="c4386c48" sha1="6a29b9a5de996b723b810c63fcbff5408abbe5ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x19efaf5d70f7018">
+		<description>ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="ascend.d88" size="348848" crc="42450803" sha1="9efaf5d70f701863586966529daea91925eff8ef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1ed3722d0beec87">
+		<description>awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="awass.d88" size="348848" crc="0476a1cc" sha1="ed3722d0beec875960efe85ac353683ac9a6a5cc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x15e31ca07289043">
 		<description>BATTLE BALLER (1996-04)(TSUYOSHI)(JP)[Micom BASIC]</description>
 		<year>????</year>
@@ -32,6 +72,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x10478e19218b2c2">
+		<description>battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="battlot.d88" size="348848" crc="a2d65f41" sha1="0478e19218b2c2e3aa054d88561c5cd78215b4c1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x10e38fcbff18c97">
+		<description>bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="bootskell.d88" size="348848" crc="ffd81930" sha1="0e38fcbff18c97a45e7c5d12fde61b5e46dc7307"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x13a3a256a18280f">
+		<description>cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="cacorm.d88" size="348848" crc="7d8d8e13" sha1="3a3a256a18280f22d957a4fa67bc18ad39c559f1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1016fb72a2288c2">
+		<description>cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="cavit.d88" size="348848" crc="fd7e3a4c" sha1="016fb72a2288c2be9877ded9c7f18acbe8eda232"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x1b4f7eed2c0c900">
 		<description>Conan (1986)(Comptiq)(Data Soft)(Eric Parker)(Eric Robinson)</description>
 		<year>????</year>
@@ -39,6 +119,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="392368">
 				<rom name="Conan (1986)(Comptiq)(Data Soft)(Eric Parker)(Eric Robinson).d88" size="392368" crc="2d7b2d8f" sha1="b4f7eed2c0c9003d944d19531e0c64cb30ec85ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1b74d3a5e7d32c0">
+		<description>cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="cracky.d88" size="348848" crc="0add2873" sha1="b74d3a5e7d32c08f543f363086fe6a8df49c4303"/>
 			</dataarea>
 		</part>
 	</software>
@@ -82,6 +172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x18b3469b06b5b4a">
+		<description>guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="guntus.d88" size="348848" crc="f1c0c728" sha1="8b3469b06b5b4a456683a63a20d7083a30748f6e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x179029f789c2730">
 		<description>H-tron</description>
 		<year>????</year>
@@ -89,6 +189,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="348848">
 				<rom name="H-tron.d88" size="348848" crc="f1ff96e1" sha1="79029f789c2730c8faf867c2d78b140ab0913f80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x183d3c357b2dcbc">
+		<description>hopman</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="hopman.d88" size="348848" crc="c6df894d" sha1="83d3c357b2dcbc76573c9ddfdba37f8fa1044805"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1d901d078e04f38">
+		<description>impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="impetus.d88" size="348848" crc="a736eb0f" sha1="d901d078e04f38bc1e3252e44e0f433238d310ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -112,6 +232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x1236526eafa0d73">
+		<description>lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="lift.d88" size="348848" crc="5f63ce8c" sha1="236526eafa0d73b9c2f0523d220f4c76ab4fcfea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x15968e8e30a969a">
 		<description>Mabel's Mansion (1985)(Comptiq)(Datamost)(Kevin Bagley)</description>
 		<year>????</year>
@@ -132,6 +262,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x108c03c30e7b384">
+		<description>mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="mazy.d88" size="348848" crc="8f2db856" sha1="08c03c30e7b38432ba34c8207834b77e3ad40736"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x104e2fe28309469">
+		<description>mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="mazy2.d88" size="348848" crc="723aa00a" sha1="04e2fe28309469c0df7b647d2146ce92ed00f42c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x101e3b81f810113">
+		<description>mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="mieyen.d88" size="348848" crc="38f5189a" sha1="01e3b81f8101139b1149270be91f3a4e7e00c045"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x13f4b0a724ad8ad">
 		<description>Mole Mole 2 (1986)(Cross Media Soft)(Success Corp.)(Victor Music Industries)(Hisaki Yokoi)</description>
 		<year>????</year>
@@ -139,6 +299,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="359728">
 				<rom name="Mole Mole 2 (1986)(Cross Media Soft)(Success Corp.)(Victor Music Industries)(Hisaki Yokoi).d88" size="359728" crc="350ece6a" sha1="3f4b0a724ad8ad56627f3b820e11750d2b6bd0cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x10f3804c7fe1ae2">
+		<description>neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="neuras.d88" size="348848" crc="a05130e0" sha1="0f3804c7fe1ae2979a1797fe339829cc7539e311"/>
 			</dataarea>
 		</part>
 	</software>
@@ -152,6 +322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="x16f8dde4f539121">
+		<description>osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="osotos.d88" size="348848" crc="c3d31ff9" sha1="6f8dde4f5391214512ef00951672d6fe3f921957"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="x198415ebac49ff9">
 		<description>Oushou</description>
 		<year>????</year>
@@ -159,6 +339,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="348848">
 				<rom name="Oushou.d88" size="348848" crc="c65510d8" sha1="98415ebac49ff91937cf43fd99d6f4a9b5f058a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x145c3458cbe80dd">
+		<description>ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="ruptus.d88" size="348848" crc="951a0e2e" sha1="45c3458cbe80ddf8742e318735954a93b4e08018"/>
 			</dataarea>
 		</part>
 	</software>
@@ -189,6 +379,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="2089196">
 				<rom name="Sky Diver (1983)(Hudson Soft)(Piano Man)(Toshiyuki Sasagawa).wav" size="2089196" crc="686810ab" sha1="aa1a26176f045261c9eb85ae4f39d6e66d78fa57"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1d2cb5848a8d4a4">
+		<description>svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="svellas.d88" size="348848" crc="ee28af39" sha1="d2cb5848a8d4a473f04c918dc2ee628ddff6d6ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x118016485b3f8c4">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="SwordWork.d88" size="348848" crc="6108ac7c" sha1="18016485b3f8c444209c5839d2dfd35d99d13d9c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -229,6 +439,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="327680">
 				<rom name="X1J_1.2D" size="327680" crc="8ec1ead0" sha1="81f24b076098689b9394993c53347ad12b11a2ba"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="x1e11a2064aeabae">
+		<description>yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="348848">
+				<rom name="yewdow.d88" size="348848" crc="c02a6440" sha1="e11a2064aeabaedbda73f351ce07cbce64daeda2"/>
 			</dataarea>
 		</part>
 	</software>

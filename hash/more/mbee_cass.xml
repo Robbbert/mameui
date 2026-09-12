@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 581 -->
+<!-- Number of items in this list = 582 -->
 <softwarelist name="mbee_cass" description="mbee_cass loose roms">
 	<software name="bee5f77b519a2abb">
 		<description>(NE)digitalker_300b</description>
@@ -4389,6 +4389,16 @@
 		<part name="cass" interface="mbee_cass">
 			<dataarea name="cass" size="481506">
 				<rom name="[x]Dodgem 2.wav" size="481506" crc="89fe43ec" sha1="14dfc0843611785c9587c05f7cb145fe15b007f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee033fbbf6628c3">
+		<description>[x]donjon</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="mbee_cass">
+			<dataarea name="cass" size="4117734">
+				<rom name="[x]donjon.wav" size="4117734" crc="60300689" sha1="033fbbf6628c35692423e0cd2e0837a8275c91ba"/>
 			</dataarea>
 		</part>
 	</software>

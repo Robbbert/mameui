@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4183 -->
+<!-- Number of items in this list = 4184 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -18919,6 +18919,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Mario_In_Yoshi_Heaven_2 (SMW1 Hack).sfc" size="2097152" crc="0b6799d6" sha1="54e0ce39c99f34a3bedc54a5daf82cdc6fd317ed"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsafb6c62400c01">
+		<description>Marvel Super Heroes - War of the Gems Redux v2.1 (2025-26)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Marvel Super Heroes - War of the Gems Redux v2.1 (2025-26)(BillyTime! Games).sfc" size="2097152" crc="ce4eb55c" sha1="afb6c62400c017b7ea5a4afc7fb44cb161085260"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7960 -->
+<!-- Number of items in this list = 7974 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -4832,16 +4832,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs916710d2307c8">
-		<description>Alchemist 48K (1983)(Imagine Software)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47321">
-				<rom name="Alchemist 48K (1983)(Imagine Software).tzx" size="47321" crc="03e190d7" sha1="916710d2307c840ab84a389697001e7c4fdcbeb2"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs6632af990d6b7">
 		<description>Alerta Ovni (1989)(Ricardo Villalba Martinez)(Sp)</description>
 		<year>????</year>
@@ -6149,6 +6139,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="2651165">
 				<rom name="antiair.wav" size="2651165" crc="97a46153" sha1="44ef1f30040dbbf6cf73c0ac0fc6dec8fdbdd83d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd66ff6af12148">
+		<description>Antics - The Birds and the Bees II 48K (1984)(Bug-Byte Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48225">
+				<rom name="Antics - The Birds and the Bees II 48K (1984)(Bug-Byte Software).tzx" size="48225" crc="d93a1123" sha1="d66ff6af1214844b48b63a4d345b2711e986665f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14892,6 +14892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsad029a0678a21">
+		<description>Chinese Juggler, The 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44483">
+				<rom name="Chinese Juggler, The 48K (1984)(Ocean).tzx" size="44483" crc="78390688" sha1="ad029a0678a2108b60204353ce0cc01f8dd7b4ff"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs4da3ae6389477">
 		<description>Chip (19xx)(-)(Sp)</description>
 		<year>????</year>
@@ -16313,12 +16323,12 @@
 		</part>
 	</software>
 	<software name="zxs81308c265b8a4">
-		<description>Cookie</description>
+		<description>Cookie 16K (1983)(Ultimate Play The Game)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="15959">
-				<rom name="Cookie.tzx" size="15959" crc="dd316aca" sha1="81308c265b8a4a7ce19c50a048fa1277b9787519"/>
+				<rom name="Cookie 16K (1983)(Ultimate Play The Game).tzx" size="15959" crc="dd316aca" sha1="81308c265b8a4a7ce19c50a048fa1277b9787519"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19269,6 +19279,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44177">
 				<rom name="Demon From The Darkside IV - Shadows Of The Past (1988)(Compass).tap" size="44177" crc="b9cd0321" sha1="c5c4c89990e3c5de70eda4a6ff6167f3d07b3063"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaab9ace42af08">
+		<description>Demon Jar, The 128K (2026)(Alan Pemberton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="119314">
+				<rom name="Demon Jar, The 128K (2026)(Alan Pemberton).tap" size="119314" crc="8b47f7d7" sha1="aab9ace42af0844db1bd6bd4cd360c56759be4cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs848f1dfee4d3b">
+		<description>Demon Jar, The v1.04 128K (2026)(Alan Pemberton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="119346">
+				<rom name="Demon Jar, The v1.04 128K (2026)(Alan Pemberton).tap" size="119346" crc="f68c0685" sha1="848f1dfee4d3b850cb074910c99bed1c9d48e36e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -23082,6 +23112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse185adfd3325a">
+		<description>Enigma Force 48K (1985)(Beyond Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48390">
+				<rom name="Enigma Force 48K (1985)(Beyond Software).tzx" size="48390" crc="49047064" sha1="e185adfd3325ae6bd8f96ec41951928efee4670d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0430c75a9ea9a">
 		<description>Enigmatik 48K (2020)(iadvd, Molomazo)</description>
 		<year>????</year>
@@ -25049,6 +25089,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37858">
 				<rom name="Flak (1984)(US Gold).tap" size="37858" crc="85c9e803" sha1="0303439fb6603169dcea9eb2c1fc5e3a54dad176"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc68b4da188036">
+		<description>Flappy Bird ZX 48K-AY (2014)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10708">
+				<rom name="Flappy Bird ZX 48K-AY (2014)(Rafal Miazga).tzx" size="10708" crc="6f3c703a" sha1="c68b4da188036068c223952efd54e03c90f46f76"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30019,6 +30069,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37417">
 				<rom name="Heartlight 48K-128K (2024)(Rafal Miazga).tap" size="37417" crc="f6930dcd" sha1="45405c2ce08785beb43b6ee585d34782df779e4c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6a715b09a147f">
+		<description>Heartlight 48K-128K (2024)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37445">
+				<rom name="Heartlight 48K-128K (2024)(Rafal Miazga).tzx" size="37445" crc="14b89c45" sha1="6a715b09a147fb3c015f56ec5ce5177f44c86794"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35712,6 +35772,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs44a4902cbd05e">
+		<description>Krypto Game 48K (2026)(Micky Adler)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37964">
+				<rom name="Krypto Game 48K (2026)(Micky Adler).tap" size="37964" crc="4bdd3af1" sha1="44a4902cbd05ea50b0ece125c8b4a03bbfaa1a1e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs196389c87cd62">
 		<description>Kuatris 128K (2022)(Mr Rancio)</description>
 		<year>????</year>
@@ -39082,6 +39152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs66d744c8b03da">
+		<description>Marbles of Wisdom 48K (2011)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15718">
+				<rom name="Marbles of Wisdom 48K (2011)(Rafal Miazga).tzx" size="15718" crc="f26be372" sha1="66d744c8b03daa60b5b7c7b4be1ef7eee45e6ec3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa965a2a2fc256">
 		<description>Maria vs. Some Bastards 48K (2019)(Manic Miner)</description>
 		<year>????</year>
@@ -39539,6 +39619,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48175">
 				<rom name="Match Day (1987)(Ocean Software).tap" size="48175" crc="8190c300" sha1="c30a64e7adc6066f4608d23b3e19ef091200156e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5abb46f55fca">
+		<description>Match Day 48K (1984)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48251">
+				<rom name="Match Day 48K (1984)(Ocean).tzx" size="48251" crc="fa16964e" sha1="c5abb46f55fcaccb94655689ce12ae865fb86d38"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs64c6082379e56">
+		<description>Match Day II 48K-128K (1987)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47364">
+				<rom name="Match Day II 48K-128K (1987)(Ocean).tzx" size="47364" crc="1d78b710" sha1="64c6082379e562d63d2c17efecafea6d15d6d57a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43652,6 +43752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs6933210f33ec8">
+		<description>Nato Assault 48K (1987)(Astros Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="58411">
+				<rom name="Nato Assault 48K (1987)(Astros Productions).tzx" size="58411" crc="ba2d917d" sha1="6933210f33ec83895ffbf506f4d7fd4bf01495ab"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8d0dcf3429ead">
 		<description>Nauka Jazdy (1986)(Komputer)(Pl)</description>
 		<year>????</year>
@@ -47229,6 +47339,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="18856">
 				<rom name="Pfui Spinne (19xx)(-)(De).tap" size="18856" crc="9303d347" sha1="c0ecce1f05266c636017965d45fee1c2c198beab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs95e0992d5db97">
+		<description>Phaeton 48K (2010)(Rafal Miazga)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34064">
+				<rom name="Phaeton 48K (2010)(Rafal Miazga).tzx" size="34064" crc="ed68cede" sha1="95e0992d5db97d27b2b637346ae434bf110e3f72"/>
 			</dataarea>
 		</part>
 	</software>
@@ -68972,6 +69092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsee6c3dfe2ac2b">
+		<description>_Backgammon 16K (1983)(Sinclair Research)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16237">
+				<rom name="_Backgammon 16K (1983)(Sinclair Research).tzx" size="16237" crc="ed56e428" sha1="ee6c3dfe2ac2b01d78577e58ad1ef6d0d92c496b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa6e9985f212f8">
 		<description>_Bajke (1985)(Xenon)(Unk-Lang)</description>
 		<year>????</year>
@@ -71019,6 +71149,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44908">
 				<rom name="_Disposable Heroes (1987)(The Power House).tap" size="44908" crc="61c2bd3d" sha1="c1353f948b2e4c60eb545220ffa97d9c3434127d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs42542a851be52">
+		<description>_Dizzy - The Dragon Traps 48K-AY (2026)(Sky Wave)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37911">
+				<rom name="_Dizzy - The Dragon Traps 48K-AY (2026)(Sky Wave).tap" size="37911" crc="fcde10fa" sha1="42542a851be5259380489a00f4db6a3d5cc6a355"/>
 			</dataarea>
 		</part>
 	</software>

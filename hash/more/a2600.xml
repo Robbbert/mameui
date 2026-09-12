@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8125 -->
+<!-- Number of items in this list = 8124 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -62829,16 +62829,6 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Reactor_PAL60(Supercharger).a26" size="4096" crc="4d0b1159" sha1="c0079ca14e86da9f9cd6d8792890f7ffdb7c624b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a26866ae2d0da147">
-		<description>readriot.a2600</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="4096">
-				<rom name="readriot.a2600.bin" size="4096" crc="b404ac55" sha1="866ae2d0da147e7aff25b53c0249ffe1b9b6b0c2"/>
 			</dataarea>
 		</part>
 	</software>

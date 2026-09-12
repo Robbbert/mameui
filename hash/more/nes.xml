@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10988 -->
+<!-- Number of items in this list = 10992 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -5179,6 +5179,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Alien 3 (USA).nes" size="262160" crc="efb4ca05" sha1="9f6c768850a49a4b50597d952523a927b2b6b48b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes50d6fc5523233">
+		<description>Alien Smash (2026)(RBG Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Alien Smash (2026)(RBG Entertainment).nes" size="524304" crc="1c692e98" sha1="50d6fc55232330814aadf00e49a6490f236308a1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27622,6 +27632,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesf9ffc2c135128">
+		<description>Dragon's Puzzle Challenge (2026)(BMO Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Dragon's Puzzle Challenge (2026)(BMO Studios).nes" size="131088" crc="283ef285" sha1="f9ffc2c135128ad90d8e01709047177f59ac67c5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesd79d5c870c159">
 		<description>Dragon, The (As)[p1][!] (M8002)</description>
 		<year>????</year>
@@ -35389,6 +35409,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="George Foreman's KO Boxing (USA).nes" size="393232" crc="8b67b2db" sha1="8e946fa9f8a5361d851804783df55c2fa14b8d69"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nese358fa081dff3">
+		<description>Get It Together! (2026)(IMP Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Get It Together! (2026)(IMP Games).nes" size="524304" crc="c05c17f1" sha1="e358fa081dff3a223a3cdeee1f289845a0d69874"/>
 			</dataarea>
 		</part>
 	</software>
@@ -49049,6 +49079,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Krusty's Fun House (USA).nes" size="393232" crc="85c86151" sha1="3306f88891e361153dff4ed6f40ab6a92d819e65"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9314f5fb98940">
+		<description>KUBO 3 Rev J (2022)(SJ Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="KUBO 3 Rev J (2022)(SJ Games).nes" size="524304" crc="0f1462fb" sha1="9314f5fb9894048a79c820c8089bc6bdab1d47e0"/>
 			</dataarea>
 		</part>
 	</software>
