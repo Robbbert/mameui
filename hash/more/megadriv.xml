@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2130 -->
+<!-- Number of items in this list = 2134 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -5762,6 +5762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genfebe9cc07eaf4">
+		<description>Debtor (Alt) (2020)(PSCD Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2228224">
+				<rom name="Debtor (Alt) (2020)(PSCD Games).bin" size="2228224" crc="7bb67106" sha1="febe9cc07eaf4fc9def4fddb4d6bb9ea0545457b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genbd913dcadba25">
 		<description>debug - charles window bug example (pd)</description>
 		<year>????</year>
@@ -7009,6 +7019,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="566368">
 				<rom name="Flying Sonic in Sonic 1 by Bobesh8.bin" size="566368" crc="2b137a00" sha1="ccd33e02cf894e20fd8422883c5620c1a87f155f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen93b50bc93a3cb">
+		<description>Frog Dude (Proto)(1993)(Twilight)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="99792">
+				<rom name="Frog Dude (Proto)(1993)(Twilight).bin" size="99792" crc="c5e80ce2" sha1="93b50bc93a3cbd510190fa7f0920ca4e07ba86ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11382,6 +11402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen69fb14b1b56be">
+		<description>Mazinger Z (2026)(NK Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Mazinger Z (2026)(NK Soft).bin" size="262144" crc="51edfae2" sha1="69fb14b1b56bef386c67b39571d34de5f1bc14a8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen53ad1707aaf1e">
 		<description>MC68000_BUS_ERROR</description>
 		<year>????</year>
@@ -14399,6 +14429,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Rolo to the Rescue T-Spa (2019)(Wave).bin" size="524288" crc="0c4584a4" sha1="38ba8d27a6b5ba39ef5bbee609fad4f8dc05af09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1b7084982ea55">
+		<description>Rook Mann - RockHeaven (Japan)(Unl)(199x)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Rook Mann - RockHeaven (Japan)(Unl)(199x).bin" size="524288" crc="274c2a1c" sha1="1b7084982ea557938d096a0679869fbb03397640"/>
 			</dataarea>
 		</part>
 	</software>
