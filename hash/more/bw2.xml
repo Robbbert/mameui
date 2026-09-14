@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 9 -->
+<!-- Number of items in this list = 10 -->
 <softwarelist name="bw2" description="bw2 loose roms">
+	<software name="bw2334afa8db4d46">
+		<description>bondwl02</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="213794">
+				<rom name="bondwl02.td0" size="213794" crc="8caa9521" sha1="334afa8db4d46b1ab2767a7d7af5179000d519ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bw2a611b91f11d6f">
 		<description>bw2_CPM22</description>
 		<year>????</year>

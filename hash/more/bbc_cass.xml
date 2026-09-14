@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 34 -->
+<!-- Number of items in this list = 42 -->
 <softwarelist name="bbc_cass" description="bbc_cass loose roms">
 	<software name="aco0f5ef03a751df">
 		<description>Aerial[-TAPE -RUN]</description>
@@ -59,6 +59,26 @@
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="10743164">
 				<rom name="Ascend[-TAPE -RUN].wav" size="10743164" crc="37e4993f" sha1="c0e991d30c695dd10888a9bd1f806daab0d6560b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco270cca1a783e9">
+		<description>Awass[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14742">
+				<rom name="Awass[-TAPE -RUN].uef" size="14742" crc="6f2558c5" sha1="270cca1a783e9cb6ec75caea8ce0b1d6b10b52d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco7707177f74073">
+		<description>Awass[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="11311244">
+				<rom name="Awass[-TAPE -RUN].wav" size="11311244" crc="f724c129" sha1="7707177f740739fe20df8ea34602a4e12941dbda"/>
 			</dataarea>
 		</part>
 	</software>
@@ -222,6 +242,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="aco0b9eb6bb8bde8">
+		<description>Mazy2[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15968">
+				<rom name="Mazy2[-TAPE -RUN].uef" size="15968" crc="755a0a27" sha1="0b9eb6bb8bde81312782282c1a0301fa925708ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acofb5cefc469e0d">
+		<description>Mazy2[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="12240044">
+				<rom name="Mazy2[-TAPE -RUN].wav" size="12240044" crc="4859d9d9" sha1="fb5cefc469e0ddc85105170cfac6bf050c878a5c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="aco3508f29ad8e1d">
 		<description>Mazy[-TAPE -RUN]</description>
 		<year>????</year>
@@ -319,6 +359,46 @@
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="14475644">
 				<rom name="Ruptus[-TAPE -RUN].wav" size="14475644" crc="50722017" sha1="feeaf06d329d77d25689750369ad3a7351eab4e3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acob6e74c206a86e">
+		<description>Svellas[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15100">
+				<rom name="Svellas[-TAPE -RUN].uef" size="15100" crc="f15743f6" sha1="b6e74c206a86e9355c122392b86d7605dc020956"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco90a5bb2bc57cc">
+		<description>Svellas[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="11580524">
+				<rom name="Svellas[-TAPE -RUN].wav" size="11580524" crc="fd7ab1d2" sha1="90a5bb2bc57cc625ff1d61e7f80ecb1f8a2553c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="acoe4342ca5884f6">
+		<description>SwordWork[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="13317">
+				<rom name="SwordWork[-TAPE -RUN].uef" size="13317" crc="fc162e4e" sha1="e4342ca5884f692aedf3e8fb14c54f8c0a107fec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco308d4797c2350">
+		<description>SwordWork[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="10227644">
+				<rom name="SwordWork[-TAPE -RUN].wav" size="10227644" crc="816af854" sha1="308d4797c2350f75db536b3a74de8579db0b41e7"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 490 -->
+<!-- Number of items in this list = 500 -->
 <softwarelist name="coco_cass" description="coco_cass loose roms">
 	<software name="coce6485ce764766">
 		<description>3D Brickaway[M]</description>
@@ -53,22 +53,22 @@
 		</part>
 	</software>
 	<software name="cocf4920baf833ec">
-		<description>Aerial3[M]</description>
+		<description>Aerial[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="12329">
-				<rom name="Aerial3[M].cas" size="12329" crc="efd7cd9c" sha1="f4920baf833ecb8d519db3a42d2ce4ec3789cdb4"/>
+				<rom name="Aerial[3M].cas" size="12329" crc="efd7cd9c" sha1="f4920baf833ecb8d519db3a42d2ce4ec3789cdb4"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc554171f761bc8">
-		<description>Aerial3[M]</description>
+		<description>Aerial[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3254968">
-				<rom name="Aerial3[M].wav" size="3254968" crc="d1dfd1f1" sha1="554171f761bc8bf593412ad285ee4e7d4577a22e"/>
+				<rom name="Aerial[3M].wav" size="3254968" crc="d1dfd1f1" sha1="554171f761bc8bf593412ad285ee4e7d4577a22e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -163,22 +163,22 @@
 		</part>
 	</software>
 	<software name="coc97eb53c850c41">
-		<description>Antiair3[M]</description>
+		<description>Antiair[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="7906">
-				<rom name="Antiair3[M].cas" size="7906" crc="602a7987" sha1="97eb53c850c41a886a847eb713ac0baf11be26aa"/>
+				<rom name="Antiair[3M].cas" size="7906" crc="602a7987" sha1="97eb53c850c41a886a847eb713ac0baf11be26aa"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc82106944cbbef">
-		<description>Antiair3[M]</description>
+		<description>Antiair[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2108936">
-				<rom name="Antiair3[M].wav" size="2108936" crc="f69aad49" sha1="82106944cbbef1713b57dc07885b9c9ae4ba01cd"/>
+				<rom name="Antiair[3M].wav" size="2108936" crc="f69aad49" sha1="82106944cbbef1713b57dc07885b9c9ae4ba01cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -233,22 +233,22 @@
 		</part>
 	</software>
 	<software name="coc733c99829f689">
-		<description>Ascend3[M]</description>
+		<description>Ascend[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="10799">
-				<rom name="Ascend3[M].cas" size="10799" crc="92e0037a" sha1="733c99829f689acbcfcb1f374c733729ba6009a2"/>
+				<rom name="Ascend[3M].cas" size="10799" crc="92e0037a" sha1="733c99829f689acbcfcb1f374c733729ba6009a2"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="cocd347c65e6b01d">
-		<description>Ascend3[M]</description>
+		<description>Ascend[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2900232">
-				<rom name="Ascend3[M].wav" size="2900232" crc="6368d617" sha1="d347c65e6b01d4ac6b4db40445fee54a840836df"/>
+				<rom name="Ascend[3M].wav" size="2900232" crc="6368d617" sha1="d347c65e6b01d4ac6b4db40445fee54a840836df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -309,6 +309,26 @@
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="23369">
 				<rom name="athletyx.cas" size="23369" crc="2b5d4669" sha1="2783cb6ad196eea7a42070bab5b316fc9c93d0f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coce115b8ce759d7">
+		<description>Awass[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="12409">
+				<rom name="Awass[3M].cas" size="12409" crc="675a735f" sha1="e115b8ce759d731cd44b92b0462c0587fd1f6e40"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="cocf2f9da8262245">
+		<description>Awass[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3366988">
+				<rom name="Awass[3M].wav" size="3366988" crc="50663a90" sha1="f2f9da8262245e7c9688beb07fb87ff6fb9fc6d7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -403,22 +423,22 @@
 		</part>
 	</software>
 	<software name="coc257824eda5a6e">
-		<description>Battlot3[M]</description>
+		<description>Battlot[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="12809">
-				<rom name="Battlot3[M].cas" size="12809" crc="2a54bc7c" sha1="257824eda5a6e2357e2c7c53fda4a6bb9c43a555"/>
+				<rom name="Battlot[3M].cas" size="12809" crc="2a54bc7c" sha1="257824eda5a6e2357e2c7c53fda4a6bb9c43a555"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coca3532af59bb6c">
-		<description>Battlot3[M]</description>
+		<description>Battlot[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3427824">
-				<rom name="Battlot3[M].wav" size="3427824" crc="47748aad" sha1="a3532af59bb6ccebb6d4cd1b2f98ad5ef44b5c0a"/>
+				<rom name="Battlot[3M].wav" size="3427824" crc="47748aad" sha1="a3532af59bb6ccebb6d4cd1b2f98ad5ef44b5c0a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -573,22 +593,22 @@
 		</part>
 	</software>
 	<software name="coccd76dcfce7f6c">
-		<description>Bootskell3[M]</description>
+		<description>Bootskell[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="13418">
-				<rom name="Bootskell3[M].cas" size="13418" crc="f1481a78" sha1="cd76dcfce7f6c4b6f8bdccbbec38d4683d5fbee3"/>
+				<rom name="Bootskell[3M].cas" size="13418" crc="f1481a78" sha1="cd76dcfce7f6c4b6f8bdccbbec38d4683d5fbee3"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coca34036a703813">
-		<description>Bootskell3[M]</description>
+		<description>Bootskell[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3613652">
-				<rom name="Bootskell3[M].wav" size="3613652" crc="d7064380" sha1="a34036a7038133b9a6ca310511ca6f71d1cdc1e0"/>
+				<rom name="Bootskell[3M].wav" size="3613652" crc="d7064380" sha1="a34036a7038133b9a6ca310511ca6f71d1cdc1e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -673,22 +693,22 @@
 		</part>
 	</software>
 	<software name="coc605ee50e94652">
-		<description>Cacorm3[M]</description>
+		<description>Cacorm[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="10539">
-				<rom name="Cacorm3[M].cas" size="10539" crc="35626b6b" sha1="605ee50e94652d5457c69ea5dbb2e6a0180ced1a"/>
+				<rom name="Cacorm[3M].cas" size="10539" crc="35626b6b" sha1="605ee50e94652d5457c69ea5dbb2e6a0180ced1a"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc75cc61877205b">
-		<description>Cacorm3[M]</description>
+		<description>Cacorm[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2789116">
-				<rom name="Cacorm3[M].wav" size="2789116" crc="17ca0608" sha1="75cc61877205b1aa15979d4fd7c3313e5077582b"/>
+				<rom name="Cacorm[3M].wav" size="2789116" crc="17ca0608" sha1="75cc61877205b1aa15979d4fd7c3313e5077582b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -793,22 +813,22 @@
 		</part>
 	</software>
 	<software name="coc6c1aa49283d44">
-		<description>Cavit3[M]</description>
+		<description>Cavit[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="14815">
-				<rom name="Cavit3[M].cas" size="14815" crc="344d9ecc" sha1="6c1aa49283d44460418d32170a07969480a70ffb"/>
+				<rom name="Cavit[3M].cas" size="14815" crc="344d9ecc" sha1="6c1aa49283d44460418d32170a07969480a70ffb"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coccfa5e0b69abe7">
-		<description>Cavit3[M]</description>
+		<description>Cavit[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3929292">
-				<rom name="Cavit3[M].wav" size="3929292" crc="6d7f94b6" sha1="cfa5e0b69abe7de457bdd806f8ea4fa64bb94704"/>
+				<rom name="Cavit[3M].wav" size="3929292" crc="6d7f94b6" sha1="cfa5e0b69abe7de457bdd806f8ea4fa64bb94704"/>
 			</dataarea>
 		</part>
 	</software>
@@ -983,22 +1003,22 @@
 		</part>
 	</software>
 	<software name="cocd7324ce50044f">
-		<description>Cracky3[M]</description>
+		<description>Cracky[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="9830">
-				<rom name="Cracky3[M].cas" size="9830" crc="151fa396" sha1="d7324ce50044f9536e0cfd10f0f902320edfd8b2"/>
+				<rom name="Cracky[3M].cas" size="9830" crc="151fa396" sha1="d7324ce50044f9536e0cfd10f0f902320edfd8b2"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc992f1e167c081">
-		<description>Cracky3[M]</description>
+		<description>Cracky[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2624708">
-				<rom name="Cracky3[M].wav" size="2624708" crc="ba202c77" sha1="992f1e167c08170a4bf7c2be920c91f4eeeb6877"/>
+				<rom name="Cracky[3M].wav" size="2624708" crc="ba202c77" sha1="992f1e167c08170a4bf7c2be920c91f4eeeb6877"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1963,22 +1983,22 @@
 		</part>
 	</software>
 	<software name="coc3eee102fd016f">
-		<description>Guntus3[M]</description>
+		<description>Guntus[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="14450">
-				<rom name="Guntus3[M].cas" size="14450" crc="3e9c7379" sha1="3eee102fd016f46f0037c999aaa8791f7da3a2a4"/>
+				<rom name="Guntus[3M].cas" size="14450" crc="3e9c7379" sha1="3eee102fd016f46f0037c999aaa8791f7da3a2a4"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc5701fc257fd66">
-		<description>Guntus3[M]</description>
+		<description>Guntus[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3870556">
-				<rom name="Guntus3[M].wav" size="3870556" crc="b0919c16" sha1="5701fc257fd66a7e0580d75ba706c73734cd5059"/>
+				<rom name="Guntus[3M].wav" size="3870556" crc="b0919c16" sha1="5701fc257fd66a7e0580d75ba706c73734cd5059"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2013,22 +2033,22 @@
 		</part>
 	</software>
 	<software name="cocd59cb8faba29c">
-		<description>Hopman3[M]</description>
+		<description>Hopman[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="10855">
-				<rom name="Hopman3[M].cas" size="10855" crc="d38979b8" sha1="d59cb8faba29c4bdc923704a9f11852b233a5b43"/>
+				<rom name="Hopman[3M].cas" size="10855" crc="d38979b8" sha1="d59cb8faba29c4bdc923704a9f11852b233a5b43"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc545ec4c44e3ce">
-		<description>Hopman3[M]</description>
+		<description>Hopman[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2985972">
-				<rom name="Hopman3[M].wav" size="2985972" crc="f1659b71" sha1="545ec4c44e3ceefc99d94c90c5f72659d2507b88"/>
+				<rom name="Hopman[3M].wav" size="2985972" crc="f1659b71" sha1="545ec4c44e3ceefc99d94c90c5f72659d2507b88"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2113,22 +2133,22 @@
 		</part>
 	</software>
 	<software name="coce315ba22eff89">
-		<description>Impetus3[M]</description>
+		<description>Impetus[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="17844">
-				<rom name="Impetus3[M].cas" size="17844" crc="bca8e47b" sha1="e315ba22eff897817fabe9713b8ce9ebc374a1ab"/>
+				<rom name="Impetus[3M].cas" size="17844" crc="bca8e47b" sha1="e315ba22eff897817fabe9713b8ce9ebc374a1ab"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coce3d4e70ec22a7">
-		<description>Impetus3[M]</description>
+		<description>Impetus[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="4790504">
-				<rom name="Impetus3[M].wav" size="4790504" crc="409980ad" sha1="e3d4e70ec22a70b36ef6cc9761a6169d911626db"/>
+				<rom name="Impetus[3M].wav" size="4790504" crc="409980ad" sha1="e3d4e70ec22a70b36ef6cc9761a6169d911626db"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2403,22 +2423,22 @@
 		</part>
 	</software>
 	<software name="coc39a58edadd6ab">
-		<description>Lift3[M]</description>
+		<description>Lift[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="10454">
-				<rom name="Lift3[M].cas" size="10454" crc="bc8710f2" sha1="39a58edadd6ab2c51e55141606a396daa2004b0f"/>
+				<rom name="Lift[3M].cas" size="10454" crc="bc8710f2" sha1="39a58edadd6ab2c51e55141606a396daa2004b0f"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="cocf6f17a1b9644e">
-		<description>Lift3[M]</description>
+		<description>Lift[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2858360">
-				<rom name="Lift3[M].wav" size="2858360" crc="33277122" sha1="f6f17a1b9644eef125c8b2c4915c376d2a6f14c7"/>
+				<rom name="Lift[3M].wav" size="2858360" crc="33277122" sha1="f6f17a1b9644eef125c8b2c4915c376d2a6f14c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2572,6 +2592,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="coceddbc5843300b">
+		<description>Mazy2[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11514">
+				<rom name="Mazy2[3M].cas" size="11514" crc="7bd9eeac" sha1="eddbc5843300b50f1da264bde5e07d5f8945471b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coced4b0cae8984a">
+		<description>Mazy2[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3081080">
+				<rom name="Mazy2[3M].wav" size="3081080" crc="7b9dce97" sha1="ed4b0cae8984a8c316c911d52ade4b68293e8aaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc436dda88dd848">
+		<description>Mazy2[M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9124">
+				<rom name="Mazy2[M].cas" size="9124" crc="a8295706" sha1="436dda88dd84883bcbb0583688ec0e6253ceafc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc9e721246b8c27">
+		<description>Mazy2[M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="2367480">
+				<rom name="Mazy2[M].wav" size="2367480" crc="03769c97" sha1="9e721246b8c271bfd94f323e9cabfbd94af1f64e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cocbee94c257a442">
 		<description>megabug</description>
 		<year>????</year>
@@ -2633,22 +2693,22 @@
 		</part>
 	</software>
 	<software name="cocf593c4de4a699">
-		<description>Mieyen3[M]</description>
+		<description>Mieyen[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="9277">
-				<rom name="Mieyen3[M].cas" size="9277" crc="ad4ccb6a" sha1="f593c4de4a699a3a34a5c0fc4f3f0b5d2f3d8ee1"/>
+				<rom name="Mieyen[3M].cas" size="9277" crc="ad4ccb6a" sha1="f593c4de4a699a3a34a5c0fc4f3f0b5d2f3d8ee1"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc5b39fb0ce6a5c">
-		<description>Mieyen3[M]</description>
+		<description>Mieyen[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2469616">
-				<rom name="Mieyen3[M].wav" size="2469616" crc="e87af9fb" sha1="5b39fb0ce6a5c994c2d2412712f36408114c1fe6"/>
+				<rom name="Mieyen[3M].wav" size="2469616" crc="e87af9fb" sha1="5b39fb0ce6a5c994c2d2412712f36408114c1fe6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2873,22 +2933,22 @@
 		</part>
 	</software>
 	<software name="cocd625a2d6ec213">
-		<description>Neuras3[M]</description>
+		<description>Neuras[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="10781">
-				<rom name="Neuras3[M].cas" size="10781" crc="df7e8026" sha1="d625a2d6ec21341ad2fe728a6f3e7e1b2f0fa845"/>
+				<rom name="Neuras[3M].cas" size="10781" crc="df7e8026" sha1="d625a2d6ec21341ad2fe728a6f3e7e1b2f0fa845"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="cocb2fb54618291f">
-		<description>Neuras3[M]</description>
+		<description>Neuras[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="2803112">
-				<rom name="Neuras3[M].wav" size="2803112" crc="cd1b7af5" sha1="b2fb54618291f008d90ff48a3db68ac4563dad4c"/>
+				<rom name="Neuras[3M].wav" size="2803112" crc="cd1b7af5" sha1="b2fb54618291f008d90ff48a3db68ac4563dad4c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3003,22 +3063,22 @@
 		</part>
 	</software>
 	<software name="cocac3228e436ced">
-		<description>Osotos3[M]</description>
+		<description>Osotos[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="11988">
-				<rom name="Osotos3[M].cas" size="11988" crc="8a6be6bb" sha1="ac3228e436ced6a765125ac8ca0a26da7a21f4f5"/>
+				<rom name="Osotos[3M].cas" size="11988" crc="8a6be6bb" sha1="ac3228e436ced6a765125ac8ca0a26da7a21f4f5"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="cocfe594c7aecea5">
-		<description>Osotos3[M]</description>
+		<description>Osotos[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3210876">
-				<rom name="Osotos3[M].wav" size="3210876" crc="5c49786a" sha1="fe594c7aecea57755293b15dc127c0e76813fc27"/>
+				<rom name="Osotos[3M].wav" size="3210876" crc="5c49786a" sha1="fe594c7aecea57755293b15dc127c0e76813fc27"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3323,12 +3383,12 @@
 		</part>
 	</software>
 	<software name="coc22e79cad84b43">
-		<description>poker3[B]</description>
+		<description>poker[3B]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="6516">
-				<rom name="poker3[B].cas" size="6516" crc="5b5426ba" sha1="22e79cad84b43b1d0910761ac43f70bcc0cdc0cc"/>
+				<rom name="poker[3B].cas" size="6516" crc="5b5426ba" sha1="22e79cad84b43b1d0910761ac43f70bcc0cdc0cc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3743,22 +3803,22 @@
 		</part>
 	</software>
 	<software name="coc87e8d0a096553">
-		<description>Ruptus3[M]</description>
+		<description>Ruptus[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="14689">
-				<rom name="Ruptus3[M].cas" size="14689" crc="4f662670" sha1="87e8d0a0965530f1fa56586035ea1d980080e6d4"/>
+				<rom name="Ruptus[3M].cas" size="14689" crc="4f662670" sha1="87e8d0a0965530f1fa56586035ea1d980080e6d4"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc3dbc9e94d37c9">
-		<description>Ruptus3[M]</description>
+		<description>Ruptus[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3833792">
-				<rom name="Ruptus3[M].wav" size="3833792" crc="c2b0d557" sha1="3dbc9e94d37c9e3e654471fdd9882bedfa6503b3"/>
+				<rom name="Ruptus[3M].wav" size="3833792" crc="c2b0d557" sha1="3dbc9e94d37c9e3e654471fdd9882bedfa6503b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4219,6 +4279,46 @@
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="6498">
 				<rom name="strata[B].cas" size="6498" crc="75d9a2e7" sha1="dd9653d71a45ace46ca3ddb5ed0e6897700664c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc4bd29fe8c51b0">
+		<description>Svellas[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="9752">
+				<rom name="Svellas[3M].cas" size="9752" crc="51e35a38" sha1="4bd29fe8c51b0a0767b332de8b0fd49957684011"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coccdc3a85b635d8">
+		<description>Svellas[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="2551848">
+				<rom name="Svellas[3M].wav" size="2551848" crc="82c34f67" sha1="cdc3a85b635d8db97e4e09284b679851d071e42d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coca316194975eb8">
+		<description>SwordWork[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="11568">
+				<rom name="SwordWork[3M].cas" size="11568" crc="6dafd4ec" sha1="a316194975eb892846cf7eef1f451d6732ed79a4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coc2c7ac59d46ae2">
+		<description>SwordWork[3M]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="coco_cass">
+			<dataarea name="cass" size="3135160">
+				<rom name="SwordWork[3M].wav" size="3135160" crc="454e6f05" sha1="2c7ac59d46ae22e30e0427c399c1cd01f6bf3fc7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4793,32 +4893,32 @@
 		</part>
 	</software>
 	<software name="coc627e372ca4106">
-		<description>yathzee3[B]</description>
+		<description>yathzee[3B]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="11790">
-				<rom name="yathzee3[B].cas" size="11790" crc="a26346c9" sha1="627e372ca4106fbba87e4e807209c3baef8a99b9"/>
+				<rom name="yathzee[3B].cas" size="11790" crc="a26346c9" sha1="627e372ca4106fbba87e4e807209c3baef8a99b9"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc154554c174168">
-		<description>Yewdow3[M]</description>
+		<description>Yewdow[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="12490">
-				<rom name="Yewdow3[M].cas" size="12490" crc="614721ed" sha1="154554c174168c460d5639346bae84815d8205ed"/>
+				<rom name="Yewdow[3M].cas" size="12490" crc="614721ed" sha1="154554c174168c460d5639346bae84815d8205ed"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="coc78eb0f36be4eb">
-		<description>Yewdow3[M]</description>
+		<description>Yewdow[3M]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="coco_cass">
 			<dataarea name="cass" size="3345228">
-				<rom name="Yewdow3[M].wav" size="3345228" crc="4c92412f" sha1="78eb0f36be4eb1efe2a20957d8a4173834fda0ee"/>
+				<rom name="Yewdow[3M].wav" size="3345228" crc="4c92412f" sha1="78eb0f36be4eb1efe2a20957d8a4173834fda0ee"/>
 			</dataarea>
 		</part>
 	</software>

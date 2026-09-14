@@ -1,64 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 103 -->
+<!-- Number of items in this list = 107 -->
 <softwarelist name="electron_cass" description="electron_cass loose roms">
 	<software name="acod805e3903ad5e">
-		<description>Adventure 4 - Voodoo Castle (1979-84)(Adventure International-Scott Adams)[b][-RUN]</description>
+		<description>Adventure 4 - Voodoo Castle (1979-84)(Adventure International-Scott Adams)[b][-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="10465">
-				<rom name="Adventure 4 - Voodoo Castle (1979-84)(Adventure International-Scott Adams)[b][-RUN].uef" size="10465" crc="bcf1b7a1" sha1="d805e3903ad5e42d9870ec1f65a4097feb63d984"/>
+				<rom name="Adventure 4 - Voodoo Castle (1979-84)(Adventure International-Scott Adams)[b][-TAPE -RUN].uef" size="10465" crc="bcf1b7a1" sha1="d805e3903ad5e42d9870ec1f65a4097feb63d984"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="aco27c3e6c874eac">
-		<description>Adventure 6 - Strange Odyssey (1979-84)(Adventure International-Scott Adams)[b][-RUN]</description>
+		<description>Adventure 6 - Strange Odyssey (1979-84)(Adventure International-Scott Adams)[b][-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="10398">
-				<rom name="Adventure 6 - Strange Odyssey (1979-84)(Adventure International-Scott Adams)[b][-RUN].uef" size="10398" crc="3084c391" sha1="27c3e6c874eac3b9497cd9615d6792f156c4c5bb"/>
+				<rom name="Adventure 6 - Strange Odyssey (1979-84)(Adventure International-Scott Adams)[b][-TAPE -RUN].uef" size="10398" crc="3084c391" sha1="27c3e6c874eac3b9497cd9615d6792f156c4c5bb"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="aco4f8e77ce5763d">
-		<description>Aerial[-RUN]</description>
+		<description>Aerial[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="16518">
-				<rom name="Aerial[-RUN].uef" size="16518" crc="ee4cdfe8" sha1="4f8e77ce5763d570f6e3ecdbe8e952a45acc9b97"/>
+				<rom name="Aerial[-TAPE -RUN].uef" size="16518" crc="ee4cdfe8" sha1="4f8e77ce5763d570f6e3ecdbe8e952a45acc9b97"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="acob14b9973ecf99">
-		<description>Antiair[-RUN]</description>
+		<description>Antiair[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="11510">
-				<rom name="Antiair[-RUN].uef" size="11510" crc="00ab1619" sha1="b14b9973ecf997de9738679db5fcae1a804ccf3f"/>
+				<rom name="Antiair[-TAPE -RUN].uef" size="11510" crc="00ab1619" sha1="b14b9973ecf997de9738679db5fcae1a804ccf3f"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="acoc45ed51a964dd">
-		<description>Ascend[-RUN]</description>
+		<description>Ascend[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="13547">
-				<rom name="Ascend[-RUN].uef" size="13547" crc="332396a0" sha1="c45ed51a964ddf07ee30c29f743bd8d5b4888f08"/>
+				<rom name="Ascend[-TAPE -RUN].uef" size="13547" crc="332396a0" sha1="c45ed51a964ddf07ee30c29f743bd8d5b4888f08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco9f9e4e3728222">
+		<description>Awass[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14547">
+				<rom name="Awass[-TAPE -RUN].uef" size="14547" crc="29db55a0" sha1="9f9e4e37282223e11a9bf0797c8f41656354de08"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="aco0e6e46dcdf25e">
-		<description>Battlot[-RUN]</description>
+		<description>Battlot[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="17211">
-				<rom name="Battlot[-RUN].uef" size="17211" crc="84588d13" sha1="0e6e46dcdf25ec1ef1756e957a1255cbad54afbd"/>
+				<rom name="Battlot[-TAPE -RUN].uef" size="17211" crc="84588d13" sha1="0e6e46dcdf25ec1ef1756e957a1255cbad54afbd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -73,12 +83,12 @@
 		</part>
 	</software>
 	<software name="aco01196bf16894d">
-		<description>Bootskell[-RUN]</description>
+		<description>Bootskell[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="16664">
-				<rom name="Bootskell[-RUN].uef" size="16664" crc="be230fdd" sha1="01196bf16894d472cc69100065e04e2cd119fb6b"/>
+				<rom name="Bootskell[-TAPE -RUN].uef" size="16664" crc="be230fdd" sha1="01196bf16894d472cc69100065e04e2cd119fb6b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -103,22 +113,22 @@
 		</part>
 	</software>
 	<software name="acoa0ffc49a22e83">
-		<description>Cacorm[-RUN]</description>
+		<description>Cacorm[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="14245">
-				<rom name="Cacorm[-RUN].uef" size="14245" crc="b8da9343" sha1="a0ffc49a22e836d4fa26f4186287d84a85a83fb2"/>
+				<rom name="Cacorm[-TAPE -RUN].uef" size="14245" crc="b8da9343" sha1="a0ffc49a22e836d4fa26f4186287d84a85a83fb2"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="aco73e00b21aa0e3">
-		<description>Cavit[-RUN]</description>
+		<description>Cavit[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="18028">
-				<rom name="Cavit[-RUN].uef" size="18028" crc="53e668a1" sha1="73e00b21aa0e3d9394cd37b3a7abe61556dce05d"/>
+				<rom name="Cavit[-TAPE -RUN].uef" size="18028" crc="53e668a1" sha1="73e00b21aa0e3d9394cd37b3a7abe61556dce05d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -153,12 +163,12 @@
 		</part>
 	</software>
 	<software name="aco5c1b5594ede15">
-		<description>Cracky[-RUN]</description>
+		<description>Cracky[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="12718">
-				<rom name="Cracky[-RUN].uef" size="12718" crc="c026e2a5" sha1="5c1b5594ede155e6de4b931645a3e7202bf13152"/>
+				<rom name="Cracky[-TAPE -RUN].uef" size="12718" crc="c026e2a5" sha1="5c1b5594ede155e6de4b931645a3e7202bf13152"/>
 			</dataarea>
 		</part>
 	</software>
@@ -713,22 +723,22 @@
 		</part>
 	</software>
 	<software name="acob0101493a9553">
-		<description>Guntus[-RUN]</description>
+		<description>Guntus[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="17152">
-				<rom name="Guntus[-RUN].uef" size="17152" crc="8e73f778" sha1="b0101493a9553493f318b984e71094ca1a1f8153"/>
+				<rom name="Guntus[-TAPE -RUN].uef" size="17152" crc="8e73f778" sha1="b0101493a9553493f318b984e71094ca1a1f8153"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="acoda4be39d9c2f3">
-		<description>Hopman[-RUN]</description>
+		<description>Hopman[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="13271">
-				<rom name="Hopman[-RUN].uef" size="13271" crc="c402e38b" sha1="da4be39d9c2f34610d774f5933fa1b5e4b4f9625"/>
+				<rom name="Hopman[-TAPE -RUN].uef" size="13271" crc="c402e38b" sha1="da4be39d9c2f34610d774f5933fa1b5e4b4f9625"/>
 			</dataarea>
 		</part>
 	</software>
@@ -793,22 +803,32 @@
 		</part>
 	</software>
 	<software name="acoa3d552b9d8ed3">
-		<description>Lift[-RUN]</description>
+		<description>Lift[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="13575">
-				<rom name="Lift[-RUN].uef" size="13575" crc="1b062e0a" sha1="a3d552b9d8ed3c3be35055ac4542b3c9ae1a518f"/>
+				<rom name="Lift[-TAPE -RUN].uef" size="13575" crc="1b062e0a" sha1="a3d552b9d8ed3c3be35055ac4542b3c9ae1a518f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco64f3a1fb74646">
+		<description>Mazy2[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="15979">
+				<rom name="Mazy2[-TAPE -RUN].uef" size="15979" crc="e4ca6906" sha1="64f3a1fb74646f8763fb6be895a9d0921d87b5f4"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="aco17226c1af3ed1">
-		<description>Mazy[-RUN]</description>
+		<description>Mazy[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="9039">
-				<rom name="Mazy[-RUN].uef" size="9039" crc="61be2012" sha1="17226c1af3ed14c71c14ce9bfcebe6375afa7449"/>
+				<rom name="Mazy[-TAPE -RUN].uef" size="9039" crc="61be2012" sha1="17226c1af3ed14c71c14ce9bfcebe6375afa7449"/>
 			</dataarea>
 		</part>
 	</software>
@@ -823,12 +843,12 @@
 		</part>
 	</software>
 	<software name="aco0b734b7f59a29">
-		<description>Mieyen[-RUN]</description>
+		<description>Mieyen[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="14476">
-				<rom name="Mieyen[-RUN].uef" size="14476" crc="5f0732d9" sha1="0b734b7f59a293049cf2ba9708c961addb5196e0"/>
+				<rom name="Mieyen[-TAPE -RUN].uef" size="14476" crc="5f0732d9" sha1="0b734b7f59a293049cf2ba9708c961addb5196e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -843,22 +863,22 @@
 		</part>
 	</software>
 	<software name="aco114f43b010eaf">
-		<description>Neuras[-RUN]</description>
+		<description>Neuras[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="15183">
-				<rom name="Neuras[-RUN].uef" size="15183" crc="d010c113" sha1="114f43b010eaf39b9e02883bd29fa706efb8e1fc"/>
+				<rom name="Neuras[-TAPE -RUN].uef" size="15183" crc="d010c113" sha1="114f43b010eaf39b9e02883bd29fa706efb8e1fc"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="aco83691b1e4f415">
-		<description>Osotos[-RUN]</description>
+		<description>Osotos[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="15606">
-				<rom name="Osotos[-RUN].uef" size="15606" crc="a5431e54" sha1="83691b1e4f415b476ceadcbdbe758dea80de8fcd"/>
+				<rom name="Osotos[-TAPE -RUN].uef" size="15606" crc="a5431e54" sha1="83691b1e4f415b476ceadcbdbe758dea80de8fcd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -933,12 +953,12 @@
 		</part>
 	</software>
 	<software name="acoa7b347dbad3cc">
-		<description>Ruptus[-RUN]</description>
+		<description>Ruptus[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="18095">
-				<rom name="Ruptus[-RUN].uef" size="18095" crc="21b7c501" sha1="a7b347dbad3cc9ef88940a341c971cbe98f6513f"/>
+				<rom name="Ruptus[-TAPE -RUN].uef" size="18095" crc="21b7c501" sha1="a7b347dbad3cc9ef88940a341c971cbe98f6513f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -982,6 +1002,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="aco4cc3901fced0f">
+		<description>Svellas[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="14970">
+				<rom name="Svellas[-TAPE -RUN].uef" size="14970" crc="6db12b72" sha1="4cc3901fced0f5b2981e01a401849dd9381d1164"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="aco5cbbec8cc6028">
+		<description>SwordWork[-TAPE -RUN]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="bbc_cass">
+			<dataarea name="cass" size="13234">
+				<rom name="SwordWork[-TAPE -RUN].uef" size="13234" crc="01ae7c49" sha1="5cbbec8cc6028eef4fca9885b43c8906d26ac06d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="acof1de918d3bc1c">
 		<description>Thrust (1986)(Superior Software)[a2][CHAIN]</description>
 		<year>????</year>
@@ -1013,12 +1053,12 @@
 		</part>
 	</software>
 	<software name="acof3c8af0b496f9">
-		<description>Yewdow[-RUN]</description>
+		<description>Yewdow[-TAPE -RUN]</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="bbc_cass">
 			<dataarea name="cass" size="14520">
-				<rom name="Yewdow[-RUN].uef" size="14520" crc="625af150" sha1="f3c8af0b496f9fbd906ad4cdf609a3ba0e397962"/>
+				<rom name="Yewdow[-TAPE -RUN].uef" size="14520" crc="625af150" sha1="f3c8af0b496f9fbd906ad4cdf609a3ba0e397962"/>
 			</dataarea>
 		</part>
 	</software>

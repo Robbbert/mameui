@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1312 -->
+<!-- Number of items in this list = 1314 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="beec670f30303e3a">
 		<description>[-](demo)3d</description>
@@ -12832,6 +12832,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="beec9ecf8e63b4ae">
+		<description>[ppc]BDV5_v3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="17859">
+				<rom name="[ppc]BDV5_v3.BEE" size="17859" crc="73129821" sha1="c9ecf8e63b4aeff4577431591638f0af99375305"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bee4534011a2305e">
 		<description>[ppc]BoulderV5</description>
 		<year>????</year>
@@ -12969,6 +12979,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="512">
 				<rom name="[ppc]lissajou.mwb" size="512" crc="1fdbb02d" sha1="b1411fa8dea2eb3d6b86d6334d537402292a83b5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee0d12f72d14279">
+		<description>[ppc]MCUCHESS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="12847">
+				<rom name="[ppc]MCUCHESS.BEE" size="12847" crc="de2e23fa" sha1="0d12f72d142795e0f849bc48aefd97e3853a28d3"/>
 			</dataarea>
 		</part>
 	</software>

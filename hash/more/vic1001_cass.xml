@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7 -->
+<!-- Number of items in this list = 11 -->
 <softwarelist name="vic1001_cass" description="vic1001_cass loose roms">
 	<software name="vice28730acc4737">
 		<description>Antiair[SYS7168]</description>
@@ -9,6 +9,16 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="525507">
 				<rom name="Antiair[SYS7168].tap" size="525507" crc="c9cf65a4" sha1="e28730acc4737448e99b2ebe7321c5906d21eddb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vic975ee939a4a94">
+		<description>Awass[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="590307">
+				<rom name="Awass[SYS7168].tap" size="590307" crc="dd91d265" sha1="975ee939a4a9451b98806fabfefb6fb637931fb2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42,6 +52,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="vic1907f2776c7d3">
+		<description>Mazy2[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="667827">
+				<rom name="Mazy2[SYS7168].tap" size="667827" crc="51cc870a" sha1="1907f2776c7d397b4ce8f3bf10d71e9c59fd629e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="vicfe32837ebe736">
 		<description>Mieyen[SYS7168]</description>
 		<year>????</year>
@@ -59,6 +79,26 @@
 		<part name="cass1" interface="cbm_cass">
 			<dataarea name="cass" size="632267">
 				<rom name="Osotos[SYS7168].tap" size="632267" crc="ed7cd071" sha1="982a9d6200f8722eab110ddf80bff7018013e474"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vicb8b1d30928657">
+		<description>Svellas[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="503507">
+				<rom name="Svellas[SYS7168].tap" size="503507" crc="5ded013f" sha1="b8b1d309286579a070e5c5346214cb897ee78ec1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="vicfbf4f12b5d581">
+		<description>SwordWork[SYS7168]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="cbm_cass">
+			<dataarea name="cass" size="517147">
+				<rom name="SwordWork[SYS7168].tap" size="517147" crc="8ed90d1a" sha1="fbf4f12b5d5810c31816090deb79bb2264259838"/>
 			</dataarea>
 		</part>
 	</software>

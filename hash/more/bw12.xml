@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4 -->
+<!-- Number of items in this list = 5 -->
 <softwarelist name="bw12" description="bw12 loose roms">
+	<software name="bw17437581b5814a">
+		<description>bondwl12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="87594">
+				<rom name="bondwl12.td0" size="87594" crc="cac6190f" sha1="7437581b5814a0a349b0871a7abd432e80392205"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="bw10b9d1c1617690">
 		<description>Deepspace_bw12[Bdrive]</description>
 		<year>????</year>
