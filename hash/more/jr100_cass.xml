@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 19 -->
+<!-- Number of items in this list = 23 -->
 <softwarelist name="jr100_cass" description="jr100_cass loose roms">
 	<software name="jr1ca01430fa60ff">
 		<description>AERIAL[mload a=usr($300)]</description>
@@ -29,6 +29,16 @@
 		<part name="cass" interface="jr100_cass">
 			<dataarea name="cass" size="6856532">
 				<rom name="ASCEND[mload a=usr($300)].wav" size="6856532" crc="69e3ddfc" sha1="24b2b59da759f822ff220303ae25ab1ec67ee4a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr12ca0625fce331">
+		<description>AWASS[mload a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="jr100_cass">
+			<dataarea name="cass" size="7928900">
+				<rom name="AWASS[mload a=usr($300)].wav" size="7928900" crc="fafb2210" sha1="2ca0625fce3319cb2e36927b2f70675d397e6190"/>
 			</dataarea>
 		</part>
 	</software>
@@ -132,6 +142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jr1afa0f85d085a1">
+		<description>MAZY2[mload a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="jr100_cass">
+			<dataarea name="cass" size="8147492">
+				<rom name="MAZY2[mload a=usr($300)].wav" size="8147492" crc="c8f21abf" sha1="afa0f85d085a16f6be49da12b7cf44cf8fbf4f6c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jr123f28a0b0fd3b">
 		<description>MAZY[mload a=usr($300)]</description>
 		<year>????</year>
@@ -179,6 +199,26 @@
 		<part name="cass" interface="jr100_cass">
 			<dataarea name="cass" size="9422612">
 				<rom name="RUPTUS[mload a=usr($300)].wav" size="9422612" crc="ff2b0319" sha1="859fe87b9da62bd7c81d685b0391bf5538f07489"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr1aed274e459eb2">
+		<description>SVELLAS[mload a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="jr100_cass">
+			<dataarea name="cass" size="7642196">
+				<rom name="SVELLAS[mload a=usr($300)].wav" size="7642196" crc="44f223ec" sha1="aed274e459eb20b17682b34a485ee37841463a4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr1a094e0a391735">
+		<description>SwordWork[mload a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="jr100_cass">
+			<dataarea name="cass" size="7209764">
+				<rom name="SwordWork[mload a=usr($300)].wav" size="7209764" crc="5220f9b3" sha1="a094e0a39173587e3e0e39bc727729927a1e7e66"/>
 			</dataarea>
 		</part>
 	</software>

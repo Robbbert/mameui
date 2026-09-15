@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 103 -->
+<!-- Number of items in this list = 104 -->
 <softwarelist name="nds" description="nds loose roms">
 	<software name="nds7f7c50671a61f">
 		<description>(demo)Color.ds</description>
@@ -13,12 +13,12 @@
 		</part>
 	</software>
 	<software name="nds0b8266c78a0c5">
-		<description>(demo)neoflash.nds</description>
+		<description>(demo)neoflash.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="328704">
-				<rom name="(demo)neoflash.nds.gba" size="328704" crc="6e35d8c1" sha1="0b8266c78a0c5b6d099c8dbc1c1fd367ff6df3d2"/>
+				<rom name="(demo)neoflash.ds.gba" size="328704" crc="6e35d8c1" sha1="0b8266c78a0c5b6d099c8dbc1c1fd367ff6df3d2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53,12 +53,12 @@
 		</part>
 	</software>
 	<software name="ndsf07447cbe5a5c">
-		<description>(nw5)nibbles.ds_1</description>
+		<description>(nw5)nibbles_1.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="177664">
-				<rom name="(nw5)nibbles.ds_1.gba" size="177664" crc="ddcafce7" sha1="f07447cbe5a5c9220bef0e64efe90b709b492605"/>
+				<rom name="(nw5)nibbles_1.ds.gba" size="177664" crc="ddcafce7" sha1="f07447cbe5a5c9220bef0e64efe90b709b492605"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69,6 +69,16 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="258121">
 				<rom name="(nw5)StupidGolfDS.ds.gba" size="258121" crc="e89f1973" sha1="459031975b5eb2efd3ae833cbd2befdee327af2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds1241d1ddd91fb">
+		<description>(nw6)2981 - Metal Slug 7 (USA)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="67108864">
+				<rom name="(nw6)2981 - Metal Slug 7 (USA).nds" size="67108864" crc="15d5765d" sha1="1241d1ddd91fb4c2a3fa3d99afa622fec30dac7b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -383,22 +393,22 @@
 		</part>
 	</software>
 	<software name="ndsd07fc05cd1762">
-		<description>audile.nds</description>
+		<description>audile.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="885564">
-				<rom name="audile.nds.gba" size="885564" crc="8c8bf323" sha1="d07fc05cd176252a276820162879a6b1405db4c2"/>
+				<rom name="audile.ds.gba" size="885564" crc="8c8bf323" sha1="d07fc05cd176252a276820162879a6b1405db4c2"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="nds3e72029300127">
-		<description>birds.nds</description>
+		<description>birds.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="60416">
-				<rom name="birds.nds.gba" size="60416" crc="bc9db742" sha1="3e72029300127fea4a86bc2a156219d06cbb553e"/>
+				<rom name="birds.ds.gba" size="60416" crc="bc9db742" sha1="3e72029300127fea4a86bc2a156219d06cbb553e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -443,12 +453,22 @@
 		</part>
 	</software>
 	<software name="nds29c889b3c25b8">
-		<description>Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).nds</description>
+		<description>Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="10498128">
-				<rom name="Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).nds.gba" size="10498128" crc="586c4345" sha1="29c889b3c25b851f590685dea03400110e98fabd"/>
+				<rom name="Chip's Advance v2.1 (2007)(PortableDev - Alekmaul).ds.gba" size="10498128" crc="586c4345" sha1="29c889b3c25b851f590685dea03400110e98fabd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nds83dd43381a72f">
+		<description>ChuckieEgg.ds</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nds_cart">
+			<dataarea name="rom" size="1491008">
+				<rom name="ChuckieEgg.ds.gba" size="1491008" crc="0fb6ad2e" sha1="83dd43381a72f4a21b6470bc25379c990675825a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -459,16 +479,6 @@
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="1612800">
 				<rom name="ChuckieEgg.nds" size="1612800" crc="ad5b9cf9" sha1="18cea93515c83a8170a2cef9be18a4f784ab7eb9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nds83dd43381a72f">
-		<description>ChuckieEgg.nds</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nds_cart">
-			<dataarea name="rom" size="1491008">
-				<rom name="ChuckieEgg.nds.gba" size="1491008" crc="0fb6ad2e" sha1="83dd43381a72f4a21b6470bc25379c990675825a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -483,12 +493,12 @@
 		</part>
 	</software>
 	<software name="ndse67d5f58afea6">
-		<description>demo.nds</description>
+		<description>demo.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="299008">
-				<rom name="demo.nds.gba" size="299008" crc="10cd677a" sha1="e67d5f58afea69601bb37b0cc5a326061c35e100"/>
+				<rom name="demo.ds.gba" size="299008" crc="10cd677a" sha1="e67d5f58afea69601bb37b0cc5a326061c35e100"/>
 			</dataarea>
 		</part>
 	</software>
@@ -553,12 +563,12 @@
 		</part>
 	</software>
 	<software name="nds31ecf4c1539ef">
-		<description>Fruits Mura no Doubutsu-tachi (Japan) (Rev 1).nds</description>
+		<description>Fruits Mura no Doubutsu-tachi (Japan) (Rev 1).ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="8388608">
-				<rom name="Fruits Mura no Doubutsu-tachi (Japan) (Rev 1).nds.gba" size="8388608" crc="aa14b198" sha1="31ecf4c1539ef7460706b17bb4404d4254c6265a"/>
+				<rom name="Fruits Mura no Doubutsu-tachi (Japan) (Rev 1).ds.gba" size="8388608" crc="aa14b198" sha1="31ecf4c1539ef7460706b17bb4404d4254c6265a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -763,12 +773,12 @@
 		</part>
 	</software>
 	<software name="nds4290a63a18a2f">
-		<description>magic_lines.nds</description>
+		<description>magic_lines.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="67904">
-				<rom name="magic_lines.nds.gba" size="67904" crc="1f42590e" sha1="4290a63a18a2fb58634ed88ff25be41381cb6b44"/>
+				<rom name="magic_lines.ds.gba" size="67904" crc="1f42590e" sha1="4290a63a18a2fb58634ed88ff25be41381cb6b44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -833,32 +843,32 @@
 		</part>
 	</software>
 	<software name="ndsecee28ef98dda">
-		<description>Nonacorn (2023-02-06)(Adams, Hugo).nds</description>
+		<description>Nonacorn (2023-02-06)(Adams, Hugo).ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="81896">
-				<rom name="Nonacorn (2023-02-06)(Adams, Hugo).nds.gba" size="81896" crc="dc11fc59" sha1="ecee28ef98ddadc14542b98b9adb74e299d22e2a"/>
+				<rom name="Nonacorn (2023-02-06)(Adams, Hugo).ds.gba" size="81896" crc="dc11fc59" sha1="ecee28ef98ddadc14542b98b9adb74e299d22e2a"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="nds08f367d2d30b6">
-		<description>Nonacorn v1.11 (2024-01-01)(Adams, Hugo).nds</description>
+		<description>Nonacorn v1.11 (2024-01-01)(Adams, Hugo).ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="86228">
-				<rom name="Nonacorn v1.11 (2024-01-01)(Adams, Hugo).nds.gba" size="86228" crc="0a8050f3" sha1="08f367d2d30b64cd3b74c5db517144ee5dbd875c"/>
+				<rom name="Nonacorn v1.11 (2024-01-01)(Adams, Hugo).ds.gba" size="86228" crc="0a8050f3" sha1="08f367d2d30b64cd3b74c5db517144ee5dbd875c"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="nds17398d0d8ee7b">
-		<description>opdemo.nds</description>
+		<description>opdemo.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="1436320">
-				<rom name="opdemo.nds.gba" size="1436320" crc="0fc66271" sha1="17398d0d8ee7b630c1f3411fbb1c97c449cd3b24"/>
+				<rom name="opdemo.ds.gba" size="1436320" crc="0fc66271" sha1="17398d0d8ee7b630c1f3411fbb1c97c449cd3b24"/>
 			</dataarea>
 		</part>
 	</software>
@@ -883,12 +893,12 @@
 		</part>
 	</software>
 	<software name="ndsf397df8d7d52a">
-		<description>rumblepong.nds</description>
+		<description>rumblepong.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="81992">
-				<rom name="rumblepong.nds.gba" size="81992" crc="1d3e6b7d" sha1="f397df8d7d52a25cb552073903ec7627eb97a1c9"/>
+				<rom name="rumblepong.ds.gba" size="81992" crc="1d3e6b7d" sha1="f397df8d7d52a25cb552073903ec7627eb97a1c9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -903,12 +913,12 @@
 		</part>
 	</software>
 	<software name="nds18f9f8a25207a">
-		<description>Sennen Kazoku (Japan) (Rev 1).nds</description>
+		<description>Sennen Kazoku (Japan) (Rev 1).ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="16777216">
-				<rom name="Sennen Kazoku (Japan) (Rev 1).nds.gba" size="16777216" crc="dcaae075" sha1="18f9f8a25207aaecd3eba55a358cfaf11abd4897"/>
+				<rom name="Sennen Kazoku (Japan) (Rev 1).ds.gba" size="16777216" crc="dcaae075" sha1="18f9f8a25207aaecd3eba55a358cfaf11abd4897"/>
 			</dataarea>
 		</part>
 	</software>
@@ -923,12 +933,12 @@
 		</part>
 	</software>
 	<software name="nds7165b37aba713">
-		<description>sponge.nds</description>
+		<description>sponge.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="219648">
-				<rom name="sponge.nds.gba" size="219648" crc="6ddbaafb" sha1="7165b37aba713c1b8c3f3bbe94e0fa31b0554b14"/>
+				<rom name="sponge.ds.gba" size="219648" crc="6ddbaafb" sha1="7165b37aba713c1b8c3f3bbe94e0fa31b0554b14"/>
 			</dataarea>
 		</part>
 	</software>
@@ -963,12 +973,12 @@
 		</part>
 	</software>
 	<software name="ndsb378a8edf90f0">
-		<description>Teenage_Queen.ds_1</description>
+		<description>Teenage_Queen_1.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="1875529">
-				<rom name="Teenage_Queen.ds_1.gba" size="1875529" crc="2f5a2be1" sha1="b378a8edf90f0010443ec35a6c08ccf9f23a5925"/>
+				<rom name="Teenage_Queen_1.ds.gba" size="1875529" crc="2f5a2be1" sha1="b378a8edf90f0010443ec35a6c08ccf9f23a5925"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1003,12 +1013,12 @@
 		</part>
 	</software>
 	<software name="ndsf60c6e1d136b9">
-		<description>YatzyDOS.nds</description>
+		<description>YatzyDOS.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="462921">
-				<rom name="YatzyDOS.nds.gba" size="462921" crc="b90f0158" sha1="f60c6e1d136b9d2da49abdb3445be96c6039e013"/>
+				<rom name="YatzyDOS.ds.gba" size="462921" crc="b90f0158" sha1="f60c6e1d136b9d2da49abdb3445be96c6039e013"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1023,12 +1033,12 @@
 		</part>
 	</software>
 	<software name="nds9dc4c1cf67d17">
-		<description>zombie_NDS.nds</description>
+		<description>zombie_NDS.ds</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nds_cart">
 			<dataarea name="rom" size="177664">
-				<rom name="zombie_NDS.nds.gba" size="177664" crc="7fcf4337" sha1="9dc4c1cf67d179cea1d4cf4767eb6f498fb4f6dd"/>
+				<rom name="zombie_NDS.ds.gba" size="177664" crc="7fcf4337" sha1="9dc4c1cf67d179cea1d4cf4767eb6f498fb4f6dd"/>
 			</dataarea>
 		</part>
 	</software>

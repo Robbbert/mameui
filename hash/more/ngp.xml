@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 126 -->
+<!-- Number of items in this list = 127 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -429,6 +429,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Gardenia (2026)(Chris Ahchay)_2.ngp" size="2097152" crc="5b0f5a12" sha1="b2262ab99a5f4d79f563ccccfbebbda1c9f031e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpbbb9a7fd1935c">
+		<description>Gardenia (2026)(Chris Ahchay)_3</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia (2026)(Chris Ahchay)_3.ngp" size="2097152" crc="efde5b4d" sha1="bbb9a7fd1935c0d19f6f8d7de52546f94c78cb59"/>
 			</dataarea>
 		</part>
 	</software>

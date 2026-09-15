@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8002 -->
+<!-- Number of items in this list = 7990 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -4912,6 +4912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3c6d49a424379">
+		<description>Alicia ES 48K (1985)(Luis E.Juan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31376">
+				<rom name="Alicia ES 48K (1985)(Luis E.Juan).tzx" size="31376" crc="d9e3cc6e" sha1="3c6d49a42437953ddfa2fc8ef11a6598de7ba796"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd81e6d8cff366">
 		<description>Alien (1982)(Chin)</description>
 		<year>????</year>
@@ -9642,16 +9652,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsfb162ebcd9982">
-		<description>BeTiled! EN 48K-128K (2007)(Computer Emuzone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="60341">
-				<rom name="BeTiled! EN 48K-128K (2007)(Computer Emuzone).tzx" size="60341" crc="ec578401" sha1="fb162ebcd9982a5bb091801a60fdc0de78aa6f57"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs750db14162e96">
 		<description>BeTiled! English</description>
 		<year>????</year>
@@ -9659,16 +9659,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="60341">
 				<rom name="BeTiled! English.tzx" size="60341" crc="e48ab976" sha1="750db14162e9686e249980afaf3cf52ea6c2c1fb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsd7eeeda47f9b1">
-		<description>BeTiled! ES 48K-128K (2007)(Computer Emuzone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="60396">
-				<rom name="BeTiled! ES 48K-128K (2007)(Computer Emuzone).tzx" size="60396" crc="8eabeb69" sha1="d7eeeda47f9b11b65155d95620794e212b8d783f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11212,26 +11202,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs147b2c64db57d">
-		<description>BMX Simulator 2 - Dirt Biking 48K-128K (1989)(Codemasters)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="51469">
-				<rom name="BMX Simulator 2 - Dirt Biking 48K-128K (1989)(Codemasters).tzx" size="51469" crc="8a40594d" sha1="147b2c64db57d97c1d49903eef1d9346d105c384"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsb884c5722bfb2">
-		<description>BMX Simulator 2 - Quarry Racing 48K-128K (1989)(Codemasters)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="51494">
-				<rom name="BMX Simulator 2 - Quarry Racing 48K-128K (1989)(Codemasters).tzx" size="51494" crc="fcc6bc3e" sha1="b884c5722bfb297cf75224f983c9f3727cfa1dad"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs794fe373b068e">
 		<description>BMX Simulator 48K (1987)(Codemasters)</description>
 		<year>????</year>
@@ -11822,6 +11792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf1a2cb97fdf9a">
+		<description>Boulder Dash II - Rockford's Riot 48K (1985)(Monolith)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33622">
+				<rom name="Boulder Dash II - Rockford's Riot 48K (1985)(Monolith).tzx" size="33622" crc="50a64357" sha1="f1a2cb97fdf9a0e7279d607438ba3c656ba2ef38"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs24aba884d840f">
 		<description>Bounces (1985)(Monolith)</description>
 		<year>????</year>
@@ -11889,6 +11869,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49343">
 				<rom name="Bounty Bob Strikes Back (1984)(US Gold).tap" size="49343" crc="71db6bc0" sha1="e3db7fa356d7328208affac914f42f294b622b25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb85528fe60376">
+		<description>Bounty Bob Strikes Back! 48K (1985)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48180">
+				<rom name="Bounty Bob Strikes Back! 48K (1985)(U.S. Gold).tzx" size="48180" crc="1827fda0" sha1="b85528fe60376075f051da5eb1ac7e9a4abebd2b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13309,16 +13299,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="7602">
 				<rom name="Cannon Ball (1983)(Hudson Soft).tap" size="7602" crc="203cc5a5" sha1="9db5e9793c7f0485892cc4dee21b5b694a572634"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxscaaeb99d6cafd">
-		<description>Cannon Bubble 128K (2007)(Computer Emuzone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="74403">
-				<rom name="Cannon Bubble 128K (2007)(Computer Emuzone).tzx" size="74403" crc="a40b420e" sha1="caaeb99d6cafdcc547be7347d5c04f187d5de9de"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17149,6 +17129,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48466">
 				<rom name="Cricket Captain (1990)(Hi-Tec Software Ltd).tap" size="48466" crc="07d36e71" sha1="0bd7a8b5c6de38b7dcae858000c72e8c2c86dc5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsefdcf1fea2c9d">
+		<description>Cricket Captain 48K (1990)(Hi-Tec)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48786">
+				<rom name="Cricket Captain 48K (1990)(Hi-Tec).tzx" size="48786" crc="92c80241" sha1="efdcf1fea2c9dcfe9cde206046bb537643b54831"/>
 			</dataarea>
 		</part>
 	</software>
@@ -25179,16 +25169,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37858">
 				<rom name="Flak (1984)(US Gold).tap" size="37858" crc="85c9e803" sha1="0303439fb6603169dcea9eb2c1fc5e3a54dad176"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsc68b4da188036">
-		<description>Flappy Bird ZX 48K-AY (2014)(Rafal Miazga)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="10708">
-				<rom name="Flappy Bird ZX 48K-AY (2014)(Rafal Miazga).tzx" size="10708" crc="6f3c703a" sha1="c68b4da188036068c223952efd54e03c90f46f76"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39282,16 +39262,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs68f7801faa2ae">
-		<description>Mariano the Dragon in Capers in Cityland 48K (2008)(Computer Emuzone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="39272">
-				<rom name="Mariano the Dragon in Capers in Cityland 48K (2008)(Computer Emuzone).tzx" size="39272" crc="dbabeaee" sha1="68f7801faa2aea6ff34bbb1ec1766dd7cc90a6e3"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxseeab02f050a19">
 		<description>Marie Celeste (1984)(Atlantis Software)[a]</description>
 		<year>????</year>
@@ -41882,16 +41852,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs8b5fae8660476">
-		<description>Moggy 48K (2005)(Computer Emuzone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="40170">
-				<rom name="Moggy 48K (2005)(Computer Emuzone).tzx" size="40170" crc="cc390497" sha1="8b5fae8660476ce49ee138483be913c9b0517f9d"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsa3bda034c7595">
 		<description>MoI Reversi v3.6 (1982)(Games Of Skill Ltd)</description>
 		<year>????</year>
@@ -43869,16 +43829,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43014">
 				<rom name="National, The (1988)(D&amp;H Games).tap" size="43014" crc="9c751740" sha1="e604700075cc3c29b42471f5de74445c58cba7ea"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs6933210f33ec8">
-		<description>Nato Assault 48K (1987)(Astros Productions)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="58411">
-				<rom name="Nato Assault 48K (1987)(Astros Productions).tzx" size="58411" crc="ba2d917d" sha1="6933210f33ec83895ffbf506f4d7fd4bf01495ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47559,16 +47509,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49300">
 				<rom name="Phantomas 2 48K (1986)(Dinamic Software).tap" size="49300" crc="7e1fecc2" sha1="e54ed324ba1cf6aad88330c8db6a44229fadf40e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs76aa088709685">
-		<description>Phantomas Saga - Infinity 48K-128K (2006)(Computer Emuzone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="18479">
-				<rom name="Phantomas Saga - Infinity 48K-128K (2006)(Computer Emuzone).tzx" size="18479" crc="eb0ae3d9" sha1="76aa088709685b3a3ed205021e6432901b2a99ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55282,16 +55222,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs236cb7b1e15ea">
-		<description>Shoot Redux 48K (2008)(Computer Emuzone)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="26072">
-				<rom name="Shoot Redux 48K (2008)(Computer Emuzone).tzx" size="26072" crc="118c8cfb" sha1="236cb7b1e15eaa5eb080547454800b0565cec423"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs04dc539f9358d">
 		<description>Shoot-Out 128K (1989)(Martech Games)</description>
 		<year>????</year>
@@ -58362,16 +58292,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxsa0cbef114b3ac">
-		<description>Splitting Images 48K (1986)(Domark)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="50130">
-				<rom name="Splitting Images 48K (1986)(Domark).tzx" size="50130" crc="d970901c" sha1="a0cbef114b3ac20092f9806eb976a3df3b07ab77"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxse40697dc1f78e">
 		<description>Splodgie</description>
 		<year>????</year>
@@ -60929,26 +60849,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48514">
 				<rom name="Swords Of Bane (1986)(CCS).tap" size="48514" crc="b87d397d" sha1="bdba8ef79279590b253ad1ff9d46d1da50315d90"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs6b70e29be6475">
-		<description>Swords of Bane 128K (1986)(CCS)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="62815">
-				<rom name="Swords of Bane 128K (1986)(CCS).tzx" size="62815" crc="5a20cadb" sha1="6b70e29be64758b429b1b48f7c794e21034e37aa"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs2eed4814ca2ef">
-		<description>Swords of Bane 48K (1986)(CCS)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48574">
-				<rom name="Swords of Bane 48K (1986)(CCS).tzx" size="48574" crc="86b215a3" sha1="2eed4814ca2eff2806e670d21d64b30e55c69453"/>
 			</dataarea>
 		</part>
 	</software>
@@ -67902,16 +67802,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs2a18576bc8376">
-		<description>Yoyo's Great Adventure 48K-128K (2020)(Rafal Miazga)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48315">
-				<rom name="Yoyo's Great Adventure 48K-128K (2020)(Rafal Miazga).tzx" size="48315" crc="c855194a" sha1="2a18576bc83766d21547490bf5c9a66545ee92e9"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsd74e55d3194cb">
 		<description>YoYo's Revenge 48K (2023)(J Bizzel)</description>
 		<year>????</year>
@@ -69359,16 +69249,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="16103">
 				<rom name="_Backgammon (1983)(Psion)[a].tap" size="16103" crc="acb48a38" sha1="672762329a36fcae31f6601dd7e33faf859ad83a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsee6c3dfe2ac2b">
-		<description>_Backgammon 16K (1983)(Sinclair Research)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="16237">
-				<rom name="_Backgammon 16K (1983)(Sinclair Research).tzx" size="16237" crc="ed56e428" sha1="ee6c3dfe2ac2b01d78577e58ad1ef6d0d92c496b"/>
 			</dataarea>
 		</part>
 	</software>

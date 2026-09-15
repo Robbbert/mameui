@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 36 -->
+<!-- Number of items in this list = 38 -->
 <softwarelist name="map1010" description="map1010 loose roms">
 	<software name="phcf4fb80373912b">
-		<description>aerial_01</description>
+		<description>aerial(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="704850">
-				<rom name="aerial_01.wav" size="704850" crc="1fa7b0cb" sha1="f4fb80373912baf7a17f44d33c3f72131d58f0ad"/>
+				<rom name="aerial(1of2).wav" size="704850" crc="1fa7b0cb" sha1="f4fb80373912baf7a17f44d33c3f72131d58f0ad"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc95470bc13cf21">
-		<description>aerial_02</description>
+		<description>aerial(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="2100524">
-				<rom name="aerial_02.wav" size="2100524" crc="1f9ae360" sha1="95470bc13cf217350978b0c6a7d0c775cf4e1028"/>
+				<rom name="aerial(2of2).wav" size="2100524" crc="1f9ae360" sha1="95470bc13cf217350978b0c6a7d0c775cf4e1028"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phcc102c1031da08">
-		<description>antiair_01</description>
+		<description>antiair(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1123254">
-				<rom name="antiair_01.wav" size="1123254" crc="da73c85c" sha1="c102c1031da083f20598056fc07ae31beaf2df29"/>
+				<rom name="antiair(1of2).wav" size="1123254" crc="da73c85c" sha1="c102c1031da083f20598056fc07ae31beaf2df29"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc7fbbf196e0aaa">
-		<description>antiair_02</description>
+		<description>antiair(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1368044">
-				<rom name="antiair_02.wav" size="1368044" crc="f060d8d4" sha1="7fbbf196e0aaa81867a568f55f267cc252b15378"/>
+				<rom name="antiair(2of2).wav" size="1368044" crc="f060d8d4" sha1="7fbbf196e0aaa81867a568f55f267cc252b15378"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc98e07f0ec0ba4">
-		<description>ascend_01</description>
+		<description>ascend(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1226454">
-				<rom name="ascend_01.wav" size="1226454" crc="07ff408d" sha1="98e07f0ec0ba46063acae6b5170a71fc55f837be"/>
+				<rom name="ascend(1of2).wav" size="1226454" crc="07ff408d" sha1="98e07f0ec0ba46063acae6b5170a71fc55f837be"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phcec35f4d601c54">
-		<description>ascend_02</description>
+		<description>ascend(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1653740">
-				<rom name="ascend_02.wav" size="1653740" crc="e0cc1a93" sha1="ec35f4d601c54a8d4e91551be6e438586566888c"/>
+				<rom name="ascend(2of2).wav" size="1653740" crc="e0cc1a93" sha1="ec35f4d601c54a8d4e91551be6e438586566888c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -83,142 +83,162 @@
 		</part>
 	</software>
 	<software name="phc727caec785ca9">
-		<description>battlot_01</description>
+		<description>battlot(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="730450">
-				<rom name="battlot_01.wav" size="730450" crc="8a4d3452" sha1="727caec785ca9322a003074ef6f62c8c69bf8740"/>
+				<rom name="battlot(1of2).wav" size="730450" crc="8a4d3452" sha1="727caec785ca9322a003074ef6f62c8c69bf8740"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc98a0768577a20">
-		<description>battlot_02</description>
+		<description>battlot(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="2025068">
-				<rom name="battlot_02.wav" size="2025068" crc="c760af9b" sha1="98a0768577a20a6ced9b5929220e56c8c08a3af1"/>
+				<rom name="battlot(2of2).wav" size="2025068" crc="c760af9b" sha1="98a0768577a20a6ced9b5929220e56c8c08a3af1"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc2bc3a7fe017ff">
-		<description>bootskell_01</description>
+		<description>bootskell(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="732050">
-				<rom name="bootskell_01.wav" size="732050" crc="c02bae06" sha1="2bc3a7fe017ff334226d8517f6f4273b116dc179"/>
+				<rom name="bootskell(1of2).wav" size="732050" crc="c02bae06" sha1="2bc3a7fe017ff334226d8517f6f4273b116dc179"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phcf9b455e99b48d">
-		<description>bootskell_02</description>
+		<description>bootskell(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1897004">
-				<rom name="bootskell_02.wav" size="1897004" crc="ce9d4c71" sha1="f9b455e99b48d46da74052a8f4ee7448631e7929"/>
+				<rom name="bootskell(2of2).wav" size="1897004" crc="ce9d4c71" sha1="f9b455e99b48d46da74052a8f4ee7448631e7929"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phcd8dd73d432d22">
-		<description>cacorm_01</description>
+		<description>cacorm(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="2325663">
-				<rom name="cacorm_01.wav" size="2325663" crc="10dd0a53" sha1="d8dd73d432d2271248d2a0aaf89f04bf80cfa66c"/>
+				<rom name="cacorm(1of2).wav" size="2325663" crc="10dd0a53" sha1="d8dd73d432d2271248d2a0aaf89f04bf80cfa66c"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc1df591407eff7">
-		<description>cacorm_02</description>
+		<description>cacorm(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1653548">
-				<rom name="cacorm_02.wav" size="1653548" crc="7a998891" sha1="1df591407eff7c2b77987037f743603f15da0ab0"/>
+				<rom name="cacorm(2of2).wav" size="1653548" crc="7a998891" sha1="1df591407eff7c2b77987037f743603f15da0ab0"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phca39ffe3dc0f13">
-		<description>cavit_01</description>
+		<description>cavit(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="670449">
-				<rom name="cavit_01.wav" size="670449" crc="24b4b0a5" sha1="a39ffe3dc0f134b2087e1aac6b73c8f95a63a648"/>
+				<rom name="cavit(1of2).wav" size="670449" crc="24b4b0a5" sha1="a39ffe3dc0f134b2087e1aac6b73c8f95a63a648"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phcc3de5123336ff">
-		<description>cavit_02</description>
+		<description>cavit(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="2113004">
-				<rom name="cavit_02.wav" size="2113004" crc="21f06e7f" sha1="c3de5123336ff63c0327bc6faadacf348127f6b8"/>
+				<rom name="cavit(2of2).wav" size="2113004" crc="21f06e7f" sha1="c3de5123336ff63c0327bc6faadacf348127f6b8"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc3dbc62f842671">
-		<description>guntus_01</description>
+		<description>guntus(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="812051">
-				<rom name="guntus_01.wav" size="812051" crc="6c6adc5f" sha1="3dbc62f842671667ca88c88d785c404893ea6609"/>
+				<rom name="guntus(1of2).wav" size="812051" crc="6c6adc5f" sha1="3dbc62f842671667ca88c88d785c404893ea6609"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc9d0832efa18d2">
-		<description>guntus_02</description>
+		<description>guntus(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="2144492">
-				<rom name="guntus_02.wav" size="2144492" crc="4767fc9b" sha1="9d0832efa18d2a68d50dc8e32abede260c1516db"/>
+				<rom name="guntus(2of2).wav" size="2144492" crc="4767fc9b" sha1="9d0832efa18d2a68d50dc8e32abede260c1516db"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phcb08bd23a6c69b">
-		<description>impetus_01</description>
+		<description>impetus(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="660049">
-				<rom name="impetus_01.wav" size="660049" crc="916279fc" sha1="b08bd23a6c69b2ca43ae0cbf20c1fd99ebf57ca6"/>
+				<rom name="impetus(1of2).wav" size="660049" crc="916279fc" sha1="b08bd23a6c69b2ca43ae0cbf20c1fd99ebf57ca6"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc2d36aa4359310">
-		<description>impetus_02</description>
+		<description>impetus(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="2730668">
-				<rom name="impetus_02.wav" size="2730668" crc="f03dc702" sha1="2d36aa43593106ec3571b314c2976a74f30b1ac2"/>
+				<rom name="impetus(2of2).wav" size="2730668" crc="f03dc702" sha1="2d36aa43593106ec3571b314c2976a74f30b1ac2"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc3b41b7a8c7fdd">
-		<description>lift_01</description>
+		<description>lift(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="477325">
-				<rom name="lift_01.wav" size="477325" crc="951a5cc2" sha1="3b41b7a8c7fdd9a7a40ede9e5b9b88dc57540310"/>
+				<rom name="lift(1of2).wav" size="477325" crc="951a5cc2" sha1="3b41b7a8c7fdd9a7a40ede9e5b9b88dc57540310"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc8d56a1cb189e3">
-		<description>lift_02</description>
+		<description>lift(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1565996">
-				<rom name="lift_02.wav" size="1565996" crc="49b986c5" sha1="8d56a1cb189e3db4126bc7c6c117bcecb5fbc4ec"/>
+				<rom name="lift(2of2).wav" size="1565996" crc="49b986c5" sha1="8d56a1cb189e3db4126bc7c6c117bcecb5fbc4ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc3d3e57baf37b3">
+		<description>mazy(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="604049">
+				<rom name="mazy(1of2).wav" size="604049" crc="e98c5875" sha1="3d3e57baf37b34f44090b7c252af8a23b9e81338"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phca5a4ea6237ea8">
+		<description>mazy(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="1641644">
+				<rom name="mazy(2of2).wav" size="1641644" crc="61efe49c" sha1="a5a4ea6237ea8bc897ae264ac069b8d65b46d1c8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -242,43 +262,43 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="phc3d3e57baf37b3">
-		<description>mazy_01</description>
+	<software name="phcd24d8d2a73c59">
+		<description>mieyen(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
-			<dataarea name="cass" size="604049">
-				<rom name="mazy_01.wav" size="604049" crc="e98c5875" sha1="3d3e57baf37b34f44090b7c252af8a23b9e81338"/>
+			<dataarea name="cass" size="633343">
+				<rom name="mieyen(1of2).wav" size="633343" crc="bac89031" sha1="d24d8d2a73c59c5419e0504062f731e30e6c1579"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="phca5a4ea6237ea8">
-		<description>mazy_02</description>
+	<software name="phc48a69aa80acff">
+		<description>mieyen(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
-			<dataarea name="cass" size="1641644">
-				<rom name="mazy_02.wav" size="1641644" crc="61efe49c" sha1="a5a4ea6237ea8bc897ae264ac069b8d65b46d1c8"/>
+			<dataarea name="cass" size="8312684">
+				<rom name="mieyen(2of2).wav" size="8312684" crc="f8f4d67e" sha1="48a69aa80acff7344876c0502fc7079fc804ef3e"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc6380eeabbf92e">
-		<description>neuras_01</description>
+		<description>neuras(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="438138">
-				<rom name="neuras_01.wav" size="438138" crc="3a1033e3" sha1="6380eeabbf92e8d67994bccbf3ec20542ae73427"/>
+				<rom name="neuras(1of2).wav" size="438138" crc="3a1033e3" sha1="6380eeabbf92e8d67994bccbf3ec20542ae73427"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phcbe88ec815d47c">
-		<description>neuras_02</description>
+		<description>neuras(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1741292">
-				<rom name="neuras_02.wav" size="1741292" crc="b1495b79" sha1="be88ec815d47c46a5e69287ed13960ba65d5d42d"/>
+				<rom name="neuras(2of2).wav" size="1741292" crc="b1495b79" sha1="be88ec815d47c46a5e69287ed13960ba65d5d42d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -303,22 +323,22 @@
 		</part>
 	</software>
 	<software name="phcb8cc55663c0e2">
-		<description>ruptus_01</description>
+		<description>ruptus(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="606449">
-				<rom name="ruptus_01.wav" size="606449" crc="03c65dd5" sha1="b8cc55663c0e29e3505a891d340f8fcfa4c1556b"/>
+				<rom name="ruptus(1of2).wav" size="606449" crc="03c65dd5" sha1="b8cc55663c0e29e3505a891d340f8fcfa4c1556b"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="phc220b740c55ba0">
-		<description>ruptus_02</description>
+		<description>ruptus(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="2392364">
-				<rom name="ruptus_02.wav" size="2392364" crc="959ef8f6" sha1="220b740c55ba0373d06628d1cf42499abf9a52e7"/>
+				<rom name="ruptus(2of2).wav" size="2392364" crc="959ef8f6" sha1="220b740c55ba0373d06628d1cf42499abf9a52e7"/>
 			</dataarea>
 		</part>
 	</software>

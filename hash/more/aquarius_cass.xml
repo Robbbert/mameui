@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 81 -->
+<!-- Number of items in this list = 102 -->
 <softwarelist name="aquarius_cass" description="aquarius_cass loose roms">
 	<software name="caq680af55277118">
 		<description>Aerial(1of2)</description>
@@ -39,6 +39,26 @@
 		<part name="cass1" interface="aquarius_cass">
 			<dataarea name="cass" size="1696242">
 				<rom name="Aerial(2of2).WAV" size="1696242" crc="3ebe1162" sha1="d7fc76715f5a199dff83d766ff452ba8f26ab4f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq185785263b398">
+		<description>Aliens (1983)(Add On Electronics)(Part 1 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="145">
+				<rom name="Aliens (1983)(Add On Electronics)(Part 1 of 2).caq" size="145" crc="223aa099" sha1="185785263b3983c98cb6399b0619a93d690b8608"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq22cc21286a18c">
+		<description>Aliens (1983)(Add On Electronics)(Part 2 of 2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="1990">
+				<rom name="Aliens (1983)(Add On Electronics)(Part 2 of 2).caq" size="1990" crc="d9a6fbb7" sha1="22cc21286a18c61532c3a66f9857a5ad77867277"/>
 			</dataarea>
 		</part>
 	</software>
@@ -119,6 +139,46 @@
 		<part name="cass1" interface="aquarius_cass">
 			<dataarea name="cass" size="1288554">
 				<rom name="Ascend(2of2).WAV" size="1288554" crc="6333efca" sha1="e9be37bfb8dc07baafb6aaab35401232cdf7979d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq5e941362048d4">
+		<description>awass(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="awass(1of2).caq" size="147" crc="51e90482" sha1="5e941362048d4f0f12cd4264d09ba7cc79587a82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq0ebaae5695d77">
+		<description>awass(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="40902">
+				<rom name="awass(1of2).WAV" size="40902" crc="494a7e21" sha1="0ebaae5695d77d534f9cb75b2d299fc2ff7aac2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caqc91b88d27c592">
+		<description>awass(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="7175">
+				<rom name="awass(2of2).caq" size="7175" crc="93bbef2d" sha1="c91b88d27c592314782b2a9f6069735a04be1d53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq503436cee455c">
+		<description>awass(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="1420494">
+				<rom name="awass(2of2).WAV" size="1420494" crc="ecc36d16" sha1="503436cee455cd9d8c3bf322e0c5f806c29be62e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -522,26 +582,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="caq185785263b398">
-		<description>Invaders Descent (1983)(Add On Electronics)(Tape 1 of 2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="aquarius_cass">
-			<dataarea name="cass" size="145">
-				<rom name="Invaders Descent (1983)(Add On Electronics)(Tape 1 of 2).caq" size="145" crc="223aa099" sha1="185785263b3983c98cb6399b0619a93d690b8608"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="caq22cc21286a18c">
-		<description>Invaders Descent (1983)(Add On Electronics)(Tape 2 of 2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="aquarius_cass">
-			<dataarea name="cass" size="1990">
-				<rom name="Invaders Descent (1983)(Add On Electronics)(Tape 2 of 2).caq" size="1990" crc="d9a6fbb7" sha1="22cc21286a18c61532c3a66f9857a5ad77867277"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="caq7db87a8f46f34">
 		<description>Lift(1of2)</description>
 		<year>????</year>
@@ -583,22 +623,22 @@
 		</part>
 	</software>
 	<software name="caq72dfc13c7b4b5">
-		<description>Mastermind(1of2)</description>
+		<description>MastermindRK(1of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="aquarius_cass">
 			<dataarea name="cass" size="147">
-				<rom name="Mastermind(1of2).caq" size="147" crc="0a2e2562" sha1="72dfc13c7b4b5a97b5bad4e79af7083ec236b30b"/>
+				<rom name="MastermindRK(1of2).caq" size="147" crc="0a2e2562" sha1="72dfc13c7b4b5a97b5bad4e79af7083ec236b30b"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="caq10676845550a7">
-		<description>Mastermind(2of2)</description>
+		<description>MastermindRK(2of2)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass1" interface="aquarius_cass">
 			<dataarea name="cass" size="8481">
-				<rom name="Mastermind(2of2).caq" size="8481" crc="07e9d918" sha1="10676845550a7f967f196c7a049fa436ae9bf194"/>
+				<rom name="MastermindRK(2of2).caq" size="8481" crc="07e9d918" sha1="10676845550a7f967f196c7a049fa436ae9bf194"/>
 			</dataarea>
 		</part>
 	</software>
@@ -639,6 +679,76 @@
 		<part name="cass1" interface="aquarius_cass">
 			<dataarea name="cass" size="1006422">
 				<rom name="Mazy(2of2).WAV" size="1006422" crc="02a6ffad" sha1="e53770b051d19247a8fb18415745fe83e9b18c36"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq75a47c401079e">
+		<description>mazy2(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="mazy2(1of2).caq" size="147" crc="9ffe8e2b" sha1="75a47c401079eaac9206164ef4a30e912d9987aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq069281cc9261e">
+		<description>mazy2(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="40914">
+				<rom name="mazy2(1of2).WAV" size="40914" crc="1f4aaf50" sha1="069281cc9261e742e1ec4432fe284c6fbe073989"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq581238f601891">
+		<description>mazy2(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="7921">
+				<rom name="mazy2(2of2).caq" size="7921" crc="a2948a95" sha1="581238f6018914a975e0fdf02b3fc046c9096923"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caqdf456e1c5b3ec">
+		<description>mazy2(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="1572294">
+				<rom name="mazy2(2of2).WAV" size="1572294" crc="f52f2783" sha1="df456e1c5b3ec6e30f8bf9a3f21025b0f415b60a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq96dd90ed019d8">
+		<description>mieyen(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="mieyen(1of2).caq" size="147" crc="a8846859" sha1="96dd90ed019d826a52be858a2dcb0e7deb970d79"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caqc226728144e1e">
+		<description>mieyen(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="6209">
+				<rom name="mieyen(2of2).caq" size="6209" crc="6f1a59e6" sha1="c226728144e1ec0370ab822110652fe4c6a9824d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq550350c6996e6">
+		<description>mieyen(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="4954258">
+				<rom name="mieyen(2of2).WAV" size="4954258" crc="316a8c31" sha1="550350c6996e66b9c284ec46ab2f8f8b8f46604b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -759,6 +869,106 @@
 		<part name="cass1" interface="aquarius_cass">
 			<dataarea name="cass" size="1891734">
 				<rom name="Ruptus(2of2).WAV" size="1891734" crc="8365d021" sha1="9e4008f99127fa751e1b634d2be18c33d7abd151"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq6ac6e52b74ec9">
+		<description>Stinger (2023-10-08)(Caruso, Fabrizio)[16K](1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="Stinger (2023-10-08)(Caruso, Fabrizio)[16K](1of2).caq" size="147" crc="8033d760" sha1="6ac6e52b74ec9f419ec92a7e0d88c3c4746a4faf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq1d9652825f32b">
+		<description>Stinger (2023-10-08)(Caruso, Fabrizio)[16K](2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="17099">
+				<rom name="Stinger (2023-10-08)(Caruso, Fabrizio)[16K](2of2).caq" size="17099" crc="d1370ef8" sha1="1d9652825f32b7463f7cedd7a1ffef57c55f30a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq43d3abf8091de">
+		<description>svellas(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="svellas(1of2).caq" size="147" crc="4db4d8cd" sha1="43d3abf8091de68df65ce8df0c18f0a827edc723"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq56c5c6bc03e68">
+		<description>svellas(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="40914">
+				<rom name="svellas(1of2).WAV" size="40914" crc="ab00ff8c" sha1="56c5c6bc03e685b75fe610758d46056f2c5f3765"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq8a507278a9ea5">
+		<description>svellas(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="6995">
+				<rom name="svellas(2of2).caq" size="6995" crc="df93cb02" sha1="8a507278a9ea57ebde63386f78025da2e07c1340"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq41c85a37bbcc8">
+		<description>svellas(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="1396122">
+				<rom name="svellas(2of2).WAV" size="1396122" crc="dfee853c" sha1="41c85a37bbcc8d4b9fe5d8d630015547b21849e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq1f8b388ea495b">
+		<description>SwordWork(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="SwordWork(1of2).caq" size="147" crc="e161342d" sha1="1f8b388ea495b3350f2d5b168d85103a57288183"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq61f17008475db">
+		<description>SwordWork(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="40938">
+				<rom name="SwordWork(1of2).WAV" size="40938" crc="9dfd61a3" sha1="61f17008475dbd275dbdf6da74fb70ced2648d0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caqc72ef27f5ff43">
+		<description>SwordWork(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="6547">
+				<rom name="SwordWork(2of2).caq" size="6547" crc="ff657fa7" sha1="c72ef27f5ff4388a42e84749e2f486eebef54240"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caqab20db1ef47c6">
+		<description>SwordWork(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="1312926">
+				<rom name="SwordWork(2of2).WAV" size="1312926" crc="3718df91" sha1="ab20db1ef47c69b4309b0559b4a7df3465b8db97"/>
 			</dataarea>
 		</part>
 	</software>

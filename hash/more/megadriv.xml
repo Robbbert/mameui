@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2134 -->
+<!-- Number of items in this list = 2135 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gena3084262f5af4">
 		<description>(demo) Sonic no way</description>
@@ -4732,6 +4732,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen121b558e4ac15">
+		<description>Bomb on Basic City (2016)(Studio Vetea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1940068">
+				<rom name="Bomb on Basic City (2016)(Studio Vetea).bin" size="1940068" crc="0b924c20" sha1="121b558e4ac15a068235b9cd20e607aa63f244a2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gene2ea204774bfc">
 		<description>Bomb on Basic City - Special Edition (World) (Unl)</description>
 		<year>????</year>
@@ -5759,16 +5769,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Deboomer.bin" size="131072" crc="49426bb1" sha1="9e41e814effa53f56ac4c1f9768c31c81feaf735"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genfebe9cc07eaf4">
-		<description>Debtor (Alt) (2020)(PSCD Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2228224">
-				<rom name="Debtor (Alt) (2020)(PSCD Games).bin" size="2228224" crc="7bb67106" sha1="febe9cc07eaf4fc9def4fddb4d6bb9ea0545457b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7019,16 +7019,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="566368">
 				<rom name="Flying Sonic in Sonic 1 by Bobesh8.bin" size="566368" crc="2b137a00" sha1="ccd33e02cf894e20fd8422883c5620c1a87f155f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gen93b50bc93a3cb">
-		<description>Frog Dude (Proto)(1993)(Twilight)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="99792">
-				<rom name="Frog Dude (Proto)(1993)(Twilight).bin" size="99792" crc="c5e80ce2" sha1="93b50bc93a3cbd510190fa7f0920ca4e07ba86ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11672,6 +11662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen439f729993487">
+		<description>Memoria de Locadora - The Game (2026)(Memoria de Locadora)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2228224">
+				<rom name="Memoria de Locadora - The Game (2026)(Memoria de Locadora).bin" size="2228224" crc="9fd9aae2" sha1="439f729993487a9050c25aad87e4453e6f4624b4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen69732b873318c">
 		<description>Mercs (JUE) [T+Fre_terminus]</description>
 		<year>????</year>
@@ -12329,6 +12329,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mortal Kombat Arcade Edition Enhanced v2.7 (2026)(Rael G.C.).bin" size="4194304" crc="b9fa989e" sha1="9aea6e52747a6369eb8c63902089fefec0f9a6cb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb653165907b5f">
+		<description>Mortal Kombat Arcade Edition Enhanced v2.8 (2026)(Rael G.C.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat Arcade Edition Enhanced v2.8 (2026)(Rael G.C.).bin" size="4194304" crc="ebc90098" sha1="b653165907b5f299573f71b024406dd3e4b08bd6"/>
 			</dataarea>
 		</part>
 	</software>

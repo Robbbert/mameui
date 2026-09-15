@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8 -->
+<!-- Number of items in this list = 9 -->
 <softwarelist name="mbc55x" description="mbc55x loose roms">
 	<software name="mbcae941d0493730">
 		<description>(NB)CalcStar</description>
@@ -59,6 +59,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="163840">
 				<rom name="MS-DOS v1.25 (1984)(Sanyo)[IO.SYS v2.00].dsk" size="163840" crc="3dbe13de" sha1="aaef69cbbc501422baa6dc6b7173ee8f24663013"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mbccd3d42c4c88e8">
+		<description>san555</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="208126">
+				<rom name="san555.td0" size="208126" crc="2754dc77" sha1="cd3d42c4c88e834d11f9c6871a4bd96645af9f2a"/>
 			</dataarea>
 		</part>
 	</software>

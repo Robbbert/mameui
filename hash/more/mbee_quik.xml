@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1314 -->
+<!-- Number of items in this list = 1315 -->
 <softwarelist name="mbee_quik" description="mbee_quik loose roms">
 	<software name="beec670f30303e3a">
 		<description>[-](demo)3d</description>
@@ -12989,6 +12989,16 @@
 		<part name="quik" interface="mbee_quik">
 			<dataarea name="quik" size="12847">
 				<rom name="[ppc]MCUCHESS.BEE" size="12847" crc="de2e23fa" sha1="0d12f72d142795e0f849bc48aefd97e3853a28d3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="bee1bd5f75057e1c">
+		<description>[ppc]MCUMAXP</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="mbee_quik">
+			<dataarea name="quik" size="13252">
+				<rom name="[ppc]MCUMAXP.COM" size="13252" crc="e7906b27" sha1="1bd5f75057e1c197b4d483a1d582f83099ba4618"/>
 			</dataarea>
 		</part>
 	</software>

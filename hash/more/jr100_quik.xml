@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 20 -->
+<!-- Number of items in this list = 24 -->
 <softwarelist name="jr100_quik" description="jr100_quik loose roms">
 	<software name="jr182c167845cb05">
 		<description>aerial[a=usr($300)]</description>
@@ -29,6 +29,16 @@
 		<part name="quik" interface="jr100_quik">
 			<dataarea name="quik" size="8259">
 				<rom name="ascend[a=usr($300)].prg" size="8259" crc="c44636ad" sha1="3b395a84a0341747e46a041dc222d977929fed0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr18751912c1dcc4">
+		<description>Awass[a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jr100_quik">
+			<dataarea name="quik" size="9612">
+				<rom name="Awass[a=usr($300)].prg" size="9612" crc="a7bec189" sha1="8751912c1dcc4c80265e526ce9ea928167c91ea0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -132,6 +142,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jr19219d26c16c31">
+		<description>Mazy2[a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jr100_quik">
+			<dataarea name="quik" size="9888">
+				<rom name="Mazy2[a=usr($300)].prg" size="9888" crc="fe3af2b8" sha1="9219d26c16c31b7c48b810a36bcd2d30972500fa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jr1124b8c0808cec">
 		<description>mazy[a=usr($300)]</description>
 		<year>????</year>
@@ -189,6 +209,26 @@
 		<part name="quik" interface="jr100_quik">
 			<dataarea name="quik" size="11499">
 				<rom name="Ruptus[a=usr($300)].prg" size="11499" crc="4a142028" sha1="30959a0498f5525d05da86fc254ccff53f90017c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr1f52b3c5a32488">
+		<description>Svellas[a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jr100_quik">
+			<dataarea name="quik" size="9252">
+				<rom name="Svellas[a=usr($300)].prg" size="9252" crc="715c0c5c" sha1="f52b3c5a324880476d108356a9375dff6f49cc97"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jr1cc62497df0bdc">
+		<description>SwordWork[a=usr($300)]</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="quik" interface="jr100_quik">
+			<dataarea name="quik" size="8704">
+				<rom name="SwordWork[a=usr($300)].prg" size="8704" crc="fc59c41d" sha1="cc62497df0bdc873b6d58e385dfb956d9cd80940"/>
 			</dataarea>
 		</part>
 	</software>
