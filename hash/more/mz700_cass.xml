@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 51 -->
+<!-- Number of items in this list = 60 -->
 <softwarelist name="mz700_cass" description="mz700_cass loose roms">
 	<software name="mz748dba064d098a">
 		<description>(sound)Plusminus-20 (19xx)(-)(de)(PD)</description>
@@ -89,6 +89,26 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="2391730">
 				<rom name="Ascend.wav" size="2391730" crc="7f04276c" sha1="883a990f5ac03f35a6563b3d93a042d6164f738f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7b674de667f7f9">
+		<description>Awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7731">
+				<rom name="Awass.mzt" size="7731" crc="6cafd285" sha1="b674de667f7f9493ebc6c870659d7af1ba7225c3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz717904f72c9baf">
+		<description>Awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2733058">
+				<rom name="Awass.wav" size="2733058" crc="8f7b1423" sha1="17904f72c9baf971f19dc46e845815555dd3ad89"/>
 			</dataarea>
 		</part>
 	</software>
@@ -372,6 +392,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="mz763a60369fe0a6">
+		<description>Mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="8363">
+				<rom name="Mazy2.mzt" size="8363" crc="88fa42ff" sha1="63a60369fe0a66098cdb9c310c9e381e7f04c56b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7b33579f027aa6">
+		<description>Mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2951362">
+				<rom name="Mazy2.wav" size="2951362" crc="b73e6809" sha1="b33579f027aa6bfa71e0cd7297e302cfff813be1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="mz7ae69bc8279872">
 		<description>Mieyen</description>
 		<year>????</year>
@@ -399,6 +439,16 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="9679">
 				<rom name="MZ-700 Schach (19xx)(Devil Soft)(de).mzf" size="9679" crc="6c8ee063" sha1="968c020c4228586cae4d0b3212ebbe5884a4db47"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7a3f00fec58557">
+		<description>mz700</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1983104">
+				<rom name="mz700.wav" size="1983104" crc="05af584c" sha1="a3f00fec58557d2f2ff81331106d455a49bdaa55"/>
 			</dataarea>
 		</part>
 	</software>
@@ -479,6 +529,46 @@
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="17792">
 				<rom name="SOLO BASIC.mzf" size="17792" crc="c61dcf14" sha1="5f966ba8700c6740d41cdadaf8ea0e8b145539d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7218beee3c8d19">
+		<description>Svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7447">
+				<rom name="Svellas.mzt" size="7447" crc="8297ad10" sha1="218beee3c8d19267e952a941164df4dfccc74130"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz757f6453339773">
+		<description>Svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2627098">
+				<rom name="Svellas.wav" size="2627098" crc="9c92e4a4" sha1="57f6453339773379b5727f8409353cb0dff560ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7bd44fb8f2e8fd">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="7076">
+				<rom name="SwordWork.mzt" size="7076" crc="7081875f" sha1="bd44fb8f2e8fd746a352cad298fefe670f8af19e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mz7a931f6d971be8">
+		<description>SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="2500258">
+				<rom name="SwordWork.wav" size="2500258" crc="6868a9a9" sha1="a931f6d971be8f2490e75ff91eb16219a83e7fb6"/>
 			</dataarea>
 		</part>
 	</software>

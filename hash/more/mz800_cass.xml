@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+<!-- Number of items in this list = 1 -->
+<softwarelist name="mz800_cass" description="mz800_cass loose roms">
+	<software name="mz8821993aecab65">
+		<description>Sharp_Test</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1252">
+				<rom name="Sharp_Test.mzf" size="1252" crc="51f5b6ba" sha1="821993aecab655c388f2b9501ebbc5d09b710a87"/>
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>

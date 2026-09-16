@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 756 -->
+<!-- Number of items in this list = 757 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -5749,6 +5749,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="557056">
 				<rom name="Space Bash - Contact !! (2026)(Dave's Retro Forge).rom" size="557056" crc="14dad385" sha1="5a711440dd5ca9f7b6d545e43ee79c3afb66eb53"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx30f4962af9a6a">
+		<description>Space Bash - Contact !! v1.1 (2026)(Dave's Retro Forge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="557056">
+				<rom name="Space Bash - Contact !! v1.1 (2026)(Dave's Retro Forge).rom" size="557056" crc="f57042fe" sha1="30f4962af9a6a3e651061626e0a96120ab56e0c3"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 130 -->
+<!-- Number of items in this list = 172 -->
 <softwarelist name="msx_flop" description="msx_flop loose roms">
 	<software name="msx5d68acb2b56ed">
 		<description>2-shin - 16-shin Henkan Program (1985-03)(Aikame)(JP)[tr en][Micom BASIC]</description>
@@ -1299,6 +1299,426 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="737280">
 				<rom name="Zoo (uk) Radarsoft 1997.dsk" size="737280" crc="2fe42c5e" sha1="528288874f2daeaba956258285d2e055a5468523"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx991070855684b">
+		<description>[2]aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]aerial.d88" size="761008" crc="99eaaa57" sha1="991070855684bd2b08ad801d634fe1d5c6931cef"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx52dd0ae26fe7e">
+		<description>[2]aerial</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]aerial.dsk" size="737280" crc="32d55812" sha1="52dd0ae26fe7e6e37c3abeec9ce683ac4ea6e336"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe29792e9b924b">
+		<description>[2]antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]antiair.d88" size="761008" crc="27245c4f" sha1="e29792e9b924b1a143241bd20bc3911ca421cfd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx2eaf8fdb6b06d">
+		<description>[2]antiair</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]antiair.dsk" size="737280" crc="68e718a9" sha1="2eaf8fdb6b06d53ede20b4a4cb33bd2641154d2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxdbcede2c05023">
+		<description>[2]ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]ascend.d88" size="761008" crc="2524590d" sha1="dbcede2c050238a9df0072a8410f209eca2dd8dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxce28b7f153ebb">
+		<description>[2]ascend</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]ascend.dsk" size="737280" crc="89243eb9" sha1="ce28b7f153ebba1219d1bc2d0b9546a3a45faf5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb61ef7b80f256">
+		<description>[2]awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]awass.d88" size="761008" crc="7d319bde" sha1="b61ef7b80f2561691047c6c91c4e59364e0c658c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx589b70d3ebfca">
+		<description>[2]awass</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]awass.dsk" size="737280" crc="0397d821" sha1="589b70d3ebfcaf7784faffb9e7caded7bf3062cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx3e0b22d42d249">
+		<description>[2]battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]battlot.d88" size="761008" crc="6d8d2797" sha1="3e0b22d42d24988e6e2ec70334f429e743ddc5a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe66d2c946345a">
+		<description>[2]battlot</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]battlot.dsk" size="737280" crc="e10d643a" sha1="e66d2c946345a43b2e968caf982eb8c6aed91528"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxdd25278a313b7">
+		<description>[2]bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]bootskell.d88" size="761008" crc="69cfd14d" sha1="dd25278a313b78aaf9bf69730d7c01015e8eb443"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa97ff30b101d1">
+		<description>[2]bootskell</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]bootskell.dsk" size="737280" crc="f0b67dae" sha1="a97ff30b101d1516c22f5d0e81b3925f8d0902dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa1cc2bd11a218">
+		<description>[2]cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]cacorm.d88" size="761008" crc="dccae6b6" sha1="a1cc2bd11a218565c70cc128c9f3feb1ec7c4302"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc89914fcd7340">
+		<description>[2]cacorm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]cacorm.dsk" size="737280" crc="6b8450c9" sha1="c89914fcd7340e25524565bc282c6fd6fe10dc9c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7f4ff60841a76">
+		<description>[2]cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]cavit.d88" size="761008" crc="fab8e383" sha1="7f4ff60841a769022cc539fc7544115995fd4e3d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb64e8263367b6">
+		<description>[2]cavit</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]cavit.dsk" size="737280" crc="022ccaab" sha1="b64e8263367b6d7b298f913b8d4bd68558ed4b60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx39b9f3f33532c">
+		<description>[2]cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]cracky.d88" size="761008" crc="e561da11" sha1="39b9f3f33532c1a767660d65675154653c8dec31"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0173618f93bf0">
+		<description>[2]cracky</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]cracky.dsk" size="737280" crc="f4cc9881" sha1="0173618f93bf024efc2f693f69873799c8969d6c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx33f3e5ae92eb2">
+		<description>[2]guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]guntus.d88" size="761008" crc="1ab1235c" sha1="33f3e5ae92eb2b181a7b6ec03c93e5798b08be03"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7b2dfd17c3baf">
+		<description>[2]guntus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]guntus.dsk" size="737280" crc="e3017f79" sha1="7b2dfd17c3baf0a80f05d628cef9c33a1a9bf3eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx867af126d18bf">
+		<description>[2]impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]impetus.d88" size="761008" crc="d1ec6d93" sha1="867af126d18bf7431dc170e3d62e0e60abee29b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8682f040bbf0e">
+		<description>[2]impetus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]impetus.dsk" size="737280" crc="0f71ae88" sha1="8682f040bbf0ef4864e7112eb0e9147f5b054bbe"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9175962f90e70">
+		<description>[2]lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]lift.d88" size="761008" crc="5b1807a9" sha1="9175962f90e7021148f1eace0cc51e1364cedeb6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx0470bc3879145">
+		<description>[2]lift</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]lift.dsk" size="737280" crc="40d02da4" sha1="0470bc3879145af83df3d21bcd4440665be906c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx90d15ab16d524">
+		<description>[2]mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]mazy.d88" size="761008" crc="2d7a7d15" sha1="90d15ab16d5245e5518c4ed8611e60fa9a43e92f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe4420088fd1cf">
+		<description>[2]mazy</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]mazy.dsk" size="737280" crc="4969b996" sha1="e4420088fd1cfb226aea8980ea1eb709a045ded6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx720728bcd28ef">
+		<description>[2]mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]mazy2.d88" size="761008" crc="9199f13a" sha1="720728bcd28effca19d44d3f6033e81ab8a730a7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1562997d961b2">
+		<description>[2]mazy2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]mazy2.dsk" size="737280" crc="37bef714" sha1="1562997d961b290673f50d83a17ebf1f593e4640"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxa28c041be7ef5">
+		<description>[2]mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]mieyen.d88" size="761008" crc="69da0aa5" sha1="a28c041be7ef59d266f2f926294b9602d2ce5e60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx88d5972c75119">
+		<description>[2]mieyen</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]mieyen.dsk" size="737280" crc="268a7db1" sha1="88d5972c7511977e572039740cfed0e4ec9ae4c6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxd40d644d0d5e1">
+		<description>[2]neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]neuras.d88" size="761008" crc="2f324ff2" sha1="d40d644d0d5e1308fc2fb758a2b8945635442a27"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx8aed7a8b1436c">
+		<description>[2]neuras</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]neuras.dsk" size="737280" crc="5277e3e3" sha1="8aed7a8b1436cd7088cfe96a85600cc90f606208"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx50c7443104f05">
+		<description>[2]osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]osotos.d88" size="761008" crc="941643d8" sha1="50c7443104f0529670b79ea1343a5f1c4fa3dbce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxc3923ed21885d">
+		<description>[2]osotos</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]osotos.dsk" size="737280" crc="6c1a0ce5" sha1="c3923ed21885d99f6d944fb3322a127027d199a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx15253ad5633af">
+		<description>[2]ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]ruptus.d88" size="761008" crc="ddf14dd4" sha1="15253ad5633af4a34e11dd6a3c16f596b8bf2298"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx5df6089b7b395">
+		<description>[2]ruptus</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]ruptus.dsk" size="737280" crc="fc66ec1e" sha1="5df6089b7b39528caa40219051736c8c53c40a2c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxabf7956bd8d34">
+		<description>[2]svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]svellas.d88" size="761008" crc="6a4ec4f9" sha1="abf7956bd8d3497948eeacb3dcf7f47b704b542b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx7e6a650d70d39">
+		<description>[2]svellas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]svellas.dsk" size="737280" crc="aa5ab84c" sha1="7e6a650d70d390920ff44eeeca822797012b163f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx910dac05ea308">
+		<description>[2]SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]SwordWork.d88" size="761008" crc="5882b8ec" sha1="910dac05ea308f4509c0aee5ebf08558a0db58bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxeb7688c47e7a1">
+		<description>[2]SwordWork</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]SwordWork.dsk" size="737280" crc="7cc278c5" sha1="eb7688c47e7a1169220b71c06f3c20b8052201b3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx1349ecbe04358">
+		<description>[2]yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="761008">
+				<rom name="[2]yewdow.d88" size="761008" crc="bcb005ff" sha1="1349ecbe043580784b00ab51dee34f99258cefa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxdc968aaa14e6d">
+		<description>[2]yewdow</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="737280">
+				<rom name="[2]yewdow.dsk" size="737280" crc="036ac6d8" sha1="dc968aaa14e6dd9b72fb0ca4fc19e36a17eea299"/>
 			</dataarea>
 		</part>
 	</software>
