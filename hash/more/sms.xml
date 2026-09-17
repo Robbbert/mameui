@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 593 -->
+<!-- Number of items in this list = 594 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -3449,6 +3449,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Oregon MSX2SMS Hack.sms" size="49152" crc="8f22fbe1" sha1="7b971b412f9730b8f9a9462fabfe9a45554de7b0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms779f3f15f4174">
+		<description>Oriflame (2026)(Altair)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Oriflame (2026)(Altair).sms" size="1048576" crc="fee8077a" sha1="779f3f15f41740d15b01dbe954126cad93b977e7"/>
 			</dataarea>
 		</part>
 	</software>

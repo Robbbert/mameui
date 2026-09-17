@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2135 -->
+<!-- Number of items in this list = 2141 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
-	<software name="gena3084262f5af4">
-		<description>(demo) Sonic no way</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2621440">
-				<rom name="(demo) Sonic no way.bin" size="2621440" crc="e01f6ed5" sha1="a3084262f5af481df1a5c5ab03c4862551a53c91"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
 		<year>????</year>
@@ -512,16 +502,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="gene372efa557989">
-		<description>(demo)Rolango Demo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="205510">
-				<rom name="(demo)Rolango Demo.bin" size="205510" crc="69528d2a" sha1="e372efa5579892749fc585fc9fe0dfc238cbb168"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="gen0b5a63a47cb1d">
 		<description>(demo)rpg68-001.rom</description>
 		<year>????</year>
@@ -709,6 +689,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1470386">
 				<rom name="(demo)Sonic 2 Retro Remix by Thorn.bin" size="1470386" crc="979a0c9a" sha1="a6eb9836d533f910f3c908ca01f7c3407b2f2fe9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena3084262f5af4">
+		<description>(demo)Sonic no way</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="(demo)Sonic no way.bin" size="2621440" crc="e01f6ed5" sha1="a3084262f5af481df1a5c5ab03c4862551a53c91"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7222,6 +7212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen145a15f5abe18">
+		<description>Garfield - Caught in the Act - Complete v1.1 (2026)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Garfield - Caught in the Act - Complete v1.1 (2026)(BillyTime! Games).bin" size="4194304" crc="1cd79306" sha1="145a15f5abe184f13be2f45240ed8820096e5438"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen54bb7bb4d9970">
 		<description>Gargoyles (USA) (Beta) (1995-09-25)</description>
 		<year>????</year>
@@ -11752,6 +11752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen50609b5532514">
+		<description>Metal Slug Warfare!! v2.3 Demo (2021)(Studio Vetea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1433692">
+				<rom name="Metal Slug Warfare!! v2.3 Demo (2021)(Studio Vetea).bin" size="1433692" crc="beba682b" sha1="50609b5532514f87e9f3b091fad63ba0aad6c3aa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen6e4805c074134">
 		<description>Metal Sonic 3k by MKdarkon</description>
 		<year>????</year>
@@ -12992,6 +13002,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen851d760cf48eb">
+		<description>Papi Commando Reload TecToy Demo (2017)(Studio Vetea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Papi Commando Reload TecToy Demo (2017)(Studio Vetea).bin" size="1572864" crc="d73e6ad5" sha1="851d760cf48eb847bd2c0bdf39d9733facb7944e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gende79298c118bc">
+		<description>Papi Commando Remix Deluxe (2020)(Studio Vetea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3830164">
+				<rom name="Papi Commando Remix Deluxe (2020)(Studio Vetea).bin" size="3830164" crc="6c8ee0b0" sha1="de79298c118bc7fa38232871bfd549f4d5bacdcb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen1290f2a3bce84">
 		<description>Papi Commando Remix MD (2018)(Studio Vetea)</description>
 		<year>????</year>
@@ -13003,22 +13033,22 @@
 		</part>
 	</software>
 	<software name="gen481848d91bcaf">
-		<description>Papi Commando Tennis (PD) (Demo)</description>
+		<description>Papi Commando Tennis Demo (2018)(Studio Vetea)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1799138">
-				<rom name="Papi Commando Tennis (PD) (Demo).bin" size="1799138" crc="0a67b352" sha1="481848d91bcafa3a07ea3407a0c5ca148b9e7dc3"/>
+				<rom name="Papi Commando Tennis Demo (2018)(Studio Vetea).bin" size="1799138" crc="0a67b352" sha1="481848d91bcafa3a07ea3407a0c5ca148b9e7dc3"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="gen851d760cf48eb">
-		<description>PapiCommandoReload-TectoyDemo</description>
+	<software name="gendb5748e624c06">
+		<description>PapiRium Demo (2021)(Studio Vetea)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="1572864">
-				<rom name="PapiCommandoReload-TectoyDemo.bin" size="1572864" crc="d73e6ad5" sha1="851d760cf48eb847bd2c0bdf39d9733facb7944e"/>
+			<dataarea name="rom" size="786432">
+				<rom name="PapiRium Demo (2021)(Studio Vetea).bin" size="786432" crc="4b54976c" sha1="db5748e624c06cc27a10d8b0f307c3535fcd5616"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14389,6 +14419,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Rocket Panda Into the Unknown v4 (2022)(SpacePants Games).bin" size="2097152" crc="70d33705" sha1="e22cb3daa1b7d03a0fa088e2d70d511a4e3db0d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene372efa557989">
+		<description>Rol'An'Go Demo (2017)(Studio Vetea)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="205510">
+				<rom name="Rol'An'Go Demo (2017)(Studio Vetea).bin" size="205510" crc="69528d2a" sha1="e372efa5579892749fc585fc9fe0dfc238cbb168"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18742,6 +18782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf1cbee06b6f3e">
+		<description>Super Hard Bouncer (2025)(Libra Bits)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="393216">
+				<rom name="Super Hard Bouncer (2025)(Libra Bits).bin" size="393216" crc="81ae1859" sha1="f1cbee06b6f3ee553fa48a16bb74f4b2ac1dc13d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3cd262040517e">
 		<description>Super Hydlide - Refined and Rebalanced v1.1 (2022)(Mentil)</description>
 		<year>????</year>
@@ -19339,6 +19389,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="TECMO CUP.bin" size="524288" crc="4c0a4b96" sha1="1041fde6628a0ddf7fa17fd10b3d1f92deeef9f8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen883418f17c205">
+		<description>Teenage Mutant Ninja Turtles - The Arcade Game v0.2.9d (2026)(Gustavo Valenzuela)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1703936">
+				<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.2.9d (2026)(Gustavo Valenzuela).bin" size="1703936" crc="a8532e61" sha1="883418f17c205d7afe7c91eb7e1dc2df1b012bd3"/>
 			</dataarea>
 		</part>
 	</software>
