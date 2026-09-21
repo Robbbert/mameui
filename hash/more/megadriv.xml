@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2141 -->
+<!-- Number of items in this list = 2142 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -19019,6 +19019,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="917504">
 				<rom name="SuperPowerKick_3_6.bin" size="917504" crc="c912389f" sha1="3b8cf83a84ee3b22fc87a7d1cb97db1a788d0b15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen5cd8768f7f032">
+		<description>Supertripper Demo (2026)(PlayOnRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Supertripper Demo (2026)(PlayOnRetro).bin" size="2097152" crc="9c1b4ec6" sha1="5cd8768f7f032c559009618567ef066e75284e87"/>
 			</dataarea>
 		</part>
 	</software>

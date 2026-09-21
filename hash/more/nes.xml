@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10992 -->
+<!-- Number of items in this list = 10994 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -53962,6 +53962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes77cbb0ea1ceae">
+		<description>Mariana Sequence, The v1.1(HB) (2026)(CGT Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Mariana Sequence, The v1.1(HB) (2026)(CGT Games).nes" size="524304" crc="63307f67" sha1="77cbb0ea1ceae36275a6819d5178cf76d76399fe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes2d44a24e60aa0">
 		<description>Mario &amp; Yoshi (Europe) (2)</description>
 		<year>????</year>
@@ -69969,6 +69979,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Pacifister, The (2026)(Musikai).nes" size="524304" crc="c0763d59" sha1="9bb6b1ba770eefe8daabeebffcd34a560bdcde26"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesd3d1370d435b2">
+		<description>Packet (2026)(Joe Sherman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Packet (2026)(Joe Sherman).nes" size="524304" crc="f437e3b4" sha1="d3d1370d435b2495283aefb1f718e1bcfd38ed5a"/>
 			</dataarea>
 		</part>
 	</software>

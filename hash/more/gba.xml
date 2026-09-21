@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 466 -->
+<!-- Number of items in this list = 474 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -792,6 +792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba4a149baad1784">
+		<description>Cat's Curse (2023)(NotImpLife)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="353052">
+				<rom name="Cat's Curse (2023)(NotImpLife).gba" size="353052" crc="a35d87de" sha1="4a149baad17840948c2d4ffdf068bfaf1116a024"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbaafc76aaab9f07">
 		<description>Catacomb 3D (2026)(MSDOS2GBA)</description>
 		<year>????</year>
@@ -803,12 +813,12 @@
 		</part>
 	</software>
 	<software name="gba324f0375e3f4f">
-		<description>cccp</description>
+		<description>CCCP (2008)(Torlus Productions)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="499440">
-				<rom name="cccp.gba" size="499440" crc="ad634c54" sha1="324f0375e3f4f89455122e2663b831917013bfc3"/>
+				<rom name="CCCP (2008)(Torlus Productions).gba" size="499440" crc="ad634c54" sha1="324f0375e3f4f89455122e2663b831917013bfc3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1069,6 +1079,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="2985468">
 				<rom name="Collie Defense (2024)(Yann Vaillant).gba" size="2985468" crc="2559e4bf" sha1="52a17491d7c6b599a086022fa6e16c5cf346254c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbae9d645515550f">
+		<description>Covid Adventure (2021)(Ties Stuij)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="520560">
+				<rom name="Covid Adventure (2021)(Ties Stuij).gba" size="520560" crc="e37400b5" sha1="e9d645515550f6eda0f0aec0fcf658b2fb93418a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1782,6 +1802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbae075db15a4fc0">
+		<description>Flipull - An Exciting Cube Game - GB2GBA (1990)(Taito)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Flipull - An Exciting Cube Game - GB2GBA (1990)(Taito).gba" size="108700" crc="12ea5abb" sha1="e075db15a4fc0a51cc1702537c31f897a852cd93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba7dc8bfa23c6d4">
 		<description>FullMetal Alchemist - Sonata of Memories T-Eng (2021)(Iredc)</description>
 		<year>????</year>
@@ -1929,6 +1959,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4740332">
 				<rom name="GORF (2025)(Jess Creations).gba" size="4740332" crc="c246ac9a" sha1="3ec020f0a4cac9b2f54e9f697e0fbf4436d16e01"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbace367d11cc53b">
+		<description>Gridiculous (2026)(Oofin Sprouts)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1621668">
+				<rom name="Gridiculous (2026)(Oofin Sprouts).gba" size="1621668" crc="5ec515b8" sha1="ce367d11cc53be872c70812176d414b186ae82cf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2189,6 +2229,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Legendary Starfy, The T-Eng v1.1 - original names (2023)(Megahog2015).gba" size="8388608" crc="a047b091" sha1="2e1d1ae854dca23a2135f29945afacea2f8bb70c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba21251466015bd">
+		<description>Lellenda de la Cerda DX, La - Ed. Charnega - GBC2GBA T-Spa v2.0 (1999)(Charnego Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="1124508">
+				<rom name="Lellenda de la Cerda DX, La - Ed. Charnega - GBC2GBA T-Spa v2.0 (1999)(Charnego Translations).gba" size="1124508" crc="4cfd62cb" sha1="21251466015bde83121fb6846e2356acb6b5f381"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2519,6 +2569,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16777216">
 				<rom name="Oriental Blue - Ao no Tengai T-Eng (2013)(Kingcom, Tom).gba" size="16777216" crc="8a850da7" sha1="95c4e8b78d7e66e28451e4f6780d3f0fd9e687d2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaab6fe7ab4b786">
+		<description>Palamedes - GB2GBA (1990)(HOT-B)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="108700">
+				<rom name="Palamedes - GB2GBA (1990)(HOT-B).gba" size="108700" crc="d2904827" sha1="ab6fe7ab4b786f5439540e402e8dae13d42d05e7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4222,6 +4282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbaa083e06f68317">
+		<description>Spindown v0.1.4 (2026)(Chris Pickel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="60604">
+				<rom name="Spindown v0.1.4 (2026)(Chris Pickel).gba" size="60604" crc="b3d30187" sha1="a083e06f68317843a6affe4c4f68cf3ae1fd7b78"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba72d84f52c796c">
 		<description>SpongeBob SquarePants - Lights, Camera, Pants! (2005-08-03)(THQ)(proto)</description>
 		<year>????</year>
@@ -4469,6 +4539,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16239516">
 				<rom name="Tremblay Island v1.10 (2021)(Cinemint Games).gba" size="16239516" crc="ce85ba07" sha1="b09b600bfc222c2d92829d8883feab700b013953"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba41cc88f39aa8d">
+		<description>Trogdor! v3.1 (2023)(Jeremy Elkayam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="5732592">
+				<rom name="Trogdor! v3.1 (2023)(Jeremy Elkayam).gba" size="5732592" crc="91768d65" sha1="41cc88f39aa8d0334560601cfc485ff93c57dd03"/>
 			</dataarea>
 		</part>
 	</software>
