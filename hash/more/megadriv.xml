@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2142 -->
+<!-- Number of items in this list = 2146 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -7449,6 +7449,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="315012">
 				<rom name="genpoker.bin" size="315012" crc="577e32d7" sha1="92fea6292e15f2481bc2069062c141de79ef271c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gendca446f8e4ae0">
+		<description>GenThrees v1.01 (2026)(abadede919302)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="GenThrees v1.01 (2026)(abadede919302).bin" size="262144" crc="657b99a3" sha1="dca446f8e4ae09174871c5652cce9b84e95204be"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15052,6 +15062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen56c0d33518315">
+		<description>Shaolin Carcara 2 Demo (2025)(Manganga Team)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Shaolin Carcara 2 Demo (2025)(Manganga Team).bin" size="1310720" crc="e7e0edfb" sha1="56c0d335183156c78a1c266a9b4cd4a35d78ddb8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen1ad8cd54f8fe4">
 		<description>shaq fu (usa, europe)</description>
 		<year>????</year>
@@ -19032,6 +19052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen06b926494b74a">
+		<description>Supertripper Demo (2026)(PlayOnRetro)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Supertripper Demo (2026)(PlayOnRetro)_1.bin" size="2097152" crc="a20cfd60" sha1="06b926494b74af21cc9e13a7a77cdf38f160962c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen71d3816e1fd6d">
 		<description>Super_Fantasy_Zone</description>
 		<year>????</year>
@@ -21139,6 +21169,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="yu yu hakusho - sunset fighters (hack, spanish).bin" size="3145728" crc="28d92080" sha1="685974e84cbddb769417f37ebbb6f0ceb4888456"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen74c8896fef4e2">
+		<description>Yu Yu Hakusho Gaiden T-Eng v1.0 Build 9 (2026)(Patch Clan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Yu Yu Hakusho Gaiden T-Eng v1.0 Build 9 (2026)(Patch Clan).bin" size="4194304" crc="fadb2b33" sha1="74c8896fef4e2858bab67535ec7d9b1ae0484344"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 127 -->
+<!-- Number of items in this list = 154 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -92,6 +92,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp60da00fb31540">
+		<description>2048 (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="2048 (2026)(Hardhat Warrior).ngp" size="524288" crc="eb81b508" sha1="60da00fb31540333b1175b9edb8afe2d4b0dc8c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp9350e1a1aef4d">
 		<description>3D Engine V2 (PD)</description>
 		<year>????</year>
@@ -109,6 +119,36 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Aerial Mini (2025)(Inufuto).ngp" size="524288" crc="3fc9f157" sha1="6de546df94ed8c7c7a84e32f8e3dbe671652b521"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp138bfeeaf0556">
+		<description>Another Day in Hell - Alt1 v1.1 (200x)(Thor &amp; Iceman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Another Day in Hell - Alt1 v1.1 (200x)(Thor &amp; Iceman).ngp" size="2097152" crc="c006324f" sha1="138bfeeaf0556f96b6a4ecd931104e5c7cfb7ad7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp11edb3b3bce28">
+		<description>Another Day in Hell - Alt2 v1.1 (200x)(Thor &amp; Iceman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Another Day in Hell - Alt2 v1.1 (200x)(Thor &amp; Iceman).ngp" size="2097152" crc="a3b7fd00" sha1="11edb3b3bce2891504e51265f9d01b37f1f457fc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpc677558611859">
+		<description>Another Day in Hell v1.1 (2005)(Thor &amp; Iceman)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Another Day in Hell v1.1 (2005)(Thor &amp; Iceman).ngp" size="2097152" crc="6e0b43ed" sha1="c677558611859a36fbb0ca0c2feb8bd263b2c089"/>
 			</dataarea>
 		</part>
 	</software>
@@ -209,6 +249,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Blocks by Ivan Mackintosh (PD).ngc" size="32768" crc="dfd9d777" sha1="8bb44863e9e874d8d78234a406f84e33711fc495"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp5450f38c7e6df">
+		<description>Bomberman V1.1 (200x)(Thor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Bomberman V1.1 (200x)(Thor).ngp" size="2097152" crc="c916e13b" sha1="5450f38c7e6df3b1ba8e3440641b4f569017c86c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -332,6 +382,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpc23283e69b13d">
+		<description>Defenderoids (2025)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Defenderoids (2025)(Chris Ahchay).ngp" size="524288" crc="33bde8bd" sha1="c23283e69b13d0a739227a0bd90a5949f8ecf822"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp92a6efa90e02f">
 		<description>Densetsu no Ogre Battle Gaiden - Zenobia no Ouji (Japan) [T-En by FFaddic v1.0] [i]</description>
 		<year>????</year>
@@ -392,6 +452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp7ee76e1885661">
+		<description>Farkle (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Farkle (2026)(Hardhat Warrior).ngp" size="524288" crc="38f1256d" sha1="7ee76e188566101367f4f56385e61b70c6c6126a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp0784e58ddf280">
 		<description>Fruity Pals' Revenge v1.2 (2025)(Infinite State Games)</description>
 		<year>????</year>
@@ -439,6 +509,46 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Gardenia (2026)(Chris Ahchay)_3.ngp" size="2097152" crc="efde5b4d" sha1="bbb9a7fd1935c0d19f6f8d7de52546f94c78cb59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpc9c3daff9287b">
+		<description>Gardenia v1.4 (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia v1.4 (2026)(Chris Ahchay).ngp" size="2097152" crc="b571eb5b" sha1="c9c3daff9287b50fbbf773fa9af15d8bb6229a02"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpb08dc7bafcae5">
+		<description>Gardenia v1.4a (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia v1.4a (2026)(Chris Ahchay).ngp" size="2097152" crc="01f824a6" sha1="b08dc7bafcae5c23611ff9d05a30a38e1f8706eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp21497e564ab06">
+		<description>Gardenia v1.4b (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia v1.4b (2026)(Chris Ahchay).ngp" size="2097152" crc="8a8641cd" sha1="21497e564ab066fa7a09f445ec05b7637f815856"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpeed7b883cbc41">
+		<description>Gears of Fate (2009)(Thor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gears of Fate (2009)(Thor).ngp" size="2097152" crc="1be7c7ac" sha1="eed7b883cbc41878593a738cf5ca4d51a2c158a2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -512,6 +622,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp53e7c3b150feb">
+		<description>Invaders by Tomasz Slanina (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Invaders by Tomasz Slanina (PD).ngc" size="524288" crc="2cca861f" sha1="53e7c3b150feb09e2c512f7397c9d01dc8c568fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp98820d322f982">
+		<description>Joust (200x)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Joust (200x)(Chris Ahchay).ngp" size="32768" crc="5cf08d87" sha1="98820d322f982ad36fb0b9a31341479434db308b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpe1330bf8931d2">
 		<description>Jumpy! by Monkey Heeded Software (PD)</description>
 		<year>????</year>
@@ -519,6 +649,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Jumpy! by Monkey Heeded Software (PD).ngc" size="32768" crc="66b24de1" sha1="e1330bf8931d2ba90074fa9893475fd84e9d88fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp5ba1692b13037">
+		<description>Juno First (200x)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno First (200x)(Chris Ahchay).ngp" size="32768" crc="c6226d57" sha1="5ba1692b13037f4bd74539c388c37eab62992617"/>
 			</dataarea>
 		</part>
 	</software>
@@ -802,6 +942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp796fd16f8c326">
+		<description>Neo Bowling (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Neo Bowling (2026)(Hardhat Warrior).ngp" size="2097152" crc="b5d2d3f2" sha1="796fd16f8c3265f6ffe6ef7470d6db44297324ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpaf4f8e4ab54a5">
 		<description>Neo Centipede by Roger Bacon (05-13-2001) (PD)</description>
 		<year>????</year>
@@ -809,6 +959,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Neo Centipede by Roger Bacon (05-13-2001) (PD).ngc" size="32768" crc="e13ddfa7" sha1="af4f8e4ab54a5a05db0f18606c88665725a07b17"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpe6278043b3833">
+		<description>Neo Yahtzee (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Neo Yahtzee (2026)(Hardhat Warrior).ngp" size="524288" crc="15c0f41e" sha1="e6278043b38339d584fecedd9554e7abda49a50c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -849,6 +1009,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Neotris (200x)(Julien, Loic)(PD).ngc" size="524288" crc="1f0db78a" sha1="5b3c02061ae4b64ab2d8e5c9f0534ac7d276674b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpeba5200b2c31d">
+		<description>Neotris - The Grand Carnage (200x)(sleipnir)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Neotris - The Grand Carnage (200x)(sleipnir).ngp" size="524288" crc="f98722c6" sha1="eba5200b2c31d887451e535c03cbe606d63b17e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -902,6 +1072,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp6b762dae1f0e8">
+		<description>Over Rev (2026)(Tixul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Over Rev (2026)(Tixul).ngp" size="2097152" crc="a381d08a" sha1="6b762dae1f0e8464f1302e622e24a1d9d097d841"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp1b4be30fcf038">
+		<description>Pac-Man (1999)(Namco - SNK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Pac-Man (1999)(Namco - SNK).ngc" size="524288" crc="34ec0db8" sha1="1b4be30fcf038d9539bc73f8c4eccb9c7f95fedd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpe9196ac0330a1">
 		<description>Pachisuro Aruze Oogoku Pocket - Delsol 2 (J) [!]</description>
 		<year>????</year>
@@ -939,6 +1129,26 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="pocket tennis - pocket sports series (japan, europe) (en,ja).ngp" size="524288" crc="89410850" sha1="59602e44c631a00b2db53196204a4bc22ccd7025"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpc39f668c83773">
+		<description>PocketRace V0.03pre-alpha by Thor (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="PocketRace V0.03pre-alpha by Thor (PD).ngc" size="524288" crc="05326208" sha1="c39f668c837737338bbae376f6a58ec781fbc1bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp3891882c215eb">
+		<description>Puzzle Gems V1.1 by Thor (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Puzzle Gems V1.1 by Thor (PD).ngc" size="524288" crc="86be8801" sha1="3891882c215ebf8e5f91f7d19cf1293180dc319b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1039,6 +1249,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Ruptus Mini (2025)(Inufuto).ngp" size="524288" crc="09f1b098" sha1="aeacc5696dec5f607db8377c27f0ce8b8a459dfb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpdaade43c3f821">
+		<description>Same Game (200x)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Same Game (200x)(Chris Ahchay).ngp" size="524288" crc="00c6cfb3" sha1="daade43c3f821e65fe395fb5010c2aae82e68232"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1162,6 +1382,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp1c1ce4db3cb46">
+		<description>SOD Chess v1.02 (2002)(Thor)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="SOD Chess v1.02 (2002)(Thor).ngp" size="524288" crc="bcf203a9" sha1="1c1ce4db3cb46694ac1e850179324e333bcab556"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp63809e48885dc">
+		<description>Sodchess V1.1.0 by Thor (PD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Sodchess V1.1.0 by Thor (PD).ngc" size="524288" crc="5e9c519f" sha1="63809e48885dc9a062e415e29552513235302dd2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpa17b1ffb66fba">
 		<description>Solitaire (2000)(Ivan Mackintosh)</description>
 		<year>????</year>
@@ -1202,6 +1442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp004a1d6432fc0">
+		<description>Sudoku (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Sudoku (2026)(Hardhat Warrior).ngp" size="524288" crc="87c40377" sha1="004a1d6432fc07710429452fd545dd2917c494c4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpca280fdc1ed1b">
 		<description>Svellas Micro (2025)(Inufuto)</description>
 		<year>????</year>
@@ -1219,6 +1469,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="SwordWork Micro (2026)(Inufuto).ngp" size="524288" crc="d7130cdf" sha1="667dd5dcc592e10845fb32f1aff41ec730cb86dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp1ec0279234034">
+		<description>Tetris (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Tetris (2026)(Hardhat Warrior).ngp" size="524288" crc="04b25a90" sha1="1ec02792340340bdb34ff437a9f1812db36eda91"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1259,6 +1519,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Unnamed Jumpy Platform Game by Roger Bacon (06-06-2001) (PD).ngc" size="32768" crc="1bdd37a9" sha1="b5ee592ad45ffbeccd404ed06e5a37185b8d0d4f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp1cf9067ca6e3a">
+		<description>Xenon 2 - Megablast (2026)(Napomex)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Xenon 2 - Megablast (2026)(Napomex).ngp" size="2097152" crc="e84ab111" sha1="1cf9067ca6e3ae64b8a7a08f4db926edb412c1ad"/>
 			</dataarea>
 		</part>
 	</software>

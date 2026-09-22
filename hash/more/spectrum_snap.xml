@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 467 -->
+<!-- Number of items in this list = 470 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -502,6 +502,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsffcbf276b80d9">
+		<description>Beach-Head 48K (1984)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="39326">
+				<rom name="Beach-Head 48K (1984)(U.S. Gold).z80" size="39326" crc="70112e2c" sha1="ffcbf276b80d9c678eb566bb31658246590b0f77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsede05116d54b8">
+		<description>Beach-Head II - The Dictator Strikes Back! 48K (1985)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="40111">
+				<rom name="Beach-Head II - The Dictator Strikes Back! 48K (1985)(U.S. Gold).z80" size="40111" crc="178b1c61" sha1="ede05116d54b8b9930db1de28aae8fced9eb22a5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsc3441e5decc2c">
 		<description>Beaky and the Egg Snatchers 48K (1984)(Fantasy Software)</description>
 		<year>????</year>
@@ -729,6 +749,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="35649">
 				<rom name="Bounces (1986)(Beyond).z80" size="35649" crc="bd312347" sha1="6e4af10a2e1dbfd502b54c028b85b15b31fffef3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ab8bf251caf0">
+		<description>Bounty Bob Strikes Back! 48K (1985)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="45436">
+				<rom name="Bounty Bob Strikes Back! 48K (1985)(U.S. Gold).z80" size="45436" crc="de0b2094" sha1="3ab8bf251caf005c2dcccf92e2aec8b9baef3ecc"/>
 			</dataarea>
 		</part>
 	</software>
