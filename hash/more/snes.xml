@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4184 -->
+<!-- Number of items in this list = 4187 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -11449,6 +11449,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Fireteam Rogue (USA) (Proto).smc" size="2097152" crc="00f67ba2" sha1="9a1b37955e5a8b01a40b0dc35454d4fb9f99f34f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsf194f32156ba6">
+		<description>Firewall (2026)(ColPanic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Firewall (2026)(ColPanic).sfc" size="524288" crc="c7b83d03" sha1="f194f32156ba6c94b256e5e02aee3d3e271ad054"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33662,6 +33672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns201f9351c1649">
+		<description>Super Formation Soccer 95 - della Serie A (J)(1995)(Human Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Super Formation Soccer 95 - della Serie A (J)(1995)(Human Entertainment).sfc" size="1572864" crc="798352bf" sha1="201f9351c1649c97fecfea060c0a135b6c06810a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="sns1f471074b4add">
 		<description>Super Freaking Mario World V1 (SMW1 Hack)</description>
 		<year>????</year>
@@ -39739,6 +39759,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="TMNT Tournament Fighters - Grandmasters Edition v3.9 (2025-26)(Allo).sfc" size="4194304" crc="58769ab4" sha1="67c4a1bc1db348a0e8e47889660014572729cfaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4359b606faadf">
+		<description>TMNT x Street Fighter II Turbo v29 (2026)(RyanFox.eth)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="TMNT x Street Fighter II Turbo v29 (2026)(RyanFox.eth).sfc" size="4194304" crc="094ddc93" sha1="4359b606faadf1352a8983cb1265c3813556eed6"/>
 			</dataarea>
 		</part>
 	</software>

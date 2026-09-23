@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 470 -->
+<!-- Number of items in this list = 471 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -1303,12 +1303,12 @@
 		</part>
 	</software>
 	<software name="zxs2e2dccdaae103">
-		<description>Dizzy 2 - Treasure Island Dizzy RU 128K (199x)</description>
+		<description>Dizzy 2 - Treasure Island Dizzy RU 48K-128K (199x)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="57508">
-				<rom name="Dizzy 2 - Treasure Island Dizzy RU 128K (199x).z80" size="57508" crc="ccc7f01b" sha1="2e2dccdaae1033af0599eabdad07d6d196ed8b8c"/>
+				<rom name="Dizzy 2 - Treasure Island Dizzy RU 48K-128K (199x).z80" size="57508" crc="ccc7f01b" sha1="2e2dccdaae1033af0599eabdad07d6d196ed8b8c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2499,6 +2499,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="88502">
 				<rom name="Lotus Esprit Turbo Challenge 128K (1990)(Gremlin Graphics).z80" size="88502" crc="e2a3503d" sha1="d5049653463a56bedcc1205dfade8bbe5ebc9cc2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs57fd6440ce319">
+		<description>Lumines ZX 48K (2026)(kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="49182">
+				<rom name="Lumines ZX 48K (2026)(kirby2000).z80" size="49182" crc="a12c7c04" sha1="57fd6440ce319ce0c1bed7c720a2950410cf3488"/>
 			</dataarea>
 		</part>
 	</software>
