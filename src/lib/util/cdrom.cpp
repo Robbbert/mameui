@@ -718,6 +718,11 @@ void cdrom_file::get_info_from_type_string(const char *typestring, uint32_t *trk
 		*trktype = CD_TRACK_AUDIO;
 		*datasize = 2352;
 	}
+	else if (!strcmp(typestring, "CDG"))
+	{
+		*trktype = CD_TRACK_AUDIO;
+		*datasize = 2352;
+	}
 }
 
 /*-------------------------------------------------
@@ -2604,6 +2609,8 @@ std::error_condition cdrom_file::parse_cue(std::string_view tocfname, toc &outto
 					osd_printf_verbose("trk %d: fname %s offset %d\n", trknum, outinfo.track[trknum].fname, outinfo.track[trknum].offset);
 				}
 			}
+			
+			const bool is_cdg = !strcmp(token, "CDG");
 
 			convert_type_string_to_track_info(token, &outtoc.tracks[trknum]);
 			if (outtoc.tracks[trknum].datasize == 0)
@@ -2617,6 +2624,13 @@ std::error_condition cdrom_file::parse_cue(std::string_view tocfname, toc &outto
 			TOKENIZE
 
 			convert_subtype_string_to_track_info(token, &outtoc.tracks[trknum]);
+
+			if (is_cdg)
+			{
+				/* CD+G format has no unique subcode. */
+				outtoc.tracks[trknum].subtype = CD_SUB_RAW;
+				outtoc.tracks[trknum].subsize = 96;
+			}
 		}
 		else if (!strcmp(token, "INDEX"))
 		{
@@ -3148,6 +3162,8 @@ std::error_condition cdrom_file::parse_toc(std::string_view tocfname, toc &outto
 			outtoc.tracks[trknum].pgsub = CD_SUB_NONE;
 			outtoc.tracks[trknum].padframes = 0;
 
+			const bool is_cdg = !strcmp(token, "CDG");
+			
 			convert_type_string_to_track_info(token, &outtoc.tracks[trknum]);
 			if (outtoc.tracks[trknum].datasize == 0)
 			{
@@ -3160,6 +3176,13 @@ std::error_condition cdrom_file::parse_toc(std::string_view tocfname, toc &outto
 			TOKENIZE
 
 			convert_subtype_string_to_track_info(token, &outtoc.tracks[trknum]);
+
+			if (is_cdg)
+			{
+				/* CD+G format has no unique subcode. */
+				outtoc.tracks[trknum].subtype = CD_SUB_RAW;
+				outtoc.tracks[trknum].subsize = 96;
+			}
 		}
 		else if (!strcmp(token, "START"))
 		{
