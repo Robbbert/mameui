@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8040 -->
+<!-- Number of items in this list = 8044 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -19172,6 +19172,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4efc68fa863ed">
+		<description>Deepspace_ZXSpectrum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="11014">
+				<rom name="Deepspace_ZXSpectrum.tap" size="11014" crc="7b9b34a3" sha1="4efc68fa863edc73df4693b02f7a4796a157a975"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs014ff8ebaac14">
 		<description>DEF-LET</description>
 		<year>????</year>
@@ -22969,6 +22979,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="14307">
 				<rom name="Elite Planet Browser_ZXSpectrum.tap" size="14307" crc="09f82f8e" sha1="4561baa8b9c2894501c0f7c6e2292bdbe0d79902"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs06bf46e413ddf">
+		<description>ElitePlanetBrowser_ZXSpectrum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="14457">
+				<rom name="ElitePlanetBrowser_ZXSpectrum.tap" size="14457" crc="fe195b14" sha1="06bf46e413ddf8eaf60df27090dbf0667d2f2853"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29629,6 +29649,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48536">
 				<rom name="Gyroscope (1985)(Melbourne House).tap" size="48536" crc="4aa3e7f5" sha1="ef3ce00fc0d5eea3c4e26d7cf1dc68f26f551616"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsab6e6967e1d7a">
+		<description>H-Tron_ZXSpectrum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="8761">
+				<rom name="H-Tron_ZXSpectrum.tap" size="8761" crc="72f4b664" sha1="ab6e6967e1d7a247a58a694cb67a4b2756a8dfdf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39879,6 +39909,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="9731">
 				<rom name="MastermindRK.tap" size="9731" crc="113ae7ef" sha1="975132c9d3347374f627b28d033ed1e22a1bb863"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf14ddf65b490">
+		<description>MastermindRK_ZXSpectrum</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="9805">
+				<rom name="MastermindRK_ZXSpectrum.tap" size="9805" crc="b53f4bef" sha1="af14ddf65b490e0970305431fdd6ad5fd528c95d"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 102 -->
+<!-- Number of items in this list = 106 -->
 <softwarelist name="aquarius_cass" description="aquarius_cass loose roms">
 	<software name="caq680af55277118">
 		<description>Aerial(1of2)</description>
@@ -502,6 +502,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="caq33065e84c0d7e">
+		<description>H-Tron_(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="H-Tron_(1of2).caq" size="147" crc="d0bd0fcc" sha1="33065e84c0d7eadcd840ff47810ab7177fe39b64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caqf21daeb8e2a56">
+		<description>H-Tron_(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="7561">
+				<rom name="H-Tron_(2of2).caq" size="7561" crc="ce211ac1" sha1="f21daeb8e2a56bf0ce7ed187f31ab3c9b30b58b6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="caqc4e2a44e5d52d">
 		<description>Hopman(1of2)</description>
 		<year>????</year>
@@ -639,6 +659,26 @@
 		<part name="cass1" interface="aquarius_cass">
 			<dataarea name="cass" size="8481">
 				<rom name="MastermindRK(2of2).caq" size="8481" crc="07e9d918" sha1="10676845550a7f967f196c7a049fa436ae9bf194"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq7867c65afdd2d">
+		<description>MastermindRK_(1of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="147">
+				<rom name="MastermindRK_(1of2).caq" size="147" crc="41b6b134" sha1="7867c65afdd2d3de7abd54fcb4339671a23d6119"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="caq767fc8ea87c5f">
+		<description>MastermindRK_(2of2)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="aquarius_cass">
+			<dataarea name="cass" size="8729">
+				<rom name="MastermindRK_(2of2).caq" size="8729" crc="b0e32276" sha1="767fc8ea87c5fe201e9e4d3cbfb061c7f66aa5f6"/>
 			</dataarea>
 		</part>
 	</software>

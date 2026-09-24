@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 757 -->
+<!-- Number of items in this list = 762 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -739,6 +739,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Beep v1.5 (2025)(Breinthee).rom" size="32768" crc="edf6e3ae" sha1="b24dfb9658a6b7236c2ed20f0c76d573e4c34a5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx808eb2617672d">
+		<description>Berzerk (2026)(Pixel Forge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Berzerk (2026)(Pixel Forge).rom" size="32768" crc="d129de5d" sha1="808eb2617672d7b476cb4a62e93af5ad315e2d72"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2229,6 +2239,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Flubber in the Upside Down World v1.2 (2023)(Amaury Carvalho).rom" size="49152" crc="7b0425f8" sha1="3f60883a6a495deef7f2181f6559aa48787b74ee"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxf688b08fa5762">
+		<description>Flying Shark - TI992MSX (2026)(Maggoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Flying Shark - TI992MSX (2026)(Maggoo).rom" size="524288" crc="35310951" sha1="f688b08fa576261b2c98713f7d003121f93fa188"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3802,6 +3822,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxdd09862b6e444">
+		<description>Magic Knight Anniversary Collection (2026)(Mastertronic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="172032">
+				<rom name="Magic Knight Anniversary Collection (2026)(Mastertronic).rom" size="172032" crc="eaeb6972" sha1="dd09862b6e44478be7061f9abafb470d4cf5acbb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxe38694117f852">
 		<description>Magic Pinball (1987)(OMK Software)</description>
 		<year>????</year>
@@ -4949,6 +4979,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="pillbox (japan).rom" size="16384" crc="436c3f29" sha1="76a79dd0554b8f7e84468fcd3bf73459ce4aeb2b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx503589c2e4d15">
+		<description>Pinball 99 - TI992MSX (2026)(Maggoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="360448">
+				<rom name="Pinball 99 - TI992MSX (2026)(Maggoo).rom" size="360448" crc="e555fef4" sha1="503589c2e4d15ef590df631d8ec70000a05bd2d5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6909,6 +6949,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Yie Ar Kung-Fu SCCP.rom" size="131072" crc="859b76ef" sha1="65e427d3282fb47192e4a0f4a09245cfe1b00834"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4e2372ec9e45d">
+		<description>YokoXevi v1.1 (2026)(GW's Workshop)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="YokoXevi v1.1 (2026)(GW's Workshop).rom" size="49152" crc="2c6a13f9" sha1="4e2372ec9e45da802250bdb60721d7d90e59dc8a"/>
 			</dataarea>
 		</part>
 	</software>

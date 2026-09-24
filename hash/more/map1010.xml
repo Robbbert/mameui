@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 38 -->
+<!-- Number of items in this list = 41 -->
 <softwarelist name="map1010" description="map1010 loose roms">
 	<software name="phcf4fb80373912b">
 		<description>aerial(1of2)</description>
@@ -162,6 +162,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="phc20bd6d86bfc5e">
+		<description>Deepspace_MAP1010</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="11982">
+				<rom name="Deepspace_MAP1010.phc" size="11982" crc="3ba2b204" sha1="20bd6d86bfc5e523a40d3ad68d446ecf612e8c77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc331cf2e45bd26">
+		<description>ElitePlanetBrowser_MAP1010</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="8640">
+				<rom name="ElitePlanetBrowser_MAP1010.phc" size="8640" crc="fdc16ace" sha1="331cf2e45bd26032e7efc33eb996893d6667ec45"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="phc3dbc62f842671">
 		<description>guntus(1of2)</description>
 		<year>????</year>
@@ -219,6 +239,16 @@
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="1565996">
 				<rom name="lift(2of2).wav" size="1565996" crc="49b986c5" sha1="8d56a1cb189e3db4126bc7c6c117bcecb5fbc4ec"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc1f83955fb569b">
+		<description>MastermindRK_MAP1010</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="10170">
+				<rom name="MastermindRK_MAP1010.phc" size="10170" crc="fcc9f7e5" sha1="1f83955fb569b0b92ac3d24654ecacfd24653b0c"/>
 			</dataarea>
 		</part>
 	</software>

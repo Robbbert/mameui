@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 6 -->
 <softwarelist name="mikro80" description="mikro80 loose roms">
 	<software name="m80f53432a0a4541">
 		<description>Cross Chase (2020-04-02)(Caruso, Fabrizio)</description>
@@ -19,6 +19,16 @@
 		<part name="cass1" interface="mikro80_cass">
 			<dataarea name="cass" size="13576">
 				<rom name="Cross Chase (2021-05-13)(Caruso, Fabrizio).rk8" size="13576" crc="c82c1be7" sha1="30c668f9f4c7036344584c94d98379793bd9c141"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="m8049d9d346ae382">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mikro80_cass">
+			<dataarea name="cass" size="9618">
+				<rom name="Deepspace.rk8" size="9618" crc="fee09b0d" sha1="49d9d346ae38225ddb29343fc571c26d5f94f68e"/>
 			</dataarea>
 		</part>
 	</software>

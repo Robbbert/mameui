@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 594 -->
+<!-- Number of items in this list = 595 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2989,6 +2989,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="MastermindRK_sg1000.rom.sg" size="32768" crc="5b4004f4" sha1="b6bc31f5548353372edf8ebb2293961cb5d3ecb1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6248a6eafe4f7">
+		<description>MastermindRK_SMS</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MastermindRK_SMS.sms" size="32768" crc="7fe1cab3" sha1="6248a6eafe4f7872a7129a3a0179bef811151eb4"/>
 			</dataarea>
 		</part>
 	</software>

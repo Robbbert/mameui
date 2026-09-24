@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 36 -->
+<!-- Number of items in this list = 44 -->
 <softwarelist name="alphatro_flop" description="alphatro_flop loose roms">
+	<software name="alpc688f550df696">
+		<description>[p2]Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174336">
+				<rom name="[p2]Deepspace.dsk" size="174336" crc="18de3cb5" sha1="c688f550df696c1a4eee03a0762e3a4bb9e658a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp3d1e581bb53dc">
+		<description>[p2]ElitePlanetBrowser</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174336">
+				<rom name="[p2]ElitePlanetBrowser.dsk" size="174336" crc="6908f8b9" sha1="3d1e581bb53dc77a2ef43bf99bcb7b0b8a169c9e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp2792588ef0243">
+		<description>[p2]H-Tron</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174336">
+				<rom name="[p2]H-Tron.dsk" size="174336" crc="bba73d34" sha1="2792588ef024372e38e01ed309aa3ecb71fd14fc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="alp355c4ad4abb6d">
 		<description>[P2]KISS</description>
 		<year>????</year>
@@ -29,6 +59,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="29462">
 				<rom name="[P2]KOMM(Bdrive).IMD" size="29462" crc="f2fbbe64" sha1="47151a0acd7c2308e7342aca88e22411de75362b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alpb864bc280cdc9">
+		<description>[p2]MasterMindRK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="174336">
+				<rom name="[p2]MasterMindRK.dsk" size="174336" crc="68061677" sha1="b864bc280cdc9acac5bb240699d491ffe67081e8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -282,6 +322,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="alpd1df47297a267">
+		<description>[pc]alphacpm</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="66320">
+				<rom name="[pc]alphacpm.td0" size="66320" crc="c6e174a8" sha1="d1df47297a2678451e8825342d3890975d48fe55"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="alp29cc9a9a04001">
 		<description>[pc]Deepspace[Bdrive}</description>
 		<year>????</year>
@@ -289,6 +339,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="330687">
 				<rom name="[pc]Deepspace[Bdrive}.imd" size="330687" crc="85ac2a74" sha1="29cc9a9a040010f11c0404c2f5e2f6e60d3bb328"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp61cad2f147b9c">
+		<description>[pc]discbas</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="63699">
+				<rom name="[pc]discbas.td0" size="63699" crc="b3b0992a" sha1="61cad2f147b9c6cc585a506af3db8986e7ece0ed"/>
 			</dataarea>
 		</part>
 	</software>
@@ -349,6 +409,26 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="128877">
 				<rom name="[pc]roycpm2.td0" size="128877" crc="7fe0fb42" sha1="87e0a224948c3c3179b41c26934d3cd1f8aa3dda"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp182581bf1f4ed">
+		<description>[pc]runtime1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="51058">
+				<rom name="[pc]runtime1.td0" size="51058" crc="da1c1df6" sha1="182581bf1f4edb62641a09a8530d57f4fbf4b327"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="alp0a8dff151c50e">
+		<description>[pc]runtime2</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="92473">
+				<rom name="[pc]runtime2.td0" size="92473" crc="0d019f11" sha1="0a8dff151c50e563b615bae9bd09124bd6c6481f"/>
 			</dataarea>
 		</part>
 	</software>

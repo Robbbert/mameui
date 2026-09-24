@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 690 -->
+<!-- Number of items in this list = 691 -->
 <softwarelist name="samcoupe_flop" description="samcoupe_flop loose roms">
 	<software name="sama71fee3f5df19">
 		<description>(ama13)amiga_mod-arch_v1-3</description>
@@ -1199,6 +1199,16 @@
 		<part name="flop1" interface="floppy_3_5">
 			<dataarea name="flop" size="819200">
 				<rom name="Deepspace.mgt" size="819200" crc="b219e266" sha1="78210f8fbcc3236831300ac6b6009632e1e4de91"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="samc627dc95cc9cc">
+		<description>Deepspace_SamCoupe</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3_5">
+			<dataarea name="flop" size="819200">
+				<rom name="Deepspace_SamCoupe.mgt" size="819200" crc="6dfe6553" sha1="c627dc95cc9ccb7cf5935dc58608cd02d48ede01"/>
 			</dataarea>
 		</part>
 	</software>

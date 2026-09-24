@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 17 -->
+<!-- Number of items in this list = 20 -->
 <softwarelist name="mtx_cass" description="mtx_cass loose roms">
 	<software name="mtxd9d08b97187f6">
 		<description>Composer512</description>
@@ -169,6 +169,36 @@
 		<part name="cass1" interface="mtx_cass">
 			<dataarea name="cass" size="3482207">
 				<rom name="Cross Snake v2.0 (2020-12-31)(Caruso, Fabrizio)(512).wav" size="3482207" crc="649006ce" sha1="2a04d31268747fe679db28bce1a41c935c889620"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxdfa7e0bcd082b">
+		<description>ElitePlanetBrowser_MemotechMTX500</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mtx_cass">
+			<dataarea name="cass" size="3531860">
+				<rom name="ElitePlanetBrowser_MemotechMTX500.wav" size="3531860" crc="21a636e7" sha1="dfa7e0bcd082baea6d9dd7f8d858ba9c4f4a63c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtxe3643dd29f80f">
+		<description>ElitePlanetBrowser_MemotechMTX512</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mtx_cass">
+			<dataarea name="cass" size="3531788">
+				<rom name="ElitePlanetBrowser_MemotechMTX512.wav" size="3531788" crc="3fa7b81a" sha1="e3643dd29f80f40fbdbb67380fe5025e9ac92508"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="mtx59240692670d6">
+		<description>MastermindRK_MemotechMTX512</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass1" interface="mtx_cass">
+			<dataarea name="cass" size="2447162">
+				<rom name="MastermindRK_MemotechMTX512.wav" size="2447162" crc="69f21c88" sha1="59240692670d6aabe9cde67a1e2bc83c20b16e69"/>
 			</dataarea>
 		</part>
 	</software>

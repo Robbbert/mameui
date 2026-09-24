@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7 -->
+<!-- Number of items in this list = 8 -->
 <softwarelist name="vector06_flop" description="vector06_flop loose roms">
+	<software name="v06b4b1df101ba4f">
+		<description>Deepspace</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="819200">
+				<rom name="Deepspace.fdd" size="819200" crc="b3e6626d" sha1="b4b1df101ba4f16db4307ba8f12e812afd8b7d8e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="v067a6bb8af7ea4a">
 		<description>Elite Planet Browser</description>
 		<year>????</year>

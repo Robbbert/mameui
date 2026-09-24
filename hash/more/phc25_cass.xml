@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 5 -->
+<!-- Number of items in this list = 9 -->
 <softwarelist name="phc25_cass" description="phc25_cass loose roms">
 	<software name="phc793cd8a63940b">
 		<description>20-sanyo-phc25-invade_11k8b</description>
@@ -39,6 +39,46 @@
 		<part name="cass" interface="phc25_cass">
 			<dataarea name="cass" size="23134252">
 				<rom name="CasseBrique.wav" size="23134252" crc="85c984f6" sha1="9583c21f808c93f30e7f91711df08eb586aafa7b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phcb6706745f32e4">
+		<description>Deepspace_PHC25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="11906">
+				<rom name="Deepspace_PHC25.phc" size="11906" crc="4769dff3" sha1="b6706745f32e4046089e8e17c1d9977db0b3a401"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc799e92f40b6a2">
+		<description>ElitePlanetBrowser_PHC25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="8682">
+				<rom name="ElitePlanetBrowser_PHC25.phc" size="8682" crc="9d11393c" sha1="799e92f40b6a21051434d39573a8976e255d83aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc65a781a22a31f">
+		<description>H-Tron_PHC25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="10226">
+				<rom name="H-Tron_PHC25.phc" size="10226" crc="9a8b34ef" sha1="65a781a22a31ff0d31f870853fd39ba0c8d2d248"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="phc05d9993f5582b">
+		<description>MastermindRK_PHC25</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="phc25_cass">
+			<dataarea name="cass" size="10094">
+				<rom name="MastermindRK_PHC25.phc" size="10094" crc="24200a3d" sha1="05d9993f5582b81eda4fdb84aa4bce0fc9c33bd9"/>
 			</dataarea>
 		</part>
 	</software>

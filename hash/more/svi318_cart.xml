@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 7 -->
+<!-- Number of items in this list = 13 -->
 <softwarelist name="svi318_cart" description="svi318_cart loose roms">
 	<software name="svi0aa15d7befc28">
 		<description>BloktrisSVI_103</description>
@@ -32,6 +32,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="svib8fa52244f4db">
+		<description>ElitePlanetBrowser_SVI318</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="ElitePlanetBrowser_SVI318.rom" size="32768" crc="92450742" sha1="b8fa52244f4db3a43d3b97f997e3b54693d4ee1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi4b290930a9afa">
+		<description>ElitePlanetBrowser_SVI328</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="ElitePlanetBrowser_SVI328.rom" size="32768" crc="98765da1" sha1="4b290930a9afa7a86795f89ce97fde8b2191f5d8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi3eaeaa1e2265d">
+		<description>H-Tron_SVI318</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="H-Tron_SVI318.rom" size="32768" crc="8e928143" sha1="3eaeaa1e2265d568a309d38c4c82a629e0125bc1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi3251d6514051b">
+		<description>H-Tron_SVI328</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="H-Tron_SVI328.rom" size="32768" crc="31ade73a" sha1="3251d6514051bcac7e7ef37b02ca1db61fa61263"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="svi57e0d0b07306c">
 		<description>Klondike_104</description>
 		<year>????</year>
@@ -49,6 +89,26 @@
 		<part name="cart" interface="svi318_cart">
 			<dataarea name="rom" size="22994">
 				<rom name="Mahjong_116.rom" size="22994" crc="6c7e5f9a" sha1="80afdd97bd837e04c929f87a689123642cae9f52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi220fd968dda15">
+		<description>MastermindRK_SVI318</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MastermindRK_SVI318.rom" size="32768" crc="f03a7f71" sha1="220fd968dda15a3c9e4d428c1c0fc7d19c713d9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="svi4cd9a16700398">
+		<description>MastermindRK_SVI328</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="svi318_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MastermindRK_SVI328.rom" size="32768" crc="7e5b7d1b" sha1="4cd9a16700398caf47617aeac8bbdcea086dc1ea"/>
 			</dataarea>
 		</part>
 	</software>

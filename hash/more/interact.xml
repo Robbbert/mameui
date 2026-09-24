@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 132 -->
+<!-- Number of items in this list = 135 -->
 <softwarelist name="interact" description="interact loose roms">
 	<software name="intb28c3cd61db34">
 		<description>10000[hr+]</description>
@@ -552,6 +552,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="intd26db96079307">
+		<description>ElitePlanetBrowser_HectorHR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="13942">
+				<rom name="ElitePlanetBrowser_HectorHR.k7" size="13942" crc="feba43fe" sha1="d26db960793075409bf17a4b8cec8ff2a1394fe7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="int8b0fe0f913191">
 		<description>Encerclement[hec1]</description>
 		<year>????</year>
@@ -659,6 +669,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="9792">
 				<rom name="Grenouille[hec1].k7" size="9792" crc="38e23440" sha1="93f1b3f245fb34157777dddac354cf9262f062df"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="inte4a6123b6a7c9">
+		<description>H-Tron_HectorHR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="8086">
+				<rom name="H-Tron_HectorHR.k7" size="8086" crc="8e7ae818" sha1="e4a6123b6a7c991bbcd20860563a1ba35bc8798b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -809,6 +829,16 @@
 		<part name="cass" interface="interact_cass">
 			<dataarea name="cass" size="16408">
 				<rom name="Life (1980)(Micro Video).k7" size="16408" crc="a7187bfa" sha1="559ff9288cb9d2252bcbe55146c29a3861cc4a82"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="int0367be6e14a26">
+		<description>MastermindRK_HectorHR</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="interact_cass">
+			<dataarea name="cass" size="9632">
+				<rom name="MastermindRK_HectorHR.k7" size="9632" crc="15889cae" sha1="0367be6e14a2624e9cc18864f7cac84f10536e86"/>
 			</dataarea>
 		</part>
 	</software>
