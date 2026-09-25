@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2146 -->
+<!-- Number of items in this list = 2147 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -4679,6 +4679,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="5242880">
 				<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9B Censored (2025)(Yoni Arousement).bin" size="5242880" crc="c7d4e6fa" sha1="3a51e5bbb5fdd82ce599967ac2541b80c228c343"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene3aa2b3e77cd9">
+		<description>Black Tiger v1.1 (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Black Tiger v1.1 (2026)(rester159).bin" size="4194304" crc="02262040" sha1="e3aa2b3e77cd952d996377fc01734d3c29d0243c"/>
 			</dataarea>
 		</part>
 	</software>
