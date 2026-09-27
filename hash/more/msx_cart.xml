@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 762 -->
+<!-- Number of items in this list = 772 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -122,6 +122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx2ca133f6f0ff8">
+		<description>3Kings ~ Three Kingdoms v1.3 (2026)(Gen Hasegawa)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="3Kings ~ Three Kingdoms v1.3 (2026)(Gen Hasegawa).rom" size="262144" crc="df7e7ca2" sha1="2ca133f6f0ff85b6f20b5606545e425d2d17b0ea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx62707cfbec06b">
 		<description>A.E. (1983)(Toshiba Emi)[a]</description>
 		<year>????</year>
@@ -179,6 +189,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Air Hockey (1992)(ASCII).rom" size="32768" crc="e6b77578" sha1="3e0a376b92967e9c6ea86a4add21a8a912291e70"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx549c6ae14dd7c">
+		<description>Airplane (1992-2026)(Jeroen Derwort)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Airplane (1992-2026)(Jeroen Derwort).rom" size="32768" crc="a0b9e934" sha1="549c6ae14dd7ca107cca7c17da3d8f9f5e71c1c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2332,6 +2352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx1713e9434a8d4">
+		<description>Galaxy (2026)(Gamecast Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Galaxy (2026)(Gamecast Entertainment).rom" size="32768" crc="be4cdb4c" sha1="1713e9434a8d485137fa752637d2e869850945d5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx3425eea336140">
 		<description>gall force - defense of chaos (japan) (alt 1)</description>
 		<year>????</year>
@@ -3289,6 +3319,26 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Jurl v1.1a (2025)(Tonsomo Entertainment).rom" size="16384" crc="7e34d5b7" sha1="ec1c3a34738849b148ee54dfadae72474b228d5c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb06cb428b6674">
+		<description>K.C. Munchkin (2026)(Maggoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="K.C. Munchkin (2026)(Maggoo).rom" size="32768" crc="a6e9336b" sha1="b06cb428b66744576dd315af8a0fec659189d098"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxe41ab92707c8a">
+		<description>K.C.'s Krazy Chase (2026)(Maggoo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="K.C.'s Krazy Chase (2026)(Maggoo).rom" size="32768" crc="3a98ace9" sha1="e41ab92707c8a74e3b7bc99bcdfc331fb89f198f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4452,6 +4502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxf6547004c5a22">
+		<description>MSX Tennis (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="MSX Tennis (2026)(Oldschool Is Beautiful).rom" size="32768" crc="af0a4f71" sha1="f6547004c5a22dc22ffdfec0241c901fced0fd1e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxdccd26054bb55">
 		<description>MSXdev23_UchuYohei_v1.6</description>
 		<year>????</year>
@@ -4689,6 +4749,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Oceano (2015)(EgoTrip).rom" size="32768" crc="642d7de8" sha1="00a3b5b11d19c4bb53eeeb4a8da5cce259193f5b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxcb586c76efce1">
+		<description>Odyssey, The (2026)(Fausto Pracek)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Odyssey, The (2026)(Fausto Pracek).rom" size="262144" crc="f429fa69" sha1="cb586c76efce1b01e80e59c866e3131eb6f82f27"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5672,6 +5742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxee483cd2646f2">
+		<description>snAIk (2026)(Rubikon Lab)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="snAIk (2026)(Rubikon Lab).rom" size="16384" crc="7193d839" sha1="ee483cd2646f2a74a5560fb4cde1fea5a76fe51e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx2fb84bfd3a81c">
 		<description>Snake and Rhino in the Sketchbook (2023)(ARC8)</description>
 		<year>????</year>
@@ -5909,6 +5989,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Star Soldier (1987)(Hudson Soft)[cr Turbo Soft].rom" size="32768" crc="c6250410" sha1="7ae260d769a1e12b8f7af09a17876027a423e926"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx18324c2733c71">
+		<description>Starling (2026)(Zydrel)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Starling (2026)(Zydrel).rom" size="32768" crc="90d82c58" sha1="18324c2733c71822d23d3c4f0997fee22426cdd0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6589,6 +6679,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="TRUN (2016)(The Pets Mode).rom" size="49152" crc="7c48ae05" sha1="57f153d67fd79987e222c053a5d013680628c2bf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msxb02344b9fb15c">
+		<description>Turtles (2026)(adlroc)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Turtles (2026)(adlroc).rom" size="32768" crc="d047bf40" sha1="b02344b9fb15c16b7397ea2b0275b4b5051db2be"/>
 			</dataarea>
 		</part>
 	</software>

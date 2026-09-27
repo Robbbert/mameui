@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8044 -->
+<!-- Number of items in this list = 8039 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -7442,16 +7442,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs2846b7833e811">
-		<description>ATV Simulator 48K (1987)(Codemasters)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47124">
-				<rom name="ATV Simulator 48K (1987)(Codemasters).tzx" size="47124" crc="73718734" sha1="2846b7833e811716c5e12e4607391b4def90426e"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs0d57f9b80013c">
 		<description>Auf Wiedersehen Pet (1984)(Tynesoft)</description>
 		<year>????</year>
@@ -9999,16 +9989,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48586">
 				<rom name="Biggles - Timewarp (1986)(Mirrorsoft).tap" size="48586" crc="a53ff55d" sha1="7990ff21b9d0d023413c669bbdd5612dc64ede35"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs455c7426cbf8f">
-		<description>Bignose's USA Adventure 48K (1992)(Codemasters)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47498">
-				<rom name="Bignose's USA Adventure 48K (1992)(Codemasters).tzx" size="47498" crc="4cbb79e9" sha1="455c7426cbf8fd7048b3841951dd5b93676fe2b9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -36172,26 +36152,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs18e253f1dd63f">
-		<description>Kyd Cadet 3 - The Eyeburx Plee 48K (2014)(Paul Jenkinson)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="36549">
-				<rom name="Kyd Cadet 3 - The Eyeburx Plee 48K (2014)(Paul Jenkinson).tzx" size="36549" crc="c9e8783c" sha1="18e253f1dd63f8892665cafaa976d629aca64f1d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs2b5c8dcccb479">
-		<description>Kyd Cadet II - The Rescue of Pobbleflu 48K (2010)(Paul Jenkinson)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="36730">
-				<rom name="Kyd Cadet II - The Rescue of Pobbleflu 48K (2010)(Paul Jenkinson).tzx" size="36730" crc="91c61db4" sha1="2b5c8dcccb47912673c55e6703948195f7feaa3f"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxsfd9fed651a886">
 		<description>L' Avventura Di Giacomo (1985)(Foglia Edizioni)(It)</description>
 		<year>????</year>
@@ -38229,16 +38189,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47917">
 				<rom name="LumASCII (2012)(Bob's Stuff).tap" size="47917" crc="f29c2da7" sha1="5565cd63c44fb73ca289e946a6152615ea0e952a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs1fb9ab3605911">
-		<description>LumASCII 48K (2012)(Bob's Stuff)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="47945">
-				<rom name="LumASCII 48K (2012)(Bob's Stuff).tzx" size="47945" crc="5eff5715" sha1="1fb9ab36059119377ba45b29df8ef9526b04935c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -68902,6 +68852,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf43a5bbc3172a">
+		<description>ZX Tennis 48K (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28676">
+				<rom name="ZX Tennis 48K (2026)(Oldschool Is Beautiful).tap" size="28676" crc="ec136250" sha1="f43a5bbc3172aab582b22eb9f9a7240377feb242"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs700285bb102ec">
 		<description>ZX Trek (1982)(Impact Software)</description>
 		<year>????</year>
@@ -74889,16 +74849,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="100737">
 				<rom name="_Kwik Snax (1990)(Codemasters)[a].tap" size="100737" crc="df06ef30" sha1="7840c2c6a59e3b54ccd9560e878ffa54edbbbeef"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs727a6ae8a1726">
-		<description>_Kyd Cadet v1.2 48K (2010)(Paul Jenkinson)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="36363">
-				<rom name="_Kyd Cadet v1.2 48K (2010)(Paul Jenkinson).tzx" size="36363" crc="025adc12" sha1="727a6ae8a1726cb2b76a205bb1be4db169df2948"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1072 -->
+<!-- Number of items in this list = 1070 -->
 <softwarelist name="zx81_cass" description="zx81_cass loose roms">
 	<software name="zx13e7d1225a731f">
 		<description>10</description>
@@ -1069,16 +1069,6 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="8221">
 				<rom name="AWARI.P" size="8221" crc="0c6a777d" sha1="3fb954cc75c0981ccbbbd862ba83cbd91342cc26"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx1c71402c6a3b69">
-		<description>awass</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="8143">
-				<rom name="awass.p" size="8143" crc="cf6ccb63" sha1="c71402c6a3b69b9c1d84f67f8fce26ba28b6de03"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9399,16 +9389,6 @@
 		<part name="cass1" interface="zx81_cass">
 			<dataarea name="cass" size="8532">
 				<rom name="Sword of Peace_1.P" size="8532" crc="17ceaac7" sha1="a5080352ca889d7938dafd1e0c527d75ff8502bb"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zx1d530fc7ec75fc">
-		<description>SwordWork</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass1" interface="zx81_cass">
-			<dataarea name="cass" size="7466">
-				<rom name="SwordWork.p" size="7466" crc="86243952" sha1="d530fc7ec75fc26f557ecb68b7234194b4baa450"/>
 			</dataarea>
 		</part>
 	</software>

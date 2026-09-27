@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 474 -->
+<!-- Number of items in this list = 475 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -2429,6 +2429,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Mini Mines v1.1 (2024)(Lazuli Software).gba" size="1048576" crc="2b6f3c3a" sha1="4a3e8f7c76e56f576b4c95f91a7ba82f57b908cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba0ddd15c9b5db9">
+		<description>Minicraft 3D v0.6.4 (2026)(GameOfTobi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="800984">
+				<rom name="Minicraft 3D v0.6.4 (2026)(GameOfTobi).gba" size="800984" crc="a525a72c" sha1="0ddd15c9b5db9394859b2ac1fa45e1905611a5e8"/>
 			</dataarea>
 		</part>
 	</software>

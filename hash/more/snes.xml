@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4187 -->
+<!-- Number of items in this list = 4188 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3433,12 +3433,12 @@
 		</part>
 	</software>
 	<software name="sns2aa3c2e950c66">
-		<description>Assault Suits Valken (USA) (Retro-Bit)</description>
+		<description>Assault Suits Valken (U)(2024)(Retro-bit)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
-				<rom name="Assault Suits Valken (USA) (Retro-Bit).sfc" size="2097152" crc="b802fc5e" sha1="2aa3c2e950c66524b7c481faeabc11355085f4ec"/>
+				<rom name="Assault Suits Valken (U)(2024)(Retro-bit).sfc" size="2097152" crc="b802fc5e" sha1="2aa3c2e950c66524b7c481faeabc11355085f4ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3929,16 +3929,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Battletoads in Battlemaniacs - Easier (U)(2024)(_Q_).sfc" size="1048576" crc="cc1199dc" sha1="e90875be5613d5a65f6b98378b6de7caca6a554f"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="snsb392d00f78e04">
-		<description>Battletoads-Double Dragon (USA) (Retro-Bit)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="1048576">
-				<rom name="Battletoads-Double Dragon (USA) (Retro-Bit).sfc" size="1048576" crc="f7433e03" sha1="b392d00f78e04a35e1c95c1eb5f11bdd0d843efa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19242,6 +19232,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns9714025c117c1">
+		<description>Mega Man X - SA-1 Plus v1.0.1 (2026)(llethas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Mega Man X - SA-1 Plus v1.0.1 (2026)(llethas).sfc" size="1572864" crc="8e685ca9" sha1="9714025c117c1c94abd1141f14d42eb805599651"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snsdc0e0852a189c">
 		<description>Mega Man X 2 (U) [T+Fre_Terminus]</description>
 		<year>????</year>
@@ -20279,6 +20279,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="Mortal Kombat II.sfc" size="3145728" crc="889a56bf" sha1="5d5be3090327be72f61553b156920fd0d5a17f06"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns2528453de0e2b">
+		<description>Mortal Kombat MA-17 (2026)(Yoshihiro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat MA-17 (2026)(Yoshihiro).sfc" size="4194304" crc="be05b9c8" sha1="2528453de0e2b8351dc754c155a32f262e81ca91"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 207 -->
+<!-- Number of items in this list = 208 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1829,6 +1829,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Son Son II (J) [tr Eng1.0b].pce" size="262144" crc="b262b184" sha1="6a6846b7f6c587becec1d169c1c551b52b798379"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pce439fab583e5d5">
+		<description>Son Son II T-Eng (2026)(Jackic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Son Son II T-Eng (2026)(Jackic).pce" size="524288" crc="ef783f57" sha1="439fab583e5d5906baaf8664b4070353335586aa"/>
 			</dataarea>
 		</part>
 	</software>

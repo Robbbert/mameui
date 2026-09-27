@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2147 -->
+<!-- Number of items in this list = 2150 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -4689,6 +4689,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Black Tiger v1.1 (2026)(rester159).bin" size="4194304" crc="02262040" sha1="e3aa2b3e77cd952d996377fc01734d3c29d0243c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf5ebf12177d88">
+		<description>Black Tiger v1.2 (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Black Tiger v1.2 (2026)(rester159).bin" size="4194304" crc="f534d2ff" sha1="f5ebf12177d8895299f387245f41cb99ce25f31b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11579,6 +11589,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4170516">
 				<rom name="Mega Queen Journey, The (2019)(DnWn).bin" size="4170516" crc="3c8f21e3" sha1="5096fde00cd1d7eb29ec9178fbf8847a36d5f827"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen17f66e073349e">
+		<description>Mega R-Type Demo v1.3 (2022)(The_Roboz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Mega R-Type Demo v1.3 (2022)(The_Roboz).bin" size="2097152" crc="3acd1afb" sha1="17f66e073349e1dbf75338b132d0aa0aeba1a6e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19449,6 +19469,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1703936">
 				<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.2.9d (2026)(Gustavo Valenzuela).bin" size="1703936" crc="a8532e61" sha1="883418f17c205d7afe7c91eb7e1dc2df1b012bd3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genec2aa161f01d1">
+		<description>Teenage Mutant Ninja Turtles - The Arcade Game v0.3.0c (2026)(Gustavo Valenzuela)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1835008">
+				<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.0c (2026)(Gustavo Valenzuela).bin" size="1835008" crc="597e54b6" sha1="ec2aa161f01d193f95bcf89d12a5f0e176bac4a9"/>
 			</dataarea>
 		</part>
 	</software>

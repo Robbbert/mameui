@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 595 -->
+<!-- Number of items in this list = 596 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -4639,6 +4639,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Sky Jaguar (TW).sms" size="32768" crc="17a8c5e8" sha1="2cf9b86c8233f6d323cca49a19da30396e0aeeaf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms5129de46aa915">
+		<description>SkyHaul v0.0.1 (2026)(haroldo-ok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="SkyHaul v0.0.1 (2026)(haroldo-ok).sms" size="32768" crc="51fc7c6b" sha1="5129de46aa9156e0c5d0ec3881681bd1226cca12"/>
 			</dataarea>
 		</part>
 	</software>

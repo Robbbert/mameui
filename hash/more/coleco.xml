@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 739 -->
+<!-- Number of items in this list = 746 -->
 <softwarelist name="coleco" description="coleco loose roms">
 	<software name="col972638a188b4a">
 		<description>(demo)Adventure Of A Witch - The Flightful Night (2015 Chris Derrig) [WIP]</description>
@@ -652,6 +652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col63dedc9548517">
+		<description>Bomb Jack RC2.2 (2015)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32174">
+				<rom name="Bomb Jack RC2.2 (2015)(CollectorVision).rom" size="32174" crc="a399d4cd" sha1="63dedc954851761c55eedbb05d51dc4b8bdb23c1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="colb8b5a7cbfa310">
 		<description>Bomb'n Blast (2011)(CollectorVision)</description>
 		<year>????</year>
@@ -1259,6 +1269,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="16374">
 				<rom name="CoCo and the Evil Robots v1.01 (2020)(Robin Gravel).rom" size="16374" crc="d6b28d19" sha1="43c092e3377c2a424052ea8760d4b602a5d0ae9a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col59de8982e9dc9">
+		<description>Coleco Tennis (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Coleco Tennis (2026)(Oldschool Is Beautiful).rom" size="32768" crc="ac3fc1d2" sha1="59de8982e9dc99f55ec7fa1e09b21a8c21a76c32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2942,6 +2962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col58d1711e84efc">
+		<description>Hamurabi (The Sumer Game) (2025)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="9744">
+				<rom name="Hamurabi (The Sumer Game) (2025)(Electric Dreams).rom" size="9744" crc="cd4328ce" sha1="58d1711e84efc49edc28371256c9d07d3af38df3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="cold4e4626c15daf">
 		<description>Happy Halloween (2001 Daniel Bienvenu)</description>
 		<year>????</year>
@@ -4582,6 +4612,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="col35d2c6718562f">
+		<description>Pang RC2.0 (2012)(CollectorVision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32558">
+				<rom name="Pang RC2.0 (2012)(CollectorVision).rom" size="32558" crc="18aced43" sha1="35d2c6718562ff094e32b076e32ff97bfbb496b6"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="col83530b6b3e0a4">
 		<description>Parsec (1982-2024)(CollectorVision)</description>
 		<year>????</year>
@@ -4659,6 +4699,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Pink Panther.rom" size="131072" crc="a9d82b08" sha1="7c6cd4a4fb2e8f4d1970efee5e1b98e19ae16b1d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="colfc6914e12477c">
+		<description>Pioneer Balloon v0.21 (2025)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="24576">
+				<rom name="Pioneer Balloon v0.21 (2025)(Electric Dreams).rom" size="24576" crc="2da26709" sha1="fc6914e12477c47835ded80cb075653ac57369de"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4829,6 +4879,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Puzzli (CollectorVision)(2011).rom" size="32768" crc="4236e57e" sha1="58d470cfafce0bb08f6ffb1b1ed04d93e8e516b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="col088125ea4dcda">
+		<description>Puzzli RC1.4b (CollectorVision)(2011)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="32061">
+				<rom name="Puzzli RC1.4b (CollectorVision)(2011).rom" size="32061" crc="58f53b6e" sha1="088125ea4dcda47374b93cacdcbc3d06f4524395"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7099,6 +7159,16 @@
 		<part name="cart" interface="coleco_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Warp &amp; Warp SGM (2016)(Opcode Games).rom" size="32768" crc="b90c2062" sha1="e319d10fc31c07a58d47d8c39ab020a8abbadc15"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="coldd2ce85ef4469">
+		<description>Warren Cave (2026)(Electric Dreams)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="coleco_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Warren Cave (2026)(Electric Dreams).rom" size="16384" crc="a2351d5b" sha1="dd2ce85ef4469e43d088ef20aac0b783b2a2b4f6"/>
 			</dataarea>
 		</part>
 	</software>
