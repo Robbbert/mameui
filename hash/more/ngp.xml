@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 174 -->
+<!-- Number of items in this list = 175 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -109,6 +109,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="2048 (2026)(Hardhat Warrior)_1.ngp" size="524288" crc="964f66cb" sha1="07f5344d9a7e71055f3ef5b6e1f9a96399150829"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp49e20ab1cd0d2">
+		<description>2048_11</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="2048_11.ngp" size="524288" crc="a225d30c" sha1="49e20ab1cd0d2778e90a7be66431fb1dddec3494"/>
 			</dataarea>
 		</part>
 	</software>
