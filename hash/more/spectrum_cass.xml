@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8039 -->
+<!-- Number of items in this list = 8048 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -10583,12 +10583,12 @@
 		</part>
 	</software>
 	<software name="zxs36bb4bfc101e7">
-		<description>Blade Runner (1985)(CRL Group)</description>
+		<description>Blade Runner 48K (1985)(CRL Group)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="34893">
-				<rom name="Blade Runner (1985)(CRL Group).tap" size="34893" crc="33bf7e7d" sha1="36bb4bfc101e7d9112bdcf11065d06d6a80e80e6"/>
+				<rom name="Blade Runner 48K (1985)(CRL Group).tap" size="34893" crc="33bf7e7d" sha1="36bb4bfc101e7d9112bdcf11065d06d6a80e80e6"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21342,6 +21342,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs567892d5f6876">
+		<description>Dragon Ninja 128K (1988)(Imagine Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118777">
+				<rom name="Dragon Ninja 128K (1988)(Imagine Software).tzx" size="118777" crc="420d8da3" sha1="567892d5f68762150ccebd64c03c701b5c047b8a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsf196eaeb0e28a">
 		<description>Dragon Ninja 128K (1988)(Imagine)</description>
 		<year>????</year>
@@ -22419,6 +22429,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="38153">
 				<rom name="Editor Caratteri (19xx)(M. Bianchi &amp; G. Restano).tap" size="38153" crc="b84fcef6" sha1="4e2720d085ccd8020fdd547d84b08b6a6bed05d0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8d6bef0aaef4d">
+		<description>Effugit EN 48K (2013)(J.B.G.V.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36588">
+				<rom name="Effugit EN 48K (2013)(J.B.G.V.).tzx" size="36588" crc="1839f858" sha1="8d6bef0aaef4d64937502ec460dfa2f93521596c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs06277e33a7415">
+		<description>Effugit ES 48K (2013)(J.B.G.V.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36593">
+				<rom name="Effugit ES 48K (2013)(J.B.G.V.).tzx" size="36593" crc="18023497" sha1="06277e33a7415199f1afe969bdffed87ec5011fb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29252,6 +29282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs090c00be4ba94">
+		<description>Grid Gate 48K (1984)(Silversoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47913">
+				<rom name="Grid Gate 48K (1984)(Silversoft).tzx" size="47913" crc="523132f6" sha1="090c00be4ba94b3b39947d579ec4537bdfcbe022"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs94c8632b41de6">
 		<description>Grid Iron II (1989)(Alternative Software)</description>
 		<year>????</year>
@@ -33949,6 +33989,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="39975">
 				<rom name="Jet Set Luis - rumbo a la Costa Blanca ES 48K (2015)(Softwarecete).tap" size="39975" crc="0da926da" sha1="e6795c73126650520760bc9e8f8d931d554025fa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs77d2c53b47dc5">
+		<description>Jet Set Luis - Rumbo a la Costa Blanca ES 48K (2015)(Softwarecete)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40003">
+				<rom name="Jet Set Luis - Rumbo a la Costa Blanca ES 48K (2015)(Softwarecete).tzx" size="40003" crc="d879f644" sha1="77d2c53b47dc585e73cadd708ef8661975cb2a7f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43402,6 +43452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7f12219c69c54">
+		<description>Munch Infinity v1.1 128K (2026)(Apologies)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="111308">
+				<rom name="Munch Infinity v1.1 128K (2026)(Apologies).tap" size="111308" crc="69dee604" sha1="7f12219c69c54a56764a11edbc42af9a44a8ea57"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd02369bf1df45">
 		<description>Muncher (1982)(Silversoft)[a2]</description>
 		<year>????</year>
@@ -44822,6 +44882,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs49bb469d4f01e">
+		<description>Ninja Commando 48K (1989)(Zeppelin Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40471">
+				<rom name="Ninja Commando 48K (1989)(Zeppelin Games).tzx" size="40471" crc="1b48a198" sha1="49bb469d4f01e07fef7fe4f7b06c17b93afd620f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7ebe929ae0cad">
 		<description>Ninja Gardening-Simulator (2019)(Andrew Bunker)</description>
 		<year>????</year>
@@ -44849,6 +44919,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="59148">
 				<rom name="Ninja Massacre (1989)(Codemasters).tap" size="59148" crc="2b28000a" sha1="aff2d00ba65f6e758ce44ed0eddadb89979a96a5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5a62c209bfdc3">
+		<description>Ninja Massacre 48K-128K (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59179">
+				<rom name="Ninja Massacre 48K-128K (1989)(Codemasters).tzx" size="59179" crc="135633fa" sha1="5a62c209bfdc35c3a64e4b22de8da9818ce6e1e0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd57e4c4c25aa5">
+		<description>Ninja Master 48K (1986)(Firebird Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49715">
+				<rom name="Ninja Master 48K (1986)(Firebird Software).tzx" size="49715" crc="bd1e320e" sha1="d57e4c4c25aa56a310cf161ecdf7e5a34fe17b3a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -57383,12 +57473,12 @@
 		</part>
 	</software>
 	<software name="zxs4c77b303a91a5">
-		<description>Sophistry (1988)(CRL Group PLC)</description>
+		<description>Sophistry 48K (1987)(CRL Group)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="42699">
-				<rom name="Sophistry (1988)(CRL Group PLC).tap" size="42699" crc="b913d76a" sha1="4c77b303a91a56243a583f9cd865eab9c3fee3fc"/>
+				<rom name="Sophistry 48K (1987)(CRL Group).tap" size="42699" crc="b913d76a" sha1="4c77b303a91a56243a583f9cd865eab9c3fee3fc"/>
 			</dataarea>
 		</part>
 	</software>
