@@ -223,14 +223,14 @@ static DWORD WINAPI AuditThreadProc(LPVOID hDlg)
 	{
 		if (!bPaused)
 		{
-			if (rom_index != -1)
+			if (rom_index >= 0)
 			{
 				sprintf(buffer, "Checking Set %s - %s", driver_list::driver(rom_index).name, driver_list::driver(rom_index).type.fullname());
 				win_set_window_text_utf8((HWND)hDlg, buffer);
 				ProcessNextRom();
 			}
 			else
-			if (sample_index != -1)
+			if (sample_index >= 0)
 			{
 				sprintf(buffer, "Checking Set %s - %s", driver_list::driver(sample_index).name, driver_list::driver(sample_index).type.fullname());
 				win_set_window_text_utf8((HWND)hDlg, buffer);

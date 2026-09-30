@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4188 -->
+<!-- Number of items in this list = 4189 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -12139,6 +12139,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Ghost Chaser Densei - Brightness Fix (2023)(Mister Man).sfc" size="2097152" crc="ff1c3c53" sha1="dd2938f50f3af14df450f022c83db70949cd59f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4890920336c8b">
+		<description>Ghost Sweeper Mikami - The Exorcist with a Nice Body T-Eng (2026)(Pizzano)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Ghost Sweeper Mikami - The Exorcist with a Nice Body T-Eng (2026)(Pizzano).sfc" size="1048576" crc="a381ca79" sha1="4890920336c8b16d292f326b0f8e7154ea58b559"/>
 			</dataarea>
 		</part>
 	</software>

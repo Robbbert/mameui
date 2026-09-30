@@ -3571,7 +3571,7 @@ static void ResetListView()
 	(void)ListView_DeleteAllItems(hwndList);
 
 	// hint to have it allocate it all at once
-	ListView_SetItemCount(hwndList,driver_list::total());
+	ListView_SetItemCountEx(hwndList,driver_list::total(), LVSICF_NOINVALIDATEALL | LVSICF_NOSCROLL);
 
 	lvi.mask = LVIF_TEXT | LVIF_IMAGE | LVIF_PARAM | LVIF_INDENT;
 	lvi.stateMask = 0;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2150 -->
+<!-- Number of items in this list = 2154 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -4839,6 +4839,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="393216">
 				<rom name="Bug Hunt (2015)(The AfroMonkeys).bin" size="393216" crc="20175de8" sha1="622e0451547adf0ce29c268920921bd871808ae9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb0ca7fae7c278">
+		<description>Bullet Panic (2026)(abadede919302)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1441792">
+				<rom name="Bullet Panic (2026)(abadede919302).bin" size="1441792" crc="5d84421a" sha1="b0ca7fae7c2789da541e789fc25ddd47a749a825"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11402,6 +11412,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbd6c5ac083eeb">
+		<description>Match-3 Demo (2026)(EugeneSpacehead)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="655360">
+				<rom name="Match-3 Demo (2026)(EugeneSpacehead).bin" size="655360" crc="035deca4" sha1="bd6c5ac083eeb7e1d968a763ea31f61d96b7860e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen9ce76ef06b72f">
 		<description>Math Blaster - Episode 1 (U) [T+Chi_xiaoguihun]</description>
 		<year>????</year>
@@ -12489,6 +12509,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Mr.Nutz 2 (Unl).md" size="1048576" crc="7674414a" sha1="dac46ab410cdcee10bee1eb60423cbb93f6bdb9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen664a82a698198">
+		<description>Ms. Bell's Rally-X MD (2026)(NK Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Ms. Bell's Rally-X MD (2026)(NK Soft).bin" size="4194304" crc="50f4ebf0" sha1="664a82a6981989f56953e37418da50f00dc86c10"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19479,6 +19509,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1835008">
 				<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.0c (2026)(Gustavo Valenzuela).bin" size="1835008" crc="597e54b6" sha1="ec2aa161f01d193f95bcf89d12a5f0e176bac4a9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena4eeeef0be810">
+		<description>Teenage Mutant Ninja Turtles - The Arcade Game v0.3.1d (2026)(Gustavo Valenzuela)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.1d (2026)(Gustavo Valenzuela).bin" size="3145728" crc="bdb89118" sha1="a4eeeef0be810b0430c67853fdcefa50d2cdff45"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 596 -->
+<!-- Number of items in this list = 597 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2969,6 +2969,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Master of Darkness - Mestre das Trevas T-Por (2017)(PO.B.R.E.).sms" size="262144" crc="30703780" sha1="b3c25f1894442fb4ef99372e313957b32b108e2d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms6a0a4870aa4d9">
+		<description>Master Tennis v1.1 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Master Tennis v1.1 (2026)(Oldschool Is Beautiful).sms" size="65536" crc="d3bc9717" sha1="6a0a4870aa4d92855a705b38e51ba9f150682390"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 107 -->
+<!-- Number of items in this list = 108 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -759,6 +759,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Pete Sampras Tennis (USA).gg" size="262144" crc="c597ba5d" sha1="d596edb302dc3d603e818847bdc9bba6972ee86d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gge4db2140761b43">
+		<description>Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega - Compile)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega - Compile).gg" size="262144" crc="09de1528" sha1="e4db2140761b43426024bd08c4372bb9b8979d3d"/>
 			</dataarea>
 		</part>
 	</software>
