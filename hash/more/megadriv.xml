@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2154 -->
+<!-- Number of items in this list = 2155 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -4699,6 +4699,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Black Tiger v1.2 (2026)(rester159).bin" size="4194304" crc="f534d2ff" sha1="f5ebf12177d8895299f387245f41cb99ce25f31b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene5db8deb4ab75">
+		<description>Black Tiger v1.6 (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Black Tiger v1.6 (2026)(rester159).bin" size="4194304" crc="b6058ed5" sha1="e5db8deb4ab7534259684c2464c7b19ee71913f7"/>
 			</dataarea>
 		</part>
 	</software>

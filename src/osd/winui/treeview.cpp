@@ -358,7 +358,8 @@ BOOL GameFiltered(int nGame, DWORD dwMask)
 
 	if (strlen(GetSearchText()) && _stricmp(GetSearchText(), SEARCH_PROMPT))
 		if (MyStrStrI(driver_list::driver(nGame).type.fullname(),GetSearchText()) == NULL &&
-			MyStrStrI(driver_list::driver(nGame).name,GetSearchText()) == NULL)
+			MyStrStrI(driver_list::driver(nGame).name,GetSearchText()) == NULL &&
+			MyStrStrI(driver_list::driver(nGame).manufacturer,GetSearchText()) == NULL)
 				return true;
 
 	/*Filter Text is already global*/

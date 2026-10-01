@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 87 -->
+<!-- Number of items in this list = 88 -->
 <softwarelist name="sg1000" description="sg1000 loose roms">
 	<software name="sg1aadf2b307ff64">
 		<description>Aerial (2022)(Inufuto)</description>
@@ -159,6 +159,16 @@
 		<part name="cart" interface="sg1000_cart">
 			<dataarea name="cart" size="9448">
 				<rom name="Bootskell (2021)(Inufuto).sg" size="9448" crc="c2413720" sha1="f44c2912e4a9ff580a4a3cd7837c7ceece2b8da3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sg19b212751467ed">
+		<description>Bubble Fight v1.2.0 (2026)(SiRioHD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sg1000_cart">
+			<dataarea name="cart" size="32768">
+				<rom name="Bubble Fight v1.2.0 (2026)(SiRioHD).sg" size="32768" crc="4e6f8134" sha1="9b212751467ed621c0fa020626f1c34a8c78979f"/>
 			</dataarea>
 		</part>
 	</software>

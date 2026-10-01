@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8048 -->
+<!-- Number of items in this list = 8049 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -68949,6 +68949,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="28676">
 				<rom name="ZX Tennis 48K (2026)(Oldschool Is Beautiful).tap" size="28676" crc="ec136250" sha1="f43a5bbc3172aab582b22eb9f9a7240377feb242"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8b1e3d06e80b9">
+		<description>ZX Tennis v1.2 48K (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29544">
+				<rom name="ZX Tennis v1.2 48K (2026)(Oldschool Is Beautiful).tap" size="29544" crc="133a99ce" sha1="8b1e3d06e80b92d82fd17d18bdf5daef72aaa0a7"/>
 			</dataarea>
 		</part>
 	</software>
