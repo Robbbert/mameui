@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 598 -->
+<!-- Number of items in this list = 600 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1099,6 +1099,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Choplifter [HTH] [SMS-GG] (TW).sms" size="131072" crc="55f929ce" sha1="62e9dae23d305c792dc1adb8b888d82d333b5265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsdebccaf0101b0">
+		<description>Chuckie Egg Remake (2026)(Flying Carpet)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Chuckie Egg Remake (2026)(Flying Carpet).sms" size="32768" crc="846b823f" sha1="debccaf0101b078d94a1ae5dd2088080b717310e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -5349,6 +5359,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Tetris (System E) v1.5 (2026)(Master Linkuei).sms" size="131072" crc="08ab88b7" sha1="ff0d590117a19bd6f102a6328f8c36e8096baf56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smsc088490d0bfff">
+		<description>Tetris4GG v1.1 (2026)(Armix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Tetris4GG v1.1 (2026)(Armix).sms" size="131072" crc="93d2a287" sha1="c088490d0bfff61fc9aac8226900a76220e07e00"/>
 			</dataarea>
 		</part>
 	</software>

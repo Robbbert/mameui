@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 772 -->
+<!-- Number of items in this list = 778 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -1842,6 +1842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx3bede3ffde1cc">
+		<description>Don Quijote ES (2026)(FX Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="327680">
+				<rom name="Don Quijote ES (2026)(FX Software).rom" size="327680" crc="8614a193" sha1="3bede3ffde1cc903f9f3c6079b845283d000ffec"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx9c2fefc4d7c73">
 		<description>Donpan (1983)(Colpax)</description>
 		<year>????</year>
@@ -2769,6 +2779,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Guardic (1986)(Compile).rom" size="32768" crc="106230b8" sha1="5e28fa0cd90bcfb7995acb025a22f6f556ccac08"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx07c5830b5bf30">
+		<description>Guerra de las Vajillas, La ES (2019)(FX Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="327680">
+				<rom name="Guerra de las Vajillas, La ES (2019)(FX Software).rom" size="327680" crc="47dcd091" sha1="07c5830b5bf304410791c2cd505b8f704c5049bd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3762,6 +3782,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx7917af555fc7b">
+		<description>Legend ES (2019)(FX Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Legend ES (2019)(FX Software).rom" size="524288" crc="04936f9a" sha1="7917af555fc7b1ec43e66391d0fa7a59491a4e5a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx598eb258cbe53">
 		<description>Legendly Knight (1988)(Topia)[cr Ulver]</description>
 		<year>????</year>
@@ -3952,6 +3982,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msx1564c86a44109">
+		<description>Mantis 1 &amp; 2 ES (2021)(FX Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="327680">
+				<rom name="Mantis 1 &amp; 2 ES (2021)(FX Software).rom" size="327680" crc="f463a7eb" sha1="1564c86a4410985232ed70d95af83a8be555e491"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msxce57ff31e7c16">
 		<description>Master Mind (2026)(Y.R. Sova)</description>
 		<year>????</year>
@@ -4022,6 +4062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="msxb5d05bd69b09b">
+		<description>Mega-Corp ES (2024)(FX Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="327680">
+				<rom name="Mega-Corp ES (2024)(FX Software).rom" size="327680" crc="5a1f057b" sha1="b5d05bd69b09bf25ad45fe3d14b4e98bde235a1a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="msx7be2f14fd0df5">
 		<description>Metal Gear 2 - Solid Snake (1990)(Konami)[RC-767]</description>
 		<year>????</year>
@@ -4079,6 +4129,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="8280">
 				<rom name="mieyen.rom" size="8280" crc="b2b44a0e" sha1="b22700dc2a17b82fa2677808d104a47a0e2ba280"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx9982cb73e9a56">
+		<description>Mikero-Odyssey v1.5.6 (2026)(Kanon-ai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Mikero-Odyssey v1.5.6 (2026)(Kanon-ai).rom" size="524288" crc="38562dda" sha1="9982cb73e9a56d06080e2249bd4545dff0440eb3"/>
 			</dataarea>
 		</part>
 	</software>

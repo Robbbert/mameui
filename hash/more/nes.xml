@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10994 -->
+<!-- Number of items in this list = 10995 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -41359,6 +41359,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Hobo Albo's Halloween Adventure v1.5 (2025)(RBG Entertainment).nes" size="524304" crc="889637a6" sha1="9c042524e4b02b6284f34f3eee8aa78c97dbcb94"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes996eeca940d1d">
+		<description>Hobo Albo's Halloween Adventure v1.5 (Alt)(2025)(RBG Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Hobo Albo's Halloween Adventure v1.5 (Alt)(2025)(RBG Entertainment).nes" size="524304" crc="e3f081c6" sha1="996eeca940d1d917a07247f4108f4e2d31d00068"/>
 			</dataarea>
 		</part>
 	</software>
@@ -88952,23 +88962,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes38c4288f31cda">
-		<description>Super C (USA) (3)</description>
+	<software name="nes32f706c6222e7">
+		<description>Super C (USA)(1990)(Konami)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Super C (USA) (3).nes" size="262160" crc="ed53852d" sha1="38c4288f31cdacfc5e563a3809cd235127adae7e"/>
+				<rom name="Super C (USA)(1990)(Konami).nes" size="262160" crc="1ac846f0" sha1="32f706c6222e7ec877c08a1adc6b7c7bbb69f3da"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes32f706c6222e7">
+	<software name="nes38c4288f31cda">
 		<description>Super C (USA)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
-				<rom name="Super C (USA).nes" size="262160" crc="1ac846f0" sha1="32f706c6222e7ec877c08a1adc6b7c7bbb69f3da"/>
+				<rom name="Super C (USA).nes" size="262160" crc="ed53852d" sha1="38c4288f31cdacfc5e563a3809cd235127adae7e"/>
 			</dataarea>
 		</part>
 	</software>

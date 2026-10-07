@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 108 -->
+<!-- Number of items in this list = 111 -->
 <softwarelist name="gamegear" description="gamegear loose roms">
 	<software name="gg83cd03408dc850">
 		<description>Aerial Mini (2023)(Inufuto)</description>
@@ -442,6 +442,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gg9b6664bfb16fe8">
+		<description>Heroes Against Demons - GG Edition (2021)(Ichigo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Heroes Against Demons - GG Edition (2021)(Ichigo).gg" size="262144" crc="73fbf79a" sha1="9b6664bfb16fe8b5adabe0ba1c6e1dfcc3efc49a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gg5757acdd7590c2">
 		<description>Hong Kong '97 v0.0.1 (2026)(SirVH)</description>
 		<year>????</year>
@@ -559,6 +569,26 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="madou monogatari iii - kyuukyoku joou-sama (english translation).gg" size="1048576" crc="e90126c0" sha1="112d9c77f2b3efa13a592f1cc5a207ea4fc3e96d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg0400be7771c77a">
+		<description>Magic Knight Rayearth 2 - Making of Magic Knight T-Eng v1.5 (2026)(Patch Clan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Magic Knight Rayearth 2 - Making of Magic Knight T-Eng v1.5 (2026)(Patch Clan).gg" size="524288" crc="1a43ed27" sha1="0400be7771c77aee6931dc3a4605d0e723c7393c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg9767d908c8732c">
+		<description>Magic Knight Rayearth 2 - Making of Magic Knight T-Eng v1.5 Build 126 (2026)(Patch Clan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Magic Knight Rayearth 2 - Making of Magic Knight T-Eng v1.5 Build 126 (2026)(Patch Clan).gg" size="524288" crc="6210fbe6" sha1="9767d908c8732c22ab524640899dceac5c833841"/>
 			</dataarea>
 		</part>
 	</software>
@@ -759,16 +789,6 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Pete Sampras Tennis (USA).gg" size="262144" crc="c597ba5d" sha1="d596edb302dc3d603e818847bdc9bba6972ee86d"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="gge4db2140761b43">
-		<description>Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega - Compile)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="gamegear_cart">
-			<dataarea name="rom" size="262144">
-				<rom name="Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega - Compile).gg" size="262144" crc="09de1528" sha1="e4db2140761b43426024bd08c4372bb9b8979d3d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -999,6 +1019,16 @@
 		<part name="cart" interface="gamegear_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Tetris4GG (2026)(Armix).gg" size="131072" crc="8ada9c7c" sha1="c5332d6e8a4b17c4e79e488f9f8f1eba06511172"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gg52b4ad7e6dd4ed">
+		<description>Tetris4GG v1.1 (2026)(Armix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gamegear_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Tetris4GG v1.1 (2026)(Armix).gg" size="131072" crc="38878aea" sha1="52b4ad7e6dd4ed6cd36af255e353a2eca6bcd7f6"/>
 			</dataarea>
 		</part>
 	</software>

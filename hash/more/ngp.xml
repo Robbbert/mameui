@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 175 -->
+<!-- Number of items in this list = 178 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -642,6 +642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp0e53ca32b508d">
+		<description>Gardenia v1.4c (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia v1.4c (2026)(Chris Ahchay).ngp" size="2097152" crc="ef30cb24" sha1="0e53ca32b508d5d16cd861e98d5bba1b17a46567"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpeed7b883cbc41">
 		<description>Gears of Fate (2009)(Thor)</description>
 		<year>????</year>
@@ -982,6 +992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp06ca57c0fb26a">
+		<description>Minesweeper v1.0 (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Minesweeper v1.0 (2026)(Hardhat Warrior).ngp" size="2097152" crc="34d50e35" sha1="06ca57c0fb26a13d951bf0ee01672ab809bfc6ac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp744a97d11cc84">
 		<description>Minesweeper v15 (2026)(Hardhat Warrior)</description>
 		<year>????</year>
@@ -1249,6 +1269,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Over Rev (2026)(Tixul).ngp" size="2097152" crc="a381d08a" sha1="6b762dae1f0e8464f1302e622e24a1d9d097d841"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp1a94ec2aab602">
+		<description>Over Rev v1.0 (2026)(Tixul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Over Rev v1.0 (2026)(Tixul).ngp" size="2097152" crc="41722bb0" sha1="1a94ec2aab6020814c81b02812cac6fc765a0464"/>
 			</dataarea>
 		</part>
 	</software>

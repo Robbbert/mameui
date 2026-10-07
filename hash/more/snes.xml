@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4189 -->
+<!-- Number of items in this list = 4191 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3429,16 +3429,6 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Assault Suits Valken (J) [T+Chi_cslrxyz].sfc" size="1048576" crc="8998359e" sha1="efc0bb3e3af99e553427ac6e2e66c63daef95e33"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="sns2aa3c2e950c66">
-		<description>Assault Suits Valken (U)(2024)(Retro-bit)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="snes_cart">
-			<dataarea name="rom" size="2097152">
-				<rom name="Assault Suits Valken (U)(2024)(Retro-bit).sfc" size="2097152" crc="b802fc5e" sha1="2aa3c2e950c66524b7c481faeabc11355085f4ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19289,6 +19279,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Mega Man X SA1 (2020)(Bosn).sfc" size="1572864" crc="b0eea801" sha1="03d76b7f596ceae00016dc2b02c991518adfa5e8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns8812706c399d1">
+		<description>Mega Man X2 - FastROM Plus v1.0.1 (2026)(llethas)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Mega Man X2 - FastROM Plus v1.0.1 (2026)(llethas).sfc" size="1572864" crc="e06039f1" sha1="8812706c399d1cfb4d84d5df966fedfe8bec762c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbe8a556d310f8">
+		<description>Mega Man X2 - FastROM v4.0 (2023)(kandowontu)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Mega Man X2 - FastROM v4.0 (2023)(kandowontu).sfc" size="1572864" crc="84caa522" sha1="be8a556d310f83ca3b46d047318f3a2c50659359"/>
 			</dataarea>
 		</part>
 	</software>
@@ -39559,6 +39569,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Those Darn Plumbers (18 levels) by nintendofreck (SMW1 Hack).sfc" size="2097152" crc="26ec1380" sha1="f57838d51aa624048dd830ee659c5816b190f9cc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc472ed0119216">
+		<description>Thunder Spirits - FastROM + Optimized (2026)(MaxwelOlinda)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Thunder Spirits - FastROM + Optimized (2026)(MaxwelOlinda).sfc" size="1048576" crc="52d44169" sha1="c472ed0119216ad59807f1978df2de8dd43bc42a"/>
 			</dataarea>
 		</part>
 	</software>

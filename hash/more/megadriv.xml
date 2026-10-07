@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2155 -->
+<!-- Number of items in this list = 2164 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -3222,6 +3222,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen0ce7f1bf4772d">
+		<description>A-Tetris Alfa (2026)(Amiguetes Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3919872">
+				<rom name="A-Tetris Alfa (2026)(Amiguetes Soft).bin" size="3919872" crc="4976dd17" sha1="0ce7f1bf4772d259f9e4b2dab6ddd749bb4db2b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb607a81633493">
+		<description>Abadia del crimen, La Beta (2026)(Amiguetes Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Abadia del crimen, La Beta (2026)(Amiguetes Soft).bin" size="4063232" crc="041cda39" sha1="b607a816334935d30785837fde9c01b051c3038f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen744519e7cc320">
 		<description>Abnormal Family - Butt Babies and Tranny Tramps</description>
 		<year>????</year>
@@ -4709,6 +4729,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Black Tiger v1.6 (2026)(rester159).bin" size="4194304" crc="b6058ed5" sha1="e5db8deb4ab7534259684c2464c7b19ee71913f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1bf818762adee">
+		<description>Black Tiger v1.7 (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Black Tiger v1.7 (2026)(rester159).bin" size="4194304" crc="db4db4b9" sha1="1bf818762adee675ab87cdc7ad28605dc16be6df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -7032,6 +7062,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genf9f1e85055e82">
+		<description>Flowers of Azathoth (2026)(Mike Daw)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Flowers of Azathoth (2026)(Mike Daw).bin" size="262144" crc="e0621243" sha1="f9f1e85055e829b5a6444a1bea7dda8f453710db"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genb246c3415ffd7">
 		<description>Fly with Tails in Sonic the Hedgehog 2 (Version 3) by JoseTB (S2 Hack)</description>
 		<year>????</year>
@@ -7559,6 +7599,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Ghostbusters - Special Edition v1.1 (2013)(BillyTime! Games).bin" size="1048576" crc="a9542c76" sha1="0a39bb108b7a23c25db7fc07418a4b0d8e686616"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gene11f019c4b66a">
+		<description>Ghostbusters - Special Edition v3.1 (2024-26)(BillyTime! Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3145728">
+				<rom name="Ghostbusters - Special Edition v3.1 (2024-26)(BillyTime! Games).bin" size="3145728" crc="3d238f58" sha1="e11f019c4b66a8fabe45adf176f2ab30afbff173"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9599,6 +9649,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="hybrid front, the (T-Chi).bin" size="2097152" crc="0d6d06f6" sha1="43bcc8f46b80b230bdb8653aae4366fe0b3f3f75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1f51c01c3b3bf">
+		<description>Hyper Dyne Side Arms (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Hyper Dyne Side Arms (2026)(rester159).bin" size="2621440" crc="cdfcc0e1" sha1="1f51c01c3b3bf2bdfca375c06a5c9e6909a2cc56"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen4063df77e30f8">
+		<description>Hyper Dyne Side Arms v1.2 (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2621440">
+				<rom name="Hyper Dyne Side Arms v1.2 (2026)(rester159).bin" size="2621440" crc="95e593c8" sha1="4063df77e30f86e3133da9fbea126eba6a40fece"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15512,6 +15582,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen49fe82f109913">
+		<description>Somali Pirates 20261003 (2026)(4D Lix)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Somali Pirates 20261003 (2026)(4D Lix).bin" size="4194304" crc="4005ecc0" sha1="49fe82f10991341a016e3eed9e22d458565bdb5a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen98743fb95944e">
 		<description>Somari The Adventurer (Hack)</description>
 		<year>????</year>
@@ -19659,6 +19739,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Tetris (World) (Genesis Mini).md" size="524288" crc="c8dd8841" sha1="1079fee1fd044f16caf641d6b96f84143a6ceceb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1293b8896fadc">
+		<description>Tetris Beta (2026)(Amiguetes Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3919872">
+				<rom name="Tetris Beta (2026)(Amiguetes Soft).bin" size="3919872" crc="181fef8d" sha1="1293b8896fadcb2034b71a0bfcddbd0d13d5d3d9"/>
 			</dataarea>
 		</part>
 	</software>
