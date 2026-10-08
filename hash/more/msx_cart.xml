@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 778 -->
+<!-- Number of items in this list = 779 -->
 <softwarelist name="msx_cart" description="msx_cart loose roms">
 	<software name="msxc958dab6f5638">
 		<description>(demo)Comando Tracer (1989)(Dinamic)</description>
@@ -889,6 +889,16 @@
 		<part name="cart" interface="msx_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Bokosuka.rom" size="16384" crc="8123aaa2" sha1="8e4f8b46cfa41a3944523e0a188fae37171e4a3b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="msx4b319d0983606">
+		<description>BOLT - Escape from the Factory (2026)(DD Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="msx_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="BOLT - Escape from the Factory (2026)(DD Studios).rom" size="32768" crc="8aaa6bbe" sha1="4b319d0983606505c5e593aece32393616c2360b"/>
 			</dataarea>
 		</part>
 	</software>

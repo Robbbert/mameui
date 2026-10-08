@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2164 -->
+<!-- Number of items in this list = 2167 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -9479,6 +9479,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="917504">
 				<rom name="Halo Zero demo_pal.bin" size="917504" crc="fe972d89" sha1="06dd48fd0ecb25f1b293687d62be2eaed3cebd20"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1a6c8455eabc5">
+		<description>Hang-On Jr. - Arcade Port (2026)(yosoynacho)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="270416">
+				<rom name="Hang-On Jr. - Arcade Port (2026)(yosoynacho).bin" size="270416" crc="bf2dc938" sha1="1a6c8455eabc5a0224af50f7fefad3796fae6ae4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19742,6 +19752,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genad954f4b05f5c">
+		<description>Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ).bin" size="2097152" crc="4b5be3f5" sha1="ad954f4b05f5c70f841a14f2dda3db1142922aac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen1293b8896fadc">
 		<description>Tetris Beta (2026)(Amiguetes Soft)</description>
 		<year>????</year>
@@ -20999,6 +21019,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2621440">
 				<rom name="Wolverine Adamantium Redux (2021)(BillyTime! Games).bin" size="2621440" crc="ab3f89b0" sha1="1c59a8b4525f894b9bb4e4f586de2d3cd2b581da"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen817ef64f6eeb4">
+		<description>Wonder Boy - Arcade Port v1.1 (2026)(ShinobiZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1638400">
+				<rom name="Wonder Boy - Arcade Port v1.1 (2026)(ShinobiZ).bin" size="1638400" crc="e48b69f7" sha1="817ef64f6eeb4b59f96c2061dba8ffe37d2065f3"/>
 			</dataarea>
 		</part>
 	</software>

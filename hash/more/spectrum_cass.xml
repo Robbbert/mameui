@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8045 -->
+<!-- Number of items in this list = 8058 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -5482,6 +5482,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd693f195075a1">
+		<description>Alleyway v1.29 48K-128K (2026)(Kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="137109">
+				<rom name="Alleyway v1.29 48K-128K (2026)(Kirby2000).tzx" size="137109" crc="b396f94e" sha1="d693f195075a1d90c332133d05253a0cab825198"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8dbf7c9754373">
 		<description>Almanac (19xx)(-)</description>
 		<year>????</year>
@@ -5489,6 +5499,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="6885">
 				<rom name="Almanac (19xx)(-).tap" size="6885" crc="0d5fb1a5" sha1="8dbf7c97543737776628bc89197ffcee2380ba0c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfb69d0735199e">
+		<description>Almazy RU 48K (2026)(Mikhail Sudakov)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16018">
+				<rom name="Almazy RU 48K (2026)(Mikhail Sudakov).tap" size="16018" crc="0ba44390" sha1="fb69d0735199e9a1be881ff0f9d6c0728f44484c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -8162,6 +8182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd1f6b9e890dec">
+		<description>Badlands 48K-128K (1990)(Domark)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33672">
+				<rom name="Badlands 48K-128K (1990)(Domark).tap" size="33672" crc="5df53959" sha1="d1f6b9e890decbc32652d0f0013cbf8453ba653a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1c4d8342aed18">
 		<description>Bailemos (1984)(Idealogic)(Sp)</description>
 		<year>????</year>
@@ -8803,12 +8833,12 @@
 		</part>
 	</software>
 	<software name="zxs9b956f2d48e3f">
-		<description>Battle Command (1991)(Ocean Software)(128k)</description>
+		<description>Battle Command 128K (1991)(Ocean)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="167389">
-				<rom name="Battle Command (1991)(Ocean Software)(128k).tap" size="167389" crc="f5b9f406" sha1="9b956f2d48e3f20ac7695cac6f3a87579c8e36cc"/>
+				<rom name="Battle Command 128K (1991)(Ocean).tap" size="167389" crc="f5b9f406" sha1="9b956f2d48e3f20ac7695cac6f3a87579c8e36cc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9239,6 +9269,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46528">
 				<rom name="Beach Head II - The Dictator Strikes Back (1984)(US Gold)[a].tap" size="46528" crc="31ed179e" sha1="70277aeb55c76ead3c4cb41ca899cbb0fb4fd99a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb1ab9c4812920">
+		<description>Beach Volley 48K-128K (1989)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="93507">
+				<rom name="Beach Volley 48K-128K (1989)(Ocean).tap" size="93507" crc="73056f7e" sha1="b1ab9c481292079c81a145aebdc6d6f091ce2a23"/>
 			</dataarea>
 		</part>
 	</software>
@@ -11412,6 +11452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs80de2e99d3012">
+		<description>BOLT - Escape from the Factory 128K (2026)(DD Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26783">
+				<rom name="BOLT - Escape from the Factory 128K (2026)(DD Studios).tap" size="26783" crc="302a4c01" sha1="80de2e99d301265b0f2334eff6382df8c84fd61f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsbe9390ac569ab">
 		<description>Bomb 48K (2025)(Radastan)</description>
 		<year>????</year>
@@ -12622,6 +12672,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs59fcf891e3ce2">
+		<description>Bubble Ghost 128K (2026)(Kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="128157">
+				<rom name="Bubble Ghost 128K (2026)(Kirby2000).tzx" size="128157" crc="7194e8b9" sha1="59fcf891e3ce2aeeab066cecdff1406b9985f3e1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse0101bf44bd11">
 		<description>Bubble in Trouble v1.1 128K (2025)(bitmagine Studio)</description>
 		<year>????</year>
@@ -12643,12 +12703,12 @@
 		</part>
 	</software>
 	<software name="zxs2eb2f9bca9467">
-		<description>Bubble Monkey Bros 128K (2015)(Gabriele Amore)</description>
+		<description>Bubble Monkey Bros 48K-128K (2015)(Gabriele Amore)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="36566">
-				<rom name="Bubble Monkey Bros 128K (2015)(Gabriele Amore).tap" size="36566" crc="729dd4be" sha1="2eb2f9bca9467836e1bb51b0884268df75b01374"/>
+				<rom name="Bubble Monkey Bros 48K-128K (2015)(Gabriele Amore).tap" size="36566" crc="729dd4be" sha1="2eb2f9bca9467836e1bb51b0884268df75b01374"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15473,12 +15533,12 @@
 		</part>
 	</software>
 	<software name="zxs86a7a0d383c4d">
-		<description>City Connection 128K (1988)(Manuel Lemos)</description>
+		<description>City Connection 128K (2023)(Manuel Lemos)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="112933">
-				<rom name="City Connection 128K (1988)(Manuel Lemos).tap" size="112933" crc="ba5fd65a" sha1="86a7a0d383c4d5737205b3d978d3bd5edeaf1944"/>
+				<rom name="City Connection 128K (2023)(Manuel Lemos).tap" size="112933" crc="ba5fd65a" sha1="86a7a0d383c4d5737205b3d978d3bd5edeaf1944"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26192,6 +26252,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs11dd9941cb978">
+		<description>Frankie Goes to Hollywood 48K (1985)(Ocean)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49851">
+				<rom name="Frankie Goes to Hollywood 48K (1985)(Ocean).tzx" size="49851" crc="2437d116" sha1="11dd9941cb978d2c67ffe00205dcf9f8adb84530"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs67fa290276e0c">
 		<description>Frankie Lost His Body EN 128K (2024)(Isaias Diaz)</description>
 		<year>????</year>
@@ -26479,6 +26549,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="59861">
 				<rom name="Frightmare 128K (1988)(Cascade Games).tap" size="59861" crc="a5ba5804" sha1="c59993f57aeca473926e594a7ca56b80fa667742"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd936c7e79d2d8">
+		<description>Frightmare 128K (1988)(Cascade Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="59986">
+				<rom name="Frightmare 128K (1988)(Cascade Games).tzx" size="59986" crc="cb957497" sha1="d936c7e79d2d8e9dc91d66ae26783a3c5c9f66ca"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28922,6 +29002,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf8771245b9170">
+		<description>Grand Prix Circuit 128K (1990)(Accolade)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="101394">
+				<rom name="Grand Prix Circuit 128K (1990)(Accolade).tzx" size="101394" crc="106296ba" sha1="f8771245b9170b15e0427fd015733ec5a3dd791b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1b7ef8fffe4a6">
 		<description>Grand Prix Drivers (1992)(Grafix Wizard)</description>
 		<year>????</year>
@@ -31019,6 +31109,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="2483">
 				<rom name="Hlasovy Program Pro Zx Spectrum (1985)(Voicesoft)(Cz).tap" size="2483" crc="49260886" sha1="4469b602852283071ee7ca815652b510f1c77a37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb727efd218e57">
+		<description>Hlipa CS 48K (2026)(Kasuha Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35521">
+				<rom name="Hlipa CS 48K (2026)(Kasuha Software).tap" size="35521" crc="93ec9bcb" sha1="b727efd218e5702bd97c2691ff62b7ca1c26ee60"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4d1ca1a8e204d">
+		<description>Hlipa EN 48K (2026)(Kasuha Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35506">
+				<rom name="Hlipa EN 48K (2026)(Kasuha Software).tap" size="35506" crc="a2fd8780" sha1="4d1ca1a8e204d9aa9716495d35cf1c9d92b5c2fe"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34199,6 +34309,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47956">
 				<rom name="Jinj 2 - Belmonte's Revenge (2012)(RetroWorks).tap" size="47956" crc="068ec259" sha1="30f2a7f731c575476245e6836c06380580a5cf2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc5f0873b0bc5d">
+		<description>Jinj 2 - Belmonte's Revenge 48K-128K (2012)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26568">
+				<rom name="Jinj 2 - Belmonte's Revenge 48K-128K (2012)(RetroWorks).tzx" size="26568" crc="ede7f3e3" sha1="c5f0873b0bc5dc665fe1a7fe5b49da2d15fcbb19"/>
 			</dataarea>
 		</part>
 	</software>
@@ -75139,6 +75259,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="121562">
 				<rom name="_Learn Chess By Computer - Introductory Course (1983)(Braveline).tap" size="121562" crc="e034f208" sha1="95dfc9d95ad9c79499d5647bb9ec4473ee55c9b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8de6ccf6e9192">
+		<description>_Legend ES 48K (1990)(Zafiro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="235225">
+				<rom name="_Legend ES 48K (1990)(Zafiro).tap" size="235225" crc="75f938b4" sha1="8de6ccf6e9192a4e5973b38586bddab8e8bcd727"/>
 			</dataarea>
 		</part>
 	</software>
