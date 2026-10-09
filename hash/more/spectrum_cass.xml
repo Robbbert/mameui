@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8058 -->
+<!-- Number of items in this list = 8067 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -45572,6 +45572,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs34d50e68076cb">
+		<description>O-Hole Block 128K (2026)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43645">
+				<rom name="O-Hole Block 128K (2026)(Oblo).tzx" size="43645" crc="d19a3d96" sha1="34d50e68076cb10e6cfb02fb3c627c01579d8639"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ad97e45f97a6">
+		<description>O-Hole Block 48K (2026)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37832">
+				<rom name="O-Hole Block 48K (2026)(Oblo).tzx" size="37832" crc="82e35f37" sha1="2ad97e45f97a60dece83a851ffc925021763f3dd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7ebdd39787fb5">
 		<description>O-Puzz Attack 48K (2018)(Oblo)</description>
 		<year>????</year>
@@ -45579,6 +45599,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="29543">
 				<rom name="O-Puzz Attack 48K (2018)(Oblo).tap" size="29543" crc="ebadd8c9" sha1="7ebdd39787fb54e882da8168a38210bd78c2b2c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1403e43a76a5a">
+		<description>O-Trix 48K (2011)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="33600">
+				<rom name="O-Trix 48K (2011)(Oblo).tzx" size="33600" crc="d616f009" sha1="1403e43a76a5acef9146e8b5be26110bf93b63ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3b3e1e938484f">
+		<description>O-Trix+ v1.55 48K (2026)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47450">
+				<rom name="O-Trix+ v1.55 48K (2026)(Oblo).tzx" size="47450" crc="a337151e" sha1="3b3e1e938484f62e81970b26bfc7b24eef78d6a0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47759,6 +47799,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="22988">
 				<rom name="perigos na selva.tzx" size="22988" crc="4c7cc1c9" sha1="6de7770c91b420d776ca93e678cbf32c3186239f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0161d892cf1ab">
+		<description>Perils of Stickman, The v1.1 48K (2026)(Steve Tyson)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35541">
+				<rom name="Perils of Stickman, The v1.1 48K (2026)(Steve Tyson).tap" size="35541" crc="de8d0f24" sha1="0161d892cf1abc18d858f38ae07a7d5c70e1784c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -50439,6 +50489,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41348">
 				<rom name="Quann Tulla (1985)(8th Day Software)[Old Version].tap" size="41348" crc="05c9e8b1" sha1="11c379ed9d7a5262d8cff408d25247b74ca23e8b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6f05027413ead">
+		<description>Quantum Hop 1.1A 48K-128K (2026)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41230">
+				<rom name="Quantum Hop 1.1A 48K-128K (2026)(Tonsomo Entertainment).tzx" size="41230" crc="2e8ed2d1" sha1="6f05027413ead6f49852e011aa6c2bba276e25e0"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55373,12 +55433,12 @@
 		</part>
 	</software>
 	<software name="zxs42db386ffdab2">
-		<description>Shadow Warriors</description>
+		<description>Shadow Warriors 48K-128K (1990)(Ocean)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="130491">
-				<rom name="Shadow Warriors.tap" size="130491" crc="a9adbe6d" sha1="42db386ffdab2d6fbea6e8dd8ae765a8e9d80c4e"/>
+				<rom name="Shadow Warriors 48K-128K (1990)(Ocean).tap" size="130491" crc="a9adbe6d" sha1="42db386ffdab2d6fbea6e8dd8ae765a8e9d80c4e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -57469,6 +57529,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47085">
 				<rom name="Solomons Key (1989)(US Gold Ltd).tap" size="47085" crc="f8e955e0" sha1="1544ecd689e57e568a08bc6db84def1f1bec8408"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6e369ebb9d6d2">
+		<description>Solseed 128K (2026)(Milos Marinovic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="65312">
+				<rom name="Solseed 128K (2026)(Milos Marinovic).tap" size="65312" crc="6866fe95" sha1="6e369ebb9d6d23d5519449fb9f0116046c680823"/>
 			</dataarea>
 		</part>
 	</software>
@@ -68499,6 +68569,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="3095">
 				<rom name="Zed.tzx" size="3095" crc="04fb7e05" sha1="8b44f0753e535b83e90ad3e7b48cc8c0efe39f7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsff4c28890e8da">
+		<description>Zeddy's Clean Sweep 128K (2026)(zeddy48)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="56536">
+				<rom name="Zeddy's Clean Sweep 128K (2026)(zeddy48).tap" size="56536" crc="af9b6be9" sha1="ff4c28890e8da02b01f7d59ec005765ba32a9827"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs54e47ceb0d960">
+		<description>Zeddy's Clean Sweep 48K (2026)(zeddy48)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41066">
+				<rom name="Zeddy's Clean Sweep 48K (2026)(zeddy48).tap" size="41066" crc="1ba05eb1" sha1="54e47ceb0d960a01625d21e8b9b7f32ee850fc33"/>
 			</dataarea>
 		</part>
 	</software>

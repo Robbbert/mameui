@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 601 -->
+<!-- Number of items in this list = 605 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1099,6 +1099,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Choplifter [HTH] [SMS-GG] (TW).sms" size="131072" crc="55f929ce" sha1="62e9dae23d305c792dc1adb8b888d82d333b5265"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3cb618ad2b681">
+		<description>Chouon Senshi Borgman T-Eng (2026)(FomaLSSJ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Chouon Senshi Borgman T-Eng (2026)(FomaLSSJ).sms" size="131072" crc="afd6e0d0" sha1="3cb618ad2b681051b66642434a5c4ee2c0efe823"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3012,6 +3022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="smsec94ed1c60237">
+		<description>Master Tennis v1.2 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="65536">
+				<rom name="Master Tennis v1.2 (2026)(Oldschool Is Beautiful).sms" size="65536" crc="88033cd3" sha1="ec94ed1c60237529fc2d2fb1da20d35c03873031"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="smsc5e78f61e8ca1">
 		<description>MastermindRK</description>
 		<year>????</year>
@@ -3679,6 +3699,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Papi_Commando_In_CPP_Land.sms" size="1048576" crc="bb622c1d" sha1="8a5b4d6e0d765e4445581ec35014c4ba0487d6ab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms26e5ab1761bcf">
+		<description>Pedrisco v1.1 (2026)(vosges6128)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="131072">
+				<rom name="Pedrisco v1.1 (2026)(vosges6128).sms" size="131072" crc="271296bc" sha1="26e5ab1761bcf8dc1c4e064812c19a5ffe25d3f3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4919,6 +4949,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="49152">
 				<rom name="Sparkie MSX2SMS Hack.sms" size="49152" crc="c119007a" sha1="de7d84ac382f9aa6940f94227bca4d0bd1f0df7a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="smse942f7d546e5e">
+		<description>Square Doom v0.0.3 (2026)(haroldo-ok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Square Doom v0.0.3 (2026)(haroldo-ok).sms" size="1048576" crc="df11b06c" sha1="e942f7d546e5e468ef5023364754d3752f728228"/>
 			</dataarea>
 		</part>
 	</software>

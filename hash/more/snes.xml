@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4191 -->
+<!-- Number of items in this list = 4195 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -3209,6 +3209,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="AmbianceOW (SMW1 Hack).sfc" size="1048576" crc="66ee407a" sha1="ebe0334a8774d3bdb0ebbf6661ec6db4f2974963"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsc7e41a2aaaf6d">
+		<description>Angelique T-Eng v0.99a (2026)(Neocrypton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Angelique T-Eng v0.99a (2026)(Neocrypton).sfc" size="4194304" crc="46be57be" sha1="c7e41a2aaaf6d248f1b445dcd7473a7086eda215"/>
 			</dataarea>
 		</part>
 	</software>
@@ -14599,6 +14609,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1572864">
 				<rom name="Kamen Rider (J)(1993)(Bandai).sfc" size="1572864" crc="3f5aeb53" sha1="57107e9156677d6466da6636fed6cdd5fb71a086"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns63ce3f65e03a8">
+		<description>Kamen Rider T-Eng (2026)(kamencoder)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Kamen Rider T-Eng (2026)(kamencoder).sfc" size="2097152" crc="7602d9b2" sha1="63ce3f65e03a8a212f47c3fc4ce19f9f042d2d08"/>
 			</dataarea>
 		</part>
 	</software>
@@ -34789,6 +34809,26 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Super Mario Kart (USA) [Track Mod v1.0 by Javier Carracedo] (Hyper Battles).sfc" size="524288" crc="3d998b36" sha1="a2822c8f7fe82cdb77005514ff58a7f6be06eb37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="snsbb0f215bbcd90">
+		<description>Super Mario Kart - Fullscreen Edition v1.3 (2026)(Psicopompo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Mario Kart - Fullscreen Edition v1.3 (2026)(Psicopompo).sfc" size="1048576" crc="3cb1596a" sha1="bb0f215bbcd90f19e057bcc9fd6fd378c1b5cb46"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3b8bba6da568d">
+		<description>Super Mario Kart - Fullscreen Edition v1.5 (2026)(Psicopompo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Mario Kart - Fullscreen Edition v1.5 (2026)(Psicopompo).sfc" size="1048576" crc="6af5145e" sha1="3b8bba6da568db21ed466b40fc5ba6179800b5a3"/>
 			</dataarea>
 		</part>
 	</software>
