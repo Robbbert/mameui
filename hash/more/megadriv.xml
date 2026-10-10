@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2170 -->
+<!-- Number of items in this list = 2171 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -21059,6 +21059,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1638400">
 				<rom name="Wonder Boy - Arcade Port v1.1 (2026)(ShinobiZ).bin" size="1638400" crc="e48b69f7" sha1="817ef64f6eeb4b59f96c2061dba8ffe37d2065f3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genadcc403feb00a">
+		<description>Wonder Boy - Arcade Port v1.2 (2026)(ShinobiZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Wonder Boy - Arcade Port v1.2 (2026)(ShinobiZ).bin" size="2097152" crc="e8a52997" sha1="adcc403feb00ab470d3e7055738b3eacab4037cf"/>
 			</dataarea>
 		</part>
 	</software>

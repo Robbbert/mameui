@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 475 -->
+<!-- Number of items in this list = 476 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -4339,6 +4339,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Star Wars 3 (Unl).gba" size="8192" crc="df567de9" sha1="a7e3ebaa91aec5a4cfef93c667b83d6783826d6b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba66ebc02731b7f">
+		<description>Starfall Advance (2026)(Dreamnoid)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="9253592">
+				<rom name="Starfall Advance (2026)(Dreamnoid).gba" size="9253592" crc="2c8d9b59" sha1="66ebc02731b7f97731a599ab3cc4beffe91be89f"/>
 			</dataarea>
 		</part>
 	</software>

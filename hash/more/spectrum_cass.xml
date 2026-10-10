@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8067 -->
+<!-- Number of items in this list = 8075 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -55469,6 +55469,86 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35621">
 				<rom name="Shadowfire (1985)(Beyond Software).tap" size="35621" crc="ddf8f741" sha1="1de6845418b6b338989c0c3975d8bcc14f673cde"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscb0c83b25f981">
+		<description>Shadows of Belial EN 128K (2016)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138984">
+				<rom name="Shadows of Belial EN 128K (2016)(RetroWorks).tap" size="138984" crc="5484f32e" sha1="cb0c83b25f981d7e0dd24ffbd0ebaab84d87dba4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs4aea11fa7bfd0">
+		<description>Shadows of Belial EN 128K (2016)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138990">
+				<rom name="Shadows of Belial EN 128K (2016)(RetroWorks).tzx" size="138990" crc="1a827307" sha1="4aea11fa7bfd0f87d8800435d4a7ca2a8e81cfc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbd6f49a0194a6">
+		<description>Shadows of Belial EN 128K (2016)(RetroWorks)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138695">
+				<rom name="Shadows of Belial EN 128K (2016)(RetroWorks)_1.tap" size="138695" crc="38f3a36d" sha1="bd6f49a0194a62b8cc1606b3bec9743007dbe29f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb67961a7b0b4a">
+		<description>Shadows of Belial EN v1.0.3 128K (2016)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138700">
+				<rom name="Shadows of Belial EN v1.0.3 128K (2016)(RetroWorks).tap" size="138700" crc="8a4e7852" sha1="b67961a7b0b4a34e805b91cc0c820c3a206bc42c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfed734a8870a9">
+		<description>Shadows of Belial ES 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139578">
+				<rom name="Shadows of Belial ES 128K (2026)(RetroWorks).tap" size="139578" crc="7df67cf9" sha1="fed734a8870a976f83c7ebb017cf5a991187e136"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs80a6ee32535fa">
+		<description>Shadows of Belial ES 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139580">
+				<rom name="Shadows of Belial ES 128K (2026)(RetroWorks).tzx" size="139580" crc="a136de86" sha1="80a6ee32535fa8c99ee8f019041d845e61099d66"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc3c2e3132848">
+		<description>Shadows of Belial ES 128K (2026)(RetroWorks)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139285">
+				<rom name="Shadows of Belial ES 128K (2026)(RetroWorks)_1.tap" size="139285" crc="febde4af" sha1="cc3c2e31328487ffcb0affe5bab47f282168c359"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs82faedd2f798f">
+		<description>Shadows of Belial ES v1.0.3 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139288">
+				<rom name="Shadows of Belial ES v1.0.3 128K (2026)(RetroWorks).tap" size="139288" crc="a12c31d0" sha1="82faedd2f798f4a802f0558e469ca539d1477454"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 605 -->
+<!-- Number of items in this list = 606 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -1249,6 +1249,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Croco Pinball v0.5 (2026)(Oldschool Is Beautiful).sms" size="524288" crc="b8e36582" sha1="c655583d69a5a66ff5dacea125d389b9d7b543c4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms04760be25dedb">
+		<description>Croco Pinball v1.0 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Croco Pinball v1.0 (2026)(Oldschool Is Beautiful).sms" size="524288" crc="b24987b4" sha1="04760be25dedb3d6c337b9ca9ca7f594636ad434"/>
 			</dataarea>
 		</part>
 	</software>
