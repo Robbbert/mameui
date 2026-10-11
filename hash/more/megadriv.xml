@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2171 -->
+<!-- Number of items in this list = 2172 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -12509,6 +12509,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mortal Kombat Arcade Edition Enhanced v2.8 (2026)(Rael G.C.).bin" size="4194304" crc="ebc90098" sha1="b653165907b5f299573f71b024406dd3e4b08bd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen427f295a447c9">
+		<description>Mortal Kombat Arcade Edition Enhanced v2.9 (2026)(Rael G.C.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Mortal Kombat Arcade Edition Enhanced v2.9 (2026)(Rael G.C.).bin" size="4194304" crc="bc3378bf" sha1="427f295a447c9ff845689b4c8fb875b84c41ba90"/>
 			</dataarea>
 		</part>
 	</software>
