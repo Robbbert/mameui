@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8087 -->
+<!-- Number of items in this list = 8108 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -6402,6 +6402,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs435313ac5c4b5">
+		<description>Aquanoids v1.2 (2015-09-06)(Parsons, Neil)(ES)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38618">
+				<rom name="Aquanoids v1.2 (2015-09-06)(Parsons, Neil)(ES).tzx" size="38618" crc="ef8964e7" sha1="435313ac5c4b58cf7eb629c39043c323135e205c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs3c04bd8413268">
 		<description>Aquanoids v1.2 48K (2015)(Neil Parsons)</description>
 		<year>????</year>
@@ -8529,6 +8539,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44946">
 				<rom name="Barry McGuigan Championship Boxing (1985)(Activision)[a].tap" size="44946" crc="0ea06ef0" sha1="07441688ed0032ebd325d96e9015dfb6d726d289"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbad80f8fda73a">
+		<description>Bartolo's Quest EN 48K (2026)(Molisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18224">
+				<rom name="Bartolo's Quest EN 48K (2026)(Molisoft).tap" size="18224" crc="27cb1564" sha1="bad80f8fda73ae55e012d96f5e11c442a1b1115d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs800868ca62891">
+		<description>Bartolo's Quest ES 48K (2026)(Molisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="18209">
+				<rom name="Bartolo's Quest ES 48K (2026)(Molisoft).tap" size="18209" crc="da420719" sha1="800868ca62891a72b82003c34784011ff0464422"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16912,6 +16942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxscdf1c6681f087">
+		<description>Count Duckula 2 128K (1992)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="97164">
+				<rom name="Count Duckula 2 128K (1992)(Alternative).tzx" size="97164" crc="52e73530" sha1="cdf1c6681f087904da0c120c6be52da7918b1405"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs45b247dd5c9ac">
 		<description>Count Duckula 2 48K (1992)(Alternative)</description>
 		<year>????</year>
@@ -16919,6 +16959,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47605">
 				<rom name="Count Duckula 2 48K (1992)(Alternative).tap" size="47605" crc="7b53965d" sha1="45b247dd5c9ac128596fe21f72ba8b3d7d7985ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs657b48f986f30">
+		<description>Count Duckula 2 48K (1992)(Alternative)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47627">
+				<rom name="Count Duckula 2 48K (1992)(Alternative).tzx" size="47627" crc="1789c1c2" sha1="657b48f986f308d2d7c97ccad441d9c6e4fa6d44"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17039,6 +17089,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="53875">
 				<rom name="Cray-5 (Retroworks)(2011).tap" size="53875" crc="a1467bf5" sha1="e01315f6c5a45c387aeb2df875a2ffc37f65b18e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1b48fe96e420f">
+		<description>Cray-5 128K (2011)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="54107">
+				<rom name="Cray-5 128K (2011)(RetroWorks).tzx" size="54107" crc="d598fc8d" sha1="1b48fe96e420fe546831a437f3d23f8715b56c91"/>
 			</dataarea>
 		</part>
 	</software>
@@ -27932,6 +27992,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs9b69075efe4af">
+		<description>Genesis dawn of a new day 128K (2010)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="63392">
+				<rom name="Genesis dawn of a new day 128K (2010)(RetroWorks).tzx" size="63392" crc="982c67a4" sha1="9b69075efe4af5929c09c6911dd14fa5ad02b8b2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs903ad0e233edf">
 		<description>Genie 128 v2.1 (19xx)(Alchemist Research)</description>
 		<year>????</year>
@@ -38232,6 +38302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs45400ba83e723">
+		<description>Lost Treasures of Tulum, The EN v1.1 128K (2020-22)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="76045">
+				<rom name="Lost Treasures of Tulum, The EN v1.1 128K (2020-22)(RetroWorks).tzx" size="76045" crc="a387543f" sha1="45400ba83e7231acafda79c74ae64226eaf1d8e8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsee409b308318d">
 		<description>Lost Treasures of Tulum, The ES 128K (2020)(RetroWorks)</description>
 		<year>????</year>
@@ -38239,6 +38319,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="75999">
 				<rom name="Lost Treasures of Tulum, The ES 128K (2020)(RetroWorks).tap" size="75999" crc="c4087b0e" sha1="ee409b308318d520b04ce17af2c24a38c4474e10"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs97d2048efe6e6">
+		<description>Lost Treasures of Tulum, The ES 128K (2020)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="76033">
+				<rom name="Lost Treasures of Tulum, The ES 128K (2020)(RetroWorks).tzx" size="76033" crc="2b8ee45d" sha1="97d2048efe6e67351b5042ba459eb0d7978d37ac"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55632,6 +55722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbacb58a4eea60">
+		<description>Shadows of Belial EN v1.0.4 128K (2016)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138736">
+				<rom name="Shadows of Belial EN v1.0.4 128K (2016)(RetroWorks).tap" size="138736" crc="caf1f445" sha1="bacb58a4eea60b1bb3bd6f362dd4ceebf9a01683"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfed734a8870a9">
 		<description>Shadows of Belial ES 128K (2026)(RetroWorks)</description>
 		<year>????</year>
@@ -55669,6 +55769,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="139288">
 				<rom name="Shadows of Belial ES v1.0.3 128K (2026)(RetroWorks).tap" size="139288" crc="a12c31d0" sha1="82faedd2f798f4a802f0558e469ca539d1477454"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0e2f12d79a3b2">
+		<description>Shadows of Belial ES v1.0.4 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139295">
+				<rom name="Shadows of Belial ES v1.0.4 128K (2026)(RetroWorks).tap" size="139295" crc="07167c28" sha1="0e2f12d79a3b2fc2dece8abfc1387be47d7786f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -65462,6 +65572,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs07a4f4392e1df">
+		<description>Umbra - Part 1 EN 48K (2025)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39127">
+				<rom name="Umbra - Part 1 EN 48K (2025)(DARKSIDE29SOFT).tap" size="39127" crc="0576c036" sha1="07a4f4392e1df1661693d77a2359c010dd92d9eb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0a7cfb74a3954">
+		<description>Umbra - Part 2 EN 48K (2025)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38639">
+				<rom name="Umbra - Part 2 EN 48K (2025)(DARKSIDE29SOFT).tap" size="38639" crc="b2822de3" sha1="0a7cfb74a3954cb4450f045a8a9b8aafca7b90c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0cce37c90d8af">
+		<description>Umbra - Parte 1 ES 48K (2025)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39141">
+				<rom name="Umbra - Parte 1 ES 48K (2025)(DARKSIDE29SOFT).tap" size="39141" crc="aee1c7fd" sha1="0cce37c90d8af396003880e3d12e2c02dcfd609c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8cd25ab16c661">
+		<description>Umbra - Parte 2 ES 48K (2025)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38648">
+				<rom name="Umbra - Parte 2 ES 48K (2025)(DARKSIDE29SOFT).tap" size="38648" crc="15b81c4e" sha1="8cd25ab16c6619b75b1d0a8c0d1f6c5ec698c2e1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs235df39004cd1">
 		<description>Un 2 Azul 48K (2014)(J.B.G.V.)</description>
 		<year>????</year>
@@ -65659,6 +65809,66 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="27747">
 				<rom name="Uridium 48K (1986)(Hewson Consultants).tap" size="27747" crc="28bdbbfc" sha1="def5f8ad270887be94759cae1ea322966011ba5d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3ca1cb70a3385">
+		<description>Urkiola I - El despertar de Gaueko ES 48K (2024)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39667">
+				<rom name="Urkiola I - El despertar de Gaueko ES 48K (2024)(DARKSIDE29SOFT).tap" size="39667" crc="cf6c56bf" sha1="3ca1cb70a338581dd2519964305cfec988fe0740"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdb18230d5e09d">
+		<description>Urkiola I - Gaueko's Awakening EN 48K (2024)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39677">
+				<rom name="Urkiola I - Gaueko's Awakening EN 48K (2024)(DARKSIDE29SOFT).tap" size="39677" crc="e71f8cdc" sha1="db18230d5e09deba49d8201fcdc3a996021d30fb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs78a04973829a8">
+		<description>Urkiola II - El origen de Gaueko ES 48K (2024)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38864">
+				<rom name="Urkiola II - El origen de Gaueko ES 48K (2024)(DARKSIDE29SOFT).tap" size="38864" crc="ac091e33" sha1="78a04973829a8efb0f4268f1bfefa60e9a71aa4a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs525af68009404">
+		<description>Urkiola II - The Origin of Gaueko EN 48K (2024)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38862">
+				<rom name="Urkiola II - The Origin of Gaueko EN 48K (2024)(DARKSIDE29SOFT).tap" size="38862" crc="d23b45ef" sha1="525af680094047496e21d3afc141b57aa04266cf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsaf5f6edc2aa5b">
+		<description>Urkiola III - Seven Streets EN 48K (2024)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40161">
+				<rom name="Urkiola III - Seven Streets EN 48K (2024)(DARKSIDE29SOFT).tap" size="40161" crc="15f9bf93" sha1="af5f6edc2aa5b9e9a6efdb8c4b4e55db3b7b9441"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs747b898a5b91c">
+		<description>Urkiola III - Siete calles ES 48K (2024)(DARKSIDE29SOFT)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40169">
+				<rom name="Urkiola III - Siete calles ES 48K (2024)(DARKSIDE29SOFT).tap" size="40169" crc="75e174a7" sha1="747b898a5b91cf0fcf119fc2650a77ddc50355f3"/>
 			</dataarea>
 		</part>
 	</software>
