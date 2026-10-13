@@ -6764,27 +6764,6 @@ Fails [MOS6526], [SID] and [cassette] checks
 		</part>
 	</software>
 
-	<software name="ide64">
-		<description>IDE64 (v4.1, IDEDOS v0.90)</description>
-		<year>2019</year>
-		<publisher>&lt;unknown&gt;</publisher>
-		<sharedfeat name="compatibility" value="NTSC,PAL"/>
-
-		<part name="cart" interface="c64_cart">
-			<feature name="slot" value="ide64" />
-
-			<dataarea name="ide64:u3" size="0x20000">
-				<rom name="idedos20190819.rom" size="0x20000" crc="8792bf2d" sha1="1b97505b07aaea1ed4404e5f5ac7550ec02854b7" />
-			</dataarea>
-		</part>
-
-		<part name="flop1" interface="floppy_5_25">
-			<dataarea name="flop" size="174848">
-				<rom name="idedos_util.d64" size="174848" crc="94f27ea4" sha1="1119da8fd7304e3cea4d37828a4ce53a0f6bad09" />
-			</dataarea>
-		</part>
-	</software>
-
 	<software name="pop">
 		<description>Prince of Persia (v1.1)</description>
 		<year>2011</year>
@@ -7119,36 +7098,6 @@ Fails [MOS6526], [SID] and [cassette] checks
 			<feature name="game" value="0" />
 			<dataarea name="roml" size="0x4000">
 				<rom name="koalapainter" size="0x4000" crc="cc75a06d" sha1="4707fe57b0575415a2c258392355941c130fcc80"/>
-			</dataarea>
-		</part>
-	</software>
-
-	<software name="tibdd001">
-		<description>Disc Drive DD-001 (v1.1)</description>
-		<year>1991</year>
-		<publisher>TIB</publisher>
-		<part name="cart" interface="c64_cart">
-			<feature name="slot" value="tibdd001" />
-			<feature name="game" value="1" />
-			<feature name="exrom" value="0" />
-
-			<dataarea name="roml" size="0x2000">
-				<rom name="rom_dd001_v1.1.bin" size="0x2000" crc="d266b628" sha1="24d178560dad3d955ebbe15f4274d966e031142d"/>
-			</dataarea>
-		</part>
-	</software>
-
-	<software name="tibdd001a" cloneof="tibdd001">
-		<description>Disc Drive DD-001 (v1.0)</description>
-		<year>1991</year>
-		<publisher>TIB</publisher>
-		<part name="cart" interface="c64_cart">
-			<feature name="slot" value="tibdd001" />
-			<feature name="game" value="1" />
-			<feature name="exrom" value="0" />
-
-			<dataarea name="roml" size="0x2000">
-				<rom name="rom_dd001_v1.0.bin" size="0x2000" crc="58f83983" sha1="f18cfb42c8e2c9152e18b129d01408f702271363"/>
 			</dataarea>
 		</part>
 	</software>
