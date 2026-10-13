@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 606 -->
+<!-- Number of items in this list = 607 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -352,23 +352,23 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms3b97e63fd8054">
+	<software name="sms4e7625fd0f050">
 		<description>Alien Cat 2 (2025)(PSCD Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="327680">
-				<rom name="Alien Cat 2 (2025)(PSCD Games).sms" size="327680" crc="188ec6fa" sha1="3b97e63fd80549ce094443a9b7301cfacc937914"/>
+			<dataarea name="rom" size="344064">
+				<rom name="Alien Cat 2 (2025)(PSCD Games).sms" size="344064" crc="7acff9b3" sha1="4e7625fd0f050bae2ebdb7e21db18c14f213324f"/>
 			</dataarea>
 		</part>
 	</software>
-	<software name="sms4e7625fd0f050">
-		<description>Alien Cat 2 (2025)(PSCD Games)_1</description>
+	<software name="sms3b97e63fd8054">
+		<description>Alien Cat 2 (Alt)(2025)(PSCD Games)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="sms_cart">
-			<dataarea name="rom" size="344064">
-				<rom name="Alien Cat 2 (2025)(PSCD Games)_1.sms" size="344064" crc="7acff9b3" sha1="4e7625fd0f050bae2ebdb7e21db18c14f213324f"/>
+			<dataarea name="rom" size="327680">
+				<rom name="Alien Cat 2 (Alt)(2025)(PSCD Games).sms" size="327680" crc="188ec6fa" sha1="3b97e63fd80549ce094443a9b7301cfacc937914"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4099,6 +4099,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="262656">
 				<rom name="Prince_of_Persia.sms" size="262656" crc="2c8f5b9f" sha1="bf0cdb664129b5548083dc0dde5449ab5f1bcc3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms66d187a905f1f">
+		<description>Project Galaxy v0.0.1 (2026)(haroldo-ok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="49152">
+				<rom name="Project Galaxy v0.0.1 (2026)(haroldo-ok).sms" size="49152" crc="1baf5cb4" sha1="66d187a905f1fb1958d23f287d58c8e6e4e47b84"/>
 			</dataarea>
 		</part>
 	</software>

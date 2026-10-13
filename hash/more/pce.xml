@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 209 -->
+<!-- Number of items in this list = 210 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -659,6 +659,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="131072">
 				<rom name="Axelay FG Demo by Chris Covell (PD).pce" size="131072" crc="b536867c" sha1="dec2b4b41c8791dd5d931bc91842a7383bd4b47b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pcedbd631208ba86">
+		<description>Batman (2026)(Magic Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Batman (2026)(Magic Games).pce" size="1048576" crc="0577fe88" sha1="dbd631208ba867b0fe8d4b73e80c83a82d4243e6"/>
 			</dataarea>
 		</part>
 	</software>
