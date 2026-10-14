@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2184 -->
+<!-- Number of items in this list = 2193 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -9542,6 +9542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen2b3aec241f60a">
+		<description>Hang-On v1.11T (2026)(ShinobiZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Hang-On v1.11T (2026)(ShinobiZ).bin" size="4194304" crc="7616cf34" sha1="2b3aec241f60ab4cb22a6338bf9c25915df8d202"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf76c0bd8bc2cb">
 		<description>Haruna's Big Snow Cleanup (2026)(NK Soft)</description>
 		<year>????</year>
@@ -11642,6 +11652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gena132ea97dceb4">
+		<description>Mega Commando v0.8b (2026)(MXRetroDev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2752512">
+				<rom name="Mega Commando v0.8b (2026)(MXRetroDev).bin" size="2752512" crc="da4a0edd" sha1="a132ea97dceb4ad493ed871c091945f5d933e940"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen9851f9c761409">
 		<description>Mega Flappy Sis (2016-18)(Beetroot)</description>
 		<year>????</year>
@@ -12822,6 +12842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen4b2a596617e4c">
+		<description>Nemeshit (2026)(Clankerbast Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Nemeshit (2026)(Clankerbast Software).bin" size="4194304" crc="8f93aed2" sha1="4b2a596617e4c8c6b09ed80fb517db0c9e13a4d5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3db399e7e8eda">
 		<description>NeverENDING</description>
 		<year>????</year>
@@ -13159,6 +13189,36 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Panda Jump (2026)(abadede919302).bin" size="262144" crc="164e8dfa" sha1="b3d6d7d5a8de55484fc85381c8707ab42d5cd5be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc78ea12a227f0">
+		<description>Pang Beta (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3050860">
+				<rom name="Pang Beta (2026)(Oldschool Is Beautiful).bin" size="3050860" crc="3b31e790" sha1="c78ea12a227f0e38b954cde52676319f9da41995"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen02cafb5507e7e">
+		<description>Pang Beta v0.61 (2026)(DavidGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1441792">
+				<rom name="Pang Beta v0.61 (2026)(DavidGames).bin" size="1441792" crc="bd568ca7" sha1="02cafb5507e7ef82d25f7305f71047b459f58f81"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genff2b2e5e82457">
+		<description>Pang Beta v0.75 (2026)(DavidGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1441792">
+				<rom name="Pang Beta v0.75 (2026)(DavidGames).bin" size="1441792" crc="75a52a4f" sha1="ff2b2e5e82457f8578fd6460e833184521712363"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15149,6 +15209,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="655360">
 				<rom name="Satyr In Hell (2022)(kakoeimon).bin" size="655360" crc="f4148d5c" sha1="aec3ae1d0934b77dc8fe5b98519eacf467c33cd6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen72dcdfd6f6ac3">
+		<description>Scoff v2 (2026)(Mike Daw)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Scoff v2 (2026)(Mike Daw).bin" size="262144" crc="056b0644" sha1="72dcdfd6f6ac3c8a6fbce9d95dbddf713ce8f205"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19772,6 +19842,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genb151f5ab29e93">
+		<description>Teenage Mutant Ninja Turtles - The Arcade Game v0.3.6 (2026)(Gustavo Valenzuela)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4063232">
+				<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.6 (2026)(Gustavo Valenzuela).bin" size="4063232" crc="bd1f9815" sha1="b151f5ab29e937baf324ea825190a50ec02b7879"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf440dfa689f65">
 		<description>teenage mutant ninja turtles - the hyperstone heist (usa)</description>
 		<year>????</year>
@@ -20079,6 +20159,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2490368">
 				<rom name="Tiger Road (2026)(hombreimaginario).bin" size="2490368" crc="88cba784" sha1="4024372d4d0e719a14e4f9728d140d38145aa329"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb05e22d55bac5">
+		<description>Tiger Road Beta 17 (2026)(hombreimaginario)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2490368">
+				<rom name="Tiger Road Beta 17 (2026)(hombreimaginario).bin" size="2490368" crc="407b4191" sha1="b05e22d55bac5ef28fa5cf9fb31bd909e6078c2c"/>
 			</dataarea>
 		</part>
 	</software>

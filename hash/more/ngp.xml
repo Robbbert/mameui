@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 179 -->
+<!-- Number of items in this list = 180 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -1109,6 +1109,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Neo Bowling (2026)(Hardhat Warrior)_1.ngp" size="2097152" crc="df4d1720" sha1="069d1236961204db53594f578d4a8ebee468d352"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpc86a210714bad">
+		<description>Neo Bowling v0.9 (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Neo Bowling v0.9 (2026)(Hardhat Warrior).ngp" size="2097152" crc="90e9e1cb" sha1="c86a210714bad59d2052c13df4c999a9ffd7a209"/>
 			</dataarea>
 		</part>
 	</software>
