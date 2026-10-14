@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 178 -->
+<!-- Number of items in this list = 179 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -1769,6 +1769,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Xenon 2 - Megablast (2026)(Napomex).ngp" size="2097152" crc="e84ab111" sha1="1cf9067ca6e3ae64b8a7a08f4db926edb412c1ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp8b5c73467a548">
+		<description>Xenon 2 - Megablast v0.7.1 (2026)(Napomex)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Xenon 2 - Megablast v0.7.1 (2026)(Napomex).ngp" size="4194304" crc="01d80d57" sha1="8b5c73467a548822e188399d34f8d222e25066f0"/>
 			</dataarea>
 		</part>
 	</software>
