@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 210 -->
+<!-- Number of items in this list = 211 -->
 <softwarelist name="pce" description="pce loose roms">
 	<software name="pced2c0810daa69a">
 		<description>(demo)After Burner II Audio Demo (19xx)(-)[p](sound-only)</description>
@@ -1959,6 +1959,16 @@
 		<part name="cart" interface="pce_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Tetris - Atari Games Arcade Port v1.01 (2026)(ShinobiZ).pce" size="524288" crc="5fccd826" sha1="4b498a0f050ec7c940da3401fc7ac6e07b40b188"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="pceb90091706a9a8">
+		<description>Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="pce_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ).pce" size="524288" crc="6e1de759" sha1="b90091706a9a8f00bc49bd256256a16324a14680"/>
 			</dataarea>
 		</part>
 	</software>

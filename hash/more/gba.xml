@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 477 -->
+<!-- Number of items in this list = 492 -->
 <softwarelist name="gba" description="gba loose roms">
 	<software name="gbaa7ef012a8f8b4">
 		<description>(demo)animdemo</description>
@@ -549,6 +549,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="12156152">
 				<rom name="Ashen Relics (2026)(Mikebloke).gba" size="12156152" crc="2d007a3d" sha1="0aa602c573eac8ab42d8c760092352c23be1c39d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba044f19fd4ca0d">
+		<description>Astra Aquarium (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="74228">
+				<rom name="Astra Aquarium (2026)(Enarkz).gba" size="74228" crc="f6ac6b01" sha1="044f19fd4ca0d639f2708dd4215c8534523e10c7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1139,6 +1149,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="21741328">
 				<rom name="Damage Report (2026)(Tapir Games).gba" size="21741328" crc="b7e46653" sha1="160dd0612419c06acde59e93f3112fc0a014d561"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba58dc4401fb6ac">
+		<description>Dance With Chiikawa (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="543492">
+				<rom name="Dance With Chiikawa (2026)(Enarkz).gba" size="543492" crc="13ed94a6" sha1="58dc4401fb6ac89032a5879c5304bd6da82f20da"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1872,6 +1892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba0a3bedaf2fc47">
+		<description>Galactic Odyssey (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="52872">
+				<rom name="Galactic Odyssey (2026)(Enarkz).gba" size="52872" crc="adbe4943" sha1="0a3bedaf2fc478aada96add2d982b32cf810913b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gbad43a35e651c0b">
 		<description>Galaxy Wall (2015)(Choi Kyun)</description>
 		<year>????</year>
@@ -1939,6 +1969,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="4770080">
 				<rom name="Getting Around It with Pheasant Birdy (2024)(Hell Labs).gba" size="4770080" crc="cd007dbd" sha1="d1886668327f4f691fb7bc935d1b2b43adba61f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba2b92d8f9bf055">
+		<description>Glorious March (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="56592">
+				<rom name="Glorious March (2026)(Enarkz).gba" size="56592" crc="fccc818f" sha1="2b92d8f9bf055f39ceb5d5f7198a0f552a87b389"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2262,6 +2302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba4560e8c8c2d41">
+		<description>Lethal Code Injection (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="42448">
+				<rom name="Lethal Code Injection (2026)(Enarkz).gba" size="42448" crc="33777521" sha1="4560e8c8c2d41ff2d80336afdedbffefd33672fa"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba91a2452875a40">
 		<description>Light Cycle GBA (2015)(Choi Kyun)</description>
 		<year>????</year>
@@ -2402,6 +2452,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbac379a87db72b3">
+		<description>Mega Scrabble (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="21238072">
+				<rom name="Mega Scrabble (2026)(Enarkz).gba" size="21238072" crc="0d5fe6a2" sha1="c379a87db72b362d72f38f3764ca80442d14e6e8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba16e4acd06bade">
 		<description>Metalgun Slinger T-Eng v1.1 (2025)(RaeDawnChonglingBay)</description>
 		<year>????</year>
@@ -2432,6 +2492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba82b4147a5c020">
+		<description>Mille Bornes (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="69584">
+				<rom name="Mille Bornes (2026)(Enarkz).gba" size="69584" crc="4f787828" sha1="82b4147a5c0204ee8e8cf97f776851658ca0d6cc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba4a3e8f7c76e56">
 		<description>Mini Mines v1.1 (2024)(Lazuli Software)</description>
 		<year>????</year>
@@ -2439,6 +2509,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Mini Mines v1.1 (2024)(Lazuli Software).gba" size="1048576" crc="2b6f3c3a" sha1="4a3e8f7c76e56f576b4c95f91a7ba82f57b908cd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbaa4e2f4c63cae2">
+		<description>Mini Pets GBA (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="142208">
+				<rom name="Mini Pets GBA (2026)(Enarkz).gba" size="142208" crc="d92d6ca7" sha1="a4e2f4c63cae27f4d2b72f389a8697758cbc2592"/>
 			</dataarea>
 		</part>
 	</software>
@@ -2572,6 +2652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gbae3e8d59828a51">
+		<description>Nemeshit (2026)(Clankerbast Software)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="2041856">
+				<rom name="Nemeshit (2026)(Clankerbast Software).gba" size="2041856" crc="90dac67d" sha1="e3e8d59828a5154269d5347fb7e009f3440ccc9d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba79ecb462336f0">
 		<description>NEONnoir (2025)(Mass)</description>
 		<year>????</year>
@@ -2609,6 +2699,36 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="43104">
 				<rom name="Paragon Breakout (2026)(Enarkz).gba" size="43104" crc="21609c4c" sha1="d42e0c01b428d3b7687dd499a21781fb8a7c5c9d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba0d3be58edef0f">
+		<description>Paragon Builder (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="64052">
+				<rom name="Paragon Builder (2026)(Enarkz).gba" size="64052" crc="621de1f6" sha1="0d3be58edef0f761479d826318875d18b2d18730"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba256b7f6a5b82c">
+		<description>Pazaak (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="69056">
+				<rom name="Pazaak (2026)(Enarkz).gba" size="69056" crc="fa500735" sha1="256b7f6a5b82cbb447cef99e2b931a5a98a7b644"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba447c1cbba25a4">
+		<description>Peggle GBA (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="134784">
+				<rom name="Peggle GBA (2026)(Enarkz).gba" size="134784" crc="d15b75e6" sha1="447c1cbba25a471371528123e042c267344222ec"/>
 			</dataarea>
 		</part>
 	</software>
@@ -3572,6 +3692,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gba35b4cfef59667">
+		<description>Saint Martial's Casino (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="36764">
+				<rom name="Saint Martial's Casino (2026)(Enarkz).gba" size="36764" crc="ebd2d50a" sha1="35b4cfef596676fc3f1f94b7b6d239e225c742ce"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gba2c0ecc0fe283d">
 		<description>Samsara Naga 1x2 (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -3579,6 +3709,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Samsara Naga 1x2 (Japan) (Rev 1).gba" size="8388608" crc="a79872fe" sha1="2c0ecc0fe283dd1f912c5ca24d1272795109398f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gba9fb2d14d5da8f">
+		<description>Scorched Earth (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="66124">
+				<rom name="Scorched Earth (2026)(Enarkz).gba" size="66124" crc="dd179ba0" sha1="9fb2d14d5da8f6a044818b7b31ebaab7f75af827"/>
 			</dataarea>
 		</part>
 	</software>
@@ -4569,6 +4709,16 @@
 		<part name="cart" interface="gba_cart">
 			<dataarea name="rom" size="16239516">
 				<rom name="Tremblay Island v1.10 (2021)(Cinemint Games).gba" size="16239516" crc="ce85ba07" sha1="b09b600bfc222c2d92829d8883feab700b013953"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbafcaa3b4df4428">
+		<description>Trials, The (2026)(Enarkz)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gba_cart">
+			<dataarea name="rom" size="178364">
+				<rom name="Trials, The (2026)(Enarkz).gba" size="178364" crc="60674eae" sha1="fcaa3b4df4428a8082828044bf13fc6732713ae7"/>
 			</dataarea>
 		</part>
 	</software>

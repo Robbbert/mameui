@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 528 -->
+<!-- Number of items in this list = 529 -->
 <softwarelist name="famicom_flop" description="famicom_flop loose roms">
 	<software name="fds6c11a67be9e78">
 		<description>(demo)Doremikko (1987)(Konami)</description>
@@ -1429,6 +1429,16 @@
 		<part name="flop1" interface="floppy_5_25">
 			<dataarea name="flop" size="131000">
 				<rom name="Dracula II - The Cursed Seal T-Eng v1.0a (2024)(BlackPaladin).fds" size="131000" crc="6cc6feb3" sha1="f260077df3613bf08b9685d8eaec0ba5627002dc"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="fdse6a1af8d2daa4">
+		<description>Dreamful - FDS Diskmag, 40th Anniversary of FDS (2026)(TakuikaNinja)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_5_25">
+			<dataarea name="flop" size="65500">
+				<rom name="Dreamful - FDS Diskmag, 40th Anniversary of FDS (2026)(TakuikaNinja).fds" size="65500" crc="55314060" sha1="e6a1af8d2daa4336ab89388aa19b5f48758ec8c0"/>
 			</dataarea>
 		</part>
 	</software>

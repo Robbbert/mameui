@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4195 -->
+<!-- Number of items in this list = 4199 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -10599,6 +10599,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="FinalBattlePT3 (SMW1 Hack).sfc" size="4194304" crc="854f3e16" sha1="bc7ffd157eb88a87a25bf8791343f3f107d44b74"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns363876b5401a7">
+		<description>Find 87 v2 (2026)(DiTnera)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Find 87 v2 (2026)(DiTnera).sfc" size="262144" crc="797eb82b" sha1="363876b5401a74a3eb9372dffdd0cf04ba96e4f3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -23252,6 +23262,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="snsdaa1f25afba5f">
+		<description>Return of Double Dragon PLUS v0.9 (2026)(Jackic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Return of Double Dragon PLUS v0.9 (2026)(Jackic).sfc" size="2097152" crc="62d3188c" sha1="daa1f25afba5fc5fa609cf6ada0a4c3a265c7b21"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse91d53938c3f6">
 		<description>Return to Demo 1 (SMW1 Hack)</description>
 		<year>????</year>
@@ -33512,6 +33532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="sns8b902c70cc357">
+		<description>Super Double Dragon PLUS v0.9 (2026)(Jackic)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Super Double Dragon PLUS v0.9 (2026)(Jackic).sfc" size="2097152" crc="60e7aa93" sha1="8b902c70cc357ac325cbf26e95d5c5cdd0a109fd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="snse7abe3c4c1429">
 		<description>Super Double Dragon</description>
 		<year>????</year>
@@ -34829,6 +34859,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Super Mario Kart - Fullscreen Edition v1.5 (2026)(Psicopompo).sfc" size="1048576" crc="6af5145e" sha1="3b8bba6da568db21ed466b40fc5ba6179800b5a3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns3c0a0d7b4e87c">
+		<description>Super Mario Kart - Fullscreen Edition v2.0 (2026)(Psicopompo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="Super Mario Kart - Fullscreen Edition v2.0 (2026)(Psicopompo).sfc" size="1048576" crc="e9b8c210" sha1="3c0a0d7b4e87cd6a54151f0b953a003e9353e65b"/>
 			</dataarea>
 		</part>
 	</software>

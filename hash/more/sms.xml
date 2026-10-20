@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 607 -->
+<!-- Number of items in this list = 608 -->
 <softwarelist name="sms" description="sms loose roms">
 	<software name="sms5d3447944b3fc">
 		<description>(demo)Battle Squadron - Highscore Tune (2024-03-27)(Kagesan)</description>
@@ -2039,6 +2039,16 @@
 		<part name="cart" interface="sms_cart">
 			<dataarea name="rom" size="278528">
 				<rom name="Gotris v1.3p (2022)(Tuxedo Games).sms" size="278528" crc="a11888ff" sha1="451d41ba7f41b33c3f03cff3c35ccc093445fc4b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sms3f9c5ce62a450">
+		<description>Grail Legacy (Raycast), The v0.50 (2026)(GuyDeNaville)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="sms_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Grail Legacy (Raycast), The v0.50 (2026)(GuyDeNaville).sms" size="262144" crc="8c3e2d0e" sha1="3f9c5ce62a45021ad9f594cf062955ac19be4795"/>
 			</dataarea>
 		</part>
 	</software>

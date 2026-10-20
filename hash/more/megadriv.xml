@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2193 -->
+<!-- Number of items in this list = 2207 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -3722,6 +3722,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen41f198f4b8800">
+		<description>Arcadiama v1.03 (2026)(NK)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2752512">
+				<rom name="Arcadiama v1.03 (2026)(NK).bin" size="2752512" crc="d2951706" sha1="41f198f4b8800ce4aecfae732022aca964263a86"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen2bd83b4da2fca">
 		<description>Ariel the Little Mermaid (USA, Europe)</description>
 		<year>????</year>
@@ -4932,6 +4942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen24235fbd887a9">
+		<description>Cabal Beta 1 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Cabal Beta 1 (2026)(Oldschool Is Beautiful).bin" size="2097152" crc="67e040cb" sha1="24235fbd887a98e0c556fa8f486533935828b79f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen005f27f6a12ac">
 		<description>cadash (arcade colors)</description>
 		<year>????</year>
@@ -5139,6 +5159,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Castlevania_Bloodlines(S).bin" size="1048576" crc="6a5e58cd" sha1="2572d121758ce2ecb89f8ee7e3de3e9503cd1b9f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen159e21d74b550">
+		<description>Catacomb Abyss 3D, The v0.0.1 (2026)(haroldo-ok)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2883584">
+				<rom name="Catacomb Abyss 3D, The v0.0.1 (2026)(haroldo-ok).bin" size="2883584" crc="b7375b10" sha1="159e21d74b5504f3a3c63517481498894420a718"/>
 			</dataarea>
 		</part>
 	</software>
@@ -6799,6 +6829,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Fight Game II 3000 (2022)(Manganga Team).bin" size="4194304" crc="769de2f6" sha1="40971fe04636513499034669cbf97da4c78fdd21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genba813886625aa">
+		<description>Fight Pub v0.5.3 (2026)(Dead House Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="786432">
+				<rom name="Fight Pub v0.5.3 (2026)(Dead House Studios).bin" size="786432" crc="f9aac5d3" sha1="ba813886625aad9151427b9403fd408a9cdbdf3b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -9552,6 +9592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen38f4611d9c1a9">
+		<description>HangOn_MD_v1.12</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="HangOn_MD_v1.12.bin" size="4194304" crc="20709eac" sha1="38f4611d9c1a9a15fdf8ee1569418237eaff6a5f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf76c0bd8bc2cb">
 		<description>Haruna's Big Snow Cleanup (2026)(NK Soft)</description>
 		<year>????</year>
@@ -11652,6 +11702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="genbb4834ce4f2be">
+		<description>Mega Commando v0.82b (2026)(MXRetroDev)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3276800">
+				<rom name="Mega Commando v0.82b (2026)(MXRetroDev).bin" size="3276800" crc="4aa12954" sha1="bb4834ce4f2be5c7683cd8a906f66d2ba31020d7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gena132ea97dceb4">
 		<description>Mega Commando v0.8b (2026)(MXRetroDev)</description>
 		<year>????</year>
@@ -12852,6 +12912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen79d641c519ead">
+		<description>Neo Glide v1.01 (2026)(nicomegadrive)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1572864">
+				<rom name="Neo Glide v1.01 (2026)(nicomegadrive).bin" size="1572864" crc="b46467b1" sha1="79d641c519eadb89c5d64589fc05ec98c254f6a8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen3db399e7e8eda">
 		<description>NeverENDING</description>
 		<year>????</year>
@@ -13222,6 +13292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen4a73db0ddb289">
+		<description>Pang Beta v0.98 (2026)(DavidGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1441792">
+				<rom name="Pang Beta v0.98 (2026)(DavidGames).bin" size="1441792" crc="bfe14ffc" sha1="4a73db0ddb289cd159d892a30e3d378d7db9bf04"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gencc4580a855ae0">
 		<description>panorama cotton (Hack, English)</description>
 		<year>????</year>
@@ -13389,6 +13469,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="8388608">
 				<rom name="Paprium.bin" size="8388608" crc="28f16e0b" sha1="4a19ede704070a99a07bc189864915c415cca222"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena90cd36720721">
+		<description>Parasol Stars v1.0 RC3 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Parasol Stars v1.0 RC3 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="181b816a" sha1="a90cd367207211810416fe5583e53e748b3a3aea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15612,6 +15702,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen35484d349682a">
+		<description>Shinobi Beta 3 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Shinobi Beta 3 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="53a81527" sha1="35484d349682aede8ac4cb448c6e60294b45ef2b"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genca27d5445533a">
 		<description>shinobi iii - return of the ninja master (usa,MIJETHack)</description>
 		<year>????</year>
@@ -15659,6 +15759,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Side Arms - Hyper Dyne v2.0 (2026)(rester159).bin" size="4194304" crc="f1eca687" sha1="07d4e3ccc72f0796721886f946544ce30fc51914"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen944dc3bac8282">
+		<description>Side Arms - Hyper Dyne v2.1 (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Side Arms - Hyper Dyne v2.1 (2026)(rester159).bin" size="4194304" crc="b36c3a67" sha1="944dc3bac82826037f58eb0ca0d8e90f811913ff"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19852,6 +19962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen59dcc36317b60">
+		<description>Teenage Mutant Ninja Turtles - The Arcade Game v0.3.9 (2026)(Gustavo Valenzuela)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3932160">
+				<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.9 (2026)(Gustavo Valenzuela).bin" size="3932160" crc="37edbe49" sha1="59dcc36317b601f4566472b2b7e9b29d0a7576e4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genf440dfa689f65">
 		<description>teenage mutant ninja turtles - the hyperstone heist (usa)</description>
 		<year>????</year>
@@ -19989,6 +20109,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ).bin" size="2097152" crc="4b5be3f5" sha1="ad954f4b05f5c70f841a14f2dda3db1142922aac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen6c573c45cebb8">
+		<description>Tetris - Atari Games Arcade Port v1.04 (2026)(ShinobiZ)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Tetris - Atari Games Arcade Port v1.04 (2026)(ShinobiZ).bin" size="2097152" crc="1aad8339" sha1="6c573c45cebb8f4174c62534e9abdfcc37e3015d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20159,6 +20289,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2490368">
 				<rom name="Tiger Road (2026)(hombreimaginario).bin" size="2490368" crc="88cba784" sha1="4024372d4d0e719a14e4f9728d140d38145aa329"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genff13b8ded1abf">
+		<description>Tiger Road Alpha (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Tiger Road Alpha (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="e7a2835d" sha1="ff13b8ded1abf586e02f222e0fec6ededeca55a2"/>
 			</dataarea>
 		</part>
 	</software>

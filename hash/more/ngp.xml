@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 180 -->
+<!-- Number of items in this list = 183 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -652,6 +652,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpc7bc30c42c132">
+		<description>Gardenia v1.4d (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia v1.4d (2026)(Chris Ahchay).ngp" size="2097152" crc="6bf8b0aa" sha1="c7bc30c42c132506ba7f55830c24978f51f3c5ac"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpeed7b883cbc41">
 		<description>Gears of Fate (2009)(Thor)</description>
 		<year>????</year>
@@ -1292,6 +1302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpf87edd7424216">
+		<description>Over Rev v2.0 (2026)(Tixul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Over Rev v2.0 (2026)(Tixul).ngp" size="2097152" crc="bd6dcde5" sha1="f87edd74242167b396a8d3e6e18208f0fc370ba1"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp1b4be30fcf038">
 		<description>Pac-Man (1999)(Namco - SNK)</description>
 		<year>????</year>
@@ -1359,6 +1379,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="PocketRace V0.03pre-alpha by Thor (PD).ngc" size="524288" crc="05326208" sha1="c39f668c837737338bbae376f6a58ec781fbc1bd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpbd71be4ffbd5a">
+		<description>Prince of Persia (2026)(JAJABINX35)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Prince of Persia (2026)(JAJABINX35).ngp" size="2097152" crc="c381be55" sha1="bd71be4ffbd5ae2cebf6d09d867a91f9e249a1ea"/>
 			</dataarea>
 		</part>
 	</software>
