@@ -5161,6 +5161,21 @@ end
 
 ---------------------------------------------------
 --
+--@src/devices/bus/roland/extport.h,BUSES["ROLAND_EXT"] = true
+---------------------------------------------------
+
+if BUSES["ROLAND_EXT"] then
+	files {
+		MAME_DIR .. "src/devices/bus/roland/extport.cpp",
+		MAME_DIR .. "src/devices/bus/roland/extport.h",
+		MAME_DIR .. "src/devices/bus/roland/mouse.cpp",
+		MAME_DIR .. "src/devices/bus/roland/mouse.h",
+	}
+end
+
+
+---------------------------------------------------
+--
 --@src/devices/bus/rs232/rs232.h,BUSES["RS232"] = true
 ---------------------------------------------------
 
@@ -5505,6 +5520,8 @@ if BUSES["SEGA8"] then
 		MAME_DIR .. "src/devices/bus/sega8/ccatch.h",
 		MAME_DIR .. "src/devices/bus/sega8/mgear.cpp",
 		MAME_DIR .. "src/devices/bus/sega8/mgear.h",
+		MAME_DIR .. "src/devices/bus/sega8/sf7000.cpp",
+		MAME_DIR .. "src/devices/bus/sega8/sf7000.h",
 	}
 end
 
