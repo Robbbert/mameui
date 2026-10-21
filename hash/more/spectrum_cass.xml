@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8106 -->
+<!-- Number of items in this list = 8118 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8872,6 +8872,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0b0bcd684a32a">
+		<description>Battle City 48K (2021)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36024">
+				<rom name="Battle City 48K (2021)(Menyiques).tap" size="36024" crc="f3b29343" sha1="0b0bcd684a32a546c30a8e6b94e3e5eeac834cc9"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9b956f2d48e3f">
 		<description>Battle Command 128K (1991)(Ocean)</description>
 		<year>????</year>
@@ -12893,12 +12903,12 @@
 		</part>
 	</software>
 	<software name="zxs63ed7d3b93d2f">
-		<description>Bugaboo The Flea (1983)(Quicksilva)[a]</description>
+		<description>Bugaboo the Flea 48K (1983)(Quicksilva)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="30368">
-				<rom name="Bugaboo The Flea (1983)(Quicksilva)[a].tap" size="30368" crc="e4345dae" sha1="63ed7d3b93d2f8be342cb7229d8b4df777ac8765"/>
+				<rom name="Bugaboo the Flea 48K (1983)(Quicksilva).tap" size="30368" crc="e4345dae" sha1="63ed7d3b93d2f8be342cb7229d8b4df777ac8765"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17282,6 +17292,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb52d3c9a0019f">
+		<description>Crazy Races 48K (2026)(BAD BITS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="34970">
+				<rom name="Crazy Races 48K (2026)(BAD BITS).tap" size="34970" crc="8a5d9d67" sha1="b52d3c9a0019fbf5e676bd7d96f704ca552e67ed"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0a9fa05161e47">
 		<description>Cred Breaks Out (1986)(TSB)</description>
 		<year>????</year>
@@ -18839,6 +18859,56 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44568">
 				<rom name="Dartz! (1984)(Automata UK).tap" size="44568" crc="aa5775a7" sha1="eb1efd58ac45e9192fd4d633fda0a3c9eed46d2f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf7cf96c92463d">
+		<description>Das Boot CA 128K (2026)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122554">
+				<rom name="Das Boot CA 128K (2026)(Menyiques).tap" size="122554" crc="994c3043" sha1="f7cf96c92463d81c52f6136d873586da6e98a8ce"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2ad3cddc7e1f8">
+		<description>Das Boot EN 128K (2026)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122855">
+				<rom name="Das Boot EN 128K (2026)(Menyiques).tap" size="122855" crc="e623e702" sha1="2ad3cddc7e1f87a6d3b564f001f5adcb153786a0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9704e2cd6c7e3">
+		<description>Das Boot ES 128K (2026)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122192">
+				<rom name="Das Boot ES 128K (2026)(Menyiques).tap" size="122192" crc="4ac7c6e4" sha1="9704e2cd6c7e3075f5c45008cf55ac153c4a8b30"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs39a5c903a3764">
+		<description>Das Boot FR 128K (2026)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122714">
+				<rom name="Das Boot FR 128K (2026)(Menyiques).tap" size="122714" crc="50ad3a2d" sha1="39a5c903a376470e19d32bc765f947528b3f51dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdf92748b5d4d3">
+		<description>Das Boot PT 128K (2026)(Menyiques)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="122452">
+				<rom name="Das Boot PT 128K (2026)(Menyiques).tap" size="122452" crc="fd7d2555" sha1="df92748b5d4d3722576b535a3cf93555a3a47c25"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21952,6 +22022,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb19956cae817c">
+		<description>Duet 48K (1987)(Elite Systems)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46919">
+				<rom name="Duet 48K (1987)(Elite Systems).tzx" size="46919" crc="fee2761e" sha1="b19956cae817c0d4a4a2757ae629f1575cf97ca8"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa620cabc478df">
 		<description>Dun Darach (1985)(Garboyle Games)</description>
 		<year>????</year>
@@ -22649,6 +22729,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49343">
 				<rom name="Eidolon, The (1986)(Activision).tap" size="49343" crc="ac736a14" sha1="d54aeaa804b02a525ea57fb1d5187c1e482a5837"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs966b6b8192070">
+		<description>Eidolon, The 48K-128K (1986)(Activision - Lucasfilm Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="107749">
+				<rom name="Eidolon, The 48K-128K (1986)(Activision - Lucasfilm Games).tap" size="107749" crc="00677105" sha1="966b6b8192070b96bb7d72d096f5c2c968f7978c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -24029,6 +24119,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="56668">
 				<rom name="Eve (1986)(Primoz Jakopin).tap" size="56668" crc="97fe7911" sha1="fa884e461a79256ebaeb44f59da46d627f566fa6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs58e1cf89263fa">
+		<description>Everest - Basecamp 128K (2026)(Peps1975)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="118885">
+				<rom name="Everest - Basecamp 128K (2026)(Peps1975).tap" size="118885" crc="eca4cc5b" sha1="58e1cf89263fa0bdaf014d76675bc98b5e71ab23"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa37becf348602">
+		<description>Everest 2 - The Climb 128K (2026)(Peps1975)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="117442">
+				<rom name="Everest 2 - The Climb 128K (2026)(Peps1975).tap" size="117442" crc="35e205f5" sha1="a37becf348602e29b7efe4e68172fb88b9e68271"/>
 			</dataarea>
 		</part>
 	</software>
@@ -28639,6 +28749,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="96306">
 				<rom name="Go 9x9 v2.0.1 128K (2026)(LAWLORD).tap" size="96306" crc="c9785e8e" sha1="49080cd85cdcf2bd9da0e49813e9c24bba6f7409"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsdff0afc612131">
+		<description>Go 9x9 v3.0 128K (2026)(LAWLORD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="108011">
+				<rom name="Go 9x9 v3.0 128K (2026)(LAWLORD).tap" size="108011" crc="bdb4b53d" sha1="dff0afc61213134c41c71029853448e24a592dfe"/>
 			</dataarea>
 		</part>
 	</software>
