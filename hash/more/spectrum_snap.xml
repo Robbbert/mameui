@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 471 -->
+<!-- Number of items in this list = 473 -->
 <softwarelist name="spectrum_snap" description="spectrum_snap loose roms">
 	<software name="zxs963e92cfefc02">
 		<description>100 - Stolnik (1995)(Power Of Sound)</description>
@@ -3862,6 +3862,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc5d2ed4841efa">
+		<description>Space Intruders 16K (1982)(Quicksilva)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="5824">
+				<rom name="Space Intruders 16K (1982)(Quicksilva).z80" size="5824" crc="254a3295" sha1="c5d2ed4841efaeec8282046bd00954bc15d8d576"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs0c8f7a3f0d188">
 		<description>Spooky Castle 48K (1990)(Atlantis Software)</description>
 		<year>????</year>
@@ -4539,6 +4549,16 @@
 		<part name="snap" interface="spectrum_snap">
 			<dataarea name="snap" size="46251">
 				<rom name="Wild West Seymour (1992)(Codemasters).z80" size="46251" crc="bf324d91" sha1="07da4222f0825f51aa39c674bbb62b1e97f483a1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs283c78f2f9ba0">
+		<description>Wizball - Enhanced Edition 128K (2026)(Gravious)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="snap" interface="spectrum_snap">
+			<dataarea name="snap" size="80330">
+				<rom name="Wizball - Enhanced Edition 128K (2026)(Gravious).z80" size="80330" crc="c60a3966" sha1="283c78f2f9ba01f581762fd6b8a5eb55e6407917"/>
 			</dataarea>
 		</part>
 	</software>
