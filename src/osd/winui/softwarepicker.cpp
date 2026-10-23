@@ -633,7 +633,7 @@ static BOOL SoftwarePicker_AddEntry(HWND hwndPicker, directory_search_info *pSea
 	if( !utf8_FileName )
 		return FALSE;
 
-	if (!strcmp(utf8_FileName, ".") || !strcmp(utf8_FileName, ".."))
+	if ((0 == strcmp(utf8_FileName, ".")) || (0 == strcmp(utf8_FileName, "..")))
 	{
 		free(utf8_FileName);
 		return TRUE;

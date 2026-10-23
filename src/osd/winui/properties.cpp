@@ -1375,7 +1375,7 @@ static bool SelectGLSLShader(HWND hWnd, int slot, BOOL is_scr)
 		snprintf(option, sizeof(option), "%s", optname);
 		free(optname);
 
-		if (strcmp(option, m_CurrentOpts.value(shader)))
+		if (0 != strcmp(option, m_CurrentOpts.value(shader)))
 		{
 			filename[strlen(filename)-4] = '\0';    // must remove ext or glsl fails
 			emu_set_value(m_CurrentOpts, shader, filename);
@@ -1405,7 +1405,7 @@ static bool ResetGLSLShader(HWND hWnd, int slot, BOOL is_scr)
 		snprintf(option, std::size(option), "glsl_shader_mame%d", slot);
 	}
 
-	if (strcmp(new_value, m_CurrentOpts.value(option)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(option)))
 	{
 		emu_set_value(m_CurrentOpts, option, new_value);
 		win_set_window_text_utf8(GetDlgItem(hWnd, dialog), "None");
@@ -2078,7 +2078,7 @@ static BOOL DefaultInputPopulateControl(datamap *map, HWND dialog, HWND control,
 					*ext = 0;
 
 					// set the option?
-					if (!strcmp(root, ctrlr_option))
+					if (0 == strcmp(root, ctrlr_option))
 						selected = index;
 
 					// add it as an option
@@ -3110,7 +3110,7 @@ static BOOL ChangeFallback(HWND hWnd)
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_ARTWORK_FALLBACK), data, std::size(data));
 
-	if (strcmp(data, m_CurrentOpts.value(OPTION_FALLBACK_ARTWORK)))
+	if (0 != strcmp(data, m_CurrentOpts.value(OPTION_FALLBACK_ARTWORK)))
 	{
 		emu_set_value(m_CurrentOpts, OPTION_FALLBACK_ARTWORK, data);
 		changed = true;
@@ -3126,7 +3126,7 @@ static BOOL ChangeOverride(HWND hWnd)
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_ARTWORK_OVERRIDE), data, std::size(data));
 
-	if (strcmp(data, m_CurrentOpts.value(OPTION_OVERRIDE_ARTWORK)))
+	if (0 != strcmp(data, m_CurrentOpts.value(OPTION_OVERRIDE_ARTWORK)))
 	{
 		emu_set_value(m_CurrentOpts, OPTION_OVERRIDE_ARTWORK, data);
 		changed = true;
@@ -3142,7 +3142,7 @@ static BOOL ChangeJoystickMap(HWND hWnd)
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_JOYSTICKMAP), joymap, std::size(joymap));
 
-	if (strcmp(joymap, m_CurrentOpts.value(OPTION_JOYSTICK_MAP)))
+	if (0 != strcmp(joymap, m_CurrentOpts.value(OPTION_JOYSTICK_MAP)))
 	{
 		emu_set_value(m_CurrentOpts, OPTION_JOYSTICK_MAP, joymap);
 		changed = true;
@@ -3156,7 +3156,7 @@ static BOOL ResetJoystickMap(HWND hWnd)
 	BOOL changed = false;
 	const char *new_value = "auto";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_JOYSTICK_MAP))!=0)
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OPTION_JOYSTICK_MAP)))
 	{
 		HWND control = GetDlgItem(hWnd, IDC_JOYSTICKMAP);
 		emu_set_value(m_CurrentOpts, OPTION_JOYSTICK_MAP, new_value);
@@ -3190,7 +3190,7 @@ static bool SelectLUAScript(HWND hWnd)
 		free(optname);
 		free(optvalue);
 
-		if (strcmp(script, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
+		if (0 != strcmp(script, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
 		{
 			emu_set_value(m_CurrentOpts, OPTION_AUTOBOOT_SCRIPT, script);
 			win_set_window_text_utf8(GetDlgItem(hWnd, IDC_LUASCRIPT), option);
@@ -3206,7 +3206,7 @@ static bool ResetLUAScript(HWND hWnd)
 	bool changed = false;
 	const char *new_value = "";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
 	{
 		emu_set_value(m_CurrentOpts, OPTION_AUTOBOOT_SCRIPT, new_value);
 		win_set_window_text_utf8(GetDlgItem(hWnd, IDC_LUASCRIPT), "None");
@@ -3282,7 +3282,7 @@ static bool SelectBGFXChains(HWND hWnd)
 		free(t_filename);
 		free(optname);
 
-		if (strcmp(option, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
+		if (0 != strcmp(option, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
 		{
 			emu_set_value(m_CurrentOpts, OSDOPTION_BGFX_SCREEN_CHAINS, option);
 			win_set_window_text_utf8(GetDlgItem(hWnd, IDC_BGFX_CHAINS), option);
@@ -3298,7 +3298,7 @@ static bool ResetBGFXChains(HWND hWnd)
 	bool changed = false;
 	const char *new_value = "default";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
 	{
 		emu_set_value(m_CurrentOpts, OSDOPTION_BGFX_SCREEN_CHAINS, new_value);
 		win_set_window_text_utf8(GetDlgItem(hWnd, IDC_BGFX_CHAINS), "Default");

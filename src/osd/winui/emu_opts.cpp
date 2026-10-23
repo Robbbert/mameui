@@ -662,7 +662,7 @@ std::string diff_ini(const core_options *diff) const
 			if (value)
 			{
 				// look up counterpart in diff, if diff is specified
-				if (!diff || strcmp(value, diff->get_entry(name.c_str())->value_unsubstituted()))
+				if (!diff || (0 != strcmp(value, diff->get_entry(name.c_str())->value_unsubstituted())))
 				{
 					// output header, if we have one
 					if (last_header)

@@ -5668,7 +5668,7 @@ int FindIconIndexByName(const char *icon_name)
 {
 	for (int i = 0; g_iconData[i].icon_name; i++)
 	{
-		if (!strcmp(g_iconData[i].icon_name, icon_name))
+		if (0 == strcmp(g_iconData[i].icon_name, icon_name))
 			return i;
 	}
 	return -1;
