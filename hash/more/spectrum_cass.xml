@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8123 -->
+<!-- Number of items in this list = 8128 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -38923,12 +38923,12 @@
 		</part>
 	</software>
 	<software name="zxs4fc9e9a02612f">
-		<description>Mad Mix 2 - The Pepsi Challenge (19xx)(Topo Soft)(Sp)</description>
+		<description>Mad Mix 2 - En el Castillo de los Fantasmas ES 48K-128K (1990)(Topo Soft)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="80610">
-				<rom name="Mad Mix 2 - The Pepsi Challenge (19xx)(Topo Soft)(Sp).tap" size="80610" crc="2e343a0c" sha1="4fc9e9a02612f61827c2663e20c34d66c86b9a95"/>
+				<rom name="Mad Mix 2 - En el Castillo de los Fantasmas ES 48K-128K (1990)(Topo Soft).tap" size="80610" crc="2e343a0c" sha1="4fc9e9a02612f61827c2663e20c34d66c86b9a95"/>
 			</dataarea>
 		</part>
 	</software>
@@ -38949,6 +38949,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="51328">
 				<rom name="Mad Mix Game (1988)(Topo Soft)(Sp)[a].tap" size="51328" crc="8da9c400" sha1="f8bfa277789733760b6393a82942321f8437e631"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsabe52efbd2049">
+		<description>Mad Mix Game ES 48K (1988)(Topo Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51403">
+				<rom name="Mad Mix Game ES 48K (1988)(Topo Soft).tzx" size="51403" crc="6d8ca935" sha1="abe52efbd2049432d5ef6b56c118f674e8737463"/>
 			</dataarea>
 		</part>
 	</software>
@@ -40512,6 +40522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs27fc0644ae6a6">
+		<description>Mathsted 48K (1983)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44622">
+				<rom name="Mathsted 48K (1983)(CCS).tzx" size="44622" crc="c50c4a7f" sha1="27fc0644ae6a68ada26e388d733b4d83a7cf1637"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfb6f8e87f7f1e">
 		<description>Matma (19xx)(Elkor Software)</description>
 		<year>????</year>
@@ -42052,6 +42072,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs3e5056d5fcd42">
+		<description>Min! 48K-128K (2024)(Zebra Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="40788">
+				<rom name="Min! 48K-128K (2024)(Zebra Games).tap" size="40788" crc="284058a3" sha1="3e5056d5fcd42ce2c463e9a5270cc11cf51322f0"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse89cac7dd61a2">
 		<description>Mind Fighter (1988)(Abstract Concepts)</description>
 		<year>????</year>
@@ -42059,6 +42089,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="146972">
 				<rom name="Mind Fighter (1988)(Abstract Concepts).tap" size="146972" crc="e17f4a90" sha1="e89cac7dd61a23bf0881dec1fb8fb289de4f2326"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1696a5d153088">
+		<description>Mind of Drains 48K-128K (2026)(Orbit Leisure)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39283">
+				<rom name="Mind of Drains 48K-128K (2026)(Orbit Leisure).tap" size="39283" crc="131bd28c" sha1="1696a5d153088ea833e6e53a277d7b76fa3e0dbc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42669,6 +42709,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41134">
 				<rom name="Moley Christmas 48K-128K (1987)(Gremlin - Your Sinclair).tap" size="41134" crc="ce50b250" sha1="99f28f379d8978cc5792dc1221158b64541deefa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs71f4923d8d0be">
+		<description>Molten Spectrum 48K-128K (2026)(DarkSoL41)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49194">
+				<rom name="Molten Spectrum 48K-128K (2026)(DarkSoL41).tap" size="49194" crc="e46c012d" sha1="71f4923d8d0be4d1c0c819c4bedfbeed9e902109"/>
 			</dataarea>
 		</part>
 	</software>
