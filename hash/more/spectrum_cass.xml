@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8128 -->
+<!-- Number of items in this list = 8140 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -23522,6 +23522,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf0db9bb69f118">
+		<description>Enduro ZX 48K-AY (2026)(FG&amp;AI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37537">
+				<rom name="Enduro ZX 48K-AY (2026)(FG&amp;AI).tap" size="37537" crc="3a12439d" sha1="f0db9bb69f11879b68b72eeef971263b8ce72337"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs48b60c05ff098">
 		<description>Energy Warrior (1987)(Mastertronic)</description>
 		<year>????</year>
@@ -43302,6 +43312,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5dca40c439de5">
+		<description>Motocross Maniacs 128K (2026)(kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="51417">
+				<rom name="Motocross Maniacs 128K (2026)(kirby2000).tzx" size="51417" crc="3e5d2ca2" sha1="5dca40c439de597b736414672161fe2a81165f20"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs27fcf842b7c92">
 		<description>Motorbike Madness (1988)(Mastertronic Ltd)</description>
 		<year>????</year>
@@ -46072,6 +46092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsc0361f577f137">
+		<description>OctuKitty 48K-128K (2018)(UltraNarwhal)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43800">
+				<rom name="OctuKitty 48K-128K (2018)(UltraNarwhal).tap" size="43800" crc="28b574a6" sha1="c0361f577f137c9d8e2afe4dedc98cbde786ce54"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs46a933dcfe595">
 		<description>Odd Ball (1987)(The Power House)</description>
 		<year>????</year>
@@ -46462,6 +46492,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs8f621ce6e4df2">
+		<description>Operacion Greenup - Parte 1 v1.1 ES 128K (2026)(Molisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="121206">
+				<rom name="Operacion Greenup - Parte 1 v1.1 ES 128K (2026)(Molisoft).tap" size="121206" crc="5ae34463" sha1="8f621ce6e4df29150b75e50ee5289d3a979547b4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsde1e07d27f3a2">
 		<description>Operacion Greenup - Parte 2 ES 128K (2026)(Molisoft)</description>
 		<year>????</year>
@@ -46519,6 +46559,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="120944">
 				<rom name="Operation Greenup - Part 1 EN 128K (2026)(Molisoft).tap" size="120944" crc="2120674b" sha1="3c11b2d0b81ea42ae6160e8b90756cb3f8638d77"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs309f0458a3432">
+		<description>Operation Greenup - Part 1 v1.1 EN 128K (2026)(Molisoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="120948">
+				<rom name="Operation Greenup - Part 1 v1.1 EN 128K (2026)(Molisoft).tap" size="120948" crc="eb9a6e7c" sha1="309f0458a3432846c466e56883ea440baab11e2b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -49499,6 +49549,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="11325">
 				<rom name="Pole Position 48K (1984)(C&amp;VG).tap" size="11325" crc="049b1e06" sha1="fe805fc1e2d2ca11ae8a8b3db764fb9ebe23a671"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2a3b211853d65">
+		<description>Pole Position ZX 48K-AY (2026)(FG&amp;AI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46896">
+				<rom name="Pole Position ZX 48K-AY (2026)(FG&amp;AI).tap" size="46896" crc="0704669e" sha1="2a3b211853d65a22edaf0e4e01f61cf2cf99df0f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54579,6 +54639,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40161">
 				<rom name="Sam Mallard EN v1.2 (2016-21)(Ersh).tap" size="40161" crc="dd71d04f" sha1="4c10103cddd857bec429f89916d27789b0d4f8b9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa0bae4a010356">
+		<description>Sam Mallard EN v2.0 48K (2026)(Ersh)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39387">
+				<rom name="Sam Mallard EN v2.0 48K (2026)(Ersh).tap" size="39387" crc="a60b39e5" sha1="a0bae4a010356863a73c4f9c9848255fc890e236"/>
 			</dataarea>
 		</part>
 	</software>
@@ -61112,6 +61182,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs42abbf13919bc">
+		<description>Sugar Byte 48K-AY (2026)(Revive8Bit)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37240">
+				<rom name="Sugar Byte 48K-AY (2026)(Revive8Bit).tap" size="37240" crc="61835d96" sha1="42abbf13919bcf507e3bdc8fe7e96a8d160fda62"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9f3cb33763ad6">
 		<description>SUM-BEEP</description>
 		<year>????</year>
@@ -64079,6 +64159,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47128">
 				<rom name="Tobit.tzx" size="47128" crc="fc88afbb" sha1="e8a884698b8fbfdd00756ace7cb66f621198f99d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs2e7132103a612">
+		<description>ToboBobo Go Home 128K (2026)(SpectrumNez)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44308">
+				<rom name="ToboBobo Go Home 128K (2026)(SpectrumNez).tap" size="44308" crc="a0bf16cc" sha1="2e7132103a612f1c4b39eeac6e9efc057cd5f0d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69112,6 +69202,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0816296fdf343">
+		<description>Zanac ZX 128K (2026)(FG&amp;AI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49433">
+				<rom name="Zanac ZX 128K (2026)(FG&amp;AI).tap" size="49433" crc="ba142bdd" sha1="0816296fdf343cd5a04b3e54a3faf3e36c15c349"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3c0a0dad1057f">
+		<description>Zanac ZX 48K-AY (2026)(FG&amp;AI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47303">
+				<rom name="Zanac ZX 48K-AY (2026)(FG&amp;AI).tap" size="47303" crc="d3583531" sha1="3c0a0dad1057f71aa65533a568e405fdf14d4023"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs19ab0587e9bfc">
 		<description>Zaxxan (1983)(Starzone Software)</description>
 		<year>????</year>
@@ -69179,6 +69289,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="3095">
 				<rom name="Zed.tzx" size="3095" crc="04fb7e05" sha1="8b44f0753e535b83e90ad3e7b48cc8c0efe39f7f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsf11ca89236eac">
+		<description>Zeddy Goes Full Blast 128K (2026)(zeddy48)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="176836">
+				<rom name="Zeddy Goes Full Blast 128K (2026)(zeddy48).tap" size="176836" crc="afac4514" sha1="f11ca89236eac48e1581ba5e0fbe385eab0aee40"/>
 			</dataarea>
 		</part>
 	</software>
