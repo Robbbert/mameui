@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8140 -->
+<!-- Number of items in this list = 8153 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -2953,12 +2953,12 @@
 		</part>
 	</software>
 	<software name="zxs757f9789a52d3">
-		<description>4x4 Off Road Racing (1988)(Epyx)</description>
+		<description>4x4 Off-Road Racing 48K-128K (1988)(U.S. Gold)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="84507">
-				<rom name="4x4 Off Road Racing (1988)(Epyx).tap" size="84507" crc="928366fa" sha1="757f9789a52d3436492feb490c27fd79acefe4df"/>
+				<rom name="4x4 Off-Road Racing 48K-128K (1988)(U.S. Gold).tap" size="84507" crc="928366fa" sha1="757f9789a52d3436492feb490c27fd79acefe4df"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10112,6 +10112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs52a6b68b63a68">
+		<description>Bill &amp; Ted's Excellent Game Boy Adventure ZX 128K (2026)(kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84808">
+				<rom name="Bill &amp; Ted's Excellent Game Boy Adventure ZX 128K (2026)(kirby2000).tzx" size="84808" crc="5e6313e7" sha1="52a6b68b63a684ecfa3596ab7a6bc7b5b66b688f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7e4914bf6bc8b">
 		<description>Billboard - Pasteman Pat (1989)(Firebird)</description>
 		<year>????</year>
@@ -12309,6 +12319,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8870">
 				<rom name="Breakout (1982)(C-Tech).tap" size="8870" crc="4b9e6a31" sha1="cfe37b5d7d129ff3fa92df8bc19106e9602eba2e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs81d2597224413">
+		<description>Breakthru 48K (1986)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49888">
+				<rom name="Breakthru 48K (1986)(U.S. Gold).tzx" size="49888" crc="b199699f" sha1="81d2597224413b9f0093613191338fb8bf711ee1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16379,6 +16399,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49227">
 				<rom name="Commando 48K (1985)(Elite Systems).tzx" size="49227" crc="6f0ce3d1" sha1="7003000fa9966a7c53c9f5195daeda6970c20985"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse0149d6fc6ef3">
+		<description>Como Cao e Gato PT 48K (2026)(CarlosITV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32756">
+				<rom name="Como Cao e Gato PT 48K (2026)(CarlosITV).tap" size="32756" crc="913883b8" sha1="e0149d6fc6ef3c9ed75400a8bf90c3d5788501fd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs579854ab3f1bf">
+		<description>Como el Perro y el Gato ES 48K (2026)(CarlosITV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32795">
+				<rom name="Como el Perro y el Gato ES 48K (2026)(CarlosITV).tap" size="32795" crc="f8396013" sha1="579854ab3f1bf6d94caf6f03cfeb22f7346b0688"/>
 			</dataarea>
 		</part>
 	</software>
@@ -21749,6 +21789,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48605">
 				<rom name="Draughts Genius (1987)(Rack-It)[a].tap" size="48605" crc="3d91e93f" sha1="d0be7f56811874dd8c52595be96f99da74ebafdb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs09302c109a1b7">
+		<description>Draughts Genius 48K (1987)(Rack-It)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48738">
+				<rom name="Draughts Genius 48K (1987)(Rack-It).tzx" size="48738" crc="bc6128f0" sha1="09302c109a1b7b30dcc70f32581e6c91a66cd92b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33892,6 +33942,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs31fa7293d0b61">
+		<description>Italy 1990 48K-128K (1990)(U.S. Gold)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="104924">
+				<rom name="Italy 1990 48K-128K (1990)(U.S. Gold).tap" size="104924" crc="9977e9aa" sha1="31fa7293d0b610b228045a642a254bfec0624a61"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxscd93ae06c2cde">
 		<description>Iwo Jima (1986)(PSS)</description>
 		<year>????</year>
@@ -35569,6 +35629,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="9745">
 				<rom name="Keyboard (1985)(J. Enters Productions).tap" size="9745" crc="91ad5edb" sha1="e0622b1d9eaaea34f7ab10f544aeb223948ea934"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9cd507d8ccb26">
+		<description>Keystone Kapers ZX 48K-AY (2026)(FG&amp;AI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="35800">
+				<rom name="Keystone Kapers ZX 48K-AY (2026)(FG&amp;AI).tap" size="35800" crc="83b79938" sha1="9cd507d8ccb2601c5a5ddcd4f6b5e1414807ae32"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37699,6 +37769,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="9158">
 				<rom name="Light Pen Mk2-3 (19xx)(DK'Tronics).tap" size="9158" crc="aa7964aa" sha1="4c069edd76eca6beb903cef23ae91e8bb49752c2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc1d8c7cd2aa2e">
+		<description>Like Cat and Dog EN 48K (2026)(CarlosITV)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32398">
+				<rom name="Like Cat and Dog EN 48K (2026)(CarlosITV).tap" size="32398" crc="8f79e03e" sha1="c1d8c7cd2aa2e7043cdbfea2fcd8e997cec044b5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -43452,6 +43532,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5616f98e7caf9">
+		<description>Mousetrap 16K (2020)(Chris Maling)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="10213">
+				<rom name="Mousetrap 16K (2020)(Chris Maling).tzx" size="10213" crc="06bb2d2d" sha1="5616f98e7caf9ec31f3ff706eb3adb850bd2da90"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs1d0120947dacf">
 		<description>Mousetrap 48K (2020)(Chris Maling)</description>
 		<year>????</year>
@@ -45939,6 +46029,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37832">
 				<rom name="O-Hole Block 48K (2026)(Oblo).tzx" size="37832" crc="82e35f37" sha1="2ad97e45f97a60dece83a851ffc925021763f3dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs7b2ebb2dbb1cb">
+		<description>O-Invaders Back! v1.5 48K (2026)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47256">
+				<rom name="O-Invaders Back! v1.5 48K (2026)(Oblo).tzx" size="47256" crc="5cae23d4" sha1="7b2ebb2dbb1cba85b43cdc90b1d92ccd00fa0853"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs9a25e300a5771">
+		<description>O-Invaders Back! v2.04 128K (2026)(Oblo)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47578">
+				<rom name="O-Invaders Back! v2.04 128K (2026)(Oblo).tzx" size="47578" crc="3e1b40bd" sha1="9a25e300a5771ee545bf890a71f73e83855fd05d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55659,6 +55769,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="83481">
 				<rom name="Seto Taisho Vs Yokai 128K (2016)(Monument Microgames).tap" size="83481" crc="4a0550ce" sha1="e4bb6962afe49e60f7fbf47e103a2a6d90c0a470"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse5de7633394f9">
+		<description>Seto Taisho Vs Yokai 128K (2016)(Monument Microgames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="83742">
+				<rom name="Seto Taisho Vs Yokai 128K (2016)(Monument Microgames).tzx" size="83742" crc="32f33aed" sha1="e5de7633394f9ef9fdd039574c8cd4ab05e4c3d3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69129,6 +69249,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35245">
 				<rom name="YoYo's Revenge 48K (2023)(J Bizzel).tap" size="35245" crc="62a2ca40" sha1="d74e55d3194cb529dd03195e10dfc0e7ac127031"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsafc9c2dd0f6d5">
+		<description>Yrion's Crusade 48K-128K (2026)(Krappy Gamez)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42662">
+				<rom name="Yrion's Crusade 48K-128K (2026)(Krappy Gamez).tap" size="42662" crc="9cdbb755" sha1="afc9c2dd0f6d5443acac2a8a7752d3d35e6bb4b1"/>
 			</dataarea>
 		</part>
 	</software>
