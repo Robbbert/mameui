@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10995 -->
+<!-- Number of items in this list = 10999 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -5489,6 +5489,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Amazons Running Diet (Japan).nes" size="524304" crc="1eced454" sha1="866ec6d18e318e455f956f5241ac9f7cc4fabe68"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb3e95e76bfcb2">
+		<description>Amber's Super Adventure v1.1 (2026)(Doby Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Amber's Super Adventure v1.1 (2026)(Doby Games).nes" size="524304" crc="93fbdd60" sha1="b3e95e76bfcb22b20d94766dcb7a94be7efb1ed2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -54382,6 +54392,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesedde09beadd58">
+		<description>Mary Worth Spills the Tea (2026)(Recreational Runners)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="131088">
+				<rom name="Mary Worth Spills the Tea (2026)(Recreational Runners).nes" size="131088" crc="08e8522d" sha1="edde09beadd5893938e5cd45b4d9a5030aa80e51"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesdbc2632734159">
 		<description>Mashin Eiyuu Den Wataru Gaiden (Japan)</description>
 		<year>????</year>
@@ -89892,6 +89912,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nesafdd6fe270404">
+		<description>Super Flappy Mario (2026)(PurpBatBoi)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="98320">
+				<rom name="Super Flappy Mario (2026)(PurpBatBoi).nes" size="98320" crc="d61d64e8" sha1="afdd6fe270404e51b9eae41ee236566f84224e0e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes3914498a1d141">
 		<description>Super Glove Ball (USA) (2)</description>
 		<year>????</year>
@@ -104959,6 +104989,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Viva! Las Vegas (Japan).nes" size="262160" crc="4cd67ad5" sha1="38e972442378529ad5999b8c46d0800ff3734e7d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes411f22e621f98">
+		<description>Voidbreaker (2026)(PolyBound)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Voidbreaker (2026)(PolyBound).nes" size="393232" crc="64cbcec6" sha1="411f22e621f98a0168f8c562dbb7ad3755b65a14"/>
 			</dataarea>
 		</part>
 	</software>
