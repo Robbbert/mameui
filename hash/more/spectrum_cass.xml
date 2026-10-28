@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8167 -->
+<!-- Number of items in this list = 8175 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -56192,6 +56192,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5b59d4c19fc96">
+		<description>Shadows of Belial EN v1.0.5 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138687">
+				<rom name="Shadows of Belial EN v1.0.5 128K (2026)(RetroWorks).tap" size="138687" crc="4ac79734" sha1="5b59d4c19fc96f4ffbf66faef7fcc47065559b0e"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfed734a8870a9">
 		<description>Shadows of Belial ES 128K (2026)(RetroWorks)</description>
 		<year>????</year>
@@ -56239,6 +56249,36 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="139295">
 				<rom name="Shadows of Belial ES v1.0.4 128K (2026)(RetroWorks).tap" size="139295" crc="07167c28" sha1="0e2f12d79a3b2fc2dece8abfc1387be47d7786f7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1f586acda2407">
+		<description>Shadows of Belial ES v1.0.5 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139297">
+				<rom name="Shadows of Belial ES v1.0.5 128K (2026)(RetroWorks).tap" size="139297" crc="2faa2142" sha1="1f586acda24075dea9ef908ccaa005ba6d841fb4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5185788efdad6">
+		<description>Shadows of Belial PT v1.0.5 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139372">
+				<rom name="Shadows of Belial PT v1.0.5 128K (2026)(RetroWorks).tap" size="139372" crc="b20c499b" sha1="5185788efdad68ececbae9819197585301a5c5f2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1a2983c32bde9">
+		<description>Shadows of Belial RU v1.0.5 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139086">
+				<rom name="Shadows of Belial RU v1.0.5 128K (2026)(RetroWorks).tap" size="139086" crc="719f3964" sha1="1a2983c32bde991fa1ff723eb852cdb649628c8e"/>
 			</dataarea>
 		</part>
 	</software>
@@ -58059,6 +58099,46 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="49593">
 				<rom name="Sodov The Sorcerer (1986)(Bug-Byte Software Ltd).tap" size="49593" crc="726eee76" sha1="2324d5b0e249a612f2e7257bfcf8dcd3bcdda8e6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb5b6d1a56055b">
+		<description>SofBelial09oct26_eng_FULL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="138961">
+				<rom name="SofBelial09oct26_eng_FULL.tap" size="138961" crc="5a237c6f" sha1="b5b6d1a56055badfc382df4897dce5e94f3bedbd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs73cf09c73072b">
+		<description>SofBelial09oct26_eng_FULL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139031">
+				<rom name="SofBelial09oct26_eng_FULL.tzx" size="139031" crc="5b2f7ea5" sha1="73cf09c73072b2fb89879d5566a73a0babd38886"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs84fe809efe6a4">
+		<description>SofBelial09oct26_esp_FULL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139520">
+				<rom name="SofBelial09oct26_esp_FULL.tap" size="139520" crc="cac6b850" sha1="84fe809efe6a4da42681f8aca8bdadf694d55490"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsbaf69c98cf60c">
+		<description>SofBelial09oct26_esp_FULL</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="139590">
+				<rom name="SofBelial09oct26_esp_FULL.tzx" size="139590" crc="fb52bc7c" sha1="baf69c98cf60c47e61918bda2b0c26bb48c35708"/>
 			</dataarea>
 		</part>
 	</software>

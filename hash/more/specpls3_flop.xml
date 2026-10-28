@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 9 -->
+<!-- Number of items in this list = 11 -->
 <softwarelist name="specpls3_flop" description="specpls3_flop loose roms">
 	<software name="zxsd1b2d1f6ddfa5">
 		<description>Brick Rick Graveyard Shift</description>
@@ -19,6 +19,26 @@
 		<part name="flop1" interface="floppy_3">
 			<dataarea name="flop" size="194816">
 				<rom name="Loxley.dsk" size="194816" crc="8ebe5365" sha1="0080dd2ce8d8d03ff8fdaaecb816f36b4c8482c8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8ef1142da4d80">
+		<description>SofBelial09oct26_eng_FULL_DSK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="SofBelial09oct26_eng_FULL_DSK.dsk" size="194816" crc="67f342bd" sha1="8ef1142da4d80d34e79806399a0faac2c0f8dd59"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa51dd7f5470f9">
+		<description>SofBelial09oct26_esp_FULL_DSK</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="flop1" interface="floppy_3">
+			<dataarea name="flop" size="194816">
+				<rom name="SofBelial09oct26_esp_FULL_DSK.dsk" size="194816" crc="51ac94b4" sha1="a51dd7f5470f9311b9ab72c22148dfd9ac5962c8"/>
 			</dataarea>
 		</part>
 	</software>
