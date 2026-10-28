@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2214 -->
+<!-- Number of items in this list = 2220 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -4789,6 +4789,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Black Tiger v1.9.1 (2026)(rester159).bin" size="4194304" crc="a1b19794" sha1="b0c0be5324d7d38924c7f4705e54d65e5d13abdf"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen3eb994463743b">
+		<description>Black Tiger v1.9.3 (2026)(rester159)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Black Tiger v1.9.3 (2026)(rester159).bin" size="4194304" crc="e5debe42" sha1="3eb994463743b92222b35f232ad8dd3765a3885a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genabb1e7c71516e">
+		<description>blacktiger_MD_v1.9.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="blacktiger_MD_v1.9.4.bin" size="4194304" crc="4714267f" sha1="abb1e7c71516e50154473413be4db00a6a4f4358"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13332,6 +13352,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen08b60ea76938c">
+		<description>Pang v1.00 (2026)(DavidGames)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1310720">
+				<rom name="Pang v1.00 (2026)(DavidGames).bin" size="1310720" crc="2d816dcb" sha1="08b60ea76938c85c5194faef737104ba1a0806d6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gencf877e4200ec4">
+		<description>Pang v1.00 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3909708">
+				<rom name="Pang v1.00 (2026)(Oldschool Is Beautiful).bin" size="3909708" crc="2022a547" sha1="cf877e4200ec4b0226ce4db53e8710c4842edf76"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gencc4580a855ae0">
 		<description>panorama cotton (Hack, English)</description>
 		<year>????</year>
@@ -13509,6 +13549,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Parasol Stars v1.0 RC3 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="181b816a" sha1="a90cd367207211810416fe5583e53e748b3a3aea"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gend95b2884a2d3c">
+		<description>Parasol Stars v1.0.2 (2026)(Oldschool Is Beautiful)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Parasol Stars v1.0.2 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="72fc1b17" sha1="d95b2884a2d3c40d3574d2f24297381cd1f046ab"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20359,6 +20409,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2490368">
 				<rom name="Tiger Road 2026-10-23 (2026)(hombreimaginario).bin" size="2490368" crc="8db153ab" sha1="0af6f0aa33d1331cd325f0594fa5a50576ed42a8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb28c25abf9dca">
+		<description>Tiger Road 2026-10-26 (2026)(hombreimaginario)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2490368">
+				<rom name="Tiger Road 2026-10-26 (2026)(hombreimaginario).bin" size="2490368" crc="98decaf0" sha1="b28c25abf9dca1db4f5966564891de19ad98d7cc"/>
 			</dataarea>
 		</part>
 	</software>

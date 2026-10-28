@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 183 -->
+<!-- Number of items in this list = 189 -->
 <softwarelist name="ngp" description="ngp loose roms">
 	<software name="ngpa61c9ef589158">
 		<description>(demo)Adventures of Gus and Rob V1, The by Mickey McMurray (PD)</description>
@@ -352,6 +352,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp2933f73f66ba5">
+		<description>Civilisation (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Civilisation (2026)(Chris Ahchay).ngp" size="2097152" crc="9392c0d0" sha1="2933f73f66ba5896f7e979f33f887c8342351469"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngp8f4070dce7003">
 		<description>Columns (2007)(Thor)</description>
 		<year>????</year>
@@ -659,6 +669,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Gardenia v1.4d (2026)(Chris Ahchay).ngp" size="2097152" crc="6bf8b0aa" sha1="c7bc30c42c132506ba7f55830c24978f51f3c5ac"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngpae9c863726dc1">
+		<description>Gardenia v1.5 (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Gardenia v1.5 (2026)(Chris Ahchay).ngp" size="2097152" crc="1e8081c2" sha1="ae9c863726dc1be610763b54973133ee52696ed4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1132,6 +1152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngpcc08bafeb15b0">
+		<description>Neo Bowling v1.0 (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Neo Bowling v1.0 (2026)(Hardhat Warrior).ngp" size="2097152" crc="c2eb225c" sha1="cc08bafeb15b0c486d6ef21e827b9a0216e6a2ba"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpaf4f8e4ab54a5">
 		<description>Neo Centipede by Roger Bacon (05-13-2001) (PD)</description>
 		<year>????</year>
@@ -1309,6 +1339,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Over Rev v2.0 (2026)(Tixul).ngp" size="2097152" crc="bd6dcde5" sha1="f87edd74242167b396a8d3e6e18208f0fc370ba1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp4a6adf787fbda">
+		<description>Over Rev v3.0 (2026)(Tixul)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Over Rev v3.0 (2026)(Tixul).ngp" size="2097152" crc="8539834d" sha1="4a6adf787fbda29f6bb1e7feef2da344909329e8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1502,6 +1542,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="ngp842cebed2240e">
+		<description>Rogue Aces (2026)(Chris Ahchay)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Rogue Aces (2026)(Chris Ahchay).ngp" size="2097152" crc="6ea9eb85" sha1="842cebed2240e98f0174bd863a59e6215a39d1d4"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="ngpaeacc5696dec5">
 		<description>Ruptus Mini (2025)(Inufuto)</description>
 		<year>????</year>
@@ -1549,6 +1599,16 @@
 		<part name="cart" interface="ngp_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Shufflepuck Cafe (Beta 2) by Loic Julien (PD).ngc" size="524288" crc="fb1ae713" sha1="8d80201af76cc358ac1e6aefc4f861f4f4f83ad2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="ngp75d41c7e20556">
+		<description>Shut the Box v0.1 (2026)(Hardhat Warrior)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="ngp_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="Shut the Box v0.1 (2026)(Hardhat Warrior).ngp" size="2097152" crc="e89d2a9c" sha1="75d41c7e20556ef4057ff78463784c796acacaf7"/>
 			</dataarea>
 		</part>
 	</software>

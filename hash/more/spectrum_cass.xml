@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8153 -->
+<!-- Number of items in this list = 8167 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -8502,6 +8502,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs9045e2c1c34d2">
+		<description>Barmy Burgers 48K (1983)(Blaby Computer Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31126">
+				<rom name="Barmy Burgers 48K (1983)(Blaby Computer Games).tzx" size="31126" crc="70455c9d" sha1="9045e2c1c34d26a44109b54d1d09b1c53d7e4ea7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs027d4e5396d3d">
 		<description>Baron (1983)(Temptation Software)</description>
 		<year>????</year>
@@ -13909,6 +13919,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="36864">
 				<rom name="Casey Jones (1984)(Blaby Computer Games)[a].tap" size="36864" crc="f225d41b" sha1="dc5bf89d801a23a9a29a109e13c2b9aca5b7a85b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6b8e2c07f5ae5">
+		<description>Casey Jones 48K (1984)(Blaby Computer Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36421">
+				<rom name="Casey Jones 48K (1984)(Blaby Computer Games).tzx" size="36421" crc="de4b4598" sha1="6b8e2c07f5ae58e2d010a59b6c95ae1b4a614d92"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42242,6 +42262,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs21c69b3d077d3">
+		<description>Mine Alert 2 128K (2026)(namco-nexgen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="85093">
+				<rom name="Mine Alert 2 128K (2026)(namco-nexgen).tap" size="85093" crc="2eca386a" sha1="21c69b3d077d3c8b92fdbcb935a1cfecbff50c25"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc11c209c81723">
+		<description>Mine Alert 48K (1987)(Ramon Gallastegui)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31444">
+				<rom name="Mine Alert 48K (1987)(Ramon Gallastegui).tzx" size="31444" crc="8d6e6afa" sha1="c11c209c8172305cab0d5f5ca890fb2a8a229315"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs206c1f778a985">
 		<description>Mined Out (1983)(Quicksilva Ltd)</description>
 		<year>????</year>
@@ -47239,6 +47279,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="267848">
 				<rom name="Outlet - The Spectrum Drive Magazine! No.78 (1994)(Chezron Software).tap" size="267848" crc="f7c79377" sha1="b545c829994c579bc09fa5c82b9c5b6745a5cb0f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs0b463ac75f7a0">
+		<description>Outpost 48K (2026)(usebox.net)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="22114">
+				<rom name="Outpost 48K (2026)(usebox.net).tap" size="22114" crc="2ac59251" sha1="0b463ac75f7a0908ed247e5505d9a4446287fc68"/>
 			</dataarea>
 		</part>
 	</software>
@@ -53059,6 +53109,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="54463">
 				<rom name="River Rad 128K (2024)(Daniel Isoba).tap" size="54463" crc="4e53cbba" sha1="68165b5b981e246093c810e41e47abc08d37d961"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3431ee4252f25">
+		<description>River Raid+ v0.7 48K-AY (2026)(theALFEST)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="26652">
+				<rom name="River Raid+ v0.7 48K-AY (2026)(theALFEST).tap" size="26652" crc="53f67db2" sha1="3431ee4252f252e660a3f7fc80ee0948ffe351b3"/>
 			</dataarea>
 		</part>
 	</software>
@@ -67242,6 +67302,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs2c762abf99de1">
+		<description>Vulcan 128K (1986)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53740">
+				<rom name="Vulcan 128K (1986)(CCS).tzx" size="53740" crc="c1299a09" sha1="2c762abf99de1a1e04e3b68458db1643c784e2b8"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfc7697649ef63">
+		<description>Vulcan 48K (1986)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49796">
+				<rom name="Vulcan 48K (1986)(CCS).tzx" size="49796" crc="378fc601" sha1="fc7697649ef630c821350e7e48c9686c2a2e66b3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs089770612877f">
 		<description>Wacky Darts</description>
 		<year>????</year>
@@ -67739,6 +67819,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48631">
 				<rom name="Who Dares Wins 2 (1986)(Alligata Software Ltd).tap" size="48631" crc="02dc6931" sha1="5074226a4bddd707912ba1fa07db453e7998c94e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsde4cffd0bd0d6">
+		<description>Who Dares Wins II 48K (1986)(Alligata)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48692">
+				<rom name="Who Dares Wins II 48K (1986)(Alligata).tzx" size="48692" crc="bf14f1aa" sha1="de4cffd0bd0d6ceb6b55e96eca42c854914c7c2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs460eae2f5e938">
+		<description>Who Dares Wins III v1.1 128K (2026)(namco-nexgen)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="73967">
+				<rom name="Who Dares Wins III v1.1 128K (2026)(namco-nexgen).tap" size="73967" crc="b8f9cc8b" sha1="460eae2f5e938315f57e575edc0c102d51cccd00"/>
 			</dataarea>
 		</part>
 	</software>
@@ -68942,6 +69042,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs30eef2db62d3f">
+		<description>XPong48 48K-AY (2026)(CodeBiters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32548">
+				<rom name="XPong48 48K-AY (2026)(CodeBiters).tap" size="32548" crc="c563401a" sha1="30eef2db62d3fd8f0e71f8ffe13fe8d2ba949fad"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs787a3837c178a">
 		<description>Xshoot_spectrum_48k</description>
 		<year>????</year>
@@ -69632,6 +69742,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsb924a209f7628">
+		<description>Zoinho - In the Garden of the Fools 48K (2025)(R.C. Nunes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42058">
+				<rom name="Zoinho - In the Garden of the Fools 48K (2025)(R.C. Nunes).tap" size="42058" crc="7ec6faaa" sha1="b924a209f7628e00e2e2f4d2834ac7a28f25fbca"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsca1b9d2a1cf0d">
 		<description>Zoinho 48K (2021)(Bitnamic)</description>
 		<year>????</year>
@@ -69699,6 +69819,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37966">
 				<rom name="Zombie Calavera Prologue 48K (2010)(Mojon Twins).tap" size="37966" crc="9eaf2b79" sha1="7d85e0f206a5383c4b7eeb4d71468a8e2b329275"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs68194cc089926">
+		<description>Zombie Calavera Prologue 48K (2010)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="38000">
+				<rom name="Zombie Calavera Prologue 48K (2010)(The Mojon Twins).tzx" size="38000" crc="bb2c916b" sha1="68194cc089926197af43ef82179eb71250f5bddb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -77639,6 +77769,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31716">
 				<rom name="_Nuclear Attack.TAP" size="31716" crc="1df6b922" sha1="ab18e9b43697db726f765fd080c174c796fb8c4e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc5813d6df9bc">
+		<description>_Nuke Lear 48K (1984)(CCS)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30334">
+				<rom name="_Nuke Lear 48K (1984)(CCS).tzx" size="30334" crc="f3e65284" sha1="cc5813d6df9bcf8b77354bbd14f1638f9f3715bd"/>
 			</dataarea>
 		</part>
 	</software>

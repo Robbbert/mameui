@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 10999 -->
+<!-- Number of items in this list = 11002 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -5302,6 +5302,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes060ffa17d6b9d">
+		<description>All Hell Unleashed - Ultimate Edition (2025-26)(Fista Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="All Hell Unleashed - Ultimate Edition (2025-26)(Fista Productions).nes" size="524304" crc="205da9ad" sha1="060ffa17d6b9d384c028d43f7eb44680fe53b894"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nes46f12d1467087">
 		<description>All Hell Unleashed v6.66 (2025)(Fista Productions)</description>
 		<year>????</year>
@@ -6149,6 +6159,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393233">
 				<rom name="Angel Wings by Heroy (captain Tsubasa 2 Hack).nes" size="393233" crc="aeb8eec6" sha1="e374bbe54bfb7d8d9033e697c10c1767c5de2b64"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes73bdad4730333">
+		<description>Angry Video Game Nerd 8-bit, The (2025)(Retroware - Mega Cat Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Angry Video Game Nerd 8-bit, The (2025)(Retroware - Mega Cat Studios).nes" size="786448" crc="fd8ddfb7" sha1="73bdad47303333609c5e8be72a437926cf91c45d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -52319,6 +52339,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="262160">
 				<rom name="Mad Max (USA)_1.nes" size="262160" crc="f70870ae" sha1="24fb27bbe3b41c2ff1300cd3d7afbb5ac5539957"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2b6b0ffcca82a">
+		<description>Mad Mix Game R (2026)(Magic Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="2097168">
+				<rom name="Mad Mix Game R (2026)(Magic Games).nes" size="2097168" crc="bb5d8cc7" sha1="2b6b0ffcca82a8442fbed809d907bec9ab8af475"/>
 			</dataarea>
 		</part>
 	</software>
