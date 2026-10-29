@@ -964,7 +964,7 @@ void CreateDeficiencyFolders(int parent_index)
 	strcpy( m_ExtraFolderData[m_next_folder_id]->m_szTitle, "Unemulated Protection" );
 	m_ExtraFolderData[m_next_folder_id++]->m_dwFlags = 0;
 	AddFolder(lpProt);
-	lpWrongCol = NewFolder("Wrong Colors", m_next_folder_id, parent_index, IDI_FP_IMP, GetFolderFlags(m_numFolders));
+	lpWrongCol = NewFolder("Wrong Colours", m_next_folder_id, parent_index, IDI_FP_IMP, GetFolderFlags(m_numFolders));
 	if (!lpWrongCol)
 		return;
 	m_ExtraFolderData[m_next_folder_id] = (EXFOLDERDATA*)malloc(m_folderBytes);
@@ -976,11 +976,11 @@ void CreateDeficiencyFolders(int parent_index)
 	m_ExtraFolderData[m_next_folder_id]->m_nIconId = IDI_FP_IMP;
 	m_ExtraFolderData[m_next_folder_id]->m_nParent = lpFolder->m_nFolderId;
 	m_ExtraFolderData[m_next_folder_id]->m_nSubIconId = -1;
-	strcpy( m_ExtraFolderData[m_next_folder_id]->m_szTitle, "Wrong Colors" );
+	strcpy( m_ExtraFolderData[m_next_folder_id]->m_szTitle, "Wrong Colours" );
 	m_ExtraFolderData[m_next_folder_id++]->m_dwFlags = 0;
 	AddFolder(lpWrongCol);
 
-	lpImpCol = NewFolder("Imperfect Colors", m_next_folder_id, parent_index, IDI_FP_IMP, GetFolderFlags(m_numFolders));
+	lpImpCol = NewFolder("Imperfect Colours", m_next_folder_id, parent_index, IDI_FP_IMP, GetFolderFlags(m_numFolders));
 	if (!lpImpCol)
 		return;
 	m_ExtraFolderData[m_next_folder_id] = (EXFOLDERDATA*)malloc(m_folderBytes);
@@ -992,7 +992,7 @@ void CreateDeficiencyFolders(int parent_index)
 	m_ExtraFolderData[m_next_folder_id]->m_nIconId = IDI_FP_IMP;
 	m_ExtraFolderData[m_next_folder_id]->m_nParent = lpFolder->m_nFolderId;
 	m_ExtraFolderData[m_next_folder_id]->m_nSubIconId = -1;
-	strcpy( m_ExtraFolderData[m_next_folder_id]->m_szTitle, "Imperfect Colors" );
+	strcpy( m_ExtraFolderData[m_next_folder_id]->m_szTitle, "Imperfect Colours" );
 	m_ExtraFolderData[m_next_folder_id++]->m_dwFlags = 0;
 	AddFolder(lpImpCol);
 

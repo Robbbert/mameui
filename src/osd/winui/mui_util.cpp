@@ -90,19 +90,14 @@ void __cdecl ErrorMsg(const char* fmt, ...)
 {
 	static FILE* pFile = NULL;
 	DWORD dwWritten;
-	char buf[5000];
-	char buf2[5000];
+	char buf[5000]{};
+	char buf2[5000]{};
 	va_list va;
-
 	va_start(va, fmt);
-
-	vsprintf(buf, fmt, va);
-
+	vsnprintf(buf, std::size(buf), fmt, va);
 	win_message_box_utf8(GetActiveWindow(), buf, MAMEUINAME, MB_OK | MB_ICONERROR);
 
-	strcpy(buf2, MAMEUINAME ": ");
-	strcat(buf2,buf);
-	strcat(buf2, "\n");
+	snprintf(buf2, std::size(buf2), "MAMEUINAME : %s\n", buf);
 
 	WriteFile(GetStdHandle(STD_OUTPUT_HANDLE), buf2, strlen(buf2), &dwWritten, NULL);
 
@@ -120,15 +115,11 @@ void __cdecl ErrorMsg(const char* fmt, ...)
 
 void __cdecl dprintf(const char* fmt, ...)
 {
-	char buf[5000];
+	char buf[5000]{};
 	va_list va;
-
 	va_start(va, fmt);
-
-	_vsnprintf(buf,sizeof(buf),fmt,va);
-
+	vsnprintf(buf, std::size(buf), fmt, va);
 	win_output_debug_string_utf8(buf);
-
 	va_end(va);
 }
 
@@ -159,9 +150,8 @@ int winui_message_box_utf8(HWND hWnd, const char *text, const char *caption, UIN
 
 void ErrorMessageBox(const char *fmt, ...)
 {
-	char buf[1024];
+	char buf[1024]{};
 	va_list ptr;
-
 	va_start(ptr, fmt);
 	vsnprintf(buf, std::size(buf), fmt, ptr);
 	winui_message_box_utf8(GetMainWindow(), buf, MAMEUINAME, MB_ICONERROR | MB_OK);
@@ -360,7 +350,7 @@ char* MyStrStrI(const char* pFirst, const char* pSrch)
 
 char * ConvertToWindowsNewlines(const char *source)
 {
-	static char buf[2048 * 2048];
+	static char buf[2048 * 2048]{};
 	char *dest;
 
 	dest = buf;
@@ -385,11 +375,11 @@ char * ConvertToWindowsNewlines(const char *source)
  */
 const char * GetDriverFilename(int drvindex)
 {
-	static char tmp[2048] = { };
+	static char tmp[2048]{};
 	if (drvindex >= 0)
 	{
 		string driver = string(core_filename_extract_base(driver_list::driver(drvindex).type.source()));
-		strcpy(tmp, driver.c_str());
+		snprintf(tmp, std::size(tmp), "%s", driver.c_str());
 	}
 	return tmp;
 }
@@ -871,18 +861,16 @@ DWORD win_get_current_directory_utf8(size_t bufferlength, char* buffer)
 		return 0;
 	}
 
-	char* utf8_buffer = NULL;
-	utf8_buffer = ui_utf8_from_wstring(t_buffer);
+	char* utf8_buffer = ui_utf8_from_wstring(t_buffer);
 
 	free(t_buffer);
 
 	if( !utf8_buffer )
 		return 0;
 
-	strncpy(buffer, utf8_buffer, bufferlength);
+	snprintf(buffer, bufferlength, "%s", utf8_buffer);
 
-	if( utf8_buffer )
-		free(utf8_buffer);
+	free(utf8_buffer);
 
 	return result;
 }

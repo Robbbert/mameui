@@ -30,10 +30,6 @@
 #include "treeview.h"
 #include "splitters.h"
 
-#ifdef _MSC_VER
-#define snprintf _snprintf
-#endif
-
 typedef std::string string;
 
 /***************************************************************************
@@ -185,7 +181,7 @@ static COLORREF options_get_color(const char *name)
 
 static void options_set_color(const char *name, COLORREF value)
 {
-	char value_str[32];
+	char value_str[32]{};
 
 	if (value == (COLORREF) -1)
 		snprintf(value_str, std::size(value_str), "%d", (int) value);
@@ -370,8 +366,8 @@ static LPBITS GetShowFolderFlags(LPBITS bits)
 		return bits;
 
 	extern const FOLDERDATA g_folderData[];
-	char s[val.size()+1];
-	snprintf(s, val.size()+1, "%s", val.c_str());
+	char s[val.size()+1]{};
+	strcpy(s, val.c_str());
 	char *token = strtok(s, ",");
 	int j;
 	while (token)
@@ -538,7 +534,7 @@ void SetCustomColor(int iIndex, COLORREF uColor)
 	if ((iIndex < 0) || (iIndex > 15))
 		return;
 
-	COLORREF custom_color[16];
+	COLORREF custom_color[16]{};
 	CusColorDecodeString(settings.getter(MUIOPTION_CUSTOM_COLOR), custom_color);
 	custom_color[iIndex] = uColor;
 	settings.setter(MUIOPTION_CUSTOM_COLOR, CusColorEncodeString(custom_color));
@@ -549,7 +545,7 @@ COLORREF GetCustomColor(int iIndex)
 	if ((iIndex < 0) || (iIndex > 15))
 		return (COLORREF)RGB(0,0,0);
 
-	COLORREF custom_color[16];
+	COLORREF custom_color[16]{};
 
 	CusColorDecodeString(settings.getter(MUIOPTION_CUSTOM_COLOR), custom_color);
 
@@ -848,7 +844,7 @@ void IncrementPlayTime(int drvindex, uint32_t playtime)
 		IncrementPlayVariable(drvindex, "time", playtime);
 }
 
-void GetTextPlayTime(int drvindex, char *buf)
+void GetTextPlayTime(int drvindex, char *buf, size_t size)
 {
 	if ((drvindex >= 0) && (drvindex < driver_list::total()))
 	{
@@ -859,9 +855,9 @@ void GetTextPlayTime(int drvindex, char *buf)
 		second -= 60*minute;
 
 		if (hour == 0)
-			sprintf(buf, "%d:%02d", minute, second );
+			snprintf(buf, size, "%d:%02d", minute, second );
 		else
-			sprintf(buf, "%d:%02d:%02d", hour, minute, second );
+			snprintf(buf, size, "%d:%02d:%02d", hour, minute, second );
 	}
 }
 
@@ -1037,7 +1033,7 @@ input_seq* Get_ui_key_quit()
 
 static int GetUIJoy(const char *option_name, int joycodeIndex)
 {
-	int joycodes[4];
+	int joycodes[4]{};
 
 	if ((joycodeIndex < 0) || (joycodeIndex > 3))
 		joycodeIndex = 0;
@@ -1047,7 +1043,7 @@ static int GetUIJoy(const char *option_name, int joycodeIndex)
 
 static void SetUIJoy(const char *option_name, int joycodeIndex, int val)
 {
-	int joycodes[4];
+	int joycodes[4]{};
 
 	if ((joycodeIndex < 0) || (joycodeIndex > 3))
 		joycodeIndex = 0;
@@ -1247,9 +1243,9 @@ static void CusColorDecodeString(string ss, COLORREF *value)
 {
 	const char *str = ss.c_str();
 	char *s, *p;
-	char tmpStr[256];
+	char tmpStr[256]{};
 
-	strcpy(tmpStr, str);
+	snprintf(tmpStr, std::size(tmpStr), "%s", str);
 	p = tmpStr;
 
 	for (int i = 0; p && i < 16; i++)
@@ -1278,14 +1274,14 @@ static string ColumnEncodeStringWithCount(const int *value, int count)
 
 static void ColumnDecodeStringWithCount(string ss, int *value, int count)
 {
-	const char *str = ss.c_str();
-	char *s, *p;
-	char tmpStr[256];
-
-	if (str == NULL)
+	if (ss.empty())
 		return;
 
-	strcpy(tmpStr, str);
+	const char *str = ss.c_str();
+	char *s, *p;
+	char tmpStr[256]{};
+
+	snprintf(tmpStr, std::size(tmpStr), "%s", str);
 	p = tmpStr;
 
 	for (int i = 0; p && i < count; i++)
@@ -1315,9 +1311,9 @@ static void SplitterDecodeString(string ss, int *value)
 {
 	const char *str = ss.c_str();
 	char *s, *p;
-	char tmpStr[256];
+	char tmpStr[256]{};
 
-	strcpy(tmpStr, str);
+	snprintf(tmpStr, std::size(tmpStr), "%s", str);
 	p = tmpStr;
 
 	for (int i = 0; p && i < GetSplitterCount(); i++)
@@ -1369,8 +1365,8 @@ static string FontEncodeString(const LOGFONT *f)
 	if( !utf8_FaceName )
 		return "";
 
-	char s[200];
-	sprintf(s, "%li,%li,%li,%li,%li,%i,%i,%i,%i,%i,%i,%i,%i,%s",
+	char s[200]{};
+	snprintf(s, std::size(s), "%li,%li,%li,%li,%li,%i,%i,%i,%i,%i,%i,%i,%i,%s",
 			f->lfHeight,
 			f->lfWidth,
 			f->lfEscapement,
@@ -1415,7 +1411,7 @@ static void TabFlagsDecodeString(string ss, int *data)
 {
 	const char *str = ss.c_str();
 	int j = 0;
-	char s[2000];
+	char s[2000]{};
 	char *token;
 
 	snprintf(s, std::size(s), "%s", str);
@@ -1484,54 +1480,20 @@ DWORD GetFolderFlags(int folder_index)
 void LoadFolderFlags()
 {
 	LPTREEFOLDER lpFolder;
-	int i, numFolders = GetNumFolders();
-
-	for (i = 0; i < numFolders; i++)
-	{
-		lpFolder = GetFolder(i);
-
-		if (lpFolder)
-		{
-			char folder_name[400];
-			char *ptr;
-
-			// Convert spaces to underscores
-			strcpy(folder_name, lpFolder->m_lpTitle);
-			ptr = folder_name;
-			while (*ptr && *ptr != '\0')
-			{
-				if ((*ptr == ' ') || (*ptr == '-'))
-					*ptr = '_';
-
-				ptr++;
-			}
-
-			string option_name = string(folder_name) + "_filters";
-		}
-	}
-
+	int numFolders = GetNumFolders();
 	// These are added to our UI ini
 	// The normal read will skip them.
 
 	// retrieve the stored values
-	for (i = 0; i < numFolders; i++)
+	for (int i = 0; i < numFolders; i++)
 	{
 		lpFolder = GetFolder(i);
 
 		if (lpFolder)
 		{
-			char folder_name[400];
-
 			// Convert spaces to underscores
-			strcpy(folder_name, lpFolder->m_lpTitle);
-			char *ptr = folder_name;
-			while (*ptr && *ptr != '\0')
-			{
-				if ((*ptr == ' ') || (*ptr == '-'))
-					*ptr = '_';
-
-				ptr++;
-			}
+			string folder_name = lpFolder->m_lpTitle;
+			std::replace(folder_name.begin(), folder_name.end(), ' ', '_');
 			string option_name = string(folder_name) + "_filters";
 
 			// get entry and decode it
@@ -1553,19 +1515,9 @@ static void AddFolderFlags()
 		lpFolder = GetFolder(i);
 		if (lpFolder)
 		{
-			char folder_name[400];
-
 			// Convert spaces to underscores
-			strcpy(folder_name, lpFolder->m_lpTitle);
-			char *ptr = folder_name;
-			while (*ptr && *ptr != '\0')
-			{
-				if ((*ptr == ' ') || (*ptr == '-'))
-					*ptr = '_';
-
-				ptr++;
-			}
-
+			string folder_name = lpFolder->m_lpTitle;
+			std::replace(folder_name.begin(), folder_name.end(), ' ', '_');
 			string option_name = string(folder_name) + "_filters";
 
 			// store entry

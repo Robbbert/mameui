@@ -34,7 +34,7 @@ struct DirWatcherEntry
 		BYTE buffer[1024];
 	} u;
 
-	char szDirPath[1];
+	char szDirPath[MAX_PATH];
 };
 
 
@@ -98,7 +98,8 @@ static BOOL DirWatcher_WatchDirectory(PDIRWATCHER pWatcher, int nIndex, int nSub
 	if (!pEntry)
 		goto error;
 	memset(pEntry, 0, sizeof(*pEntry));
-	strcpy(pEntry->szDirPath, pszPath);
+	//strcpy(pEntry->szDirPath, pszPath);
+	snprintf(pEntry->szDirPath, std::size(pEntry->szDirPath), "%s", pszPath);
 	pEntry->overlapped.hEvent = pWatcher->hRequestEvent;
 
 	hDir = win_create_file_utf8(pszPath, FILE_LIST_DIRECTORY,
@@ -143,9 +144,7 @@ static void DirWatcher_Signal(PDIRWATCHER pWatcher, struct DirWatcherEntry *pEnt
 
 	// get the full path to this new file
 	LPSTR pszFullFileName = (LPSTR) alloca(strlen(pEntry->szDirPath) + strlen(pszFileName) + 2);
-	strcpy(pszFullFileName, pEntry->szDirPath);
-	strcat(pszFullFileName, "\\");
-	strcat(pszFullFileName, pszFileName);
+	snprintf(pszFullFileName, sizeof(pszFullFileName), "%s\\%s", pEntry->szDirPath, pszFileName);
 
 	// attempt to busy wait until any result other than ERROR_SHARING_VIOLATION
 	// is generated

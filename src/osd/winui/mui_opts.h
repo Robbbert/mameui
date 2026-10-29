@@ -220,7 +220,7 @@ void ResetPlayCount(int);
 
 void IncrementPlayTime(int, uint32_t playtime);
 uint32_t GetPlayTime(int);
-void GetTextPlayTime(int, char *buf);
+void GetTextPlayTime(int, char *buf, size_t);
 void ResetPlayTime(int);
 
 const char * GetVersionString();

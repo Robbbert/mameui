@@ -28,11 +28,6 @@
 #include "properties.h"
 #include <richedit.h>
 
-
-#ifdef _MSC_VER
-#define vsnprintf _vsnprintf
-#endif
-
 /***************************************************************************
     function prototypes
  ***************************************************************************/
@@ -67,8 +62,8 @@ static int m_choice = 0;
 
 static int strcatvprintf(std::string &str, const char *format, va_list args)
 {
-	char tempbuf[4096];
-	int result = vsprintf(tempbuf, format, args);
+	char tempbuf[4096]{};
+	int result = vsnprintf(tempbuf, std::size(tempbuf), format, args);
 	str.append(tempbuf);
 	return result;
 }
@@ -217,7 +212,7 @@ int MameUIVerifySampleSet(int game)
 
 static DWORD WINAPI AuditThreadProc(LPVOID hDlg)
 {
-	char buffer[200];
+	char buffer[200]{};
 
 	while (!bCancel)
 	{
@@ -225,14 +220,14 @@ static DWORD WINAPI AuditThreadProc(LPVOID hDlg)
 		{
 			if (rom_index >= 0)
 			{
-				sprintf(buffer, "Checking Set %s - %s", driver_list::driver(rom_index).name, driver_list::driver(rom_index).type.fullname());
+				snprintf(buffer, std::size(buffer), "Checking Set %s - %s", driver_list::driver(rom_index).name, driver_list::driver(rom_index).type.fullname());
 				win_set_window_text_utf8((HWND)hDlg, buffer);
 				ProcessNextRom();
 			}
 			else
 			if (sample_index >= 0)
 			{
-				sprintf(buffer, "Checking Set %s - %s", driver_list::driver(sample_index).name, driver_list::driver(sample_index).type.fullname());
+				snprintf(buffer, std::size(buffer), "Checking Set %s - %s", driver_list::driver(sample_index).name, driver_list::driver(sample_index).type.fullname());
 				win_set_window_text_utf8((HWND)hDlg, buffer);
 				ProcessNextSample();
 			}
@@ -354,7 +349,7 @@ INT_PTR CALLBACK GameAuditDialogProc(HWND hDlg,UINT Msg,WPARAM wParam,LPARAM lPa
 static void ProcessNextRom()
 {
 	int retval = 0;
-	TCHAR buffer[200];
+	TCHAR buffer[200]{};
 
 	retval = MameUIVerifyRomSet(rom_index, 1);
 	switch (retval)
@@ -392,7 +387,7 @@ static void ProcessNextRom()
 static void ProcessNextSample()
 {
 	int retval = 0;
-	TCHAR buffer[200];
+	TCHAR buffer[200]{};
 
 	retval = MameUIVerifySampleSet(sample_index);
 
@@ -435,34 +430,28 @@ static void ProcessNextSample()
 
 static void CLIB_DECL DetailsPrintf(int box, const char *fmt, ...)
 {
-	//RS 20030613 Different Ids for Property Page and Dialog
-	// so see which one's currently instantiated
-	HWND hEdit = 0;
-	if (box == 0)
+	// This does the audit boxes for all systems and for an individual game.
+	// See if it's all systems
+	HWND hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS);
+	// if not open, try individual game
+	if (!hEdit)
 	{
-		hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS);
+		// if this system has separate boxes for samples, try that
+		// otherwise all errors go into the roms box
+		if (box)
+			hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS_PROP1);
 		if (!hEdit)
 			hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS_PROP0);
 	}
-	else
-	if (box == 1)
-	{
-		hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS);
-		if (!hEdit)
-			hEdit = GetDlgItem(hAudit, IDC_AUDIT_DETAILS_PROP1);
-	}
 
+	// Still nothing? Most likely doing an F5 audit, which has no boxes.
 	if (!hEdit)
-	{
-		// Auditing via F5 - no window to display the results
-		//printf("audit detailsprintf() can't find any audit control\n");
 		return;
-	}
 
 	va_list marker;
 	va_start(marker, fmt);
-	char buffer[8000];
-	vsprintf(buffer, fmt, marker);
+	char buffer[8000]{};
+	vsnprintf(buffer, std::size(buffer), fmt, marker);
 	va_end(marker);
 
 	TCHAR* t_s = ui_wstring_from_utf8(ConvertToWindowsNewlines(buffer));

@@ -398,10 +398,10 @@ static PDIRWATCHER s_pWatcher;
 static const struct OSDJoystick* g_pJoyGUI = NULL;
 
 /* store current keyboard state (in bools) here */
-static bool keyboard_state[4096]; /* __code_max #defines the number of internal key_codes */
+static bool keyboard_state[4096]{}; /* __code_max #defines the number of internal key_codes */
 
 /* search */
-static char g_SearchText[2048];
+static char g_SearchText[2048]{};
 /* table copied from windows/inputs.c */
 // table entry indices
 #define MAME_KEY      0
@@ -1097,8 +1097,8 @@ HICON LoadIconFromFile(const char *iconname)
 {
 	HICON hIcon = 0;
 	struct stat file_stat;
-	char tmpStr[MAX_PATH];
-	char tmpIcoName[MAX_PATH];
+	char tmpStr[MAX_PATH]{};
+	char tmpIcoName[MAX_PATH]{};
 	PBYTE bufferPtr = 0;
 	util::archive_file::ptr zip;
 
@@ -1402,12 +1402,12 @@ void ResizePickerControls(HWND hWnd)
 char *ModifyThe(const char *str)
 {
 	static int  bufno = 0;
-	static char buffer[4][2048];
+	static char buffer[4][2048]{};
 
 	if (strncmp(str, "The ", 4) == 0)
 	{
 		char *s, *p;
-		char temp[2048];
+		char temp[2048]{};
 
 		strcpy(temp, &str[4]);
 
@@ -1508,7 +1508,7 @@ int GetGameNameIndex(const char *name)
 
 static void SetMainTitle()
 {
-	char buffer[100];
+	char buffer[100]{};
 	snprintf(buffer, std::size(buffer), "%s %s", MAMEUINAME, GetVersionString());
 	win_set_window_text_utf8(hMain,buffer);
 }
@@ -1935,7 +1935,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 {
 	MINMAXINFO *mminfo;
 	int i = 0;
-	TCHAR szClass[128];
+	TCHAR szClass[128]{};
 
 	switch (message)
 	{
@@ -2186,8 +2186,8 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT message, WPARAM wParam, L
 			if (pfnGetAuditResults && pfnSetAuditResults)
 			{
 				int nGameIndex, nParentIndex = -1;
-				char szFileName[256];
-				snprintf(szFileName, sizeof(szFileName), "%s", (LPCSTR) lParam);
+				char szFileName[256]{};
+				snprintf(szFileName, std::size(szFileName), "%s", (LPCSTR) lParam);
 				char* s = strchr(szFileName, '.');
 				if (s)
 					*s = '\0';
@@ -2639,7 +2639,7 @@ static void ProgressBarHide()
 	if (hProgWnd == NULL)
 		return;
 
-	int  widths[4];
+	int  widths[4]{};
 	SIZE size;
 	HDC hDC = GetDC(hProgWnd);
 
@@ -2745,7 +2745,7 @@ static void CopyToolTipText(LPTOOLTIPTEXT lpttt)
 		}
 	}
 
-	static TCHAR String[1024];
+	static TCHAR String[1024]{};
 	if( bConverted )
 	{
 		/* Check for valid parameter */
@@ -2982,8 +2982,8 @@ static void EnableSelection(int nGame)
 		return;
 
 	//printf("EnableSelection: C\n");fflush(stdout);
-	TCHAR buf[200];
-	_sntprintf(buf, sizeof(buf) / sizeof(buf[0]), g_szPlayGameString, t_description);
+	TCHAR buf[200]{};
+	_sntprintf(buf, std::size(buf), g_szPlayGameString, t_description);
 	MENUITEMINFO mmi;
 	mmi.cbSize = sizeof(mmi);
 	mmi.fMask = MIIM_TYPE;
@@ -3191,7 +3191,7 @@ char* ConvertAmpersandString(const char *s)
      */
 	/* returns a static buffer--use before calling again */
 
-	static char buf[256];
+	static char buf[256]{};
 	char *ptr;
 
 	ptr = buf;
@@ -3711,7 +3711,7 @@ static void PickFont()
 {
 	LOGFONT font;
 	CHOOSEFONT cf;
-	TCHAR szClass[128];
+	TCHAR szClass[128]{};
 	HWND hWnd;
 
 	GetListFont(&font);
@@ -3761,7 +3761,7 @@ static void PickFont()
 static void PickColor(COLORREF *cDefault)
 {
 	CHOOSECOLOR cc;
-	COLORREF choice_colors[16];
+	COLORREF choice_colors[16]{};
 	int i = 0;
 
 	for (i=0;i<16;i++)
@@ -4329,7 +4329,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				}
 				// CFG
 				t = dir_get_value(14);
-				char buf14[t.size()+1];
+				char buf14[t.size()+1]{};
 				strcpy(buf14, t.c_str());
 				t_dir = strtok(buf14, ";");
 				while (t_dir)
@@ -4341,7 +4341,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				}
 				// NVRAM
 				t = dir_get_value(15);
-				char buf15[t.size()+1];
+				char buf15[t.size()+1]{};
 				strcpy(buf15, t.c_str());
 				t_dir = strtok(buf15, ";");
 				while (t_dir)
@@ -4353,7 +4353,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				}
 				// Save states
 				t = dir_get_value(17);
-				char buf17[t.size()+1];
+				char buf17[t.size()+1]{};
 				strcpy(buf17, t.c_str());
 				t_dir = strtok(buf17, ";");
 				while (t_dir)
@@ -4377,7 +4377,7 @@ static BOOL MameCommand(HWND hwnd,int id, HWND hwndCtl, UINT codeNotify)
 				string t2 = GetGameHistory(nGame);
 				std::ofstream outfile (filename, std::ios::out | std::ios::trunc);
 				size_t size = t2.size();
-				char t1[size+1];
+				char t1[size+1]{};
 				strcpy(t1, t2.c_str());
 				outfile.write(t1, size);
 				outfile.close();
@@ -4644,7 +4644,7 @@ static const TCHAR *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nCo
 {
 	const TCHAR *s = NULL;
 	const char* utf8_s = NULL;
-	char playtime_buf[256];
+	char playtime_buf[256]{};
 
 	switch(nColumn)
 	{
@@ -4681,7 +4681,7 @@ static const TCHAR *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nCo
 
 		case COLUMN_PLAYTIME:
 			/* Source drivers */
-			GetTextPlayTime(nItem, playtime_buf);
+			GetTextPlayTime(nItem, playtime_buf, std::size(playtime_buf));
 			utf8_s = playtime_buf;
 			break;
 
@@ -4905,7 +4905,7 @@ static DWORD GetShellLargeIconSize()
 	}
 
 	/* Save the last size */
-	TCHAR  szBuffer[512];
+	TCHAR  szBuffer[512]{};
 	lRes = RegQueryValueEx(hKey, TEXT("Shell Icon Size"), NULL, &dwType, (LPBYTE)szBuffer, &dwLength);
 	if( lRes != ERROR_SUCCESS )
 	{
@@ -5014,8 +5014,8 @@ static int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_
 	int value = 0;  /* Default to 0, for unknown case */
 	const char *name1 = NULL;
 	const char *name2 = NULL;
-	char file1[MAX_PATH];
-	char file2[MAX_PATH];
+	char file1[MAX_PATH]{};
+	char file2[MAX_PATH]{};
 	int nTemp1=0, nTemp2=0;
 
 	switch (sort_subitem)
@@ -5255,7 +5255,7 @@ void SetStatusBarText(int part_index, const char *message)
 
 void SetStatusBarTextF(int part_index, const char *fmt, ...)
 {
-	char buf[256];
+	char buf[256]{};
 	va_list va;
 
 	va_start(va, fmt);
@@ -5268,7 +5268,7 @@ void SetStatusBarTextF(int part_index, const char *fmt, ...)
 
 static void CLIB_DECL ATTR_PRINTF(1,2) MameMessageBox(const char *fmt, ...)
 {
-	char buf[2048];
+	char buf[2048]{};
 	va_list va;
 
 	va_start(va, fmt);
@@ -5321,7 +5321,7 @@ static void MamePlayGameWithOptions(int nGame, const play_options *playopts)
 
 static void MamePlayBackGame()
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	*filename = 0;
 
 	int nGame = Picker_GetSelectedItem(hwndList);
@@ -5330,12 +5330,12 @@ static void MamePlayBackGame()
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_INPUT_FILES))
 	{
-		char drive[_MAX_DRIVE];
-		char dir[_MAX_DIR];
-		char bare_fname[_MAX_FNAME];
-		char ext[_MAX_EXT];
-		char path[MAX_PATH];
-		char fname[MAX_PATH];
+		char drive[_MAX_DRIVE]{};
+		char dir[_MAX_DIR]{};
+		char bare_fname[_MAX_FNAME]{};
+		char ext[_MAX_EXT]{};
+		char path[MAX_PATH]{};
+		char fname[MAX_PATH]{};
 		play_options playopts;
 
 		_splitpath(filename, drive, dir, bare_fname, ext);
@@ -5394,8 +5394,8 @@ static void MamePlayBackGame()
 
 static void MameLoadState()
 {
-	char filename[MAX_PATH];
-	char selected_filename[MAX_PATH];
+	char filename[MAX_PATH]{};
+	char selected_filename[MAX_PATH]{};
 
 	*filename = 0;
 
@@ -5407,12 +5407,12 @@ static void MameLoadState()
 	}
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_SAVESTATE_FILES))
 	{
-		char drive[_MAX_DRIVE];
-		char dir[_MAX_DIR];
-		char ext[_MAX_EXT];
-		char path[MAX_PATH];
-		char fname[MAX_PATH];
-		char bare_fname[_MAX_FNAME];
+		char drive[_MAX_DRIVE]{};
+		char dir[_MAX_DIR]{};
+		char ext[_MAX_EXT]{};
+		char path[MAX_PATH]{};
+		char fname[MAX_PATH]{};
+		char bare_fname[_MAX_FNAME]{};
 
 		_splitpath(filename, drive, dir, bare_fname, ext);
 
@@ -5446,7 +5446,7 @@ static void MameLoadState()
 
 static void MamePlayRecordGame()
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	*filename = 0;
 	int nGame = Picker_GetSelectedItem(hwndList);
 	if (nGame != -1)
@@ -5454,11 +5454,11 @@ static void MamePlayRecordGame()
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_INPUT_FILES))
 	{
-		char drive[_MAX_DRIVE];
-		char dir[_MAX_DIR];
-		char fname[_MAX_FNAME];
-		char ext[_MAX_EXT];
-		char path[MAX_PATH];
+		char drive[_MAX_DRIVE]{};
+		char dir[_MAX_DIR]{};
+		char fname[_MAX_FNAME]{};
+		char ext[_MAX_EXT]{};
+		char path[MAX_PATH]{};
 
 		_splitpath(filename, drive, dir, fname, ext);
 
@@ -5494,7 +5494,7 @@ void MamePlayGame()
 
 static void MamePlayRecordWave()
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	int nGame = Picker_GetSelectedItem(hwndList);
 	if (nGame != -1)
 		strcpy(filename, driver_list::driver(nGame).name);
@@ -5512,18 +5512,18 @@ static void MamePlayRecordWave()
 
 static void MamePlayRecordMNG()
 {
-	char filename[MAX_PATH] = { 0, };
+	char filename[MAX_PATH]{};
 	int nGame = Picker_GetSelectedItem(hwndList);
 	if (nGame != -1)
 		strcpy(filename, driver_list::driver(nGame).name);
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_MNG_FILES))
 	{
-		char drive[_MAX_DRIVE];
-		char dir[_MAX_DIR];
-		char fname[_MAX_FNAME];
-		char ext[_MAX_EXT];
-		char path[MAX_PATH];
+		char drive[_MAX_DRIVE]{};
+		char dir[_MAX_DIR]{};
+		char fname[_MAX_FNAME]{};
+		char ext[_MAX_EXT]{};
+		char path[MAX_PATH]{};
 
 		_splitpath(filename, drive, dir, fname, ext);
 
@@ -5543,18 +5543,18 @@ static void MamePlayRecordMNG()
 
 static void MamePlayRecordAVI()
 {
-	char filename[MAX_PATH] = { 0, };
+	char filename[MAX_PATH]{};
 	int nGame = Picker_GetSelectedItem(hwndList);
 	if (nGame != -1)
 		strcpy(filename, driver_list::driver(nGame).name);
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_AVI_FILES))
 	{
-		char drive[_MAX_DRIVE];
-		char dir[_MAX_DIR];
-		char fname[_MAX_FNAME];
-		char ext[_MAX_EXT];
-		char path[MAX_PATH];
+		char drive[_MAX_DRIVE]{};
+		char dir[_MAX_DIR]{};
+		char fname[_MAX_FNAME]{};
+		char ext[_MAX_EXT]{};
+		char path[MAX_PATH]{};
 
 		_splitpath(filename, drive, dir, fname, ext);
 
@@ -5610,11 +5610,11 @@ static void AdjustMetrics()
 	if ((textColor = GetListFontColor()) == RGB(255, 255, 255))
 		textColor = RGB(240, 240, 240);
 
-	TCHAR szClass[128];
+	TCHAR szClass[128]{};
 	HWND hWnd = GetWindow(hMain, GW_CHILD);
 	while(hWnd)
 	{
-		if (GetClassName(hWnd, szClass, sizeof(szClass) / sizeof(szClass[0])))
+		if (GetClassName(hWnd, szClass, std::size(szClass)))
 		{
 			if (!_tcscmp(szClass, TEXT("SysListView32")))
 			{
@@ -5826,7 +5826,7 @@ static BOOL HandleScreenShotContextMenu(HWND hWnd, WPARAM wParam, LPARAM lParam)
 
 static void UpdateMenu(HMENU hMenu)
 {
-	TCHAR buf[200];
+	TCHAR buf[200]{};
 	MENUITEMINFO mItem;
 	int nGame = Picker_GetSelectedItem(hwndList);
 	if (nGame < 0)
@@ -5973,7 +5973,7 @@ void InitBodyContextMenu(HMENU hBodyContextMenu)
 	if (drvindex < 0)
 		return;
 
-	TCHAR tmp[256];
+	TCHAR tmp[256]{};
 	MENUITEMINFO mii;
 	ZeroMemory(&mii,sizeof(mii));
 	mii.cbSize = sizeof(mii);
@@ -6635,8 +6635,8 @@ static bool CommonListDialog(common_file_dialog_proc cfd)
 {
 	bool success = false;
 	OPENFILENAME of;
-	wchar_t szFile[MAX_PATH];
-	wchar_t szCurDir[MAX_PATH];
+	wchar_t szFile[MAX_PATH]{};
+	wchar_t szCurDir[MAX_PATH]{};
 
 	szFile[0] = 0;
 

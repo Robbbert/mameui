@@ -744,15 +744,12 @@ static const ERRORCODE g_ErrorCode[] =
 *****************************************************************************/
 const char * DirectXDecodeError(HRESULT errorval)
 {
-	for (int i = 0; i < (sizeof(g_ErrorCode) / sizeof(g_ErrorCode[0])); i++)
-	{
+	for (int i = 0; i < std::size(g_ErrorCode); i++)
 		if (g_ErrorCode[i].hr == errorval)
-		{
 			return g_ErrorCode[i].szError;
-		}
-	}
-	static char tmp[64];
-	sprintf(tmp, "UNKNOWN: 0x%x", (unsigned int)errorval);
+
+	static char tmp[64]{};
+	snprintf(tmp, std::size(tmp), "UNKNOWN DIRECTX ERROR: 0x%8x", (uint32_t)errorval);
 	return tmp;
 }
 

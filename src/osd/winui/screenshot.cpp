@@ -444,14 +444,11 @@ static std::error_condition OpenZipDIBFile(const char *dir_name, const char *zip
 // display a snap, cabinet, title, flyer, marquee, pcb, control panel
 static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pic_type)
 {
-	std::error_condition filerr = std::errc::no_such_file_or_directory;
-	util::core_file::ptr file = NULL;
-	char fullpath[2048];
-	const char* zip_name;
-	string t;
-
 	if (pPal)
 		DeletePalette(pPal);
+
+	const char* zip_name;
+	string t;
 
 	switch (pic_type)
 	{
@@ -528,9 +525,21 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 			return false;
 	}
 
+	if (t.empty())
+		return false;
+
+	// we need to split the filename into the game name (system_name), and the software-list item name (file_name)
+	char tempfile[2048]{};
+	snprintf(tempfile, std::size(tempfile), "%s", filename);
+	char* system_name = strtok(tempfile, ":");
+	char* file_name = strtok(NULL, ":");
+
 	string ext;
 	BOOL success;
 	void *buffer = NULL;
+	std::error_condition filerr = std::errc::no_such_file_or_directory;
+	util::core_file::ptr file = NULL;
+	char fullpath[2048]{};
 
 	for (u8 extnum = 0; extnum < 3; extnum++)
 	{
@@ -545,12 +554,7 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 			default:
 				ext = ".png";
 		}
-		// we need to split the filename into the game name (system_name), and the software-list item name (file_name)
-		strcpy(fullpath, t.c_str());
-		char tempfile[2048];
-		strcpy(tempfile, filename);
-		char* system_name = strtok(tempfile, ":");
-		char* file_name = strtok(NULL, ":");
+		snprintf(fullpath, std::size(fullpath), "%s", t.c_str());
 		string fname;
 		buffer = 0;
 		success = false;
@@ -593,25 +597,27 @@ static BOOL LoadDIB(const char *filename, HGLOBAL *phDIB, HPALETTE *pPal, int pi
 			// give up on software-specific.
 			// For SNAPS only, try filenames with 0000.png
 			if ((pic_type == TAB_SCREENSHOT) && (extnum == 0))
-			if (filerr)
-
-			{      //%g/%i              gamename/increment
+			{
+				//%g/%i              gamename/increment
+				if (filerr)
+				{
 					fname = string(system_name) + PATH_SEPARATOR + "0000.png";
 					filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
-			}
+				}
 
-			if ((pic_type == TAB_SCREENSHOT) && (extnum == 0))
-			if (filerr)
-			{       //%g/%g+0000.png    gamename/gamename+increment
-			        fname = string(system_name) + PATH_SEPARATOR + string(system_name) + "0000.png";
-			        filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
-			}
+				//%g/%g+0000.png    gamename/gamename+increment
+				if (filerr)
+				{
+					fname = string(system_name) + PATH_SEPARATOR + string(system_name) + "0000.png";
+					filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
+				}
 
-			if ((pic_type == TAB_SCREENSHOT) && (extnum == 0))
-			if (filerr)
-			{       //%g+0000.png       gamename + increment
-			        fname = string(system_name) + "0000.png";
-			        filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
+				//%g+0000.png       gamename + increment
+				if (filerr)
+				{
+					fname = string(system_name) + "0000.png";
+					filerr = OpenRawDIBFile(partpath, fname.c_str(), file);
+				}
 			}
 
 			// Try dir/system.png  %g
