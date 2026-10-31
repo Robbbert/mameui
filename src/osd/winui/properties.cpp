@@ -3054,7 +3054,7 @@ static BOOL SelectEffect(HWND hWnd)
 
 		buff[l] = '\0';
 
-		if (strcmp(buff, m_CurrentOpts.value(OPTION_EFFECT))!=0)
+		if (0 != strcmp(buff, m_CurrentOpts.value(OPTION_EFFECT)))
 		{
 			HWND control = GetDlgItem(hWnd, IDC_EFFECT);
 			emu_set_value(m_CurrentOpts, OPTION_EFFECT, buff);
@@ -3071,7 +3071,7 @@ static BOOL ResetEffect(HWND hWnd)
 	BOOL changed = false;
 	const char *new_value = "none";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_EFFECT))!=0)
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OPTION_EFFECT)))
 	{
 		HWND control = GetDlgItem(hWnd, IDC_EFFECT);
 		emu_set_value(m_CurrentOpts, OPTION_EFFECT, new_value);

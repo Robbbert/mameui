@@ -188,7 +188,7 @@ int SoftwarePicker_LookupIndex(HWND hwndPicker, LPCSTR pszFilename)
 
 string SoftwarePicker_GetImageType(HWND hwndPicker, int nIndex)
 {
-	string type = "flop";
+	string type = "unkn";
 	const device_image_interface *device = SoftwarePicker_LookupDevice(hwndPicker, nIndex);
 
 	if (device)
@@ -534,7 +534,7 @@ static BOOL SoftwarePicker_InternalAddFile(HWND hwndPicker, LPCSTR pszFilename, 
 
 BOOL SoftwarePicker_AddFile(HWND hwndPicker, LPCSTR pszFilename, bool check)
 {
-	char szBuffer[2048] = { };
+	char szBuffer[2048]{};
 
 	Picker_ResetIdle(hwndPicker);
 	pszFilename = NormalizePath(pszFilename, szBuffer, std::size(szBuffer));
@@ -550,7 +550,7 @@ BOOL SoftwarePicker_AddDirectory(HWND hwndPicker, LPCSTR pszDirectory)
 	directory_search_info *pSearchInfo;
 	directory_search_info **ppLast;
 	size_t nSearchInfoSize;
-	char szBuffer[2048] = { };
+	char szBuffer[2048]{};
 
 	pszDirectory = NormalizePath(pszDirectory, szBuffer, std::size(szBuffer));
 
@@ -633,7 +633,7 @@ static BOOL SoftwarePicker_AddEntry(HWND hwndPicker, directory_search_info *pSea
 	if( !utf8_FileName )
 		return FALSE;
 
-	if (!strcmp(utf8_FileName, ".") || !strcmp(utf8_FileName, ".."))
+	if ((0 == strcmp(utf8_FileName, ".")) || (0 == strcmp(utf8_FileName, "..")))
 	{
 		free(utf8_FileName);
 		return TRUE;

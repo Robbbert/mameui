@@ -144,14 +144,19 @@ BOOL SoftwareList_AddFile(HWND hwndPicker, string pszName, string pszListname, s
 	memset(pInfo, 0, nSize);
 
 	// copy the filename
-	strcpy(pInfo->file_name, pszName.c_str());
-	strcpy(pInfo->list_name, pszListname.c_str());
-	if (!pszDescription.empty()) strcpy(pInfo->description, longdots(pszDescription,200).c_str());
-	if (!pszPublisher.empty()) strcpy(pInfo->publisher, longdots(pszPublisher,200).c_str());
-	if (!pszYear.empty()) strcpy(pInfo->year, longdots(pszYear, 8).c_str());
-	if (!pszUsage.empty()) strcpy(pInfo->usage, longdots(pszUsage,200).c_str());
-	if (!pszDevice.empty()) strcpy(pInfo->device, pszDevice.c_str());
-	sprintf(pInfo->full_name,"%s:%s", pInfo->list_name,pInfo->file_name);
+	snprintf(pInfo->file_name, std::size(pInfo->file_name), "%s", pszName.c_str());
+	snprintf(pInfo->list_name, std::size(pInfo->list_name), "%s", pszListname.c_str());
+	if (!pszDescription.empty())
+		snprintf(pInfo->description, std::size(pInfo->description), "%s" ,longdots(pszDescription,200).c_str());
+	if (!pszPublisher.empty())
+		snprintf(pInfo->publisher, std::size(pInfo->publisher), "%s" ,longdots(pszPublisher,200).c_str());
+	if (!pszYear.empty())
+		snprintf(pInfo->year, std::size(pInfo->year), "%s" ,longdots(pszYear, 8).c_str());
+	if (!pszUsage.empty())
+		snprintf(pInfo->usage, std::size(pInfo->usage), "%s" ,longdots(pszUsage,200).c_str());
+	if (!pszDevice.empty())
+		snprintf(pInfo->device, std::size(pInfo->device), "%s" ,pszDevice.c_str());
+	snprintf(pInfo->full_name, std::size(pInfo->full_name), "%s:%s", pInfo->list_name,pInfo->file_name);
 
 	ppNewIndex = (file_info**)malloc((pPickerInfo->file_index_length + 1) * sizeof(*pPickerInfo->file_index));
 	memcpy(ppNewIndex,pPickerInfo->file_index,pPickerInfo->file_index_length * sizeof(*pPickerInfo->file_index));

@@ -22,12 +22,6 @@
 #include "winutf8.h"
 #include "emu_opts.h"
 
-
-#ifdef _MSC_VER
-#define snprintf _snprintf
-#endif
-
-
 //============================================================
 //  TYPE DEFINITIONS
 //============================================================
@@ -307,7 +301,7 @@ static datamap_entry *find_entry(datamap *map, int dlgitem)
 static control_type get_control_type(HWND hwnd)
 {
 	control_type type;
-	TCHAR class_name[256];
+	TCHAR class_name[256]{};
 
 	GetClassName(hwnd, class_name, std::size(class_name));
 	if (!_tcscmp(class_name, WC_BUTTON))
@@ -373,7 +367,7 @@ static void broadcast_changes(datamap *map, HWND dialog, windows_options *o, dat
 		// search for an entry with the same option_name, but is not the exact
 		// same entry
 		that_option_name = map->entries[i].option_name;
-		if (map->entries[i].option_name && (&map->entries[i] != entry) && !strcmp(that_option_name, option_name))
+		if (map->entries[i].option_name && (&map->entries[i] != entry) && (0 == strcmp(that_option_name, option_name)))
 		{
 			// we've found a control sharing the same option; populate it
 			other_control = GetDlgItem(dialog, map->entries[i].dlgitem);
@@ -399,8 +393,8 @@ static int control_operation(datamap *map, HWND dialog, windows_options *o, data
 	};
 	int result = 0;
 	const char *option_name;
-	char option_name_buffer[64];
-	char option_value[1024] = {0, };
+	char option_name_buffer[64]{};
+	char option_value[1024]{};
 
 	HWND hwnd = GetDlgItem(dialog, entry->dlgitem);
 	if (hwnd)
@@ -582,7 +576,7 @@ static void populate_control(datamap *map, HWND hwnd, windows_options *o, datama
 	int int_value = 0;
 	float float_value = 0;
 	int selected_index = 0;
-	char buffer[128];
+	char buffer[128]{};
 	int trackbar_range = 0;
 	int trackbar_pos = 0;
 	double trackbar_range_d = 0;
@@ -734,11 +728,11 @@ static void populate_control(datamap *map, HWND hwnd, windows_options *o, datama
 // Return a string from a float value with trailing zeros removed.
 static char *tztrim(float float_value)
 {
-	static char tz_string[20];
-	char float_string[20];
+	static char tz_string[20]{};
+	char float_string[20]{};
 	int i = 0;
 
-	sprintf(float_string, "%f", float_value);
+	snprintf(float_string, std::size(float_string), "%f", float_value);
 
 	char* ptr = float_string;
 

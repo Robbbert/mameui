@@ -43,7 +43,6 @@ BOOL DriverSupportsSaveState(int);
 BOOL DriverIsVertical(int);
 BOOL DriverIsMechanical(int);
 BOOL DriverIsArcade(int);
-BOOL DriverHasRam(int);
 
 int isDriverVector(const machine_config *config);
 int numberOfSpeakers(const machine_config *config);

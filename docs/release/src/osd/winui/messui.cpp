@@ -388,7 +388,7 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 	// It's also the reason it takes so long to populate the loose software list.
 	HICON hIcon = 0;
 	const game_driver *drv;
-	char buffer[256];
+	char buffer[256]{};
 	const char *iconname;
 
 	if ((nSoftwareType >= 0) && (nSoftwareType < std::size(s_devices)))
@@ -399,7 +399,7 @@ static int GetMessIcon(int drvindex, string nSoftwareType)
 			drv = &driver_list::driver(drvindex);
 			while (drv)
 			{
-				_snprintf(buffer, std::size(buffer), "%s/%s", drv->name, iconname);
+				snprintf(buffer, std::size(buffer), "%s/%s", drv->name, iconname);
 				hIcon = LoadIconFromFile(buffer);
 				if (hIcon)
 					break;
@@ -439,7 +439,7 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 	}
 
 	BOOL b_dir = false;
-	char dir0[2048] = { };
+	char dir0[2048]{};
 	string global_swpath = dir_get_value(13);
 	printf("ProcessSWDir: A: Driver = %s; Global swpath = %s\n",driver_list::driver(drvindex).type.fullname(),global_swpath.c_str());fflush(stdout);
 	if (!global_swpath.empty())
@@ -456,7 +456,7 @@ static std::pair<int, string> ProcessSWDir(int drvindex)
 	printf("ProcessSWDir: C: Global path is %s\n",b_dir ? "valid" : "invalid");fflush(stdout);
 	windows_options o;
 	load_options(o, OPTIONS_GAME, drvindex, 0);
-	char dir1[2048] = { };
+	char dir1[2048]{};
 	char* t1;
 	string local_swpath = o.value(OPTION_SWPATH);
 	printf("ProcessSWDir: D: local path = %s\n",local_swpath.c_str());fflush(stdout);
@@ -691,7 +691,7 @@ void MView_Refresh(HWND hwndMView)
 
 	struct MViewInfo *pMViewInfo;
 	LPCTSTR pszSelection;
-	TCHAR szBuffer[MAX_PATH];
+	TCHAR szBuffer[MAX_PATH]{};
 
 	pMViewInfo = GetMViewInfo(hwndMView);
 	// test
@@ -1271,9 +1271,9 @@ static void MessSetupDevice(common_file_dialog_proc cfd, const device_image_inte
 	// allocate the machine config
 	machine_config config(driver_list::driver(drvindex), MameUIGlobal());
 
-	mess_image_type imagetypes[256];
+	mess_image_type imagetypes[256]{};
 	SetupImageTypes(&config, imagetypes, std::size(imagetypes), true, dev);
-	TCHAR filename[MAX_PATH];
+	TCHAR filename[MAX_PATH]{};
 	BOOL bResult = CommonFileImageDialog(t_s, cfd, filename, &config, imagetypes);
 	free(t_s);
 	CleanupImageTypes(imagetypes, std::size(imagetypes));
@@ -1329,7 +1329,7 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 			dst.erase(i);
 	}
 
-	mess_image_type imagetypes[256];
+	mess_image_type imagetypes[256]{};
 	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, dev);
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
 	BOOL bResult = CommonFileImageDialog(t_s, GetOpenFileName, pszFilename, config, imagetypes);
@@ -1338,7 +1338,7 @@ static BOOL MView_GetOpenFileName(HWND hwndMView, const machine_config *config, 
 
 	if (bResult)
 	{
-		char t2[nFilenameLength];
+		char t2[nFilenameLength]{};
 		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
 		SetSelectedSoftware(drvindex, dev->instance_name(), t2);
 		mvmap[opt_name] = 1;
@@ -1371,7 +1371,7 @@ static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, 
 		// Default to emu directory
 		osd_get_full_path(dst, ".");
 
-	mess_image_type imagetypes[256];
+	mess_image_type imagetypes[256]{};
 	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, NULL); // just get zip & 7z
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
 	BOOL bResult = CommonFileImageDialog(t_s, GetOpenFileName, pszFilename, config, imagetypes);
@@ -1381,7 +1381,7 @@ static BOOL MView_GetOpenItemName(HWND hwndMView, const machine_config *config, 
 	if (bResult)
 	{
 		// Get the Item name out of the full path
-		char t2[nFilenameLength];
+		char t2[nFilenameLength]{};
 		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
 		string t3 = t2; // then convert to a c++ string so we can manipulate it
 		size_t i = t3.find(".zip"); // get rid of zip name and anything after
@@ -1426,7 +1426,7 @@ static BOOL MView_GetCreateFileName(HWND hwndMView, const machine_config *config
 		dst.erase(i);
 
 	TCHAR *t_s = ui_wstring_from_utf8(dst.c_str());
-	mess_image_type imagetypes[256];
+	mess_image_type imagetypes[256]{};
 	SetupImageTypes(config, imagetypes, std::size(imagetypes), true, dev);
 	BOOL bResult = CommonFileImageDialog(t_s, GetSaveFileName, pszFilename, config, imagetypes);
 	free(t_s);
@@ -1434,7 +1434,7 @@ static BOOL MView_GetCreateFileName(HWND hwndMView, const machine_config *config
 
 	if (bResult)
 	{
-		char t2[nFilenameLength];
+		char t2[nFilenameLength]{};
 		wcstombs(t2, pszFilename, nFilenameLength-1); // convert wide string to a normal one
 		SetSelectedSoftware(drvindex, dev->instance_name(), t2);
 		mvmap[dev->instance_name()] = 1;
@@ -1897,7 +1897,7 @@ static void MView_ButtonClick(HWND hwndMView, struct MViewEntry *pEnt, HWND hwnd
 	struct MViewInfo *pMViewInfo;
 	RECT r;
 	BOOL software = false, passes_tests = false;
-	TCHAR szPath[MAX_PATH];
+	TCHAR szPath[MAX_PATH]{};
 	string opt_name = pEnt->dev->instance_name();
 	pMViewInfo = GetMViewInfo(hwndMView);
 

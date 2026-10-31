@@ -11,12 +11,6 @@
 ***************************************************************************/
 
 
-#ifdef _MSC_VER
-#ifndef NONAMELESSUNION
-#define NONAMELESSUNION
-#endif
-#endif
-
 // standard windows headers
 #include <windows.h>
 #include <windowsx.h>
@@ -38,10 +32,6 @@
 // MAME headers
 #include "winutf8.h"
 #include "corestr.h"
-
-#ifdef _MSC_VER
-#define snprintf _snprintf
-#endif
 
 static struct ComboBoxHistoryTab
 {
@@ -425,7 +415,7 @@ INT_PTR CALLBACK FilterDialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lPa
 
 		if (folder)
 		{
-			char tmp[80];
+			char tmp[80]{};
 
 			win_set_window_text_utf8(GetDlgItem(hDlg, IDC_FILTER_EDIT), g_FilterText.c_str());
 			Edit_SetSel(GetDlgItem(hDlg, IDC_FILTER_EDIT), 0, -1);

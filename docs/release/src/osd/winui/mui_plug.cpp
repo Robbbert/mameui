@@ -19,6 +19,9 @@ Determine which plugins are valid, which ones are wanted and which ones are not 
 =================================================================================================== */
 #include "emu.h"
 #include <windows.h>
+#include <iostream>
+#include <fstream>
+#include <locale>
 
 #include "fileio.h"
 #include "osdcore.h"
@@ -185,7 +188,9 @@ void mui_plugin_options::parse_ini_file(util::core_file &inifile)
 std::string mui_plugin_options::output_ini() const
 {
 	core_options opts = create_core_options(*this);
-	return opts.output_ini();
+	std::stringstream output;
+	opts.output_ini(output);
+	return output.str();
 }
 
 
@@ -222,14 +227,14 @@ void mui_plugin_options::scan_directory(const std::string &path, bool recursive)
 		// iterate over all files in the directory
 		for (const osd::directory::entry *entry = directory->read(); entry != nullptr; entry = directory->read())
 		{
-			if (entry->type == osd::directory::entry::entry_type::FILE && !strcmp(entry->name, "plugin.json"))
+			if (entry->type == osd::directory::entry::entry_type::FILE && (0 == strcmp(entry->name, "plugin.json")))
 			{
 				load_plugin(util::path_concat(path, entry->name));
 			}
 			else
 			if (entry->type == osd::directory::entry::entry_type::DIR)
 			{
-				if (recursive && strcmp(entry->name, ".") && strcmp(entry->name, ".."))
+				if (recursive && (0 != strcmp(entry->name, ".")) && (0 != strcmp(entry->name, "..")))
 					scan_directory(util::path_concat(path, entry->name), recursive);
 			}
 		}
@@ -355,11 +360,15 @@ std::pair<std::string, std::string>mui_plugin_options::split_into_lists(windows_
 		std::string pluglist(output_ini());
 
 		// write new plugin.ini
-		emu_file file(GetIniDir(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-		if (file.open("plugin.ini"))
-			osd_printf_error("Unable to create plugin.ini, changes lost\n");
+		std::string filename = GetIniDir() + PATH_SEPARATOR + "plugin.ini";
+		std::ofstream file;
+		file.imbue(std::locale::classic());
+		file.open(filename);
+		if (!file.is_open() || file.bad() || file.fail())
+			printf("%s: Unable to open for writing\n",filename.c_str());
 		else
-			file.puts(pluglist);
+			file << pluglist;
+		file.close();
 	}
 	else
 	if (nGame >= 0)
@@ -440,11 +449,15 @@ void mui_plugin_options::init_plug(windows_options& o)
 		std::string pluglist(output_ini());
 
 		// write new plugin.ini
-		emu_file file(GetIniDir(), OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-		if (file.open("plugin.ini"))
-			osd_printf_error("Unable to create new plugin.ini\n");
+		std::string filename = GetIniDir() + PATH_SEPARATOR + "plugin.ini";
+		std::ofstream file;
+		file.imbue(std::locale::classic());
+		file.open(filename);
+		if (!file.is_open() || file.bad() || file.fail())
+			printf("%s: Unable to open for writing\n",filename.c_str());
 		else
-			file.puts(pluglist);
+			file << pluglist;
+		file.close();
 	}
 }
 

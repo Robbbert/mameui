@@ -765,9 +765,9 @@ static INT_PTR CALLBACK dialog_proc(HWND dlgwnd, UINT msg, WPARAM wparam, LPARAM
 			command = LOWORD(wparam);
 
 			buf = win_get_window_text_utf8((HWND) lparam);
-			if (!strcmp(buf.c_str(), DLGTEXT_OK))
+			if (0 == strcmp(buf.c_str(), DLGTEXT_OK))
 				command = IDOK;
-			else if (!strcmp(buf.c_str(), DLGTEXT_CANCEL))
+			else if (0 == strcmp(buf.c_str(), DLGTEXT_CANCEL))
 				command = IDCANCEL;
 			else
 				command = 0;

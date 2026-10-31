@@ -27,7 +27,6 @@
 #include "mui_opts.h"
 #include "emu_opts.h"
 #include "drivenum.h"
-#include "machine/ram.h"
 #include <shlwapi.h>
 #include "corestr.h"
 #include "path.h"
@@ -59,7 +58,6 @@ struct DriversInfo
 	bool usesMouse;
 	bool supportsSaveState;
 	bool isVertical;
-	bool hasRam;
 };
 
 static std::vector<DriversInfo> drivers_info;
@@ -79,7 +77,6 @@ enum
 	DRIVER_CACHE_LIGHTGUN   = 0x0800,
 	DRIVER_CACHE_VECTOR     = 0x1000,
 	DRIVER_CACHE_MOUSE      = 0x2000,
-	DRIVER_CACHE_RAM        = 0x4000,
 };
 
 /***************************************************************************
@@ -93,19 +90,14 @@ void __cdecl ErrorMsg(const char* fmt, ...)
 {
 	static FILE* pFile = NULL;
 	DWORD dwWritten;
-	char buf[5000];
-	char buf2[5000];
+	char buf[5000]{};
+	char buf2[5000]{};
 	va_list va;
-
 	va_start(va, fmt);
-
-	vsprintf(buf, fmt, va);
-
+	vsnprintf(buf, std::size(buf), fmt, va);
 	win_message_box_utf8(GetActiveWindow(), buf, MAMEUINAME, MB_OK | MB_ICONERROR);
 
-	strcpy(buf2, MAMEUINAME ": ");
-	strcat(buf2,buf);
-	strcat(buf2, "\n");
+	snprintf(buf2, std::size(buf2), "MAMEUINAME : %s\n", buf);
 
 	WriteFile(GetStdHandle(STD_OUTPUT_HANDLE), buf2, strlen(buf2), &dwWritten, NULL);
 
@@ -123,15 +115,11 @@ void __cdecl ErrorMsg(const char* fmt, ...)
 
 void __cdecl dprintf(const char* fmt, ...)
 {
-	char buf[5000];
+	char buf[5000]{};
 	va_list va;
-
 	va_start(va, fmt);
-
-	_vsnprintf(buf,sizeof(buf),fmt,va);
-
+	vsnprintf(buf, std::size(buf), fmt, va);
 	win_output_debug_string_utf8(buf);
-
 	va_end(va);
 }
 
@@ -162,9 +150,8 @@ int winui_message_box_utf8(HWND hWnd, const char *text, const char *caption, UIN
 
 void ErrorMessageBox(const char *fmt, ...)
 {
-	char buf[1024];
+	char buf[1024]{};
 	va_list ptr;
-
 	va_start(ptr, fmt);
 	vsnprintf(buf, std::size(buf), fmt, ptr);
 	winui_message_box_utf8(GetMainWindow(), buf, MAMEUINAME, MB_ICONERROR | MB_OK);
@@ -363,7 +350,7 @@ char* MyStrStrI(const char* pFirst, const char* pSrch)
 
 char * ConvertToWindowsNewlines(const char *source)
 {
-	static char buf[2048 * 2048];
+	static char buf[2048 * 2048]{};
 	char *dest;
 
 	dest = buf;
@@ -388,21 +375,21 @@ char * ConvertToWindowsNewlines(const char *source)
  */
 const char * GetDriverFilename(int drvindex)
 {
-	static char tmp[2048] = { };
+	static char tmp[2048]{};
 	if (drvindex >= 0)
 	{
 		string driver = string(core_filename_extract_base(driver_list::driver(drvindex).type.source()));
-		strcpy(tmp, driver.c_str());
+		snprintf(tmp, std::size(tmp), "%s", driver.c_str());
 	}
 	return tmp;
 }
 
 BOOL isDriverVector(const machine_config *config)
 {
-	const screen_device *screen = screen_device_enumerator(config->root_device()).first();
+	auto *output = video_output_interface_enumerator(config->root_device()).first();
 
-	if (screen)
-		if (SCREEN_TYPE_VECTOR == screen->screen_type())
+	if (output) 
+		if (output->is_vector())
 			return true;
 
 	return false;
@@ -410,7 +397,7 @@ BOOL isDriverVector(const machine_config *config)
 
 int numberOfScreens(const machine_config *config)
 {
-	screen_device_enumerator scriter(config->root_device());
+	video_output_interface_enumerator scriter(config->root_device());
 	return scriter.count();
 }
 
@@ -461,9 +448,6 @@ static void SetDriversInfo()
 		if (gameinfo->usesMouse)
 			cache += DRIVER_CACHE_MOUSE;
 
-		if (gameinfo->hasRam)
-			cache += DRIVER_CACHE_RAM;
-
 		SetDriverCache(ndriver, cache);
 	}
 }
@@ -484,16 +468,13 @@ static void InitDriversInfo()
 		gameinfo = &drivers_info[ndriver];
 		machine_config config(*gamedrv, MameUIGlobal());
 
-		bool const have_parent(strcmp(gamedrv->parent, "0"));
+		bool const have_parent(0 != strcmp(gamedrv->parent, "0"));
 		auto const parent_idx(have_parent ? driver_list::find(gamedrv->parent) : -1);
 		gameinfo->isClone = ( !have_parent || (0 > parent_idx) || BIT(GetDriverCacheLower(parent_idx),9)) ? false : true;
 		gameinfo->isBroken = (cache & 0x4040) ? true : false;  // (MACHINE_NOT_WORKING | MACHINE_MECHANICAL)
 		gameinfo->supportsSaveState = BIT(cache, 7);  //MACHINE_SUPPORTS_SAVE
 		gameinfo->isHarddisk = false;
 		gameinfo->isVertical = BIT(cache, 2);  //ORIENTATION_SWAP_XY
-
-		ram_device_enumerator iter1(config.root_device());
-		gameinfo->hasRam = (iter1.first() );
 
 		for (device_t &device : device_enumerator(config.root_device()))
 			for (region = rom_first_region(device); region; region = rom_next_region(region))
@@ -594,7 +575,6 @@ static int InitDriversCache()
 		gameinfo->usesTrackball     = ((cache_upper & DRIVER_CACHE_TRACKBALL) != 0);
 		gameinfo->usesLightGun      = ((cache_upper & DRIVER_CACHE_LIGHTGUN)  != 0);
 		gameinfo->usesMouse         = ((cache_upper & DRIVER_CACHE_MOUSE)     != 0);
-		gameinfo->hasRam            = ((cache_upper & DRIVER_CACHE_RAM)       != 0);
 	}
 
 	printf("InitDriversCache: Finished\n");fflush(stdout);
@@ -609,7 +589,7 @@ static struct DriversInfo* GetDriversInfo(int drvindex)
 
 		drivers_info.clear();
 		drivers_info.resize(driver_list::total());
-		std::fill(drivers_info.begin(), drivers_info.end(), DriversInfo{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
+		std::fill(drivers_info.begin(), drivers_info.end(), DriversInfo{ });
 		printf("DriversInfo: B\n");fflush(stdout);
 		InitDriversCache();
 	}
@@ -753,14 +733,6 @@ BOOL DriverIsVertical(int drvindex)
 		return GetDriversInfo(drvindex)->isVertical;
 }
 
-BOOL DriverHasRam(int drvindex)
-{
-	if (drvindex < 0)
-		return 0;
-	else
-		return GetDriversInfo(drvindex)->hasRam;
-}
-
 void FlushFileCaches()
 {
 	util::archive_file::cache_clear();
@@ -889,18 +861,16 @@ DWORD win_get_current_directory_utf8(size_t bufferlength, char* buffer)
 		return 0;
 	}
 
-	char* utf8_buffer = NULL;
-	utf8_buffer = ui_utf8_from_wstring(t_buffer);
+	char* utf8_buffer = ui_utf8_from_wstring(t_buffer);
 
 	free(t_buffer);
 
 	if( !utf8_buffer )
 		return 0;
 
-	strncpy(buffer, utf8_buffer, bufferlength);
+	snprintf(buffer, bufferlength, "%s", utf8_buffer);
 
-	if( utf8_buffer )
-		free(utf8_buffer);
+	free(utf8_buffer);
 
 	return result;
 }
