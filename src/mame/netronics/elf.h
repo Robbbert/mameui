@@ -6,8 +6,8 @@
 #pragma once
 
 
+#include "bus/elf2/exp.h"
 #include "cpu/cosmac/cosmac.h"
-//#include "imagedev/cassette.h"
 #include "imagedev/snapquik.h"
 #include "machine/mm74c922.h"
 #include "video/cdp1861.h"
@@ -32,7 +32,7 @@ public:
 		, m_kb(*this, MM74C923_TAG)
 		, m_led_l(*this, DM9368_L_TAG)
 		, m_led_h(*this, DM9368_H_TAG)
-		//, m_cassette(*this, "cassette")
+		, m_exp(*this, "exp")
 		, m_ram(*this, RAM_TAG)
 		, m_special(*this, "SPECIAL")
 		, m_adr_l(*this, "adr_l")
@@ -52,6 +52,7 @@ protected:
 private:
 	uint8_t dispon_r();
 	uint8_t data_r();
+	uint8_t memory_r(offs_t offset);
 	void data_w(uint8_t data);
 	void memory_w(offs_t offset, uint8_t data);
 	int wait_r();
@@ -67,7 +68,7 @@ private:
 	required_device<mm74c922_device> m_kb;
 	required_device<dm9368_device> m_led_l;
 	required_device<dm9368_device> m_led_h;
-	//required_device<cassette_image_device> m_cassette;
+	required_device<elf2_expansion_bus_device> m_exp;
 	required_device<ram_device> m_ram;
 	required_ioport m_special;
 	required_device<dm9368_device> m_adr_l;
