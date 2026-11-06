@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8175 -->
+<!-- Number of items in this list = 8181 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -6132,6 +6132,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxse2d02284ce6e0">
+		<description>Ant Attack 3D 128K (2026)(AlColella)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="109122">
+				<rom name="Ant Attack 3D 128K (2026)(AlColella).tap" size="109122" crc="82c9b3cf" sha1="e2d02284ce6e07a5092b0063316f262aa1dcf6c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfefd5dc2141c8">
+		<description>Ant Attack 3D 48K (2026)(AlColella)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42554">
+				<rom name="Ant Attack 3D 48K (2026)(AlColella).tap" size="42554" crc="539d1507" sha1="fefd5dc2141c8cf0fa0f909c09e761aeb030e919"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse95b8140f8db5">
 		<description>Ant Attack</description>
 		<year>????</year>
@@ -8092,6 +8112,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs173c3c7722bbf">
+		<description>Back to the Gemba 128K+2A (2015)(Gemba Boys)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="121502">
+				<rom name="Back to the Gemba 128K+2A (2015)(Gemba Boys).tap" size="121502" crc="3fd44c58" sha1="173c3c7722bbf33f1f90c1fdc7bb0b2089a8db05"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsfb68693aba409">
 		<description>Backgammon (1983)(Pi Software)</description>
 		<year>????</year>
@@ -8499,16 +8529,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31038">
 				<rom name="Barmy Burgers (1983)(Blaby Computer Games).tap" size="31038" crc="15d45359" sha1="8832a3ef5326c39d23ff2a50210a1feeb599ee9c"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs9045e2c1c34d2">
-		<description>Barmy Burgers 48K (1983)(Blaby Computer Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="31126">
-				<rom name="Barmy Burgers 48K (1983)(Blaby Computer Games).tzx" size="31126" crc="70455c9d" sha1="9045e2c1c34d26a44109b54d1d09b1c53d7e4ea7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10132,6 +10152,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs35b4f685ce746">
+		<description>Bill &amp; Ted's Excellent Game Boy Adventure ZX v1.1 128K (2026)(kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="84833">
+				<rom name="Bill &amp; Ted's Excellent Game Boy Adventure ZX v1.1 128K (2026)(kirby2000).tzx" size="84833" crc="1d6ab283" sha1="35b4f685ce74611800b184d932afaae3ff2c3772"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7e4914bf6bc8b">
 		<description>Billboard - Pasteman Pat (1989)(Firebird)</description>
 		<year>????</year>
@@ -11302,6 +11332,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs23ef150cc1e30">
+		<description>Bloqtrix 128K (2026)(Gabriel Cuesta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="31961">
+				<rom name="Bloqtrix 128K (2026)(Gabriel Cuesta).tap" size="31961" crc="43ade574" sha1="23ef150cc1e30a2e7ef8e9060f5eae34bd1fae9b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs3233f15857ec4">
+		<description>Bloqtrix 48K (2026)(Gabriel Cuesta)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="29725">
+				<rom name="Bloqtrix 48K (2026)(Gabriel Cuesta).tap" size="29725" crc="ccc94daa" sha1="3233f15857ec4118378a40aa68cdb3bea5849b4d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsb700695b9ad78">
 		<description>Blue Max (1984)(US Gold)</description>
 		<year>????</year>
@@ -12192,6 +12242,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf00bc66b4a2f7">
+		<description>Boxing ZX 48K-AY (2026)(FG&amp;AI)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="30835">
+				<rom name="Boxing ZX 48K-AY (2026)(FG&amp;AI).tap" size="30835" crc="165ac82c" sha1="f00bc66b4a2f7a33bf52a39f9231e6e870211611"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs563c57db91c6f">
 		<description>boxing</description>
 		<year>????</year>
@@ -12329,16 +12389,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8870">
 				<rom name="Breakout (1982)(C-Tech).tap" size="8870" crc="4b9e6a31" sha1="cfe37b5d7d129ff3fa92df8bc19106e9602eba2e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs81d2597224413">
-		<description>Breakthru 48K (1986)(U.S. Gold)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49888">
-				<rom name="Breakthru 48K (1986)(U.S. Gold).tzx" size="49888" crc="b199699f" sha1="81d2597224413b9f0093613191338fb8bf711ee1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13442,6 +13492,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs311121997ddd1">
+		<description>Cafetonic Strikes Back! v1.2 - HARD 48K-128K (2026)(Claus Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="37036">
+				<rom name="Cafetonic Strikes Back! v1.2 - HARD 48K-128K (2026)(Claus Games).tap" size="37036" crc="dac0223e" sha1="311121997ddd1251896f21ebbb8de93d0c76f16e"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs45123518d3012">
+		<description>Cafetonic Strikes Back! v1.2 - NORMAL 48K-128K (2026)(Claus Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36780">
+				<rom name="Cafetonic Strikes Back! v1.2 - NORMAL 48K-128K (2026)(Claus Games).tap" size="36780" crc="81d0e4dd" sha1="45123518d30122198533c097a0f5f4863d17267a"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs09bae7cdc847e">
 		<description>Cafetonic v1.1 48K-128K (2026)(Claus Games)</description>
 		<year>????</year>
@@ -13633,12 +13703,12 @@
 		</part>
 	</software>
 	<software name="zxsc69a3a3071141">
-		<description>Captain Dynamo</description>
+		<description>Captain Dynamo 48K-128K (1992)(Codemasters)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="68533">
-				<rom name="Captain Dynamo.tzx" size="68533" crc="280883d6" sha1="c69a3a3071141251aa26e9e3602ec44bab68f497"/>
+				<rom name="Captain Dynamo 48K-128K (1992)(Codemasters).tzx" size="68533" crc="280883d6" sha1="c69a3a3071141251aa26e9e3602ec44bab68f497"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13919,16 +13989,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="36864">
 				<rom name="Casey Jones (1984)(Blaby Computer Games)[a].tap" size="36864" crc="f225d41b" sha1="dc5bf89d801a23a9a29a109e13c2b9aca5b7a85b"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs6b8e2c07f5ae5">
-		<description>Casey Jones 48K (1984)(Blaby Computer Games)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="36421">
-				<rom name="Casey Jones 48K (1984)(Blaby Computer Games).tzx" size="36421" crc="de4b4598" sha1="6b8e2c07f5ae58e2d010a59b6c95ae1b4a614d92"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15263,22 +15323,22 @@
 		</part>
 	</software>
 	<software name="zxs8361d53b3786d">
-		<description>Chispy 128K EN (2022)(xavisan)</description>
+		<description>Chispy EN 128K (2022)(Xavisan)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43965">
-				<rom name="Chispy 128K EN (2022)(xavisan).tap" size="43965" crc="93b9fa2a" sha1="8361d53b3786d79f05a4710c2cb3eb10b95dea17"/>
+				<rom name="Chispy EN 128K (2022)(Xavisan).tap" size="43965" crc="93b9fa2a" sha1="8361d53b3786d79f05a4710c2cb3eb10b95dea17"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxs3f239e35906a8">
-		<description>Chispy 128K ES (2022)(xavisan)</description>
+		<description>Chispy ES 128K (2022)(Xavisan)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43995">
-				<rom name="Chispy 128K ES (2022)(xavisan).tap" size="43995" crc="c2c964b0" sha1="3f239e35906a878402b0800a5d7592404b26eb86"/>
+				<rom name="Chispy ES 128K (2022)(Xavisan).tap" size="43995" crc="c2c964b0" sha1="3f239e35906a878402b0800a5d7592404b26eb86"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16022,6 +16082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf9a107562d2c4">
+		<description>Code-112 48K-128K (2020)(PC NONO Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47864">
+				<rom name="Code-112 48K-128K (2020)(PC NONO Games).tap" size="47864" crc="d3a6349d" sha1="f9a107562d2c4461fd0d5d752e24958132a33b10"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs28aa0e851dd86">
 		<description>Coingame (19xx)(Ceran Software)(De)</description>
 		<year>????</year>
@@ -16033,12 +16103,12 @@
 		</part>
 	</software>
 	<software name="zxs87a8bc9680564">
-		<description>COINZ are mine 128K (2023)(Drunk Fly)</description>
+		<description>COINZ are mine 48K-128K (2023)(Drunk Fly)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31418">
-				<rom name="COINZ are mine 128K (2023)(Drunk Fly).tap" size="31418" crc="1c0f1177" sha1="87a8bc9680564368e04ec5035a9f92978bb6eeda"/>
+				<rom name="COINZ are mine 48K-128K (2023)(Drunk Fly).tap" size="31418" crc="1c0f1177" sha1="87a8bc9680564368e04ec5035a9f92978bb6eeda"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16083,62 +16153,62 @@
 		</part>
 	</software>
 	<software name="zxs96e3b236bea59">
-		<description>Colonos III Part1 EN 128K (2022)(Jose Manuel Gris)</description>
+		<description>Colonos III Part1 EN 48K-128K (2022)(Jose Manuel Gris)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40239">
-				<rom name="Colonos III Part1 EN 128K (2022)(Jose Manuel Gris).tap" size="40239" crc="d479a589" sha1="96e3b236bea59cd59cde57c249bc1cabb2776652"/>
+				<rom name="Colonos III Part1 EN 48K-128K (2022)(Jose Manuel Gris).tap" size="40239" crc="d479a589" sha1="96e3b236bea59cd59cde57c249bc1cabb2776652"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxs6f74b66f56f20">
-		<description>Colonos III Part2 EN 128K (2022)(Jose Manuel Gris)</description>
+		<description>Colonos III Part2 EN 48K-128K (2022)(Jose Manuel Gris)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37801">
-				<rom name="Colonos III Part2 EN 128K (2022)(Jose Manuel Gris).tap" size="37801" crc="9d287b2d" sha1="6f74b66f56f20875c61a004b0753abff594bcdb8"/>
+				<rom name="Colonos III Part2 EN 48K-128K (2022)(Jose Manuel Gris).tap" size="37801" crc="9d287b2d" sha1="6f74b66f56f20875c61a004b0753abff594bcdb8"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxse0c8b2284b738">
-		<description>Colonos III Part3 EN 128K (2022)(Jose Manuel Gris)</description>
+		<description>Colonos III Part3 EN 48K-128K (2022)(Jose Manuel Gris)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37320">
-				<rom name="Colonos III Part3 EN 128K (2022)(Jose Manuel Gris).tap" size="37320" crc="5fec4b64" sha1="e0c8b2284b7387b0541b957e7e3d33bf12a15ad9"/>
+				<rom name="Colonos III Part3 EN 48K-128K (2022)(Jose Manuel Gris).tap" size="37320" crc="5fec4b64" sha1="e0c8b2284b7387b0541b957e7e3d33bf12a15ad9"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxs06bf1705e5ae4">
-		<description>Colonos III Parte1 ES (2022)(Jose Manuel Gris)</description>
+		<description>Colonos III Parte1 ES 48K-128K (2022)(Jose Manuel Gris)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="40344">
-				<rom name="Colonos III Parte1 ES (2022)(Jose Manuel Gris).tap" size="40344" crc="9faec737" sha1="06bf1705e5ae44f87e8388af4abcbcb43db5b02b"/>
+				<rom name="Colonos III Parte1 ES 48K-128K (2022)(Jose Manuel Gris).tap" size="40344" crc="9faec737" sha1="06bf1705e5ae44f87e8388af4abcbcb43db5b02b"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxsbf457b76092d7">
-		<description>Colonos III Parte2 ES (2022)(Jose Manuel Gris)</description>
+		<description>Colonos III Parte2 ES 48K-128K (2022)(Jose Manuel Gris)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37808">
-				<rom name="Colonos III Parte2 ES (2022)(Jose Manuel Gris).tap" size="37808" crc="3f4195f8" sha1="bf457b76092d7ad44c7ae6cc89a2c52ea27350ef"/>
+				<rom name="Colonos III Parte2 ES 48K-128K (2022)(Jose Manuel Gris).tap" size="37808" crc="3f4195f8" sha1="bf457b76092d7ad44c7ae6cc89a2c52ea27350ef"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="zxs0eaa9ad9a58c4">
-		<description>Colonos III Parte3 ES 128K (2022)(Jose Manuel Gris)</description>
+		<description>Colonos III Parte3 ES 48K-128K (2022)(Jose Manuel Gris)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37325">
-				<rom name="Colonos III Parte3 ES 128K (2022)(Jose Manuel Gris).tap" size="37325" crc="9f90edc5" sha1="0eaa9ad9a58c4ed9727ef43dec7910c18fe0045b"/>
+				<rom name="Colonos III Parte3 ES 48K-128K (2022)(Jose Manuel Gris).tap" size="37325" crc="9f90edc5" sha1="0eaa9ad9a58c4ed9727ef43dec7910c18fe0045b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16179,6 +16249,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="23511">
 				<rom name="Coloris (1990)(WoMo-Team).tap" size="23511" crc="349ff927" sha1="d83bceee0f88ac4ceb70b64ca5a307f16617776f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs1412dd6039351">
+		<description>Coloristic 48K-128K (2020)(Martin Borik)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="16436">
+				<rom name="Coloristic 48K-128K (2020)(Martin Borik).tap" size="16436" crc="1c824bfb" sha1="1412dd60393515342aa550ac8ff6f1d3faed48c8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -16349,6 +16429,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="43332">
 				<rom name="Comeme el Chip 128K (2019)(Beyker Soft).tap" size="43332" crc="1ef8fe2b" sha1="67cabecb66f8b35d33b9cd55a45052d44d53ce37"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs5df1574936834">
+		<description>Comeme el Chip 48K (2019)(Beyker Soft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="43392">
+				<rom name="Comeme el Chip 48K (2019)(Beyker Soft).tzx" size="43392" crc="8824f60e" sha1="5df15749368348d898e7071d339474bf115d18cd"/>
 			</dataarea>
 		</part>
 	</software>
@@ -17872,6 +17962,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs10459e8020feb">
+		<description>Curse of Dusarlyn, The EN 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="92110">
+				<rom name="Curse of Dusarlyn, The EN 128K (2026)(RetroWorks).tzx" size="92110" crc="8f50c153" sha1="10459e8020febfd946f6726ed0c07594bd4034b2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsee83a5319911e">
+		<description>Curse of Dusarlyn, The ES 128K (2026)(RetroWorks)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="92079">
+				<rom name="Curse of Dusarlyn, The ES 128K (2026)(RetroWorks).tzx" size="92079" crc="7494a0d7" sha1="ee83a5319911e626968010f259b739fcc6e510d2"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs53734a8018541">
 		<description>Curse Of The 7 Faces v4.1 (1985)(Artic Computing)</description>
 		<year>????</year>
@@ -18269,6 +18379,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="52324">
 				<rom name="Cygnus - Alpha 128K (2020)(Steve A.J. Broad).tap" size="52324" crc="830a0b99" sha1="76fcbd9a88d19035ff1324cee3dcf3703c36fd75"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa1295485796f3">
+		<description>Cyrus II Chess 48K-128K (1986)(Alligata)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39926">
+				<rom name="Cyrus II Chess 48K-128K (1986)(Alligata).tap" size="39926" crc="2eee30a5" sha1="a1295485796f3d11cd46b871dfb1d72a37082a8f"/>
 			</dataarea>
 		</part>
 	</software>
@@ -35099,16 +35219,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="8200">
 				<rom name="JumBert (1986)(Norbert Roescher).tap" size="8200" crc="88452295" sha1="c6714720f381f9d1660f67ab6a5336c0f5d6daa2"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs000746caa3a91">
-		<description>Jumbly 48K (1983)(DK'Tronics)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="40334">
-				<rom name="Jumbly 48K (1983)(DK'Tronics).tzx" size="40334" crc="44a5a3fd" sha1="000746caa3a91406c9175c0c8d3c8af42db9f330"/>
 			</dataarea>
 		</part>
 	</software>
@@ -67382,26 +67492,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="zxs2c762abf99de1">
-		<description>Vulcan 128K (1986)(CCS)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="53740">
-				<rom name="Vulcan 128K (1986)(CCS).tzx" size="53740" crc="c1299a09" sha1="2c762abf99de1a1e04e3b68458db1643c784e2b8"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsfc7697649ef63">
-		<description>Vulcan 48K (1986)(CCS)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49796">
-				<rom name="Vulcan 48K (1986)(CCS).tzx" size="49796" crc="378fc601" sha1="fc7697649ef630c821350e7e48c9686c2a2e66b3"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="zxs089770612877f">
 		<description>Wacky Darts</description>
 		<year>????</year>
@@ -67899,16 +67989,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="48631">
 				<rom name="Who Dares Wins 2 (1986)(Alligata Software Ltd).tap" size="48631" crc="02dc6931" sha1="5074226a4bddd707912ba1fa07db453e7998c94e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsde4cffd0bd0d6">
-		<description>Who Dares Wins II 48K (1986)(Alligata)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="48692">
-				<rom name="Who Dares Wins II 48K (1986)(Alligata).tzx" size="48692" crc="bf14f1aa" sha1="de4cffd0bd0d6ceb6b55e96eca42c854914c7c2a"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69899,16 +69979,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37966">
 				<rom name="Zombie Calavera Prologue 48K (2010)(Mojon Twins).tap" size="37966" crc="9eaf2b79" sha1="7d85e0f206a5383c4b7eeb4d71468a8e2b329275"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxs68194cc089926">
-		<description>Zombie Calavera Prologue 48K (2010)(The Mojon Twins)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="38000">
-				<rom name="Zombie Calavera Prologue 48K (2010)(The Mojon Twins).tzx" size="38000" crc="bb2c916b" sha1="68194cc089926197af43ef82179eb71250f5bddb"/>
 			</dataarea>
 		</part>
 	</software>
@@ -77849,16 +77919,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="31716">
 				<rom name="_Nuclear Attack.TAP" size="31716" crc="1df6b922" sha1="ab18e9b43697db726f765fd080c174c796fb8c4e"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxscc5813d6df9bc">
-		<description>_Nuke Lear 48K (1984)(CCS)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="30334">
-				<rom name="_Nuke Lear 48K (1984)(CCS).tzx" size="30334" crc="f3e65284" sha1="cc5813d6df9bcf8b77354bbd14f1638f9f3715bd"/>
 			</dataarea>
 		</part>
 	</software>

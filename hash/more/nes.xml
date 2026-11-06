@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 11002 -->
+<!-- Number of items in this list = 11011 -->
 <softwarelist name="nes" description="nes loose roms">
 	<software name="nesaf690847c0e39">
 		<description>'89 Dennou Kyuusei Uranai (J) [!]</description>
@@ -13092,6 +13092,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes4e3addb54100f">
+		<description>Bucky O'Hare - Special Edition (2026)(DarthVaderX)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Bucky O'Hare - Special Edition (2026)(DarthVaderX).nes" size="262160" crc="3ca18c64" sha1="4e3addb54100f0f4356160579f414e8f73b97bbb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nese9484835eb02d">
 		<description>Buggy Popper (Japan) (2)</description>
 		<year>????</year>
@@ -14339,6 +14349,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="393232">
 				<rom name="Captain Tsubasa II - Super Striker (Japan).nes" size="393232" crc="867d064d" sha1="d63bfe4759a8e01956a7cfb6b43799f5696446f6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes7bfedb661fd3f">
+		<description>Captain Tsubasa Plus (2026)(V. Hernandez)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Captain Tsubasa Plus (2026)(V. Hernandez).nes" size="393232" crc="204f8edc" sha1="7bfedb661fd3f5e41588c449186af2d554e925a5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15622,6 +15642,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nes68b736e2f6acd">
+		<description>Captain Tsubasa Vol. II - Super Striker Plus v1.2 (2026)(V. Hernandez)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="786448">
+				<rom name="Captain Tsubasa Vol. II - Super Striker Plus v1.2 (2026)(V. Hernandez).nes" size="786448" crc="2d17945d" sha1="68b736e2f6acda2f2e8815286354f6f81e25562c"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesee71d0bb4f76b">
 		<description>Captain Tsubasa Vol. II - Super Striker T-Chs (2025)(Kuixinwu, Jujue Ronghua)</description>
 		<year>????</year>
@@ -16009,6 +16039,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Captain Tsubasa Vol. II unknown title by farouk.nes" size="524304" crc="287d1313" sha1="fc72f4d7e9b57f86d30510db962162cee3d81ad7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes88ffc49e3bccb">
+		<description>Car Park (2025)(EvgenyKz &amp; Lancuster)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="49168">
+				<rom name="Car Park (2025)(EvgenyKz &amp; Lancuster).nes" size="49168" crc="02d74be5" sha1="88ffc49e3bccb74b47718bc5971d2295b4fb68e8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -18593,12 +18633,12 @@
 		</part>
 	</software>
 	<software name="nes22d865adf410b">
-		<description>Chouyoku Senki ESTIQUE God Mode (2025)(darthvaderx)</description>
+		<description>Chouyoku Senki ESTIQUE - God Mode (Japan)(2025)(DarthVaderX)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
-				<rom name="Chouyoku Senki ESTIQUE God Mode (2025)(darthvaderx).nes" size="524304" crc="b412dbca" sha1="22d865adf410b4c5f1fabffdf5591698a44bb527"/>
+				<rom name="Chouyoku Senki ESTIQUE - God Mode (Japan)(2025)(DarthVaderX).nes" size="524304" crc="b412dbca" sha1="22d865adf410b4c5f1fabffdf5591698a44bb527"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26482,6 +26522,46 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="nescbec2dfc44ec9">
+		<description>Dragon Ball 3 - Gokuu Den (Japan, Rev 1)(1989)(Bandai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="393232">
+				<rom name="Dragon Ball 3 - Gokuu Den (Japan, Rev 1)(1989)(Bandai).nes" size="393232" crc="ed45ce26" sha1="cbec2dfc44ec97928048bce33055fae11314e9f4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes9e0a5bd376225">
+		<description>Dragon Ball 3 - La Lenda de Goku T-Por v1.1 (2026)(PatchClan, Melhorado)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Dragon Ball 3 - La Lenda de Goku T-Por v1.1 (2026)(PatchClan, Melhorado).nes" size="524304" crc="ddd21dec" sha1="9e0a5bd376225cdd22db164d4f3e27afaf3ac08b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesc119d5f6e4dcd">
+		<description>Dragon Ball 3 - La Leyenda de Goku T-Spa v1.1 (2026)(PatchClan, Mejorado)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Dragon Ball 3 - La Leyenda de Goku T-Spa v1.1 (2026)(PatchClan, Mejorado).nes" size="524304" crc="323532d7" sha1="c119d5f6e4dcdbeebb7b42e836f8ea89d9e46a09"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes62bc5d133cb97">
+		<description>Dragon Ball 3 - Legend of Goku T-Eng v1.1 (2026)(PatchClan)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Dragon Ball 3 - Legend of Goku T-Eng v1.1 (2026)(PatchClan).nes" size="524304" crc="7164bbd1" sha1="62bc5d133cb977f75fee342fd5fb8ea86c6ea6c7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="nesad98f5001b6df">
 		<description>Dragon Ball Adventure - Qi Long Zhu Da Mao Xian</description>
 		<year>????</year>
@@ -26622,16 +26702,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes6a68b71a67e42">
-		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan) (2).nes" size="524304" crc="6a876bb1" sha1="6a68b71a67e42aea1236947187c702d8850c32c6"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nescbb2382d78724">
 		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan) [En by Twilight v1.0] (~Dragon Ball Z Gaiden - Plan to Eliminate the Saiyans) (Vegeta Control)</description>
 		<year>????</year>
@@ -26643,22 +26713,32 @@
 		</part>
 	</software>
 	<software name="nes3b018c152d799">
+		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan)(1993)(Bandai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan)(1993)(Bandai).nes" size="524304" crc="69ae6291" sha1="3b018c152d7997929d202e01a6bdcdee0b00e603"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes6a68b71a67e42">
 		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan).nes" size="524304" crc="69ae6291" sha1="3b018c152d7997929d202e01a6bdcdee0b00e603"/>
+				<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan).nes" size="524304" crc="6a876bb1" sha1="6a68b71a67e42aea1236947187c702d8850c32c6"/>
 			</dataarea>
 		</part>
 	</software>
 	<software name="nes893453c17b0df">
-		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (T-Eng)</description>
+		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku T-Eng (2007)(Twilight Translations)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (T-Eng).nes" size="524304" crc="e7a5a03d" sha1="893453c17b0dff8889acf496ceb06d1f63021fcc"/>
+				<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku T-Eng (2007)(Twilight Translations).nes" size="524304" crc="e7a5a03d" sha1="893453c17b0dff8889acf496ceb06d1f63021fcc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26692,16 +26772,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="nes1d1e2b5f97a0b">
-		<description>Dragon Ball Z II - Gekishin Freeza!! (Japan) (3)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z II - Gekishin Freeza!! (Japan) (3).nes" size="524304" crc="d396d28a" sha1="1d1e2b5f97a0bdb4823fdc43308ab65bab2a5152"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="nes1ed61d3eb3781">
 		<description>Dragon Ball Z II - Gekishin Freeza!! (Japan) (Rev 1)</description>
 		<year>????</year>
@@ -26709,6 +26779,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
 				<rom name="Dragon Ball Z II - Gekishin Freeza!! (Japan) (Rev 1).nes" size="524304" crc="1627ac6b" sha1="1ed61d3eb378179a3e70fbcd9a9ae17eb191d758"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes1d1e2b5f97a0b">
+		<description>Dragon Ball Z II - Gekishin Freeza!! (Japan)(1991)(Bandai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Dragon Ball Z II - Gekishin Freeza!! (Japan)(1991)(Bandai).nes" size="524304" crc="d396d28a" sha1="1d1e2b5f97a0bdb4823fdc43308ab65bab2a5152"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26723,32 +26803,12 @@
 		</part>
 	</software>
 	<software name="nesc43ab4f278de0">
-		<description>Dragon Ball Z II - Gekishin Freeza!! (T-Eng)</description>
+		<description>Dragon Ball Z II - Gekishin Freeza!! T-Eng (2019)(Gyroballer)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z II - Gekishin Freeza!! (T-Eng).nes" size="524304" crc="ffa1e20e" sha1="c43ab4f278de0bee8ac948dbae91a40581ba3d04"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes246a66ff3e961">
-		<description>Dragon Ball Z III - Ressen Jinzou Ningen (J) [T+Eng_Twilight]</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (J) [T+Eng_Twilight].nes" size="524304" crc="209955ea" sha1="246a66ff3e961554fa1e56ed3334350104c53ca9"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="nes2b63552004b60">
-		<description>Dragon Ball Z III - Ressen Jinzou Ningen (Japan) (2)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="nes_cart">
-			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (Japan) (2).nes" size="524304" crc="63210735" sha1="2b63552004b601e7865af7614abcbd857fdd73f0"/>
+				<rom name="Dragon Ball Z II - Gekishin Freeza!! T-Eng (2019)(Gyroballer).nes" size="524304" crc="ffa1e20e" sha1="c43ab4f278de0bee8ac948dbae91a40581ba3d04"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26763,12 +26823,32 @@
 		</part>
 	</software>
 	<software name="nes10918010e3c88">
+		<description>Dragon Ball Z III - Ressen Jinzou Ningen (Japan)(1992)(Bandai)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (Japan)(1992)(Bandai).nes" size="524304" crc="a69079d4" sha1="10918010e3c886e56398e93bd19e1e619a51f8aa"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes2b63552004b60">
 		<description>Dragon Ball Z III - Ressen Jinzou Ningen (Japan)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="524304">
-				<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (Japan).nes" size="524304" crc="a69079d4" sha1="10918010e3c886e56398e93bd19e1e619a51f8aa"/>
+				<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (Japan).nes" size="524304" crc="63210735" sha1="2b63552004b601e7865af7614abcbd857fdd73f0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nes246a66ff3e961">
+		<description>Dragon Ball Z III - Ressen Jinzou Ningen T-Eng (2007)(Twilight Translations)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="524304">
+				<rom name="Dragon Ball Z III - Ressen Jinzou Ningen T-Eng (2007)(Twilight Translations).nes" size="524304" crc="209955ea" sha1="246a66ff3e961554fa1e56ed3334350104c53ca9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -88339,6 +88419,16 @@
 		<part name="cart" interface="nes_cart">
 			<dataarea name="rom" size="131088">
 				<rom name="Study Hall (2014)(Khan Games).nes" size="131088" crc="4e79d831" sha1="3d7d6e6a2d620bac4e1ba83015fc592049358da7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="nesb85c46127910e">
+		<description>Stunt Car Racer v1.1 (2026)(cobbpg)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="nes_cart">
+			<dataarea name="rom" size="262160">
+				<rom name="Stunt Car Racer v1.1 (2026)(cobbpg).nes" size="262160" crc="eeb6dd16" sha1="b85c46127910ea6d44bc254954919ae61f598ba5"/>
 			</dataarea>
 		</part>
 	</software>
