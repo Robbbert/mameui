@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4202 -->
+<!-- Number of items in this list = 4203 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -14349,6 +14349,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Jurl v0.5A (2025)(Tonsomo Entertainment).sfc" size="262144" crc="eccff965" sha1="7d75ce2c2766fff87f7ad8aa10c5179ec1335087"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns5765f7eb65fc7">
+		<description>Jurl v0.6a (2025-26)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="Jurl v0.6a (2025-26)(Tonsomo Entertainment).sfc" size="262144" crc="d38977f9" sha1="5765f7eb65fc7190ef9c41f485e6cabaed9ff54e"/>
 			</dataarea>
 		</part>
 	</software>

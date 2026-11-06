@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2220 -->
+<!-- Number of items in this list = 2226 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -4802,6 +4802,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen8614d27f1dc69">
+		<description>Black Tiger v1.9.6 (2026)(rester159)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Black Tiger v1.9.6 (2026)(rester159)_1.bin" size="4194304" crc="ae0d7433" sha1="8614d27f1dc69a1c85eea136f1b48ffa0ca72191"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genabb1e7c71516e">
 		<description>blacktiger_MD_v1.9.4</description>
 		<year>????</year>
@@ -5429,6 +5439,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1310720">
 				<rom name="chipschallenge_v13.bin" size="1310720" crc="a7783390" sha1="6073cffdc711fd0876a7cf50110278f5ee37914f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7cca549db1d33">
+		<description>choplifter_wip</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="choplifter_wip.bin" size="4194304" crc="4fdadefe" sha1="7cca549db1d33fd384d432fade26fd136ee64df1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -12872,6 +12892,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen666d0faa603da">
+		<description>myhero_pal_v1_0</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="myhero_pal_v1_0.bin" size="4194304" crc="96780cb4" sha1="666d0faa603daae3048f835a4ddfb82c09f98d11"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen4f6cb626080fc">
 		<description>Mystic Defender (USA, Europe) (Rev A)</description>
 		<year>????</year>
@@ -15539,6 +15569,26 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Shadow of the Beast II (USA, Europe).bin" size="1048576" crc="03b05238" sha1="bf748cd62e02229fcf56656160ffa49c28486120"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1cd8edcf787d9">
+		<description>ShadowWarriors_MD_v1.6</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="ShadowWarriors_MD_v1.6.bin" size="8388608" crc="c6de07da" sha1="1cd8edcf787d9f8238741c818b2c2bd6f19798ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genc616df21c8e40">
+		<description>ShadowWarriors_MD_v1.6_4MB</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="ShadowWarriors_MD_v1.6_4MB.bin" size="4194304" crc="e08c05f8" sha1="c616df21c8e40bfebe50074dd27ce987bf4b2dc7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19249,6 +19299,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Streets of Rage Plus (2024)(BillyTime! Games).bin" size="1048576" crc="606bb84f" sha1="13d41d6e20ee92fbafcc3b4e459a3815938fe11f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen94c5f865565d1">
+		<description>STREET_FIGHTER</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="STREET_FIGHTER.bin" size="4194304" crc="9ea45946" sha1="94c5f865565d1285d894aefbc5e3d1c96c974fbc"/>
 			</dataarea>
 		</part>
 	</software>
