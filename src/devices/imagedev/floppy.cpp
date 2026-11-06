@@ -217,7 +217,7 @@ floppy_connector::floppy_connector(const machine_config &mconfig, const char *ta
 	device_t(mconfig, FLOPPY_CONNECTOR, tag, owner, clock),
 	device_slot_interface(mconfig, *this),
 	formats(nullptr),
-	m_use_sound(true),     // MESSUI
+	m_use_sound(false),
 	m_sample_set(nullptr),
 	m_media_change_time(attotime::zero)
 {
