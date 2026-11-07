@@ -14,7 +14,6 @@
 
 // standard C headers
 #include <tchar.h>
-#include <filesystem>
 
 // MAME/MAMEUI headers
 #include "emu.h"
@@ -379,10 +378,7 @@ const char * GetDriverFilename(int drvindex)
 	static char tmp[MAX_PATH]{};
 	if (drvindex >= 0)
 	{
-		//string t = std::filesystem::path(driver_list::driver(drvindex).type.source()).filename().string();
-		//string t = std::filesystem::path(driver_list::driver(drvindex).type.source()).stem().string();
-		//snprintf(tmp, MAX_PATH, "%s", t.c_str());
-		std::string driver = std::string(core_filename_extract_base(driver_list::driver(drvindex).type.source(), false));
+		string driver = string(core_filename_extract_base(driver_list::driver(drvindex).type.source(), false));
 		snprintf(tmp, std::size(tmp), "%s", driver.c_str());
 	}
 	return tmp;

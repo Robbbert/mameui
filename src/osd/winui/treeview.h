@@ -8,13 +8,15 @@
 #include <stdint.h>
 #include "emu_opts.h"
 
+#define MAX_TITLE_LENGTH   128
+
 /***************************************************************************
     Folder And Filter Definitions
  ***************************************************************************/
 
 typedef struct
 {
-	const char *m_lpTitle; // Folder Title
+	const char m_lpTitle[MAX_TITLE_LENGTH]; // Folder Title
 	const char *short_name;  // for saving in the .ini
 	UINT        m_nFolderId; // ID
 	UINT        m_nIconId; // icon for parent folder. if >= 0, IDI_xxx, otherwise index in image list
@@ -126,7 +128,7 @@ typedef enum
 
 typedef struct
 {
-	LPSTR       m_lpTitle;        // String contains the folder name
+	char        m_lpTitle[MAX_TITLE_LENGTH];        // String contains the folder name
 	LPTSTR      m_lptTitle;       // String contains the folder name as TCHAR*
 	UINT        m_nFolderId;      // Index / Folder ID number
 	int         m_nParent;        // Parent folder index in treeFolders[]
@@ -137,7 +139,7 @@ typedef struct
 
 typedef struct
 {
-	char        m_szTitle[64];  // Folder Title
+	char        m_szTitle[MAX_TITLE_LENGTH];  // Folder Title
 	UINT        m_nFolderId;    // ID
 	int         m_nParent;      // Parent Folder index in treeFolders[]
 	DWORD       m_dwFlags;      // Flags - Customisable and Filters
@@ -147,7 +149,7 @@ typedef struct
 
 void FreeFolders();
 void ResetFilters();
-void InitTree(LPCFOLDERDATA lpFolderData, LPCFILTER_ITEM lpFilterList);
+int InitTree(LPCFOLDERDATA lpFolderData, LPCFILTER_ITEM lpFilterList);
 void SetCurrentFolder(LPTREEFOLDER lpFolder);
 UINT GetCurrentFolderID();
 

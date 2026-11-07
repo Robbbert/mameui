@@ -372,7 +372,7 @@ static LPBITS GetShowFolderFlags(LPBITS bits)
 	int j;
 	while (token)
 	{
-		for (j=0; g_folderData[j].m_lpTitle; j++)
+		for (j=0; g_folderData[j].short_name; j++)
 		{
 			if (strcmp(g_folderData[j].short_name,token) == 0)
 			{
@@ -418,7 +418,7 @@ void SetShowFolder(int folder, BOOL show)
 			if (num_saved != 0)
 				str.append(",");
 
-			for (j=0; g_folderData[j].m_lpTitle; j++)
+			for (j=0; g_folderData[j].short_name; j++)
 			{
 				if (g_folderData[j].m_nFolderId == i)
 				{

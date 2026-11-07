@@ -68,7 +68,7 @@ extern const FOLDERDATA g_folderData[] =
 	{"Vertical",        "vertical",          FOLDER_VERT,      IDI_FP_VERT,      0,              FI_VERT,    FI_HORI,    0, NULL,                       DriverIsVertical,        TRUE, OPTIONS_VERTICAL },
 	{"Working",         "working",           FOLDER_W,         IDI_FP_W,         0,              FI_W,       FI_NW,      0, NULL,                       DriverIsBroken,          FALSE, OPTIONS_MAX },
 	{"Year",            "year",              FOLDER_YEAR,      IDI_FP_YEAR,      IDI_FC_YEAR,    0,          0,          1, CreateYearFolders,          NULL,                    FALSE, OPTIONS_MAX },
-	{ NULL }
+	{ "0" }
 };
 #else
 extern const FOLDERDATA g_folderData[] =
@@ -103,7 +103,7 @@ extern const FOLDERDATA g_folderData[] =
 	{"Vertical",        "vertical",          FOLDER_VERTICAL,     IDI_FOLDER_VERTICAL,      F_VERTICAL,    F_HORIZONTAL, 0, NULL,                       DriverIsVertical,        TRUE, OPTIONS_VERTICAL },
 	{"Working",         "working",           FOLDER_WORKING,      IDI_FOLDER_WORKING,       F_WORKING,     F_NONWORKING, 0, NULL,                       DriverIsBroken,          FALSE, OPTIONS_MAX },
 	{"Year",            "year",              FOLDER_YEAR,         IDI_FOLDER_YEAR,          0,             0,            1, CreateYearFolders,          NULL,                    FALSE, OPTIONS_MAX },
-	{ NULL }
+	{ "0" }
 };
 #endif
 
