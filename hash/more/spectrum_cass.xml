@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8201 -->
+<!-- Number of items in this list = 8213 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -35662,6 +35662,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs7cca4bf29c544">
+		<description>Kamikaze 48K-128K (1991)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47831">
+				<rom name="Kamikaze 48K-128K (1991)(Codemasters).tzx" size="47831" crc="740a3ae6" sha1="7cca4bf29c544f56c65273f686ea9f9798a83cdb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxse35294770c3bb">
 		<description>Kane 48K (1986)(Mastertronic)</description>
 		<year>????</year>
@@ -35962,6 +35972,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs0e6e7bc660b2d">
+		<description>KGB Superspy 48K-128K (1989)(Codemasters)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47054">
+				<rom name="KGB Superspy 48K-128K (1989)(Codemasters).tzx" size="47054" crc="40d5a54b" sha1="0e6e7bc660b2d681fd35d8184880691b814a9451"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs7c628e1e1f3ff">
 		<description>Kick Off (1989)(Anco Software)[a]</description>
 		<year>????</year>
@@ -36049,6 +36069,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="145913">
 				<rom name="Killed Until Dead (1987)(US Gold)[a].tap" size="145913" crc="71d46fdc" sha1="5d7010e68188078bb92852d9ba1f4618bbd22dc9"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb41669f27e02a">
+		<description>Killer Bees 48K-AY (2014)(Gary James)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="23349">
+				<rom name="Killer Bees 48K-AY (2014)(Gary James).tap" size="23349" crc="c2bb0b45" sha1="b41669f27e02a2c4b5e6b12c3dc6ed4d81a101e9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -37252,6 +37282,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs968e77eb918c1">
+		<description>Lala Prologue 48K (2010)(The Mojon Twins)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="32889">
+				<rom name="Lala Prologue 48K (2010)(The Mojon Twins).tzx" size="32889" crc="9c55b5cb" sha1="968e77eb918c1d8533b1c93068100d575749c8e3"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsffa57f7bd9ac5">
 		<description>Lambs To The Slaughter 48K (2024)(Death Squad)</description>
 		<year>????</year>
@@ -37832,6 +37872,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs9f54320363fef">
+		<description>Legend of the Little Chicken, The EN 128K (2026)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="105744">
+				<rom name="Legend of the Little Chicken, The EN 128K (2026)(Furillo Productions).tap" size="105744" crc="e41d1b25" sha1="9f54320363fef614a34caec86bb8e7ce38fedabd"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs949db59d3c542">
 		<description>Legend of Traxtor (2014)(usebox.net)</description>
 		<year>????</year>
@@ -38132,6 +38182,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs9e0fa6e0e2b06">
+		<description>Linaje EN - Part 2 48K (2026)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39690">
+				<rom name="Linaje EN - Part 2 48K (2026)(Furillo Productions).tap" size="39690" crc="24311d70" sha1="9e0fa6e0e2b06c91b475531364503b03db1909c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb79292a1e1ab8">
+		<description>Linaje ES - Parte 1 48K (2026)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39705">
+				<rom name="Linaje ES - Parte 1 48K (2026)(Furillo Productions).tap" size="39705" crc="94f255ec" sha1="b79292a1e1ab825edcc9037843587756f138bfc5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsc132a0075c316">
+		<description>Linaje ES - Parte 2 48K (2026)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39695">
+				<rom name="Linaje ES - Parte 2 48K (2026)(Furillo Productions).tap" size="39695" crc="95820f98" sha1="c132a0075c316024703b6388dba905c9b03e30ea"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsa50579f6a6956">
 		<description>Line Of Fire (1990)(US Gold)</description>
 		<year>????</year>
@@ -38309,6 +38389,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="45998">
 				<rom name="Livingstone, I Presume 128K (1987)(Opera Soft).tap" size="45998" crc="359fbe3c" sha1="043899d8ee326ebcf148a6080d65337aabb10e5a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxscc5922dd6208c">
+		<description>Llamaban El Pollito, Le ES 128K (2026)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="105983">
+				<rom name="Llamaban El Pollito, Le ES 128K (2026)(Furillo Productions).tap" size="105983" crc="9c2b30b5" sha1="cc5922dd6208c01f885a4de3e0bd41117c510b52"/>
 			</dataarea>
 		</part>
 	</software>
@@ -42722,6 +42812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs54c517dbec45e">
+		<description>MinTee Golf 128K (2026)(Boingball)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80292">
+				<rom name="MinTee Golf 128K (2026)(Boingball).tap" size="80292" crc="3e09b1fc" sha1="54c517dbec45e203c69a25bbc2594547797a81b5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs5e6a8b0c38f72">
 		<description>Minutes (19xx)(-)</description>
 		<year>????</year>
@@ -44262,6 +44362,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs4d2f485a0425a">
+		<description>Mugsy DX 128K (1984-2026)(FlunkyRetro)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="100205">
+				<rom name="Mugsy DX 128K (1984-2026)(FlunkyRetro).tap" size="100205" crc="d3e894b2" sha1="4d2f485a0425ad3276787e51444f08f5f0e74a93"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs66a132ca66115">
 		<description>Mugsy's Revenge (1984)(Melbourne House)</description>
 		<year>????</year>
@@ -45659,6 +45769,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="25280">
 				<rom name="Nightmare (1986)(K'Soft Ltd).tap" size="25280" crc="1e512243" sha1="1381a1936089acefb676d4d283a946bb9da16b2a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs75c3afed19044">
+		<description>NightMare of Pepe the Hippe-Punk, The EN 48K (2026)(MANSoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="42967">
+				<rom name="NightMare of Pepe the Hippe-Punk, The EN 48K (2026)(MANSoft).tap" size="42967" crc="3c396d18" sha1="75c3afed19044b3424c153b242ff1a6e75e6d75e"/>
 			</dataarea>
 		</part>
 	</software>

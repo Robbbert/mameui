@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2226 -->
+<!-- Number of items in this list = 2239 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -6232,6 +6232,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen36ad31812933c">
+		<description>Double Dragon Zeebo EN v4 (2025-26)(carachapadu)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Double Dragon Zeebo EN v4 (2025-26)(carachapadu)_1.bin" size="4194304" crc="96e394c3" sha1="36ad31812933cebab0772138b7a363b0acde2ea4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genb4e700321d3a8">
+		<description>Double Dragon Zeebo ES v4 (2025-26)(carachapadu)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Double Dragon Zeebo ES v4 (2025-26)(carachapadu)_1.bin" size="4194304" crc="b6618f60" sha1="b4e700321d3a8a09a1b3ef0a599ca6041790be1b"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen94949be02fdd4">
+		<description>Double Dragon Zeebo PT v4 (2025-26)(carachapadu)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Double Dragon Zeebo PT v4 (2025-26)(carachapadu)_1.bin" size="4194304" crc="395215fb" sha1="94949be02fdd4a68f6cf8b753706b31d4ba5ac78"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen9ab56d66140e2">
 		<description>Double Snake v1.32 (2026)(Zaka)</description>
 		<year>????</year>
@@ -8249,6 +8279,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="gunstar heroes (T-Chi).bin" size="2097152" crc="a046c36e" sha1="d84f0cbcf76d8d007868b0de95ded38ba1ff0079"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen27afffaa30b6b">
+		<description>GYRUSS_MD_1.3_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4128768">
+				<rom name="GYRUSS_MD_1.3_1.bin" size="4128768" crc="3a0abcfa" sha1="27afffaa30b6bd4b3a71c82253cd38481339e68d"/>
 			</dataarea>
 		</part>
 	</software>
@@ -10552,6 +10592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen0e14c1aba9c7e">
+		<description>KICKER_MEGADRIVE_V1.4_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="KICKER_MEGADRIVE_V1.4_1.bin" size="2097152" crc="beec489c" sha1="0e14c1aba9c7e05d15f5937db9de41926a786f0d"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen29197c61164df">
 		<description>kid chameleon (Hack, Spanish)</description>
 		<year>????</year>
@@ -11772,6 +11822,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen059cc8eb53f0e">
+		<description>Mega Commando v0.83b (2026)(MXRetroDev)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3276800">
+				<rom name="Mega Commando v0.83b (2026)(MXRetroDev)_1.bin" size="3276800" crc="cfd5b395" sha1="059cc8eb53f0eab3fe3234219c61c906a430a450"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gena132ea97dceb4">
 		<description>Mega Commando v0.8b (2026)(MXRetroDev)</description>
 		<year>????</year>
@@ -11879,6 +11939,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Mega Man The Sequel Wars Episode Red.bin" size="4194304" crc="bb87ec69" sha1="256cf8372391bb5ce68459e2f57230aae1e03f33"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen81d50fd0ef362">
+		<description>Mega Pang v0.4 Beta (2025-26)(RCampeador)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2490368">
+				<rom name="Mega Pang v0.4 Beta (2025-26)(RCampeador)_1.bin" size="2490368" crc="a983b48a" sha1="81d50fd0ef3621e35272cfc5093b3e37d872ccdc"/>
 			</dataarea>
 		</part>
 	</software>
@@ -13329,6 +13399,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="Panda Jump (2026)(abadede919302).bin" size="262144" crc="164e8dfa" sha1="b3d6d7d5a8de55484fc85381c8707ab42d5cd5be"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7f45c8ddcddd0">
+		<description>PANDORAS_MD_V1_0_5_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="PANDORAS_MD_V1_0_5_1.bin" size="4194304" crc="a1933f4e" sha1="7f45c8ddcddd0b3ea3dc6358e8e1b3f3e87e4444"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15592,6 +15672,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen955898710836f">
+		<description>ShadowWarriors_MD_v1.7_RC1_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="8388608">
+				<rom name="ShadowWarriors_MD_v1.7_RC1_1.bin" size="8388608" crc="495dfaac" sha1="955898710836faf82941ffeb1945d57b8909f7d5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7f4b2b30628a4">
+		<description>ShadowWarriors_MD_v1.7_RC1_4MB_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="ShadowWarriors_MD_v1.7_RC1_4MB_1.bin" size="4194304" crc="3ef6c7e9" sha1="7f4b2b30628a496d05e784b2b9537b5243f74102"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="gen38116f593c086">
 		<description>Shaolin Carcara (Rev 1)(2020-22)(Manganga Team)</description>
 		<year>????</year>
@@ -15869,6 +15969,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="4194304">
 				<rom name="Shinobi v1.1 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="e8989d45" sha1="46855159872fb435437c502b1a6febb78260ff1a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1046e8af2c91d">
+		<description>Shinobi v1.2.1 (2026)(Oldschool Is Beautiful)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="Shinobi v1.2.1 (2026)(Oldschool Is Beautiful)_1.bin" size="4194304" crc="010364e5" sha1="1046e8af2c91d7a8e56dcc5bf4286889dfdd52e1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -20482,6 +20592,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="gen5d5be09450286">
+		<description>Tiger Road 2026-10-29i (2026)(hombreimaginario)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="2490368">
+				<rom name="Tiger Road 2026-10-29i (2026)(hombreimaginario)_1.bin" size="2490368" crc="1c68844f" sha1="5d5be094502868cab4b605422b363aa6ad673cb7"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="genff13b8ded1abf">
 		<description>Tiger Road Alpha (2026)(Oldschool Is Beautiful)</description>
 		<year>????</year>
@@ -20519,6 +20639,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="393728">
 				<rom name="Time Invaders v0.02 (2005)(Haroldo)(PD)[b].bin" size="393728" crc="cd8dd288" sha1="3022753a338f2fd87da9e17b8de0034cc6d3bab1"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="genf3b8cdba03157">
+		<description>TIME_PILOT_MD_V1_0_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="TIME_PILOT_MD_V1_0_1.bin" size="4194304" crc="166c95a8" sha1="f3b8cdba0315791bf267431b2a244226f65fff47"/>
 			</dataarea>
 		</part>
 	</software>
