@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2239 -->
+<!-- Number of items in this list = 2241 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -6949,6 +6949,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Fighting Masters.bin" size="524288" crc="3c5da13b" sha1="cee833104884cb00ce099b24fe04edaebc3bf022"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen8729950ee3210">
+		<description>FightingStreet_MD</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="FightingStreet_MD.bin" size="4194304" crc="a692d9c7" sha1="8729950ee3210f04a0cad755585207e2e282b444"/>
 			</dataarea>
 		</part>
 	</software>
@@ -19429,6 +19439,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="3145728">
 				<rom name="STREET_FIGHTER_II(J).bin" size="3145728" crc="95a351f5" sha1="9d507da08660ef27e45f54a214bea5ae9ee4cd3a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gena845373c33bfd">
+		<description>STREET_FIGHTER_v1.4</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="4194304">
+				<rom name="STREET_FIGHTER_v1.4.bin" size="4194304" crc="a9f961a2" sha1="a845373c33bfd4b112c03b6df610b95d76aacac1"/>
 			</dataarea>
 		</part>
 	</software>
