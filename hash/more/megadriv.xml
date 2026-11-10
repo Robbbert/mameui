@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2241 -->
+<!-- Number of items in this list = 2242 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -6949,6 +6949,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="524288">
 				<rom name="Fighting Masters.bin" size="524288" crc="3c5da13b" sha1="cee833104884cb00ce099b24fe04edaebc3bf022"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen833ba5d93b468">
+		<description>FightingStreet_MD(final)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="3932160">
+				<rom name="FightingStreet_MD(final).bin" size="3932160" crc="27a03370" sha1="833ba5d93b468dfff048ecdb4dd26349c4cdb0f4"/>
 			</dataarea>
 		</part>
 	</software>
