@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 176 -->
+<!-- Number of items in this list = 179 -->
 <softwarelist name="jaguar" description="jaguar loose roms">
 	<software name="jag162de3abfc73d">
 		<description>(demo)96Kb Demo (19xx)(Mr Spock)(PD)[$8000]</description>
@@ -792,6 +792,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="jagefdec9897e6d2">
+		<description>cheshire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="2097152">
+				<rom name="cheshire.j64" size="2097152" crc="857f220b" sha1="efdec9897e6d2fff437ed4683b3089c1e860b851"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="jag348655646a889">
 		<description>Crazy_Kong_Demo</description>
 		<year>????</year>
@@ -799,6 +809,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="Crazy_Kong_Demo.j64" size="1048576" crc="2584fe62" sha1="348655646a889fb4afa1de5e019fad1ecbe69ecd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jage42ac2f38225d">
+		<description>critter-jag-ntsc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="critter-jag-ntsc.j64" size="1048576" crc="63094f36" sha1="e42ac2f38225d2527a2db725a724f35672e137e9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -1319,6 +1339,16 @@
 		<part name="cart" interface="jaguar_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Mandelbrot Demo (2008).j64" size="32768" crc="bb109167" sha1="e3beb1a9568d3d0cc4bff23b63be80489898b093"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="jag80f6c7c34d0ba">
+		<description>Manor-ntsc</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="jaguar_cart">
+			<dataarea name="rom" size="6291456">
+				<rom name="Manor-ntsc.j64" size="6291456" crc="f41726be" sha1="80f6c7c34d0bafbaa4fd1c86f10228acaa52a8da"/>
 			</dataarea>
 		</part>
 	</software>

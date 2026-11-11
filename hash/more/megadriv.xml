@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2242 -->
+<!-- Number of items in this list = 2243 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -5339,6 +5339,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="2097152">
 				<rom name="Cheese Cat-astrophe starring Speedy Gonzales.bin" size="2097152" crc="326f1819" sha1="e7f3805847cd910c1d387be777bcd63cf572203d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen7d8b4b748474d">
+		<description>cheshire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="262144">
+				<rom name="cheshire.bin" size="262144" crc="1c6aad1e" sha1="7d8b4b748474d4e6aaee77ec7a0f49b1ed40fafb"/>
 			</dataarea>
 		</part>
 	</software>

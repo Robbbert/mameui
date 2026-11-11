@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8220 -->
+<!-- Number of items in this list = 8227 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -38122,6 +38122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsef940367b19ce">
+		<description>Linaje EN - Part 1 48K (2026)(Furillo Productions)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="39704">
+				<rom name="Linaje EN - Part 1 48K (2026)(Furillo Productions).tap" size="39704" crc="8ab2dc3e" sha1="ef940367b19ce0db939c90c46fa14d192ec84cbe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9e0fa6e0e2b06">
 		<description>Linaje EN - Part 2 48K (2026)(Furillo Productions)</description>
 		<year>????</year>
@@ -54202,6 +54212,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs9d4df23b0501e">
+		<description>Rollerball 48K (2025)(Dvader)_1</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="19060">
+				<rom name="Rollerball 48K (2025)(Dvader)_1.tap" size="19060" crc="c5545bce" sha1="9d4df23b0501eec87f149796fc10610407cdb0bc"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsea08596a7edd8">
 		<description>Rolling Thunder (1988)(US Gold Ltd)</description>
 		<year>????</year>
@@ -63742,6 +63762,36 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsa41493951f9cb">
+		<description>Tetris ZX Mono v1.1.0 48K (2026)(kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47992">
+				<rom name="Tetris ZX Mono v1.1.0 48K (2026)(kirby2000).tap" size="47992" crc="78c4740b" sha1="a41493951f9cb574133616cc75c69529185184c5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs538181afd98fb">
+		<description>Tetris ZX v1.1.0 128K (2026)(kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="80839">
+				<rom name="Tetris ZX v1.1.0 128K (2026)(kirby2000).tap" size="80839" crc="583c4c5c" sha1="538181afd98fb10f5dcfdb24598f3e9f5ab92ff0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs576ece7f25cba">
+		<description>Tetris ZX v1.1.0 48K (2026)(kirby2000)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="47992">
+				<rom name="Tetris ZX v1.1.0 48K (2026)(kirby2000).tap" size="47992" crc="113f7874" sha1="576ece7f25cbac83fdbc642154c26ad3c3fcf235"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs45bb81ad08030">
 		<description>tetris2u</description>
 		<year>????</year>
@@ -66219,6 +66269,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="74792">
 				<rom name="Turbo The Tortoise.tzx" size="74792" crc="703eff06" sha1="837f3ccdbf01d8af12844ff7c99eb4ff57069845"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsfa5498a952b23">
+		<description>Turbo Vektor 128K (2026)(BokenDev Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53765">
+				<rom name="Turbo Vektor 128K (2026)(BokenDev Studios).tzx" size="53765" crc="49d2b736" sha1="fa5498a952b2315b5d871b17595b5d87cad6efeb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsb6932a13b78fa">
+		<description>Turbo Vektor 48K (2026)(BokenDev Studios)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="36204">
+				<rom name="Turbo Vektor 48K (2026)(BokenDev Studios).tzx" size="36204" crc="220d8754" sha1="b6932a13b78fad86e03ac9d0b9466a401c89b2f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -81033,12 +81103,12 @@
 		</part>
 	</software>
 	<software name="zxsf25eb6ddf7d3c">
-		<description>_Tank Battle 128K (2020)(kas29)</description>
+		<description>_Tank Battle 48K (2020)(kas29)</description>
 		<year>????</year>
 		<publisher>unknown</publisher>
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44955">
-				<rom name="_Tank Battle 128K (2020)(kas29).tap" size="44955" crc="2d909b3c" sha1="f25eb6ddf7d3c3361f8f31b6dd300917adc8235b"/>
+				<rom name="_Tank Battle 48K (2020)(kas29).tap" size="44955" crc="2d909b3c" sha1="f25eb6ddf7d3c3361f8f31b6dd300917adc8235b"/>
 			</dataarea>
 		</part>
 	</software>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 4203 -->
+<!-- Number of items in this list = 4204 -->
 <softwarelist name="snes" description="snes loose roms">
 	<software name="snsd1346f1df3666">
 		<description>(demo) STRDEMO</description>
@@ -5849,6 +5849,16 @@
 		<part name="cart" interface="snes_cart">
 			<dataarea name="rom" size="262144">
 				<rom name="ChavinHuantar.sfc" size="262144" crc="3e3032ea" sha1="5c18cf7e86a9524acc93abc622508c5e0f38c8e4"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="sns4b15ade0f1be5">
+		<description>cheshire</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="snes_cart">
+			<dataarea name="rom" size="524288">
+				<rom name="cheshire.sfc" size="524288" crc="5b2a9a13" sha1="4b15ade0f1be5edf6df34e8a44f3e72be77cf3bb"/>
 			</dataarea>
 		</part>
 	</software>
