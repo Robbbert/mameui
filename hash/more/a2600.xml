@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8124 -->
+<!-- Number of items in this list = 8133 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -2219,6 +2219,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="aabaabaa.bas.bin" size="4096" crc="e5f28ea5" sha1="f5c1c8957c6e591d1f454518f03c48c012c0244a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267d4c755cb5c24">
+		<description>Aardvark (2019)(Oscar Toledo G.)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Aardvark (2019)(Oscar Toledo G.).bin" size="32768" crc="3a6ca45b" sha1="7d4c755cb5c24456174a753a815317639922f2f5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -23262,6 +23272,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a269ff196f1137be">
+		<description>Conquest of Mars (2006)(Champ Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Conquest of Mars (2006)(Champ Games).bin" size="16384" crc="bace5a14" sha1="9ff196f1137be8deecf23448ebf817c060d2b595"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26dcdbe2be3ee32">
 		<description>Conquest of Mars (John W. Champeau) (PAL60)</description>
 		<year>????</year>
@@ -23279,16 +23299,6 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Conquest of Mars FINAL (John W. Champeau) (PAL60).a26" size="16384" crc="d3aed230" sha1="153013c758534569371afeeff2c5c61b2fb29703"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a269ff196f1137be">
-		<description>Conquest of Mars FINAL (John W. Champeau)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Conquest of Mars FINAL (John W. Champeau).a26" size="16384" crc="bace5a14" sha1="9ff196f1137be8deecf23448ebf817c060d2b595"/>
 			</dataarea>
 		</part>
 	</software>
@@ -26499,6 +26509,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Donkey Kong Take 2 by Feralstorm (Hack) (2).a26" size="4096" crc="32218ed2" sha1="da1d1cc7b62577795b21a82c0fc8b1b8ccc4c957"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e37887a3c7b6a">
+		<description>Donkey Kong VCS (2017)(Andreas Dietrich)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Donkey Kong VCS (2017)(Andreas Dietrich).bin" size="32768" crc="6c87f24e" sha1="e37887a3c7b6a6d9603df9092c076c1224999aaa"/>
 			</dataarea>
 		</part>
 	</software>
@@ -41062,6 +41082,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2661b676db1acf8">
+		<description>I Ran (2020)(VHZC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="I Ran (2020)(VHZC).bin" size="16384" crc="bcdc3f73" sha1="61b676db1acf8d28611a1612a044b45324afa180"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26426d22f71ed31">
 		<description>I Robot (1984) (Atari) (Prototype) [!]</description>
 		<year>????</year>
@@ -45782,6 +45812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26cac26d5d96795">
+		<description>Juno First (2009)(Chris Walton)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Juno First (2009)(Chris Walton).bin" size="32768" crc="30baa209" sha1="cac26d5d967957dac8133a2f226629bdc44cdd09"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26e2e77a27bb603">
 		<description>Juno First logo</description>
 		<year>????</year>
@@ -47019,6 +47059,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="KKAltair_AgainAndAgain.bin" size="8192" crc="98043d8b" sha1="706094c64495aa6d8cb64be8887cf41c283071e7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a269b6c306cb2e98">
+		<description>Knight Guy (2018)(VHZC Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Knight Guy (2018)(VHZC Games).bin" size="16384" crc="2f04be66" sha1="9b6c306cb2e98af297b071b8b8eb4494788c6da5"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2669fcf51aa5150">
+		<description>Knight Guy - Castle Days (2021)(VHZC Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Knight Guy - Castle Days (2021)(VHZC Games).bin" size="32768" crc="87333357" sha1="69fcf51aa5150e9461feb4ddc58bbbfbceecf9b1"/>
 			</dataarea>
 		</part>
 	</software>
@@ -56299,6 +56359,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="ooze.a26" size="4096" crc="27ffef2f" sha1="e3fd5ec191666526edebdc99d5ddde57e1e15b21"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dd6b89d39fd57">
+		<description>Oozy the Goo - Slime Quest (2022)(VHZC Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Oozy the Goo - Slime Quest (2022)(VHZC Games).bin" size="32768" crc="dd56e194" sha1="dd6b89d39fd57dc954d6948d0634ef23402993ea"/>
 			</dataarea>
 		</part>
 	</software>
@@ -69742,6 +69812,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2613c028abd3d6c">
+		<description>Space Treat (60percent complete) (Fabrizio Zavagli)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Space Treat (60percent complete) (Fabrizio Zavagli).a26" size="4096" crc="130cc8a5" sha1="13c028abd3d6cbe30696810d96260794bf2f0e10"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26417872486f83e">
 		<description>Space Treat (Fabrizio Zavagli) (PAL)</description>
 		<year>????</year>
@@ -77219,6 +77299,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Topy (2600 Screen Search Console) (Jone Yuan Telephonic Enterprise Co).a26" size="4096" crc="90eff841" sha1="59b5f61a8a6009a2ac9903fb3d72ee817fd849bb"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26ed5aa11ed4f19">
+		<description>Tower of Rubble v1.1 (2018)(DionoiD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Tower of Rubble v1.1 (2018)(DionoiD).bin" size="8192" crc="45082a89" sha1="ed5aa11ed4f195723bafcc7ee3f0b7d015d03dea"/>
 			</dataarea>
 		</part>
 	</software>
