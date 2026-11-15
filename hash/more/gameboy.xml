@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 1381 -->
+<!-- Number of items in this list = 1382 -->
 <softwarelist name="gameboy" description="gameboy loose roms">
 	<software name="gbc6fe80d2d2b876">
 		<description>(demo)100000 Boys (LCP2000) (PD) [C]</description>
@@ -2729,6 +2729,16 @@
 		<part name="cart" interface="gameboy_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="6ROOMS (2019-07-19)(Bland, Emberlynn)[a].gb" size="1048576" crc="cd6638f0" sha1="9eb3b85ae60295c8a00a1175d09b8c5450ebc83c"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gbcf1d0626ed2257">
+		<description>airaki</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="airaki.gbc" size="32768" crc="f427eee1" sha1="f1d0626ed225721ead8656458c895e02c2ea637e"/>
 			</dataarea>
 		</part>
 	</software>
