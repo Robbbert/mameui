@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8133 -->
+<!-- Number of items in this list = 8143 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -5339,6 +5339,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Amityville Horror, The (Haunted House Hack).a26" size="4096" crc="7aec34cd" sha1="71168786a3a9695a334324afbaa84077286b7585"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26dccbfb28358ca">
+		<description>Amoeba Jump v1.3 (2018)(DionoiD)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Amoeba Jump v1.3 (2018)(DionoiD).bin" size="4096" crc="e4349cef" sha1="dccbfb28358ca8339920b584cf64465905ce1354"/>
 			</dataarea>
 		</part>
 	</software>
@@ -23672,6 +23682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a266ee0a26af4643">
+		<description>Crackpots (1983)(Activision)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Crackpots (1983)(Activision).bin" size="4096" crc="ecd891b3" sha1="6ee0a26af4643ff250198dfc1c2b7c6568b4f207"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26972db0f6170fa">
 		<description>Crackpots_NTSC(Supercharger)</description>
 		<year>????</year>
@@ -32812,6 +32832,26 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2628e00ac1f37f2">
+		<description>Game of the Bear (2021)(VHZC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Game of the Bear (2021)(VHZC).bin" size="32768" crc="493320bc" sha1="28e00ac1f37f2f9fa1adea1672aedae261a5d25f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267da3cbbbfa046">
+		<description>Game of the Bear 2 Much to Bear (2022)(VHZC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Game of the Bear 2 Much to Bear (2022)(VHZC).bin" size="32768" crc="28ac49c3" sha1="7da3cbbbfa046e570992ba8d8ffabfbb3a74b386"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26532274f5724af">
 		<description>game1 (2016-09-12)(Lee, Bill)</description>
 		<year>????</year>
@@ -37039,6 +37079,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="H.E.R.O. - Infinite Lives &amp; Bombs Hack.a26" size="8192" crc="6b50a10c" sha1="2c4a04f70fb75f1e4efcc63c44358c5660299d52"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26e0c02ede89e2a">
+		<description>H.E.R.O. 2 (2022)(Game Select)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="H.E.R.O. 2 (2022)(Game Select).bin" size="8192" crc="733fa414" sha1="e0c02ede89e2a06179dfc833415e888b42bc0427"/>
 			</dataarea>
 		</part>
 	</software>
@@ -46459,6 +46509,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Juno_First_RC3_PAL60.a26" size="32768" crc="49599aae" sha1="b452589019c8c3d7a711600b1046108a9f35cfd7"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26c5391f936a0a2">
+		<description>Jurl (2020)(Tonsomo Entertainment)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Jurl (2020)(Tonsomo Entertainment).bin" size="16384" crc="d05bdff9" sha1="c5391f936a0a279b4c2a0f31898d9c15650b02f8"/>
 			</dataarea>
 		</part>
 	</software>
@@ -55902,6 +55962,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26b5b9380ee07a4">
+		<description>Oh No More Peril - Beta 2 (2021)(VHZC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Oh No More Peril - Beta 2 (2021)(VHZC).bin" size="32768" crc="4787ebf8" sha1="b5b9380ee07a4e7d6855de363735f64d6ad14d24"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2653da0bf924acf">
 		<description>Oh No! (Version 1) (17-01-2003) (AD)</description>
 		<year>????</year>
@@ -58369,6 +58439,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Pepsi.a26" size="4096" crc="dae6296a" sha1="51849149e7ea4f69a5c67d5d35fd1e6ce54727a6"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d1111ed7a2218">
+		<description>Peril - RC1 (2020)(VHZC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Peril - RC1 (2020)(VHZC).bin" size="32768" crc="7c68b600" sha1="d1111ed7a22188ec7597f0a83105772c5f7283da"/>
 			</dataarea>
 		</part>
 	</software>
@@ -70829,6 +70909,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="spider_v0.4c_Feb08_cutscene.a26" size="4096" crc="1058dccb" sha1="7ec87728945d03dd327cf1f2b589d803b4aed6ae"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26934b652be776f">
+		<description>Spies in the Night (2015)(Jared Gray West)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Spies in the Night (2015)(Jared Gray West).bin" size="8192" crc="6209531c" sha1="934b652be776f37b597e94675b9609fd9b711960"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cf8f71f11c0ad">
+		<description>Spies in the Night 2 (2019)(Jared Gray West)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Spies in the Night 2 (2019)(Jared Gray West).bin" size="32768" crc="82b725b5" sha1="cf8f71f11c0ad332aadfb6c64713962fe67bd281"/>
 			</dataarea>
 		</part>
 	</software>
