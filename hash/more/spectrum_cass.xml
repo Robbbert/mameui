@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8227 -->
+<!-- Number of items in this list = 8237 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -19222,6 +19222,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsbfab4386e6d75">
+		<description>Dead Man's Draw 48K (2026)(Frogotten Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="21926">
+				<rom name="Dead Man's Draw 48K (2026)(Frogotten Games).tzx" size="21926" crc="8ffb70ad" sha1="bfab4386e6d75dd66b636918f6288c28cb7529cb"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxsd7f32b90ea818">
 		<description>Dead Or Alive (1987)(Alternative Software)</description>
 		<year>????</year>
@@ -22462,6 +22472,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsf1b1f7b1889a0">
+		<description>Dynamite Dan 48K (1985)(Mirrorsoft)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="49833">
+				<rom name="Dynamite Dan 48K (1985)(Mirrorsoft).tzx" size="49833" crc="fd66031c" sha1="f1b1f7b1889a0f72e49861d9cd742f7fbc02cff5"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs9f414a04c77f1">
 		<description>Dynamite Dan II - Dr Blitzen And The Islands Of Arcanum (1985)(Mirrorsoft)</description>
 		<year>????</year>
@@ -22479,16 +22499,6 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46482">
 				<rom name="Dynamite Dan II - Dr Blitzen And The Islands Of Arcanum.tzx" size="46482" crc="08e2f2e1" sha1="2c63eee4266d35632b3373ca344652e45d2b6738"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="zxsf1b1f7b1889a0">
-		<description>Dynamite Dan</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cass" interface="spectrum_cass">
-			<dataarea name="cass" size="49833">
-				<rom name="Dynamite Dan.tzx" size="49833" crc="fd66031c" sha1="f1b1f7b1889a0f72e49861d9cd742f7fbc02cff5"/>
 			</dataarea>
 		</part>
 	</software>
@@ -30769,6 +30779,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="47211">
 				<rom name="Hard Drivin' (1989)(Domark)(128k).tap" size="47211" crc="f55dc984" sha1="4116dfdfca6391349726203429ddee3e3696bf3f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs371a2d64e5b45">
+		<description>Hard Hat Mack v1.0.1 48K (2026)(ZikiTrake)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48497">
+				<rom name="Hard Hat Mack v1.0.1 48K (2026)(ZikiTrake).tap" size="48497" crc="d78f9b65" sha1="371a2d64e5b454e1b8503a7d5fa51c592c1e431c"/>
 			</dataarea>
 		</part>
 	</software>
@@ -48662,6 +48682,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxs5da072b7605f9">
+		<description>Penguin Pick-up v1.2.1 48K (2026)(boredofjam)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="28744">
+				<rom name="Penguin Pick-up v1.2.1 48K (2026)(boredofjam).tap" size="28744" crc="31db8df9" sha1="5da072b7605f9d4da42c7c0315a2c6b5c63daa63"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs37b560a6f01db">
 		<description>Penguins (1983)(Add-On Electronics Ltd)</description>
 		<year>????</year>
@@ -52269,6 +52299,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="37824">
 				<rom name="Ramparts 48K (1988)(Go!).tap" size="37824" crc="d6391cbe" sha1="d8ad1bed44331743f2a211c8f637f34d67ea020d"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse4ae04a119823">
+		<description>Ramparts 48K (1988)(Go!)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="53825">
+				<rom name="Ramparts 48K (1988)(Go!).tzx" size="53825" crc="8690ba70" sha1="e4ae04a119823e2a0c01306e6e978617e7370ae2"/>
 			</dataarea>
 		</part>
 	</software>
@@ -59582,6 +59622,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="zxsd593e67320741">
+		<description>Speccies 2, The v1.1 16K (2013)(Sokurah, Tardis Remakes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="15706">
+				<rom name="Speccies 2, The v1.1 16K (2013)(Sokurah, Tardis Remakes).tzx" size="15706" crc="153f93a0" sha1="d593e6732074157a10891e0192033d9f26b4c76f"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="zxs8ef13dd42cbc3">
 		<description>Speccies, The v1.2 (2013)(Tardis Remakes)</description>
 		<year>????</year>
@@ -59589,6 +59639,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="44236">
 				<rom name="Speccies, The v1.2 (2013)(Tardis Remakes).tap" size="44236" crc="7b5ffc84" sha1="8ef13dd42cbc33c0f305ee3e5bfb4b05b5fe3756"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsa8abb54168f5e">
+		<description>Speccies, The v1.2 48K (2013)(Sokurah, Tardis Remakes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="44264">
+				<rom name="Speccies, The v1.2 48K (2013)(Sokurah, Tardis Remakes).tzx" size="44264" crc="7c388864" sha1="a8abb54168f5e97390aca3d20ad2d14a7ad18edf"/>
 			</dataarea>
 		</part>
 	</software>
@@ -60399,6 +60459,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="46020">
 				<rom name="Sqij ZX (2018)(Psytronik Software).tap" size="46020" crc="d0af1a22" sha1="4fd1c93417d5f8a01721118cf7fd376f66589ff3"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs850622ec7a093">
+		<description>Sqij ZX 48K (2018)(Sokurah, Tardis Remakes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="46048">
+				<rom name="Sqij ZX 48K (2018)(Sokurah, Tardis Remakes).tzx" size="46048" crc="a17bf181" sha1="850622ec7a093d68284a4269bffd5e5e7c7b56a9"/>
 			</dataarea>
 		</part>
 	</software>
@@ -62169,6 +62239,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="123476">
 				<rom name="Super Monaco GP.tzx" size="123476" crc="7740a5de" sha1="756e91bcc591427d9b7beb73af1ca16a769a98ca"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs6c0bb94829164">
+		<description>Super Oval ZX v2 128K (2026(Guardi Rock)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="48942">
+				<rom name="Super Oval ZX v2 128K (2026(Guardi Rock).tzx" size="48942" crc="6389e693" sha1="6c0bb94829164ab189361a8396dd879845792937"/>
 			</dataarea>
 		</part>
 	</software>
@@ -67079,6 +67159,26 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="41456">
 				<rom name="Vade Retro ES 48K (2012)(J.B.G.V.).tzx" size="41456" crc="1215623a" sha1="e560bec14d3a2f0c00ed332a77305fafd8858ab0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs13d7f0368b150">
+		<description>Vallation 128K (2017)(Sokurah, Tardis Remakes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="68565">
+				<rom name="Vallation 128K (2017)(Sokurah, Tardis Remakes).tzx" size="68565" crc="2e4b612b" sha1="13d7f0368b1507cd3ccf26a37fe8daf2754becdd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxsd70ee8941bb5d">
+		<description>Vallation v1.1 48K (2016)(Sokurah, Tardis Remakes)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="41207">
+				<rom name="Vallation v1.1 48K (2016)(Sokurah, Tardis Remakes).tzx" size="41207" crc="4869ba37" sha1="d70ee8941bb5dfeca9663d74e952b7814615a190"/>
 			</dataarea>
 		</part>
 	</software>
