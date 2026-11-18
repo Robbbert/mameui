@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8237 -->
+<!-- Number of items in this list = 8239 -->
 <softwarelist name="spectrum_cass" description="spectrum_cass loose roms">
 	<software name="zxs54eb2ea1cbe49">
 		<description>(demo)63 BIT 3 (19xx)(-)</description>
@@ -22229,6 +22229,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="50407">
 				<rom name="DuckTales_ZX_UA_Release.tap" size="50407" crc="61e559ca" sha1="59833aa55890f7b7132cd1c2e5ad90086692b606"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxs8c96cbc9d05fd">
+		<description>Duel ZX EN-IT 128K (2026)(Wellfields Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="61203">
+				<rom name="Duel ZX EN-IT 128K (2026)(Wellfields Games).tap" size="61203" crc="07a6e71e" sha1="8c96cbc9d05fd0854e082864836a0d403055e405"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47359,6 +47369,16 @@
 		<part name="cass" interface="spectrum_cass">
 			<dataarea name="cass" size="35808">
 				<rom name="Orbol Voon (Mojon Twins) ES.tap" size="35808" crc="fe3d978f" sha1="615d8d33254432b60fc7335b8ba1371a0e4adb80"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="zxse510c67cfce4b">
+		<description>Orbs of Overlord 128K (2026)(7 Tower Soft Games)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cass" interface="spectrum_cass">
+			<dataarea name="cass" size="121457">
+				<rom name="Orbs of Overlord 128K (2026)(7 Tower Soft Games).tap" size="121457" crc="70c7a932" sha1="e510c67cfce4bd688f4a71570a81e8a11d341a72"/>
 			</dataarea>
 		</part>
 	</software>
