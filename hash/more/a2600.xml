@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8143 -->
+<!-- Number of items in this list = 8147 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -6189,6 +6189,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Assault on Precinct 13 hack.a26" size="4096" crc="af14c186" sha1="bc49169f61bb8d72eb4e67193b6ac69c689b7f8a"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2646e789a5843d5">
+		<description>Assembloids (2017)(AtariAge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Assembloids (2017)(AtariAge).bin" size="4096" crc="c106ab8f" sha1="46e789a5843d5ce002932fd05386c580f3aeb026"/>
 			</dataarea>
 		</part>
 	</software>
@@ -33412,6 +33422,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26c8094b18ea8d7">
+		<description>Go Fish (2005)(Bob Montgomery)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Go Fish (2005)(Bob Montgomery).bin" size="8192" crc="b99fc2bf" sha1="c8094b18ea8d7dd0e1824a5fff2c26dd5f99a520"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26f286f2e862ca8">
 		<description>Go Fish! (Real Final Version) (Bob Montgomery) (PAL)</description>
 		<year>????</year>
@@ -33529,16 +33549,6 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Go Fish! Extended 2007-02-20 (Bob Montgomery).a26" size="8192" crc="010ce7d6" sha1="9348dfdddac834b8b5bdb6e607f1353dcee04f0a"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a26c8094b18ea8d7">
-		<description>Go Fish! SP (Bob Montgomery)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Go Fish! SP (Bob Montgomery).a26" size="8192" crc="b99fc2bf" sha1="c8094b18ea8d7dd0e1824a5fff2c26dd5f99a520"/>
 			</dataarea>
 		</part>
 	</software>
@@ -73112,6 +73122,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26965e19f5533bd">
+		<description>Stay Frosty (2007)(SpiceWare)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Stay Frosty (2007)(SpiceWare).bin" size="16384" crc="2cd521fe" sha1="965e19f5533bd2ddb73c10efe6c548fb335f2126"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26fadde76e61462">
 		<description>Steam Tunnel Bob_v58</description>
 		<year>????</year>
@@ -76512,16 +76532,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a267423a5ddd917b">
-		<description>Thrust (V1.21) (2000) (TJ)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Thrust (V1.21) (2000) (TJ).a26" size="16384" crc="36a5c1c5" sha1="7423a5ddd917bbdc0eea29fd8e27becfd38aec58"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a26fb9eda5e2caad">
 		<description>Thrust (V1.22) (2000) (TJ) [a1]</description>
 		<year>????</year>
@@ -76589,6 +76599,26 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="16384">
 				<rom name="Thrust (V1.60) (2000) (TJ).a26" size="16384" crc="2d3f6b99" sha1="e9bcc4ee3b85327d756c91ba9bd6b85394021dab"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2679e9d3a3e9bd8">
+		<description>Thrust Plus v1.26 (2004) (Xype, Thomas Jentzsch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Thrust Plus v1.26 (2004) (Xype, Thomas Jentzsch).bin" size="16384" crc="70b25fb7" sha1="79e9d3a3e9bd8a8a9e4c7242c16cdfcccb1de1a2"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a267423a5ddd917b">
+		<description>Thrust v1.21 (2000)(Thomas Jentzsch)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="16384">
+				<rom name="Thrust v1.21 (2000)(Thomas Jentzsch).bin" size="16384" crc="36a5c1c5" sha1="7423a5ddd917bbdc0eea29fd8e27becfd38aec58"/>
 			</dataarea>
 		</part>
 	</software>
@@ -79299,6 +79329,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="Venture II by Tim Snider (Venture Hack).a26" size="4096" crc="ae961885" sha1="17626ae7bfd10bcde14903040baee0923ecf41dd"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26addf22a2a5d01">
+		<description>Venture Reloaded - RC3 (2019)(AtariAge)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Venture Reloaded - RC3 (2019)(AtariAge).bin" size="32768" crc="e7ac60fe" sha1="addf22a2a5d015c49992316fb03d91f09c9cf335"/>
 			</dataarea>
 		</part>
 	</software>
