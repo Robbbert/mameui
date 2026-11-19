@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2244 -->
+<!-- Number of items in this list = 2243 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -18849,16 +18849,6 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="577232">
 				<rom name="South Island Adventure v0.3 (2004)(Hivebrain).bin" size="577232" crc="ced56180" sha1="1fc41aee2c0fd0bceb6be60d679e1e30a72a0cda"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="genecd9dc5b87124">
-		<description>sovietborgs-demo</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="megadriv_cart">
-			<dataarea name="rom" size="2752512">
-				<rom name="sovietborgs-demo.bin" size="2752512" crc="e11938d4" sha1="ecd9dc5b87124ad9fe134b80a23062c5fa811608"/>
 			</dataarea>
 		</part>
 	</software>
