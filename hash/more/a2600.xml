@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 8153 -->
+<!-- Number of items in this list = 8154 -->
 <softwarelist name="a2600" description="a2600 loose roms">
 	<software name="a2620d41e7c06004">
 		<description>(000 - $F800) Game Select</description>
@@ -849,6 +849,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="1932 v9 by Out of Gas (Gangster Alley Hack).a26" size="4096" crc="3a278b56" sha1="58dbd58a95aa3e7e6db0fb2b316b3c95ea8e46c0"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26d354f06e1389b">
+		<description>1942 (2022)(Al-Nafuur)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="1942 (2022)(Al-Nafuur).bin" size="32768" crc="cda8739e" sha1="d354f06e1389b30b2d427052526ce8c9f25fec4b"/>
 			</dataarea>
 		</part>
 	</software>
@@ -15752,6 +15762,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a2668c0204f61b23">
+		<description>Bobby is Home v1.2 (2026)(C. Hammers)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Bobby is Home v1.2 (2026)(C. Hammers).bin" size="32768" crc="cfc572e0" sha1="68c0204f61b2384a1e03565c1d2523900dac4421"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a26ece481f754f90">
 		<description>Bobby Needs Food (belial)</description>
 		<year>????</year>
@@ -17549,16 +17569,6 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="c7obt.a26" size="4096" crc="f689fa1e" sha1="b6b58179ee12fd1886fa51536ca7aa075d6f71db"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a26ffdba8ae22784">
-		<description>Cabbage Patch Kids - Adventures in the Park (USA, Proto)(1984)(Coleco)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="Cabbage Patch Kids - Adventures in the Park (USA, Proto)(1984)(Coleco).a26" size="8192" crc="7025d30d" sha1="ffdba8ae22784ccc81a5a2e81a236ace09e5b7f4"/>
 			</dataarea>
 		</part>
 	</software>
@@ -29839,16 +29849,6 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="32768">
 				<rom name="Fatal Run (1992) (Atari) [f1] (NTSC by TJ).a26" size="32768" crc="7169337a" sha1="86b11d0a276c1cc9a777f3cf174577fe863b4298"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a2659d004547e693">
-		<description>Fatal Run (USA, Proto)(1990)(Atari)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="32768">
-				<rom name="Fatal Run (USA, Proto)(1990)(Atari).a26" size="32768" crc="60b08497" sha1="59d004547e693aa05bb3333f055163ade2c9ea95"/>
 			</dataarea>
 		</part>
 	</software>
@@ -47152,16 +47152,6 @@
 			</dataarea>
 		</part>
 	</software>
-	<software name="a263162259c6dbfb">
-		<description>Klax (USA, Proto)(1990)(Atari)</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="16384">
-				<rom name="Klax (USA, Proto)(1990)(Atari).a26" size="16384" crc="6bc47721" sha1="3162259c6dbfbb57a2ea41d849155702151ee39b"/>
-			</dataarea>
-		</part>
-	</software>
 	<software name="a269b6c306cb2e98">
 		<description>Knight Guy (2018)(VHZC Games)</description>
 		<year>????</year>
@@ -57062,6 +57052,16 @@
 			</dataarea>
 		</part>
 	</software>
+	<software name="a26e84a347e67885">
+		<description>Pac-Man 4K v2e (2014)(Dintar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="4096">
+				<rom name="Pac-Man 4K v2e (2014)(Dintar).bin" size="4096" crc="63756311" sha1="e84a347e678851a6ac849f2dca24c115f5e1befe"/>
+			</dataarea>
+		</part>
+	</software>
 	<software name="a2651165b3ae7bd2">
 		<description>Pac-Man 8k (Pac-Man Hack)</description>
 		<year>????</year>
@@ -57129,6 +57129,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="8192">
 				<rom name="Pac-Man 8k test (Pac-Man Hack).a26" size="8192" crc="79e729e8" sha1="d184e24915b2a7ea403f40f9749b17f4ff54b656"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a2659c78aa860fb1">
+		<description>Pac-Man 8K v5 (2014)(Dintar)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="8192">
+				<rom name="Pac-Man 8K v5 (2014)(Dintar).bin" size="8192" crc="ee085471" sha1="59c78aa860fb1c17edf95d6b10de08cdac9977f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -57429,16 +57439,6 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="pacman09.bas.a26" size="4096" crc="eff597ef" sha1="abdbce8b0801f3820ec7f794b7b43e396a966e72"/>
-			</dataarea>
-		</part>
-	</software>
-	<software name="a2659c78aa860fb1">
-		<description>pacman2600_8k_v5</description>
-		<year>????</year>
-		<publisher>unknown</publisher>
-		<part name="cart" interface="a2600_cart">
-			<dataarea name="rom" size="8192">
-				<rom name="pacman2600_8k_v5.a26" size="8192" crc="ee085471" sha1="59c78aa860fb1c17edf95d6b10de08cdac9977f7"/>
 			</dataarea>
 		</part>
 	</software>
@@ -63949,6 +63949,16 @@
 		<part name="cart" interface="a2600_cart">
 			<dataarea name="rom" size="4096">
 				<rom name="River_Raid__infinite_lives_Hack.a26" size="4096" crc="78082f94" sha1="63b12e34ed0676c69e9c6f05a41562966264b8ad"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="a26cc20e5a545e2a">
+		<description>Roach in Space, A (2019)(VHZC)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="a2600_cart">
+			<dataarea name="rom" size="32768">
+				<rom name="Roach in Space, A (2019)(VHZC).bin" size="32768" crc="06b1cac9" sha1="cc20e5a545e2a63970beb15c43f7695c191e5a87"/>
 			</dataarea>
 		</part>
 	</software>

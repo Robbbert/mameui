@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
-<!-- Number of items in this list = 2243 -->
+<!-- Number of items in this list = 2244 -->
 <softwarelist name="megadriv" description="megadriv loose roms">
 	<software name="gen27dbe96f5478e">
 		<description>(demo)akira (prototype)</description>
@@ -11829,6 +11829,16 @@
 		<part name="cart" interface="megadriv_cart">
 			<dataarea name="rom" size="1048576">
 				<rom name="McDonald's Treasure Land Adventure Restoration (2025)(SCD).bin" size="1048576" crc="28398d66" sha1="2eb1978740c0b63fc35020d8af83fa36cc70260f"/>
+			</dataarea>
+		</part>
+	</software>
+	<software name="gen1b5691f2b3a6c">
+		<description>MD+ Castle Of Illusion (Grant Kirkhope Arranged)</description>
+		<year>????</year>
+		<publisher>unknown</publisher>
+		<part name="cart" interface="megadriv_cart">
+			<dataarea name="rom" size="1048576">
+				<rom name="MD+ Castle Of Illusion (Grant Kirkhope Arranged).md" size="1048576" crc="39601b88" sha1="1b5691f2b3a6c3b3d4732356a8c33d91f458869f"/>
 			</dataarea>
 		</part>
 	</software>
